@@ -1,5 +1,8 @@
 /* Tree Renderer — layout radial escalável para árvores grandes */
 const TreeRenderer = (() => {
+  const SIBLING_GAP = 1.65;
+  const PARENT_GAP = 1.45;
+
   function buildTree(nodes) {
     const map = new Map();
     nodes.forEach(n => map.set(n.id, { ...n, children: [] }));
@@ -21,39 +24,66 @@ const TreeRenderer = (() => {
     return c;
   }
 
-  function getRings(nodeCount, depth, rect) {
+  function getRings(nodeCount, rect) {
     const minDim = Math.min(rect.width, rect.height);
-    const density = Math.max(0.45, Math.min(1.1, 14 / Math.sqrt(nodeCount)));
-    const base = minDim * 0.14 * density;
+    const density = Math.max(0.58, Math.min(1.25, 18 / Math.sqrt(nodeCount)));
+    const base = minDim * 0.19 * density;
     return {
       module: base,
-      file: base * 1.55,
-      function: base * 2.05,
-      default: base
+      file: base * 1.9,
+      function: base * 2.55,
+      default: base * 1.15
     };
   }
 
   function nodeHalfSize(layer, dense) {
     const sizes = dense
-      ? { root: 40, module: 28, file: 22, function: 19 }
-      : { root: 48, module: 34, file: 28, function: 22 };
+      ? { root: 38, module: 26, file: 21, function: 18 }
+      : { root: 46, module: 32, file: 26, function: 21 };
     return sizes[layer] || sizes.function;
   }
 
+  function nodeDiameter(layer, dense) {
+    return nodeHalfSize(layer, dense) * 2;
+  }
+
+  /** Raio mínimo para N irmãos em círculo sem sobreposição */
+  function minOrbitRadius(count, childLayer, dense) {
+    if (count <= 1) return 0;
+    const d = nodeDiameter(childLayer, dense);
+    return (count * d * SIBLING_GAP) / (2 * Math.PI);
+  }
+
+  function childOrbitRadius(ringRadius, childLayer, depth, parentLayer, dense) {
+    const depthFactors = [1.15, 1.0, 0.92, 0.86];
+    const factor = depthFactors[depth] ?? 0.8;
+    const fromRing = ringRadius * factor;
+    const minFromParent = (nodeHalfSize(parentLayer, dense) + nodeHalfSize(childLayer, dense)) * PARENT_GAP;
+    return Math.max(fromRing, minFromParent);
+  }
+
+  function arcForSiblings(count, orbitR, childLayer, dense) {
+    if (count <= 1) return 0;
+    const d = nodeDiameter(childLayer, dense);
+    const minArc = (count * d * SIBLING_GAP) / Math.max(orbitR, 1);
+    const spreadArc = Math.PI * 0.52 * count + 0.55;
+    return Math.min(Math.PI * 2 * 0.94, Math.max(minArc, spreadArc));
+  }
+
   function fitStage(stage, positions, rect, dense) {
-    const pad = 36;
+    const pad = 48;
     let minX = Infinity, minY = Infinity, maxX = -Infinity, maxY = -Infinity;
 
     positions.forEach((pos) => {
-      const r = nodeHalfSize(pos.node.layer || 'function', dense);
-      minX = Math.min(minX, pos.x - r);
-      minY = Math.min(minY, pos.y - r);
-      maxX = Math.max(maxX, pos.x + r);
-      maxY = Math.max(maxY, pos.y + r);
+      const margin = nodeHalfSize(pos.node.layer || 'function', dense) * 1.2;
+      minX = Math.min(minX, pos.x - margin);
+      minY = Math.min(minY, pos.y - margin);
+      maxX = Math.max(maxX, pos.x + margin);
+      maxY = Math.max(maxY, pos.y + margin);
     });
 
-    const bw = Math.max(maxX - minX, 100);
-    const bh = Math.max(maxY - minY, 100);
+    const bw = Math.max(maxX - minX, 120);
+    const bh = Math.max(maxY - minY, 120);
     const scale = Math.min(
       (rect.width - pad * 2) / bw,
       (rect.height - pad * 2) / bh,
@@ -69,18 +99,20 @@ const TreeRenderer = (() => {
     stage.style.transform = 'translate(' + tx + 'px,' + ty + 'px) scale(' + scale + ')';
   }
 
-  function layoutNode(node, angle, depth, positions, cx, cy, rings) {
+  function layoutNode(node, angle, depth, positions, cx, cy, rings, dense) {
     positions.set(node.id, { x: cx, y: cy, node, depth });
     const children = node.children || [];
     if (!children.length) return;
 
+    const parentLayer = node.layer || 'root';
     const childLayer = children[0].layer || 'function';
-    const radius = rings[childLayer] || rings.default;
-    const depthFactor = 0.55 + depth * 0.22;
-    const r = radius * depthFactor;
+    const ringRadius = rings[childLayer] || rings.default;
+    let orbitR = childOrbitRadius(ringRadius, childLayer, depth, parentLayer, dense);
+    orbitR = Math.max(orbitR, minOrbitRadius(children.length, childLayer, dense));
 
     if (children.length === 1) {
-      layoutNode(children[0], angle, depth + 1, positions, cx + Math.cos(angle) * r, cy + Math.sin(angle) * r, rings);
+      layoutNode(children[0], angle, depth + 1, positions,
+        cx + Math.cos(angle) * orbitR, cy + Math.sin(angle) * orbitR, rings, dense);
       return;
     }
 
@@ -88,18 +120,20 @@ const TreeRenderer = (() => {
       const step = (2 * Math.PI) / children.length;
       children.forEach((child, i) => {
         const a = -Math.PI / 2 + step * i;
-        layoutNode(child, a, depth + 1, positions, cx + Math.cos(a) * r, cy + Math.sin(a) * r, rings);
+        layoutNode(child, a, depth + 1, positions,
+          cx + Math.cos(a) * orbitR, cy + Math.sin(a) * orbitR, rings, dense);
       });
       return;
     }
 
-    const arc = Math.min(Math.PI * 1.85, Math.PI * 0.4 * children.length + 0.4);
+    const arc = arcForSiblings(children.length, orbitR, childLayer, dense);
     const start = angle - arc / 2;
     const step = arc / (children.length - 1);
 
     children.forEach((child, i) => {
       const a = start + step * i;
-      layoutNode(child, a, depth + 1, positions, cx + Math.cos(a) * r, cy + Math.sin(a) * r, rings);
+      layoutNode(child, a, depth + 1, positions,
+        cx + Math.cos(a) * orbitR, cy + Math.sin(a) * orbitR, rings, dense);
     });
   }
 
@@ -116,11 +150,11 @@ const TreeRenderer = (() => {
     const cx = rect.width / 2;
     const cy = rect.height / 2;
     const nodeCount = countNodes(tree);
-    const depth = maxDepth(tree);
-    const rings = getRings(nodeCount, depth, rect);
+    const rings = getRings(nodeCount, rect);
+    const dense = nodeCount > 14;
 
     const positions = new Map();
-    layoutNode(tree, -Math.PI / 2, 0, positions, cx, cy, rings);
+    layoutNode(tree, -Math.PI / 2, 0, positions, cx, cy, rings, dense);
 
     positions.forEach((pos) => {
       const n = pos.node;
@@ -136,8 +170,6 @@ const TreeRenderer = (() => {
       line.setAttribute('stroke-opacity', '0.3');
       linesEl.appendChild(line);
     });
-
-    const dense = nodeCount > 14;
 
     positions.forEach((pos) => {
       const n = pos.node;
@@ -160,7 +192,7 @@ const TreeRenderer = (() => {
 
       const inner = document.createElement('span');
       inner.className = 'tree-node-inner';
-      const maxLen = dense ? 10 : 14;
+      const maxLen = dense ? 11 : 14;
       inner.textContent = n.title.length > maxLen ? n.title.slice(0, maxLen - 1) + '…' : n.title;
       el.appendChild(inner);
       container.appendChild(el);

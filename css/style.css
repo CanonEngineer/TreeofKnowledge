@@ -285,7 +285,7 @@ a.tree-node:hover { text-decoration: none; }
 .tree-node-dense[data-layer="root"] .tree-node-inner { width: 76px; height: 76px; font-size: .62rem; }
 .tree-node:hover { z-index: 10; }
 .tree-node:hover .tree-node-inner {
-  transform: scale(1.2);
+  transform: scale(1.12);
   filter: brightness(1.15);
 }
 @keyframes pulse-root {
