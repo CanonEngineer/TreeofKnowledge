@@ -1,4 +1,4 @@
-/* Árvore do Conhecimento — 164 nós */
+/* Árvore do Conhecimento — 182 nós */
 const PROJECTS = [
   {
     "slug": "canon-python-ecommerce",
@@ -631,48 +631,188 @@ const PROJECTS = [
     "color": "#eab308",
     "icon": "javascript",
     "stack": "Express + Firebase",
-    "summary": "Clone Dropbox no browser com Firebase Realtime Database e Storage.",
+    "summary": "Clone Dropbox — Firebase Storage, barra de progresso, seleção Ctrl/Shift e ícones por MIME.",
     "nodes": [
       {
         "id": "jdb-root",
         "parent": null,
         "layer": "root",
         "title": "JavaScriptDropBoxProject",
-        "description": "Armazenamento em nuvem estilo Dropbox com Express e Firebase.",
+        "description": "Clone Dropbox no browser — Express serve a SPA, Firebase Realtime DB + Storage, upload com barra de progresso.",
         "file": "public/src/",
-        "code": "// Express serve public/\n// DropBoxController gerencia arquivos no Firebase\nwindow.app = new DropBoxController();",
+        "code": "// HiperCloud — navegação SPA sem reload\n// Firebase Storage + Realtime Database\nwindow.app = new DropBoxController();",
         "implementation": [
-          "npm install express firebase.",
+          "Clone o repo e npm install.",
           "Configure firebaseConfig no controller.",
-          "node bin/www na porta 3000."
+          "npm start → porta 3000."
+        ]
+      },
+      {
+        "id": "jdb-backend",
+        "parent": "jdb-root",
+        "layer": "module",
+        "title": "Backend Express",
+        "description": "Servidor Node com EJS, static em public/ e rotas legacy com Formidable.",
+        "file": "app.js",
+        "code": "var app = express();\napp.use(express.static(path.join(__dirname, 'public')));\napp.use('/', indexRouter);",
+        "implementation": [
+          "Express 4 + cookie-parser.",
+          "views/index.ejs renderiza o clone.",
+          "Rotas /upload e /file para modo local legado."
         ]
       },
       {
         "id": "jdb-app",
-        "parent": "jdb-root",
+        "parent": "jdb-backend",
         "layer": "file",
         "title": "app.js",
-        "description": "Servidor Express com EJS e static em public/.",
+        "description": "Bootstrap do Express: middlewares, views e routers.",
         "file": "app.js",
-        "code": "app.use(express.static(path.join(__dirname, 'public')));\napp.use('/', indexRouter);\napp.use('/users', usersRouter);",
+        "code": "app.set('view engine', 'ejs');\napp.use(logger('dev'));\napp.use(express.json());\napp.use(express.static(path.join(__dirname, 'public')));",
         "implementation": [
-          "view engine ejs.",
-          "cookie-parser e morgan.",
-          "Export app para bin/www."
+          "Monte indexRouter em /.",
+          "Error handler renderiza error.ejs.",
+          "Export module.exports = app."
         ]
       },
       {
-        "id": "jdb-routes",
-        "parent": "jdb-root",
+        "id": "jdb-bin-www",
+        "parent": "jdb-backend",
+        "layer": "file",
+        "title": "bin/www",
+        "description": "HTTP server na porta 3000 com tratamento EADDRINUSE.",
+        "file": "bin/www",
+        "code": "var port = normalizePort(process.env.PORT || '3000');\nvar server = http.createServer(app);\nserver.listen(port);",
+        "implementation": [
+          "normalizePort valida número.",
+          "debug('app:server') no listen.",
+          "Usado por npm start."
+        ]
+      },
+      {
+        "id": "jdb-routes-mod",
+        "parent": "jdb-backend",
         "layer": "module",
         "title": "routes/index.js",
-        "description": "Rotas Express para home, upload e delete de arquivos locais.",
+        "description": "Rotas REST para home, upload multipart e delete de arquivos locais.",
         "file": "routes/index.js",
-        "code": "router.get('/', function(req, res, next) {\n  res.render('index', { title: 'Express' });\n});\nrouter.post('/upload', (req, res) => {\n  let form = new formidable.IncomingForm({ uploadDir: './upload' });\n});",
+        "code": "router.get('/', ...);\nrouter.post('/upload', ...);\nrouter.get('/file', ...);\nrouter.delete('/file', ...);",
         "implementation": [
-          "formidable para multipart.",
-          "GET /file serve arquivo por query path.",
-          "DELETE /file remove do disco."
+          "formidable.IncomingForm com uploadDir ./upload.",
+          "GET /file lê path da query.",
+          "Versão cloud usa Firebase no client."
+        ]
+      },
+      {
+        "id": "jdb-route-home",
+        "parent": "jdb-routes-mod",
+        "layer": "function",
+        "title": "GET /",
+        "description": "Renderiza index.ejs com layout Dropbox clone.",
+        "file": "routes/index.js",
+        "code": "router.get('/', function(req, res, next) {\n  res.render('index', { title: 'Express' });\n});",
+        "implementation": [
+          "EJS injeta HTML da UI.",
+          "Scripts Firebase no final da página.",
+          "DropBoxController inicia no index.js."
+        ]
+      },
+      {
+        "id": "jdb-route-upload",
+        "parent": "jdb-routes-mod",
+        "layer": "function",
+        "title": "POST /upload",
+        "description": "Upload local via Formidable (legado antes do Firebase).",
+        "file": "routes/index.js",
+        "code": "let form = new formidable.IncomingForm({ uploadDir: './upload', keepExtensions: true });\nform.parse(req, (err, fields, files) => { res.json({ files }); });",
+        "implementation": [
+          "Multipart para pasta upload/.",
+          "Retorna JSON com metadados.",
+          "Substituído por Firebase Storage no client."
+        ]
+      },
+      {
+        "id": "jdb-route-file-get",
+        "parent": "jdb-routes-mod",
+        "layer": "function",
+        "title": "GET /file",
+        "description": "Serve arquivo do disco por query ?path=.",
+        "file": "routes/index.js",
+        "code": "let path = './' + req.query.path;\nfs.readFile(path, (err, data) => res.status(200).end(data));",
+        "implementation": [
+          "404 se não existir.",
+          "Usado no modo local comentado.",
+          "Cloud abre downloadURL direto."
+        ]
+      },
+      {
+        "id": "jdb-route-delete",
+        "parent": "jdb-routes-mod",
+        "layer": "function",
+        "title": "DELETE /file",
+        "description": "Remove arquivo local via Formidable fields.",
+        "file": "routes/index.js",
+        "code": "form.parse(req, (err, fields) => {\n  fs.unlink('./' + fields.path, err => res.json({ fields }));\n});",
+        "implementation": [
+          "fields.path do body multipart.",
+          "Resposta JSON com key.",
+          "Espelho do removeFile Firebase."
+        ]
+      },
+      {
+        "id": "jdb-frontend",
+        "parent": "jdb-root",
+        "layer": "module",
+        "title": "Frontend SPA",
+        "description": "Interface estilo Dropbox com sidebar, breadcrumb e grid de arquivos.",
+        "file": "views/index.ejs",
+        "code": "<div id=\"browse-location\"></div>\n<ul id=\"list-of-files-and-directories\"></ul>\n<div id=\"react-snackbar-root\">...</div>",
+        "implementation": [
+          "Bootstrap + dropbox-clone.css.",
+          "Botões nova pasta, renomear, excluir.",
+          "Input #files oculto para upload."
+        ]
+      },
+      {
+        "id": "jdb-index-ejs",
+        "parent": "jdb-frontend",
+        "layer": "file",
+        "title": "views/index.ejs",
+        "description": "Template EJS com sidebar Hiperware e área de arquivos.",
+        "file": "views/index.ejs",
+        "code": "<nav class=\"col-md-2 sidebar\">...</nav>\n<main id=\"browse-location\">...</main>",
+        "implementation": [
+          "Logo SVG estilo Dropbox.",
+          "Inclui Firebase SDK.",
+          "Carrega index.js no final."
+        ]
+      },
+      {
+        "id": "jdb-index-js",
+        "parent": "jdb-frontend",
+        "layer": "file",
+        "title": "public/src/index.js",
+        "description": "Bootstrap do controller após DOM pronto.",
+        "file": "public/src/index.js",
+        "code": "window.app = new DropBoxController();",
+        "implementation": [
+          "Uma linha instancia o app.",
+          "Classe em controller/DropBoxController.js.",
+          "Expõe global para debug."
+        ]
+      },
+      {
+        "id": "jdb-dropbox-css",
+        "parent": "jdb-frontend",
+        "layer": "file",
+        "title": "dropbox-clone.css",
+        "description": "Estilos do grid, seleção múltipla e snackbar de upload.",
+        "file": "public/assets/css/dropbox-clone.css",
+        "code": ".selected { outline: 2px solid #0062ff; }\n.mc-progress-bar-fg { transition: width .2s; }",
+        "implementation": [
+          "Tiles com preview SVG.",
+          "Breadcrumb segmentado.",
+          "Modal de progresso fixo no rodapé."
         ]
       },
       {
@@ -680,13 +820,13 @@ const PROJECTS = [
         "parent": "jdb-root",
         "layer": "module",
         "title": "DropBoxController",
-        "description": "Classe principal: navegação, upload, rename e delete no Firebase.",
+        "description": "Classe central: Firebase, navegação, CRUD e seleção Ctrl/Shift.",
         "file": "public/src/controller/DropBoxController.js",
         "code": "class DropBoxController {\n  constructor() {\n    this.currentFolder = ['HiperCloud'];\n    this.connDatabase();\n    this.initEvents();\n    this.openFolder();\n  }\n}",
         "implementation": [
-          "Instancie no index.js após DOM ready.",
-          "currentFolder é pilha de navegação.",
-          "Bind events nos botões da UI."
+          "currentFolder é pilha de paths.",
+          "onselectionchange Event custom.",
+          "Refs DOM no constructor."
         ]
       },
       {
@@ -696,11 +836,11 @@ const PROJECTS = [
         "title": "connDatabase()",
         "description": "Inicializa Firebase App com config do projeto.",
         "file": "public/src/controller/DropBoxController.js",
-        "code": "connDatabase() {\n  const firebaseConfig = {\n    /* Here you enter your firebase configuration */\n  };\n  firebase.initializeApp(firebaseConfig);\n}",
+        "code": "const firebaseConfig = { /* credenciais */ };\nfirebase.initializeApp(firebaseConfig);",
         "implementation": [
-          "Cole credenciais do Firebase Console.",
-          "Inclua SDK no index.ejs.",
-          "Realtime DB + Storage no mesmo projeto."
+          "Realtime Database + Storage.",
+          "SDK carregado no EJS.",
+          "Config não commitada no repo público."
         ]
       },
       {
@@ -708,209 +848,321 @@ const PROJECTS = [
         "parent": "jdb-controller",
         "layer": "function",
         "title": "getFirebaseRef()",
-        "description": "Retorna database ref do caminho atual.",
+        "description": "Retorna ref do Realtime DB para o path atual.",
         "file": "public/src/controller/DropBoxController.js",
         "code": "getFirebaseRef(path) {\n  if (!path) path = this.currentFolder.join('/');\n  return firebase.database().ref(path);\n}",
         "implementation": [
-          "Join currentFolder com '/'.",
-          "Usado em readFiles e push.",
-          "Off listener ao trocar pasta."
+          "Join com '/'.",
+          "Usado em push/set/on.",
+          "off('value') ao trocar pasta."
+        ]
+      },
+      {
+        "id": "jdb-navigation",
+        "parent": "jdb-root",
+        "layer": "module",
+        "title": "Navegação de pastas",
+        "description": "Breadcrumb, leitura reativa e duplo-clique para entrar em pastas.",
+        "file": "public/src/controller/DropBoxController.js",
+        "code": "openFolder() → renderNav() + readFiles()",
+        "implementation": [
+          "SPA sem reload de página.",
+          "lastFolder guarda listener anterior.",
+          "Duplo-clique push no currentFolder."
         ]
       },
       {
         "id": "jdb-open-folder",
-        "parent": "jdb-controller",
+        "parent": "jdb-navigation",
         "layer": "function",
         "title": "openFolder()",
-        "description": "Atualiza breadcrumb e lista arquivos da pasta atual.",
+        "description": "Troca de pasta: desliga listener antigo e recarrega lista.",
         "file": "public/src/controller/DropBoxController.js",
         "code": "openFolder() {\n  if (this.lastFolder) this.getFirebaseRef(this.lastFolder).off('value');\n  this.renderNav();\n  this.readFiles();\n}",
         "implementation": [
-          "renderNav() monta breadcrumbs.",
-          "readFiles() escuta on('value').",
-          "Duplo-clique em pasta faz push no currentFolder."
-        ]
-      },
-      {
-        "id": "jdb-read-files",
-        "parent": "jdb-controller",
-        "layer": "function",
-        "title": "readFiles()",
-        "description": "Escuta Firebase e renderiza lista de arquivos.",
-        "file": "public/src/controller/DropBoxController.js",
-        "code": "this.getFirebaseRef().on('value', snapshot => {\n  this.listFilesEl.innerHTML = '';\n  snapshot.forEach(snapshotItem => {\n    let data = snapshotItem.val();\n    if (data.type) {\n      this.listFilesEl.appendChild(this.getFileView(data, key));\n    }\n  });\n});",
-        "implementation": [
-          "getFileView cria <li> com ícone.",
-          "dataset.file guarda JSON.",
-          "initEventsLi para click/dblclick."
-        ]
-      },
-      {
-        "id": "jdb-upload",
-        "parent": "jdb-controller",
-        "layer": "function",
-        "title": "uploadTask()",
-        "description": "Envia arquivos ao Firebase Storage com progresso.",
-        "file": "public/src/controller/DropBoxController.js",
-        "code": "let fileRef = firebase.storage().ref(this.currentFolder.join('/')).child(file.name);\nlet task = fileRef.put(file);\ntask.on('state_changed', snapshot => {\n  this.uploadProgress({ loaded: snapshot.bytesTransferred, total: snapshot.totalBytes }, file);\n});",
-        "implementation": [
-          "Input type=file com change listener.",
-          "getDownloadURL após upload.",
-          "push metadata no Realtime DB."
-        ]
-      },
-      {
-        "id": "jdb-upload-progress",
-        "parent": "jdb-controller",
-        "layer": "function",
-        "title": "uploadProgress()",
-        "description": "Atualiza barra de progresso e tempo restante.",
-        "file": "public/src/controller/DropBoxController.js",
-        "code": "let porcent = parseInt((loaded / total) * 100);\nlet timeleft = ((100 - porcent) * timespent) / porcent;\nthis.progressBarEl.style.width = `${porcent}%`;\nthis.timeleftEl.innerHTML = this.formatTimeToHuman(timeleft);",
-        "implementation": [
-          "modalShow durante upload.",
-          "formatTimeToHuman em PT.",
-          "uploadComplete reseta UI."
-        ]
-      },
-      {
-        "id": "jdb-init-events",
-        "parent": "jdb-controller",
-        "layer": "function",
-        "title": "initEvents()",
-        "description": "Bind de botões nova pasta, delete, rename e upload.",
-        "file": "public/src/controller/DropBoxController.js",
-        "code": "this.btnNewFolder.addEventListener('click', e => {\n  let name = prompt('Nome da nova pasta: ');\n  this.getFirebaseRef().push().set({ name, type: 'folder', path: this.currentFolder.join('/') });\n});",
-        "implementation": [
-          "btnDelete chama removeTask.",
-          "btnRename atualiza child no Firebase.",
-          "selectionchange mostra/oculta botões."
-        ]
-      },
-      {
-        "id": "jdb-remove-folder",
-        "parent": "jdb-controller",
-        "layer": "function",
-        "title": "removeFolder()",
-        "description": "Remove pasta recursivamente do Firebase.",
-        "file": "public/src/controller/DropBoxController.js",
-        "code": "removeFolder(ref, name) {\n  return new Promise((resolve, reject) => {\n    let folderRef = this.getFirebaseRef(ref + '/' + name);\n    snapshot.forEach(item => {\n      if (data.type === 'folder') {\n        this.removeFolder(ref + '/' + name, data.name);\n      }\n    });\n    folderRef.remove();\n  });\n}",
-        "implementation": [
-          "Recursão para subpastas.",
-          "removeFile para arquivos.",
-          "removeTask com Promise.all."
-        ]
-      },
-      {
-        "id": "jdb-remove-file",
-        "parent": "jdb-controller",
-        "layer": "function",
-        "title": "removeFile()",
-        "description": "Remove arquivo do Firebase Storage.",
-        "file": "public/src/controller/DropBoxController.js",
-        "code": "removeFile(ref, name) {\n  let fileRef = firebase.storage().ref(ref).child(name);\n  return fileRef.delete();\n}",
-        "implementation": [
-          "Chamado na recursão removeFolder.",
-          "Remove também ref no Realtime DB.",
-          "Confirme seleção antes de deletar."
+          "Evita memory leak no on('value').",
+          "Atualiza breadcrumb.",
+          "Chamado ao clicar pasta ou breadcrumb."
         ]
       },
       {
         "id": "jdb-render-nav",
-        "parent": "jdb-controller",
+        "parent": "jdb-navigation",
         "layer": "function",
         "title": "renderNav()",
-        "description": "Breadcrumb clicável da pilha currentFolder.",
+        "description": "Monta breadcrumb clicável da pilha currentFolder.",
         "file": "public/src/controller/DropBoxController.js",
-        "code": "for (let i = 0; i < this.currentFolder.length; i++) {\n  if ((i + 1) === this.currentFolder.length) {\n    span.innerHTML = folderName;\n  } else {\n    span.innerHTML = `<a href=\"#\" data-path=\"${path.join('/')}\">${folderName}</a>`;\n  }\n}",
+        "code": "span.innerHTML = `<a href=\"#\" data-path=\"${path.join('/')}\">${folderName}</a>`;",
         "implementation": [
-          "Click no breadcrumb trunca currentFolder.",
           "Último segmento sem link.",
-          "Atualiza #browse-location."
+          "SVG seta entre segmentos.",
+          "Click trunca currentFolder."
         ]
       },
       {
-        "id": "jdb-get-selection",
-        "parent": "jdb-controller",
+        "id": "jdb-read-files",
+        "parent": "jdb-navigation",
         "layer": "function",
-        "title": "getSelection()",
-        "description": "Retorna itens .selected na listagem.",
+        "title": "readFiles()",
+        "description": "Escuta Firebase value e renderiza grid de arquivos.",
         "file": "public/src/controller/DropBoxController.js",
-        "code": "getSelection() {\n  return this.listFilesEl.querySelectorAll('.selected');\n}",
+        "code": "this.getFirebaseRef().on('value', snapshot => {\n  snapshot.forEach(item => {\n    this.listFilesEl.appendChild(this.getFileView(data, key));\n  });\n});",
         "implementation": [
-          "Ctrl+click para multi-seleção.",
-          "Shift+click para range.",
-          "Dispara evento selectionchange."
+          "Limpa innerHTML a cada snapshot.",
+          "Filtra itens com data.type.",
+          "initEventsLi em cada <li>."
         ]
       },
       {
-        "id": "jdb-file-icons",
-        "parent": "jdb-controller",
-        "layer": "function",
-        "title": "getFileIconView()",
-        "description": "SVG por MIME type: folder, image, pdf, doc.",
-        "file": "public/src/controller/DropBoxController.js",
-        "code": "getFileIconView(file) {\n  switch (file.type) {\n    case 'folder':\n      return `<svg>...</svg>`;\n    case 'image/jpeg':\n    case 'image/png':\n      return `<svg>...</svg>`;\n  }\n}",
-        "implementation": [
-          "Switch por file.type.",
-          "Ícones inline SVG estilo Dropbox.",
-          "Default para tipo desconhecido."
-        ]
-      },
-      {
-        "id": "jdb-index",
+        "id": "jdb-upload-mod",
         "parent": "jdb-root",
-        "layer": "file",
-        "title": "index.js",
-        "description": "Bootstrap da SPA instanciando o controller.",
-        "file": "public/src/index.js",
-        "code": "window.app = new DropBoxController();",
+        "layer": "module",
+        "title": "Upload Firebase Storage",
+        "description": "Envio com barra de progresso, ETA e metadata downloadURL.",
+        "file": "public/src/controller/DropBoxController.js",
+        "code": "uploadTask(files) → uploadProgress() → push no Realtime DB",
         "implementation": [
-          "Carregue após DOM e Firebase SDK.",
-          "Inclua no index.ejs.",
-          "Expõe app global para debug."
+          "Formidable legado comentado no final.",
+          "modalShow snackbar inferior.",
+          "Promise.all para múltiplos arquivos."
         ]
       },
       {
-        "id": "jdb-route-upload",
-        "parent": "jdb-routes",
+        "id": "jdb-upload-task",
+        "parent": "jdb-upload-mod",
         "layer": "function",
-        "title": "POST /upload",
-        "description": "Upload local alternativo com formidable (legado).",
-        "file": "routes/index.js",
-        "code": "router.post('/upload', (req, res) => {\n  let form = new formidable.IncomingForm({\n    uploadDir: './upload',\n    keepExtensions: true\n  });\n  form.parse(req, (err, fields, files) => {\n    res.json({ files });\n  });\n});",
+        "title": "uploadTask()",
+        "description": "fileRef.put(file) com state_changed e getDownloadURL.",
+        "file": "public/src/controller/DropBoxController.js",
+        "code": "let task = fileRef.put(file);\ntask.on('state_changed', snapshot => this.uploadProgress(...));\ntask.snapshot.ref.getDownloadURL().then(url => ref.updateMetadata({ customMetadata: { downloadURL: url } }));",
         "implementation": [
-          "Pasta upload/ no projeto.",
-          "Versão Firebase é a principal.",
-          "Mantido para fallback local."
+          "child(file.name) no path atual.",
+          "Resolve metadata após upload.",
+          "push no DB com name, type, path, size."
         ]
       },
       {
-        "id": "jdb-route-file",
-        "parent": "jdb-routes",
+        "id": "jdb-upload-progress",
+        "parent": "jdb-upload-mod",
         "layer": "function",
-        "title": "GET /file",
-        "description": "Serve arquivo do disco por query path.",
-        "file": "routes/index.js",
-        "code": "router.get('/file', (req, res) => {\n  let path = './' + req.query.path;\n  if (fs.existsSync(path)) {\n    fs.readFile(path, (err, data) => {\n      res.status(200).end(data);\n    });\n  }\n});",
+        "title": "uploadProgress()",
+        "description": "Calcula % e tempo restante com base em bytesTransferred.",
+        "file": "public/src/controller/DropBoxController.js",
+        "code": "let porcent = parseInt((loaded / total) * 100);\nlet timeleft = ((100 - porcent) * timespent) / porcent;\nthis.progressBarEl.style.width = `${porcent}%`;",
         "implementation": [
-          "Validação de path recomendada.",
-          "Usado na versão local comentada.",
-          "Firebase usa downloadURL direto."
+          "startUploadTime no onloadstart (ajax legado).",
+          "nameFileEl mostra arquivo atual.",
+          "formatTimeToHuman no timeleftEl."
         ]
       },
       {
         "id": "jdb-format-time",
-        "parent": "jdb-controller",
+        "parent": "jdb-upload-mod",
         "layer": "function",
         "title": "formatTimeToHuman()",
-        "description": "Formata milissegundos em texto PT-BR.",
+        "description": "Converte ms restantes em texto PT-BR legível.",
         "file": "public/src/controller/DropBoxController.js",
-        "code": "formatTimeToHuman(duration) {\n  let seconds = parseInt((duration / 1000) % 60);\n  let minutes = parseInt((duration / (1000 * 60)) % 60);\n  if (minutes > 0) {\n    return `${minutes} minutos e ${seconds} segundos`;\n  }\n}",
+        "code": "if (hours > 0) return `${hours} horas, ${minutes} minutos e ${seconds} segundos`;",
         "implementation": [
-          "Exibido no snackbar de upload.",
-          "Calcula ETA pelo progresso.",
-          "Retorna string vazia se instantâneo."
+          "Horas, minutos ou só segundos.",
+          "Retorna '' se instantâneo.",
+          "Exibido na snackbar de upload."
+        ]
+      },
+      {
+        "id": "jdb-modal-show",
+        "parent": "jdb-upload-mod",
+        "layer": "function",
+        "title": "modalShow()",
+        "description": "Exibe/oculta snackbar de progresso (#react-snackbar-root).",
+        "file": "public/src/controller/DropBoxController.js",
+        "code": "modalShow(show = true) {\n  this.snackModalEl.style.display = show ? 'block' : 'none';\n}",
+        "implementation": [
+          "Chamado no change do input files.",
+          "uploadComplete(false) ao terminar.",
+          "Desabilita btn-send durante upload."
+        ]
+      },
+      {
+        "id": "jdb-crud",
+        "parent": "jdb-root",
+        "layer": "module",
+        "title": "CRUD arquivos e pastas",
+        "description": "Criar pasta, renomear, excluir recursivo no DB + Storage.",
+        "file": "public/src/controller/DropBoxController.js",
+        "code": "initEvents() → removeTask() → removeFolder() / removeFile()",
+        "implementation": [
+          "prompt() para nome pasta/renomear.",
+          "selectionchange controla botões.",
+          "Promise.all em removeTask."
+        ]
+      },
+      {
+        "id": "jdb-init-events",
+        "parent": "jdb-crud",
+        "layer": "function",
+        "title": "initEvents()",
+        "description": "Bind nova pasta, delete, rename e input de upload.",
+        "file": "public/src/controller/DropBoxController.js",
+        "code": "this.btnNewFolder.addEventListener('click', () => {\n  this.getFirebaseRef().push().set({ name, type: 'folder', path: ... });\n});",
+        "implementation": [
+          "btnSendFile dispara inputFiles.click().",
+          "change chama uploadTask.",
+          "selectionchange listener na lista."
+        ]
+      },
+      {
+        "id": "jdb-remove-task",
+        "parent": "jdb-crud",
+        "layer": "function",
+        "title": "removeTask()",
+        "description": "Deleta todos os itens selecionados com Promise.all.",
+        "file": "public/src/controller/DropBoxController.js",
+        "code": "this.getSelection().forEach(li => {\n  promises.push(file.type === 'folder' ? this.removeFolder(...) : this.removeFile(...));\n});",
+        "implementation": [
+          "Remove child key no Realtime DB.",
+          "Pasta recursiva antes do Storage.",
+          "Erro logado no console."
+        ]
+      },
+      {
+        "id": "jdb-remove-folder",
+        "parent": "jdb-crud",
+        "layer": "function",
+        "title": "removeFolder()",
+        "description": "Recursão: percorre snapshot e apaga subpastas/arquivos.",
+        "file": "public/src/controller/DropBoxController.js",
+        "code": "folderRef.on('value', snapshot => {\n  snapshot.forEach(item => {\n    if (data.type === 'folder') this.removeFolder(...);\n    else this.removeFile(...);\n  });\n  folderRef.remove();\n});",
+        "implementation": [
+          "Promise por item filho.",
+          "folderRef.off após leitura.",
+          "Apaga nó pai no final."
+        ]
+      },
+      {
+        "id": "jdb-remove-file",
+        "parent": "jdb-crud",
+        "layer": "function",
+        "title": "removeFile()",
+        "description": "firebase.storage().ref(ref).child(name).delete().",
+        "file": "public/src/controller/DropBoxController.js",
+        "code": "let fileRef = firebase.storage().ref(ref).child(name);\nreturn fileRef.delete();",
+        "implementation": [
+          "Path = currentFolder + nome.",
+          "Chamado na recursão.",
+          "DB key removido em removeTask."
+        ]
+      },
+      {
+        "id": "jdb-selection",
+        "parent": "jdb-root",
+        "layer": "module",
+        "title": "Seleção Ctrl / Shift",
+        "description": "Lógica de multi-select estilo explorador de arquivos.",
+        "file": "public/src/controller/DropBoxController.js",
+        "code": "initEventsLi(li) — click, dblclick, ctrl, shift",
+        "implementation": [
+          "CustomEvent selectionchange.",
+          "getSelection() retorna .selected.",
+          "Toggle botões rename/delete."
+        ]
+      },
+      {
+        "id": "jdb-get-selection",
+        "parent": "jdb-selection",
+        "layer": "function",
+        "title": "getSelection()",
+        "description": "querySelectorAll('.selected') na lista de arquivos.",
+        "file": "public/src/controller/DropBoxController.js",
+        "code": "getSelection() {\n  return this.listFilesEl.querySelectorAll('.selected');\n}",
+        "implementation": [
+          "Usado em removeTask e rename.",
+          "Case 0/1/N no selectionchange.",
+          "Renomear só com 1 item."
+        ]
+      },
+      {
+        "id": "jdb-init-events-li",
+        "parent": "jdb-selection",
+        "layer": "function",
+        "title": "initEventsLi()",
+        "description": "Click com Ctrl toggle; Shift seleciona intervalo; dblclick abre.",
+        "file": "public/src/controller/DropBoxController.js",
+        "code": "if (e.shiftKey) { /* indexStart..indexEnd */ }\nif (!e.ctrlKey) { clear selected }\nli.classList.toggle('selected');",
+        "implementation": [
+          "dblclick pasta → openFolder.",
+          "dblclick arquivo → window.open(path).",
+          "dispatchEvent selectionchange."
+        ]
+      },
+      {
+        "id": "jdb-icons",
+        "parent": "jdb-root",
+        "layer": "module",
+        "title": "Ícones por MIME type",
+        "description": "SVG inline para pasta, imagem, PDF, Office, áudio e vídeo.",
+        "file": "public/src/controller/DropBoxController.js",
+        "code": "getFileIconView(file) — switch(file.type)",
+        "implementation": [
+          "folder → SVG azul Dropbox.",
+          "image/jpeg, application/pdf, etc.",
+          "default → ícone genérico."
+        ]
+      },
+      {
+        "id": "jdb-get-file-icon",
+        "parent": "jdb-icons",
+        "layer": "function",
+        "title": "getFileIconView()",
+        "description": "Switch por MIME retornando template SVG 160×160.",
+        "file": "public/src/controller/DropBoxController.js",
+        "code": "switch (file.type) {\n  case 'folder': return `<svg>...</svg>`;\n  case 'image/jpeg': ...\n  case 'application/pdf': ...\n}",
+        "implementation": [
+          "Word, Excel, PowerPoint mapeados.",
+          "audio/mp3 e video/mp4.",
+          "HTML string injetado no <li>."
+        ]
+      },
+      {
+        "id": "jdb-get-file-view",
+        "parent": "jdb-icons",
+        "layer": "function",
+        "title": "getFileView()",
+        "description": "Cria <li> com dataset.file JSON e ícone + nome.",
+        "file": "public/src/controller/DropBoxController.js",
+        "code": "li.dataset.key = key;\nli.dataset.file = JSON.stringify(file);\nli.innerHTML = `${this.getFileIconView(file)}<div class=\"name\">${file.name}</div>`;",
+        "implementation": [
+          "initEventsLi antes de append.",
+          "Nome centralizado abaixo do ícone.",
+          "key do Firebase no dataset."
+        ]
+      },
+      {
+        "id": "jdb-ajax",
+        "parent": "jdb-backend",
+        "layer": "function",
+        "title": "ajax()",
+        "description": "XHR Promise com upload.onprogress (modo local legado).",
+        "file": "public/src/controller/DropBoxController.js",
+        "code": "ajax(url, method, formData, onprogress, onloadstart) {\n  return new Promise((resolve, reject) => { ... });\n}",
+        "implementation": [
+          "Usado no uploadTask comentado.",
+          "JSON.parse na response.",
+          "Espelha API fetch moderna."
+        ]
+      },
+      {
+        "id": "jdb-firebase-storage",
+        "parent": "jdb-upload-mod",
+        "layer": "file",
+        "title": "Firebase Storage",
+        "description": "Blob storage na nuvem com downloadURL em customMetadata.",
+        "file": "Firebase Console → Storage",
+        "code": "fileRef.put(file) → getDownloadURL() → updateMetadata({ customMetadata: { downloadURL } })",
+        "implementation": [
+          "Regras de segurança no console.",
+          "Path espelha currentFolder.",
+          "URL aberta em nova aba no dblclick."
         ]
       }
     ]

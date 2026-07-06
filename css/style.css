@@ -55,7 +55,13 @@ body {
   backdrop-filter: blur(12px);
   background: rgba(6,8,15,.7);
 }
-.brand { display: flex; align-items: center; gap: 1rem; }
+.brand { display: flex; align-items: center; gap: .85rem; }
+.header-profile {
+  width: 48px; height: 48px; border-radius: 50%; object-fit: cover;
+  border: 2px solid rgba(251,191,36,.55);
+  box-shadow: 0 0 18px rgba(251,191,36,.35), 0 0 0 3px rgba(56,189,248,.15);
+  flex-shrink: 0;
+}
 .brand-icon { font-size: 2rem; filter: drop-shadow(0 0 12px rgba(251,191,36,.5)); }
 .brand h1 { font-size: 1.4rem; font-weight: 700; letter-spacing: -.02em; }
 .brand p { font-size: .8rem; color: var(--muted); }
@@ -76,6 +82,77 @@ body {
   border: 1px solid var(--border);
 }
 .btn-ghost:hover { background: rgba(56,189,248,.08); border-color: var(--accent); }
+
+.header-nav {
+  display: flex; align-items: center; gap: .85rem; flex-shrink: 0;
+}
+.header-datetime {
+  font-family: var(--mono); font-size: .72rem; line-height: 1.35;
+  color: var(--muted); text-align: right; max-width: 220px;
+  padding: .35rem .65rem; border-radius: 8px;
+  background: rgba(255,255,255,.04); border: 1px solid var(--border);
+  white-space: nowrap;
+}
+
+/* Sagat victory — canto superior direito */
+.sagat-widget {
+  position: fixed; top: 5.5rem; right: 1rem; z-index: 50;
+  width: 88px; height: 110px; pointer-events: none;
+  filter: drop-shadow(0 4px 16px rgba(251,191,36,.35));
+}
+.sagat-fighter { width: 100%; height: 100%; overflow: visible; }
+.sagat-kick-leg {
+  transform-origin: 55px 58px;
+  animation: sagatVictoryKick 2.8s cubic-bezier(.34,1.56,.64,1) infinite;
+}
+.sagat-arm-left { animation: sagatArmLeft 2.8s ease-in-out infinite; transform-origin: 29px 39px; }
+.sagat-arm-right { animation: sagatArmRight 2.8s ease-in-out infinite; transform-origin: 63px 39px; }
+.sagat-torso { animation: sagatTorsoBounce 2.8s ease-in-out infinite; transform-origin: 45px 70px; }
+.sagat-sparks { animation: sagatSparks 2.8s ease-in-out infinite; }
+.sagat-ko {
+  font-family: var(--font); opacity: 0;
+  animation: sagatKoText 2.8s ease-in-out infinite;
+}
+.spark { opacity: 0; }
+.spark-1 { animation: sagatSpark 2.8s .9s ease-out infinite; }
+.spark-2 { animation: sagatSpark 2.8s 1s ease-out infinite; }
+.spark-3 { animation: sagatSpark 2.8s 1.1s ease-out infinite; }
+
+@keyframes sagatVictoryKick {
+  0%, 12% { transform: rotate(0deg); }
+  28%, 55% { transform: rotate(-92deg); }
+  70%, 100% { transform: rotate(0deg); }
+}
+@keyframes sagatArmLeft {
+  0%, 15% { transform: rotate(0deg); }
+  30%, 55% { transform: rotate(-18deg) translateY(-4px); }
+  70%, 100% { transform: rotate(0deg); }
+}
+@keyframes sagatArmRight {
+  0%, 15% { transform: rotate(0deg); }
+  30%, 55% { transform: rotate(18deg) translateY(-4px); }
+  70%, 100% { transform: rotate(0deg); }
+}
+@keyframes sagatTorsoBounce {
+  0%, 20% { transform: translateY(0); }
+  32%, 50% { transform: translateY(-3px) scale(1.02); }
+  65%, 100% { transform: translateY(0); }
+}
+@keyframes sagatSparks {
+  0%, 25% { opacity: 0; }
+  35%, 60% { opacity: 1; }
+  75%, 100% { opacity: 0; }
+}
+@keyframes sagatSpark {
+  0% { opacity: 0; transform: translateY(8px) scale(.5); }
+  20% { opacity: 1; transform: translateY(0) scale(1.2); }
+  100% { opacity: 0; transform: translateY(-14px) scale(.3); }
+}
+@keyframes sagatKoText {
+  0%, 30% { opacity: 0; transform: scale(.6); }
+  40%, 58% { opacity: 1; transform: scale(1.15); }
+  70%, 100% { opacity: 0; transform: scale(.8); }
+}
 
 /* Gallery */
 #app { position: relative; z-index: 1; }
@@ -408,6 +485,9 @@ a.tree-node:hover { text-decoration: none; }
   .site-header { padding: 1rem; flex-wrap: wrap; gap: .75rem; }
   .header-search-wrap { order: 3; max-width: 100%; width: 100%; margin: 0; }
   .brand h1 { font-size: 1.1rem; }
+  .header-profile { width: 40px; height: 40px; }
+  .header-datetime { display: none; }
+  .sagat-widget { width: 64px; height: 80px; top: auto; bottom: 1rem; right: .75rem; opacity: .85; }
   .tree-view { height: calc(100vh - 9rem); padding: .5rem .75rem; }
   .tree-node[data-layer="root"] .tree-node-inner { width: 70px; height: 70px; font-size: .6rem; }
   .node-page { padding: 1rem; }

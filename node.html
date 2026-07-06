@@ -16,7 +16,7 @@
 
   <header class="site-header">
     <a href="index.html" class="brand brand-link">
-      <span class="brand-icon">🌳</span>
+      <img src="img/canon-profile.jpg" alt="Alessandro Canon" class="header-profile" width="48" height="48">
       <div>
         <h1>Árvore do Conhecimento</h1>
         <p id="node-breadcrumb">Carregando...</p>
@@ -30,9 +30,27 @@
       </div>
     </div>
     <nav class="header-nav">
+      <time id="header-datetime" class="header-datetime" aria-live="polite"></time>
       <a id="node-repo-link" href="#" target="_blank" rel="noopener" class="btn-ghost">Repositório</a>
     </nav>
   </header>
+
+  <div class="sagat-widget" aria-hidden="true">
+    <svg class="sagat-fighter" viewBox="0 0 96 128" xmlns="http://www.w3.org/2000/svg">
+      <defs>
+        <linearGradient id="sagat-skin" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#e8b878"/><stop offset="100%" stop-color="#c9955a"/></linearGradient>
+        <linearGradient id="sagat-pants" x1="0" y1="0" x2="1" y2="1"><stop offset="0%" stop-color="#7c1d1d"/><stop offset="100%" stop-color="#450a0a"/></linearGradient>
+        <filter id="sagat-glow"><feDropShadow dx="0" dy="0" stdDeviation="2" flood-color="#fbbf24" flood-opacity="0.6"/></filter>
+      </defs>
+      <ellipse cx="48" cy="118" rx="28" ry="4" fill="rgba(251,191,36,.25)"/>
+      <g class="sagat-stance-leg"><rect x="40" y="72" width="10" height="34" rx="3" fill="url(#sagat-pants)"/><rect x="38" y="104" width="14" height="8" rx="2" fill="#1e293b"/></g>
+      <g class="sagat-torso" filter="url(#sagat-glow)"><rect x="34" y="38" width="22" height="36" rx="4" fill="#b91c1c"/><circle cx="45" cy="30" r="11" fill="url(#sagat-skin)"/></g>
+      <g class="sagat-arm-left"><rect x="22" y="36" width="14" height="6" rx="3" fill="url(#sagat-skin)" transform="rotate(-35 29 39)"/></g>
+      <g class="sagat-arm-right"><rect x="56" y="36" width="14" height="6" rx="3" fill="url(#sagat-skin)" transform="rotate(35 63 39)"/></g>
+      <g class="sagat-kick-leg"><rect x="50" y="58" width="10" height="28" rx="3" fill="url(#sagat-pants)"/><rect x="48" y="38" width="14" height="10" rx="3" fill="#1e293b"/></g>
+      <g class="sagat-sparks"><circle class="spark spark-1" cx="72" cy="18" r="2" fill="#fbbf24"/><text x="76" y="14" class="sagat-ko" font-size="10" font-weight="800" fill="#fbbf24">KO</text></g>
+    </svg>
+  </div>
 
   <main class="node-page">
     <div class="node-page-toolbar">
@@ -71,6 +89,7 @@
 
   <script src="js/data/projects.js"></script>
   <script src="js/config.js"></script>
+  <script src="js/header.js"></script>
   <script src="js/search.js"></script>
   <script src="js/node-page.js"></script>
 </body>

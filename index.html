@@ -34,7 +34,13 @@
 
     <div class="brand">
 
-      <span class="brand-icon">🌳</span>
+      <img
+        src="img/canon-profile.jpg"
+        alt="Alessandro Canon — CanonEngineer"
+        class="header-profile"
+        width="48"
+        height="48"
+        loading="eager">
 
       <div>
 
@@ -62,11 +68,125 @@
 
     <nav class="header-nav">
 
+      <time id="header-datetime" class="header-datetime" datetime="" aria-live="polite"></time>
+
       <a href="https://github.com/CanonEngineer/TreeofKnowledge" class="btn-ghost">GitHub</a>
 
     </nav>
 
   </header>
+
+
+
+  <div class="sagat-widget" aria-hidden="true" title="Victory!">
+
+    <svg class="sagat-fighter" viewBox="0 0 96 128" xmlns="http://www.w3.org/2000/svg">
+
+      <defs>
+
+        <linearGradient id="sagat-skin" x1="0" y1="0" x2="0" y2="1">
+
+          <stop offset="0%" stop-color="#e8b878"/>
+
+          <stop offset="100%" stop-color="#c9955a"/>
+
+        </linearGradient>
+
+        <linearGradient id="sagat-pants" x1="0" y1="0" x2="1" y2="1">
+
+          <stop offset="0%" stop-color="#7c1d1d"/>
+
+          <stop offset="100%" stop-color="#450a0a"/>
+
+        </linearGradient>
+
+        <filter id="sagat-glow">
+
+          <feDropShadow dx="0" dy="0" stdDeviation="2" flood-color="#fbbf24" flood-opacity="0.6"/>
+
+        </filter>
+
+      </defs>
+
+      <!-- chão -->
+
+      <ellipse cx="48" cy="118" rx="28" ry="4" fill="rgba(251,191,36,.25)"/>
+
+      <!-- perna de apoio -->
+
+      <g class="sagat-stance-leg">
+
+        <rect x="40" y="72" width="10" height="34" rx="3" fill="url(#sagat-pants)"/>
+
+        <rect x="38" y="104" width="14" height="8" rx="2" fill="#1e293b"/>
+
+      </g>
+
+      <!-- torso -->
+
+      <g class="sagat-torso" filter="url(#sagat-glow)">
+
+        <rect x="34" y="38" width="22" height="36" rx="4" fill="#b91c1c"/>
+
+        <rect x="36" y="40" width="18" height="8" rx="2" fill="#dc2626"/>
+
+        <circle cx="45" cy="30" r="11" fill="url(#sagat-skin)"/>
+
+        <rect x="38" y="22" width="14" height="6" rx="2" fill="#1c1917"/>
+
+        <circle cx="41" cy="29" r="1.5" fill="#1c1917"/>
+
+        <circle cx="49" cy="29" r="1.5" fill="#1c1917"/>
+
+      </g>
+
+      <!-- braço esquerdo (vitória) -->
+
+      <g class="sagat-arm-left">
+
+        <rect x="22" y="36" width="14" height="6" rx="3" fill="url(#sagat-skin)" transform="rotate(-35 29 39)"/>
+
+        <rect x="14" y="28" width="12" height="6" rx="3" fill="url(#sagat-skin)" transform="rotate(-55 20 31)"/>
+
+      </g>
+
+      <!-- braço direito -->
+
+      <g class="sagat-arm-right">
+
+        <rect x="56" y="36" width="14" height="6" rx="3" fill="url(#sagat-skin)" transform="rotate(35 63 39)"/>
+
+        <rect x="68" y="28" width="12" height="6" rx="3" fill="url(#sagat-skin)" transform="rotate(55 74 31)"/>
+
+      </g>
+
+      <!-- perna vitória — chute alto estilo Sagat -->
+
+      <g class="sagat-kick-leg">
+
+        <rect x="50" y="58" width="10" height="28" rx="3" fill="url(#sagat-pants)" transform-origin="55px 58px"/>
+
+        <rect x="48" y="38" width="14" height="10" rx="3" fill="#1e293b" transform-origin="55px 58px"/>
+
+      </g>
+
+      <!-- faíscas de vitória -->
+
+      <g class="sagat-sparks">
+
+        <circle class="spark spark-1" cx="72" cy="18" r="2" fill="#fbbf24"/>
+
+        <circle class="spark spark-2" cx="80" cy="28" r="1.5" fill="#fde68a"/>
+
+        <circle class="spark spark-3" cx="68" cy="12" r="1.2" fill="#f59e0b"/>
+
+        <text x="76" y="14" class="sagat-ko" font-size="10" font-weight="800" fill="#fbbf24">KO</text>
+
+      </g>
+
+    </svg>
+
+  </div>
 
 
 
@@ -144,6 +264,7 @@
 
   <script src="js/data/projects.js"></script>
   <script src="js/config.js"></script>
+  <script src="js/header.js"></script>
   <script src="js/search.js"></script>
   <script src="js/tree-renderer.js"></script>
   <script src="js/app.js"></script>
