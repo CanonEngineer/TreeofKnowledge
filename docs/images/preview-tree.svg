@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 540" role="img">
+  <rect width="960" height="540" fill="#06080f"/>
+  <!-- header -->
+  <rect width="960" height="52" fill="#0c1220" stroke="#1e3a5f" stroke-width="1"/>
+  <text x="24" y="34" fill="#e8edf5" font-family="Segoe UI,sans-serif" font-size="16" font-weight="600"><3 ¡rvore do Conhecimento</text>
+  <rect x="620" y="14" width="320" height="28" rx="14" fill="#111827" stroke="#38bdf8" stroke-width="1"/>
+  <text x="640" y="33" fill="#64748b" font-family="Segoe UI,sans-serif" font-size="12">= Buscar cÛdigo, funÁ„o, arquivo...</text>
+  <!-- toolbar -->
+  <rect x="16" y="64" width="130" height="32" rx="8" fill="#38bdf8"/>
+  <text x="36" y="85" fill="#fff" font-size="12" font-weight="600">ê Voltar</text>
+  <text x="200" y="85" fill="#e8edf5" font-size="14" font-weight="600">CanonPythonEcommerce</text>
+  <text x="200" y="102" fill="#64748b" font-size="11">8 nÛs de cÛdigo</text>
+  <!-- scene -->
+  <rect x="16" y="118" width="928" height="406" rx="12" fill="#0a0f1a" stroke="#1e293b"/>
+  <!-- lines -->
+  <line x1="480" y1="280" x2="320" y2="200" stroke="#38bdf8" stroke-width="2" opacity="0.4"/>
+  <line x1="480" y1="280" x2="640" y2="200" stroke="#38bdf8" stroke-width="2" opacity="0.4"/>
+  <line x1="480" y1="280" x2="280" y2="320" stroke="#38bdf8" stroke-width="2" opacity="0.4"/>
+  <line x1="480" y1="280" x2="680" y2="320" stroke="#38bdf8" stroke-width="2" opacity="0.4"/>
+  <line x1="480" y1="280" x2="480" y2="380" stroke="#38bdf8" stroke-width="2" opacity="0.4"/>
+  <line x1="480" y1="280" x2="720" y2="260" stroke="#38bdf8" stroke-width="2" opacity="0.4"/>
+  <line x1="320" y2="200" x2="260" y2="170" stroke="#34d399" stroke-width="1.5" opacity="0.4"/>
+  <!-- root -->
+  <circle cx="480" cy="280" r="44" fill="#fbbf24" filter="url(#g)"/>
+  <text x="480" y="276" text-anchor="middle" fill="#1c1917" font-size="9" font-weight="700">CanonPython</text>
+  <text x="480" y="288" text-anchor="middle" fill="#1c1917" font-size="9" font-weight="700">Ecommerce</text>
+  <!-- modules -->
+  <circle cx="320" cy="200" r="30" fill="#38bdf8"/><text x="320" y="204" text-anchor="middle" fill="#fff" font-size="10">Store</text>
+  <circle cx="640" cy="200" r="30" fill="#38bdf8"/><text x="640" y="204" text-anchor="middle" fill="#fff" font-size="10">Carts</text>
+  <circle cx="280" cy="320" r="30" fill="#38bdf8"/><text x="280" y="324" text-anchor="middle" fill="#fff" font-size="9">Accounts</text>
+  <circle cx="680" cy="320" r="30" fill="#38bdf8"/><text x="680" y="324" text-anchor="middle" fill="#fff" font-size="10">Orders</text>
+  <circle cx="480" cy="390" r="30" fill="#38bdf8"/><text x="480" y="386" text-anchor="middle" fill="#fff" font-size="8">URLs</text><text x="480" y="398" text-anchor="middle" fill="#fff" font-size="8">Central</text>
+  <circle cx="720" cy="260" r="26" fill="#c084fc"/><text x="720" y="264" text-anchor="middle" fill="#fff" font-size="9">Category</text>
+  <circle cx="260" cy="170" r="22" fill="#34d399"/><text x="260" y="174" text-anchor="middle" fill="#fff" font-size="9">Busca</text>
+  <!-- hint -->
+  <text x="480" y="520" text-anchor="middle" fill="#64748b" font-size="12">Clique no bal„o í abre p·gina com cÛdigo e implementaÁ„o</text>
+  <defs><filter id="g"><feGaussianBlur stdDeviation="4" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter></defs>
+</svg>

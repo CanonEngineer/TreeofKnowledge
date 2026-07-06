@@ -1,4 +1,4 @@
-/* App — galeria, árvore, tooltip, modal */
+/* App — galeria, árvore, busca, navegação para página do nó */
 (() => {
   const $ = (s) => document.querySelector(s);
   const gallery = $('#gallery');
@@ -16,33 +16,39 @@
     python: '🐍', django: '🍕', javascript: '⚡', node: '🖥️', cpp: '⚙️', scanner: '🔍'
   };
 
+  TreeSearch.mount($('#global-search'), $('#search-results'));
+
   function initGallery() {
+    projectGrid.innerHTML = '';
     PROJECTS.forEach(p => {
       const card = document.createElement('article');
-      card.className = 'project-card';
+      card.className = 'project-card' + (p.comingSoon ? ' project-card-soon' : '');
       card.style.setProperty('--card-color', p.color);
       card.innerHTML = `
         <div class="project-card-icon">${ICONS[p.icon] || '📦'}</div>
         <h3>${p.name}</h3>
-        <p>${p.summary}</p>
+        <p>${p.comingSoon ? 'Mapeamento em breve — disponível amanhã.' : p.summary}</p>
         <div class="project-card-meta">
-          <span>${p.nodes.length} nós</span>
+          <span>${p.comingSoon ? 'Em breve' : p.nodes.length + ' nós'}</span>
           <span>${p.stack}</span>
         </div>`;
-      card.addEventListener('click', () => openTree(p));
+      if (!p.comingSoon) {
+        card.addEventListener('click', () => openTree(p));
+      }
       projectGrid.appendChild(card);
     });
   }
 
   function openTree(project) {
+    if (project.comingSoon) return;
     currentProject = project;
     nodeMap = new Map(project.nodes.map(n => [n.id, n]));
     gallery.classList.add('hidden');
     treeView.classList.remove('hidden');
+    history.replaceState(null, '', `?tree=${encodeURIComponent(project.slug)}`);
     $('#tree-project-name').textContent = project.name;
     $('#tree-node-count').textContent = `${project.nodes.length} nós de código`;
-    const link = $('#tree-repo-link');
-    link.href = project.repoUrl;
+    $('#tree-repo-link').href = project.repoUrl;
     TreeRenderer.render(treeNodes, treeLines, project.nodes, project.color);
     bindNodeEvents();
     initParallax();
@@ -53,6 +59,14 @@
     gallery.classList.remove('hidden');
     currentProject = null;
     hideTooltip();
+    history.replaceState(null, '', 'index.html');
+  }
+
+  function goToNodePage(node) {
+    hideTooltip();
+    const url = TreeSearch.nodeUrl(currentProject.slug, node.id);
+    if (node.layer === 'root') return;
+    window.location.href = url;
   }
 
   function bindNodeEvents() {
@@ -62,13 +76,19 @@
       el.addEventListener('mouseenter', (e) => showTooltip(e, node));
       el.addEventListener('mousemove', (e) => moveTooltip(e));
       el.addEventListener('mouseleave', hideTooltip);
-      el.addEventListener('click', () => openModal(node));
+      el.addEventListener('click', () => {
+        if (node.layer === 'root') return;
+        goToNodePage(node);
+      });
+      if (node.layer === 'root') el.style.cursor = 'default';
     });
   }
 
   function showTooltip(e, node) {
     $('#tooltip-title').textContent = node.title;
-    $('#tooltip-desc').textContent = node.description;
+    $('#tooltip-desc').textContent = node.layer === 'root'
+      ? node.description
+      : node.description + ' — Clique para abrir a página do código.';
     $('#tooltip-file').textContent = node.file || '';
     tooltip.classList.remove('hidden');
     moveTooltip(e);
@@ -89,27 +109,6 @@
     tooltip.classList.add('hidden');
   }
 
-  function openModal(node) {
-    hideTooltip();
-    $('#modal-title').textContent = node.title;
-    $('#modal-file').textContent = node.file || '';
-    $('#modal-desc').textContent = node.description;
-    $('#modal-code').textContent = node.code || '';
-    const impl = $('#modal-impl');
-    if (Array.isArray(node.implementation)) {
-      impl.innerHTML = '<ol>' + node.implementation.map(s => `<li>${s}</li>`).join('') + '</ol>';
-    } else {
-      impl.textContent = node.implementation || '';
-    }
-    $('#modal-overlay').classList.remove('hidden');
-    document.body.style.overflow = 'hidden';
-  }
-
-  function closeModal() {
-    $('#modal-overlay').classList.add('hidden');
-    document.body.style.overflow = '';
-  }
-
   function initParallax() {
     treeScene.onmousemove = (e) => {
       const rect = treeScene.getBoundingClientRect();
@@ -120,15 +119,16 @@
     treeScene.onmouseleave = () => { treeStage.style.transform = ''; };
   }
 
+  function restoreFromUrl() {
+    const params = new URLSearchParams(window.location.search);
+    const treeSlug = params.get('tree');
+    if (treeSlug) {
+      const project = PROJECTS.find(p => p.slug === treeSlug && !p.comingSoon);
+      if (project) openTree(project);
+    }
+  }
+
   $('#btn-back').addEventListener('click', closeTree);
-  $('#modal-close').addEventListener('click', closeModal);
-  $('#modal-close-bottom').addEventListener('click', closeModal);
-  $('#modal-overlay').addEventListener('click', (e) => {
-    if (e.target === $('#modal-overlay')) closeModal();
-  });
-  document.addEventListener('keydown', (e) => {
-    if (e.key === 'Escape') closeModal();
-  });
 
   window.addEventListener('resize', () => {
     if (!currentProject) return;
@@ -137,4 +137,5 @@
   });
 
   initGallery();
+  restoreFromUrl();
 })();

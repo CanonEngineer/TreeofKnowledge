@@ -425,11 +425,12 @@ function render3DMap(results) {
   {
     slug: 'customize-veyon',
     name: 'CustomizeVeyonProject',
+    comingSoon: true,
     repoUrl: 'https://github.com/CanonEngineer/CustomizeVeyonProject',
     color: '#ef4444',
     icon: 'cpp',
     stack: 'Qt/C++ Veyon 4.10.4',
-    summary: 'Veyon customizado CIMED/HCFMB — logs SHA-256, UI HiDPI.',
+    summary: 'Veyon customizado CIMED/HCFMB — mapeamento amanhã.',
     nodes: [
       { id: 'cv-root', parent: null, layer: 'root', title: 'CustomizeVeyonProject', file: 'veyon-4.10.4-src/', description: 'Veyon 4.10.4 customizado para CiMED/HCFMB — controle remoto hospitalar.', code: '// Customizações Canon:\n// TamperLogProtector, UI CIMED, logs rede\n// Veyon_Custom/ deploy portátil', implementation: ['Clone com submódulo veyon-4.10.4-src.', 'Build com CMake no Windows.', 'Deploy via pasta Veyon_Custom/.'] },
       { id: 'cv-tamper', parent: 'cv-root', layer: 'module', title: 'TamperLogProtector', file: 'core/src/TamperLogProtector.cpp', description: 'Monitora logs de acesso e detecta adulteração com SHA-256.', code: `constexpr auto AdminPasswordHash = "8ab2cdcbd95fabaab0ef54a74c84a08b3e8c95c511f50c4992e9a8cac3c63863";

@@ -1,6 +1,6 @@
 <div align="center">
 
-![Árvore do Conhecimento](docs/images/banner.svg)
+![Árvore do Conhecimento](https://raw.githubusercontent.com/CanonEngineer/TreeofKnowledge/main/docs/images/banner.svg)
 
 # Árvore do Conhecimento
 
@@ -57,9 +57,9 @@ A **Árvore do Conhecimento** é o hub central de todos os projetos do **CanonEn
 |------|-----------|
 | **Raiz (nó dourado)** | Nome do projeto de origem |
 | **Hover no nó** | Tooltip com nome + o que o código faz |
-| **Clique no nó** | Modal com código-fonte real + passos de implementação |
-| **Fechar modal** | Retorna à árvore sem perder contexto |
-| **Voltar** | Retorna à galeria dos 7 projetos |
+| **Clique no balão** | Abre **página dedicada** (`node.html`) com código e implementação |
+| **Barra de busca** | Pesquisa em todos os projetos por código, função ou arquivo |
+| **Voltar** | Retorna à árvore do projeto |
 
 > Daqui saem todos os projetos — cada nó é código **criado por mim**, não boilerplate genérico.
 
@@ -77,17 +77,29 @@ A **Árvore do Conhecimento** é o hub central de todos os projetos do **CanonEn
 
 ## 📸 Ilustrações
 
-### Jornada do usuário
+### 1 — Galeria de projetos
 
-![Fluxo da árvore interativa](docs/images/tree-flow.svg)
+![Galeria de projetos](https://raw.githubusercontent.com/CanonEngineer/TreeofKnowledge/main/docs/images/preview-gallery.svg)
+
+### 2 — Árvore interativa (clique no balão → página do código)
+
+![Árvore com balões clicáveis](https://raw.githubusercontent.com/CanonEngineer/TreeofKnowledge/main/docs/images/preview-tree.svg)
+
+### 3 — Página do nó (código + explicação embutidos)
+
+![Página dedicada do código](https://raw.githubusercontent.com/CanonEngineer/TreeofKnowledge/main/docs/images/preview-node-page.svg)
+
+### Fluxo da jornada
+
+![Fluxo da árvore interativa](https://raw.githubusercontent.com/CanonEngineer/TreeofKnowledge/main/docs/images/tree-flow.svg)
 
 ### Arquitetura do sistema
 
-![Arquitetura TreeofKnowledge](docs/images/architecture.svg)
+![Arquitetura TreeofKnowledge](https://raw.githubusercontent.com/CanonEngineer/TreeofKnowledge/main/docs/images/architecture.svg)
 
 ### Camadas dos nós
 
-![Hierarquia dos nós](docs/images/node-layers.svg)
+![Hierarquia dos nós](https://raw.githubusercontent.com/CanonEngineer/TreeofKnowledge/main/docs/images/node-layers.svg)
 
 ---
 
@@ -101,7 +113,7 @@ A **Árvore do Conhecimento** é o hub central de todos os projetos do **CanonEn
 | 4 | **JavaScriptUsersProject** | ES6 + localStorage | 7 | [JavaScriptUsersProject](https://github.com/CanonEngineer/JavaScriptUsersProject) |
 | 5 | **JavaScriptRestfulApiProject** | Express + NeDB | 7 | [JavaScriptRestfulApiProject](https://github.com/CanonEngineer/JavaScriptRestfulApiProject) |
 | 6 | **Professional-Scanner** | Node.js + WebSocket | 7 | [Professional-Scanner](https://github.com/CanonEngineer/Professional-Scanner) |
-| 7 | **CustomizeVeyonProject** | Qt/C++ Veyon CIMED | 9 | [CustomizeVeyonProject](https://github.com/CanonEngineer/CustomizeVeyonProject) |
+| 7 | **CustomizeVeyonProject** | Qt/C++ Veyon CIMED | _em breve_ | [CustomizeVeyonProject](https://github.com/CanonEngineer/CustomizeVeyonProject) |
 
 ---
 
@@ -245,11 +257,12 @@ mindmap
 </div>
 
 1. Clique em **Conectar** acima
-2. Escolha um dos **7 projetos** na galeria
+2. Escolha um dos **6 projetos ativos** na galeria
 3. Explore a **árvore dimensional** — mova o mouse para o efeito 3D
-4. **Passe o mouse** nos nós para ver o que cada código faz
-5. **Clique** para abrir o modal com código e implementação
-6. **Fechar** retorna à árvore · **Voltar** retorna à galeria
+4. **Passe o mouse** nos balões para ver o que cada código faz
+5. **Clique no balão** para abrir a **página com código e implementação**
+6. Use a **barra de busca** no topo para encontrar qualquer trecho de código
+7. **Voltar à Árvore** retorna ao projeto · **Voltar aos Projetos** retorna à galeria
 
 ### Opção 2 — Permanecer no GitHub
 
@@ -277,22 +290,15 @@ cd TreeofKnowledge
 
 ```
 TreeofKnowledge/
-├── index.html              # Página principal (galeria + árvore + modal)
-├── css/
-│   └── style.css           # Visual dimensional, cosmos, nós 3D
+├── index.html              # Galeria + árvore + busca
+├── node.html               # Página dedicada do nó (código + implementação)
+├── css/style.css
 ├── js/
-│   ├── app.js              # Galeria, tooltip, modal, parallax
-│   ├── tree-renderer.js    # Layout radial + linhas SVG
-│   └── data/
-│       └── projects.js     # 7 projetos · 56 nós de código
-├── docs/
-│   └── images/             # Ilustrações SVG deste README
-│       ├── banner.svg
-│       ├── tree-flow.svg
-│       ├── architecture.svg
-│       └── node-layers.svg
-├── .nojekyll               # Desativa Jekyll no GitHub Pages
-└── README.md
+│   ├── app.js              # Galeria, árvore, navegação
+│   ├── node-page.js        # Renderiza página do nó
+│   ├── search.js           # Busca global na árvore
+│   ├── tree-renderer.js
+│   └── data/projects.js
 ```
 
 ---

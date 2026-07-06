@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Nó — Árvore do Conhecimento</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;600&family=Outfit:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <div class="cosmos" aria-hidden="true">
+    <div class="stars"></div>
+    <div class="nebula"></div>
+  </div>
+
+  <header class="site-header">
+    <a href="index.html" class="brand brand-link">
+      <span class="brand-icon">🌳</span>
+      <div>
+        <h1>Árvore do Conhecimento</h1>
+        <p id="node-breadcrumb">Carregando...</p>
+      </div>
+    </a>
+    <div class="header-search-wrap">
+      <div class="search-box">
+        <span class="search-icon">🔍</span>
+        <input type="search" id="global-search" placeholder="Buscar código, função, arquivo..." autocomplete="off" aria-label="Buscar na árvore">
+        <div id="search-results" class="search-results hidden"></div>
+      </div>
+    </div>
+    <nav class="header-nav">
+      <a id="node-repo-link" href="#" target="_blank" rel="noopener" class="btn-ghost">Repositório</a>
+    </nav>
+  </header>
+
+  <main class="node-page">
+    <div class="node-page-toolbar">
+      <a id="btn-back-tree" href="index.html" class="btn-primary">← Voltar à Árvore</a>
+      <span id="node-project-badge" class="node-project-badge"></span>
+    </div>
+
+    <article class="node-content-card">
+      <header class="node-content-header">
+        <span id="node-layer-badge" class="node-layer-badge"></span>
+        <h2 id="node-title"></h2>
+        <code id="node-file" class="node-file-path"></code>
+      </header>
+
+      <section class="node-section">
+        <h3>O que faz</h3>
+        <p id="node-desc"></p>
+      </section>
+
+      <section class="node-section">
+        <h3>Código</h3>
+        <pre class="code-block"><code id="node-code"></code></pre>
+      </section>
+
+      <section class="node-section">
+        <h3>Como implementar</h3>
+        <div id="node-impl" class="node-impl"></div>
+      </section>
+    </article>
+
+    <nav class="node-siblings" id="node-siblings">
+      <h3>Outros nós deste projeto</h3>
+      <div id="sibling-links" class="sibling-links"></div>
+    </nav>
+  </main>
+
+  <script src="js/data/projects.js"></script>
+  <script src="js/search.js"></script>
+  <script src="js/node-page.js"></script>
+</body>
+</html>

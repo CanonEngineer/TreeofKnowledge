@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 540" role="img">
+  <rect width="960" height="540" fill="#06080f"/>
+  <rect width="960" height="52" fill="#0c1220"/>
+  <text x="24" y="34" fill="#e8edf5" font-family="Segoe UI,sans-serif" font-size="16" font-weight="600"><3 Store  CanonPythonEcommerce</text>
+  <rect x="24" y="64" width="100" height="30" rx="8" fill="#38bdf8"/>
+  <text x="40" y="84" fill="#fff" font-size="11">ê ¡rvore</text>
+  <!-- breadcrumb -->
+  <text x="140" y="84" fill="#64748b" font-size="12">CanonPythonEcommerce : store/views.py : Store</text>
+  <!-- content card -->
+  <rect x="24" y="110" width="912" height="410" rx="14" fill="#0c1220" stroke="#1e293b"/>
+  <text x="48" y="148" fill="#38bdf8" font-size="20" font-weight="700">Store</text>
+  <text x="48" y="172" fill="#38bdf8" font-family="Consolas,monospace" font-size="12">store/views.py</text>
+  <text x="48" y="208" fill="#a78bfa" font-size="11" font-weight="600">O QUE FAZ</text>
+  <text x="48" y="230" fill="#cbd5e1" font-size="13">Listagem por categoria, detalhe do produto, busca e avaliaÁıes.</text>
+  <text x="48" y="268" fill="#a78bfa" font-size="11" font-weight="600">C”DIGO</text>
+  <rect x="48" y="280" width="864" height="120" rx="8" fill="#060a14" stroke="#1e3a5f"/>
+  <text x="64" y="304" fill="#a5f3fc" font-family="Consolas,monospace" font-size="11">def store(request, category_slug=None):</text>
+  <text x="64" y="322" fill="#a5f3fc" font-family="Consolas,monospace" font-size="11">    products = Product.objects.filter(is_available=True)</text>
+  <text x="64" y="340" fill="#a5f3fc" font-family="Consolas,monospace" font-size="11">    paginator = Paginator(products, 6)</text>
+  <text x="48" y="430" fill="#a78bfa" font-size="11" font-weight="600">COMO IMPLEMENTAR</text>
+  <text x="48" y="452" fill="#94a3b8" font-size="12">1. Model Product com slug e FK para Category</text>
+  <text x="48" y="472" fill="#94a3b8" font-size="12">2. Paginator com 6 itens por p·gina</text>
+  <text x="48" y="492" fill="#94a3b8" font-size="12">3. Template store.html com loop de produtos</text>
+</svg>
