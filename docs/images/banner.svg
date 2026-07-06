@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 320" role="img" aria-label="Árvore do Conhecimento">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#06080f"/>
+      <stop offset="50%" stop-color="#0c1830"/>
+      <stop offset="100%" stop-color="#1a0a2e"/>
+    </linearGradient>
+    <radialGradient id="glow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#38bdf8" stop-opacity="0.35"/>
+      <stop offset="100%" stop-color="#38bdf8" stop-opacity="0"/>
+    </radialGradient>
+    <filter id="blur"><feGaussianBlur stdDeviation="8"/></filter>
+  </defs>
+  <rect width="1200" height="320" fill="url(#bg)"/>
+  <circle cx="600" cy="160" r="140" fill="url(#glow)" filter="url(#blur)"/>
+  <!-- trunk -->
+  <rect x="585" y="170" width="30" height="90" rx="6" fill="#92400e"/>
+  <!-- branches -->
+  <line x1="600" y1="170" x2="420" y2="90" stroke="#38bdf8" stroke-width="3" opacity="0.6"/>
+  <line x1="600" y1="170" x2="780" y2="90" stroke="#a78bfa" stroke-width="3" opacity="0.6"/>
+  <line x1="600" y1="150" x2="300" y2="130" stroke="#34d399" stroke-width="2.5" opacity="0.5"/>
+  <line x1="600" y1="150" x2="900" y2="130" stroke="#fbbf24" stroke-width="2.5" opacity="0.5"/>
+  <!-- nodes -->
+  <circle cx="420" cy="90" r="28" fill="#38bdf8" opacity="0.9"/>
+  <circle cx="780" cy="90" r="28" fill="#a78bfa" opacity="0.9"/>
+  <circle cx="300" cy="130" r="22" fill="#34d399" opacity="0.85"/>
+  <circle cx="900" cy="130" r="22" fill="#fbbf24" opacity="0.85"/>
+  <circle cx="600" cy="155" r="38" fill="#fbbf24" stroke="#fde68a" stroke-width="3"/>
+  <text x="600" y="162" text-anchor="middle" fill="#1c1917" font-family="Segoe UI,sans-serif" font-size="11" font-weight="700">ROOT</text>
+  <!-- title -->
+  <text x="600" y="48" text-anchor="middle" fill="#e8edf5" font-family="Segoe UI,sans-serif" font-size="36" font-weight="700">Árvore do Conhecimento</text>
+  <text x="600" y="78" text-anchor="middle" fill="#8899b0" font-family="Segoe UI,sans-serif" font-size="16">Coração do GitHub  CanonEngineer</text>
+  <!-- stars -->
+  <circle cx="120" cy="60" r="1.5" fill="#fff" opacity="0.7"/>
+  <circle cx="1050" cy="45" r="1.2" fill="#fff" opacity="0.5"/>
+  <circle cx="200" cy="250" r="1" fill="#fff" opacity="0.4"/>
+  <circle cx="980" cy="220" r="1.8" fill="#fff" opacity="0.6"/>
+</svg>
