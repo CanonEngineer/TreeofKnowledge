@@ -78,110 +78,65 @@
 
 
 
-  <div class="sagat-widget" aria-hidden="true" title="Victory!">
+  <div class="sagat-widget" aria-hidden="true" title="Sagat — Victory!">
 
-    <svg class="sagat-fighter" viewBox="0 0 96 128" xmlns="http://www.w3.org/2000/svg">
+    <svg class="sagat-fighter" viewBox="0 0 120 160" xmlns="http://www.w3.org/2000/svg" shape-rendering="crispEdges">
 
-      <defs>
+      <ellipse cx="52" cy="154" rx="22" ry="3" fill="rgba(0,0,0,.45)"/>
 
-        <linearGradient id="sagat-skin" x1="0" y1="0" x2="0" y2="1">
+      <g class="sagat-base">
 
-          <stop offset="0%" stop-color="#e8b878"/>
+        <rect x="38" y="108" width="10" height="28" fill="#1a1a1a"/>
+        <rect x="36" y="134" width="14" height="6" fill="#0f0f0f"/>
+        <rect x="37" y="136" width="12" height="3" fill="#262626"/>
+        <rect x="34" y="96" width="28" height="14" fill="#1a1a1a"/>
+        <rect x="36" y="98" width="24" height="4" fill="#262626"/>
+        <rect x="30" y="58" width="36" height="40" fill="#b91c1c"/>
+        <rect x="32" y="60" width="32" height="6" fill="#dc2626"/>
+        <rect x="34" y="68" width="8" height="22" fill="#991b1b"/>
+        <rect x="54" y="68" width="8" height="22" fill="#7f1d1d"/>
+        <rect x="42" y="72" width="12" height="18" fill="#c68642"/>
+        <rect x="44" y="76" width="8" height="3" fill="#a66d32"/>
+        <rect x="44" y="82" width="8" height="3" fill="#a66d32"/>
+        <rect x="28" y="54" width="14" height="12" fill="#c68642"/>
+        <rect x="54" y="54" width="14" height="12" fill="#a66d32"/>
+        <rect x="36" y="30" width="24" height="22" fill="#c68642"/>
+        <rect x="38" y="28" width="20" height="6" fill="#a66d32"/>
+        <rect x="50" y="36" width="4" height="3" fill="#1a1a1a"/>
+        <rect x="38" y="34" width="14" height="5" fill="#f5f5f5"/>
+        <rect x="40" y="35" width="10" height="3" fill="#e5e5e5"/>
+        <rect x="48" y="33" width="8" height="2" fill="#8b5e2f"/>
 
-          <stop offset="100%" stop-color="#c9955a"/>
+        <g class="sagat-arm-l">
+          <rect x="18" y="48" width="14" height="8" fill="#c68642"/>
+          <rect x="10" y="42" width="12" height="8" fill="#a66d32"/>
+          <rect x="6" y="40" width="8" height="8" fill="#c68642"/>
+        </g>
 
-        </linearGradient>
-
-        <linearGradient id="sagat-pants" x1="0" y1="0" x2="1" y2="1">
-
-          <stop offset="0%" stop-color="#7c1d1d"/>
-
-          <stop offset="100%" stop-color="#450a0a"/>
-
-        </linearGradient>
-
-        <filter id="sagat-glow">
-
-          <feDropShadow dx="0" dy="0" stdDeviation="2" flood-color="#fbbf24" flood-opacity="0.6"/>
-
-        </filter>
-
-      </defs>
-
-      <!-- chão -->
-
-      <ellipse cx="48" cy="118" rx="28" ry="4" fill="rgba(251,191,36,.25)"/>
-
-      <!-- perna de apoio -->
-
-      <g class="sagat-stance-leg">
-
-        <rect x="40" y="72" width="10" height="34" rx="3" fill="url(#sagat-pants)"/>
-
-        <rect x="38" y="104" width="14" height="8" rx="2" fill="#1e293b"/>
-
-      </g>
-
-      <!-- torso -->
-
-      <g class="sagat-torso" filter="url(#sagat-glow)">
-
-        <rect x="34" y="38" width="22" height="36" rx="4" fill="#b91c1c"/>
-
-        <rect x="36" y="40" width="18" height="8" rx="2" fill="#dc2626"/>
-
-        <circle cx="45" cy="30" r="11" fill="url(#sagat-skin)"/>
-
-        <rect x="38" y="22" width="14" height="6" rx="2" fill="#1c1917"/>
-
-        <circle cx="41" cy="29" r="1.5" fill="#1c1917"/>
-
-        <circle cx="49" cy="29" r="1.5" fill="#1c1917"/>
+        <g class="sagat-arm-r">
+          <rect x="64" y="48" width="14" height="8" fill="#a66d32"/>
+          <rect x="78" y="42" width="12" height="8" fill="#c68642"/>
+          <rect x="90" y="40" width="8" height="8" fill="#a66d32"/>
+        </g>
 
       </g>
-
-      <!-- braço esquerdo (vitória) -->
-
-      <g class="sagat-arm-left">
-
-        <rect x="22" y="36" width="14" height="6" rx="3" fill="url(#sagat-skin)" transform="rotate(-35 29 39)"/>
-
-        <rect x="14" y="28" width="12" height="6" rx="3" fill="url(#sagat-skin)" transform="rotate(-55 20 31)"/>
-
-      </g>
-
-      <!-- braço direito -->
-
-      <g class="sagat-arm-right">
-
-        <rect x="56" y="36" width="14" height="6" rx="3" fill="url(#sagat-skin)" transform="rotate(35 63 39)"/>
-
-        <rect x="68" y="28" width="12" height="6" rx="3" fill="url(#sagat-skin)" transform="rotate(55 74 31)"/>
-
-      </g>
-
-      <!-- perna vitória — chute alto estilo Sagat -->
 
       <g class="sagat-kick-leg">
-
-        <rect x="50" y="58" width="10" height="28" rx="3" fill="url(#sagat-pants)" transform-origin="55px 58px"/>
-
-        <rect x="48" y="38" width="14" height="10" rx="3" fill="#1e293b" transform-origin="55px 58px"/>
-
+        <rect x="54" y="88" width="12" height="26" fill="#1a1a1a"/>
+        <rect x="52" y="112" width="16" height="8" fill="#0f0f0f"/>
+        <rect x="50" y="68" width="18" height="22" fill="#c68642"/>
+        <rect x="52" y="64" width="14" height="8" fill="#a66d32"/>
+        <rect x="54" y="56" width="10" height="10" fill="#c68642"/>
+        <rect x="56" y="48" width="8" height="10" fill="#a66d32"/>
+        <rect x="57" y="40" width="6" height="10" fill="#c68642"/>
+        <rect x="58" y="32" width="5" height="10" fill="#a66d32"/>
       </g>
 
-      <!-- faíscas de vitória -->
-
-      <g class="sagat-sparks">
-
-        <circle class="spark spark-1" cx="72" cy="18" r="2" fill="#fbbf24"/>
-
-        <circle class="spark spark-2" cx="80" cy="28" r="1.5" fill="#fde68a"/>
-
-        <circle class="spark spark-3" cx="68" cy="12" r="1.2" fill="#f59e0b"/>
-
-        <text x="76" y="14" class="sagat-ko" font-size="10" font-weight="800" fill="#fbbf24">KO</text>
-
+      <g class="sagat-fx">
+        <text x="72" y="24" class="sagat-perfect" font-family="'JetBrains Mono',monospace" font-size="11" font-weight="700" fill="#fbbf24">PERFECT</text>
+        <rect class="spark" x="88" y="30" width="3" height="3" fill="#fde68a"/>
+        <rect class="spark" x="96" y="26" width="2" height="2" fill="#f59e0b"/>
+        <rect class="spark" x="80" y="18" width="2" height="2" fill="#fff"/>
       </g>
 
     </svg>
