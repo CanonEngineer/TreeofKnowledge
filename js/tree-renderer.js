@@ -38,8 +38,8 @@ const TreeRenderer = (() => {
 
   function nodeHalfSize(layer, dense) {
     const sizes = dense
-      ? { root: 38, module: 26, file: 21, function: 18 }
-      : { root: 46, module: 32, file: 26, function: 21 };
+      ? { root: 43, module: 29, file: 25, function: 22 }
+      : { root: 50, module: 36, file: 29, function: 25 };
     return sizes[layer] || sizes.function;
   }
 
@@ -192,7 +192,7 @@ const TreeRenderer = (() => {
 
       const inner = document.createElement('span');
       inner.className = 'tree-node-inner';
-      const maxLen = dense ? 11 : 14;
+      const maxLen = dense ? 12 : 15;
       inner.textContent = n.title.length > maxLen ? n.title.slice(0, maxLen - 1) + '…' : n.title;
       el.appendChild(inner);
       container.appendChild(el);
