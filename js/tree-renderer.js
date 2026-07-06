@@ -22,15 +22,51 @@ const TreeRenderer = (() => {
   }
 
   function getRings(nodeCount, depth, rect) {
-    const scale = Math.min(rect.width, rect.height) / 900;
-    const base = 140 * Math.max(scale, 0.75);
-    const spread = nodeCount > 15 ? 1.35 : nodeCount > 10 ? 1.2 : 1;
+    const minDim = Math.min(rect.width, rect.height);
+    const density = Math.max(0.45, Math.min(1.1, 14 / Math.sqrt(nodeCount)));
+    const base = minDim * 0.14 * density;
     return {
-      module: base * spread,
-      file: base * 1.75 * spread,
-      function: base * 2.35 * spread,
-      default: base * spread
+      module: base,
+      file: base * 1.55,
+      function: base * 2.05,
+      default: base
     };
+  }
+
+  function nodeHalfSize(layer, dense) {
+    const sizes = dense
+      ? { root: 40, module: 28, file: 22, function: 19 }
+      : { root: 48, module: 34, file: 28, function: 22 };
+    return sizes[layer] || sizes.function;
+  }
+
+  function fitStage(stage, positions, rect, dense) {
+    const pad = 36;
+    let minX = Infinity, minY = Infinity, maxX = -Infinity, maxY = -Infinity;
+
+    positions.forEach((pos) => {
+      const r = nodeHalfSize(pos.node.layer || 'function', dense);
+      minX = Math.min(minX, pos.x - r);
+      minY = Math.min(minY, pos.y - r);
+      maxX = Math.max(maxX, pos.x + r);
+      maxY = Math.max(maxY, pos.y + r);
+    });
+
+    const bw = Math.max(maxX - minX, 100);
+    const bh = Math.max(maxY - minY, 100);
+    const scale = Math.min(
+      (rect.width - pad * 2) / bw,
+      (rect.height - pad * 2) / bh,
+      1
+    );
+
+    const bcx = (minX + maxX) / 2;
+    const bcy = (minY + maxY) / 2;
+    const tx = rect.width / 2 - bcx * scale;
+    const ty = rect.height / 2 - bcy * scale;
+
+    stage.style.transformOrigin = '0 0';
+    stage.style.transform = 'translate(' + tx + 'px,' + ty + 'px) scale(' + scale + ')';
   }
 
   function layoutNode(node, angle, depth, positions, cx, cy, rings) {
@@ -48,15 +84,22 @@ const TreeRenderer = (() => {
       return;
     }
 
-    const arc = Math.min(Math.PI * 1.6, Math.PI * 0.35 * children.length + 0.5);
+    if (depth === 0) {
+      const step = (2 * Math.PI) / children.length;
+      children.forEach((child, i) => {
+        const a = -Math.PI / 2 + step * i;
+        layoutNode(child, a, depth + 1, positions, cx + Math.cos(a) * r, cy + Math.sin(a) * r, rings);
+      });
+      return;
+    }
+
+    const arc = Math.min(Math.PI * 1.85, Math.PI * 0.4 * children.length + 0.4);
     const start = angle - arc / 2;
     const step = arc / (children.length - 1);
 
     children.forEach((child, i) => {
       const a = start + step * i;
-      const x = cx + Math.cos(a) * r;
-      const y = cy + Math.sin(a) * r;
-      layoutNode(child, a, depth + 1, positions, x, y, rings);
+      layoutNode(child, a, depth + 1, positions, cx + Math.cos(a) * r, cy + Math.sin(a) * r, rings);
     });
   }
 
@@ -66,8 +109,10 @@ const TreeRenderer = (() => {
     const tree = buildTree(nodes);
     if (!tree) return;
 
-    const scene = container.parentElement.parentElement;
+    const stage = container.parentElement;
+    const scene = stage.parentElement;
     const rect = scene.getBoundingClientRect();
+    stage.style.transform = '';
     const cx = rect.width / 2;
     const cy = rect.height / 2;
     const nodeCount = countNodes(tree);
@@ -121,6 +166,7 @@ const TreeRenderer = (() => {
       container.appendChild(el);
     });
 
+    fitStage(stage, positions, rect, dense);
     return positions;
   }
 

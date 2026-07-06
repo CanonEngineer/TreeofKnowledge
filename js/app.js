@@ -36,8 +36,10 @@
   }
 
   function renderTree() {
-    TreeRenderer.render(treeNodes, treeLines, currentProject.nodes, currentProject.color, currentProject.slug);
-    bindNodeEvents();
+    requestAnimationFrame(() => {
+      TreeRenderer.render(treeNodes, treeLines, currentProject.nodes, currentProject.color, currentProject.slug);
+      bindNodeEvents();
+    });
   }
 
   function openTree(project) {
