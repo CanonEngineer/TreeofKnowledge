@@ -7,7 +7,7 @@
 ### Coração do GitHub — mapa interativo de todo o código CanonEngineer
 
 <img src="https://img.shields.io/badge/Projetos-7-38bdf8?style=for-the-badge" alt="7 projetos"/>
-<img src="https://img.shields.io/badge/Nós-124-fbbf24?style=for-the-badge" alt="124 nós"/>
+<img src="https://img.shields.io/badge/Nós-164-fbbf24?style=for-the-badge" alt="164 nós"/>
 <img src="https://img.shields.io/badge/GitHub_Pages-Ativo-22c55e?style=for-the-badge&logo=githubpages&logoColor=white" alt="GitHub Pages"/>
 <img src="https://img.shields.io/badge/Stack-Python_·_Django_·_Node_·_Qt-a78bfa?style=for-the-badge" alt="Stack"/>
 
@@ -113,7 +113,7 @@ A **Árvore do Conhecimento** é o hub central de todos os projetos do **CanonEn
 | 4 | **JavaScriptUsersProject** | ES6 + localStorage | 20 | [JavaScriptUsersProject](https://github.com/CanonEngineer/JavaScriptUsersProject) |
 | 5 | **JavaScriptRestfulApiProject** | Express + NeDB | 20 | [JavaScriptRestfulApiProject](https://github.com/CanonEngineer/JavaScriptRestfulApiProject) |
 | 6 | **Professional-Scanner** | Node.js + WebSocket | 20 | [Professional-Scanner](https://github.com/CanonEngineer/Professional-Scanner) |
-| 7 | **CustomizeVeyonProject** | Qt/C++ Veyon CIMED | _em breve_ | [CustomizeVeyonProject](https://github.com/CanonEngineer/CustomizeVeyonProject) |
+| 7 | **CustomizeVeyonProject** | Qt/C++ Veyon CIMED | 41 | [CustomizeVeyonProject](https://github.com/CanonEngineer/CustomizeVeyonProject) |
 
 ---
 
@@ -130,7 +130,7 @@ flowchart TB
         CSS["css/style.css<br/>Visual 3D + Cosmos"]
         APP["js/app.js<br/>Eventos + Navegação"]
         RENDER["js/tree-renderer.js<br/>Layout radial SVG"]
-        DATA["js/data/projects.js<br/>7 projetos · 56 nós"]
+        DATA["js/data/projects.js<br/>7 projetos · 164 nós"]
     end
 
     subgraph PROJ["Repositórios de origem"]
@@ -238,8 +238,9 @@ mindmap
         WebSocket
         Mapa 3D
       CustomizeVeyon
-        TamperLog CIMED
-        Logs rede
+        UI HiDPI CIMED
+        TamperLog SHA-256
+        Logs UNC rede
 ```
 
 ---

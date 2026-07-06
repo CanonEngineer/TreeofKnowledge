@@ -1,4 +1,4 @@
-/* Árvore do Conhecimento — 124 nós */
+/* Árvore do Conhecimento — 164 nós */
 const PROJECTS = [
   {
     "slug": "canon-python-ecommerce",
@@ -1791,25 +1791,584 @@ const PROJECTS = [
   {
     "slug": "customize-veyon",
     "name": "CustomizeVeyonProject",
-    "comingSoon": true,
     "repoUrl": "https://github.com/CanonEngineer/CustomizeVeyonProject",
     "color": "#ef4444",
     "icon": "cpp",
     "stack": "Qt/C++ Veyon 4.10.4",
-    "summary": "Veyon customizado CIMED/HCFMB — mapeamento em breve.",
+    "summary": "Veyon CIMED/HCFMB — UI HiDPI, logs SHA-256 em UNC, anti-tampering e deploy portátil.",
     "nodes": [
       {
         "id": "cv-root",
         "parent": null,
         "layer": "root",
         "title": "CustomizeVeyonProject",
-        "description": "Veyon 4.10.4 customizado para CiMED/HCFMB — controle remoto hospitalar com proteção de logs.",
-        "file": "veyon-4.10.4-src/",
-        "code": "// Customizações Canon:\n// TamperLogProtector, UI CIMED, logs rede\n// Veyon_Custom/ deploy portátil",
+        "description": "Veyon 4.10.4 customizado CiMED/HCFMB — UI HiDPI, logs SHA-256 em UNC, anti-tampering e deploy portátil.",
+        "file": "veyon-4.10.4-src (1)/veyon-4.10.4/",
+        "code": "// Fork Veyon 4.10.4 + Veyon_Custom/\n// Logs: \\\\172.20.100.36\\vnc_veyon$\\veyon\\\n// Marca: Veyon CIMED",
         "implementation": [
-          "Clone com submódulo veyon-4.10.4-src.",
-          "Build com CMake no Windows.",
-          "Deploy via pasta Veyon_Custom/."
+          "Clone CustomizeVeyonProject com submódulo veyon-4.10.4-src.",
+          "Build CMake/MSVC no Windows.",
+          "Distribua via pasta Veyon_Custom/."
+        ]
+      },
+      {
+        "id": "cv-ui",
+        "parent": "cv-root",
+        "layer": "module",
+        "title": "Interface CIMED HiDPI",
+        "description": "Diálogos escuros com chrome CIMED, ícones vetoriais e suporte a 125%/150% DPI.",
+        "file": "core/src/CimedDialogStyle.cpp",
+        "code": "namespace CimedDialogStyle { QWidget* buildDialogShell(...); QString dialogStyleSheet(); }",
+        "implementation": [
+          "Todos os diálogos custom passam por CimedDialogStyle.",
+          "Ícones desenhados com QPainter — sem assets PNG.",
+          "devicePixelRatio do monitor primário define nitidez."
+        ]
+      },
+      {
+        "id": "cv-cimed-style",
+        "parent": "cv-ui",
+        "layer": "file",
+        "title": "CimedDialogStyle.cpp",
+        "description": "Chrome compartilhado: shell, stylesheet, ícones e botões CIMED.",
+        "file": "core/src/CimedDialogStyle.cpp",
+        "code": "const QColor IconCyan( 34, 211, 238 );\nQLabel* createIconLabel( const QPixmap& pixmap, int logicalSize, QWidget* parent );",
+        "implementation": [
+          "Centraliza paleta cyan/slate dos diálogos.",
+          "applyButtonIcon padroniza QPushButton 16×16.",
+          "drawUserGlyph / drawLockGlyph para ícones inline."
+        ]
+      },
+      {
+        "id": "cv-icon-dpr",
+        "parent": "cv-cimed-style",
+        "layer": "function",
+        "title": "iconDevicePixelRatio()",
+        "description": "Lê devicePixelRatio da tela primária para ícones nítidos em HiDPI.",
+        "file": "core/src/CimedDialogStyle.cpp",
+        "code": "qreal iconDevicePixelRatio() {\n  if (auto* screen = QGuiApplication::primaryScreen())\n    return std::max(1.0, screen->devicePixelRatio());\n  return 1.0;\n}",
+        "implementation": [
+          "Evita ícones borrados em monitores 125%/150%.",
+          "Fallback 1.0 se não houver tela.",
+          "Usado ao rasterizar pixmaps dos diálogos."
+        ]
+      },
+      {
+        "id": "cv-dialog-shell",
+        "parent": "cv-cimed-style",
+        "layer": "function",
+        "title": "buildDialogShell()",
+        "description": "Monta QDialog com header CIMED, área de conteúdo e rodapé de ações.",
+        "file": "core/src/CimedDialogStyle.cpp",
+        "code": "QWidget* buildDialogShell( QDialog* dialog, const QString& title,\n  const QPixmap& titleIcon, QWidget* content, QWidget* actions );",
+        "implementation": [
+          "Frameless + stylesheet escuro.",
+          "Título com ícone à esquerda.",
+          "Botões OK/Cancelar no rodapé."
+        ]
+      },
+      {
+        "id": "cv-password-dialog",
+        "parent": "cv-ui",
+        "layer": "file",
+        "title": "PasswordDialog.cpp",
+        "description": "Senha VNC com visual CIMED e validação integrada ao fluxo remoto.",
+        "file": "core/src/PasswordDialog.cpp",
+        "code": "PasswordDialog::PasswordDialog( QWidget* parent )\n  : QDialog( parent ) { /* CimedDialogStyle shell */ }",
+        "implementation": [
+          "Substitui QMessageBox nativo.",
+          "Usa buildDialogShell + dialogStyleSheet.",
+          "Retorna senha digitada ao plugin RemoteAccess."
+        ]
+      },
+      {
+        "id": "cv-host-input",
+        "parent": "cv-ui",
+        "layer": "file",
+        "title": "CimedHostInputDialog.cpp",
+        "description": "Entrada de host/IP para conexão remota com UI CIMED.",
+        "file": "core/src/CimedHostInputDialog.cpp",
+        "code": "CimedHostInputDialog::CimedHostInputDialog( QWidget* parent )\n  : QDialog( parent ) { /* host + botões */ }",
+        "implementation": [
+          "QLineEdit para hostname ou IP.",
+          "Validação antes de iniciar sessão.",
+          "Chamado por RemoteAccessFeaturePlugin."
+        ]
+      },
+      {
+        "id": "cv-desktop-access",
+        "parent": "cv-ui",
+        "layer": "file",
+        "title": "DesktopAccessConfirmDialog.cpp",
+        "description": "Confirmação de acesso à área de trabalho do aluno com branding CIMED.",
+        "file": "core/src/DesktopAccessConfirmDialog.cpp",
+        "code": "DesktopAccessConfirmDialog::execForAccess( QWidget* parent, const QString& teacherName );",
+        "implementation": [
+          "Exibido no cliente quando professor solicita controle.",
+          "Texto em PT-BR com dados do solicitante.",
+          "Aceitar/recusar com ícones CIMED."
+        ]
+      },
+      {
+        "id": "cv-brand",
+        "parent": "cv-root",
+        "layer": "module",
+        "title": "Marca e suporte CIMED",
+        "description": "Rótulo Veyon CIMED, hostname, usuário AD e textos da bandeja.",
+        "file": "core/src/ComputerSupportInfo.cpp",
+        "code": "class ComputerSupportInfo { static QString productLabel(); static QString idleTrayHoverHtml(); };",
+        "implementation": [
+          "Centraliza strings de produto e suporte.",
+          "Consulta AD via PlatformUserFunctions.",
+          "HTML formatado para tooltip da bandeja."
+        ]
+      },
+      {
+        "id": "cv-support-info",
+        "parent": "cv-brand",
+        "layer": "file",
+        "title": "ComputerSupportInfo.cpp",
+        "description": "Metadados da estação: hostname, IP, login AD e nome completo.",
+        "file": "core/src/ComputerSupportInfo.cpp",
+        "code": "QString ComputerSupportInfo::hostname() {\n  return QHostInfo::localHostName();\n}",
+        "implementation": [
+          "hostname() e localIpv4() para logs.",
+          "adUserName() via queryCurrentUserProperty.",
+          "productLabel() retorna \"Veyon CIMED\"."
+        ]
+      },
+      {
+        "id": "cv-product-label",
+        "parent": "cv-support-info",
+        "layer": "function",
+        "title": "productLabel()",
+        "description": "Nome do produto exibido em diálogos, bandeja e relatórios.",
+        "file": "core/src/ComputerSupportInfo.cpp",
+        "code": "QString ComputerSupportInfo::productLabel() {\n  return QStringLiteral( \"Veyon CIMED\" );\n}",
+        "implementation": [
+          "Substitui branding genérico Veyon.",
+          "Usado em idleTrayHoverText/Html.",
+          "Aparece no ComputerSupportInfoDialog."
+        ]
+      },
+      {
+        "id": "cv-idle-hover",
+        "parent": "cv-support-info",
+        "layer": "function",
+        "title": "idleTrayHoverHtml()",
+        "description": "Tooltip HTML da bandeja em repouso com dados da máquina e suporte.",
+        "file": "core/src/ComputerSupportInfo.cpp",
+        "code": "QString ComputerSupportInfo::idleTrayHoverHtml() {\n  return QStringLiteral( \"<b>%1</b><br/>%2 (%3)<br/>%4\" )\n    .arg( productLabel().toHtmlEscaped(), hostname(), localIpv4(), adUserName() );\n}",
+        "implementation": [
+          "Rich text para QLabel na bandeja.",
+          "Par idleTrayHoverText() para versão plain.",
+          "Atualizado ao passar mouse no ícone."
+        ]
+      },
+      {
+        "id": "cv-support-dialog",
+        "parent": "cv-brand",
+        "layer": "file",
+        "title": "ComputerSupportInfoDialog.cpp",
+        "description": "Diálogo F9 com informações de suporte técnico e contatos CiMED.",
+        "file": "core/src/ComputerSupportInfoDialog.cpp",
+        "code": "ComputerSupportInfoDialog::ComputerSupportInfoDialog( QWidget* parent );",
+        "implementation": [
+          "Atalho F9 no worker da bandeja.",
+          "Lista hostname, IP, usuário AD.",
+          "Chrome CIMED via CimedDialogStyle."
+        ]
+      },
+      {
+        "id": "cv-logs",
+        "parent": "cv-root",
+        "layer": "module",
+        "title": "Logs de acesso com integridade",
+        "description": "Escrita em UNC, linhas com SHA-256, validação diária e lookup AD.",
+        "file": "core/src/AccessLogWriter.cpp",
+        "code": "class AccessLogWriter {\n  static QString networkAccessLogPath();\n  static QString lineWithHash( const QString& message );\n};",
+        "implementation": [
+          "Logs só na rede — não em disco local.",
+          "Cada linha termina com marcador + hash.",
+          "Validação às 15h e no startup."
+        ]
+      },
+      {
+        "id": "cv-access-writer",
+        "parent": "cv-logs",
+        "layer": "file",
+        "title": "AccessLogWriter.cpp",
+        "description": "Writer principal: leitura/escrita UNC, hashes, alertas e agendador.",
+        "file": "core/src/AccessLogWriter.cpp",
+        "code": "bool AccessLogWriter::writeLogFileContent( const QString& filePath, const QString& content ) {\n  ensureParentDirectoryExists( filePath );\n  /* QFile WriteOnly + TamperLogProtector batch */\n}",
+        "implementation": [
+          "tryReadLogFileContent com decode UTF-8/ANSI.",
+          "recordTamperAlert evita duplicatas.",
+          "scheduleDailyAccessLogValidation às 15:00."
+        ]
+      },
+      {
+        "id": "cv-network-path",
+        "parent": "cv-access-writer",
+        "layer": "function",
+        "title": "networkAccessLogPath()",
+        "description": "Caminho UNC do log principal acessos_veyon.log.",
+        "file": "core/src/AccessLogWriter.cpp",
+        "code": "QString AccessLogWriter::networkAccessLogPath() {\n  return QDir( AccessLogPermissions::networkAccessLogDirectoryPath() )\n    .filePath( QStringLiteral( \"acessos_veyon.log\" ) );\n}",
+        "implementation": [
+          "Combina diretório UNC + nome do arquivo.",
+          "Espelho usado por TamperLogProtector.",
+          "Nunca grava em %ProgramFiles%."
+        ]
+      },
+      {
+        "id": "cv-line-hash",
+        "parent": "cv-access-writer",
+        "layer": "function",
+        "title": "lineWithHash()",
+        "description": "Anexa marcador e SHA-256 hex à mensagem de log.",
+        "file": "core/src/AccessLogWriter.cpp",
+        "code": "QString AccessLogWriter::lineWithHash( const QString& message ) {\n  return message + HashMarker() + sha256Hex( message );\n}",
+        "implementation": [
+          "sha256Hex usa QCryptographicHash::Sha256.",
+          "Validação compara hash recalculado.",
+          "Tampering quebra a verificação."
+        ]
+      },
+      {
+        "id": "cv-access-permissions",
+        "parent": "cv-logs",
+        "layer": "file",
+        "title": "AccessLogPermissions.cpp",
+        "description": "Define paths UNC fixos do compartilhamento vnc_veyon$.",
+        "file": "core/src/AccessLogPermissions.cpp",
+        "code": "QString AccessLogPermissions::networkLogDirectoryPath() {\n  return QStringLiteral( \"\\\\\\\\172.20.100.36\\\\vnc_veyon$\\\\veyon\" );\n}",
+        "implementation": [
+          "UNC hardcoded para ambiente CiMED.",
+          "Subpastas acessos_veyon e acessos_veyon_ad.",
+          "Isolamento por share SMB."
+        ]
+      },
+      {
+        "id": "cv-network-unc",
+        "parent": "cv-access-permissions",
+        "layer": "function",
+        "title": "networkLogDirectoryPath()",
+        "description": "Raiz UNC \\\\172.20.100.36\\vnc_veyon$\\veyon para todos os logs.",
+        "file": "core/src/AccessLogPermissions.cpp",
+        "code": "return QStringLiteral( \"\\\\172.20.100.36\\vnc_veyon$\\veyon\" );",
+        "implementation": [
+          "Servidor de arquivos da rede hospitalar.",
+          "Acesso via conta de serviço / GPO.",
+          "Documentado no README e relatório técnico."
+        ]
+      },
+      {
+        "id": "cv-access-recorder",
+        "parent": "cv-logs",
+        "layer": "file",
+        "title": "AccessLogRecorder.cpp",
+        "description": "Registra eventos de sessão remota em português com contexto AD.",
+        "file": "core/src/AccessLogRecorder.cpp",
+        "code": "void AccessLogRecorder::logOutboundAccessSuccess(\n  const QString& destinationHost, const QString& destinationIp );",
+        "implementation": [
+          "Mensagens dd/MM/yyyy às HH:mm:ss.",
+          "Origem = hostname/IP local.",
+          "Usuário via ComputerSupportInfo::adUserName()."
+        ]
+      },
+      {
+        "id": "cv-outbound-log",
+        "parent": "cv-access-recorder",
+        "layer": "function",
+        "title": "logOutboundAccessSuccess()",
+        "description": "Grava acesso remoto iniciado desta estação para outro host.",
+        "file": "core/src/AccessLogRecorder.cpp",
+        "code": "const auto mensagem = QStringLiteral(\n  \"Em %1 foi identificado acesso remoto via Veyon originado do equipamento %2 (%3)...\" );\nAccessLogWriter::appendNetworkAccessLogLine( lineWithHash( mensagem ) );",
+        "implementation": [
+          "shouldRecordAccess filtra loopback/localhost.",
+          "Texto jurídico em PT-BR.",
+          "Append atômico via AccessLogWriter."
+        ]
+      },
+      {
+        "id": "cv-inbound-disabled",
+        "parent": "cv-access-recorder",
+        "layer": "function",
+        "title": "logInboundAccessSuccess()",
+        "description": "Inbound desabilitado — veyon-server (SYSTEM) não grava UNC em todos os hosts.",
+        "file": "core/src/AccessLogRecorder.cpp",
+        "code": "void AccessLogRecorder::logInboundAccessSuccess(...) {\n  Q_UNUSED( originHost ); /* CIMED: inbound logging disabled */\n}",
+        "implementation": [
+          "Evita falhas silenciosas em serviço SYSTEM.",
+          "Outbound cobre professor→aluno.",
+          "Documentado como decisão de arquitetura."
+        ]
+      },
+      {
+        "id": "cv-ad-lookup",
+        "parent": "cv-logs",
+        "layer": "file",
+        "title": "AccessLogAdLookup_win.cpp",
+        "description": "Lookup LDAP do displayName do usuário de domínio para logs.",
+        "file": "core/src/AccessLogAdLookup_win.cpp",
+        "code": "QString accessLogLookupDomainUserDisplayName( const QString& loginName ) {\n  /* DsGetDcName + ldap_search_s displayName */\n}",
+        "implementation": [
+          "ldapEscapeFilterValue sanitiza filtro.",
+          "Fallback se AD indisponível.",
+          "Chamado em currentAdUserFullName()."
+        ]
+      },
+      {
+        "id": "cv-tamper",
+        "parent": "cv-root",
+        "layer": "module",
+        "title": "Proteção anti-tampering",
+        "description": "Monitora alterações nos logs de rede, alerta e exige senha admin.",
+        "file": "core/src/TamperLogProtector.cpp",
+        "code": "class TamperLogProtector : public QObject {\n  void checkProtectedFile( const QString& path, ... );\n};",
+        "implementation": [
+          "Poll timer compara backup em memória.",
+          "reportUnauthorizedChange grava alerta.",
+          "Senha SHA-256 em AdminPasswordHash."
+        ]
+      },
+      {
+        "id": "cv-tamper-protector",
+        "parent": "cv-tamper",
+        "layer": "file",
+        "title": "TamperLogProtector.cpp",
+        "description": "Watcher de integridade com batch protegido durante escritas legítimas.",
+        "file": "core/src/TamperLogProtector.cpp",
+        "code": "TamperLogProtector::TamperLogProtector( FeatureWorkerManager& m, QObject* parent ) {\n  refreshBackups();\n  auto* pollTimer = new QTimer( this );\n  connect( pollTimer, &QTimer::timeout, this, [this]() { checkNetworkAccessFile(); } );\n}",
+        "implementation": [
+          "isAccessLogPath valida paths UNC.",
+          "setWatcherSuppressed durante writes.",
+          "writeTamperResponse em acessos_tamper_response.txt."
+        ]
+      },
+      {
+        "id": "cv-tamper-backup",
+        "parent": "cv-tamper-protector",
+        "layer": "function",
+        "title": "refreshBackups()",
+        "description": "Carrega snapshot dos logs de rede para comparação posterior.",
+        "file": "core/src/TamperLogProtector.cpp",
+        "code": "void TamperLogProtector::refreshBackups() {\n  if ( AccessLogWriter::tryReadLogFileContent( networkAccessLogPath(), content ) )\n    m_networkAccessBackup = content;\n}",
+        "implementation": [
+          "Executado no construtor e após writes.",
+          "Dois arquivos: acessos_veyon e _ad.",
+          "Base para detectar edição manual."
+        ]
+      },
+      {
+        "id": "cv-tamper-check",
+        "parent": "cv-tamper-protector",
+        "layer": "function",
+        "title": "checkProtectedFile()",
+        "description": "Compara conteúdo atual com backup; dispara alerta se divergir.",
+        "file": "core/src/TamperLogProtector.cpp",
+        "code": "void TamperLogProtector::checkProtectedFile( const QString& filePath,\n  const QString& backup, const QString& label ) {\n  /* read + compare + reportUnauthorizedChange */\n}",
+        "implementation": [
+          "Ignora durante beginProtectedBatch.",
+          "Notifica SystemTrayIcon.",
+          "recordTamperAlert no AccessLogWriter."
+        ]
+      },
+      {
+        "id": "cv-tamper-password",
+        "parent": "cv-tamper",
+        "layer": "file",
+        "title": "TamperLogPasswordDialog.cpp",
+        "description": "Diálogo de senha para autorizar manutenção nos logs tamperados.",
+        "file": "core/src/TamperLogPasswordDialog.cpp",
+        "code": "bool TamperLogPasswordDialog::attemptAuthentication( const QString& password );",
+        "implementation": [
+          "Compara SHA-256 com AdminPasswordHash.",
+          "UI CIMED com CimedDialogStyle.",
+          "IPC via SystemTrayIcon server."
+        ]
+      },
+      {
+        "id": "cv-tamper-auth",
+        "parent": "cv-tamper-password",
+        "layer": "function",
+        "title": "attemptAuthentication()",
+        "description": "Valida senha admin contra hash SHA-256 embutido.",
+        "file": "core/src/TamperLogProtector.cpp",
+        "code": "constexpr auto AdminPasswordHash = \"8ab2cdcbd95fabaab0ef54a74c84a08b3e8c95c511f50c4992e9a8cac3c63863\";\nreturn passwordSha256Hex( password ) == QLatin1String( AdminPasswordHash );",
+        "implementation": [
+          "Hash fixo — não plaintext em disco.",
+          "Libera batch protegido se OK.",
+          "Falha mantém watcher ativo."
+        ]
+      },
+      {
+        "id": "cv-tray",
+        "parent": "cv-root",
+        "layer": "module",
+        "title": "Bandeja do sistema HiDPI",
+        "description": "Ícones multi-DPI, hover CIMED, F9 suporte e servidor de senha tamper.",
+        "file": "core/src/SystemTrayIcon.cpp",
+        "code": "class SystemTrayIcon : public QWidget {\n  void ensureSessionWorker( FeatureWorkerManager& );\n};",
+        "implementation": [
+          "Worker dedicado por sessão Windows.",
+          "Estados: Monitoring, Connected, Active.",
+          "devicePixelRatios 1.0–2.0."
+        ]
+      },
+      {
+        "id": "cv-tray-icon",
+        "parent": "cv-tray",
+        "layer": "file",
+        "title": "SystemTrayIcon.cpp",
+        "description": "Implementação da bandeja com renderização vetorial e overlay.",
+        "file": "core/src/SystemTrayIcon.cpp",
+        "code": "QIcon buildStatusIcon( SystemTrayIcon::StatusIndicator status, const QImage& overlayIcon );",
+        "implementation": [
+          "QLocalServer para TamperLogPassword.",
+          "Hover panel com idleTrayHoverHtml.",
+          "ensureSessionWorker no server start."
+        ]
+      },
+      {
+        "id": "cv-tray-render",
+        "parent": "cv-tray-icon",
+        "layer": "function",
+        "title": "renderTrayStatusPixmap()",
+        "description": "Desenha pixmap do estado da bandeja com gradiente e glyph central.",
+        "file": "core/src/SystemTrayIcon.cpp",
+        "code": "QPixmap renderTrayStatusPixmap( StatusIndicator status, int logicalSize, qreal devicePixelRatio ) {\n  QPixmap pixmap( logicalSize * dpr, logicalSize * dpr );\n  pixmap.setDevicePixelRatio( dpr );\n  /* QPainter radial gradient + icon */\n}",
+        "implementation": [
+          "Cores por status (verde=c monitoring).",
+          "Antialiasing em QPainter.",
+          "Tamanhos 16–128 lógicos."
+        ]
+      },
+      {
+        "id": "cv-tray-hidpi",
+        "parent": "cv-tray-icon",
+        "layer": "function",
+        "title": "buildStatusIcon()",
+        "description": "Gera QIcon com múltiplos devicePixelRatio para Windows 125%/150%.",
+        "file": "core/src/SystemTrayIcon.cpp",
+        "code": "QList<qreal> devicePixelRatios = {1.0, 1.25, 1.5, 1.75, 2.0};\nfor ( const auto dpr : devicePixelRatios )\n  for ( const auto size : {16, 20, 22, 24, 32, 48, 64, 128} )\n    icon.addPixmap( renderTrayStatusPixmap( status, size, dpr ) );",
+        "implementation": [
+          "Adiciona DPR da tela se ausente na lista.",
+          "Overlay do professor só no DPR atual.",
+          "Corrige ícone borrado na bandeja Win11."
+        ]
+      },
+      {
+        "id": "cv-server",
+        "parent": "cv-root",
+        "layer": "module",
+        "title": "veyon-server",
+        "description": "Inicialização do serviço com proteção de logs e worker da bandeja.",
+        "file": "server/src/ComputerControlServer.cpp",
+        "code": "class ComputerControlServer { bool start(); };",
+        "implementation": [
+          "Roda como serviço Windows.",
+          "Integra VNC proxy + FeatureWorkerManager.",
+          "Tooltip idle via ComputerSupportInfo."
+        ]
+      },
+      {
+        "id": "cv-control-server",
+        "parent": "cv-server",
+        "layer": "file",
+        "title": "ComputerControlServer.cpp",
+        "description": "Servidor de controle com hooks CIMED no startup.",
+        "file": "server/src/ComputerControlServer.cpp",
+        "code": "bool ComputerControlServer::start() {\n  AccessLogWriter::startTamperedLogProtection( m_featureWorkerManager, this );\n  AccessLogWriter::validateAccessLogsOnStartup();\n  VeyonCore::builtinFeatures().systemTrayIcon().ensureSessionWorker( m_featureWorkerManager );\n}",
+        "implementation": [
+          "startTamperedLogProtection instancia TamperLogProtector.",
+          "validateAccessLogsOnStartup na subida.",
+          "scheduleDailyAccessLogValidation às 15h."
+        ]
+      },
+      {
+        "id": "cv-server-tooltip",
+        "parent": "cv-control-server",
+        "layer": "function",
+        "title": "updateTrayToolTip()",
+        "description": "Tooltip da bandeja usa idleTrayHoverText quando sem sessão ativa.",
+        "file": "server/src/ComputerControlServer.cpp",
+        "code": "toolTip = ComputerSupportInfo::idleTrayHoverText();",
+        "implementation": [
+          "Substitui texto genérico Veyon.",
+          "Atualizado a cada mudança de estado.",
+          "Inclui hostname e usuário AD."
+        ]
+      },
+      {
+        "id": "cv-plugins",
+        "parent": "cv-root",
+        "layer": "module",
+        "title": "Plugins customizados",
+        "description": "RemoteAccess com diálogos CIMED e textos de suporte.",
+        "file": "plugins/remoteaccess/RemoteAccessFeaturePlugin.cpp",
+        "code": "class RemoteAccessFeaturePlugin : public QObject, public PluginInterface { ... };",
+        "implementation": [
+          "Plugin de acesso remoto VNC.",
+          "Usa CimedHostInputDialog e PasswordDialog.",
+          "Mensagens com idleTrayHoverText."
+        ]
+      },
+      {
+        "id": "cv-remote-plugin",
+        "parent": "cv-plugins",
+        "layer": "file",
+        "title": "RemoteAccessFeaturePlugin.cpp",
+        "description": "Fluxo de conexão remota com UI CIMED e logs outbound.",
+        "file": "plugins/remoteaccess/RemoteAccessFeaturePlugin.cpp",
+        "code": "CimedHostInputDialog hostDialog( parent );\nPasswordDialog passwordDialog( parent );\nAccessLogRecorder::logOutboundAccessSuccess( host, ip );",
+        "implementation": [
+          "Coleta host antes da senha.",
+          "Registra sucesso via AccessLogRecorder.",
+          "Notificação com branding CIMED."
+        ]
+      },
+      {
+        "id": "cv-deploy",
+        "parent": "cv-root",
+        "layer": "module",
+        "title": "Deploy Veyon_Custom",
+        "description": "Pacote portátil pronto para GPO/SCCM nas estações CiMED.",
+        "file": "Veyon_Custom/",
+        "code": "Veyon_Custom/\n  veyon-master.exe\n  veyon-worker.exe\n  plugins/\n  qt/",
+        "implementation": [
+          "Build Release copiado para Veyon_Custom/.",
+          "Inclui DLLs Qt e plugins.",
+          "README documenta fases restore-*."
+        ]
+      },
+      {
+        "id": "cv-veyon-custom",
+        "parent": "cv-deploy",
+        "layer": "file",
+        "title": "Veyon_Custom/",
+        "description": "Layout de instalação portátil sem installer MSI.",
+        "file": "Veyon_Custom/",
+        "code": "| Fase | Tag restore | Entrega |\n| UI+DPI | restore-pos-etapa5-dpi | Telas CIMED + bandeja |\n| Logs rede | este ciclo | UNC 172.20.100.36 |",
+        "implementation": [
+          "Copiar pasta inteira para destino.",
+          "Configurar GPO para autostart worker.",
+          "Tags git restore-* para rollback."
+        ]
+      },
+      {
+        "id": "cv-docs",
+        "parent": "cv-deploy",
+        "layer": "file",
+        "title": "docs/",
+        "description": "Relatórios PDF/MD: técnico executivo e estrutura de código.",
+        "file": "docs/RELATORIO-TECNICO-PROJETO-CIMED.pdf",
+        "code": "docs/\n  PROJETO-CIMED.md\n  RELATORIO-ESTRUTURA-CODIGO-CIMED.pdf\n  imagens/bandeja-todos-estados.png",
+        "implementation": [
+          "Mapa visual em PROJETO-CIMED.md.",
+          "PDF executivo ≤5 páginas.",
+          "Fluxogramas Mermaid no README."
         ]
       }
     ]

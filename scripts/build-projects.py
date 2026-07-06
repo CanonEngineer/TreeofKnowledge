@@ -6,7 +6,7 @@ import os
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 OUT = os.path.join(ROOT, "js", "data", "projects.js")
 DATA = os.path.join(ROOT, "scripts", "projects-data.json")
-BUILDER = os.path.join(ROOT, "scripts", "cpe-nodes.json")
+VEYON_FILE = os.path.join(ROOT, "scripts", "veyon-project.json")
 
 def n(id, parent, layer, title, desc, file, code, impl):
     return {
@@ -98,8 +98,10 @@ CPE = {
 
 def main():
     with open(DATA, encoding="utf-8") as f:
-        others = json.load(f)
-    projects = [CPE] + others
+        others = [p for p in json.load(f) if p.get("slug") != "customize-veyon"]
+    with open(VEYON_FILE, encoding="utf-8") as f:
+        veyon = json.load(f)
+    projects = [CPE] + others + [veyon]
     js = "/* Árvore do Conhecimento — " + str(sum(len(p['nodes']) for p in projects)) + " nós */\nconst PROJECTS = "
     js += json.dumps(projects, ensure_ascii=False, indent=2) + ";\n"
     with open(OUT, "w", encoding="utf-8") as f:

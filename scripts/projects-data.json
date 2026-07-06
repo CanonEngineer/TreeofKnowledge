@@ -1453,31 +1453,5 @@
         ]
       }
     ]
-  },
-  {
-    "slug": "customize-veyon",
-    "name": "CustomizeVeyonProject",
-    "comingSoon": true,
-    "repoUrl": "https://github.com/CanonEngineer/CustomizeVeyonProject",
-    "color": "#ef4444",
-    "icon": "cpp",
-    "stack": "Qt/C++ Veyon 4.10.4",
-    "summary": "Veyon customizado CIMED/HCFMB — mapeamento em breve.",
-    "nodes": [
-      {
-        "id": "cv-root",
-        "parent": null,
-        "layer": "root",
-        "title": "CustomizeVeyonProject",
-        "description": "Veyon 4.10.4 customizado para CiMED/HCFMB — controle remoto hospitalar com proteção de logs.",
-        "file": "veyon-4.10.4-src/",
-        "code": "// Customizações Canon:\n// TamperLogProtector, UI CIMED, logs rede\n// Veyon_Custom/ deploy portátil",
-        "implementation": [
-          "Clone com submódulo veyon-4.10.4-src.",
-          "Build com CMake no Windows.",
-          "Deploy via pasta Veyon_Custom/."
-        ]
-      }
-    ]
   }
 ]
