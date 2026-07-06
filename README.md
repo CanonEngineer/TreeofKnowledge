@@ -1,6 +1,6 @@
 <div align="center">
 
-![Árvore do Conhecimento](https://raw.githubusercontent.com/CanonEngineer/TreeofKnowledge/main/docs/images/banner.svg)
+![Árvore do Conhecimento](docs/images/preview-banner.png)
 
 # Árvore do Conhecimento
 
@@ -79,27 +79,27 @@ A **Árvore do Conhecimento** é o hub central de todos os projetos do **CanonEn
 
 ### 1 — Galeria de projetos
 
-![Galeria de projetos](https://raw.githubusercontent.com/CanonEngineer/TreeofKnowledge/main/docs/images/preview-gallery.svg)
+![Galeria de projetos](docs/images/preview-gallery.png)
 
 ### 2 — Árvore interativa (clique no balão → página do código)
 
-![Árvore com balões clicáveis](https://raw.githubusercontent.com/CanonEngineer/TreeofKnowledge/main/docs/images/preview-tree.svg)
+![Árvore com balões clicáveis](docs/images/preview-tree.png)
 
 ### 3 — Página do nó (código + explicação embutidos)
 
-![Página dedicada do código](https://raw.githubusercontent.com/CanonEngineer/TreeofKnowledge/main/docs/images/preview-node-page.svg)
+![Página dedicada do código](docs/images/preview-node-page.png)
 
 ### Fluxo da jornada
 
-![Fluxo da árvore interativa](https://raw.githubusercontent.com/CanonEngineer/TreeofKnowledge/main/docs/images/tree-flow.svg)
+![Fluxo da árvore interativa](docs/images/preview-flow.png)
 
 ### Arquitetura do sistema
 
-![Arquitetura TreeofKnowledge](https://raw.githubusercontent.com/CanonEngineer/TreeofKnowledge/main/docs/images/architecture.svg)
+![Arquitetura TreeofKnowledge](docs/images/preview-architecture.png)
 
 ### Camadas dos nós
 
-![Hierarquia dos nós](https://raw.githubusercontent.com/CanonEngineer/TreeofKnowledge/main/docs/images/node-layers.svg)
+![Hierarquia dos nós](docs/images/preview-layers.png)
 
 ---
 

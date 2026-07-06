@@ -1,4 +1,4 @@
-/* Tree Renderer — layout radial 3D */
+/* Tree Renderer — layout radial com links clicáveis */
 const TreeRenderer = (() => {
   const RINGS = { module: 160, file: 280, function: 400 };
 
@@ -27,19 +27,20 @@ const TreeRenderer = (() => {
     });
   }
 
-  function render(container, linesEl, nodes, projectColor) {
+  function render(container, linesEl, nodes, projectColor, projectSlug) {
     container.innerHTML = '';
     linesEl.innerHTML = '';
     const tree = buildTree(nodes);
     if (!tree) return;
 
-    const rect = container.parentElement.getBoundingClientRect();
+    const scene = container.parentElement.parentElement;
+    const rect = scene.getBoundingClientRect();
     const cx = rect.width / 2;
     const cy = rect.height / 2;
     const positions = new Map();
     layoutNode(tree, -Math.PI / 2, 0, positions, cx, cy);
 
-    positions.forEach((pos, id) => {
+    positions.forEach((pos) => {
       const n = pos.node;
       if (!n.parent) return;
       const parent = positions.get(n.parent);
@@ -56,15 +57,24 @@ const TreeRenderer = (() => {
 
     positions.forEach((pos) => {
       const n = pos.node;
-      const el = document.createElement('div');
+      const isRoot = n.layer === 'root';
+      const el = document.createElement(isRoot ? 'div' : 'a');
       el.className = 'tree-node';
       el.dataset.id = n.id;
       el.dataset.layer = n.layer || 'function';
       el.style.left = pos.x + 'px';
       el.style.top = pos.y + 'px';
-      const z = n.layer === 'root' ? 80 : n.layer === 'module' ? 50 : n.layer === 'file' ? 30 : 10;
+      const z = isRoot ? 80 : n.layer === 'module' ? 50 : n.layer === 'file' ? 30 : 10;
       el.style.zIndex = z;
-      const inner = document.createElement('div');
+
+      if (!isRoot) {
+        el.href = AppConfig.nodePageUrl(projectSlug, n.id);
+        el.title = 'Abrir código: ' + n.title;
+      } else {
+        el.style.cursor = 'default';
+      }
+
+      const inner = document.createElement('span');
       inner.className = 'tree-node-inner';
       inner.textContent = n.title.length > 14 ? n.title.slice(0, 12) + '…' : n.title;
       el.appendChild(inner);

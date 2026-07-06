@@ -35,20 +35,25 @@ const TreeSearch = (() => {
     return index;
   }
 
-  const INDEX = buildIndex();
+  let INDEX = [];
+
+  function ensureIndex() {
+    if (!INDEX.length && typeof PROJECTS !== 'undefined') INDEX = buildIndex();
+    return INDEX;
+  }
 
   function nodeUrl(projectSlug, nodeId) {
-    return `node.html?p=${encodeURIComponent(projectSlug)}&n=${encodeURIComponent(nodeId)}`;
+    return AppConfig.nodePageUrl(projectSlug, nodeId);
   }
 
   function search(query, limit = 12) {
     const q = query.trim().toLowerCase();
     if (!q || q.length < 2) return [];
-
+    const index = ensureIndex();
     const terms = q.split(/\s+/).filter(Boolean);
     const scored = [];
 
-    INDEX.forEach(item => {
+    index.forEach(item => {
       let score = 0;
       terms.forEach(term => {
         if (item.title.toLowerCase().includes(term)) score += 10;
@@ -61,37 +66,33 @@ const TreeSearch = (() => {
       if (score > 0) scored.push({ ...item, score });
     });
 
-    return scored
-      .sort((a, b) => b.score - a.score)
-      .slice(0, limit);
+    return scored.sort((a, b) => b.score - a.score).slice(0, limit);
   }
 
   function highlight(text, query) {
     if (!query) return text;
     const escaped = query.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
-    return text.replace(new RegExp(`(${escaped})`, 'gi'), '<mark>$1</mark>');
+    return text.replace(new RegExp('(' + escaped + ')', 'gi'), '<mark>$1</mark>');
   }
 
   function mount(inputEl, resultsEl) {
     if (!inputEl || !resultsEl) return;
-
     let debounce;
 
     function renderResults(results, query) {
       if (!results.length) {
-        resultsEl.innerHTML = `<div class="search-empty">Nenhum resultado para "<strong>${query}</strong>"</div>`;
+        resultsEl.innerHTML = '<div class="search-empty">Nenhum resultado para "<strong>' + query + '</strong>"</div>';
         resultsEl.classList.remove('hidden');
         return;
       }
-
-      resultsEl.innerHTML = results.map(r => `
-        <a class="search-result-item" href="${nodeUrl(r.projectSlug, r.nodeId)}">
-          <span class="search-result-layer" style="border-color:${r.projectColor}">${LAYER_LABELS[r.layer] || r.layer}</span>
-          <strong>${highlight(r.title, query)}</strong>
-          <span class="search-result-meta">${r.projectName} · ${r.file}</span>
-          <span class="search-result-snippet">${highlight(r.description.slice(0, 90), query)}${r.description.length > 90 ? '…' : ''}</span>
-        </a>
-      `).join('');
+      resultsEl.innerHTML = results.map(r =>
+        '<a class="search-result-item" href="' + nodeUrl(r.projectSlug, r.nodeId) + '">' +
+        '<span class="search-result-layer" style="border-color:' + r.projectColor + '">' + (LAYER_LABELS[r.layer] || r.layer) + '</span>' +
+        '<strong>' + highlight(r.title, query) + '</strong>' +
+        '<span class="search-result-meta">' + r.projectName + ' · ' + r.file + '</span>' +
+        '<span class="search-result-snippet">' + highlight(r.description.slice(0, 90), query) + (r.description.length > 90 ? '…' : '') + '</span>' +
+        '</a>'
+      ).join('');
       resultsEl.classList.remove('hidden');
     }
 
@@ -126,6 +127,7 @@ const TreeSearch = (() => {
   }
 
   function findNode(projectSlug, nodeId) {
+    if (typeof PROJECTS === 'undefined') return null;
     const project = PROJECTS.find(p => p.slug === projectSlug);
     if (!project) return null;
     const node = project.nodes.find(n => n.id === nodeId);
@@ -133,5 +135,5 @@ const TreeSearch = (() => {
     return { project, node };
   }
 
-  return { search, mount, nodeUrl, findNode, activeProjects, INDEX };
+  return { search, mount, nodeUrl, findNode, activeProjects, ensureIndex };
 })();

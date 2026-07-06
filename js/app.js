@@ -1,4 +1,4 @@
-/* App — galeria, árvore, busca, navegação para página do nó */
+/* App — galeria, árvore, busca */
 (() => {
   const $ = (s) => document.querySelector(s);
   const gallery = $('#gallery');
@@ -7,7 +7,6 @@
   const treeNodes = $('#tree-nodes');
   const treeLines = $('#tree-lines');
   const treeScene = $('#tree-scene');
-  const treeStage = $('#tree-stage');
   const tooltip = $('#tooltip');
   let currentProject = null;
   let nodeMap = new Map();
@@ -24,19 +23,21 @@
       const card = document.createElement('article');
       card.className = 'project-card' + (p.comingSoon ? ' project-card-soon' : '');
       card.style.setProperty('--card-color', p.color);
-      card.innerHTML = `
-        <div class="project-card-icon">${ICONS[p.icon] || '📦'}</div>
-        <h3>${p.name}</h3>
-        <p>${p.comingSoon ? 'Mapeamento em breve — disponível amanhã.' : p.summary}</p>
-        <div class="project-card-meta">
-          <span>${p.comingSoon ? 'Em breve' : p.nodes.length + ' nós'}</span>
-          <span>${p.stack}</span>
-        </div>`;
-      if (!p.comingSoon) {
-        card.addEventListener('click', () => openTree(p));
-      }
+      card.innerHTML =
+        '<div class="project-card-icon">' + (ICONS[p.icon] || '📦') + '</div>' +
+        '<h3>' + p.name + '</h3>' +
+        '<p>' + (p.comingSoon ? 'Mapeamento em breve — disponível amanhã.' : p.summary) + '</p>' +
+        '<div class="project-card-meta">' +
+        '<span>' + (p.comingSoon ? 'Em breve' : p.nodes.length + ' nós') + '</span>' +
+        '<span>' + p.stack + '</span></div>';
+      if (!p.comingSoon) card.addEventListener('click', () => openTree(p));
       projectGrid.appendChild(card);
     });
+  }
+
+  function renderTree() {
+    TreeRenderer.render(treeNodes, treeLines, currentProject.nodes, currentProject.color, currentProject.slug);
+    bindNodeEvents();
   }
 
   function openTree(project) {
@@ -45,13 +46,11 @@
     nodeMap = new Map(project.nodes.map(n => [n.id, n]));
     gallery.classList.add('hidden');
     treeView.classList.remove('hidden');
-    history.replaceState(null, '', `?tree=${encodeURIComponent(project.slug)}`);
+    history.replaceState(null, '', AppConfig.indexUrl('tree=' + encodeURIComponent(project.slug)));
     $('#tree-project-name').textContent = project.name;
-    $('#tree-node-count').textContent = `${project.nodes.length} nós de código`;
+    $('#tree-node-count').textContent = project.nodes.length + ' nós de código';
     $('#tree-repo-link').href = project.repoUrl;
-    TreeRenderer.render(treeNodes, treeLines, project.nodes, project.color);
-    bindNodeEvents();
-    initParallax();
+    renderTree();
   }
 
   function closeTree() {
@@ -59,14 +58,7 @@
     gallery.classList.remove('hidden');
     currentProject = null;
     hideTooltip();
-    history.replaceState(null, '', 'index.html');
-  }
-
-  function goToNodePage(node) {
-    hideTooltip();
-    const url = TreeSearch.nodeUrl(currentProject.slug, node.id);
-    if (node.layer === 'root') return;
-    window.location.href = url;
+    history.replaceState(null, '', AppConfig.indexUrl());
   }
 
   function bindNodeEvents() {
@@ -76,11 +68,6 @@
       el.addEventListener('mouseenter', (e) => showTooltip(e, node));
       el.addEventListener('mousemove', (e) => moveTooltip(e));
       el.addEventListener('mouseleave', hideTooltip);
-      el.addEventListener('click', () => {
-        if (node.layer === 'root') return;
-        goToNodePage(node);
-      });
-      if (node.layer === 'root') el.style.cursor = 'default';
     });
   }
 
@@ -109,16 +96,6 @@
     tooltip.classList.add('hidden');
   }
 
-  function initParallax() {
-    treeScene.onmousemove = (e) => {
-      const rect = treeScene.getBoundingClientRect();
-      const rx = ((e.clientY - rect.top) / rect.height - 0.5) * 8;
-      const ry = ((e.clientX - rect.left) / rect.width - 0.5) * -8;
-      treeStage.style.transform = `rotateX(${rx}deg) rotateY(${ry}deg)`;
-    };
-    treeScene.onmouseleave = () => { treeStage.style.transform = ''; };
-  }
-
   function restoreFromUrl() {
     const params = new URLSearchParams(window.location.search);
     const treeSlug = params.get('tree');
@@ -131,9 +108,7 @@
   $('#btn-back').addEventListener('click', closeTree);
 
   window.addEventListener('resize', () => {
-    if (!currentProject) return;
-    TreeRenderer.render(treeNodes, treeLines, currentProject.nodes, currentProject.color);
-    bindNodeEvents();
+    if (currentProject) renderTree();
   });
 
   initGallery();

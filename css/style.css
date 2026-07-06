@@ -141,8 +141,6 @@ body {
 }
 .tree-stage {
   position: absolute; inset: 0;
-  transform-style: preserve-3d;
-  transition: transform .15s ease-out;
 }
 .tree-lines {
   position: absolute; inset: 0; width: 100%; height: 100%;
@@ -152,7 +150,8 @@ body {
   stroke: rgba(56,189,248,.25); stroke-width: 1.5;
   filter: drop-shadow(0 0 4px rgba(56,189,248,.3));
 }
-.tree-nodes { position: absolute; inset: 0; }
+.tree-nodes { position: absolute; inset: 0; pointer-events: none; }
+.tree-nodes .tree-node { pointer-events: auto; }
 
 /* Nodes */
 .tree-node {
@@ -161,7 +160,11 @@ body {
   cursor: pointer;
   transition: transform .2s, filter .2s;
   z-index: 2;
+  text-decoration: none;
+  color: inherit;
+  pointer-events: auto;
 }
+a.tree-node:hover { text-decoration: none; }
 .tree-node-inner {
   display: flex; align-items: center; justify-content: center;
   border-radius: 50%;

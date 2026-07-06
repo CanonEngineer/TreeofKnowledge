@@ -1,79 +1,155 @@
-<!DOCTYPE html>
-<html lang="pt-BR">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Árvore do Conhecimento — CanonEngineer</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;600&family=Outfit:wght@300;400;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="css/style.css">
-</head>
-<body>
-  <div class="cosmos" aria-hidden="true">
-    <div class="stars"></div>
-    <div class="nebula"></div>
-  </div>
-
-  <header class="site-header">
-    <div class="brand">
-      <span class="brand-icon">🌳</span>
-      <div>
-        <h1>Árvore do Conhecimento</h1>
-        <p>Coração do GitHub — CanonEngineer</p>
-      </div>
-    </div>
-    <div class="header-search-wrap">
-      <div class="search-box">
-        <span class="search-icon">🔍</span>
-        <input type="search" id="global-search" placeholder="Buscar código, função, arquivo..." autocomplete="off" aria-label="Buscar na árvore">
-        <div id="search-results" class="search-results hidden"></div>
-      </div>
-    </div>
-    <nav class="header-nav">
-      <a href="https://github.com/CanonEngineer/TreeofKnowledge" class="btn-ghost">GitHub</a>
-    </nav>
-  </header>
-
-  <main id="app">
-    <section id="gallery" class="gallery">
-      <div class="gallery-intro">
-        <h2>Selecione um Projeto</h2>
-        <p>Cada árvore mapeia o código que criei — clique nos balões para abrir a página do código.</p>
-      </div>
-      <div id="project-grid" class="project-grid"></div>
-    </section>
-
-    <section id="tree-view" class="tree-view hidden">
-      <div class="tree-toolbar">
-        <button id="btn-back" class="btn-primary" type="button">
-          <span>←</span> Voltar aos Projetos
-        </button>
-        <div class="tree-info">
-          <span id="tree-project-name" class="tree-project-name"></span>
-          <span id="tree-node-count" class="tree-node-count"></span>
-        </div>
-        <a id="tree-repo-link" href="#" target="_blank" rel="noopener" class="btn-ghost">Ver Repositório</a>
-      </div>
-      <div id="tree-scene" class="tree-scene">
-        <div id="tree-stage" class="tree-stage">
-          <svg id="tree-lines" class="tree-lines" aria-hidden="true"></svg>
-          <div id="tree-nodes" class="tree-nodes"></div>
-        </div>
-      </div>
-      <p class="tree-hint">Passe o mouse nos nós para detalhes · Clique no balão para abrir a página com código</p>
-    </section>
-  </main>
-
-  <div id="tooltip" class="tooltip hidden" role="tooltip">
-    <strong id="tooltip-title"></strong>
-    <p id="tooltip-desc"></p>
-    <span id="tooltip-file" class="tooltip-file"></span>
-  </div>
-
-  <script src="js/data/projects.js"></script>
-  <script src="js/search.js"></script>
-  <script src="js/tree-renderer.js"></script>
-  <script src="js/app.js"></script>
-</body>
-</html>
-
+<!DOCTYPE html>
+
+<html lang="pt-BR">
+
+<head>
+
+  <meta charset="UTF-8">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Árvore do Conhecimento — CanonEngineer</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;600&family=Outfit:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="css/style.css">
+
+</head>
+
+<body>
+
+  <div class="cosmos" aria-hidden="true">
+
+    <div class="stars"></div>
+
+    <div class="nebula"></div>
+
+  </div>
+
+
+
+  <header class="site-header">
+
+    <div class="brand">
+
+      <span class="brand-icon">🌳</span>
+
+      <div>
+
+        <h1>Árvore do Conhecimento</h1>
+
+        <p>Coração do GitHub — CanonEngineer</p>
+
+      </div>
+
+    </div>
+
+    <div class="header-search-wrap">
+
+      <div class="search-box">
+
+        <span class="search-icon">🔍</span>
+
+        <input type="search" id="global-search" placeholder="Buscar código, função, arquivo..." autocomplete="off" aria-label="Buscar na árvore">
+
+        <div id="search-results" class="search-results hidden"></div>
+
+      </div>
+
+    </div>
+
+    <nav class="header-nav">
+
+      <a href="https://github.com/CanonEngineer/TreeofKnowledge" class="btn-ghost">GitHub</a>
+
+    </nav>
+
+  </header>
+
+
+
+  <main id="app">
+
+    <section id="gallery" class="gallery">
+
+      <div class="gallery-intro">
+
+        <h2>Selecione um Projeto</h2>
+
+        <p>Cada árvore mapeia o código que criei — clique nos balões para abrir a página do código.</p>
+
+      </div>
+
+      <div id="project-grid" class="project-grid"></div>
+
+    </section>
+
+
+
+    <section id="tree-view" class="tree-view hidden">
+
+      <div class="tree-toolbar">
+
+        <button id="btn-back" class="btn-primary" type="button">
+
+          <span>←</span> Voltar aos Projetos
+
+        </button>
+
+        <div class="tree-info">
+
+          <span id="tree-project-name" class="tree-project-name"></span>
+
+          <span id="tree-node-count" class="tree-node-count"></span>
+
+        </div>
+
+        <a id="tree-repo-link" href="#" target="_blank" rel="noopener" class="btn-ghost">Ver Repositório</a>
+
+      </div>
+
+      <div id="tree-scene" class="tree-scene">
+
+        <div id="tree-stage" class="tree-stage">
+
+          <svg id="tree-lines" class="tree-lines" aria-hidden="true"></svg>
+
+          <div id="tree-nodes" class="tree-nodes"></div>
+
+        </div>
+
+      </div>
+
+      <p class="tree-hint">Passe o mouse nos nós para detalhes · Clique no balão para abrir a página com código</p>
+
+    </section>
+
+  </main>
+
+
+
+  <div id="tooltip" class="tooltip hidden" role="tooltip">
+
+    <strong id="tooltip-title"></strong>
+
+    <p id="tooltip-desc"></p>
+
+    <span id="tooltip-file" class="tooltip-file"></span>
+
+  </div>
+
+
+
+  <script src="js/data/projects.js"></script>
+  <script src="js/config.js"></script>
+  <script src="js/search.js"></script>
+  <script src="js/tree-renderer.js"></script>
+  <script src="js/app.js"></script>
+
+</body>
+
+</html>
+
+
