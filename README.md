@@ -7,7 +7,7 @@
 ### Coração do GitHub — mapa interativo de todo o código CanonEngineer
 
 <img src="https://img.shields.io/badge/Projetos-7-38bdf8?style=for-the-badge" alt="7 projetos"/>
-<img src="https://img.shields.io/badge/Nós-56-fbbf24?style=for-the-badge" alt="56 nós"/>
+<img src="https://img.shields.io/badge/Nós-124-fbbf24?style=for-the-badge" alt="124 nós"/>
 <img src="https://img.shields.io/badge/GitHub_Pages-Ativo-22c55e?style=for-the-badge&logo=githubpages&logoColor=white" alt="GitHub Pages"/>
 <img src="https://img.shields.io/badge/Stack-Python_·_Django_·_Node_·_Qt-a78bfa?style=for-the-badge" alt="Stack"/>
 
@@ -107,12 +107,12 @@ A **Árvore do Conhecimento** é o hub central de todos os projetos do **CanonEn
 
 | # | Projeto | Stack | Nós | Repositório |
 |---|---------|-------|-----|-------------|
-| 1 | **CanonPythonEcommerce** | Django 5 + PayPal | 8 | [CanonPythonEcommerce](https://github.com/CanonEngineer/CanonPythonEcommerce) |
-| 2 | **FoodOnlineDjango** | Django + PostGIS + RazorPay | 8 | [FoodOnlineDjango](https://github.com/CanonEngineer/FoodOnlineDjango) |
-| 3 | **JavaScriptDropBoxProject** | Express + Firebase | 7 | [JavaScriptDropBoxProject](https://github.com/CanonEngineer/JavaScriptDropBoxProject) |
-| 4 | **JavaScriptUsersProject** | ES6 + localStorage | 7 | [JavaScriptUsersProject](https://github.com/CanonEngineer/JavaScriptUsersProject) |
-| 5 | **JavaScriptRestfulApiProject** | Express + NeDB | 7 | [JavaScriptRestfulApiProject](https://github.com/CanonEngineer/JavaScriptRestfulApiProject) |
-| 6 | **Professional-Scanner** | Node.js + WebSocket | 7 | [Professional-Scanner](https://github.com/CanonEngineer/Professional-Scanner) |
+| 1 | **CanonPythonEcommerce** | Django 5 + PayPal | 23 | [CanonPythonEcommerce](https://github.com/CanonEngineer/CanonPythonEcommerce) |
+| 2 | **FoodOnlineDjango** | Django + PostGIS + RazorPay | 20 | [FoodOnlineDjango](https://github.com/CanonEngineer/FoodOnlineDjango) |
+| 3 | **JavaScriptDropBoxProject** | Express + Firebase | 20 | [JavaScriptDropBoxProject](https://github.com/CanonEngineer/JavaScriptDropBoxProject) |
+| 4 | **JavaScriptUsersProject** | ES6 + localStorage | 20 | [JavaScriptUsersProject](https://github.com/CanonEngineer/JavaScriptUsersProject) |
+| 5 | **JavaScriptRestfulApiProject** | Express + NeDB | 20 | [JavaScriptRestfulApiProject](https://github.com/CanonEngineer/JavaScriptRestfulApiProject) |
+| 6 | **Professional-Scanner** | Node.js + WebSocket | 20 | [Professional-Scanner](https://github.com/CanonEngineer/Professional-Scanner) |
 | 7 | **CustomizeVeyonProject** | Qt/C++ Veyon CIMED | _em breve_ | [CustomizeVeyonProject](https://github.com/CanonEngineer/CustomizeVeyonProject) |
 
 ---
