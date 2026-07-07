@@ -32,7 +32,7 @@
     return;
   }
 
-  document.title = node.title + ' — ' + project.name + ' | Árvore do Conhecimento';
+  document.title = node.title + ' — ' + project.name + ' | Tree of Knowledge';
 
   const treeBack = AppConfig.indexUrl('tree=' + encodeURIComponent(project.slug));
   document.getElementById('btn-back-tree').href = treeBack;

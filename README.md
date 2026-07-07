@@ -2,9 +2,9 @@
 
 ![Árvore do Conhecimento](docs/images/preview-banner.png)
 
-# Árvore do Conhecimento
+# Tree of Knowledge
 
-### Coração do GitHub — mapa interativo de todo o código CanonEngineer
+### Heart of Programming — interactive map of all CanonEngineer code
 
 <img src="https://img.shields.io/badge/Projetos-8-38bdf8?style=for-the-badge" alt="8 projetos"/>
 <img src="https://img.shields.io/badge/Nós-213-fbbf24?style=for-the-badge" alt="213 nós"/>
