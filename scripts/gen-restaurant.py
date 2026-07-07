@@ -184,13 +184,13 @@ n("jsr-moment", "jsr-reservations-mod", "function", "moment pt-BR",
 
 n("jsr-mysql-tables", "jsr-db", "file", "Schema MySQL",
   "Tabelas do restaurante saboroso.",
-  "database/",
+  "public/db/mysql.sql",
   "tb_menus | tb_reservations | tb_contacts | tb_users | tb_emails",
   ["menus: title, description, price, photo.", "reservations: people, date, time.", "Crie DB antes do npm start."]),
 
 n("jsr-redis", "jsr-session", "file", "Redis",
   "Store de sessão para admin.",
-  "connect-redis",
+  "app.js",
   "new RedisStore({ host:'localhost', port:6379 })",
   ["Instale Redis no Windows/Linux.", "Sessão persiste entre requests.", "Secret configurável em produção."]),
 

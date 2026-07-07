@@ -238,7 +238,7 @@ n("jdb-ajax", "jdb-backend", "function", "ajax()",
 
 n("jdb-firebase-storage", "jdb-upload-mod", "file", "Firebase Storage",
   "Blob storage na nuvem com downloadURL em customMetadata.",
-  "Firebase Console → Storage",
+  "public/src/controller/DropBoxController.js",
   "fileRef.put(file) → getDownloadURL() → updateMetadata({ customMetadata: { downloadURL } })",
   ["Regras de segurança no console.", "Path espelha currentFolder.", "URL aberta em nova aba no dblclick."]),
 ]
