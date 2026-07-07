@@ -248,6 +248,18 @@ n("cv-deploy", "cv-root", "module", "Deploy Veyon_Custom",
   "Veyon_Custom/\n  veyon-master.exe\n  veyon-worker.exe\n  plugins/\n  qt/",
   ["Build Release copiado para Veyon_Custom/.", "Inclui DLLs Qt e plugins.", "README documenta fases restore-*."]),
 
+n("cv-compile", "cv-root", "file", "Compilação win64",
+  "CMake + Ninja (MSYS2): qt-cmake e alvo windows-binaries — gera DLLs e EXEs CIMED.",
+  ".ci/windows/build.sh",
+  "#!/usr/bin/env bash\nninja windows-binaries",
+  ["Abra MSYS2 MinGW 64-bit.", "cd veyon-4.10.4-src (1)/veyon-4.10.4", "Execute .ci/windows/build.sh ou qt-cmake em build-win64 + ninja.", "Copie artefatos para Veyon_Custom com copy_binary_to_veyon_custom.ps1."]),
+
+n("cv-installers-dual", "cv-deploy", "file", "Instaladores lab + posto",
+  "NSIS: gera os dois setup.exe win64 (laboratório com Master e posto/aluno sem Master).",
+  "scripts/build_veyon_custom_installer.ps1",
+  "powershell -File scripts\\build_veyon_custom_installer.ps1 -Architecture win64-dual",
+  ["Requer NSIS (makensis) e pasta Veyon_Custom com binários.", "Executa sanitize + payload + makensis para lab e posto.", "Saída: dist\\Veyon-CIMED-1.0-win64-setup.exe e dist\\...-posto-setup.exe.", "GPO silencioso: setup.exe /S"]),
+
 n("cv-veyon-custom", "cv-deploy", "file", "Veyon_Custom/",
   "Layout de instalação portátil sem installer MSI.",
   "Veyon_Custom/",
