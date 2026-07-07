@@ -1,4 +1,4 @@
-/* Árvore do Conhecimento — 182 nós */
+/* Árvore do Conhecimento — 213 nós */
 const PROJECTS = [
   {
     "slug": "canon-python-ecommerce",
@@ -1163,6 +1163,451 @@ const PROJECTS = [
           "Regras de segurança no console.",
           "Path espelha currentFolder.",
           "URL aberta em nova aba no dblclick."
+        ]
+      }
+    ]
+  },
+  {
+    "slug": "javascript-restaurant",
+    "name": "JavaScriptRestaurantProject",
+    "repoUrl": "https://github.com/CanonEngineer/JavaScriptRestaurantProject",
+    "color": "#f97316",
+    "icon": "javascript",
+    "stack": "Express + MySQL + Redis",
+    "summary": "Restaurante Saboroso — cardápio, reservas, contato e painel AdminLTE com MySQL.",
+    "nodes": [
+      {
+        "id": "jsr-root",
+        "parent": null,
+        "layer": "root",
+        "title": "JavaScriptRestaurantProject",
+        "description": "Restaurante Saboroso — site + painel admin com Express, EJS, MySQL, Redis e AdminLTE.",
+        "file": "app.js",
+        "code": "// Restaurante Saboroso\n// MySQL tb_menus, tb_reservations, tb_contacts\n// Admin /admin com AdminLTE",
+        "implementation": [
+          "Clone o repo e npm install.",
+          "Configure MySQL database saboroso e Redis.",
+          "npm start → porta 3000."
+        ]
+      },
+      {
+        "id": "jsr-backend",
+        "parent": "jsr-root",
+        "layer": "module",
+        "title": "Backend Express",
+        "description": "Servidor com sessão Redis, upload Formidable e rotas públicas/admin.",
+        "file": "app.js",
+        "code": "app.use(session({ store: new RedisStore({ host:'localhost', port:6379 }) }));\napp.use('/', indexRouter);\napp.use('/admin', adminRouter);",
+        "implementation": [
+          "EJS view engine.",
+          "express.static em public/.",
+          "Middleware multipart para fotos do menu."
+        ]
+      },
+      {
+        "id": "jsr-app",
+        "parent": "jsr-backend",
+        "layer": "file",
+        "title": "app.js",
+        "description": "Bootstrap: sessão Redis, parsers, static e routers.",
+        "file": "app.js",
+        "code": "var RedisStore = require('connect-redis')(session);\napp.use(session({ store: new RedisStore(...), secret:'p@ssw0rd' }));",
+        "implementation": [
+          "Formidable salva em public/images/.",
+          "Cookie-parser e morgan logger.",
+          "Error handler renderiza error.ejs."
+        ]
+      },
+      {
+        "id": "jsr-bin-www",
+        "parent": "jsr-backend",
+        "layer": "file",
+        "title": "bin/www",
+        "description": "HTTP server na porta 3000 com nodemon.",
+        "file": "bin/www",
+        "code": "var port = normalizePort(process.env.PORT || '3000');\nserver.listen(port);",
+        "implementation": [
+          "npm start usa nodemon.",
+          "Tratamento EADDRINUSE.",
+          "Debug app:server."
+        ]
+      },
+      {
+        "id": "jsr-formidable",
+        "parent": "jsr-app",
+        "layer": "function",
+        "title": "Middleware Formidable",
+        "description": "Parse multipart antes das rotas — upload de fotos do cardápio.",
+        "file": "app.js",
+        "code": "if (req.method === 'POST' && contentType.indexOf('multipart/form-data') > -1) {\n  form.parse(req, (err, fields, files) => { req.body = fields; req.files = files; next(); });\n}",
+        "implementation": [
+          "uploadDir: public/images.",
+          "keepExtensions: true.",
+          "Disponível em rotas admin de menus."
+        ]
+      },
+      {
+        "id": "jsr-session",
+        "parent": "jsr-app",
+        "layer": "function",
+        "title": "Sessão Redis",
+        "description": "express-session com connect-redis para painel admin.",
+        "file": "app.js",
+        "code": "app.use(session({ store: new RedisStore({ host:'localhost', port:6379 }), secret:'p@ssw0rd', resave:true }));",
+        "implementation": [
+          "Redis na porta 6379.",
+          "req.session.user após login.",
+          "Logout deleta session.user."
+        ]
+      },
+      {
+        "id": "jsr-db",
+        "parent": "jsr-root",
+        "layer": "module",
+        "title": "Banco MySQL",
+        "description": "Conexão mysql2 com database saboroso.",
+        "file": "inc/db.js",
+        "code": "const connection = mysql.createConnection({ host:'localhost', user:'user', database:'saboroso', multipleStatements:true });",
+        "implementation": [
+          "Tabelas: tb_menus, tb_reservations, tb_contacts, tb_users, tb_emails.",
+          "Promises nos módulos inc/.",
+          "Pagination usa FOUND_ROWS()."
+        ]
+      },
+      {
+        "id": "jsr-routes-public",
+        "parent": "jsr-root",
+        "layer": "module",
+        "title": "Rotas públicas",
+        "description": "Site do cliente: home, cardápio, reservas e contato.",
+        "file": "routes/index.js",
+        "code": "router.get('/', ...);\nrouter.get('/menus', ...);\nrouter.get('/reservations', ...);\nrouter.post('/contacts', ...);",
+        "implementation": [
+          "EJS com background hero.",
+          "Validação server-side nos POST.",
+          "E-mails de notificação opcionais."
+        ]
+      },
+      {
+        "id": "jsr-home",
+        "parent": "jsr-routes-public",
+        "layer": "function",
+        "title": "GET /",
+        "description": "Home com lista de menus em destaque.",
+        "file": "routes/index.js",
+        "code": "menus.getMenus().then(results => {\n  res.render('index', { title: 'Restaurante Saboroso!', menus: results, isHome: true });\n});",
+        "implementation": [
+          "Template index.ejs.",
+          "Flag isHome para navbar.",
+          "Fotos em public/images/."
+        ]
+      },
+      {
+        "id": "jsr-menus-page",
+        "parent": "jsr-routes-public",
+        "layer": "function",
+        "title": "GET /menus",
+        "description": "Página do cardápio completo com preços.",
+        "file": "routes/index.js",
+        "code": "res.render('menus', { title: 'Menus - Restaurante Saboroso!', h1: 'Saboreie nosso menu!', menus: results });",
+        "implementation": [
+          "background images/img_bg_1.jpg.",
+          "Loop EJS nos itens.",
+          "Dados de tb_menus."
+        ]
+      },
+      {
+        "id": "jsr-reservations-page",
+        "parent": "jsr-routes-public",
+        "layer": "function",
+        "title": "POST /reservations",
+        "description": "Formulário de reserva de mesa com validação.",
+        "file": "routes/index.js",
+        "code": "if(!req.body.name) reservations.render(req, res, 'Digite o nome');\nelse reservations.save(req.body).then(...);",
+        "implementation": [
+          "Campos: name, email, people, date, time.",
+          "Conversão data DD/MM/YYYY.",
+          "Mensagem de sucesso no render."
+        ]
+      },
+      {
+        "id": "jsr-contacts-page",
+        "parent": "jsr-routes-public",
+        "layer": "function",
+        "title": "POST /contacts",
+        "description": "Formulário de contato gravado em tb_contacts.",
+        "file": "routes/index.js",
+        "code": "contacts.save(req.body).then(() => contacts.render(req, res, null, 'Contato enviado com sucesso!'));",
+        "implementation": [
+          "Valida name, email, message.",
+          "background img_bg_3.jpg.",
+          "Admin lista em /admin/contacts."
+        ]
+      },
+      {
+        "id": "jsr-admin-routes",
+        "parent": "jsr-root",
+        "layer": "module",
+        "title": "Painel Admin",
+        "description": "AdminLTE: dashboard, CRUD menus, reservas, usuários.",
+        "file": "routes/admin.js",
+        "code": "router.get('/', admin.dashboard());\nrouter.post('/login', users.login);\nrouter.get('/menus', ...);",
+        "implementation": [
+          "moment.locale('pt-BR').",
+          "req.menus = admin.getMenus(req).",
+          "Templates em views/admin/."
+        ]
+      },
+      {
+        "id": "jsr-dashboard",
+        "parent": "jsr-admin-routes",
+        "layer": "function",
+        "title": "admin.dashboard()",
+        "description": "Contadores de contatos, menus, reservas e usuários.",
+        "file": "inc/admin.js",
+        "code": "SELECT (SELECT COUNT(*) FROM tb_contacts) AS nrcontacts, (SELECT COUNT(*) FROM tb_menus) AS nrmenus, ...",
+        "implementation": [
+          "Cards no admin/index.ejs.",
+          "AdminLTE boxes.",
+          "Promise resolve results[0]."
+        ]
+      },
+      {
+        "id": "jsr-admin-login",
+        "parent": "jsr-admin-routes",
+        "layer": "function",
+        "title": "POST /admin/login",
+        "description": "Autenticação por email/senha em tb_users.",
+        "file": "inc/users.js",
+        "code": "users.login(email, password).then(user => res.redirect('/admin')).catch(err => users.render(req, res, err.message));",
+        "implementation": [
+          "Comparação password plain (legado).",
+          "Sessão req.session.user.",
+          "Redirect /admin/login se falhar."
+        ]
+      },
+      {
+        "id": "jsr-menus-mod",
+        "parent": "jsr-root",
+        "layer": "module",
+        "title": "CRUD Cardápio",
+        "description": "Gerencia tb_menus com foto, título, descrição e preço.",
+        "file": "inc/menus.js",
+        "code": "getMenus() / save(fields, files) / delete(id)",
+        "implementation": [
+          "Upload photo → public/images/.",
+          "UPDATE ou INSERT conforme fields.id.",
+          "Listagem paginada no admin."
+        ]
+      },
+      {
+        "id": "jsr-menus-get",
+        "parent": "jsr-menus-mod",
+        "layer": "function",
+        "title": "getMenus()",
+        "description": "SELECT * FROM tb_menus ORDER BY title.",
+        "file": "inc/menus.js",
+        "code": "conn.query('SELECT * FROM tb_menus ORDER BY title', (err, results) => resolve(results));",
+        "implementation": [
+          "Usado na home e /menus.",
+          "Admin lista com edição.",
+          "Cada item tem photo path."
+        ]
+      },
+      {
+        "id": "jsr-menus-save",
+        "parent": "jsr-menus-mod",
+        "layer": "function",
+        "title": "save()",
+        "description": "INSERT/UPDATE com foto opcional via Formidable.",
+        "file": "inc/menus.js",
+        "code": "fields.photo = `images/${path.parse(files.photo.path).base}`;\nINSERT INTO tb_menus (title, description, price, photo) VALUES(?, ?, ?, ?)",
+        "implementation": [
+          "Rejeita se novo item sem foto.",
+          "queryPhoto dinâmico no UPDATE.",
+          "Params title, description, price."
+        ]
+      },
+      {
+        "id": "jsr-reservations-mod",
+        "parent": "jsr-root",
+        "layer": "module",
+        "title": "Reservas",
+        "description": "tb_reservations com paginação e moment.js.",
+        "file": "inc/reservations.js",
+        "code": "save(fields) / getReservations(req) / delete(id)",
+        "implementation": [
+          "Data convertida de DD/MM/YYYY para MySQL.",
+          "Classe Pagination.",
+          "Admin confirma/exclui reservas."
+        ]
+      },
+      {
+        "id": "jsr-reservations-save",
+        "parent": "jsr-reservations-mod",
+        "layer": "function",
+        "title": "save()",
+        "description": "Grava reserva com nome, email, pessoas, data e hora.",
+        "file": "inc/reservations.js",
+        "code": "INSERT INTO tb_reservations (name, email, people, date, time) VALUES(?, ?, ?, ?, ?)",
+        "implementation": [
+          "UPDATE se fields.id > 0.",
+          "Validação no router antes do save.",
+          "Render com error/success."
+        ]
+      },
+      {
+        "id": "jsr-pagination",
+        "parent": "jsr-reservations-mod",
+        "layer": "file",
+        "title": "Pagination.js",
+        "description": "Paginação SQL com FOUND_ROWS e navegação.",
+        "file": "inc/Pagination.js",
+        "code": "class Pagination { getPage(page) { conn.query([query, 'SELECT FOUND_ROWS() AS FOUND_ROWS'].join(';'), ...) } }",
+        "implementation": [
+          "itemPerPage default 10.",
+          "getNavigation() gera links.",
+          "Usado em reservas e listagens admin."
+        ]
+      },
+      {
+        "id": "jsr-users-mod",
+        "parent": "jsr-root",
+        "layer": "module",
+        "title": "Usuários Admin",
+        "description": "Login e CRUD de tb_users.",
+        "file": "inc/users.js",
+        "code": "login(email, password) / getUsers() / save(fields)",
+        "implementation": [
+          "Render admin/login.ejs.",
+          "Lista usuários no admin.",
+          "Senha comparada diretamente."
+        ]
+      },
+      {
+        "id": "jsr-contacts-mod",
+        "parent": "jsr-root",
+        "layer": "module",
+        "title": "Contatos",
+        "description": "Mensagens do formulário público.",
+        "file": "inc/contacts.js",
+        "code": "save(fields) / getContacts() / delete(id)",
+        "implementation": [
+          "INSERT tb_contacts.",
+          "ORDER BY register DESC.",
+          "Admin visualiza e exclui."
+        ]
+      },
+      {
+        "id": "jsr-emails-mod",
+        "parent": "jsr-root",
+        "layer": "module",
+        "title": "Lista de E-mails",
+        "description": "Newsletter / captura de e-mails.",
+        "file": "inc/emails.js",
+        "code": "getEmails() / save(req) / delete(id)",
+        "implementation": [
+          "INSERT tb_emails (email).",
+          "Validação Digite o e-mail.",
+          "Admin gerencia lista."
+        ]
+      },
+      {
+        "id": "jsr-admin-inc",
+        "parent": "jsr-admin-routes",
+        "layer": "file",
+        "title": "admin.js",
+        "description": "Sidebar AdminLTE e helper getParams.",
+        "file": "inc/admin.js",
+        "code": "getMenus(req) → [{ text:'Menu', href:'/admin/menus', icon:'cutlery' }, ...]",
+        "implementation": [
+          "Marca active conforme req.url.",
+          "getParams merge menus + data.",
+          "dashboard() agrega COUNTs."
+        ]
+      },
+      {
+        "id": "jsr-frontend",
+        "parent": "jsr-root",
+        "layer": "module",
+        "title": "Frontend EJS",
+        "description": "Templates públicos com hero e Bootstrap.",
+        "file": "views/",
+        "code": "index.ejs / menus.ejs / reservations.ejs / contacts.ejs",
+        "implementation": [
+          "Imagens em public/images/.",
+          "Partials header/footer.",
+          "Tema Restaurante Saboroso."
+        ]
+      },
+      {
+        "id": "jsr-adminlte",
+        "parent": "jsr-admin-routes",
+        "layer": "file",
+        "title": "AdminLTE",
+        "description": "Painel admin com tema AdminLTE e Bower.",
+        "file": "public/admin/",
+        "code": "dist/css/AdminLTE.min.css / dist/js/app.min.js",
+        "implementation": [
+          "Sidebar com ícones Font Awesome.",
+          "Skins skin-blue.",
+          "Charts Flot opcionais."
+        ]
+      },
+      {
+        "id": "jsr-moment",
+        "parent": "jsr-reservations-mod",
+        "layer": "function",
+        "title": "moment pt-BR",
+        "description": "Formatação de datas nas views admin.",
+        "file": "routes/admin.js",
+        "code": "moment.locale('pt-BR');",
+        "implementation": [
+          "Exibe reservas formatadas.",
+          "Locale brasileiro.",
+          "Dependência moment ^2.29."
+        ]
+      },
+      {
+        "id": "jsr-mysql-tables",
+        "parent": "jsr-db",
+        "layer": "file",
+        "title": "Schema MySQL",
+        "description": "Tabelas do restaurante saboroso.",
+        "file": "database/",
+        "code": "tb_menus | tb_reservations | tb_contacts | tb_users | tb_emails",
+        "implementation": [
+          "menus: title, description, price, photo.",
+          "reservations: people, date, time.",
+          "Crie DB antes do npm start."
+        ]
+      },
+      {
+        "id": "jsr-redis",
+        "parent": "jsr-session",
+        "layer": "file",
+        "title": "Redis",
+        "description": "Store de sessão para admin.",
+        "file": "connect-redis",
+        "code": "new RedisStore({ host:'localhost', port:6379 })",
+        "implementation": [
+          "Instale Redis no Windows/Linux.",
+          "Sessão persiste entre requests.",
+          "Secret configurável em produção."
+        ]
+      },
+      {
+        "id": "jsr-package",
+        "parent": "jsr-backend",
+        "layer": "file",
+        "title": "package.json",
+        "description": "Dependências: express, mysql2, ejs, formidable, moment.",
+        "file": "package.json",
+        "code": "\"dependencies\": { \"express\": \"~4.16.1\", \"mysql2\": \"^2.2.5\", \"connect-redis\": \"^3.3.3\", \"formidable\": \"^1.2.2\" }",
+        "implementation": [
+          "npm start com nodemon.",
+          "Nome interno saboroso.",
+          "Private project."
         ]
       }
     ]

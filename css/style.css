@@ -101,6 +101,61 @@ body {
 .header-datetime .dt-time { display: block; color: var(--accent); font-weight: 600; white-space: nowrap; }
 .header-nav .btn-ghost { white-space: nowrap; }
 
+/* Carrossel 3D de categorias — canto superior direito */
+.category-3d-widget {
+  position: fixed;
+  top: 6.25rem;
+  right: 1.25rem;
+  z-index: 50;
+  width: 110px;
+  height: 130px;
+  pointer-events: none;
+  perspective: 520px;
+  perspective-origin: 50% 40%;
+}
+.category-3d-scene {
+  width: 80px;
+  height: 80px;
+  margin: 0 auto;
+  transform-style: preserve-3d;
+  animation: categoryRotateY 14s linear infinite;
+}
+.category-3d-carousel {
+  position: relative;
+  width: 80px;
+  height: 80px;
+  transform-style: preserve-3d;
+}
+.category-3d-card {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: .15rem;
+  background: linear-gradient(145deg, rgba(249,115,22,.92), rgba(194,65,12,.85));
+  border: 1px solid rgba(251,191,36,.45);
+  border-radius: 14px;
+  box-shadow: 0 10px 28px rgba(249,115,22,.4), inset 0 1px 0 rgba(255,255,255,.15);
+  transform: rotateY(calc(var(--i) * 90deg)) translateZ(72px);
+  backface-visibility: hidden;
+}
+.category-3d-card span { font-size: 1.35rem; line-height: 1; filter: drop-shadow(0 2px 4px rgba(0,0,0,.3)); }
+.category-3d-card small {
+  font-size: .58rem; font-weight: 700; letter-spacing: .02em;
+  color: #fff; text-transform: uppercase;
+}
+.category-3d-label {
+  display: block; margin-top: .45rem; text-align: center;
+  font-size: .62rem; font-weight: 600; letter-spacing: .08em;
+  text-transform: uppercase; color: var(--muted);
+}
+@keyframes categoryRotateY {
+  from { transform: rotateY(0deg) rotateX(8deg); }
+  to { transform: rotateY(360deg) rotateX(8deg); }
+}
+
 /* Gallery */
 #app { position: relative; z-index: 1; }
 .gallery { padding: 2.5rem 2rem 4rem; max-width: 1280px; margin: 0 auto; }
@@ -434,6 +489,10 @@ a.tree-node:hover { text-decoration: none; }
   .brand h1 { font-size: 1.1rem; }
   .header-profile { width: 40px; height: 40px; }
   .header-datetime { display: none; }
+  .category-3d-widget { width: 80px; height: 100px; top: auto; bottom: 1rem; right: .75rem; opacity: .88; }
+  .category-3d-scene { width: 64px; height: 64px; }
+  .category-3d-carousel { width: 64px; height: 64px; }
+  .category-3d-card { transform: rotateY(calc(var(--i) * 90deg)) translateZ(56px); }
   .tree-view { height: calc(100vh - 9rem); padding: .5rem .75rem; }
   .tree-node[data-layer="root"] .tree-node-inner { width: 78px; height: 78px; font-size: .64rem; }
   .tree-node-dense[data-layer="root"] .tree-node-inner { width: 74px; height: 74px; }

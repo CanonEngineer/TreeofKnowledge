@@ -6,8 +6,8 @@
 
 ### Coração do GitHub — mapa interativo de todo o código CanonEngineer
 
-<img src="https://img.shields.io/badge/Projetos-7-38bdf8?style=for-the-badge" alt="7 projetos"/>
-<img src="https://img.shields.io/badge/Nós-182-fbbf24?style=for-the-badge" alt="182 nós"/>
+<img src="https://img.shields.io/badge/Projetos-8-38bdf8?style=for-the-badge" alt="8 projetos"/>
+<img src="https://img.shields.io/badge/Nós-213-fbbf24?style=for-the-badge" alt="213 nós"/>
 <img src="https://img.shields.io/badge/GitHub_Pages-Ativo-22c55e?style=for-the-badge&logo=githubpages&logoColor=white" alt="GitHub Pages"/>
 <img src="https://img.shields.io/badge/Stack-Python_·_Django_·_Node_·_Qt-a78bfa?style=for-the-badge" alt="Stack"/>
 
@@ -110,10 +110,11 @@ A **Árvore do Conhecimento** é o hub central de todos os projetos do **CanonEn
 | 1 | **CanonPythonEcommerce** | Django 5 + PayPal | 23 | [CanonPythonEcommerce](https://github.com/CanonEngineer/CanonPythonEcommerce) |
 | 2 | **FoodOnlineDjango** | Django + PostGIS + RazorPay | 20 | [FoodOnlineDjango](https://github.com/CanonEngineer/FoodOnlineDjango) |
 | 3 | **JavaScriptDropBoxProject** | Express + Firebase | 38 | [JavaScriptDropBoxProject](https://github.com/CanonEngineer/JavaScriptDropBoxProject) |
-| 4 | **JavaScriptUsersProject** | ES6 + localStorage | 20 | [JavaScriptUsersProject](https://github.com/CanonEngineer/JavaScriptUsersProject) |
-| 5 | **JavaScriptRestfulApiProject** | Express + NeDB | 20 | [JavaScriptRestfulApiProject](https://github.com/CanonEngineer/JavaScriptRestfulApiProject) |
-| 6 | **Professional-Scanner** | Node.js + WebSocket | 20 | [Professional-Scanner](https://github.com/CanonEngineer/Professional-Scanner) |
-| 7 | **CustomizeVeyonProject** | Qt/C++ Veyon CIMED | 41 | [CustomizeVeyonProject](https://github.com/CanonEngineer/CustomizeVeyonProject) |
+| 4 | **JavaScriptRestaurantProject** | Express + EJS + MySQL + Redis | 31 | [JavaScriptRestaurantProject](https://github.com/CanonEngineer/JavaScriptRestaurantProject) |
+| 5 | **JavaScriptUsersProject** | ES6 + localStorage | 20 | [JavaScriptUsersProject](https://github.com/CanonEngineer/JavaScriptUsersProject) |
+| 6 | **JavaScriptRestfulApiProject** | Express + NeDB | 20 | [JavaScriptRestfulApiProject](https://github.com/CanonEngineer/JavaScriptRestfulApiProject) |
+| 7 | **Professional-Scanner** | Node.js + WebSocket | 20 | [Professional-Scanner](https://github.com/CanonEngineer/Professional-Scanner) |
+| 8 | **CustomizeVeyonProject** | Qt/C++ Veyon CIMED | 41 | [CustomizeVeyonProject](https://github.com/CanonEngineer/CustomizeVeyonProject) |
 
 ---
 
@@ -130,17 +131,18 @@ flowchart TB
         CSS["css/style.css<br/>Visual 3D + Cosmos"]
         APP["js/app.js<br/>Eventos + Navegação"]
         RENDER["js/tree-renderer.js<br/>Layout radial SVG"]
-        DATA["js/data/projects.js<br/>7 projetos · 182 nós"]
+        DATA["js/data/projects.js<br/>8 projetos · 213 nós"]
     end
 
     subgraph PROJ["Repositórios de origem"]
         P1["CanonPythonEcommerce"]
         P2["FoodOnlineDjango"]
         P3["JS DropBox"]
-        P4["JS Users"]
-        P5["JS RestfulApi"]
-        P6["Professional-Scanner"]
-        P7["CustomizeVeyon"]
+        P4["JS Restaurant"]
+        P5["JS Users"]
+        P6["JS RestfulApi"]
+        P7["Professional-Scanner"]
+        P8["CustomizeVeyon"]
     end
 
     URL --> HTML
@@ -155,6 +157,7 @@ flowchart TB
     DATA -.->|código mapeado| P5
     DATA -.->|código mapeado| P6
     DATA -.->|código mapeado| P7
+    DATA -.->|código mapeado| P8
 ```
 
 ---
@@ -166,7 +169,7 @@ flowchart TB
 ```mermaid
 flowchart LR
     A(["👤 Usuário acessa<br/>GitHub Pages"]) --> B{"Escolhe ação"}
-    B -->|"🔗 Conectar"| C["Galeria de<br/>7 projetos"]
+    B -->|"🔗 Conectar"| C["Galeria de<br/>8 projetos"]
     B -->|"✖ Cancelar"| D["Permanece no<br/>README GitHub"]
     C --> E["Clica em um<br/>card de projeto"]
     E --> F["Árvore 3D<br/>renderizada"]
@@ -231,6 +234,7 @@ mindmap
         RazorPay
     JavaScript
       DropBox Firebase
+      Restaurant MySQL Redis
       Users localStorage
       RestfulApi NeDB
     Infra
@@ -258,7 +262,7 @@ mindmap
 </div>
 
 1. Clique em **Conectar** acima
-2. Escolha um dos **6 projetos ativos** na galeria
+2. Escolha um dos **8 projetos** na galeria
 3. Explore a **árvore dimensional** — mova o mouse para o efeito 3D
 4. **Passe o mouse** nos balões para ver o que cada código faz
 5. **Clique no balão** para abrir a **página com código e implementação**
@@ -315,6 +319,7 @@ TreeofKnowledge/
 | **Nós roxos** | Arquivos |
 | **Nós verdes** | Funções e métodos |
 | **Linhas SVG** | Conexões pai → filho com glow |
+| **Carrossel 3D** | Categorias do cardápio (Pratos, Entradas, Bebidas, Sobremesas) no canto superior direito |
 | **Modal** | Código em JetBrains Mono + passos numerados |
 
 ---

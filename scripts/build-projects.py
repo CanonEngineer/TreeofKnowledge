@@ -8,6 +8,7 @@ OUT = os.path.join(ROOT, "js", "data", "projects.js")
 DATA = os.path.join(ROOT, "scripts", "projects-data.json")
 VEYON_FILE = os.path.join(ROOT, "scripts", "veyon-project.json")
 DROPBOX_FILE = os.path.join(ROOT, "scripts", "dropbox-project.json")
+RESTAURANT_FILE = os.path.join(ROOT, "scripts", "restaurant-project.json")
 
 def n(id, parent, layer, title, desc, file, code, impl):
     return {
@@ -104,7 +105,9 @@ def main():
         veyon = json.load(f)
     with open(DROPBOX_FILE, encoding="utf-8") as f:
         dropbox = json.load(f)
-    projects = [CPE] + others[:1] + [dropbox] + others[1:] + [veyon]
+    with open(RESTAURANT_FILE, encoding="utf-8") as f:
+        restaurant = json.load(f)
+    projects = [CPE] + others[:1] + [dropbox, restaurant] + others[1:] + [veyon]
     js = "/* Árvore do Conhecimento — " + str(sum(len(p['nodes']) for p in projects)) + " nós */\nconst PROJECTS = "
     js += json.dumps(projects, ensure_ascii=False, indent=2) + ";\n"
     with open(OUT, "w", encoding="utf-8") as f:
