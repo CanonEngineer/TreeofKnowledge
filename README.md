@@ -319,7 +319,7 @@ TreeofKnowledge/
 | **Nós roxos** | Arquivos |
 | **Nós verdes** | Funções e métodos |
 | **Linhas SVG** | Conexões pai → filho com glow |
-| **Carrossel 3D** | Categorias do cardápio (Pratos, Entradas, Bebidas, Sobremesas) no canto superior direito |
+| **Tech Dimension** | Núcleo 3D com cubo de código, anéis orbitais e partículas no canto superior direito |
 | **Modal** | Código em JetBrains Mono + passos numerados |
 
 ---
