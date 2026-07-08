@@ -7,7 +7,7 @@
 ### Heart of Programming — interactive map of all CanonEngineer code
 
 <img src="https://img.shields.io/badge/Projetos-8-38bdf8?style=for-the-badge" alt="8 projetos"/>
-<img src="https://img.shields.io/badge/Nós-215-fbbf24?style=for-the-badge" alt="215 nós"/>
+<img src="https://img.shields.io/badge/Nós-217-fbbf24?style=for-the-badge" alt="217 nós"/>
 <img src="https://img.shields.io/badge/GitHub_Pages-Ativo-22c55e?style=for-the-badge&logo=githubpages&logoColor=white" alt="GitHub Pages"/>
 <img src="https://img.shields.io/badge/Stack-Python_·_Django_·_Node_·_Qt-a78bfa?style=for-the-badge" alt="Stack"/>
 
@@ -114,7 +114,7 @@ A **Árvore do Conhecimento** é o hub central de todos os projetos do **CanonEn
 | 5 | **JavaScriptUsersProject** | ES6 + localStorage | 20 | [JavaScriptUsersProject](https://github.com/CanonEngineer/JavaScriptUsersProject) |
 | 6 | **JavaScriptRestfulApiProject** | Express + NeDB | 20 | [JavaScriptRestfulApiProject](https://github.com/CanonEngineer/JavaScriptRestfulApiProject) |
 | 7 | **Professional-Scanner** | Node.js + WebSocket | 20 | [Professional-Scanner](https://github.com/CanonEngineer/Professional-Scanner) |
-| 8 | **CustomizeVeyonProject** | Qt/C++ Veyon CIMED | 43 | [CustomizeVeyonProject](https://github.com/CanonEngineer/CustomizeVeyonProject) |
+| 8 | **CustomizeVeyonProject** | Qt/C++ Veyon CIMED | 45 | [CustomizeVeyonProject](https://github.com/CanonEngineer/CustomizeVeyonProject) |
 
 ---
 
@@ -131,7 +131,7 @@ flowchart TB
         CSS["css/style.css<br/>Visual 3D + Cosmos"]
         APP["js/app.js<br/>Eventos + Navegação"]
         RENDER["js/tree-renderer.js<br/>Layout radial SVG"]
-        DATA["js/data/projects.js<br/>8 projetos · 215 nós"]
+        DATA["js/data/projects.js<br/>8 projetos · 217 nós"]
     end
 
     subgraph PROJ["Repositórios de origem"]
