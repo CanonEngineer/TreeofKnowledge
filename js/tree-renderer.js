@@ -1,8 +1,8 @@
-/* Tree Renderer — layout radial com nós grandes e área rolável */
+/* Tree Renderer — layout radial com nós médios e área rolável */
 const TreeRenderer = (() => {
-  const SIBLING_GAP = 3.4;
-  const PARENT_GAP = 2.75;
-  const STAGE_PAD = 150;
+  const SIBLING_GAP = 3.0;
+  const PARENT_GAP = 2.45;
+  const STAGE_PAD = 135;
 
   function buildTree(nodes) {
     const map = new Map();
@@ -26,22 +26,22 @@ const TreeRenderer = (() => {
   }
 
   function getRings(nodeCount) {
-    const spread = Math.max(1, Math.sqrt(nodeCount) * 0.48);
-    const base = 195 * spread;
+    const spread = Math.max(1, Math.sqrt(nodeCount) * 0.45);
+    const base = 176 * spread;
     return {
       module: base,
-      file: base * 1.62,
-      function: base * 2.15,
-      default: base * 1.15
+      file: base * 1.58,
+      function: base * 2.1,
+      default: base * 1.12
     };
   }
 
   function nodeHalfSize(layer) {
     const sizes = {
-      root: 102,
-      module: 76,
-      file: 64,
-      function: 56
+      root: 92,
+      module: 69,
+      file: 58,
+      function: 51
     };
     return sizes[layer] || sizes.function;
   }
@@ -80,7 +80,7 @@ const TreeRenderer = (() => {
     let maxY = -Infinity;
 
     positions.forEach((pos) => {
-      const margin = nodeHalfSize(pos.node.layer || 'function') * 1.5;
+      const margin = nodeHalfSize(pos.node.layer || 'function') * 1.42;
       minX = Math.min(minX, pos.x - margin);
       minY = Math.min(minY, pos.y - margin);
       maxX = Math.max(maxX, pos.x + margin);
@@ -95,8 +95,8 @@ const TreeRenderer = (() => {
       pos.y += offsetY;
     });
 
-    const width = Math.max(maxX - minX + STAGE_PAD * 2, 1100);
-    const height = Math.max(maxY - minY + STAGE_PAD * 2, 850);
+    const width = Math.max(maxX - minX + STAGE_PAD * 2, 1000);
+    const height = Math.max(maxY - minY + STAGE_PAD * 2, 780);
 
     stage.style.width = width + 'px';
     stage.style.height = height + 'px';
@@ -161,7 +161,7 @@ const TreeRenderer = (() => {
     stage.style.transform = '';
 
     const nodeCount = countNodes(tree);
-    const layoutSpan = Math.max(1800, nodeCount * 98);
+    const layoutSpan = Math.max(1600, nodeCount * 86);
     const cx = layoutSpan / 2;
     const cy = layoutSpan / 2;
     const rings = getRings(nodeCount);
