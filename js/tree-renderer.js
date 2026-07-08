@@ -1,8 +1,8 @@
 /* Tree Renderer — layout radial com nós médios e área rolável */
 const TreeRenderer = (() => {
-  const SIBLING_GAP = 3.0;
-  const PARENT_GAP = 2.45;
-  const STAGE_PAD = 135;
+  const SIBLING_GAP = 2.55;
+  const PARENT_GAP = 2.1;
+  const STAGE_PAD = 115;
 
   function buildTree(nodes) {
     const map = new Map();
@@ -26,8 +26,8 @@ const TreeRenderer = (() => {
   }
 
   function getRings(nodeCount) {
-    const spread = Math.max(1, Math.sqrt(nodeCount) * 0.45);
-    const base = 176 * spread;
+    const spread = Math.max(1, Math.sqrt(nodeCount) * 0.38);
+    const base = 150 * spread;
     return {
       module: base,
       file: base * 1.58,
@@ -38,10 +38,10 @@ const TreeRenderer = (() => {
 
   function nodeHalfSize(layer) {
     const sizes = {
-      root: 92,
-      module: 69,
-      file: 58,
-      function: 51
+      root: 78,
+      module: 59,
+      file: 49,
+      function: 43
     };
     return sizes[layer] || sizes.function;
   }
@@ -80,7 +80,7 @@ const TreeRenderer = (() => {
     let maxY = -Infinity;
 
     positions.forEach((pos) => {
-      const margin = nodeHalfSize(pos.node.layer || 'function') * 1.42;
+      const margin = nodeHalfSize(pos.node.layer || 'function') * 1.21;
       minX = Math.min(minX, pos.x - margin);
       minY = Math.min(minY, pos.y - margin);
       maxX = Math.max(maxX, pos.x + margin);
@@ -95,8 +95,8 @@ const TreeRenderer = (() => {
       pos.y += offsetY;
     });
 
-    const width = Math.max(maxX - minX + STAGE_PAD * 2, 1000);
-    const height = Math.max(maxY - minY + STAGE_PAD * 2, 780);
+    const width = Math.max(maxX - minX + STAGE_PAD * 2, 850);
+    const height = Math.max(maxY - minY + STAGE_PAD * 2, 663);
 
     stage.style.width = width + 'px';
     stage.style.height = height + 'px';
@@ -161,7 +161,7 @@ const TreeRenderer = (() => {
     stage.style.transform = '';
 
     const nodeCount = countNodes(tree);
-    const layoutSpan = Math.max(1600, nodeCount * 86);
+    const layoutSpan = Math.max(1360, nodeCount * 73);
     const cx = layoutSpan / 2;
     const cy = layoutSpan / 2;
     const rings = getRings(nodeCount);
