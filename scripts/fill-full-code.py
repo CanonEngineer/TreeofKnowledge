@@ -45,6 +45,8 @@ def repo_root(slug: str) -> str:
     if not name:
         raise KeyError(f"Repositório desconhecido: {slug}")
     path = os.path.join(DESKTOP, name)
+    if not os.path.isdir(path) and slug == "customize-veyon":
+        path = os.path.join(DESKTOP, "Projeto Veyon")
     if not os.path.isdir(path):
         raise FileNotFoundError(f"Clone não encontrado: {path}")
     return path
