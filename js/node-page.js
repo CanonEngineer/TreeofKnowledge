@@ -59,7 +59,14 @@
   document.getElementById('node-title').textContent = node.title;
   document.getElementById('node-file').textContent = node.file || '';
   document.getElementById('node-desc').textContent = node.description || '';
-  document.getElementById('node-code').textContent = node.code || '';
+
+  const codeEl = document.getElementById('node-code');
+  CimedCodeHighlight.renderInto(codeEl, node.code || '', node.file || '', project.slug);
+
+  const legend = document.getElementById('code-cimed-legend');
+  if (legend) {
+    legend.hidden = !CimedCodeHighlight.shouldHighlightProject(project.slug);
+  }
 
   const implEl = document.getElementById('node-impl');
   if (Array.isArray(node.implementation)) {
