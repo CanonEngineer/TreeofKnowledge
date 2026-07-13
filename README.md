@@ -319,7 +319,7 @@ TreeofKnowledge/
 | **Nós roxos** | Arquivos |
 | **Nós verdes** | Funções e métodos |
 | **Linhas SVG** | Conexões pai → filho com glow |
-| **Tech Dimension** | Núcleo 3D com cubo de código, anéis orbitais e partículas no canto superior direito |
+| **Canon Evolution** | Núcleo 3D com cubo de código, anéis orbitais e partículas no header |
 | **Modal** | Código em JetBrains Mono + passos numerados |
 
 ---
