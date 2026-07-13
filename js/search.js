@@ -75,24 +75,60 @@ const TreeSearch = (() => {
     return text.replace(new RegExp('(' + escaped + ')', 'gi'), '<mark>$1</mark>');
   }
 
+  function fileBaseName(path) {
+    if (!path) return '';
+    const parts = String(path).split(/[/\\]/).filter(Boolean);
+    return parts.length ? parts[parts.length - 1] : path;
+  }
+
   function mount(inputEl, resultsEl) {
     if (!inputEl || !resultsEl) return;
     let debounce;
 
     function renderResults(results, query) {
       if (!results.length) {
-        resultsEl.innerHTML = '<div class="search-empty">Nenhum resultado para "<strong>' + query + '</strong>"</div>';
+        resultsEl.innerHTML =
+          '<div class="search-confirm">' +
+          '<span class="search-confirm-label">Busca</span>' +
+          '<strong class="search-confirm-file">' + highlight(query, query) + '</strong>' +
+          '<span class="search-confirm-path">Nenhum arquivo correspondente</span>' +
+          '</div>' +
+          '<div class="search-empty">Nenhum resultado para "<strong>' + query + '</strong>"</div>';
         resultsEl.classList.remove('hidden');
         return;
       }
-      resultsEl.innerHTML = results.map(r =>
-        '<a class="search-result-item" href="' + nodeUrl(r.projectSlug, r.nodeId) + '">' +
-        '<span class="search-result-layer" style="border-color:' + r.projectColor + '">' + (LAYER_LABELS[r.layer] || r.layer) + '</span>' +
-        '<strong>' + highlight(r.title, query) + '</strong>' +
-        '<span class="search-result-meta">' + r.projectName + ' · ' + r.file + '</span>' +
-        '<span class="search-result-snippet">' + highlight(r.description.slice(0, 90), query) + (r.description.length > 90 ? '…' : '') + '</span>' +
-        '</a>'
-      ).join('');
+
+      const top = results[0];
+      const confirmFile = fileBaseName(top.file) || top.title;
+      const confirmPath = top.file || top.title;
+
+      const header =
+        '<div class="search-confirm">' +
+        '<span class="search-confirm-label">Arquivo</span>' +
+        '<strong class="search-confirm-file">' + highlight(confirmFile, query) + '</strong>' +
+        '<span class="search-confirm-path">' + highlight(confirmPath, query) + '</span>' +
+        '</div>';
+
+      const items = results.map((r) => {
+        const fileName = fileBaseName(r.file) || r.title;
+        const pathLine = r.file || r.title;
+        return (
+          '<a class="search-result-item" href="' + nodeUrl(r.projectSlug, r.nodeId) + '">' +
+          '<span class="search-result-layer" style="border-color:' + r.projectColor + '">' +
+          (LAYER_LABELS[r.layer] || r.layer) +
+          '</span>' +
+          '<strong class="search-result-file">' + highlight(fileName, query) + '</strong>' +
+          '<span class="search-result-title">' + highlight(r.title, query) + '</span>' +
+          '<span class="search-result-meta">' + r.projectName + ' · ' + highlight(pathLine, query) + '</span>' +
+          '<span class="search-result-snippet">' +
+          highlight(r.description.slice(0, 90), query) +
+          (r.description.length > 90 ? '…' : '') +
+          '</span>' +
+          '</a>'
+        );
+      }).join('');
+
+      resultsEl.innerHTML = header + items;
       resultsEl.classList.remove('hidden');
     }
 
