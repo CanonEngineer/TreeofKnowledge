@@ -131,7 +131,7 @@ A **Árvore do Conhecimento** é o hub central de todos os projetos do **CanonEn
 | 22 | **AnkiUnivespProject** | Django | 28 | [AnkiUnivespProject](https://github.com/CanonEngineer/AnkiUnivespProject) |
 | 23 | **HyperwareProject** | HTML + CSS + JS + PHP | 10 | [HyperwareProject](https://github.com/CanonEngineer/HyperwareProject) |
 | 24 | **PHPDaoProject** | PHP DAO | 6 | [PHPDaoProject](https://github.com/CanonEngineer/PHPDaoProject) |
-| 25 | **DangerZone** | Python · Labs educacionais | 22 | [DangerZone](https://github.com/CanonEngineer/DangerZone) |
+| 25 | **DangerZone** | Python · Cybersecurity Labs | 133 | [DangerZone](https://github.com/CanonEngineer/DangerZone) |
 
 ---
 
@@ -148,7 +148,7 @@ flowchart TB
         CSS["css/style.css<br/>Visual 3D + Cosmos"]
         APP["js/app.js<br/>Eventos + Navegação"]
         RENDER["js/tree-renderer.js<br/>Layout radial SVG"]
-        DATA["js/data/projects.js<br/>25 projetos · 543 nós"]
+        DATA["js/data/projects.js<br/>25 projetos · 654 nós"]
     end
 
     subgraph PROJ["Repositórios de origem"]
