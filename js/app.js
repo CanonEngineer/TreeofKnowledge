@@ -132,11 +132,15 @@
 
   function moveTooltip(e) {
     const pad = 16;
+    tooltip.style.left = '0px';
+    tooltip.style.top = '0px';
+    const rect = tooltip.getBoundingClientRect();
     let x = e.clientX + pad;
     let y = e.clientY + pad;
-    const rect = tooltip.getBoundingClientRect();
-    if (x + rect.width > window.innerWidth) x = e.clientX - rect.width - pad;
-    if (y + rect.height > window.innerHeight) y = e.clientY - rect.height - pad;
+    if (x + rect.width > window.innerWidth - 8) x = Math.max(8, e.clientX - rect.width - pad);
+    if (y + rect.height > window.innerHeight - 8) y = Math.max(8, e.clientY - rect.height - pad);
+    if (x < 8) x = 8;
+    if (y < 8) y = 8;
     tooltip.style.left = x + 'px';
     tooltip.style.top = y + 'px';
   }

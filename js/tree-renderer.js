@@ -277,7 +277,7 @@ const TreeRenderer = (() => {
 
       if (!isRoot) {
         el.href = AppConfig.nodePageUrl(projectSlug, n.id);
-        el.title = n.title + ' — ' + (n.file || '');
+        el.removeAttribute('title');
       } else {
         el.style.cursor = 'default';
       }
