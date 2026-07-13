@@ -307,31 +307,21 @@ body {
 .tree-scene {
   position: relative; width: 100%;
   flex: 1; min-height: 0;
-  overflow: auto;
+  overflow: hidden;
   border-radius: 16px; border: 1px solid var(--border);
   background: radial-gradient(ellipse at center, rgba(20,30,50,.9) 0%, rgba(6,8,15,.95) 100%);
-  scrollbar-width: thin;
-  scrollbar-color: rgba(56,189,248,.45) rgba(255,255,255,.06);
 }
-.tree-scene::-webkit-scrollbar { width: 10px; height: 10px; }
-.tree-scene::-webkit-scrollbar-thumb {
-  background: rgba(56,189,248,.45);
-  border-radius: 999px;
-}
-.tree-scene::-webkit-scrollbar-track { background: rgba(255,255,255,.06); }
 .tree-stage {
-  position: relative;
-  min-width: 100%;
-  min-height: 100%;
-  will-change: width, height;
+  position: absolute; inset: 0;
+  will-change: transform;
 }
 .tree-lines {
   position: absolute; inset: 0; width: 100%; height: 100%;
   pointer-events: none;
 }
 .tree-lines line {
-  stroke: rgba(56,189,248,.36); stroke-width: 2.5;
-  filter: drop-shadow(0 0 5px rgba(56,189,248,.35));
+  stroke: rgba(56,189,248,.25); stroke-width: 1.5;
+  filter: drop-shadow(0 0 4px rgba(56,189,248,.3));
 }
 .tree-nodes { position: absolute; inset: 0; pointer-events: none; }
 .tree-nodes .tree-node { pointer-events: auto; }
@@ -350,44 +340,41 @@ body {
 a.tree-node:hover { text-decoration: none; }
 .tree-node-inner {
   display: flex; align-items: center; justify-content: center;
-  border-radius: 10px;
-  font-size: .57rem; font-weight: 700; text-align: center;
-  color: #fff; line-height: 1.25;
-  padding: 7px 8px;
+  border-radius: 50%;
+  font-size: .68rem; font-weight: 600; text-align: center;
+  color: #fff; line-height: 1.2; padding: 4px;
   word-break: break-word;
-  hyphens: auto;
   transition: all .25s;
-  box-sizing: border-box;
 }
 .tree-node[data-layer="root"] .tree-node-inner {
-  min-width: 114px; max-width: 148px; min-height: 73px;
-  font-size: .63rem;
+  width: 100px; height: 100px; font-size: .74rem;
   background: radial-gradient(circle at 30% 30%, #fde68a, var(--gold) 50%, #b45309);
-  box-shadow: 0 0 36px rgba(251,191,36,.55), 0 0 72px rgba(251,191,36,.25);
+  box-shadow: 0 0 30px rgba(251,191,36,.5), 0 0 60px rgba(251,191,36,.2);
   animation: pulse-root 3s ease-in-out infinite;
 }
 .tree-node[data-layer="module"] .tree-node-inner {
-  min-width: 92px; max-width: 129px; min-height: 61px;
-  font-size: .57rem;
+  width: 72px; height: 72px;
   background: radial-gradient(circle at 30% 30%, #7dd3fc, var(--accent) 60%, #0369a1);
-  box-shadow: 0 0 26px rgba(56,189,248,.45);
+  box-shadow: 0 0 20px rgba(56,189,248,.4);
 }
 .tree-node[data-layer="file"] .tree-node-inner {
-  min-width: 81px; max-width: 112px; min-height: 54px;
-  font-size: .54rem;
+  width: 58px; height: 58px;
   background: radial-gradient(circle at 30% 30%, #d8b4fe, var(--purple) 60%, #7c3aed);
-  box-shadow: 0 0 20px rgba(192,132,252,.4);
+  box-shadow: 0 0 16px rgba(192,132,252,.35);
 }
 .tree-node[data-layer="function"] .tree-node-inner {
-  min-width: 73px; max-width: 102px; min-height: 48px;
-  font-size: .51rem;
+  width: 50px; height: 50px;
   background: radial-gradient(circle at 30% 30%, #6ee7b7, var(--green) 60%, #059669);
-  box-shadow: 0 0 18px rgba(52,211,153,.4);
+  box-shadow: 0 0 14px rgba(52,211,153,.35);
 }
+.tree-node-dense[data-layer="module"] .tree-node-inner { width: 58px; height: 58px; font-size: .58rem; }
+.tree-node-dense[data-layer="file"] .tree-node-inner { width: 50px; height: 50px; font-size: .55rem; }
+.tree-node-dense[data-layer="function"] .tree-node-inner { width: 43px; height: 43px; font-size: .53rem; }
+.tree-node-dense[data-layer="root"] .tree-node-inner { width: 86px; height: 86px; font-size: .66rem; }
 .tree-node:hover { z-index: 10; }
 .tree-node:hover .tree-node-inner {
-  transform: scale(1.06);
-  filter: brightness(1.12);
+  transform: scale(1.12);
+  filter: brightness(1.15);
 }
 @keyframes pulse-root {
   0%, 100% { box-shadow: 0 0 30px rgba(251,191,36,.5), 0 0 60px rgba(251,191,36,.2); }
@@ -396,7 +383,7 @@ a.tree-node:hover { text-decoration: none; }
 
 .tree-hint {
   flex-shrink: 0;
-  text-align: center; font-size: .82rem; color: var(--muted);
+  text-align: center; font-size: .78rem; color: var(--muted);
   margin-top: .5rem;
 }
 
@@ -599,9 +586,7 @@ a.tree-node:hover { text-decoration: none; }
   .tech-cube-face.top    { transform: rotateX(90deg) translateZ(14px); }
   .tech-cube-face.bottom { transform: rotateX(-90deg) translateZ(14px); }
   .tree-view { height: calc(100vh - 9rem); padding: .5rem .75rem; }
-  .tree-node[data-layer="root"] .tree-node-inner { min-width: 93px; max-width: 126px; min-height: 61px; font-size: .57rem; }
-  .tree-node[data-layer="module"] .tree-node-inner { min-width: 81px; max-width: 107px; min-height: 53px; font-size: .53rem; }
-  .tree-node[data-layer="file"] .tree-node-inner { min-width: 73px; max-width: 97px; min-height: 46px; font-size: .49rem; }
-  .tree-node[data-layer="function"] .tree-node-inner { min-width: 67px; max-width: 90px; min-height: 42px; font-size: .46rem; }
+  .tree-node[data-layer="root"] .tree-node-inner { width: 78px; height: 78px; font-size: .64rem; }
+  .tree-node-dense[data-layer="root"] .tree-node-inner { width: 74px; height: 74px; }
   .node-page { padding: 1rem; }
 }
