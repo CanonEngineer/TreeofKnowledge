@@ -6,7 +6,7 @@
 
 ### Heart of Programming — interactive map of all CanonEngineer code
 
-<img src="https://img.shields.io/badge/Projetos-24-38bdf8?style=for-the-badge" alt="24 projetos"/>
+<img src="https://img.shields.io/badge/Projetos-25-38bdf8?style=for-the-badge" alt="25 projetos"/>
 <img src="https://img.shields.io/badge/Nós-217-fbbf24?style=for-the-badge" alt="217 nós"/>
 <img src="https://img.shields.io/badge/GitHub_Pages-Ativo-22c55e?style=for-the-badge&logo=githubpages&logoColor=white" alt="GitHub Pages"/>
 <img src="https://img.shields.io/badge/Stack-Python_·_Django_·_Node_·_Qt-a78bfa?style=for-the-badge" alt="Stack"/>
@@ -131,6 +131,7 @@ A **Árvore do Conhecimento** é o hub central de todos os projetos do **CanonEn
 | 22 | **AnkiUnivespProject** | Django | 28 | [AnkiUnivespProject](https://github.com/CanonEngineer/AnkiUnivespProject) |
 | 23 | **HyperwareProject** | HTML + CSS + JS + PHP | 10 | [HyperwareProject](https://github.com/CanonEngineer/HyperwareProject) |
 | 24 | **PHPDaoProject** | PHP DAO | 6 | [PHPDaoProject](https://github.com/CanonEngineer/PHPDaoProject) |
+| 25 | **DangerZone** | Python · Labs educacionais | 22 | [DangerZone](https://github.com/CanonEngineer/DangerZone) |
 
 ---
 
@@ -147,7 +148,7 @@ flowchart TB
         CSS["css/style.css<br/>Visual 3D + Cosmos"]
         APP["js/app.js<br/>Eventos + Navegação"]
         RENDER["js/tree-renderer.js<br/>Layout radial SVG"]
-        DATA["js/data/projects.js<br/>24 projetos · 521 nós"]
+        DATA["js/data/projects.js<br/>25 projetos · 543 nós"]
     end
 
     subgraph PROJ["Repositórios de origem"]
@@ -185,7 +186,7 @@ flowchart TB
 ```mermaid
 flowchart LR
     A(["👤 Usuário acessa<br/>GitHub Pages"]) --> B{"Escolhe ação"}
-    B -->|"🔗 Conectar"| C["Galeria de<br/>24 projetos"]
+    B -->|"🔗 Conectar"| C["Galeria de<br/>25 projetos"]
     B -->|"✖ Cancelar"| D["Permanece no<br/>README GitHub"]
     C --> E["Clica em um<br/>card de projeto"]
     E --> F["Árvore 3D<br/>renderizada"]
@@ -278,7 +279,7 @@ mindmap
 </div>
 
 1. Clique em **Conectar** acima
-2. Escolha um dos **24 projetos** na galeria
+2. Escolha um dos **25 projetos** na galeria
 3. Explore a **árvore dimensional** — mova o mouse para o efeito 3D
 4. **Passe o mouse** nos balões para ver o que cada código faz
 5. **Clique no balão** para abrir a **página com código e implementação**
