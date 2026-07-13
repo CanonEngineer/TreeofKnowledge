@@ -1,9 +1,10 @@
-/* Tree Renderer — layout radial sem sobreposição, com área rolável */
+/* Tree Renderer — layout no estilo CustomizeVeyon: radial, sem sobreposição, área rolável */
 const TreeRenderer = (() => {
-  const SIBLING_PAD = 1.28;
-  const PARENT_PAD = 1.18;
-  const STAGE_PAD = 72;
-  const SEPARATION_ITERS = 48;
+  const SIBLING_PAD = 1.42;
+  const PARENT_PAD = 1.22;
+  const STAGE_PAD = 80;
+  const SEPARATION_ITERS = 56;
+  const FILL_RATIO = 0.88;
 
   function buildTree(nodes) {
     const map = new Map();
@@ -28,33 +29,53 @@ const TreeRenderer = (() => {
     return sizes[layer] || sizes.function;
   }
 
-  /** Raio do disco ocupado pela subárvore (nó + descendentes). */
-  function measureSubtree(node, dense) {
+  /** Abertura angular dos filhos (círculo completo só na raiz). */
+  function childSpread(count, isRoot) {
+    if (count <= 1) return 0;
+    if (isRoot) return Math.PI * 2;
+    return Math.min(Math.PI * 1.25, 0.55 + count * 0.48);
+  }
+
+  function orbitFromChildren(half, childRs, isRoot) {
+    const n = childRs.length;
+    if (n === 0) return 0;
+    if (n === 1) return (half + childRs[0]) * PARENT_PAD;
+
+    const spread = childSpread(n, isRoot);
+    const step = isRoot ? spread / n : spread / (n - 1);
+    let orbit = 0;
+    for (let i = 0; i < n; i++) {
+      const a = childRs[i];
+      const b = childRs[isRoot ? (i + 1) % n : Math.min(i + 1, n - 1)];
+      if (!isRoot && i === n - 1) break;
+      const need = ((a + b) * SIBLING_PAD) / (2 * Math.sin(Math.max(step, 0.12) / 2));
+      orbit = Math.max(orbit, need);
+    }
+    orbit = Math.max(orbit, (half + Math.max(...childRs)) * PARENT_PAD);
+    return orbit;
+  }
+
+  /** Mede subárvores; na raiz aplica órbita mínima no estilo Veyon. */
+  function measureSubtree(node, dense, isRoot, minRootOrbit) {
     const half = nodeHalfSize(node.layer || 'function', dense);
     const children = node.children || [];
     if (!children.length) {
       node._subR = half;
+      node._orbit = 0;
       return half;
     }
 
-    children.forEach(ch => measureSubtree(ch, dense));
-
+    children.forEach(ch => measureSubtree(ch, dense, false, 0));
     const childRs = children.map(ch => ch._subR);
-    const n = children.length;
-    let orbit = 0;
+    let orbit = orbitFromChildren(half, childRs, isRoot);
 
-    if (n === 1) {
-      orbit = (half + childRs[0]) * PARENT_PAD;
-    } else {
-      const step = (2 * Math.PI) / n;
-      for (let i = 0; i < n; i++) {
-        const a = childRs[i];
-        const b = childRs[(i + 1) % n];
-        const need = ((a + b) * SIBLING_PAD) / (2 * Math.sin(step / 2));
-        orbit = Math.max(orbit, need);
-      }
-      const maxChild = Math.max(...childRs);
-      orbit = Math.max(orbit, (half + maxChild) * PARENT_PAD);
+    if (isRoot && minRootOrbit) {
+      orbit = Math.max(orbit, minRootOrbit);
+    }
+
+    // Espaçamento extra leve em nós com muitos filhos (como o Veyon)
+    if (children.length >= 5) {
+      orbit *= 1.08;
     }
 
     node._orbit = orbit;
@@ -62,39 +83,39 @@ const TreeRenderer = (() => {
     return node._subR;
   }
 
-  function layoutNode(node, angle, depth, positions, cx, cy, dense) {
+  function layoutNode(node, angle, depth, positions, cx, cy) {
     positions.set(node.id, { x: cx, y: cy, node, depth, angle });
     const children = node.children || [];
     if (!children.length) return;
 
     const orbitR = node._orbit || 0;
+    const n = children.length;
+    const isRoot = depth === 0;
 
-    if (children.length === 1) {
-      const a = angle;
+    if (n === 1) {
+      const a = isRoot ? -Math.PI / 2 : angle;
       layoutNode(
         children[0], a, depth + 1, positions,
         cx + Math.cos(a) * orbitR,
-        cy + Math.sin(a) * orbitR,
-        dense
+        cy + Math.sin(a) * orbitR
       );
       return;
     }
 
-    const step = (2 * Math.PI) / children.length;
-    const start = depth === 0 ? -Math.PI / 2 : angle - Math.PI + step / 2;
+    const spread = childSpread(n, isRoot);
+    const step = isRoot ? spread / n : spread / (n - 1);
+    const start = isRoot ? -Math.PI / 2 : angle - spread / 2;
 
     children.forEach((child, i) => {
       const a = start + step * i;
       layoutNode(
         child, a, depth + 1, positions,
         cx + Math.cos(a) * orbitR,
-        cy + Math.sin(a) * orbitR,
-        dense
+        cy + Math.sin(a) * orbitR
       );
     });
   }
 
-  /** Empurra nós que ainda se tocam (colisões entre ramos). */
   function resolveOverlaps(positions, dense) {
     const items = Array.from(positions.values());
     for (let iter = 0; iter < SEPARATION_ITERS; iter++) {
@@ -142,29 +163,51 @@ const TreeRenderer = (() => {
     }
   }
 
-  function normalizeStage(stage, positions, dense) {
-    let minX = Infinity;
-    let minY = Infinity;
-    let maxX = -Infinity;
-    let maxY = -Infinity;
-
+  function boundsOf(positions, dense) {
+    let minX = Infinity, minY = Infinity, maxX = -Infinity, maxY = -Infinity;
     positions.forEach((pos) => {
-      const margin = nodeHalfSize(pos.node.layer || 'function', dense) * 1.25;
+      const margin = nodeHalfSize(pos.node.layer || 'function', dense) * 1.3;
       minX = Math.min(minX, pos.x - margin);
       minY = Math.min(minY, pos.y - margin);
       maxX = Math.max(maxX, pos.x + margin);
       maxY = Math.max(maxY, pos.y + margin);
     });
+    return { minX, minY, maxX, maxY, width: maxX - minX, height: maxY - minY };
+  }
 
-    const offsetX = STAGE_PAD - minX;
-    const offsetY = STAGE_PAD - minY;
+  /**
+   * Centraliza e, se a árvore for menor que a tela (FoodOnline etc.),
+   * amplia até preencher ~88% — visual próximo ao CustomizeVeyon.
+   * Se for maior, mantém tamanho real e usa scroll.
+   */
+  function normalizeStage(stage, positions, dense, sceneW, sceneH) {
+    let b = boundsOf(positions, dense);
+
+    const targetW = Math.max(sceneW * FILL_RATIO, 320);
+    const targetH = Math.max(sceneH * FILL_RATIO, 280);
+    const scaleUp = Math.min(targetW / Math.max(b.width, 1), targetH / Math.max(b.height, 1));
+
+    if (scaleUp > 1.02) {
+      const cx = (b.minX + b.maxX) / 2;
+      const cy = (b.minY + b.maxY) / 2;
+      positions.forEach((pos) => {
+        pos.x = cx + (pos.x - cx) * scaleUp;
+        pos.y = cy + (pos.y - cy) * scaleUp;
+      });
+      b = boundsOf(positions, dense);
+    }
+
+    const contentW = b.width + STAGE_PAD * 2;
+    const contentH = b.height + STAGE_PAD * 2;
+    const width = Math.max(contentW, sceneW);
+    const height = Math.max(contentH, sceneH);
+
+    const offsetX = (width - b.width) / 2 - b.minX;
+    const offsetY = (height - b.height) / 2 - b.minY;
     positions.forEach((pos) => {
       pos.x += offsetX;
       pos.y += offsetY;
     });
-
-    const width = Math.max(maxX - minX + STAGE_PAD * 2, 640);
-    const height = Math.max(maxY - minY + STAGE_PAD * 2, 480);
 
     stage.style.width = width + 'px';
     stage.style.height = height + 'px';
@@ -184,14 +227,19 @@ const TreeRenderer = (() => {
     const scene = stage.parentElement;
     stage.style.transform = '';
 
+    const sceneW = Math.max(scene.clientWidth || 1000, 640);
+    const sceneH = Math.max(scene.clientHeight || 640, 420);
     const nodeCount = countNodes(tree);
     const dense = nodeCount > 14;
-    measureSubtree(tree, dense);
+
+    // Órbita mínima da raiz no espírito do Veyon (módulos bem abertos)
+    const minRootOrbit = Math.min(sceneW, sceneH) * (nodeCount >= 40 ? 0.30 : 0.34);
+    measureSubtree(tree, dense, true, minRootOrbit);
 
     const positions = new Map();
-    layoutNode(tree, -Math.PI / 2, 0, positions, 0, 0, dense);
+    layoutNode(tree, -Math.PI / 2, 0, positions, 0, 0);
     resolveOverlaps(positions, dense);
-    const stageSize = normalizeStage(stage, positions, dense);
+    const stageSize = normalizeStage(stage, positions, dense, sceneW, sceneH);
 
     linesEl.setAttribute('width', stageSize.width);
     linesEl.setAttribute('height', stageSize.height);
@@ -239,14 +287,11 @@ const TreeRenderer = (() => {
       container.appendChild(el);
     });
 
-    // Centraliza a raiz na viewport inicial
     const rootPos = positions.get(tree.id);
     if (rootPos) {
       requestAnimationFrame(() => {
-        const vw = scene.clientWidth;
-        const vh = scene.clientHeight;
-        scene.scrollLeft = Math.max(0, rootPos.x - vw / 2);
-        scene.scrollTop = Math.max(0, rootPos.y - vh / 2);
+        scene.scrollLeft = Math.max(0, rootPos.x - scene.clientWidth / 2);
+        scene.scrollTop = Math.max(0, rootPos.y - scene.clientHeight / 2);
       });
     }
 
