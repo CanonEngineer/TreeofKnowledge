@@ -1,7 +1,9 @@
-/* Tree Renderer — layout radial escalável para árvores grandes */
+/* Tree Renderer — layout radial sem sobreposição, com área rolável */
 const TreeRenderer = (() => {
-  const SIBLING_GAP = 1.65;
-  const PARENT_GAP = 1.45;
+  const SIBLING_PAD = 1.28;
+  const PARENT_PAD = 1.18;
+  const STAGE_PAD = 72;
+  const SEPARATION_ITERS = 48;
 
   function buildTree(nodes) {
     const map = new Map();
@@ -13,27 +15,10 @@ const TreeRenderer = (() => {
     return root ? map.get(root.id) : null;
   }
 
-  function maxDepth(node, d = 0) {
-    if (!node.children || !node.children.length) return d;
-    return Math.max(...node.children.map(c => maxDepth(c, d + 1)));
-  }
-
   function countNodes(node) {
     let c = 1;
     (node.children || []).forEach(ch => { c += countNodes(ch); });
     return c;
-  }
-
-  function getRings(nodeCount, rect) {
-    const minDim = Math.min(rect.width, rect.height);
-    const density = Math.max(0.58, Math.min(1.25, 18 / Math.sqrt(nodeCount)));
-    const base = minDim * 0.19 * density;
-    return {
-      module: base,
-      file: base * 1.9,
-      function: base * 2.55,
-      default: base * 1.15
-    };
   }
 
   function nodeHalfSize(layer, dense) {
@@ -43,98 +28,150 @@ const TreeRenderer = (() => {
     return sizes[layer] || sizes.function;
   }
 
-  function nodeDiameter(layer, dense) {
-    return nodeHalfSize(layer, dense) * 2;
+  /** Raio do disco ocupado pela subárvore (nó + descendentes). */
+  function measureSubtree(node, dense) {
+    const half = nodeHalfSize(node.layer || 'function', dense);
+    const children = node.children || [];
+    if (!children.length) {
+      node._subR = half;
+      return half;
+    }
+
+    children.forEach(ch => measureSubtree(ch, dense));
+
+    const childRs = children.map(ch => ch._subR);
+    const n = children.length;
+    let orbit = 0;
+
+    if (n === 1) {
+      orbit = (half + childRs[0]) * PARENT_PAD;
+    } else {
+      const step = (2 * Math.PI) / n;
+      for (let i = 0; i < n; i++) {
+        const a = childRs[i];
+        const b = childRs[(i + 1) % n];
+        const need = ((a + b) * SIBLING_PAD) / (2 * Math.sin(step / 2));
+        orbit = Math.max(orbit, need);
+      }
+      const maxChild = Math.max(...childRs);
+      orbit = Math.max(orbit, (half + maxChild) * PARENT_PAD);
+    }
+
+    node._orbit = orbit;
+    node._subR = orbit + Math.max(...childRs);
+    return node._subR;
   }
 
-  /** Raio mínimo para N irmãos em círculo sem sobreposição */
-  function minOrbitRadius(count, childLayer, dense) {
-    if (count <= 1) return 0;
-    const d = nodeDiameter(childLayer, dense);
-    return (count * d * SIBLING_GAP) / (2 * Math.PI);
+  function layoutNode(node, angle, depth, positions, cx, cy, dense) {
+    positions.set(node.id, { x: cx, y: cy, node, depth, angle });
+    const children = node.children || [];
+    if (!children.length) return;
+
+    const orbitR = node._orbit || 0;
+
+    if (children.length === 1) {
+      const a = angle;
+      layoutNode(
+        children[0], a, depth + 1, positions,
+        cx + Math.cos(a) * orbitR,
+        cy + Math.sin(a) * orbitR,
+        dense
+      );
+      return;
+    }
+
+    const step = (2 * Math.PI) / children.length;
+    const start = depth === 0 ? -Math.PI / 2 : angle - Math.PI + step / 2;
+
+    children.forEach((child, i) => {
+      const a = start + step * i;
+      layoutNode(
+        child, a, depth + 1, positions,
+        cx + Math.cos(a) * orbitR,
+        cy + Math.sin(a) * orbitR,
+        dense
+      );
+    });
   }
 
-  function childOrbitRadius(ringRadius, childLayer, depth, parentLayer, dense) {
-    const depthFactors = [1.15, 1.0, 0.92, 0.86];
-    const factor = depthFactors[depth] ?? 0.8;
-    const fromRing = ringRadius * factor;
-    const minFromParent = (nodeHalfSize(parentLayer, dense) + nodeHalfSize(childLayer, dense)) * PARENT_GAP;
-    return Math.max(fromRing, minFromParent);
+  /** Empurra nós que ainda se tocam (colisões entre ramos). */
+  function resolveOverlaps(positions, dense) {
+    const items = Array.from(positions.values());
+    for (let iter = 0; iter < SEPARATION_ITERS; iter++) {
+      let moved = false;
+      for (let i = 0; i < items.length; i++) {
+        for (let j = i + 1; j < items.length; j++) {
+          const a = items[i];
+          const b = items[j];
+          const ra = nodeHalfSize(a.node.layer || 'function', dense);
+          const rb = nodeHalfSize(b.node.layer || 'function', dense);
+          const minDist = (ra + rb) * SIBLING_PAD;
+          let dx = b.x - a.x;
+          let dy = b.y - a.y;
+          let dist = Math.hypot(dx, dy);
+          if (dist < 0.01) {
+            dx = (Math.random() - 0.5) || 0.01;
+            dy = (Math.random() - 0.5) || 0.01;
+            dist = Math.hypot(dx, dy);
+          }
+          if (dist >= minDist) continue;
+
+          const push = (minDist - dist) / 2;
+          const ux = dx / dist;
+          const uy = dy / dist;
+          const aRoot = a.node.layer === 'root';
+          const bRoot = b.node.layer === 'root';
+
+          if (!aRoot) {
+            a.x -= ux * push;
+            a.y -= uy * push;
+            moved = true;
+          }
+          if (!bRoot) {
+            b.x += ux * (aRoot ? push * 2 : push);
+            b.y += uy * (aRoot ? push * 2 : push);
+            moved = true;
+          } else if (aRoot) {
+            a.x -= ux * push * 2;
+            a.y -= uy * push * 2;
+            moved = true;
+          }
+        }
+      }
+      if (!moved) break;
+    }
   }
 
-  function arcForSiblings(count, orbitR, childLayer, dense) {
-    if (count <= 1) return 0;
-    const d = nodeDiameter(childLayer, dense);
-    const minArc = (count * d * SIBLING_GAP) / Math.max(orbitR, 1);
-    const spreadArc = Math.PI * 0.52 * count + 0.55;
-    return Math.min(Math.PI * 2 * 0.94, Math.max(minArc, spreadArc));
-  }
-
-  function fitStage(stage, positions, rect, dense) {
-    const pad = 48;
-    let minX = Infinity, minY = Infinity, maxX = -Infinity, maxY = -Infinity;
+  function normalizeStage(stage, positions, dense) {
+    let minX = Infinity;
+    let minY = Infinity;
+    let maxX = -Infinity;
+    let maxY = -Infinity;
 
     positions.forEach((pos) => {
-      const margin = nodeHalfSize(pos.node.layer || 'function', dense) * 1.2;
+      const margin = nodeHalfSize(pos.node.layer || 'function', dense) * 1.25;
       minX = Math.min(minX, pos.x - margin);
       minY = Math.min(minY, pos.y - margin);
       maxX = Math.max(maxX, pos.x + margin);
       maxY = Math.max(maxY, pos.y + margin);
     });
 
-    const bw = Math.max(maxX - minX, 120);
-    const bh = Math.max(maxY - minY, 120);
-    const scale = Math.min(
-      (rect.width - pad * 2) / bw,
-      (rect.height - pad * 2) / bh,
-      1
-    );
-
-    const bcx = (minX + maxX) / 2;
-    const bcy = (minY + maxY) / 2;
-    const tx = rect.width / 2 - bcx * scale;
-    const ty = rect.height / 2 - bcy * scale;
-
-    stage.style.transformOrigin = '0 0';
-    stage.style.transform = 'translate(' + tx + 'px,' + ty + 'px) scale(' + scale + ')';
-  }
-
-  function layoutNode(node, angle, depth, positions, cx, cy, rings, dense) {
-    positions.set(node.id, { x: cx, y: cy, node, depth });
-    const children = node.children || [];
-    if (!children.length) return;
-
-    const parentLayer = node.layer || 'root';
-    const childLayer = children[0].layer || 'function';
-    const ringRadius = rings[childLayer] || rings.default;
-    let orbitR = childOrbitRadius(ringRadius, childLayer, depth, parentLayer, dense);
-    orbitR = Math.max(orbitR, minOrbitRadius(children.length, childLayer, dense));
-
-    if (children.length === 1) {
-      layoutNode(children[0], angle, depth + 1, positions,
-        cx + Math.cos(angle) * orbitR, cy + Math.sin(angle) * orbitR, rings, dense);
-      return;
-    }
-
-    if (depth === 0) {
-      const step = (2 * Math.PI) / children.length;
-      children.forEach((child, i) => {
-        const a = -Math.PI / 2 + step * i;
-        layoutNode(child, a, depth + 1, positions,
-          cx + Math.cos(a) * orbitR, cy + Math.sin(a) * orbitR, rings, dense);
-      });
-      return;
-    }
-
-    const arc = arcForSiblings(children.length, orbitR, childLayer, dense);
-    const start = angle - arc / 2;
-    const step = arc / (children.length - 1);
-
-    children.forEach((child, i) => {
-      const a = start + step * i;
-      layoutNode(child, a, depth + 1, positions,
-        cx + Math.cos(a) * orbitR, cy + Math.sin(a) * orbitR, rings, dense);
+    const offsetX = STAGE_PAD - minX;
+    const offsetY = STAGE_PAD - minY;
+    positions.forEach((pos) => {
+      pos.x += offsetX;
+      pos.y += offsetY;
     });
+
+    const width = Math.max(maxX - minX + STAGE_PAD * 2, 640);
+    const height = Math.max(maxY - minY + STAGE_PAD * 2, 480);
+
+    stage.style.width = width + 'px';
+    stage.style.height = height + 'px';
+    stage.style.transform = 'none';
+    stage.style.transformOrigin = '0 0';
+
+    return { width, height };
   }
 
   function render(container, linesEl, nodes, projectColor, projectSlug) {
@@ -145,16 +182,20 @@ const TreeRenderer = (() => {
 
     const stage = container.parentElement;
     const scene = stage.parentElement;
-    const rect = scene.getBoundingClientRect();
     stage.style.transform = '';
-    const cx = rect.width / 2;
-    const cy = rect.height / 2;
+
     const nodeCount = countNodes(tree);
-    const rings = getRings(nodeCount, rect);
     const dense = nodeCount > 14;
+    measureSubtree(tree, dense);
 
     const positions = new Map();
-    layoutNode(tree, -Math.PI / 2, 0, positions, cx, cy, rings, dense);
+    layoutNode(tree, -Math.PI / 2, 0, positions, 0, 0, dense);
+    resolveOverlaps(positions, dense);
+    const stageSize = normalizeStage(stage, positions, dense);
+
+    linesEl.setAttribute('width', stageSize.width);
+    linesEl.setAttribute('height', stageSize.height);
+    linesEl.setAttribute('viewBox', '0 0 ' + stageSize.width + ' ' + stageSize.height);
 
     positions.forEach((pos) => {
       const n = pos.node;
@@ -167,7 +208,8 @@ const TreeRenderer = (() => {
       line.setAttribute('x2', pos.x);
       line.setAttribute('y2', pos.y);
       line.setAttribute('stroke', projectColor || '#38bdf8');
-      line.setAttribute('stroke-opacity', '0.3');
+      line.setAttribute('stroke-opacity', '0.35');
+      line.setAttribute('stroke-width', '1.5');
       linesEl.appendChild(line);
     });
 
@@ -180,8 +222,7 @@ const TreeRenderer = (() => {
       el.dataset.layer = n.layer || 'function';
       el.style.left = pos.x + 'px';
       el.style.top = pos.y + 'px';
-      const z = isRoot ? 80 : n.layer === 'module' ? 50 : n.layer === 'file' ? 30 : 10;
-      el.style.zIndex = z;
+      el.style.zIndex = isRoot ? 80 : n.layer === 'module' ? 50 : n.layer === 'file' ? 30 : 10;
 
       if (!isRoot) {
         el.href = AppConfig.nodePageUrl(projectSlug, n.id);
@@ -198,7 +239,17 @@ const TreeRenderer = (() => {
       container.appendChild(el);
     });
 
-    fitStage(stage, positions, rect, dense);
+    // Centraliza a raiz na viewport inicial
+    const rootPos = positions.get(tree.id);
+    if (rootPos) {
+      requestAnimationFrame(() => {
+        const vw = scene.clientWidth;
+        const vh = scene.clientHeight;
+        scene.scrollLeft = Math.max(0, rootPos.x - vw / 2);
+        scene.scrollTop = Math.max(0, rootPos.y - vh / 2);
+      });
+    }
+
     return positions;
   }
 

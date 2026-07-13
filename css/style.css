@@ -307,13 +307,23 @@ body {
 .tree-scene {
   position: relative; width: 100%;
   flex: 1; min-height: 0;
-  overflow: hidden;
+  overflow: auto;
   border-radius: 16px; border: 1px solid var(--border);
   background: radial-gradient(ellipse at center, rgba(20,30,50,.9) 0%, rgba(6,8,15,.95) 100%);
+  scrollbar-width: thin;
+  scrollbar-color: rgba(56,189,248,.45) rgba(255,255,255,.06);
 }
+.tree-scene::-webkit-scrollbar { width: 10px; height: 10px; }
+.tree-scene::-webkit-scrollbar-thumb {
+  background: rgba(56,189,248,.45);
+  border-radius: 999px;
+}
+.tree-scene::-webkit-scrollbar-track { background: rgba(255,255,255,.06); }
 .tree-stage {
-  position: absolute; inset: 0;
-  will-change: transform;
+  position: relative;
+  min-width: 100%;
+  min-height: 100%;
+  will-change: width, height;
 }
 .tree-lines {
   position: absolute; inset: 0; width: 100%; height: 100%;
