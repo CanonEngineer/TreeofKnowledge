@@ -38,6 +38,7 @@ REPO_DIRS = {
     "hyperware": "HyperwareProject",
     "php-dao": "PHPDaoProject",
     "smarthome-iot": "ArduínoProject",
+    "smartferrari-iot": "FerrariArduínoProject",
 }
 
 PREFIXES = {
@@ -47,7 +48,7 @@ PREFIXES = {
 SOURCE_EXTS = {
     ".py", ".js", ".jsx", ".ts", ".tsx", ".cpp", ".h", ".hpp", ".c", ".cc",
     ".ejs", ".html", ".htm", ".css", ".scss", ".sql", ".json", ".sh", ".md",
-    ".vue", ".php",
+    ".vue", ".php", ".ino", ".ps1",
 }
 
 SKIP_DIRS = {
@@ -319,6 +320,8 @@ def project_files() -> list[tuple[str, bool]]:
         (os.path.join(SCRIPTS, "restaurant-project.json"), True),
         (os.path.join(SCRIPTS, "veyon-project.json"), True),
         (os.path.join(SCRIPTS, "extra-projects.json"), False),
+        (os.path.join(SCRIPTS, "smarthome-project.json"), True),
+        (os.path.join(SCRIPTS, "smartferrari-project.json"), True),
     ]
 
 

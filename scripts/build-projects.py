@@ -15,6 +15,7 @@ RESTAURANT_FILE = os.path.join(ROOT, "scripts", "restaurant-project.json")
 EXTRA_FILE = os.path.join(ROOT, "scripts", "extra-projects.json")
 DANGERZONE_FILE = os.path.join(ROOT, "scripts", "dangerzone-project.json")
 SMARTHOME_FILE = os.path.join(ROOT, "scripts", "smarthome-project.json")
+SMARTFERRARI_FILE = os.path.join(ROOT, "scripts", "smartferrari-project.json")
 FILL_SCRIPT = os.path.join(ROOT, "scripts", "fill-full-code.py")
 
 
@@ -44,7 +45,11 @@ def main():
   if os.path.isfile(SMARTHOME_FILE):
     with open(SMARTHOME_FILE, encoding="utf-8") as f:
       smarthome = [json.load(f)]
-  projects = [cpe] + others[:1] + [dropbox, restaurant] + others[1:] + [veyon] + extras + dangerzone + smarthome
+  smartferrari = []
+  if os.path.isfile(SMARTFERRARI_FILE):
+    with open(SMARTFERRARI_FILE, encoding="utf-8") as f:
+      smartferrari = [json.load(f)]
+  projects = [cpe] + others[:1] + [dropbox, restaurant] + others[1:] + [veyon] + extras + dangerzone + smarthome + smartferrari
   js = "/* Árvore do Conhecimento — " + str(sum(len(p["nodes"]) for p in projects)) + " nós */\nconst PROJECTS = "
   js += json.dumps(projects, ensure_ascii=False, indent=2) + ";\n"
   with open(OUT, "w", encoding="utf-8") as f:
