@@ -50,7 +50,8 @@ body {
 .site-header {
   position: relative; z-index: 10;
   display: flex; align-items: center; justify-content: space-between;
-  padding: 1.25rem 2rem;
+  gap: 1rem;
+  padding: 0.85rem 2rem;
   border-bottom: 1px solid var(--border);
   backdrop-filter: blur(12px);
   background: rgba(6,8,15,.7);
@@ -101,22 +102,30 @@ body {
 .header-datetime .dt-time { display: block; color: var(--accent); font-weight: 600; white-space: nowrap; }
 .header-nav .btn-ghost { white-space: nowrap; }
 
-/* Núcleo tech 3D — canto superior direito */
+/* Núcleo tech 3D — centralizado entre busca e data */
 .tech-dim-widget {
-  position: fixed;
-  top: 6.25rem;
-  right: 1.25rem;
-  z-index: 50;
-  width: 100px;
-  height: 118px;
+  position: relative;
+  top: auto;
+  right: auto;
+  z-index: 5;
+  flex: 1 1 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: auto;
+  min-width: 96px;
+  max-width: 160px;
+  height: 92px;
+  margin: 0 auto;
   pointer-events: none;
   perspective: 620px;
   perspective-origin: 50% 45%;
 }
 .tech-dim-scene {
   position: relative;
-  width: 72px;
-  height: 72px;
+  width: 58px;
+  height: 58px;
   margin: 0 auto;
   transform-style: preserve-3d;
   animation: techSceneSpin 20s linear infinite;
@@ -146,23 +155,23 @@ body {
 }
 .tech-dim-cube {
   position: absolute;
-  width: 34px;
-  height: 34px;
+  width: 28px;
+  height: 28px;
   left: 50%;
   top: 50%;
-  margin: -17px 0 0 -17px;
+  margin: -14px 0 0 -14px;
   transform-style: preserve-3d;
   animation: techCubeSpin 14s linear infinite;
 }
 .tech-cube-face {
   position: absolute;
-  width: 34px;
-  height: 34px;
+  width: 28px;
+  height: 28px;
   display: flex;
   align-items: center;
   justify-content: center;
   font-family: var(--mono);
-  font-size: .52rem;
+  font-size: .48rem;
   font-weight: 600;
   letter-spacing: -.02em;
   color: #bae6fd;
@@ -171,12 +180,12 @@ body {
   box-shadow: inset 0 0 14px rgba(56, 189, 248, .12);
   backface-visibility: hidden;
 }
-.tech-cube-face.front  { transform: rotateY(0deg) translateZ(17px); }
-.tech-cube-face.back   { transform: rotateY(180deg) translateZ(17px); }
-.tech-cube-face.right  { transform: rotateY(90deg) translateZ(17px); }
-.tech-cube-face.left   { transform: rotateY(-90deg) translateZ(17px); }
-.tech-cube-face.top    { transform: rotateX(90deg) translateZ(17px); }
-.tech-cube-face.bottom { transform: rotateX(-90deg) translateZ(17px); }
+.tech-cube-face.front  { transform: rotateY(0deg) translateZ(14px); }
+.tech-cube-face.back   { transform: rotateY(180deg) translateZ(14px); }
+.tech-cube-face.right  { transform: rotateY(90deg) translateZ(14px); }
+.tech-cube-face.left   { transform: rotateY(-90deg) translateZ(14px); }
+.tech-cube-face.top    { transform: rotateX(90deg) translateZ(14px); }
+.tech-cube-face.bottom { transform: rotateX(-90deg) translateZ(14px); }
 .tech-dim-core {
   position: absolute;
   width: 8px;
@@ -205,13 +214,14 @@ body {
 .tech-orbit-dot:nth-of-type(3) { background: var(--green); animation-delay: -3.4s; }
 .tech-dim-label {
   display: block;
-  margin-top: .5rem;
+  margin-top: .35rem;
   text-align: center;
-  font-size: .58rem;
+  font-size: .52rem;
   font-weight: 600;
   letter-spacing: .1em;
   text-transform: uppercase;
   color: var(--muted);
+  white-space: nowrap;
 }
 @keyframes techSceneSpin {
   from { transform: rotateX(14deg) rotateY(0deg); }
@@ -238,8 +248,8 @@ body {
   50% { opacity: .75; transform: scale(1.35); }
 }
 @keyframes techOrbit {
-  from { transform: rotateY(0deg) translateZ(36px); }
-  to { transform: rotateY(360deg) translateZ(36px); }
+  from { transform: rotateY(0deg) translateZ(30px); }
+  to { transform: rotateY(360deg) translateZ(30px); }
 }
 
 /* Gallery */
@@ -544,7 +554,7 @@ a.tree-node:hover { text-decoration: none; }
 .brand { display: flex; align-items: center; gap: 1rem; }
 .brand-link { text-decoration: none; color: inherit; }
 .brand-link:hover h1 { color: var(--accent); }
-.header-search-wrap { flex: 1; max-width: 420px; margin: 0 1rem; }
+.header-search-wrap { flex: 0 1 380px; max-width: 420px; margin: 0; }
 .search-box { position: relative; }
 .search-box input {
   width: 100%; padding: .55rem 1rem .55rem 2.25rem;
@@ -647,20 +657,29 @@ a.tree-node:hover { text-decoration: none; }
 
 @media (max-width: 640px) {
   .site-header { padding: 1rem; flex-wrap: wrap; gap: .75rem; }
-  .header-search-wrap { order: 3; max-width: 100%; width: 100%; margin: 0; }
+  .header-search-wrap { order: 3; max-width: 100%; width: 100%; margin: 0; flex: 1 1 100%; }
   .brand h1 { font-size: 1.1rem; }
   .header-profile { width: 40px; height: 40px; }
   .header-datetime { display: none; }
-  .tech-dim-widget { width: 84px; height: 102px; top: auto; bottom: 1rem; right: .75rem; opacity: .9; }
-  .tech-dim-scene { width: 60px; height: 60px; }
-  .tech-dim-cube { width: 28px; height: 28px; margin: -14px 0 0 -14px; }
-  .tech-cube-face { width: 28px; height: 28px; font-size: .48rem; }
-  .tech-cube-face.front  { transform: rotateY(0deg) translateZ(14px); }
-  .tech-cube-face.back   { transform: rotateY(180deg) translateZ(14px); }
-  .tech-cube-face.right  { transform: rotateY(90deg) translateZ(14px); }
-  .tech-cube-face.left   { transform: rotateY(-90deg) translateZ(14px); }
-  .tech-cube-face.top    { transform: rotateX(90deg) translateZ(14px); }
-  .tech-cube-face.bottom { transform: rotateX(-90deg) translateZ(14px); }
+  .tech-dim-widget {
+    order: 2;
+    flex: 0 0 auto;
+    width: 72px;
+    min-width: 72px;
+    max-width: 72px;
+    height: 72px;
+    margin: 0;
+  }
+  .tech-dim-label { display: none; }
+  .tech-dim-scene { width: 52px; height: 52px; }
+  .tech-dim-cube { width: 24px; height: 24px; margin: -12px 0 0 -12px; }
+  .tech-cube-face { width: 24px; height: 24px; font-size: .42rem; }
+  .tech-cube-face.front  { transform: rotateY(0deg) translateZ(12px); }
+  .tech-cube-face.back   { transform: rotateY(180deg) translateZ(12px); }
+  .tech-cube-face.right  { transform: rotateY(90deg) translateZ(12px); }
+  .tech-cube-face.left   { transform: rotateY(-90deg) translateZ(12px); }
+  .tech-cube-face.top    { transform: rotateX(90deg) translateZ(12px); }
+  .tech-cube-face.bottom { transform: rotateX(-90deg) translateZ(12px); }
   .tree-view { height: calc(100vh - 9rem); padding: .5rem .75rem; }
   .tree-node[data-layer="root"] .tree-node-inner { width: 78px; height: 78px; font-size: .64rem; }
   .tree-node-dense[data-layer="root"] .tree-node-inner { width: 74px; height: 74px; }
