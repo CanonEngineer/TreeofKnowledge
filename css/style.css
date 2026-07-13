@@ -93,9 +93,10 @@ body {
   flex: 1 1 auto;
   min-width: 0;
   display: grid;
-  grid-template-columns: minmax(200px, 1fr) auto minmax(160px, 1fr);
+  /* espaço | busca | espaço | tech | espaço | data */
+  grid-template-columns: 1fr auto 1fr auto 1fr auto;
   align-items: center;
-  column-gap: 1rem;
+  column-gap: 0.75rem;
 }
 
 /* Buttons */
@@ -121,6 +122,7 @@ body {
   align-items: flex-end;
   gap: .5rem;
   flex-shrink: 0;
+  grid-column: 6;
   justify-self: end;
   min-width: 0;
 }
@@ -135,12 +137,13 @@ body {
 .header-datetime .dt-time { display: block; color: var(--accent); font-weight: 600; white-space: nowrap; }
 .header-nav .btn-ghost { white-space: nowrap; }
 
-/* Núcleo tech 3D — centro do cluster entre busca e data */
+/* Núcleo tech 3D — centro entre busca e data */
 .tech-dim-widget {
   position: relative;
   top: auto;
   right: auto;
   z-index: 5;
+  grid-column: 4;
   flex: none;
   display: flex;
   flex-direction: column;
@@ -588,10 +591,11 @@ a.tree-node:hover { text-decoration: none; }
 .brand-link { text-decoration: none; color: inherit; min-width: 0; }
 .brand-link:hover h1 { color: var(--accent); }
 .header-search-wrap {
-  width: 100%;
-  max-width: 420px;
+  grid-column: 2;
+  width: min(400px, 100%);
+  max-width: 400px;
   margin: 0;
-  justify-self: start;
+  justify-self: center;
   min-width: 0;
 }
 .search-box { position: relative; }
@@ -707,8 +711,9 @@ a.tree-node:hover { text-decoration: none; }
     grid-template-columns: minmax(160px, 1fr) auto auto;
     column-gap: .75rem;
   }
-  .header-search-wrap { max-width: none; }
-  .tech-dim-widget { width: 84px; min-width: 84px; max-width: 84px; height: 78px; }
+  .header-search-wrap { grid-column: 1; max-width: none; width: 100%; justify-self: stretch; }
+  .tech-dim-widget { grid-column: 2; width: 84px; min-width: 84px; max-width: 84px; height: 78px; }
+  .header-nav { grid-column: 3; }
   .tech-dim-label { font-size: .48rem; }
 }
 
@@ -725,15 +730,15 @@ a.tree-node:hover { text-decoration: none; }
     grid-template-columns: 1fr auto;
     order: 3;
   }
-  .header-search-wrap { grid-column: 1 / -1; max-width: 100%; width: 100%; order: 3; }
+  .header-search-wrap { grid-column: 1 / -1; max-width: 100%; width: 100%; justify-self: stretch; }
   .tech-dim-widget {
-    order: 2;
+    grid-column: 1;
     width: 72px;
     min-width: 72px;
     max-width: 72px;
     height: 72px;
   }
-  .header-nav { order: 1; justify-self: end; }
+  .header-nav { grid-column: 2; justify-self: end; }
   .brand h1 { font-size: 1.1rem; }
   .header-profile { width: 40px; height: 40px; }
   .header-datetime { display: none; }
