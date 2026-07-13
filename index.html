@@ -42,7 +42,7 @@
         height="48"
         loading="eager">
 
-      <div>
+      <div class="brand-text">
 
         <h1>Tree of Knowledge</h1>
 
@@ -52,67 +52,71 @@
 
     </div>
 
-    <div class="header-search-wrap">
+    <div class="header-cluster">
 
-      <div class="search-box">
+      <div class="header-search-wrap">
 
-        <span class="search-icon">🔍</span>
+        <div class="search-box">
 
-        <input type="search" id="global-search" placeholder="Buscar código, função, arquivo..." autocomplete="off" aria-label="Buscar na árvore">
+          <span class="search-icon">🔍</span>
 
-        <div id="search-results" class="search-results hidden"></div>
+          <input type="search" id="global-search" placeholder="Buscar código, função, arquivo..." autocomplete="off" aria-label="Buscar na árvore">
 
-      </div>
-
-    </div>
-
-    <div class="tech-dim-widget" aria-hidden="true" title="Tech Dimension">
-
-      <div class="tech-dim-scene">
-
-        <div class="tech-dim-ring tech-dim-ring-x"></div>
-
-        <div class="tech-dim-ring tech-dim-ring-y"></div>
-
-        <div class="tech-dim-ring tech-dim-ring-z"></div>
-
-        <div class="tech-dim-cube">
-
-          <div class="tech-cube-face front">&lt;/&gt;</div>
-
-          <div class="tech-cube-face back">{ }</div>
-
-          <div class="tech-cube-face right">01</div>
-
-          <div class="tech-cube-face left">λ</div>
-
-          <div class="tech-cube-face top">API</div>
-
-          <div class="tech-cube-face bottom">Git</div>
+          <div id="search-results" class="search-results hidden"></div>
 
         </div>
 
-        <div class="tech-dim-core"></div>
+      </div>
 
-        <span class="tech-orbit-dot"></span>
+      <div class="tech-dim-widget" aria-hidden="true" title="Tech Dimension">
 
-        <span class="tech-orbit-dot"></span>
+        <div class="tech-dim-scene">
 
-        <span class="tech-orbit-dot"></span>
+          <div class="tech-dim-ring tech-dim-ring-x"></div>
+
+          <div class="tech-dim-ring tech-dim-ring-y"></div>
+
+          <div class="tech-dim-ring tech-dim-ring-z"></div>
+
+          <div class="tech-dim-cube">
+
+            <div class="tech-cube-face front">&lt;/&gt;</div>
+
+            <div class="tech-cube-face back">{ }</div>
+
+            <div class="tech-cube-face right">01</div>
+
+            <div class="tech-cube-face left">λ</div>
+
+            <div class="tech-cube-face top">API</div>
+
+            <div class="tech-cube-face bottom">Git</div>
+
+          </div>
+
+          <div class="tech-dim-core"></div>
+
+          <span class="tech-orbit-dot"></span>
+
+          <span class="tech-orbit-dot"></span>
+
+          <span class="tech-orbit-dot"></span>
+
+        </div>
+
+        <span class="tech-dim-label">Tech Dimension</span>
 
       </div>
 
-      <span class="tech-dim-label">Tech Dimension</span>
+      <nav class="header-nav">
+
+        <time id="header-datetime" class="header-datetime" datetime="" aria-live="polite"></time>
+
+        <a href="https://github.com/CanonEngineer/TreeofKnowledge" class="btn-ghost">GitHub</a>
+
+      </nav>
 
     </div>
-
-    <nav class="header-nav">
-
-      <time id="header-datetime" class="header-datetime" datetime="" aria-live="polite"></time>
-
-      <a href="https://github.com/CanonEngineer/TreeofKnowledge" class="btn-ghost">GitHub</a>
-
-    </nav>
 
   </header>
 

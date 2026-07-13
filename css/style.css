@@ -49,21 +49,27 @@ body {
 /* Header */
 .site-header {
   position: relative; z-index: 10;
-  display: grid;
-  grid-template-columns: auto minmax(300px, 400px) 1fr auto 1fr auto;
+  display: flex;
   align-items: center;
-  column-gap: 1.5rem;
+  gap: 1.25rem;
   padding: 0.85rem 2rem;
   border-bottom: 1px solid var(--border);
   backdrop-filter: blur(12px);
   background: rgba(6,8,15,.7);
+  min-width: 0;
+  overflow: hidden;
 }
 .brand {
   display: flex;
   align-items: center;
   gap: .85rem;
-  grid-column: 1;
-  margin-right: clamp(1rem, 3vw, 2.75rem);
+  flex: 0 1 280px;
+  min-width: 0;
+  max-width: 300px;
+}
+.brand-text {
+  min-width: 0;
+  overflow: hidden;
 }
 .header-profile {
   width: 48px; height: 48px; border-radius: 50%; object-fit: cover;
@@ -72,8 +78,25 @@ body {
   flex-shrink: 0;
 }
 .brand-icon { font-size: 2rem; filter: drop-shadow(0 0 12px rgba(251,191,36,.5)); }
-.brand h1 { font-size: 1.4rem; font-weight: 700; letter-spacing: -.02em; }
-.brand p { font-size: .8rem; color: var(--muted); }
+.brand h1 {
+  font-size: 1.4rem; font-weight: 700; letter-spacing: -.02em;
+  overflow: hidden; text-overflow: ellipsis; white-space: nowrap;
+}
+.brand p,
+#node-breadcrumb {
+  font-size: .8rem; color: var(--muted);
+  overflow: hidden; text-overflow: ellipsis; white-space: nowrap;
+  max-width: 100%;
+}
+
+.header-cluster {
+  flex: 1 1 auto;
+  min-width: 0;
+  display: grid;
+  grid-template-columns: minmax(200px, 1fr) auto minmax(160px, 1fr);
+  align-items: center;
+  column-gap: 1rem;
+}
 
 /* Buttons */
 .btn-primary, .btn-ghost {
@@ -98,7 +121,8 @@ body {
   align-items: flex-end;
   gap: .5rem;
   flex-shrink: 0;
-  grid-column: 6;
+  justify-self: end;
+  min-width: 0;
 }
 .header-datetime {
   font-family: var(--mono); font-size: .68rem; line-height: 1.4;
@@ -111,18 +135,18 @@ body {
 .header-datetime .dt-time { display: block; color: var(--accent); font-weight: 600; white-space: nowrap; }
 .header-nav .btn-ghost { white-space: nowrap; }
 
-/* Núcleo tech 3D — exatamente no meio entre busca e data */
+/* Núcleo tech 3D — centro do cluster entre busca e data */
 .tech-dim-widget {
   position: relative;
   top: auto;
   right: auto;
   z-index: 5;
-  grid-column: 4;
   flex: none;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  justify-self: center;
   width: 100px;
   min-width: 100px;
   max-width: 100px;
@@ -561,14 +585,14 @@ a.tree-node:hover { text-decoration: none; }
   display: flex; justify-content: flex-end;
 }
 
-.brand-link { text-decoration: none; color: inherit; }
+.brand-link { text-decoration: none; color: inherit; min-width: 0; }
 .brand-link:hover h1 { color: var(--accent); }
 .header-search-wrap {
-  grid-column: 2;
   width: 100%;
-  max-width: 400px;
+  max-width: 420px;
   margin: 0;
-  justify-self: stretch;
+  justify-self: start;
+  min-width: 0;
 }
 .search-box { position: relative; }
 .search-box input {
@@ -671,37 +695,42 @@ a.tree-node:hover { text-decoration: none; }
 .node-error p { color: var(--muted); margin-bottom: 1.5rem; }
 
 @media (max-width: 900px) {
-  .site-header {
-    grid-template-columns: auto minmax(220px, 1fr) auto auto;
-    column-gap: 1rem;
+  .site-header { gap: 1rem; }
+  .brand { flex: 0 1 220px; max-width: 240px; }
+  .header-cluster {
+    grid-template-columns: minmax(160px, 1fr) auto auto;
+    column-gap: .75rem;
   }
-  .brand { margin-right: 0; }
-  .header-search-wrap { grid-column: 2; max-width: none; }
-  .tech-dim-widget { grid-column: 3; }
-  .header-nav { grid-column: 4; }
+  .header-search-wrap { max-width: none; }
+  .tech-dim-widget { width: 84px; min-width: 84px; max-width: 84px; height: 78px; }
+  .tech-dim-label { font-size: .48rem; }
 }
 
 @media (max-width: 640px) {
   .site-header {
-    display: flex;
     flex-wrap: wrap;
     padding: 1rem;
     gap: .75rem;
+    overflow: visible;
   }
-  .brand { margin-right: 0; }
-  .header-search-wrap { order: 3; max-width: 100%; width: 100%; margin: 0; flex: 1 1 100%; }
-  .brand h1 { font-size: 1.1rem; }
-  .header-profile { width: 40px; height: 40px; }
-  .header-datetime { display: none; }
+  .brand { flex: 1 1 auto; max-width: none; }
+  .header-cluster {
+    flex: 1 1 100%;
+    grid-template-columns: 1fr auto;
+    order: 3;
+  }
+  .header-search-wrap { grid-column: 1 / -1; max-width: 100%; width: 100%; order: 3; }
   .tech-dim-widget {
     order: 2;
-    flex: 0 0 auto;
     width: 72px;
     min-width: 72px;
     max-width: 72px;
     height: 72px;
-    margin: 0;
   }
+  .header-nav { order: 1; justify-self: end; }
+  .brand h1 { font-size: 1.1rem; }
+  .header-profile { width: 40px; height: 40px; }
+  .header-datetime { display: none; }
   .tech-dim-label { display: none; }
   .tech-dim-scene { width: 52px; height: 52px; }
   .tech-dim-cube { width: 24px; height: 24px; margin: -12px 0 0 -12px; }

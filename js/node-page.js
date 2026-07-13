@@ -36,8 +36,16 @@
 
   const treeBack = AppConfig.indexUrl('tree=' + encodeURIComponent(project.slug));
   document.getElementById('btn-back-tree').href = treeBack;
-  document.getElementById('node-breadcrumb').textContent =
-    project.name + ' › ' + (node.file || 'código') + ' › ' + node.title;
+
+  const crumbEl = document.getElementById('node-breadcrumb');
+  const fileBase = (node.file || '').split(/[/\\]/).filter(Boolean).pop() || '';
+  const crumbShort = fileBase && fileBase !== node.title
+    ? project.name + ' › ' + fileBase
+    : project.name + ' › ' + node.title;
+  const crumbFull = project.name + ' › ' + (node.file || node.title);
+  crumbEl.textContent = crumbShort;
+  crumbEl.title = crumbFull;
+
   document.getElementById('node-repo-link').href = project.repoUrl;
 
   const badge = document.getElementById('node-project-badge');
