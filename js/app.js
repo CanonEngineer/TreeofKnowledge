@@ -1,4 +1,4 @@
-/* App — galeria, árvore, busca */
+/* App — galeria, árvore, busca e zoom */
 (() => {
   const $ = (s) => document.querySelector(s);
   const gallery = $('#gallery');
@@ -7,9 +7,20 @@
   const treeNodes = $('#tree-nodes');
   const treeLines = $('#tree-lines');
   const treeScene = $('#tree-scene');
+  const treeStage = $('#tree-stage');
+  const treeZoomSpace = $('#tree-zoom-space');
   const tooltip = $('#tooltip');
+  const zoomLabel = $('#tree-zoom-label');
+  const btnZoomIn = $('#btn-zoom-in');
+  const btnZoomOut = $('#btn-zoom-out');
+
   let currentProject = null;
   let nodeMap = new Map();
+  let zoom = 1;
+
+  const ZOOM_MIN = 0.35;
+  const ZOOM_MAX = 2.5;
+  const ZOOM_STEP = 0.15;
 
   const ICONS = {
     python: '🐍', django: '🍕', javascript: '⚡', node: '🖥️', cpp: '⚙️', scanner: '🔍'
@@ -35,9 +46,43 @@
     });
   }
 
+  function clampZoom(value) {
+    return Math.min(ZOOM_MAX, Math.max(ZOOM_MIN, Math.round(value * 100) / 100));
+  }
+
+  function applyZoom(nextZoom, keepCenter = true) {
+    const prev = zoom;
+    zoom = clampZoom(nextZoom);
+
+    const baseW = parseFloat(treeStage.dataset.baseWidth || treeStage.style.width) || treeStage.offsetWidth;
+    const baseH = parseFloat(treeStage.dataset.baseHeight || treeStage.style.height) || treeStage.offsetHeight;
+
+    const viewW = treeScene.clientWidth;
+    const viewH = treeScene.clientHeight;
+    const centerX = treeScene.scrollLeft + viewW / 2;
+    const centerY = treeScene.scrollTop + viewH / 2;
+    const contentX = centerX / prev;
+    const contentY = centerY / prev;
+
+    treeStage.style.transformOrigin = '0 0';
+    treeStage.style.transform = zoom === 1 ? 'none' : 'scale(' + zoom + ')';
+    treeZoomSpace.style.width = Math.max(baseW * zoom, viewW) + 'px';
+    treeZoomSpace.style.height = Math.max(baseH * zoom, viewH) + 'px';
+
+    if (keepCenter) {
+      treeScene.scrollLeft = contentX * zoom - viewW / 2;
+      treeScene.scrollTop = contentY * zoom - viewH / 2;
+    }
+
+    zoomLabel.textContent = Math.round(zoom * 100) + '%';
+    btnZoomOut.disabled = zoom <= ZOOM_MIN + 0.001;
+    btnZoomIn.disabled = zoom >= ZOOM_MAX - 0.001;
+  }
+
   function renderTree() {
     requestAnimationFrame(() => {
       TreeRenderer.render(treeNodes, treeLines, currentProject.nodes, currentProject.color, currentProject.slug);
+      applyZoom(zoom, false);
       bindNodeEvents();
     });
   }
@@ -46,6 +91,7 @@
     if (project.comingSoon) return;
     currentProject = project;
     nodeMap = new Map(project.nodes.map(n => [n.id, n]));
+    zoom = 1;
     gallery.classList.add('hidden');
     treeView.classList.remove('hidden');
     history.replaceState(null, '', AppConfig.indexUrl('tree=' + encodeURIComponent(project.slug)));
@@ -59,6 +105,7 @@
     treeView.classList.add('hidden');
     gallery.classList.remove('hidden');
     currentProject = null;
+    zoom = 1;
     hideTooltip();
     history.replaceState(null, '', AppConfig.indexUrl());
   }
@@ -108,6 +155,8 @@
   }
 
   $('#btn-back').addEventListener('click', closeTree);
+  btnZoomIn.addEventListener('click', () => applyZoom(zoom + ZOOM_STEP));
+  btnZoomOut.addEventListener('click', () => applyZoom(zoom - ZOOM_STEP));
 
   window.addEventListener('resize', () => {
     if (currentProject) renderTree();

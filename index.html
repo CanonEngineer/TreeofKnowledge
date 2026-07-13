@@ -160,19 +160,24 @@
 
       </div>
 
-      <div id="tree-scene" class="tree-scene">
-
-        <div id="tree-stage" class="tree-stage">
-
-          <svg id="tree-lines" class="tree-lines" aria-hidden="true"></svg>
-
-          <div id="tree-nodes" class="tree-nodes"></div>
-
+      <div class="tree-scene-wrap">
+        <div class="tree-zoom" id="tree-zoom" role="group" aria-label="Zoom da árvore">
+          <button type="button" id="btn-zoom-out" class="tree-zoom-btn" aria-label="Diminuir zoom" title="Diminuir zoom">−</button>
+          <span id="tree-zoom-label" class="tree-zoom-label">100%</span>
+          <button type="button" id="btn-zoom-in" class="tree-zoom-btn" aria-label="Aumentar zoom" title="Aumentar zoom">+</button>
         </div>
 
+        <div id="tree-scene" class="tree-scene">
+          <div id="tree-zoom-space" class="tree-zoom-space">
+            <div id="tree-stage" class="tree-stage">
+              <svg id="tree-lines" class="tree-lines" aria-hidden="true"></svg>
+              <div id="tree-nodes" class="tree-nodes"></div>
+            </div>
+          </div>
+        </div>
       </div>
 
-      <p class="tree-hint">Sem sobreposição · Role a área se precisar · Passe o mouse para detalhes · Clique no balão para abrir o código</p>
+      <p class="tree-hint">Use + / − para zoom · Role a área se precisar · Passe o mouse para detalhes · Clique no balão para abrir o código</p>
 
     </section>
 

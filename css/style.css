@@ -304,6 +304,13 @@ body {
 .tree-project-name { font-size: 1.1rem; font-weight: 600; }
 .tree-node-count { font-size: .75rem; color: var(--muted); }
 
+.tree-scene-wrap {
+  position: relative;
+  flex: 1;
+  min-height: 0;
+  display: flex;
+  flex-direction: column;
+}
 .tree-scene {
   position: relative; width: 100%;
   flex: 1; min-height: 0;
@@ -319,11 +326,60 @@ body {
   border-radius: 999px;
 }
 .tree-scene::-webkit-scrollbar-track { background: rgba(255,255,255,.06); }
-.tree-stage {
+.tree-zoom {
+  position: absolute;
+  top: 14px;
+  right: 14px;
+  z-index: 40;
+  display: flex;
+  align-items: center;
+  gap: .35rem;
+  padding: .35rem;
+  border-radius: 12px;
+  background: rgba(12, 18, 32, .92);
+  border: 1px solid var(--border);
+  box-shadow: 0 8px 24px rgba(0,0,0,.35);
+  backdrop-filter: blur(10px);
+}
+.tree-zoom-btn {
+  width: 36px; height: 36px;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  background: rgba(56,189,248,.1);
+  color: var(--text);
+  font-size: 1.25rem;
+  font-weight: 700;
+  line-height: 1;
+  cursor: pointer;
+  transition: background .15s, border-color .15s, transform .15s;
+}
+.tree-zoom-btn:hover {
+  background: rgba(56,189,248,.22);
+  border-color: var(--accent);
+}
+.tree-zoom-btn:active { transform: scale(.96); }
+.tree-zoom-btn:disabled {
+  opacity: .4;
+  cursor: not-allowed;
+  transform: none;
+}
+.tree-zoom-label {
+  min-width: 3.4rem;
+  text-align: center;
+  font-family: var(--mono);
+  font-size: .75rem;
+  font-weight: 600;
+  color: var(--accent);
+}
+.tree-zoom-space {
   position: relative;
   min-width: 100%;
   min-height: 100%;
-  will-change: width, height;
+}
+.tree-stage {
+  position: relative;
+  transform-origin: 0 0;
+  will-change: transform, width, height;
 }
 .tree-lines {
   position: absolute; inset: 0; width: 100%; height: 100%;

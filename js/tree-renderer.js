@@ -213,6 +213,8 @@ const TreeRenderer = (() => {
     stage.style.height = height + 'px';
     stage.style.transform = 'none';
     stage.style.transformOrigin = '0 0';
+    stage.dataset.baseWidth = String(width);
+    stage.dataset.baseHeight = String(height);
 
     return { width, height };
   }
@@ -224,7 +226,8 @@ const TreeRenderer = (() => {
     if (!tree) return;
 
     const stage = container.parentElement;
-    const scene = stage.parentElement;
+    const zoomSpace = stage.parentElement;
+    const scene = zoomSpace.parentElement;
     stage.style.transform = '';
 
     const sceneW = Math.max(scene.clientWidth || 1000, 640);
