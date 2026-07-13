@@ -49,14 +49,22 @@ body {
 /* Header */
 .site-header {
   position: relative; z-index: 10;
-  display: flex; align-items: center; justify-content: space-between;
-  gap: 1rem;
+  display: grid;
+  grid-template-columns: auto minmax(300px, 400px) 1fr auto 1fr auto;
+  align-items: center;
+  column-gap: 1.5rem;
   padding: 0.85rem 2rem;
   border-bottom: 1px solid var(--border);
   backdrop-filter: blur(12px);
   background: rgba(6,8,15,.7);
 }
-.brand { display: flex; align-items: center; gap: .85rem; }
+.brand {
+  display: flex;
+  align-items: center;
+  gap: .85rem;
+  grid-column: 1;
+  margin-right: clamp(1rem, 3vw, 2.75rem);
+}
 .header-profile {
   width: 48px; height: 48px; border-radius: 50%; object-fit: cover;
   border: 2px solid rgba(251,191,36,.55);
@@ -90,6 +98,7 @@ body {
   align-items: flex-end;
   gap: .5rem;
   flex-shrink: 0;
+  grid-column: 6;
 }
 .header-datetime {
   font-family: var(--mono); font-size: .68rem; line-height: 1.4;
@@ -102,22 +111,23 @@ body {
 .header-datetime .dt-time { display: block; color: var(--accent); font-weight: 600; white-space: nowrap; }
 .header-nav .btn-ghost { white-space: nowrap; }
 
-/* Núcleo tech 3D — centralizado entre busca e data */
+/* Núcleo tech 3D — exatamente no meio entre busca e data */
 .tech-dim-widget {
   position: relative;
   top: auto;
   right: auto;
   z-index: 5;
-  flex: 1 1 auto;
+  grid-column: 4;
+  flex: none;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  width: auto;
-  min-width: 96px;
-  max-width: 160px;
+  width: 100px;
+  min-width: 100px;
+  max-width: 100px;
   height: 92px;
-  margin: 0 auto;
+  margin: 0;
   pointer-events: none;
   perspective: 620px;
   perspective-origin: 50% 45%;
@@ -551,10 +561,15 @@ a.tree-node:hover { text-decoration: none; }
   display: flex; justify-content: flex-end;
 }
 
-.brand { display: flex; align-items: center; gap: 1rem; }
 .brand-link { text-decoration: none; color: inherit; }
 .brand-link:hover h1 { color: var(--accent); }
-.header-search-wrap { flex: 0 1 380px; max-width: 420px; margin: 0; }
+.header-search-wrap {
+  grid-column: 2;
+  width: 100%;
+  max-width: 400px;
+  margin: 0;
+  justify-self: stretch;
+}
 .search-box { position: relative; }
 .search-box input {
   width: 100%; padding: .55rem 1rem .55rem 2.25rem;
@@ -655,8 +670,25 @@ a.tree-node:hover { text-decoration: none; }
 .node-error h2 { margin-bottom: .75rem; }
 .node-error p { color: var(--muted); margin-bottom: 1.5rem; }
 
+@media (max-width: 900px) {
+  .site-header {
+    grid-template-columns: auto minmax(220px, 1fr) auto auto;
+    column-gap: 1rem;
+  }
+  .brand { margin-right: 0; }
+  .header-search-wrap { grid-column: 2; max-width: none; }
+  .tech-dim-widget { grid-column: 3; }
+  .header-nav { grid-column: 4; }
+}
+
 @media (max-width: 640px) {
-  .site-header { padding: 1rem; flex-wrap: wrap; gap: .75rem; }
+  .site-header {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 1rem;
+    gap: .75rem;
+  }
+  .brand { margin-right: 0; }
   .header-search-wrap { order: 3; max-width: 100%; width: 100%; margin: 0; flex: 1 1 100%; }
   .brand h1 { font-size: 1.1rem; }
   .header-profile { width: 40px; height: 40px; }
