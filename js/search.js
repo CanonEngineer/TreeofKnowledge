@@ -69,10 +69,19 @@ const TreeSearch = (() => {
     return scored.sort((a, b) => b.score - a.score).slice(0, limit);
   }
 
+  function escapeHtml(text) {
+    return String(text)
+      .replace(/&/g, '&amp;')
+      .replace(/</g, '&lt;')
+      .replace(/>/g, '&gt;')
+      .replace(/"/g, '&quot;');
+  }
+
   function highlight(text, query) {
-    if (!query) return text;
+    const safe = escapeHtml(text || '');
+    if (!query) return safe;
     const escaped = query.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
-    return text.replace(new RegExp('(' + escaped + ')', 'gi'), '<mark>$1</mark>');
+    return safe.replace(new RegExp('(' + escaped + ')', 'gi'), '<mark>$1</mark>');
   }
 
   function fileBaseName(path) {
@@ -89,29 +98,30 @@ const TreeSearch = (() => {
       if (!results.length) {
         resultsEl.innerHTML =
           '<div class="search-confirm">' +
-          '<span class="search-confirm-label">Busca</span>' +
-          '<strong class="search-confirm-file">' + highlight(query, query) + '</strong>' +
-          '<span class="search-confirm-path">Nenhum arquivo correspondente</span>' +
-          '</div>' +
-          '<div class="search-empty">Nenhum resultado para "<strong>' + query + '</strong>"</div>';
+          '<p class="search-confirm-kicker">Você digitou</p>' +
+          '<p class="search-confirm-name">' + escapeHtml(query) + '</p>' +
+          '<p class="search-confirm-hint">Nenhum arquivo correspondente</p>' +
+          '</div>';
         resultsEl.classList.remove('hidden');
         return;
       }
 
       const top = results[0];
       const confirmFile = fileBaseName(top.file) || top.title;
-      const confirmPath = top.file || top.title;
+      const confirmPath = top.file || '';
 
       const header =
         '<div class="search-confirm">' +
-        '<span class="search-confirm-label">Arquivo</span>' +
-        '<strong class="search-confirm-file">' + highlight(confirmFile, query) + '</strong>' +
-        '<span class="search-confirm-path">' + highlight(confirmPath, query) + '</span>' +
+        '<p class="search-confirm-kicker">Arquivo encontrado</p>' +
+        '<p class="search-confirm-name">' + escapeHtml(confirmFile) + '</p>' +
+        (confirmPath
+          ? '<p class="search-confirm-hint">' + escapeHtml(confirmPath) + '</p>'
+          : '') +
         '</div>';
 
       const items = results.map((r) => {
         const fileName = fileBaseName(r.file) || r.title;
-        const pathLine = r.file || r.title;
+        const pathLine = r.file || '';
         return (
           '<a class="search-result-item" href="' + nodeUrl(r.projectSlug, r.nodeId) + '">' +
           '<span class="search-result-layer" style="border-color:' + r.projectColor + '">' +
@@ -119,10 +129,13 @@ const TreeSearch = (() => {
           '</span>' +
           '<strong class="search-result-file">' + highlight(fileName, query) + '</strong>' +
           '<span class="search-result-title">' + highlight(r.title, query) + '</span>' +
-          '<span class="search-result-meta">' + r.projectName + ' · ' + highlight(pathLine, query) + '</span>' +
+          '<span class="search-result-meta">' +
+          escapeHtml(r.projectName) +
+          (pathLine ? ' · ' + highlight(pathLine, query) : '') +
+          '</span>' +
           '<span class="search-result-snippet">' +
-          highlight(r.description.slice(0, 90), query) +
-          (r.description.length > 90 ? '…' : '') +
+          highlight((r.description || '').slice(0, 90), query) +
+          ((r.description || '').length > 90 ? '…' : '') +
           '</span>' +
           '</a>'
         );
