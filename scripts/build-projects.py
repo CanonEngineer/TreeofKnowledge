@@ -12,6 +12,7 @@ CPE_FILE = os.path.join(ROOT, "scripts", "cpe-project.json")
 VEYON_FILE = os.path.join(ROOT, "scripts", "veyon-project.json")
 DROPBOX_FILE = os.path.join(ROOT, "scripts", "dropbox-project.json")
 RESTAURANT_FILE = os.path.join(ROOT, "scripts", "restaurant-project.json")
+EXTRA_FILE = os.path.join(ROOT, "scripts", "extra-projects.json")
 FILL_SCRIPT = os.path.join(ROOT, "scripts", "fill-full-code.py")
 
 
@@ -29,7 +30,11 @@ def main():
     dropbox = json.load(f)
   with open(RESTAURANT_FILE, encoding="utf-8") as f:
     restaurant = json.load(f)
-  projects = [cpe] + others[:1] + [dropbox, restaurant] + others[1:] + [veyon]
+  extras = []
+  if os.path.isfile(EXTRA_FILE):
+    with open(EXTRA_FILE, encoding="utf-8") as f:
+      extras = json.load(f)
+  projects = [cpe] + others[:1] + [dropbox, restaurant] + others[1:] + [veyon] + extras
   js = "/* Árvore do Conhecimento — " + str(sum(len(p["nodes"]) for p in projects)) + " nós */\nconst PROJECTS = "
   js += json.dumps(projects, ensure_ascii=False, indent=2) + ";\n"
   with open(OUT, "w", encoding="utf-8") as f:

@@ -6,7 +6,7 @@
 
 ### Heart of Programming — interactive map of all CanonEngineer code
 
-<img src="https://img.shields.io/badge/Projetos-8-38bdf8?style=for-the-badge" alt="8 projetos"/>
+<img src="https://img.shields.io/badge/Projetos-24-38bdf8?style=for-the-badge" alt="24 projetos"/>
 <img src="https://img.shields.io/badge/Nós-217-fbbf24?style=for-the-badge" alt="217 nós"/>
 <img src="https://img.shields.io/badge/GitHub_Pages-Ativo-22c55e?style=for-the-badge&logo=githubpages&logoColor=white" alt="GitHub Pages"/>
 <img src="https://img.shields.io/badge/Stack-Python_·_Django_·_Node_·_Qt-a78bfa?style=for-the-badge" alt="Stack"/>
@@ -114,7 +114,23 @@ A **Árvore do Conhecimento** é o hub central de todos os projetos do **CanonEn
 | 5 | **JavaScriptUsersProject** | ES6 + localStorage | 20 | [JavaScriptUsersProject](https://github.com/CanonEngineer/JavaScriptUsersProject) |
 | 6 | **JavaScriptRestfulApiProject** | Express + NeDB | 20 | [JavaScriptRestfulApiProject](https://github.com/CanonEngineer/JavaScriptRestfulApiProject) |
 | 7 | **Professional-Scanner** | Node.js + WebSocket | 20 | [Professional-Scanner](https://github.com/CanonEngineer/Professional-Scanner) |
-| 8 | **CustomizeVeyonProject** | Qt/C++ Veyon CIMED | 45 | [CustomizeVeyonProject](https://github.com/CanonEngineer/CustomizeVeyonProject) |
+| 8 | **CustomizeVeyonProject** | Qt/C++ Veyon CIMED | 56 | [CustomizeVeyonProject](https://github.com/CanonEngineer/CustomizeVeyonProject) |
+| 9 | **CanonEngineer.github.io** | HTML + CSS + JS | 16 | [CanonEngineer.github.io](https://github.com/CanonEngineer/CanonEngineer.github.io) |
+| 10 | **JavaScriptWhatsAppProject** | JS + Webpack + Firebase | 16 | [JavaScriptWhatsAppProject](https://github.com/CanonEngineer/JavaScriptWhatsAppProject) |
+| 11 | **UserManagementProject** | Express + EJS | 16 | [UserManagementProject](https://github.com/CanonEngineer/UserManagementProject) |
+| 12 | **CoursePython2023** | Python | 28 | [CoursePython2023](https://github.com/CanonEngineer/CoursePython2023) |
+| 13 | **PythonEmployeeList** | Django | 19 | [PythonEmployeeList](https://github.com/CanonEngineer/PythonEmployeeList) |
+| 14 | **TodoApp** | Django CRUD | 19 | [TodoApp](https://github.com/CanonEngineer/TodoApp) |
+| 15 | **ProjectHelpDesk** | PHP | 9 | [ProjectHelpDesk](https://github.com/CanonEngineer/ProjectHelpDesk) |
+| 16 | **AppMosquito** | HTML + CSS + JS | 8 | [AppMosquito](https://github.com/CanonEngineer/AppMosquito) |
+| 17 | **NeighborhoodBoysProject** | Django + MySQL | 28 | [NeighborhoodBoysProject](https://github.com/CanonEngineer/NeighborhoodBoysProject) |
+| 18 | **SearchUnivespProject** | Express + EJS | 28 | [SearchUnivespProject](https://github.com/CanonEngineer/SearchUnivespProject) |
+| 19 | **JavaScriptCalculatorProject** | HTML + JavaScript | 6 | [JavaScriptCalculatorProject](https://github.com/CanonEngineer/JavaScriptCalculatorProject) |
+| 20 | **PythonIIEcommerceProject** | Django e-commerce | 28 | [PythonIIEcommerceProject](https://github.com/CanonEngineer/PythonIIEcommerceProject) |
+| 21 | **HtmlWebsiteProject** | HTML + CSS + Bootstrap | 28 | [HtmlWebsiteProject](https://github.com/CanonEngineer/HtmlWebsiteProject) |
+| 22 | **AnkiUnivespProject** | Django | 28 | [AnkiUnivespProject](https://github.com/CanonEngineer/AnkiUnivespProject) |
+| 23 | **HyperwareProject** | HTML + CSS + JS + PHP | 10 | [HyperwareProject](https://github.com/CanonEngineer/HyperwareProject) |
+| 24 | **PHPDaoProject** | PHP DAO | 6 | [PHPDaoProject](https://github.com/CanonEngineer/PHPDaoProject) |
 
 ---
 
@@ -131,7 +147,7 @@ flowchart TB
         CSS["css/style.css<br/>Visual 3D + Cosmos"]
         APP["js/app.js<br/>Eventos + Navegação"]
         RENDER["js/tree-renderer.js<br/>Layout radial SVG"]
-        DATA["js/data/projects.js<br/>8 projetos · 217 nós"]
+        DATA["js/data/projects.js<br/>24 projetos · 521 nós"]
     end
 
     subgraph PROJ["Repositórios de origem"]
@@ -169,7 +185,7 @@ flowchart TB
 ```mermaid
 flowchart LR
     A(["👤 Usuário acessa<br/>GitHub Pages"]) --> B{"Escolhe ação"}
-    B -->|"🔗 Conectar"| C["Galeria de<br/>8 projetos"]
+    B -->|"🔗 Conectar"| C["Galeria de<br/>24 projetos"]
     B -->|"✖ Cancelar"| D["Permanece no<br/>README GitHub"]
     C --> E["Clica em um<br/>card de projeto"]
     E --> F["Árvore 3D<br/>renderizada"]
@@ -262,7 +278,7 @@ mindmap
 </div>
 
 1. Clique em **Conectar** acima
-2. Escolha um dos **8 projetos** na galeria
+2. Escolha um dos **24 projetos** na galeria
 3. Explore a **árvore dimensional** — mova o mouse para o efeito 3D
 4. **Passe o mouse** nos balões para ver o que cada código faz
 5. **Clique no balão** para abrir a **página com código e implementação**

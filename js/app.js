@@ -23,7 +23,8 @@
   const ZOOM_STEP = 0.15;
 
   const ICONS = {
-    python: '🐍', django: '🍕', javascript: '⚡', node: '🖥️', cpp: '⚙️', scanner: '🔍'
+    python: '🐍', django: '🍕', javascript: '⚡', node: '🖥️', cpp: '⚙️',
+    scanner: '🔍', php: '🐘', html: '🌐'
   };
 
   TreeSearch.mount($('#global-search'), $('#search-results'));

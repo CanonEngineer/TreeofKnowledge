@@ -21,6 +21,22 @@ REPO_DIRS = {
     "javascript-restful-api": "JavaScriptRestfulApiProject",
     "professional-scanner": "Professional-Scanner",
     "customize-veyon": "CustomizeVeyonProject",
+    "canon-engineer-github-io": "CanonEngineer.github.io",
+    "javascript-whatsapp": "JavaScriptWhatsAppProject",
+    "user-management": "UserManagementProject",
+    "course-python-2023": "CoursePython2023",
+    "python-employee-list": "PythonEmployeeList",
+    "todo-app": "TodoApp",
+    "project-helpdesk": "ProjectHelpDesk",
+    "app-mosquito": "AppMosquito",
+    "neighborhood-boys": "NeighborhoodBoysProject",
+    "search-univesp": "SearchUnivespProject",
+    "javascript-calculator": "JavaScriptCalculatorProject",
+    "python-ii-ecommerce": "PythonIIEcommerceProject",
+    "html-website": "HtmlWebsiteProject",
+    "anki-univesp": "AnkiUnivespProject",
+    "hyperware": "HyperwareProject",
+    "php-dao": "PHPDaoProject",
 }
 
 PREFIXES = {
@@ -29,12 +45,13 @@ PREFIXES = {
 
 SOURCE_EXTS = {
     ".py", ".js", ".jsx", ".ts", ".tsx", ".cpp", ".h", ".hpp", ".c", ".cc",
-    ".ejs", ".html", ".css", ".sql", ".json", ".sh", ".md", ".vue",
+    ".ejs", ".html", ".htm", ".css", ".scss", ".sql", ".json", ".sh", ".md",
+    ".vue", ".php",
 }
 
 SKIP_DIRS = {
     "node_modules", "bower_components", "vendor", "__pycache__", ".git",
-    "dist", "build", "migrations", ".venv", "venv",
+    "dist", "build", "migrations", ".venv", "venv", "env",
 }
 
 MAX_NODE_CHARS = 250_000
@@ -300,6 +317,7 @@ def project_files() -> list[tuple[str, bool]]:
         (os.path.join(SCRIPTS, "dropbox-project.json"), True),
         (os.path.join(SCRIPTS, "restaurant-project.json"), True),
         (os.path.join(SCRIPTS, "veyon-project.json"), True),
+        (os.path.join(SCRIPTS, "extra-projects.json"), False),
     ]
 
 
