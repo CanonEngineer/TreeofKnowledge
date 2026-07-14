@@ -147,10 +147,10 @@ n("cv-inbound-disabled", "cv-access-recorder", "function", "logInboundAccessSucc
   ["Evita falhas silenciosas em serviço SYSTEM.", "Outbound cobre professor→aluno.", "Documentado como decisão de arquitetura."]),
 
 n("cv-ad-lookup", "cv-logs", "file", "AccessLogAdLookup_win.cpp",
-  "Lookup LDAP do displayName do usuário de domínio para logs.",
+  "LDAP displayName + WTS da sessão Console ativa no host remoto (auxiliar do alerta).",
   "core/src/AccessLogAdLookup_win.cpp",
-  "QString accessLogLookupDomainUserDisplayName( const QString& loginName ) {\n  /* DsGetDcName + ldap_search_s displayName */\n}",
-  ["ldapEscapeFilterValue sanitiza filtro.", "Fallback se AD indisponível.", "Chamado em currentAdUserFullName()."]),
+  "QString accessLogLookupDomainUserDisplayName( const QString& loginName );\nQString accessLogLookupRemoteInteractiveUser( const QString& hostOrIp );",
+  ["ldapEscapeFilterValue sanitiza filtro LDAP.", "Console Active via WTSOpenServer — ignora FUS desconectada.", "Nota 'sessao Windows' no alerta quando diverge do handshake."]),
 
 n("cv-tamper", "cv-root", "module", "Proteção anti-tampering",
   "Monitora alterações nos logs de rede, alerta e exige senha admin.",
@@ -258,7 +258,7 @@ n("cv-installers-dual", "cv-deploy", "file", "Instaladores lab + posto",
   "NSIS: gera os dois setup.exe win64 (laboratório com Master e posto/aluno sem Master).",
   "scripts/build_veyon_custom_installer.ps1",
   "powershell -File scripts\\build_veyon_custom_installer.ps1 -Architecture win64-dual",
-  ["Build final 08/07/2026 com alerta versão incompatível.", "Exclui Logs/, alertas_versao_incompativel/ e *.log do payload.", "Saída: dist\\Veyon-CIMED-1.0-win64-setup.exe e -posto-setup.exe.", "GPO silencioso: setup.exe /S"]),
+  ["Build 14/07/2026: alerta sentinela + DisplayName UTF-8 correto.", "makensis /INPUTCHARSET UTF8 — evita versÃ£o no registro.", "Saída: dist\\Veyon-CIMED-1.0-win64-setup.exe e -posto-setup.exe.", "GPO silencioso: setup.exe /S"]),
 
 n("cv-veyon-custom", "cv-deploy", "file", "Veyon_Custom/",
   "Layout de instalação portátil sem installer MSI.",
@@ -291,10 +291,10 @@ n("cv-vnc-signature", "cv-build-signature", "function", "handleInboundClientSign
   ["Após ler clientBuildSignature do socket.", "Antes do estado Authenticating.", "Ignora loopback e builds homologados."]),
 
 n("cv-version-compat", "cv-version-alert", "file", "CimedVersionCompatibility.cpp",
-  "Filtra loopback, ativa sentinela se qualquer IPv4 local for um dos 4 IPs, grava via writer.",
+  "Filtra loopback, sentinela multi-NIC, usuário do handshake Veyon (+ nota Console se divergir).",
   "core/src/CimedVersionCompatibility.cpp",
-  "bool CimedVersionCompatibility::isSentinelAlertHost() {\n  for (const auto& address : QNetworkInterface::allAddresses())\n    if (isSentinelIpv4(address.toString())) return true;\n  return false;\n}",
-  ["Quatro IPs: .86 .74 .94 .72 — não só o primeiro NIC.", "Hyper-V/vEthernet não anula o monitor.", "resolveHostName + lookup AD display name."]),
+  "details.adUser = client->username(); // KeyFile=LoginName; Logon=conta de autenticação\n// opcional: accessLogLookupRemoteInteractiveUser(...) → 'sessao Windows: ...'",
+  ["Quatro IPs: .86 .74 .94 .72 — não só o primeiro NIC.", "Usuario AD no modal = handshake (muda com a conta do Master).", "Console WTS só como informação auxiliar no nome completo."]),
 
 n("cv-version-writer", "cv-version-alert", "file", "CimedVersionAlertWriter.cpp",
   "Grava alertas somente em UNC — cada conexão incompatível gera linha nova + FlushFileBuffers.",
@@ -324,7 +324,7 @@ n("cv-version-dialog", "cv-version-alert", "file", "CimedVersionAlertDialog.cpp"
   "Diálogo de segurança CIMED — bloqueante até o operador fechar.",
   "core/src/CimedVersionAlertDialog.cpp",
   "CimedVersionAlertDialog::showAlert( originIp, originHost, adUser, adDisplayName, detectedVersion );",
-  ["Estilo CimedDialogStyle escuro.", "Exibe IP/host origem, usuário AD e build detectado.", "Apenas nas quatro sentinelas via monitor."]),
+  ["Estilo CimedDialogStyle escuro.", "Usuario AD (handshake Veyon) + nome / sessão Windows se diverge.", "Apenas nas quatro sentinelas via monitor."]),
 
 n("cv-restore-20260708", "cv-version-alert", "file", "RESTORE-POINT-20260708.md",
   "Ponto de restauração funcional do alerta — tag Git e script de deploy.",
@@ -333,10 +333,10 @@ n("cv-restore-20260708", "cv-version-alert", "file", "RESTORE-POINT-20260708.md"
   ["Commit 5cabc10 na main.", "Pacote em Veyon_Custom/_deploy/restore-versao-incompativel-funcional-20260708/.", "Validado em CIMED-ALESSAN (.86)."]),
 
 n("cv-release-github", "cv-deploy", "file", "GitHub Release 1.0 win64",
-  "Republicação dos instaladores lab + posto em 08/07/2026 com alerta de versão.",
+  "Instaladores lab + posto (14/07/2026): sentinelas + DisplayName versão correto.",
   "docs/RELEASE-veyon-cimed-1.0-win64-20260626.md",
   "https://github.com/CanonEngineer/CustomizeVeyonProject/releases/tag/veyon-cimed-1.0-win64-20260626",
-  ["Veyon-CIMED-1.0-win64-setup.exe e -posto-setup.exe (~44 MB).", "Payload sem pastas Logs/ legadas.", "Notas de release com seção alerta versão incompatível."]),
+  ["Veyon-CIMED-1.0-win64-setup.exe e -posto-setup.exe (~44 MB).", "NSIS /INPUTCHARSET UTF8 — Apps mostra versão, não versÃ£o.", "Payload com veyon-core das sentinelas (14/07)."]),
 
 n("cv-release", "cv-root", "module", "Release Git",
   "Ramificação separada para versionamento semver e publicação de tags no GitHub.",
@@ -358,7 +358,7 @@ PROJECT = {
     "color": "#ef4444",
     "icon": "cpp",
     "stack": "Qt/C++ Veyon 4.10.4",
-    "summary": "Veyon CIMED/HCFMB — UI HiDPI, logs SHA-256 em UNC, anti-tampering, alerta versão incompatível (08/07/2026) e deploy portátil.",
+    "summary": "Veyon CIMED/HCFMB — UI HiDPI, logs SHA-256 em UNC, anti-tampering, alerta versão incompatível (14/07/2026) e deploy portátil.",
     "nodes": NODES,
 }
 
