@@ -113,7 +113,7 @@ A **Árvore do Conhecimento** é o hub central de todos os projetos do **CanonEn
 | 4 | **JavaScriptRestaurantProject** | Express + EJS + MySQL + Redis | 31 | [JavaScriptRestaurantProject](https://github.com/CanonEngineer/JavaScriptRestaurantProject) |
 | 5 | **JavaScriptUsersProject** | ES6 + localStorage | 20 | [JavaScriptUsersProject](https://github.com/CanonEngineer/JavaScriptUsersProject) |
 | 6 | **JavaScriptRestfulApiProject** | Express + NeDB | 20 | [JavaScriptRestfulApiProject](https://github.com/CanonEngineer/JavaScriptRestfulApiProject) |
-| 7 | **Professional-Scanner** | Node.js + WebSocket | 20 | [Professional-Scanner](https://github.com/CanonEngineer/Professional-Scanner) |
+| 7 | **Professional-Scanner** | Node.js + WebSocket + SNMP | 27 | [Professional-Scanner](https://github.com/CanonEngineer/Professional-Scanner) |
 | 8 | **CustomizeVeyonProject** | Qt/C++ Veyon CIMED | 56 | [CustomizeVeyonProject](https://github.com/CanonEngineer/CustomizeVeyonProject) |
 | 9 | **CanonEngineer.github.io** | HTML + CSS + JS | 16 | [CanonEngineer.github.io](https://github.com/CanonEngineer/CanonEngineer.github.io) |
 | 10 | **JavaScriptWhatsAppProject** | JS + Webpack + Firebase | 16 | [JavaScriptWhatsAppProject](https://github.com/CanonEngineer/JavaScriptWhatsAppProject) |
