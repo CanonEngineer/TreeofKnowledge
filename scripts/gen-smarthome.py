@@ -67,7 +67,7 @@ def build(repo: Path | None) -> dict:
             [
                 "Clone: https://github.com/CanonEngineer/SmartHomeIOT",
                 "Local: .\\start.ps1 → http://127.0.0.1:8000",
-                "Demo: docs/demo/standalone.html",
+                "Demo: https://canonengineer.github.io/SmartHomeIOT/demo/standalone.html",
             ],
         ),
         n(
@@ -301,10 +301,14 @@ def build(repo: Path | None) -> dict:
             "smi-web",
             "file",
             "docs/demo/standalone.html",
-            "Demo standalone para GitHub Pages / htmlpreview sem backend.",
+            "Demo standalone no GitHub Pages (sem backend).",
             "docs/demo/standalone.html",
             r("docs/demo/standalone.html", "<!-- standalone demo -->"),
-            ["CSS/JS inline", "Simulação no browser", "Botão do README"],
+            [
+                "https://canonengineer.github.io/SmartHomeIOT/demo/standalone.html",
+                "CSS/JS inline",
+                "Layout conferência: LED · Relé · Buzzer",
+            ],
         ),
         n(
             "smi-java",
