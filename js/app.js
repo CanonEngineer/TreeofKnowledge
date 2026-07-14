@@ -99,6 +99,14 @@
     $('#tree-project-name').textContent = project.name;
     $('#tree-node-count').textContent = project.nodes.length + ' nós de código';
     $('#tree-repo-link').href = project.repoUrl;
+    const demoLink = $('#tree-demo-link');
+    if (project.demoUrl) {
+      demoLink.href = project.demoUrl;
+      demoLink.classList.remove('hidden');
+    } else {
+      demoLink.removeAttribute('href');
+      demoLink.classList.add('hidden');
+    }
     renderTree();
   }
 

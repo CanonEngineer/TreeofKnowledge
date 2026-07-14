@@ -47,6 +47,15 @@
   crumbEl.title = crumbFull;
 
   document.getElementById('node-repo-link').href = project.repoUrl;
+  const nodeDemo = document.getElementById('node-demo-link');
+  if (nodeDemo) {
+    if (project.demoUrl) {
+      nodeDemo.href = project.demoUrl;
+      nodeDemo.classList.remove('hidden');
+    } else {
+      nodeDemo.classList.add('hidden');
+    }
+  }
 
   const badge = document.getElementById('node-project-badge');
   badge.textContent = project.name;
@@ -69,10 +78,11 @@
   }
 
   const implEl = document.getElementById('node-impl');
+  const linkify = (s) => String(s).replace(/(https?:\/\/[^\s<]+)/g, '<a href="$1" target="_blank" rel="noopener">$1</a>');
   if (Array.isArray(node.implementation)) {
-    implEl.innerHTML = '<ol>' + node.implementation.map(s => '<li>' + s + '</li>').join('') + '</ol>';
+    implEl.innerHTML = '<ol>' + node.implementation.map(s => '<li>' + linkify(s) + '</li>').join('') + '</ol>';
   } else {
-    implEl.textContent = node.implementation || '';
+    implEl.innerHTML = linkify(node.implementation || '');
   }
 
   const siblings = document.getElementById('sibling-links');

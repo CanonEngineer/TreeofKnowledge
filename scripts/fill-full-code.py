@@ -37,8 +37,8 @@ REPO_DIRS = {
     "anki-univesp": "AnkiUnivespProject",
     "hyperware": "HyperwareProject",
     "php-dao": "PHPDaoProject",
-    "smarthome-iot": "ArduínoProject",
-    "smartferrari-iot": "FerrariArduínoProject",
+    "smarthome-iot": "SmartHomeIOT",
+    "smartferrari-iot": "SmartFerrariIOT",
 }
 
 PREFIXES = {

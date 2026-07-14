@@ -22,10 +22,14 @@ def n(id, parent, layer, title, desc, file, code, impl):
 
 NODES = [
 n("sf-root", None, "root", "SmartFerrariIOT",
-  "Lab de pós em Engenharia da Computação: gêmeo digital Ferrari, sync Arduino↔Raspberry, HIL/QoS, Web Audio e Research Lab em http://127.0.0.1:8001.",
-  "",
-  "// SmartFerrariIOT\n// UI: http://127.0.0.1:8001\n// Repo: https://github.com/CanonEngineer/SmartFerrariIOT",
-  ["Clone SmartFerrariIOT / FerrariArduínoProject.", "Execute .\\start.ps1", "Abra http://127.0.0.1:8001 (admin / ferrari123)."]),
+  "Lab de pós em Engenharia da Computação: gêmeo digital Ferrari, sync Arduino↔Raspberry, HIL/QoS, Web Audio e Research Lab (Demo GitHub Pages + local :8001).",
+  "README.md",
+  "// SmartFerrariIOT\n// Demo: https://canonengineer.github.io/SmartFerrariIOT/demo/standalone.html\n// Local: http://127.0.0.1:8001\n// Repo: https://github.com/CanonEngineer/SmartFerrariIOT",
+  [
+    "Clone: https://github.com/CanonEngineer/SmartFerrariIOT",
+    "Demo online: https://canonengineer.github.io/SmartFerrariIOT/demo/standalone.html",
+    "Local: .\\start.ps1 → http://127.0.0.1:8001 (admin / ferrari123)",
+  ]),
 
 # --- Server ---
 n("sf-server", "sf-root", "module", "python_server",
@@ -168,12 +172,26 @@ n("sf-actuators", "sf-pi", "file", "actuators.py",
   "# actuators helpers",
   ["Isola GPIO/serial do agent.", "Espelha estado do twin.", "Facilita HIL em bancada."]),
 
-# --- Docs / start ---
+# --- Docs / demo / start ---
+n("sf-demo", "sf-root", "file", "docs/demo/standalone.html",
+  "Demo standalone no GitHub Pages (sem backend) — abre no celular ou qualquer browser.",
+  "docs/demo/standalone.html",
+  "<!-- Ferrari Lab Demo — GitHub Pages -->",
+  [
+    "https://canonengineer.github.io/SmartFerrariIOT/demo/standalone.html",
+    "Publicado via .github/workflows/deploy-pages.yml",
+    "Backend completo local: .\\start.ps1 → :8001",
+  ]),
+
 n("sf-start", "sf-root", "file", "start.ps1",
   "Bootstrap Windows: venv, deps e sobe Lab em :8001.",
   "start.ps1",
   "Write-Host \"Ferrari Lab: http://127.0.0.1:8001\"\n& .\\.venv\\Scripts\\python.exe app.py",
-  ["Execute na raiz do projeto.", "Instala requirements automaticamente.", "URL de análise: http://127.0.0.1:8001."]),
+  [
+    "Execute na raiz do projeto.",
+    "Instala requirements automaticamente.",
+    "Local: http://127.0.0.1:8001 · Demo: https://canonengineer.github.io/SmartFerrariIOT/demo/standalone.html",
+  ]),
 
 n("sf-protocol", "sf-root", "file", "protocol.py",
   "Versão de protocolo e QoS MQTT do Ferrari IoT.",
@@ -192,10 +210,11 @@ PROJECT = {
     "slug": "smartferrari-iot",
     "name": "SmartFerrariIOT",
     "repoUrl": "https://github.com/CanonEngineer/SmartFerrariIOT",
+    "demoUrl": "https://canonengineer.github.io/SmartFerrariIOT/demo/standalone.html?v=2026-07-14",
     "color": "#e10600",
     "icon": "python",
     "stack": "FastAPI · MQTT · Web Audio",
-    "summary": "Gêmeo digital Ferrari + Arduino↔Raspberry, HIL/QoS, invariantes e Lab em :8001 — pós em Engenharia da Computação.",
+    "summary": "Gêmeo digital Ferrari + Arduino↔Raspberry, HIL/QoS, invariantes e Demo Lab no GitHub Pages — pós em Engenharia da Computação.",
     "nodes": NODES,
 }
 
