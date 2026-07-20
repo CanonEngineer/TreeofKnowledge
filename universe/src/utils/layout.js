@@ -156,18 +156,27 @@ export function computeGraphBounds(laidOut) {
   return { center, radius };
 }
 
-/** 35% = visão completa · 100% = detalhe · distâncias proporcionais ao grafo */
-export function computeCameraFrames(bounds, fovDeg = 52) {
+/** 35% = visão completa · 100% = detalhe */
+export const ZOOM_OVERVIEW = 35;
+export const ZOOM_DETAIL = 100;
+
+export function computeCameraFrames(bounds, fovDeg = 52, aspect = 16 / 9) {
   const fov = (fovDeg * Math.PI) / 180;
-  const fitDistance = (bounds.radius / Math.tan(fov / 2)) * 1.28;
+  const vHalf = fov / 2;
+  const hHalf = 2 * Math.atan(Math.tan(vHalf) * aspect);
+
+  const vDist = (bounds.radius / Math.tan(vHalf)) * 1.75;
+  const hDist = (bounds.radius / Math.tan(hHalf)) * 1.75;
+  const fitDistance = Math.max(vDist, hDist, 40);
+
   const overviewDistance = fitDistance;
-  const detailDistance = fitDistance * 0.35;
+  const detailDistance = fitDistance * (ZOOM_OVERVIEW / ZOOM_DETAIL);
 
   return {
     center: bounds.center,
     overview: {
       x: bounds.center.x,
-      y: bounds.center.y + overviewDistance * 0.14,
+      y: bounds.center.y + overviewDistance * 0.12,
       z: bounds.center.z + overviewDistance,
     },
     detail: {
@@ -175,14 +184,24 @@ export function computeCameraFrames(bounds, fovDeg = 52) {
       y: bounds.center.y + 4,
       z: bounds.center.z + detailDistance,
     },
-    minDistance: detailDistance * 0.4,
-    maxDistance: overviewDistance * 1.5,
+    minDistance: detailDistance * 0.35,
+    maxDistance: overviewDistance * 1.8,
     overviewDistance,
     detailDistance,
   };
 }
 
 export function zoomFromDistance(distance, overviewDistance) {
-  const pct = Math.round(35 * (overviewDistance / Math.max(distance, 0.001)));
-  return Math.min(200, Math.max(35, pct));
+  const pct = Math.round(ZOOM_OVERVIEW * (overviewDistance / Math.max(distance, 0.001)));
+  return Math.min(200, Math.max(ZOOM_OVERVIEW, pct));
+}
+
+export function applyCameraFrame(camera, controls, frames, mode = 'overview') {
+  if (!camera || !frames) return;
+  const pos = mode === 'detail' ? frames.detail : frames.overview;
+  camera.position.set(pos.x, pos.y, pos.z);
+  if (controls) {
+    controls.target.set(frames.center.x, frames.center.y, frames.center.z);
+    controls.update();
+  }
 }

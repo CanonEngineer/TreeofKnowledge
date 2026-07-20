@@ -1,19 +1,21 @@
-import { useRef, useEffect } from 'react';
+import { useRef, useLayoutEffect } from 'react';
 import { useThree, useFrame } from '@react-three/fiber';
 import * as THREE from 'three';
-import { zoomFromDistance } from '../utils/layout';
+import { applyCameraFrame, zoomFromDistance, ZOOM_OVERVIEW } from '../utils/layout';
 
-export function InitialCamera({ frames, graphKey }) {
+export function ApplyOverviewCamera({ frames, version }) {
   const { camera, controls } = useThree();
+  const done = useRef(false);
 
-  useEffect(() => {
-    if (!frames) return;
-    camera.position.set(frames.overview.x, frames.overview.y, frames.overview.z);
-    if (controls?.target) {
-      controls.target.set(frames.center.x, frames.center.y, frames.center.z);
-      controls.update();
-    }
-  }, [frames, graphKey, camera, controls]);
+  useLayoutEffect(() => {
+    done.current = false;
+  }, [version]);
+
+  useFrame(() => {
+    if (done.current || !frames) return;
+    applyCameraFrame(camera, controls, frames, 'overview');
+    if (controls) done.current = true;
+  });
 
   return null;
 }
@@ -21,13 +23,9 @@ export function InitialCamera({ frames, graphKey }) {
 export function ResetCamera({ trigger, frames }) {
   const { camera, controls } = useThree();
 
-  useEffect(() => {
+  useLayoutEffect(() => {
     if (!trigger || !frames) return;
-    camera.position.set(frames.overview.x, frames.overview.y, frames.overview.z);
-    if (controls?.target) {
-      controls.target.set(frames.center.x, frames.center.y, frames.center.z);
-      controls.update();
-    }
+    applyCameraFrame(camera, controls, frames, 'overview');
   }, [trigger, frames, camera, controls]);
 
   return null;
@@ -37,14 +35,13 @@ export function CameraFocus({ target, frames }) {
   const { camera, controls } = useThree();
   const anim = useRef(null);
 
-  useEffect(() => {
-    if (!target || !frames) return;
+  useLayoutEffect(() => {
+    if (!target || !frames) {
+      anim.current = null;
+      return;
+    }
     const detailZ = frames.detail.z - frames.center.z;
-    const dest = new THREE.Vector3(
-      target.x,
-      target.y + 3,
-      target.z + detailZ
-    );
+    const dest = new THREE.Vector3(target.x, target.y + 3, target.z + detailZ);
     const look = new THREE.Vector3(target.x, target.y, target.z);
     anim.current = { dest, look, t: 0 };
   }, [target, frames]);
@@ -70,13 +67,18 @@ export function ZoomTracker({ frames, onZoomChange }) {
 
   useFrame(() => {
     if (!frames || !onZoomChange) return;
-    const dist = camera.position.distanceTo(controls?.target || new THREE.Vector3(0, 0, 0));
+    const target = controls?.target || new THREE.Vector3(frames.center.x, frames.center.y, frames.center.z);
+    const dist = camera.position.distanceTo(target);
     const pct = zoomFromDistance(dist, frames.overviewDistance);
     if (pct !== last.current) {
       last.current = pct;
       onZoomChange(pct);
     }
   });
+
+  useLayoutEffect(() => {
+    if (onZoomChange) onZoomChange(ZOOM_OVERVIEW);
+  }, [frames, onZoomChange]);
 
   return null;
 }
