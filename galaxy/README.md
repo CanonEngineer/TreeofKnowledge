@@ -1,5 +1,5 @@
-# Galaxy 3D — Tree of Knowledge
+# Galaxy 3D
 
-Visualização premium em React Three Fiber com bloom, layout hierárquico e partículas.
+Zoom inicial **35%** (visão completa) · scroll até **100%+** para detalhe.
 
 Build: `.\scripts\build-galaxy.ps1`

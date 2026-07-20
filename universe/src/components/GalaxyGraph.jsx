@@ -3,8 +3,8 @@ import { Canvas } from '@react-three/fiber';
 import { OrbitControls, Html } from '@react-three/drei';
 import { EffectComposer, Bloom, Vignette } from '@react-three/postprocessing';
 import { StarField, GridFloor, NodeSphere, ConnectionBeam } from './SceneObjects';
-import { CameraFocus, ResetCamera } from './CameraFocus';
-import { computeLayout, getNeighbors } from '../utils/layout';
+import { InitialCamera, ResetCamera, CameraFocus, ZoomTracker } from './CameraFocus';
+import { computeLayout, computeGraphBounds, computeCameraFrames, getNeighbors } from '../utils/layout';
 
 function Scene({
   graph,
@@ -19,10 +19,17 @@ function Scene({
   activeCategories,
   resetCam,
   paused,
+  onZoomChange,
 }) {
   const laidOut = useMemo(() => computeLayout(graph), [graph]);
   const posMap = useMemo(() => new Map(laidOut.map((n) => [n.id, n.position])), [laidOut]);
   const links = graph.links || [];
+  const graphKey = `${graph.slug}-${graph.nodes.length}-${resetCam}`;
+
+  const cameraFrames = useMemo(() => {
+    const bounds = computeGraphBounds(laidOut);
+    return computeCameraFrames(bounds);
+  }, [laidOut]);
 
   const focusNode = useMemo(() => {
     if (!selectedId) return null;
@@ -40,15 +47,17 @@ function Scene({
   return (
     <>
       <color attach="background" args={['#010409']} />
-      <fog attach="fog" args={['#010409', 45, 160]} />
+      <fog attach="fog" args={['#010409', cameraFrames.overviewDistance * 0.8, cameraFrames.overviewDistance * 2.8]} />
       <ambientLight intensity={0.22} />
       <directionalLight position={[30, 40, 20]} intensity={0.55} color="#93c5fd" />
       <pointLight position={[-30, 15, -25]} intensity={0.9} color="#818cf8" />
       <pointLight position={[0, -10, 30]} intensity={0.35} color="#22d3ee" />
       <StarField />
       <GridFloor />
-      <ResetCamera trigger={resetCam} />
-      <CameraFocus target={focusNode} offset={[0, 3, 18]} />
+      <InitialCamera frames={cameraFrames} graphKey={graphKey} />
+      <ResetCamera trigger={resetCam} frames={cameraFrames} />
+      <CameraFocus target={focusNode} frames={cameraFrames} />
+      <ZoomTracker frames={cameraFrames} onZoomChange={onZoomChange} />
 
       {showLinks &&
         links.map((link, i) => {
@@ -115,8 +124,9 @@ function Scene({
       <OrbitControls
         enableDamping
         dampingFactor={0.05}
-        minDistance={6}
-        maxDistance={100}
+        minDistance={cameraFrames.minDistance}
+        maxDistance={cameraFrames.maxDistance}
+        target={[cameraFrames.center.x, cameraFrames.center.y, cameraFrames.center.z]}
         maxPolarAngle={Math.PI * 0.52}
         autoRotate={showAnimations && !hasFocus && !paused}
         autoRotateSpeed={0.35}
@@ -130,19 +140,19 @@ function Scene({
   );
 }
 
-export default function GalaxyGraph(props) {
+export default function GalaxyGraph({ onZoomChange, ...props }) {
   const [hoveredId, setHoveredId] = useState(null);
   const handleHover = useCallback((node) => setHoveredId(node?.id ?? null), []);
 
   return (
     <Canvas
-      camera={{ position: [0, 8, 42], fov: 52 }}
+      camera={{ fov: 52, near: 0.1, far: 500 }}
       gl={{ antialias: true, alpha: false, powerPreference: 'high-performance' }}
       dpr={[1, 2]}
       frameloop={props.paused ? 'never' : 'always'}
     >
       <Suspense fallback={null}>
-        <Scene {...props} hoveredId={hoveredId} onHover={handleHover} />
+        <Scene {...props} hoveredId={hoveredId} onHover={handleHover} onZoomChange={onZoomChange} />
       </Suspense>
     </Canvas>
   );

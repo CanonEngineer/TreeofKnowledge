@@ -118,3 +118,71 @@ export function countConnections(nodeId, links) {
 export function countDependencies(nodeId, links) {
   return links.filter((l) => l.target === nodeId).length;
 }
+
+/** Envelope esférico do grafo posicionado — base para enquadrar a câmera */
+export function computeGraphBounds(laidOut) {
+  if (!laidOut.length) {
+    return { center: { x: 0, y: 0, z: 0 }, radius: 22 };
+  }
+
+  let minX = Infinity;
+  let maxX = -Infinity;
+  let minY = Infinity;
+  let maxY = -Infinity;
+  let minZ = Infinity;
+  let maxZ = -Infinity;
+
+  laidOut.forEach((n) => {
+    const pad = (n.size || 0.6) * 1.8;
+    minX = Math.min(minX, n.position.x - pad);
+    maxX = Math.max(maxX, n.position.x + pad);
+    minY = Math.min(minY, n.position.y - pad);
+    maxY = Math.max(maxY, n.position.y + pad);
+    minZ = Math.min(minZ, n.position.z - pad);
+    maxZ = Math.max(maxZ, n.position.z + pad);
+  });
+
+  const center = {
+    x: (minX + maxX) / 2,
+    y: (minY + maxY) / 2,
+    z: (minZ + maxZ) / 2,
+  };
+  const radius = Math.max(
+    Math.hypot(maxX - minX, maxZ - minZ) / 2,
+    (maxY - minY) / 2,
+    10
+  ) + 6;
+
+  return { center, radius };
+}
+
+/** 35% = visão completa · 100% = detalhe · distâncias proporcionais ao grafo */
+export function computeCameraFrames(bounds, fovDeg = 52) {
+  const fov = (fovDeg * Math.PI) / 180;
+  const fitDistance = (bounds.radius / Math.tan(fov / 2)) * 1.28;
+  const overviewDistance = fitDistance;
+  const detailDistance = fitDistance * 0.35;
+
+  return {
+    center: bounds.center,
+    overview: {
+      x: bounds.center.x,
+      y: bounds.center.y + overviewDistance * 0.14,
+      z: bounds.center.z + overviewDistance,
+    },
+    detail: {
+      x: bounds.center.x,
+      y: bounds.center.y + 4,
+      z: bounds.center.z + detailDistance,
+    },
+    minDistance: detailDistance * 0.4,
+    maxDistance: overviewDistance * 1.5,
+    overviewDistance,
+    detailDistance,
+  };
+}
+
+export function zoomFromDistance(distance, overviewDistance) {
+  const pct = Math.round(35 * (overviewDistance / Math.max(distance, 0.001)));
+  return Math.min(200, Math.max(35, pct));
+}

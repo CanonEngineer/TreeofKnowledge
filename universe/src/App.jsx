@@ -16,6 +16,7 @@ export default function App() {
   const [resetCam, setResetCam] = useState(0);
   const [activeCategories, setActiveCategories] = useState(new Set());
   const [fullscreen, setFullscreen] = useState(false);
+  const [zoomPct, setZoomPct] = useState(35);
 
   const slug = getProjectSlug();
 
@@ -140,7 +141,11 @@ export default function App() {
           activeCategories={activeCategories}
           resetCam={resetCam}
           paused={paused}
+          onZoomChange={setZoomPct}
         />
+        <div className="zoom-indicator" title="Scroll para aproximar · 35% visão geral · 100% detalhe">
+          {zoomPct}%
+        </div>
         <button type="button" className="fs-btn" onClick={toggleFullscreen} title="Tela cheia">
           {fullscreen ? '⤓' : '⤢'}
         </button>
