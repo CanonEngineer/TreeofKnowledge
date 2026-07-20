@@ -1,0 +1,348 @@
+{
+  "slug": "todo-app",
+  "name": "TodoApp",
+  "repoUrl": "https://github.com/CanonEngineer/TodoApp",
+  "color": "#34d399",
+  "demoUrl": "",
+  "nodeCount": 19,
+  "categories": {
+    "core": {
+      "label": "Backend",
+      "color": "#3b82f6"
+    },
+    "frontend": {
+      "label": "Frontend",
+      "color": "#eab308"
+    },
+    "tests": {
+      "label": "Testes",
+      "color": "#94a3b8"
+    },
+    "other": {
+      "label": "Outros",
+      "color": "#64748b"
+    }
+  },
+  "nodes": [
+    {
+      "id": "tod-root",
+      "label": "TodoApp",
+      "parent": null,
+      "layer": "root",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 1.4,
+      "file": "manage.py",
+      "description": "TODO app Django com operações CRUD."
+    },
+    {
+      "id": "tod-todo",
+      "label": "todo",
+      "parent": "tod-root",
+      "layer": "module",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 1.0,
+      "file": "todo/",
+      "description": "Módulo/pasta `todo/` com arquivos-chave do projeto."
+    },
+    {
+      "id": "tod-todo-admin-py",
+      "label": "admin.py",
+      "parent": "tod-todo",
+      "layer": "file",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 0.72,
+      "file": "todo/admin.py",
+      "description": "Arquivo `todo/admin.py` mapeado a partir do repositório original."
+    },
+    {
+      "id": "tod-todo-models-py",
+      "label": "models.py",
+      "parent": "tod-todo",
+      "layer": "file",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 0.72,
+      "file": "todo/models.py",
+      "description": "Arquivo `todo/models.py` mapeado a partir do repositório original."
+    },
+    {
+      "id": "tod-todo-urls-py",
+      "label": "urls.py",
+      "parent": "tod-todo",
+      "layer": "file",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 0.72,
+      "file": "todo/urls.py",
+      "description": "Arquivo `todo/urls.py` mapeado a partir do repositório original."
+    },
+    {
+      "id": "tod-todo-views-py",
+      "label": "views.py",
+      "parent": "tod-todo",
+      "layer": "file",
+      "category": "frontend",
+      "categoryLabel": "Frontend",
+      "color": "#eab308",
+      "size": 0.72,
+      "file": "todo/views.py",
+      "description": "Arquivo `todo/views.py` mapeado a partir do repositório original."
+    },
+    {
+      "id": "tod-todo-apps-py",
+      "label": "apps.py",
+      "parent": "tod-todo",
+      "layer": "file",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 0.72,
+      "file": "todo/apps.py",
+      "description": "Arquivo `todo/apps.py` mapeado a partir do repositório original."
+    },
+    {
+      "id": "tod-todo-tests-py",
+      "label": "tests.py",
+      "parent": "tod-todo",
+      "layer": "file",
+      "category": "tests",
+      "categoryLabel": "Testes",
+      "color": "#94a3b8",
+      "size": 0.72,
+      "file": "todo/tests.py",
+      "description": "Arquivo `todo/tests.py` mapeado a partir do repositório original."
+    },
+    {
+      "id": "tod-todo-main",
+      "label": "todo_main",
+      "parent": "tod-root",
+      "layer": "module",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 1.0,
+      "file": "todo_main/",
+      "description": "Módulo/pasta `todo_main/` com arquivos-chave do projeto."
+    },
+    {
+      "id": "tod-todo-main-settings-py",
+      "label": "settings.py",
+      "parent": "tod-todo-main",
+      "layer": "file",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 0.72,
+      "file": "todo_main/settings.py",
+      "description": "Arquivo `todo_main/settings.py` mapeado a partir do repositório original."
+    },
+    {
+      "id": "tod-todo-main-urls-py",
+      "label": "urls.py",
+      "parent": "tod-todo-main",
+      "layer": "file",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 0.72,
+      "file": "todo_main/urls.py",
+      "description": "Arquivo `todo_main/urls.py` mapeado a partir do repositório original."
+    },
+    {
+      "id": "tod-todo-main-views-py",
+      "label": "views.py",
+      "parent": "tod-todo-main",
+      "layer": "file",
+      "category": "frontend",
+      "categoryLabel": "Frontend",
+      "color": "#eab308",
+      "size": 0.72,
+      "file": "todo_main/views.py",
+      "description": "Arquivo `todo_main/views.py` mapeado a partir do repositório original."
+    },
+    {
+      "id": "tod-todo-main-asgi-py",
+      "label": "asgi.py",
+      "parent": "tod-todo-main",
+      "layer": "file",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 0.72,
+      "file": "todo_main/asgi.py",
+      "description": "Arquivo `todo_main/asgi.py` mapeado a partir do repositório original."
+    },
+    {
+      "id": "tod-todo-main-wsgi-py",
+      "label": "wsgi.py",
+      "parent": "tod-todo-main",
+      "layer": "file",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 0.72,
+      "file": "todo_main/wsgi.py",
+      "description": "Arquivo `todo_main/wsgi.py` mapeado a partir do repositório original."
+    },
+    {
+      "id": "tod-templates",
+      "label": "templates",
+      "parent": "tod-root",
+      "layer": "module",
+      "category": "frontend",
+      "categoryLabel": "Frontend",
+      "color": "#eab308",
+      "size": 1.0,
+      "file": "templates/",
+      "description": "Módulo/pasta `templates/` com arquivos-chave do projeto."
+    },
+    {
+      "id": "tod-templates-edit-task-html",
+      "label": "edit_task.html",
+      "parent": "tod-templates",
+      "layer": "file",
+      "category": "frontend",
+      "categoryLabel": "Frontend",
+      "color": "#eab308",
+      "size": 0.72,
+      "file": "templates/edit_task.html",
+      "description": "Arquivo `templates/edit_task.html` mapeado a partir do repositório original."
+    },
+    {
+      "id": "tod-templates-home-html",
+      "label": "home.html",
+      "parent": "tod-templates",
+      "layer": "file",
+      "category": "frontend",
+      "categoryLabel": "Frontend",
+      "color": "#eab308",
+      "size": 0.72,
+      "file": "templates/home.html",
+      "description": "Arquivo `templates/home.html` mapeado a partir do repositório original."
+    },
+    {
+      "id": "tod-manage-py",
+      "label": "manage.py",
+      "parent": "tod-root",
+      "layer": "file",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 0.72,
+      "file": "manage.py",
+      "description": "Arquivo `manage.py` mapeado a partir do repositório original."
+    },
+    {
+      "id": "tod-readme-md",
+      "label": "README.md",
+      "parent": "tod-root",
+      "layer": "file",
+      "category": "other",
+      "categoryLabel": "Outros",
+      "color": "#64748b",
+      "size": 0.72,
+      "file": "README.md",
+      "description": "Arquivo `README.md` mapeado a partir do repositório original."
+    }
+  ],
+  "links": [
+    {
+      "source": "tod-root",
+      "target": "tod-todo",
+      "type": "dependency"
+    },
+    {
+      "source": "tod-todo",
+      "target": "tod-todo-admin-py",
+      "type": "dependency"
+    },
+    {
+      "source": "tod-todo",
+      "target": "tod-todo-models-py",
+      "type": "dependency"
+    },
+    {
+      "source": "tod-todo",
+      "target": "tod-todo-urls-py",
+      "type": "dependency"
+    },
+    {
+      "source": "tod-todo",
+      "target": "tod-todo-views-py",
+      "type": "dependency"
+    },
+    {
+      "source": "tod-todo",
+      "target": "tod-todo-apps-py",
+      "type": "dependency"
+    },
+    {
+      "source": "tod-todo",
+      "target": "tod-todo-tests-py",
+      "type": "dependency"
+    },
+    {
+      "source": "tod-root",
+      "target": "tod-todo-main",
+      "type": "dependency"
+    },
+    {
+      "source": "tod-todo-main",
+      "target": "tod-todo-main-settings-py",
+      "type": "dependency"
+    },
+    {
+      "source": "tod-todo-main",
+      "target": "tod-todo-main-urls-py",
+      "type": "dependency"
+    },
+    {
+      "source": "tod-todo-main",
+      "target": "tod-todo-main-views-py",
+      "type": "dependency"
+    },
+    {
+      "source": "tod-todo-main",
+      "target": "tod-todo-main-asgi-py",
+      "type": "dependency"
+    },
+    {
+      "source": "tod-todo-main",
+      "target": "tod-todo-main-wsgi-py",
+      "type": "dependency"
+    },
+    {
+      "source": "tod-root",
+      "target": "tod-templates",
+      "type": "dependency"
+    },
+    {
+      "source": "tod-templates",
+      "target": "tod-templates-edit-task-html",
+      "type": "dependency"
+    },
+    {
+      "source": "tod-templates",
+      "target": "tod-templates-home-html",
+      "type": "dependency"
+    },
+    {
+      "source": "tod-root",
+      "target": "tod-manage-py",
+      "type": "dependency"
+    },
+    {
+      "source": "tod-root",
+      "target": "tod-readme-md",
+      "type": "dependency"
+    }
+  ]
+}

@@ -1,0 +1,297 @@
+{
+  "slug": "user-management",
+  "name": "UserManagementProject",
+  "repoUrl": "https://github.com/CanonEngineer/UserManagementProject",
+  "color": "#a78bfa",
+  "demoUrl": "",
+  "nodeCount": 16,
+  "categories": {
+    "core": {
+      "label": "Backend",
+      "color": "#3b82f6"
+    },
+    "network": {
+      "label": "Rede / Scan",
+      "color": "#22d3ee"
+    },
+    "frontend": {
+      "label": "Frontend",
+      "color": "#eab308"
+    },
+    "other": {
+      "label": "Outros",
+      "color": "#64748b"
+    }
+  },
+  "nodes": [
+    {
+      "id": "use-root",
+      "label": "UserManagementProject",
+      "parent": null,
+      "layer": "root",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 1.4,
+      "file": "app.js",
+      "description": "CRUD de usuários com Express, rotas e views EJS."
+    },
+    {
+      "id": "use-routes",
+      "label": "routes",
+      "parent": "use-root",
+      "layer": "module",
+      "category": "network",
+      "categoryLabel": "Rede / Scan",
+      "color": "#22d3ee",
+      "size": 1.0,
+      "file": "routes/",
+      "description": "Módulo/pasta `routes/` com arquivos-chave do projeto."
+    },
+    {
+      "id": "use-routes-index-js",
+      "label": "index.js",
+      "parent": "use-routes",
+      "layer": "file",
+      "category": "network",
+      "categoryLabel": "Rede / Scan",
+      "color": "#22d3ee",
+      "size": 0.72,
+      "file": "routes/index.js",
+      "description": "Arquivo `routes/index.js` mapeado a partir do repositório original."
+    },
+    {
+      "id": "use-routes-users-js",
+      "label": "users.js",
+      "parent": "use-routes",
+      "layer": "file",
+      "category": "network",
+      "categoryLabel": "Rede / Scan",
+      "color": "#22d3ee",
+      "size": 0.72,
+      "file": "routes/users.js",
+      "description": "Arquivo `routes/users.js` mapeado a partir do repositório original."
+    },
+    {
+      "id": "use-views",
+      "label": "views",
+      "parent": "use-root",
+      "layer": "module",
+      "category": "frontend",
+      "categoryLabel": "Frontend",
+      "color": "#eab308",
+      "size": 1.0,
+      "file": "views/",
+      "description": "Módulo/pasta `views/` com arquivos-chave do projeto."
+    },
+    {
+      "id": "use-views-index-ejs",
+      "label": "index.ejs",
+      "parent": "use-views",
+      "layer": "file",
+      "category": "frontend",
+      "categoryLabel": "Frontend",
+      "color": "#eab308",
+      "size": 0.72,
+      "file": "views/index.ejs",
+      "description": "Arquivo `views/index.ejs` mapeado a partir do repositório original."
+    },
+    {
+      "id": "use-views-error-ejs",
+      "label": "error.ejs",
+      "parent": "use-views",
+      "layer": "file",
+      "category": "frontend",
+      "categoryLabel": "Frontend",
+      "color": "#eab308",
+      "size": 0.72,
+      "file": "views/error.ejs",
+      "description": "Arquivo `views/error.ejs` mapeado a partir do repositório original."
+    },
+    {
+      "id": "use-public",
+      "label": "public",
+      "parent": "use-root",
+      "layer": "module",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 1.0,
+      "file": "public/",
+      "description": "Módulo/pasta `public/` com arquivos-chave do projeto."
+    },
+    {
+      "id": "use-public-classes-fetch-js",
+      "label": "Fetch.js",
+      "parent": "use-public",
+      "layer": "file",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 0.72,
+      "file": "public/classes/Fetch.js",
+      "description": "Arquivo `public/classes/Fetch.js` mapeado a partir do repositório original."
+    },
+    {
+      "id": "use-public-classes-httprequest-js",
+      "label": "HttpRequest.js",
+      "parent": "use-public",
+      "layer": "file",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 0.72,
+      "file": "public/classes/HttpRequest.js",
+      "description": "Arquivo `public/classes/HttpRequest.js` mapeado a partir do repositório original."
+    },
+    {
+      "id": "use-public-models-user-js",
+      "label": "User.js",
+      "parent": "use-public",
+      "layer": "file",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 0.72,
+      "file": "public/models/User.js",
+      "description": "Arquivo `public/models/User.js` mapeado a partir do repositório original."
+    },
+    {
+      "id": "use-public-controllers-usercontroller-js",
+      "label": "UserController.js",
+      "parent": "use-public",
+      "layer": "file",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 0.72,
+      "file": "public/controllers/UserController.js",
+      "description": "Arquivo `public/controllers/UserController.js` mapeado a partir do repositório original."
+    },
+    {
+      "id": "use-public-classes-utils-js",
+      "label": "Utils.js",
+      "parent": "use-public",
+      "layer": "file",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 0.72,
+      "file": "public/classes/Utils.js",
+      "description": "Arquivo `public/classes/Utils.js` mapeado a partir do repositório original."
+    },
+    {
+      "id": "use-app-js",
+      "label": "app.js",
+      "parent": "use-root",
+      "layer": "file",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 0.72,
+      "file": "app.js",
+      "description": "Arquivo `app.js` mapeado a partir do repositório original."
+    },
+    {
+      "id": "use-package-json",
+      "label": "package.json",
+      "parent": "use-root",
+      "layer": "file",
+      "category": "other",
+      "categoryLabel": "Outros",
+      "color": "#64748b",
+      "size": 0.72,
+      "file": "package.json",
+      "description": "Arquivo `package.json` mapeado a partir do repositório original."
+    },
+    {
+      "id": "use-readme-md",
+      "label": "README.md",
+      "parent": "use-root",
+      "layer": "file",
+      "category": "other",
+      "categoryLabel": "Outros",
+      "color": "#64748b",
+      "size": 0.72,
+      "file": "README.md",
+      "description": "Arquivo `README.md` mapeado a partir do repositório original."
+    }
+  ],
+  "links": [
+    {
+      "source": "use-root",
+      "target": "use-routes",
+      "type": "dependency"
+    },
+    {
+      "source": "use-routes",
+      "target": "use-routes-index-js",
+      "type": "dependency"
+    },
+    {
+      "source": "use-routes",
+      "target": "use-routes-users-js",
+      "type": "dependency"
+    },
+    {
+      "source": "use-root",
+      "target": "use-views",
+      "type": "dependency"
+    },
+    {
+      "source": "use-views",
+      "target": "use-views-index-ejs",
+      "type": "dependency"
+    },
+    {
+      "source": "use-views",
+      "target": "use-views-error-ejs",
+      "type": "dependency"
+    },
+    {
+      "source": "use-root",
+      "target": "use-public",
+      "type": "dependency"
+    },
+    {
+      "source": "use-public",
+      "target": "use-public-classes-fetch-js",
+      "type": "dependency"
+    },
+    {
+      "source": "use-public",
+      "target": "use-public-classes-httprequest-js",
+      "type": "dependency"
+    },
+    {
+      "source": "use-public",
+      "target": "use-public-models-user-js",
+      "type": "dependency"
+    },
+    {
+      "source": "use-public",
+      "target": "use-public-controllers-usercontroller-js",
+      "type": "dependency"
+    },
+    {
+      "source": "use-public",
+      "target": "use-public-classes-utils-js",
+      "type": "dependency"
+    },
+    {
+      "source": "use-root",
+      "target": "use-app-js",
+      "type": "dependency"
+    },
+    {
+      "source": "use-root",
+      "target": "use-package-json",
+      "type": "dependency"
+    },
+    {
+      "source": "use-root",
+      "target": "use-readme-md",
+      "type": "dependency"
+    }
+  ]
+}

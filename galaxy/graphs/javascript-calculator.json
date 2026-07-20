@@ -1,0 +1,127 @@
+{
+  "slug": "javascript-calculator",
+  "name": "JavaScriptCalculatorProject",
+  "repoUrl": "https://github.com/CanonEngineer/JavaScriptCalculatorProject",
+  "color": "#fbbf24",
+  "demoUrl": "",
+  "nodeCount": 6,
+  "categories": {
+    "core": {
+      "label": "Backend",
+      "color": "#3b82f6"
+    },
+    "frontend": {
+      "label": "Frontend",
+      "color": "#eab308"
+    },
+    "scripts": {
+      "label": "Scripts",
+      "color": "#64748b"
+    },
+    "other": {
+      "label": "Outros",
+      "color": "#64748b"
+    }
+  },
+  "nodes": [
+    {
+      "id": "jav-root",
+      "label": "JavaScriptCalculatorProject",
+      "parent": null,
+      "layer": "root",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 1.4,
+      "file": "index.html",
+      "description": "Calculadora interativa em JavaScript com som de clique."
+    },
+    {
+      "id": "jav-scripts",
+      "label": "scripts",
+      "parent": "jav-root",
+      "layer": "module",
+      "category": "scripts",
+      "categoryLabel": "Scripts",
+      "color": "#64748b",
+      "size": 1.0,
+      "file": "scripts/",
+      "description": "Módulo/pasta `scripts/` com arquivos-chave do projeto."
+    },
+    {
+      "id": "jav-scripts-controller-calccontroller-js",
+      "label": "CalcController.js",
+      "parent": "jav-scripts",
+      "layer": "file",
+      "category": "scripts",
+      "categoryLabel": "Scripts",
+      "color": "#64748b",
+      "size": 0.72,
+      "file": "scripts/controller/CalcController.js",
+      "description": "Arquivo `scripts/controller/CalcController.js` mapeado a partir do repositório original."
+    },
+    {
+      "id": "jav-scripts-calculator-js",
+      "label": "calculator.js",
+      "parent": "jav-scripts",
+      "layer": "file",
+      "category": "scripts",
+      "categoryLabel": "Scripts",
+      "color": "#64748b",
+      "size": 0.72,
+      "file": "scripts/calculator.js",
+      "description": "Arquivo `scripts/calculator.js` mapeado a partir do repositório original."
+    },
+    {
+      "id": "jav-index-html",
+      "label": "index.html",
+      "parent": "jav-root",
+      "layer": "file",
+      "category": "frontend",
+      "categoryLabel": "Frontend",
+      "color": "#eab308",
+      "size": 0.72,
+      "file": "index.html",
+      "description": "Arquivo `index.html` mapeado a partir do repositório original."
+    },
+    {
+      "id": "jav-readme-md",
+      "label": "README.md",
+      "parent": "jav-root",
+      "layer": "file",
+      "category": "other",
+      "categoryLabel": "Outros",
+      "color": "#64748b",
+      "size": 0.72,
+      "file": "README.md",
+      "description": "Arquivo `README.md` mapeado a partir do repositório original."
+    }
+  ],
+  "links": [
+    {
+      "source": "jav-root",
+      "target": "jav-scripts",
+      "type": "dependency"
+    },
+    {
+      "source": "jav-scripts",
+      "target": "jav-scripts-controller-calccontroller-js",
+      "type": "dependency"
+    },
+    {
+      "source": "jav-scripts",
+      "target": "jav-scripts-calculator-js",
+      "type": "dependency"
+    },
+    {
+      "source": "jav-root",
+      "target": "jav-index-html",
+      "type": "dependency"
+    },
+    {
+      "source": "jav-root",
+      "target": "jav-readme-md",
+      "type": "dependency"
+    }
+  ]
+}

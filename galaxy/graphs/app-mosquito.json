@@ -1,0 +1,157 @@
+{
+  "slug": "app-mosquito",
+  "name": "AppMosquito",
+  "repoUrl": "https://github.com/CanonEngineer/AppMosquito",
+  "color": "#f472b6",
+  "demoUrl": "",
+  "nodeCount": 8,
+  "categories": {
+    "core": {
+      "label": "Backend",
+      "color": "#3b82f6"
+    },
+    "frontend": {
+      "label": "Frontend",
+      "color": "#eab308"
+    },
+    "other": {
+      "label": "Outros",
+      "color": "#64748b"
+    }
+  },
+  "nodes": [
+    {
+      "id": "app-root",
+      "label": "AppMosquito",
+      "parent": null,
+      "layer": "root",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 1.4,
+      "file": "index.html",
+      "description": "Jogo Mata Mosquito com níveis e telas de vitória/derrota."
+    },
+    {
+      "id": "app-jogo-js",
+      "label": "jogo.js",
+      "parent": "app-root",
+      "layer": "file",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 0.72,
+      "file": "jogo.js",
+      "description": "Arquivo `jogo.js` mapeado a partir do repositório original."
+    },
+    {
+      "id": "app-app-html",
+      "label": "app.html",
+      "parent": "app-root",
+      "layer": "file",
+      "category": "frontend",
+      "categoryLabel": "Frontend",
+      "color": "#eab308",
+      "size": 0.72,
+      "file": "app.html",
+      "description": "Arquivo `app.html` mapeado a partir do repositório original."
+    },
+    {
+      "id": "app-index-html",
+      "label": "index.html",
+      "parent": "app-root",
+      "layer": "file",
+      "category": "frontend",
+      "categoryLabel": "Frontend",
+      "color": "#eab308",
+      "size": 0.72,
+      "file": "index.html",
+      "description": "Arquivo `index.html` mapeado a partir do repositório original."
+    },
+    {
+      "id": "app-estilo-css",
+      "label": "estilo.css",
+      "parent": "app-root",
+      "layer": "file",
+      "category": "frontend",
+      "categoryLabel": "Frontend",
+      "color": "#eab308",
+      "size": 0.72,
+      "file": "estilo.css",
+      "description": "Arquivo `estilo.css` mapeado a partir do repositório original."
+    },
+    {
+      "id": "app-fim-de-jogo-html",
+      "label": "fim_de_jogo.html",
+      "parent": "app-root",
+      "layer": "file",
+      "category": "frontend",
+      "categoryLabel": "Frontend",
+      "color": "#eab308",
+      "size": 0.72,
+      "file": "fim_de_jogo.html",
+      "description": "Arquivo `fim_de_jogo.html` mapeado a partir do repositório original."
+    },
+    {
+      "id": "app-vitoria-html",
+      "label": "vitoria.html",
+      "parent": "app-root",
+      "layer": "file",
+      "category": "frontend",
+      "categoryLabel": "Frontend",
+      "color": "#eab308",
+      "size": 0.72,
+      "file": "vitoria.html",
+      "description": "Arquivo `vitoria.html` mapeado a partir do repositório original."
+    },
+    {
+      "id": "app-readme-md",
+      "label": "README.md",
+      "parent": "app-root",
+      "layer": "file",
+      "category": "other",
+      "categoryLabel": "Outros",
+      "color": "#64748b",
+      "size": 0.72,
+      "file": "README.md",
+      "description": "Arquivo `README.md` mapeado a partir do repositório original."
+    }
+  ],
+  "links": [
+    {
+      "source": "app-root",
+      "target": "app-jogo-js",
+      "type": "dependency"
+    },
+    {
+      "source": "app-root",
+      "target": "app-app-html",
+      "type": "dependency"
+    },
+    {
+      "source": "app-root",
+      "target": "app-index-html",
+      "type": "dependency"
+    },
+    {
+      "source": "app-root",
+      "target": "app-estilo-css",
+      "type": "dependency"
+    },
+    {
+      "source": "app-root",
+      "target": "app-fim-de-jogo-html",
+      "type": "dependency"
+    },
+    {
+      "source": "app-root",
+      "target": "app-vitoria-html",
+      "type": "dependency"
+    },
+    {
+      "source": "app-root",
+      "target": "app-readme-md",
+      "type": "dependency"
+    }
+  ]
+}

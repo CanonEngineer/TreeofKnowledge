@@ -1,0 +1,513 @@
+{
+  "slug": "smarthome-iot",
+  "name": "SmartHomeIOT",
+  "repoUrl": "https://github.com/CanonEngineer/SmartHomeIOT",
+  "color": "#7dd3c0",
+  "demoUrl": "https://canonengineer.github.io/SmartHomeIOT/demo/standalone.html?v=2026-07-14b",
+  "nodeCount": 28,
+  "categories": {
+    "core": {
+      "label": "Backend",
+      "color": "#3b82f6"
+    },
+    "network": {
+      "label": "Rede / Scan",
+      "color": "#22d3ee"
+    },
+    "oracle": {
+      "label": "Oracle / DB",
+      "color": "#c084fc"
+    },
+    "frontend": {
+      "label": "Frontend",
+      "color": "#eab308"
+    },
+    "scripts": {
+      "label": "Scripts",
+      "color": "#64748b"
+    },
+    "tests": {
+      "label": "Testes",
+      "color": "#94a3b8"
+    },
+    "other": {
+      "label": "Outros",
+      "color": "#64748b"
+    }
+  },
+  "nodes": [
+    {
+      "id": "smi-root",
+      "label": "SmartHomeIOT",
+      "parent": null,
+      "layer": "root",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 1.4,
+      "file": "README.md",
+      "description": "Bancada experimental IoT edge para doutorado: Arduino ↔ Raspberry, servos/portas, FastAPI, SQI e Research Lab."
+    },
+    {
+      "id": "smi-arch",
+      "label": "Arquitetura L1–L5",
+      "parent": "smi-root",
+      "layer": "module",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 1.0,
+      "file": "docs/ARCHITECTURE.md",
+      "description": "Camadas de engenharia: percepção, comunicação, edge, serviço e experimentação."
+    },
+    {
+      "id": "smi-protocol",
+      "label": "Protocolo v1.0.0",
+      "parent": "smi-root",
+      "layer": "module",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 1.0,
+      "file": "python_server/protocol.py",
+      "description": "Contratos de mensagem house/* com envelope versionado."
+    },
+    {
+      "id": "smi-backend",
+      "label": "Backend FastAPI",
+      "parent": "smi-root",
+      "layer": "module",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 1.0,
+      "file": "python_server/app.py",
+      "description": "Serviço L4: estado, API REST, WebSocket, auth e research endpoints."
+    },
+    {
+      "id": "smi-app",
+      "label": "app.py",
+      "parent": "smi-backend",
+      "layer": "file",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 0.72,
+      "file": "python_server/app.py",
+      "description": "Bootstrap FastAPI, CORS, MQTT bridge e lifespan do simulador."
+    },
+    {
+      "id": "smi-api",
+      "label": "api.py",
+      "parent": "smi-backend",
+      "layer": "file",
+      "category": "network",
+      "categoryLabel": "Rede / Scan",
+      "color": "#22d3ee",
+      "size": 0.72,
+      "file": "python_server/api.py",
+      "description": "Rotas de atuação: LED, relé, servo, porta, cenários e WebSocket."
+    },
+    {
+      "id": "smi-state",
+      "label": "state.py",
+      "parent": "smi-backend",
+      "layer": "file",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 0.72,
+      "file": "python_server/state.py",
+      "description": "HouseState — fonte de verdade em runtime com versionamento e sync."
+    },
+    {
+      "id": "smi-telemetry",
+      "label": "telemetry.py",
+      "parent": "smi-backend",
+      "layer": "file",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 0.72,
+      "file": "python_server/telemetry.py",
+      "description": "TelemetryEngine: latência, skew Arduino↔Raspberry e Sync Quality Index."
+    },
+    {
+      "id": "smi-research",
+      "label": "research_api.py",
+      "parent": "smi-backend",
+      "layer": "file",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 0.72,
+      "file": "python_server/research_api.py",
+      "description": "API científica: overview, experimentos, export CSV/JSON e thesis-brief."
+    },
+    {
+      "id": "smi-experiments",
+      "label": "experiments.py",
+      "parent": "smi-research",
+      "layer": "file",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 0.72,
+      "file": "python_server/experiments.py",
+      "description": "Bancada reproduzível: sync_latency, actuator_response, fault_injection, E2E."
+    },
+    {
+      "id": "smi-sim",
+      "label": "simulator.py",
+      "parent": "smi-backend",
+      "layer": "file",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 0.72,
+      "file": "python_server/simulator.py",
+      "description": "Simulador de sensores e cenários welcome/garage/alarm/night/sync_test."
+    },
+    {
+      "id": "smi-db",
+      "label": "database.py",
+      "parent": "smi-backend",
+      "layer": "file",
+      "category": "oracle",
+      "categoryLabel": "Oracle / DB",
+      "color": "#c084fc",
+      "size": 0.72,
+      "file": "python_server/database.py",
+      "description": "SQLite + SQLAlchemy: users, devices, sensors, logs; bcrypt nativo."
+    },
+    {
+      "id": "smi-models",
+      "label": "models.py",
+      "parent": "smi-db",
+      "layer": "file",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 0.72,
+      "file": "python_server/models.py",
+      "description": "Modelos ORM User, Device, SensorReading, ActionLog."
+    },
+    {
+      "id": "smi-mqtt",
+      "label": "mqtt_bridge.py",
+      "parent": "smi-backend",
+      "layer": "file",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 0.72,
+      "file": "python_server/mqtt_bridge.py",
+      "description": "Ponte MQTT opcional (Mosquitto) — desligada por padrão em simulação."
+    },
+    {
+      "id": "smi-arduino",
+      "label": "Firmware Arduino/ESP32",
+      "parent": "smi-root",
+      "layer": "module",
+      "category": "frontend",
+      "categoryLabel": "Frontend",
+      "color": "#eab308",
+      "size": 1.0,
+      "file": "arduino/SmartHomeNode/SmartHomeNode.ino",
+      "description": "Nó L1: sensores DHT/LDR/PIR e atuação LED/relé/servo via MQTT."
+    },
+    {
+      "id": "smi-ino",
+      "label": "SmartHomeNode.ino",
+      "parent": "smi-arduino",
+      "layer": "file",
+      "category": "other",
+      "categoryLabel": "Outros",
+      "color": "#64748b",
+      "size": 0.72,
+      "file": "arduino/SmartHomeNode/SmartHomeNode.ino",
+      "description": "Loop de sensores e callback onMessage para house/led|relay|servo|door."
+    },
+    {
+      "id": "smi-raspberry",
+      "label": "Agente Raspberry Pi",
+      "parent": "smi-root",
+      "layer": "module",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 1.0,
+      "file": "raspberry/agent.py",
+      "description": "L3 edge: espelha comandos MQTT/API e envia heartbeat de sincronia."
+    },
+    {
+      "id": "smi-agent",
+      "label": "agent.py",
+      "parent": "smi-raspberry",
+      "layer": "file",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 0.72,
+      "file": "raspberry/agent.py",
+      "description": "Loop MQTT ou espelhamento via GET /api/status."
+    },
+    {
+      "id": "smi-actuators",
+      "label": "actuators.py",
+      "parent": "smi-raspberry",
+      "layer": "file",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 0.72,
+      "file": "raspberry/actuators.py",
+      "description": "Atuadores locais LED/buzzer/relé/servo/porta (GPIO real ou stub)."
+    },
+    {
+      "id": "smi-web",
+      "label": "Simulador Web + Research Lab",
+      "parent": "smi-root",
+      "layer": "module",
+      "category": "frontend",
+      "categoryLabel": "Frontend",
+      "color": "#eab308",
+      "size": 1.0,
+      "file": "web/index.html",
+      "description": "L5: planta da casa, placas, mecanismos e painel de métricas/experimentos."
+    },
+    {
+      "id": "smi-html",
+      "label": "index.html",
+      "parent": "smi-web",
+      "layer": "file",
+      "category": "frontend",
+      "categoryLabel": "Frontend",
+      "color": "#eab308",
+      "size": 0.72,
+      "file": "web/index.html",
+      "description": "Layout do laboratório visual e controles manuais."
+    },
+    {
+      "id": "smi-js",
+      "label": "script.js",
+      "parent": "smi-web",
+      "layer": "file",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 0.72,
+      "file": "web/script.js",
+      "description": "Cliente WS/REST: aplica estado, gráficos e roda experimentos."
+    },
+    {
+      "id": "smi-css",
+      "label": "style.css",
+      "parent": "smi-web",
+      "layer": "file",
+      "category": "frontend",
+      "categoryLabel": "Frontend",
+      "color": "#eab308",
+      "size": 0.72,
+      "file": "web/style.css",
+      "description": "Tema de engenharia (teal/amber) e animações de porta/servo."
+    },
+    {
+      "id": "smi-demo",
+      "label": "docs/demo/standalone.html",
+      "parent": "smi-web",
+      "layer": "file",
+      "category": "frontend",
+      "categoryLabel": "Frontend",
+      "color": "#eab308",
+      "size": 0.72,
+      "file": "docs/demo/standalone.html",
+      "description": "Demo standalone no GitHub Pages (sem backend)."
+    },
+    {
+      "id": "smi-java",
+      "label": "Dashboard Java",
+      "parent": "smi-root",
+      "layer": "module",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 1.0,
+      "file": "java_client/src/main/java/smarthome/Dashboard.java",
+      "description": "Cliente desktop Swing consumindo a mesma API REST."
+    },
+    {
+      "id": "smi-method",
+      "label": "Metodologia experimental",
+      "parent": "smi-root",
+      "layer": "module",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 1.0,
+      "file": "docs/METHODOLOGY.md",
+      "description": "Perguntas de pesquisa, variáveis, ameaças à validade e entregáveis de tese."
+    },
+    {
+      "id": "smi-tests",
+      "label": "tests/test_engineering.py",
+      "parent": "smi-root",
+      "layer": "file",
+      "category": "tests",
+      "categoryLabel": "Testes",
+      "color": "#94a3b8",
+      "size": 0.72,
+      "file": "tests/test_engineering.py",
+      "description": "Testes de protocolo, SQI, latência e máquina de estados."
+    },
+    {
+      "id": "smi-start",
+      "label": "start.ps1",
+      "parent": "smi-root",
+      "layer": "file",
+      "category": "scripts",
+      "categoryLabel": "Scripts",
+      "color": "#64748b",
+      "size": 0.72,
+      "file": "start.ps1",
+      "description": "Bootstrap Windows: venv, deps e sobe o servidor."
+    }
+  ],
+  "links": [
+    {
+      "source": "smi-root",
+      "target": "smi-arch",
+      "type": "dependency"
+    },
+    {
+      "source": "smi-root",
+      "target": "smi-protocol",
+      "type": "dependency"
+    },
+    {
+      "source": "smi-root",
+      "target": "smi-backend",
+      "type": "dependency"
+    },
+    {
+      "source": "smi-backend",
+      "target": "smi-app",
+      "type": "dependency"
+    },
+    {
+      "source": "smi-backend",
+      "target": "smi-api",
+      "type": "dependency"
+    },
+    {
+      "source": "smi-backend",
+      "target": "smi-state",
+      "type": "dependency"
+    },
+    {
+      "source": "smi-backend",
+      "target": "smi-telemetry",
+      "type": "dependency"
+    },
+    {
+      "source": "smi-backend",
+      "target": "smi-research",
+      "type": "dependency"
+    },
+    {
+      "source": "smi-research",
+      "target": "smi-experiments",
+      "type": "dependency"
+    },
+    {
+      "source": "smi-backend",
+      "target": "smi-sim",
+      "type": "dependency"
+    },
+    {
+      "source": "smi-backend",
+      "target": "smi-db",
+      "type": "dependency"
+    },
+    {
+      "source": "smi-db",
+      "target": "smi-models",
+      "type": "dependency"
+    },
+    {
+      "source": "smi-backend",
+      "target": "smi-mqtt",
+      "type": "dependency"
+    },
+    {
+      "source": "smi-root",
+      "target": "smi-arduino",
+      "type": "dependency"
+    },
+    {
+      "source": "smi-arduino",
+      "target": "smi-ino",
+      "type": "dependency"
+    },
+    {
+      "source": "smi-root",
+      "target": "smi-raspberry",
+      "type": "dependency"
+    },
+    {
+      "source": "smi-raspberry",
+      "target": "smi-agent",
+      "type": "dependency"
+    },
+    {
+      "source": "smi-raspberry",
+      "target": "smi-actuators",
+      "type": "dependency"
+    },
+    {
+      "source": "smi-root",
+      "target": "smi-web",
+      "type": "dependency"
+    },
+    {
+      "source": "smi-web",
+      "target": "smi-html",
+      "type": "dependency"
+    },
+    {
+      "source": "smi-web",
+      "target": "smi-js",
+      "type": "dependency"
+    },
+    {
+      "source": "smi-web",
+      "target": "smi-css",
+      "type": "dependency"
+    },
+    {
+      "source": "smi-web",
+      "target": "smi-demo",
+      "type": "dependency"
+    },
+    {
+      "source": "smi-root",
+      "target": "smi-java",
+      "type": "dependency"
+    },
+    {
+      "source": "smi-root",
+      "target": "smi-method",
+      "type": "dependency"
+    },
+    {
+      "source": "smi-root",
+      "target": "smi-tests",
+      "type": "dependency"
+    },
+    {
+      "source": "smi-root",
+      "target": "smi-start",
+      "type": "dependency"
+    }
+  ]
+}

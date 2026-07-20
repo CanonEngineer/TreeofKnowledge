@@ -1,0 +1,513 @@
+{
+  "slug": "smartferrari-iot",
+  "name": "SmartFerrariIOT",
+  "repoUrl": "https://github.com/CanonEngineer/SmartFerrariIOT",
+  "color": "#e10600",
+  "demoUrl": "https://canonengineer.github.io/SmartFerrariIOT/demo/standalone.html?v=2026-07-14",
+  "nodeCount": 28,
+  "categories": {
+    "core": {
+      "label": "Backend",
+      "color": "#3b82f6"
+    },
+    "network": {
+      "label": "Rede / Scan",
+      "color": "#22d3ee"
+    },
+    "auth": {
+      "label": "Segurança",
+      "color": "#ef4444"
+    },
+    "frontend": {
+      "label": "Frontend",
+      "color": "#eab308"
+    },
+    "scripts": {
+      "label": "Scripts",
+      "color": "#64748b"
+    },
+    "tests": {
+      "label": "Testes",
+      "color": "#94a3b8"
+    },
+    "other": {
+      "label": "Outros",
+      "color": "#64748b"
+    }
+  },
+  "nodes": [
+    {
+      "id": "sf-root",
+      "label": "SmartFerrariIOT",
+      "parent": null,
+      "layer": "root",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 1.4,
+      "file": "README.md",
+      "description": "Lab de pós em Engenharia da Computação: gêmeo digital Ferrari, sync Arduino↔Raspberry, HIL/QoS, Web Audio e Research Lab (Demo GitHub Pages + local :8001)."
+    },
+    {
+      "id": "sf-server",
+      "label": "python_server",
+      "parent": "sf-root",
+      "layer": "module",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 1.0,
+      "file": "python_server/",
+      "description": "Orquestração FastAPI :8001 — estado, MQTT, telemetria SQI, research API."
+    },
+    {
+      "id": "sf-app",
+      "label": "app.py",
+      "parent": "sf-server",
+      "layer": "file",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 0.72,
+      "file": "python_server/app.py",
+      "description": "Entry point FastAPI: lifespan MQTT, rotas API/research, static web."
+    },
+    {
+      "id": "sf-api",
+      "label": "api.py",
+      "parent": "sf-server",
+      "layer": "file",
+      "category": "network",
+      "categoryLabel": "Rede / Scan",
+      "color": "#22d3ee",
+      "size": 0.72,
+      "file": "python_server/api.py",
+      "description": "REST + WebSocket: atuadores, login, status; rejeita INV com 409."
+    },
+    {
+      "id": "sf-state",
+      "label": "state.py",
+      "parent": "sf-server",
+      "layer": "file",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 0.72,
+      "file": "python_server/state.py",
+      "description": "Estado vivo da Ferrari: atuadores, sensores, broadcast, HIL timed."
+    },
+    {
+      "id": "sf-twin",
+      "label": "statemachine.py",
+      "parent": "sf-server",
+      "layer": "file",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 0.72,
+      "file": "python_server/statemachine.py",
+      "description": "Gêmeo formal SECURE→SPORT com invariantes INV-01…06."
+    },
+    {
+      "id": "sf-hil",
+      "label": "hil.py",
+      "parent": "sf-server",
+      "layer": "file",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 0.72,
+      "file": "python_server/hil.py",
+      "description": "Fault injection: delay_ms, loss_rate, métricas QoS."
+    },
+    {
+      "id": "sf-security",
+      "label": "security.py",
+      "parent": "sf-server",
+      "layer": "file",
+      "category": "auth",
+      "categoryLabel": "Segurança",
+      "color": "#ef4444",
+      "size": 0.72,
+      "file": "python_server/security.py",
+      "description": "HMAC de comandos + cadeia hash de auditoria verificável."
+    },
+    {
+      "id": "sf-energy",
+      "label": "energy.py",
+      "parent": "sf-server",
+      "layer": "file",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 0.72,
+      "file": "python_server/energy.py",
+      "description": "Modelo P_motor/P_total/ΔE_bat e combustível documentado."
+    },
+    {
+      "id": "sf-research",
+      "label": "research_api.py",
+      "parent": "sf-server",
+      "layer": "file",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 0.72,
+      "file": "python_server/research_api.py",
+      "description": "Endpoints Lab: HIL, audit, visão, paper-pack LaTeX, experimentos."
+    },
+    {
+      "id": "sf-telemetry",
+      "label": "telemetry.py",
+      "parent": "sf-server",
+      "layer": "file",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 0.72,
+      "file": "python_server/telemetry.py",
+      "description": "SQI e estatísticas de latência de comando."
+    },
+    {
+      "id": "sf-mqtt",
+      "label": "mqtt_bridge.py",
+      "parent": "sf-server",
+      "layer": "file",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 0.72,
+      "file": "python_server/mqtt_bridge.py",
+      "description": "Bridge MQTT ferrari/* com fallback simulação se broker ausente."
+    },
+    {
+      "id": "sf-paper",
+      "label": "paperpack.py",
+      "parent": "sf-server",
+      "layer": "file",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 0.72,
+      "file": "python_server/paperpack.py",
+      "description": "Gera figuras/tabelas LaTeX a partir de experimentos e QoS."
+    },
+    {
+      "id": "sf-web",
+      "label": "web",
+      "parent": "sf-root",
+      "layer": "module",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 1.0,
+      "file": "web/",
+      "description": "Digital Twin UI: SVG SF90, áudio, visão, Research Lab."
+    },
+    {
+      "id": "sf-index",
+      "label": "index.html",
+      "parent": "sf-web",
+      "layer": "file",
+      "category": "frontend",
+      "categoryLabel": "Frontend",
+      "color": "#eab308",
+      "size": 0.72,
+      "file": "web/index.html",
+      "description": "Layout Lab: stage SVG, comandos, HIL, espectro, visão."
+    },
+    {
+      "id": "sf-script",
+      "label": "script.js",
+      "parent": "sf-web",
+      "layer": "file",
+      "category": "scripts",
+      "categoryLabel": "Scripts",
+      "color": "#64748b",
+      "size": 0.72,
+      "file": "web/script.js",
+      "description": "WS client, applyState, animações e botões de campo."
+    },
+    {
+      "id": "sf-audio",
+      "label": "audio.js",
+      "parent": "sf-web",
+      "layer": "file",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 0.72,
+      "file": "web/audio.js",
+      "description": "Web Audio: buzina dual-tone, sirene, ronco RPM, clique de trava."
+    },
+    {
+      "id": "sf-vision",
+      "label": "vision.js",
+      "parent": "sf-web",
+      "layer": "file",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 0.72,
+      "file": "web/vision.js",
+      "description": "Webcam leve: gesto de partida e QR track na pit lane."
+    },
+    {
+      "id": "sf-style",
+      "label": "style.css",
+      "parent": "sf-web",
+      "layer": "file",
+      "category": "frontend",
+      "categoryLabel": "Frontend",
+      "color": "#eab308",
+      "size": 0.72,
+      "file": "web/style.css",
+      "description": "UI lab carbon/rosso — tipografia Archivo, painéis e animações."
+    },
+    {
+      "id": "sf-arduino",
+      "label": "arduino",
+      "parent": "sf-root",
+      "layer": "module",
+      "category": "frontend",
+      "categoryLabel": "Frontend",
+      "color": "#eab308",
+      "size": 1.0,
+      "file": "arduino/FerrariNode/",
+      "description": "Firmware nó Ferrari — L1 atuadores/sensores."
+    },
+    {
+      "id": "sf-ino",
+      "label": "FerrariNode.ino",
+      "parent": "sf-arduino",
+      "layer": "file",
+      "category": "other",
+      "categoryLabel": "Outros",
+      "color": "#64748b",
+      "size": 0.72,
+      "file": "arduino/FerrariNode/FerrariNode.ino",
+      "description": "Sketch principal do nó Arduino Ferrari."
+    },
+    {
+      "id": "sf-pi",
+      "label": "raspberry",
+      "parent": "sf-root",
+      "layer": "module",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 1.0,
+      "file": "raspberry/",
+      "description": "Agent hub Raspberry — bridge e heartbeat."
+    },
+    {
+      "id": "sf-agent",
+      "label": "agent.py",
+      "parent": "sf-pi",
+      "layer": "file",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 0.72,
+      "file": "raspberry/agent.py",
+      "description": "Loop do hub: sync, telemetria e comandos downstream."
+    },
+    {
+      "id": "sf-actuators",
+      "label": "actuators.py",
+      "parent": "sf-pi",
+      "layer": "file",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 0.72,
+      "file": "raspberry/actuators.py",
+      "description": "Abstração de atuadores no lado Raspberry."
+    },
+    {
+      "id": "sf-demo",
+      "label": "docs/demo/standalone.html",
+      "parent": "sf-root",
+      "layer": "file",
+      "category": "frontend",
+      "categoryLabel": "Frontend",
+      "color": "#eab308",
+      "size": 0.72,
+      "file": "docs/demo/standalone.html",
+      "description": "Demo standalone no GitHub Pages (sem backend) — abre no celular ou qualquer browser."
+    },
+    {
+      "id": "sf-start",
+      "label": "start.ps1",
+      "parent": "sf-root",
+      "layer": "file",
+      "category": "scripts",
+      "categoryLabel": "Scripts",
+      "color": "#64748b",
+      "size": 0.72,
+      "file": "start.ps1",
+      "description": "Bootstrap Windows: venv, deps e sobe Lab em :8001."
+    },
+    {
+      "id": "sf-protocol",
+      "label": "protocol.py",
+      "parent": "sf-root",
+      "layer": "file",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 0.72,
+      "file": "python_server/protocol.py",
+      "description": "Versão de protocolo e QoS MQTT do Ferrari IoT."
+    },
+    {
+      "id": "sf-tests",
+      "label": "test_engineering.py",
+      "parent": "sf-root",
+      "layer": "file",
+      "category": "tests",
+      "categoryLabel": "Testes",
+      "color": "#94a3b8",
+      "size": 0.72,
+      "file": "tests/test_engineering.py",
+      "description": "Testes de engenharia do lab (invariantes / SQI)."
+    }
+  ],
+  "links": [
+    {
+      "source": "sf-root",
+      "target": "sf-server",
+      "type": "dependency"
+    },
+    {
+      "source": "sf-server",
+      "target": "sf-app",
+      "type": "dependency"
+    },
+    {
+      "source": "sf-server",
+      "target": "sf-api",
+      "type": "dependency"
+    },
+    {
+      "source": "sf-server",
+      "target": "sf-state",
+      "type": "dependency"
+    },
+    {
+      "source": "sf-server",
+      "target": "sf-twin",
+      "type": "dependency"
+    },
+    {
+      "source": "sf-server",
+      "target": "sf-hil",
+      "type": "dependency"
+    },
+    {
+      "source": "sf-server",
+      "target": "sf-security",
+      "type": "dependency"
+    },
+    {
+      "source": "sf-server",
+      "target": "sf-energy",
+      "type": "dependency"
+    },
+    {
+      "source": "sf-server",
+      "target": "sf-research",
+      "type": "dependency"
+    },
+    {
+      "source": "sf-server",
+      "target": "sf-telemetry",
+      "type": "dependency"
+    },
+    {
+      "source": "sf-server",
+      "target": "sf-mqtt",
+      "type": "dependency"
+    },
+    {
+      "source": "sf-server",
+      "target": "sf-paper",
+      "type": "dependency"
+    },
+    {
+      "source": "sf-root",
+      "target": "sf-web",
+      "type": "dependency"
+    },
+    {
+      "source": "sf-web",
+      "target": "sf-index",
+      "type": "dependency"
+    },
+    {
+      "source": "sf-web",
+      "target": "sf-script",
+      "type": "dependency"
+    },
+    {
+      "source": "sf-web",
+      "target": "sf-audio",
+      "type": "dependency"
+    },
+    {
+      "source": "sf-web",
+      "target": "sf-vision",
+      "type": "dependency"
+    },
+    {
+      "source": "sf-web",
+      "target": "sf-style",
+      "type": "dependency"
+    },
+    {
+      "source": "sf-root",
+      "target": "sf-arduino",
+      "type": "dependency"
+    },
+    {
+      "source": "sf-arduino",
+      "target": "sf-ino",
+      "type": "dependency"
+    },
+    {
+      "source": "sf-root",
+      "target": "sf-pi",
+      "type": "dependency"
+    },
+    {
+      "source": "sf-pi",
+      "target": "sf-agent",
+      "type": "dependency"
+    },
+    {
+      "source": "sf-pi",
+      "target": "sf-actuators",
+      "type": "dependency"
+    },
+    {
+      "source": "sf-root",
+      "target": "sf-demo",
+      "type": "dependency"
+    },
+    {
+      "source": "sf-root",
+      "target": "sf-start",
+      "type": "dependency"
+    },
+    {
+      "source": "sf-root",
+      "target": "sf-protocol",
+      "type": "dependency"
+    },
+    {
+      "source": "sf-root",
+      "target": "sf-tests",
+      "type": "dependency"
+    }
+  ]
+}

@@ -1,0 +1,497 @@
+{
+  "slug": "html-website",
+  "name": "HtmlWebsiteProject",
+  "repoUrl": "https://github.com/CanonEngineer/HtmlWebsiteProject",
+  "color": "#4ade80",
+  "demoUrl": "",
+  "nodeCount": 28,
+  "categories": {
+    "core": {
+      "label": "Backend",
+      "color": "#3b82f6"
+    },
+    "frontend": {
+      "label": "Frontend",
+      "color": "#eab308"
+    },
+    "other": {
+      "label": "Outros",
+      "color": "#64748b"
+    }
+  },
+  "nodes": [
+    {
+      "id": "htm-root",
+      "label": "HtmlWebsiteProject",
+      "parent": null,
+      "layer": "root",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 1.4,
+      "file": "Parallax/index.html",
+      "description": "Coleção de sites HTML: Ana Bella, Chalé, Museu, TecBlog e mais."
+    },
+    {
+      "id": "htm-parallax",
+      "label": "Parallax",
+      "parent": "htm-root",
+      "layer": "module",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 1.0,
+      "file": "Parallax/",
+      "description": "Módulo/pasta `Parallax/` com arquivos-chave do projeto."
+    },
+    {
+      "id": "htm-parallax-index-html",
+      "label": "index.html",
+      "parent": "htm-parallax",
+      "layer": "file",
+      "category": "frontend",
+      "categoryLabel": "Frontend",
+      "color": "#eab308",
+      "size": 0.72,
+      "file": "Parallax/index.html",
+      "description": "Arquivo `Parallax/index.html` mapeado a partir do repositório original."
+    },
+    {
+      "id": "htm-projeto-bootstrap4",
+      "label": "projeto-bootstrap4",
+      "parent": "htm-root",
+      "layer": "module",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 1.0,
+      "file": "projeto-bootstrap4/",
+      "description": "Módulo/pasta `projeto-bootstrap4/` com arquivos-chave do projeto."
+    },
+    {
+      "id": "htm-projeto-bootstrap4-index-html",
+      "label": "index.html",
+      "parent": "htm-projeto-bootstrap4",
+      "layer": "file",
+      "category": "frontend",
+      "categoryLabel": "Frontend",
+      "color": "#eab308",
+      "size": 0.72,
+      "file": "projeto-bootstrap4/index.html",
+      "description": "Arquivo `projeto-bootstrap4/index.html` mapeado a partir do repositório original."
+    },
+    {
+      "id": "htm-projetoanabella",
+      "label": "ProjetoAnaBella",
+      "parent": "htm-root",
+      "layer": "module",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 1.0,
+      "file": "ProjetoAnaBella/",
+      "description": "Módulo/pasta `ProjetoAnaBella/` com arquivos-chave do projeto."
+    },
+    {
+      "id": "htm-projetoanabella-index-html",
+      "label": "index.html",
+      "parent": "htm-projetoanabella",
+      "layer": "file",
+      "category": "frontend",
+      "categoryLabel": "Frontend",
+      "color": "#eab308",
+      "size": 0.72,
+      "file": "ProjetoAnaBella/index.html",
+      "description": "Arquivo `ProjetoAnaBella/index.html` mapeado a partir do repositório original."
+    },
+    {
+      "id": "htm-projetoanabella-estilo-css",
+      "label": "estilo.css",
+      "parent": "htm-projetoanabella",
+      "layer": "file",
+      "category": "frontend",
+      "categoryLabel": "Frontend",
+      "color": "#eab308",
+      "size": 0.72,
+      "file": "ProjetoAnaBella/estilo.css",
+      "description": "Arquivo `ProjetoAnaBella/estilo.css` mapeado a partir do repositório original."
+    },
+    {
+      "id": "htm-projetoanabella-biografia-html",
+      "label": "biografia.html",
+      "parent": "htm-projetoanabella",
+      "layer": "file",
+      "category": "frontend",
+      "categoryLabel": "Frontend",
+      "color": "#eab308",
+      "size": 0.72,
+      "file": "ProjetoAnaBella/biografia.html",
+      "description": "Arquivo `ProjetoAnaBella/biografia.html` mapeado a partir do repositório original."
+    },
+    {
+      "id": "htm-projetoanabella-campanhas-html",
+      "label": "campanhas.html",
+      "parent": "htm-projetoanabella",
+      "layer": "file",
+      "category": "frontend",
+      "categoryLabel": "Frontend",
+      "color": "#eab308",
+      "size": 0.72,
+      "file": "ProjetoAnaBella/campanhas.html",
+      "description": "Arquivo `ProjetoAnaBella/campanhas.html` mapeado a partir do repositório original."
+    },
+    {
+      "id": "htm-projetoanabella-contato-html",
+      "label": "contato.html",
+      "parent": "htm-projetoanabella",
+      "layer": "file",
+      "category": "frontend",
+      "categoryLabel": "Frontend",
+      "color": "#eab308",
+      "size": 0.72,
+      "file": "ProjetoAnaBella/contato.html",
+      "description": "Arquivo `ProjetoAnaBella/contato.html` mapeado a partir do repositório original."
+    },
+    {
+      "id": "htm-projetochalehotel",
+      "label": "ProjetoChaleHotel",
+      "parent": "htm-root",
+      "layer": "module",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 1.0,
+      "file": "ProjetoChaleHotel/",
+      "description": "Módulo/pasta `ProjetoChaleHotel/` com arquivos-chave do projeto."
+    },
+    {
+      "id": "htm-projetochalehotel-index-html",
+      "label": "index.html",
+      "parent": "htm-projetochalehotel",
+      "layer": "file",
+      "category": "frontend",
+      "categoryLabel": "Frontend",
+      "color": "#eab308",
+      "size": 0.72,
+      "file": "ProjetoChaleHotel/index.html",
+      "description": "Arquivo `ProjetoChaleHotel/index.html` mapeado a partir do repositório original."
+    },
+    {
+      "id": "htm-projetochalehotel-css-estilo-css",
+      "label": "estilo.css",
+      "parent": "htm-projetochalehotel",
+      "layer": "file",
+      "category": "frontend",
+      "categoryLabel": "Frontend",
+      "color": "#eab308",
+      "size": 0.72,
+      "file": "ProjetoChaleHotel/css/estilo.css",
+      "description": "Arquivo `ProjetoChaleHotel/css/estilo.css` mapeado a partir do repositório original."
+    },
+    {
+      "id": "htm-projetofinalhtml",
+      "label": "ProjetoFinalHtml",
+      "parent": "htm-root",
+      "layer": "module",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 1.0,
+      "file": "ProjetoFinalHtml/",
+      "description": "Módulo/pasta `ProjetoFinalHtml/` com arquivos-chave do projeto."
+    },
+    {
+      "id": "htm-projetofinalhtml-index-html",
+      "label": "index.html",
+      "parent": "htm-projetofinalhtml",
+      "layer": "file",
+      "category": "frontend",
+      "categoryLabel": "Frontend",
+      "color": "#eab308",
+      "size": 0.72,
+      "file": "ProjetoFinalHtml/index.html",
+      "description": "Arquivo `ProjetoFinalHtml/index.html` mapeado a partir do repositório original."
+    },
+    {
+      "id": "htm-projetofinalhtml-contato-html",
+      "label": "contato.html",
+      "parent": "htm-projetofinalhtml",
+      "layer": "file",
+      "category": "frontend",
+      "categoryLabel": "Frontend",
+      "color": "#eab308",
+      "size": 0.72,
+      "file": "ProjetoFinalHtml/contato.html",
+      "description": "Arquivo `ProjetoFinalHtml/contato.html` mapeado a partir do repositório original."
+    },
+    {
+      "id": "htm-projetofinalhtml-quem-somos-html",
+      "label": "quem-somos.html",
+      "parent": "htm-projetofinalhtml",
+      "layer": "file",
+      "category": "frontend",
+      "categoryLabel": "Frontend",
+      "color": "#eab308",
+      "size": 0.72,
+      "file": "ProjetoFinalHtml/quem-somos.html",
+      "description": "Arquivo `ProjetoFinalHtml/quem-somos.html` mapeado a partir do repositório original."
+    },
+    {
+      "id": "htm-projetomuseunacional",
+      "label": "ProjetoMuseuNacional",
+      "parent": "htm-root",
+      "layer": "module",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 1.0,
+      "file": "ProjetoMuseuNacional/",
+      "description": "Módulo/pasta `ProjetoMuseuNacional/` com arquivos-chave do projeto."
+    },
+    {
+      "id": "htm-projetomuseunacional-index-html",
+      "label": "index.html",
+      "parent": "htm-projetomuseunacional",
+      "layer": "file",
+      "category": "frontend",
+      "categoryLabel": "Frontend",
+      "color": "#eab308",
+      "size": 0.72,
+      "file": "ProjetoMuseuNacional/index.html",
+      "description": "Arquivo `ProjetoMuseuNacional/index.html` mapeado a partir do repositório original."
+    },
+    {
+      "id": "htm-projetomuseunacional-css-estilo-css",
+      "label": "estilo.css",
+      "parent": "htm-projetomuseunacional",
+      "layer": "file",
+      "category": "frontend",
+      "categoryLabel": "Frontend",
+      "color": "#eab308",
+      "size": 0.72,
+      "file": "ProjetoMuseuNacional/css/estilo.css",
+      "description": "Arquivo `ProjetoMuseuNacional/css/estilo.css` mapeado a partir do repositório original."
+    },
+    {
+      "id": "htm-projetomuseunacional-css-normalize-css",
+      "label": "normalize.css",
+      "parent": "htm-projetomuseunacional",
+      "layer": "file",
+      "category": "frontend",
+      "categoryLabel": "Frontend",
+      "color": "#eab308",
+      "size": 0.72,
+      "file": "ProjetoMuseuNacional/css/normalize.css",
+      "description": "Arquivo `ProjetoMuseuNacional/css/normalize.css` mapeado a partir do repositório original."
+    },
+    {
+      "id": "htm-projetonoticiascidade",
+      "label": "ProjetoNoticiasCidade",
+      "parent": "htm-root",
+      "layer": "module",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 1.0,
+      "file": "ProjetoNoticiasCidade/",
+      "description": "Módulo/pasta `ProjetoNoticiasCidade/` com arquivos-chave do projeto."
+    },
+    {
+      "id": "htm-projetonoticiascidade-index-html",
+      "label": "index.html",
+      "parent": "htm-projetonoticiascidade",
+      "layer": "file",
+      "category": "frontend",
+      "categoryLabel": "Frontend",
+      "color": "#eab308",
+      "size": 0.72,
+      "file": "ProjetoNoticiasCidade/index.html",
+      "description": "Arquivo `ProjetoNoticiasCidade/index.html` mapeado a partir do repositório original."
+    },
+    {
+      "id": "htm-projetonoticiascidade-css-estilo-css",
+      "label": "estilo.css",
+      "parent": "htm-projetonoticiascidade",
+      "layer": "file",
+      "category": "frontend",
+      "categoryLabel": "Frontend",
+      "color": "#eab308",
+      "size": 0.72,
+      "file": "ProjetoNoticiasCidade/css/estilo.css",
+      "description": "Arquivo `ProjetoNoticiasCidade/css/estilo.css` mapeado a partir do repositório original."
+    },
+    {
+      "id": "htm-projetonoticiascidade-brasil-html",
+      "label": "brasil.html",
+      "parent": "htm-projetonoticiascidade",
+      "layer": "file",
+      "category": "frontend",
+      "categoryLabel": "Frontend",
+      "color": "#eab308",
+      "size": 0.72,
+      "file": "ProjetoNoticiasCidade/brasil.html",
+      "description": "Arquivo `ProjetoNoticiasCidade/brasil.html` mapeado a partir do repositório original."
+    },
+    {
+      "id": "htm-projetonoticiascidade-fotos-html",
+      "label": "fotos.html",
+      "parent": "htm-projetonoticiascidade",
+      "layer": "file",
+      "category": "frontend",
+      "categoryLabel": "Frontend",
+      "color": "#eab308",
+      "size": 0.72,
+      "file": "ProjetoNoticiasCidade/fotos.html",
+      "description": "Arquivo `ProjetoNoticiasCidade/fotos.html` mapeado a partir do repositório original."
+    },
+    {
+      "id": "htm-projetonoticiascidade-nova-legislacao-ht",
+      "label": "nova-legislacao.html",
+      "parent": "htm-projetonoticiascidade",
+      "layer": "file",
+      "category": "frontend",
+      "categoryLabel": "Frontend",
+      "color": "#eab308",
+      "size": 0.72,
+      "file": "ProjetoNoticiasCidade/nova-legislacao.html",
+      "description": "Arquivo `ProjetoNoticiasCidade/nova-legislacao.html` mapeado a partir do repositório original."
+    }
+  ],
+  "links": [
+    {
+      "source": "htm-root",
+      "target": "htm-parallax",
+      "type": "dependency"
+    },
+    {
+      "source": "htm-parallax",
+      "target": "htm-parallax-index-html",
+      "type": "dependency"
+    },
+    {
+      "source": "htm-root",
+      "target": "htm-projeto-bootstrap4",
+      "type": "dependency"
+    },
+    {
+      "source": "htm-projeto-bootstrap4",
+      "target": "htm-projeto-bootstrap4-index-html",
+      "type": "dependency"
+    },
+    {
+      "source": "htm-root",
+      "target": "htm-projetoanabella",
+      "type": "dependency"
+    },
+    {
+      "source": "htm-projetoanabella",
+      "target": "htm-projetoanabella-index-html",
+      "type": "dependency"
+    },
+    {
+      "source": "htm-projetoanabella",
+      "target": "htm-projetoanabella-estilo-css",
+      "type": "dependency"
+    },
+    {
+      "source": "htm-projetoanabella",
+      "target": "htm-projetoanabella-biografia-html",
+      "type": "dependency"
+    },
+    {
+      "source": "htm-projetoanabella",
+      "target": "htm-projetoanabella-campanhas-html",
+      "type": "dependency"
+    },
+    {
+      "source": "htm-projetoanabella",
+      "target": "htm-projetoanabella-contato-html",
+      "type": "dependency"
+    },
+    {
+      "source": "htm-root",
+      "target": "htm-projetochalehotel",
+      "type": "dependency"
+    },
+    {
+      "source": "htm-projetochalehotel",
+      "target": "htm-projetochalehotel-index-html",
+      "type": "dependency"
+    },
+    {
+      "source": "htm-projetochalehotel",
+      "target": "htm-projetochalehotel-css-estilo-css",
+      "type": "dependency"
+    },
+    {
+      "source": "htm-root",
+      "target": "htm-projetofinalhtml",
+      "type": "dependency"
+    },
+    {
+      "source": "htm-projetofinalhtml",
+      "target": "htm-projetofinalhtml-index-html",
+      "type": "dependency"
+    },
+    {
+      "source": "htm-projetofinalhtml",
+      "target": "htm-projetofinalhtml-contato-html",
+      "type": "dependency"
+    },
+    {
+      "source": "htm-projetofinalhtml",
+      "target": "htm-projetofinalhtml-quem-somos-html",
+      "type": "dependency"
+    },
+    {
+      "source": "htm-root",
+      "target": "htm-projetomuseunacional",
+      "type": "dependency"
+    },
+    {
+      "source": "htm-projetomuseunacional",
+      "target": "htm-projetomuseunacional-index-html",
+      "type": "dependency"
+    },
+    {
+      "source": "htm-projetomuseunacional",
+      "target": "htm-projetomuseunacional-css-estilo-css",
+      "type": "dependency"
+    },
+    {
+      "source": "htm-projetomuseunacional",
+      "target": "htm-projetomuseunacional-css-normalize-css",
+      "type": "dependency"
+    },
+    {
+      "source": "htm-root",
+      "target": "htm-projetonoticiascidade",
+      "type": "dependency"
+    },
+    {
+      "source": "htm-projetonoticiascidade",
+      "target": "htm-projetonoticiascidade-index-html",
+      "type": "dependency"
+    },
+    {
+      "source": "htm-projetonoticiascidade",
+      "target": "htm-projetonoticiascidade-css-estilo-css",
+      "type": "dependency"
+    },
+    {
+      "source": "htm-projetonoticiascidade",
+      "target": "htm-projetonoticiascidade-brasil-html",
+      "type": "dependency"
+    },
+    {
+      "source": "htm-projetonoticiascidade",
+      "target": "htm-projetonoticiascidade-fotos-html",
+      "type": "dependency"
+    },
+    {
+      "source": "htm-projetonoticiascidade",
+      "target": "htm-projetonoticiascidade-nova-legislacao-ht",
+      "type": "dependency"
+    }
+  ]
+}

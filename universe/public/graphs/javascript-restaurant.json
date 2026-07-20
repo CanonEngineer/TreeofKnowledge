@@ -1,0 +1,560 @@
+{
+  "slug": "javascript-restaurant",
+  "name": "JavaScriptRestaurantProject",
+  "repoUrl": "https://github.com/CanonEngineer/JavaScriptRestaurantProject",
+  "color": "#f97316",
+  "demoUrl": "",
+  "nodeCount": 31,
+  "categories": {
+    "core": {
+      "label": "Backend",
+      "color": "#3b82f6"
+    },
+    "network": {
+      "label": "Rede / Scan",
+      "color": "#22d3ee"
+    },
+    "oracle": {
+      "label": "Oracle / DB",
+      "color": "#c084fc"
+    },
+    "auth": {
+      "label": "Segurança",
+      "color": "#ef4444"
+    },
+    "frontend": {
+      "label": "Frontend",
+      "color": "#eab308"
+    },
+    "other": {
+      "label": "Outros",
+      "color": "#64748b"
+    }
+  },
+  "nodes": [
+    {
+      "id": "jsr-root",
+      "label": "JavaScriptRestaurantProject",
+      "parent": null,
+      "layer": "root",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 1.4,
+      "file": "app.js",
+      "description": "Restaurante Saboroso — site + painel admin com Express, EJS, MySQL, Redis e AdminLTE."
+    },
+    {
+      "id": "jsr-backend",
+      "label": "Backend Express",
+      "parent": "jsr-root",
+      "layer": "module",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 1.0,
+      "file": "app.js",
+      "description": "Servidor com sessão Redis, upload Formidable e rotas públicas/admin."
+    },
+    {
+      "id": "jsr-app",
+      "label": "app.js",
+      "parent": "jsr-backend",
+      "layer": "file",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 0.72,
+      "file": "app.js",
+      "description": "Bootstrap: sessão Redis, parsers, static e routers."
+    },
+    {
+      "id": "jsr-bin-www",
+      "label": "bin/www",
+      "parent": "jsr-backend",
+      "layer": "file",
+      "category": "other",
+      "categoryLabel": "Outros",
+      "color": "#64748b",
+      "size": 0.72,
+      "file": "bin/www",
+      "description": "HTTP server na porta 3000 com nodemon."
+    },
+    {
+      "id": "jsr-formidable",
+      "label": "Middleware Formidable",
+      "parent": "jsr-app",
+      "layer": "function",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 0.58,
+      "file": "app.js",
+      "description": "Parse multipart antes das rotas — upload de fotos do cardápio."
+    },
+    {
+      "id": "jsr-session",
+      "label": "Sessão Redis",
+      "parent": "jsr-app",
+      "layer": "function",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 0.58,
+      "file": "app.js",
+      "description": "express-session com connect-redis para painel admin."
+    },
+    {
+      "id": "jsr-db",
+      "label": "Banco MySQL",
+      "parent": "jsr-root",
+      "layer": "module",
+      "category": "oracle",
+      "categoryLabel": "Oracle / DB",
+      "color": "#c084fc",
+      "size": 1.0,
+      "file": "inc/db.js",
+      "description": "Conexão mysql2 com database saboroso."
+    },
+    {
+      "id": "jsr-routes-public",
+      "label": "Rotas públicas",
+      "parent": "jsr-root",
+      "layer": "module",
+      "category": "network",
+      "categoryLabel": "Rede / Scan",
+      "color": "#22d3ee",
+      "size": 1.0,
+      "file": "routes/index.js",
+      "description": "Site do cliente: home, cardápio, reservas e contato."
+    },
+    {
+      "id": "jsr-home",
+      "label": "GET /",
+      "parent": "jsr-routes-public",
+      "layer": "function",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 0.58,
+      "file": "routes/index.js",
+      "description": "Home com lista de menus em destaque."
+    },
+    {
+      "id": "jsr-menus-page",
+      "label": "GET /menus",
+      "parent": "jsr-routes-public",
+      "layer": "function",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 0.58,
+      "file": "routes/index.js",
+      "description": "Página do cardápio completo com preços."
+    },
+    {
+      "id": "jsr-reservations-page",
+      "label": "POST /reservations",
+      "parent": "jsr-routes-public",
+      "layer": "function",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 0.58,
+      "file": "routes/index.js",
+      "description": "Formulário de reserva de mesa com validação."
+    },
+    {
+      "id": "jsr-contacts-page",
+      "label": "POST /contacts",
+      "parent": "jsr-routes-public",
+      "layer": "function",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 0.58,
+      "file": "routes/index.js",
+      "description": "Formulário de contato gravado em tb_contacts."
+    },
+    {
+      "id": "jsr-admin-routes",
+      "label": "Painel Admin",
+      "parent": "jsr-root",
+      "layer": "module",
+      "category": "network",
+      "categoryLabel": "Rede / Scan",
+      "color": "#22d3ee",
+      "size": 1.0,
+      "file": "routes/admin.js",
+      "description": "AdminLTE: dashboard, CRUD menus, reservas, usuários."
+    },
+    {
+      "id": "jsr-dashboard",
+      "label": "admin.dashboard()",
+      "parent": "jsr-admin-routes",
+      "layer": "function",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 0.58,
+      "file": "inc/admin.js",
+      "description": "Contadores de contatos, menus, reservas e usuários."
+    },
+    {
+      "id": "jsr-admin-login",
+      "label": "POST /admin/login",
+      "parent": "jsr-admin-routes",
+      "layer": "function",
+      "category": "auth",
+      "categoryLabel": "Segurança",
+      "color": "#ef4444",
+      "size": 0.58,
+      "file": "inc/users.js",
+      "description": "Autenticação por email/senha em tb_users."
+    },
+    {
+      "id": "jsr-menus-mod",
+      "label": "CRUD Cardápio",
+      "parent": "jsr-root",
+      "layer": "module",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 1.0,
+      "file": "inc/menus.js",
+      "description": "Gerencia tb_menus com foto, título, descrição e preço."
+    },
+    {
+      "id": "jsr-menus-get",
+      "label": "getMenus()",
+      "parent": "jsr-menus-mod",
+      "layer": "function",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 0.58,
+      "file": "inc/menus.js",
+      "description": "SELECT * FROM tb_menus ORDER BY title."
+    },
+    {
+      "id": "jsr-menus-save",
+      "label": "save()",
+      "parent": "jsr-menus-mod",
+      "layer": "function",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 0.58,
+      "file": "inc/menus.js",
+      "description": "INSERT/UPDATE com foto opcional via Formidable."
+    },
+    {
+      "id": "jsr-reservations-mod",
+      "label": "Reservas",
+      "parent": "jsr-root",
+      "layer": "module",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 1.0,
+      "file": "inc/reservations.js",
+      "description": "tb_reservations com paginação e moment.js."
+    },
+    {
+      "id": "jsr-reservations-save",
+      "label": "save()",
+      "parent": "jsr-reservations-mod",
+      "layer": "function",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 0.58,
+      "file": "inc/reservations.js",
+      "description": "Grava reserva com nome, email, pessoas, data e hora."
+    },
+    {
+      "id": "jsr-pagination",
+      "label": "Pagination.js",
+      "parent": "jsr-reservations-mod",
+      "layer": "file",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 0.72,
+      "file": "inc/Pagination.js",
+      "description": "Paginação SQL com FOUND_ROWS e navegação."
+    },
+    {
+      "id": "jsr-users-mod",
+      "label": "Usuários Admin",
+      "parent": "jsr-root",
+      "layer": "module",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 1.0,
+      "file": "inc/users.js",
+      "description": "Login e CRUD de tb_users."
+    },
+    {
+      "id": "jsr-contacts-mod",
+      "label": "Contatos",
+      "parent": "jsr-root",
+      "layer": "module",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 1.0,
+      "file": "inc/contacts.js",
+      "description": "Mensagens do formulário público."
+    },
+    {
+      "id": "jsr-emails-mod",
+      "label": "Lista de E-mails",
+      "parent": "jsr-root",
+      "layer": "module",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 1.0,
+      "file": "inc/emails.js",
+      "description": "Newsletter / captura de e-mails."
+    },
+    {
+      "id": "jsr-admin-inc",
+      "label": "admin.js",
+      "parent": "jsr-admin-routes",
+      "layer": "file",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 0.72,
+      "file": "inc/admin.js",
+      "description": "Sidebar AdminLTE e helper getParams."
+    },
+    {
+      "id": "jsr-frontend",
+      "label": "Frontend EJS",
+      "parent": "jsr-root",
+      "layer": "module",
+      "category": "frontend",
+      "categoryLabel": "Frontend",
+      "color": "#eab308",
+      "size": 1.0,
+      "file": "views/",
+      "description": "Templates públicos com hero e Bootstrap."
+    },
+    {
+      "id": "jsr-adminlte",
+      "label": "AdminLTE",
+      "parent": "jsr-admin-routes",
+      "layer": "file",
+      "category": "other",
+      "categoryLabel": "Outros",
+      "color": "#64748b",
+      "size": 0.72,
+      "file": "public/admin/",
+      "description": "Painel admin com tema AdminLTE e Bower."
+    },
+    {
+      "id": "jsr-moment",
+      "label": "moment pt-BR",
+      "parent": "jsr-reservations-mod",
+      "layer": "function",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 0.58,
+      "file": "routes/admin.js",
+      "description": "Formatação de datas nas views admin."
+    },
+    {
+      "id": "jsr-mysql-tables",
+      "label": "Schema MySQL",
+      "parent": "jsr-db",
+      "layer": "file",
+      "category": "oracle",
+      "categoryLabel": "Oracle / DB",
+      "color": "#c084fc",
+      "size": 0.72,
+      "file": "public/db/mysql.sql",
+      "description": "Tabelas do restaurante saboroso."
+    },
+    {
+      "id": "jsr-redis",
+      "label": "Redis",
+      "parent": "jsr-session",
+      "layer": "file",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 0.72,
+      "file": "app.js",
+      "description": "Store de sessão para admin."
+    },
+    {
+      "id": "jsr-package",
+      "label": "package.json",
+      "parent": "jsr-backend",
+      "layer": "file",
+      "category": "other",
+      "categoryLabel": "Outros",
+      "color": "#64748b",
+      "size": 0.72,
+      "file": "package.json",
+      "description": "Dependências: express, mysql2, ejs, formidable, moment."
+    }
+  ],
+  "links": [
+    {
+      "source": "jsr-root",
+      "target": "jsr-backend",
+      "type": "dependency"
+    },
+    {
+      "source": "jsr-backend",
+      "target": "jsr-app",
+      "type": "dependency"
+    },
+    {
+      "source": "jsr-backend",
+      "target": "jsr-bin-www",
+      "type": "dependency"
+    },
+    {
+      "source": "jsr-app",
+      "target": "jsr-formidable",
+      "type": "dependency"
+    },
+    {
+      "source": "jsr-app",
+      "target": "jsr-session",
+      "type": "dependency"
+    },
+    {
+      "source": "jsr-root",
+      "target": "jsr-db",
+      "type": "dependency"
+    },
+    {
+      "source": "jsr-root",
+      "target": "jsr-routes-public",
+      "type": "dependency"
+    },
+    {
+      "source": "jsr-routes-public",
+      "target": "jsr-home",
+      "type": "dependency"
+    },
+    {
+      "source": "jsr-routes-public",
+      "target": "jsr-menus-page",
+      "type": "dependency"
+    },
+    {
+      "source": "jsr-routes-public",
+      "target": "jsr-reservations-page",
+      "type": "dependency"
+    },
+    {
+      "source": "jsr-routes-public",
+      "target": "jsr-contacts-page",
+      "type": "dependency"
+    },
+    {
+      "source": "jsr-root",
+      "target": "jsr-admin-routes",
+      "type": "dependency"
+    },
+    {
+      "source": "jsr-admin-routes",
+      "target": "jsr-dashboard",
+      "type": "dependency"
+    },
+    {
+      "source": "jsr-admin-routes",
+      "target": "jsr-admin-login",
+      "type": "dependency"
+    },
+    {
+      "source": "jsr-root",
+      "target": "jsr-menus-mod",
+      "type": "dependency"
+    },
+    {
+      "source": "jsr-menus-mod",
+      "target": "jsr-menus-get",
+      "type": "dependency"
+    },
+    {
+      "source": "jsr-menus-mod",
+      "target": "jsr-menus-save",
+      "type": "dependency"
+    },
+    {
+      "source": "jsr-root",
+      "target": "jsr-reservations-mod",
+      "type": "dependency"
+    },
+    {
+      "source": "jsr-reservations-mod",
+      "target": "jsr-reservations-save",
+      "type": "dependency"
+    },
+    {
+      "source": "jsr-reservations-mod",
+      "target": "jsr-pagination",
+      "type": "dependency"
+    },
+    {
+      "source": "jsr-root",
+      "target": "jsr-users-mod",
+      "type": "dependency"
+    },
+    {
+      "source": "jsr-root",
+      "target": "jsr-contacts-mod",
+      "type": "dependency"
+    },
+    {
+      "source": "jsr-root",
+      "target": "jsr-emails-mod",
+      "type": "dependency"
+    },
+    {
+      "source": "jsr-admin-routes",
+      "target": "jsr-admin-inc",
+      "type": "dependency"
+    },
+    {
+      "source": "jsr-root",
+      "target": "jsr-frontend",
+      "type": "dependency"
+    },
+    {
+      "source": "jsr-admin-routes",
+      "target": "jsr-adminlte",
+      "type": "dependency"
+    },
+    {
+      "source": "jsr-reservations-mod",
+      "target": "jsr-moment",
+      "type": "dependency"
+    },
+    {
+      "source": "jsr-db",
+      "target": "jsr-mysql-tables",
+      "type": "dependency"
+    },
+    {
+      "source": "jsr-session",
+      "target": "jsr-redis",
+      "type": "dependency"
+    },
+    {
+      "source": "jsr-backend",
+      "target": "jsr-package",
+      "type": "dependency"
+    }
+  ]
+}

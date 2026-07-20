@@ -1,0 +1,497 @@
+{
+  "slug": "course-python-2023",
+  "name": "CoursePython2023",
+  "repoUrl": "https://github.com/CanonEngineer/CoursePython2023",
+  "color": "#facc15",
+  "demoUrl": "",
+  "nodeCount": 28,
+  "categories": {
+    "core": {
+      "label": "Backend",
+      "color": "#3b82f6"
+    },
+    "frontend": {
+      "label": "Frontend",
+      "color": "#eab308"
+    },
+    "other": {
+      "label": "Outros",
+      "color": "#64748b"
+    }
+  },
+  "nodes": [
+    {
+      "id": "cp2-root",
+      "label": "CoursePython2023",
+      "parent": null,
+      "layer": "root",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 1.4,
+      "file": "README.md",
+      "description": "Exercícios e práticas do curso de Python 2023."
+    },
+    {
+      "id": "cp2-readme-md",
+      "label": "README.md",
+      "parent": "cp2-root",
+      "layer": "file",
+      "category": "other",
+      "categoryLabel": "Outros",
+      "color": "#64748b",
+      "size": 0.72,
+      "file": "README.md",
+      "description": "Arquivo `README.md` mapeado a partir do repositório original."
+    },
+    {
+      "id": "cp2-aula100-py",
+      "label": "aula100.py",
+      "parent": "cp2-root",
+      "layer": "file",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 0.72,
+      "file": "aula100.py",
+      "description": "Arquivo `aula100.py` mapeado a partir do repositório original."
+    },
+    {
+      "id": "cp2-aula101-py",
+      "label": "aula101.py",
+      "parent": "cp2-root",
+      "layer": "file",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 0.72,
+      "file": "aula101.py",
+      "description": "Arquivo `aula101.py` mapeado a partir do repositório original."
+    },
+    {
+      "id": "cp2-aula102-py",
+      "label": "aula102.py",
+      "parent": "cp2-root",
+      "layer": "file",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 0.72,
+      "file": "aula102.py",
+      "description": "Arquivo `aula102.py` mapeado a partir do repositório original."
+    },
+    {
+      "id": "cp2-aula103-py",
+      "label": "aula103.py",
+      "parent": "cp2-root",
+      "layer": "file",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 0.72,
+      "file": "aula103.py",
+      "description": "Arquivo `aula103.py` mapeado a partir do repositório original."
+    },
+    {
+      "id": "cp2-aula104-py",
+      "label": "aula104.py",
+      "parent": "cp2-root",
+      "layer": "file",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 0.72,
+      "file": "aula104.py",
+      "description": "Arquivo `aula104.py` mapeado a partir do repositório original."
+    },
+    {
+      "id": "cp2-aula105-py",
+      "label": "aula105.py",
+      "parent": "cp2-root",
+      "layer": "file",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 0.72,
+      "file": "aula105.py",
+      "description": "Arquivo `aula105.py` mapeado a partir do repositório original."
+    },
+    {
+      "id": "cp2-aula106-py",
+      "label": "aula106.py",
+      "parent": "cp2-root",
+      "layer": "file",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 0.72,
+      "file": "aula106.py",
+      "description": "Arquivo `aula106.py` mapeado a partir do repositório original."
+    },
+    {
+      "id": "cp2-aula141",
+      "label": "aula141",
+      "parent": "cp2-root",
+      "layer": "module",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 1.0,
+      "file": "aula141/",
+      "description": "Módulo/pasta `aula141/` com arquivos-chave do projeto."
+    },
+    {
+      "id": "cp2-aula141-eletronico-py",
+      "label": "eletronico.py",
+      "parent": "cp2-aula141",
+      "layer": "file",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 0.72,
+      "file": "aula141/eletronico.py",
+      "description": "Arquivo `aula141/eletronico.py` mapeado a partir do repositório original."
+    },
+    {
+      "id": "cp2-aula141-log-py",
+      "label": "log.py",
+      "parent": "cp2-aula141",
+      "layer": "file",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 0.72,
+      "file": "aula141/log.py",
+      "description": "Arquivo `aula141/log.py` mapeado a partir do repositório original."
+    },
+    {
+      "id": "cp2-aula141-main-py",
+      "label": "main.py",
+      "parent": "cp2-aula141",
+      "layer": "file",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 0.72,
+      "file": "aula141/main.py",
+      "description": "Arquivo `aula141/main.py` mapeado a partir do repositório original."
+    },
+    {
+      "id": "cp2-aula156",
+      "label": "aula156",
+      "parent": "cp2-root",
+      "layer": "module",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 1.0,
+      "file": "aula156/",
+      "description": "Módulo/pasta `aula156/` com arquivos-chave do projeto."
+    },
+    {
+      "id": "cp2-aula156-documentando-class-py",
+      "label": "documentando_class.py",
+      "parent": "cp2-aula156",
+      "layer": "file",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 0.72,
+      "file": "aula156/documentando_class.py",
+      "description": "Arquivo `aula156/documentando_class.py` mapeado a partir do repositório original."
+    },
+    {
+      "id": "cp2-aula156-documentando-funcoes-py",
+      "label": "documentando_funcoes.py",
+      "parent": "cp2-aula156",
+      "layer": "file",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 0.72,
+      "file": "aula156/documentando_funcoes.py",
+      "description": "Arquivo `aula156/documentando_funcoes.py` mapeado a partir do repositório original."
+    },
+    {
+      "id": "cp2-aula156-main-py",
+      "label": "main.py",
+      "parent": "cp2-aula156",
+      "layer": "file",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 0.72,
+      "file": "aula156/main.py",
+      "description": "Arquivo `aula156/main.py` mapeado a partir do repositório original."
+    },
+    {
+      "id": "cp2-aula156-varias-linhas-py",
+      "label": "varias_linhas.py",
+      "parent": "cp2-aula156",
+      "layer": "file",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 0.72,
+      "file": "aula156/varias_linhas.py",
+      "description": "Arquivo `aula156/varias_linhas.py` mapeado a partir do repositório original."
+    },
+    {
+      "id": "cp2-aula156-uma-linha-py",
+      "label": "uma_linha.py",
+      "parent": "cp2-aula156",
+      "layer": "file",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 0.72,
+      "file": "aula156/uma_linha.py",
+      "description": "Arquivo `aula156/uma_linha.py` mapeado a partir do repositório original."
+    },
+    {
+      "id": "cp2-aula158",
+      "label": "aula158",
+      "parent": "cp2-root",
+      "layer": "module",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 1.0,
+      "file": "aula158/",
+      "description": "Módulo/pasta `aula158/` com arquivos-chave do projeto."
+    },
+    {
+      "id": "cp2-aula158-banco-py",
+      "label": "banco.py",
+      "parent": "cp2-aula158",
+      "layer": "file",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 0.72,
+      "file": "aula158/banco.py",
+      "description": "Arquivo `aula158/banco.py` mapeado a partir do repositório original."
+    },
+    {
+      "id": "cp2-aula158-contas-py",
+      "label": "contas.py",
+      "parent": "cp2-aula158",
+      "layer": "file",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 0.72,
+      "file": "aula158/contas.py",
+      "description": "Arquivo `aula158/contas.py` mapeado a partir do repositório original."
+    },
+    {
+      "id": "cp2-aula158-main-py",
+      "label": "main.py",
+      "parent": "cp2-aula158",
+      "layer": "file",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 0.72,
+      "file": "aula158/main.py",
+      "description": "Arquivo `aula158/main.py` mapeado a partir do repositório original."
+    },
+    {
+      "id": "cp2-aula158-pessoas-py",
+      "label": "pessoas.py",
+      "parent": "cp2-aula158",
+      "layer": "file",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 0.72,
+      "file": "aula158/pessoas.py",
+      "description": "Arquivo `aula158/pessoas.py` mapeado a partir do repositório original."
+    },
+    {
+      "id": "cp2-aula190-site",
+      "label": "aula190_site",
+      "parent": "cp2-root",
+      "layer": "module",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 1.0,
+      "file": "aula190_site/",
+      "description": "Módulo/pasta `aula190_site/` com arquivos-chave do projeto."
+    },
+    {
+      "id": "cp2-aula190-site-index-html",
+      "label": "index.html",
+      "parent": "cp2-aula190-site",
+      "layer": "file",
+      "category": "frontend",
+      "categoryLabel": "Frontend",
+      "color": "#eab308",
+      "size": 0.72,
+      "file": "aula190_site/index.html",
+      "description": "Arquivo `aula190_site/index.html` mapeado a partir do repositório original."
+    },
+    {
+      "id": "cp2-aula190-site-style-css",
+      "label": "style.css",
+      "parent": "cp2-aula190-site",
+      "layer": "file",
+      "category": "frontend",
+      "categoryLabel": "Frontend",
+      "color": "#eab308",
+      "size": 0.72,
+      "file": "aula190_site/style.css",
+      "description": "Arquivo `aula190_site/style.css` mapeado a partir do repositório original."
+    },
+    {
+      "id": "cp2-aula193",
+      "label": "aula193",
+      "parent": "cp2-root",
+      "layer": "module",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 1.0,
+      "file": "aula193/",
+      "description": "Módulo/pasta `aula193/` com arquivos-chave do projeto."
+    }
+  ],
+  "links": [
+    {
+      "source": "cp2-root",
+      "target": "cp2-readme-md",
+      "type": "dependency"
+    },
+    {
+      "source": "cp2-root",
+      "target": "cp2-aula100-py",
+      "type": "dependency"
+    },
+    {
+      "source": "cp2-root",
+      "target": "cp2-aula101-py",
+      "type": "dependency"
+    },
+    {
+      "source": "cp2-root",
+      "target": "cp2-aula102-py",
+      "type": "dependency"
+    },
+    {
+      "source": "cp2-root",
+      "target": "cp2-aula103-py",
+      "type": "dependency"
+    },
+    {
+      "source": "cp2-root",
+      "target": "cp2-aula104-py",
+      "type": "dependency"
+    },
+    {
+      "source": "cp2-root",
+      "target": "cp2-aula105-py",
+      "type": "dependency"
+    },
+    {
+      "source": "cp2-root",
+      "target": "cp2-aula106-py",
+      "type": "dependency"
+    },
+    {
+      "source": "cp2-root",
+      "target": "cp2-aula141",
+      "type": "dependency"
+    },
+    {
+      "source": "cp2-aula141",
+      "target": "cp2-aula141-eletronico-py",
+      "type": "dependency"
+    },
+    {
+      "source": "cp2-aula141",
+      "target": "cp2-aula141-log-py",
+      "type": "dependency"
+    },
+    {
+      "source": "cp2-aula141",
+      "target": "cp2-aula141-main-py",
+      "type": "dependency"
+    },
+    {
+      "source": "cp2-root",
+      "target": "cp2-aula156",
+      "type": "dependency"
+    },
+    {
+      "source": "cp2-aula156",
+      "target": "cp2-aula156-documentando-class-py",
+      "type": "dependency"
+    },
+    {
+      "source": "cp2-aula156",
+      "target": "cp2-aula156-documentando-funcoes-py",
+      "type": "dependency"
+    },
+    {
+      "source": "cp2-aula156",
+      "target": "cp2-aula156-main-py",
+      "type": "dependency"
+    },
+    {
+      "source": "cp2-aula156",
+      "target": "cp2-aula156-varias-linhas-py",
+      "type": "dependency"
+    },
+    {
+      "source": "cp2-aula156",
+      "target": "cp2-aula156-uma-linha-py",
+      "type": "dependency"
+    },
+    {
+      "source": "cp2-root",
+      "target": "cp2-aula158",
+      "type": "dependency"
+    },
+    {
+      "source": "cp2-aula158",
+      "target": "cp2-aula158-banco-py",
+      "type": "dependency"
+    },
+    {
+      "source": "cp2-aula158",
+      "target": "cp2-aula158-contas-py",
+      "type": "dependency"
+    },
+    {
+      "source": "cp2-aula158",
+      "target": "cp2-aula158-main-py",
+      "type": "dependency"
+    },
+    {
+      "source": "cp2-aula158",
+      "target": "cp2-aula158-pessoas-py",
+      "type": "dependency"
+    },
+    {
+      "source": "cp2-root",
+      "target": "cp2-aula190-site",
+      "type": "dependency"
+    },
+    {
+      "source": "cp2-aula190-site",
+      "target": "cp2-aula190-site-index-html",
+      "type": "dependency"
+    },
+    {
+      "source": "cp2-aula190-site",
+      "target": "cp2-aula190-site-style-css",
+      "type": "dependency"
+    },
+    {
+      "source": "cp2-root",
+      "target": "cp2-aula193",
+      "type": "dependency"
+    }
+  ]
+}

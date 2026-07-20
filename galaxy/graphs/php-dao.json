@@ -1,0 +1,119 @@
+{
+  "slug": "php-dao",
+  "name": "PHPDaoProject",
+  "repoUrl": "https://github.com/CanonEngineer/PHPDaoProject",
+  "color": "#e879f9",
+  "demoUrl": "",
+  "nodeCount": 6,
+  "categories": {
+    "core": {
+      "label": "Backend",
+      "color": "#3b82f6"
+    },
+    "other": {
+      "label": "Outros",
+      "color": "#64748b"
+    }
+  },
+  "nodes": [
+    {
+      "id": "php-root",
+      "label": "PHPDaoProject",
+      "parent": null,
+      "layer": "root",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 1.4,
+      "file": "index.php",
+      "description": "Padrão DAO em PHP com classes e config de conexão."
+    },
+    {
+      "id": "php-class",
+      "label": "class",
+      "parent": "php-root",
+      "layer": "module",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 1.0,
+      "file": "class/",
+      "description": "Módulo/pasta `class/` com arquivos-chave do projeto."
+    },
+    {
+      "id": "php-class-sql-php",
+      "label": "Sql.php",
+      "parent": "php-class",
+      "layer": "file",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 0.72,
+      "file": "class/Sql.php",
+      "description": "Arquivo `class/Sql.php` mapeado a partir do repositório original."
+    },
+    {
+      "id": "php-class-usuario-php",
+      "label": "Usuario.php",
+      "parent": "php-class",
+      "layer": "file",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 0.72,
+      "file": "class/Usuario.php",
+      "description": "Arquivo `class/Usuario.php` mapeado a partir do repositório original."
+    },
+    {
+      "id": "php-config-php",
+      "label": "config.php",
+      "parent": "php-root",
+      "layer": "file",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 0.72,
+      "file": "config.php",
+      "description": "Arquivo `config.php` mapeado a partir do repositório original."
+    },
+    {
+      "id": "php-index-php",
+      "label": "index.php",
+      "parent": "php-root",
+      "layer": "file",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 0.72,
+      "file": "index.php",
+      "description": "Arquivo `index.php` mapeado a partir do repositório original."
+    }
+  ],
+  "links": [
+    {
+      "source": "php-root",
+      "target": "php-class",
+      "type": "dependency"
+    },
+    {
+      "source": "php-class",
+      "target": "php-class-sql-php",
+      "type": "dependency"
+    },
+    {
+      "source": "php-class",
+      "target": "php-class-usuario-php",
+      "type": "dependency"
+    },
+    {
+      "source": "php-root",
+      "target": "php-config-php",
+      "type": "dependency"
+    },
+    {
+      "source": "php-root",
+      "target": "php-index-php",
+      "type": "dependency"
+    }
+  ]
+}

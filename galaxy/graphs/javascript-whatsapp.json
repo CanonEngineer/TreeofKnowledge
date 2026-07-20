@@ -1,0 +1,293 @@
+{
+  "slug": "javascript-whatsapp",
+  "name": "JavaScriptWhatsAppProject",
+  "repoUrl": "https://github.com/CanonEngineer/JavaScriptWhatsAppProject",
+  "color": "#22c55e",
+  "demoUrl": "",
+  "nodeCount": 16,
+  "categories": {
+    "core": {
+      "label": "Backend",
+      "color": "#3b82f6"
+    },
+    "frontend": {
+      "label": "Frontend",
+      "color": "#eab308"
+    },
+    "other": {
+      "label": "Outros",
+      "color": "#64748b"
+    }
+  },
+  "nodes": [
+    {
+      "id": "jav-root",
+      "label": "JavaScriptWhatsAppProject",
+      "parent": null,
+      "layer": "root",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 1.4,
+      "file": "index.html",
+      "description": "Clone do WhatsApp com Webpack, Firebase Auth, Firestore e Storage."
+    },
+    {
+      "id": "jav-src",
+      "label": "src",
+      "parent": "jav-root",
+      "layer": "module",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 1.0,
+      "file": "src/",
+      "description": "Módulo/pasta `src/` com arquivos-chave do projeto."
+    },
+    {
+      "id": "jav-src-controller-cameracontroller-js",
+      "label": "CameraController.js",
+      "parent": "jav-src",
+      "layer": "file",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 0.72,
+      "file": "src/controller/CameraController.js",
+      "description": "Arquivo `src/controller/CameraController.js` mapeado a partir do repositório original."
+    },
+    {
+      "id": "jav-src-util-classevent-js",
+      "label": "ClassEvent.js",
+      "parent": "jav-src",
+      "layer": "file",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 0.72,
+      "file": "src/util/ClassEvent.js",
+      "description": "Arquivo `src/util/ClassEvent.js` mapeado a partir do repositório original."
+    },
+    {
+      "id": "jav-src-controller-documentpreviewcontroller",
+      "label": "DocumentPreviewController.js",
+      "parent": "jav-src",
+      "layer": "file",
+      "category": "frontend",
+      "categoryLabel": "Frontend",
+      "color": "#eab308",
+      "size": 0.72,
+      "file": "src/controller/DocumentPreviewController.js",
+      "description": "Arquivo `src/controller/DocumentPreviewController.js` mapeado a partir do repositório original."
+    },
+    {
+      "id": "jav-src-util-firebase-js",
+      "label": "Firebase.js",
+      "parent": "jav-src",
+      "layer": "file",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 0.72,
+      "file": "src/util/Firebase.js",
+      "description": "Arquivo `src/util/Firebase.js` mapeado a partir do repositório original."
+    },
+    {
+      "id": "jav-src-util-format-js",
+      "label": "Format.js",
+      "parent": "jav-src",
+      "layer": "file",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 0.72,
+      "file": "src/util/Format.js",
+      "description": "Arquivo `src/util/Format.js` mapeado a partir do repositório original."
+    },
+    {
+      "id": "jav-src-model-message-js",
+      "label": "Message.js",
+      "parent": "jav-src",
+      "layer": "file",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 0.72,
+      "file": "src/model/Message.js",
+      "description": "Arquivo `src/model/Message.js` mapeado a partir do repositório original."
+    },
+    {
+      "id": "jav-src-controller-microphonecontroller-js",
+      "label": "MicrophoneController.js",
+      "parent": "jav-src",
+      "layer": "file",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 0.72,
+      "file": "src/controller/MicrophoneController.js",
+      "description": "Arquivo `src/controller/MicrophoneController.js` mapeado a partir do repositório original."
+    },
+    {
+      "id": "jav-src-model-model-js",
+      "label": "Model.js",
+      "parent": "jav-src",
+      "layer": "file",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 0.72,
+      "file": "src/model/Model.js",
+      "description": "Arquivo `src/model/Model.js` mapeado a partir do repositório original."
+    },
+    {
+      "id": "jav-css",
+      "label": "css",
+      "parent": "jav-root",
+      "layer": "module",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 1.0,
+      "file": "css/",
+      "description": "Módulo/pasta `css/` com arquivos-chave do projeto."
+    },
+    {
+      "id": "jav-css-style-css",
+      "label": "style.css",
+      "parent": "jav-css",
+      "layer": "file",
+      "category": "frontend",
+      "categoryLabel": "Frontend",
+      "color": "#eab308",
+      "size": 0.72,
+      "file": "css/style.css",
+      "description": "Arquivo `css/style.css` mapeado a partir do repositório original."
+    },
+    {
+      "id": "jav-webpack-config-js",
+      "label": "webpack.config.js",
+      "parent": "jav-root",
+      "layer": "file",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 0.72,
+      "file": "webpack.config.js",
+      "description": "Arquivo `webpack.config.js` mapeado a partir do repositório original."
+    },
+    {
+      "id": "jav-index-html",
+      "label": "index.html",
+      "parent": "jav-root",
+      "layer": "file",
+      "category": "frontend",
+      "categoryLabel": "Frontend",
+      "color": "#eab308",
+      "size": 0.72,
+      "file": "index.html",
+      "description": "Arquivo `index.html` mapeado a partir do repositório original."
+    },
+    {
+      "id": "jav-package-json",
+      "label": "package.json",
+      "parent": "jav-root",
+      "layer": "file",
+      "category": "other",
+      "categoryLabel": "Outros",
+      "color": "#64748b",
+      "size": 0.72,
+      "file": "package.json",
+      "description": "Arquivo `package.json` mapeado a partir do repositório original."
+    },
+    {
+      "id": "jav-readme-md",
+      "label": "README.md",
+      "parent": "jav-root",
+      "layer": "file",
+      "category": "other",
+      "categoryLabel": "Outros",
+      "color": "#64748b",
+      "size": 0.72,
+      "file": "README.md",
+      "description": "Arquivo `README.md` mapeado a partir do repositório original."
+    }
+  ],
+  "links": [
+    {
+      "source": "jav-root",
+      "target": "jav-src",
+      "type": "dependency"
+    },
+    {
+      "source": "jav-src",
+      "target": "jav-src-controller-cameracontroller-js",
+      "type": "dependency"
+    },
+    {
+      "source": "jav-src",
+      "target": "jav-src-util-classevent-js",
+      "type": "dependency"
+    },
+    {
+      "source": "jav-src",
+      "target": "jav-src-controller-documentpreviewcontroller",
+      "type": "dependency"
+    },
+    {
+      "source": "jav-src",
+      "target": "jav-src-util-firebase-js",
+      "type": "dependency"
+    },
+    {
+      "source": "jav-src",
+      "target": "jav-src-util-format-js",
+      "type": "dependency"
+    },
+    {
+      "source": "jav-src",
+      "target": "jav-src-model-message-js",
+      "type": "dependency"
+    },
+    {
+      "source": "jav-src",
+      "target": "jav-src-controller-microphonecontroller-js",
+      "type": "dependency"
+    },
+    {
+      "source": "jav-src",
+      "target": "jav-src-model-model-js",
+      "type": "dependency"
+    },
+    {
+      "source": "jav-root",
+      "target": "jav-css",
+      "type": "dependency"
+    },
+    {
+      "source": "jav-css",
+      "target": "jav-css-style-css",
+      "type": "dependency"
+    },
+    {
+      "source": "jav-root",
+      "target": "jav-webpack-config-js",
+      "type": "dependency"
+    },
+    {
+      "source": "jav-root",
+      "target": "jav-index-html",
+      "type": "dependency"
+    },
+    {
+      "source": "jav-root",
+      "target": "jav-package-json",
+      "type": "dependency"
+    },
+    {
+      "source": "jav-root",
+      "target": "jav-readme-md",
+      "type": "dependency"
+    }
+  ]
+}

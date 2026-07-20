@@ -1,0 +1,497 @@
+{
+  "slug": "neighborhood-boys",
+  "name": "NeighborhoodBoysProject",
+  "repoUrl": "https://github.com/CanonEngineer/NeighborhoodBoysProject",
+  "color": "#c084fc",
+  "demoUrl": "",
+  "nodeCount": 28,
+  "categories": {
+    "core": {
+      "label": "Backend",
+      "color": "#3b82f6"
+    },
+    "frontend": {
+      "label": "Frontend",
+      "color": "#eab308"
+    },
+    "other": {
+      "label": "Outros",
+      "color": "#64748b"
+    }
+  },
+  "nodes": [
+    {
+      "id": "nei-root",
+      "label": "NeighborhoodBoysProject",
+      "parent": null,
+      "layer": "root",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 1.4,
+      "file": "manage.py",
+      "description": "Sistema de salão Meninos da Vila — contas, agenda e clientes."
+    },
+    {
+      "id": "nei-accounts",
+      "label": "accounts",
+      "parent": "nei-root",
+      "layer": "module",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 1.0,
+      "file": "accounts/",
+      "description": "Módulo/pasta `accounts/` com arquivos-chave do projeto."
+    },
+    {
+      "id": "nei-accounts-admin-py",
+      "label": "admin.py",
+      "parent": "nei-accounts",
+      "layer": "file",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 0.72,
+      "file": "accounts/admin.py",
+      "description": "Arquivo `accounts/admin.py` mapeado a partir do repositório original."
+    },
+    {
+      "id": "nei-accounts-forms-py",
+      "label": "forms.py",
+      "parent": "nei-accounts",
+      "layer": "file",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 0.72,
+      "file": "accounts/forms.py",
+      "description": "Arquivo `accounts/forms.py` mapeado a partir do repositório original."
+    },
+    {
+      "id": "nei-accounts-models-py",
+      "label": "models.py",
+      "parent": "nei-accounts",
+      "layer": "file",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 0.72,
+      "file": "accounts/models.py",
+      "description": "Arquivo `accounts/models.py` mapeado a partir do repositório original."
+    },
+    {
+      "id": "nei-accounts-urls-py",
+      "label": "urls.py",
+      "parent": "nei-accounts",
+      "layer": "file",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 0.72,
+      "file": "accounts/urls.py",
+      "description": "Arquivo `accounts/urls.py` mapeado a partir do repositório original."
+    },
+    {
+      "id": "nei-accounts-views-py",
+      "label": "views.py",
+      "parent": "nei-accounts",
+      "layer": "file",
+      "category": "frontend",
+      "categoryLabel": "Frontend",
+      "color": "#eab308",
+      "size": 0.72,
+      "file": "accounts/views.py",
+      "description": "Arquivo `accounts/views.py` mapeado a partir do repositório original."
+    },
+    {
+      "id": "nei-accounts-templates-accounts-index-html",
+      "label": "index.html",
+      "parent": "nei-accounts",
+      "layer": "file",
+      "category": "frontend",
+      "categoryLabel": "Frontend",
+      "color": "#eab308",
+      "size": 0.72,
+      "file": "accounts/templates/accounts/index.html",
+      "description": "Arquivo `accounts/templates/accounts/index.html` mapeado a partir do repositório original."
+    },
+    {
+      "id": "nei-accounts-backends-py",
+      "label": "backends.py",
+      "parent": "nei-accounts",
+      "layer": "file",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 0.72,
+      "file": "accounts/backends.py",
+      "description": "Arquivo `accounts/backends.py` mapeado a partir do repositório original."
+    },
+    {
+      "id": "nei-accounts-templates-accounts-register-htm",
+      "label": "register.html",
+      "parent": "nei-accounts",
+      "layer": "file",
+      "category": "frontend",
+      "categoryLabel": "Frontend",
+      "color": "#eab308",
+      "size": 0.72,
+      "file": "accounts/templates/accounts/register.html",
+      "description": "Arquivo `accounts/templates/accounts/register.html` mapeado a partir do repositório original."
+    },
+    {
+      "id": "nei-agenda",
+      "label": "agenda",
+      "parent": "nei-root",
+      "layer": "module",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 1.0,
+      "file": "agenda/",
+      "description": "Módulo/pasta `agenda/` com arquivos-chave do projeto."
+    },
+    {
+      "id": "nei-agenda-admin-py",
+      "label": "admin.py",
+      "parent": "nei-agenda",
+      "layer": "file",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 0.72,
+      "file": "agenda/admin.py",
+      "description": "Arquivo `agenda/admin.py` mapeado a partir do repositório original."
+    },
+    {
+      "id": "nei-agenda-forms-py",
+      "label": "forms.py",
+      "parent": "nei-agenda",
+      "layer": "file",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 0.72,
+      "file": "agenda/forms.py",
+      "description": "Arquivo `agenda/forms.py` mapeado a partir do repositório original."
+    },
+    {
+      "id": "nei-agenda-models-py",
+      "label": "models.py",
+      "parent": "nei-agenda",
+      "layer": "file",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 0.72,
+      "file": "agenda/models.py",
+      "description": "Arquivo `agenda/models.py` mapeado a partir do repositório original."
+    },
+    {
+      "id": "nei-agenda-views-py",
+      "label": "views.py",
+      "parent": "nei-agenda",
+      "layer": "file",
+      "category": "frontend",
+      "categoryLabel": "Frontend",
+      "color": "#eab308",
+      "size": 0.72,
+      "file": "agenda/views.py",
+      "description": "Arquivo `agenda/views.py` mapeado a partir do repositório original."
+    },
+    {
+      "id": "nei-agenda-templates-deletar-cliente-html",
+      "label": "deletar_cliente.html",
+      "parent": "nei-agenda",
+      "layer": "file",
+      "category": "frontend",
+      "categoryLabel": "Frontend",
+      "color": "#eab308",
+      "size": 0.72,
+      "file": "agenda/templates/deletar_cliente.html",
+      "description": "Arquivo `agenda/templates/deletar_cliente.html` mapeado a partir do repositório original."
+    },
+    {
+      "id": "nei-agenda-templates-detalhes-cliente-html",
+      "label": "detalhes_cliente.html",
+      "parent": "nei-agenda",
+      "layer": "file",
+      "category": "frontend",
+      "categoryLabel": "Frontend",
+      "color": "#eab308",
+      "size": 0.72,
+      "file": "agenda/templates/detalhes_cliente.html",
+      "description": "Arquivo `agenda/templates/detalhes_cliente.html` mapeado a partir do repositório original."
+    },
+    {
+      "id": "nei-agenda-templates-editar-cliente-html",
+      "label": "editar_cliente.html",
+      "parent": "nei-agenda",
+      "layer": "file",
+      "category": "frontend",
+      "categoryLabel": "Frontend",
+      "color": "#eab308",
+      "size": 0.72,
+      "file": "agenda/templates/editar_cliente.html",
+      "description": "Arquivo `agenda/templates/editar_cliente.html` mapeado a partir do repositório original."
+    },
+    {
+      "id": "nei-agenda-templates-home-page-html",
+      "label": "home_page.html",
+      "parent": "nei-agenda",
+      "layer": "file",
+      "category": "frontend",
+      "categoryLabel": "Frontend",
+      "color": "#eab308",
+      "size": 0.72,
+      "file": "agenda/templates/home_page.html",
+      "description": "Arquivo `agenda/templates/home_page.html` mapeado a partir do repositório original."
+    },
+    {
+      "id": "nei-app",
+      "label": "app",
+      "parent": "nei-root",
+      "layer": "module",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 1.0,
+      "file": "app/",
+      "description": "Módulo/pasta `app/` com arquivos-chave do projeto."
+    },
+    {
+      "id": "nei-app-forms-py",
+      "label": "forms.py",
+      "parent": "nei-app",
+      "layer": "file",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 0.72,
+      "file": "app/forms.py",
+      "description": "Arquivo `app/forms.py` mapeado a partir do repositório original."
+    },
+    {
+      "id": "nei-app-models-py",
+      "label": "models.py",
+      "parent": "nei-app",
+      "layer": "file",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 0.72,
+      "file": "app/models.py",
+      "description": "Arquivo `app/models.py` mapeado a partir do repositório original."
+    },
+    {
+      "id": "nei-app-views-py",
+      "label": "views.py",
+      "parent": "nei-app",
+      "layer": "file",
+      "category": "frontend",
+      "categoryLabel": "Frontend",
+      "color": "#eab308",
+      "size": 0.72,
+      "file": "app/views.py",
+      "description": "Arquivo `app/views.py` mapeado a partir do repositório original."
+    },
+    {
+      "id": "nei-app-static-js-jquery-cart-js",
+      "label": "jquery.cart.js",
+      "parent": "nei-app",
+      "layer": "file",
+      "category": "frontend",
+      "categoryLabel": "Frontend",
+      "color": "#eab308",
+      "size": 0.72,
+      "file": "app/static/js/jquery.cart.js",
+      "description": "Arquivo `app/static/js/jquery.cart.js` mapeado a partir do repositório original."
+    },
+    {
+      "id": "nei-app-templates-agendamento-html",
+      "label": "agendamento.html",
+      "parent": "nei-app",
+      "layer": "file",
+      "category": "frontend",
+      "categoryLabel": "Frontend",
+      "color": "#eab308",
+      "size": 0.72,
+      "file": "app/templates/agendamento.html",
+      "description": "Arquivo `app/templates/agendamento.html` mapeado a partir do repositório original."
+    },
+    {
+      "id": "nei-app-templates-catalogo-html",
+      "label": "catalogo.html",
+      "parent": "nei-app",
+      "layer": "file",
+      "category": "frontend",
+      "categoryLabel": "Frontend",
+      "color": "#eab308",
+      "size": 0.72,
+      "file": "app/templates/catalogo.html",
+      "description": "Arquivo `app/templates/catalogo.html` mapeado a partir do repositório original."
+    },
+    {
+      "id": "nei-app-templates-contact-html",
+      "label": "contact.html",
+      "parent": "nei-app",
+      "layer": "file",
+      "category": "frontend",
+      "categoryLabel": "Frontend",
+      "color": "#eab308",
+      "size": 0.72,
+      "file": "app/templates/contact.html",
+      "description": "Arquivo `app/templates/contact.html` mapeado a partir do repositório original."
+    },
+    {
+      "id": "nei-app-templates-home-html",
+      "label": "home.html",
+      "parent": "nei-app",
+      "layer": "file",
+      "category": "frontend",
+      "categoryLabel": "Frontend",
+      "color": "#eab308",
+      "size": 0.72,
+      "file": "app/templates/home.html",
+      "description": "Arquivo `app/templates/home.html` mapeado a partir do repositório original."
+    }
+  ],
+  "links": [
+    {
+      "source": "nei-root",
+      "target": "nei-accounts",
+      "type": "dependency"
+    },
+    {
+      "source": "nei-accounts",
+      "target": "nei-accounts-admin-py",
+      "type": "dependency"
+    },
+    {
+      "source": "nei-accounts",
+      "target": "nei-accounts-forms-py",
+      "type": "dependency"
+    },
+    {
+      "source": "nei-accounts",
+      "target": "nei-accounts-models-py",
+      "type": "dependency"
+    },
+    {
+      "source": "nei-accounts",
+      "target": "nei-accounts-urls-py",
+      "type": "dependency"
+    },
+    {
+      "source": "nei-accounts",
+      "target": "nei-accounts-views-py",
+      "type": "dependency"
+    },
+    {
+      "source": "nei-accounts",
+      "target": "nei-accounts-templates-accounts-index-html",
+      "type": "dependency"
+    },
+    {
+      "source": "nei-accounts",
+      "target": "nei-accounts-backends-py",
+      "type": "dependency"
+    },
+    {
+      "source": "nei-accounts",
+      "target": "nei-accounts-templates-accounts-register-htm",
+      "type": "dependency"
+    },
+    {
+      "source": "nei-root",
+      "target": "nei-agenda",
+      "type": "dependency"
+    },
+    {
+      "source": "nei-agenda",
+      "target": "nei-agenda-admin-py",
+      "type": "dependency"
+    },
+    {
+      "source": "nei-agenda",
+      "target": "nei-agenda-forms-py",
+      "type": "dependency"
+    },
+    {
+      "source": "nei-agenda",
+      "target": "nei-agenda-models-py",
+      "type": "dependency"
+    },
+    {
+      "source": "nei-agenda",
+      "target": "nei-agenda-views-py",
+      "type": "dependency"
+    },
+    {
+      "source": "nei-agenda",
+      "target": "nei-agenda-templates-deletar-cliente-html",
+      "type": "dependency"
+    },
+    {
+      "source": "nei-agenda",
+      "target": "nei-agenda-templates-detalhes-cliente-html",
+      "type": "dependency"
+    },
+    {
+      "source": "nei-agenda",
+      "target": "nei-agenda-templates-editar-cliente-html",
+      "type": "dependency"
+    },
+    {
+      "source": "nei-agenda",
+      "target": "nei-agenda-templates-home-page-html",
+      "type": "dependency"
+    },
+    {
+      "source": "nei-root",
+      "target": "nei-app",
+      "type": "dependency"
+    },
+    {
+      "source": "nei-app",
+      "target": "nei-app-forms-py",
+      "type": "dependency"
+    },
+    {
+      "source": "nei-app",
+      "target": "nei-app-models-py",
+      "type": "dependency"
+    },
+    {
+      "source": "nei-app",
+      "target": "nei-app-views-py",
+      "type": "dependency"
+    },
+    {
+      "source": "nei-app",
+      "target": "nei-app-static-js-jquery-cart-js",
+      "type": "dependency"
+    },
+    {
+      "source": "nei-app",
+      "target": "nei-app-templates-agendamento-html",
+      "type": "dependency"
+    },
+    {
+      "source": "nei-app",
+      "target": "nei-app-templates-catalogo-html",
+      "type": "dependency"
+    },
+    {
+      "source": "nei-app",
+      "target": "nei-app-templates-contact-html",
+      "type": "dependency"
+    },
+    {
+      "source": "nei-app",
+      "target": "nei-app-templates-home-html",
+      "type": "dependency"
+    }
+  ]
+}

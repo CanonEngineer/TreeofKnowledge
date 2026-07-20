@@ -10,10 +10,6 @@
       "label": "Backend",
       "color": "#3b82f6"
     },
-    "network": {
-      "label": "Rede / Scan",
-      "color": "#22d3ee"
-    },
     "ad": {
       "label": "Active Directory",
       "color": "#a78bfa"

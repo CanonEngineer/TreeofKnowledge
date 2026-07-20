@@ -1,0 +1,297 @@
+{
+  "slug": "canon-engineer-github-io",
+  "name": "CanonEngineer.github.io",
+  "repoUrl": "https://github.com/CanonEngineer/CanonEngineer.github.io",
+  "color": "#38bdf8",
+  "demoUrl": "",
+  "nodeCount": 16,
+  "categories": {
+    "core": {
+      "label": "Backend",
+      "color": "#3b82f6"
+    },
+    "frontend": {
+      "label": "Frontend",
+      "color": "#eab308"
+    },
+    "scripts": {
+      "label": "Scripts",
+      "color": "#64748b"
+    },
+    "other": {
+      "label": "Outros",
+      "color": "#64748b"
+    }
+  },
+  "nodes": [
+    {
+      "id": "cegi-root",
+      "label": "CanonEngineer.github.io",
+      "parent": null,
+      "layer": "root",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 1.4,
+      "file": "index.html",
+      "description": "Portfolio profissional e currículo — site CanonEngineer no GitHub Pages."
+    },
+    {
+      "id": "cegi-scripts",
+      "label": "scripts",
+      "parent": "cegi-root",
+      "layer": "module",
+      "category": "scripts",
+      "categoryLabel": "Scripts",
+      "color": "#64748b",
+      "size": 1.0,
+      "file": "scripts/",
+      "description": "Módulo/pasta `scripts/` com arquivos-chave do projeto."
+    },
+    {
+      "id": "cegi-scripts-generate-cv-py",
+      "label": "generate_cv.py",
+      "parent": "cegi-scripts",
+      "layer": "file",
+      "category": "scripts",
+      "categoryLabel": "Scripts",
+      "color": "#64748b",
+      "size": 0.72,
+      "file": "scripts/generate_cv.py",
+      "description": "Arquivo `scripts/generate_cv.py` mapeado a partir do repositório original."
+    },
+    {
+      "id": "cegi-wwwroot",
+      "label": "wwwroot",
+      "parent": "cegi-root",
+      "layer": "module",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 1.0,
+      "file": "wwwroot/",
+      "description": "Módulo/pasta `wwwroot/` com arquivos-chave do projeto."
+    },
+    {
+      "id": "cegi-wwwroot-js-script-js",
+      "label": "script.js",
+      "parent": "cegi-wwwroot",
+      "layer": "file",
+      "category": "scripts",
+      "categoryLabel": "Scripts",
+      "color": "#64748b",
+      "size": 0.72,
+      "file": "wwwroot/js/script.js",
+      "description": "Arquivo `wwwroot/js/script.js` mapeado a partir do repositório original."
+    },
+    {
+      "id": "cegi-wwwroot-css-blog-css",
+      "label": "blog.css",
+      "parent": "cegi-wwwroot",
+      "layer": "file",
+      "category": "frontend",
+      "categoryLabel": "Frontend",
+      "color": "#eab308",
+      "size": 0.72,
+      "file": "wwwroot/css/blog.css",
+      "description": "Arquivo `wwwroot/css/blog.css` mapeado a partir do repositório original."
+    },
+    {
+      "id": "cegi-wwwroot-css-style-css",
+      "label": "style.css",
+      "parent": "cegi-wwwroot",
+      "layer": "file",
+      "category": "frontend",
+      "categoryLabel": "Frontend",
+      "color": "#eab308",
+      "size": 0.72,
+      "file": "wwwroot/css/style.css",
+      "description": "Arquivo `wwwroot/css/style.css` mapeado a partir do repositório original."
+    },
+    {
+      "id": "cegi-blog",
+      "label": "blog",
+      "parent": "cegi-root",
+      "layer": "module",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 1.0,
+      "file": "blog/",
+      "description": "Módulo/pasta `blog/` com arquivos-chave do projeto."
+    },
+    {
+      "id": "cegi-blog-devops-na-pratica-html",
+      "label": "devops-na-pratica.html",
+      "parent": "cegi-blog",
+      "layer": "file",
+      "category": "frontend",
+      "categoryLabel": "Frontend",
+      "color": "#eab308",
+      "size": 0.72,
+      "file": "blog/devops-na-pratica.html",
+      "description": "Arquivo `blog/devops-na-pratica.html` mapeado a partir do repositório original."
+    },
+    {
+      "id": "cegi-blog-firewall-html",
+      "label": "firewall.html",
+      "parent": "cegi-blog",
+      "layer": "file",
+      "category": "frontend",
+      "categoryLabel": "Frontend",
+      "color": "#eab308",
+      "size": 0.72,
+      "file": "blog/firewall.html",
+      "description": "Arquivo `blog/firewall.html` mapeado a partir do repositório original."
+    },
+    {
+      "id": "cegi-blog-inteligencia-artificial-html",
+      "label": "inteligencia-artificial.html",
+      "parent": "cegi-blog",
+      "layer": "file",
+      "category": "frontend",
+      "categoryLabel": "Frontend",
+      "color": "#eab308",
+      "size": 0.72,
+      "file": "blog/inteligencia-artificial.html",
+      "description": "Arquivo `blog/inteligencia-artificial.html` mapeado a partir do repositório original."
+    },
+    {
+      "id": "cegi-blog-maquinas-virtuais-proxmox-html",
+      "label": "maquinas-virtuais-proxmox.html",
+      "parent": "cegi-blog",
+      "layer": "file",
+      "category": "frontend",
+      "categoryLabel": "Frontend",
+      "color": "#eab308",
+      "size": 0.72,
+      "file": "blog/maquinas-virtuais-proxmox.html",
+      "description": "Arquivo `blog/maquinas-virtuais-proxmox.html` mapeado a partir do repositório original."
+    },
+    {
+      "id": "cegi-blog-python-no-backend-html",
+      "label": "python-no-backend.html",
+      "parent": "cegi-blog",
+      "layer": "file",
+      "category": "frontend",
+      "categoryLabel": "Frontend",
+      "color": "#eab308",
+      "size": 0.72,
+      "file": "blog/python-no-backend.html",
+      "description": "Arquivo `blog/python-no-backend.html` mapeado a partir do repositório original."
+    },
+    {
+      "id": "cegi-blog-seguranca-em-redes-html",
+      "label": "seguranca-em-redes.html",
+      "parent": "cegi-blog",
+      "layer": "file",
+      "category": "frontend",
+      "categoryLabel": "Frontend",
+      "color": "#eab308",
+      "size": 0.72,
+      "file": "blog/seguranca-em-redes.html",
+      "description": "Arquivo `blog/seguranca-em-redes.html` mapeado a partir do repositório original."
+    },
+    {
+      "id": "cegi-index-html",
+      "label": "index.html",
+      "parent": "cegi-root",
+      "layer": "file",
+      "category": "frontend",
+      "categoryLabel": "Frontend",
+      "color": "#eab308",
+      "size": 0.72,
+      "file": "index.html",
+      "description": "Arquivo `index.html` mapeado a partir do repositório original."
+    },
+    {
+      "id": "cegi-readme-md",
+      "label": "README.md",
+      "parent": "cegi-root",
+      "layer": "file",
+      "category": "other",
+      "categoryLabel": "Outros",
+      "color": "#64748b",
+      "size": 0.72,
+      "file": "README.md",
+      "description": "Arquivo `README.md` mapeado a partir do repositório original."
+    }
+  ],
+  "links": [
+    {
+      "source": "cegi-root",
+      "target": "cegi-scripts",
+      "type": "dependency"
+    },
+    {
+      "source": "cegi-scripts",
+      "target": "cegi-scripts-generate-cv-py",
+      "type": "dependency"
+    },
+    {
+      "source": "cegi-root",
+      "target": "cegi-wwwroot",
+      "type": "dependency"
+    },
+    {
+      "source": "cegi-wwwroot",
+      "target": "cegi-wwwroot-js-script-js",
+      "type": "dependency"
+    },
+    {
+      "source": "cegi-wwwroot",
+      "target": "cegi-wwwroot-css-blog-css",
+      "type": "dependency"
+    },
+    {
+      "source": "cegi-wwwroot",
+      "target": "cegi-wwwroot-css-style-css",
+      "type": "dependency"
+    },
+    {
+      "source": "cegi-root",
+      "target": "cegi-blog",
+      "type": "dependency"
+    },
+    {
+      "source": "cegi-blog",
+      "target": "cegi-blog-devops-na-pratica-html",
+      "type": "dependency"
+    },
+    {
+      "source": "cegi-blog",
+      "target": "cegi-blog-firewall-html",
+      "type": "dependency"
+    },
+    {
+      "source": "cegi-blog",
+      "target": "cegi-blog-inteligencia-artificial-html",
+      "type": "dependency"
+    },
+    {
+      "source": "cegi-blog",
+      "target": "cegi-blog-maquinas-virtuais-proxmox-html",
+      "type": "dependency"
+    },
+    {
+      "source": "cegi-blog",
+      "target": "cegi-blog-python-no-backend-html",
+      "type": "dependency"
+    },
+    {
+      "source": "cegi-blog",
+      "target": "cegi-blog-seguranca-em-redes-html",
+      "type": "dependency"
+    },
+    {
+      "source": "cegi-root",
+      "target": "cegi-index-html",
+      "type": "dependency"
+    },
+    {
+      "source": "cegi-root",
+      "target": "cegi-readme-md",
+      "type": "dependency"
+    }
+  ]
+}

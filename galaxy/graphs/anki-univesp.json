@@ -1,0 +1,497 @@
+{
+  "slug": "anki-univesp",
+  "name": "AnkiUnivespProject",
+  "repoUrl": "https://github.com/CanonEngineer/AnkiUnivespProject",
+  "color": "#818cf8",
+  "demoUrl": "",
+  "nodeCount": 28,
+  "categories": {
+    "core": {
+      "label": "Backend",
+      "color": "#3b82f6"
+    },
+    "frontend": {
+      "label": "Frontend",
+      "color": "#eab308"
+    },
+    "other": {
+      "label": "Outros",
+      "color": "#64748b"
+    }
+  },
+  "nodes": [
+    {
+      "id": "ank-root",
+      "label": "AnkiUnivespProject",
+      "parent": null,
+      "layer": "root",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 1.4,
+      "file": "manage.py",
+      "description": "App estilo Anki para estudos UNIVESP com accounts e core."
+    },
+    {
+      "id": "ank-accounts",
+      "label": "accounts",
+      "parent": "ank-root",
+      "layer": "module",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 1.0,
+      "file": "accounts/",
+      "description": "Módulo/pasta `accounts/` com arquivos-chave do projeto."
+    },
+    {
+      "id": "ank-accounts-admin-py",
+      "label": "admin.py",
+      "parent": "ank-accounts",
+      "layer": "file",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 0.72,
+      "file": "accounts/admin.py",
+      "description": "Arquivo `accounts/admin.py` mapeado a partir do repositório original."
+    },
+    {
+      "id": "ank-accounts-forms-py",
+      "label": "forms.py",
+      "parent": "ank-accounts",
+      "layer": "file",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 0.72,
+      "file": "accounts/forms.py",
+      "description": "Arquivo `accounts/forms.py` mapeado a partir do repositório original."
+    },
+    {
+      "id": "ank-accounts-models-py",
+      "label": "models.py",
+      "parent": "ank-accounts",
+      "layer": "file",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 0.72,
+      "file": "accounts/models.py",
+      "description": "Arquivo `accounts/models.py` mapeado a partir do repositório original."
+    },
+    {
+      "id": "ank-accounts-urls-py",
+      "label": "urls.py",
+      "parent": "ank-accounts",
+      "layer": "file",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 0.72,
+      "file": "accounts/urls.py",
+      "description": "Arquivo `accounts/urls.py` mapeado a partir do repositório original."
+    },
+    {
+      "id": "ank-accounts-views-py",
+      "label": "views.py",
+      "parent": "ank-accounts",
+      "layer": "file",
+      "category": "frontend",
+      "categoryLabel": "Frontend",
+      "color": "#eab308",
+      "size": 0.72,
+      "file": "accounts/views.py",
+      "description": "Arquivo `accounts/views.py` mapeado a partir do repositório original."
+    },
+    {
+      "id": "ank-accounts-templates-accounts-index-html",
+      "label": "index.html",
+      "parent": "ank-accounts",
+      "layer": "file",
+      "category": "frontend",
+      "categoryLabel": "Frontend",
+      "color": "#eab308",
+      "size": 0.72,
+      "file": "accounts/templates/accounts/index.html",
+      "description": "Arquivo `accounts/templates/accounts/index.html` mapeado a partir do repositório original."
+    },
+    {
+      "id": "ank-accounts-backends-py",
+      "label": "backends.py",
+      "parent": "ank-accounts",
+      "layer": "file",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 0.72,
+      "file": "accounts/backends.py",
+      "description": "Arquivo `accounts/backends.py` mapeado a partir do repositório original."
+    },
+    {
+      "id": "ank-accounts-templates-accounts-register-htm",
+      "label": "register.html",
+      "parent": "ank-accounts",
+      "layer": "file",
+      "category": "frontend",
+      "categoryLabel": "Frontend",
+      "color": "#eab308",
+      "size": 0.72,
+      "file": "accounts/templates/accounts/register.html",
+      "description": "Arquivo `accounts/templates/accounts/register.html` mapeado a partir do repositório original."
+    },
+    {
+      "id": "ank-core",
+      "label": "core",
+      "parent": "ank-root",
+      "layer": "module",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 1.0,
+      "file": "core/",
+      "description": "Módulo/pasta `core/` com arquivos-chave do projeto."
+    },
+    {
+      "id": "ank-core-forms-py",
+      "label": "forms.py",
+      "parent": "ank-core",
+      "layer": "file",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 0.72,
+      "file": "core/forms.py",
+      "description": "Arquivo `core/forms.py` mapeado a partir do repositório original."
+    },
+    {
+      "id": "ank-core-views-py",
+      "label": "views.py",
+      "parent": "ank-core",
+      "layer": "file",
+      "category": "frontend",
+      "categoryLabel": "Frontend",
+      "color": "#eab308",
+      "size": 0.72,
+      "file": "core/views.py",
+      "description": "Arquivo `core/views.py` mapeado a partir do repositório original."
+    },
+    {
+      "id": "ank-core-templates-index-html",
+      "label": "index.html",
+      "parent": "ank-core",
+      "layer": "file",
+      "category": "frontend",
+      "categoryLabel": "Frontend",
+      "color": "#eab308",
+      "size": 0.72,
+      "file": "core/templates/index.html",
+      "description": "Arquivo `core/templates/index.html` mapeado a partir do repositório original."
+    },
+    {
+      "id": "ank-core-tests-test-views-py",
+      "label": "test_views.py",
+      "parent": "ank-core",
+      "layer": "file",
+      "category": "frontend",
+      "categoryLabel": "Frontend",
+      "color": "#eab308",
+      "size": 0.72,
+      "file": "core/tests/test_views.py",
+      "description": "Arquivo `core/tests/test_views.py` mapeado a partir do repositório original."
+    },
+    {
+      "id": "ank-core-templates-base-html",
+      "label": "base.html",
+      "parent": "ank-core",
+      "layer": "file",
+      "category": "frontend",
+      "categoryLabel": "Frontend",
+      "color": "#eab308",
+      "size": 0.72,
+      "file": "core/templates/base.html",
+      "description": "Arquivo `core/templates/base.html` mapeado a partir do repositório original."
+    },
+    {
+      "id": "ank-core-templates-contact-html",
+      "label": "contact.html",
+      "parent": "ank-core",
+      "layer": "file",
+      "category": "frontend",
+      "categoryLabel": "Frontend",
+      "color": "#eab308",
+      "size": 0.72,
+      "file": "core/templates/contact.html",
+      "description": "Arquivo `core/templates/contact.html` mapeado a partir do repositório original."
+    },
+    {
+      "id": "ank-core-templates-file-html",
+      "label": "file.html",
+      "parent": "ank-core",
+      "layer": "file",
+      "category": "frontend",
+      "categoryLabel": "Frontend",
+      "color": "#eab308",
+      "size": 0.72,
+      "file": "core/templates/file.html",
+      "description": "Arquivo `core/templates/file.html` mapeado a partir do repositório original."
+    },
+    {
+      "id": "ank-core-templates-help-html",
+      "label": "help.html",
+      "parent": "ank-core",
+      "layer": "file",
+      "category": "frontend",
+      "categoryLabel": "Frontend",
+      "color": "#eab308",
+      "size": 0.72,
+      "file": "core/templates/help.html",
+      "description": "Arquivo `core/templates/help.html` mapeado a partir do repositório original."
+    },
+    {
+      "id": "ank-projetoankiunivesp",
+      "label": "ProjetoAnkiUnivesp",
+      "parent": "ank-root",
+      "layer": "module",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 1.0,
+      "file": "ProjetoAnkiUnivesp/",
+      "description": "Módulo/pasta `ProjetoAnkiUnivesp/` com arquivos-chave do projeto."
+    },
+    {
+      "id": "ank-projetoankiunivesp-settings-py",
+      "label": "settings.py",
+      "parent": "ank-projetoankiunivesp",
+      "layer": "file",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 0.72,
+      "file": "ProjetoAnkiUnivesp/settings.py",
+      "description": "Arquivo `ProjetoAnkiUnivesp/settings.py` mapeado a partir do repositório original."
+    },
+    {
+      "id": "ank-projetoankiunivesp-urls-py",
+      "label": "urls.py",
+      "parent": "ank-projetoankiunivesp",
+      "layer": "file",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 0.72,
+      "file": "ProjetoAnkiUnivesp/urls.py",
+      "description": "Arquivo `ProjetoAnkiUnivesp/urls.py` mapeado a partir do repositório original."
+    },
+    {
+      "id": "ank-projetoankiunivesp-asgi-py",
+      "label": "asgi.py",
+      "parent": "ank-projetoankiunivesp",
+      "layer": "file",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 0.72,
+      "file": "ProjetoAnkiUnivesp/asgi.py",
+      "description": "Arquivo `ProjetoAnkiUnivesp/asgi.py` mapeado a partir do repositório original."
+    },
+    {
+      "id": "ank-projetoankiunivesp-local-settings-py",
+      "label": "local_settings.py",
+      "parent": "ank-projetoankiunivesp",
+      "layer": "file",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 0.72,
+      "file": "ProjetoAnkiUnivesp/local_settings.py",
+      "description": "Arquivo `ProjetoAnkiUnivesp/local_settings.py` mapeado a partir do repositório original."
+    },
+    {
+      "id": "ank-projetoankiunivesp-wsgi-py",
+      "label": "wsgi.py",
+      "parent": "ank-projetoankiunivesp",
+      "layer": "file",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 0.72,
+      "file": "ProjetoAnkiUnivesp/wsgi.py",
+      "description": "Arquivo `ProjetoAnkiUnivesp/wsgi.py` mapeado a partir do repositório original."
+    },
+    {
+      "id": "ank-design",
+      "label": "design",
+      "parent": "ank-root",
+      "layer": "module",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 1.0,
+      "file": "design/",
+      "description": "Módulo/pasta `design/` com arquivos-chave do projeto."
+    },
+    {
+      "id": "ank-design-index-html",
+      "label": "index.html",
+      "parent": "ank-design",
+      "layer": "file",
+      "category": "frontend",
+      "categoryLabel": "Frontend",
+      "color": "#eab308",
+      "size": 0.72,
+      "file": "design/index.html",
+      "description": "Arquivo `design/index.html` mapeado a partir do repositório original."
+    },
+    {
+      "id": "ank-design-base-html",
+      "label": "base.html",
+      "parent": "ank-design",
+      "layer": "file",
+      "category": "frontend",
+      "categoryLabel": "Frontend",
+      "color": "#eab308",
+      "size": 0.72,
+      "file": "design/base.html",
+      "description": "Arquivo `design/base.html` mapeado a partir do repositório original."
+    }
+  ],
+  "links": [
+    {
+      "source": "ank-root",
+      "target": "ank-accounts",
+      "type": "dependency"
+    },
+    {
+      "source": "ank-accounts",
+      "target": "ank-accounts-admin-py",
+      "type": "dependency"
+    },
+    {
+      "source": "ank-accounts",
+      "target": "ank-accounts-forms-py",
+      "type": "dependency"
+    },
+    {
+      "source": "ank-accounts",
+      "target": "ank-accounts-models-py",
+      "type": "dependency"
+    },
+    {
+      "source": "ank-accounts",
+      "target": "ank-accounts-urls-py",
+      "type": "dependency"
+    },
+    {
+      "source": "ank-accounts",
+      "target": "ank-accounts-views-py",
+      "type": "dependency"
+    },
+    {
+      "source": "ank-accounts",
+      "target": "ank-accounts-templates-accounts-index-html",
+      "type": "dependency"
+    },
+    {
+      "source": "ank-accounts",
+      "target": "ank-accounts-backends-py",
+      "type": "dependency"
+    },
+    {
+      "source": "ank-accounts",
+      "target": "ank-accounts-templates-accounts-register-htm",
+      "type": "dependency"
+    },
+    {
+      "source": "ank-root",
+      "target": "ank-core",
+      "type": "dependency"
+    },
+    {
+      "source": "ank-core",
+      "target": "ank-core-forms-py",
+      "type": "dependency"
+    },
+    {
+      "source": "ank-core",
+      "target": "ank-core-views-py",
+      "type": "dependency"
+    },
+    {
+      "source": "ank-core",
+      "target": "ank-core-templates-index-html",
+      "type": "dependency"
+    },
+    {
+      "source": "ank-core",
+      "target": "ank-core-tests-test-views-py",
+      "type": "dependency"
+    },
+    {
+      "source": "ank-core",
+      "target": "ank-core-templates-base-html",
+      "type": "dependency"
+    },
+    {
+      "source": "ank-core",
+      "target": "ank-core-templates-contact-html",
+      "type": "dependency"
+    },
+    {
+      "source": "ank-core",
+      "target": "ank-core-templates-file-html",
+      "type": "dependency"
+    },
+    {
+      "source": "ank-core",
+      "target": "ank-core-templates-help-html",
+      "type": "dependency"
+    },
+    {
+      "source": "ank-root",
+      "target": "ank-projetoankiunivesp",
+      "type": "dependency"
+    },
+    {
+      "source": "ank-projetoankiunivesp",
+      "target": "ank-projetoankiunivesp-settings-py",
+      "type": "dependency"
+    },
+    {
+      "source": "ank-projetoankiunivesp",
+      "target": "ank-projetoankiunivesp-urls-py",
+      "type": "dependency"
+    },
+    {
+      "source": "ank-projetoankiunivesp",
+      "target": "ank-projetoankiunivesp-asgi-py",
+      "type": "dependency"
+    },
+    {
+      "source": "ank-projetoankiunivesp",
+      "target": "ank-projetoankiunivesp-local-settings-py",
+      "type": "dependency"
+    },
+    {
+      "source": "ank-projetoankiunivesp",
+      "target": "ank-projetoankiunivesp-wsgi-py",
+      "type": "dependency"
+    },
+    {
+      "source": "ank-root",
+      "target": "ank-design",
+      "type": "dependency"
+    },
+    {
+      "source": "ank-design",
+      "target": "ank-design-index-html",
+      "type": "dependency"
+    },
+    {
+      "source": "ank-design",
+      "target": "ank-design-base-html",
+      "type": "dependency"
+    }
+  ]
+}

@@ -321,6 +321,13 @@ body,
   color: #38bdf8;
 }
 
+.error-hint {
+  color: #64748b;
+  font-size: 0.9rem;
+  max-width: 360px;
+  text-align: center;
+}
+
 @media (max-width: 900px) {
   .app {
     grid-template-columns: 1fr;

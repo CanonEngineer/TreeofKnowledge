@@ -1,0 +1,671 @@
+{
+  "slug": "javascript-dropbox",
+  "name": "JavaScriptDropBoxProject",
+  "repoUrl": "https://github.com/CanonEngineer/JavaScriptDropBoxProject",
+  "color": "#eab308",
+  "demoUrl": "",
+  "nodeCount": 38,
+  "categories": {
+    "core": {
+      "label": "Backend",
+      "color": "#3b82f6"
+    },
+    "oracle": {
+      "label": "Oracle / DB",
+      "color": "#c084fc"
+    },
+    "frontend": {
+      "label": "Frontend",
+      "color": "#eab308"
+    },
+    "other": {
+      "label": "Outros",
+      "color": "#64748b"
+    }
+  },
+  "nodes": [
+    {
+      "id": "jdb-root",
+      "label": "JavaScriptDropBoxProject",
+      "parent": null,
+      "layer": "root",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 1.4,
+      "file": "public/src/",
+      "description": "Clone Dropbox no browser — Express serve a SPA, Firebase Realtime DB + Storage, upload com barra de progresso."
+    },
+    {
+      "id": "jdb-backend",
+      "label": "Backend Express",
+      "parent": "jdb-root",
+      "layer": "module",
+      "category": "oracle",
+      "categoryLabel": "Oracle / DB",
+      "color": "#c084fc",
+      "size": 1.0,
+      "file": "app.js",
+      "description": "Servidor Node com EJS, static em public/ e rotas legacy com Formidable."
+    },
+    {
+      "id": "jdb-app",
+      "label": "app.js",
+      "parent": "jdb-backend",
+      "layer": "file",
+      "category": "oracle",
+      "categoryLabel": "Oracle / DB",
+      "color": "#c084fc",
+      "size": 0.72,
+      "file": "app.js",
+      "description": "Bootstrap do Express: middlewares, views e routers."
+    },
+    {
+      "id": "jdb-bin-www",
+      "label": "bin/www",
+      "parent": "jdb-backend",
+      "layer": "file",
+      "category": "oracle",
+      "categoryLabel": "Oracle / DB",
+      "color": "#c084fc",
+      "size": 0.72,
+      "file": "bin/www",
+      "description": "HTTP server na porta 3000 com tratamento EADDRINUSE."
+    },
+    {
+      "id": "jdb-routes-mod",
+      "label": "routes/index.js",
+      "parent": "jdb-backend",
+      "layer": "module",
+      "category": "oracle",
+      "categoryLabel": "Oracle / DB",
+      "color": "#c084fc",
+      "size": 1.0,
+      "file": "routes/index.js",
+      "description": "Rotas REST para home, upload multipart e delete de arquivos locais."
+    },
+    {
+      "id": "jdb-route-home",
+      "label": "GET /",
+      "parent": "jdb-routes-mod",
+      "layer": "function",
+      "category": "oracle",
+      "categoryLabel": "Oracle / DB",
+      "color": "#c084fc",
+      "size": 0.58,
+      "file": "routes/index.js",
+      "description": "Renderiza index.ejs com layout Dropbox clone."
+    },
+    {
+      "id": "jdb-route-upload",
+      "label": "POST /upload",
+      "parent": "jdb-routes-mod",
+      "layer": "function",
+      "category": "oracle",
+      "categoryLabel": "Oracle / DB",
+      "color": "#c084fc",
+      "size": 0.58,
+      "file": "routes/index.js",
+      "description": "Upload local via Formidable (legado antes do Firebase)."
+    },
+    {
+      "id": "jdb-route-file-get",
+      "label": "GET /file",
+      "parent": "jdb-routes-mod",
+      "layer": "function",
+      "category": "oracle",
+      "categoryLabel": "Oracle / DB",
+      "color": "#c084fc",
+      "size": 0.58,
+      "file": "routes/index.js",
+      "description": "Serve arquivo do disco por query ?path=."
+    },
+    {
+      "id": "jdb-route-delete",
+      "label": "DELETE /file",
+      "parent": "jdb-routes-mod",
+      "layer": "function",
+      "category": "oracle",
+      "categoryLabel": "Oracle / DB",
+      "color": "#c084fc",
+      "size": 0.58,
+      "file": "routes/index.js",
+      "description": "Remove arquivo local via Formidable fields."
+    },
+    {
+      "id": "jdb-frontend",
+      "label": "Frontend SPA",
+      "parent": "jdb-root",
+      "layer": "module",
+      "category": "frontend",
+      "categoryLabel": "Frontend",
+      "color": "#eab308",
+      "size": 1.0,
+      "file": "views/index.ejs",
+      "description": "Interface estilo Dropbox com sidebar, breadcrumb e grid de arquivos."
+    },
+    {
+      "id": "jdb-index-ejs",
+      "label": "views/index.ejs",
+      "parent": "jdb-frontend",
+      "layer": "file",
+      "category": "oracle",
+      "categoryLabel": "Oracle / DB",
+      "color": "#c084fc",
+      "size": 0.72,
+      "file": "views/index.ejs",
+      "description": "Template EJS com sidebar Hiperware e área de arquivos."
+    },
+    {
+      "id": "jdb-index-js",
+      "label": "public/src/index.js",
+      "parent": "jdb-frontend",
+      "layer": "file",
+      "category": "oracle",
+      "categoryLabel": "Oracle / DB",
+      "color": "#c084fc",
+      "size": 0.72,
+      "file": "public/src/index.js",
+      "description": "Bootstrap do controller após DOM pronto."
+    },
+    {
+      "id": "jdb-dropbox-css",
+      "label": "dropbox-clone.css",
+      "parent": "jdb-frontend",
+      "layer": "file",
+      "category": "frontend",
+      "categoryLabel": "Frontend",
+      "color": "#eab308",
+      "size": 0.72,
+      "file": "public/assets/css/dropbox-clone.css",
+      "description": "Estilos do grid, seleção múltipla e snackbar de upload."
+    },
+    {
+      "id": "jdb-controller",
+      "label": "DropBoxController",
+      "parent": "jdb-root",
+      "layer": "module",
+      "category": "oracle",
+      "categoryLabel": "Oracle / DB",
+      "color": "#c084fc",
+      "size": 1.0,
+      "file": "public/src/controller/DropBoxController.js",
+      "description": "Classe central: Firebase, navegação, CRUD e seleção Ctrl/Shift."
+    },
+    {
+      "id": "jdb-conn-db",
+      "label": "connDatabase()",
+      "parent": "jdb-controller",
+      "layer": "function",
+      "category": "oracle",
+      "categoryLabel": "Oracle / DB",
+      "color": "#c084fc",
+      "size": 0.58,
+      "file": "public/src/controller/DropBoxController.js",
+      "description": "Inicializa Firebase App com config do projeto."
+    },
+    {
+      "id": "jdb-firebase-ref",
+      "label": "getFirebaseRef()",
+      "parent": "jdb-controller",
+      "layer": "function",
+      "category": "oracle",
+      "categoryLabel": "Oracle / DB",
+      "color": "#c084fc",
+      "size": 0.58,
+      "file": "public/src/controller/DropBoxController.js",
+      "description": "Retorna ref do Realtime DB para o path atual."
+    },
+    {
+      "id": "jdb-navigation",
+      "label": "Navegação de pastas",
+      "parent": "jdb-root",
+      "layer": "module",
+      "category": "oracle",
+      "categoryLabel": "Oracle / DB",
+      "color": "#c084fc",
+      "size": 1.0,
+      "file": "public/src/controller/DropBoxController.js",
+      "description": "Breadcrumb, leitura reativa e duplo-clique para entrar em pastas."
+    },
+    {
+      "id": "jdb-open-folder",
+      "label": "openFolder()",
+      "parent": "jdb-navigation",
+      "layer": "function",
+      "category": "oracle",
+      "categoryLabel": "Oracle / DB",
+      "color": "#c084fc",
+      "size": 0.58,
+      "file": "public/src/controller/DropBoxController.js",
+      "description": "Troca de pasta: desliga listener antigo e recarrega lista."
+    },
+    {
+      "id": "jdb-render-nav",
+      "label": "renderNav()",
+      "parent": "jdb-navigation",
+      "layer": "function",
+      "category": "oracle",
+      "categoryLabel": "Oracle / DB",
+      "color": "#c084fc",
+      "size": 0.58,
+      "file": "public/src/controller/DropBoxController.js",
+      "description": "Monta breadcrumb clicável da pilha currentFolder."
+    },
+    {
+      "id": "jdb-read-files",
+      "label": "readFiles()",
+      "parent": "jdb-navigation",
+      "layer": "function",
+      "category": "oracle",
+      "categoryLabel": "Oracle / DB",
+      "color": "#c084fc",
+      "size": 0.58,
+      "file": "public/src/controller/DropBoxController.js",
+      "description": "Escuta Firebase value e renderiza grid de arquivos."
+    },
+    {
+      "id": "jdb-upload-mod",
+      "label": "Upload Firebase Storage",
+      "parent": "jdb-root",
+      "layer": "module",
+      "category": "oracle",
+      "categoryLabel": "Oracle / DB",
+      "color": "#c084fc",
+      "size": 1.0,
+      "file": "public/src/controller/DropBoxController.js",
+      "description": "Envio com barra de progresso, ETA e metadata downloadURL."
+    },
+    {
+      "id": "jdb-upload-task",
+      "label": "uploadTask()",
+      "parent": "jdb-upload-mod",
+      "layer": "function",
+      "category": "oracle",
+      "categoryLabel": "Oracle / DB",
+      "color": "#c084fc",
+      "size": 0.58,
+      "file": "public/src/controller/DropBoxController.js",
+      "description": "fileRef.put(file) com state_changed e getDownloadURL."
+    },
+    {
+      "id": "jdb-upload-progress",
+      "label": "uploadProgress()",
+      "parent": "jdb-upload-mod",
+      "layer": "function",
+      "category": "oracle",
+      "categoryLabel": "Oracle / DB",
+      "color": "#c084fc",
+      "size": 0.58,
+      "file": "public/src/controller/DropBoxController.js",
+      "description": "Calcula % e tempo restante com base em bytesTransferred."
+    },
+    {
+      "id": "jdb-format-time",
+      "label": "formatTimeToHuman()",
+      "parent": "jdb-upload-mod",
+      "layer": "function",
+      "category": "oracle",
+      "categoryLabel": "Oracle / DB",
+      "color": "#c084fc",
+      "size": 0.58,
+      "file": "public/src/controller/DropBoxController.js",
+      "description": "Converte ms restantes em texto PT-BR legível."
+    },
+    {
+      "id": "jdb-modal-show",
+      "label": "modalShow()",
+      "parent": "jdb-upload-mod",
+      "layer": "function",
+      "category": "oracle",
+      "categoryLabel": "Oracle / DB",
+      "color": "#c084fc",
+      "size": 0.58,
+      "file": "public/src/controller/DropBoxController.js",
+      "description": "Exibe/oculta snackbar de progresso (#react-snackbar-root)."
+    },
+    {
+      "id": "jdb-crud",
+      "label": "CRUD arquivos e pastas",
+      "parent": "jdb-root",
+      "layer": "module",
+      "category": "oracle",
+      "categoryLabel": "Oracle / DB",
+      "color": "#c084fc",
+      "size": 1.0,
+      "file": "public/src/controller/DropBoxController.js",
+      "description": "Criar pasta, renomear, excluir recursivo no DB + Storage."
+    },
+    {
+      "id": "jdb-init-events",
+      "label": "initEvents()",
+      "parent": "jdb-crud",
+      "layer": "function",
+      "category": "oracle",
+      "categoryLabel": "Oracle / DB",
+      "color": "#c084fc",
+      "size": 0.58,
+      "file": "public/src/controller/DropBoxController.js",
+      "description": "Bind nova pasta, delete, rename e input de upload."
+    },
+    {
+      "id": "jdb-remove-task",
+      "label": "removeTask()",
+      "parent": "jdb-crud",
+      "layer": "function",
+      "category": "oracle",
+      "categoryLabel": "Oracle / DB",
+      "color": "#c084fc",
+      "size": 0.58,
+      "file": "public/src/controller/DropBoxController.js",
+      "description": "Deleta todos os itens selecionados com Promise.all."
+    },
+    {
+      "id": "jdb-remove-folder",
+      "label": "removeFolder()",
+      "parent": "jdb-crud",
+      "layer": "function",
+      "category": "oracle",
+      "categoryLabel": "Oracle / DB",
+      "color": "#c084fc",
+      "size": 0.58,
+      "file": "public/src/controller/DropBoxController.js",
+      "description": "Recursão: percorre snapshot e apaga subpastas/arquivos."
+    },
+    {
+      "id": "jdb-remove-file",
+      "label": "removeFile()",
+      "parent": "jdb-crud",
+      "layer": "function",
+      "category": "oracle",
+      "categoryLabel": "Oracle / DB",
+      "color": "#c084fc",
+      "size": 0.58,
+      "file": "public/src/controller/DropBoxController.js",
+      "description": "firebase.storage().ref(ref).child(name).delete()."
+    },
+    {
+      "id": "jdb-selection",
+      "label": "Seleção Ctrl / Shift",
+      "parent": "jdb-root",
+      "layer": "module",
+      "category": "oracle",
+      "categoryLabel": "Oracle / DB",
+      "color": "#c084fc",
+      "size": 1.0,
+      "file": "public/src/controller/DropBoxController.js",
+      "description": "Lógica de multi-select estilo explorador de arquivos."
+    },
+    {
+      "id": "jdb-get-selection",
+      "label": "getSelection()",
+      "parent": "jdb-selection",
+      "layer": "function",
+      "category": "oracle",
+      "categoryLabel": "Oracle / DB",
+      "color": "#c084fc",
+      "size": 0.58,
+      "file": "public/src/controller/DropBoxController.js",
+      "description": "querySelectorAll('.selected') na lista de arquivos."
+    },
+    {
+      "id": "jdb-init-events-li",
+      "label": "initEventsLi()",
+      "parent": "jdb-selection",
+      "layer": "function",
+      "category": "oracle",
+      "categoryLabel": "Oracle / DB",
+      "color": "#c084fc",
+      "size": 0.58,
+      "file": "public/src/controller/DropBoxController.js",
+      "description": "Click com Ctrl toggle; Shift seleciona intervalo; dblclick abre."
+    },
+    {
+      "id": "jdb-icons",
+      "label": "Ícones por MIME type",
+      "parent": "jdb-root",
+      "layer": "module",
+      "category": "oracle",
+      "categoryLabel": "Oracle / DB",
+      "color": "#c084fc",
+      "size": 1.0,
+      "file": "public/src/controller/DropBoxController.js",
+      "description": "SVG inline para pasta, imagem, PDF, Office, áudio e vídeo."
+    },
+    {
+      "id": "jdb-get-file-icon",
+      "label": "getFileIconView()",
+      "parent": "jdb-icons",
+      "layer": "function",
+      "category": "oracle",
+      "categoryLabel": "Oracle / DB",
+      "color": "#c084fc",
+      "size": 0.58,
+      "file": "public/src/controller/DropBoxController.js",
+      "description": "Switch por MIME retornando template SVG 160×160."
+    },
+    {
+      "id": "jdb-get-file-view",
+      "label": "getFileView()",
+      "parent": "jdb-icons",
+      "layer": "function",
+      "category": "frontend",
+      "categoryLabel": "Frontend",
+      "color": "#eab308",
+      "size": 0.58,
+      "file": "public/src/controller/DropBoxController.js",
+      "description": "Cria <li> com dataset.file JSON e ícone + nome."
+    },
+    {
+      "id": "jdb-ajax",
+      "label": "ajax()",
+      "parent": "jdb-backend",
+      "layer": "function",
+      "category": "oracle",
+      "categoryLabel": "Oracle / DB",
+      "color": "#c084fc",
+      "size": 0.58,
+      "file": "public/src/controller/DropBoxController.js",
+      "description": "XHR Promise com upload.onprogress (modo local legado)."
+    },
+    {
+      "id": "jdb-firebase-storage",
+      "label": "Firebase Storage",
+      "parent": "jdb-upload-mod",
+      "layer": "file",
+      "category": "oracle",
+      "categoryLabel": "Oracle / DB",
+      "color": "#c084fc",
+      "size": 0.72,
+      "file": "public/src/controller/DropBoxController.js",
+      "description": "Blob storage na nuvem com downloadURL em customMetadata."
+    }
+  ],
+  "links": [
+    {
+      "source": "jdb-root",
+      "target": "jdb-backend",
+      "type": "dependency"
+    },
+    {
+      "source": "jdb-backend",
+      "target": "jdb-app",
+      "type": "dependency"
+    },
+    {
+      "source": "jdb-backend",
+      "target": "jdb-bin-www",
+      "type": "dependency"
+    },
+    {
+      "source": "jdb-backend",
+      "target": "jdb-routes-mod",
+      "type": "dependency"
+    },
+    {
+      "source": "jdb-routes-mod",
+      "target": "jdb-route-home",
+      "type": "dependency"
+    },
+    {
+      "source": "jdb-routes-mod",
+      "target": "jdb-route-upload",
+      "type": "dependency"
+    },
+    {
+      "source": "jdb-routes-mod",
+      "target": "jdb-route-file-get",
+      "type": "dependency"
+    },
+    {
+      "source": "jdb-routes-mod",
+      "target": "jdb-route-delete",
+      "type": "dependency"
+    },
+    {
+      "source": "jdb-root",
+      "target": "jdb-frontend",
+      "type": "dependency"
+    },
+    {
+      "source": "jdb-frontend",
+      "target": "jdb-index-ejs",
+      "type": "dependency"
+    },
+    {
+      "source": "jdb-frontend",
+      "target": "jdb-index-js",
+      "type": "dependency"
+    },
+    {
+      "source": "jdb-frontend",
+      "target": "jdb-dropbox-css",
+      "type": "dependency"
+    },
+    {
+      "source": "jdb-root",
+      "target": "jdb-controller",
+      "type": "dependency"
+    },
+    {
+      "source": "jdb-controller",
+      "target": "jdb-conn-db",
+      "type": "dependency"
+    },
+    {
+      "source": "jdb-controller",
+      "target": "jdb-firebase-ref",
+      "type": "dependency"
+    },
+    {
+      "source": "jdb-root",
+      "target": "jdb-navigation",
+      "type": "dependency"
+    },
+    {
+      "source": "jdb-navigation",
+      "target": "jdb-open-folder",
+      "type": "dependency"
+    },
+    {
+      "source": "jdb-navigation",
+      "target": "jdb-render-nav",
+      "type": "dependency"
+    },
+    {
+      "source": "jdb-navigation",
+      "target": "jdb-read-files",
+      "type": "dependency"
+    },
+    {
+      "source": "jdb-root",
+      "target": "jdb-upload-mod",
+      "type": "dependency"
+    },
+    {
+      "source": "jdb-upload-mod",
+      "target": "jdb-upload-task",
+      "type": "dependency"
+    },
+    {
+      "source": "jdb-upload-mod",
+      "target": "jdb-upload-progress",
+      "type": "dependency"
+    },
+    {
+      "source": "jdb-upload-mod",
+      "target": "jdb-format-time",
+      "type": "dependency"
+    },
+    {
+      "source": "jdb-upload-mod",
+      "target": "jdb-modal-show",
+      "type": "dependency"
+    },
+    {
+      "source": "jdb-root",
+      "target": "jdb-crud",
+      "type": "dependency"
+    },
+    {
+      "source": "jdb-crud",
+      "target": "jdb-init-events",
+      "type": "dependency"
+    },
+    {
+      "source": "jdb-crud",
+      "target": "jdb-remove-task",
+      "type": "dependency"
+    },
+    {
+      "source": "jdb-crud",
+      "target": "jdb-remove-folder",
+      "type": "dependency"
+    },
+    {
+      "source": "jdb-crud",
+      "target": "jdb-remove-file",
+      "type": "dependency"
+    },
+    {
+      "source": "jdb-root",
+      "target": "jdb-selection",
+      "type": "dependency"
+    },
+    {
+      "source": "jdb-selection",
+      "target": "jdb-get-selection",
+      "type": "dependency"
+    },
+    {
+      "source": "jdb-selection",
+      "target": "jdb-init-events-li",
+      "type": "dependency"
+    },
+    {
+      "source": "jdb-root",
+      "target": "jdb-icons",
+      "type": "dependency"
+    },
+    {
+      "source": "jdb-icons",
+      "target": "jdb-get-file-icon",
+      "type": "dependency"
+    },
+    {
+      "source": "jdb-icons",
+      "target": "jdb-get-file-view",
+      "type": "dependency"
+    },
+    {
+      "source": "jdb-backend",
+      "target": "jdb-ajax",
+      "type": "dependency"
+    },
+    {
+      "source": "jdb-upload-mod",
+      "target": "jdb-firebase-storage",
+      "type": "dependency"
+    }
+  ]
+}

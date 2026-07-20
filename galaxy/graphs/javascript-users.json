@@ -10,46 +10,6 @@
       "label": "Backend",
       "color": "#3b82f6"
     },
-    "network": {
-      "label": "Rede / Scan",
-      "color": "#22d3ee"
-    },
-    "ad": {
-      "label": "Active Directory",
-      "color": "#a78bfa"
-    },
-    "loop": {
-      "label": "Loop SNMP",
-      "color": "#f97316"
-    },
-    "autotest": {
-      "label": "AutoTest",
-      "color": "#06b6d4"
-    },
-    "oracle": {
-      "label": "Oracle / DB",
-      "color": "#c084fc"
-    },
-    "platform": {
-      "label": "Plataforma Canon",
-      "color": "#8b5cf6"
-    },
-    "auth": {
-      "label": "Segurança",
-      "color": "#ef4444"
-    },
-    "frontend": {
-      "label": "Frontend",
-      "color": "#eab308"
-    },
-    "scripts": {
-      "label": "Scripts",
-      "color": "#64748b"
-    },
-    "tests": {
-      "label": "Testes",
-      "color": "#94a3b8"
-    },
     "other": {
       "label": "Outros",
       "color": "#64748b"
@@ -61,9 +21,9 @@
       "label": "JavaScriptUsersProject",
       "parent": null,
       "layer": "root",
-      "category": "other",
-      "categoryLabel": "Outros",
-      "color": "#64748b",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
       "size": 1.4,
       "file": "index.html",
       "description": "Sistema de cadastro 100% frontend com AdminLTE e localStorage."
@@ -73,9 +33,9 @@
       "label": "User Model",
       "parent": "jus-root",
       "layer": "module",
-      "category": "other",
-      "categoryLabel": "Outros",
-      "color": "#64748b",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
       "size": 1.0,
       "file": "models/User.js",
       "description": "Modelo com getters/setters e serialização JSON."
@@ -85,9 +45,9 @@
       "label": "loadFromJSON()",
       "parent": "jus-model",
       "layer": "function",
-      "category": "ad",
-      "categoryLabel": "Active Directory",
-      "color": "#a78bfa",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
       "size": 0.58,
       "file": "models/User.js",
       "description": "Hidrata instância a partir de objeto salvo."
@@ -97,9 +57,9 @@
       "label": "save()",
       "parent": "jus-model",
       "layer": "function",
-      "category": "other",
-      "categoryLabel": "Outros",
-      "color": "#64748b",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
       "size": 0.58,
       "file": "models/User.js",
       "description": "Persiste usuário novo ou atualiza existente."
@@ -109,9 +69,9 @@
       "label": "deleteUser()",
       "parent": "jus-model",
       "layer": "function",
-      "category": "other",
-      "categoryLabel": "Outros",
-      "color": "#64748b",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
       "size": 0.58,
       "file": "models/User.js",
       "description": "Remove usuário do array no localStorage."
@@ -121,9 +81,9 @@
       "label": "getUserStorage()",
       "parent": "jus-model",
       "layer": "function",
-      "category": "other",
-      "categoryLabel": "Outros",
-      "color": "#64748b",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
       "size": 0.58,
       "file": "models/User.js",
       "description": "Lê array de usuários do localStorage."
@@ -133,9 +93,9 @@
       "label": "UserController",
       "parent": "jus-root",
       "layer": "module",
-      "category": "other",
-      "categoryLabel": "Outros",
-      "color": "#64748b",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
       "size": 1.0,
       "file": "controllers/UserController.js",
       "description": "Orquestra formulários create/update, tabela e eventos."
@@ -145,9 +105,9 @@
       "label": "onSubmit()",
       "parent": "jus-controller",
       "layer": "function",
-      "category": "other",
-      "categoryLabel": "Outros",
-      "color": "#64748b",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
       "size": 0.58,
       "file": "controllers/UserController.js",
       "description": "Cria usuário com foto convertida para Base64."
@@ -157,9 +117,9 @@
       "label": "onEdit()",
       "parent": "jus-controller",
       "layer": "function",
-      "category": "other",
-      "categoryLabel": "Outros",
-      "color": "#64748b",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
       "size": 0.58,
       "file": "controllers/UserController.js",
       "description": "Atualiza usuário existente com Object.assign."
@@ -169,9 +129,9 @@
       "label": "getValues()",
       "parent": "jus-controller",
       "layer": "function",
-      "category": "other",
-      "categoryLabel": "Outros",
-      "color": "#64748b",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
       "size": 0.58,
       "file": "controllers/UserController.js",
       "description": "Lê form e valida campos obrigatórios."
@@ -181,9 +141,9 @@
       "label": "getPhoto()",
       "parent": "jus-controller",
       "layer": "function",
-      "category": "other",
-      "categoryLabel": "Outros",
-      "color": "#64748b",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
       "size": 0.58,
       "file": "controllers/UserController.js",
       "description": "Converte File input em string Base64."
@@ -193,9 +153,9 @@
       "label": "getTr()",
       "parent": "jus-controller",
       "layer": "function",
-      "category": "other",
-      "categoryLabel": "Outros",
-      "color": "#64748b",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
       "size": 0.58,
       "file": "controllers/UserController.js",
       "description": "Monta linha da tabela com foto e botões."
@@ -205,9 +165,9 @@
       "label": "addEventsTr()",
       "parent": "jus-controller",
       "layer": "function",
-      "category": "ad",
-      "categoryLabel": "Active Directory",
-      "color": "#a78bfa",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
       "size": 0.58,
       "file": "controllers/UserController.js",
       "description": "Bind delete e edit em cada linha."
@@ -217,9 +177,9 @@
       "label": "selectAll()",
       "parent": "jus-controller",
       "layer": "function",
-      "category": "other",
-      "categoryLabel": "Outros",
-      "color": "#64748b",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
       "size": 0.58,
       "file": "controllers/UserController.js",
       "description": "Carrega usuários salvos ao iniciar."
@@ -229,9 +189,9 @@
       "label": "updateCount()",
       "parent": "jus-controller",
       "layer": "function",
-      "category": "other",
-      "categoryLabel": "Outros",
-      "color": "#64748b",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
       "size": 0.58,
       "file": "controllers/UserController.js",
       "description": "Atualiza badges de total e admins."
@@ -241,9 +201,9 @@
       "label": "showPanelCreate()",
       "parent": "jus-controller",
       "layer": "function",
-      "category": "other",
-      "categoryLabel": "Outros",
-      "color": "#64748b",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
       "size": 0.58,
       "file": "controllers/UserController.js",
       "description": "Alterna visibilidade dos painéis create/update."
@@ -253,9 +213,9 @@
       "label": "Utils",
       "parent": "jus-root",
       "layer": "module",
-      "category": "other",
-      "categoryLabel": "Outros",
-      "color": "#64748b",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
       "size": 1.0,
       "file": "classes/Utils.js",
       "description": "Helpers estáticos de formatação."
@@ -265,9 +225,9 @@
       "label": "dateFormat()",
       "parent": "jus-utils",
       "layer": "function",
-      "category": "other",
-      "categoryLabel": "Outros",
-      "color": "#64748b",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
       "size": 0.58,
       "file": "classes/Utils.js",
       "description": "Formata Date para dd/mm/yyyy hh:mm:ss."
@@ -277,9 +237,9 @@
       "label": "getNewId()",
       "parent": "jus-model",
       "layer": "function",
-      "category": "other",
-      "categoryLabel": "Outros",
-      "color": "#64748b",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
       "size": 0.58,
       "file": "models/User.js",
       "description": "Auto-incremento de ID no localStorage."
@@ -289,9 +249,9 @@
       "label": "Getters/Setters",
       "parent": "jus-model",
       "layer": "file",
-      "category": "other",
-      "categoryLabel": "Outros",
-      "color": "#64748b",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
       "size": 0.72,
       "file": "models/User.js",
       "description": "Encapsulamento das propriedades do usuário."

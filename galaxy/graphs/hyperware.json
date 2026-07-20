@@ -1,0 +1,191 @@
+{
+  "slug": "hyperware",
+  "name": "HyperwareProject",
+  "repoUrl": "https://github.com/CanonEngineer/HyperwareProject",
+  "color": "#94a3b8",
+  "demoUrl": "",
+  "nodeCount": 10,
+  "categories": {
+    "core": {
+      "label": "Backend",
+      "color": "#3b82f6"
+    },
+    "frontend": {
+      "label": "Frontend",
+      "color": "#eab308"
+    },
+    "other": {
+      "label": "Outros",
+      "color": "#64748b"
+    }
+  },
+  "nodes": [
+    {
+      "id": "hyp-root",
+      "label": "HyperwareProject",
+      "parent": null,
+      "layer": "root",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 1.4,
+      "file": "web/stats/index.php",
+      "description": "Site Hyperware com estrutura web e scripts PHP."
+    },
+    {
+      "id": "hyp-web",
+      "label": "web",
+      "parent": "hyp-root",
+      "layer": "module",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 1.0,
+      "file": "web/",
+      "description": "Módulo/pasta `web/` com arquivos-chave do projeto."
+    },
+    {
+      "id": "hyp-web-stats-index-php",
+      "label": "index.php",
+      "parent": "hyp-web",
+      "layer": "file",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 0.72,
+      "file": "web/stats/index.php",
+      "description": "Arquivo `web/stats/index.php` mapeado a partir do repositório original."
+    },
+    {
+      "id": "hyp-web-index-html",
+      "label": "index.html",
+      "parent": "hyp-web",
+      "layer": "file",
+      "category": "frontend",
+      "categoryLabel": "Frontend",
+      "color": "#eab308",
+      "size": 0.72,
+      "file": "web/index.html",
+      "description": "Arquivo `web/index.html` mapeado a partir do repositório original."
+    },
+    {
+      "id": "hyp-web-site-hyper-index-html",
+      "label": "index.html",
+      "parent": "hyp-web",
+      "layer": "file",
+      "category": "frontend",
+      "categoryLabel": "Frontend",
+      "color": "#eab308",
+      "size": 0.72,
+      "file": "web/site-hyper/index.html",
+      "description": "Arquivo `web/site-hyper/index.html` mapeado a partir do repositório original."
+    },
+    {
+      "id": "hyp-web-unzipper-php",
+      "label": "unzipper.php",
+      "parent": "hyp-web",
+      "layer": "file",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 0.72,
+      "file": "web/unzipper.php",
+      "description": "Arquivo `web/unzipper.php` mapeado a partir do repositório original."
+    },
+    {
+      "id": "hyp-web-site-hyper-sendemail-php",
+      "label": "sendemail.php",
+      "parent": "hyp-web",
+      "layer": "file",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 0.72,
+      "file": "web/site-hyper/sendemail.php",
+      "description": "Arquivo `web/site-hyper/sendemail.php` mapeado a partir do repositório original."
+    },
+    {
+      "id": "hyp-web-site-hyper-sendnewslatters-php",
+      "label": "sendnewslatters.php",
+      "parent": "hyp-web",
+      "layer": "file",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 0.72,
+      "file": "web/site-hyper/sendnewslatters.php",
+      "description": "Arquivo `web/site-hyper/sendnewslatters.php` mapeado a partir do repositório original."
+    },
+    {
+      "id": "hyp-web-site-hyper-js-appear-js",
+      "label": "appear.js",
+      "parent": "hyp-web",
+      "layer": "file",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 0.72,
+      "file": "web/site-hyper/js/appear.js",
+      "description": "Arquivo `web/site-hyper/js/appear.js` mapeado a partir do repositório original."
+    },
+    {
+      "id": "hyp-web-site-hyper-js-horas-js",
+      "label": "horas.js",
+      "parent": "hyp-web",
+      "layer": "file",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 0.72,
+      "file": "web/site-hyper/js/horas.js",
+      "description": "Arquivo `web/site-hyper/js/horas.js` mapeado a partir do repositório original."
+    }
+  ],
+  "links": [
+    {
+      "source": "hyp-root",
+      "target": "hyp-web",
+      "type": "dependency"
+    },
+    {
+      "source": "hyp-web",
+      "target": "hyp-web-stats-index-php",
+      "type": "dependency"
+    },
+    {
+      "source": "hyp-web",
+      "target": "hyp-web-index-html",
+      "type": "dependency"
+    },
+    {
+      "source": "hyp-web",
+      "target": "hyp-web-site-hyper-index-html",
+      "type": "dependency"
+    },
+    {
+      "source": "hyp-web",
+      "target": "hyp-web-unzipper-php",
+      "type": "dependency"
+    },
+    {
+      "source": "hyp-web",
+      "target": "hyp-web-site-hyper-sendemail-php",
+      "type": "dependency"
+    },
+    {
+      "source": "hyp-web",
+      "target": "hyp-web-site-hyper-sendnewslatters-php",
+      "type": "dependency"
+    },
+    {
+      "source": "hyp-web",
+      "target": "hyp-web-site-hyper-js-appear-js",
+      "type": "dependency"
+    },
+    {
+      "source": "hyp-web",
+      "target": "hyp-web-site-hyper-js-horas-js",
+      "type": "dependency"
+    }
+  ]
+}

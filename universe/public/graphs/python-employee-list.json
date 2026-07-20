@@ -1,0 +1,348 @@
+{
+  "slug": "python-employee-list",
+  "name": "PythonEmployeeList",
+  "repoUrl": "https://github.com/CanonEngineer/PythonEmployeeList",
+  "color": "#fb7185",
+  "demoUrl": "",
+  "nodeCount": 19,
+  "categories": {
+    "core": {
+      "label": "Backend",
+      "color": "#3b82f6"
+    },
+    "frontend": {
+      "label": "Frontend",
+      "color": "#eab308"
+    },
+    "tests": {
+      "label": "Testes",
+      "color": "#94a3b8"
+    },
+    "other": {
+      "label": "Outros",
+      "color": "#64748b"
+    }
+  },
+  "nodes": [
+    {
+      "id": "pel-root",
+      "label": "PythonEmployeeList",
+      "parent": null,
+      "layer": "root",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 1.4,
+      "file": "manage.py",
+      "description": "Lista de funcionários com Django, models e templates."
+    },
+    {
+      "id": "pel-employees",
+      "label": "employees",
+      "parent": "pel-root",
+      "layer": "module",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 1.0,
+      "file": "employees/",
+      "description": "Módulo/pasta `employees/` com arquivos-chave do projeto."
+    },
+    {
+      "id": "pel-employees-models-py",
+      "label": "models.py",
+      "parent": "pel-employees",
+      "layer": "file",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 0.72,
+      "file": "employees/models.py",
+      "description": "Arquivo `employees/models.py` mapeado a partir do repositório original."
+    },
+    {
+      "id": "pel-employees-views-py",
+      "label": "views.py",
+      "parent": "pel-employees",
+      "layer": "file",
+      "category": "frontend",
+      "categoryLabel": "Frontend",
+      "color": "#eab308",
+      "size": 0.72,
+      "file": "employees/views.py",
+      "description": "Arquivo `employees/views.py` mapeado a partir do repositório original."
+    },
+    {
+      "id": "pel-employees-admin-py",
+      "label": "admin.py",
+      "parent": "pel-employees",
+      "layer": "file",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 0.72,
+      "file": "employees/admin.py",
+      "description": "Arquivo `employees/admin.py` mapeado a partir do repositório original."
+    },
+    {
+      "id": "pel-employees-urls-py",
+      "label": "urls.py",
+      "parent": "pel-employees",
+      "layer": "file",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 0.72,
+      "file": "employees/urls.py",
+      "description": "Arquivo `employees/urls.py` mapeado a partir do repositório original."
+    },
+    {
+      "id": "pel-employees-apps-py",
+      "label": "apps.py",
+      "parent": "pel-employees",
+      "layer": "file",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 0.72,
+      "file": "employees/apps.py",
+      "description": "Arquivo `employees/apps.py` mapeado a partir do repositório original."
+    },
+    {
+      "id": "pel-employees-tests-py",
+      "label": "tests.py",
+      "parent": "pel-employees",
+      "layer": "file",
+      "category": "tests",
+      "categoryLabel": "Testes",
+      "color": "#94a3b8",
+      "size": 0.72,
+      "file": "employees/tests.py",
+      "description": "Arquivo `employees/tests.py` mapeado a partir do repositório original."
+    },
+    {
+      "id": "pel-mysite",
+      "label": "mysite",
+      "parent": "pel-root",
+      "layer": "module",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 1.0,
+      "file": "mysite/",
+      "description": "Módulo/pasta `mysite/` com arquivos-chave do projeto."
+    },
+    {
+      "id": "pel-mysite-settings-py",
+      "label": "settings.py",
+      "parent": "pel-mysite",
+      "layer": "file",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 0.72,
+      "file": "mysite/settings.py",
+      "description": "Arquivo `mysite/settings.py` mapeado a partir do repositório original."
+    },
+    {
+      "id": "pel-mysite-urls-py",
+      "label": "urls.py",
+      "parent": "pel-mysite",
+      "layer": "file",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 0.72,
+      "file": "mysite/urls.py",
+      "description": "Arquivo `mysite/urls.py` mapeado a partir do repositório original."
+    },
+    {
+      "id": "pel-mysite-views-py",
+      "label": "views.py",
+      "parent": "pel-mysite",
+      "layer": "file",
+      "category": "frontend",
+      "categoryLabel": "Frontend",
+      "color": "#eab308",
+      "size": 0.72,
+      "file": "mysite/views.py",
+      "description": "Arquivo `mysite/views.py` mapeado a partir do repositório original."
+    },
+    {
+      "id": "pel-mysite-asgi-py",
+      "label": "asgi.py",
+      "parent": "pel-mysite",
+      "layer": "file",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 0.72,
+      "file": "mysite/asgi.py",
+      "description": "Arquivo `mysite/asgi.py` mapeado a partir do repositório original."
+    },
+    {
+      "id": "pel-mysite-wsgi-py",
+      "label": "wsgi.py",
+      "parent": "pel-mysite",
+      "layer": "file",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 0.72,
+      "file": "mysite/wsgi.py",
+      "description": "Arquivo `mysite/wsgi.py` mapeado a partir do repositório original."
+    },
+    {
+      "id": "pel-mysite-static-css-style-css",
+      "label": "style.css",
+      "parent": "pel-mysite",
+      "layer": "file",
+      "category": "frontend",
+      "categoryLabel": "Frontend",
+      "color": "#eab308",
+      "size": 0.72,
+      "file": "mysite/static/css/style.css",
+      "description": "Arquivo `mysite/static/css/style.css` mapeado a partir do repositório original."
+    },
+    {
+      "id": "pel-templates",
+      "label": "templates",
+      "parent": "pel-root",
+      "layer": "module",
+      "category": "frontend",
+      "categoryLabel": "Frontend",
+      "color": "#eab308",
+      "size": 1.0,
+      "file": "templates/",
+      "description": "Módulo/pasta `templates/` com arquivos-chave do projeto."
+    },
+    {
+      "id": "pel-templates-employee-detail-html",
+      "label": "employee_detail.html",
+      "parent": "pel-templates",
+      "layer": "file",
+      "category": "frontend",
+      "categoryLabel": "Frontend",
+      "color": "#eab308",
+      "size": 0.72,
+      "file": "templates/employee_detail.html",
+      "description": "Arquivo `templates/employee_detail.html` mapeado a partir do repositório original."
+    },
+    {
+      "id": "pel-templates-home-html",
+      "label": "home.html",
+      "parent": "pel-templates",
+      "layer": "file",
+      "category": "frontend",
+      "categoryLabel": "Frontend",
+      "color": "#eab308",
+      "size": 0.72,
+      "file": "templates/home.html",
+      "description": "Arquivo `templates/home.html` mapeado a partir do repositório original."
+    },
+    {
+      "id": "pel-manage-py",
+      "label": "manage.py",
+      "parent": "pel-root",
+      "layer": "file",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 0.72,
+      "file": "manage.py",
+      "description": "Arquivo `manage.py` mapeado a partir do repositório original."
+    }
+  ],
+  "links": [
+    {
+      "source": "pel-root",
+      "target": "pel-employees",
+      "type": "dependency"
+    },
+    {
+      "source": "pel-employees",
+      "target": "pel-employees-models-py",
+      "type": "dependency"
+    },
+    {
+      "source": "pel-employees",
+      "target": "pel-employees-views-py",
+      "type": "dependency"
+    },
+    {
+      "source": "pel-employees",
+      "target": "pel-employees-admin-py",
+      "type": "dependency"
+    },
+    {
+      "source": "pel-employees",
+      "target": "pel-employees-urls-py",
+      "type": "dependency"
+    },
+    {
+      "source": "pel-employees",
+      "target": "pel-employees-apps-py",
+      "type": "dependency"
+    },
+    {
+      "source": "pel-employees",
+      "target": "pel-employees-tests-py",
+      "type": "dependency"
+    },
+    {
+      "source": "pel-root",
+      "target": "pel-mysite",
+      "type": "dependency"
+    },
+    {
+      "source": "pel-mysite",
+      "target": "pel-mysite-settings-py",
+      "type": "dependency"
+    },
+    {
+      "source": "pel-mysite",
+      "target": "pel-mysite-urls-py",
+      "type": "dependency"
+    },
+    {
+      "source": "pel-mysite",
+      "target": "pel-mysite-views-py",
+      "type": "dependency"
+    },
+    {
+      "source": "pel-mysite",
+      "target": "pel-mysite-asgi-py",
+      "type": "dependency"
+    },
+    {
+      "source": "pel-mysite",
+      "target": "pel-mysite-wsgi-py",
+      "type": "dependency"
+    },
+    {
+      "source": "pel-mysite",
+      "target": "pel-mysite-static-css-style-css",
+      "type": "dependency"
+    },
+    {
+      "source": "pel-root",
+      "target": "pel-templates",
+      "type": "dependency"
+    },
+    {
+      "source": "pel-templates",
+      "target": "pel-templates-employee-detail-html",
+      "type": "dependency"
+    },
+    {
+      "source": "pel-templates",
+      "target": "pel-templates-home-html",
+      "type": "dependency"
+    },
+    {
+      "source": "pel-root",
+      "target": "pel-manage-py",
+      "type": "dependency"
+    }
+  ]
+}

@@ -1,0 +1,985 @@
+{
+  "slug": "customize-veyon",
+  "name": "CustomizeVeyonProject",
+  "repoUrl": "https://github.com/CanonEngineer/CustomizeVeyonProject",
+  "color": "#ef4444",
+  "demoUrl": "",
+  "nodeCount": 56,
+  "categories": {
+    "core": {
+      "label": "Backend",
+      "color": "#3b82f6"
+    },
+    "network": {
+      "label": "Rede / Scan",
+      "color": "#22d3ee"
+    },
+    "auth": {
+      "label": "Segurança",
+      "color": "#ef4444"
+    },
+    "frontend": {
+      "label": "Frontend",
+      "color": "#eab308"
+    },
+    "scripts": {
+      "label": "Scripts",
+      "color": "#64748b"
+    },
+    "other": {
+      "label": "Outros",
+      "color": "#64748b"
+    }
+  },
+  "nodes": [
+    {
+      "id": "cv-root",
+      "label": "CustomizeVeyonProject",
+      "parent": null,
+      "layer": "root",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 1.4,
+      "file": "veyon-4.10.4-src (1)/veyon-4.10.4/",
+      "description": "Veyon 4.10.4 customizado CiMED/HCFMB — UI HiDPI, logs SHA-256 em UNC, anti-tampering e deploy portátil."
+    },
+    {
+      "id": "cv-ui",
+      "label": "Interface CIMED HiDPI",
+      "parent": "cv-root",
+      "layer": "module",
+      "category": "frontend",
+      "categoryLabel": "Frontend",
+      "color": "#eab308",
+      "size": 1.0,
+      "file": "core/src/CimedDialogStyle.cpp",
+      "description": "Diálogos escuros com chrome CIMED, ícones vetoriais e suporte a 125%/150% DPI."
+    },
+    {
+      "id": "cv-cimed-style",
+      "label": "CimedDialogStyle.cpp",
+      "parent": "cv-ui",
+      "layer": "file",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 0.72,
+      "file": "core/src/CimedDialogStyle.cpp",
+      "description": "Chrome compartilhado: shell, stylesheet, ícones e botões CIMED."
+    },
+    {
+      "id": "cv-icon-dpr",
+      "label": "iconDevicePixelRatio()",
+      "parent": "cv-cimed-style",
+      "layer": "function",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 0.58,
+      "file": "core/src/CimedDialogStyle.cpp",
+      "description": "Lê devicePixelRatio da tela primária para ícones nítidos em HiDPI."
+    },
+    {
+      "id": "cv-dialog-shell",
+      "label": "buildDialogShell()",
+      "parent": "cv-cimed-style",
+      "layer": "function",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 0.58,
+      "file": "core/src/CimedDialogStyle.cpp",
+      "description": "Monta QDialog com header CIMED, área de conteúdo e rodapé de ações."
+    },
+    {
+      "id": "cv-password-dialog",
+      "label": "PasswordDialog.cpp",
+      "parent": "cv-ui",
+      "layer": "file",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 0.72,
+      "file": "core/src/PasswordDialog.cpp",
+      "description": "Senha VNC com visual CIMED e validação integrada ao fluxo remoto."
+    },
+    {
+      "id": "cv-host-input",
+      "label": "CimedHostInputDialog.cpp",
+      "parent": "cv-ui",
+      "layer": "file",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 0.72,
+      "file": "core/src/CimedHostInputDialog.cpp",
+      "description": "Entrada de host/IP para conexão remota com UI CIMED."
+    },
+    {
+      "id": "cv-desktop-access",
+      "label": "DesktopAccessConfirmDialog.cpp",
+      "parent": "cv-ui",
+      "layer": "file",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 0.72,
+      "file": "core/src/DesktopAccessConfirmDialog.cpp",
+      "description": "Confirmação de acesso à área de trabalho do aluno com branding CIMED."
+    },
+    {
+      "id": "cv-brand",
+      "label": "Marca e suporte CIMED",
+      "parent": "cv-root",
+      "layer": "module",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 1.0,
+      "file": "core/src/ComputerSupportInfo.cpp",
+      "description": "Rótulo Veyon CIMED, hostname, usuário AD e textos da bandeja."
+    },
+    {
+      "id": "cv-support-info",
+      "label": "ComputerSupportInfo.cpp",
+      "parent": "cv-brand",
+      "layer": "file",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 0.72,
+      "file": "core/src/ComputerSupportInfo.cpp",
+      "description": "Metadados da estação: hostname, IP, login AD e nome completo."
+    },
+    {
+      "id": "cv-product-label",
+      "label": "productLabel()",
+      "parent": "cv-support-info",
+      "layer": "function",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 0.58,
+      "file": "core/src/ComputerSupportInfo.cpp",
+      "description": "Nome do produto exibido em diálogos, bandeja e relatórios."
+    },
+    {
+      "id": "cv-idle-hover",
+      "label": "idleTrayHoverHtml()",
+      "parent": "cv-support-info",
+      "layer": "function",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 0.58,
+      "file": "core/src/ComputerSupportInfo.cpp",
+      "description": "Tooltip HTML da bandeja em repouso com dados da máquina e suporte."
+    },
+    {
+      "id": "cv-support-dialog",
+      "label": "ComputerSupportInfoDialog.cpp",
+      "parent": "cv-brand",
+      "layer": "file",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 0.72,
+      "file": "core/src/ComputerSupportInfoDialog.cpp",
+      "description": "Diálogo F9 com informações de suporte técnico e contatos CiMED."
+    },
+    {
+      "id": "cv-logs",
+      "label": "Logs de acesso com integridade",
+      "parent": "cv-root",
+      "layer": "module",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 1.0,
+      "file": "core/src/AccessLogWriter.cpp",
+      "description": "Escrita em UNC, linhas com SHA-256, validação diária e lookup AD."
+    },
+    {
+      "id": "cv-access-writer",
+      "label": "AccessLogWriter.cpp",
+      "parent": "cv-logs",
+      "layer": "file",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 0.72,
+      "file": "core/src/AccessLogWriter.cpp",
+      "description": "Writer principal: leitura/escrita UNC, hashes, alertas e agendador."
+    },
+    {
+      "id": "cv-network-path",
+      "label": "networkAccessLogPath()",
+      "parent": "cv-access-writer",
+      "layer": "function",
+      "category": "network",
+      "categoryLabel": "Rede / Scan",
+      "color": "#22d3ee",
+      "size": 0.58,
+      "file": "core/src/AccessLogWriter.cpp",
+      "description": "Caminho UNC do log principal acessos_veyon.log."
+    },
+    {
+      "id": "cv-line-hash",
+      "label": "lineWithHash()",
+      "parent": "cv-access-writer",
+      "layer": "function",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 0.58,
+      "file": "core/src/AccessLogWriter.cpp",
+      "description": "Anexa marcador e SHA-256 hex à mensagem de log."
+    },
+    {
+      "id": "cv-access-permissions",
+      "label": "AccessLogPermissions.cpp",
+      "parent": "cv-logs",
+      "layer": "file",
+      "category": "auth",
+      "categoryLabel": "Segurança",
+      "color": "#ef4444",
+      "size": 0.72,
+      "file": "core/src/AccessLogPermissions.cpp",
+      "description": "Define paths UNC fixos do compartilhamento vnc_veyon$."
+    },
+    {
+      "id": "cv-network-unc",
+      "label": "networkLogDirectoryPath()",
+      "parent": "cv-access-permissions",
+      "layer": "function",
+      "category": "network",
+      "categoryLabel": "Rede / Scan",
+      "color": "#22d3ee",
+      "size": 0.58,
+      "file": "core/src/AccessLogPermissions.cpp",
+      "description": "Raiz UNC \\\\172.20.100.36\\vnc_veyon$\\veyon para todos os logs."
+    },
+    {
+      "id": "cv-access-recorder",
+      "label": "AccessLogRecorder.cpp",
+      "parent": "cv-logs",
+      "layer": "file",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 0.72,
+      "file": "core/src/AccessLogRecorder.cpp",
+      "description": "Registra eventos de sessão remota em português com contexto AD."
+    },
+    {
+      "id": "cv-outbound-log",
+      "label": "logOutboundAccessSuccess()",
+      "parent": "cv-access-recorder",
+      "layer": "function",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 0.58,
+      "file": "core/src/AccessLogRecorder.cpp",
+      "description": "Grava acesso remoto iniciado desta estação para outro host."
+    },
+    {
+      "id": "cv-inbound-disabled",
+      "label": "logInboundAccessSuccess()",
+      "parent": "cv-access-recorder",
+      "layer": "function",
+      "category": "auth",
+      "categoryLabel": "Segurança",
+      "color": "#ef4444",
+      "size": 0.58,
+      "file": "core/src/AccessLogRecorder.cpp",
+      "description": "Inbound desabilitado — veyon-server (SYSTEM) não grava UNC em todos os hosts."
+    },
+    {
+      "id": "cv-ad-lookup",
+      "label": "AccessLogAdLookup_win.cpp",
+      "parent": "cv-logs",
+      "layer": "file",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 0.72,
+      "file": "core/src/AccessLogAdLookup_win.cpp",
+      "description": "LDAP displayName + WTS da sessão Console ativa no host remoto (auxiliar do alerta)."
+    },
+    {
+      "id": "cv-tamper",
+      "label": "Proteção anti-tampering",
+      "parent": "cv-root",
+      "layer": "module",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 1.0,
+      "file": "core/src/TamperLogProtector.cpp",
+      "description": "Monitora alterações nos logs de rede, alerta e exige senha admin."
+    },
+    {
+      "id": "cv-tamper-protector",
+      "label": "TamperLogProtector.cpp",
+      "parent": "cv-tamper",
+      "layer": "file",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 0.72,
+      "file": "core/src/TamperLogProtector.cpp",
+      "description": "Watcher de integridade com batch protegido durante escritas legítimas."
+    },
+    {
+      "id": "cv-tamper-backup",
+      "label": "refreshBackups()",
+      "parent": "cv-tamper-protector",
+      "layer": "function",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 0.58,
+      "file": "core/src/TamperLogProtector.cpp",
+      "description": "Carrega snapshot dos logs de rede para comparação posterior."
+    },
+    {
+      "id": "cv-tamper-check",
+      "label": "checkProtectedFile()",
+      "parent": "cv-tamper-protector",
+      "layer": "function",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 0.58,
+      "file": "core/src/TamperLogProtector.cpp",
+      "description": "Compara conteúdo atual com backup; dispara alerta se divergir."
+    },
+    {
+      "id": "cv-tamper-password",
+      "label": "TamperLogPasswordDialog.cpp",
+      "parent": "cv-tamper",
+      "layer": "file",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 0.72,
+      "file": "core/src/TamperLogPasswordDialog.cpp",
+      "description": "Diálogo de senha para autorizar manutenção nos logs tamperados."
+    },
+    {
+      "id": "cv-tamper-auth",
+      "label": "attemptAuthentication()",
+      "parent": "cv-tamper-password",
+      "layer": "function",
+      "category": "auth",
+      "categoryLabel": "Segurança",
+      "color": "#ef4444",
+      "size": 0.58,
+      "file": "core/src/TamperLogProtector.cpp",
+      "description": "Valida senha admin contra hash SHA-256 embutido."
+    },
+    {
+      "id": "cv-tray",
+      "label": "Bandeja do sistema HiDPI",
+      "parent": "cv-root",
+      "layer": "module",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 1.0,
+      "file": "core/src/SystemTrayIcon.cpp",
+      "description": "Ícones multi-DPI, hover CIMED, F9 suporte e servidor de senha tamper."
+    },
+    {
+      "id": "cv-tray-icon",
+      "label": "SystemTrayIcon.cpp",
+      "parent": "cv-tray",
+      "layer": "file",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 0.72,
+      "file": "core/src/SystemTrayIcon.cpp",
+      "description": "Implementação da bandeja com renderização vetorial e overlay."
+    },
+    {
+      "id": "cv-tray-render",
+      "label": "renderTrayStatusPixmap()",
+      "parent": "cv-tray-icon",
+      "layer": "function",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 0.58,
+      "file": "core/src/SystemTrayIcon.cpp",
+      "description": "Desenha pixmap do estado da bandeja com gradiente e glyph central."
+    },
+    {
+      "id": "cv-tray-hidpi",
+      "label": "buildStatusIcon()",
+      "parent": "cv-tray-icon",
+      "layer": "function",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 0.58,
+      "file": "core/src/SystemTrayIcon.cpp",
+      "description": "Gera QIcon com múltiplos devicePixelRatio para Windows 125%/150%."
+    },
+    {
+      "id": "cv-server",
+      "label": "veyon-server",
+      "parent": "cv-root",
+      "layer": "module",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 1.0,
+      "file": "server/src/ComputerControlServer.cpp",
+      "description": "Inicialização do serviço com proteção de logs e worker da bandeja."
+    },
+    {
+      "id": "cv-control-server",
+      "label": "ComputerControlServer.cpp",
+      "parent": "cv-server",
+      "layer": "file",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 0.72,
+      "file": "server/src/ComputerControlServer.cpp",
+      "description": "Servidor de controle com hooks CIMED no startup."
+    },
+    {
+      "id": "cv-server-tooltip",
+      "label": "updateTrayToolTip()",
+      "parent": "cv-control-server",
+      "layer": "function",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 0.58,
+      "file": "server/src/ComputerControlServer.cpp",
+      "description": "Tooltip da bandeja usa idleTrayHoverText quando sem sessão ativa."
+    },
+    {
+      "id": "cv-plugins",
+      "label": "Plugins customizados",
+      "parent": "cv-root",
+      "layer": "module",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 1.0,
+      "file": "plugins/remoteaccess/RemoteAccessFeaturePlugin.cpp",
+      "description": "RemoteAccess com diálogos CIMED e textos de suporte."
+    },
+    {
+      "id": "cv-remote-plugin",
+      "label": "RemoteAccessFeaturePlugin.cpp",
+      "parent": "cv-plugins",
+      "layer": "file",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 0.72,
+      "file": "plugins/remoteaccess/RemoteAccessFeaturePlugin.cpp",
+      "description": "Fluxo de conexão remota com UI CIMED e logs outbound."
+    },
+    {
+      "id": "cv-deploy",
+      "label": "Deploy Veyon_Custom",
+      "parent": "cv-root",
+      "layer": "module",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 1.0,
+      "file": "Veyon_Custom/",
+      "description": "Pacote portátil pronto para GPO/SCCM nas estações CiMED."
+    },
+    {
+      "id": "cv-compile",
+      "label": "Compilação win64",
+      "parent": "cv-root",
+      "layer": "file",
+      "category": "other",
+      "categoryLabel": "Outros",
+      "color": "#64748b",
+      "size": 0.72,
+      "file": ".ci/windows/build.sh",
+      "description": "CMake + Ninja (MSYS2): qt-cmake e alvo windows-binaries — gera DLLs e EXEs CIMED."
+    },
+    {
+      "id": "cv-installers-dual",
+      "label": "Instaladores lab + posto",
+      "parent": "cv-deploy",
+      "layer": "file",
+      "category": "scripts",
+      "categoryLabel": "Scripts",
+      "color": "#64748b",
+      "size": 0.72,
+      "file": "scripts/build_veyon_custom_installer.ps1",
+      "description": "NSIS: gera os dois setup.exe win64 (laboratório com Master e posto/aluno sem Master)."
+    },
+    {
+      "id": "cv-veyon-custom",
+      "label": "Veyon_Custom/",
+      "parent": "cv-deploy",
+      "layer": "file",
+      "category": "other",
+      "categoryLabel": "Outros",
+      "color": "#64748b",
+      "size": 0.72,
+      "file": "Veyon_Custom/",
+      "description": "Layout de instalação portátil sem installer MSI."
+    },
+    {
+      "id": "cv-docs",
+      "label": "docs/",
+      "parent": "cv-deploy",
+      "layer": "file",
+      "category": "other",
+      "categoryLabel": "Outros",
+      "color": "#64748b",
+      "size": 0.72,
+      "file": "docs/RELATORIO-TECNICO-PROJETO-CIMED.pdf",
+      "description": "Relatórios PDF/MD: técnico executivo e estrutura de código."
+    },
+    {
+      "id": "cv-version-alert",
+      "label": "Alerta versão incompatível",
+      "parent": "cv-root",
+      "layer": "module",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 1.0,
+      "file": "core/src/CimedVersionCompatibility.cpp",
+      "description": "Detecção de build não homologado, gravação UNC e modal nas 4 sentinelas — fix poll UNC + multi-NIC (14/07/2026)."
+    },
+    {
+      "id": "cv-build-signature",
+      "label": "CimedBuildSignature.cpp",
+      "parent": "cv-version-alert",
+      "layer": "file",
+      "category": "frontend",
+      "categoryLabel": "Frontend",
+      "color": "#eab308",
+      "size": 0.72,
+      "file": "core/src/CimedBuildSignature.cpp",
+      "description": "Token de handshake: produto|versão CIMED|versão Veyon; valida homologação."
+    },
+    {
+      "id": "cv-vnc-signature",
+      "label": "handleInboundClientSignature() hook",
+      "parent": "cv-build-signature",
+      "layer": "function",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 0.58,
+      "file": "core/src/VncServerProtocol.cpp",
+      "description": "Protocolo VNC chama compatibilidade ao receber assinatura do cliente remoto."
+    },
+    {
+      "id": "cv-version-compat",
+      "label": "CimedVersionCompatibility.cpp",
+      "parent": "cv-version-alert",
+      "layer": "file",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 0.72,
+      "file": "core/src/CimedVersionCompatibility.cpp",
+      "description": "Filtra loopback, sentinela multi-NIC, usuário do handshake Veyon (+ nota Console se divergir)."
+    },
+    {
+      "id": "cv-version-writer",
+      "label": "CimedVersionAlertWriter.cpp",
+      "parent": "cv-version-alert",
+      "layer": "file",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 0.72,
+      "file": "core/src/CimedVersionAlertWriter.cpp",
+      "description": "Grava alertas somente em UNC — cada conexão incompatível gera linha nova + FlushFileBuffers."
+    },
+    {
+      "id": "cv-version-monitor",
+      "label": "CimedVersionAlertMonitor.cpp",
+      "parent": "cv-version-alert",
+      "layer": "file",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 0.72,
+      "file": "core/src/CimedVersionAlertMonitor.cpp",
+      "description": "Sentinelas fazem poll do log UNC (tamanho via FindFirstFile) a cada 1 s e disparam o presenter."
+    },
+    {
+      "id": "cv-version-presenter",
+      "label": "CimedVersionAlertPresenter.cpp",
+      "parent": "cv-version-alert",
+      "layer": "file",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 0.72,
+      "file": "core/src/CimedVersionAlertPresenter.cpp",
+      "description": "Roteia alerta para o worker da bandeja via FeatureMessage ShowVersionAlert."
+    },
+    {
+      "id": "cv-tray-version-alert",
+      "label": "SystemTrayIcon::showVersionAlert()",
+      "parent": "cv-version-presenter",
+      "layer": "function",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 0.58,
+      "file": "core/src/SystemTrayIcon.cpp",
+      "description": "Worker da bandeja exibe CimedVersionAlertDialog bloqueante na sessão."
+    },
+    {
+      "id": "cv-version-dialog",
+      "label": "CimedVersionAlertDialog.cpp",
+      "parent": "cv-version-alert",
+      "layer": "file",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 0.72,
+      "file": "core/src/CimedVersionAlertDialog.cpp",
+      "description": "Diálogo de segurança CIMED — bloqueante até o operador fechar."
+    },
+    {
+      "id": "cv-restore-20260708",
+      "label": "RESTORE-POINT-20260708.md",
+      "parent": "cv-version-alert",
+      "layer": "file",
+      "category": "other",
+      "categoryLabel": "Outros",
+      "color": "#64748b",
+      "size": 0.72,
+      "file": "docs/RESTORE-POINT-20260708.md",
+      "description": "Ponto de restauração funcional do alerta — tag Git e script de deploy."
+    },
+    {
+      "id": "cv-release-github",
+      "label": "GitHub Release 1.0 win64",
+      "parent": "cv-deploy",
+      "layer": "file",
+      "category": "other",
+      "categoryLabel": "Outros",
+      "color": "#64748b",
+      "size": 0.72,
+      "file": "docs/RELEASE-veyon-cimed-1.0-win64-20260626.md",
+      "description": "Instaladores lab + posto (14/07/2026): sentinelas + DisplayName versão correto."
+    },
+    {
+      "id": "cv-release",
+      "label": "Release Git",
+      "parent": "cv-root",
+      "layer": "module",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 1.0,
+      "file": "tag.bat",
+      "description": "Ramificação separada para versionamento semver e publicação de tags no GitHub."
+    },
+    {
+      "id": "cv-tag-bat",
+      "label": "tag.bat",
+      "parent": "cv-release",
+      "layer": "file",
+      "category": "other",
+      "categoryLabel": "Outros",
+      "color": "#64748b",
+      "size": 0.72,
+      "file": "tag.bat",
+      "description": "Gerador interativo de release: valida Git, atualiza main, calcula semver e publica a tag."
+    }
+  ],
+  "links": [
+    {
+      "source": "cv-root",
+      "target": "cv-ui",
+      "type": "dependency"
+    },
+    {
+      "source": "cv-ui",
+      "target": "cv-cimed-style",
+      "type": "dependency"
+    },
+    {
+      "source": "cv-cimed-style",
+      "target": "cv-icon-dpr",
+      "type": "dependency"
+    },
+    {
+      "source": "cv-cimed-style",
+      "target": "cv-dialog-shell",
+      "type": "dependency"
+    },
+    {
+      "source": "cv-ui",
+      "target": "cv-password-dialog",
+      "type": "dependency"
+    },
+    {
+      "source": "cv-ui",
+      "target": "cv-host-input",
+      "type": "dependency"
+    },
+    {
+      "source": "cv-ui",
+      "target": "cv-desktop-access",
+      "type": "dependency"
+    },
+    {
+      "source": "cv-root",
+      "target": "cv-brand",
+      "type": "dependency"
+    },
+    {
+      "source": "cv-brand",
+      "target": "cv-support-info",
+      "type": "dependency"
+    },
+    {
+      "source": "cv-support-info",
+      "target": "cv-product-label",
+      "type": "dependency"
+    },
+    {
+      "source": "cv-support-info",
+      "target": "cv-idle-hover",
+      "type": "dependency"
+    },
+    {
+      "source": "cv-brand",
+      "target": "cv-support-dialog",
+      "type": "dependency"
+    },
+    {
+      "source": "cv-root",
+      "target": "cv-logs",
+      "type": "dependency"
+    },
+    {
+      "source": "cv-logs",
+      "target": "cv-access-writer",
+      "type": "dependency"
+    },
+    {
+      "source": "cv-access-writer",
+      "target": "cv-network-path",
+      "type": "dependency"
+    },
+    {
+      "source": "cv-access-writer",
+      "target": "cv-line-hash",
+      "type": "dependency"
+    },
+    {
+      "source": "cv-logs",
+      "target": "cv-access-permissions",
+      "type": "dependency"
+    },
+    {
+      "source": "cv-access-permissions",
+      "target": "cv-network-unc",
+      "type": "dependency"
+    },
+    {
+      "source": "cv-logs",
+      "target": "cv-access-recorder",
+      "type": "dependency"
+    },
+    {
+      "source": "cv-access-recorder",
+      "target": "cv-outbound-log",
+      "type": "dependency"
+    },
+    {
+      "source": "cv-access-recorder",
+      "target": "cv-inbound-disabled",
+      "type": "dependency"
+    },
+    {
+      "source": "cv-logs",
+      "target": "cv-ad-lookup",
+      "type": "dependency"
+    },
+    {
+      "source": "cv-root",
+      "target": "cv-tamper",
+      "type": "dependency"
+    },
+    {
+      "source": "cv-tamper",
+      "target": "cv-tamper-protector",
+      "type": "dependency"
+    },
+    {
+      "source": "cv-tamper-protector",
+      "target": "cv-tamper-backup",
+      "type": "dependency"
+    },
+    {
+      "source": "cv-tamper-protector",
+      "target": "cv-tamper-check",
+      "type": "dependency"
+    },
+    {
+      "source": "cv-tamper",
+      "target": "cv-tamper-password",
+      "type": "dependency"
+    },
+    {
+      "source": "cv-tamper-password",
+      "target": "cv-tamper-auth",
+      "type": "dependency"
+    },
+    {
+      "source": "cv-root",
+      "target": "cv-tray",
+      "type": "dependency"
+    },
+    {
+      "source": "cv-tray",
+      "target": "cv-tray-icon",
+      "type": "dependency"
+    },
+    {
+      "source": "cv-tray-icon",
+      "target": "cv-tray-render",
+      "type": "dependency"
+    },
+    {
+      "source": "cv-tray-icon",
+      "target": "cv-tray-hidpi",
+      "type": "dependency"
+    },
+    {
+      "source": "cv-root",
+      "target": "cv-server",
+      "type": "dependency"
+    },
+    {
+      "source": "cv-server",
+      "target": "cv-control-server",
+      "type": "dependency"
+    },
+    {
+      "source": "cv-control-server",
+      "target": "cv-server-tooltip",
+      "type": "dependency"
+    },
+    {
+      "source": "cv-root",
+      "target": "cv-plugins",
+      "type": "dependency"
+    },
+    {
+      "source": "cv-plugins",
+      "target": "cv-remote-plugin",
+      "type": "dependency"
+    },
+    {
+      "source": "cv-root",
+      "target": "cv-deploy",
+      "type": "dependency"
+    },
+    {
+      "source": "cv-root",
+      "target": "cv-compile",
+      "type": "dependency"
+    },
+    {
+      "source": "cv-deploy",
+      "target": "cv-installers-dual",
+      "type": "dependency"
+    },
+    {
+      "source": "cv-deploy",
+      "target": "cv-veyon-custom",
+      "type": "dependency"
+    },
+    {
+      "source": "cv-deploy",
+      "target": "cv-docs",
+      "type": "dependency"
+    },
+    {
+      "source": "cv-root",
+      "target": "cv-version-alert",
+      "type": "dependency"
+    },
+    {
+      "source": "cv-version-alert",
+      "target": "cv-build-signature",
+      "type": "dependency"
+    },
+    {
+      "source": "cv-build-signature",
+      "target": "cv-vnc-signature",
+      "type": "dependency"
+    },
+    {
+      "source": "cv-version-alert",
+      "target": "cv-version-compat",
+      "type": "dependency"
+    },
+    {
+      "source": "cv-version-alert",
+      "target": "cv-version-writer",
+      "type": "dependency"
+    },
+    {
+      "source": "cv-version-alert",
+      "target": "cv-version-monitor",
+      "type": "dependency"
+    },
+    {
+      "source": "cv-version-alert",
+      "target": "cv-version-presenter",
+      "type": "dependency"
+    },
+    {
+      "source": "cv-version-presenter",
+      "target": "cv-tray-version-alert",
+      "type": "dependency"
+    },
+    {
+      "source": "cv-version-alert",
+      "target": "cv-version-dialog",
+      "type": "dependency"
+    },
+    {
+      "source": "cv-version-alert",
+      "target": "cv-restore-20260708",
+      "type": "dependency"
+    },
+    {
+      "source": "cv-deploy",
+      "target": "cv-release-github",
+      "type": "dependency"
+    },
+    {
+      "source": "cv-root",
+      "target": "cv-release",
+      "type": "dependency"
+    },
+    {
+      "source": "cv-release",
+      "target": "cv-tag-bat",
+      "type": "dependency"
+    }
+  ]
+}

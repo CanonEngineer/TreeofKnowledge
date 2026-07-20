@@ -1,0 +1,416 @@
+{
+  "slug": "canon-python-ecommerce",
+  "name": "CanonPythonEcommerce",
+  "repoUrl": "https://github.com/CanonEngineer/CanonPythonEcommerce",
+  "color": "#38bdf8",
+  "demoUrl": "",
+  "nodeCount": 23,
+  "categories": {
+    "core": {
+      "label": "Backend",
+      "color": "#3b82f6"
+    },
+    "auth": {
+      "label": "Segurança",
+      "color": "#ef4444"
+    },
+    "frontend": {
+      "label": "Frontend",
+      "color": "#eab308"
+    },
+    "other": {
+      "label": "Outros",
+      "color": "#64748b"
+    }
+  },
+  "nodes": [
+    {
+      "id": "cpe-root",
+      "label": "CanonPythonEcommerce",
+      "parent": null,
+      "layer": "root",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 1.4,
+      "file": "greatkart/",
+      "description": "E-commerce Django — GreatKart com 6 apps customizadas."
+    },
+    {
+      "id": "cpe-greatkart",
+      "label": "greatkart",
+      "parent": "cpe-root",
+      "layer": "module",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 1.0,
+      "file": "greatkart/",
+      "description": "Pacote central: settings, URLs, home e honeypot admin."
+    },
+    {
+      "id": "cpe-settings",
+      "label": "settings.py",
+      "parent": "cpe-greatkart",
+      "layer": "file",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 0.72,
+      "file": "greatkart/settings.py",
+      "description": "Secrets via decouple, sessão 1h, SMTP e SQLite."
+    },
+    {
+      "id": "cpe-urls",
+      "label": "urls.py",
+      "parent": "cpe-greatkart",
+      "layer": "file",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 0.72,
+      "file": "greatkart/urls.py",
+      "description": "Roteador raiz com honeypot e includes das apps."
+    },
+    {
+      "id": "cpe-home",
+      "label": "home()",
+      "parent": "cpe-greatkart",
+      "layer": "function",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 0.58,
+      "file": "greatkart/views.py",
+      "description": "Home lista produtos ativos com reviews."
+    },
+    {
+      "id": "cpe-accounts",
+      "label": "accounts",
+      "parent": "cpe-root",
+      "layer": "module",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 1.0,
+      "file": "accounts/",
+      "description": "Auth customizada: Account, perfil, ativação e dashboard."
+    },
+    {
+      "id": "cpe-account-model",
+      "label": "Account",
+      "parent": "cpe-accounts",
+      "layer": "file",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 0.72,
+      "file": "accounts/models.py",
+      "description": "User customizado com MyAccountManager."
+    },
+    {
+      "id": "cpe-register",
+      "label": "register()",
+      "parent": "cpe-accounts",
+      "layer": "function",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 0.58,
+      "file": "accounts/views.py",
+      "description": "Cadastro + perfil + e-mail de ativação."
+    },
+    {
+      "id": "cpe-login",
+      "label": "login()",
+      "parent": "cpe-accounts",
+      "layer": "function",
+      "category": "auth",
+      "categoryLabel": "Segurança",
+      "color": "#ef4444",
+      "size": 0.58,
+      "file": "accounts/views.py",
+      "description": "Login por email e merge de carrinho anônimo."
+    },
+    {
+      "id": "cpe-dashboard",
+      "label": "dashboard()",
+      "parent": "cpe-accounts",
+      "layer": "function",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 0.58,
+      "file": "accounts/views.py",
+      "description": "Painel do cliente com pedidos e perfil."
+    },
+    {
+      "id": "cpe-category",
+      "label": "category",
+      "parent": "cpe-root",
+      "layer": "module",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 1.0,
+      "file": "category/",
+      "description": "Categorias com slug e menu global."
+    },
+    {
+      "id": "cpe-menu-links",
+      "label": "menu_links()",
+      "parent": "cpe-category",
+      "layer": "function",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 0.58,
+      "file": "category/context_processors.py",
+      "description": "Injeta categorias no navbar."
+    },
+    {
+      "id": "cpe-store",
+      "label": "store",
+      "parent": "cpe-root",
+      "layer": "module",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 1.0,
+      "file": "store/",
+      "description": "Catálogo, detalhe, busca e reviews."
+    },
+    {
+      "id": "cpe-product-model",
+      "label": "Product",
+      "parent": "cpe-store",
+      "layer": "file",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 0.72,
+      "file": "store/models.py",
+      "description": "Produto com variações e média de reviews."
+    },
+    {
+      "id": "cpe-product-detail",
+      "label": "product_detail()",
+      "parent": "cpe-store",
+      "layer": "function",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 0.58,
+      "file": "store/views.py",
+      "description": "Detalhe com galeria, reviews e in_cart."
+    },
+    {
+      "id": "cpe-search",
+      "label": "search()",
+      "parent": "cpe-store",
+      "layer": "function",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 0.58,
+      "file": "store/views.py",
+      "description": "Busca por nome ou descrição."
+    },
+    {
+      "id": "cpe-review",
+      "label": "submit_review()",
+      "parent": "cpe-store",
+      "layer": "function",
+      "category": "frontend",
+      "categoryLabel": "Frontend",
+      "color": "#eab308",
+      "size": 0.58,
+      "file": "store/views.py",
+      "description": "Avaliação por estrelas pós-compra."
+    },
+    {
+      "id": "cpe-carts",
+      "label": "carts",
+      "parent": "cpe-root",
+      "layer": "module",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 1.0,
+      "file": "carts/",
+      "description": "Carrinho sessão/usuário com variações."
+    },
+    {
+      "id": "cpe-add-cart",
+      "label": "add_cart()",
+      "parent": "cpe-carts",
+      "layer": "function",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 0.58,
+      "file": "carts/views.py",
+      "description": "Adiciona produto com variações."
+    },
+    {
+      "id": "cpe-cart-counter",
+      "label": "counter()",
+      "parent": "cpe-carts",
+      "layer": "function",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 0.58,
+      "file": "carts/context_processors.py",
+      "description": "Badge de quantidade no navbar."
+    },
+    {
+      "id": "cpe-orders",
+      "label": "orders",
+      "parent": "cpe-root",
+      "layer": "module",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 1.0,
+      "file": "orders/",
+      "description": "Checkout PayPal, Payment e estoque."
+    },
+    {
+      "id": "cpe-place-order",
+      "label": "place_order()",
+      "parent": "cpe-orders",
+      "layer": "function",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 0.58,
+      "file": "orders/views.py",
+      "description": "Cria pedido pendente antes do PayPal."
+    },
+    {
+      "id": "cpe-payments",
+      "label": "payments()",
+      "parent": "cpe-orders",
+      "layer": "function",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 0.58,
+      "file": "orders/views.py",
+      "description": "Confirma PayPal e limpa carrinho."
+    }
+  ],
+  "links": [
+    {
+      "source": "cpe-root",
+      "target": "cpe-greatkart",
+      "type": "dependency"
+    },
+    {
+      "source": "cpe-greatkart",
+      "target": "cpe-settings",
+      "type": "dependency"
+    },
+    {
+      "source": "cpe-greatkart",
+      "target": "cpe-urls",
+      "type": "dependency"
+    },
+    {
+      "source": "cpe-greatkart",
+      "target": "cpe-home",
+      "type": "dependency"
+    },
+    {
+      "source": "cpe-root",
+      "target": "cpe-accounts",
+      "type": "dependency"
+    },
+    {
+      "source": "cpe-accounts",
+      "target": "cpe-account-model",
+      "type": "dependency"
+    },
+    {
+      "source": "cpe-accounts",
+      "target": "cpe-register",
+      "type": "dependency"
+    },
+    {
+      "source": "cpe-accounts",
+      "target": "cpe-login",
+      "type": "dependency"
+    },
+    {
+      "source": "cpe-accounts",
+      "target": "cpe-dashboard",
+      "type": "dependency"
+    },
+    {
+      "source": "cpe-root",
+      "target": "cpe-category",
+      "type": "dependency"
+    },
+    {
+      "source": "cpe-category",
+      "target": "cpe-menu-links",
+      "type": "dependency"
+    },
+    {
+      "source": "cpe-root",
+      "target": "cpe-store",
+      "type": "dependency"
+    },
+    {
+      "source": "cpe-store",
+      "target": "cpe-product-model",
+      "type": "dependency"
+    },
+    {
+      "source": "cpe-store",
+      "target": "cpe-product-detail",
+      "type": "dependency"
+    },
+    {
+      "source": "cpe-store",
+      "target": "cpe-search",
+      "type": "dependency"
+    },
+    {
+      "source": "cpe-store",
+      "target": "cpe-review",
+      "type": "dependency"
+    },
+    {
+      "source": "cpe-root",
+      "target": "cpe-carts",
+      "type": "dependency"
+    },
+    {
+      "source": "cpe-carts",
+      "target": "cpe-add-cart",
+      "type": "dependency"
+    },
+    {
+      "source": "cpe-carts",
+      "target": "cpe-cart-counter",
+      "type": "dependency"
+    },
+    {
+      "source": "cpe-root",
+      "target": "cpe-orders",
+      "type": "dependency"
+    },
+    {
+      "source": "cpe-orders",
+      "target": "cpe-place-order",
+      "type": "dependency"
+    },
+    {
+      "source": "cpe-orders",
+      "target": "cpe-payments",
+      "type": "dependency"
+    }
+  ]
+}

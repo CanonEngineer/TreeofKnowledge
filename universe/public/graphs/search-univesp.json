@@ -1,0 +1,509 @@
+{
+  "slug": "search-univesp",
+  "name": "SearchUnivespProject",
+  "repoUrl": "https://github.com/CanonEngineer/SearchUnivespProject",
+  "color": "#2dd4bf",
+  "demoUrl": "",
+  "nodeCount": 28,
+  "categories": {
+    "core": {
+      "label": "Backend",
+      "color": "#3b82f6"
+    },
+    "network": {
+      "label": "Rede / Scan",
+      "color": "#22d3ee"
+    },
+    "oracle": {
+      "label": "Oracle / DB",
+      "color": "#c084fc"
+    },
+    "frontend": {
+      "label": "Frontend",
+      "color": "#eab308"
+    },
+    "scripts": {
+      "label": "Scripts",
+      "color": "#64748b"
+    },
+    "other": {
+      "label": "Outros",
+      "color": "#64748b"
+    }
+  },
+  "nodes": [
+    {
+      "id": "sea-root",
+      "label": "SearchUnivespProject",
+      "parent": null,
+      "layer": "root",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 1.4,
+      "file": "index.html",
+      "description": "Projeto integrador UNIVESP com pesquisa e páginas de saúde."
+    },
+    {
+      "id": "sea-inc",
+      "label": "inc",
+      "parent": "sea-root",
+      "layer": "module",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 1.0,
+      "file": "inc/",
+      "description": "Módulo/pasta `inc/` com arquivos-chave do projeto."
+    },
+    {
+      "id": "sea-inc-contact-js",
+      "label": "contact.js",
+      "parent": "sea-inc",
+      "layer": "file",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 0.72,
+      "file": "inc/contact.js",
+      "description": "Arquivo `inc/contact.js` mapeado a partir do repositório original."
+    },
+    {
+      "id": "sea-inc-db-js",
+      "label": "db.js",
+      "parent": "sea-inc",
+      "layer": "file",
+      "category": "oracle",
+      "categoryLabel": "Oracle / DB",
+      "color": "#c084fc",
+      "size": 0.72,
+      "file": "inc/db.js",
+      "description": "Arquivo `inc/db.js` mapeado a partir do repositório original."
+    },
+    {
+      "id": "sea-inc-search-js",
+      "label": "search.js",
+      "parent": "sea-inc",
+      "layer": "file",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 0.72,
+      "file": "inc/search.js",
+      "description": "Arquivo `inc/search.js` mapeado a partir do repositório original."
+    },
+    {
+      "id": "sea-routes",
+      "label": "routes",
+      "parent": "sea-root",
+      "layer": "module",
+      "category": "network",
+      "categoryLabel": "Rede / Scan",
+      "color": "#22d3ee",
+      "size": 1.0,
+      "file": "routes/",
+      "description": "Módulo/pasta `routes/` com arquivos-chave do projeto."
+    },
+    {
+      "id": "sea-routes-index-js",
+      "label": "index.js",
+      "parent": "sea-routes",
+      "layer": "file",
+      "category": "network",
+      "categoryLabel": "Rede / Scan",
+      "color": "#22d3ee",
+      "size": 0.72,
+      "file": "routes/index.js",
+      "description": "Arquivo `routes/index.js` mapeado a partir do repositório original."
+    },
+    {
+      "id": "sea-routes-users-js",
+      "label": "users.js",
+      "parent": "sea-routes",
+      "layer": "file",
+      "category": "network",
+      "categoryLabel": "Rede / Scan",
+      "color": "#22d3ee",
+      "size": 0.72,
+      "file": "routes/users.js",
+      "description": "Arquivo `routes/users.js` mapeado a partir do repositório original."
+    },
+    {
+      "id": "sea-views",
+      "label": "views",
+      "parent": "sea-root",
+      "layer": "module",
+      "category": "frontend",
+      "categoryLabel": "Frontend",
+      "color": "#eab308",
+      "size": 1.0,
+      "file": "views/",
+      "description": "Módulo/pasta `views/` com arquivos-chave do projeto."
+    },
+    {
+      "id": "sea-views-contact-ejs",
+      "label": "contact.ejs",
+      "parent": "sea-views",
+      "layer": "file",
+      "category": "frontend",
+      "categoryLabel": "Frontend",
+      "color": "#eab308",
+      "size": 0.72,
+      "file": "views/contact.ejs",
+      "description": "Arquivo `views/contact.ejs` mapeado a partir do repositório original."
+    },
+    {
+      "id": "sea-views-index-ejs",
+      "label": "index.ejs",
+      "parent": "sea-views",
+      "layer": "file",
+      "category": "frontend",
+      "categoryLabel": "Frontend",
+      "color": "#eab308",
+      "size": 0.72,
+      "file": "views/index.ejs",
+      "description": "Arquivo `views/index.ejs` mapeado a partir do repositório original."
+    },
+    {
+      "id": "sea-views-result-ejs",
+      "label": "result.ejs",
+      "parent": "sea-views",
+      "layer": "file",
+      "category": "frontend",
+      "categoryLabel": "Frontend",
+      "color": "#eab308",
+      "size": 0.72,
+      "file": "views/result.ejs",
+      "description": "Arquivo `views/result.ejs` mapeado a partir do repositório original."
+    },
+    {
+      "id": "sea-views-search-ejs",
+      "label": "search.ejs",
+      "parent": "sea-views",
+      "layer": "file",
+      "category": "frontend",
+      "categoryLabel": "Frontend",
+      "color": "#eab308",
+      "size": 0.72,
+      "file": "views/search.ejs",
+      "description": "Arquivo `views/search.ejs` mapeado a partir do repositório original."
+    },
+    {
+      "id": "sea-views-inc-alerts-ejs",
+      "label": "alerts.ejs",
+      "parent": "sea-views",
+      "layer": "file",
+      "category": "frontend",
+      "categoryLabel": "Frontend",
+      "color": "#eab308",
+      "size": 0.72,
+      "file": "views/inc/alerts.ejs",
+      "description": "Arquivo `views/inc/alerts.ejs` mapeado a partir do repositório original."
+    },
+    {
+      "id": "sea-views-inc-cep-scripts-ejs",
+      "label": "cep-scripts.ejs",
+      "parent": "sea-views",
+      "layer": "file",
+      "category": "frontend",
+      "categoryLabel": "Frontend",
+      "color": "#eab308",
+      "size": 0.72,
+      "file": "views/inc/cep-scripts.ejs",
+      "description": "Arquivo `views/inc/cep-scripts.ejs` mapeado a partir do repositório original."
+    },
+    {
+      "id": "sea-views-inc-footer-scripts-health-ejs",
+      "label": "footer-scripts-health.ejs",
+      "parent": "sea-views",
+      "layer": "file",
+      "category": "frontend",
+      "categoryLabel": "Frontend",
+      "color": "#eab308",
+      "size": 0.72,
+      "file": "views/inc/footer-scripts-health.ejs",
+      "description": "Arquivo `views/inc/footer-scripts-health.ejs` mapeado a partir do repositório original."
+    },
+    {
+      "id": "sea-views-inc-footer-scripts-ejs",
+      "label": "footer-scripts.ejs",
+      "parent": "sea-views",
+      "layer": "file",
+      "category": "frontend",
+      "categoryLabel": "Frontend",
+      "color": "#eab308",
+      "size": 0.72,
+      "file": "views/inc/footer-scripts.ejs",
+      "description": "Arquivo `views/inc/footer-scripts.ejs` mapeado a partir do repositório original."
+    },
+    {
+      "id": "sea-public",
+      "label": "public",
+      "parent": "sea-root",
+      "layer": "module",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 1.0,
+      "file": "public/",
+      "description": "Módulo/pasta `public/` com arquivos-chave do projeto."
+    },
+    {
+      "id": "sea-public-assests-script-busca-cep-js",
+      "label": "busca-cep.js",
+      "parent": "sea-public",
+      "layer": "file",
+      "category": "scripts",
+      "categoryLabel": "Scripts",
+      "color": "#64748b",
+      "size": 0.72,
+      "file": "public/assests/script/busca-cep.js",
+      "description": "Arquivo `public/assests/script/busca-cep.js` mapeado a partir do repositório original."
+    },
+    {
+      "id": "sea-public-assests-script-mobile-navbar-js",
+      "label": "mobile-navbar.js",
+      "parent": "sea-public",
+      "layer": "file",
+      "category": "scripts",
+      "categoryLabel": "Scripts",
+      "color": "#64748b",
+      "size": 0.72,
+      "file": "public/assests/script/mobile-navbar.js",
+      "description": "Arquivo `public/assests/script/mobile-navbar.js` mapeado a partir do repositório original."
+    },
+    {
+      "id": "sea-public-assests-css-variaveis-css",
+      "label": "_variaveis.css",
+      "parent": "sea-public",
+      "layer": "file",
+      "category": "frontend",
+      "categoryLabel": "Frontend",
+      "color": "#eab308",
+      "size": 0.72,
+      "file": "public/assests/css/_variaveis.css",
+      "description": "Arquivo `public/assests/css/_variaveis.css` mapeado a partir do repositório original."
+    },
+    {
+      "id": "sea-public-assests-css-form-css",
+      "label": "form.css",
+      "parent": "sea-public",
+      "layer": "file",
+      "category": "frontend",
+      "categoryLabel": "Frontend",
+      "color": "#eab308",
+      "size": 0.72,
+      "file": "public/assests/css/form.css",
+      "description": "Arquivo `public/assests/css/form.css` mapeado a partir do repositório original."
+    },
+    {
+      "id": "sea-public-assests-css-pesquisa-css",
+      "label": "pesquisa.css",
+      "parent": "sea-public",
+      "layer": "file",
+      "category": "frontend",
+      "categoryLabel": "Frontend",
+      "color": "#eab308",
+      "size": 0.72,
+      "file": "public/assests/css/pesquisa.css",
+      "description": "Arquivo `public/assests/css/pesquisa.css` mapeado a partir do repositório original."
+    },
+    {
+      "id": "sea-public-assests-css-reset-css",
+      "label": "reset.css",
+      "parent": "sea-public",
+      "layer": "file",
+      "category": "frontend",
+      "categoryLabel": "Frontend",
+      "color": "#eab308",
+      "size": 0.72,
+      "file": "public/assests/css/reset.css",
+      "description": "Arquivo `public/assests/css/reset.css` mapeado a partir do repositório original."
+    },
+    {
+      "id": "sea-public-assests-css-style-css",
+      "label": "style.css",
+      "parent": "sea-public",
+      "layer": "file",
+      "category": "frontend",
+      "categoryLabel": "Frontend",
+      "color": "#eab308",
+      "size": 0.72,
+      "file": "public/assests/css/style.css",
+      "description": "Arquivo `public/assests/css/style.css` mapeado a partir do repositório original."
+    },
+    {
+      "id": "sea-assests",
+      "label": "assests",
+      "parent": "sea-root",
+      "layer": "module",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 1.0,
+      "file": "assests/",
+      "description": "Módulo/pasta `assests/` com arquivos-chave do projeto."
+    },
+    {
+      "id": "sea-assests-script-busca-cep-js",
+      "label": "busca-cep.js",
+      "parent": "sea-assests",
+      "layer": "file",
+      "category": "scripts",
+      "categoryLabel": "Scripts",
+      "color": "#64748b",
+      "size": 0.72,
+      "file": "assests/script/busca-cep.js",
+      "description": "Arquivo `assests/script/busca-cep.js` mapeado a partir do repositório original."
+    },
+    {
+      "id": "sea-assests-script-mobile-navbar-js",
+      "label": "mobile-navbar.js",
+      "parent": "sea-assests",
+      "layer": "file",
+      "category": "scripts",
+      "categoryLabel": "Scripts",
+      "color": "#64748b",
+      "size": 0.72,
+      "file": "assests/script/mobile-navbar.js",
+      "description": "Arquivo `assests/script/mobile-navbar.js` mapeado a partir do repositório original."
+    }
+  ],
+  "links": [
+    {
+      "source": "sea-root",
+      "target": "sea-inc",
+      "type": "dependency"
+    },
+    {
+      "source": "sea-inc",
+      "target": "sea-inc-contact-js",
+      "type": "dependency"
+    },
+    {
+      "source": "sea-inc",
+      "target": "sea-inc-db-js",
+      "type": "dependency"
+    },
+    {
+      "source": "sea-inc",
+      "target": "sea-inc-search-js",
+      "type": "dependency"
+    },
+    {
+      "source": "sea-root",
+      "target": "sea-routes",
+      "type": "dependency"
+    },
+    {
+      "source": "sea-routes",
+      "target": "sea-routes-index-js",
+      "type": "dependency"
+    },
+    {
+      "source": "sea-routes",
+      "target": "sea-routes-users-js",
+      "type": "dependency"
+    },
+    {
+      "source": "sea-root",
+      "target": "sea-views",
+      "type": "dependency"
+    },
+    {
+      "source": "sea-views",
+      "target": "sea-views-contact-ejs",
+      "type": "dependency"
+    },
+    {
+      "source": "sea-views",
+      "target": "sea-views-index-ejs",
+      "type": "dependency"
+    },
+    {
+      "source": "sea-views",
+      "target": "sea-views-result-ejs",
+      "type": "dependency"
+    },
+    {
+      "source": "sea-views",
+      "target": "sea-views-search-ejs",
+      "type": "dependency"
+    },
+    {
+      "source": "sea-views",
+      "target": "sea-views-inc-alerts-ejs",
+      "type": "dependency"
+    },
+    {
+      "source": "sea-views",
+      "target": "sea-views-inc-cep-scripts-ejs",
+      "type": "dependency"
+    },
+    {
+      "source": "sea-views",
+      "target": "sea-views-inc-footer-scripts-health-ejs",
+      "type": "dependency"
+    },
+    {
+      "source": "sea-views",
+      "target": "sea-views-inc-footer-scripts-ejs",
+      "type": "dependency"
+    },
+    {
+      "source": "sea-root",
+      "target": "sea-public",
+      "type": "dependency"
+    },
+    {
+      "source": "sea-public",
+      "target": "sea-public-assests-script-busca-cep-js",
+      "type": "dependency"
+    },
+    {
+      "source": "sea-public",
+      "target": "sea-public-assests-script-mobile-navbar-js",
+      "type": "dependency"
+    },
+    {
+      "source": "sea-public",
+      "target": "sea-public-assests-css-variaveis-css",
+      "type": "dependency"
+    },
+    {
+      "source": "sea-public",
+      "target": "sea-public-assests-css-form-css",
+      "type": "dependency"
+    },
+    {
+      "source": "sea-public",
+      "target": "sea-public-assests-css-pesquisa-css",
+      "type": "dependency"
+    },
+    {
+      "source": "sea-public",
+      "target": "sea-public-assests-css-reset-css",
+      "type": "dependency"
+    },
+    {
+      "source": "sea-public",
+      "target": "sea-public-assests-css-style-css",
+      "type": "dependency"
+    },
+    {
+      "source": "sea-root",
+      "target": "sea-assests",
+      "type": "dependency"
+    },
+    {
+      "source": "sea-assests",
+      "target": "sea-assests-script-busca-cep-js",
+      "type": "dependency"
+    },
+    {
+      "source": "sea-assests",
+      "target": "sea-assests-script-mobile-navbar-js",
+      "type": "dependency"
+    }
+  ]
+}

@@ -84,6 +84,7 @@ export default function App() {
       <div className="app-error">
         <h1>Galaxy 3D</h1>
         <p>{error}</p>
+        <p className="error-hint">Este projeto ainda não possui grafo exportado. Volte à árvore 2D ou escolha outro projeto.</p>
         <a href="../index.html">Voltar à árvore</a>
       </div>
     );
