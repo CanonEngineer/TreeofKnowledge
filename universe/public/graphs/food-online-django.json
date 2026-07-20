@@ -1,0 +1,397 @@
+{
+  "slug": "food-online-django",
+  "name": "FoodOnlineDjango",
+  "repoUrl": "https://github.com/CanonEngineer/FoodOnlineDjango",
+  "color": "#f97316",
+  "demoUrl": "",
+  "nodeCount": 20,
+  "categories": {
+    "core": {
+      "label": "Backend",
+      "color": "#3b82f6"
+    },
+    "network": {
+      "label": "Rede / Scan",
+      "color": "#22d3ee"
+    },
+    "ad": {
+      "label": "Active Directory",
+      "color": "#a78bfa"
+    },
+    "loop": {
+      "label": "Loop SNMP",
+      "color": "#f97316"
+    },
+    "autotest": {
+      "label": "AutoTest",
+      "color": "#06b6d4"
+    },
+    "oracle": {
+      "label": "Oracle / DB",
+      "color": "#c084fc"
+    },
+    "platform": {
+      "label": "Plataforma Canon",
+      "color": "#8b5cf6"
+    },
+    "auth": {
+      "label": "Segurança",
+      "color": "#ef4444"
+    },
+    "frontend": {
+      "label": "Frontend",
+      "color": "#eab308"
+    },
+    "scripts": {
+      "label": "Scripts",
+      "color": "#64748b"
+    },
+    "tests": {
+      "label": "Testes",
+      "color": "#94a3b8"
+    },
+    "other": {
+      "label": "Outros",
+      "color": "#64748b"
+    }
+  },
+  "nodes": [
+    {
+      "id": "fod-root",
+      "label": "FoodOnlineDjango",
+      "parent": null,
+      "layer": "root",
+      "category": "other",
+      "categoryLabel": "Outros",
+      "color": "#64748b",
+      "size": 1.4,
+      "file": "foodOnline/",
+      "description": "Plataforma multi-vendor de delivery com Django 5, PostGIS e RazorPay."
+    },
+    {
+      "id": "fod-settings",
+      "label": "foodOnline/settings.py",
+      "parent": "fod-root",
+      "layer": "module",
+      "category": "other",
+      "categoryLabel": "Outros",
+      "color": "#64748b",
+      "size": 1.0,
+      "file": "foodOnline/settings.py",
+      "description": "Secrets via decouple, PostGIS, context processors e middleware customizado."
+    },
+    {
+      "id": "fod-urls",
+      "label": "urls.py",
+      "parent": "fod-settings",
+      "layer": "file",
+      "category": "other",
+      "categoryLabel": "Outros",
+      "color": "#64748b",
+      "size": 0.72,
+      "file": "foodOnline/urls.py",
+      "description": "Roteador raiz: accounts, vendor, marketplace, cart, checkout e orders."
+    },
+    {
+      "id": "fod-accounts",
+      "label": "accounts",
+      "parent": "fod-root",
+      "layer": "module",
+      "category": "other",
+      "categoryLabel": "Outros",
+      "color": "#64748b",
+      "size": 1.0,
+      "file": "accounts/",
+      "description": "Auth customizada com roles Vendor (1) e Customer (2)."
+    },
+    {
+      "id": "fod-user-model",
+      "label": "User",
+      "parent": "fod-accounts",
+      "layer": "file",
+      "category": "other",
+      "categoryLabel": "Outros",
+      "color": "#64748b",
+      "size": 0.72,
+      "file": "accounts/models.py",
+      "description": "User customizado com email único e campo role."
+    },
+    {
+      "id": "fod-roles",
+      "label": "check_role_vendor()",
+      "parent": "fod-accounts",
+      "layer": "function",
+      "category": "other",
+      "categoryLabel": "Outros",
+      "color": "#64748b",
+      "size": 0.58,
+      "file": "accounts/views.py",
+      "description": "Decorators RBAC que restringem dashboards por role."
+    },
+    {
+      "id": "fod-register-user",
+      "label": "registerUser()",
+      "parent": "fod-accounts",
+      "layer": "function",
+      "category": "other",
+      "categoryLabel": "Outros",
+      "color": "#64748b",
+      "size": 0.58,
+      "file": "accounts/views.py",
+      "description": "Cadastro de Customer com create_user e e-mail de verificação."
+    },
+    {
+      "id": "fod-register-vendor",
+      "label": "registerVendor()",
+      "parent": "fod-accounts",
+      "layer": "function",
+      "category": "other",
+      "categoryLabel": "Outros",
+      "color": "#64748b",
+      "size": 0.58,
+      "file": "accounts/views.py",
+      "description": "Cadastro de restaurante: User + Vendor + slug único."
+    },
+    {
+      "id": "fod-activate",
+      "label": "activate()",
+      "parent": "fod-accounts",
+      "layer": "function",
+      "category": "other",
+      "categoryLabel": "Outros",
+      "color": "#64748b",
+      "size": 0.58,
+      "file": "accounts/views.py",
+      "description": "Ativa conta via uid/token do e-mail."
+    },
+    {
+      "id": "fod-vendor",
+      "label": "vendor",
+      "parent": "fod-root",
+      "layer": "module",
+      "category": "other",
+      "categoryLabel": "Outros",
+      "color": "#64748b",
+      "size": 1.0,
+      "file": "vendor/",
+      "description": "Perfil de restaurante, horários e aprovação admin."
+    },
+    {
+      "id": "fod-vendor-model",
+      "label": "Vendor",
+      "parent": "fod-vendor",
+      "layer": "file",
+      "category": "other",
+      "categoryLabel": "Outros",
+      "color": "#64748b",
+      "size": 0.72,
+      "file": "vendor/models.py",
+      "description": "Modelo Vendor com slug e verificação de horário."
+    },
+    {
+      "id": "fod-menu",
+      "label": "menu",
+      "parent": "fod-root",
+      "layer": "module",
+      "category": "other",
+      "categoryLabel": "Outros",
+      "color": "#64748b",
+      "size": 1.0,
+      "file": "menu/",
+      "description": "Categorias e itens de comida por vendor."
+    },
+    {
+      "id": "fod-fooditem",
+      "label": "FoodItem",
+      "parent": "fod-menu",
+      "layer": "file",
+      "category": "other",
+      "categoryLabel": "Outros",
+      "color": "#64748b",
+      "size": 0.72,
+      "file": "menu/models.py",
+      "description": "Item do cardápio com preço e disponibilidade."
+    },
+    {
+      "id": "fod-marketplace",
+      "label": "marketplace",
+      "parent": "fod-root",
+      "layer": "module",
+      "category": "other",
+      "categoryLabel": "Outros",
+      "color": "#64748b",
+      "size": 1.0,
+      "file": "marketplace/",
+      "description": "Listagem, carrinho AJAX e busca geoespacial."
+    },
+    {
+      "id": "fod-cart-counter",
+      "label": "get_cart_counter()",
+      "parent": "fod-marketplace",
+      "layer": "function",
+      "category": "other",
+      "categoryLabel": "Outros",
+      "color": "#64748b",
+      "size": 0.58,
+      "file": "marketplace/context_processors.py",
+      "description": "Context processor com badge de quantidade no navbar."
+    },
+    {
+      "id": "fod-add-cart",
+      "label": "add_to_cart()",
+      "parent": "fod-marketplace",
+      "layer": "function",
+      "category": "ad",
+      "categoryLabel": "Active Directory",
+      "color": "#a78bfa",
+      "size": 0.58,
+      "file": "marketplace/views.py",
+      "description": "Adiciona item via AJAX incrementando quantity."
+    },
+    {
+      "id": "fod-search",
+      "label": "search()",
+      "parent": "fod-marketplace",
+      "layer": "function",
+      "category": "other",
+      "categoryLabel": "Outros",
+      "color": "#64748b",
+      "size": 0.58,
+      "file": "marketplace/views.py",
+      "description": "Busca vendors por keyword e raio PostGIS."
+    },
+    {
+      "id": "fod-orders",
+      "label": "orders",
+      "parent": "fod-root",
+      "layer": "module",
+      "category": "other",
+      "categoryLabel": "Outros",
+      "color": "#64748b",
+      "size": 1.0,
+      "file": "orders/",
+      "description": "Checkout multi-vendor, Payment e OrderedFood."
+    },
+    {
+      "id": "fod-place-order",
+      "label": "place_order()",
+      "parent": "fod-orders",
+      "layer": "function",
+      "category": "other",
+      "categoryLabel": "Outros",
+      "color": "#64748b",
+      "size": 0.58,
+      "file": "orders/views.py",
+      "description": "Cria pedido pendente agrupando taxas por vendor."
+    },
+    {
+      "id": "fod-payments",
+      "label": "payments()",
+      "parent": "fod-orders",
+      "layer": "function",
+      "category": "other",
+      "categoryLabel": "Outros",
+      "color": "#64748b",
+      "size": 0.58,
+      "file": "orders/views.py",
+      "description": "Confirma pagamento AJAX e notifica vendors."
+    }
+  ],
+  "links": [
+    {
+      "source": "fod-root",
+      "target": "fod-settings",
+      "type": "dependency"
+    },
+    {
+      "source": "fod-settings",
+      "target": "fod-urls",
+      "type": "dependency"
+    },
+    {
+      "source": "fod-root",
+      "target": "fod-accounts",
+      "type": "dependency"
+    },
+    {
+      "source": "fod-accounts",
+      "target": "fod-user-model",
+      "type": "dependency"
+    },
+    {
+      "source": "fod-accounts",
+      "target": "fod-roles",
+      "type": "dependency"
+    },
+    {
+      "source": "fod-accounts",
+      "target": "fod-register-user",
+      "type": "dependency"
+    },
+    {
+      "source": "fod-accounts",
+      "target": "fod-register-vendor",
+      "type": "dependency"
+    },
+    {
+      "source": "fod-accounts",
+      "target": "fod-activate",
+      "type": "dependency"
+    },
+    {
+      "source": "fod-root",
+      "target": "fod-vendor",
+      "type": "dependency"
+    },
+    {
+      "source": "fod-vendor",
+      "target": "fod-vendor-model",
+      "type": "dependency"
+    },
+    {
+      "source": "fod-root",
+      "target": "fod-menu",
+      "type": "dependency"
+    },
+    {
+      "source": "fod-menu",
+      "target": "fod-fooditem",
+      "type": "dependency"
+    },
+    {
+      "source": "fod-root",
+      "target": "fod-marketplace",
+      "type": "dependency"
+    },
+    {
+      "source": "fod-marketplace",
+      "target": "fod-cart-counter",
+      "type": "dependency"
+    },
+    {
+      "source": "fod-marketplace",
+      "target": "fod-add-cart",
+      "type": "dependency"
+    },
+    {
+      "source": "fod-marketplace",
+      "target": "fod-search",
+      "type": "dependency"
+    },
+    {
+      "source": "fod-root",
+      "target": "fod-orders",
+      "type": "dependency"
+    },
+    {
+      "source": "fod-orders",
+      "target": "fod-place-order",
+      "type": "dependency"
+    },
+    {
+      "source": "fod-orders",
+      "target": "fod-payments",
+      "type": "dependency"
+    }
+  ]
+}

@@ -1,0 +1,397 @@
+{
+  "slug": "javascript-restful-api",
+  "name": "JavaScriptRestfulApiProject",
+  "repoUrl": "https://github.com/CanonEngineer/JavaScriptRestfulApiProject",
+  "color": "#8b5cf6",
+  "demoUrl": "",
+  "nodeCount": 20,
+  "categories": {
+    "core": {
+      "label": "Backend",
+      "color": "#3b82f6"
+    },
+    "network": {
+      "label": "Rede / Scan",
+      "color": "#22d3ee"
+    },
+    "ad": {
+      "label": "Active Directory",
+      "color": "#a78bfa"
+    },
+    "loop": {
+      "label": "Loop SNMP",
+      "color": "#f97316"
+    },
+    "autotest": {
+      "label": "AutoTest",
+      "color": "#06b6d4"
+    },
+    "oracle": {
+      "label": "Oracle / DB",
+      "color": "#c084fc"
+    },
+    "platform": {
+      "label": "Plataforma Canon",
+      "color": "#8b5cf6"
+    },
+    "auth": {
+      "label": "Segurança",
+      "color": "#ef4444"
+    },
+    "frontend": {
+      "label": "Frontend",
+      "color": "#eab308"
+    },
+    "scripts": {
+      "label": "Scripts",
+      "color": "#64748b"
+    },
+    "tests": {
+      "label": "Testes",
+      "color": "#94a3b8"
+    },
+    "other": {
+      "label": "Outros",
+      "color": "#64748b"
+    }
+  },
+  "nodes": [
+    {
+      "id": "jra-root",
+      "label": "JavaScriptRestfulApiProject",
+      "parent": null,
+      "layer": "root",
+      "category": "other",
+      "categoryLabel": "Outros",
+      "color": "#64748b",
+      "size": 1.4,
+      "file": "index.js",
+      "description": "API REST com Express, consign e banco NeDB embarcado."
+    },
+    {
+      "id": "jra-index",
+      "label": "index.js",
+      "parent": "jra-root",
+      "layer": "file",
+      "category": "other",
+      "categoryLabel": "Outros",
+      "color": "#64748b",
+      "size": 0.72,
+      "file": "index.js",
+      "description": "Bootstrap Express com body-parser e consign."
+    },
+    {
+      "id": "jra-routes-index",
+      "label": "routes/index.js",
+      "parent": "jra-root",
+      "layer": "file",
+      "category": "other",
+      "categoryLabel": "Outros",
+      "color": "#64748b",
+      "size": 0.72,
+      "file": "routes/index.js",
+      "description": "Rota raiz HTML de boas-vindas."
+    },
+    {
+      "id": "jra-users",
+      "label": "routes/users.js",
+      "parent": "jra-root",
+      "layer": "module",
+      "category": "other",
+      "categoryLabel": "Outros",
+      "color": "#64748b",
+      "size": 1.0,
+      "file": "routes/users.js",
+      "description": "CRUD completo GET/POST/PUT/DELETE em /users."
+    },
+    {
+      "id": "jra-get-users",
+      "label": "GET /users",
+      "parent": "jra-users",
+      "layer": "function",
+      "category": "other",
+      "categoryLabel": "Outros",
+      "color": "#64748b",
+      "size": 0.58,
+      "file": "routes/users.js",
+      "description": "Lista todos os usuários ordenados por nome."
+    },
+    {
+      "id": "jra-post-user",
+      "label": "POST /users",
+      "parent": "jra-users",
+      "layer": "function",
+      "category": "other",
+      "categoryLabel": "Outros",
+      "color": "#64748b",
+      "size": 0.58,
+      "file": "routes/users.js",
+      "description": "Insere novo usuário após validação."
+    },
+    {
+      "id": "jra-get-id",
+      "label": "GET /users/:id",
+      "parent": "jra-users",
+      "layer": "function",
+      "category": "other",
+      "categoryLabel": "Outros",
+      "color": "#64748b",
+      "size": 0.58,
+      "file": "routes/users.js",
+      "description": "Busca um usuário pelo _id do NeDB."
+    },
+    {
+      "id": "jra-put-user",
+      "label": "PUT /users/:id",
+      "parent": "jra-users",
+      "layer": "function",
+      "category": "other",
+      "categoryLabel": "Outros",
+      "color": "#64748b",
+      "size": 0.58,
+      "file": "routes/users.js",
+      "description": "Atualiza usuário existente no NeDB."
+    },
+    {
+      "id": "jra-delete-user",
+      "label": "DELETE /users/:id",
+      "parent": "jra-users",
+      "layer": "function",
+      "category": "other",
+      "categoryLabel": "Outros",
+      "color": "#64748b",
+      "size": 0.58,
+      "file": "routes/users.js",
+      "description": "Remove usuário do banco NeDB."
+    },
+    {
+      "id": "jra-admin",
+      "label": "GET /users/admin",
+      "parent": "jra-users",
+      "layer": "function",
+      "category": "ad",
+      "categoryLabel": "Active Directory",
+      "color": "#a78bfa",
+      "size": 0.58,
+      "file": "routes/users.js",
+      "description": "Rota mock com lista fixa de admins."
+    },
+    {
+      "id": "jra-nedb",
+      "label": "NeDB",
+      "parent": "jra-users",
+      "layer": "file",
+      "category": "other",
+      "categoryLabel": "Outros",
+      "color": "#64748b",
+      "size": 0.72,
+      "file": "routes/users.js",
+      "description": "Banco embarcado com autoload em users.db."
+    },
+    {
+      "id": "jra-validator",
+      "label": "utils/validator.js",
+      "parent": "jra-root",
+      "layer": "module",
+      "category": "other",
+      "categoryLabel": "Outros",
+      "color": "#64748b",
+      "size": 1.0,
+      "file": "utils/validator.js",
+      "description": "Valida nome obrigatório e e-mail válido no POST/PUT."
+    },
+    {
+      "id": "jra-error",
+      "label": "utils/error.js",
+      "parent": "jra-root",
+      "layer": "module",
+      "category": "other",
+      "categoryLabel": "Outros",
+      "color": "#64748b",
+      "size": 1.0,
+      "file": "utils/error.js",
+      "description": "Padroniza respostas de erro da API."
+    },
+    {
+      "id": "jra-consign",
+      "label": "consign()",
+      "parent": "jra-index",
+      "layer": "function",
+      "category": "other",
+      "categoryLabel": "Outros",
+      "color": "#64748b",
+      "size": 0.58,
+      "file": "index.js",
+      "description": "Carrega routes/ e utils/ automaticamente no app."
+    },
+    {
+      "id": "jra-body-parser",
+      "label": "body-parser",
+      "parent": "jra-index",
+      "layer": "file",
+      "category": "other",
+      "categoryLabel": "Outros",
+      "color": "#64748b",
+      "size": 0.72,
+      "file": "index.js",
+      "description": "Parse JSON e urlencoded com limite 50mb."
+    },
+    {
+      "id": "jra-express-validator",
+      "label": "express-validator",
+      "parent": "jra-index",
+      "layer": "file",
+      "category": "other",
+      "categoryLabel": "Outros",
+      "color": "#64748b",
+      "size": 0.72,
+      "file": "index.js",
+      "description": "Middleware global de validação."
+    },
+    {
+      "id": "jra-route-id",
+      "label": "routeId",
+      "parent": "jra-users",
+      "layer": "file",
+      "category": "other",
+      "categoryLabel": "Outros",
+      "color": "#64748b",
+      "size": 0.72,
+      "file": "routes/users.js",
+      "description": "Agrupa rotas REST por :id."
+    },
+    {
+      "id": "jra-package",
+      "label": "package.json",
+      "parent": "jra-root",
+      "layer": "file",
+      "category": "other",
+      "categoryLabel": "Outros",
+      "color": "#64748b",
+      "size": 0.72,
+      "file": "package.json",
+      "description": "Dependências e entry point index.js."
+    },
+    {
+      "id": "jra-listen",
+      "label": "app.listen()",
+      "parent": "jra-index",
+      "layer": "function",
+      "category": "other",
+      "categoryLabel": "Outros",
+      "color": "#64748b",
+      "size": 0.58,
+      "file": "index.js",
+      "description": "Inicia servidor na porta 4000."
+    },
+    {
+      "id": "jra-error-handling",
+      "label": "Tratamento de erros",
+      "parent": "jra-users",
+      "layer": "function",
+      "category": "other",
+      "categoryLabel": "Outros",
+      "color": "#64748b",
+      "size": 0.58,
+      "file": "routes/users.js",
+      "description": "Padrão if(err) em todos os callbacks NeDB."
+    }
+  ],
+  "links": [
+    {
+      "source": "jra-root",
+      "target": "jra-index",
+      "type": "dependency"
+    },
+    {
+      "source": "jra-root",
+      "target": "jra-routes-index",
+      "type": "dependency"
+    },
+    {
+      "source": "jra-root",
+      "target": "jra-users",
+      "type": "dependency"
+    },
+    {
+      "source": "jra-users",
+      "target": "jra-get-users",
+      "type": "dependency"
+    },
+    {
+      "source": "jra-users",
+      "target": "jra-post-user",
+      "type": "dependency"
+    },
+    {
+      "source": "jra-users",
+      "target": "jra-get-id",
+      "type": "dependency"
+    },
+    {
+      "source": "jra-users",
+      "target": "jra-put-user",
+      "type": "dependency"
+    },
+    {
+      "source": "jra-users",
+      "target": "jra-delete-user",
+      "type": "dependency"
+    },
+    {
+      "source": "jra-users",
+      "target": "jra-admin",
+      "type": "dependency"
+    },
+    {
+      "source": "jra-users",
+      "target": "jra-nedb",
+      "type": "dependency"
+    },
+    {
+      "source": "jra-root",
+      "target": "jra-validator",
+      "type": "dependency"
+    },
+    {
+      "source": "jra-root",
+      "target": "jra-error",
+      "type": "dependency"
+    },
+    {
+      "source": "jra-index",
+      "target": "jra-consign",
+      "type": "dependency"
+    },
+    {
+      "source": "jra-index",
+      "target": "jra-body-parser",
+      "type": "dependency"
+    },
+    {
+      "source": "jra-index",
+      "target": "jra-express-validator",
+      "type": "dependency"
+    },
+    {
+      "source": "jra-users",
+      "target": "jra-route-id",
+      "type": "dependency"
+    },
+    {
+      "source": "jra-root",
+      "target": "jra-package",
+      "type": "dependency"
+    },
+    {
+      "source": "jra-index",
+      "target": "jra-listen",
+      "type": "dependency"
+    },
+    {
+      "source": "jra-users",
+      "target": "jra-error-handling",
+      "type": "dependency"
+    }
+  ]
+}

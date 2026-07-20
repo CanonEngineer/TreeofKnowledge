@@ -1,0 +1,397 @@
+{
+  "slug": "javascript-users",
+  "name": "JavaScriptUsersProject",
+  "repoUrl": "https://github.com/CanonEngineer/JavaScriptUsersProject",
+  "color": "#22c55e",
+  "demoUrl": "",
+  "nodeCount": 20,
+  "categories": {
+    "core": {
+      "label": "Backend",
+      "color": "#3b82f6"
+    },
+    "network": {
+      "label": "Rede / Scan",
+      "color": "#22d3ee"
+    },
+    "ad": {
+      "label": "Active Directory",
+      "color": "#a78bfa"
+    },
+    "loop": {
+      "label": "Loop SNMP",
+      "color": "#f97316"
+    },
+    "autotest": {
+      "label": "AutoTest",
+      "color": "#06b6d4"
+    },
+    "oracle": {
+      "label": "Oracle / DB",
+      "color": "#c084fc"
+    },
+    "platform": {
+      "label": "Plataforma Canon",
+      "color": "#8b5cf6"
+    },
+    "auth": {
+      "label": "Segurança",
+      "color": "#ef4444"
+    },
+    "frontend": {
+      "label": "Frontend",
+      "color": "#eab308"
+    },
+    "scripts": {
+      "label": "Scripts",
+      "color": "#64748b"
+    },
+    "tests": {
+      "label": "Testes",
+      "color": "#94a3b8"
+    },
+    "other": {
+      "label": "Outros",
+      "color": "#64748b"
+    }
+  },
+  "nodes": [
+    {
+      "id": "jus-root",
+      "label": "JavaScriptUsersProject",
+      "parent": null,
+      "layer": "root",
+      "category": "other",
+      "categoryLabel": "Outros",
+      "color": "#64748b",
+      "size": 1.4,
+      "file": "index.html",
+      "description": "Sistema de cadastro 100% frontend com AdminLTE e localStorage."
+    },
+    {
+      "id": "jus-model",
+      "label": "User Model",
+      "parent": "jus-root",
+      "layer": "module",
+      "category": "other",
+      "categoryLabel": "Outros",
+      "color": "#64748b",
+      "size": 1.0,
+      "file": "models/User.js",
+      "description": "Modelo com getters/setters e serialização JSON."
+    },
+    {
+      "id": "jus-load-json",
+      "label": "loadFromJSON()",
+      "parent": "jus-model",
+      "layer": "function",
+      "category": "ad",
+      "categoryLabel": "Active Directory",
+      "color": "#a78bfa",
+      "size": 0.58,
+      "file": "models/User.js",
+      "description": "Hidrata instância a partir de objeto salvo."
+    },
+    {
+      "id": "jus-save",
+      "label": "save()",
+      "parent": "jus-model",
+      "layer": "function",
+      "category": "other",
+      "categoryLabel": "Outros",
+      "color": "#64748b",
+      "size": 0.58,
+      "file": "models/User.js",
+      "description": "Persiste usuário novo ou atualiza existente."
+    },
+    {
+      "id": "jus-delete",
+      "label": "deleteUser()",
+      "parent": "jus-model",
+      "layer": "function",
+      "category": "other",
+      "categoryLabel": "Outros",
+      "color": "#64748b",
+      "size": 0.58,
+      "file": "models/User.js",
+      "description": "Remove usuário do array no localStorage."
+    },
+    {
+      "id": "jus-get-storage",
+      "label": "getUserStorage()",
+      "parent": "jus-model",
+      "layer": "function",
+      "category": "other",
+      "categoryLabel": "Outros",
+      "color": "#64748b",
+      "size": 0.58,
+      "file": "models/User.js",
+      "description": "Lê array de usuários do localStorage."
+    },
+    {
+      "id": "jus-controller",
+      "label": "UserController",
+      "parent": "jus-root",
+      "layer": "module",
+      "category": "other",
+      "categoryLabel": "Outros",
+      "color": "#64748b",
+      "size": 1.0,
+      "file": "controllers/UserController.js",
+      "description": "Orquestra formulários create/update, tabela e eventos."
+    },
+    {
+      "id": "jus-on-submit",
+      "label": "onSubmit()",
+      "parent": "jus-controller",
+      "layer": "function",
+      "category": "other",
+      "categoryLabel": "Outros",
+      "color": "#64748b",
+      "size": 0.58,
+      "file": "controllers/UserController.js",
+      "description": "Cria usuário com foto convertida para Base64."
+    },
+    {
+      "id": "jus-on-edit",
+      "label": "onEdit()",
+      "parent": "jus-controller",
+      "layer": "function",
+      "category": "other",
+      "categoryLabel": "Outros",
+      "color": "#64748b",
+      "size": 0.58,
+      "file": "controllers/UserController.js",
+      "description": "Atualiza usuário existente com Object.assign."
+    },
+    {
+      "id": "jus-get-values",
+      "label": "getValues()",
+      "parent": "jus-controller",
+      "layer": "function",
+      "category": "other",
+      "categoryLabel": "Outros",
+      "color": "#64748b",
+      "size": 0.58,
+      "file": "controllers/UserController.js",
+      "description": "Lê form e valida campos obrigatórios."
+    },
+    {
+      "id": "jus-get-photo",
+      "label": "getPhoto()",
+      "parent": "jus-controller",
+      "layer": "function",
+      "category": "other",
+      "categoryLabel": "Outros",
+      "color": "#64748b",
+      "size": 0.58,
+      "file": "controllers/UserController.js",
+      "description": "Converte File input em string Base64."
+    },
+    {
+      "id": "jus-get-tr",
+      "label": "getTr()",
+      "parent": "jus-controller",
+      "layer": "function",
+      "category": "other",
+      "categoryLabel": "Outros",
+      "color": "#64748b",
+      "size": 0.58,
+      "file": "controllers/UserController.js",
+      "description": "Monta linha da tabela com foto e botões."
+    },
+    {
+      "id": "jus-add-events",
+      "label": "addEventsTr()",
+      "parent": "jus-controller",
+      "layer": "function",
+      "category": "ad",
+      "categoryLabel": "Active Directory",
+      "color": "#a78bfa",
+      "size": 0.58,
+      "file": "controllers/UserController.js",
+      "description": "Bind delete e edit em cada linha."
+    },
+    {
+      "id": "jus-select-all",
+      "label": "selectAll()",
+      "parent": "jus-controller",
+      "layer": "function",
+      "category": "other",
+      "categoryLabel": "Outros",
+      "color": "#64748b",
+      "size": 0.58,
+      "file": "controllers/UserController.js",
+      "description": "Carrega usuários salvos ao iniciar."
+    },
+    {
+      "id": "jus-update-count",
+      "label": "updateCount()",
+      "parent": "jus-controller",
+      "layer": "function",
+      "category": "other",
+      "categoryLabel": "Outros",
+      "color": "#64748b",
+      "size": 0.58,
+      "file": "controllers/UserController.js",
+      "description": "Atualiza badges de total e admins."
+    },
+    {
+      "id": "jus-panels",
+      "label": "showPanelCreate()",
+      "parent": "jus-controller",
+      "layer": "function",
+      "category": "other",
+      "categoryLabel": "Outros",
+      "color": "#64748b",
+      "size": 0.58,
+      "file": "controllers/UserController.js",
+      "description": "Alterna visibilidade dos painéis create/update."
+    },
+    {
+      "id": "jus-utils",
+      "label": "Utils",
+      "parent": "jus-root",
+      "layer": "module",
+      "category": "other",
+      "categoryLabel": "Outros",
+      "color": "#64748b",
+      "size": 1.0,
+      "file": "classes/Utils.js",
+      "description": "Helpers estáticos de formatação."
+    },
+    {
+      "id": "jus-date-format",
+      "label": "dateFormat()",
+      "parent": "jus-utils",
+      "layer": "function",
+      "category": "other",
+      "categoryLabel": "Outros",
+      "color": "#64748b",
+      "size": 0.58,
+      "file": "classes/Utils.js",
+      "description": "Formata Date para dd/mm/yyyy hh:mm:ss."
+    },
+    {
+      "id": "jus-get-new-id",
+      "label": "getNewId()",
+      "parent": "jus-model",
+      "layer": "function",
+      "category": "other",
+      "categoryLabel": "Outros",
+      "color": "#64748b",
+      "size": 0.58,
+      "file": "models/User.js",
+      "description": "Auto-incremento de ID no localStorage."
+    },
+    {
+      "id": "jus-getters",
+      "label": "Getters/Setters",
+      "parent": "jus-model",
+      "layer": "file",
+      "category": "other",
+      "categoryLabel": "Outros",
+      "color": "#64748b",
+      "size": 0.72,
+      "file": "models/User.js",
+      "description": "Encapsulamento das propriedades do usuário."
+    }
+  ],
+  "links": [
+    {
+      "source": "jus-root",
+      "target": "jus-model",
+      "type": "dependency"
+    },
+    {
+      "source": "jus-model",
+      "target": "jus-load-json",
+      "type": "dependency"
+    },
+    {
+      "source": "jus-model",
+      "target": "jus-save",
+      "type": "dependency"
+    },
+    {
+      "source": "jus-model",
+      "target": "jus-delete",
+      "type": "dependency"
+    },
+    {
+      "source": "jus-model",
+      "target": "jus-get-storage",
+      "type": "dependency"
+    },
+    {
+      "source": "jus-root",
+      "target": "jus-controller",
+      "type": "dependency"
+    },
+    {
+      "source": "jus-controller",
+      "target": "jus-on-submit",
+      "type": "dependency"
+    },
+    {
+      "source": "jus-controller",
+      "target": "jus-on-edit",
+      "type": "dependency"
+    },
+    {
+      "source": "jus-controller",
+      "target": "jus-get-values",
+      "type": "dependency"
+    },
+    {
+      "source": "jus-controller",
+      "target": "jus-get-photo",
+      "type": "dependency"
+    },
+    {
+      "source": "jus-controller",
+      "target": "jus-get-tr",
+      "type": "dependency"
+    },
+    {
+      "source": "jus-controller",
+      "target": "jus-add-events",
+      "type": "dependency"
+    },
+    {
+      "source": "jus-controller",
+      "target": "jus-select-all",
+      "type": "dependency"
+    },
+    {
+      "source": "jus-controller",
+      "target": "jus-update-count",
+      "type": "dependency"
+    },
+    {
+      "source": "jus-controller",
+      "target": "jus-panels",
+      "type": "dependency"
+    },
+    {
+      "source": "jus-root",
+      "target": "jus-utils",
+      "type": "dependency"
+    },
+    {
+      "source": "jus-utils",
+      "target": "jus-date-format",
+      "type": "dependency"
+    },
+    {
+      "source": "jus-model",
+      "target": "jus-get-new-id",
+      "type": "dependency"
+    },
+    {
+      "source": "jus-model",
+      "target": "jus-getters",
+      "type": "dependency"
+    }
+  ]
+}

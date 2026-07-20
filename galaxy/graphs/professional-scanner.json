@@ -1,0 +1,1485 @@
+{
+  "slug": "professional-scanner",
+  "name": "Professional-Scanner",
+  "repoUrl": "https://github.com/CanonEngineer/Professional-Scanner",
+  "color": "#06b6d4",
+  "demoUrl": "https://github.com/CanonEngineer/Professional-Scanner/blob/main/docs/DOCUMENTATION.md",
+  "nodeCount": 84,
+  "categories": {
+    "core": {
+      "label": "Backend",
+      "color": "#3b82f6"
+    },
+    "network": {
+      "label": "Rede / Scan",
+      "color": "#22d3ee"
+    },
+    "ad": {
+      "label": "Active Directory",
+      "color": "#a78bfa"
+    },
+    "loop": {
+      "label": "Loop SNMP",
+      "color": "#f97316"
+    },
+    "autotest": {
+      "label": "AutoTest",
+      "color": "#06b6d4"
+    },
+    "oracle": {
+      "label": "Oracle / DB",
+      "color": "#c084fc"
+    },
+    "platform": {
+      "label": "Plataforma Canon",
+      "color": "#8b5cf6"
+    },
+    "auth": {
+      "label": "Segurança",
+      "color": "#ef4444"
+    },
+    "frontend": {
+      "label": "Frontend",
+      "color": "#eab308"
+    },
+    "scripts": {
+      "label": "Scripts",
+      "color": "#64748b"
+    },
+    "tests": {
+      "label": "Testes",
+      "color": "#94a3b8"
+    },
+    "other": {
+      "label": "Outros",
+      "color": "#64748b"
+    }
+  },
+  "nodes": [
+    {
+      "id": "ps-root",
+      "label": "Professional-Scanner",
+      "parent": null,
+      "layer": "root",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 1.4,
+      "file": "server.js",
+      "description": "NetScan Canon v2 — árvore completa: backend, AD, loop, AutoTest, Oracle, Plataforma Canon, frontend, scripts e testes."
+    },
+    {
+      "id": "ps-static",
+      "label": "Express static",
+      "parent": "ps-grp-core",
+      "layer": "file",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 0.72,
+      "file": "server.js",
+      "description": "Serve dashboard, mapa e assets da pasta public/."
+    },
+    {
+      "id": "ps-ws",
+      "label": "WebSocket Server",
+      "parent": "ps-grp-core",
+      "layer": "module",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 1.0,
+      "file": "server.js",
+      "description": "Scan em tempo real + eventos de auditoria AD e alertas de loop."
+    },
+    {
+      "id": "ps-enrich",
+      "label": "hostEnrichment.js",
+      "parent": "ps-grp-core",
+      "layer": "module",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 1.0,
+      "file": "hostEnrichment.js",
+      "description": "Enriquecimento: AD/LDAP, DNS Windows, SNMP, TLS, impressoras e fingerprint."
+    },
+    {
+      "id": "ps-history",
+      "label": "hostHistory.js",
+      "parent": "ps-grp-core",
+      "layer": "module",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 1.0,
+      "file": "hostHistory.js",
+      "description": "Histórico global de IPs ociosos — só limpa quando o host volta Ativo."
+    },
+    {
+      "id": "ps-ad-audit",
+      "label": "adUserAudit.js",
+      "parent": "ps-root",
+      "layer": "module",
+      "category": "ad",
+      "categoryLabel": "Active Directory",
+      "color": "#a78bfa",
+      "size": 1.0,
+      "file": "adUserAudit.js",
+      "description": "Auditoria de usuários AD: snapshot, saídas arquivadas e lookup ao vivo."
+    },
+    {
+      "id": "ps-vm-vlan",
+      "label": "vmVlanStrategy.js",
+      "parent": "ps-grp-core",
+      "layer": "module",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 1.0,
+      "file": "vmVlanStrategy.js",
+      "description": "Detecção de VM com evidências + mapa de VLAN/subnet."
+    },
+    {
+      "id": "ps-detect-vm",
+      "label": "detectVirtualization()",
+      "parent": "ps-grp-core",
+      "layer": "function",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 0.58,
+      "file": "vmVlanStrategy.js",
+      "description": "Score por OUI, vendor, hostname forte, OU AD e limiar hospitalar."
+    },
+    {
+      "id": "ps-loop",
+      "label": "loopDetection.js",
+      "parent": "ps-root",
+      "layer": "module",
+      "category": "loop",
+      "categoryLabel": "Loop SNMP",
+      "color": "#f97316",
+      "size": 1.0,
+      "file": "loopDetection.js",
+      "description": "Monitor urgente de loop via SNMP (Aruba/Cisco/Intelbras/D-Link)."
+    },
+    {
+      "id": "ps-loop-api",
+      "label": "API /api/loop/*",
+      "parent": "ps-root",
+      "layer": "function",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 0.58,
+      "file": "server.js",
+      "description": "Config de switches, start/stop, quick-check e alertas."
+    },
+    {
+      "id": "ps-parse-target",
+      "label": "parseTarget()",
+      "parent": "ps-grp-core",
+      "layer": "function",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 0.58,
+      "file": "server.js",
+      "description": "Expande IP único, range ou CIDR em lista de IPs."
+    },
+    {
+      "id": "ps-ping",
+      "label": "pingHost()",
+      "parent": "ps-grp-core",
+      "layer": "function",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 0.58,
+      "file": "server.js",
+      "description": "Ping sweep Windows com TTL para heurística de SO."
+    },
+    {
+      "id": "ps-os-ttl",
+      "label": "getOSFromTTL()",
+      "parent": "ps-grp-core",
+      "layer": "function",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 0.58,
+      "file": "server.js",
+      "description": "Heurística de SO a partir do TTL."
+    },
+    {
+      "id": "ps-dns",
+      "label": "resolveHostname()",
+      "parent": "ps-grp-core",
+      "layer": "function",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 0.58,
+      "file": "hostEnrichment.js",
+      "description": "Reverse DNS / ping -a / nslookup Windows."
+    },
+    {
+      "id": "ps-mac",
+      "label": "getMacAddress()",
+      "parent": "ps-grp-core",
+      "layer": "function",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 0.58,
+      "file": "server.js",
+      "description": "Lê tabela ARP do Windows."
+    },
+    {
+      "id": "ps-vendor",
+      "label": "getVendorFromMac()",
+      "parent": "ps-grp-core",
+      "layer": "function",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 0.58,
+      "file": "server.js",
+      "description": "Lookup OUI em dicionário MAC_VENDORS."
+    },
+    {
+      "id": "ps-tcp-scan",
+      "label": "scanTcpPort()",
+      "parent": "ps-grp-core",
+      "layer": "function",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 0.58,
+      "file": "server.js",
+      "description": "TCP connect scan com banner grabbing."
+    },
+    {
+      "id": "ps-concurrent",
+      "label": "runConcurrent()",
+      "parent": "ps-grp-core",
+      "layer": "function",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 0.58,
+      "file": "server.js",
+      "description": "Worker pool com limite de concorrência."
+    },
+    {
+      "id": "ps-detect-dmz",
+      "label": "detectDMZ()",
+      "parent": "ps-grp-core",
+      "layer": "function",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 0.58,
+      "file": "server.js",
+      "description": "Heurística DMZ por IP público ou serviços."
+    },
+    {
+      "id": "ps-device-type",
+      "label": "detectDeviceType()",
+      "parent": "ps-grp-core",
+      "layer": "function",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 0.58,
+      "file": "server.js",
+      "description": "Classifica host hospitalar: PC, impressora, câmera, PACS, OT…"
+    },
+    {
+      "id": "ps-export-xlsx",
+      "label": "POST /export-xlsx",
+      "parent": "ps-grp-core",
+      "layer": "function",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 0.58,
+      "file": "server.js",
+      "description": "Exporta resultados para Excel com formatação."
+    },
+    {
+      "id": "ps-api-results",
+      "label": "GET /api/scan-results",
+      "parent": "ps-grp-core",
+      "layer": "function",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 0.58,
+      "file": "server.js",
+      "description": "Snapshot dos últimos resultados em memória."
+    },
+    {
+      "id": "ps-client",
+      "label": "public/app.js",
+      "parent": "ps-grp-public",
+      "layer": "module",
+      "category": "frontend",
+      "categoryLabel": "Frontend",
+      "color": "#eab308",
+      "size": 1.0,
+      "file": "public/app.js",
+      "description": "Módulo UI public/app.js — resumo; ver ps-app-file para código completo."
+    },
+    {
+      "id": "ps-handle-msg",
+      "label": "handleServerMessage()",
+      "parent": "ps-grp-public",
+      "layer": "function",
+      "category": "frontend",
+      "categoryLabel": "Frontend",
+      "color": "#eab308",
+      "size": 0.58,
+      "file": "public/app.js",
+      "description": "Processa scan, AD sync e alertas de loop em tempo real."
+    },
+    {
+      "id": "ps-loop-modal",
+      "label": "openLoopModal()",
+      "parent": "ps-grp-public",
+      "layer": "function",
+      "category": "loop",
+      "categoryLabel": "Loop SNMP",
+      "color": "#f97316",
+      "size": 0.58,
+      "file": "public/app.js",
+      "description": "Modal separado de urgência para monitor SNMP de loop."
+    },
+    {
+      "id": "ps-map",
+      "label": "public/map.js",
+      "parent": "ps-grp-public",
+      "layer": "module",
+      "category": "frontend",
+      "categoryLabel": "Frontend",
+      "color": "#eab308",
+      "size": 1.0,
+      "file": "public/map.js",
+      "description": "Visualização topológica 3D com force-graph."
+    },
+    {
+      "id": "ps-render-3d",
+      "label": "render3DMap()",
+      "parent": "ps-grp-public",
+      "layer": "function",
+      "category": "frontend",
+      "categoryLabel": "Frontend",
+      "color": "#eab308",
+      "size": 0.58,
+      "file": "public/map.js",
+      "description": "Grafo 3D: hosts ligados a subnets."
+    },
+    {
+      "id": "ps-autotest-ui",
+      "label": "renderAutoTestEngineeringBanner()",
+      "parent": "ps-grp-public",
+      "layer": "function",
+      "category": "autotest",
+      "categoryLabel": "AutoTest",
+      "color": "#06b6d4",
+      "size": 0.58,
+      "file": "public/app.js",
+      "description": "Banner EXECUTANDO animado, métricas PASS/AVISO/FALHA e cards em 3 colunas."
+    },
+    {
+      "id": "ps-grp-core",
+      "label": "Núcleo backend",
+      "parent": "ps-root",
+      "layer": "module",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 1.0,
+      "file": "server.js",
+      "description": "Motor Express, WebSocket, varredura e orquestração de módulos."
+    },
+    {
+      "id": "ps-server-file",
+      "label": "server.js",
+      "parent": "ps-grp-core",
+      "layer": "file",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 0.72,
+      "file": "server.js",
+      "description": "Arquivo completo — Express, WebSocket, scan TCP/UDP/ICMP, rotas API."
+    },
+    {
+      "id": "ps-host-enrichment-file",
+      "label": "hostEnrichment.js",
+      "parent": "ps-grp-core",
+      "layer": "file",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 0.72,
+      "file": "hostEnrichment.js",
+      "description": "Enriquecimento AD, SNMP, TLS, HTTP, impressoras, fingerprint."
+    },
+    {
+      "id": "ps-host-history-file",
+      "label": "hostHistory.js",
+      "parent": "ps-grp-core",
+      "layer": "file",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 0.72,
+      "file": "hostHistory.js",
+      "description": "Histórico persistente de IPs ociosos."
+    },
+    {
+      "id": "ps-vm-vlan-file",
+      "label": "vmVlanStrategy.js",
+      "parent": "ps-grp-core",
+      "layer": "file",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 0.72,
+      "file": "vmVlanStrategy.js",
+      "description": "Detecção de virtualização e mapeamento VLAN."
+    },
+    {
+      "id": "ps-ad-file",
+      "label": "adUserAudit.js",
+      "parent": "ps-root",
+      "layer": "file",
+      "category": "ad",
+      "categoryLabel": "Active Directory",
+      "color": "#a78bfa",
+      "size": 0.72,
+      "file": "adUserAudit.js",
+      "description": "Auditoria AD: sync, saídas, departamentos, grupos, lookup live."
+    },
+    {
+      "id": "ps-loop-file",
+      "label": "loopDetection.js",
+      "parent": "ps-root",
+      "layer": "file",
+      "category": "loop",
+      "categoryLabel": "Loop SNMP",
+      "color": "#f97316",
+      "size": 0.72,
+      "file": "loopDetection.js",
+      "description": "Monitor SNMP urgente de loop multi-vendor."
+    },
+    {
+      "id": "ps-grp-autotest",
+      "label": "AutoTest L2/L3/L4",
+      "parent": "ps-root",
+      "layer": "module",
+      "category": "autotest",
+      "categoryLabel": "AutoTest",
+      "color": "#06b6d4",
+      "size": 1.0,
+      "file": "autoTest.js",
+      "description": "Diagnóstico de conectividade local e remoto."
+    },
+    {
+      "id": "ps-autotest",
+      "label": "autoTest.js",
+      "parent": "ps-grp-autotest",
+      "layer": "file",
+      "category": "autotest",
+      "categoryLabel": "AutoTest",
+      "color": "#06b6d4",
+      "size": 0.72,
+      "file": "autoTest.js",
+      "description": "Motor AutoTest: perfis, histórico, engenharia, run local."
+    },
+    {
+      "id": "ps-autotest-network",
+      "label": "autoTestNetwork.js",
+      "parent": "ps-grp-autotest",
+      "layer": "file",
+      "category": "autotest",
+      "categoryLabel": "AutoTest",
+      "color": "#06b6d4",
+      "size": 0.72,
+      "file": "autoTestNetwork.js",
+      "description": "Testes subnet, IP duplicado, HTTP, Wi-Fi scan."
+    },
+    {
+      "id": "ps-autotest-pdf",
+      "label": "autoTestPdf.js",
+      "parent": "ps-grp-autotest",
+      "layer": "file",
+      "category": "autotest",
+      "categoryLabel": "AutoTest",
+      "color": "#06b6d4",
+      "size": 0.72,
+      "file": "autoTestPdf.js",
+      "description": "Export PDF do relatório de engenharia."
+    },
+    {
+      "id": "ps-autotest-csv",
+      "label": "autoTestCsv.js",
+      "parent": "ps-grp-autotest",
+      "layer": "file",
+      "category": "autotest",
+      "categoryLabel": "AutoTest",
+      "color": "#06b6d4",
+      "size": 0.72,
+      "file": "autoTestCsv.js",
+      "description": "Export CSV dos passos AutoTest."
+    },
+    {
+      "id": "ps-autotest-remote",
+      "label": "autoTestRemote.js",
+      "parent": "ps-grp-autotest",
+      "layer": "file",
+      "category": "autotest",
+      "categoryLabel": "AutoTest",
+      "color": "#06b6d4",
+      "size": 0.72,
+      "file": "autoTestRemote.js",
+      "description": "Fila de jobs e registro de agentes remotos."
+    },
+    {
+      "id": "ps-autotest-remote-sec",
+      "label": "autoTestRemoteSecurity.js",
+      "parent": "ps-grp-autotest",
+      "layer": "file",
+      "category": "autotest",
+      "categoryLabel": "AutoTest",
+      "color": "#06b6d4",
+      "size": 0.72,
+      "file": "autoTestRemoteSecurity.js",
+      "description": "Assinatura HMAC e validação estilo Veyon."
+    },
+    {
+      "id": "ps-autotest-runner",
+      "label": "autotestRemoteRunner.js",
+      "parent": "ps-grp-autotest",
+      "layer": "file",
+      "category": "autotest",
+      "categoryLabel": "AutoTest",
+      "color": "#06b6d4",
+      "size": 0.72,
+      "file": "autotestRemoteRunner.js",
+      "description": "Runner do agente Windows: poll, execute, complete."
+    },
+    {
+      "id": "ps-grp-oracle",
+      "label": "Oracle lookup",
+      "parent": "ps-root",
+      "layer": "module",
+      "category": "oracle",
+      "categoryLabel": "Oracle / DB",
+      "color": "#c084fc",
+      "size": 1.0,
+      "file": "oracleUserLookup.js",
+      "description": "Consulta usuários Oracle correlacionados ao AD."
+    },
+    {
+      "id": "ps-oracle",
+      "label": "oracleUserLookup.js",
+      "parent": "ps-grp-oracle",
+      "layer": "file",
+      "category": "oracle",
+      "categoryLabel": "Oracle / DB",
+      "color": "#c084fc",
+      "size": 0.72,
+      "file": "oracleUserLookup.js",
+      "description": "Lookup Oracle via SQL*Plus / oracledb."
+    },
+    {
+      "id": "ps-oracle-bridge",
+      "label": "oracleSqlPlusBridge.js",
+      "parent": "ps-grp-oracle",
+      "layer": "file",
+      "category": "oracle",
+      "categoryLabel": "Oracle / DB",
+      "color": "#c084fc",
+      "size": 0.72,
+      "file": "oracleSqlPlusBridge.js",
+      "description": "Ponte PowerShell SQL*Plus."
+    },
+    {
+      "id": "ps-oracle-java",
+      "label": "OracleJdbcBridge.java",
+      "parent": "ps-grp-oracle",
+      "layer": "file",
+      "category": "oracle",
+      "categoryLabel": "Oracle / DB",
+      "color": "#c084fc",
+      "size": 0.72,
+      "file": "scripts/oracle-bridge/OracleJdbcBridge.java",
+      "description": "Ponte JDBC Java para Oracle."
+    },
+    {
+      "id": "ps-grp-platform",
+      "label": "Plataforma Canon",
+      "parent": "ps-root",
+      "layer": "module",
+      "category": "platform",
+      "categoryLabel": "Plataforma Canon",
+      "color": "#8b5cf6",
+      "size": 1.0,
+      "file": "platformRoutes.js",
+      "description": "Drift, correlação, NAC, CMDB, TLS, webhooks, relatórios."
+    },
+    {
+      "id": "ps-platform",
+      "label": "platformRoutes.js",
+      "parent": "ps-grp-platform",
+      "layer": "file",
+      "category": "platform",
+      "categoryLabel": "Plataforma Canon",
+      "color": "#8b5cf6",
+      "size": 0.72,
+      "file": "platformRoutes.js",
+      "description": "Rotas /api/platform/* e montagem dos submódulos."
+    },
+    {
+      "id": "ps-platform-config",
+      "label": "platformConfig.js",
+      "parent": "ps-grp-platform",
+      "layer": "file",
+      "category": "platform",
+      "categoryLabel": "Plataforma Canon",
+      "color": "#8b5cf6",
+      "size": 0.72,
+      "file": "platformConfig.js",
+      "description": "Sites, feature flags, config persistente."
+    },
+    {
+      "id": "ps-platform-hooks",
+      "label": "platformHooks.js",
+      "parent": "ps-grp-platform",
+      "layer": "file",
+      "category": "platform",
+      "categoryLabel": "Plataforma Canon",
+      "color": "#8b5cf6",
+      "size": 0.72,
+      "file": "platformHooks.js",
+      "description": "Hooks pós-scan e integração com varredura."
+    },
+    {
+      "id": "ps-network-drift",
+      "label": "networkDrift.js",
+      "parent": "ps-grp-platform",
+      "layer": "file",
+      "category": "platform",
+      "categoryLabel": "Plataforma Canon",
+      "color": "#8b5cf6",
+      "size": 0.72,
+      "file": "networkDrift.js",
+      "description": "Drift de rede vs baseline."
+    },
+    {
+      "id": "ps-asset-correlation",
+      "label": "assetCorrelation.js",
+      "parent": "ps-grp-platform",
+      "layer": "file",
+      "category": "platform",
+      "categoryLabel": "Plataforma Canon",
+      "color": "#8b5cf6",
+      "size": 0.72,
+      "file": "assetCorrelation.js",
+      "description": "Correlação IP + MAC + switch + AD."
+    },
+    {
+      "id": "ps-asset-lifecycle",
+      "label": "assetLifecycle.js",
+      "parent": "ps-grp-platform",
+      "layer": "file",
+      "category": "platform",
+      "categoryLabel": "Plataforma Canon",
+      "color": "#8b5cf6",
+      "size": 0.72,
+      "file": "assetLifecycle.js",
+      "description": "CMDB — estados de lifecycle dos assets."
+    },
+    {
+      "id": "ps-nac-readiness",
+      "label": "nacReadiness.js",
+      "parent": "ps-grp-platform",
+      "layer": "file",
+      "category": "ad",
+      "categoryLabel": "Active Directory",
+      "color": "#a78bfa",
+      "size": 0.72,
+      "file": "nacReadiness.js",
+      "description": "Score de prontidão NAC."
+    },
+    {
+      "id": "ps-tls-cert",
+      "label": "tlsCertScan.js",
+      "parent": "ps-grp-platform",
+      "layer": "file",
+      "category": "platform",
+      "categoryLabel": "Plataforma Canon",
+      "color": "#8b5cf6",
+      "size": 0.72,
+      "file": "tlsCertScan.js",
+      "description": "Varredura de certificados TLS."
+    },
+    {
+      "id": "ps-deep-fp",
+      "label": "deepFingerprint.js",
+      "parent": "ps-grp-platform",
+      "layer": "file",
+      "category": "platform",
+      "categoryLabel": "Plataforma Canon",
+      "color": "#8b5cf6",
+      "size": 0.72,
+      "file": "deepFingerprint.js",
+      "description": "Fingerprint profundo de serviços."
+    },
+    {
+      "id": "ps-passive",
+      "label": "passiveDiscovery.js",
+      "parent": "ps-grp-platform",
+      "layer": "file",
+      "category": "platform",
+      "categoryLabel": "Plataforma Canon",
+      "color": "#8b5cf6",
+      "size": 0.72,
+      "file": "passiveDiscovery.js",
+      "description": "Descoberta passiva / snapshot ARP."
+    },
+    {
+      "id": "ps-scheduled",
+      "label": "scheduledReports.js",
+      "parent": "ps-grp-platform",
+      "layer": "file",
+      "category": "platform",
+      "categoryLabel": "Plataforma Canon",
+      "color": "#8b5cf6",
+      "size": 0.72,
+      "file": "scheduledReports.js",
+      "description": "Relatórios agendados e scheduler."
+    },
+    {
+      "id": "ps-webhook",
+      "label": "webhookDispatcher.js",
+      "parent": "ps-grp-platform",
+      "layer": "file",
+      "category": "platform",
+      "categoryLabel": "Plataforma Canon",
+      "color": "#8b5cf6",
+      "size": 0.72,
+      "file": "webhookDispatcher.js",
+      "description": "Dispatch HTTP para webhooks configurados."
+    },
+    {
+      "id": "ps-canon-agent",
+      "label": "canonAgent.js",
+      "parent": "ps-grp-platform",
+      "layer": "file",
+      "category": "platform",
+      "categoryLabel": "Plataforma Canon",
+      "color": "#8b5cf6",
+      "size": 0.72,
+      "file": "canonAgent.js",
+      "description": "Ingestão de relatórios do agente Canon."
+    },
+    {
+      "id": "ps-ala-mapping",
+      "label": "alaMapping.js",
+      "parent": "ps-grp-platform",
+      "layer": "file",
+      "category": "platform",
+      "categoryLabel": "Plataforma Canon",
+      "color": "#8b5cf6",
+      "size": 0.72,
+      "file": "alaMapping.js",
+      "description": "Mapeamento ALA hospitalar."
+    },
+    {
+      "id": "ps-grp-auth",
+      "label": "Autenticação Canon",
+      "parent": "ps-root",
+      "layer": "module",
+      "category": "auth",
+      "categoryLabel": "Segurança",
+      "color": "#ef4444",
+      "size": 1.0,
+      "file": "canonAuth.js",
+      "description": "Login sessão PBKDF2 e RBAC."
+    },
+    {
+      "id": "ps-auth",
+      "label": "canonAuth.js",
+      "parent": "ps-grp-auth",
+      "layer": "file",
+      "category": "auth",
+      "categoryLabel": "Segurança",
+      "color": "#ef4444",
+      "size": 0.72,
+      "file": "canonAuth.js",
+      "description": "Autenticação, sessões, middleware requireAuth."
+    },
+    {
+      "id": "ps-rbac",
+      "label": "canonRbac.js",
+      "parent": "ps-grp-auth",
+      "layer": "file",
+      "category": "auth",
+      "categoryLabel": "Segurança",
+      "color": "#ef4444",
+      "size": 0.72,
+      "file": "canonRbac.js",
+      "description": "RBAC Plataforma — permissões por role."
+    },
+    {
+      "id": "ps-grp-public",
+      "label": "Frontend (public/)",
+      "parent": "ps-root",
+      "layer": "module",
+      "category": "frontend",
+      "categoryLabel": "Frontend",
+      "color": "#eab308",
+      "size": 1.0,
+      "file": "public/index.html",
+      "description": "Dashboard, modais, mapa 3D, plataforma."
+    },
+    {
+      "id": "ps-app-file",
+      "label": "public/app.js",
+      "parent": "ps-grp-public",
+      "layer": "file",
+      "category": "frontend",
+      "categoryLabel": "Frontend",
+      "color": "#eab308",
+      "size": 0.72,
+      "file": "public/app.js",
+      "description": "Cliente principal: WS, scan, AD, loop, AutoTest, Oracle."
+    },
+    {
+      "id": "ps-index-html",
+      "label": "public/index.html",
+      "parent": "ps-grp-public",
+      "layer": "file",
+      "category": "frontend",
+      "categoryLabel": "Frontend",
+      "color": "#eab308",
+      "size": 0.72,
+      "file": "public/index.html",
+      "description": "HTML dashboard e modais Canon."
+    },
+    {
+      "id": "ps-style-css",
+      "label": "public/style.css",
+      "parent": "ps-grp-public",
+      "layer": "file",
+      "category": "frontend",
+      "categoryLabel": "Frontend",
+      "color": "#eab308",
+      "size": 0.72,
+      "file": "public/style.css",
+      "description": "Tema Canon, modais padronizados, AutoTest UI."
+    },
+    {
+      "id": "ps-platform-js",
+      "label": "public/platform.js",
+      "parent": "ps-grp-public",
+      "layer": "file",
+      "category": "platform",
+      "categoryLabel": "Plataforma Canon",
+      "color": "#8b5cf6",
+      "size": 0.72,
+      "file": "public/platform.js",
+      "description": "UI Plataforma Canon — abas Drift, NAC, CMDB…"
+    },
+    {
+      "id": "ps-platform-css",
+      "label": "public/platform.css",
+      "parent": "ps-grp-public",
+      "layer": "file",
+      "category": "platform",
+      "categoryLabel": "Plataforma Canon",
+      "color": "#8b5cf6",
+      "size": 0.72,
+      "file": "public/platform.css",
+      "description": "Estilos do modal Plataforma."
+    },
+    {
+      "id": "ps-map-file",
+      "label": "public/map.js",
+      "parent": "ps-grp-public",
+      "layer": "file",
+      "category": "frontend",
+      "categoryLabel": "Frontend",
+      "color": "#eab308",
+      "size": 0.72,
+      "file": "public/map.js",
+      "description": "Mapa topológico 3D force-graph."
+    },
+    {
+      "id": "ps-map-html",
+      "label": "public/map.html",
+      "parent": "ps-grp-public",
+      "layer": "file",
+      "category": "frontend",
+      "categoryLabel": "Frontend",
+      "color": "#eab308",
+      "size": 0.72,
+      "file": "public/map.html",
+      "description": "Página dedicada do mapa de rede."
+    },
+    {
+      "id": "ps-port-presets",
+      "label": "public/portPresets.js",
+      "parent": "ps-grp-public",
+      "layer": "file",
+      "category": "frontend",
+      "categoryLabel": "Frontend",
+      "color": "#eab308",
+      "size": 0.72,
+      "file": "public/portPresets.js",
+      "description": "Presets de portas Integra / well-known."
+    },
+    {
+      "id": "ps-grp-scripts",
+      "label": "Scripts (scripts/)",
+      "parent": "ps-root",
+      "layer": "module",
+      "category": "autotest",
+      "categoryLabel": "AutoTest",
+      "color": "#06b6d4",
+      "size": 1.0,
+      "file": "scripts/install-autotest-agent-service.ps1",
+      "description": "Instalação agente, Oracle bridge, help."
+    },
+    {
+      "id": "ps-script-install-agent",
+      "label": "install-autotest-agent-service.ps1",
+      "parent": "ps-grp-scripts",
+      "layer": "file",
+      "category": "autotest",
+      "categoryLabel": "AutoTest",
+      "color": "#06b6d4",
+      "size": 0.72,
+      "file": "scripts/install-autotest-agent-service.ps1",
+      "description": "Instala serviço Windows do agente AutoTest."
+    },
+    {
+      "id": "ps-script-remote-agent",
+      "label": "autotest-remote-agent.ps1",
+      "parent": "ps-grp-scripts",
+      "layer": "file",
+      "category": "autotest",
+      "categoryLabel": "AutoTest",
+      "color": "#06b6d4",
+      "size": 0.72,
+      "file": "scripts/autotest-remote-agent.ps1",
+      "description": "Wrapper PowerShell do agente remoto."
+    },
+    {
+      "id": "ps-script-remote-help",
+      "label": "autotest-remote-help.ps1",
+      "parent": "ps-grp-scripts",
+      "layer": "file",
+      "category": "autotest",
+      "categoryLabel": "AutoTest",
+      "color": "#06b6d4",
+      "size": 0.72,
+      "file": "scripts/autotest-remote-help.ps1",
+      "description": "Diagnóstico e help do agente."
+    },
+    {
+      "id": "ps-script-canon-agent",
+      "label": "canon-agent.ps1",
+      "parent": "ps-grp-scripts",
+      "layer": "file",
+      "category": "scripts",
+      "categoryLabel": "Scripts",
+      "color": "#64748b",
+      "size": 0.72,
+      "file": "scripts/canon-agent.ps1",
+      "description": "Script agente relatórios Plataforma."
+    },
+    {
+      "id": "ps-grp-tests",
+      "label": "Testes",
+      "parent": "ps-root",
+      "layer": "module",
+      "category": "platform",
+      "categoryLabel": "Plataforma Canon",
+      "color": "#8b5cf6",
+      "size": 1.0,
+      "file": "test-platform.js",
+      "description": "Testes automatizados da plataforma."
+    },
+    {
+      "id": "ps-test-platform",
+      "label": "test-platform.js",
+      "parent": "ps-grp-tests",
+      "layer": "file",
+      "category": "platform",
+      "categoryLabel": "Plataforma Canon",
+      "color": "#8b5cf6",
+      "size": 0.72,
+      "file": "test-platform.js",
+      "description": "Suite Node test — npm test."
+    },
+    {
+      "id": "ps-test-legacy",
+      "label": "test.js",
+      "parent": "ps-grp-tests",
+      "layer": "file",
+      "category": "tests",
+      "categoryLabel": "Testes",
+      "color": "#94a3b8",
+      "size": 0.72,
+      "file": "test.js",
+      "description": "Testes legados / utilitários."
+    },
+    {
+      "id": "ps-package-json",
+      "label": "package.json",
+      "parent": "ps-root",
+      "layer": "file",
+      "category": "other",
+      "categoryLabel": "Outros",
+      "color": "#64748b",
+      "size": 0.72,
+      "file": "package.json",
+      "description": "Dependências npm e scripts npm start / test."
+    },
+    {
+      "id": "ps-package-agent-json",
+      "label": "package.agent.json",
+      "parent": "ps-grp-scripts",
+      "layer": "file",
+      "category": "other",
+      "categoryLabel": "Outros",
+      "color": "#64748b",
+      "size": 0.72,
+      "file": "package.agent.json",
+      "description": "Manifesto npm do bundle do agente AutoTest remoto."
+    }
+  ],
+  "links": [
+    {
+      "source": "ps-grp-core",
+      "target": "ps-static",
+      "type": "dependency"
+    },
+    {
+      "source": "ps-grp-core",
+      "target": "ps-ws",
+      "type": "dependency"
+    },
+    {
+      "source": "ps-grp-core",
+      "target": "ps-enrich",
+      "type": "dependency"
+    },
+    {
+      "source": "ps-grp-core",
+      "target": "ps-history",
+      "type": "dependency"
+    },
+    {
+      "source": "ps-root",
+      "target": "ps-ad-audit",
+      "type": "dependency"
+    },
+    {
+      "source": "ps-grp-core",
+      "target": "ps-vm-vlan",
+      "type": "dependency"
+    },
+    {
+      "source": "ps-grp-core",
+      "target": "ps-detect-vm",
+      "type": "dependency"
+    },
+    {
+      "source": "ps-root",
+      "target": "ps-loop",
+      "type": "dependency"
+    },
+    {
+      "source": "ps-root",
+      "target": "ps-loop-api",
+      "type": "dependency"
+    },
+    {
+      "source": "ps-grp-core",
+      "target": "ps-parse-target",
+      "type": "dependency"
+    },
+    {
+      "source": "ps-grp-core",
+      "target": "ps-ping",
+      "type": "dependency"
+    },
+    {
+      "source": "ps-grp-core",
+      "target": "ps-os-ttl",
+      "type": "dependency"
+    },
+    {
+      "source": "ps-grp-core",
+      "target": "ps-dns",
+      "type": "dependency"
+    },
+    {
+      "source": "ps-grp-core",
+      "target": "ps-mac",
+      "type": "dependency"
+    },
+    {
+      "source": "ps-grp-core",
+      "target": "ps-vendor",
+      "type": "dependency"
+    },
+    {
+      "source": "ps-grp-core",
+      "target": "ps-tcp-scan",
+      "type": "dependency"
+    },
+    {
+      "source": "ps-grp-core",
+      "target": "ps-concurrent",
+      "type": "dependency"
+    },
+    {
+      "source": "ps-grp-core",
+      "target": "ps-detect-dmz",
+      "type": "dependency"
+    },
+    {
+      "source": "ps-grp-core",
+      "target": "ps-device-type",
+      "type": "dependency"
+    },
+    {
+      "source": "ps-grp-core",
+      "target": "ps-export-xlsx",
+      "type": "dependency"
+    },
+    {
+      "source": "ps-grp-core",
+      "target": "ps-api-results",
+      "type": "dependency"
+    },
+    {
+      "source": "ps-grp-public",
+      "target": "ps-client",
+      "type": "dependency"
+    },
+    {
+      "source": "ps-grp-public",
+      "target": "ps-handle-msg",
+      "type": "dependency"
+    },
+    {
+      "source": "ps-grp-public",
+      "target": "ps-loop-modal",
+      "type": "dependency"
+    },
+    {
+      "source": "ps-grp-public",
+      "target": "ps-map",
+      "type": "dependency"
+    },
+    {
+      "source": "ps-grp-public",
+      "target": "ps-render-3d",
+      "type": "dependency"
+    },
+    {
+      "source": "ps-grp-public",
+      "target": "ps-autotest-ui",
+      "type": "dependency"
+    },
+    {
+      "source": "ps-root",
+      "target": "ps-grp-core",
+      "type": "dependency"
+    },
+    {
+      "source": "ps-grp-core",
+      "target": "ps-server-file",
+      "type": "dependency"
+    },
+    {
+      "source": "ps-grp-core",
+      "target": "ps-host-enrichment-file",
+      "type": "dependency"
+    },
+    {
+      "source": "ps-grp-core",
+      "target": "ps-host-history-file",
+      "type": "dependency"
+    },
+    {
+      "source": "ps-grp-core",
+      "target": "ps-vm-vlan-file",
+      "type": "dependency"
+    },
+    {
+      "source": "ps-root",
+      "target": "ps-ad-file",
+      "type": "dependency"
+    },
+    {
+      "source": "ps-root",
+      "target": "ps-loop-file",
+      "type": "dependency"
+    },
+    {
+      "source": "ps-root",
+      "target": "ps-grp-autotest",
+      "type": "dependency"
+    },
+    {
+      "source": "ps-grp-autotest",
+      "target": "ps-autotest",
+      "type": "dependency"
+    },
+    {
+      "source": "ps-grp-autotest",
+      "target": "ps-autotest-network",
+      "type": "dependency"
+    },
+    {
+      "source": "ps-grp-autotest",
+      "target": "ps-autotest-pdf",
+      "type": "dependency"
+    },
+    {
+      "source": "ps-grp-autotest",
+      "target": "ps-autotest-csv",
+      "type": "dependency"
+    },
+    {
+      "source": "ps-grp-autotest",
+      "target": "ps-autotest-remote",
+      "type": "dependency"
+    },
+    {
+      "source": "ps-grp-autotest",
+      "target": "ps-autotest-remote-sec",
+      "type": "dependency"
+    },
+    {
+      "source": "ps-grp-autotest",
+      "target": "ps-autotest-runner",
+      "type": "dependency"
+    },
+    {
+      "source": "ps-root",
+      "target": "ps-grp-oracle",
+      "type": "dependency"
+    },
+    {
+      "source": "ps-grp-oracle",
+      "target": "ps-oracle",
+      "type": "dependency"
+    },
+    {
+      "source": "ps-grp-oracle",
+      "target": "ps-oracle-bridge",
+      "type": "dependency"
+    },
+    {
+      "source": "ps-grp-oracle",
+      "target": "ps-oracle-java",
+      "type": "dependency"
+    },
+    {
+      "source": "ps-root",
+      "target": "ps-grp-platform",
+      "type": "dependency"
+    },
+    {
+      "source": "ps-grp-platform",
+      "target": "ps-platform",
+      "type": "dependency"
+    },
+    {
+      "source": "ps-grp-platform",
+      "target": "ps-platform-config",
+      "type": "dependency"
+    },
+    {
+      "source": "ps-grp-platform",
+      "target": "ps-platform-hooks",
+      "type": "dependency"
+    },
+    {
+      "source": "ps-grp-platform",
+      "target": "ps-network-drift",
+      "type": "dependency"
+    },
+    {
+      "source": "ps-grp-platform",
+      "target": "ps-asset-correlation",
+      "type": "dependency"
+    },
+    {
+      "source": "ps-grp-platform",
+      "target": "ps-asset-lifecycle",
+      "type": "dependency"
+    },
+    {
+      "source": "ps-grp-platform",
+      "target": "ps-nac-readiness",
+      "type": "dependency"
+    },
+    {
+      "source": "ps-grp-platform",
+      "target": "ps-tls-cert",
+      "type": "dependency"
+    },
+    {
+      "source": "ps-grp-platform",
+      "target": "ps-deep-fp",
+      "type": "dependency"
+    },
+    {
+      "source": "ps-grp-platform",
+      "target": "ps-passive",
+      "type": "dependency"
+    },
+    {
+      "source": "ps-grp-platform",
+      "target": "ps-scheduled",
+      "type": "dependency"
+    },
+    {
+      "source": "ps-grp-platform",
+      "target": "ps-webhook",
+      "type": "dependency"
+    },
+    {
+      "source": "ps-grp-platform",
+      "target": "ps-canon-agent",
+      "type": "dependency"
+    },
+    {
+      "source": "ps-grp-platform",
+      "target": "ps-ala-mapping",
+      "type": "dependency"
+    },
+    {
+      "source": "ps-root",
+      "target": "ps-grp-auth",
+      "type": "dependency"
+    },
+    {
+      "source": "ps-grp-auth",
+      "target": "ps-auth",
+      "type": "dependency"
+    },
+    {
+      "source": "ps-grp-auth",
+      "target": "ps-rbac",
+      "type": "dependency"
+    },
+    {
+      "source": "ps-root",
+      "target": "ps-grp-public",
+      "type": "dependency"
+    },
+    {
+      "source": "ps-grp-public",
+      "target": "ps-app-file",
+      "type": "dependency"
+    },
+    {
+      "source": "ps-grp-public",
+      "target": "ps-index-html",
+      "type": "dependency"
+    },
+    {
+      "source": "ps-grp-public",
+      "target": "ps-style-css",
+      "type": "dependency"
+    },
+    {
+      "source": "ps-grp-public",
+      "target": "ps-platform-js",
+      "type": "dependency"
+    },
+    {
+      "source": "ps-grp-public",
+      "target": "ps-platform-css",
+      "type": "dependency"
+    },
+    {
+      "source": "ps-grp-public",
+      "target": "ps-map-file",
+      "type": "dependency"
+    },
+    {
+      "source": "ps-grp-public",
+      "target": "ps-map-html",
+      "type": "dependency"
+    },
+    {
+      "source": "ps-grp-public",
+      "target": "ps-port-presets",
+      "type": "dependency"
+    },
+    {
+      "source": "ps-root",
+      "target": "ps-grp-scripts",
+      "type": "dependency"
+    },
+    {
+      "source": "ps-grp-scripts",
+      "target": "ps-script-install-agent",
+      "type": "dependency"
+    },
+    {
+      "source": "ps-grp-scripts",
+      "target": "ps-script-remote-agent",
+      "type": "dependency"
+    },
+    {
+      "source": "ps-grp-scripts",
+      "target": "ps-script-remote-help",
+      "type": "dependency"
+    },
+    {
+      "source": "ps-grp-scripts",
+      "target": "ps-script-canon-agent",
+      "type": "dependency"
+    },
+    {
+      "source": "ps-root",
+      "target": "ps-grp-tests",
+      "type": "dependency"
+    },
+    {
+      "source": "ps-grp-tests",
+      "target": "ps-test-platform",
+      "type": "dependency"
+    },
+    {
+      "source": "ps-grp-tests",
+      "target": "ps-test-legacy",
+      "type": "dependency"
+    },
+    {
+      "source": "ps-root",
+      "target": "ps-package-json",
+      "type": "dependency"
+    },
+    {
+      "source": "ps-grp-scripts",
+      "target": "ps-package-agent-json",
+      "type": "dependency"
+    }
+  ]
+}

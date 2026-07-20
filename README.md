@@ -285,6 +285,11 @@ mindmap
 5. **Clique no balão** para abrir a **página com código e implementação**
 6. Use a **barra de busca** no topo para encontrar qualquer trecho de código
 7. **Voltar à Árvore** retorna ao projeto · **Voltar aos Projetos** retorna à galeria
+8. **Modo Galaxy 3D** — visualização espacial em React Three Fiber (esferas, partículas, filtros por categoria)
+
+<a href="https://canonengineer.github.io/TreeofKnowledge/galaxy/index.html?project=professional-scanner">
+  <img src="https://img.shields.io/badge/🌌_GALAXY-Professional_Scanner_3D-8b5cf6?style=for-the-badge&labelColor=0c2344" alt="Galaxy 3D Professional Scanner"/>
+</a>
 
 ### Opção 2 — Permanecer no GitHub
 

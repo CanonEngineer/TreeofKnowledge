@@ -107,6 +107,11 @@
       demoLink.removeAttribute('href');
       demoLink.classList.add('hidden');
     }
+    const galaxyLink = $('#tree-galaxy-link');
+    if (galaxyLink) {
+      galaxyLink.href = 'galaxy/index.html?project=' + encodeURIComponent(project.slug);
+      galaxyLink.classList.remove('hidden');
+    }
     const shotsEl = document.getElementById('tree-screenshots');
     if (shotsEl) {
       const shots = Array.isArray(project.screenshots) ? project.screenshots : [];
