@@ -166,12 +166,17 @@
 
       <div id="tree-screenshots" class="tree-screenshots hidden" aria-label="Capturas de tela do projeto"></div>
 
-      <div class="tree-scene-wrap">
+      <div class="tree-scene-wrap" id="tree-scene-wrap">
+        <div class="tree-fs-bar hidden" id="tree-fs-bar" aria-hidden="true">
+          <span id="tree-fs-name" class="tree-fs-name"></span>
+          <button type="button" id="btn-tree-fs-exit" class="tree-fs-exit">Sair da tela cheia ⤓</button>
+        </div>
         <div class="tree-zoom" id="tree-zoom" role="group" aria-label="Zoom da árvore">
           <button type="button" id="btn-zoom-out" class="tree-zoom-btn" aria-label="Diminuir zoom" title="Diminuir zoom">−</button>
           <span id="tree-zoom-label" class="tree-zoom-label">35%</span>
           <button type="button" id="btn-zoom-in" class="tree-zoom-btn" aria-label="Aumentar zoom" title="Aumentar zoom">+</button>
           <button type="button" id="btn-zoom-reset" class="tree-zoom-btn tree-zoom-reset" aria-label="Visão geral" title="Visão geral (35%)">⟲</button>
+          <button type="button" id="btn-tree-fullscreen" class="tree-zoom-btn tree-zoom-fs" aria-label="Tela cheia da árvore" title="Tela cheia da árvore">⤢</button>
         </div>
 
         <div id="tree-scene" class="tree-scene">
@@ -184,7 +189,7 @@
         </div>
       </div>
 
-      <p class="tree-hint">Abre em 35% para visão geral · Use + / − para aproximar · ⟲ restaura panorama · Clique no balão para abrir o código</p>
+      <p class="tree-hint">Abre em 35% para visão geral · ⤢ tela cheia só da árvore · + / − aproximar · ⟲ restaura panorama</p>
 
     </section>
 

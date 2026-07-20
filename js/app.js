@@ -13,6 +13,11 @@
   const zoomLabel = $('#tree-zoom-label');
   const btnZoomIn = $('#btn-zoom-in');
   const btnZoomOut = $('#btn-zoom-out');
+  const treeSceneWrap = $('#tree-scene-wrap');
+  const btnTreeFullscreen = $('#btn-tree-fullscreen');
+  const treeFsBar = $('#tree-fs-bar');
+  const treeFsName = $('#tree-fs-name');
+  const btnTreeFsExit = $('#btn-tree-fs-exit');
 
   let currentProject = null;
   let nodeMap = new Map();
@@ -72,6 +77,53 @@
     const fitZoom = Math.min(viewW / baseW, viewH / baseH) * 0.92;
     if (fitZoom >= ZOOM_INITIAL) return ZOOM_INITIAL;
     return clampZoom(Math.max(0.12, fitZoom));
+  }
+
+  function restoreOverview() {
+    zoom = computeOverviewZoom();
+    applyZoom(zoom, false);
+    centerTreeInView();
+  }
+
+  function isTreeFullscreen() {
+    return document.fullscreenElement === treeSceneWrap;
+  }
+
+  function updateFullscreenUi() {
+    const on = isTreeFullscreen();
+    if (btnTreeFullscreen) {
+      btnTreeFullscreen.textContent = on ? '⤓' : '⤢';
+      btnTreeFullscreen.title = on ? 'Sair da tela cheia' : 'Tela cheia da árvore';
+      btnTreeFullscreen.setAttribute('aria-label', btnTreeFullscreen.title);
+    }
+    if (treeFsBar) {
+      treeFsBar.classList.toggle('hidden', !on);
+      treeFsBar.setAttribute('aria-hidden', on ? 'false' : 'true');
+    }
+    if (treeFsName && currentProject) {
+      treeFsName.textContent = currentProject.name;
+    }
+  }
+
+  async function toggleTreeFullscreen() {
+    if (!treeSceneWrap || !currentProject) return;
+    try {
+      if (!isTreeFullscreen()) {
+        await treeSceneWrap.requestFullscreen();
+      } else {
+        await document.exitFullscreen();
+      }
+    } catch (_) {
+      /* navegador bloqueou ou API indisponível */
+    }
+  }
+
+  async function exitTreeFullscreen() {
+    if (isTreeFullscreen()) {
+      try {
+        await document.exitFullscreen();
+      } catch (_) { /* ignore */ }
+    }
   }
 
   function applyZoom(nextZoom, keepCenter = true) {
@@ -158,6 +210,7 @@
   }
 
   function closeTree() {
+    exitTreeFullscreen();
     treeView.classList.add('hidden');
     gallery.classList.remove('hidden');
     currentProject = null;
@@ -218,10 +271,15 @@
   btnZoomIn.addEventListener('click', () => applyZoom(zoom + ZOOM_STEP));
   btnZoomOut.addEventListener('click', () => applyZoom(zoom - ZOOM_STEP));
 
-  $('#btn-zoom-reset')?.addEventListener('click', () => {
-    zoom = computeOverviewZoom();
-    applyZoom(zoom, false);
-    centerTreeInView();
+  $('#btn-zoom-reset')?.addEventListener('click', restoreOverview);
+
+  btnTreeFullscreen?.addEventListener('click', toggleTreeFullscreen);
+  btnTreeFsExit?.addEventListener('click', exitTreeFullscreen);
+
+  treeSceneWrap?.addEventListener('fullscreenchange', () => {
+    updateFullscreenUi();
+    if (!currentProject) return;
+    requestAnimationFrame(() => restoreOverview());
   });
 
   window.addEventListener('resize', () => {
