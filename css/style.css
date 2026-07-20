@@ -412,6 +412,9 @@ body {
   cursor: not-allowed;
   transform: none;
 }
+.tree-zoom-reset {
+  font-size: 1rem;
+}
 .tree-zoom-label {
   min-width: 3.4rem;
   text-align: center;

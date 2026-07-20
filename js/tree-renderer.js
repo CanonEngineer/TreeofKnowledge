@@ -290,14 +290,6 @@ const TreeRenderer = (() => {
       container.appendChild(el);
     });
 
-    const rootPos = positions.get(tree.id);
-    if (rootPos) {
-      requestAnimationFrame(() => {
-        scene.scrollLeft = Math.max(0, rootPos.x - scene.clientWidth / 2);
-        scene.scrollTop = Math.max(0, rootPos.y - scene.clientHeight / 2);
-      });
-    }
-
     return positions;
   }
 

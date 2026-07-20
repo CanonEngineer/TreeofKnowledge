@@ -17,7 +17,9 @@
   let currentProject = null;
   let nodeMap = new Map();
   let zoom = 1;
+  let fitOverviewOnRender = false;
 
+  const ZOOM_INITIAL = 0.35;
   const ZOOM_MIN = 0.35;
   const ZOOM_MAX = 2.5;
   const ZOOM_STEP = 0.15;
@@ -49,6 +51,27 @@
 
   function clampZoom(value) {
     return Math.min(ZOOM_MAX, Math.max(ZOOM_MIN, Math.round(value * 100) / 100));
+  }
+
+  function centerTreeInView() {
+    const baseW = parseFloat(treeStage.dataset.baseWidth) || treeStage.offsetWidth;
+    const baseH = parseFloat(treeStage.dataset.baseHeight) || treeStage.offsetHeight;
+    const viewW = treeScene.clientWidth;
+    const viewH = treeScene.clientHeight;
+    treeScene.scrollLeft = Math.max(0, (baseW * zoom - viewW) / 2);
+    treeScene.scrollTop = Math.max(0, (baseH * zoom - viewH) / 2);
+  }
+
+  /** 35% padrão; se o grafo for enorme, reduz só o necessário para caber tudo */
+  function computeOverviewZoom() {
+    const baseW = parseFloat(treeStage.dataset.baseWidth) || treeStage.offsetWidth;
+    const baseH = parseFloat(treeStage.dataset.baseHeight) || treeStage.offsetHeight;
+    const viewW = treeScene.clientWidth;
+    const viewH = treeScene.clientHeight;
+    if (!baseW || !baseH || !viewW || !viewH) return ZOOM_INITIAL;
+    const fitZoom = Math.min(viewW / baseW, viewH / baseH) * 0.92;
+    if (fitZoom >= ZOOM_INITIAL) return ZOOM_INITIAL;
+    return clampZoom(Math.max(0.12, fitZoom));
   }
 
   function applyZoom(nextZoom, keepCenter = true) {
@@ -83,7 +106,12 @@
   function renderTree() {
     requestAnimationFrame(() => {
       TreeRenderer.render(treeNodes, treeLines, currentProject.nodes, currentProject.color, currentProject.slug);
+      if (fitOverviewOnRender) {
+        zoom = computeOverviewZoom();
+        fitOverviewOnRender = false;
+      }
       applyZoom(zoom, false);
+      centerTreeInView();
       bindNodeEvents();
     });
   }
@@ -92,7 +120,8 @@
     if (project.comingSoon) return;
     currentProject = project;
     nodeMap = new Map(project.nodes.map(n => [n.id, n]));
-    zoom = 1;
+    zoom = ZOOM_INITIAL;
+    fitOverviewOnRender = true;
     gallery.classList.add('hidden');
     treeView.classList.remove('hidden');
     history.replaceState(null, '', AppConfig.indexUrl('tree=' + encodeURIComponent(project.slug)));
@@ -189,8 +218,17 @@
   btnZoomIn.addEventListener('click', () => applyZoom(zoom + ZOOM_STEP));
   btnZoomOut.addEventListener('click', () => applyZoom(zoom - ZOOM_STEP));
 
+  $('#btn-zoom-reset')?.addEventListener('click', () => {
+    zoom = computeOverviewZoom();
+    applyZoom(zoom, false);
+    centerTreeInView();
+  });
+
   window.addEventListener('resize', () => {
-    if (currentProject) renderTree();
+    if (currentProject) {
+      fitOverviewOnRender = false;
+      renderTree();
+    }
   });
 
   initGallery();
