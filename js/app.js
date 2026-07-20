@@ -26,7 +26,7 @@
 
   const ZOOM_INITIAL = 0.35;
   const ZOOM_MIN = 0.35;
-  const ZOOM_MAX = 2.5;
+  const ZOOM_MAX = 1;
   const ZOOM_STEP = 0.15;
 
   const ICONS = {
