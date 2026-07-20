@@ -110,7 +110,7 @@ def main():
             "NetScan Canon v2: varredura, AD, AutoTest L2/L3/L4 local/remoto, "
             "Oracle, Plataforma Canon e monitor urgente de loop SNMP."
         )
-        project["demoUrl"] = "https://github.com/CanonEngineer/Professional-Scanner#autotest-de-rede-1"
+        project["demoUrl"] = "https://github.com/CanonEngineer/Professional-Scanner#autotest-de-rede"
         project["screenshots"] = [
             "docs/images/professional-scanner/autotest-results.png",
             "docs/images/professional-scanner/autotest-running.png",
