@@ -291,24 +291,6 @@ body,
   font-size: 1rem;
 }
 
-.zoom-indicator {
-  position: absolute;
-  top: 52px;
-  left: 50%;
-  transform: translateX(-50%);
-  z-index: 15;
-  padding: 0.35rem 0.85rem;
-  border-radius: 999px;
-  border: 1px solid rgba(59, 130, 246, 0.25);
-  background: rgba(8, 15, 30, 0.88);
-  color: #94a3b8;
-  font-size: 0.78rem;
-  font-family: 'JetBrains Mono', monospace;
-  pointer-events: none;
-  min-width: 52px;
-  text-align: center;
-}
-
 .minimap {
   position: absolute;
   bottom: 14px;

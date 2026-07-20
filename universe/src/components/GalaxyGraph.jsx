@@ -3,13 +3,11 @@ import { Canvas } from '@react-three/fiber';
 import { OrbitControls, Html } from '@react-three/drei';
 import { EffectComposer, Bloom, Vignette } from '@react-three/postprocessing';
 import { StarField, GridFloor, NodeSphere, ConnectionBeam } from './SceneObjects';
-import { ApplyOverviewCamera, ResetCamera, CameraFocus, ZoomTracker } from './CameraFocus';
-import { computeLayout, computeGraphBounds, computeCameraFrames, getNeighbors } from '../utils/layout';
+import { CameraFocus, ResetCamera } from './CameraFocus';
+import { computeLayout, getNeighbors } from '../utils/layout';
 
 function Scene({
   graph,
-  cameraFrames,
-  cameraVersion,
   selectedId,
   hoveredId,
   onSelect,
@@ -21,7 +19,6 @@ function Scene({
   activeCategories,
   resetCam,
   paused,
-  onZoomChange,
 }) {
   const laidOut = useMemo(() => computeLayout(graph), [graph]);
   const posMap = useMemo(() => new Map(laidOut.map((n) => [n.id, n.position])), [laidOut]);
@@ -43,30 +40,15 @@ function Scene({
   return (
     <>
       <color attach="background" args={['#010409']} />
-      <fog attach="fog" args={['#010409', cameraFrames.overviewDistance * 0.6, cameraFrames.overviewDistance * 3.2]} />
+      <fog attach="fog" args={['#010409', 45, 160]} />
       <ambientLight intensity={0.22} />
       <directionalLight position={[30, 40, 20]} intensity={0.55} color="#93c5fd" />
       <pointLight position={[-30, 15, -25]} intensity={0.9} color="#818cf8" />
       <pointLight position={[0, -10, 30]} intensity={0.35} color="#22d3ee" />
       <StarField />
       <GridFloor />
-
-      <OrbitControls
-        makeDefault
-        enableDamping
-        dampingFactor={0.05}
-        minDistance={cameraFrames.minDistance}
-        maxDistance={cameraFrames.maxDistance}
-        target={[cameraFrames.center.x, cameraFrames.center.y, cameraFrames.center.z]}
-        maxPolarAngle={Math.PI * 0.52}
-        autoRotate={showAnimations && !hasFocus && !paused}
-        autoRotateSpeed={0.35}
-      />
-
-      <ApplyOverviewCamera frames={cameraFrames} version={cameraVersion} />
-      <ResetCamera trigger={resetCam} frames={cameraFrames} />
-      <CameraFocus target={focusNode} frames={cameraFrames} />
-      <ZoomTracker frames={cameraFrames} onZoomChange={onZoomChange} />
+      <ResetCamera trigger={resetCam} />
+      <CameraFocus target={focusNode} offset={[0, 3, 18]} />
 
       {showLinks &&
         links.map((link, i) => {
@@ -130,6 +112,16 @@ function Scene({
         );
       })}
 
+      <OrbitControls
+        enableDamping
+        dampingFactor={0.05}
+        minDistance={6}
+        maxDistance={100}
+        maxPolarAngle={Math.PI * 0.52}
+        autoRotate={showAnimations && !hasFocus && !paused}
+        autoRotateSpeed={0.35}
+      />
+
       <EffectComposer multisampling={0}>
         <Bloom luminanceThreshold={0.2} luminanceSmoothing={0.85} intensity={1.35} radius={0.75} />
         <Vignette eskil offset={0.12} darkness={0.85} />
@@ -138,41 +130,19 @@ function Scene({
   );
 }
 
-export default function GalaxyGraph({ graph, onZoomChange, ...props }) {
+export default function GalaxyGraph(props) {
   const [hoveredId, setHoveredId] = useState(null);
   const handleHover = useCallback((node) => setHoveredId(node?.id ?? null), []);
 
-  const laidOut = useMemo(() => computeLayout(graph), [graph]);
-  const cameraFrames = useMemo(() => {
-    const aspect = typeof window !== 'undefined' ? window.innerWidth / Math.max(window.innerHeight, 1) : 16 / 9;
-    return computeCameraFrames(computeGraphBounds(laidOut), 52, aspect);
-  }, [laidOut]);
-
-  const canvasKey = `${graph.slug}-${graph.nodes.length}`;
-
   return (
     <Canvas
-      key={canvasKey}
-      camera={{
-        fov: 52,
-        near: 0.1,
-        far: Math.max(800, cameraFrames.overviewDistance * 5),
-        position: [cameraFrames.overview.x, cameraFrames.overview.y, cameraFrames.overview.z],
-      }}
+      camera={{ position: [0, 8, 42], fov: 52 }}
       gl={{ antialias: true, alpha: false, powerPreference: 'high-performance' }}
       dpr={[1, 2]}
       frameloop={props.paused ? 'never' : 'always'}
     >
       <Suspense fallback={null}>
-        <Scene
-          {...props}
-          graph={graph}
-          cameraFrames={cameraFrames}
-          cameraVersion={canvasKey}
-          hoveredId={hoveredId}
-          onHover={handleHover}
-          onZoomChange={onZoomChange}
-        />
+        <Scene {...props} hoveredId={hoveredId} onHover={handleHover} />
       </Suspense>
     </Canvas>
   );
