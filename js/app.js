@@ -126,7 +126,7 @@
     }
   }
 
-  function applyZoom(nextZoom, keepCenter = true) {
+  function applyZoom(nextZoom, keepCenter = true, pointer = null) {
     const prev = zoom;
     zoom = clampZoom(nextZoom);
 
@@ -145,7 +145,15 @@
     treeZoomSpace.style.width = Math.max(baseW * zoom, viewW) + 'px';
     treeZoomSpace.style.height = Math.max(baseH * zoom, viewH) + 'px';
 
-    if (keepCenter) {
+    if (pointer) {
+      const rect = treeScene.getBoundingClientRect();
+      const localX = pointer.x - rect.left + treeScene.scrollLeft;
+      const localY = pointer.y - rect.top + treeScene.scrollTop;
+      const px = localX / prev;
+      const py = localY / prev;
+      treeScene.scrollLeft = px * zoom - (pointer.x - rect.left);
+      treeScene.scrollTop = py * zoom - (pointer.y - rect.top);
+    } else if (keepCenter) {
       treeScene.scrollLeft = contentX * zoom - viewW / 2;
       treeScene.scrollTop = contentY * zoom - viewH / 2;
     }
@@ -262,6 +270,13 @@
 
   btnTreeFullscreen?.addEventListener('click', toggleTreeFullscreen);
   btnTreeFsExit?.addEventListener('click', exitTreeFullscreen);
+
+  treeScene?.addEventListener('wheel', (e) => {
+    if (!currentProject) return;
+    e.preventDefault();
+    const step = e.deltaY > 0 ? -ZOOM_STEP : ZOOM_STEP;
+    applyZoom(zoom + step, false, { x: e.clientX, y: e.clientY });
+  }, { passive: false });
 
   treeSceneWrap?.addEventListener('fullscreenchange', () => {
     updateFullscreenUi();
