@@ -69,6 +69,16 @@
   document.getElementById('node-file').textContent = node.file || '';
   document.getElementById('node-desc').textContent = node.description || '';
 
+  const shotSection = document.getElementById('node-screenshot-section');
+  const shotImg = document.getElementById('node-screenshot');
+  if (shotSection && shotImg && node.screenshot) {
+    shotImg.src = node.screenshot;
+    shotImg.alt = (node.title || '') + ' — ' + project.name;
+    shotSection.classList.remove('hidden');
+  } else if (shotSection) {
+    shotSection.classList.add('hidden');
+  }
+
   const codeEl = document.getElementById('node-code');
   CimedCodeHighlight.renderInto(codeEl, node.code || '', node.file || '', project.slug);
 

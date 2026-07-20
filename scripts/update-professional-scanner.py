@@ -14,6 +14,7 @@ NEW_NODES = [
         "title": "autoTest.js",
         "description": "Motor AutoTest L2/L3/L4: perfis, histórico, relatório de engenharia e export PDF/CSV.",
         "file": "autoTest.js",
+        "screenshot": "docs/images/professional-scanner/autotest-results.png",
         "implementation": [
             "runAutoTest()",
             "perfis Canon / Integra",
@@ -28,6 +29,7 @@ NEW_NODES = [
         "title": "renderAutoTestEngineeringBanner()",
         "description": "Banner EXECUTANDO animado, métricas PASS/AVISO/FALHA e cards em 3 colunas.",
         "file": "public/app.js",
+        "screenshot": "docs/images/professional-scanner/autotest-running.png",
         "implementation": [
             "autotest-run-scroll",
             "loadAutoTestInterfaces()",
@@ -42,6 +44,7 @@ NEW_NODES = [
         "title": "autoTestRemote.js",
         "description": "Execução remota estilo Veyon: pareamento, runner assinado e fila de jobs na LAN.",
         "file": "autoTestRemote.js",
+        "screenshot": "docs/images/professional-scanner/autotest-remote.png",
         "implementation": [
             "enrollRemoteAgent()",
             "install-autotest-agent-service.ps1",
@@ -107,6 +110,13 @@ def main():
             "NetScan Canon v2: varredura, AD, AutoTest L2/L3/L4 local/remoto, "
             "Oracle, Plataforma Canon e monitor urgente de loop SNMP."
         )
+        project["demoUrl"] = "https://github.com/CanonEngineer/Professional-Scanner#autotest-de-rede-1"
+        project["screenshots"] = [
+            "docs/images/professional-scanner/autotest-results.png",
+            "docs/images/professional-scanner/autotest-running.png",
+            "docs/images/professional-scanner/autotest-remote.png",
+            "docs/images/professional-scanner/autotest-history.png",
+        ]
 
         existing_ids = {n["id"] for n in project.get("nodes", [])}
         for node in project.get("nodes", []):
@@ -121,12 +131,18 @@ def main():
                 )
 
         added = 0
+        updated = 0
         for node in NEW_NODES:
             if node["id"] not in existing_ids:
                 project.setdefault("nodes", []).append(node)
                 added += 1
+            else:
+                for existing in project.get("nodes", []):
+                    if existing["id"] == node["id"] and node.get("screenshot"):
+                        existing["screenshot"] = node["screenshot"]
+                        updated += 1
 
-        print(f"Professional-Scanner: +{added} nós, total {len(project['nodes'])}")
+        print(f"Professional-Scanner: +{added} nós, {updated} screenshots, total {len(project['nodes'])}")
         break
     else:
         raise SystemExit("Projeto professional-scanner não encontrado")
