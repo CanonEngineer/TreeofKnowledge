@@ -11,6 +11,7 @@ function Scene({
   selectedId,
   hoveredId,
   onSelect,
+  onOpenCode,
   onHover,
   showLabels,
   showLinks,
@@ -89,6 +90,10 @@ function Scene({
               dimmed={dimmed}
               animated={showAnimations}
               onClick={onSelect}
+              onDoubleClick={(node) => {
+                if (node.layer === 'root') return;
+                onOpenCode(node);
+              }}
               onPointerOver={onHover}
               onPointerOut={() => onHover(null)}
             />

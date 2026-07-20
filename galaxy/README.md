@@ -1,3 +1,3 @@
 # Galaxy 3D
 
-Build: `.\scripts\build-galaxy.ps1`
+Duplo clique na esfera abre o código. Build: `.\scripts\build-galaxy.ps1`

@@ -52,6 +52,7 @@ export function NodeSphere({
   dimmed,
   animated,
   onClick,
+  onDoubleClick,
   onPointerOver,
   onPointerOut,
 }) {
@@ -100,6 +101,10 @@ export function NodeSphere({
         ref={meshRef}
         scale={[base, base, base]}
         onClick={(e) => { e.stopPropagation(); onClick(node); }}
+        onDoubleClick={(e) => {
+          e.stopPropagation();
+          if (onDoubleClick) onDoubleClick(node);
+        }}
         onPointerOver={(e) => { e.stopPropagation(); onPointerOver(node); document.body.style.cursor = 'pointer'; }}
         onPointerOut={() => { onPointerOut(); document.body.style.cursor = 'default'; }}
       >

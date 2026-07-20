@@ -133,6 +133,7 @@ export default function App() {
           graph={filteredGraph}
           selectedId={selectedId}
           onSelect={(node) => setSelectedId(node.id === selectedId ? null : node.id)}
+          onOpenCode={handleViewCode}
           showLabels={showLabels}
           showLinks={showLinks}
           showParticles={showParticles}

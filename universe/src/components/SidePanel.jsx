@@ -40,9 +40,9 @@ export function SidePanel({ node, graph, onClose, onViewCode, onReset }) {
           <button type="button" className="action-btn" onClick={onReset}>Reiniciar Vista</button>
         </div>
         <div className="panel-hints">
-          <p>Arraste · rotacionar</p>
-          <p>Scroll · zoom</p>
-          <p>Hover · destacar conexões</p>
+          <p>Clique · selecionar nó</p>
+          <p>Duplo clique · abrir código</p>
+          <p>Scroll · zoom · arraste · rotacionar</p>
         </div>
       </aside>
     );
