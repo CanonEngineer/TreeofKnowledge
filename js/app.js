@@ -193,19 +193,6 @@
       galaxyLink.href = 'galaxy/index.html?project=' + encodeURIComponent(project.slug);
       galaxyLink.classList.remove('hidden');
     }
-    const shotsEl = document.getElementById('tree-screenshots');
-    if (shotsEl) {
-      const shots = Array.isArray(project.screenshots) ? project.screenshots : [];
-      if (shots.length) {
-        shotsEl.innerHTML = shots.map((src, i) =>
-          '<figure class="tree-screenshot-item"><img src="' + src + '" alt="' + project.name + ' — captura ' + (i + 1) + '" loading="lazy"></figure>'
-        ).join('');
-        shotsEl.classList.remove('hidden');
-      } else {
-        shotsEl.innerHTML = '';
-        shotsEl.classList.add('hidden');
-      }
-    }
     renderTree();
   }
 
