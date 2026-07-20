@@ -28,7 +28,7 @@
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
-      "size": 1.4,
+      "size": 2.2,
       "file": "manage.py",
       "description": "Sistema de salão Meninos da Vila — contas, agenda e clientes."
     },
@@ -40,7 +40,7 @@
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
-      "size": 1.0,
+      "size": 1.35,
       "file": "accounts/",
       "description": "Módulo/pasta `accounts/` com arquivos-chave do projeto."
     },
@@ -52,7 +52,7 @@
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
-      "size": 0.72,
+      "size": 0.85,
       "file": "accounts/admin.py",
       "description": "Arquivo `accounts/admin.py` mapeado a partir do repositório original."
     },
@@ -64,7 +64,7 @@
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
-      "size": 0.72,
+      "size": 0.85,
       "file": "accounts/forms.py",
       "description": "Arquivo `accounts/forms.py` mapeado a partir do repositório original."
     },
@@ -76,7 +76,7 @@
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
-      "size": 0.72,
+      "size": 0.85,
       "file": "accounts/models.py",
       "description": "Arquivo `accounts/models.py` mapeado a partir do repositório original."
     },
@@ -88,7 +88,7 @@
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
-      "size": 0.72,
+      "size": 0.85,
       "file": "accounts/urls.py",
       "description": "Arquivo `accounts/urls.py` mapeado a partir do repositório original."
     },
@@ -100,7 +100,7 @@
       "category": "frontend",
       "categoryLabel": "Frontend",
       "color": "#eab308",
-      "size": 0.72,
+      "size": 0.85,
       "file": "accounts/views.py",
       "description": "Arquivo `accounts/views.py` mapeado a partir do repositório original."
     },
@@ -112,7 +112,7 @@
       "category": "frontend",
       "categoryLabel": "Frontend",
       "color": "#eab308",
-      "size": 0.72,
+      "size": 0.85,
       "file": "accounts/templates/accounts/index.html",
       "description": "Arquivo `accounts/templates/accounts/index.html` mapeado a partir do repositório original."
     },
@@ -124,7 +124,7 @@
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
-      "size": 0.72,
+      "size": 0.85,
       "file": "accounts/backends.py",
       "description": "Arquivo `accounts/backends.py` mapeado a partir do repositório original."
     },
@@ -136,7 +136,7 @@
       "category": "frontend",
       "categoryLabel": "Frontend",
       "color": "#eab308",
-      "size": 0.72,
+      "size": 0.85,
       "file": "accounts/templates/accounts/register.html",
       "description": "Arquivo `accounts/templates/accounts/register.html` mapeado a partir do repositório original."
     },
@@ -148,7 +148,7 @@
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
-      "size": 1.0,
+      "size": 1.35,
       "file": "agenda/",
       "description": "Módulo/pasta `agenda/` com arquivos-chave do projeto."
     },
@@ -160,7 +160,7 @@
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
-      "size": 0.72,
+      "size": 0.85,
       "file": "agenda/admin.py",
       "description": "Arquivo `agenda/admin.py` mapeado a partir do repositório original."
     },
@@ -172,7 +172,7 @@
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
-      "size": 0.72,
+      "size": 0.85,
       "file": "agenda/forms.py",
       "description": "Arquivo `agenda/forms.py` mapeado a partir do repositório original."
     },
@@ -184,7 +184,7 @@
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
-      "size": 0.72,
+      "size": 0.85,
       "file": "agenda/models.py",
       "description": "Arquivo `agenda/models.py` mapeado a partir do repositório original."
     },
@@ -196,7 +196,7 @@
       "category": "frontend",
       "categoryLabel": "Frontend",
       "color": "#eab308",
-      "size": 0.72,
+      "size": 0.85,
       "file": "agenda/views.py",
       "description": "Arquivo `agenda/views.py` mapeado a partir do repositório original."
     },
@@ -208,7 +208,7 @@
       "category": "frontend",
       "categoryLabel": "Frontend",
       "color": "#eab308",
-      "size": 0.72,
+      "size": 0.85,
       "file": "agenda/templates/deletar_cliente.html",
       "description": "Arquivo `agenda/templates/deletar_cliente.html` mapeado a partir do repositório original."
     },
@@ -220,7 +220,7 @@
       "category": "frontend",
       "categoryLabel": "Frontend",
       "color": "#eab308",
-      "size": 0.72,
+      "size": 0.85,
       "file": "agenda/templates/detalhes_cliente.html",
       "description": "Arquivo `agenda/templates/detalhes_cliente.html` mapeado a partir do repositório original."
     },
@@ -232,7 +232,7 @@
       "category": "frontend",
       "categoryLabel": "Frontend",
       "color": "#eab308",
-      "size": 0.72,
+      "size": 0.85,
       "file": "agenda/templates/editar_cliente.html",
       "description": "Arquivo `agenda/templates/editar_cliente.html` mapeado a partir do repositório original."
     },
@@ -244,7 +244,7 @@
       "category": "frontend",
       "categoryLabel": "Frontend",
       "color": "#eab308",
-      "size": 0.72,
+      "size": 0.85,
       "file": "agenda/templates/home_page.html",
       "description": "Arquivo `agenda/templates/home_page.html` mapeado a partir do repositório original."
     },
@@ -256,7 +256,7 @@
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
-      "size": 1.0,
+      "size": 1.35,
       "file": "app/",
       "description": "Módulo/pasta `app/` com arquivos-chave do projeto."
     },
@@ -268,7 +268,7 @@
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
-      "size": 0.72,
+      "size": 0.85,
       "file": "app/forms.py",
       "description": "Arquivo `app/forms.py` mapeado a partir do repositório original."
     },
@@ -280,7 +280,7 @@
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
-      "size": 0.72,
+      "size": 0.85,
       "file": "app/models.py",
       "description": "Arquivo `app/models.py` mapeado a partir do repositório original."
     },
@@ -292,7 +292,7 @@
       "category": "frontend",
       "categoryLabel": "Frontend",
       "color": "#eab308",
-      "size": 0.72,
+      "size": 0.85,
       "file": "app/views.py",
       "description": "Arquivo `app/views.py` mapeado a partir do repositório original."
     },
@@ -304,7 +304,7 @@
       "category": "frontend",
       "categoryLabel": "Frontend",
       "color": "#eab308",
-      "size": 0.72,
+      "size": 0.85,
       "file": "app/static/js/jquery.cart.js",
       "description": "Arquivo `app/static/js/jquery.cart.js` mapeado a partir do repositório original."
     },
@@ -316,7 +316,7 @@
       "category": "frontend",
       "categoryLabel": "Frontend",
       "color": "#eab308",
-      "size": 0.72,
+      "size": 0.85,
       "file": "app/templates/agendamento.html",
       "description": "Arquivo `app/templates/agendamento.html` mapeado a partir do repositório original."
     },
@@ -328,7 +328,7 @@
       "category": "frontend",
       "categoryLabel": "Frontend",
       "color": "#eab308",
-      "size": 0.72,
+      "size": 0.85,
       "file": "app/templates/catalogo.html",
       "description": "Arquivo `app/templates/catalogo.html` mapeado a partir do repositório original."
     },
@@ -340,7 +340,7 @@
       "category": "frontend",
       "categoryLabel": "Frontend",
       "color": "#eab308",
-      "size": 0.72,
+      "size": 0.85,
       "file": "app/templates/contact.html",
       "description": "Arquivo `app/templates/contact.html` mapeado a partir do repositório original."
     },
@@ -352,7 +352,7 @@
       "category": "frontend",
       "categoryLabel": "Frontend",
       "color": "#eab308",
-      "size": 0.72,
+      "size": 0.85,
       "file": "app/templates/home.html",
       "description": "Arquivo `app/templates/home.html` mapeado a partir do repositório original."
     }

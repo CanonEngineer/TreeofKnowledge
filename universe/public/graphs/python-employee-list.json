@@ -32,7 +32,7 @@
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
-      "size": 1.4,
+      "size": 2.2,
       "file": "manage.py",
       "description": "Lista de funcionários com Django, models e templates."
     },
@@ -44,7 +44,7 @@
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
-      "size": 1.0,
+      "size": 1.35,
       "file": "employees/",
       "description": "Módulo/pasta `employees/` com arquivos-chave do projeto."
     },
@@ -56,7 +56,7 @@
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
-      "size": 0.72,
+      "size": 0.85,
       "file": "employees/models.py",
       "description": "Arquivo `employees/models.py` mapeado a partir do repositório original."
     },
@@ -68,7 +68,7 @@
       "category": "frontend",
       "categoryLabel": "Frontend",
       "color": "#eab308",
-      "size": 0.72,
+      "size": 0.85,
       "file": "employees/views.py",
       "description": "Arquivo `employees/views.py` mapeado a partir do repositório original."
     },
@@ -80,7 +80,7 @@
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
-      "size": 0.72,
+      "size": 0.85,
       "file": "employees/admin.py",
       "description": "Arquivo `employees/admin.py` mapeado a partir do repositório original."
     },
@@ -92,7 +92,7 @@
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
-      "size": 0.72,
+      "size": 0.85,
       "file": "employees/urls.py",
       "description": "Arquivo `employees/urls.py` mapeado a partir do repositório original."
     },
@@ -104,7 +104,7 @@
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
-      "size": 0.72,
+      "size": 0.85,
       "file": "employees/apps.py",
       "description": "Arquivo `employees/apps.py` mapeado a partir do repositório original."
     },
@@ -116,7 +116,7 @@
       "category": "tests",
       "categoryLabel": "Testes",
       "color": "#94a3b8",
-      "size": 0.72,
+      "size": 0.85,
       "file": "employees/tests.py",
       "description": "Arquivo `employees/tests.py` mapeado a partir do repositório original."
     },
@@ -128,7 +128,7 @@
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
-      "size": 1.0,
+      "size": 1.35,
       "file": "mysite/",
       "description": "Módulo/pasta `mysite/` com arquivos-chave do projeto."
     },
@@ -140,7 +140,7 @@
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
-      "size": 0.72,
+      "size": 0.85,
       "file": "mysite/settings.py",
       "description": "Arquivo `mysite/settings.py` mapeado a partir do repositório original."
     },
@@ -152,7 +152,7 @@
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
-      "size": 0.72,
+      "size": 0.85,
       "file": "mysite/urls.py",
       "description": "Arquivo `mysite/urls.py` mapeado a partir do repositório original."
     },
@@ -164,7 +164,7 @@
       "category": "frontend",
       "categoryLabel": "Frontend",
       "color": "#eab308",
-      "size": 0.72,
+      "size": 0.85,
       "file": "mysite/views.py",
       "description": "Arquivo `mysite/views.py` mapeado a partir do repositório original."
     },
@@ -176,7 +176,7 @@
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
-      "size": 0.72,
+      "size": 0.85,
       "file": "mysite/asgi.py",
       "description": "Arquivo `mysite/asgi.py` mapeado a partir do repositório original."
     },
@@ -188,7 +188,7 @@
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
-      "size": 0.72,
+      "size": 0.85,
       "file": "mysite/wsgi.py",
       "description": "Arquivo `mysite/wsgi.py` mapeado a partir do repositório original."
     },
@@ -200,7 +200,7 @@
       "category": "frontend",
       "categoryLabel": "Frontend",
       "color": "#eab308",
-      "size": 0.72,
+      "size": 0.85,
       "file": "mysite/static/css/style.css",
       "description": "Arquivo `mysite/static/css/style.css` mapeado a partir do repositório original."
     },
@@ -212,7 +212,7 @@
       "category": "frontend",
       "categoryLabel": "Frontend",
       "color": "#eab308",
-      "size": 1.0,
+      "size": 1.35,
       "file": "templates/",
       "description": "Módulo/pasta `templates/` com arquivos-chave do projeto."
     },
@@ -224,7 +224,7 @@
       "category": "frontend",
       "categoryLabel": "Frontend",
       "color": "#eab308",
-      "size": 0.72,
+      "size": 0.85,
       "file": "templates/employee_detail.html",
       "description": "Arquivo `templates/employee_detail.html` mapeado a partir do repositório original."
     },
@@ -236,7 +236,7 @@
       "category": "frontend",
       "categoryLabel": "Frontend",
       "color": "#eab308",
-      "size": 0.72,
+      "size": 0.85,
       "file": "templates/home.html",
       "description": "Arquivo `templates/home.html` mapeado a partir do repositório original."
     },
@@ -248,7 +248,7 @@
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
-      "size": 0.72,
+      "size": 0.85,
       "file": "manage.py",
       "description": "Arquivo `manage.py` mapeado a partir do repositório original."
     }

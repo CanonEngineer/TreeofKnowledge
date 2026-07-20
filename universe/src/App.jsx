@@ -1,7 +1,7 @@
 import { useCallback, useEffect, useMemo, useState } from 'react';
 import GalaxyGraph from './components/GalaxyGraph';
-import { LeftSidebar, SidePanel, Minimap } from './components/SidePanel';
-import { getProjectSlug } from './utils/layout';
+import { TopBar, LeftSidebar, SidePanel, Minimap } from './components/SidePanel';
+import { computeLayout, getProjectSlug } from './utils/layout';
 
 export default function App() {
   const [graph, setGraph] = useState(null);
@@ -11,6 +11,7 @@ export default function App() {
   const [showLabels, setShowLabels] = useState(true);
   const [showLinks, setShowLinks] = useState(true);
   const [showParticles, setShowParticles] = useState(true);
+  const [showAnimations, setShowAnimations] = useState(true);
   const [paused, setPaused] = useState(false);
   const [resetCam, setResetCam] = useState(0);
   const [activeCategories, setActiveCategories] = useState(new Set());
@@ -53,6 +54,11 @@ export default function App() {
     return { ...graph, nodes, links };
   }, [graph, activeCategories, search]);
 
+  const laidOut = useMemo(
+    () => (filteredGraph ? computeLayout(filteredGraph) : []),
+    [filteredGraph]
+  );
+
   const toggleCategory = useCallback((key) => {
     setActiveCategories((prev) => {
       const next = new Set(prev);
@@ -68,6 +74,11 @@ export default function App() {
     },
     [slug]
   );
+
+  const handleReset = useCallback(() => {
+    setResetCam((n) => n + 1);
+    setSelectedId(null);
+  }, []);
 
   const toggleFullscreen = () => {
     if (!document.fullscreenElement) {
@@ -91,7 +102,7 @@ export default function App() {
   }
 
   if (!filteredGraph) {
-    return <div className="app-loading">Carregando universo…</div>;
+    return <div className="app-loading"><div className="loader" /><span>Carregando universo…</span></div>;
   }
 
   return (
@@ -106,15 +117,18 @@ export default function App() {
         onToggleLinks={() => setShowLinks((v) => !v)}
         showParticles={showParticles}
         onToggleParticles={() => setShowParticles((v) => !v)}
+        showAnimations={showAnimations}
+        onToggleAnimations={() => setShowAnimations((v) => !v)}
         paused={paused}
         onTogglePause={() => setPaused((v) => !v)}
-        onReset={() => { setResetCam((n) => n + 1); setSelectedId(null); }}
+        onReset={handleReset}
         search={search}
         onSearch={setSearch}
         filteredCount={filteredGraph.nodes.length}
       />
 
       <main className="canvas-wrap">
+        <TopBar graph={filteredGraph} />
         <GalaxyGraph
           graph={filteredGraph}
           selectedId={selectedId}
@@ -122,6 +136,7 @@ export default function App() {
           showLabels={showLabels}
           showLinks={showLinks}
           showParticles={showParticles}
+          showAnimations={showAnimations}
           activeCategories={activeCategories}
           resetCam={resetCam}
           paused={paused}
@@ -129,7 +144,12 @@ export default function App() {
         <button type="button" className="fs-btn" onClick={toggleFullscreen} title="Tela cheia">
           {fullscreen ? '⤓' : '⤢'}
         </button>
-        <Minimap graph={filteredGraph} selectedId={selectedId} activeCategories={activeCategories} />
+        <Minimap
+          laidOut={laidOut}
+          selectedId={selectedId}
+          links={filteredGraph.links}
+          activeCategories={activeCategories}
+        />
       </main>
 
       <SidePanel
@@ -137,6 +157,7 @@ export default function App() {
         graph={filteredGraph}
         onClose={() => setSelectedId(null)}
         onViewCode={handleViewCode}
+        onReset={handleReset}
       />
     </div>
   );

@@ -32,7 +32,7 @@
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
-      "size": 1.4,
+      "size": 2.2,
       "file": "README.md",
       "description": "Laboratório educacional: catálogo de pragas, labs, prevenção empresarial e defesa."
     },
@@ -44,7 +44,7 @@
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
-      "size": 1.0,
+      "size": 1.35,
       "file": "common/",
       "description": "Biblioteca VFS + telemetria segura"
     },
@@ -56,7 +56,7 @@
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
-      "size": 1.0,
+      "size": 1.35,
       "file": "catalog/",
       "description": "28 famílias ilustrativas não funcionais"
     },
@@ -68,7 +68,7 @@
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
-      "size": 1.0,
+      "size": 1.35,
       "file": "labs/",
       "description": "Labs 01–05 e 10–19 (simulação)"
     },
@@ -80,7 +80,7 @@
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
-      "size": 1.0,
+      "size": 1.35,
       "file": "labs/",
       "description": "Labs 06–09 defesa + 20 hardening"
     },
@@ -92,7 +92,7 @@
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
-      "size": 1.0,
+      "size": 1.35,
       "file": "docs/",
       "description": "Catálogo, kill chain, prevenção, risco"
     },
@@ -104,7 +104,7 @@
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
-      "size": 1.0,
+      "size": 1.35,
       "file": "conference/",
       "description": "Roteiro e talking points"
     },
@@ -116,7 +116,7 @@
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
-      "size": 1.0,
+      "size": 1.35,
       "file": "prevention/",
       "description": "Controles empresariais imprimíveis"
     },
@@ -128,7 +128,7 @@
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
-      "size": 1.0,
+      "size": 1.35,
       "file": "demos/",
       "description": "Pipeline da palestra"
     },
@@ -140,7 +140,7 @@
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
-      "size": 1.0,
+      "size": 1.35,
       "file": "labs/Users/",
       "description": "Laboratório educacional Users"
     },
@@ -152,7 +152,7 @@
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
-      "size": 0.72,
+      "size": 0.85,
       "file": "catalog/adware.py",
       "description": "Ilustração não funcional: adware"
     },
@@ -164,7 +164,7 @@
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
-      "size": 0.58,
+      "size": 0.62,
       "file": "catalog/adware.py",
       "description": "Função ilustrativa/defensiva `ILLUSTRATIVE_adware`"
     },
@@ -176,7 +176,7 @@
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
-      "size": 0.72,
+      "size": 0.85,
       "file": "catalog/apt_campaign.py",
       "description": "Ilustração não funcional: apt_campaign"
     },
@@ -188,7 +188,7 @@
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
-      "size": 0.58,
+      "size": 0.62,
       "file": "catalog/apt_campaign.py",
       "description": "Função ilustrativa/defensiva `ILLUSTRATIVE_apt_stages`"
     },
@@ -200,7 +200,7 @@
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
-      "size": 0.72,
+      "size": 0.85,
       "file": "catalog/backdoor.py",
       "description": "Ilustração não funcional: backdoor"
     },
@@ -212,7 +212,7 @@
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
-      "size": 0.58,
+      "size": 0.62,
       "file": "catalog/backdoor.py",
       "description": "Função ilustrativa/defensiva `ILLUSTRATIVE_backdoor`"
     },
@@ -224,7 +224,7 @@
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
-      "size": 0.72,
+      "size": 0.85,
       "file": "catalog/banking_trojan.py",
       "description": "Ilustração não funcional: banking_trojan"
     },
@@ -236,7 +236,7 @@
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
-      "size": 0.58,
+      "size": 0.62,
       "file": "catalog/banking_trojan.py",
       "description": "Função ilustrativa/defensiva `ILLUSTRATIVE_bank`"
     },
@@ -248,7 +248,7 @@
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
-      "size": 0.72,
+      "size": 0.85,
       "file": "catalog/bootkit.py",
       "description": "Ilustração não funcional: bootkit"
     },
@@ -260,7 +260,7 @@
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
-      "size": 0.58,
+      "size": 0.62,
       "file": "catalog/bootkit.py",
       "description": "Função ilustrativa/defensiva `ILLUSTRATIVE_bootkit`"
     },
@@ -272,7 +272,7 @@
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
-      "size": 0.72,
+      "size": 0.85,
       "file": "catalog/botnet.py",
       "description": "Ilustração não funcional: botnet"
     },
@@ -284,7 +284,7 @@
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
-      "size": 0.58,
+      "size": 0.62,
       "file": "catalog/botnet.py",
       "description": "Função ilustrativa/defensiva `ILLUSTRATIVE_bot_loop`"
     },
@@ -296,7 +296,7 @@
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
-      "size": 0.72,
+      "size": 0.85,
       "file": "catalog/browser_hijacker.py",
       "description": "Ilustração não funcional: browser_hijacker"
     },
@@ -308,7 +308,7 @@
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
-      "size": 0.58,
+      "size": 0.62,
       "file": "catalog/browser_hijacker.py",
       "description": "Função ilustrativa/defensiva `ILLUSTRATIVE_hijack`"
     },
@@ -320,7 +320,7 @@
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
-      "size": 0.72,
+      "size": 0.85,
       "file": "catalog/cryptojacker.py",
       "description": "Ilustração não funcional: cryptojacker"
     },
@@ -332,7 +332,7 @@
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
-      "size": 0.58,
+      "size": 0.62,
       "file": "catalog/cryptojacker.py",
       "description": "Função ilustrativa/defensiva `ILLUSTRATIVE_mine`"
     },
@@ -344,7 +344,7 @@
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
-      "size": 0.72,
+      "size": 0.85,
       "file": "catalog/double_extortion.py",
       "description": "Ilustração não funcional: double_extortion"
     },
@@ -356,7 +356,7 @@
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
-      "size": 0.58,
+      "size": 0.62,
       "file": "catalog/double_extortion.py",
       "description": "Função ilustrativa/defensiva `ILLUSTRATIVE_double_extortion`"
     },
@@ -368,7 +368,7 @@
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
-      "size": 0.72,
+      "size": 0.85,
       "file": "catalog/dropper_loader.py",
       "description": "Ilustração não funcional: dropper_loader"
     },
@@ -380,7 +380,7 @@
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
-      "size": 0.58,
+      "size": 0.62,
       "file": "catalog/dropper_loader.py",
       "description": "Função ilustrativa/defensiva `ILLUSTRATIVE_dropper`"
     },
@@ -392,7 +392,7 @@
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
-      "size": 0.72,
+      "size": 0.85,
       "file": "catalog/fileless.py",
       "description": "Ilustração não funcional: fileless"
     },
@@ -404,7 +404,7 @@
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
-      "size": 0.58,
+      "size": 0.62,
       "file": "catalog/fileless.py",
       "description": "Função ilustrativa/defensiva `ILLUSTRATIVE_fileless`"
     },
@@ -416,7 +416,7 @@
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
-      "size": 0.72,
+      "size": 0.85,
       "file": "catalog/infostealer.py",
       "description": "Ilustração não funcional: infostealer"
     },
@@ -428,7 +428,7 @@
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
-      "size": 0.58,
+      "size": 0.62,
       "file": "catalog/infostealer.py",
       "description": "Função ilustrativa/defensiva `ILLUSTRATIVE_steal`"
     },
@@ -440,7 +440,7 @@
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
-      "size": 0.72,
+      "size": 0.85,
       "file": "catalog/iot_malware.py",
       "description": "Ilustração não funcional: iot_malware"
     },
@@ -452,7 +452,7 @@
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
-      "size": 0.58,
+      "size": 0.62,
       "file": "catalog/iot_malware.py",
       "description": "Função ilustrativa/defensiva `ILLUSTRATIVE_iot`"
     },
@@ -464,7 +464,7 @@
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
-      "size": 0.72,
+      "size": 0.85,
       "file": "catalog/logic_bomb.py",
       "description": "Ilustração não funcional: logic_bomb"
     },
@@ -476,7 +476,7 @@
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
-      "size": 0.58,
+      "size": 0.62,
       "file": "catalog/logic_bomb.py",
       "description": "Função ilustrativa/defensiva `ILLUSTRATIVE_logic_bomb`"
     },
@@ -488,7 +488,7 @@
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
-      "size": 0.72,
+      "size": 0.85,
       "file": "catalog/macro_malware.py",
       "description": "Ilustração não funcional: macro_malware"
     },
@@ -500,7 +500,7 @@
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
-      "size": 0.58,
+      "size": 0.62,
       "file": "catalog/macro_malware.py",
       "description": "Função ilustrativa/defensiva `ILLUSTRATIVE_macro`"
     },
@@ -512,7 +512,7 @@
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
-      "size": 0.72,
+      "size": 0.85,
       "file": "catalog/mobile_malware.py",
       "description": "Ilustração não funcional: mobile_malware"
     },
@@ -524,7 +524,7 @@
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
-      "size": 0.58,
+      "size": 0.62,
       "file": "catalog/mobile_malware.py",
       "description": "Função ilustrativa/defensiva `ILLUSTRATIVE_mobile`"
     },
@@ -536,7 +536,7 @@
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
-      "size": 0.72,
+      "size": 0.85,
       "file": "catalog/packer_obfuscation.py",
       "description": "Ilustração não funcional: packer_obfuscation"
     },
@@ -548,7 +548,7 @@
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
-      "size": 0.58,
+      "size": 0.62,
       "file": "catalog/packer_obfuscation.py",
       "description": "Função ilustrativa/defensiva `ILLUSTRATIVE_packed`"
     },
@@ -560,7 +560,7 @@
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
-      "size": 0.72,
+      "size": 0.85,
       "file": "catalog/phishing_lure.py",
       "description": "Ilustração não funcional: phishing_lure"
     },
@@ -572,7 +572,7 @@
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
-      "size": 0.58,
+      "size": 0.62,
       "file": "catalog/phishing_lure.py",
       "description": "Função ilustrativa/defensiva `ILLUSTRATIVE_phish`"
     },
@@ -584,7 +584,7 @@
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
-      "size": 0.72,
+      "size": 0.85,
       "file": "catalog/polymorphic.py",
       "description": "Ilustração não funcional: polymorphic"
     },
@@ -596,7 +596,7 @@
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
-      "size": 0.58,
+      "size": 0.62,
       "file": "catalog/polymorphic.py",
       "description": "Função ilustrativa/defensiva `ILLUSTRATIVE_mutate`"
     },
@@ -608,7 +608,7 @@
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
-      "size": 0.72,
+      "size": 0.85,
       "file": "catalog/ransomware.py",
       "description": "Ilustração não funcional: ransomware"
     },
@@ -620,7 +620,7 @@
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
-      "size": 0.58,
+      "size": 0.62,
       "file": "catalog/ransomware.py",
       "description": "Função ilustrativa/defensiva `ILLUSTRATIVE_encrypt`"
     },
@@ -632,7 +632,7 @@
       "category": "other",
       "categoryLabel": "Outros",
       "color": "#64748b",
-      "size": 0.72,
+      "size": 0.85,
       "file": "catalog/README.md",
       "description": "Documentação: README"
     },
@@ -644,7 +644,7 @@
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
-      "size": 0.72,
+      "size": 0.85,
       "file": "catalog/rootkit.py",
       "description": "Ilustração não funcional: rootkit"
     },
@@ -656,7 +656,7 @@
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
-      "size": 0.58,
+      "size": 0.62,
       "file": "catalog/rootkit.py",
       "description": "Função ilustrativa/defensiva `ILLUSTRATIVE_hide`"
     },
@@ -668,7 +668,7 @@
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
-      "size": 0.72,
+      "size": 0.85,
       "file": "catalog/scareware.py",
       "description": "Ilustração não funcional: scareware"
     },
@@ -680,7 +680,7 @@
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
-      "size": 0.58,
+      "size": 0.62,
       "file": "catalog/scareware.py",
       "description": "Função ilustrativa/defensiva `ILLUSTRATIVE_scare`"
     },
@@ -692,7 +692,7 @@
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
-      "size": 0.72,
+      "size": 0.85,
       "file": "catalog/spyware_keylogger.py",
       "description": "Ilustração não funcional: spyware_keylogger"
     },
@@ -704,7 +704,7 @@
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
-      "size": 0.58,
+      "size": 0.62,
       "file": "catalog/spyware_keylogger.py",
       "description": "Função ilustrativa/defensiva `ILLUSTRATIVE_keylog`"
     },
@@ -716,7 +716,7 @@
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
-      "size": 0.72,
+      "size": 0.85,
       "file": "catalog/supply_chain.py",
       "description": "Ilustração não funcional: supply_chain"
     },
@@ -728,7 +728,7 @@
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
-      "size": 0.58,
+      "size": 0.62,
       "file": "catalog/supply_chain.py",
       "description": "Função ilustrativa/defensiva `ILLUSTRATIVE_supply_chain`"
     },
@@ -740,7 +740,7 @@
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
-      "size": 0.72,
+      "size": 0.85,
       "file": "catalog/trojan_rat.py",
       "description": "Ilustração não funcional: trojan_rat"
     },
@@ -752,7 +752,7 @@
       "category": "frontend",
       "categoryLabel": "Frontend",
       "color": "#eab308",
-      "size": 0.58,
+      "size": 0.62,
       "file": "catalog/trojan_rat.py",
       "description": "Função ilustrativa/defensiva `ILLUSTRATIVE_trojan_ui`"
     },
@@ -764,7 +764,7 @@
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
-      "size": 0.58,
+      "size": 0.62,
       "file": "catalog/trojan_rat.py",
       "description": "Função ilustrativa/defensiva `ILLUSTRATIVE_hidden_channel`"
     },
@@ -776,7 +776,7 @@
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
-      "size": 0.72,
+      "size": 0.85,
       "file": "catalog/virus_file_infector.py",
       "description": "Ilustração não funcional: virus_file_infector"
     },
@@ -788,7 +788,7 @@
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
-      "size": 0.58,
+      "size": 0.62,
       "file": "catalog/virus_file_infector.py",
       "description": "Função ilustrativa/defensiva `ILLUSTRATIVE_infect`"
     },
@@ -800,7 +800,7 @@
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
-      "size": 0.72,
+      "size": 0.85,
       "file": "catalog/wiper.py",
       "description": "Ilustração não funcional: wiper"
     },
@@ -812,7 +812,7 @@
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
-      "size": 0.58,
+      "size": 0.62,
       "file": "catalog/wiper.py",
       "description": "Função ilustrativa/defensiva `ILLUSTRATIVE_wipe`"
     },
@@ -824,7 +824,7 @@
       "category": "network",
       "categoryLabel": "Rede / Scan",
       "color": "#22d3ee",
-      "size": 0.72,
+      "size": 0.85,
       "file": "catalog/worm_network.py",
       "description": "Ilustração não funcional: worm_network"
     },
@@ -836,7 +836,7 @@
       "category": "network",
       "categoryLabel": "Rede / Scan",
       "color": "#22d3ee",
-      "size": 0.58,
+      "size": 0.62,
       "file": "catalog/worm_network.py",
       "description": "Função ilustrativa/defensiva `ILLUSTRATIVE_spread`"
     },
@@ -848,7 +848,7 @@
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
-      "size": 0.72,
+      "size": 0.85,
       "file": "common/__init__.py",
       "description": "Arquivo educacional `common/__init__.py` — risco/conceito/prevenção."
     },
@@ -860,7 +860,7 @@
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
-      "size": 0.72,
+      "size": 0.85,
       "file": "common/banner.py",
       "description": "Arquivo educacional `common/banner.py` — risco/conceito/prevenção."
     },
@@ -872,7 +872,7 @@
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
-      "size": 0.72,
+      "size": 0.85,
       "file": "common/telemetry.py",
       "description": "Arquivo educacional `common/telemetry.py` — risco/conceito/prevenção."
     },
@@ -884,7 +884,7 @@
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
-      "size": 0.72,
+      "size": 0.85,
       "file": "common/virtual_fs.py",
       "description": "Arquivo educacional `common/virtual_fs.py` — risco/conceito/prevenção."
     },
@@ -896,7 +896,7 @@
       "category": "other",
       "categoryLabel": "Outros",
       "color": "#64748b",
-      "size": 0.72,
+      "size": 0.85,
       "file": "conference/outline.md",
       "description": "Documentação: outline"
     },
@@ -908,7 +908,7 @@
       "category": "other",
       "categoryLabel": "Outros",
       "color": "#64748b",
-      "size": 0.72,
+      "size": 0.85,
       "file": "conference/talking-points.md",
       "description": "Documentação: talking-points"
     },
@@ -920,7 +920,7 @@
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
-      "size": 0.72,
+      "size": 0.85,
       "file": "demos/run_all_sims.py",
       "description": "Arquivo educacional `demos/run_all_sims.py` — risco/conceito/prevenção."
     },
@@ -932,7 +932,7 @@
       "category": "other",
       "categoryLabel": "Outros",
       "color": "#64748b",
-      "size": 0.72,
+      "size": 0.85,
       "file": "DISCLAIMER.md",
       "description": "Documentação: DISCLAIMER"
     },
@@ -944,7 +944,7 @@
       "category": "other",
       "categoryLabel": "Outros",
       "color": "#64748b",
-      "size": 0.72,
+      "size": 0.85,
       "file": "docs/detection-playbook.md",
       "description": "Documentação: detection-playbook"
     },
@@ -956,7 +956,7 @@
       "category": "other",
       "categoryLabel": "Outros",
       "color": "#64748b",
-      "size": 0.72,
+      "size": 0.85,
       "file": "docs/enterprise_prevention.md",
       "description": "Documentação: enterprise prevention"
     },
@@ -968,7 +968,7 @@
       "category": "other",
       "categoryLabel": "Outros",
       "color": "#64748b",
-      "size": 0.72,
+      "size": 0.85,
       "file": "docs/kill-chain.md",
       "description": "Documentação: kill-chain"
     },
@@ -980,7 +980,7 @@
       "category": "other",
       "categoryLabel": "Outros",
       "color": "#64748b",
-      "size": 0.72,
+      "size": 0.85,
       "file": "docs/malware_catalog.md",
       "description": "Documentação: malware catalog"
     },
@@ -992,7 +992,7 @@
       "category": "other",
       "categoryLabel": "Outros",
       "color": "#64748b",
-      "size": 0.72,
+      "size": 0.85,
       "file": "docs/risk_matrix.md",
       "description": "Documentação: risk matrix"
     },
@@ -1004,7 +1004,7 @@
       "category": "other",
       "categoryLabel": "Outros",
       "color": "#64748b",
-      "size": 0.72,
+      "size": 0.85,
       "file": "docs/taxonomy.md",
       "description": "Documentação: taxonomy"
     },
@@ -1016,7 +1016,7 @@
       "category": "other",
       "categoryLabel": "Outros",
       "color": "#64748b",
-      "size": 0.72,
+      "size": 0.85,
       "file": "labs/01_virus_lifecycle/README.md",
       "description": "Documentação: README"
     },
@@ -1028,7 +1028,7 @@
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
-      "size": 0.72,
+      "size": 0.85,
       "file": "labs/01_virus_lifecycle/simulate_virus.py",
       "description": "Ilustração não funcional: simulate_virus"
     },
@@ -1040,7 +1040,7 @@
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
-      "size": 0.58,
+      "size": 0.62,
       "file": "labs/01_virus_lifecycle/simulate_virus.py",
       "description": "Função ilustrativa/defensiva `simulate_virus`"
     },
@@ -1052,7 +1052,7 @@
       "category": "other",
       "categoryLabel": "Outros",
       "color": "#64748b",
-      "size": 0.72,
+      "size": 0.85,
       "file": "labs/02_worm_propagation/README.md",
       "description": "Documentação: README"
     },
@@ -1064,7 +1064,7 @@
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
-      "size": 0.72,
+      "size": 0.85,
       "file": "labs/02_worm_propagation/simulate_worm.py",
       "description": "Ilustração não funcional: simulate_worm"
     },
@@ -1076,7 +1076,7 @@
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
-      "size": 0.58,
+      "size": 0.62,
       "file": "labs/02_worm_propagation/simulate_worm.py",
       "description": "Função ilustrativa/defensiva `simulate_worm`"
     },
@@ -1088,7 +1088,7 @@
       "category": "other",
       "categoryLabel": "Outros",
       "color": "#64748b",
-      "size": 0.72,
+      "size": 0.85,
       "file": "labs/03_trojan_behavior/README.md",
       "description": "Documentação: README"
     },
@@ -1100,7 +1100,7 @@
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
-      "size": 0.72,
+      "size": 0.85,
       "file": "labs/03_trojan_behavior/simulate_trojan.py",
       "description": "Ilustração não funcional: simulate_trojan"
     },
@@ -1112,7 +1112,7 @@
       "category": "other",
       "categoryLabel": "Outros",
       "color": "#64748b",
-      "size": 0.72,
+      "size": 0.85,
       "file": "labs/04_ransomware_concept/README.md",
       "description": "Documentação: README"
     },
@@ -1124,7 +1124,7 @@
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
-      "size": 0.72,
+      "size": 0.85,
       "file": "labs/04_ransomware_concept/simulate_ransomware.py",
       "description": "Ilustração não funcional: simulate_ransomware"
     },
@@ -1136,7 +1136,7 @@
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
-      "size": 0.58,
+      "size": 0.62,
       "file": "labs/04_ransomware_concept/simulate_ransomware.py",
       "description": "Função ilustrativa/defensiva `xor_bytes`"
     },
@@ -1148,7 +1148,7 @@
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
-      "size": 0.58,
+      "size": 0.62,
       "file": "labs/04_ransomware_concept/simulate_ransomware.py",
       "description": "Função ilustrativa/defensiva `lock_docs`"
     },
@@ -1160,7 +1160,7 @@
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
-      "size": 0.58,
+      "size": 0.62,
       "file": "labs/04_ransomware_concept/simulate_ransomware.py",
       "description": "Função ilustrativa/defensiva `recover`"
     },
@@ -1172,7 +1172,7 @@
       "category": "other",
       "categoryLabel": "Outros",
       "color": "#64748b",
-      "size": 0.72,
+      "size": 0.85,
       "file": "labs/05_spyware_telemetry/README.md",
       "description": "Documentação: README"
     },
@@ -1184,7 +1184,7 @@
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
-      "size": 0.72,
+      "size": 0.85,
       "file": "labs/05_spyware_telemetry/simulate_spyware.py",
       "description": "Ilustração não funcional: simulate_spyware"
     },
@@ -1196,7 +1196,7 @@
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
-      "size": 0.58,
+      "size": 0.62,
       "file": "labs/05_spyware_telemetry/simulate_spyware.py",
       "description": "Função ilustrativa/defensiva `simulate_spyware`"
     },
@@ -1208,7 +1208,7 @@
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
-      "size": 0.72,
+      "size": 0.85,
       "file": "labs/06_ioc_detector/detector.py",
       "description": "Arquivo educacional `labs/06_ioc_detector/detector.py` — risco/conceito/prevenção."
     },
@@ -1220,7 +1220,7 @@
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
-      "size": 0.58,
+      "size": 0.62,
       "file": "labs/06_ioc_detector/detector.py",
       "description": "Função ilustrativa/defensiva `match`"
     },
@@ -1232,7 +1232,7 @@
       "category": "other",
       "categoryLabel": "Outros",
       "color": "#64748b",
-      "size": 0.72,
+      "size": 0.85,
       "file": "labs/06_ioc_detector/README.md",
       "description": "Documentação: README"
     },
@@ -1244,7 +1244,7 @@
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
-      "size": 0.72,
+      "size": 0.85,
       "file": "labs/07_hash_integrity/integrity.py",
       "description": "Arquivo educacional `labs/07_hash_integrity/integrity.py` — risco/conceito/prevenção."
     },
@@ -1256,7 +1256,7 @@
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
-      "size": 0.58,
+      "size": 0.62,
       "file": "labs/07_hash_integrity/integrity.py",
       "description": "Função ilustrativa/defensiva `baseline`"
     },
@@ -1268,7 +1268,7 @@
       "category": "other",
       "categoryLabel": "Outros",
       "color": "#64748b",
-      "size": 0.72,
+      "size": 0.85,
       "file": "labs/07_hash_integrity/README.md",
       "description": "Documentação: README"
     },
@@ -1280,7 +1280,7 @@
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
-      "size": 0.72,
+      "size": 0.85,
       "file": "labs/08_behavioral_analyzer/analyzer.py",
       "description": "Arquivo educacional `labs/08_behavioral_analyzer/analyzer.py` — risco/conceito/prevenção."
     },
@@ -1292,7 +1292,7 @@
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
-      "size": 0.58,
+      "size": 0.62,
       "file": "labs/08_behavioral_analyzer/analyzer.py",
       "description": "Função ilustrativa/defensiva `score_file`"
     },
@@ -1304,7 +1304,7 @@
       "category": "other",
       "categoryLabel": "Outros",
       "color": "#64748b",
-      "size": 0.72,
+      "size": 0.85,
       "file": "labs/08_behavioral_analyzer/README.md",
       "description": "Documentação: README"
     },
@@ -1316,7 +1316,7 @@
       "category": "network",
       "categoryLabel": "Rede / Scan",
       "color": "#22d3ee",
-      "size": 0.72,
+      "size": 0.85,
       "file": "labs/09_yara_like_scanner/pattern_scanner.py",
       "description": "Arquivo educacional `labs/09_yara_like_scanner/pattern_scanner.py` — risco/conceito/prevenção."
     },
@@ -1328,7 +1328,7 @@
       "category": "network",
       "categoryLabel": "Rede / Scan",
       "color": "#22d3ee",
-      "size": 0.58,
+      "size": 0.62,
       "file": "labs/09_yara_like_scanner/pattern_scanner.py",
       "description": "Função ilustrativa/defensiva `scan_vfs`"
     },
@@ -1340,7 +1340,7 @@
       "category": "network",
       "categoryLabel": "Rede / Scan",
       "color": "#22d3ee",
-      "size": 0.72,
+      "size": 0.85,
       "file": "labs/09_yara_like_scanner/README.md",
       "description": "Documentação: README"
     },
@@ -1352,7 +1352,7 @@
       "category": "other",
       "categoryLabel": "Outros",
       "color": "#64748b",
-      "size": 0.72,
+      "size": 0.85,
       "file": "labs/10_rootkit_concept/README.md",
       "description": "Documentação: README"
     },
@@ -1364,7 +1364,7 @@
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
-      "size": 0.72,
+      "size": 0.85,
       "file": "labs/10_rootkit_concept/simulate_rootkit.py",
       "description": "Ilustração não funcional: simulate_rootkit"
     },
@@ -1376,7 +1376,7 @@
       "category": "other",
       "categoryLabel": "Outros",
       "color": "#64748b",
-      "size": 0.72,
+      "size": 0.85,
       "file": "labs/11_botnet_concept/README.md",
       "description": "Documentação: README"
     },
@@ -1388,7 +1388,7 @@
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
-      "size": 0.72,
+      "size": 0.85,
       "file": "labs/11_botnet_concept/simulate_botnet.py",
       "description": "Ilustração não funcional: simulate_botnet"
     },
@@ -1400,7 +1400,7 @@
       "category": "other",
       "categoryLabel": "Outros",
       "color": "#64748b",
-      "size": 0.72,
+      "size": 0.85,
       "file": "labs/12_adware_scareware/README.md",
       "description": "Documentação: README"
     },
@@ -1412,7 +1412,7 @@
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
-      "size": 0.72,
+      "size": 0.85,
       "file": "labs/12_adware_scareware/simulate_adware.py",
       "description": "Ilustração não funcional: simulate_adware"
     },
@@ -1424,7 +1424,7 @@
       "category": "other",
       "categoryLabel": "Outros",
       "color": "#64748b",
-      "size": 0.72,
+      "size": 0.85,
       "file": "labs/13_cryptojacker/README.md",
       "description": "Documentação: README"
     },
@@ -1436,7 +1436,7 @@
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
-      "size": 0.72,
+      "size": 0.85,
       "file": "labs/13_cryptojacker/simulate_cryptojacker.py",
       "description": "Ilustração não funcional: simulate_cryptojacker"
     },
@@ -1448,7 +1448,7 @@
       "category": "other",
       "categoryLabel": "Outros",
       "color": "#64748b",
-      "size": 0.72,
+      "size": 0.85,
       "file": "labs/14_fileless_concept/README.md",
       "description": "Documentação: README"
     },
@@ -1460,7 +1460,7 @@
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
-      "size": 0.72,
+      "size": 0.85,
       "file": "labs/14_fileless_concept/simulate_fileless.py",
       "description": "Ilustração não funcional: simulate_fileless"
     },
@@ -1472,7 +1472,7 @@
       "category": "other",
       "categoryLabel": "Outros",
       "color": "#64748b",
-      "size": 0.72,
+      "size": 0.85,
       "file": "labs/15_macro_malware/README.md",
       "description": "Documentação: README"
     },
@@ -1484,7 +1484,7 @@
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
-      "size": 0.72,
+      "size": 0.85,
       "file": "labs/15_macro_malware/simulate_macro.py",
       "description": "Ilustração não funcional: simulate_macro"
     },
@@ -1496,7 +1496,7 @@
       "category": "other",
       "categoryLabel": "Outros",
       "color": "#64748b",
-      "size": 0.72,
+      "size": 0.85,
       "file": "labs/16_logic_bomb/README.md",
       "description": "Documentação: README"
     },
@@ -1508,7 +1508,7 @@
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
-      "size": 0.72,
+      "size": 0.85,
       "file": "labs/16_logic_bomb/simulate_logic_bomb.py",
       "description": "Ilustração não funcional: simulate_logic_bomb"
     },
@@ -1520,7 +1520,7 @@
       "category": "other",
       "categoryLabel": "Outros",
       "color": "#64748b",
-      "size": 0.72,
+      "size": 0.85,
       "file": "labs/17_backdoor_dropper/README.md",
       "description": "Documentação: README"
     },
@@ -1532,7 +1532,7 @@
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
-      "size": 0.72,
+      "size": 0.85,
       "file": "labs/17_backdoor_dropper/simulate_backdoor.py",
       "description": "Ilustração não funcional: simulate_backdoor"
     },
@@ -1544,7 +1544,7 @@
       "category": "other",
       "categoryLabel": "Outros",
       "color": "#64748b",
-      "size": 0.72,
+      "size": 0.85,
       "file": "labs/18_phishing_lure/README.md",
       "description": "Documentação: README"
     },
@@ -1556,7 +1556,7 @@
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
-      "size": 0.72,
+      "size": 0.85,
       "file": "labs/18_phishing_lure/simulate_phishing.py",
       "description": "Ilustração não funcional: simulate_phishing"
     },
@@ -1568,7 +1568,7 @@
       "category": "other",
       "categoryLabel": "Outros",
       "color": "#64748b",
-      "size": 0.72,
+      "size": 0.85,
       "file": "labs/19_supply_chain/README.md",
       "description": "Documentação: README"
     },
@@ -1580,7 +1580,7 @@
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
-      "size": 0.72,
+      "size": 0.85,
       "file": "labs/19_supply_chain/simulate_supply_chain.py",
       "description": "Ilustração não funcional: simulate_supply_chain"
     },
@@ -1592,7 +1592,7 @@
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
-      "size": 0.72,
+      "size": 0.85,
       "file": "labs/20_enterprise_hardening/checklist.py",
       "description": "Arquivo educacional `labs/20_enterprise_hardening/checklist.py` — risco/conceito/prevenção."
     },
@@ -1604,7 +1604,7 @@
       "category": "other",
       "categoryLabel": "Outros",
       "color": "#64748b",
-      "size": 0.72,
+      "size": 0.85,
       "file": "labs/20_enterprise_hardening/README.md",
       "description": "Documentação: README"
     },
@@ -1616,7 +1616,7 @@
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
-      "size": 0.72,
+      "size": 0.85,
       "file": "prevention/print_controls.py",
       "description": "Arquivo educacional `prevention/print_controls.py` — risco/conceito/prevenção."
     }

@@ -28,7 +28,7 @@
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
-      "size": 1.4,
+      "size": 2.2,
       "file": "web/stats/index.php",
       "description": "Site Hyperware com estrutura web e scripts PHP."
     },
@@ -40,7 +40,7 @@
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
-      "size": 1.0,
+      "size": 1.35,
       "file": "web/",
       "description": "Módulo/pasta `web/` com arquivos-chave do projeto."
     },
@@ -52,7 +52,7 @@
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
-      "size": 0.72,
+      "size": 0.85,
       "file": "web/stats/index.php",
       "description": "Arquivo `web/stats/index.php` mapeado a partir do repositório original."
     },
@@ -64,7 +64,7 @@
       "category": "frontend",
       "categoryLabel": "Frontend",
       "color": "#eab308",
-      "size": 0.72,
+      "size": 0.85,
       "file": "web/index.html",
       "description": "Arquivo `web/index.html` mapeado a partir do repositório original."
     },
@@ -76,7 +76,7 @@
       "category": "frontend",
       "categoryLabel": "Frontend",
       "color": "#eab308",
-      "size": 0.72,
+      "size": 0.85,
       "file": "web/site-hyper/index.html",
       "description": "Arquivo `web/site-hyper/index.html` mapeado a partir do repositório original."
     },
@@ -88,7 +88,7 @@
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
-      "size": 0.72,
+      "size": 0.85,
       "file": "web/unzipper.php",
       "description": "Arquivo `web/unzipper.php` mapeado a partir do repositório original."
     },
@@ -100,7 +100,7 @@
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
-      "size": 0.72,
+      "size": 0.85,
       "file": "web/site-hyper/sendemail.php",
       "description": "Arquivo `web/site-hyper/sendemail.php` mapeado a partir do repositório original."
     },
@@ -112,7 +112,7 @@
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
-      "size": 0.72,
+      "size": 0.85,
       "file": "web/site-hyper/sendnewslatters.php",
       "description": "Arquivo `web/site-hyper/sendnewslatters.php` mapeado a partir do repositório original."
     },
@@ -124,7 +124,7 @@
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
-      "size": 0.72,
+      "size": 0.85,
       "file": "web/site-hyper/js/appear.js",
       "description": "Arquivo `web/site-hyper/js/appear.js` mapeado a partir do repositório original."
     },
@@ -136,7 +136,7 @@
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
-      "size": 0.72,
+      "size": 0.85,
       "file": "web/site-hyper/js/horas.js",
       "description": "Arquivo `web/site-hyper/js/horas.js` mapeado a partir do repositório original."
     }

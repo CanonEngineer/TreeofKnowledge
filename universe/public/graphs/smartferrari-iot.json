@@ -44,7 +44,7 @@
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
-      "size": 1.4,
+      "size": 2.2,
       "file": "README.md",
       "description": "Lab de pós em Engenharia da Computação: gêmeo digital Ferrari, sync Arduino↔Raspberry, HIL/QoS, Web Audio e Research Lab (Demo GitHub Pages + local :8001)."
     },
@@ -56,7 +56,7 @@
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
-      "size": 1.0,
+      "size": 1.35,
       "file": "python_server/",
       "description": "Orquestração FastAPI :8001 — estado, MQTT, telemetria SQI, research API."
     },
@@ -68,7 +68,7 @@
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
-      "size": 0.72,
+      "size": 0.85,
       "file": "python_server/app.py",
       "description": "Entry point FastAPI: lifespan MQTT, rotas API/research, static web."
     },
@@ -80,7 +80,7 @@
       "category": "network",
       "categoryLabel": "Rede / Scan",
       "color": "#22d3ee",
-      "size": 0.72,
+      "size": 0.85,
       "file": "python_server/api.py",
       "description": "REST + WebSocket: atuadores, login, status; rejeita INV com 409."
     },
@@ -92,7 +92,7 @@
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
-      "size": 0.72,
+      "size": 0.85,
       "file": "python_server/state.py",
       "description": "Estado vivo da Ferrari: atuadores, sensores, broadcast, HIL timed."
     },
@@ -104,7 +104,7 @@
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
-      "size": 0.72,
+      "size": 0.85,
       "file": "python_server/statemachine.py",
       "description": "Gêmeo formal SECURE→SPORT com invariantes INV-01…06."
     },
@@ -116,7 +116,7 @@
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
-      "size": 0.72,
+      "size": 0.85,
       "file": "python_server/hil.py",
       "description": "Fault injection: delay_ms, loss_rate, métricas QoS."
     },
@@ -128,7 +128,7 @@
       "category": "auth",
       "categoryLabel": "Segurança",
       "color": "#ef4444",
-      "size": 0.72,
+      "size": 0.85,
       "file": "python_server/security.py",
       "description": "HMAC de comandos + cadeia hash de auditoria verificável."
     },
@@ -140,7 +140,7 @@
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
-      "size": 0.72,
+      "size": 0.85,
       "file": "python_server/energy.py",
       "description": "Modelo P_motor/P_total/ΔE_bat e combustível documentado."
     },
@@ -152,7 +152,7 @@
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
-      "size": 0.72,
+      "size": 0.85,
       "file": "python_server/research_api.py",
       "description": "Endpoints Lab: HIL, audit, visão, paper-pack LaTeX, experimentos."
     },
@@ -164,7 +164,7 @@
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
-      "size": 0.72,
+      "size": 0.85,
       "file": "python_server/telemetry.py",
       "description": "SQI e estatísticas de latência de comando."
     },
@@ -176,7 +176,7 @@
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
-      "size": 0.72,
+      "size": 0.85,
       "file": "python_server/mqtt_bridge.py",
       "description": "Bridge MQTT ferrari/* com fallback simulação se broker ausente."
     },
@@ -188,7 +188,7 @@
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
-      "size": 0.72,
+      "size": 0.85,
       "file": "python_server/paperpack.py",
       "description": "Gera figuras/tabelas LaTeX a partir de experimentos e QoS."
     },
@@ -200,7 +200,7 @@
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
-      "size": 1.0,
+      "size": 1.35,
       "file": "web/",
       "description": "Digital Twin UI: SVG SF90, áudio, visão, Research Lab."
     },
@@ -212,7 +212,7 @@
       "category": "frontend",
       "categoryLabel": "Frontend",
       "color": "#eab308",
-      "size": 0.72,
+      "size": 0.85,
       "file": "web/index.html",
       "description": "Layout Lab: stage SVG, comandos, HIL, espectro, visão."
     },
@@ -224,7 +224,7 @@
       "category": "scripts",
       "categoryLabel": "Scripts",
       "color": "#64748b",
-      "size": 0.72,
+      "size": 0.85,
       "file": "web/script.js",
       "description": "WS client, applyState, animações e botões de campo."
     },
@@ -236,7 +236,7 @@
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
-      "size": 0.72,
+      "size": 0.85,
       "file": "web/audio.js",
       "description": "Web Audio: buzina dual-tone, sirene, ronco RPM, clique de trava."
     },
@@ -248,7 +248,7 @@
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
-      "size": 0.72,
+      "size": 0.85,
       "file": "web/vision.js",
       "description": "Webcam leve: gesto de partida e QR track na pit lane."
     },
@@ -260,7 +260,7 @@
       "category": "frontend",
       "categoryLabel": "Frontend",
       "color": "#eab308",
-      "size": 0.72,
+      "size": 0.85,
       "file": "web/style.css",
       "description": "UI lab carbon/rosso — tipografia Archivo, painéis e animações."
     },
@@ -272,7 +272,7 @@
       "category": "frontend",
       "categoryLabel": "Frontend",
       "color": "#eab308",
-      "size": 1.0,
+      "size": 1.35,
       "file": "arduino/FerrariNode/",
       "description": "Firmware nó Ferrari — L1 atuadores/sensores."
     },
@@ -284,7 +284,7 @@
       "category": "other",
       "categoryLabel": "Outros",
       "color": "#64748b",
-      "size": 0.72,
+      "size": 0.85,
       "file": "arduino/FerrariNode/FerrariNode.ino",
       "description": "Sketch principal do nó Arduino Ferrari."
     },
@@ -296,7 +296,7 @@
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
-      "size": 1.0,
+      "size": 1.35,
       "file": "raspberry/",
       "description": "Agent hub Raspberry — bridge e heartbeat."
     },
@@ -308,7 +308,7 @@
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
-      "size": 0.72,
+      "size": 0.85,
       "file": "raspberry/agent.py",
       "description": "Loop do hub: sync, telemetria e comandos downstream."
     },
@@ -320,7 +320,7 @@
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
-      "size": 0.72,
+      "size": 0.85,
       "file": "raspberry/actuators.py",
       "description": "Abstração de atuadores no lado Raspberry."
     },
@@ -332,7 +332,7 @@
       "category": "frontend",
       "categoryLabel": "Frontend",
       "color": "#eab308",
-      "size": 0.72,
+      "size": 0.85,
       "file": "docs/demo/standalone.html",
       "description": "Demo standalone no GitHub Pages (sem backend) — abre no celular ou qualquer browser."
     },
@@ -344,7 +344,7 @@
       "category": "scripts",
       "categoryLabel": "Scripts",
       "color": "#64748b",
-      "size": 0.72,
+      "size": 0.85,
       "file": "start.ps1",
       "description": "Bootstrap Windows: venv, deps e sobe Lab em :8001."
     },
@@ -356,7 +356,7 @@
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
-      "size": 0.72,
+      "size": 0.85,
       "file": "python_server/protocol.py",
       "description": "Versão de protocolo e QoS MQTT do Ferrari IoT."
     },
@@ -368,7 +368,7 @@
       "category": "tests",
       "categoryLabel": "Testes",
       "color": "#94a3b8",
-      "size": 0.72,
+      "size": 0.85,
       "file": "tests/test_engineering.py",
       "description": "Testes de engenharia do lab (invariantes / SQI)."
     }

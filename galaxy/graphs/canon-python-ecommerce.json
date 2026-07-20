@@ -32,7 +32,7 @@
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
-      "size": 1.4,
+      "size": 2.2,
       "file": "greatkart/",
       "description": "E-commerce Django — GreatKart com 6 apps customizadas."
     },
@@ -44,7 +44,7 @@
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
-      "size": 1.0,
+      "size": 1.35,
       "file": "greatkart/",
       "description": "Pacote central: settings, URLs, home e honeypot admin."
     },
@@ -56,7 +56,7 @@
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
-      "size": 0.72,
+      "size": 0.85,
       "file": "greatkart/settings.py",
       "description": "Secrets via decouple, sessão 1h, SMTP e SQLite."
     },
@@ -68,7 +68,7 @@
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
-      "size": 0.72,
+      "size": 0.85,
       "file": "greatkart/urls.py",
       "description": "Roteador raiz com honeypot e includes das apps."
     },
@@ -80,7 +80,7 @@
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
-      "size": 0.58,
+      "size": 0.62,
       "file": "greatkart/views.py",
       "description": "Home lista produtos ativos com reviews."
     },
@@ -92,7 +92,7 @@
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
-      "size": 1.0,
+      "size": 1.35,
       "file": "accounts/",
       "description": "Auth customizada: Account, perfil, ativação e dashboard."
     },
@@ -104,7 +104,7 @@
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
-      "size": 0.72,
+      "size": 0.85,
       "file": "accounts/models.py",
       "description": "User customizado com MyAccountManager."
     },
@@ -116,7 +116,7 @@
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
-      "size": 0.58,
+      "size": 0.62,
       "file": "accounts/views.py",
       "description": "Cadastro + perfil + e-mail de ativação."
     },
@@ -128,7 +128,7 @@
       "category": "auth",
       "categoryLabel": "Segurança",
       "color": "#ef4444",
-      "size": 0.58,
+      "size": 0.62,
       "file": "accounts/views.py",
       "description": "Login por email e merge de carrinho anônimo."
     },
@@ -140,7 +140,7 @@
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
-      "size": 0.58,
+      "size": 0.62,
       "file": "accounts/views.py",
       "description": "Painel do cliente com pedidos e perfil."
     },
@@ -152,7 +152,7 @@
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
-      "size": 1.0,
+      "size": 1.35,
       "file": "category/",
       "description": "Categorias com slug e menu global."
     },
@@ -164,7 +164,7 @@
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
-      "size": 0.58,
+      "size": 0.62,
       "file": "category/context_processors.py",
       "description": "Injeta categorias no navbar."
     },
@@ -176,7 +176,7 @@
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
-      "size": 1.0,
+      "size": 1.35,
       "file": "store/",
       "description": "Catálogo, detalhe, busca e reviews."
     },
@@ -188,7 +188,7 @@
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
-      "size": 0.72,
+      "size": 0.85,
       "file": "store/models.py",
       "description": "Produto com variações e média de reviews."
     },
@@ -200,7 +200,7 @@
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
-      "size": 0.58,
+      "size": 0.62,
       "file": "store/views.py",
       "description": "Detalhe com galeria, reviews e in_cart."
     },
@@ -212,7 +212,7 @@
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
-      "size": 0.58,
+      "size": 0.62,
       "file": "store/views.py",
       "description": "Busca por nome ou descrição."
     },
@@ -224,7 +224,7 @@
       "category": "frontend",
       "categoryLabel": "Frontend",
       "color": "#eab308",
-      "size": 0.58,
+      "size": 0.62,
       "file": "store/views.py",
       "description": "Avaliação por estrelas pós-compra."
     },
@@ -236,7 +236,7 @@
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
-      "size": 1.0,
+      "size": 1.35,
       "file": "carts/",
       "description": "Carrinho sessão/usuário com variações."
     },
@@ -248,7 +248,7 @@
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
-      "size": 0.58,
+      "size": 0.62,
       "file": "carts/views.py",
       "description": "Adiciona produto com variações."
     },
@@ -260,7 +260,7 @@
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
-      "size": 0.58,
+      "size": 0.62,
       "file": "carts/context_processors.py",
       "description": "Badge de quantidade no navbar."
     },
@@ -272,7 +272,7 @@
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
-      "size": 1.0,
+      "size": 1.35,
       "file": "orders/",
       "description": "Checkout PayPal, Payment e estoque."
     },
@@ -284,7 +284,7 @@
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
-      "size": 0.58,
+      "size": 0.62,
       "file": "orders/views.py",
       "description": "Cria pedido pendente antes do PayPal."
     },
@@ -296,7 +296,7 @@
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
-      "size": 0.58,
+      "size": 0.62,
       "file": "orders/views.py",
       "description": "Confirma PayPal e limpa carrinho."
     }

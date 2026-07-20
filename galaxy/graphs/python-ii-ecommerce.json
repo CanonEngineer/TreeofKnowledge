@@ -28,7 +28,7 @@
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
-      "size": 1.4,
+      "size": 2.2,
       "file": "manage.py",
       "description": "E-commerce Django do curso Python II."
     },
@@ -40,7 +40,7 @@
       "category": "frontend",
       "categoryLabel": "Frontend",
       "color": "#eab308",
-      "size": 1.0,
+      "size": 1.35,
       "file": "templates/",
       "description": "Módulo/pasta `templates/` com arquivos-chave do projeto."
     },
@@ -52,7 +52,7 @@
       "category": "frontend",
       "categoryLabel": "Frontend",
       "color": "#eab308",
-      "size": 0.72,
+      "size": 0.85,
       "file": "templates/static/assets/font-awesome/js/all.js",
       "description": "Arquivo `templates/static/assets/font-awesome/js/all.js` mapeado a partir do repositório original."
     },
@@ -64,7 +64,7 @@
       "category": "frontend",
       "categoryLabel": "Frontend",
       "color": "#eab308",
-      "size": 0.72,
+      "size": 0.85,
       "file": "templates/static/assets/font-awesome/js/brands.js",
       "description": "Arquivo `templates/static/assets/font-awesome/js/brands.js` mapeado a partir do repositório original."
     },
@@ -76,7 +76,7 @@
       "category": "frontend",
       "categoryLabel": "Frontend",
       "color": "#eab308",
-      "size": 0.72,
+      "size": 0.85,
       "file": "templates/static/assets/font-awesome/js/conflict-detection.js",
       "description": "Arquivo `templates/static/assets/font-awesome/js/conflict-detection.js` mapeado a partir do repositório original."
     },
@@ -88,7 +88,7 @@
       "category": "frontend",
       "categoryLabel": "Frontend",
       "color": "#eab308",
-      "size": 0.72,
+      "size": 0.85,
       "file": "templates/static/assets/login/js/popper.js",
       "description": "Arquivo `templates/static/assets/login/js/popper.js` mapeado a partir do repositório original."
     },
@@ -100,7 +100,7 @@
       "category": "frontend",
       "categoryLabel": "Frontend",
       "color": "#eab308",
-      "size": 0.72,
+      "size": 0.85,
       "file": "templates/static/assets/font-awesome/js/regular.js",
       "description": "Arquivo `templates/static/assets/font-awesome/js/regular.js` mapeado a partir do repositório original."
     },
@@ -112,7 +112,7 @@
       "category": "frontend",
       "categoryLabel": "Frontend",
       "color": "#eab308",
-      "size": 0.72,
+      "size": 0.85,
       "file": "templates/static/assets/custom/js/scripts.js",
       "description": "Arquivo `templates/static/assets/custom/js/scripts.js` mapeado a partir do repositório original."
     },
@@ -124,7 +124,7 @@
       "category": "frontend",
       "categoryLabel": "Frontend",
       "color": "#eab308",
-      "size": 0.72,
+      "size": 0.85,
       "file": "templates/static/assets/font-awesome/js/solid.js",
       "description": "Arquivo `templates/static/assets/font-awesome/js/solid.js` mapeado a partir do repositório original."
     },
@@ -136,7 +136,7 @@
       "category": "frontend",
       "categoryLabel": "Frontend",
       "color": "#eab308",
-      "size": 0.72,
+      "size": 0.85,
       "file": "templates/static/assets/font-awesome/js/v4-shims.js",
       "description": "Arquivo `templates/static/assets/font-awesome/js/v4-shims.js` mapeado a partir do repositório original."
     },
@@ -148,7 +148,7 @@
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
-      "size": 0.72,
+      "size": 0.85,
       "file": "manage.py",
       "description": "Arquivo `manage.py` mapeado a partir do repositório original."
     },
@@ -160,7 +160,7 @@
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
-      "size": 1.0,
+      "size": 1.35,
       "file": "loja/",
       "description": "Módulo/pasta `loja/` com arquivos-chave do projeto."
     },
@@ -172,7 +172,7 @@
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
-      "size": 0.72,
+      "size": 0.85,
       "file": "loja/settings.py",
       "description": "Arquivo `loja/settings.py` mapeado a partir do repositório original."
     },
@@ -184,7 +184,7 @@
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
-      "size": 0.72,
+      "size": 0.85,
       "file": "loja/urls.py",
       "description": "Arquivo `loja/urls.py` mapeado a partir do repositório original."
     },
@@ -196,7 +196,7 @@
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
-      "size": 0.72,
+      "size": 0.85,
       "file": "loja/wsgi.py",
       "description": "Arquivo `loja/wsgi.py` mapeado a partir do repositório original."
     },
@@ -208,7 +208,7 @@
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
-      "size": 1.0,
+      "size": 1.35,
       "file": "pedido/",
       "description": "Módulo/pasta `pedido/` com arquivos-chave do projeto."
     },
@@ -220,7 +220,7 @@
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
-      "size": 0.72,
+      "size": 0.85,
       "file": "pedido/admin.py",
       "description": "Arquivo `pedido/admin.py` mapeado a partir do repositório original."
     },
@@ -232,7 +232,7 @@
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
-      "size": 0.72,
+      "size": 0.85,
       "file": "pedido/models.py",
       "description": "Arquivo `pedido/models.py` mapeado a partir do repositório original."
     },
@@ -244,7 +244,7 @@
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
-      "size": 0.72,
+      "size": 0.85,
       "file": "pedido/urls.py",
       "description": "Arquivo `pedido/urls.py` mapeado a partir do repositório original."
     },
@@ -256,7 +256,7 @@
       "category": "frontend",
       "categoryLabel": "Frontend",
       "color": "#eab308",
-      "size": 0.72,
+      "size": 0.85,
       "file": "pedido/views.py",
       "description": "Arquivo `pedido/views.py` mapeado a partir do repositório original."
     },
@@ -268,7 +268,7 @@
       "category": "frontend",
       "categoryLabel": "Frontend",
       "color": "#eab308",
-      "size": 0.72,
+      "size": 0.85,
       "file": "pedido/templates/pedido/detalhe.html",
       "description": "Arquivo `pedido/templates/pedido/detalhe.html` mapeado a partir do repositório original."
     },
@@ -280,7 +280,7 @@
       "category": "frontend",
       "categoryLabel": "Frontend",
       "color": "#eab308",
-      "size": 0.72,
+      "size": 0.85,
       "file": "pedido/templates/pedido/lista.html",
       "description": "Arquivo `pedido/templates/pedido/lista.html` mapeado a partir do repositório original."
     },
@@ -292,7 +292,7 @@
       "category": "frontend",
       "categoryLabel": "Frontend",
       "color": "#eab308",
-      "size": 0.72,
+      "size": 0.85,
       "file": "pedido/templates/pedido/pagar.html",
       "description": "Arquivo `pedido/templates/pedido/pagar.html` mapeado a partir do repositório original."
     },
@@ -304,7 +304,7 @@
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
-      "size": 0.72,
+      "size": 0.85,
       "file": "pedido/apps.py",
       "description": "Arquivo `pedido/apps.py` mapeado a partir do repositório original."
     },
@@ -316,7 +316,7 @@
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
-      "size": 1.0,
+      "size": 1.35,
       "file": "perfil/",
       "description": "Módulo/pasta `perfil/` com arquivos-chave do projeto."
     },
@@ -328,7 +328,7 @@
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
-      "size": 0.72,
+      "size": 0.85,
       "file": "perfil/forms.py",
       "description": "Arquivo `perfil/forms.py` mapeado a partir do repositório original."
     },
@@ -340,7 +340,7 @@
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
-      "size": 0.72,
+      "size": 0.85,
       "file": "perfil/models.py",
       "description": "Arquivo `perfil/models.py` mapeado a partir do repositório original."
     },
@@ -352,7 +352,7 @@
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
-      "size": 0.72,
+      "size": 0.85,
       "file": "perfil/urls.py",
       "description": "Arquivo `perfil/urls.py` mapeado a partir do repositório original."
     }

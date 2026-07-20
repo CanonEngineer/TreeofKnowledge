@@ -28,7 +28,7 @@
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
-      "size": 1.4,
+      "size": 2.2,
       "file": "index.html",
       "description": "Clone do WhatsApp com Webpack, Firebase Auth, Firestore e Storage."
     },
@@ -40,7 +40,7 @@
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
-      "size": 1.0,
+      "size": 1.35,
       "file": "src/",
       "description": "Módulo/pasta `src/` com arquivos-chave do projeto."
     },
@@ -52,7 +52,7 @@
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
-      "size": 0.72,
+      "size": 0.85,
       "file": "src/controller/CameraController.js",
       "description": "Arquivo `src/controller/CameraController.js` mapeado a partir do repositório original."
     },
@@ -64,7 +64,7 @@
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
-      "size": 0.72,
+      "size": 0.85,
       "file": "src/util/ClassEvent.js",
       "description": "Arquivo `src/util/ClassEvent.js` mapeado a partir do repositório original."
     },
@@ -76,7 +76,7 @@
       "category": "frontend",
       "categoryLabel": "Frontend",
       "color": "#eab308",
-      "size": 0.72,
+      "size": 0.85,
       "file": "src/controller/DocumentPreviewController.js",
       "description": "Arquivo `src/controller/DocumentPreviewController.js` mapeado a partir do repositório original."
     },
@@ -88,7 +88,7 @@
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
-      "size": 0.72,
+      "size": 0.85,
       "file": "src/util/Firebase.js",
       "description": "Arquivo `src/util/Firebase.js` mapeado a partir do repositório original."
     },
@@ -100,7 +100,7 @@
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
-      "size": 0.72,
+      "size": 0.85,
       "file": "src/util/Format.js",
       "description": "Arquivo `src/util/Format.js` mapeado a partir do repositório original."
     },
@@ -112,7 +112,7 @@
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
-      "size": 0.72,
+      "size": 0.85,
       "file": "src/model/Message.js",
       "description": "Arquivo `src/model/Message.js` mapeado a partir do repositório original."
     },
@@ -124,7 +124,7 @@
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
-      "size": 0.72,
+      "size": 0.85,
       "file": "src/controller/MicrophoneController.js",
       "description": "Arquivo `src/controller/MicrophoneController.js` mapeado a partir do repositório original."
     },
@@ -136,7 +136,7 @@
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
-      "size": 0.72,
+      "size": 0.85,
       "file": "src/model/Model.js",
       "description": "Arquivo `src/model/Model.js` mapeado a partir do repositório original."
     },
@@ -148,7 +148,7 @@
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
-      "size": 1.0,
+      "size": 1.35,
       "file": "css/",
       "description": "Módulo/pasta `css/` com arquivos-chave do projeto."
     },
@@ -160,7 +160,7 @@
       "category": "frontend",
       "categoryLabel": "Frontend",
       "color": "#eab308",
-      "size": 0.72,
+      "size": 0.85,
       "file": "css/style.css",
       "description": "Arquivo `css/style.css` mapeado a partir do repositório original."
     },
@@ -172,7 +172,7 @@
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
-      "size": 0.72,
+      "size": 0.85,
       "file": "webpack.config.js",
       "description": "Arquivo `webpack.config.js` mapeado a partir do repositório original."
     },
@@ -184,7 +184,7 @@
       "category": "frontend",
       "categoryLabel": "Frontend",
       "color": "#eab308",
-      "size": 0.72,
+      "size": 0.85,
       "file": "index.html",
       "description": "Arquivo `index.html` mapeado a partir do repositório original."
     },
@@ -196,7 +196,7 @@
       "category": "other",
       "categoryLabel": "Outros",
       "color": "#64748b",
-      "size": 0.72,
+      "size": 0.85,
       "file": "package.json",
       "description": "Arquivo `package.json` mapeado a partir do repositório original."
     },
@@ -208,7 +208,7 @@
       "category": "other",
       "categoryLabel": "Outros",
       "color": "#64748b",
-      "size": 0.72,
+      "size": 0.85,
       "file": "README.md",
       "description": "Arquivo `README.md` mapeado a partir do repositório original."
     }

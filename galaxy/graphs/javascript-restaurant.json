@@ -40,7 +40,7 @@
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
-      "size": 1.4,
+      "size": 2.2,
       "file": "app.js",
       "description": "Restaurante Saboroso — site + painel admin com Express, EJS, MySQL, Redis e AdminLTE."
     },
@@ -52,7 +52,7 @@
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
-      "size": 1.0,
+      "size": 1.35,
       "file": "app.js",
       "description": "Servidor com sessão Redis, upload Formidable e rotas públicas/admin."
     },
@@ -64,7 +64,7 @@
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
-      "size": 0.72,
+      "size": 0.85,
       "file": "app.js",
       "description": "Bootstrap: sessão Redis, parsers, static e routers."
     },
@@ -76,7 +76,7 @@
       "category": "other",
       "categoryLabel": "Outros",
       "color": "#64748b",
-      "size": 0.72,
+      "size": 0.85,
       "file": "bin/www",
       "description": "HTTP server na porta 3000 com nodemon."
     },
@@ -88,7 +88,7 @@
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
-      "size": 0.58,
+      "size": 0.62,
       "file": "app.js",
       "description": "Parse multipart antes das rotas — upload de fotos do cardápio."
     },
@@ -100,7 +100,7 @@
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
-      "size": 0.58,
+      "size": 0.62,
       "file": "app.js",
       "description": "express-session com connect-redis para painel admin."
     },
@@ -112,7 +112,7 @@
       "category": "oracle",
       "categoryLabel": "Oracle / DB",
       "color": "#c084fc",
-      "size": 1.0,
+      "size": 1.35,
       "file": "inc/db.js",
       "description": "Conexão mysql2 com database saboroso."
     },
@@ -124,7 +124,7 @@
       "category": "network",
       "categoryLabel": "Rede / Scan",
       "color": "#22d3ee",
-      "size": 1.0,
+      "size": 1.35,
       "file": "routes/index.js",
       "description": "Site do cliente: home, cardápio, reservas e contato."
     },
@@ -136,7 +136,7 @@
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
-      "size": 0.58,
+      "size": 0.62,
       "file": "routes/index.js",
       "description": "Home com lista de menus em destaque."
     },
@@ -148,7 +148,7 @@
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
-      "size": 0.58,
+      "size": 0.62,
       "file": "routes/index.js",
       "description": "Página do cardápio completo com preços."
     },
@@ -160,7 +160,7 @@
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
-      "size": 0.58,
+      "size": 0.62,
       "file": "routes/index.js",
       "description": "Formulário de reserva de mesa com validação."
     },
@@ -172,7 +172,7 @@
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
-      "size": 0.58,
+      "size": 0.62,
       "file": "routes/index.js",
       "description": "Formulário de contato gravado em tb_contacts."
     },
@@ -184,7 +184,7 @@
       "category": "network",
       "categoryLabel": "Rede / Scan",
       "color": "#22d3ee",
-      "size": 1.0,
+      "size": 1.35,
       "file": "routes/admin.js",
       "description": "AdminLTE: dashboard, CRUD menus, reservas, usuários."
     },
@@ -196,7 +196,7 @@
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
-      "size": 0.58,
+      "size": 0.62,
       "file": "inc/admin.js",
       "description": "Contadores de contatos, menus, reservas e usuários."
     },
@@ -208,7 +208,7 @@
       "category": "auth",
       "categoryLabel": "Segurança",
       "color": "#ef4444",
-      "size": 0.58,
+      "size": 0.62,
       "file": "inc/users.js",
       "description": "Autenticação por email/senha em tb_users."
     },
@@ -220,7 +220,7 @@
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
-      "size": 1.0,
+      "size": 1.35,
       "file": "inc/menus.js",
       "description": "Gerencia tb_menus com foto, título, descrição e preço."
     },
@@ -232,7 +232,7 @@
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
-      "size": 0.58,
+      "size": 0.62,
       "file": "inc/menus.js",
       "description": "SELECT * FROM tb_menus ORDER BY title."
     },
@@ -244,7 +244,7 @@
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
-      "size": 0.58,
+      "size": 0.62,
       "file": "inc/menus.js",
       "description": "INSERT/UPDATE com foto opcional via Formidable."
     },
@@ -256,7 +256,7 @@
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
-      "size": 1.0,
+      "size": 1.35,
       "file": "inc/reservations.js",
       "description": "tb_reservations com paginação e moment.js."
     },
@@ -268,7 +268,7 @@
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
-      "size": 0.58,
+      "size": 0.62,
       "file": "inc/reservations.js",
       "description": "Grava reserva com nome, email, pessoas, data e hora."
     },
@@ -280,7 +280,7 @@
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
-      "size": 0.72,
+      "size": 0.85,
       "file": "inc/Pagination.js",
       "description": "Paginação SQL com FOUND_ROWS e navegação."
     },
@@ -292,7 +292,7 @@
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
-      "size": 1.0,
+      "size": 1.35,
       "file": "inc/users.js",
       "description": "Login e CRUD de tb_users."
     },
@@ -304,7 +304,7 @@
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
-      "size": 1.0,
+      "size": 1.35,
       "file": "inc/contacts.js",
       "description": "Mensagens do formulário público."
     },
@@ -316,7 +316,7 @@
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
-      "size": 1.0,
+      "size": 1.35,
       "file": "inc/emails.js",
       "description": "Newsletter / captura de e-mails."
     },
@@ -328,7 +328,7 @@
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
-      "size": 0.72,
+      "size": 0.85,
       "file": "inc/admin.js",
       "description": "Sidebar AdminLTE e helper getParams."
     },
@@ -340,7 +340,7 @@
       "category": "frontend",
       "categoryLabel": "Frontend",
       "color": "#eab308",
-      "size": 1.0,
+      "size": 1.35,
       "file": "views/",
       "description": "Templates públicos com hero e Bootstrap."
     },
@@ -352,7 +352,7 @@
       "category": "other",
       "categoryLabel": "Outros",
       "color": "#64748b",
-      "size": 0.72,
+      "size": 0.85,
       "file": "public/admin/",
       "description": "Painel admin com tema AdminLTE e Bower."
     },
@@ -364,7 +364,7 @@
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
-      "size": 0.58,
+      "size": 0.62,
       "file": "routes/admin.js",
       "description": "Formatação de datas nas views admin."
     },
@@ -376,7 +376,7 @@
       "category": "oracle",
       "categoryLabel": "Oracle / DB",
       "color": "#c084fc",
-      "size": 0.72,
+      "size": 0.85,
       "file": "public/db/mysql.sql",
       "description": "Tabelas do restaurante saboroso."
     },
@@ -388,7 +388,7 @@
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
-      "size": 0.72,
+      "size": 0.85,
       "file": "app.js",
       "description": "Store de sessão para admin."
     },
@@ -400,7 +400,7 @@
       "category": "other",
       "categoryLabel": "Outros",
       "color": "#64748b",
-      "size": 0.72,
+      "size": 0.85,
       "file": "package.json",
       "description": "Dependências: express, mysql2, ejs, formidable, moment."
     }

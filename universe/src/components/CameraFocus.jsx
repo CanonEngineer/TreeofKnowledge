@@ -32,7 +32,7 @@ export function ResetCamera({ trigger }) {
   const { camera, controls } = useThree();
   useEffect(() => {
     if (!trigger) return;
-    camera.position.set(0, 12, 48);
+    camera.position.set(0, 8, 42);
     if (controls?.target) {
       controls.target.set(0, 0, 0);
       controls.update();

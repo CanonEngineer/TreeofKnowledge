@@ -40,7 +40,7 @@
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
-      "size": 1.4,
+      "size": 2.2,
       "file": "veyon-4.10.4-src (1)/veyon-4.10.4/",
       "description": "Veyon 4.10.4 customizado CiMED/HCFMB — UI HiDPI, logs SHA-256 em UNC, anti-tampering e deploy portátil."
     },
@@ -52,7 +52,7 @@
       "category": "frontend",
       "categoryLabel": "Frontend",
       "color": "#eab308",
-      "size": 1.0,
+      "size": 1.35,
       "file": "core/src/CimedDialogStyle.cpp",
       "description": "Diálogos escuros com chrome CIMED, ícones vetoriais e suporte a 125%/150% DPI."
     },
@@ -64,7 +64,7 @@
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
-      "size": 0.72,
+      "size": 0.85,
       "file": "core/src/CimedDialogStyle.cpp",
       "description": "Chrome compartilhado: shell, stylesheet, ícones e botões CIMED."
     },
@@ -76,7 +76,7 @@
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
-      "size": 0.58,
+      "size": 0.62,
       "file": "core/src/CimedDialogStyle.cpp",
       "description": "Lê devicePixelRatio da tela primária para ícones nítidos em HiDPI."
     },
@@ -88,7 +88,7 @@
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
-      "size": 0.58,
+      "size": 0.62,
       "file": "core/src/CimedDialogStyle.cpp",
       "description": "Monta QDialog com header CIMED, área de conteúdo e rodapé de ações."
     },
@@ -100,7 +100,7 @@
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
-      "size": 0.72,
+      "size": 0.85,
       "file": "core/src/PasswordDialog.cpp",
       "description": "Senha VNC com visual CIMED e validação integrada ao fluxo remoto."
     },
@@ -112,7 +112,7 @@
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
-      "size": 0.72,
+      "size": 0.85,
       "file": "core/src/CimedHostInputDialog.cpp",
       "description": "Entrada de host/IP para conexão remota com UI CIMED."
     },
@@ -124,7 +124,7 @@
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
-      "size": 0.72,
+      "size": 0.85,
       "file": "core/src/DesktopAccessConfirmDialog.cpp",
       "description": "Confirmação de acesso à área de trabalho do aluno com branding CIMED."
     },
@@ -136,7 +136,7 @@
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
-      "size": 1.0,
+      "size": 1.35,
       "file": "core/src/ComputerSupportInfo.cpp",
       "description": "Rótulo Veyon CIMED, hostname, usuário AD e textos da bandeja."
     },
@@ -148,7 +148,7 @@
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
-      "size": 0.72,
+      "size": 0.85,
       "file": "core/src/ComputerSupportInfo.cpp",
       "description": "Metadados da estação: hostname, IP, login AD e nome completo."
     },
@@ -160,7 +160,7 @@
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
-      "size": 0.58,
+      "size": 0.62,
       "file": "core/src/ComputerSupportInfo.cpp",
       "description": "Nome do produto exibido em diálogos, bandeja e relatórios."
     },
@@ -172,7 +172,7 @@
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
-      "size": 0.58,
+      "size": 0.62,
       "file": "core/src/ComputerSupportInfo.cpp",
       "description": "Tooltip HTML da bandeja em repouso com dados da máquina e suporte."
     },
@@ -184,7 +184,7 @@
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
-      "size": 0.72,
+      "size": 0.85,
       "file": "core/src/ComputerSupportInfoDialog.cpp",
       "description": "Diálogo F9 com informações de suporte técnico e contatos CiMED."
     },
@@ -196,7 +196,7 @@
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
-      "size": 1.0,
+      "size": 1.35,
       "file": "core/src/AccessLogWriter.cpp",
       "description": "Escrita em UNC, linhas com SHA-256, validação diária e lookup AD."
     },
@@ -208,7 +208,7 @@
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
-      "size": 0.72,
+      "size": 0.85,
       "file": "core/src/AccessLogWriter.cpp",
       "description": "Writer principal: leitura/escrita UNC, hashes, alertas e agendador."
     },
@@ -220,7 +220,7 @@
       "category": "network",
       "categoryLabel": "Rede / Scan",
       "color": "#22d3ee",
-      "size": 0.58,
+      "size": 0.62,
       "file": "core/src/AccessLogWriter.cpp",
       "description": "Caminho UNC do log principal acessos_veyon.log."
     },
@@ -232,7 +232,7 @@
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
-      "size": 0.58,
+      "size": 0.62,
       "file": "core/src/AccessLogWriter.cpp",
       "description": "Anexa marcador e SHA-256 hex à mensagem de log."
     },
@@ -244,7 +244,7 @@
       "category": "auth",
       "categoryLabel": "Segurança",
       "color": "#ef4444",
-      "size": 0.72,
+      "size": 0.85,
       "file": "core/src/AccessLogPermissions.cpp",
       "description": "Define paths UNC fixos do compartilhamento vnc_veyon$."
     },
@@ -256,7 +256,7 @@
       "category": "network",
       "categoryLabel": "Rede / Scan",
       "color": "#22d3ee",
-      "size": 0.58,
+      "size": 0.62,
       "file": "core/src/AccessLogPermissions.cpp",
       "description": "Raiz UNC \\\\172.20.100.36\\vnc_veyon$\\veyon para todos os logs."
     },
@@ -268,7 +268,7 @@
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
-      "size": 0.72,
+      "size": 0.85,
       "file": "core/src/AccessLogRecorder.cpp",
       "description": "Registra eventos de sessão remota em português com contexto AD."
     },
@@ -280,7 +280,7 @@
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
-      "size": 0.58,
+      "size": 0.62,
       "file": "core/src/AccessLogRecorder.cpp",
       "description": "Grava acesso remoto iniciado desta estação para outro host."
     },
@@ -292,7 +292,7 @@
       "category": "auth",
       "categoryLabel": "Segurança",
       "color": "#ef4444",
-      "size": 0.58,
+      "size": 0.62,
       "file": "core/src/AccessLogRecorder.cpp",
       "description": "Inbound desabilitado — veyon-server (SYSTEM) não grava UNC em todos os hosts."
     },
@@ -304,7 +304,7 @@
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
-      "size": 0.72,
+      "size": 0.85,
       "file": "core/src/AccessLogAdLookup_win.cpp",
       "description": "LDAP displayName + WTS da sessão Console ativa no host remoto (auxiliar do alerta)."
     },
@@ -316,7 +316,7 @@
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
-      "size": 1.0,
+      "size": 1.35,
       "file": "core/src/TamperLogProtector.cpp",
       "description": "Monitora alterações nos logs de rede, alerta e exige senha admin."
     },
@@ -328,7 +328,7 @@
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
-      "size": 0.72,
+      "size": 0.85,
       "file": "core/src/TamperLogProtector.cpp",
       "description": "Watcher de integridade com batch protegido durante escritas legítimas."
     },
@@ -340,7 +340,7 @@
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
-      "size": 0.58,
+      "size": 0.62,
       "file": "core/src/TamperLogProtector.cpp",
       "description": "Carrega snapshot dos logs de rede para comparação posterior."
     },
@@ -352,7 +352,7 @@
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
-      "size": 0.58,
+      "size": 0.62,
       "file": "core/src/TamperLogProtector.cpp",
       "description": "Compara conteúdo atual com backup; dispara alerta se divergir."
     },
@@ -364,7 +364,7 @@
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
-      "size": 0.72,
+      "size": 0.85,
       "file": "core/src/TamperLogPasswordDialog.cpp",
       "description": "Diálogo de senha para autorizar manutenção nos logs tamperados."
     },
@@ -376,7 +376,7 @@
       "category": "auth",
       "categoryLabel": "Segurança",
       "color": "#ef4444",
-      "size": 0.58,
+      "size": 0.62,
       "file": "core/src/TamperLogProtector.cpp",
       "description": "Valida senha admin contra hash SHA-256 embutido."
     },
@@ -388,7 +388,7 @@
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
-      "size": 1.0,
+      "size": 1.35,
       "file": "core/src/SystemTrayIcon.cpp",
       "description": "Ícones multi-DPI, hover CIMED, F9 suporte e servidor de senha tamper."
     },
@@ -400,7 +400,7 @@
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
-      "size": 0.72,
+      "size": 0.85,
       "file": "core/src/SystemTrayIcon.cpp",
       "description": "Implementação da bandeja com renderização vetorial e overlay."
     },
@@ -412,7 +412,7 @@
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
-      "size": 0.58,
+      "size": 0.62,
       "file": "core/src/SystemTrayIcon.cpp",
       "description": "Desenha pixmap do estado da bandeja com gradiente e glyph central."
     },
@@ -424,7 +424,7 @@
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
-      "size": 0.58,
+      "size": 0.62,
       "file": "core/src/SystemTrayIcon.cpp",
       "description": "Gera QIcon com múltiplos devicePixelRatio para Windows 125%/150%."
     },
@@ -436,7 +436,7 @@
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
-      "size": 1.0,
+      "size": 1.35,
       "file": "server/src/ComputerControlServer.cpp",
       "description": "Inicialização do serviço com proteção de logs e worker da bandeja."
     },
@@ -448,7 +448,7 @@
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
-      "size": 0.72,
+      "size": 0.85,
       "file": "server/src/ComputerControlServer.cpp",
       "description": "Servidor de controle com hooks CIMED no startup."
     },
@@ -460,7 +460,7 @@
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
-      "size": 0.58,
+      "size": 0.62,
       "file": "server/src/ComputerControlServer.cpp",
       "description": "Tooltip da bandeja usa idleTrayHoverText quando sem sessão ativa."
     },
@@ -472,7 +472,7 @@
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
-      "size": 1.0,
+      "size": 1.35,
       "file": "plugins/remoteaccess/RemoteAccessFeaturePlugin.cpp",
       "description": "RemoteAccess com diálogos CIMED e textos de suporte."
     },
@@ -484,7 +484,7 @@
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
-      "size": 0.72,
+      "size": 0.85,
       "file": "plugins/remoteaccess/RemoteAccessFeaturePlugin.cpp",
       "description": "Fluxo de conexão remota com UI CIMED e logs outbound."
     },
@@ -496,7 +496,7 @@
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
-      "size": 1.0,
+      "size": 1.35,
       "file": "Veyon_Custom/",
       "description": "Pacote portátil pronto para GPO/SCCM nas estações CiMED."
     },
@@ -508,7 +508,7 @@
       "category": "other",
       "categoryLabel": "Outros",
       "color": "#64748b",
-      "size": 0.72,
+      "size": 0.85,
       "file": ".ci/windows/build.sh",
       "description": "CMake + Ninja (MSYS2): qt-cmake e alvo windows-binaries — gera DLLs e EXEs CIMED."
     },
@@ -520,7 +520,7 @@
       "category": "scripts",
       "categoryLabel": "Scripts",
       "color": "#64748b",
-      "size": 0.72,
+      "size": 0.85,
       "file": "scripts/build_veyon_custom_installer.ps1",
       "description": "NSIS: gera os dois setup.exe win64 (laboratório com Master e posto/aluno sem Master)."
     },
@@ -532,7 +532,7 @@
       "category": "other",
       "categoryLabel": "Outros",
       "color": "#64748b",
-      "size": 0.72,
+      "size": 0.85,
       "file": "Veyon_Custom/",
       "description": "Layout de instalação portátil sem installer MSI."
     },
@@ -544,7 +544,7 @@
       "category": "other",
       "categoryLabel": "Outros",
       "color": "#64748b",
-      "size": 0.72,
+      "size": 0.85,
       "file": "docs/RELATORIO-TECNICO-PROJETO-CIMED.pdf",
       "description": "Relatórios PDF/MD: técnico executivo e estrutura de código."
     },
@@ -556,7 +556,7 @@
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
-      "size": 1.0,
+      "size": 1.35,
       "file": "core/src/CimedVersionCompatibility.cpp",
       "description": "Detecção de build não homologado, gravação UNC e modal nas 4 sentinelas — fix poll UNC + multi-NIC (14/07/2026)."
     },
@@ -568,7 +568,7 @@
       "category": "frontend",
       "categoryLabel": "Frontend",
       "color": "#eab308",
-      "size": 0.72,
+      "size": 0.85,
       "file": "core/src/CimedBuildSignature.cpp",
       "description": "Token de handshake: produto|versão CIMED|versão Veyon; valida homologação."
     },
@@ -580,7 +580,7 @@
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
-      "size": 0.58,
+      "size": 0.62,
       "file": "core/src/VncServerProtocol.cpp",
       "description": "Protocolo VNC chama compatibilidade ao receber assinatura do cliente remoto."
     },
@@ -592,7 +592,7 @@
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
-      "size": 0.72,
+      "size": 0.85,
       "file": "core/src/CimedVersionCompatibility.cpp",
       "description": "Filtra loopback, sentinela multi-NIC, usuário do handshake Veyon (+ nota Console se divergir)."
     },
@@ -604,7 +604,7 @@
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
-      "size": 0.72,
+      "size": 0.85,
       "file": "core/src/CimedVersionAlertWriter.cpp",
       "description": "Grava alertas somente em UNC — cada conexão incompatível gera linha nova + FlushFileBuffers."
     },
@@ -616,7 +616,7 @@
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
-      "size": 0.72,
+      "size": 0.85,
       "file": "core/src/CimedVersionAlertMonitor.cpp",
       "description": "Sentinelas fazem poll do log UNC (tamanho via FindFirstFile) a cada 1 s e disparam o presenter."
     },
@@ -628,7 +628,7 @@
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
-      "size": 0.72,
+      "size": 0.85,
       "file": "core/src/CimedVersionAlertPresenter.cpp",
       "description": "Roteia alerta para o worker da bandeja via FeatureMessage ShowVersionAlert."
     },
@@ -640,7 +640,7 @@
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
-      "size": 0.58,
+      "size": 0.62,
       "file": "core/src/SystemTrayIcon.cpp",
       "description": "Worker da bandeja exibe CimedVersionAlertDialog bloqueante na sessão."
     },
@@ -652,7 +652,7 @@
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
-      "size": 0.72,
+      "size": 0.85,
       "file": "core/src/CimedVersionAlertDialog.cpp",
       "description": "Diálogo de segurança CIMED — bloqueante até o operador fechar."
     },
@@ -664,7 +664,7 @@
       "category": "other",
       "categoryLabel": "Outros",
       "color": "#64748b",
-      "size": 0.72,
+      "size": 0.85,
       "file": "docs/RESTORE-POINT-20260708.md",
       "description": "Ponto de restauração funcional do alerta — tag Git e script de deploy."
     },
@@ -676,7 +676,7 @@
       "category": "other",
       "categoryLabel": "Outros",
       "color": "#64748b",
-      "size": 0.72,
+      "size": 0.85,
       "file": "docs/RELEASE-veyon-cimed-1.0-win64-20260626.md",
       "description": "Instaladores lab + posto (14/07/2026): sentinelas + DisplayName versão correto."
     },
@@ -688,7 +688,7 @@
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
-      "size": 1.0,
+      "size": 1.35,
       "file": "tag.bat",
       "description": "Ramificação separada para versionamento semver e publicação de tags no GitHub."
     },
@@ -700,7 +700,7 @@
       "category": "other",
       "categoryLabel": "Outros",
       "color": "#64748b",
-      "size": 0.72,
+      "size": 0.85,
       "file": "tag.bat",
       "description": "Gerador interativo de release: valida Git, atualiza main, calcula semver e publica a tag."
     }

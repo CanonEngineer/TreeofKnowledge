@@ -40,7 +40,7 @@
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
-      "size": 1.4,
+      "size": 2.2,
       "file": "index.html",
       "description": "Projeto integrador UNIVESP com pesquisa e páginas de saúde."
     },
@@ -52,7 +52,7 @@
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
-      "size": 1.0,
+      "size": 1.35,
       "file": "inc/",
       "description": "Módulo/pasta `inc/` com arquivos-chave do projeto."
     },
@@ -64,7 +64,7 @@
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
-      "size": 0.72,
+      "size": 0.85,
       "file": "inc/contact.js",
       "description": "Arquivo `inc/contact.js` mapeado a partir do repositório original."
     },
@@ -76,7 +76,7 @@
       "category": "oracle",
       "categoryLabel": "Oracle / DB",
       "color": "#c084fc",
-      "size": 0.72,
+      "size": 0.85,
       "file": "inc/db.js",
       "description": "Arquivo `inc/db.js` mapeado a partir do repositório original."
     },
@@ -88,7 +88,7 @@
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
-      "size": 0.72,
+      "size": 0.85,
       "file": "inc/search.js",
       "description": "Arquivo `inc/search.js` mapeado a partir do repositório original."
     },
@@ -100,7 +100,7 @@
       "category": "network",
       "categoryLabel": "Rede / Scan",
       "color": "#22d3ee",
-      "size": 1.0,
+      "size": 1.35,
       "file": "routes/",
       "description": "Módulo/pasta `routes/` com arquivos-chave do projeto."
     },
@@ -112,7 +112,7 @@
       "category": "network",
       "categoryLabel": "Rede / Scan",
       "color": "#22d3ee",
-      "size": 0.72,
+      "size": 0.85,
       "file": "routes/index.js",
       "description": "Arquivo `routes/index.js` mapeado a partir do repositório original."
     },
@@ -124,7 +124,7 @@
       "category": "network",
       "categoryLabel": "Rede / Scan",
       "color": "#22d3ee",
-      "size": 0.72,
+      "size": 0.85,
       "file": "routes/users.js",
       "description": "Arquivo `routes/users.js` mapeado a partir do repositório original."
     },
@@ -136,7 +136,7 @@
       "category": "frontend",
       "categoryLabel": "Frontend",
       "color": "#eab308",
-      "size": 1.0,
+      "size": 1.35,
       "file": "views/",
       "description": "Módulo/pasta `views/` com arquivos-chave do projeto."
     },
@@ -148,7 +148,7 @@
       "category": "frontend",
       "categoryLabel": "Frontend",
       "color": "#eab308",
-      "size": 0.72,
+      "size": 0.85,
       "file": "views/contact.ejs",
       "description": "Arquivo `views/contact.ejs` mapeado a partir do repositório original."
     },
@@ -160,7 +160,7 @@
       "category": "frontend",
       "categoryLabel": "Frontend",
       "color": "#eab308",
-      "size": 0.72,
+      "size": 0.85,
       "file": "views/index.ejs",
       "description": "Arquivo `views/index.ejs` mapeado a partir do repositório original."
     },
@@ -172,7 +172,7 @@
       "category": "frontend",
       "categoryLabel": "Frontend",
       "color": "#eab308",
-      "size": 0.72,
+      "size": 0.85,
       "file": "views/result.ejs",
       "description": "Arquivo `views/result.ejs` mapeado a partir do repositório original."
     },
@@ -184,7 +184,7 @@
       "category": "frontend",
       "categoryLabel": "Frontend",
       "color": "#eab308",
-      "size": 0.72,
+      "size": 0.85,
       "file": "views/search.ejs",
       "description": "Arquivo `views/search.ejs` mapeado a partir do repositório original."
     },
@@ -196,7 +196,7 @@
       "category": "frontend",
       "categoryLabel": "Frontend",
       "color": "#eab308",
-      "size": 0.72,
+      "size": 0.85,
       "file": "views/inc/alerts.ejs",
       "description": "Arquivo `views/inc/alerts.ejs` mapeado a partir do repositório original."
     },
@@ -208,7 +208,7 @@
       "category": "frontend",
       "categoryLabel": "Frontend",
       "color": "#eab308",
-      "size": 0.72,
+      "size": 0.85,
       "file": "views/inc/cep-scripts.ejs",
       "description": "Arquivo `views/inc/cep-scripts.ejs` mapeado a partir do repositório original."
     },
@@ -220,7 +220,7 @@
       "category": "frontend",
       "categoryLabel": "Frontend",
       "color": "#eab308",
-      "size": 0.72,
+      "size": 0.85,
       "file": "views/inc/footer-scripts-health.ejs",
       "description": "Arquivo `views/inc/footer-scripts-health.ejs` mapeado a partir do repositório original."
     },
@@ -232,7 +232,7 @@
       "category": "frontend",
       "categoryLabel": "Frontend",
       "color": "#eab308",
-      "size": 0.72,
+      "size": 0.85,
       "file": "views/inc/footer-scripts.ejs",
       "description": "Arquivo `views/inc/footer-scripts.ejs` mapeado a partir do repositório original."
     },
@@ -244,7 +244,7 @@
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
-      "size": 1.0,
+      "size": 1.35,
       "file": "public/",
       "description": "Módulo/pasta `public/` com arquivos-chave do projeto."
     },
@@ -256,7 +256,7 @@
       "category": "scripts",
       "categoryLabel": "Scripts",
       "color": "#64748b",
-      "size": 0.72,
+      "size": 0.85,
       "file": "public/assests/script/busca-cep.js",
       "description": "Arquivo `public/assests/script/busca-cep.js` mapeado a partir do repositório original."
     },
@@ -268,7 +268,7 @@
       "category": "scripts",
       "categoryLabel": "Scripts",
       "color": "#64748b",
-      "size": 0.72,
+      "size": 0.85,
       "file": "public/assests/script/mobile-navbar.js",
       "description": "Arquivo `public/assests/script/mobile-navbar.js` mapeado a partir do repositório original."
     },
@@ -280,7 +280,7 @@
       "category": "frontend",
       "categoryLabel": "Frontend",
       "color": "#eab308",
-      "size": 0.72,
+      "size": 0.85,
       "file": "public/assests/css/_variaveis.css",
       "description": "Arquivo `public/assests/css/_variaveis.css` mapeado a partir do repositório original."
     },
@@ -292,7 +292,7 @@
       "category": "frontend",
       "categoryLabel": "Frontend",
       "color": "#eab308",
-      "size": 0.72,
+      "size": 0.85,
       "file": "public/assests/css/form.css",
       "description": "Arquivo `public/assests/css/form.css` mapeado a partir do repositório original."
     },
@@ -304,7 +304,7 @@
       "category": "frontend",
       "categoryLabel": "Frontend",
       "color": "#eab308",
-      "size": 0.72,
+      "size": 0.85,
       "file": "public/assests/css/pesquisa.css",
       "description": "Arquivo `public/assests/css/pesquisa.css` mapeado a partir do repositório original."
     },
@@ -316,7 +316,7 @@
       "category": "frontend",
       "categoryLabel": "Frontend",
       "color": "#eab308",
-      "size": 0.72,
+      "size": 0.85,
       "file": "public/assests/css/reset.css",
       "description": "Arquivo `public/assests/css/reset.css` mapeado a partir do repositório original."
     },
@@ -328,7 +328,7 @@
       "category": "frontend",
       "categoryLabel": "Frontend",
       "color": "#eab308",
-      "size": 0.72,
+      "size": 0.85,
       "file": "public/assests/css/style.css",
       "description": "Arquivo `public/assests/css/style.css` mapeado a partir do repositório original."
     },
@@ -340,7 +340,7 @@
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
-      "size": 1.0,
+      "size": 1.35,
       "file": "assests/",
       "description": "Módulo/pasta `assests/` com arquivos-chave do projeto."
     },
@@ -352,7 +352,7 @@
       "category": "scripts",
       "categoryLabel": "Scripts",
       "color": "#64748b",
-      "size": 0.72,
+      "size": 0.85,
       "file": "assests/script/busca-cep.js",
       "description": "Arquivo `assests/script/busca-cep.js` mapeado a partir do repositório original."
     },
@@ -364,7 +364,7 @@
       "category": "scripts",
       "categoryLabel": "Scripts",
       "color": "#64748b",
-      "size": 0.72,
+      "size": 0.85,
       "file": "assests/script/mobile-navbar.js",
       "description": "Arquivo `assests/script/mobile-navbar.js` mapeado a partir do repositório original."
     }

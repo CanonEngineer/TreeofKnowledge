@@ -32,7 +32,7 @@
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
-      "size": 1.4,
+      "size": 2.2,
       "file": "index.html",
       "description": "Calculadora interativa em JavaScript com som de clique."
     },
@@ -44,7 +44,7 @@
       "category": "scripts",
       "categoryLabel": "Scripts",
       "color": "#64748b",
-      "size": 1.0,
+      "size": 1.35,
       "file": "scripts/",
       "description": "Módulo/pasta `scripts/` com arquivos-chave do projeto."
     },
@@ -56,7 +56,7 @@
       "category": "scripts",
       "categoryLabel": "Scripts",
       "color": "#64748b",
-      "size": 0.72,
+      "size": 0.85,
       "file": "scripts/controller/CalcController.js",
       "description": "Arquivo `scripts/controller/CalcController.js` mapeado a partir do repositório original."
     },
@@ -68,7 +68,7 @@
       "category": "scripts",
       "categoryLabel": "Scripts",
       "color": "#64748b",
-      "size": 0.72,
+      "size": 0.85,
       "file": "scripts/calculator.js",
       "description": "Arquivo `scripts/calculator.js` mapeado a partir do repositório original."
     },
@@ -80,7 +80,7 @@
       "category": "frontend",
       "categoryLabel": "Frontend",
       "color": "#eab308",
-      "size": 0.72,
+      "size": 0.85,
       "file": "index.html",
       "description": "Arquivo `index.html` mapeado a partir do repositório original."
     },
@@ -92,7 +92,7 @@
       "category": "other",
       "categoryLabel": "Outros",
       "color": "#64748b",
-      "size": 0.72,
+      "size": 0.85,
       "file": "README.md",
       "description": "Arquivo `README.md` mapeado a partir do repositório original."
     }

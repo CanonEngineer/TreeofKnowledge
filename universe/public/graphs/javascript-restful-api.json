@@ -32,7 +32,7 @@
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
-      "size": 1.4,
+      "size": 2.2,
       "file": "index.js",
       "description": "API REST com Express, consign e banco NeDB embarcado."
     },
@@ -44,7 +44,7 @@
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
-      "size": 0.72,
+      "size": 0.85,
       "file": "index.js",
       "description": "Bootstrap Express com body-parser e consign."
     },
@@ -56,7 +56,7 @@
       "category": "network",
       "categoryLabel": "Rede / Scan",
       "color": "#22d3ee",
-      "size": 0.72,
+      "size": 0.85,
       "file": "routes/index.js",
       "description": "Rota raiz HTML de boas-vindas."
     },
@@ -68,7 +68,7 @@
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
-      "size": 1.0,
+      "size": 1.35,
       "file": "routes/users.js",
       "description": "CRUD completo GET/POST/PUT/DELETE em /users."
     },
@@ -80,7 +80,7 @@
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
-      "size": 0.58,
+      "size": 0.62,
       "file": "routes/users.js",
       "description": "Lista todos os usuários ordenados por nome."
     },
@@ -92,7 +92,7 @@
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
-      "size": 0.58,
+      "size": 0.62,
       "file": "routes/users.js",
       "description": "Insere novo usuário após validação."
     },
@@ -104,7 +104,7 @@
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
-      "size": 0.58,
+      "size": 0.62,
       "file": "routes/users.js",
       "description": "Busca um usuário pelo _id do NeDB."
     },
@@ -116,7 +116,7 @@
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
-      "size": 0.58,
+      "size": 0.62,
       "file": "routes/users.js",
       "description": "Atualiza usuário existente no NeDB."
     },
@@ -128,7 +128,7 @@
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
-      "size": 0.58,
+      "size": 0.62,
       "file": "routes/users.js",
       "description": "Remove usuário do banco NeDB."
     },
@@ -140,7 +140,7 @@
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
-      "size": 0.58,
+      "size": 0.62,
       "file": "routes/users.js",
       "description": "Rota mock com lista fixa de admins."
     },
@@ -152,7 +152,7 @@
       "category": "oracle",
       "categoryLabel": "Oracle / DB",
       "color": "#c084fc",
-      "size": 0.72,
+      "size": 0.85,
       "file": "routes/users.js",
       "description": "Banco embarcado com autoload em users.db."
     },
@@ -164,7 +164,7 @@
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
-      "size": 1.0,
+      "size": 1.35,
       "file": "utils/validator.js",
       "description": "Valida nome obrigatório e e-mail válido no POST/PUT."
     },
@@ -176,7 +176,7 @@
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
-      "size": 1.0,
+      "size": 1.35,
       "file": "utils/error.js",
       "description": "Padroniza respostas de erro da API."
     },
@@ -188,7 +188,7 @@
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
-      "size": 0.58,
+      "size": 0.62,
       "file": "index.js",
       "description": "Carrega routes/ e utils/ automaticamente no app."
     },
@@ -200,7 +200,7 @@
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
-      "size": 0.72,
+      "size": 0.85,
       "file": "index.js",
       "description": "Parse JSON e urlencoded com limite 50mb."
     },
@@ -212,7 +212,7 @@
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
-      "size": 0.72,
+      "size": 0.85,
       "file": "index.js",
       "description": "Middleware global de validação."
     },
@@ -224,7 +224,7 @@
       "category": "network",
       "categoryLabel": "Rede / Scan",
       "color": "#22d3ee",
-      "size": 0.72,
+      "size": 0.85,
       "file": "routes/users.js",
       "description": "Agrupa rotas REST por :id."
     },
@@ -236,7 +236,7 @@
       "category": "other",
       "categoryLabel": "Outros",
       "color": "#64748b",
-      "size": 0.72,
+      "size": 0.85,
       "file": "package.json",
       "description": "Dependências e entry point index.js."
     },
@@ -248,7 +248,7 @@
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
-      "size": 0.58,
+      "size": 0.62,
       "file": "index.js",
       "description": "Inicia servidor na porta 4000."
     },
@@ -260,7 +260,7 @@
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
-      "size": 0.58,
+      "size": 0.62,
       "file": "routes/users.js",
       "description": "Padrão if(err) em todos os callbacks NeDB."
     }

@@ -44,7 +44,7 @@
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
-      "size": 1.4,
+      "size": 2.2,
       "file": "README.md",
       "description": "Bancada experimental IoT edge para doutorado: Arduino ↔ Raspberry, servos/portas, FastAPI, SQI e Research Lab."
     },
@@ -56,7 +56,7 @@
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
-      "size": 1.0,
+      "size": 1.35,
       "file": "docs/ARCHITECTURE.md",
       "description": "Camadas de engenharia: percepção, comunicação, edge, serviço e experimentação."
     },
@@ -68,7 +68,7 @@
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
-      "size": 1.0,
+      "size": 1.35,
       "file": "python_server/protocol.py",
       "description": "Contratos de mensagem house/* com envelope versionado."
     },
@@ -80,7 +80,7 @@
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
-      "size": 1.0,
+      "size": 1.35,
       "file": "python_server/app.py",
       "description": "Serviço L4: estado, API REST, WebSocket, auth e research endpoints."
     },
@@ -92,7 +92,7 @@
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
-      "size": 0.72,
+      "size": 0.85,
       "file": "python_server/app.py",
       "description": "Bootstrap FastAPI, CORS, MQTT bridge e lifespan do simulador."
     },
@@ -104,7 +104,7 @@
       "category": "network",
       "categoryLabel": "Rede / Scan",
       "color": "#22d3ee",
-      "size": 0.72,
+      "size": 0.85,
       "file": "python_server/api.py",
       "description": "Rotas de atuação: LED, relé, servo, porta, cenários e WebSocket."
     },
@@ -116,7 +116,7 @@
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
-      "size": 0.72,
+      "size": 0.85,
       "file": "python_server/state.py",
       "description": "HouseState — fonte de verdade em runtime com versionamento e sync."
     },
@@ -128,7 +128,7 @@
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
-      "size": 0.72,
+      "size": 0.85,
       "file": "python_server/telemetry.py",
       "description": "TelemetryEngine: latência, skew Arduino↔Raspberry e Sync Quality Index."
     },
@@ -140,7 +140,7 @@
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
-      "size": 0.72,
+      "size": 0.85,
       "file": "python_server/research_api.py",
       "description": "API científica: overview, experimentos, export CSV/JSON e thesis-brief."
     },
@@ -152,7 +152,7 @@
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
-      "size": 0.72,
+      "size": 0.85,
       "file": "python_server/experiments.py",
       "description": "Bancada reproduzível: sync_latency, actuator_response, fault_injection, E2E."
     },
@@ -164,7 +164,7 @@
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
-      "size": 0.72,
+      "size": 0.85,
       "file": "python_server/simulator.py",
       "description": "Simulador de sensores e cenários welcome/garage/alarm/night/sync_test."
     },
@@ -176,7 +176,7 @@
       "category": "oracle",
       "categoryLabel": "Oracle / DB",
       "color": "#c084fc",
-      "size": 0.72,
+      "size": 0.85,
       "file": "python_server/database.py",
       "description": "SQLite + SQLAlchemy: users, devices, sensors, logs; bcrypt nativo."
     },
@@ -188,7 +188,7 @@
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
-      "size": 0.72,
+      "size": 0.85,
       "file": "python_server/models.py",
       "description": "Modelos ORM User, Device, SensorReading, ActionLog."
     },
@@ -200,7 +200,7 @@
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
-      "size": 0.72,
+      "size": 0.85,
       "file": "python_server/mqtt_bridge.py",
       "description": "Ponte MQTT opcional (Mosquitto) — desligada por padrão em simulação."
     },
@@ -212,7 +212,7 @@
       "category": "frontend",
       "categoryLabel": "Frontend",
       "color": "#eab308",
-      "size": 1.0,
+      "size": 1.35,
       "file": "arduino/SmartHomeNode/SmartHomeNode.ino",
       "description": "Nó L1: sensores DHT/LDR/PIR e atuação LED/relé/servo via MQTT."
     },
@@ -224,7 +224,7 @@
       "category": "other",
       "categoryLabel": "Outros",
       "color": "#64748b",
-      "size": 0.72,
+      "size": 0.85,
       "file": "arduino/SmartHomeNode/SmartHomeNode.ino",
       "description": "Loop de sensores e callback onMessage para house/led|relay|servo|door."
     },
@@ -236,7 +236,7 @@
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
-      "size": 1.0,
+      "size": 1.35,
       "file": "raspberry/agent.py",
       "description": "L3 edge: espelha comandos MQTT/API e envia heartbeat de sincronia."
     },
@@ -248,7 +248,7 @@
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
-      "size": 0.72,
+      "size": 0.85,
       "file": "raspberry/agent.py",
       "description": "Loop MQTT ou espelhamento via GET /api/status."
     },
@@ -260,7 +260,7 @@
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
-      "size": 0.72,
+      "size": 0.85,
       "file": "raspberry/actuators.py",
       "description": "Atuadores locais LED/buzzer/relé/servo/porta (GPIO real ou stub)."
     },
@@ -272,7 +272,7 @@
       "category": "frontend",
       "categoryLabel": "Frontend",
       "color": "#eab308",
-      "size": 1.0,
+      "size": 1.35,
       "file": "web/index.html",
       "description": "L5: planta da casa, placas, mecanismos e painel de métricas/experimentos."
     },
@@ -284,7 +284,7 @@
       "category": "frontend",
       "categoryLabel": "Frontend",
       "color": "#eab308",
-      "size": 0.72,
+      "size": 0.85,
       "file": "web/index.html",
       "description": "Layout do laboratório visual e controles manuais."
     },
@@ -296,7 +296,7 @@
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
-      "size": 0.72,
+      "size": 0.85,
       "file": "web/script.js",
       "description": "Cliente WS/REST: aplica estado, gráficos e roda experimentos."
     },
@@ -308,7 +308,7 @@
       "category": "frontend",
       "categoryLabel": "Frontend",
       "color": "#eab308",
-      "size": 0.72,
+      "size": 0.85,
       "file": "web/style.css",
       "description": "Tema de engenharia (teal/amber) e animações de porta/servo."
     },
@@ -320,7 +320,7 @@
       "category": "frontend",
       "categoryLabel": "Frontend",
       "color": "#eab308",
-      "size": 0.72,
+      "size": 0.85,
       "file": "docs/demo/standalone.html",
       "description": "Demo standalone no GitHub Pages (sem backend)."
     },
@@ -332,7 +332,7 @@
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
-      "size": 1.0,
+      "size": 1.35,
       "file": "java_client/src/main/java/smarthome/Dashboard.java",
       "description": "Cliente desktop Swing consumindo a mesma API REST."
     },
@@ -344,7 +344,7 @@
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
-      "size": 1.0,
+      "size": 1.35,
       "file": "docs/METHODOLOGY.md",
       "description": "Perguntas de pesquisa, variáveis, ameaças à validade e entregáveis de tese."
     },
@@ -356,7 +356,7 @@
       "category": "tests",
       "categoryLabel": "Testes",
       "color": "#94a3b8",
-      "size": 0.72,
+      "size": 0.85,
       "file": "tests/test_engineering.py",
       "description": "Testes de protocolo, SQI, latência e máquina de estados."
     },
@@ -368,7 +368,7 @@
       "category": "scripts",
       "categoryLabel": "Scripts",
       "color": "#64748b",
-      "size": 0.72,
+      "size": 0.85,
       "file": "start.ps1",
       "description": "Bootstrap Windows: venv, deps e sobe o servidor."
     }

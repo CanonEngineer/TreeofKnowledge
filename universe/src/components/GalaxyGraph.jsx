@@ -1,7 +1,8 @@
 import { Suspense, useMemo, useState, useCallback } from 'react';
 import { Canvas } from '@react-three/fiber';
 import { OrbitControls, Html } from '@react-three/drei';
-import { Stars, GridFloor, NodeSphere, ConnectionBeam } from './SceneObjects';
+import { EffectComposer, Bloom, Vignette } from '@react-three/postprocessing';
+import { StarField, GridFloor, NodeSphere, ConnectionBeam } from './SceneObjects';
 import { CameraFocus, ResetCamera } from './CameraFocus';
 import { computeLayout, getNeighbors } from '../utils/layout';
 
@@ -14,8 +15,10 @@ function Scene({
   showLabels,
   showLinks,
   showParticles,
+  showAnimations,
   activeCategories,
   resetCam,
+  paused,
 }) {
   const laidOut = useMemo(() => computeLayout(graph), [graph]);
   const posMap = useMemo(() => new Map(laidOut.map((n) => [n.id, n.position])), [laidOut]);
@@ -36,30 +39,32 @@ function Scene({
 
   return (
     <>
-      <color attach="background" args={['#030712']} />
-      <fog attach="fog" args={['#030712', 60, 180]} />
-      <ambientLight intensity={0.35} />
-      <pointLight position={[20, 30, 20]} intensity={1.2} color="#60a5fa" />
-      <pointLight position={[-25, -10, -15]} intensity={0.6} color="#a78bfa" />
-      <Stars />
+      <color attach="background" args={['#010409']} />
+      <fog attach="fog" args={['#010409', 45, 160]} />
+      <ambientLight intensity={0.22} />
+      <directionalLight position={[30, 40, 20]} intensity={0.55} color="#93c5fd" />
+      <pointLight position={[-30, 15, -25]} intensity={0.9} color="#818cf8" />
+      <pointLight position={[0, -10, 30]} intensity={0.35} color="#22d3ee" />
+      <StarField />
       <GridFloor />
       <ResetCamera trigger={resetCam} />
-      <CameraFocus target={focusNode} />
+      <CameraFocus target={focusNode} offset={[0, 3, 18]} />
 
       {showLinks &&
-        links.map((link) => {
-          const active =
-            showParticles &&
-            neighborSet &&
-            (neighborSet.has(link.source) && neighborSet.has(link.target));
-          const dimmed = hasFocus && !active;
+        links.map((link, i) => {
+          const connected = neighborSet?.has(link.source) && neighborSet.has(link.target);
+          const active = showParticles && connected;
+          const dimmed = hasFocus && !connected;
+          const style = i % 7 === 0 ? 'communication' : i % 11 === 0 ? 'dataflow' : 'dependency';
           return (
             <ConnectionBeam
               key={`${link.source}-${link.target}`}
-              link={link}
+              link={{ ...link, type: style === 'dependency' ? link.type : style }}
               posMap={posMap}
-              active={active}
+              active={active || (connected && !hasFocus)}
               dimmed={dimmed}
+              showParticles={showParticles}
+              linkStyle={style}
             />
           );
         })}
@@ -70,6 +75,10 @@ function Scene({
         const hovered = node.id === hoveredId;
         const highlighted = neighborSet?.has(node.id) ?? false;
         const dimmed = hasFocus && !highlighted;
+        const showLabel =
+          showLabels &&
+          (selected || hovered || node.layer === 'root' || node.layer === 'module' || (!hasFocus && node.layer === 'file'));
+
         return (
           <group key={node.id}>
             <NodeSphere
@@ -78,18 +87,25 @@ function Scene({
               hovered={hovered}
               highlighted={highlighted}
               dimmed={dimmed}
+              animated={showAnimations}
               onClick={onSelect}
               onPointerOver={onHover}
               onPointerOut={() => onHover(null)}
             />
-            {showLabels && (selected || hovered || node.layer === 'root' || node.layer === 'module') && (
+            {showLabel && (
               <Html
-                position={[node.position.x, node.position.y + node.size + 0.8, node.position.z]}
+                position={[node.position.x, node.position.y + node.size * 1.6 + 0.5, node.position.z]}
                 center
-                distanceFactor={18}
+                distanceFactor={14}
+                zIndexRange={[100, 0]}
                 style={{ pointerEvents: 'none' }}
               >
-                <span className="node-label">{node.label}</span>
+                <span
+                  className={`node-label ${selected ? 'selected' : ''} ${node.layer}`}
+                  style={{ borderColor: node.color, boxShadow: `0 0 12px ${node.color}55` }}
+                >
+                  {node.label}
+                </span>
               </Html>
             )}
           </group>
@@ -98,49 +114,35 @@ function Scene({
 
       <OrbitControls
         enableDamping
-        dampingFactor={0.06}
-        minDistance={8}
-        maxDistance={120}
-        maxPolarAngle={Math.PI * 0.48}
+        dampingFactor={0.05}
+        minDistance={6}
+        maxDistance={100}
+        maxPolarAngle={Math.PI * 0.52}
+        autoRotate={showAnimations && !hasFocus && !paused}
+        autoRotateSpeed={0.35}
       />
+
+      <EffectComposer multisampling={0}>
+        <Bloom luminanceThreshold={0.2} luminanceSmoothing={0.85} intensity={1.35} radius={0.75} />
+        <Vignette eskil offset={0.12} darkness={0.85} />
+      </EffectComposer>
     </>
   );
 }
 
-export default function GalaxyGraph({
-  graph,
-  selectedId,
-  onSelect,
-  showLabels,
-  showLinks,
-  showParticles,
-  activeCategories,
-  resetCam,
-  paused,
-}) {
+export default function GalaxyGraph(props) {
   const [hoveredId, setHoveredId] = useState(null);
   const handleHover = useCallback((node) => setHoveredId(node?.id ?? null), []);
 
   return (
     <Canvas
-      camera={{ position: [0, 12, 48], fov: 50 }}
-      gl={{ antialias: true, alpha: false }}
+      camera={{ position: [0, 8, 42], fov: 52 }}
+      gl={{ antialias: true, alpha: false, powerPreference: 'high-performance' }}
       dpr={[1, 2]}
-      frameloop={paused ? 'never' : 'always'}
+      frameloop={props.paused ? 'never' : 'always'}
     >
       <Suspense fallback={null}>
-        <Scene
-          graph={graph}
-          selectedId={selectedId}
-          hoveredId={hoveredId}
-          onSelect={onSelect}
-          onHover={handleHover}
-          showLabels={showLabels}
-          showLinks={showLinks}
-          showParticles={showParticles}
-          activeCategories={activeCategories}
-          resetCam={resetCam}
-        />
+        <Scene {...props} hoveredId={hoveredId} onHover={handleHover} />
       </Suspense>
     </Canvas>
   );

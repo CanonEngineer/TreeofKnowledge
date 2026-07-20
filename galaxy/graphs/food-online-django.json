@@ -24,7 +24,7 @@
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
-      "size": 1.4,
+      "size": 2.2,
       "file": "foodOnline/",
       "description": "Plataforma multi-vendor de delivery com Django 5, PostGIS e RazorPay."
     },
@@ -36,7 +36,7 @@
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
-      "size": 1.0,
+      "size": 1.35,
       "file": "foodOnline/settings.py",
       "description": "Secrets via decouple, PostGIS, context processors e middleware customizado."
     },
@@ -48,7 +48,7 @@
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
-      "size": 0.72,
+      "size": 0.85,
       "file": "foodOnline/urls.py",
       "description": "Roteador raiz: accounts, vendor, marketplace, cart, checkout e orders."
     },
@@ -60,7 +60,7 @@
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
-      "size": 1.0,
+      "size": 1.35,
       "file": "accounts/",
       "description": "Auth customizada com roles Vendor (1) e Customer (2)."
     },
@@ -72,7 +72,7 @@
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
-      "size": 0.72,
+      "size": 0.85,
       "file": "accounts/models.py",
       "description": "User customizado com email único e campo role."
     },
@@ -84,7 +84,7 @@
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
-      "size": 0.58,
+      "size": 0.62,
       "file": "accounts/views.py",
       "description": "Decorators RBAC que restringem dashboards por role."
     },
@@ -96,7 +96,7 @@
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
-      "size": 0.58,
+      "size": 0.62,
       "file": "accounts/views.py",
       "description": "Cadastro de Customer com create_user e e-mail de verificação."
     },
@@ -108,7 +108,7 @@
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
-      "size": 0.58,
+      "size": 0.62,
       "file": "accounts/views.py",
       "description": "Cadastro de restaurante: User + Vendor + slug único."
     },
@@ -120,7 +120,7 @@
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
-      "size": 0.58,
+      "size": 0.62,
       "file": "accounts/views.py",
       "description": "Ativa conta via uid/token do e-mail."
     },
@@ -132,7 +132,7 @@
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
-      "size": 1.0,
+      "size": 1.35,
       "file": "vendor/",
       "description": "Perfil de restaurante, horários e aprovação admin."
     },
@@ -144,7 +144,7 @@
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
-      "size": 0.72,
+      "size": 0.85,
       "file": "vendor/models.py",
       "description": "Modelo Vendor com slug e verificação de horário."
     },
@@ -156,7 +156,7 @@
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
-      "size": 1.0,
+      "size": 1.35,
       "file": "menu/",
       "description": "Categorias e itens de comida por vendor."
     },
@@ -168,7 +168,7 @@
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
-      "size": 0.72,
+      "size": 0.85,
       "file": "menu/models.py",
       "description": "Item do cardápio com preço e disponibilidade."
     },
@@ -180,7 +180,7 @@
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
-      "size": 1.0,
+      "size": 1.35,
       "file": "marketplace/",
       "description": "Listagem, carrinho AJAX e busca geoespacial."
     },
@@ -192,7 +192,7 @@
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
-      "size": 0.58,
+      "size": 0.62,
       "file": "marketplace/context_processors.py",
       "description": "Context processor com badge de quantidade no navbar."
     },
@@ -204,7 +204,7 @@
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
-      "size": 0.58,
+      "size": 0.62,
       "file": "marketplace/views.py",
       "description": "Adiciona item via AJAX incrementando quantity."
     },
@@ -216,7 +216,7 @@
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
-      "size": 0.58,
+      "size": 0.62,
       "file": "marketplace/views.py",
       "description": "Busca vendors por keyword e raio PostGIS."
     },
@@ -228,7 +228,7 @@
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
-      "size": 1.0,
+      "size": 1.35,
       "file": "orders/",
       "description": "Checkout multi-vendor, Payment e OrderedFood."
     },
@@ -240,7 +240,7 @@
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
-      "size": 0.58,
+      "size": 0.62,
       "file": "orders/views.py",
       "description": "Cria pedido pendente agrupando taxas por vendor."
     },
@@ -252,7 +252,7 @@
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
-      "size": 0.58,
+      "size": 0.62,
       "file": "orders/views.py",
       "description": "Confirma pagamento AJAX e notifica vendors."
     }

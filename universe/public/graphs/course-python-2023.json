@@ -28,7 +28,7 @@
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
-      "size": 1.4,
+      "size": 2.2,
       "file": "README.md",
       "description": "Exercícios e práticas do curso de Python 2023."
     },
@@ -40,7 +40,7 @@
       "category": "other",
       "categoryLabel": "Outros",
       "color": "#64748b",
-      "size": 0.72,
+      "size": 0.85,
       "file": "README.md",
       "description": "Arquivo `README.md` mapeado a partir do repositório original."
     },
@@ -52,7 +52,7 @@
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
-      "size": 0.72,
+      "size": 0.85,
       "file": "aula100.py",
       "description": "Arquivo `aula100.py` mapeado a partir do repositório original."
     },
@@ -64,7 +64,7 @@
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
-      "size": 0.72,
+      "size": 0.85,
       "file": "aula101.py",
       "description": "Arquivo `aula101.py` mapeado a partir do repositório original."
     },
@@ -76,7 +76,7 @@
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
-      "size": 0.72,
+      "size": 0.85,
       "file": "aula102.py",
       "description": "Arquivo `aula102.py` mapeado a partir do repositório original."
     },
@@ -88,7 +88,7 @@
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
-      "size": 0.72,
+      "size": 0.85,
       "file": "aula103.py",
       "description": "Arquivo `aula103.py` mapeado a partir do repositório original."
     },
@@ -100,7 +100,7 @@
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
-      "size": 0.72,
+      "size": 0.85,
       "file": "aula104.py",
       "description": "Arquivo `aula104.py` mapeado a partir do repositório original."
     },
@@ -112,7 +112,7 @@
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
-      "size": 0.72,
+      "size": 0.85,
       "file": "aula105.py",
       "description": "Arquivo `aula105.py` mapeado a partir do repositório original."
     },
@@ -124,7 +124,7 @@
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
-      "size": 0.72,
+      "size": 0.85,
       "file": "aula106.py",
       "description": "Arquivo `aula106.py` mapeado a partir do repositório original."
     },
@@ -136,7 +136,7 @@
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
-      "size": 1.0,
+      "size": 1.35,
       "file": "aula141/",
       "description": "Módulo/pasta `aula141/` com arquivos-chave do projeto."
     },
@@ -148,7 +148,7 @@
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
-      "size": 0.72,
+      "size": 0.85,
       "file": "aula141/eletronico.py",
       "description": "Arquivo `aula141/eletronico.py` mapeado a partir do repositório original."
     },
@@ -160,7 +160,7 @@
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
-      "size": 0.72,
+      "size": 0.85,
       "file": "aula141/log.py",
       "description": "Arquivo `aula141/log.py` mapeado a partir do repositório original."
     },
@@ -172,7 +172,7 @@
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
-      "size": 0.72,
+      "size": 0.85,
       "file": "aula141/main.py",
       "description": "Arquivo `aula141/main.py` mapeado a partir do repositório original."
     },
@@ -184,7 +184,7 @@
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
-      "size": 1.0,
+      "size": 1.35,
       "file": "aula156/",
       "description": "Módulo/pasta `aula156/` com arquivos-chave do projeto."
     },
@@ -196,7 +196,7 @@
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
-      "size": 0.72,
+      "size": 0.85,
       "file": "aula156/documentando_class.py",
       "description": "Arquivo `aula156/documentando_class.py` mapeado a partir do repositório original."
     },
@@ -208,7 +208,7 @@
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
-      "size": 0.72,
+      "size": 0.85,
       "file": "aula156/documentando_funcoes.py",
       "description": "Arquivo `aula156/documentando_funcoes.py` mapeado a partir do repositório original."
     },
@@ -220,7 +220,7 @@
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
-      "size": 0.72,
+      "size": 0.85,
       "file": "aula156/main.py",
       "description": "Arquivo `aula156/main.py` mapeado a partir do repositório original."
     },
@@ -232,7 +232,7 @@
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
-      "size": 0.72,
+      "size": 0.85,
       "file": "aula156/varias_linhas.py",
       "description": "Arquivo `aula156/varias_linhas.py` mapeado a partir do repositório original."
     },
@@ -244,7 +244,7 @@
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
-      "size": 0.72,
+      "size": 0.85,
       "file": "aula156/uma_linha.py",
       "description": "Arquivo `aula156/uma_linha.py` mapeado a partir do repositório original."
     },
@@ -256,7 +256,7 @@
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
-      "size": 1.0,
+      "size": 1.35,
       "file": "aula158/",
       "description": "Módulo/pasta `aula158/` com arquivos-chave do projeto."
     },
@@ -268,7 +268,7 @@
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
-      "size": 0.72,
+      "size": 0.85,
       "file": "aula158/banco.py",
       "description": "Arquivo `aula158/banco.py` mapeado a partir do repositório original."
     },
@@ -280,7 +280,7 @@
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
-      "size": 0.72,
+      "size": 0.85,
       "file": "aula158/contas.py",
       "description": "Arquivo `aula158/contas.py` mapeado a partir do repositório original."
     },
@@ -292,7 +292,7 @@
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
-      "size": 0.72,
+      "size": 0.85,
       "file": "aula158/main.py",
       "description": "Arquivo `aula158/main.py` mapeado a partir do repositório original."
     },
@@ -304,7 +304,7 @@
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
-      "size": 0.72,
+      "size": 0.85,
       "file": "aula158/pessoas.py",
       "description": "Arquivo `aula158/pessoas.py` mapeado a partir do repositório original."
     },
@@ -316,7 +316,7 @@
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
-      "size": 1.0,
+      "size": 1.35,
       "file": "aula190_site/",
       "description": "Módulo/pasta `aula190_site/` com arquivos-chave do projeto."
     },
@@ -328,7 +328,7 @@
       "category": "frontend",
       "categoryLabel": "Frontend",
       "color": "#eab308",
-      "size": 0.72,
+      "size": 0.85,
       "file": "aula190_site/index.html",
       "description": "Arquivo `aula190_site/index.html` mapeado a partir do repositório original."
     },
@@ -340,7 +340,7 @@
       "category": "frontend",
       "categoryLabel": "Frontend",
       "color": "#eab308",
-      "size": 0.72,
+      "size": 0.85,
       "file": "aula190_site/style.css",
       "description": "Arquivo `aula190_site/style.css` mapeado a partir do repositório original."
     },
@@ -352,7 +352,7 @@
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
-      "size": 1.0,
+      "size": 1.35,
       "file": "aula193/",
       "description": "Módulo/pasta `aula193/` com arquivos-chave do projeto."
     }

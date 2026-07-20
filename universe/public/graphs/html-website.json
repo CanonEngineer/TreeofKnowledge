@@ -28,7 +28,7 @@
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
-      "size": 1.4,
+      "size": 2.2,
       "file": "Parallax/index.html",
       "description": "Coleção de sites HTML: Ana Bella, Chalé, Museu, TecBlog e mais."
     },
@@ -40,7 +40,7 @@
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
-      "size": 1.0,
+      "size": 1.35,
       "file": "Parallax/",
       "description": "Módulo/pasta `Parallax/` com arquivos-chave do projeto."
     },
@@ -52,7 +52,7 @@
       "category": "frontend",
       "categoryLabel": "Frontend",
       "color": "#eab308",
-      "size": 0.72,
+      "size": 0.85,
       "file": "Parallax/index.html",
       "description": "Arquivo `Parallax/index.html` mapeado a partir do repositório original."
     },
@@ -64,7 +64,7 @@
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
-      "size": 1.0,
+      "size": 1.35,
       "file": "projeto-bootstrap4/",
       "description": "Módulo/pasta `projeto-bootstrap4/` com arquivos-chave do projeto."
     },
@@ -76,7 +76,7 @@
       "category": "frontend",
       "categoryLabel": "Frontend",
       "color": "#eab308",
-      "size": 0.72,
+      "size": 0.85,
       "file": "projeto-bootstrap4/index.html",
       "description": "Arquivo `projeto-bootstrap4/index.html` mapeado a partir do repositório original."
     },
@@ -88,7 +88,7 @@
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
-      "size": 1.0,
+      "size": 1.35,
       "file": "ProjetoAnaBella/",
       "description": "Módulo/pasta `ProjetoAnaBella/` com arquivos-chave do projeto."
     },
@@ -100,7 +100,7 @@
       "category": "frontend",
       "categoryLabel": "Frontend",
       "color": "#eab308",
-      "size": 0.72,
+      "size": 0.85,
       "file": "ProjetoAnaBella/index.html",
       "description": "Arquivo `ProjetoAnaBella/index.html` mapeado a partir do repositório original."
     },
@@ -112,7 +112,7 @@
       "category": "frontend",
       "categoryLabel": "Frontend",
       "color": "#eab308",
-      "size": 0.72,
+      "size": 0.85,
       "file": "ProjetoAnaBella/estilo.css",
       "description": "Arquivo `ProjetoAnaBella/estilo.css` mapeado a partir do repositório original."
     },
@@ -124,7 +124,7 @@
       "category": "frontend",
       "categoryLabel": "Frontend",
       "color": "#eab308",
-      "size": 0.72,
+      "size": 0.85,
       "file": "ProjetoAnaBella/biografia.html",
       "description": "Arquivo `ProjetoAnaBella/biografia.html` mapeado a partir do repositório original."
     },
@@ -136,7 +136,7 @@
       "category": "frontend",
       "categoryLabel": "Frontend",
       "color": "#eab308",
-      "size": 0.72,
+      "size": 0.85,
       "file": "ProjetoAnaBella/campanhas.html",
       "description": "Arquivo `ProjetoAnaBella/campanhas.html` mapeado a partir do repositório original."
     },
@@ -148,7 +148,7 @@
       "category": "frontend",
       "categoryLabel": "Frontend",
       "color": "#eab308",
-      "size": 0.72,
+      "size": 0.85,
       "file": "ProjetoAnaBella/contato.html",
       "description": "Arquivo `ProjetoAnaBella/contato.html` mapeado a partir do repositório original."
     },
@@ -160,7 +160,7 @@
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
-      "size": 1.0,
+      "size": 1.35,
       "file": "ProjetoChaleHotel/",
       "description": "Módulo/pasta `ProjetoChaleHotel/` com arquivos-chave do projeto."
     },
@@ -172,7 +172,7 @@
       "category": "frontend",
       "categoryLabel": "Frontend",
       "color": "#eab308",
-      "size": 0.72,
+      "size": 0.85,
       "file": "ProjetoChaleHotel/index.html",
       "description": "Arquivo `ProjetoChaleHotel/index.html` mapeado a partir do repositório original."
     },
@@ -184,7 +184,7 @@
       "category": "frontend",
       "categoryLabel": "Frontend",
       "color": "#eab308",
-      "size": 0.72,
+      "size": 0.85,
       "file": "ProjetoChaleHotel/css/estilo.css",
       "description": "Arquivo `ProjetoChaleHotel/css/estilo.css` mapeado a partir do repositório original."
     },
@@ -196,7 +196,7 @@
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
-      "size": 1.0,
+      "size": 1.35,
       "file": "ProjetoFinalHtml/",
       "description": "Módulo/pasta `ProjetoFinalHtml/` com arquivos-chave do projeto."
     },
@@ -208,7 +208,7 @@
       "category": "frontend",
       "categoryLabel": "Frontend",
       "color": "#eab308",
-      "size": 0.72,
+      "size": 0.85,
       "file": "ProjetoFinalHtml/index.html",
       "description": "Arquivo `ProjetoFinalHtml/index.html` mapeado a partir do repositório original."
     },
@@ -220,7 +220,7 @@
       "category": "frontend",
       "categoryLabel": "Frontend",
       "color": "#eab308",
-      "size": 0.72,
+      "size": 0.85,
       "file": "ProjetoFinalHtml/contato.html",
       "description": "Arquivo `ProjetoFinalHtml/contato.html` mapeado a partir do repositório original."
     },
@@ -232,7 +232,7 @@
       "category": "frontend",
       "categoryLabel": "Frontend",
       "color": "#eab308",
-      "size": 0.72,
+      "size": 0.85,
       "file": "ProjetoFinalHtml/quem-somos.html",
       "description": "Arquivo `ProjetoFinalHtml/quem-somos.html` mapeado a partir do repositório original."
     },
@@ -244,7 +244,7 @@
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
-      "size": 1.0,
+      "size": 1.35,
       "file": "ProjetoMuseuNacional/",
       "description": "Módulo/pasta `ProjetoMuseuNacional/` com arquivos-chave do projeto."
     },
@@ -256,7 +256,7 @@
       "category": "frontend",
       "categoryLabel": "Frontend",
       "color": "#eab308",
-      "size": 0.72,
+      "size": 0.85,
       "file": "ProjetoMuseuNacional/index.html",
       "description": "Arquivo `ProjetoMuseuNacional/index.html` mapeado a partir do repositório original."
     },
@@ -268,7 +268,7 @@
       "category": "frontend",
       "categoryLabel": "Frontend",
       "color": "#eab308",
-      "size": 0.72,
+      "size": 0.85,
       "file": "ProjetoMuseuNacional/css/estilo.css",
       "description": "Arquivo `ProjetoMuseuNacional/css/estilo.css` mapeado a partir do repositório original."
     },
@@ -280,7 +280,7 @@
       "category": "frontend",
       "categoryLabel": "Frontend",
       "color": "#eab308",
-      "size": 0.72,
+      "size": 0.85,
       "file": "ProjetoMuseuNacional/css/normalize.css",
       "description": "Arquivo `ProjetoMuseuNacional/css/normalize.css` mapeado a partir do repositório original."
     },
@@ -292,7 +292,7 @@
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
-      "size": 1.0,
+      "size": 1.35,
       "file": "ProjetoNoticiasCidade/",
       "description": "Módulo/pasta `ProjetoNoticiasCidade/` com arquivos-chave do projeto."
     },
@@ -304,7 +304,7 @@
       "category": "frontend",
       "categoryLabel": "Frontend",
       "color": "#eab308",
-      "size": 0.72,
+      "size": 0.85,
       "file": "ProjetoNoticiasCidade/index.html",
       "description": "Arquivo `ProjetoNoticiasCidade/index.html` mapeado a partir do repositório original."
     },
@@ -316,7 +316,7 @@
       "category": "frontend",
       "categoryLabel": "Frontend",
       "color": "#eab308",
-      "size": 0.72,
+      "size": 0.85,
       "file": "ProjetoNoticiasCidade/css/estilo.css",
       "description": "Arquivo `ProjetoNoticiasCidade/css/estilo.css` mapeado a partir do repositório original."
     },
@@ -328,7 +328,7 @@
       "category": "frontend",
       "categoryLabel": "Frontend",
       "color": "#eab308",
-      "size": 0.72,
+      "size": 0.85,
       "file": "ProjetoNoticiasCidade/brasil.html",
       "description": "Arquivo `ProjetoNoticiasCidade/brasil.html` mapeado a partir do repositório original."
     },
@@ -340,7 +340,7 @@
       "category": "frontend",
       "categoryLabel": "Frontend",
       "color": "#eab308",
-      "size": 0.72,
+      "size": 0.85,
       "file": "ProjetoNoticiasCidade/fotos.html",
       "description": "Arquivo `ProjetoNoticiasCidade/fotos.html` mapeado a partir do repositório original."
     },
@@ -352,7 +352,7 @@
       "category": "frontend",
       "categoryLabel": "Frontend",
       "color": "#eab308",
-      "size": 0.72,
+      "size": 0.85,
       "file": "ProjetoNoticiasCidade/nova-legislacao.html",
       "description": "Arquivo `ProjetoNoticiasCidade/nova-legislacao.html` mapeado a partir do repositório original."
     }

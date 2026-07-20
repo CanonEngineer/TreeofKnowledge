@@ -24,7 +24,7 @@
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
-      "size": 1.4,
+      "size": 2.2,
       "file": "index.html",
       "description": "Sistema de cadastro 100% frontend com AdminLTE e localStorage."
     },
@@ -36,7 +36,7 @@
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
-      "size": 1.0,
+      "size": 1.35,
       "file": "models/User.js",
       "description": "Modelo com getters/setters e serialização JSON."
     },
@@ -48,7 +48,7 @@
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
-      "size": 0.58,
+      "size": 0.62,
       "file": "models/User.js",
       "description": "Hidrata instância a partir de objeto salvo."
     },
@@ -60,7 +60,7 @@
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
-      "size": 0.58,
+      "size": 0.62,
       "file": "models/User.js",
       "description": "Persiste usuário novo ou atualiza existente."
     },
@@ -72,7 +72,7 @@
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
-      "size": 0.58,
+      "size": 0.62,
       "file": "models/User.js",
       "description": "Remove usuário do array no localStorage."
     },
@@ -84,7 +84,7 @@
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
-      "size": 0.58,
+      "size": 0.62,
       "file": "models/User.js",
       "description": "Lê array de usuários do localStorage."
     },
@@ -96,7 +96,7 @@
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
-      "size": 1.0,
+      "size": 1.35,
       "file": "controllers/UserController.js",
       "description": "Orquestra formulários create/update, tabela e eventos."
     },
@@ -108,7 +108,7 @@
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
-      "size": 0.58,
+      "size": 0.62,
       "file": "controllers/UserController.js",
       "description": "Cria usuário com foto convertida para Base64."
     },
@@ -120,7 +120,7 @@
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
-      "size": 0.58,
+      "size": 0.62,
       "file": "controllers/UserController.js",
       "description": "Atualiza usuário existente com Object.assign."
     },
@@ -132,7 +132,7 @@
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
-      "size": 0.58,
+      "size": 0.62,
       "file": "controllers/UserController.js",
       "description": "Lê form e valida campos obrigatórios."
     },
@@ -144,7 +144,7 @@
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
-      "size": 0.58,
+      "size": 0.62,
       "file": "controllers/UserController.js",
       "description": "Converte File input em string Base64."
     },
@@ -156,7 +156,7 @@
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
-      "size": 0.58,
+      "size": 0.62,
       "file": "controllers/UserController.js",
       "description": "Monta linha da tabela com foto e botões."
     },
@@ -168,7 +168,7 @@
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
-      "size": 0.58,
+      "size": 0.62,
       "file": "controllers/UserController.js",
       "description": "Bind delete e edit em cada linha."
     },
@@ -180,7 +180,7 @@
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
-      "size": 0.58,
+      "size": 0.62,
       "file": "controllers/UserController.js",
       "description": "Carrega usuários salvos ao iniciar."
     },
@@ -192,7 +192,7 @@
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
-      "size": 0.58,
+      "size": 0.62,
       "file": "controllers/UserController.js",
       "description": "Atualiza badges de total e admins."
     },
@@ -204,7 +204,7 @@
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
-      "size": 0.58,
+      "size": 0.62,
       "file": "controllers/UserController.js",
       "description": "Alterna visibilidade dos painéis create/update."
     },
@@ -216,7 +216,7 @@
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
-      "size": 1.0,
+      "size": 1.35,
       "file": "classes/Utils.js",
       "description": "Helpers estáticos de formatação."
     },
@@ -228,7 +228,7 @@
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
-      "size": 0.58,
+      "size": 0.62,
       "file": "classes/Utils.js",
       "description": "Formata Date para dd/mm/yyyy hh:mm:ss."
     },
@@ -240,7 +240,7 @@
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
-      "size": 0.58,
+      "size": 0.62,
       "file": "models/User.js",
       "description": "Auto-incremento de ID no localStorage."
     },
@@ -252,7 +252,7 @@
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
-      "size": 0.72,
+      "size": 0.85,
       "file": "models/User.js",
       "description": "Encapsulamento das propriedades do usuário."
     }

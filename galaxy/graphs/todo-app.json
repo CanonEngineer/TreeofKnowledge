@@ -32,7 +32,7 @@
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
-      "size": 1.4,
+      "size": 2.2,
       "file": "manage.py",
       "description": "TODO app Django com operações CRUD."
     },
@@ -44,7 +44,7 @@
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
-      "size": 1.0,
+      "size": 1.35,
       "file": "todo/",
       "description": "Módulo/pasta `todo/` com arquivos-chave do projeto."
     },
@@ -56,7 +56,7 @@
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
-      "size": 0.72,
+      "size": 0.85,
       "file": "todo/admin.py",
       "description": "Arquivo `todo/admin.py` mapeado a partir do repositório original."
     },
@@ -68,7 +68,7 @@
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
-      "size": 0.72,
+      "size": 0.85,
       "file": "todo/models.py",
       "description": "Arquivo `todo/models.py` mapeado a partir do repositório original."
     },
@@ -80,7 +80,7 @@
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
-      "size": 0.72,
+      "size": 0.85,
       "file": "todo/urls.py",
       "description": "Arquivo `todo/urls.py` mapeado a partir do repositório original."
     },
@@ -92,7 +92,7 @@
       "category": "frontend",
       "categoryLabel": "Frontend",
       "color": "#eab308",
-      "size": 0.72,
+      "size": 0.85,
       "file": "todo/views.py",
       "description": "Arquivo `todo/views.py` mapeado a partir do repositório original."
     },
@@ -104,7 +104,7 @@
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
-      "size": 0.72,
+      "size": 0.85,
       "file": "todo/apps.py",
       "description": "Arquivo `todo/apps.py` mapeado a partir do repositório original."
     },
@@ -116,7 +116,7 @@
       "category": "tests",
       "categoryLabel": "Testes",
       "color": "#94a3b8",
-      "size": 0.72,
+      "size": 0.85,
       "file": "todo/tests.py",
       "description": "Arquivo `todo/tests.py` mapeado a partir do repositório original."
     },
@@ -128,7 +128,7 @@
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
-      "size": 1.0,
+      "size": 1.35,
       "file": "todo_main/",
       "description": "Módulo/pasta `todo_main/` com arquivos-chave do projeto."
     },
@@ -140,7 +140,7 @@
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
-      "size": 0.72,
+      "size": 0.85,
       "file": "todo_main/settings.py",
       "description": "Arquivo `todo_main/settings.py` mapeado a partir do repositório original."
     },
@@ -152,7 +152,7 @@
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
-      "size": 0.72,
+      "size": 0.85,
       "file": "todo_main/urls.py",
       "description": "Arquivo `todo_main/urls.py` mapeado a partir do repositório original."
     },
@@ -164,7 +164,7 @@
       "category": "frontend",
       "categoryLabel": "Frontend",
       "color": "#eab308",
-      "size": 0.72,
+      "size": 0.85,
       "file": "todo_main/views.py",
       "description": "Arquivo `todo_main/views.py` mapeado a partir do repositório original."
     },
@@ -176,7 +176,7 @@
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
-      "size": 0.72,
+      "size": 0.85,
       "file": "todo_main/asgi.py",
       "description": "Arquivo `todo_main/asgi.py` mapeado a partir do repositório original."
     },
@@ -188,7 +188,7 @@
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
-      "size": 0.72,
+      "size": 0.85,
       "file": "todo_main/wsgi.py",
       "description": "Arquivo `todo_main/wsgi.py` mapeado a partir do repositório original."
     },
@@ -200,7 +200,7 @@
       "category": "frontend",
       "categoryLabel": "Frontend",
       "color": "#eab308",
-      "size": 1.0,
+      "size": 1.35,
       "file": "templates/",
       "description": "Módulo/pasta `templates/` com arquivos-chave do projeto."
     },
@@ -212,7 +212,7 @@
       "category": "frontend",
       "categoryLabel": "Frontend",
       "color": "#eab308",
-      "size": 0.72,
+      "size": 0.85,
       "file": "templates/edit_task.html",
       "description": "Arquivo `templates/edit_task.html` mapeado a partir do repositório original."
     },
@@ -224,7 +224,7 @@
       "category": "frontend",
       "categoryLabel": "Frontend",
       "color": "#eab308",
-      "size": 0.72,
+      "size": 0.85,
       "file": "templates/home.html",
       "description": "Arquivo `templates/home.html` mapeado a partir do repositório original."
     },
@@ -236,7 +236,7 @@
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
-      "size": 0.72,
+      "size": 0.85,
       "file": "manage.py",
       "description": "Arquivo `manage.py` mapeado a partir do repositório original."
     },
@@ -248,7 +248,7 @@
       "category": "other",
       "categoryLabel": "Outros",
       "color": "#64748b",
-      "size": 0.72,
+      "size": 0.85,
       "file": "README.md",
       "description": "Arquivo `README.md` mapeado a partir do repositório original."
     }

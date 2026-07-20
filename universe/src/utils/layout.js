@@ -1,8 +1,9 @@
-/** Posicionamento em clusters (modo galaxy) + filhos em esfera ao redor do pai */
+/** Layout hierárquico radial — raiz no centro, ramos em esferas concêntricas */
 export function computeLayout(graph) {
-  const { nodes, links } = graph;
-  const byId = new Map(nodes.map((n) => [n.id, { ...n }]));
+  const { nodes } = graph;
+  const byId = new Map(nodes.map((n) => [n.id, n]));
   const children = new Map();
+
   nodes.forEach((n) => {
     if (n.parent) {
       if (!children.has(n.parent)) children.set(n.parent, []);
@@ -10,56 +11,84 @@ export function computeLayout(graph) {
     }
   });
 
-  const positions = new Map();
-  const clusterCenters = {};
-  const cats = [...new Set(nodes.map((n) => n.category))];
-  const R = 28;
-  cats.forEach((cat, i) => {
-    const a = (i / cats.length) * Math.PI * 2;
-    clusterCenters[cat] = { x: Math.cos(a) * R, y: (Math.sin(i * 1.3) * 4), z: Math.sin(a) * R };
-  });
+  children.forEach((ids) => ids.sort());
 
-  const root = nodes.find((n) => n.layer === 'root') || nodes[0];
+  const root =
+    nodes.find((n) => n.layer === 'root') ||
+    nodes.find((n) => !n.parent) ||
+    nodes[0];
+
+  const positions = new Map();
   positions.set(root.id, { x: 0, y: 0, z: 0 });
 
-  function placeOnSphere(cx, cy, cz, ids, radius) {
-    ids.forEach((id, i) => {
-      const node = byId.get(id);
-      if (!node || positions.has(id)) return;
-      const phi = Math.acos(1 - (2 * (i + 0.5)) / ids.length);
-      const theta = Math.PI * (1 + Math.sqrt(5)) * i;
-      positions.set(id, {
-        x: cx + radius * Math.sin(phi) * Math.cos(theta),
-        y: cy + radius * Math.cos(phi) * 0.6,
-        z: cz + radius * Math.sin(phi) * Math.sin(theta),
+  const level1 = children.get(root.id) || [];
+  const R1 = Math.max(14, Math.min(22, 8 + level1.length * 0.55));
+
+  level1.forEach((id, i) => {
+    const angle = (i / Math.max(level1.length, 1)) * Math.PI * 2 - Math.PI / 2;
+    const tilt = Math.sin(i * 1.15) * 3;
+    positions.set(id, {
+      x: Math.cos(angle) * R1,
+      y: tilt,
+      z: Math.sin(angle) * R1,
+    });
+  });
+
+  function fibonacciOffset(i, count, radius) {
+    const phi = Math.acos(1 - (2 * (i + 0.5)) / Math.max(count, 1));
+    const theta = Math.PI * (1 + Math.sqrt(5)) * i;
+    return {
+      x: radius * Math.sin(phi) * Math.cos(theta),
+      y: radius * Math.cos(phi) * 0.55,
+      z: radius * Math.sin(phi) * Math.sin(theta),
+    };
+  }
+
+  function layoutSubtree(parentId, depth) {
+    const kids = children.get(parentId) || [];
+    const parentPos = positions.get(parentId);
+    if (!parentPos || !kids.length) return;
+
+    const baseR = depth === 1 ? 8 : depth === 2 ? 5.5 : 3.8;
+    const radius = baseR + Math.min(kids.length * 0.12, 3);
+
+    kids.forEach((kidId, i) => {
+      if (positions.has(kidId)) return;
+      const off = fibonacciOffset(i, kids.length, radius);
+      positions.set(kidId, {
+        x: parentPos.x + off.x,
+        y: parentPos.y + off.y,
+        z: parentPos.z + off.z,
       });
+      layoutSubtree(kidId, depth + 1);
     });
   }
 
-  nodes.forEach((n) => {
-    if (n.layer === 'root') return;
-    if (positions.has(n.id)) return;
-    const c = clusterCenters[n.category] || { x: 0, y: 0, z: 0 };
-    const jitter = hash(n.id) * 6;
-    positions.set(n.id, {
-      x: c.x + (hash(n.id + 'x') - 0.5) * jitter,
-      y: c.y + (hash(n.id + 'y') - 0.5) * jitter * 0.5,
-      z: c.z + (hash(n.id + 'z') - 0.5) * jitter,
-    });
-  });
+  level1.forEach((id) => layoutSubtree(id, 1));
 
-  const groups = [...new Set(nodes.filter((n) => n.layer === 'module').map((n) => n.id))];
-  groups.forEach((gid) => {
-    const gpos = positions.get(gid);
-    if (!gpos) return;
-    const kids = (children.get(gid) || []).filter((id) => byId.get(id)?.layer !== 'module');
-    placeOnSphere(gpos.x, gpos.y, gpos.z, kids, 4 + Math.min(kids.length * 0.15, 6));
+  nodes.forEach((n) => {
+    if (!positions.has(n.id)) {
+      const c = clusterFallback(n, nodes);
+      positions.set(n.id, c);
+    }
   });
 
   return nodes.map((n) => ({
     ...n,
     position: positions.get(n.id) || { x: 0, y: 0, z: 0 },
   }));
+}
+
+function clusterFallback(node, nodes) {
+  const cats = [...new Set(nodes.map((n) => n.category))];
+  const idx = cats.indexOf(node.category);
+  const a = (idx / Math.max(cats.length, 1)) * Math.PI * 2;
+  const r = 24 + hash(node.id) * 8;
+  return {
+    x: Math.cos(a) * r,
+    y: (hash(node.id + 'y') - 0.5) * 6,
+    z: Math.sin(a) * r,
+  };
 }
 
 function hash(s) {
@@ -80,4 +109,12 @@ export function getNeighbors(nodeId, links) {
 export function getProjectSlug() {
   const p = new URLSearchParams(window.location.search);
   return p.get('project') || 'professional-scanner';
+}
+
+export function countConnections(nodeId, links) {
+  return links.filter((l) => l.source === nodeId || l.target === nodeId).length;
+}
+
+export function countDependencies(nodeId, links) {
+  return links.filter((l) => l.target === nodeId).length;
 }

@@ -28,7 +28,7 @@
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
-      "size": 1.4,
+      "size": 2.2,
       "file": "index.php",
       "description": "Help Desk em PHP: login, abrir e consultar chamados."
     },
@@ -40,7 +40,7 @@
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
-      "size": 0.72,
+      "size": 0.85,
       "file": "index.php",
       "description": "Arquivo `index.php` mapeado a partir do repositório original."
     },
@@ -52,7 +52,7 @@
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
-      "size": 0.72,
+      "size": 0.85,
       "file": "abrir_chamado.php",
       "description": "Arquivo `abrir_chamado.php` mapeado a partir do repositório original."
     },
@@ -64,7 +64,7 @@
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
-      "size": 0.72,
+      "size": 0.85,
       "file": "consultar_chamado.php",
       "description": "Arquivo `consultar_chamado.php` mapeado a partir do repositório original."
     },
@@ -76,7 +76,7 @@
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
-      "size": 0.72,
+      "size": 0.85,
       "file": "home.php",
       "description": "Arquivo `home.php` mapeado a partir do repositório original."
     },
@@ -88,7 +88,7 @@
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
-      "size": 0.72,
+      "size": 0.85,
       "file": "logoff.php",
       "description": "Arquivo `logoff.php` mapeado a partir do repositório original."
     },
@@ -100,7 +100,7 @@
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
-      "size": 0.72,
+      "size": 0.85,
       "file": "registra_chamado.php",
       "description": "Arquivo `registra_chamado.php` mapeado a partir do repositório original."
     },
@@ -112,7 +112,7 @@
       "category": "auth",
       "categoryLabel": "Segurança",
       "color": "#ef4444",
-      "size": 0.72,
+      "size": 0.85,
       "file": "valida_login.php",
       "description": "Arquivo `valida_login.php` mapeado a partir do repositório original."
     },
@@ -124,7 +124,7 @@
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
-      "size": 0.72,
+      "size": 0.85,
       "file": "validador_acesso.php",
       "description": "Arquivo `validador_acesso.php` mapeado a partir do repositório original."
     }

@@ -32,7 +32,7 @@
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
-      "size": 1.4,
+      "size": 2.2,
       "file": "index.html",
       "description": "Portfolio profissional e currículo — site CanonEngineer no GitHub Pages."
     },
@@ -44,7 +44,7 @@
       "category": "scripts",
       "categoryLabel": "Scripts",
       "color": "#64748b",
-      "size": 1.0,
+      "size": 1.35,
       "file": "scripts/",
       "description": "Módulo/pasta `scripts/` com arquivos-chave do projeto."
     },
@@ -56,7 +56,7 @@
       "category": "scripts",
       "categoryLabel": "Scripts",
       "color": "#64748b",
-      "size": 0.72,
+      "size": 0.85,
       "file": "scripts/generate_cv.py",
       "description": "Arquivo `scripts/generate_cv.py` mapeado a partir do repositório original."
     },
@@ -68,7 +68,7 @@
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
-      "size": 1.0,
+      "size": 1.35,
       "file": "wwwroot/",
       "description": "Módulo/pasta `wwwroot/` com arquivos-chave do projeto."
     },
@@ -80,7 +80,7 @@
       "category": "scripts",
       "categoryLabel": "Scripts",
       "color": "#64748b",
-      "size": 0.72,
+      "size": 0.85,
       "file": "wwwroot/js/script.js",
       "description": "Arquivo `wwwroot/js/script.js` mapeado a partir do repositório original."
     },
@@ -92,7 +92,7 @@
       "category": "frontend",
       "categoryLabel": "Frontend",
       "color": "#eab308",
-      "size": 0.72,
+      "size": 0.85,
       "file": "wwwroot/css/blog.css",
       "description": "Arquivo `wwwroot/css/blog.css` mapeado a partir do repositório original."
     },
@@ -104,7 +104,7 @@
       "category": "frontend",
       "categoryLabel": "Frontend",
       "color": "#eab308",
-      "size": 0.72,
+      "size": 0.85,
       "file": "wwwroot/css/style.css",
       "description": "Arquivo `wwwroot/css/style.css` mapeado a partir do repositório original."
     },
@@ -116,7 +116,7 @@
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
-      "size": 1.0,
+      "size": 1.35,
       "file": "blog/",
       "description": "Módulo/pasta `blog/` com arquivos-chave do projeto."
     },
@@ -128,7 +128,7 @@
       "category": "frontend",
       "categoryLabel": "Frontend",
       "color": "#eab308",
-      "size": 0.72,
+      "size": 0.85,
       "file": "blog/devops-na-pratica.html",
       "description": "Arquivo `blog/devops-na-pratica.html` mapeado a partir do repositório original."
     },
@@ -140,7 +140,7 @@
       "category": "frontend",
       "categoryLabel": "Frontend",
       "color": "#eab308",
-      "size": 0.72,
+      "size": 0.85,
       "file": "blog/firewall.html",
       "description": "Arquivo `blog/firewall.html` mapeado a partir do repositório original."
     },
@@ -152,7 +152,7 @@
       "category": "frontend",
       "categoryLabel": "Frontend",
       "color": "#eab308",
-      "size": 0.72,
+      "size": 0.85,
       "file": "blog/inteligencia-artificial.html",
       "description": "Arquivo `blog/inteligencia-artificial.html` mapeado a partir do repositório original."
     },
@@ -164,7 +164,7 @@
       "category": "frontend",
       "categoryLabel": "Frontend",
       "color": "#eab308",
-      "size": 0.72,
+      "size": 0.85,
       "file": "blog/maquinas-virtuais-proxmox.html",
       "description": "Arquivo `blog/maquinas-virtuais-proxmox.html` mapeado a partir do repositório original."
     },
@@ -176,7 +176,7 @@
       "category": "frontend",
       "categoryLabel": "Frontend",
       "color": "#eab308",
-      "size": 0.72,
+      "size": 0.85,
       "file": "blog/python-no-backend.html",
       "description": "Arquivo `blog/python-no-backend.html` mapeado a partir do repositório original."
     },
@@ -188,7 +188,7 @@
       "category": "frontend",
       "categoryLabel": "Frontend",
       "color": "#eab308",
-      "size": 0.72,
+      "size": 0.85,
       "file": "blog/seguranca-em-redes.html",
       "description": "Arquivo `blog/seguranca-em-redes.html` mapeado a partir do repositório original."
     },
@@ -200,7 +200,7 @@
       "category": "frontend",
       "categoryLabel": "Frontend",
       "color": "#eab308",
-      "size": 0.72,
+      "size": 0.85,
       "file": "index.html",
       "description": "Arquivo `index.html` mapeado a partir do repositório original."
     },
@@ -212,7 +212,7 @@
       "category": "other",
       "categoryLabel": "Outros",
       "color": "#64748b",
-      "size": 0.72,
+      "size": 0.85,
       "file": "README.md",
       "description": "Arquivo `README.md` mapeado a partir do repositório original."
     }

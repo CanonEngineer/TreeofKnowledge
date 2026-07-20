@@ -32,7 +32,7 @@
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
-      "size": 1.4,
+      "size": 2.2,
       "file": "public/src/",
       "description": "Clone Dropbox no browser — Express serve a SPA, Firebase Realtime DB + Storage, upload com barra de progresso."
     },
@@ -44,7 +44,7 @@
       "category": "oracle",
       "categoryLabel": "Oracle / DB",
       "color": "#c084fc",
-      "size": 1.0,
+      "size": 1.35,
       "file": "app.js",
       "description": "Servidor Node com EJS, static em public/ e rotas legacy com Formidable."
     },
@@ -56,7 +56,7 @@
       "category": "oracle",
       "categoryLabel": "Oracle / DB",
       "color": "#c084fc",
-      "size": 0.72,
+      "size": 0.85,
       "file": "app.js",
       "description": "Bootstrap do Express: middlewares, views e routers."
     },
@@ -68,7 +68,7 @@
       "category": "oracle",
       "categoryLabel": "Oracle / DB",
       "color": "#c084fc",
-      "size": 0.72,
+      "size": 0.85,
       "file": "bin/www",
       "description": "HTTP server na porta 3000 com tratamento EADDRINUSE."
     },
@@ -80,7 +80,7 @@
       "category": "oracle",
       "categoryLabel": "Oracle / DB",
       "color": "#c084fc",
-      "size": 1.0,
+      "size": 1.35,
       "file": "routes/index.js",
       "description": "Rotas REST para home, upload multipart e delete de arquivos locais."
     },
@@ -92,7 +92,7 @@
       "category": "oracle",
       "categoryLabel": "Oracle / DB",
       "color": "#c084fc",
-      "size": 0.58,
+      "size": 0.62,
       "file": "routes/index.js",
       "description": "Renderiza index.ejs com layout Dropbox clone."
     },
@@ -104,7 +104,7 @@
       "category": "oracle",
       "categoryLabel": "Oracle / DB",
       "color": "#c084fc",
-      "size": 0.58,
+      "size": 0.62,
       "file": "routes/index.js",
       "description": "Upload local via Formidable (legado antes do Firebase)."
     },
@@ -116,7 +116,7 @@
       "category": "oracle",
       "categoryLabel": "Oracle / DB",
       "color": "#c084fc",
-      "size": 0.58,
+      "size": 0.62,
       "file": "routes/index.js",
       "description": "Serve arquivo do disco por query ?path=."
     },
@@ -128,7 +128,7 @@
       "category": "oracle",
       "categoryLabel": "Oracle / DB",
       "color": "#c084fc",
-      "size": 0.58,
+      "size": 0.62,
       "file": "routes/index.js",
       "description": "Remove arquivo local via Formidable fields."
     },
@@ -140,7 +140,7 @@
       "category": "frontend",
       "categoryLabel": "Frontend",
       "color": "#eab308",
-      "size": 1.0,
+      "size": 1.35,
       "file": "views/index.ejs",
       "description": "Interface estilo Dropbox com sidebar, breadcrumb e grid de arquivos."
     },
@@ -152,7 +152,7 @@
       "category": "oracle",
       "categoryLabel": "Oracle / DB",
       "color": "#c084fc",
-      "size": 0.72,
+      "size": 0.85,
       "file": "views/index.ejs",
       "description": "Template EJS com sidebar Hiperware e área de arquivos."
     },
@@ -164,7 +164,7 @@
       "category": "oracle",
       "categoryLabel": "Oracle / DB",
       "color": "#c084fc",
-      "size": 0.72,
+      "size": 0.85,
       "file": "public/src/index.js",
       "description": "Bootstrap do controller após DOM pronto."
     },
@@ -176,7 +176,7 @@
       "category": "frontend",
       "categoryLabel": "Frontend",
       "color": "#eab308",
-      "size": 0.72,
+      "size": 0.85,
       "file": "public/assets/css/dropbox-clone.css",
       "description": "Estilos do grid, seleção múltipla e snackbar de upload."
     },
@@ -188,7 +188,7 @@
       "category": "oracle",
       "categoryLabel": "Oracle / DB",
       "color": "#c084fc",
-      "size": 1.0,
+      "size": 1.35,
       "file": "public/src/controller/DropBoxController.js",
       "description": "Classe central: Firebase, navegação, CRUD e seleção Ctrl/Shift."
     },
@@ -200,7 +200,7 @@
       "category": "oracle",
       "categoryLabel": "Oracle / DB",
       "color": "#c084fc",
-      "size": 0.58,
+      "size": 0.62,
       "file": "public/src/controller/DropBoxController.js",
       "description": "Inicializa Firebase App com config do projeto."
     },
@@ -212,7 +212,7 @@
       "category": "oracle",
       "categoryLabel": "Oracle / DB",
       "color": "#c084fc",
-      "size": 0.58,
+      "size": 0.62,
       "file": "public/src/controller/DropBoxController.js",
       "description": "Retorna ref do Realtime DB para o path atual."
     },
@@ -224,7 +224,7 @@
       "category": "oracle",
       "categoryLabel": "Oracle / DB",
       "color": "#c084fc",
-      "size": 1.0,
+      "size": 1.35,
       "file": "public/src/controller/DropBoxController.js",
       "description": "Breadcrumb, leitura reativa e duplo-clique para entrar em pastas."
     },
@@ -236,7 +236,7 @@
       "category": "oracle",
       "categoryLabel": "Oracle / DB",
       "color": "#c084fc",
-      "size": 0.58,
+      "size": 0.62,
       "file": "public/src/controller/DropBoxController.js",
       "description": "Troca de pasta: desliga listener antigo e recarrega lista."
     },
@@ -248,7 +248,7 @@
       "category": "oracle",
       "categoryLabel": "Oracle / DB",
       "color": "#c084fc",
-      "size": 0.58,
+      "size": 0.62,
       "file": "public/src/controller/DropBoxController.js",
       "description": "Monta breadcrumb clicável da pilha currentFolder."
     },
@@ -260,7 +260,7 @@
       "category": "oracle",
       "categoryLabel": "Oracle / DB",
       "color": "#c084fc",
-      "size": 0.58,
+      "size": 0.62,
       "file": "public/src/controller/DropBoxController.js",
       "description": "Escuta Firebase value e renderiza grid de arquivos."
     },
@@ -272,7 +272,7 @@
       "category": "oracle",
       "categoryLabel": "Oracle / DB",
       "color": "#c084fc",
-      "size": 1.0,
+      "size": 1.35,
       "file": "public/src/controller/DropBoxController.js",
       "description": "Envio com barra de progresso, ETA e metadata downloadURL."
     },
@@ -284,7 +284,7 @@
       "category": "oracle",
       "categoryLabel": "Oracle / DB",
       "color": "#c084fc",
-      "size": 0.58,
+      "size": 0.62,
       "file": "public/src/controller/DropBoxController.js",
       "description": "fileRef.put(file) com state_changed e getDownloadURL."
     },
@@ -296,7 +296,7 @@
       "category": "oracle",
       "categoryLabel": "Oracle / DB",
       "color": "#c084fc",
-      "size": 0.58,
+      "size": 0.62,
       "file": "public/src/controller/DropBoxController.js",
       "description": "Calcula % e tempo restante com base em bytesTransferred."
     },
@@ -308,7 +308,7 @@
       "category": "oracle",
       "categoryLabel": "Oracle / DB",
       "color": "#c084fc",
-      "size": 0.58,
+      "size": 0.62,
       "file": "public/src/controller/DropBoxController.js",
       "description": "Converte ms restantes em texto PT-BR legível."
     },
@@ -320,7 +320,7 @@
       "category": "oracle",
       "categoryLabel": "Oracle / DB",
       "color": "#c084fc",
-      "size": 0.58,
+      "size": 0.62,
       "file": "public/src/controller/DropBoxController.js",
       "description": "Exibe/oculta snackbar de progresso (#react-snackbar-root)."
     },
@@ -332,7 +332,7 @@
       "category": "oracle",
       "categoryLabel": "Oracle / DB",
       "color": "#c084fc",
-      "size": 1.0,
+      "size": 1.35,
       "file": "public/src/controller/DropBoxController.js",
       "description": "Criar pasta, renomear, excluir recursivo no DB + Storage."
     },
@@ -344,7 +344,7 @@
       "category": "oracle",
       "categoryLabel": "Oracle / DB",
       "color": "#c084fc",
-      "size": 0.58,
+      "size": 0.62,
       "file": "public/src/controller/DropBoxController.js",
       "description": "Bind nova pasta, delete, rename e input de upload."
     },
@@ -356,7 +356,7 @@
       "category": "oracle",
       "categoryLabel": "Oracle / DB",
       "color": "#c084fc",
-      "size": 0.58,
+      "size": 0.62,
       "file": "public/src/controller/DropBoxController.js",
       "description": "Deleta todos os itens selecionados com Promise.all."
     },
@@ -368,7 +368,7 @@
       "category": "oracle",
       "categoryLabel": "Oracle / DB",
       "color": "#c084fc",
-      "size": 0.58,
+      "size": 0.62,
       "file": "public/src/controller/DropBoxController.js",
       "description": "Recursão: percorre snapshot e apaga subpastas/arquivos."
     },
@@ -380,7 +380,7 @@
       "category": "oracle",
       "categoryLabel": "Oracle / DB",
       "color": "#c084fc",
-      "size": 0.58,
+      "size": 0.62,
       "file": "public/src/controller/DropBoxController.js",
       "description": "firebase.storage().ref(ref).child(name).delete()."
     },
@@ -392,7 +392,7 @@
       "category": "oracle",
       "categoryLabel": "Oracle / DB",
       "color": "#c084fc",
-      "size": 1.0,
+      "size": 1.35,
       "file": "public/src/controller/DropBoxController.js",
       "description": "Lógica de multi-select estilo explorador de arquivos."
     },
@@ -404,7 +404,7 @@
       "category": "oracle",
       "categoryLabel": "Oracle / DB",
       "color": "#c084fc",
-      "size": 0.58,
+      "size": 0.62,
       "file": "public/src/controller/DropBoxController.js",
       "description": "querySelectorAll('.selected') na lista de arquivos."
     },
@@ -416,7 +416,7 @@
       "category": "oracle",
       "categoryLabel": "Oracle / DB",
       "color": "#c084fc",
-      "size": 0.58,
+      "size": 0.62,
       "file": "public/src/controller/DropBoxController.js",
       "description": "Click com Ctrl toggle; Shift seleciona intervalo; dblclick abre."
     },
@@ -428,7 +428,7 @@
       "category": "oracle",
       "categoryLabel": "Oracle / DB",
       "color": "#c084fc",
-      "size": 1.0,
+      "size": 1.35,
       "file": "public/src/controller/DropBoxController.js",
       "description": "SVG inline para pasta, imagem, PDF, Office, áudio e vídeo."
     },
@@ -440,7 +440,7 @@
       "category": "oracle",
       "categoryLabel": "Oracle / DB",
       "color": "#c084fc",
-      "size": 0.58,
+      "size": 0.62,
       "file": "public/src/controller/DropBoxController.js",
       "description": "Switch por MIME retornando template SVG 160×160."
     },
@@ -452,7 +452,7 @@
       "category": "frontend",
       "categoryLabel": "Frontend",
       "color": "#eab308",
-      "size": 0.58,
+      "size": 0.62,
       "file": "public/src/controller/DropBoxController.js",
       "description": "Cria <li> com dataset.file JSON e ícone + nome."
     },
@@ -464,7 +464,7 @@
       "category": "oracle",
       "categoryLabel": "Oracle / DB",
       "color": "#c084fc",
-      "size": 0.58,
+      "size": 0.62,
       "file": "public/src/controller/DropBoxController.js",
       "description": "XHR Promise com upload.onprogress (modo local legado)."
     },
@@ -476,7 +476,7 @@
       "category": "oracle",
       "categoryLabel": "Oracle / DB",
       "color": "#c084fc",
-      "size": 0.72,
+      "size": 0.85,
       "file": "public/src/controller/DropBoxController.js",
       "description": "Blob storage na nuvem com downloadURL em customMetadata."
     }

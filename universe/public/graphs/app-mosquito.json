@@ -28,7 +28,7 @@
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
-      "size": 1.4,
+      "size": 2.2,
       "file": "index.html",
       "description": "Jogo Mata Mosquito com níveis e telas de vitória/derrota."
     },
@@ -40,7 +40,7 @@
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
-      "size": 0.72,
+      "size": 0.85,
       "file": "jogo.js",
       "description": "Arquivo `jogo.js` mapeado a partir do repositório original."
     },
@@ -52,7 +52,7 @@
       "category": "frontend",
       "categoryLabel": "Frontend",
       "color": "#eab308",
-      "size": 0.72,
+      "size": 0.85,
       "file": "app.html",
       "description": "Arquivo `app.html` mapeado a partir do repositório original."
     },
@@ -64,7 +64,7 @@
       "category": "frontend",
       "categoryLabel": "Frontend",
       "color": "#eab308",
-      "size": 0.72,
+      "size": 0.85,
       "file": "index.html",
       "description": "Arquivo `index.html` mapeado a partir do repositório original."
     },
@@ -76,7 +76,7 @@
       "category": "frontend",
       "categoryLabel": "Frontend",
       "color": "#eab308",
-      "size": 0.72,
+      "size": 0.85,
       "file": "estilo.css",
       "description": "Arquivo `estilo.css` mapeado a partir do repositório original."
     },
@@ -88,7 +88,7 @@
       "category": "frontend",
       "categoryLabel": "Frontend",
       "color": "#eab308",
-      "size": 0.72,
+      "size": 0.85,
       "file": "fim_de_jogo.html",
       "description": "Arquivo `fim_de_jogo.html` mapeado a partir do repositório original."
     },
@@ -100,7 +100,7 @@
       "category": "frontend",
       "categoryLabel": "Frontend",
       "color": "#eab308",
-      "size": 0.72,
+      "size": 0.85,
       "file": "vitoria.html",
       "description": "Arquivo `vitoria.html` mapeado a partir do repositório original."
     },
@@ -112,7 +112,7 @@
       "category": "other",
       "categoryLabel": "Outros",
       "color": "#64748b",
-      "size": 0.72,
+      "size": 0.85,
       "file": "README.md",
       "description": "Arquivo `README.md` mapeado a partir do repositório original."
     }

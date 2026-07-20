@@ -24,7 +24,7 @@
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
-      "size": 1.4,
+      "size": 2.2,
       "file": "index.php",
       "description": "Padrão DAO em PHP com classes e config de conexão."
     },
@@ -36,7 +36,7 @@
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
-      "size": 1.0,
+      "size": 1.35,
       "file": "class/",
       "description": "Módulo/pasta `class/` com arquivos-chave do projeto."
     },
@@ -48,7 +48,7 @@
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
-      "size": 0.72,
+      "size": 0.85,
       "file": "class/Sql.php",
       "description": "Arquivo `class/Sql.php` mapeado a partir do repositório original."
     },
@@ -60,7 +60,7 @@
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
-      "size": 0.72,
+      "size": 0.85,
       "file": "class/Usuario.php",
       "description": "Arquivo `class/Usuario.php` mapeado a partir do repositório original."
     },
@@ -72,7 +72,7 @@
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
-      "size": 0.72,
+      "size": 0.85,
       "file": "config.php",
       "description": "Arquivo `config.php` mapeado a partir do repositório original."
     },
@@ -84,7 +84,7 @@
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
-      "size": 0.72,
+      "size": 0.85,
       "file": "index.php",
       "description": "Arquivo `index.php` mapeado a partir do repositório original."
     }

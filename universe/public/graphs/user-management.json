@@ -32,7 +32,7 @@
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
-      "size": 1.4,
+      "size": 2.2,
       "file": "app.js",
       "description": "CRUD de usuários com Express, rotas e views EJS."
     },
@@ -44,7 +44,7 @@
       "category": "network",
       "categoryLabel": "Rede / Scan",
       "color": "#22d3ee",
-      "size": 1.0,
+      "size": 1.35,
       "file": "routes/",
       "description": "Módulo/pasta `routes/` com arquivos-chave do projeto."
     },
@@ -56,7 +56,7 @@
       "category": "network",
       "categoryLabel": "Rede / Scan",
       "color": "#22d3ee",
-      "size": 0.72,
+      "size": 0.85,
       "file": "routes/index.js",
       "description": "Arquivo `routes/index.js` mapeado a partir do repositório original."
     },
@@ -68,7 +68,7 @@
       "category": "network",
       "categoryLabel": "Rede / Scan",
       "color": "#22d3ee",
-      "size": 0.72,
+      "size": 0.85,
       "file": "routes/users.js",
       "description": "Arquivo `routes/users.js` mapeado a partir do repositório original."
     },
@@ -80,7 +80,7 @@
       "category": "frontend",
       "categoryLabel": "Frontend",
       "color": "#eab308",
-      "size": 1.0,
+      "size": 1.35,
       "file": "views/",
       "description": "Módulo/pasta `views/` com arquivos-chave do projeto."
     },
@@ -92,7 +92,7 @@
       "category": "frontend",
       "categoryLabel": "Frontend",
       "color": "#eab308",
-      "size": 0.72,
+      "size": 0.85,
       "file": "views/index.ejs",
       "description": "Arquivo `views/index.ejs` mapeado a partir do repositório original."
     },
@@ -104,7 +104,7 @@
       "category": "frontend",
       "categoryLabel": "Frontend",
       "color": "#eab308",
-      "size": 0.72,
+      "size": 0.85,
       "file": "views/error.ejs",
       "description": "Arquivo `views/error.ejs` mapeado a partir do repositório original."
     },
@@ -116,7 +116,7 @@
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
-      "size": 1.0,
+      "size": 1.35,
       "file": "public/",
       "description": "Módulo/pasta `public/` com arquivos-chave do projeto."
     },
@@ -128,7 +128,7 @@
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
-      "size": 0.72,
+      "size": 0.85,
       "file": "public/classes/Fetch.js",
       "description": "Arquivo `public/classes/Fetch.js` mapeado a partir do repositório original."
     },
@@ -140,7 +140,7 @@
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
-      "size": 0.72,
+      "size": 0.85,
       "file": "public/classes/HttpRequest.js",
       "description": "Arquivo `public/classes/HttpRequest.js` mapeado a partir do repositório original."
     },
@@ -152,7 +152,7 @@
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
-      "size": 0.72,
+      "size": 0.85,
       "file": "public/models/User.js",
       "description": "Arquivo `public/models/User.js` mapeado a partir do repositório original."
     },
@@ -164,7 +164,7 @@
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
-      "size": 0.72,
+      "size": 0.85,
       "file": "public/controllers/UserController.js",
       "description": "Arquivo `public/controllers/UserController.js` mapeado a partir do repositório original."
     },
@@ -176,7 +176,7 @@
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
-      "size": 0.72,
+      "size": 0.85,
       "file": "public/classes/Utils.js",
       "description": "Arquivo `public/classes/Utils.js` mapeado a partir do repositório original."
     },
@@ -188,7 +188,7 @@
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
-      "size": 0.72,
+      "size": 0.85,
       "file": "app.js",
       "description": "Arquivo `app.js` mapeado a partir do repositório original."
     },
@@ -200,7 +200,7 @@
       "category": "other",
       "categoryLabel": "Outros",
       "color": "#64748b",
-      "size": 0.72,
+      "size": 0.85,
       "file": "package.json",
       "description": "Arquivo `package.json` mapeado a partir do repositório original."
     },
@@ -212,7 +212,7 @@
       "category": "other",
       "categoryLabel": "Outros",
       "color": "#64748b",
-      "size": 0.72,
+      "size": 0.85,
       "file": "README.md",
       "description": "Arquivo `README.md` mapeado a partir do repositório original."
     }
