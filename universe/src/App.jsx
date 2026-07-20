@@ -70,7 +70,7 @@ export default function App() {
 
   const handleViewCode = useCallback(
     (node) => {
-      window.location.href = `../node.html?tree=${slug}&node=${encodeURIComponent(node.id)}`;
+      window.location.href = `../node.html?p=${encodeURIComponent(slug)}&n=${encodeURIComponent(node.id)}`;
     },
     [slug]
   );
