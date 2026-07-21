@@ -55,7 +55,7 @@ FILE_NODES = [
          "Enriquecimento AD, SNMP, TLS, HTTP, impressoras, fingerprint."),
     node("ps-host-history-file", "ps-grp-core", "file", "hostHistory.js",
          "hostHistory.js",
-         "Histórico persistente de IPs ociosos."),
+         "Histórico persistente de IPs ociosos — backup antes de limpar, restore e merge."),
     node("ps-vm-vlan-file", "ps-grp-core", "file", "vmVlanStrategy.js",
          "vmVlanStrategy.js",
          "Detecção de virtualização e mapeamento VLAN."),
@@ -282,6 +282,14 @@ FILE_NODES = [
          "canon-agent.ps1",
          "scripts/canon-agent.ps1",
          "Script agente relatórios Plataforma."),
+    node("ps-script-restore-history", "ps-grp-scripts", "file",
+         "restore-host-history-from-baselines.js",
+         "scripts/restore-host-history-from-baselines.js",
+         "Reconstrói host-history.json a partir de network-baselines.json."),
+    node("ps-script-merge-idle", "ps-grp-scripts", "file",
+         "merge-idle-export-into-history.js",
+         "scripts/merge-idle-export-into-history.js",
+         "Mescla export JSON de ociosos de volta no histórico."),
 
     # ── Testes ──
     node("ps-grp-tests", "ps-root", "module", "Testes",
@@ -354,7 +362,8 @@ def main():
         for n in preserved:
             if n["id"] == "ps-root":
                 n["description"] = (
-                    "NetScan Canon v2.4 — auth em fases (#18 etapas 0–5): escopos dashboard/modals, "
+                    "NetScan Canon v2.4.1 — auth em fases (#18 etapas 0–6): escopos dashboard/modals, "
+                    "DELETE destrutivos protegidos, backup host-history, restore scripts, "
                     "backend, AD, loop, AutoTest remoto AD, Inventário UNESP, Oracle, Plataforma e UI."
                 )
             if n["id"] == "ps-client":
@@ -386,8 +395,8 @@ def main():
         project["nodes"] = list(by_id.values())
         project["stack"] = "Node.js + WebSocket + SNMP + AutoTest + Platform + AD Remote Auth"
         project["summary"] = (
-            "NetScan Canon v2.4 — auth Canon em fases (dashboard boot + modals), AutoTest remoto AD, "
-            "rate limit, inventário UNESP SNMP MAC, scan, AD, Oracle, Plataforma e UI."
+            "NetScan Canon v2.4.1 — auth Canon etapa 6 (DELETE protegidos), backup host-history, "
+            "AutoTest remoto AD, rate limit, inventário UNESP SNMP MAC, scan, AD, Oracle, Plataforma e UI."
         )
         project["demoUrl"] = (
             "https://github.com/CanonEngineer/Professional-Scanner/blob/main/docs/DOCUMENTATION.md"

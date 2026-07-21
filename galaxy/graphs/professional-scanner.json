@@ -4,7 +4,7 @@
   "repoUrl": "https://github.com/CanonEngineer/Professional-Scanner",
   "color": "#06b6d4",
   "demoUrl": "https://github.com/CanonEngineer/Professional-Scanner/blob/main/docs/DOCUMENTATION.md",
-  "nodeCount": 103,
+  "nodeCount": 105,
   "categories": {
     "core": {
       "label": "Backend",
@@ -66,7 +66,7 @@
       "color": "#3b82f6",
       "size": 2.2,
       "file": "server.js",
-      "description": "NetScan Canon v2.4 — auth em fases (#18 etapas 0–5): escopos dashboard/modals, backend, AD, loop, AutoTest remoto AD, Inventário UNESP, Oracle, Plataforma e UI."
+      "description": "NetScan Canon v2.4.1 — auth em fases (#18 etapas 0–6): escopos dashboard/modals, DELETE destrutivos protegidos, backup host-history, restore scripts, backend, AD, loop, AutoTest remoto AD, Inventário UNESP, Oracle, Plataforma e UI."
     },
     {
       "id": "ps-static",
@@ -438,7 +438,7 @@
       "color": "#3b82f6",
       "size": 0.85,
       "file": "hostHistory.js",
-      "description": "Histórico persistente de IPs ociosos."
+      "description": "Histórico persistente de IPs ociosos — backup antes de limpar, restore e merge."
     },
     {
       "id": "ps-vm-vlan-file",
@@ -1233,6 +1233,30 @@
       "description": "Script agente relatórios Plataforma."
     },
     {
+      "id": "ps-script-restore-history",
+      "label": "restore-host-history-from-baselines.js",
+      "parent": "ps-grp-scripts",
+      "layer": "file",
+      "category": "scripts",
+      "categoryLabel": "Scripts",
+      "color": "#64748b",
+      "size": 0.85,
+      "file": "scripts/restore-host-history-from-baselines.js",
+      "description": "Reconstrói host-history.json a partir de network-baselines.json."
+    },
+    {
+      "id": "ps-script-merge-idle",
+      "label": "merge-idle-export-into-history.js",
+      "parent": "ps-grp-scripts",
+      "layer": "file",
+      "category": "scripts",
+      "categoryLabel": "Scripts",
+      "color": "#64748b",
+      "size": 0.85,
+      "file": "scripts/merge-idle-export-into-history.js",
+      "description": "Mescla export JSON de ociosos de volta no histórico."
+    },
+    {
       "id": "ps-grp-tests",
       "label": "Testes",
       "parent": "ps-root",
@@ -1777,6 +1801,16 @@
     {
       "source": "ps-grp-scripts",
       "target": "ps-script-canon-agent",
+      "type": "dependency"
+    },
+    {
+      "source": "ps-grp-scripts",
+      "target": "ps-script-restore-history",
+      "type": "dependency"
+    },
+    {
+      "source": "ps-grp-scripts",
+      "target": "ps-script-merge-idle",
       "type": "dependency"
     },
     {
