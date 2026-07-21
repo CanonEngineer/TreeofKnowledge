@@ -66,7 +66,7 @@
       "color": "#3b82f6",
       "size": 2.2,
       "file": "server.js",
-      "description": "NetScan Canon v2.4.3 — lista persistente ativos de novo, auth modais só memória, subtítulos de login por módulo (Oracle, ADUC, Loop, AutoTest, Plataforma, Inventário), badge Conectado animado, scroll interno nos modais e fix PORT startup."
+      "description": "NetScan Canon v2.4.5 — auth etapa 7 WebSocket handshake, inventário Ausente/conflitos, ociosos ativos de novo, Oracle cruzamento AD, docs engenharia completas."
     },
     {
       "id": "ps-static",
@@ -330,7 +330,7 @@
       "color": "#eab308",
       "size": 1.35,
       "file": "public/app.js",
-      "description": "Módulo UI public/app.js — painel IPs ativos de novo, chips auditoria ociosos, subtítulos login Canon por modal, badge Conectado dinâmico e modais sticky."
+      "description": "public/app.js — WS auth handshake, connectWebSocket pós-login boot, badge Conectado dinâmico, ociosos ativos de novo, modais Canon gated."
     },
     {
       "id": "ps-handle-msg",
