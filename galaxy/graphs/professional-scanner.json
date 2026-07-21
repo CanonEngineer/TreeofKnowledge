@@ -4,7 +4,7 @@
   "repoUrl": "https://github.com/CanonEngineer/Professional-Scanner",
   "color": "#06b6d4",
   "demoUrl": "https://github.com/CanonEngineer/Professional-Scanner/blob/main/docs/DOCUMENTATION.md",
-  "nodeCount": 98,
+  "nodeCount": 99,
   "categories": {
     "core": {
       "label": "Backend",
@@ -66,7 +66,7 @@
       "color": "#3b82f6",
       "size": 2.2,
       "file": "server.js",
-      "description": "NetScan Canon v2.1 — árvore completa: backend, AD, loop, AutoTest, Inventário UNESP, Oracle, Plataforma Canon, frontend, scripts e testes."
+      "description": "NetScan Canon v2.2 — árvore completa: backend, AD, loop, AutoTest, Inventário UNESP (SNMP MAC), Oracle, Plataforma Canon, frontend, scripts e testes."
     },
     {
       "id": "ps-static",
@@ -882,7 +882,7 @@
       "color": "#10b981",
       "size": 1.35,
       "file": "inventory.js",
-      "description": "Inventário persistente: merge scan + AD + histórico + portas/MAC."
+      "description": "Inventário persistente: merge scan + AD + histórico + portas/MAC/SNMP."
     },
     {
       "id": "ps-inventory",
@@ -894,7 +894,19 @@
       "color": "#10b981",
       "size": 0.85,
       "file": "inventory.js",
-      "description": "Core: merge incremental, enrich AD/MAC/portas, sync async."
+      "description": "Core: merge incremental, enrich AD/MAC/portas/SNMP, sync async."
+    },
+    {
+      "id": "ps-switch-mac-lookup",
+      "label": "switchMacLookup.js",
+      "parent": "ps-grp-inventory",
+      "layer": "file",
+      "category": "inventory",
+      "categoryLabel": "Inventário UNESP",
+      "color": "#10b981",
+      "size": 0.85,
+      "file": "switchMacLookup.js",
+      "description": "IP→MAC via SNMP ipNetToMedia — gateway padrão e switches Loop Monitor."
     },
     {
       "id": "ps-inventory-routes",
@@ -954,7 +966,7 @@
       "color": "#10b981",
       "size": 0.85,
       "file": "public/inventory.js",
-      "description": "UI modal inventário: tabela, filtros, sync AD."
+      "description": "UI modal inventário: tabela centralizada, sync AD, feedback MAC SNMP."
     },
     {
       "id": "ps-inventory-ui-css",
@@ -966,7 +978,7 @@
       "color": "#10b981",
       "size": 0.85,
       "file": "public/inventory.css",
-      "description": "Estilos modal inventário UNESP."
+      "description": "Estilos modal inventário — colunas centradas, portas/serviços largas."
     },
     {
       "id": "ps-grp-auth",
@@ -1577,6 +1589,11 @@
     {
       "source": "ps-grp-inventory",
       "target": "ps-inventory",
+      "type": "dependency"
+    },
+    {
+      "source": "ps-grp-inventory",
+      "target": "ps-switch-mac-lookup",
       "type": "dependency"
     },
     {

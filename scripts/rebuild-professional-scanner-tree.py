@@ -179,11 +179,15 @@ FILE_NODES = [
     # ── Inventário UNESP ──
     node("ps-grp-inventory", "ps-root", "module", "Inventário Corporativo UNESP",
          "inventory.js",
-         "Inventário persistente: merge scan + AD + histórico + portas/MAC.",
-         ["inventory.js", "inventoryRoutes.js", "inventoryXlsx.js"]),
+         "Inventário persistente: merge scan + AD + histórico + portas/MAC/SNMP.",
+         ["inventory.js", "inventoryRoutes.js", "switchMacLookup.js", "inventoryXlsx.js"]),
     node("ps-inventory", "ps-grp-inventory", "file", "inventory.js",
          "inventory.js",
-         "Core: merge incremental, enrich AD/MAC/portas, sync async."),
+         "Core: merge incremental, enrich AD/MAC/portas/SNMP, sync async."),
+    node("ps-switch-mac-lookup", "ps-grp-inventory", "file", "switchMacLookup.js",
+         "switchMacLookup.js",
+         "IP→MAC via SNMP ipNetToMedia — gateway padrão e switches Loop Monitor.",
+         ["buildSnmpIpMacIndex()", "discoverDefaultGateways()", "queryIpNetToMedia()"]),
     node("ps-inventory-routes", "ps-grp-inventory", "file", "inventoryRoutes.js",
          "inventoryRoutes.js",
          "API /api/inventory/* — sync, resolve AD, export."),
@@ -198,10 +202,10 @@ FILE_NODES = [
          "Export CSV inventário."),
     node("ps-inventory-ui-js", "ps-grp-inventory", "file", "public/inventory.js",
          "public/inventory.js",
-         "UI modal inventário: tabela, filtros, sync AD."),
+         "UI modal inventário: tabela centralizada, sync AD, feedback MAC SNMP."),
     node("ps-inventory-ui-css", "ps-grp-inventory", "file", "public/inventory.css",
          "public/inventory.css",
-         "Estilos modal inventário UNESP."),
+         "Estilos modal inventário — colunas centradas, portas/serviços largas."),
 
     # ── Auth ──
     node("ps-grp-auth", "ps-root", "module", "Autenticação Canon",
@@ -335,8 +339,8 @@ def main():
         for n in preserved:
             if n["id"] == "ps-root":
                 n["description"] = (
-                    "NetScan Canon v2.1 — árvore completa: backend, AD, loop, AutoTest, "
-                    "Inventário UNESP, Oracle, Plataforma Canon, frontend, scripts e testes."
+                    "NetScan Canon v2.2 — árvore completa: backend, AD, loop, AutoTest, "
+                    "Inventário UNESP (SNMP MAC), Oracle, Plataforma Canon, frontend, scripts e testes."
                 )
             if n["id"] == "ps-client":
                 n["description"] = (
@@ -359,8 +363,8 @@ def main():
         project["nodes"] = list(by_id.values())
         project["stack"] = "Node.js + WebSocket + SNMP + AutoTest + Platform"
         project["summary"] = (
-            "NetScan Canon v2.1 — inventário UNESP, exports Canon, scan, AD, loop, "
-            "AutoTest, Oracle, Plataforma, UI e scripts."
+            "NetScan Canon v2.2 — inventário UNESP com MAC SNMP, tabela UI, exports Canon, "
+            "scan, AD, loop, AutoTest, Oracle, Plataforma, UI e scripts."
         )
         project["demoUrl"] = (
             "https://github.com/CanonEngineer/Professional-Scanner/blob/main/docs/DOCUMENTATION.md"

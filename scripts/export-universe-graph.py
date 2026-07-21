@@ -84,7 +84,7 @@ def category_for_professional_scanner(node):
         return "oracle"
     if "platform" in nid or "platform" in file or nid.startswith(("ps-network", "ps-asset", "ps-nac", "ps-tls", "ps-deep", "ps-passive", "ps-scheduled", "ps-webhook", "ps-canon-agent", "ps-ala")):
         return "platform"
-    if "inventory" in nid or file.startswith("inventory") or "inventory/" in file:
+    if "inventory" in nid or file.startswith("inventory") or "inventory/" in file or file.endswith("switchmaclookup.js"):
         return "inventory"
     if "auth" in nid or "rbac" in nid or file.endswith("canonauth.js") or file.endswith("canonrbac.js"):
         return "auth"
