@@ -110,7 +110,13 @@ FILE_NODES = [
          screenshot="docs/images/professional-scanner/autotest-remote.png"),
     node("ps-autotest-remote-sec", "ps-grp-autotest", "file", "autoTestRemoteSecurity.js",
          "autoTestRemoteSecurity.js",
-         "Assinatura HMAC e validação estilo Veyon."),
+         "Assinatura HMAC, pareamento persistido e profileSnapshot nos jobs."),
+    node("ps-autotest-remote-auth", "ps-grp-autotest", "file", "autoTestRemoteAuth.js",
+         "autoTestRemoteAuth.js",
+         "Login AD remoto (HCFMB/UNESP) — sessão separada do Canon para execução remota."),
+    node("ps-rate-limit", "ps-grp-auth", "file", "rateLimit.js",
+         "rateLimit.js",
+         "Rate limit por IP/rota em endpoints sensíveis (login, pareamento, jobs)."),
     node("ps-autotest-runner", "ps-grp-autotest", "file", "autotestRemoteRunner.js",
          "autotestRemoteRunner.js",
          "Runner do agente Windows: poll, execute, complete."),
@@ -224,13 +230,13 @@ FILE_NODES = [
          "Dashboard, modais, mapa 3D, plataforma."),
     node("ps-app-file", "ps-grp-public", "file", "public/app.js",
          "public/app.js",
-         "Cliente principal: WS, scan, AD, loop, AutoTest, Oracle."),
+         "Cliente principal: WS, scan, AD, loop, AutoTest remoto AD, Oracle, vis-network lazy."),
     node("ps-index-html", "ps-grp-public", "file", "public/index.html",
          "public/index.html",
-         "HTML dashboard e modais Canon."),
+         "HTML dashboard, modais sticky e branding Canon."),
     node("ps-style-css", "ps-grp-public", "file", "public/style.css",
          "public/style.css",
-         "Tema Canon, modais padronizados, AutoTest UI."),
+         "Tema Canon, modais padronizados, branding animado, loop modal sticky."),
     node("ps-platform-js", "ps-grp-public", "file", "public/platform.js",
          "public/platform.js",
          "UI Plataforma Canon — abas Drift, NAC, CMDB…"),
@@ -339,12 +345,20 @@ def main():
         for n in preserved:
             if n["id"] == "ps-root":
                 n["description"] = (
-                    "NetScan Canon v2.2 — árvore completa: backend, AD, loop, AutoTest, "
-                    "Inventário UNESP (SNMP MAC), Oracle, Plataforma Canon, frontend, scripts e testes."
+                    "NetScan Canon v2.3 — árvore completa: backend, AD, loop, AutoTest remoto AD, "
+                    "Inventário UNESP (SNMP MAC), Oracle, Plataforma Canon, UI branding, scripts e testes."
                 )
             if n["id"] == "ps-client":
                 n["description"] = (
-                    "Módulo UI public/app.js — resumo; ver ps-app-file para código completo."
+                    "Módulo UI public/app.js — branding Canon animado, login remoto AD e modais sticky."
+                )
+            if n["id"] == "ps-loop-modal":
+                n["description"] = (
+                    "Modal Loop Rede sticky — layout flex sem barra vertical na borda; scroll interno na área de conteúdo."
+                )
+            if n["id"] == "ps-autotest-ui":
+                n["description"] = (
+                    "UI AutoTest: cards L2/L3/L4, login AD remoto acima do modal, revogar agente, poll cancelável."
                 )
 
         by_id = {n["id"]: n for n in preserved}
@@ -361,10 +375,10 @@ def main():
                 by_id[fn["id"]] = fn
 
         project["nodes"] = list(by_id.values())
-        project["stack"] = "Node.js + WebSocket + SNMP + AutoTest + Platform"
+        project["stack"] = "Node.js + WebSocket + SNMP + AutoTest + Platform + AD Remote Auth"
         project["summary"] = (
-            "NetScan Canon v2.2 — inventário UNESP com MAC SNMP, tabela UI, exports Canon, "
-            "scan, AD, loop, AutoTest, Oracle, Plataforma, UI e scripts."
+            "NetScan Canon v2.3 — AutoTest remoto AD, rate limit, loop modal sticky, branding Canon, "
+            "inventário UNESP SNMP MAC, scan, AD, Oracle, Plataforma e UI."
         )
         project["demoUrl"] = (
             "https://github.com/CanonEngineer/Professional-Scanner/blob/main/docs/DOCUMENTATION.md"
