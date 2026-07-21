@@ -24,6 +24,7 @@ CATEGORIES = {
     "autotest": ("AutoTest", "#06b6d4"),
     "oracle": ("Oracle / DB", "#c084fc"),
     "platform": ("Plataforma Canon", "#8b5cf6"),
+    "inventory": ("Inventário UNESP", "#10b981"),
     "auth": ("Segurança", "#ef4444"),
     "frontend": ("Frontend", "#eab308"),
     "scripts": ("Scripts", "#64748b"),
@@ -83,6 +84,8 @@ def category_for_professional_scanner(node):
         return "oracle"
     if "platform" in nid or "platform" in file or nid.startswith(("ps-network", "ps-asset", "ps-nac", "ps-tls", "ps-deep", "ps-passive", "ps-scheduled", "ps-webhook", "ps-canon-agent", "ps-ala")):
         return "platform"
+    if "inventory" in nid or file.startswith("inventory") or "inventory/" in file:
+        return "inventory"
     if "auth" in nid or "rbac" in nid or file.endswith("canonauth.js") or file.endswith("canonrbac.js"):
         return "auth"
     if "public" in file or nid.startswith(("ps-client", "ps-map", "ps-app", "ps-index", "ps-style", "ps-port")):

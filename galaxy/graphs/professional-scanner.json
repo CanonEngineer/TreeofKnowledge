@@ -4,7 +4,7 @@
   "repoUrl": "https://github.com/CanonEngineer/Professional-Scanner",
   "color": "#06b6d4",
   "demoUrl": "https://github.com/CanonEngineer/Professional-Scanner/blob/main/docs/DOCUMENTATION.md",
-  "nodeCount": 84,
+  "nodeCount": 98,
   "categories": {
     "core": {
       "label": "Backend",
@@ -29,6 +29,10 @@
     "platform": {
       "label": "Plataforma Canon",
       "color": "#8b5cf6"
+    },
+    "inventory": {
+      "label": "Inventário UNESP",
+      "color": "#10b981"
     },
     "auth": {
       "label": "Segurança",
@@ -62,7 +66,7 @@
       "color": "#3b82f6",
       "size": 2.2,
       "file": "server.js",
-      "description": "NetScan Canon v2 — árvore completa: backend, AD, loop, AutoTest, Oracle, Plataforma Canon, frontend, scripts e testes."
+      "description": "NetScan Canon v2.1 — árvore completa: backend, AD, loop, AutoTest, Inventário UNESP, Oracle, Plataforma Canon, frontend, scripts e testes."
     },
     {
       "id": "ps-static",
@@ -449,6 +453,66 @@
       "description": "Detecção de virtualização e mapeamento VLAN."
     },
     {
+      "id": "ps-scan-xlsx",
+      "label": "scanReportXlsx.js",
+      "parent": "ps-grp-core",
+      "layer": "file",
+      "category": "other",
+      "categoryLabel": "Outros",
+      "color": "#64748b",
+      "size": 0.85,
+      "file": "scanReportXlsx.js",
+      "description": "Export Excel varredura, IPs ociosos e mapa ALA."
+    },
+    {
+      "id": "ps-canon-report-theme",
+      "label": "canonReportTheme.js",
+      "parent": "ps-grp-core",
+      "layer": "file",
+      "category": "other",
+      "categoryLabel": "Outros",
+      "color": "#64748b",
+      "size": 0.85,
+      "file": "canonReportTheme.js",
+      "description": "Tema visual compartilhado (PDF/Excel Canon)."
+    },
+    {
+      "id": "ps-canon-report-pdf",
+      "label": "canonReportPdf.js",
+      "parent": "ps-grp-core",
+      "layer": "file",
+      "category": "other",
+      "categoryLabel": "Outros",
+      "color": "#64748b",
+      "size": 0.85,
+      "file": "canonReportPdf.js",
+      "description": "Helpers PDF relatórios Canon."
+    },
+    {
+      "id": "ps-canon-report-excel",
+      "label": "canonReportExcel.js",
+      "parent": "ps-grp-core",
+      "layer": "file",
+      "category": "other",
+      "categoryLabel": "Outros",
+      "color": "#64748b",
+      "size": 0.85,
+      "file": "canonReportExcel.js",
+      "description": "Helpers Excel relatórios Canon."
+    },
+    {
+      "id": "ps-mac-vendor-file",
+      "label": "macVendor.js",
+      "parent": "ps-grp-core",
+      "layer": "file",
+      "category": "other",
+      "categoryLabel": "Outros",
+      "color": "#64748b",
+      "size": 0.85,
+      "file": "macVendor.js",
+      "description": "Base OUI → fabricante (scan + inventário)."
+    },
+    {
       "id": "ps-ad-file",
       "label": "adUserAudit.js",
       "parent": "ps-root",
@@ -531,6 +595,18 @@
       "size": 0.85,
       "file": "autoTestCsv.js",
       "description": "Export CSV dos passos AutoTest."
+    },
+    {
+      "id": "ps-autotest-xlsx",
+      "label": "autoTestXlsx.js",
+      "parent": "ps-grp-autotest",
+      "layer": "file",
+      "category": "autotest",
+      "categoryLabel": "AutoTest",
+      "color": "#06b6d4",
+      "size": 0.85,
+      "file": "autoTestXlsx.js",
+      "description": "Export Excel AutoTest (tema Canon)."
     },
     {
       "id": "ps-autotest-remote",
@@ -795,6 +871,102 @@
       "size": 0.85,
       "file": "alaMapping.js",
       "description": "Mapeamento ALA hospitalar."
+    },
+    {
+      "id": "ps-grp-inventory",
+      "label": "Inventário Corporativo UNESP",
+      "parent": "ps-root",
+      "layer": "module",
+      "category": "inventory",
+      "categoryLabel": "Inventário UNESP",
+      "color": "#10b981",
+      "size": 1.35,
+      "file": "inventory.js",
+      "description": "Inventário persistente: merge scan + AD + histórico + portas/MAC."
+    },
+    {
+      "id": "ps-inventory",
+      "label": "inventory.js",
+      "parent": "ps-grp-inventory",
+      "layer": "file",
+      "category": "inventory",
+      "categoryLabel": "Inventário UNESP",
+      "color": "#10b981",
+      "size": 0.85,
+      "file": "inventory.js",
+      "description": "Core: merge incremental, enrich AD/MAC/portas, sync async."
+    },
+    {
+      "id": "ps-inventory-routes",
+      "label": "inventoryRoutes.js",
+      "parent": "ps-grp-inventory",
+      "layer": "file",
+      "category": "inventory",
+      "categoryLabel": "Inventário UNESP",
+      "color": "#10b981",
+      "size": 0.85,
+      "file": "inventoryRoutes.js",
+      "description": "API /api/inventory/* — sync, resolve AD, export."
+    },
+    {
+      "id": "ps-inventory-xlsx",
+      "label": "inventoryXlsx.js",
+      "parent": "ps-grp-inventory",
+      "layer": "file",
+      "category": "inventory",
+      "categoryLabel": "Inventário UNESP",
+      "color": "#10b981",
+      "size": 0.85,
+      "file": "inventoryXlsx.js",
+      "description": "Export Excel inventário UNESP."
+    },
+    {
+      "id": "ps-inventory-pdf",
+      "label": "inventoryPdf.js",
+      "parent": "ps-grp-inventory",
+      "layer": "file",
+      "category": "inventory",
+      "categoryLabel": "Inventário UNESP",
+      "color": "#10b981",
+      "size": 0.85,
+      "file": "inventoryPdf.js",
+      "description": "Export PDF inventário."
+    },
+    {
+      "id": "ps-inventory-csv",
+      "label": "inventoryCsv.js",
+      "parent": "ps-grp-inventory",
+      "layer": "file",
+      "category": "inventory",
+      "categoryLabel": "Inventário UNESP",
+      "color": "#10b981",
+      "size": 0.85,
+      "file": "inventoryCsv.js",
+      "description": "Export CSV inventário."
+    },
+    {
+      "id": "ps-inventory-ui-js",
+      "label": "public/inventory.js",
+      "parent": "ps-grp-inventory",
+      "layer": "file",
+      "category": "inventory",
+      "categoryLabel": "Inventário UNESP",
+      "color": "#10b981",
+      "size": 0.85,
+      "file": "public/inventory.js",
+      "description": "UI modal inventário: tabela, filtros, sync AD."
+    },
+    {
+      "id": "ps-inventory-ui-css",
+      "label": "public/inventory.css",
+      "parent": "ps-grp-inventory",
+      "layer": "file",
+      "category": "inventory",
+      "categoryLabel": "Inventário UNESP",
+      "color": "#10b981",
+      "size": 0.85,
+      "file": "public/inventory.css",
+      "description": "Estilos modal inventário UNESP."
     },
     {
       "id": "ps-grp-auth",
@@ -1223,6 +1395,31 @@
       "type": "dependency"
     },
     {
+      "source": "ps-grp-core",
+      "target": "ps-scan-xlsx",
+      "type": "dependency"
+    },
+    {
+      "source": "ps-grp-core",
+      "target": "ps-canon-report-theme",
+      "type": "dependency"
+    },
+    {
+      "source": "ps-grp-core",
+      "target": "ps-canon-report-pdf",
+      "type": "dependency"
+    },
+    {
+      "source": "ps-grp-core",
+      "target": "ps-canon-report-excel",
+      "type": "dependency"
+    },
+    {
+      "source": "ps-grp-core",
+      "target": "ps-mac-vendor-file",
+      "type": "dependency"
+    },
+    {
       "source": "ps-root",
       "target": "ps-ad-file",
       "type": "dependency"
@@ -1255,6 +1452,11 @@
     {
       "source": "ps-grp-autotest",
       "target": "ps-autotest-csv",
+      "type": "dependency"
+    },
+    {
+      "source": "ps-grp-autotest",
+      "target": "ps-autotest-xlsx",
       "type": "dependency"
     },
     {
@@ -1365,6 +1567,46 @@
     {
       "source": "ps-grp-platform",
       "target": "ps-ala-mapping",
+      "type": "dependency"
+    },
+    {
+      "source": "ps-root",
+      "target": "ps-grp-inventory",
+      "type": "dependency"
+    },
+    {
+      "source": "ps-grp-inventory",
+      "target": "ps-inventory",
+      "type": "dependency"
+    },
+    {
+      "source": "ps-grp-inventory",
+      "target": "ps-inventory-routes",
+      "type": "dependency"
+    },
+    {
+      "source": "ps-grp-inventory",
+      "target": "ps-inventory-xlsx",
+      "type": "dependency"
+    },
+    {
+      "source": "ps-grp-inventory",
+      "target": "ps-inventory-pdf",
+      "type": "dependency"
+    },
+    {
+      "source": "ps-grp-inventory",
+      "target": "ps-inventory-csv",
+      "type": "dependency"
+    },
+    {
+      "source": "ps-grp-inventory",
+      "target": "ps-inventory-ui-js",
+      "type": "dependency"
+    },
+    {
+      "source": "ps-grp-inventory",
+      "target": "ps-inventory-ui-css",
       "type": "dependency"
     },
     {

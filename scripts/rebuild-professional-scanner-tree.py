@@ -59,6 +59,21 @@ FILE_NODES = [
     node("ps-vm-vlan-file", "ps-grp-core", "file", "vmVlanStrategy.js",
          "vmVlanStrategy.js",
          "Detecção de virtualização e mapeamento VLAN."),
+    node("ps-scan-xlsx", "ps-grp-core", "file", "scanReportXlsx.js",
+         "scanReportXlsx.js",
+         "Export Excel varredura, IPs ociosos e mapa ALA."),
+    node("ps-canon-report-theme", "ps-grp-core", "file", "canonReportTheme.js",
+         "canonReportTheme.js",
+         "Tema visual compartilhado (PDF/Excel Canon)."),
+    node("ps-canon-report-pdf", "ps-grp-core", "file", "canonReportPdf.js",
+         "canonReportPdf.js",
+         "Helpers PDF relatórios Canon."),
+    node("ps-canon-report-excel", "ps-grp-core", "file", "canonReportExcel.js",
+         "canonReportExcel.js",
+         "Helpers Excel relatórios Canon."),
+    node("ps-mac-vendor-file", "ps-grp-core", "file", "macVendor.js",
+         "macVendor.js",
+         "Base OUI → fabricante (scan + inventário)."),
 
     node("ps-ad-file", "ps-root", "file", "adUserAudit.js",
          "adUserAudit.js",
@@ -86,6 +101,9 @@ FILE_NODES = [
     node("ps-autotest-csv", "ps-grp-autotest", "file", "autoTestCsv.js",
          "autoTestCsv.js",
          "Export CSV dos passos AutoTest."),
+    node("ps-autotest-xlsx", "ps-grp-autotest", "file", "autoTestXlsx.js",
+         "autoTestXlsx.js",
+         "Export Excel AutoTest (tema Canon)."),
     node("ps-autotest-remote", "ps-grp-autotest", "file", "autoTestRemote.js",
          "autoTestRemote.js",
          "Fila de jobs e registro de agentes remotos.",
@@ -157,6 +175,33 @@ FILE_NODES = [
     node("ps-ala-mapping", "ps-grp-platform", "file", "alaMapping.js",
          "alaMapping.js",
          "Mapeamento ALA hospitalar."),
+
+    # ── Inventário UNESP ──
+    node("ps-grp-inventory", "ps-root", "module", "Inventário Corporativo UNESP",
+         "inventory.js",
+         "Inventário persistente: merge scan + AD + histórico + portas/MAC.",
+         ["inventory.js", "inventoryRoutes.js", "inventoryXlsx.js"]),
+    node("ps-inventory", "ps-grp-inventory", "file", "inventory.js",
+         "inventory.js",
+         "Core: merge incremental, enrich AD/MAC/portas, sync async."),
+    node("ps-inventory-routes", "ps-grp-inventory", "file", "inventoryRoutes.js",
+         "inventoryRoutes.js",
+         "API /api/inventory/* — sync, resolve AD, export."),
+    node("ps-inventory-xlsx", "ps-grp-inventory", "file", "inventoryXlsx.js",
+         "inventoryXlsx.js",
+         "Export Excel inventário UNESP."),
+    node("ps-inventory-pdf", "ps-grp-inventory", "file", "inventoryPdf.js",
+         "inventoryPdf.js",
+         "Export PDF inventário."),
+    node("ps-inventory-csv", "ps-grp-inventory", "file", "inventoryCsv.js",
+         "inventoryCsv.js",
+         "Export CSV inventário."),
+    node("ps-inventory-ui-js", "ps-grp-inventory", "file", "public/inventory.js",
+         "public/inventory.js",
+         "UI modal inventário: tabela, filtros, sync AD."),
+    node("ps-inventory-ui-css", "ps-grp-inventory", "file", "public/inventory.css",
+         "public/inventory.css",
+         "Estilos modal inventário UNESP."),
 
     # ── Auth ──
     node("ps-grp-auth", "ps-root", "module", "Autenticação Canon",
@@ -290,8 +335,8 @@ def main():
         for n in preserved:
             if n["id"] == "ps-root":
                 n["description"] = (
-                    "NetScan Canon v2 — árvore completa: backend, AD, loop, AutoTest, "
-                    "Oracle, Plataforma Canon, frontend, scripts e testes."
+                    "NetScan Canon v2.1 — árvore completa: backend, AD, loop, AutoTest, "
+                    "Inventário UNESP, Oracle, Plataforma Canon, frontend, scripts e testes."
                 )
             if n["id"] == "ps-client":
                 n["description"] = (
@@ -314,8 +359,8 @@ def main():
         project["nodes"] = list(by_id.values())
         project["stack"] = "Node.js + WebSocket + SNMP + AutoTest + Platform"
         project["summary"] = (
-            "NetScan Canon v2 — árvore completa com todo o código-fonte: "
-            "scan, AD, loop, AutoTest, Oracle, Plataforma, UI e scripts."
+            "NetScan Canon v2.1 — inventário UNESP, exports Canon, scan, AD, loop, "
+            "AutoTest, Oracle, Plataforma, UI e scripts."
         )
         project["demoUrl"] = (
             "https://github.com/CanonEngineer/Professional-Scanner/blob/main/docs/DOCUMENTATION.md"
