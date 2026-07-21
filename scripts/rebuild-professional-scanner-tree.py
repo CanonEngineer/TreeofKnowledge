@@ -216,10 +216,19 @@ FILE_NODES = [
     # ── Auth ──
     node("ps-grp-auth", "ps-root", "module", "Autenticação Canon",
          "canonAuth.js",
-         "Login sessão PBKDF2 e RBAC."),
+         "Login PBKDF2 com escopos dashboard (boot/memória) e modals (sessionStorage + disco).",
+         ["canonAuth.js", "canonRbac.js", "data/canon-sessions.json"]),
     node("ps-auth", "ps-grp-auth", "file", "canonAuth.js",
          "canonAuth.js",
-         "Autenticação, sessões, middleware requireAuth."),
+         "requireAuth(scope), login(username, password, scope), persistência só sessões modals."),
+    node("ps-auth-boot-ui", "ps-grp-auth", "function", "bootCanonApp()",
+         "public/app.js",
+         "Login boot obrigatório no F5; token dashboard só em memória; gate ociosos/exports.",
+         ["installCanonFetch()", "gateProtectedArea()", "canonBootToken"]),
+    node("ps-auth-modals-ui", "ps-grp-auth", "function", "gateCanonModalsArea()",
+         "public/app.js",
+         "Login modals compartilhado: Oracle, AD, Loop, AutoTest local, Inventário, Plataforma.",
+         ["canonModalToken", "sessionStorage", "openInventoryModalDirect"]),
     node("ps-rbac", "ps-grp-auth", "file", "canonRbac.js",
          "canonRbac.js",
          "RBAC Plataforma — permissões por role."),
@@ -230,7 +239,7 @@ FILE_NODES = [
          "Dashboard, modais, mapa 3D, plataforma."),
     node("ps-app-file", "ps-grp-public", "file", "public/app.js",
          "public/app.js",
-         "Cliente principal: WS, scan, AD, loop, AutoTest remoto AD, Oracle, vis-network lazy."),
+         "Cliente principal: WS, scan, auth dois níveis (boot + modals), AD, loop, AutoTest, Oracle."),
     node("ps-index-html", "ps-grp-public", "file", "public/index.html",
          "public/index.html",
          "HTML dashboard, modais sticky e branding Canon."),
@@ -345,8 +354,8 @@ def main():
         for n in preserved:
             if n["id"] == "ps-root":
                 n["description"] = (
-                    "NetScan Canon v2.3 — árvore completa: backend, AD, loop, AutoTest remoto AD, "
-                    "Inventário UNESP (SNMP MAC), Oracle, Plataforma Canon, UI branding, scripts e testes."
+                    "NetScan Canon v2.4 — auth em fases (#18 etapas 0–5): escopos dashboard/modals, "
+                    "backend, AD, loop, AutoTest remoto AD, Inventário UNESP, Oracle, Plataforma e UI."
                 )
             if n["id"] == "ps-client":
                 n["description"] = (
@@ -377,8 +386,8 @@ def main():
         project["nodes"] = list(by_id.values())
         project["stack"] = "Node.js + WebSocket + SNMP + AutoTest + Platform + AD Remote Auth"
         project["summary"] = (
-            "NetScan Canon v2.3 — AutoTest remoto AD, rate limit, loop modal sticky, branding Canon, "
-            "inventário UNESP SNMP MAC, scan, AD, Oracle, Plataforma e UI."
+            "NetScan Canon v2.4 — auth Canon em fases (dashboard boot + modals), AutoTest remoto AD, "
+            "rate limit, inventário UNESP SNMP MAC, scan, AD, Oracle, Plataforma e UI."
         )
         project["demoUrl"] = (
             "https://github.com/CanonEngineer/Professional-Scanner/blob/main/docs/DOCUMENTATION.md"
