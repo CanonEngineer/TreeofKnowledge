@@ -362,14 +362,23 @@ def main():
         for n in preserved:
             if n["id"] == "ps-root":
                 n["description"] = (
-                    "NetScan Canon v2.4.3 — lista persistente ativos de novo, auth modais só memória, "
-                    "subtítulos de login por módulo (Oracle, ADUC, Loop, AutoTest, Plataforma, Inventário), "
-                    "badge Conectado animado, scroll interno nos modais e fix PORT startup."
+                    "NetScan Canon v2.4.4 — inventário UNESP com status Ausente, conflitos por sub-rede, "
+                    "scroll horizontal da tabela, células expandíveis (portas/serviços) e política persistente."
                 )
             if n["id"] == "ps-client":
                 n["description"] = (
                     "Módulo UI public/app.js — painel IPs ativos de novo, chips auditoria ociosos, "
                     "subtítulos login Canon por modal, badge Conectado dinâmico e modais sticky."
+                )
+            if n["id"] == "ps-inventory":
+                n["description"] = (
+                    "inventory.js — status Ausente vs Offline, detectFlags por sub-rede/VLAN, "
+                    "hostname genérico ignorado, merge incremental persistente."
+                )
+            if n["id"] == "ps-inventory-ui-js":
+                n["description"] = (
+                    "public/inventory.js — stats Ausente, scroll horizontal, colunas compactas, "
+                    "wireExpandableInventoryCells para portas e serviços truncados."
                 )
             if n["id"] == "ps-host-history-file":
                 n["description"] = (
@@ -405,9 +414,9 @@ def main():
         project["nodes"] = list(by_id.values())
         project["stack"] = "Node.js + WebSocket + SNMP + AutoTest + Platform + AD Remote Auth"
         project["summary"] = (
-            "NetScan Canon v2.4.3 — ativos de novo persistentes, auth modais memória, "
-            "subtítulos login (Oracle/ADUC/Loop/AutoTest/Plataforma/Inventário), badge Conectado animado, "
-            "stillInactive global, auth etapa 6, backup host-history, AutoTest remoto AD e UI."
+            "NetScan Canon v2.4.4 — inventário Ausente/conflitos por sub-rede, scroll horizontal, "
+            "células expandíveis, ativos de novo persistentes, auth modais memória, auth etapa 6, "
+            "backup host-history e AutoTest remoto AD."
         )
         project["demoUrl"] = (
             "https://github.com/CanonEngineer/Professional-Scanner/blob/main/docs/DOCUMENTATION.md"
