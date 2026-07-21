@@ -362,13 +362,21 @@ def main():
         for n in preserved:
             if n["id"] == "ps-root":
                 n["description"] = (
-                    "NetScan Canon v2.4.4 — inventário UNESP com status Ausente, conflitos por sub-rede, "
-                    "scroll horizontal da tabela, células expandíveis (portas/serviços) e política persistente."
+                    "NetScan Canon v2.4.5 — auth etapa 7 WebSocket handshake, inventário Ausente/conflitos, "
+                    "ociosos ativos de novo, Oracle cruzamento AD, docs engenharia completas."
                 )
             if n["id"] == "ps-client":
                 n["description"] = (
-                    "Módulo UI public/app.js — painel IPs ativos de novo, chips auditoria ociosos, "
-                    "subtítulos login Canon por modal, badge Conectado dinâmico e modais sticky."
+                    "public/app.js — WS auth handshake, connectWebSocket pós-login boot, badge Conectado dinâmico, "
+                    "ociosos ativos de novo, modais Canon gated."
+                )
+            if n["id"] == "ps-server-file":
+                n["description"] = (
+                    "server.js — WebSocket auth etapa 7, scan engine, rotas REST, handshake dashboard 5s timeout."
+                )
+            if n["id"] == "ps-auth":
+                n["description"] = (
+                    "canonAuth.js — escopos dashboard/modals, sessões persistentes, #18 etapas 0-7 concluídas."
                 )
             if n["id"] == "ps-inventory":
                 n["description"] = (
@@ -414,9 +422,8 @@ def main():
         project["nodes"] = list(by_id.values())
         project["stack"] = "Node.js + WebSocket + SNMP + AutoTest + Platform + AD Remote Auth"
         project["summary"] = (
-            "NetScan Canon v2.4.4 — inventário Ausente/conflitos por sub-rede, scroll horizontal, "
-            "células expandíveis, ativos de novo persistentes, auth modais memória, auth etapa 6, "
-            "backup host-history e AutoTest remoto AD."
+            "NetScan Canon v2.4.5 — auth WebSocket etapa 7, inventário Ausente, ociosos ativos de novo, "
+            "Oracle×AD, docs v2.4.5, backup host-history e AutoTest remoto AD."
         )
         project["demoUrl"] = (
             "https://github.com/CanonEngineer/Professional-Scanner/blob/main/docs/DOCUMENTATION.md"
