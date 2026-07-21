@@ -362,13 +362,14 @@ def main():
         for n in preserved:
             if n["id"] == "ps-root":
                 n["description"] = (
-                    "NetScan Canon v2.4.1 — auth em fases (#18 etapas 0–6): escopos dashboard/modals, "
-                    "DELETE destrutivos protegidos, backup host-history, restore scripts, "
-                    "backend, AD, loop, AutoTest remoto AD, Inventário UNESP, Oracle, Plataforma e UI."
+                    "NetScan Canon v2.4.2 — auditoria ociosos: stillInactive global, chips interativos "
+                    "(faixas amarelo, histórico branco), CIDR sem quebra; auth #18 etapas 0–6, "
+                    "backup/restore host-history, backend, AD, loop, AutoTest, Oracle, Plataforma e UI."
                 )
             if n["id"] == "ps-client":
                 n["description"] = (
-                    "Módulo UI public/app.js — branding Canon animado, login remoto AD e modais sticky."
+                    "Módulo UI public/app.js — chips de auditoria ociosos, console formatIdleAuditLogLine, "
+                    "branding Canon animado, login remoto AD e modais sticky."
                 )
             if n["id"] == "ps-loop-modal":
                 n["description"] = (
@@ -395,8 +396,9 @@ def main():
         project["nodes"] = list(by_id.values())
         project["stack"] = "Node.js + WebSocket + SNMP + AutoTest + Platform + AD Remote Auth"
         project["summary"] = (
-            "NetScan Canon v2.4.1 — auth Canon etapa 6 (DELETE protegidos), backup host-history, "
-            "AutoTest remoto AD, rate limit, inventário UNESP SNMP MAC, scan, AD, Oracle, Plataforma e UI."
+            "NetScan Canon v2.4.2 — stillInactive global na auditoria ociosos, chips interativos, "
+            "auth Canon etapa 6 (DELETE protegidos), backup host-history, AutoTest remoto AD, "
+            "rate limit, inventário UNESP SNMP MAC, scan, AD, Oracle, Plataforma e UI."
         )
         project["demoUrl"] = (
             "https://github.com/CanonEngineer/Professional-Scanner/blob/main/docs/DOCUMENTATION.md"
