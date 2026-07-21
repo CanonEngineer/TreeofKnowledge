@@ -66,7 +66,7 @@
       "color": "#3b82f6",
       "size": 2.2,
       "file": "server.js",
-      "description": "NetScan Canon v2.4.2 — auditoria ociosos: stillInactive global, chips interativos (faixas amarelo, histórico branco), CIDR sem quebra; auth #18 etapas 0–6, backup/restore host-history, backend, AD, loop, AutoTest, Oracle, Plataforma e UI."
+      "description": "NetScan Canon v2.4.3 — lista persistente ativos de novo, auth modais só memória, subtítulos de login por módulo (Oracle, ADUC, Loop, AutoTest, Plataforma, Inventário), badge Conectado animado, scroll interno nos modais e fix PORT startup."
     },
     {
       "id": "ps-static",
@@ -330,7 +330,7 @@
       "color": "#eab308",
       "size": 1.35,
       "file": "public/app.js",
-      "description": "Módulo UI public/app.js — chips de auditoria ociosos, console formatIdleAuditLogLine, branding Canon animado, login remoto AD e modais sticky."
+      "description": "Módulo UI public/app.js — painel IPs ativos de novo, chips auditoria ociosos, subtítulos login Canon por modal, badge Conectado dinâmico e modais sticky."
     },
     {
       "id": "ps-handle-msg",
