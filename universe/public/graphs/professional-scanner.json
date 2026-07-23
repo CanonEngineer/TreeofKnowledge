@@ -4,7 +4,7 @@
   "repoUrl": "https://github.com/CanonEngineer/Professional-Scanner",
   "color": "#06b6d4",
   "demoUrl": "https://github.com/CanonEngineer/Professional-Scanner/blob/main/docs/DOCUMENTATION.md",
-  "nodeCount": 105,
+  "nodeCount": 106,
   "categories": {
     "core": {
       "label": "Backend",
@@ -66,7 +66,7 @@
       "color": "#3b82f6",
       "size": 2.2,
       "file": "server.js",
-      "description": "NetScan Canon v2.4.5 — auth etapa 7 WebSocket handshake, inventário Ausente/conflitos, ociosos ativos de novo, Oracle cruzamento AD, docs engenharia completas."
+      "description": "NetScan Canon v2.4.6 — design system UI (paginação, modais, tema claro/escuro), inventário renomeado, auth WebSocket etapa 7, inventário Ausente/conflitos."
     },
     {
       "id": "ps-static",
@@ -330,7 +330,7 @@
       "color": "#eab308",
       "size": 1.35,
       "file": "public/app.js",
-      "description": "public/app.js — WS auth handshake, connectWebSocket pós-login boot, badge Conectado dinâmico, ociosos ativos de novo, modais Canon gated."
+      "description": "public/app.js — paginação resultados/ociosos/ala, toggle tema claro/escuro, WS auth handshake, modais Canon gated."
     },
     {
       "id": "ps-handle-msg",
@@ -1110,7 +1110,19 @@
       "color": "#eab308",
       "size": 0.85,
       "file": "public/style.css",
-      "description": "Tema Canon, modais padronizados, branding animado, loop modal sticky."
+      "description": "Tema Canon base, modais padronizados, branding animado."
+    },
+    {
+      "id": "ps-design-system-css",
+      "label": "public/canon-design-system.css",
+      "parent": "ps-grp-public",
+      "layer": "file",
+      "category": "frontend",
+      "categoryLabel": "Frontend",
+      "color": "#eab308",
+      "size": 0.85,
+      "file": "public/canon-design-system.css",
+      "description": "Design system Fases 1–3: tokens, paginação, modais enterprise, toggle claro/escuro, tabelas sticky."
     },
     {
       "id": "ps-platform-js",
@@ -1751,6 +1763,11 @@
     {
       "source": "ps-grp-public",
       "target": "ps-style-css",
+      "type": "dependency"
+    },
+    {
+      "source": "ps-grp-public",
+      "target": "ps-design-system-css",
       "type": "dependency"
     },
     {

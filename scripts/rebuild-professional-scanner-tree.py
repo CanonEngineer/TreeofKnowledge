@@ -245,7 +245,10 @@ FILE_NODES = [
          "HTML dashboard, modais sticky e branding Canon."),
     node("ps-style-css", "ps-grp-public", "file", "public/style.css",
          "public/style.css",
-         "Tema Canon, modais padronizados, branding animado, loop modal sticky."),
+         "Tema Canon base, modais padronizados, branding animado."),
+    node("ps-design-system-css", "ps-grp-public", "file", "public/canon-design-system.css",
+         "public/canon-design-system.css",
+         "Design system Fases 1–3: tokens, paginação, modais enterprise, toggle claro/escuro, tabelas sticky."),
     node("ps-platform-js", "ps-grp-public", "file", "public/platform.js",
          "public/platform.js",
          "UI Plataforma Canon — abas Drift, NAC, CMDB…"),
@@ -362,13 +365,13 @@ def main():
         for n in preserved:
             if n["id"] == "ps-root":
                 n["description"] = (
-                    "NetScan Canon v2.4.5 — auth etapa 7 WebSocket handshake, inventário Ausente/conflitos, "
-                    "ociosos ativos de novo, Oracle cruzamento AD, docs engenharia completas."
+                    "NetScan Canon v2.4.6 — design system UI (paginação, modais, tema claro/escuro), "
+                    "inventário renomeado, auth WebSocket etapa 7, inventário Ausente/conflitos."
                 )
             if n["id"] == "ps-client":
                 n["description"] = (
-                    "public/app.js — WS auth handshake, connectWebSocket pós-login boot, badge Conectado dinâmico, "
-                    "ociosos ativos de novo, modais Canon gated."
+                    "public/app.js — paginação resultados/ociosos/ala, toggle tema claro/escuro, "
+                    "WS auth handshake, modais Canon gated."
                 )
             if n["id"] == "ps-server-file":
                 n["description"] = (
@@ -385,7 +388,7 @@ def main():
                 )
             if n["id"] == "ps-inventory-ui-js":
                 n["description"] = (
-                    "public/inventory.js — stats Ausente, scroll horizontal, colunas compactas, "
+                    "public/inventory.js — paginação server-side, stats Ausente, scroll horizontal, "
                     "wireExpandableInventoryCells para portas e serviços truncados."
                 )
             if n["id"] == "ps-host-history-file":
@@ -422,8 +425,8 @@ def main():
         project["nodes"] = list(by_id.values())
         project["stack"] = "Node.js + WebSocket + SNMP + AutoTest + Platform + AD Remote Auth"
         project["summary"] = (
-            "NetScan Canon v2.4.5 — auth WebSocket etapa 7, inventário Ausente, ociosos ativos de novo, "
-            "Oracle×AD, docs v2.4.5, backup host-history e AutoTest remoto AD."
+            "NetScan Canon v2.4.6 — design system UI (Fases 1–3), paginação tabelas, modais enterprise, "
+            "tema claro/escuro, auth WebSocket, inventário Ausente e ociosos ativos de novo."
         )
         project["demoUrl"] = (
             "https://github.com/CanonEngineer/Professional-Scanner/blob/main/docs/DOCUMENTATION.md"
