@@ -14,6 +14,7 @@ EXTRA_FILE = os.path.join(ROOT, "scripts", "extra-projects.json")
 DANGERZONE_FILE = os.path.join(ROOT, "scripts", "dangerzone-project.json")
 SMARTHOME_FILE = os.path.join(ROOT, "scripts", "smarthome-project.json")
 SMARTFERRARI_FILE = os.path.join(ROOT, "scripts", "smartferrari-project.json")
+SENTINELAI_FILE = os.path.join(ROOT, "scripts", "sentinelai-project.json")
 OUT_DIR = os.path.join(ROOT, "universe", "public", "graphs")
 
 CATEGORIES = {
@@ -61,7 +62,11 @@ def load_all_projects():
     if os.path.isfile(SMARTFERRARI_FILE):
         with open(SMARTFERRARI_FILE, encoding="utf-8") as f:
             smartferrari = [json.load(f)]
-    return [cpe] + others[:1] + [dropbox, restaurant] + others[1:] + [veyon] + extras + dangerzone + smarthome + smartferrari
+    sentinelai = []
+    if os.path.isfile(SENTINELAI_FILE):
+        with open(SENTINELAI_FILE, encoding="utf-8") as f:
+            sentinelai = [json.load(f)]
+    return [cpe] + others[:1] + [dropbox, restaurant] + others[1:] + [veyon] + extras + dangerzone + smarthome + smartferrari + sentinelai
 
 
 def category_for_professional_scanner(node):

@@ -6,8 +6,8 @@
 
 ### Heart of Programming — interactive map of all CanonEngineer code
 
-<img src="https://img.shields.io/badge/Projetos-25-38bdf8?style=for-the-badge" alt="25 projetos"/>
-<img src="https://img.shields.io/badge/Nós-217-fbbf24?style=for-the-badge" alt="217 nós"/>
+<img src="https://img.shields.io/badge/Projetos-28-38bdf8?style=for-the-badge" alt="28 projetos"/>
+<img src="https://img.shields.io/badge/Nós-821-fbbf24?style=for-the-badge" alt="821 nós"/>
 <img src="https://img.shields.io/badge/GitHub_Pages-Ativo-22c55e?style=for-the-badge&logo=githubpages&logoColor=white" alt="GitHub Pages"/>
 <img src="https://img.shields.io/badge/Stack-Python_·_Django_·_Node_·_Qt-a78bfa?style=for-the-badge" alt="Stack"/>
 
@@ -132,6 +132,7 @@ A **Árvore do Conhecimento** é o hub central de todos os projetos do **CanonEn
 | 23 | **HyperwareProject** | HTML + CSS + JS + PHP | 10 | [HyperwareProject](https://github.com/CanonEngineer/HyperwareProject) |
 | 24 | **PHPDaoProject** | PHP DAO | 6 | [PHPDaoProject](https://github.com/CanonEngineer/PHPDaoProject) |
 | 25 | **DangerZone** | Python · Cybersecurity Labs | 133 | [DangerZone](https://github.com/CanonEngineer/DangerZone) |
+| 26 | **SentinelAI** | FastAPI + React + Nmap + SNMP | 25 | [SentinelAI](https://github.com/CanonEngineer/SentinelAI) |
 
 ---
 
