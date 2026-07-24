@@ -1,9 +1,13 @@
 #!/usr/bin/env python3
-"""Gera scripts/sentinelai-project.json — SentinelAI NMS (árvore expandida ~120 nós)."""
+"""Gera scripts/sentinelai-project.json com TODOS os arquivos de código do SentinelAI.
+
+Árvore 2D + Galaxy 3D — cobertura completa do repositório (não curadoria parcial).
+"""
 from __future__ import annotations
 
 import json
 import os
+import re
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent
@@ -14,6 +18,58 @@ CANDIDATES = [
     Path(__file__).resolve().parent.parent.parent / "SentinelAI",
 ]
 
+SKIP_DIRS = {
+    ".git",
+    "node_modules",
+    "__pycache__",
+    ".venv",
+    "venv",
+    "dist",
+    "build",
+    "backups",
+    ".cursor",
+    "reports",
+    ".pytest_cache",
+    ".mypy_cache",
+    "htmlcov",
+    ".eggs",
+    "coverage",
+}
+
+SKIP_FILES = {
+    "package-lock.json",
+    "celerybeat-schedule",
+    ".DS_Store",
+    "Thumbs.db",
+}
+
+SKIP_NAME_PREFIXES = ("tmp_", ".")
+
+CODE_EXTS = {
+    ".py",
+    ".ts",
+    ".tsx",
+    ".js",
+    ".jsx",
+    ".css",
+    ".ps1",
+    ".yml",
+    ".yaml",
+    ".md",
+    ".json",
+    ".toml",
+    ".ini",
+    ".bat",
+    ".sh",
+    ".sql",
+    ".html",
+    ".vue",
+    ".dockerfile",
+}
+
+MAX_FILE_BYTES = 1_500_000
+CODE_LIMIT = 7000
+
 
 def find_repo() -> Path | None:
     for p in CANDIDATES:
@@ -22,1215 +78,174 @@ def find_repo() -> Path | None:
     return None
 
 
-def read_file(repo: Path | None, rel: str, fallback: str = "", limit: int = 12000) -> str:
-    if repo is None:
-        return fallback.strip()
+def path_id(rel: str, *, is_dir: bool = False) -> str:
+    """ID estável a partir do caminho relativo."""
+    s = rel.replace("\\", "/").strip("/")
+    if not s:
+        return "sai-root"
+    s = re.sub(r"[^a-zA-Z0-9]+", "-", s).strip("-").lower()
+    prefix = "sai-dir-" if is_dir else "sai-file-"
+    return (prefix + s)[:120]
+
+
+def read_code(repo: Path, rel: str, limit: int = CODE_LIMIT) -> str:
     path = repo / rel.replace("/", os.sep)
     if not path.is_file():
-        return fallback.strip() or f"# Arquivo não encontrado: {rel}\n"
+        return f"# Arquivo não encontrado: {rel}\n"
     try:
-        text = path.read_text(encoding="utf-8", errors="replace")
-    except OSError:
-        return fallback.strip() or f"# Erro ao ler: {rel}\n"
+        raw = path.read_bytes()
+    except OSError as exc:
+        return f"# Erro ao ler {rel}: {exc}\n"
+    if len(raw) > MAX_FILE_BYTES:
+        return f"# Arquivo grande demais para embutir na árvore ({len(raw)} bytes): {rel}\n"
+    try:
+        text = raw.decode("utf-8")
+    except UnicodeDecodeError:
+        text = raw.decode("utf-8", errors="replace")
     if len(text) > limit:
-        text = text[:limit] + "\n\n/* … truncado na árvore … */\n"
+        text = text[:limit] + "\n\n/* … truncado na árvore (arquivo completo no GitHub) … */\n"
     return text
 
 
-def n(nid, parent, layer, title, desc, file, code, impl):
-    return {
-        "id": nid,
-        "parent": parent,
-        "layer": layer,
-        "title": title,
-        "description": desc,
-        "file": file,
-        "code": code.strip() if isinstance(code, str) else code,
-        "implementation": impl if isinstance(impl, list) else [impl],
-    }
+def collect_files(repo: Path) -> list[Path]:
+    files: list[Path] = []
+    for p in repo.rglob("*"):
+        if not p.is_file():
+            continue
+        rel_parts = p.relative_to(repo).parts
+        if any(part in SKIP_DIRS for part in rel_parts):
+            continue
+        if p.name in SKIP_FILES:
+            continue
+        if p.name.startswith(SKIP_NAME_PREFIXES) and p.name not in {".env.example", ".gitignore", ".cursorignore", ".nojekyll"}:
+            # allow listed dotfiles that are project config
+            if not p.name.startswith(".env") and p.name not in {".gitignore", ".cursorignore", ".dockerignore"}:
+                if p.name.startswith("."):
+                    # still skip most dotfiles except allowlist
+                    if p.name not in {".gitignore", ".cursorignore", ".dockerignore", ".env.example"}:
+                        continue
+        if p.name.startswith("tmp_"):
+            continue
+        suf = p.suffix.lower()
+        if p.name.lower() == "dockerfile":
+            suf = ".dockerfile"
+        if suf not in CODE_EXTS and p.name not in {".gitignore", ".cursorignore", ".dockerignore", ".env.example"}:
+            continue
+        try:
+            if p.stat().st_size > MAX_FILE_BYTES:
+                continue
+        except OSError:
+            continue
+        files.append(p)
+    return sorted(files, key=lambda x: x.as_posix().lower())
 
 
-# (id, parent, layer, title, description, file, [implementation bullets])
-SPEC: list[tuple] = [
-    # ── Root ──
-    (
-        "sai-root",
-        None,
-        "root",
-        "SentinelAI",
-        "Plataforma NMS full-stack: discovery, Zion, topologia 2D/3D, WMI/SNMP, alertas e estabilização.",
-        "README.md",
-        [
-            "Repo: https://github.com/CanonEngineer/SentinelAI",
-            "docker compose up → http://localhost:5173",
-            "API docs: http://localhost:8000/docs",
-        ],
-    ),
-    (
-        "sai-arch",
-        "sai-root",
-        "module",
-        "Arquitetura & Compose",
-        "Stack Docker: API, frontend, workers, Postgres, Redis.",
-        "docker-compose.yml",
-        ["api :8000", "frontend :5173", "discovery-worker", "postgres + redis"],
-    ),
-    (
-        "sai-main",
-        "sai-arch",
-        "file",
-        "main.py",
-        "Bootstrap FastAPI, CORS, schema ensure, admin seed.",
-        "backend/app/main.py",
-        ["lifespan", "ensure_schema", "api_router"],
-    ),
-    (
-        "sai-config",
-        "sai-arch",
-        "file",
-        "config.py",
-        "Settings pydantic: SNMP, WMI, alertas, feature flags.",
-        "backend/app/config.py",
-        ["wmi_*", "snmp_communities", "ALERT_CHANNELS_ENABLED"],
-    ),
-    (
-        "sai-models",
-        "sai-arch",
-        "file",
-        "models/__init__.py",
-        "ORM SQLAlchemy: Device, Monitor, Metric, ZionMonitorPanel…",
-        "backend/app/models/__init__.py",
-        ["Device", "DiscoveryJob", "ZionMonitorPanel", "card_exclusions"],
-    ),
-    (
-        "sai-celery",
-        "sai-arch",
-        "file",
-        "celery_app.py",
-        "Broker Redis, filas celery/discovery, beat schedule.",
-        "backend/app/workers/celery_app.py",
-        ["beat monitors", "snmp poll", "zion refresh"],
-    ),
+def build(repo: Path) -> dict:
+    files = collect_files(repo)
+    nodes: list[dict] = []
+    seen_ids: set[str] = set()
+    dir_ids: dict[str, str] = {"": "sai-root"}
 
-    # ── Discovery ──
-    (
-        "sai-discovery",
-        "sai-root",
-        "module",
-        "Discovery Engine",
-        "Scan de sub-rede Nmap/ICMP + inventário ativo/inativo.",
-        "backend/app/api/routes/discovery.py",
-        ["POST /api/discovery", "scan-defaults", "stop job"],
-    ),
-    (
-        "sai-discovery-task",
-        "sai-discovery",
-        "file",
-        "discovery_tasks.py",
-        "Worker Celery do job de discovery e poll SNMP/Zion.",
-        "backend/app/workers/discovery_tasks.py",
-        ["run_discovery_job", "run_snmp_poll", "refresh_zion_panel_metrics"],
-    ),
-    (
-        "sai-nmap",
-        "sai-discovery",
-        "file",
-        "nmap_scanner.py",
-        "Scan SYN/connect, UDP, scripts e timing.",
-        "backend/app/engines/discovery/nmap_scanner.py",
-        ["scan_subnet_nmap", "ResolvedScanOptions"],
-    ),
-    (
-        "sai-scan-options",
-        "sai-discovery",
-        "file",
-        "scan_options.py",
-        "Perfis quick → aggressive e opções custom.",
-        "backend/app/engines/discovery/scan_options.py",
-        ["inventory_full_subnet", "ping_verify"],
-    ),
-    (
-        "sai-subnet",
-        "sai-discovery",
-        "file",
-        "subnet_scanner.py",
-        "ICMP ping em batches (fallback sem nmap).",
-        "backend/app/engines/discovery/subnet_scanner.py",
-        ["ping_hosts", "scan_subnet"],
-    ),
-    (
-        "sai-snmp",
-        "sai-discovery",
-        "file",
-        "snmp_collector.py",
-        "sysName, CPU, mem, disco, temp, interfaces SNMP.",
-        "backend/app/engines/discovery/snmp_collector.py",
-        ["collect_snmp_info", "UPS-MIB", "hrStorage"],
-    ),
-    (
-        "sai-wmi",
-        "sai-discovery",
-        "file",
-        "wmi_collector.py",
-        "Windows via Impacket: hostname, vendor, CPU/RAM/disco/temp.",
-        "backend/app/engines/discovery/wmi_collector.py",
-        ["collect_wmi_info", "MSAcpi thermal", "porta 135"],
-    ),
-    (
-        "sai-ssh-collector",
-        "sai-discovery",
-        "file",
-        "ssh_collector.py",
-        "Coleta Linux via SSH (hostname, OS, uptime).",
-        "backend/app/engines/discovery/ssh_collector.py",
-        ["collect_ssh_info", "toggle use_ssh"],
-    ),
-    (
-        "sai-software",
-        "sai-discovery",
-        "file",
-        "software_collector.py",
-        "Inventário de software (SNMP hrSW + WMI).",
-        "backend/app/engines/discovery/software_collector.py",
-        ["SNMP hrSWInstalled", "WMI Win32_Product"],
-    ),
-    (
-        "sai-dns",
-        "sai-discovery",
-        "file",
-        "dns_resolver.py",
-        "Resolução reversa de hostname.",
-        "backend/app/engines/discovery/dns_resolver.py",
-        ["reverse DNS"],
-    ),
-    (
-        "sai-oui",
-        "sai-discovery",
-        "file",
-        "oui.py",
-        "Vendor pelo MAC (OUI).",
-        "backend/app/engines/discovery/oui.py",
-        ["lookup_vendor"],
-    ),
-    (
-        "sai-progress",
-        "sai-discovery",
-        "file",
-        "discovery_progress.py",
-        "Progresso do scan em tempo real.",
-        "backend/app/engines/discovery/discovery_progress.py",
-        ["ativos/inativos", "publish progress"],
-    ),
-    (
-        "sai-inventory",
-        "sai-discovery",
-        "file",
-        "inventory_service.py",
-        "Upsert ativos/inativos, histórico de campos.",
-        "backend/app/services/inventory_service.py",
-        ["process_discovery_results", "apply_field_update_sync"],
-    ),
-    (
-        "sai-discovery-svc",
-        "sai-discovery",
-        "file",
-        "discovery_service.py",
-        "Ciclo de IDs de job e cancelamento.",
-        "backend/app/services/discovery_service.py",
-        ["stop_discovery_job", "cycle job ids"],
-    ),
+    readme = repo / "README.md"
+    readme_code = read_code(repo, "README.md", limit=12000) if readme.is_file() else "# SentinelAI\n"
+    nodes.append(
+        {
+            "id": "sai-root",
+            "parent": None,
+            "layer": "root",
+            "title": "SentinelAI",
+            "description": (
+                f"Árvore completa do repositório — {len(files)} arquivos de código mapeados "
+                "(backend, frontend, mobile, docs, scripts, deploy)."
+            ),
+            "file": "README.md",
+            "code": readme_code,
+            "implementation": [
+                "Repo: https://github.com/CanonEngineer/SentinelAI",
+                f"Arquivos na árvore: {len(files)}",
+                "2D + Galaxy 3D — cobertura total do código-fonte",
+                "docker compose up → http://localhost:5173",
+            ],
+        }
+    )
+    seen_ids.add("sai-root")
 
-    # ── Devices / Monitors ──
-    (
-        "sai-devices",
-        "sai-root",
-        "module",
-        "Devices & Monitors",
-        "CRUD devices, enrich, métricas, monitores ping/HTTP/SNMP.",
-        "backend/app/api/routes/devices.py",
-        ["limit 2500", "on_map", "enrich", "hardware/software"],
-    ),
-    (
-        "sai-devices-svc",
-        "sai-devices",
-        "file",
-        "device_service.py",
-        "Criação com monitor ping e helpers.",
-        "backend/app/services/device_service.py",
-        ["create_device_with_monitor"],
-    ),
-    (
-        "sai-hardware",
-        "sai-devices",
-        "file",
-        "hardware_service.py",
-        "Snapshot de hardware (serial, ports, SNMP).",
-        "backend/app/services/hardware_service.py",
-        ["GET hardware"],
-    ),
-    (
-        "sai-monitors-api",
-        "sai-devices",
-        "file",
-        "monitors.py",
-        "API de monitores por device.",
-        "backend/app/api/routes/monitors.py",
-        ["CRUD monitors", "SLA"],
-    ),
-    (
-        "sai-monitor-svc",
-        "sai-devices",
-        "file",
-        "monitor_service.py",
-        "Execução de checks e persistência de métricas.",
-        "backend/app/services/monitor_service.py",
-        ["run_monitor", "Metric"],
-    ),
-    (
-        "sai-ping",
-        "sai-devices",
-        "file",
-        "ping.py",
-        "Check ICMP de disponibilidade.",
-        "backend/app/engines/monitor/ping.py",
-        ["latency", "packet_loss"],
-    ),
-    (
-        "sai-http-check",
-        "sai-devices",
-        "file",
-        "http_check.py",
-        "Probe HTTP/HTTPS.",
-        "backend/app/engines/monitor/http_check.py",
-        ["status_code", "latency"],
-    ),
-    (
-        "sai-tcp-check",
-        "sai-devices",
-        "file",
-        "tcp_check.py",
-        "Probe TCP de porta.",
-        "backend/app/engines/monitor/tcp_check.py",
-        ["connect timeout"],
-    ),
-    (
-        "sai-protocol-probes",
-        "sai-devices",
-        "file",
-        "protocol_probes.py",
-        "Probes leves de portas/serviços.",
-        "backend/app/engines/monitor/protocol_probes.py",
-        ["RDP", "SMB", "WinRM"],
-    ),
-    (
-        "sai-events-api",
-        "sai-devices",
-        "file",
-        "events.py",
-        "Timeline de eventos (DEVICE_DISCOVERED…).",
-        "backend/app/api/routes/events.py",
-        ["GET /api/events", "limit"],
-    ),
-    (
-        "sai-stream",
-        "sai-devices",
-        "file",
-        "stream.py",
-        "SSE de monitoramento ao vivo.",
-        "backend/app/api/routes/stream.py",
-        ["/api/stream/monitoring"],
-    ),
-    (
-        "sai-realtime",
-        "sai-devices",
-        "file",
-        "realtime_events.py",
-        "Event bus (in-memory; Fase 1 → Redis).",
-        "backend/app/services/realtime_events.py",
-        ["publish", "subscribe", "history"],
-    ),
-    (
-        "sai-ad-identity",
-        "sai-devices",
-        "file",
-        "ad_identity_service.py",
-        "Enrich AD (user/computer OU, department).",
-        "backend/app/services/ad_identity_service.py",
-        ["lookup_ad_user", "lookup_ad_computer"],
-    ),
+    # Diretórios que contêm arquivos
+    dirs_needed: set[str] = set()
+    for f in files:
+        rel = f.relative_to(repo).as_posix()
+        parent = str(Path(rel).parent).replace("\\", "/")
+        if parent == ".":
+            parent = ""
+        # all ancestors
+        parts = parent.split("/") if parent else []
+        acc = []
+        for part in parts:
+            acc.append(part)
+            dirs_needed.add("/".join(acc))
 
-    # ── Topology ──
-    (
-        "sai-topology",
-        "sai-root",
-        "module",
-        "Topology Map",
-        "Grafo LLDP/CDP, layout, export PDF/VSDX, tráfego.",
-        "backend/app/api/routes/topology.py",
-        ["graph", "layout", "export", "traffic"],
-    ),
-    (
-        "sai-topology-svc",
-        "sai-topology",
-        "file",
-        "topology_service.py",
-        "Montagem do grafo e grupos do mapa.",
-        "backend/app/services/topology_service.py",
-        ["build_topology_graph", "groups"],
-    ),
-    (
-        "sai-neighbor",
-        "sai-topology",
-        "file",
-        "neighbor_collector.py",
-        "Vizinhos LLDP/CDP via SNMP.",
-        "backend/app/engines/topology/neighbor_collector.py",
-        ["discover_neighbors"],
-    ),
-    (
-        "sai-traffic",
-        "sai-topology",
-        "file",
-        "traffic_service.py",
-        "bps in/out e utilização de links.",
-        "backend/app/services/traffic_service.py",
-        ["sync_link_traffic", "ifOctets"],
-    ),
-    (
-        "sai-topo-pdf",
-        "sai-topology",
-        "file",
-        "topology_pdf.py",
-        "Export PDF do mapa.",
-        "backend/app/engines/reporting/topology_pdf.py",
-        ["reportlab"],
-    ),
-    (
-        "sai-topo-vsdx",
-        "sai-topology",
-        "file",
-        "topology_vsdx.py",
-        "Export Visio (.vsdx).",
-        "backend/app/engines/reporting/topology_vsdx.py",
-        ["VSDX zip"],
-    ),
-    (
-        "sai-ws",
-        "sai-topology",
-        "file",
-        "ws.py",
-        "WebSocket colaboração no mapa.",
-        "backend/app/api/routes/ws.py",
-        ["/ws/map", "presence"],
-    ),
-    (
-        "sai-topology-tasks",
-        "sai-topology",
-        "file",
-        "topology_tasks.py",
-        "Jobs Celery de topologia/auto-layout.",
-        "backend/app/workers/topology_tasks.py",
-        ["scheduled topology"],
-    ),
+    # Criar módulos de diretório (profundidade crescente)
+    for drel in sorted(dirs_needed, key=lambda s: (s.count("/"), s.lower())):
+        did = path_id(drel, is_dir=True)
+        parent_path = str(Path(drel).parent).replace("\\", "/")
+        if parent_path == ".":
+            parent_path = ""
+        parent_id = dir_ids.get(parent_path, "sai-root")
+        # evitar colisão
+        base = did
+        n = 2
+        while did in seen_ids:
+            did = f"{base}-{n}"
+            n += 1
+        dir_ids[drel] = did
+        seen_ids.add(did)
+        title = Path(drel).name
+        nodes.append(
+            {
+                "id": did,
+                "parent": parent_id,
+                "layer": "module",
+                "title": f"{title}/",
+                "description": f"Pacote/pasta `{drel}/` do SentinelAI.",
+                "file": drel + "/",
+                "code": f"# Diretório: {drel}/\n# Contém arquivos e subpastas do projeto.\n",
+                "implementation": [f"path: {drel}/", "nó de agrupamento na árvore"],
+            }
+        )
 
-    # ── Alerts ──
-    (
-        "sai-alerts",
-        "sai-root",
-        "module",
-        "Alert Engine",
-        "Multicanal: email, Telegram, Slack, Discord, Teams, webhook, SMS, push.",
-        "backend/app/engines/alerts/channels.py",
-        ["dispatch", "enabled channels"],
-    ),
-    (
-        "sai-alerts-api",
-        "sai-alerts",
-        "file",
-        "alerts.py",
-        "API de alertas e config.",
-        "backend/app/api/routes/alerts.py",
-        ["list alerts", "config"],
-    ),
-    (
-        "sai-alert-rules",
-        "sai-alerts",
-        "file",
-        "alert_rules.py",
-        "Regras de alerta (CRUD).",
-        "backend/app/api/routes/alert_rules.py",
-        ["rules → channels"],
-    ),
-    (
-        "sai-alert-email",
-        "sai-alerts",
-        "file",
-        "email.py",
-        "Envio SMTP.",
-        "backend/app/engines/alerts/email.py",
-        ["SMTP_HOST"],
-    ),
-    (
-        "sai-alert-sms",
-        "sai-alerts",
-        "file",
-        "sms.py",
-        "SMS via Twilio.",
-        "backend/app/engines/alerts/sms.py",
-        ["Twilio REST"],
-    ),
-    (
-        "sai-alert-push",
-        "sai-alerts",
-        "file",
-        "push.py",
-        "Push Expo mobile.",
-        "backend/app/engines/alerts/push.py",
-        ["Expo push"],
-    ),
-    (
-        "sai-rule-engine",
-        "sai-alerts",
-        "file",
-        "rule_engine.py",
-        "Avaliação de regras e severidade.",
-        "backend/app/engines/alerts/rule_engine.py",
-        ["thresholds", "suppress"],
-    ),
-    (
-        "sai-alert-svc",
-        "sai-alerts",
-        "file",
-        "alert_service.py",
-        "Orquestra criação/envio de alertas.",
-        "backend/app/services/alert_service.py",
-        ["create_alert", "notify"],
-    ),
-
-    # ── Zion ──
-    (
-        "sai-zion",
-        "sai-root",
-        "module",
-        "Zion Hub",
-        "Painéis operacionais por IP/métrica com cards dinâmicos.",
-        "frontend/src/pages/ZionPage.tsx",
-        ["criar painel", "add métrica", "delete card", "toast 30s"],
-    ),
-    (
-        "sai-zion-api",
-        "sai-zion",
-        "file",
-        "zion.py",
-        "REST dos painéis Zion.",
-        "backend/app/api/routes/zion.py",
-        ["CRUD", "DELETE card", "metrics"],
-    ),
-    (
-        "sai-zion-panels",
-        "sai-zion",
-        "file",
-        "zion_panels.py",
-        "Coleta SNMP/WMI/ports, exclusions, serialize cards.",
-        "backend/app/services/zion_panels.py",
-        ["refresh_device_sensor_metrics", "remove_card_from_panel"],
-    ),
-    (
-        "sai-zion-svc",
-        "sai-zion",
-        "file",
-        "zion_service.py",
-        "Overview, inventário corporativo, templates, capabilities.",
-        "backend/app/services/zion_service.py",
-        ["overview", "templates", "inventory"],
-    ),
-    (
-        "sai-zion-schema",
-        "sai-zion",
-        "file",
-        "zion.py (schemas)",
-        "Pydantic dos painéis e cards.",
-        "backend/app/schemas/zion.py",
-        ["ZionPanelResponse", "categories"],
-    ),
-
-    # ── AI / Copilot / Chatbot ──
-    (
-        "sai-ai",
-        "sai-root",
-        "module",
-        "AI & Copilot",
-        "NOC Copilot, chatbot de produto, anomalias, visão.",
-        "backend/app/engines/ai/noc_copilot.py",
-        ["LLM", "RAG produto"],
-    ),
-    (
-        "sai-copilot-api",
-        "sai-ai",
-        "file",
-        "copilot.py",
-        "API do NOC Copilot.",
-        "backend/app/api/routes/copilot.py",
-        ["chat"],
-    ),
-    (
-        "sai-llm",
-        "sai-ai",
-        "file",
-        "llm_client.py",
-        "Cliente LLM (OpenAI-compatible).",
-        "backend/app/engines/ai/llm_client.py",
-        ["chat completion"],
-    ),
-    (
-        "sai-chatbot",
-        "sai-ai",
-        "file",
-        "chatbot_service.py",
-        "Assistente do produto SentinelAI.",
-        "backend/app/engines/ai/chatbot_service.py",
-        ["product Q&A"],
-    ),
-    (
-        "sai-chatbot-api",
-        "sai-ai",
-        "file",
-        "chatbot.py",
-        "Rotas do chatbot.",
-        "backend/app/api/routes/chatbot.py",
-        ["/api/chatbot"],
-    ),
-    (
-        "sai-product-knowledge",
-        "sai-ai",
-        "file",
-        "product_knowledge.py",
-        "Base de conhecimento do produto.",
-        "backend/app/engines/ai/product_knowledge.py",
-        ["features", "how-to"],
-    ),
-    (
-        "sai-anomaly",
-        "sai-ai",
-        "file",
-        "anomaly_detector.py",
-        "Detecção de anomalias em métricas.",
-        "backend/app/engines/ai/anomaly_detector.py",
-        ["z-score / baseline"],
-    ),
-    (
-        "sai-vision",
-        "sai-ai",
-        "file",
-        "vision_client.py",
-        "Cliente de visão / AR overlay.",
-        "backend/app/engines/ai/vision_client.py",
-        ["map vision"],
-    ),
-    (
-        "sai-vision-api",
-        "sai-ai",
-        "file",
-        "vision.py",
-        "API Vision / WebXR.",
-        "backend/app/api/routes/vision.py",
-        ["webxr", "overlay"],
-    ),
-
-    # ── Workers ──
-    (
-        "sai-workers",
-        "sai-root",
-        "module",
-        "Celery Workers",
-        "Tasks de monitor, reports, enterprise e AI.",
-        "backend/app/workers/tasks.py",
-        ["run_all_monitors"],
-    ),
-    (
-        "sai-worker-tasks",
-        "sai-workers",
-        "file",
-        "tasks.py",
-        "Loop principal de monitores.",
-        "backend/app/workers/tasks.py",
-        ["crontab * * * * *"],
-    ),
-    (
-        "sai-ai-tasks",
-        "sai-workers",
-        "file",
-        "ai_tasks.py",
-        "Jobs assíncronos de IA.",
-        "backend/app/workers/ai_tasks.py",
-        ["anomaly batch"],
-    ),
-    (
-        "sai-report-tasks",
-        "sai-workers",
-        "file",
-        "report_tasks.py",
-        "Geração de relatórios PDF/XLSX.",
-        "backend/app/workers/report_tasks.py",
-        ["ReportJob"],
-    ),
-    (
-        "sai-enterprise-tasks",
-        "sai-workers",
-        "file",
-        "enterprise_tasks.py",
-        "Tasks enterprise / multi-tenant.",
-        "backend/app/workers/enterprise_tasks.py",
-        ["org sync"],
-    ),
-    (
-        "sai-phase10-tasks",
-        "sai-workers",
-        "file",
-        "phase10_tasks.py",
-        "Plugins sync e traps.",
-        "backend/app/workers/phase10_tasks.py",
-        ["plugin sync"],
-    ),
-
-    # ── Plugins / NetFlow / SNMP traps ──
-    (
-        "sai-plugins",
-        "sai-root",
-        "module",
-        "Plugins & Flows",
-        "Registry de plugins cloud/VM, NetFlow, traps SNMP.",
-        "backend/app/engines/plugins/registry.py",
-        ["Proxmox", "VMware", "AWS", "Azure", "Fortinet"],
-    ),
-    (
-        "sai-plugin-base",
-        "sai-plugins",
-        "file",
-        "base.py",
-        "Interface base de plugin.",
-        "backend/app/engines/plugins/base.py",
-        ["Plugin protocol"],
-    ),
-    (
-        "sai-plugin-sync",
-        "sai-plugins",
-        "file",
-        "plugin_sync_service.py",
-        "Sync plugins → Device VM.",
-        "backend/app/services/plugin_sync_service.py",
-        ["Celery sync"],
-    ),
-    (
-        "sai-plugins-api",
-        "sai-plugins",
-        "file",
-        "plugins.py",
-        "API de plugins.",
-        "backend/app/api/routes/plugins.py",
-        ["list/register"],
-    ),
-    (
-        "sai-netflow",
-        "sai-plugins",
-        "file",
-        "netflow/collector.py",
-        "Coletor NetFlow/sFlow.",
-        "backend/app/engines/netflow/collector.py",
-        ["start_netflow_collector"],
-    ),
-    (
-        "sai-flows-api",
-        "sai-plugins",
-        "file",
-        "flows.py",
-        "API de flows.",
-        "backend/app/api/routes/flows.py",
-        ["flow records"],
-    ),
-    (
-        "sai-snmp-trap",
-        "sai-plugins",
-        "file",
-        "trap_collector.py",
-        "Listener de SNMP traps.",
-        "backend/app/engines/snmp/trap_collector.py",
-        ["UDP trap port"],
-    ),
-    (
-        "sai-scanner",
-        "sai-plugins",
-        "file",
-        "port_scanner.py",
-        "Scanner de portas dedicado.",
-        "backend/app/engines/scanner/port_scanner.py",
-        ["PortScanJob"],
-    ),
-    (
-        "sai-vault",
-        "sai-plugins",
-        "file",
-        "vault_client.py",
-        "Cliente Vault / secrets.",
-        "backend/app/engines/secrets/vault_client.py",
-        ["read secret"],
-    ),
-
-    # ── Platform / Billing / Scale ──
-    (
-        "sai-platform",
-        "sai-root",
-        "module",
-        "Platform & SaaS",
-        "Billing, scale, auditor, CDN, phases 15–21.",
-        "backend/app/api/routes/platform.py",
-        ["capabilities", "status"],
-    ),
-    (
-        "sai-billing",
-        "sai-platform",
-        "file",
-        "billing.py",
-        "Planos e tax/VAT regional.",
-        "backend/app/api/routes/billing.py",
-        ["tax quote", "plans"],
-    ),
-    (
-        "sai-payments",
-        "sai-platform",
-        "file",
-        "payments.py",
-        "Stripe invoices.",
-        "backend/app/api/routes/payments.py",
-        ["invoices"],
-    ),
-    (
-        "sai-scale",
-        "sai-platform",
-        "file",
-        "scale.py",
-        "Marketplace playbooks / scale features.",
-        "backend/app/api/routes/scale.py",
-        ["marketplace reviews"],
-    ),
-    (
-        "sai-auditor",
-        "sai-platform",
-        "file",
-        "auditor.py",
-        "Portal auditor multi-tenant.",
-        "backend/app/api/routes/auditor.py",
-        ["tenant billing"],
-    ),
-    (
-        "sai-cdn",
-        "sai-platform",
-        "file",
-        "cdn.py",
-        "CDN cost AI / auto-purge.",
-        "backend/app/api/routes/cdn.py",
-        ["auto-purge"],
-    ),
-    (
-        "sai-mobile-api",
-        "sai-platform",
-        "file",
-        "mobile.py",
-        "API mobile / push tokens.",
-        "backend/app/api/routes/mobile.py",
-        ["Expo"],
-    ),
-    (
-        "sai-auth",
-        "sai-platform",
-        "file",
-        "auth.py",
-        "Login JWT / RBAC.",
-        "backend/app/api/routes/auth.py",
-        ["admin/operator/viewer"],
-    ),
-    (
-        "sai-users",
-        "sai-platform",
-        "file",
-        "users.py",
-        "CRUD usuários.",
-        "backend/app/api/routes/users.py",
-        ["roles"],
-    ),
-    (
-        "sai-orgs",
-        "sai-platform",
-        "file",
-        "organizations.py",
-        "Multi-tenant organizations.",
-        "backend/app/api/routes/organizations.py",
-        ["orgs"],
-    ),
-    (
-        "sai-phase20",
-        "sai-platform",
-        "file",
-        "phase20_service.py",
-        "Fase 20: multi-currency / marketplace.",
-        "backend/app/services/phase20_service.py",
-        ["v2.0.0"],
-    ),
-    (
-        "sai-phase21",
-        "sai-platform",
-        "file",
-        "phase21_service.py",
-        "Fase 21: tax regional, WebXR, CDN purge.",
-        "backend/app/services/phase21_service.py",
-        ["v2.1.0"],
-    ),
-    (
-        "sai-observability",
-        "sai-platform",
-        "file",
-        "metrics.py",
-        "Métricas Prometheus.",
-        "backend/app/engines/observability/metrics.py",
-        ["sentinelai_* gauges"],
-    ),
-    (
-        "sai-reports-api",
-        "sai-platform",
-        "file",
-        "reports.py",
-        "Jobs de relatório.",
-        "backend/app/api/routes/reports.py",
-        ["PDF/XLSX", "SOC2"],
-    ),
-    (
-        "sai-remediation",
-        "sai-platform",
-        "file",
-        "remediation.py",
-        "Playbooks de remediação.",
-        "backend/app/api/routes/remediation.py",
-        ["runs", "marketplace"],
-    ),
-
-    # ── Frontend ──
-    (
-        "sai-frontend",
-        "sai-root",
-        "module",
-        "Frontend React",
-        "SPA Vite: dashboard, mapa, Zion, alertas, plataforma.",
-        "frontend/src/App.tsx",
-        ["AppShell", "routes"],
-    ),
-    (
-        "sai-appshell",
-        "sai-frontend",
-        "file",
-        "AppShell.tsx",
-        "Shell de navegação.",
-        "frontend/src/components/layout/AppShell.tsx",
-        ["nav Zion", "Dashboard"],
-    ),
-    (
-        "sai-api-client",
-        "sai-frontend",
-        "file",
-        "client.ts",
-        "Cliente HTTP tipado da API.",
-        "frontend/src/api/client.ts",
-        ["fetchDevices(2500)", "fetchEvents(100)", "Zion APIs"],
-    ),
-    (
-        "sai-dashboard",
-        "sai-frontend",
-        "file",
-        "Dashboard.tsx",
-        "Discovery UI, KPIs, devices paginados, eventos 10/100.",
-        "frontend/src/pages/Dashboard.tsx",
-        ["scan", "pagination", "widgets"],
-    ),
-    (
-        "sai-device-list",
-        "sai-frontend",
-        "file",
-        "DeviceList.tsx",
-        "Tabela de dispositivos (pageSize 10).",
-        "frontend/src/components/DeviceList.tsx",
-        ["DataTable", "Detalhes"],
-    ),
-    (
-        "sai-datatable",
-        "sai-frontend",
-        "file",
-        "DataTable.tsx",
-        "Tabela genérica com busca e paginação.",
-        "frontend/src/components/ui/DataTable.tsx",
-        ["pageSize", "sort"],
-    ),
-    (
-        "sai-scan-ui",
-        "sai-frontend",
-        "file",
-        "DiscoveryScanOptions.tsx",
-        "UI de perfis nmap.",
-        "frontend/src/components/DiscoveryScanOptions.tsx",
-        ["quick/standard/deep"],
-    ),
-    (
-        "sai-job-progress",
-        "sai-frontend",
-        "file",
-        "DiscoveryJobProgress.tsx",
-        "Progresso e banner do scan.",
-        "frontend/src/components/DiscoveryJobProgress.tsx",
-        ["ativos/inativos"],
-    ),
-    (
-        "sai-topo-map",
-        "sai-frontend",
-        "file",
-        "TopologyMap.tsx",
-        "Editor React Flow 2D.",
-        "frontend/src/pages/TopologyMap.tsx",
-        ["ELK", "collab", "export"],
-    ),
-    (
-        "sai-map-3d",
-        "sai-frontend",
-        "file",
-        "Map3DView.tsx",
-        "Vista 3D CSS do grafo.",
-        "frontend/src/components/map/Map3DView.tsx",
-        ["height by status"],
-    ),
-    (
-        "sai-map-toolbar",
-        "sai-frontend",
-        "file",
-        "MapToolbar.tsx",
-        "Toolbar do mapa (camadas, tráfego, 3D).",
-        "frontend/src/components/map/MapToolbar.tsx",
-        ["layers", "Visio", "PDF"],
-    ),
-    (
-        "sai-traffic-edge",
-        "sai-frontend",
-        "file",
-        "TrafficEdge.tsx",
-        "Aresta animada com tráfego.",
-        "frontend/src/components/map/TrafficEdge.tsx",
-        ["bps particles"],
-    ),
-    (
-        "sai-device-library",
-        "sai-frontend",
-        "file",
-        "DeviceLibrary.tsx",
-        "Biblioteca drag-drop de equipamentos.",
-        "frontend/src/components/map/DeviceLibrary.tsx",
-        ["The Dude++"],
-    ),
-    (
-        "sai-map-history",
-        "sai-frontend",
-        "file",
-        "useMapHistory.ts",
-        "Undo/redo ilimitado do mapa.",
-        "frontend/src/hooks/useMapHistory.ts",
-        ["history stack"],
-    ),
-    (
-        "sai-map-collab",
-        "sai-frontend",
-        "file",
-        "useMapCollaboration.ts",
-        "Presença multi-admin no mapa.",
-        "frontend/src/hooks/useMapCollaboration.ts",
-        ["WebSocket cursors"],
-    ),
-    (
-        "sai-mon-stream",
-        "sai-frontend",
-        "file",
-        "useMonitoringStream.ts",
-        "Hook SSE de eventos ao vivo.",
-        "frontend/src/hooks/useMonitoringStream.ts",
-        ["EventSource"],
-    ),
-    (
-        "sai-dash-layout",
-        "sai-frontend",
-        "file",
-        "useDashboardLayout.ts",
-        "Widgets show/hide/reorder.",
-        "frontend/src/hooks/useDashboardLayout.ts",
-        ["localStorage"],
-    ),
-    (
-        "sai-alerts-page",
-        "sai-frontend",
-        "file",
-        "AlertsPage.tsx",
-        "UI de alertas.",
-        "frontend/src/pages/AlertsPage.tsx",
-        ["channels", "history"],
-    ),
-    (
-        "sai-platform-page",
-        "sai-frontend",
-        "file",
-        "PlatformPage.tsx",
-        "UI fases / plataforma.",
-        "frontend/src/pages/PlatformPage.tsx",
-        ["Fase 20/21 tabs"],
-    ),
-    (
-        "sai-copilot-page",
-        "sai-frontend",
-        "file",
-        "NocCopilotPage.tsx",
-        "Chat NOC Copilot.",
-        "frontend/src/pages/NocCopilotPage.tsx",
-        ["LLM chat"],
-    ),
-    (
-        "sai-chatbot-page",
-        "sai-frontend",
-        "file",
-        "ChatbotPage.tsx",
-        "Página do chatbot de produto.",
-        "frontend/src/pages/ChatbotPage.tsx",
-        ["product help"],
-    ),
-    (
-        "sai-chatbot-widget",
-        "sai-frontend",
-        "file",
-        "ChatbotWidget.tsx",
-        "Widget flutuante do chatbot.",
-        "frontend/src/components/ChatbotWidget.tsx",
-        ["FAB chat"],
-    ),
-    (
-        "sai-scanner-page",
-        "sai-frontend",
-        "file",
-        "ScannerPage.tsx",
-        "UI de port scan.",
-        "frontend/src/pages/ScannerPage.tsx",
-        ["PortScanJob"],
-    ),
-    (
-        "sai-reports-page",
-        "sai-frontend",
-        "file",
-        "ReportsPage.tsx",
-        "UI de relatórios.",
-        "frontend/src/pages/ReportsPage.tsx",
-        ["download PDF"],
-    ),
-    (
-        "sai-login",
-        "sai-frontend",
-        "file",
-        "LoginPage.tsx",
-        "Tela de login JWT.",
-        "frontend/src/pages/LoginPage.tsx",
-        ["admin/admin123"],
-    ),
-    (
-        "sai-mobile-app",
-        "sai-frontend",
-        "file",
-        "mobile/App.tsx",
-        "App Expo mobile.",
-        "mobile/App.tsx",
-        ["push notifications"],
-    ),
-
-    # ── Docs / Stabilization ──
-    (
-        "sai-docs",
-        "sai-root",
-        "module",
-        "Docs & Estabilização",
-        "Baseline Fase 0, cronograma e inventário de features.",
-        "docs/PHASE-0-BASELINE.md",
-        ["SNMP 8/603", "congelar Fase 1–2"],
-    ),
-    (
-        "sai-cronograma",
-        "sai-docs",
-        "file",
-        "CRONOGRAMA-ESTABILIZACAO.md",
-        "Plano 16 semanas (Fases 0–8 estabilização).",
-        "docs/CRONOGRAMA-ESTABILIZACAO.md",
-        ["P0 SSE", "P1 SNMP/alertas"],
-    ),
-    (
-        "sai-feature-inv",
-        "sai-docs",
-        "file",
-        "feature-inventory.json",
-        "Inventário Map Editor + NMS + ops gaps.",
-        "docs/feature-inventory.json",
-        ["scripts/feature-inventory.py"],
-    ),
-    (
-        "sai-backup-script",
-        "sai-docs",
-        "file",
-        "backup-sentinel.ps1",
-        "Backup Postgres + .env.",
-        "scripts/backup-sentinel.ps1",
-        ["backups/"],
-    ),
-    (
-        "sai-wmi-script",
-        "sai-docs",
-        "file",
-        "set-wmi-credentials.ps1",
-        "Config interativa de credenciais WMI.",
-        "scripts/set-wmi-credentials.ps1",
-        ["password hidden"],
-    ),
-    (
-        "sai-map-roadmap",
-        "sai-docs",
-        "file",
-        "MAP-EDITOR-ROADMAP.md",
-        "Roadmap The Dude++ Map Editor.",
-        "docs/MAP-EDITOR-ROADMAP.md",
-        ["fases 6–8"],
-    ),
-    (
-        "sai-phase20-doc",
-        "sai-docs",
-        "file",
-        "PHASE-20-ROADMAP.md",
-        "Roadmap SaaS v2.0.",
-        "docs/PHASE-20-ROADMAP.md",
-        ["multi-currency"],
-    ),
-    (
-        "sai-phase21-doc",
-        "sai-docs",
-        "file",
-        "PHASE-21-ROADMAP.md",
-        "Roadmap Regional SaaS v2.1.",
-        "docs/PHASE-21-ROADMAP.md",
-        ["WebXR", "tax"],
-    ),
-]
-
-
-def build(repo: Path | None) -> dict:
-    nodes = []
-    for item in SPEC:
-        nid, parent, layer, title, desc, file, impl = item
-        code = read_file(repo, file, f"# {file}\n")
-        nodes.append(n(nid, parent, layer, title, desc, file, code, impl))
+    # Arquivos
+    for f in files:
+        rel = f.relative_to(repo).as_posix()
+        if rel == "README.md":
+            # já no root
+            continue
+        parent_path = str(Path(rel).parent).replace("\\", "/")
+        if parent_path == ".":
+            parent_path = ""
+        parent_id = dir_ids.get(parent_path, "sai-root")
+        fid = path_id(rel, is_dir=False)
+        base = fid
+        n = 2
+        while fid in seen_ids:
+            fid = f"{base}-{n}"
+            n += 1
+        seen_ids.add(fid)
+        title = Path(rel).name
+        nodes.append(
+            {
+                "id": fid,
+                "parent": parent_id,
+                "layer": "file",
+                "title": title,
+                "description": f"Código-fonte: `{rel}`",
+                "file": rel,
+                "code": read_code(repo, rel),
+                "implementation": [
+                    f"path: {rel}",
+                    f"GitHub: https://github.com/CanonEngineer/SentinelAI/blob/main/{rel}",
+                ],
+            }
+        )
 
     return {
         "slug": "sentinelai",
@@ -1241,20 +256,28 @@ def build(repo: Path | None) -> dict:
         "icon": "network",
         "stack": "FastAPI + React + Celery + Nmap + SNMP + WMI",
         "summary": (
-            f"NMS expandido: discovery, Zion, topologia 2D/3D, WMI/SNMP, alertas, "
-            f"AI/Copilot, plugins e estabilização — {len(nodes)} nós na árvore."
+            f"Cobertura completa: {len(files)} arquivos de código no repositório "
+            f"({len(nodes)} nós na árvore incluindo pastas)."
         ),
         "nodes": nodes,
+        "meta": {
+            "sourceFiles": len(files),
+            "treeNodes": len(nodes),
+            "complete": True,
+        },
     }
 
 
 def main() -> None:
     repo = find_repo()
+    if not repo:
+        raise SystemExit("Repositório SentinelAI não encontrado (Desktop/SentinelAI).")
     project = build(repo)
     OUT.write_text(json.dumps(project, ensure_ascii=False, indent=2), encoding="utf-8")
-    src = str(repo) if repo else "(fallback)"
-    print(f"SentinelAI: {len(project['nodes'])} nos -> {OUT}")
-    print(f"Fonte: {src}")
+    size_mb = OUT.stat().st_size / (1024 * 1024)
+    print(f"SentinelAI: {project['meta']['treeNodes']} nos ({project['meta']['sourceFiles']} arquivos)")
+    print(f"JSON: {OUT} ({size_mb:.2f} MB)")
+    print(f"Fonte: {repo}")
 
 
 if __name__ == "__main__":
