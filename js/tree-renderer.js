@@ -1,10 +1,14 @@
-/* Tree Renderer — layout no estilo CustomizeVeyon: radial, sem sobreposição, área rolável */
+/* Tree Renderer - layout radial estável (inclui árvores grandes 100–400+ nós) */
 const TreeRenderer = (() => {
   const SIBLING_PAD = 1.42;
   const PARENT_PAD = 1.22;
   const STAGE_PAD = 80;
   const SEPARATION_ITERS = 56;
   const FILL_RATIO = 0.88;
+  /** Evita órbita explosiva quando subárvores profundas têm muitos irmãos. */
+  const MAX_CHILD_R_FOR_ORBIT = 420;
+  const MAX_SUB_R = 2400;
+  const MAX_ROOT_ORBIT = 920;
 
   function buildTree(nodes) {
     const map = new Map();
@@ -24,39 +28,44 @@ const TreeRenderer = (() => {
 
   function nodeHalfSize(layer, dense) {
     const sizes = dense
-      ? { root: 43, module: 29, file: 25, function: 22 }
+      ? { root: 40, module: 26, file: 22, function: 20 }
       : { root: 50, module: 36, file: 29, function: 25 };
     return sizes[layer] || sizes.function;
   }
 
-  /** Abertura angular dos filhos (círculo completo só na raiz). */
   function childSpread(count, isRoot) {
     if (count <= 1) return 0;
     if (isRoot) return Math.PI * 2;
     return Math.min(Math.PI * 1.25, 0.55 + count * 0.48);
   }
 
-  function orbitFromChildren(half, childRs, isRoot) {
+  function orbitFromChildren(half, childRs, isRoot, mega) {
     const n = childRs.length;
     if (n === 0) return 0;
-    if (n === 1) return (half + childRs[0]) * PARENT_PAD;
+    const capped = childRs.map((r) => Math.min(r, mega ? MAX_CHILD_R_FOR_ORBIT * 0.72 : MAX_CHILD_R_FOR_ORBIT));
+    if (n === 1) return (half + capped[0]) * PARENT_PAD;
+
+    // Mega-árvores: raio ~ sqrt(n) — evita (a+b)/sin(step) explodir
+    if (mega) {
+      const maxC = Math.max(...capped);
+      return half + maxC * 1.12 + Math.sqrt(n) * 38 + Math.min(n, 24) * 6;
+    }
 
     const spread = childSpread(n, isRoot);
     const step = isRoot ? spread / n : spread / (n - 1);
     let orbit = 0;
     for (let i = 0; i < n; i++) {
-      const a = childRs[i];
-      const b = childRs[isRoot ? (i + 1) % n : Math.min(i + 1, n - 1)];
+      const a = capped[i];
+      const b = capped[isRoot ? (i + 1) % n : Math.min(i + 1, n - 1)];
       if (!isRoot && i === n - 1) break;
       const need = ((a + b) * SIBLING_PAD) / (2 * Math.sin(Math.max(step, 0.12) / 2));
       orbit = Math.max(orbit, need);
     }
-    orbit = Math.max(orbit, (half + Math.max(...childRs)) * PARENT_PAD);
+    orbit = Math.max(orbit, (half + Math.max(...capped)) * PARENT_PAD);
     return orbit;
   }
 
-  /** Mede subárvores; na raiz aplica órbita mínima no estilo Veyon. */
-  function measureSubtree(node, dense, isRoot, minRootOrbit) {
+  function measureSubtree(node, dense, isRoot, minRootOrbit, mega) {
     const half = nodeHalfSize(node.layer || 'function', dense);
     const children = node.children || [];
     if (!children.length) {
@@ -65,21 +74,29 @@ const TreeRenderer = (() => {
       return half;
     }
 
-    children.forEach(ch => measureSubtree(ch, dense, false, 0));
+    children.forEach(ch => measureSubtree(ch, dense, false, 0, mega));
     const childRs = children.map(ch => ch._subR);
-    let orbit = orbitFromChildren(half, childRs, isRoot);
+    let orbit = orbitFromChildren(half, childRs, isRoot, mega);
 
     if (isRoot && minRootOrbit) {
       orbit = Math.max(orbit, minRootOrbit);
     }
 
-    // Espaçamento extra leve em nós com muitos filhos (como o Veyon)
     if (children.length >= 5) {
-      orbit *= 1.08;
+      orbit *= mega ? 1.04 : 1.08;
+    }
+
+    if (isRoot) {
+      orbit = Math.min(orbit, MAX_ROOT_ORBIT);
     }
 
     node._orbit = orbit;
-    node._subR = orbit + Math.max(...childRs);
+    node._subR = orbit + Math.max(...childRs.map((r) => Math.min(r, mega ? MAX_CHILD_R_FOR_ORBIT : r)));
+    if (!isRoot && node._subR > MAX_SUB_R) {
+      const scale = MAX_SUB_R / node._subR;
+      node._orbit *= scale;
+      node._subR = MAX_SUB_R;
+    }
     return node._subR;
   }
 
@@ -118,7 +135,8 @@ const TreeRenderer = (() => {
 
   function resolveOverlaps(positions, dense) {
     const items = Array.from(positions.values());
-    for (let iter = 0; iter < SEPARATION_ITERS; iter++) {
+    const iters = items.length > 200 ? 28 : SEPARATION_ITERS;
+    for (let iter = 0; iter < iters; iter++) {
       let moved = false;
       for (let i = 0; i < items.length; i++) {
         for (let j = i + 1; j < items.length; j++) {
@@ -175,11 +193,6 @@ const TreeRenderer = (() => {
     return { minX, minY, maxX, maxY, width: maxX - minX, height: maxY - minY };
   }
 
-  /**
-   * Centraliza e, se a árvore for menor que a tela (FoodOnline etc.),
-   * amplia até preencher ~88% — visual próximo ao CustomizeVeyon.
-   * Se for maior, mantém tamanho real e usa scroll.
-   */
   function normalizeStage(stage, positions, dense, sceneW, sceneH) {
     let b = boundsOf(positions, dense);
 
@@ -193,6 +206,18 @@ const TreeRenderer = (() => {
       positions.forEach((pos) => {
         pos.x = cx + (pos.x - cx) * scaleUp;
         pos.y = cy + (pos.y - cy) * scaleUp;
+      });
+      b = boundsOf(positions, dense);
+    }
+
+    const MAX_STAGE = 14000;
+    if (b.width > MAX_STAGE || b.height > MAX_STAGE) {
+      const shrink = Math.min(MAX_STAGE / Math.max(b.width, 1), MAX_STAGE / Math.max(b.height, 1));
+      const cx = (b.minX + b.maxX) / 2;
+      const cy = (b.minY + b.maxY) / 2;
+      positions.forEach((pos) => {
+        pos.x = cx + (pos.x - cx) * shrink;
+        pos.y = cy + (pos.y - cy) * shrink;
       });
       b = boundsOf(positions, dense);
     }
@@ -234,10 +259,13 @@ const TreeRenderer = (() => {
     const sceneH = Math.max(scene.clientHeight || 640, 420);
     const nodeCount = countNodes(tree);
     const dense = nodeCount > 14;
+    const mega = nodeCount >= 80;
 
-    // Órbita mínima da raiz no espírito do Veyon (módulos bem abertos)
-    const minRootOrbit = Math.min(sceneW, sceneH) * (nodeCount >= 40 ? 0.30 : 0.34);
-    measureSubtree(tree, dense, true, minRootOrbit);
+    const minRootOrbit = Math.min(
+      MAX_ROOT_ORBIT * 0.85,
+      Math.min(sceneW, sceneH) * (mega ? 0.42 : nodeCount >= 40 ? 0.30 : 0.34),
+    );
+    measureSubtree(tree, dense, true, minRootOrbit, mega);
 
     const positions = new Map();
     layoutNode(tree, -Math.PI / 2, 0, positions, 0, 0);
@@ -285,7 +313,8 @@ const TreeRenderer = (() => {
       const inner = document.createElement('span');
       inner.className = 'tree-node-inner';
       const maxLen = dense ? 12 : 15;
-      inner.textContent = n.title.length > maxLen ? n.title.slice(0, maxLen - 1) + '…' : n.title;
+      const title = n.title || n.id;
+      inner.textContent = title.length > maxLen ? title.slice(0, maxLen - 1) + '…' : title;
       el.appendChild(inner);
       container.appendChild(el);
     });

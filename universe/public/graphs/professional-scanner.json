@@ -1333,9 +1333,9 @@
       "label": "deviceLibrary.js",
       "parent": "ps-grp-core",
       "layer": "file",
-      "category": "core",
-      "categoryLabel": "Backend",
-      "color": "#3b82f6",
+      "category": "other",
+      "categoryLabel": "Outros",
+      "color": "#64748b",
       "size": 0.85,
       "file": "deviceLibrary.js",
       "description": "Biblioteca permanente de dispositivos — add/update por IP, categorias Ativos/Inativos/tipos, sem wipe."
@@ -1345,9 +1345,9 @@
       "label": "deviceTypeDetect.js",
       "parent": "ps-grp-core",
       "layer": "file",
-      "category": "core",
-      "categoryLabel": "Backend",
-      "color": "#3b82f6",
+      "category": "other",
+      "categoryLabel": "Outros",
+      "color": "#64748b",
       "size": 0.85,
       "file": "deviceTypeDetect.js",
       "description": "Classificação endurecida de tipo: hostname, portas, HTTP/TLS, SNMP, MAC/OUI e AD."
@@ -1357,10 +1357,10 @@
       "label": "fileShareAudit.js",
       "parent": "ps-root",
       "layer": "file",
-      "category": "ad",
-      "categoryLabel": "Active Directory",
-      "color": "#a78bfa",
-      "size": 0.9,
+      "category": "other",
+      "categoryLabel": "Outros",
+      "color": "#64748b",
+      "size": 0.85,
       "file": "fileShareAudit.js",
       "description": "Aba Pastas — shares fileserver, browse UNC/local e ACL NTFS via PowerShell (-File)."
     },
@@ -1384,7 +1384,7 @@
       "category": "scripts",
       "categoryLabel": "Scripts",
       "color": "#64748b",
-      "size": 0.7,
+      "size": 0.85,
       "file": "scripts/reclassify-device-library-live.js",
       "description": "Reclassifica a biblioteca com enriquecimento ao vivo (AD, SNMP, HTTP, TLS, MAC)."
     },
@@ -1396,7 +1396,7 @@
       "category": "scripts",
       "categoryLabel": "Scripts",
       "color": "#64748b",
-      "size": 0.7,
+      "size": 0.85,
       "file": "scripts/reapply-device-types.js",
       "description": "Reaplica tipos offline a partir dos dados já salvos na biblioteca."
     },
@@ -1405,10 +1405,10 @@
       "label": "fileserver-shares.example.json",
       "parent": "ps-grp-core",
       "layer": "file",
-      "category": "core",
-      "categoryLabel": "Backend",
-      "color": "#3b82f6",
-      "size": 0.65,
+      "category": "other",
+      "categoryLabel": "Outros",
+      "color": "#64748b",
+      "size": 0.85,
       "file": "data/fileserver-shares.example.json",
       "description": "Exemplo de configuração de fileservers/shares para a aba Pastas (arquivo real é gitignored)."
     }
@@ -1937,6 +1937,41 @@
     {
       "source": "ps-grp-scripts",
       "target": "ps-package-agent-json",
+      "type": "dependency"
+    },
+    {
+      "source": "ps-grp-core",
+      "target": "ps-device-library-file",
+      "type": "dependency"
+    },
+    {
+      "source": "ps-grp-core",
+      "target": "ps-device-type-detect-file",
+      "type": "dependency"
+    },
+    {
+      "source": "ps-root",
+      "target": "ps-file-share-audit",
+      "type": "dependency"
+    },
+    {
+      "source": "ps-grp-public",
+      "target": "ps-device-library-ui",
+      "type": "dependency"
+    },
+    {
+      "source": "ps-grp-scripts",
+      "target": "ps-script-reclassify-live",
+      "type": "dependency"
+    },
+    {
+      "source": "ps-grp-scripts",
+      "target": "ps-script-reapply-types",
+      "type": "dependency"
+    },
+    {
+      "source": "ps-grp-core",
+      "target": "ps-shares-example",
       "type": "dependency"
     }
   ]

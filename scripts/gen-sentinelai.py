@@ -8,6 +8,7 @@ from __future__ import annotations
 import json
 import os
 import re
+from collections import defaultdict
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent
@@ -69,6 +70,8 @@ CODE_EXTS = {
 
 MAX_FILE_BYTES = 1_500_000
 CODE_LIMIT = 7000
+# Pastas com muitos arquivos viram subgrupos — evita fan-out que quebra layout 2D/3D
+MAX_DIRECT_FILES = 12
 
 
 def find_repo() -> Path | None:
@@ -213,39 +216,107 @@ def build(repo: Path) -> dict:
             }
         )
 
-    # Arquivos
+    # Arquivos (agrupa quando pasta tem muitos filhos diretos)
+    files_by_dir: dict[str, list[Path]] = defaultdict(list)
     for f in files:
         rel = f.relative_to(repo).as_posix()
         if rel == "README.md":
-            # já no root
             continue
         parent_path = str(Path(rel).parent).replace("\\", "/")
         if parent_path == ".":
             parent_path = ""
-        parent_id = dir_ids.get(parent_path, "sai-root")
-        fid = path_id(rel, is_dir=False)
-        base = fid
+        files_by_dir[parent_path].append(f)
+
+    def unique_id(candidate: str) -> str:
+        base = candidate
         n = 2
-        while fid in seen_ids:
-            fid = f"{base}-{n}"
+        out = candidate
+        while out in seen_ids:
+            out = f"{base}-{n}"
             n += 1
-        seen_ids.add(fid)
-        title = Path(rel).name
+        seen_ids.add(out)
+        return out
+
+    def ensure_group(parent_path: str, parent_id: str, label: str, slug: str) -> str:
+        gid = unique_id(path_id(f"{parent_path}/{slug}" if parent_path else slug, is_dir=True).replace("sai-dir-", "sai-grp-"))
         nodes.append(
             {
-                "id": fid,
+                "id": gid,
                 "parent": parent_id,
-                "layer": "file",
-                "title": title,
-                "description": f"Código-fonte: `{rel}`",
-                "file": rel,
-                "code": read_code(repo, rel),
-                "implementation": [
-                    f"path: {rel}",
-                    f"GitHub: https://github.com/CanonEngineer/SentinelAI/blob/main/{rel}",
-                ],
+                "layer": "module",
+                "title": label,
+                "description": f"Grupo de arquivos em `{parent_path or '.'}/` — {label}",
+                "file": (parent_path + "/" if parent_path else "") + f"[{slug}]",
+                "code": f"# Grupo: {label}\n# Pasta: {parent_path or '.'}/\n",
+                "implementation": ["agrupamento para layout 2D/3D", f"pasta: {parent_path or '.'}/"],
             }
         )
+        return gid
+
+    for parent_path, flist in sorted(files_by_dir.items(), key=lambda x: x[0].lower()):
+        flist = sorted(flist, key=lambda p: p.name.lower())
+        parent_id = dir_ids.get(parent_path, "sai-root")
+
+        if len(flist) <= MAX_DIRECT_FILES:
+            targets = [(parent_id, f) for f in flist]
+        else:
+            # Preferir grupos por letra inicial; se ainda > MAX, fatiar
+            by_letter: dict[str, list[Path]] = defaultdict(list)
+            for f in flist:
+                ch = f.name[0].upper()
+                key = ch if ch.isalpha() else "#"
+                by_letter[key].append(f)
+
+            targets = []
+            # Mesclar letras pequenas até ~MAX_DIRECT_FILES
+            buckets: list[tuple[str, list[Path]]] = []
+            cur_label_parts: list[str] = []
+            cur_files: list[Path] = []
+            for letter in sorted(by_letter.keys()):
+                chunk = by_letter[letter]
+                if cur_files and len(cur_files) + len(chunk) > MAX_DIRECT_FILES:
+                    buckets.append(("–".join(cur_label_parts), cur_files))
+                    cur_label_parts, cur_files = [], []
+                cur_label_parts.append(letter)
+                cur_files.extend(chunk)
+            if cur_files:
+                buckets.append(("–".join(cur_label_parts), cur_files))
+
+            for label, chunk in buckets:
+                if len(chunk) <= MAX_DIRECT_FILES:
+                    gid = ensure_group(parent_path, parent_id, f"Arquivos {label}", f"files-{label.lower()}")
+                    targets.extend((gid, f) for f in chunk)
+                else:
+                    for i in range(0, len(chunk), MAX_DIRECT_FILES):
+                        part = chunk[i : i + MAX_DIRECT_FILES]
+                        lo, hi = i + 1, i + len(part)
+                        gid = ensure_group(
+                            parent_path,
+                            parent_id,
+                            f"Arquivos {label} ({lo}–{hi})",
+                            f"files-{label.lower()}-{lo}-{hi}",
+                        )
+                        targets.extend((gid, f) for f in part)
+
+        for file_parent_id, f in targets:
+            rel = f.relative_to(repo).as_posix()
+            fid = unique_id(path_id(rel, is_dir=False))
+            title = Path(rel).name
+            nodes.append(
+                {
+                    "id": fid,
+                    "parent": file_parent_id,
+                    "layer": "file",
+                    "title": title,
+                    "description": f"Código-fonte: `{rel}`",
+                    "file": rel,
+                    "code": read_code(repo, rel),
+                    "implementation": [
+                        f"path: {rel}",
+                        f"GitHub: https://github.com/CanonEngineer/SentinelAI/blob/main/{rel}",
+                    ],
+                }
+            )
 
     return {
         "slug": "sentinelai",

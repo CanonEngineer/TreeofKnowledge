@@ -1,7 +1,6 @@
-/** Layout hierárquico radial — raiz no centro, ramos em esferas concêntricas */
+/** Layout hierárquico radial — estável para árvores grandes (100–400+ nós) */
 export function computeLayout(graph) {
   const { nodes } = graph;
-  const byId = new Map(nodes.map((n) => [n.id, n]));
   const children = new Map();
 
   nodes.forEach((n) => {
@@ -14,7 +13,7 @@ export function computeLayout(graph) {
   children.forEach((ids) => ids.sort());
 
   const root =
-    nodes.find((n) => n.layer === 'root') ||
+    nodes.find((n) => n.layer === "root") ||
     nodes.find((n) => !n.parent) ||
     nodes[0];
 
@@ -22,7 +21,7 @@ export function computeLayout(graph) {
   positions.set(root.id, { x: 0, y: 0, z: 0 });
 
   const level1 = children.get(root.id) || [];
-  const R1 = Math.max(14, Math.min(22, 8 + level1.length * 0.55));
+  const R1 = Math.max(16, Math.min(36, 10 + Math.sqrt(level1.length) * 4.2));
 
   level1.forEach((id, i) => {
     const angle = (i / Math.max(level1.length, 1)) * Math.PI * 2 - Math.PI / 2;
@@ -49,8 +48,9 @@ export function computeLayout(graph) {
     const parentPos = positions.get(parentId);
     if (!parentPos || !kids.length) return;
 
-    const baseR = depth === 1 ? 8 : depth === 2 ? 5.5 : 3.8;
-    const radius = baseR + Math.min(kids.length * 0.12, 3);
+    const baseR = depth === 1 ? 9 : depth === 2 ? 6.2 : depth === 3 ? 4.5 : 3.4;
+    // Cresce com sqrt(n) — evita colapso/sobreposição em pastas com muitos arquivos
+    const radius = baseR + Math.min(Math.sqrt(kids.length) * 1.35, 14);
 
     kids.forEach((kidId, i) => {
       if (positions.has(kidId)) return;
@@ -86,7 +86,7 @@ function clusterFallback(node, nodes) {
   const r = 24 + hash(node.id) * 8;
   return {
     x: Math.cos(a) * r,
-    y: (hash(node.id + 'y') - 0.5) * 6,
+    y: (hash(node.id + "y") - 0.5) * 6,
     z: Math.sin(a) * r,
   };
 }
@@ -99,7 +99,7 @@ function hash(s) {
 
 export function getNeighbors(nodeId, links) {
   const set = new Set([nodeId]);
-  links.forEach((l) => {
+  (links || []).forEach((l) => {
     if (l.source === nodeId) set.add(l.target);
     if (l.target === nodeId) set.add(l.source);
   });
@@ -108,13 +108,13 @@ export function getNeighbors(nodeId, links) {
 
 export function getProjectSlug() {
   const p = new URLSearchParams(window.location.search);
-  return p.get('project') || 'professional-scanner';
+  return p.get("project") || "professional-scanner";
 }
 
 export function countConnections(nodeId, links) {
-  return links.filter((l) => l.source === nodeId || l.target === nodeId).length;
+  return (links || []).filter((l) => l.source === nodeId || l.target === nodeId).length;
 }
 
 export function countDependencies(nodeId, links) {
-  return links.filter((l) => l.target === nodeId).length;
+  return (links || []).filter((l) => l.target === nodeId).length;
 }
