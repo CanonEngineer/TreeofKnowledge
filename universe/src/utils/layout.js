@@ -28,7 +28,7 @@ export function computeLayout(graph) {
     const angle = (i / Math.max(level1.length, 1)) * Math.PI * 2 - Math.PI / 2;
     positions.set(id, {
       x: Math.cos(angle) * R1,
-      y: Math.sin(i * 0.7) * 0.8,
+      y: Math.sin(i * 0.7) * 0.25,
       z: Math.sin(angle) * R1,
     });
   });
@@ -84,7 +84,7 @@ export function computeLayout(graph) {
       if (positions.has(kidId)) return;
       const a = n === 1 ? 0 : start + step * i;
       // leve elevação por índice para profundidade visual sem quebrar o raio
-      const elev = ((i % 5) - 2) * 0.35;
+      const elev = ((i % 5) - 2) * 0.12;
       const cosA = Math.cos(a);
       const sinA = Math.sin(a);
       // ponto no cone: principalmente ao longo de outward + leque no plano u/v

@@ -1,7 +1,6 @@
 import { Suspense, useMemo, useState, useCallback } from 'react';
 import { Canvas } from '@react-three/fiber';
 import { OrbitControls } from '@react-three/drei';
-import { EffectComposer, Bloom, Vignette } from '@react-three/postprocessing';
 import { StarField, GridFloor, NodeSphere, ConnectionBeam } from './SceneObjects';
 import { CameraFocus, ResetCamera } from './CameraFocus';
 import { computeLayout, getNeighbors } from '../utils/layout';
@@ -45,15 +44,14 @@ function Scene({
   return (
     <>
       <color attach="background" args={['#010409']} />
-      <fog attach="fog" args={['#010409', 45, 160]} />
-      <ambientLight intensity={0.28} />
-      <directionalLight position={[30, 40, 20]} intensity={0.55} color="#93c5fd" />
-      <pointLight position={[-30, 15, -25]} intensity={0.75} color="#818cf8" />
-      <pointLight position={[0, -10, 30]} intensity={0.3} color="#22d3ee" />
+      <fog attach="fog" args={['#010409', 50, 150]} />
+      <ambientLight intensity={0.35} />
+      <directionalLight position={[30, 40, 20]} intensity={0.6} color="#93c5fd" />
+      <pointLight position={[-30, 15, -25]} intensity={0.55} color="#818cf8" />
       <StarField />
       <GridFloor />
       <ResetCamera trigger={resetCam} />
-      <CameraFocus target={focusNode} offset={[0, 3, 18]} />
+      <CameraFocus target={focusNode} offset={[0, 4, 20]} />
 
       {showLinks &&
         links.map((link, i) => {
@@ -78,9 +76,15 @@ function Scene({
         const hovered = node.id === hoveredId;
         const highlighted = neighborSet?.has(node.id) ?? false;
         const dimmed = hasFocus && !highlighted;
+        // Com foco: só labels dos vizinhos (menos caos). Sem foco: root/module + arquivos.
         const showLabel =
           showLabels &&
-          (selected || hovered || node.layer === 'root' || node.layer === 'module' || (!hasFocus && node.layer === 'file'));
+          (selected ||
+            hovered ||
+            node.layer === 'root' ||
+            node.layer === 'module' ||
+            (!hasFocus && node.layer === 'file') ||
+            (hasFocus && highlighted));
 
         return (
           <NodeSphere
@@ -90,7 +94,6 @@ function Scene({
             hovered={hovered}
             highlighted={highlighted}
             dimmed={dimmed}
-            animated={showAnimations}
             showLabel={showLabel}
             onClick={onSelect}
             onDoubleClick={(n) => {
@@ -107,16 +110,11 @@ function Scene({
         enableDamping
         dampingFactor={0.05}
         minDistance={6}
-        maxDistance={100}
-        maxPolarAngle={Math.PI * 0.52}
+        maxDistance={110}
+        maxPolarAngle={Math.PI * 0.49}
         autoRotate={showAnimations && !hasFocus && !paused}
-        autoRotateSpeed={0.35}
+        autoRotateSpeed={0.28}
       />
-
-      <EffectComposer multisampling={0}>
-        <Bloom luminanceThreshold={0.35} luminanceSmoothing={0.85} intensity={0.95} radius={0.55} />
-        <Vignette eskil offset={0.12} darkness={0.85} />
-      </EffectComposer>
     </>
   );
 }
@@ -127,9 +125,9 @@ export default function GalaxyGraph(props) {
 
   return (
     <Canvas
-      camera={{ position: [0, 8, 42], fov: 52 }}
+      camera={{ position: [0, 12, 48], fov: 50 }}
       gl={{ antialias: true, alpha: false, powerPreference: 'high-performance' }}
-      dpr={[1, 1.75]}
+      dpr={[1, 1.5]}
       frameloop={props.paused ? 'never' : 'always'}
     >
       <Suspense fallback={null}>

@@ -1,9 +1,9 @@
 import { useRef, useMemo, useEffect } from 'react';
 import { useFrame } from '@react-three/fiber';
-import { Html } from '@react-three/drei';
+import { Billboard } from '@react-three/drei';
 import * as THREE from 'three';
 
-export function StarField({ count = 6000 }) {
+export function StarField({ count = 5000 }) {
   const ref = useRef();
   const positions = useMemo(() => {
     const pos = new Float32Array(count * 3);
@@ -27,7 +27,7 @@ export function StarField({ count = 6000 }) {
       <bufferGeometry>
         <bufferAttribute attach="attributes-position" count={count} array={positions} itemSize={3} />
       </bufferGeometry>
-      <pointsMaterial size={0.45} color="#a5d8ff" transparent opacity={0.9} sizeAttenuation depthWrite={false} />
+      <pointsMaterial size={0.4} color="#a5d8ff" transparent opacity={0.85} sizeAttenuation depthWrite={false} />
     </points>
   );
 }
@@ -44,58 +44,96 @@ export function GridFloor() {
   );
 }
 
+/** Textura 2D no WebGL — mesmo sistema de coordenadas das arestas (sem Html/CSS). */
+function makeLabelTexture(text, borderColor, selected) {
+  const canvas = document.createElement('canvas');
+  const ctx = canvas.getContext('2d');
+  const padX = 14;
+  const padY = 8;
+  const font = selected ? '600 28px JetBrains Mono, Consolas, monospace' : '500 24px JetBrains Mono, Consolas, monospace';
+  ctx.font = font;
+  const label = text.length > 28 ? `${text.slice(0, 27)}…` : text;
+  const tw = Math.ceil(ctx.measureText(label).width);
+  const w = tw + padX * 2;
+  const h = 36 + padY;
+  canvas.width = w;
+  canvas.height = h;
+
+  // fundo
+  ctx.fillStyle = selected ? 'rgba(15, 23, 42, 0.95)' : 'rgba(2, 6, 23, 0.88)';
+  roundRect(ctx, 0.5, 0.5, w - 1, h - 1, 6);
+  ctx.fill();
+  // borda
+  ctx.strokeStyle = borderColor || '#38bdf8';
+  ctx.lineWidth = selected ? 2.5 : 1.5;
+  roundRect(ctx, 1, 1, w - 2, h - 2, 6);
+  ctx.stroke();
+  // texto
+  ctx.font = font;
+  ctx.fillStyle = '#f8fafc';
+  ctx.textBaseline = 'middle';
+  ctx.fillText(label, padX, h / 2);
+
+  const tex = new THREE.CanvasTexture(canvas);
+  tex.colorSpace = THREE.SRGBColorSpace;
+  tex.needsUpdate = true;
+  const aspect = w / h;
+  return { tex, aspect, worldH: selected ? 1.15 : 0.95 };
+}
+
+function roundRect(ctx, x, y, w, h, r) {
+  ctx.beginPath();
+  ctx.moveTo(x + r, y);
+  ctx.arcTo(x + w, y, x + w, y + h, r);
+  ctx.arcTo(x + w, y + h, x, y + h, r);
+  ctx.arcTo(x, y + h, x, y, r);
+  ctx.arcTo(x, y, x + w, y, r);
+  ctx.closePath();
+}
+
+/**
+ * O NÓ é o cartão Billboard no centro exato (onde o raio chega).
+ * Sem Html — nada de projeção CSS desalinhada da cena WebGL.
+ */
 export function NodeSphere({
   node,
   selected,
   hovered,
   highlighted,
   dimmed,
-  animated,
   showLabel,
   onClick,
   onDoubleClick,
   onPointerOver,
   onPointerOut,
 }) {
-  const meshRef = useRef();
-  const glowRef = useRef();
-  const ringRef = useRef();
-  const base = Math.max(0.55, node.size * (node.layer === 'root' ? 1.1 : 1));
-  const targetScale = selected ? 1.35 : hovered ? 1.2 : highlighted ? 1.08 : 1;
-  const opacity = dimmed ? 0.18 : 1;
-  const color = useMemo(() => new THREE.Color(node.color), [node.color]);
+  const groupRef = useRef();
+  const core = Math.max(0.28, (node.size || 0.85) * 0.32);
+  const color = useMemo(() => new THREE.Color(node.color || '#38bdf8'), [node.color]);
+  const opacity = dimmed ? 0.15 : 1;
 
-  useFrame(({ clock }) => {
-    if (!meshRef.current) return;
-    const t = clock.elapsedTime;
-    // Sem floatY — desincronizava esfera do raio / label
-    if (animated && (selected || hovered)) {
-      meshRef.current.rotation.y += 0.012;
-    }
-    meshRef.current.scale.lerp(new THREE.Vector3(base * targetScale, base * targetScale, base * targetScale), 0.12);
-    const mat = meshRef.current.material;
-    mat.emissiveIntensity += ((selected ? 2.0 : hovered ? 1.5 : highlighted ? 0.9 : 0.55) - mat.emissiveIntensity) * 0.1;
-    mat.opacity += (opacity - mat.opacity) * 0.12;
-    if (ringRef.current) ringRef.current.rotation.z = t * 0.35;
+  const labelGfx = useMemo(() => {
+    if (!showLabel) return null;
+    return makeLabelTexture(node.label || node.id, node.color, selected || hovered);
+  }, [showLabel, node.label, node.id, node.color, selected, hovered]);
+
+  useEffect(() => () => {
+    labelGfx?.tex?.dispose();
+  }, [labelGfx]);
+
+  useFrame(() => {
+    if (!groupRef.current) return;
+    const s = selected ? 1.12 : hovered ? 1.06 : 1;
+    groupRef.current.scale.lerp(new THREE.Vector3(s, s, s), 0.15);
   });
 
+  const labelW = labelGfx ? labelGfx.worldH * labelGfx.aspect : 1;
+  const labelH = labelGfx ? labelGfx.worldH : 1;
+
   return (
-    <group position={[node.position.x, node.position.y, node.position.z]}>
-      {(selected || hovered || node.layer === 'root') && (
-        <mesh ref={glowRef} scale={[base * (node.layer === 'root' ? 1.55 : 2.2), base * (node.layer === 'root' ? 1.55 : 2.2), base * (node.layer === 'root' ? 1.55 : 2.2)]}>
-          <sphereGeometry args={[1, 16, 16]} />
-          <meshBasicMaterial color={node.color} transparent opacity={selected ? 0.14 : 0.07} depthWrite={false} />
-        </mesh>
-      )}
-      {selected && (
-        <mesh ref={ringRef} rotation={[Math.PI / 2, 0, 0]} scale={[base * 1.7, base * 1.7, base * 1.7]}>
-          <ringGeometry args={[0.85, 1, 48]} />
-          <meshBasicMaterial color={node.color} transparent opacity={0.55} side={THREE.DoubleSide} />
-        </mesh>
-      )}
+    <group ref={groupRef} position={[node.position.x, node.position.y, node.position.z]}>
+      {/* Núcleo — ponto exato do endpoint do raio */}
       <mesh
-        ref={meshRef}
-        scale={[base, base, base]}
         onClick={(e) => { e.stopPropagation(); onClick(node); }}
         onDoubleClick={(e) => {
           e.stopPropagation();
@@ -104,84 +142,88 @@ export function NodeSphere({
         onPointerOver={(e) => { e.stopPropagation(); onPointerOver(node); document.body.style.cursor = 'pointer'; }}
         onPointerOut={() => { onPointerOut(); document.body.style.cursor = 'default'; }}
       >
-        <sphereGeometry args={[1, 32, 32]} />
+        <sphereGeometry args={[core, 20, 20]} />
         <meshStandardMaterial
           color={color}
           emissive={color}
-          emissiveIntensity={0.55}
+          emissiveIntensity={selected ? 2.2 : hovered ? 1.6 : highlighted ? 1.1 : 0.7}
           transparent
-          opacity={1}
-          roughness={0.2}
-          metalness={0.75}
+          opacity={opacity}
+          roughness={0.25}
+          metalness={0.7}
         />
       </mesh>
-      <pointLight
-        color={node.color}
-        intensity={selected ? 2.4 : hovered ? 1.4 : 0.25}
-        distance={base * 7}
-      />
-      {/* Label no MESMO grupo da esfera — mesmo ponto do raio */}
-      {showLabel && (
-        <Html
-          position={[0, base + 0.35, 0]}
-          center
-          sprite
-          distanceFactor={22}
-          zIndexRange={[40, 0]}
-          style={{ pointerEvents: 'none' }}
-        >
-          <span
-            className={`node-label ${selected ? 'selected' : ''} ${node.layer || ''}`}
-            style={{ borderColor: node.color, boxShadow: `0 0 10px ${node.color}44` }}
+
+      {(selected || hovered || node.layer === 'root') && (
+        <mesh scale={[core * 2.4, core * 2.4, core * 2.4]}>
+          <sphereGeometry args={[1, 12, 12]} />
+          <meshBasicMaterial color={node.color} transparent opacity={0.12} depthWrite={false} />
+        </mesh>
+      )}
+
+      {/* Cartão no MESMO ponto (Billboard) — centro = âncora do raio */}
+      {labelGfx && (
+        <Billboard follow lockX={false} lockY={false} lockZ={false}>
+          <mesh
+            position={[0, 0, core + 0.02]}
+            renderOrder={2}
+            onClick={(e) => { e.stopPropagation(); onClick(node); }}
+            onDoubleClick={(e) => {
+              e.stopPropagation();
+              if (onDoubleClick) onDoubleClick(node);
+            }}
+            onPointerOver={(e) => { e.stopPropagation(); onPointerOver(node); document.body.style.cursor = 'pointer'; }}
+            onPointerOut={() => { onPointerOut(); document.body.style.cursor = 'default'; }}
           >
-            {node.label}
-          </span>
-        </Html>
+            <planeGeometry args={[labelW, labelH]} />
+            <meshBasicMaterial
+              map={labelGfx.tex}
+              transparent
+              opacity={opacity}
+              depthTest
+              depthWrite={false}
+              side={THREE.DoubleSide}
+            />
+          </mesh>
+        </Billboard>
       )}
     </group>
   );
 }
 
-/** Aresta em world-space (THREE.Line) — não usa Line2/screen-space do drei, que desalinha com Html. */
+/** Aresta reta centro→centro (mesmo origin do Billboard). */
 export function ConnectionBeam({ link, posMap, sizeMap, active, dimmed }) {
-  const objRef = useRef();
-
-  const { positions, color, opacity } = useMemo(() => {
+  const { line } = useMemo(() => {
     const start = posMap.get(link.source);
     const end = posMap.get(link.target);
-    if (!start || !end) return { positions: null, color: '#475569', opacity: 0 };
+    if (!start || !end) return { line: null };
 
     const s0 = new THREE.Vector3(start.x, start.y, start.z);
     const e0 = new THREE.Vector3(end.x, end.y, end.z);
     const dir = e0.clone().sub(s0);
     const dist = dir.length();
-    if (dist < 0.01) return { positions: null, color: '#475569', opacity: 0 };
+    if (dist < 0.01) return { line: null };
     dir.multiplyScalar(1 / dist);
 
-    const rs = (sizeMap?.get(link.source) || 0.85) * 0.95;
-    const re = (sizeMap?.get(link.target) || 0.85) * 0.95;
-    const s = s0.clone().addScaledVector(dir, Math.min(rs, dist * 0.35));
-    const e = e0.clone().addScaledVector(dir, -Math.min(re, dist * 0.35));
+    // Encosta no núcleo (esfera pequena), não “morde” o cartão
+    const rs = Math.max(0.22, (sizeMap?.get(link.source) || 0.85) * 0.32);
+    const re = Math.max(0.22, (sizeMap?.get(link.target) || 0.85) * 0.32);
+    const s = s0.clone().addScaledVector(dir, rs);
+    const e = e0.clone().addScaledVector(dir, -re);
 
-    return {
-      positions: new Float32Array([s.x, s.y, s.z, e.x, e.y, e.z]),
-      color: active ? '#60a5fa' : dimmed ? '#1e293b' : '#64748b',
-      opacity: active ? 0.95 : dimmed ? 0.08 : 0.55,
-    };
-  }, [link.source, link.target, posMap, sizeMap, active, dimmed]);
-
-  const line = useMemo(() => {
-    if (!positions) return null;
     const geo = new THREE.BufferGeometry();
-    geo.setAttribute('position', new THREE.BufferAttribute(positions, 3));
+    geo.setAttribute(
+      'position',
+      new THREE.BufferAttribute(new Float32Array([s.x, s.y, s.z, e.x, e.y, e.z]), 3)
+    );
     const mat = new THREE.LineBasicMaterial({
-      color,
+      color: active ? '#7dd3fc' : dimmed ? '#1e293b' : '#94a3b8',
       transparent: true,
-      opacity,
+      opacity: active ? 1 : dimmed ? 0.07 : 0.65,
       depthWrite: false,
     });
-    return new THREE.Line(geo, mat);
-  }, [positions, color, opacity]);
+    return { line: new THREE.Line(geo, mat) };
+  }, [link.source, link.target, posMap, sizeMap, active, dimmed]);
 
   useEffect(() => () => {
     if (!line) return;
@@ -190,5 +232,5 @@ export function ConnectionBeam({ link, posMap, sizeMap, active, dimmed }) {
   }, [line]);
 
   if (!line) return null;
-  return <primitive ref={objRef} object={line} />;
+  return <primitive object={line} />;
 }
