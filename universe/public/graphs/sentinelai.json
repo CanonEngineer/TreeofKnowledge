@@ -4,7 +4,7 @@
   "repoUrl": "https://github.com/CanonEngineer/SentinelAI",
   "color": "#38bdf8",
   "demoUrl": "http://localhost:5173",
-  "nodeCount": 25,
+  "nodeCount": 32,
   "categories": {
     "core": {
       "label": "Backend",
@@ -322,7 +322,91 @@
       "color": "#3b82f6",
       "size": 1.35,
       "file": "backend/app/engines/alerts/channels.py",
-      "description": "Email, Telegram, Slack, Discord, Teams, webhook."
+      "description": "Email, Telegram, Slack, Discord, Teams, webhook, SMS, push."
+    },
+    {
+      "id": "sai-zion",
+      "label": "Zion Hub",
+      "parent": "sai-root",
+      "layer": "module",
+      "category": "frontend",
+      "categoryLabel": "Frontend",
+      "color": "#eab308",
+      "size": 1.35,
+      "file": "frontend/src/pages/ZionPage.tsx",
+      "description": "Painéis operacionais por IP/métrica: cards, exclusões, refresh WMI/SNMP."
+    },
+    {
+      "id": "sai-zion-api",
+      "label": "zion.py",
+      "parent": "sai-zion",
+      "layer": "file",
+      "category": "network",
+      "categoryLabel": "Rede / Scan",
+      "color": "#22d3ee",
+      "size": 0.85,
+      "file": "backend/app/api/routes/zion.py",
+      "description": "API REST dos painéis Zion."
+    },
+    {
+      "id": "sai-zion-panels",
+      "label": "zion_panels.py",
+      "parent": "sai-zion",
+      "layer": "file",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 0.85,
+      "file": "backend/app/services/zion_panels.py",
+      "description": "Coleta SNMP/WMI/ports, serialize cards, card_exclusions."
+    },
+    {
+      "id": "sai-wmi",
+      "label": "wmi_collector.py",
+      "parent": "sai-discovery-task",
+      "layer": "file",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 0.85,
+      "file": "backend/app/engines/discovery/wmi_collector.py",
+      "description": "Coleta Windows via Impacket: hostname, vendor, CPU, RAM, disco, temp."
+    },
+    {
+      "id": "sai-sse",
+      "label": "Realtime SSE",
+      "parent": "sai-root",
+      "layer": "module",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 1.35,
+      "file": "backend/app/services/realtime_events.py",
+      "description": "Stream de monitoramento (hoje in-memory; Fase 1 → Redis pub/sub)."
+    },
+    {
+      "id": "sai-stabilize",
+      "label": "Estabilização Fase 0",
+      "parent": "sai-root",
+      "layer": "module",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 1.35,
+      "file": "docs/PHASE-0-BASELINE.md",
+      "description": "Baseline operacional, inventário honesto e backup Postgres/.env."
+    },
+    {
+      "id": "sai-feature-inv",
+      "label": "feature-inventory.json",
+      "parent": "sai-stabilize",
+      "layer": "file",
+      "category": "other",
+      "categoryLabel": "Outros",
+      "color": "#64748b",
+      "size": 0.85,
+      "file": "docs/feature-inventory.json",
+      "description": "Inventário de features Map Editor + NMS + stabilization gaps."
     }
   ],
   "links": [
@@ -444,6 +528,41 @@
     {
       "source": "sai-root",
       "target": "sai-alerts",
+      "type": "dependency"
+    },
+    {
+      "source": "sai-root",
+      "target": "sai-zion",
+      "type": "dependency"
+    },
+    {
+      "source": "sai-zion",
+      "target": "sai-zion-api",
+      "type": "dependency"
+    },
+    {
+      "source": "sai-zion",
+      "target": "sai-zion-panels",
+      "type": "dependency"
+    },
+    {
+      "source": "sai-discovery-task",
+      "target": "sai-wmi",
+      "type": "dependency"
+    },
+    {
+      "source": "sai-root",
+      "target": "sai-sse",
+      "type": "dependency"
+    },
+    {
+      "source": "sai-root",
+      "target": "sai-stabilize",
+      "type": "dependency"
+    },
+    {
+      "source": "sai-stabilize",
+      "target": "sai-feature-inv",
       "type": "dependency"
     }
   ]
