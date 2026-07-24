@@ -1,6 +1,6 @@
 import { Suspense, useMemo, useState, useCallback } from 'react';
 import { Canvas } from '@react-three/fiber';
-import { OrbitControls, Html } from '@react-three/drei';
+import { OrbitControls } from '@react-three/drei';
 import { EffectComposer, Bloom, Vignette } from '@react-three/postprocessing';
 import { StarField, GridFloor, NodeSphere, ConnectionBeam } from './SceneObjects';
 import { CameraFocus, ResetCamera } from './CameraFocus';
@@ -24,7 +24,7 @@ function Scene({
   const laidOut = useMemo(() => computeLayout(graph), [graph]);
   const posMap = useMemo(() => new Map(laidOut.map((n) => [n.id, n.position])), [laidOut]);
   const sizeMap = useMemo(
-    () => new Map(laidOut.map((n) => [n.id, n.size * (n.layer === 'root' ? 1.15 : 1)])),
+    () => new Map(laidOut.map((n) => [n.id, Math.max(0.55, n.size * (n.layer === 'root' ? 1.1 : 1))])),
     [laidOut]
   );
   const links = graph.links || [];
@@ -46,10 +46,10 @@ function Scene({
     <>
       <color attach="background" args={['#010409']} />
       <fog attach="fog" args={['#010409', 45, 160]} />
-      <ambientLight intensity={0.22} />
+      <ambientLight intensity={0.28} />
       <directionalLight position={[30, 40, 20]} intensity={0.55} color="#93c5fd" />
-      <pointLight position={[-30, 15, -25]} intensity={0.9} color="#818cf8" />
-      <pointLight position={[0, -10, 30]} intensity={0.35} color="#22d3ee" />
+      <pointLight position={[-30, 15, -25]} intensity={0.75} color="#818cf8" />
+      <pointLight position={[0, -10, 30]} intensity={0.3} color="#22d3ee" />
       <StarField />
       <GridFloor />
       <ResetCamera trigger={resetCam} />
@@ -58,19 +58,16 @@ function Scene({
       {showLinks &&
         links.map((link, i) => {
           const connected = neighborSet?.has(link.source) && neighborSet.has(link.target);
-          const active = showParticles && connected;
+          const active = Boolean(showParticles && connected);
           const dimmed = hasFocus && !connected;
-          const style = i % 7 === 0 ? 'communication' : i % 11 === 0 ? 'dataflow' : 'dependency';
           return (
             <ConnectionBeam
-              key={`${link.source}-${link.target}`}
-              link={{ ...link, type: style === 'dependency' ? link.type : style }}
+              key={`${link.source}-${link.target}-${i}`}
+              link={link}
               posMap={posMap}
               sizeMap={sizeMap}
               active={active || (connected && !hasFocus)}
               dimmed={dimmed}
-              showParticles={showParticles}
-              linkStyle={style}
             />
           );
         })}
@@ -86,39 +83,23 @@ function Scene({
           (selected || hovered || node.layer === 'root' || node.layer === 'module' || (!hasFocus && node.layer === 'file'));
 
         return (
-          <group key={node.id}>
-            <NodeSphere
-              node={node}
-              selected={selected}
-              hovered={hovered}
-              highlighted={highlighted}
-              dimmed={dimmed}
-              animated={showAnimations}
-              onClick={onSelect}
-              onDoubleClick={(node) => {
-                if (node.layer === 'root') return;
-                onOpenCode(node);
-              }}
-              onPointerOver={onHover}
-              onPointerOut={() => onHover(null)}
-            />
-            {showLabel && (
-              <Html
-                position={[node.position.x, node.position.y + node.size * 1.6 + 0.5, node.position.z]}
-                center
-                distanceFactor={14}
-                zIndexRange={[100, 0]}
-                style={{ pointerEvents: 'none' }}
-              >
-                <span
-                  className={`node-label ${selected ? 'selected' : ''} ${node.layer}`}
-                  style={{ borderColor: node.color, boxShadow: `0 0 12px ${node.color}55` }}
-                >
-                  {node.label}
-                </span>
-              </Html>
-            )}
-          </group>
+          <NodeSphere
+            key={node.id}
+            node={node}
+            selected={selected}
+            hovered={hovered}
+            highlighted={highlighted}
+            dimmed={dimmed}
+            animated={showAnimations}
+            showLabel={showLabel}
+            onClick={onSelect}
+            onDoubleClick={(n) => {
+              if (n.layer === 'root') return;
+              onOpenCode(n);
+            }}
+            onPointerOver={onHover}
+            onPointerOut={() => onHover(null)}
+          />
         );
       })}
 
@@ -133,7 +114,7 @@ function Scene({
       />
 
       <EffectComposer multisampling={0}>
-        <Bloom luminanceThreshold={0.2} luminanceSmoothing={0.85} intensity={1.35} radius={0.75} />
+        <Bloom luminanceThreshold={0.35} luminanceSmoothing={0.85} intensity={0.95} radius={0.55} />
         <Vignette eskil offset={0.12} darkness={0.85} />
       </EffectComposer>
     </>
@@ -148,7 +129,7 @@ export default function GalaxyGraph(props) {
     <Canvas
       camera={{ position: [0, 8, 42], fov: 52 }}
       gl={{ antialias: true, alpha: false, powerPreference: 'high-performance' }}
-      dpr={[1, 2]}
+      dpr={[1, 1.75]}
       frameloop={props.paused ? 'never' : 'always'}
     >
       <Suspense fallback={null}>

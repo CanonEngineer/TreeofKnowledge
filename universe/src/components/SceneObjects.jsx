@@ -1,6 +1,6 @@
-import { useRef, useMemo } from 'react';
+import { useRef, useMemo, useEffect } from 'react';
 import { useFrame } from '@react-three/fiber';
-import { Line } from '@react-three/drei';
+import { Html } from '@react-three/drei';
 import * as THREE from 'three';
 
 export function StarField({ count = 6000 }) {
@@ -51,6 +51,7 @@ export function NodeSphere({
   highlighted,
   dimmed,
   animated,
+  showLabel,
   onClick,
   onDoubleClick,
   onPointerOver,
@@ -59,40 +60,35 @@ export function NodeSphere({
   const meshRef = useRef();
   const glowRef = useRef();
   const ringRef = useRef();
-  const base = node.size * (node.layer === 'root' ? 1.15 : 1);
-  const targetScale = selected ? base * 1.4 : hovered ? base * 1.25 : highlighted ? base * 1.1 : base;
-  const opacity = dimmed ? 0.12 : 1;
+  const base = Math.max(0.55, node.size * (node.layer === 'root' ? 1.1 : 1));
+  const targetScale = selected ? 1.35 : hovered ? 1.2 : highlighted ? 1.08 : 1;
+  const opacity = dimmed ? 0.18 : 1;
   const color = useMemo(() => new THREE.Color(node.color), [node.color]);
 
   useFrame(({ clock }) => {
     if (!meshRef.current) return;
     const t = clock.elapsedTime;
-    const floatY = animated && !dimmed ? Math.sin(t * 1.2 + hash(node.id) * 10) * 0.15 : 0;
-    meshRef.current.position.y = floatY;
-    if (glowRef.current) glowRef.current.position.y = floatY;
-    if (ringRef.current) {
-      ringRef.current.position.y = floatY;
-      ringRef.current.rotation.z = t * 0.35;
+    // Sem floatY — desincronizava esfera do raio / label
+    if (animated && (selected || hovered)) {
+      meshRef.current.rotation.y += 0.012;
     }
-
-    meshRef.current.scale.lerp(new THREE.Vector3(targetScale, targetScale, targetScale), 0.1);
+    meshRef.current.scale.lerp(new THREE.Vector3(base * targetScale, base * targetScale, base * targetScale), 0.12);
     const mat = meshRef.current.material;
-    mat.emissiveIntensity += ((selected ? 2.2 : hovered ? 1.6 : highlighted ? 1.0 : 0.45) - mat.emissiveIntensity) * 0.08;
-    mat.opacity += (opacity - mat.opacity) * 0.1;
-
-    if (selected || hovered) meshRef.current.rotation.y += 0.01;
+    mat.emissiveIntensity += ((selected ? 2.0 : hovered ? 1.5 : highlighted ? 0.9 : 0.55) - mat.emissiveIntensity) * 0.1;
+    mat.opacity += (opacity - mat.opacity) * 0.12;
+    if (ringRef.current) ringRef.current.rotation.z = t * 0.35;
   });
 
   return (
     <group position={[node.position.x, node.position.y, node.position.z]}>
       {(selected || hovered || node.layer === 'root') && (
-        <mesh ref={glowRef} scale={[base * 2.8, base * 2.8, base * 2.8]}>
+        <mesh ref={glowRef} scale={[base * (node.layer === 'root' ? 1.55 : 2.2), base * (node.layer === 'root' ? 1.55 : 2.2), base * (node.layer === 'root' ? 1.55 : 2.2)]}>
           <sphereGeometry args={[1, 16, 16]} />
-          <meshBasicMaterial color={node.color} transparent opacity={selected ? 0.14 : 0.08} depthWrite={false} />
+          <meshBasicMaterial color={node.color} transparent opacity={selected ? 0.14 : 0.07} depthWrite={false} />
         </mesh>
       )}
       {selected && (
-        <mesh ref={ringRef} rotation={[Math.PI / 2, 0, 0]} scale={[base * 1.8, base * 1.8, base * 1.8]}>
+        <mesh ref={ringRef} rotation={[Math.PI / 2, 0, 0]} scale={[base * 1.7, base * 1.7, base * 1.7]}>
           <ringGeometry args={[0.85, 1, 48]} />
           <meshBasicMaterial color={node.color} transparent opacity={0.55} side={THREE.DoubleSide} />
         </mesh>
@@ -108,96 +104,91 @@ export function NodeSphere({
         onPointerOver={(e) => { e.stopPropagation(); onPointerOver(node); document.body.style.cursor = 'pointer'; }}
         onPointerOut={() => { onPointerOut(); document.body.style.cursor = 'default'; }}
       >
-        <sphereGeometry args={[1, 48, 48]} />
+        <sphereGeometry args={[1, 32, 32]} />
         <meshStandardMaterial
           color={color}
           emissive={color}
-          emissiveIntensity={0.45}
+          emissiveIntensity={0.55}
           transparent
           opacity={1}
-          roughness={0.15}
-          metalness={0.85}
+          roughness={0.2}
+          metalness={0.75}
         />
       </mesh>
       <pointLight
         color={node.color}
-        intensity={selected ? 3 : hovered ? 1.8 : highlighted ? 0.8 : 0.15}
-        distance={base * 8}
+        intensity={selected ? 2.4 : hovered ? 1.4 : 0.25}
+        distance={base * 7}
       />
-    </group>
-  );
-}
-
-export function ConnectionBeam({ link, posMap, sizeMap, active, dimmed, showParticles, linkStyle }) {
-  const start = posMap.get(link.source);
-  const end = posMap.get(link.target);
-  const p0 = useRef();
-  const p1 = useRef();
-  const p2 = useRef();
-
-  const { curve, points } = useMemo(() => {
-    if (!start || !end) return { curve: null, points: [] };
-    const s0 = new THREE.Vector3(start.x, start.y, start.z);
-    const e0 = new THREE.Vector3(end.x, end.y, end.z);
-    const dir = e0.clone().sub(s0);
-    const dist = dir.length();
-    if (dist < 0.01) return { curve: null, points: [] };
-    dir.multiplyScalar(1 / dist);
-
-    // Encosta na superfície das esferas — o raio não “flutua” fora do nó
-    const rs = (sizeMap?.get(link.source) || 0.85) * 0.92;
-    const re = (sizeMap?.get(link.target) || 0.85) * 0.92;
-    const pad = Math.min(rs + re + 0.15, dist * 0.45);
-    const s = s0.clone().addScaledVector(dir, Math.min(rs, pad * 0.5));
-    const e = e0.clone().addScaledVector(dir, -Math.min(re, pad * 0.5));
-
-    // Quase reto (arco mínimo) — bezier alto deslocava o raio para fora dos nós
-    const mid = s.clone().add(e).multiplyScalar(0.5);
-    mid.y += Math.min(0.55, s.distanceTo(e) * 0.02);
-    const c = new THREE.QuadraticBezierCurve3(s, mid, e);
-    return { curve: c, points: c.getPoints(24).map((p) => [p.x, p.y, p.z]) };
-  }, [start, end, sizeMap, link.source, link.target]);
-
-  const color = active ? '#60a5fa' : dimmed ? '#1e293b' : '#475569';
-  const opacity = active ? 1 : dimmed ? 0.06 : 0.42;
-  const dashed = linkStyle === 'communication' || link.type === 'communication';
-
-  useFrame(({ clock }) => {
-    if (!showParticles || !active || !curve) return;
-    [p0, p1, p2].forEach((ref, i) => {
-      if (!ref.current) return;
-      const t = (clock.elapsedTime * 0.28 + i * 0.33 + hash(link.source + link.target)) % 1;
-      ref.current.position.copy(curve.getPoint(t));
-    });
-  });
-
-  if (!curve || !points.length) return null;
-
-  return (
-    <group>
-      <Line
-        points={points}
-        color={color}
-        lineWidth={active ? 2.2 : 1}
-        transparent
-        opacity={opacity}
-        dashed={dashed}
-        dashSize={0.8}
-        gapSize={0.45}
-      />
-      {active && showParticles && (
-        <>
-          <mesh ref={p0}><sphereGeometry args={[0.22, 8, 8]} /><meshBasicMaterial color="#bfdbfe" /></mesh>
-          <mesh ref={p1}><sphereGeometry args={[0.18, 8, 8]} /><meshBasicMaterial color="#93c5fd" /></mesh>
-          <mesh ref={p2}><sphereGeometry args={[0.14, 8, 8]} /><meshBasicMaterial color="#dbeafe" /></mesh>
-        </>
+      {/* Label no MESMO grupo da esfera — mesmo ponto do raio */}
+      {showLabel && (
+        <Html
+          position={[0, base + 0.35, 0]}
+          center
+          sprite
+          distanceFactor={22}
+          zIndexRange={[40, 0]}
+          style={{ pointerEvents: 'none' }}
+        >
+          <span
+            className={`node-label ${selected ? 'selected' : ''} ${node.layer || ''}`}
+            style={{ borderColor: node.color, boxShadow: `0 0 10px ${node.color}44` }}
+          >
+            {node.label}
+          </span>
+        </Html>
       )}
     </group>
   );
 }
 
-function hash(s) {
-  let h = 0;
-  for (let i = 0; i < s.length; i++) h = (h * 31 + s.charCodeAt(i)) >>> 0;
-  return (h % 1000) / 1000;
+/** Aresta em world-space (THREE.Line) — não usa Line2/screen-space do drei, que desalinha com Html. */
+export function ConnectionBeam({ link, posMap, sizeMap, active, dimmed }) {
+  const objRef = useRef();
+
+  const { positions, color, opacity } = useMemo(() => {
+    const start = posMap.get(link.source);
+    const end = posMap.get(link.target);
+    if (!start || !end) return { positions: null, color: '#475569', opacity: 0 };
+
+    const s0 = new THREE.Vector3(start.x, start.y, start.z);
+    const e0 = new THREE.Vector3(end.x, end.y, end.z);
+    const dir = e0.clone().sub(s0);
+    const dist = dir.length();
+    if (dist < 0.01) return { positions: null, color: '#475569', opacity: 0 };
+    dir.multiplyScalar(1 / dist);
+
+    const rs = (sizeMap?.get(link.source) || 0.85) * 0.95;
+    const re = (sizeMap?.get(link.target) || 0.85) * 0.95;
+    const s = s0.clone().addScaledVector(dir, Math.min(rs, dist * 0.35));
+    const e = e0.clone().addScaledVector(dir, -Math.min(re, dist * 0.35));
+
+    return {
+      positions: new Float32Array([s.x, s.y, s.z, e.x, e.y, e.z]),
+      color: active ? '#60a5fa' : dimmed ? '#1e293b' : '#64748b',
+      opacity: active ? 0.95 : dimmed ? 0.08 : 0.55,
+    };
+  }, [link.source, link.target, posMap, sizeMap, active, dimmed]);
+
+  const line = useMemo(() => {
+    if (!positions) return null;
+    const geo = new THREE.BufferGeometry();
+    geo.setAttribute('position', new THREE.BufferAttribute(positions, 3));
+    const mat = new THREE.LineBasicMaterial({
+      color,
+      transparent: true,
+      opacity,
+      depthWrite: false,
+    });
+    return new THREE.Line(geo, mat);
+  }, [positions, color, opacity]);
+
+  useEffect(() => () => {
+    if (!line) return;
+    line.geometry.dispose();
+    line.material.dispose();
+  }, [line]);
+
+  if (!line) return null;
+  return <primitive ref={objRef} object={line} />;
 }
