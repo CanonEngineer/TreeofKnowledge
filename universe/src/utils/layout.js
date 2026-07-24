@@ -1,4 +1,4 @@
-/** Layout hierárquico radial — estável para árvores grandes (100–400+ nós) */
+/** Layout hierárquico radial 3D — espelha a lógica da árvore 2D (raios alinhados aos nós). */
 export function computeLayout(graph) {
   const { nodes } = graph;
   const children = new Map();
@@ -21,44 +21,79 @@ export function computeLayout(graph) {
   positions.set(root.id, { x: 0, y: 0, z: 0 });
 
   const level1 = children.get(root.id) || [];
-  const R1 = Math.max(16, Math.min(36, 10 + Math.sqrt(level1.length) * 4.2));
+  // Anel no plano XZ — mesmo espírito do 2D
+  const R1 = Math.max(12, Math.min(28, 8 + Math.sqrt(Math.max(level1.length, 1)) * 3.4));
 
   level1.forEach((id, i) => {
     const angle = (i / Math.max(level1.length, 1)) * Math.PI * 2 - Math.PI / 2;
-    const tilt = Math.sin(i * 1.15) * 3;
     positions.set(id, {
       x: Math.cos(angle) * R1,
-      y: tilt,
+      y: Math.sin(i * 0.7) * 0.8,
       z: Math.sin(angle) * R1,
     });
   });
-
-  function fibonacciOffset(i, count, radius) {
-    const phi = Math.acos(1 - (2 * (i + 0.5)) / Math.max(count, 1));
-    const theta = Math.PI * (1 + Math.sqrt(5)) * i;
-    return {
-      x: radius * Math.sin(phi) * Math.cos(theta),
-      y: radius * Math.cos(phi) * 0.55,
-      z: radius * Math.sin(phi) * Math.sin(theta),
-    };
-  }
 
   function layoutSubtree(parentId, depth) {
     const kids = children.get(parentId) || [];
     const parentPos = positions.get(parentId);
     if (!parentPos || !kids.length) return;
 
-    const baseR = depth === 1 ? 9 : depth === 2 ? 6.2 : depth === 3 ? 4.5 : 3.4;
-    // Cresce com sqrt(n) — evita colapso/sobreposição em pastas com muitos arquivos
-    const radius = baseR + Math.min(Math.sqrt(kids.length) * 1.35, 14);
+    // Direção "para fora" a partir da raiz (eixo do ramo)
+    const outward = {
+      x: parentPos.x,
+      y: parentPos.y * 0.35,
+      z: parentPos.z,
+    };
+    let olen = Math.hypot(outward.x, outward.y, outward.z);
+    if (olen < 0.001) {
+      outward.x = 0;
+      outward.y = 0;
+      outward.z = 1;
+      olen = 1;
+    }
+    outward.x /= olen;
+    outward.y /= olen;
+    outward.z /= olen;
+
+    // Base ortonormal no plano perpendicular ao ramo
+    let ax = Math.abs(outward.x) < 0.9 ? 1 : 0;
+    let ay = Math.abs(outward.x) < 0.9 ? 0 : 1;
+    let az = 0;
+    // u = outward × arbitrary
+    let ux = outward.y * az - outward.z * ay;
+    let uy = outward.z * ax - outward.x * az;
+    let uz = outward.x * ay - outward.y * ax;
+    let ul = Math.hypot(ux, uy, uz) || 1;
+    ux /= ul;
+    uy /= ul;
+    uz /= ul;
+    // v = outward × u
+    let vx = outward.y * uz - outward.z * uy;
+    let vy = outward.z * ux - outward.x * uz;
+    let vz = outward.x * uy - outward.y * ux;
+
+    const baseR = depth === 1 ? 7.5 : depth === 2 ? 5.4 : depth === 3 ? 4.0 : 3.2;
+    const orbit = baseR + Math.min(Math.sqrt(kids.length) * 0.95, 8);
+    const n = kids.length;
+    // Leque aberto à frente do ramo (como o spread 2D), não esfera completa
+    const spread = n <= 1 ? 0 : Math.min(Math.PI * 1.15, 0.55 + n * 0.38);
+    const start = -spread / 2;
+    const step = n <= 1 ? 0 : spread / (n - 1);
 
     kids.forEach((kidId, i) => {
       if (positions.has(kidId)) return;
-      const off = fibonacciOffset(i, kids.length, radius);
+      const a = n === 1 ? 0 : start + step * i;
+      // leve elevação por índice para profundidade visual sem quebrar o raio
+      const elev = ((i % 5) - 2) * 0.35;
+      const cosA = Math.cos(a);
+      const sinA = Math.sin(a);
+      // ponto no cone: principalmente ao longo de outward + leque no plano u/v
+      const along = orbit * 0.72;
+      const side = orbit * 0.78;
       positions.set(kidId, {
-        x: parentPos.x + off.x,
-        y: parentPos.y + off.y,
-        z: parentPos.z + off.z,
+        x: parentPos.x + outward.x * along + (ux * cosA + vx * sinA) * side,
+        y: parentPos.y + outward.y * along + (uy * cosA + vy * sinA) * side + elev,
+        z: parentPos.z + outward.z * along + (uz * cosA + vz * sinA) * side,
       });
       layoutSubtree(kidId, depth + 1);
     });
@@ -68,8 +103,7 @@ export function computeLayout(graph) {
 
   nodes.forEach((n) => {
     if (!positions.has(n.id)) {
-      const c = clusterFallback(n, nodes);
-      positions.set(n.id, c);
+      positions.set(n.id, clusterFallback(n, nodes));
     }
   });
 

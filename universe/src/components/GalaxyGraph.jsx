@@ -23,6 +23,10 @@ function Scene({
 }) {
   const laidOut = useMemo(() => computeLayout(graph), [graph]);
   const posMap = useMemo(() => new Map(laidOut.map((n) => [n.id, n.position])), [laidOut]);
+  const sizeMap = useMemo(
+    () => new Map(laidOut.map((n) => [n.id, n.size * (n.layer === 'root' ? 1.15 : 1)])),
+    [laidOut]
+  );
   const links = graph.links || [];
 
   const focusNode = useMemo(() => {
@@ -62,6 +66,7 @@ function Scene({
               key={`${link.source}-${link.target}`}
               link={{ ...link, type: style === 'dependency' ? link.type : style }}
               posMap={posMap}
+              sizeMap={sizeMap}
               active={active || (connected && !hasFocus)}
               dimmed={dimmed}
               showParticles={showParticles}

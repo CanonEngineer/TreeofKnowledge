@@ -128,7 +128,7 @@ export function NodeSphere({
   );
 }
 
-export function ConnectionBeam({ link, posMap, active, dimmed, showParticles, linkStyle }) {
+export function ConnectionBeam({ link, posMap, sizeMap, active, dimmed, showParticles, linkStyle }) {
   const start = posMap.get(link.source);
   const end = posMap.get(link.target);
   const p0 = useRef();
@@ -137,13 +137,26 @@ export function ConnectionBeam({ link, posMap, active, dimmed, showParticles, li
 
   const { curve, points } = useMemo(() => {
     if (!start || !end) return { curve: null, points: [] };
-    const s = new THREE.Vector3(start.x, start.y, start.z);
-    const e = new THREE.Vector3(end.x, end.y, end.z);
+    const s0 = new THREE.Vector3(start.x, start.y, start.z);
+    const e0 = new THREE.Vector3(end.x, end.y, end.z);
+    const dir = e0.clone().sub(s0);
+    const dist = dir.length();
+    if (dist < 0.01) return { curve: null, points: [] };
+    dir.multiplyScalar(1 / dist);
+
+    // Encosta na superfície das esferas — o raio não “flutua” fora do nó
+    const rs = (sizeMap?.get(link.source) || 0.85) * 0.92;
+    const re = (sizeMap?.get(link.target) || 0.85) * 0.92;
+    const pad = Math.min(rs + re + 0.15, dist * 0.45);
+    const s = s0.clone().addScaledVector(dir, Math.min(rs, pad * 0.5));
+    const e = e0.clone().addScaledVector(dir, -Math.min(re, pad * 0.5));
+
+    // Quase reto (arco mínimo) — bezier alto deslocava o raio para fora dos nós
     const mid = s.clone().add(e).multiplyScalar(0.5);
-    mid.y += 1.2 + s.distanceTo(e) * 0.08;
+    mid.y += Math.min(0.55, s.distanceTo(e) * 0.02);
     const c = new THREE.QuadraticBezierCurve3(s, mid, e);
-    return { curve: c, points: c.getPoints(48).map((p) => [p.x, p.y, p.z]) };
-  }, [start, end]);
+    return { curve: c, points: c.getPoints(24).map((p) => [p.x, p.y, p.z]) };
+  }, [start, end, sizeMap, link.source, link.target]);
 
   const color = active ? '#60a5fa' : dimmed ? '#1e293b' : '#475569';
   const opacity = active ? 1 : dimmed ? 0.06 : 0.42;
