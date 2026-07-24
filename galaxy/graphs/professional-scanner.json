@@ -4,7 +4,7 @@
   "repoUrl": "https://github.com/CanonEngineer/Professional-Scanner",
   "color": "#06b6d4",
   "demoUrl": "https://github.com/CanonEngineer/Professional-Scanner/blob/main/docs/DOCUMENTATION.md",
-  "nodeCount": 106,
+  "nodeCount": 113,
   "categories": {
     "core": {
       "label": "Backend",
@@ -66,7 +66,7 @@
       "color": "#3b82f6",
       "size": 2.2,
       "file": "server.js",
-      "description": "NetScan Canon v2.4.6 — design system UI (paginação, modais, tema claro/escuro), inventário renomeado, auth WebSocket etapa 7, inventário Ausente/conflitos."
+      "description": "NetScan Canon v2.5.0 — Biblioteca permanente, Pastas/ACL, classificação endurecida, auth WebSocket, inventário Ausente/conflitos e design system UI."
     },
     {
       "id": "ps-static",
@@ -293,8 +293,8 @@
       "categoryLabel": "Backend",
       "color": "#3b82f6",
       "size": 0.62,
-      "file": "server.js",
-      "description": "Classifica host hospitalar: PC, impressora, câmera, PACS, OT…"
+      "file": "deviceTypeDetect.js",
+      "description": "Classifica host (deviceTypeDetect.js): impressora, endpoint, câmera, roteador, switch, médico, IoT…"
     },
     {
       "id": "ps-export-xlsx",
@@ -438,7 +438,7 @@
       "color": "#3b82f6",
       "size": 0.85,
       "file": "hostHistory.js",
-      "description": "Histórico persistente de IPs ociosos — backup antes de limpar, restore e merge."
+      "description": "Histórico de IPs ociosos — recovered/novos inativos, backup, restore e merge."
     },
     {
       "id": "ps-vm-vlan-file",
@@ -522,7 +522,7 @@
       "color": "#a78bfa",
       "size": 0.85,
       "file": "adUserAudit.js",
-      "description": "Auditoria AD: sync, saídas, departamentos, grupos, lookup live."
+      "description": "Auditoria AD: sync, saídas, departamentos, grupos, lookup live e integração Pastas."
     },
     {
       "id": "ps-loop-file",
@@ -1194,7 +1194,7 @@
       "color": "#06b6d4",
       "size": 1.35,
       "file": "scripts/install-autotest-agent-service.ps1",
-      "description": "Instalação agente, Oracle bridge, help."
+      "description": "Instalação agente, Oracle bridge, restore history e reclassificação da biblioteca."
     },
     {
       "id": "ps-script-install-agent",
@@ -1327,6 +1327,90 @@
       "size": 0.85,
       "file": "package.agent.json",
       "description": "Manifesto npm do bundle do agente AutoTest remoto."
+    },
+    {
+      "id": "ps-device-library-file",
+      "label": "deviceLibrary.js",
+      "parent": "ps-grp-core",
+      "layer": "file",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 0.85,
+      "file": "deviceLibrary.js",
+      "description": "Biblioteca permanente de dispositivos — add/update por IP, categorias Ativos/Inativos/tipos, sem wipe."
+    },
+    {
+      "id": "ps-device-type-detect-file",
+      "label": "deviceTypeDetect.js",
+      "parent": "ps-grp-core",
+      "layer": "file",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 0.85,
+      "file": "deviceTypeDetect.js",
+      "description": "Classificação endurecida de tipo: hostname, portas, HTTP/TLS, SNMP, MAC/OUI e AD."
+    },
+    {
+      "id": "ps-file-share-audit",
+      "label": "fileShareAudit.js",
+      "parent": "ps-root",
+      "layer": "file",
+      "category": "ad",
+      "categoryLabel": "Active Directory",
+      "color": "#a78bfa",
+      "size": 0.9,
+      "file": "fileShareAudit.js",
+      "description": "Aba Pastas — shares fileserver, browse UNC/local e ACL NTFS via PowerShell (-File)."
+    },
+    {
+      "id": "ps-device-library-ui",
+      "label": "public/deviceLibrary.js",
+      "parent": "ps-grp-public",
+      "layer": "file",
+      "category": "frontend",
+      "categoryLabel": "Frontend",
+      "color": "#eab308",
+      "size": 0.85,
+      "file": "public/deviceLibrary.js",
+      "description": "UI Biblioteca de Dispositivos — categorias, busca, cards e paginação sob o Mapa por Ala."
+    },
+    {
+      "id": "ps-script-reclassify-live",
+      "label": "reclassify-device-library-live.js",
+      "parent": "ps-grp-scripts",
+      "layer": "file",
+      "category": "scripts",
+      "categoryLabel": "Scripts",
+      "color": "#64748b",
+      "size": 0.7,
+      "file": "scripts/reclassify-device-library-live.js",
+      "description": "Reclassifica a biblioteca com enriquecimento ao vivo (AD, SNMP, HTTP, TLS, MAC)."
+    },
+    {
+      "id": "ps-script-reapply-types",
+      "label": "reapply-device-types.js",
+      "parent": "ps-grp-scripts",
+      "layer": "file",
+      "category": "scripts",
+      "categoryLabel": "Scripts",
+      "color": "#64748b",
+      "size": 0.7,
+      "file": "scripts/reapply-device-types.js",
+      "description": "Reaplica tipos offline a partir dos dados já salvos na biblioteca."
+    },
+    {
+      "id": "ps-shares-example",
+      "label": "fileserver-shares.example.json",
+      "parent": "ps-grp-core",
+      "layer": "file",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 0.65,
+      "file": "data/fileserver-shares.example.json",
+      "description": "Exemplo de configuração de fileservers/shares para a aba Pastas (arquivo real é gitignored)."
     }
   ],
   "links": [
