@@ -4,7 +4,7 @@
   "repoUrl": "https://github.com/CanonEngineer/SentinelAI",
   "color": "#38bdf8",
   "demoUrl": "http://localhost:5173",
-  "nodeCount": 32,
+  "nodeCount": 127,
   "categories": {
     "core": {
       "label": "Backend",
@@ -17,6 +17,10 @@
     "frontend": {
       "label": "Frontend",
       "color": "#eab308"
+    },
+    "auth": {
+      "label": "Seguranca",
+      "color": "#ef4444"
     },
     "other": {
       "label": "Outros",
@@ -34,11 +38,11 @@
       "color": "#3b82f6",
       "size": 2.2,
       "file": "README.md",
-      "description": "Plataforma NMS full-stack: discovery Nmap/SNMP, topologia 2D/3D, monitoramento, alertas e inventário persistente."
+      "description": "Plataforma NMS full-stack: discovery, Zion, topologia 2D/3D, WMI/SNMP, alertas e estabilização."
     },
     {
       "id": "sai-arch",
-      "label": "Arquitetura C4",
+      "label": "Arquitetura & Compose",
       "parent": "sai-root",
       "layer": "module",
       "category": "core",
@@ -46,11 +50,59 @@
       "color": "#3b82f6",
       "size": 1.35,
       "file": "docker-compose.yml",
-      "description": "Frontend React + FastAPI + Celery + PostgreSQL + Redis."
+      "description": "Stack Docker: API, frontend, workers, Postgres, Redis."
     },
     {
-      "id": "sai-discovery-api",
-      "label": "API Discovery",
+      "id": "sai-main",
+      "label": "main.py",
+      "parent": "sai-arch",
+      "layer": "file",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 0.85,
+      "file": "backend/app/main.py",
+      "description": "Bootstrap FastAPI, CORS, schema ensure, admin seed."
+    },
+    {
+      "id": "sai-config",
+      "label": "config.py",
+      "parent": "sai-arch",
+      "layer": "file",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 0.85,
+      "file": "backend/app/config.py",
+      "description": "Settings pydantic: SNMP, WMI, alertas, feature flags."
+    },
+    {
+      "id": "sai-models",
+      "label": "models/__init__.py",
+      "parent": "sai-arch",
+      "layer": "file",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 0.85,
+      "file": "backend/app/models/__init__.py",
+      "description": "ORM SQLAlchemy: Device, Monitor, Metric, ZionMonitorPanel…"
+    },
+    {
+      "id": "sai-celery",
+      "label": "celery_app.py",
+      "parent": "sai-arch",
+      "layer": "file",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 0.85,
+      "file": "backend/app/workers/celery_app.py",
+      "description": "Broker Redis, filas celery/discovery, beat schedule."
+    },
+    {
+      "id": "sai-discovery",
+      "label": "Discovery Engine",
       "parent": "sai-root",
       "layer": "module",
       "category": "network",
@@ -58,95 +110,323 @@
       "color": "#22d3ee",
       "size": 1.35,
       "file": "backend/app/api/routes/discovery.py",
-      "description": "Jobs assíncronos de scan, perfis nmap, stop e listagem."
+      "description": "Scan de sub-rede Nmap/ICMP + inventário ativo/inativo."
     },
     {
       "id": "sai-discovery-task",
       "label": "discovery_tasks.py",
-      "parent": "sai-discovery-api",
+      "parent": "sai-discovery",
       "layer": "file",
-      "category": "core",
-      "categoryLabel": "Backend",
-      "color": "#3b82f6",
+      "category": "network",
+      "categoryLabel": "Rede / Scan",
+      "color": "#22d3ee",
       "size": 0.85,
       "file": "backend/app/workers/discovery_tasks.py",
-      "description": "Worker Celery: nmap → inventário → progresso em tempo real."
+      "description": "Worker Celery do job de discovery e poll SNMP/Zion."
     },
     {
       "id": "sai-nmap",
       "label": "nmap_scanner.py",
-      "parent": "sai-discovery-task",
+      "parent": "sai-discovery",
       "layer": "file",
-      "category": "core",
-      "categoryLabel": "Backend",
-      "color": "#3b82f6",
+      "category": "network",
+      "categoryLabel": "Rede / Scan",
+      "color": "#22d3ee",
       "size": 0.85,
       "file": "backend/app/engines/discovery/nmap_scanner.py",
-      "description": "Scan SYN/connect, UDP, scripts, timing e perfis configuráveis."
+      "description": "Scan SYN/connect, UDP, scripts e timing."
     },
     {
       "id": "sai-scan-options",
       "label": "scan_options.py",
-      "parent": "sai-discovery-task",
+      "parent": "sai-discovery",
       "layer": "file",
       "category": "network",
       "categoryLabel": "Rede / Scan",
       "color": "#22d3ee",
       "size": 0.85,
       "file": "backend/app/engines/discovery/scan_options.py",
-      "description": "Perfis quick, standard, deep, aggressive e custom."
+      "description": "Perfis quick → aggressive e opções custom."
     },
     {
       "id": "sai-subnet",
       "label": "subnet_scanner.py",
-      "parent": "sai-discovery-task",
+      "parent": "sai-discovery",
       "layer": "file",
-      "category": "core",
-      "categoryLabel": "Backend",
-      "color": "#3b82f6",
+      "category": "network",
+      "categoryLabel": "Rede / Scan",
+      "color": "#22d3ee",
       "size": 0.85,
       "file": "backend/app/engines/discovery/subnet_scanner.py",
-      "description": "ICMP ping em batches quando nmap indisponível."
+      "description": "ICMP ping em batches (fallback sem nmap)."
     },
     {
       "id": "sai-snmp",
       "label": "snmp_collector.py",
-      "parent": "sai-discovery-task",
+      "parent": "sai-discovery",
       "layer": "file",
-      "category": "core",
-      "categoryLabel": "Backend",
-      "color": "#3b82f6",
+      "category": "network",
+      "categoryLabel": "Rede / Scan",
+      "color": "#22d3ee",
       "size": 0.85,
       "file": "backend/app/engines/discovery/snmp_collector.py",
-      "description": "sysName, sysDescr, interfaces, CPU via SNMP."
+      "description": "sysName, CPU, mem, disco, temp, interfaces SNMP."
+    },
+    {
+      "id": "sai-wmi",
+      "label": "wmi_collector.py",
+      "parent": "sai-discovery",
+      "layer": "file",
+      "category": "network",
+      "categoryLabel": "Rede / Scan",
+      "color": "#22d3ee",
+      "size": 0.85,
+      "file": "backend/app/engines/discovery/wmi_collector.py",
+      "description": "Windows via Impacket: hostname, vendor, CPU/RAM/disco/temp."
+    },
+    {
+      "id": "sai-ssh-collector",
+      "label": "ssh_collector.py",
+      "parent": "sai-discovery",
+      "layer": "file",
+      "category": "network",
+      "categoryLabel": "Rede / Scan",
+      "color": "#22d3ee",
+      "size": 0.85,
+      "file": "backend/app/engines/discovery/ssh_collector.py",
+      "description": "Coleta Linux via SSH (hostname, OS, uptime)."
+    },
+    {
+      "id": "sai-software",
+      "label": "software_collector.py",
+      "parent": "sai-discovery",
+      "layer": "file",
+      "category": "network",
+      "categoryLabel": "Rede / Scan",
+      "color": "#22d3ee",
+      "size": 0.85,
+      "file": "backend/app/engines/discovery/software_collector.py",
+      "description": "Inventário de software (SNMP hrSW + WMI)."
+    },
+    {
+      "id": "sai-dns",
+      "label": "dns_resolver.py",
+      "parent": "sai-discovery",
+      "layer": "file",
+      "category": "network",
+      "categoryLabel": "Rede / Scan",
+      "color": "#22d3ee",
+      "size": 0.85,
+      "file": "backend/app/engines/discovery/dns_resolver.py",
+      "description": "Resolução reversa de hostname."
+    },
+    {
+      "id": "sai-oui",
+      "label": "oui.py",
+      "parent": "sai-discovery",
+      "layer": "file",
+      "category": "network",
+      "categoryLabel": "Rede / Scan",
+      "color": "#22d3ee",
+      "size": 0.85,
+      "file": "backend/app/engines/discovery/oui.py",
+      "description": "Vendor pelo MAC (OUI)."
+    },
+    {
+      "id": "sai-progress",
+      "label": "discovery_progress.py",
+      "parent": "sai-discovery",
+      "layer": "file",
+      "category": "network",
+      "categoryLabel": "Rede / Scan",
+      "color": "#22d3ee",
+      "size": 0.85,
+      "file": "backend/app/engines/discovery/discovery_progress.py",
+      "description": "Progresso do scan em tempo real."
     },
     {
       "id": "sai-inventory",
       "label": "inventory_service.py",
-      "parent": "sai-discovery-task",
+      "parent": "sai-discovery",
       "layer": "file",
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
       "size": 0.85,
       "file": "backend/app/services/inventory_service.py",
-      "description": "Inventário ativos + inativos em /24, asset history."
+      "description": "Upsert ativos/inativos, histórico de campos."
     },
     {
       "id": "sai-discovery-svc",
       "label": "discovery_service.py",
-      "parent": "sai-discovery-api",
+      "parent": "sai-discovery",
+      "layer": "file",
+      "category": "network",
+      "categoryLabel": "Rede / Scan",
+      "color": "#22d3ee",
+      "size": 0.85,
+      "file": "backend/app/services/discovery_service.py",
+      "description": "Ciclo de IDs de job e cancelamento."
+    },
+    {
+      "id": "sai-devices",
+      "label": "Devices & Monitors",
+      "parent": "sai-root",
+      "layer": "module",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 1.35,
+      "file": "backend/app/api/routes/devices.py",
+      "description": "CRUD devices, enrich, métricas, monitores ping/HTTP/SNMP."
+    },
+    {
+      "id": "sai-devices-svc",
+      "label": "device_service.py",
+      "parent": "sai-devices",
       "layer": "file",
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
       "size": 0.85,
-      "file": "backend/app/services/discovery_service.py",
-      "description": "Prune histórico, cancelamento e ciclo IDs 1–100."
+      "file": "backend/app/services/device_service.py",
+      "description": "Criação com monitor ping e helpers."
     },
     {
-      "id": "sai-topology-api",
-      "label": "API Topologia",
+      "id": "sai-hardware",
+      "label": "hardware_service.py",
+      "parent": "sai-devices",
+      "layer": "file",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 0.85,
+      "file": "backend/app/services/hardware_service.py",
+      "description": "Snapshot de hardware (serial, ports, SNMP)."
+    },
+    {
+      "id": "sai-monitors-api",
+      "label": "monitors.py",
+      "parent": "sai-devices",
+      "layer": "file",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 0.85,
+      "file": "backend/app/api/routes/monitors.py",
+      "description": "API de monitores por device."
+    },
+    {
+      "id": "sai-monitor-svc",
+      "label": "monitor_service.py",
+      "parent": "sai-devices",
+      "layer": "file",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 0.85,
+      "file": "backend/app/services/monitor_service.py",
+      "description": "Execução de checks e persistência de métricas."
+    },
+    {
+      "id": "sai-ping",
+      "label": "ping.py",
+      "parent": "sai-devices",
+      "layer": "file",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 0.85,
+      "file": "backend/app/engines/monitor/ping.py",
+      "description": "Check ICMP de disponibilidade."
+    },
+    {
+      "id": "sai-http-check",
+      "label": "http_check.py",
+      "parent": "sai-devices",
+      "layer": "file",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 0.85,
+      "file": "backend/app/engines/monitor/http_check.py",
+      "description": "Probe HTTP/HTTPS."
+    },
+    {
+      "id": "sai-tcp-check",
+      "label": "tcp_check.py",
+      "parent": "sai-devices",
+      "layer": "file",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 0.85,
+      "file": "backend/app/engines/monitor/tcp_check.py",
+      "description": "Probe TCP de porta."
+    },
+    {
+      "id": "sai-protocol-probes",
+      "label": "protocol_probes.py",
+      "parent": "sai-devices",
+      "layer": "file",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 0.85,
+      "file": "backend/app/engines/monitor/protocol_probes.py",
+      "description": "Probes leves de portas/serviços."
+    },
+    {
+      "id": "sai-events-api",
+      "label": "events.py",
+      "parent": "sai-devices",
+      "layer": "file",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 0.85,
+      "file": "backend/app/api/routes/events.py",
+      "description": "Timeline de eventos (DEVICE_DISCOVERED…)."
+    },
+    {
+      "id": "sai-stream",
+      "label": "stream.py",
+      "parent": "sai-devices",
+      "layer": "file",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 0.85,
+      "file": "backend/app/api/routes/stream.py",
+      "description": "SSE de monitoramento ao vivo."
+    },
+    {
+      "id": "sai-realtime",
+      "label": "realtime_events.py",
+      "parent": "sai-devices",
+      "layer": "file",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 0.85,
+      "file": "backend/app/services/realtime_events.py",
+      "description": "Event bus (in-memory; Fase 1 → Redis)."
+    },
+    {
+      "id": "sai-ad-identity",
+      "label": "ad_identity_service.py",
+      "parent": "sai-devices",
+      "layer": "file",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 0.85,
+      "file": "backend/app/services/ad_identity_service.py",
+      "description": "Enrich AD (user/computer OU, department)."
+    },
+    {
+      "id": "sai-topology",
+      "label": "Topology Map",
       "parent": "sai-root",
       "layer": "module",
       "category": "network",
@@ -154,163 +434,91 @@
       "color": "#22d3ee",
       "size": 1.35,
       "file": "backend/app/api/routes/topology.py",
-      "description": "Grafo, links LLDP/CDP, layout, export PDF/VSDX."
+      "description": "Grafo LLDP/CDP, layout, export PDF/VSDX, tráfego."
     },
     {
       "id": "sai-topology-svc",
       "label": "topology_service.py",
-      "parent": "sai-topology-api",
+      "parent": "sai-topology",
       "layer": "file",
-      "category": "core",
-      "categoryLabel": "Backend",
-      "color": "#3b82f6",
+      "category": "network",
+      "categoryLabel": "Rede / Scan",
+      "color": "#22d3ee",
       "size": 0.85,
       "file": "backend/app/services/topology_service.py",
-      "description": "Montagem do grafo, grupos e camadas do mapa."
+      "description": "Montagem do grafo e grupos do mapa."
     },
     {
       "id": "sai-neighbor",
       "label": "neighbor_collector.py",
-      "parent": "sai-topology-api",
+      "parent": "sai-topology",
       "layer": "file",
-      "category": "core",
-      "categoryLabel": "Backend",
-      "color": "#3b82f6",
+      "category": "network",
+      "categoryLabel": "Rede / Scan",
+      "color": "#22d3ee",
       "size": 0.85,
       "file": "backend/app/engines/topology/neighbor_collector.py",
-      "description": "Coleta LLDP/CDP via SNMP."
+      "description": "Vizinhos LLDP/CDP via SNMP."
     },
     {
-      "id": "sai-devices-api",
-      "label": "API Devices",
-      "parent": "sai-root",
-      "layer": "module",
-      "category": "network",
-      "categoryLabel": "Rede / Scan",
-      "color": "#22d3ee",
-      "size": 1.35,
-      "file": "backend/app/api/routes/devices.py",
-      "description": "CRUD, CSV import, enrich, histórico."
-    },
-    {
-      "id": "sai-main",
-      "label": "main.py",
-      "parent": "sai-root",
-      "layer": "file",
-      "category": "core",
-      "categoryLabel": "Backend",
-      "color": "#3b82f6",
-      "size": 0.85,
-      "file": "backend/app/main.py",
-      "description": "Bootstrap FastAPI, CORS, rotas e migrações leves."
-    },
-    {
-      "id": "sai-models",
-      "label": "models/__init__.py",
-      "parent": "sai-root",
-      "layer": "file",
-      "category": "core",
-      "categoryLabel": "Backend",
-      "color": "#3b82f6",
-      "size": 0.85,
-      "file": "backend/app/models/__init__.py",
-      "description": "ORM: Device, DiscoveryJob, NetworkLink, Metric…"
-    },
-    {
-      "id": "sai-dashboard",
-      "label": "Dashboard React",
-      "parent": "sai-root",
-      "layer": "module",
-      "category": "frontend",
-      "categoryLabel": "Frontend",
-      "color": "#eab308",
-      "size": 1.35,
-      "file": "frontend/src/pages/Dashboard.tsx",
-      "description": "Discovery UI, jobs, KPIs, scan options."
-    },
-    {
-      "id": "sai-scan-options-ui",
-      "label": "DiscoveryScanOptions.tsx",
-      "parent": "sai-dashboard",
-      "layer": "file",
-      "category": "frontend",
-      "categoryLabel": "Frontend",
-      "color": "#eab308",
-      "size": 0.85,
-      "file": "frontend/src/components/DiscoveryScanOptions.tsx",
-      "description": "Painel de perfis nmap e opções avançadas."
-    },
-    {
-      "id": "sai-job-progress",
-      "label": "DiscoveryJobProgress.tsx",
-      "parent": "sai-dashboard",
-      "layer": "file",
-      "category": "frontend",
-      "categoryLabel": "Frontend",
-      "color": "#eab308",
-      "size": 0.85,
-      "file": "frontend/src/components/DiscoveryJobProgress.tsx",
-      "description": "Barra de progresso e banner ativo do scan."
-    },
-    {
-      "id": "sai-topology-map",
-      "label": "Topology Map 2D",
-      "parent": "sai-root",
-      "layer": "module",
-      "category": "frontend",
-      "categoryLabel": "Frontend",
-      "color": "#eab308",
-      "size": 1.35,
-      "file": "frontend/src/pages/TopologyMap.tsx",
-      "description": "React Flow: editor, ELK layout, colaboração WS."
-    },
-    {
-      "id": "sai-map-3d",
-      "label": "Map3DView.tsx",
-      "parent": "sai-topology-map",
-      "layer": "file",
-      "category": "frontend",
-      "categoryLabel": "Frontend",
-      "color": "#eab308",
-      "size": 0.85,
-      "file": "frontend/src/components/map/Map3DView.tsx",
-      "description": "Vista 3D CSS do grafo com altura por status."
-    },
-    {
-      "id": "sai-api-client",
-      "label": "client.ts",
-      "parent": "sai-root",
+      "id": "sai-traffic",
+      "label": "traffic_service.py",
+      "parent": "sai-topology",
       "layer": "file",
       "category": "network",
       "categoryLabel": "Rede / Scan",
       "color": "#22d3ee",
       "size": 0.85,
-      "file": "frontend/src/api/client.ts",
-      "description": "Cliente HTTP tipado para toda a API."
+      "file": "backend/app/services/traffic_service.py",
+      "description": "bps in/out e utilização de links."
     },
     {
-      "id": "sai-docker",
-      "label": "docker-compose.yml",
-      "parent": "sai-root",
+      "id": "sai-topo-pdf",
+      "label": "topology_pdf.py",
+      "parent": "sai-topology",
       "layer": "file",
-      "category": "other",
-      "categoryLabel": "Outros",
-      "color": "#64748b",
+      "category": "network",
+      "categoryLabel": "Rede / Scan",
+      "color": "#22d3ee",
       "size": 0.85,
-      "file": "docker-compose.yml",
-      "description": "Stack local: postgres, redis, api, workers, frontend."
+      "file": "backend/app/engines/reporting/topology_pdf.py",
+      "description": "Export PDF do mapa."
     },
     {
-      "id": "sai-celery",
-      "label": "celery_app.py",
-      "parent": "sai-root",
+      "id": "sai-topo-vsdx",
+      "label": "topology_vsdx.py",
+      "parent": "sai-topology",
+      "layer": "file",
+      "category": "network",
+      "categoryLabel": "Rede / Scan",
+      "color": "#22d3ee",
+      "size": 0.85,
+      "file": "backend/app/engines/reporting/topology_vsdx.py",
+      "description": "Export Visio (.vsdx)."
+    },
+    {
+      "id": "sai-ws",
+      "label": "ws.py",
+      "parent": "sai-topology",
       "layer": "file",
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
       "size": 0.85,
-      "file": "backend/app/workers/celery_app.py",
-      "description": "Configuração Celery e filas."
+      "file": "backend/app/api/routes/ws.py",
+      "description": "WebSocket colaboração no mapa."
+    },
+    {
+      "id": "sai-topology-tasks",
+      "label": "topology_tasks.py",
+      "parent": "sai-topology",
+      "layer": "file",
+      "category": "network",
+      "categoryLabel": "Rede / Scan",
+      "color": "#22d3ee",
+      "size": 0.85,
+      "file": "backend/app/workers/topology_tasks.py",
+      "description": "Jobs Celery de topologia/auto-layout."
     },
     {
       "id": "sai-alerts",
@@ -322,7 +530,91 @@
       "color": "#3b82f6",
       "size": 1.35,
       "file": "backend/app/engines/alerts/channels.py",
-      "description": "Email, Telegram, Slack, Discord, Teams, webhook, SMS, push."
+      "description": "Multicanal: email, Telegram, Slack, Discord, Teams, webhook, SMS, push."
+    },
+    {
+      "id": "sai-alerts-api",
+      "label": "alerts.py",
+      "parent": "sai-alerts",
+      "layer": "file",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 0.85,
+      "file": "backend/app/api/routes/alerts.py",
+      "description": "API de alertas e config."
+    },
+    {
+      "id": "sai-alert-rules",
+      "label": "alert_rules.py",
+      "parent": "sai-alerts",
+      "layer": "file",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 0.85,
+      "file": "backend/app/api/routes/alert_rules.py",
+      "description": "Regras de alerta (CRUD)."
+    },
+    {
+      "id": "sai-alert-email",
+      "label": "email.py",
+      "parent": "sai-alerts",
+      "layer": "file",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 0.85,
+      "file": "backend/app/engines/alerts/email.py",
+      "description": "Envio SMTP."
+    },
+    {
+      "id": "sai-alert-sms",
+      "label": "sms.py",
+      "parent": "sai-alerts",
+      "layer": "file",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 0.85,
+      "file": "backend/app/engines/alerts/sms.py",
+      "description": "SMS via Twilio."
+    },
+    {
+      "id": "sai-alert-push",
+      "label": "push.py",
+      "parent": "sai-alerts",
+      "layer": "file",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 0.85,
+      "file": "backend/app/engines/alerts/push.py",
+      "description": "Push Expo mobile."
+    },
+    {
+      "id": "sai-rule-engine",
+      "label": "rule_engine.py",
+      "parent": "sai-alerts",
+      "layer": "file",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 0.85,
+      "file": "backend/app/engines/alerts/rule_engine.py",
+      "description": "Avaliação de regras e severidade."
+    },
+    {
+      "id": "sai-alert-svc",
+      "label": "alert_service.py",
+      "parent": "sai-alerts",
+      "layer": "file",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 0.85,
+      "file": "backend/app/services/alert_service.py",
+      "description": "Orquestra criação/envio de alertas."
     },
     {
       "id": "sai-zion",
@@ -334,19 +626,19 @@
       "color": "#eab308",
       "size": 1.35,
       "file": "frontend/src/pages/ZionPage.tsx",
-      "description": "Painéis operacionais por IP/métrica: cards, exclusões, refresh WMI/SNMP."
+      "description": "Painéis operacionais por IP/métrica com cards dinâmicos."
     },
     {
       "id": "sai-zion-api",
       "label": "zion.py",
       "parent": "sai-zion",
       "layer": "file",
-      "category": "network",
-      "categoryLabel": "Rede / Scan",
-      "color": "#22d3ee",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
       "size": 0.85,
       "file": "backend/app/api/routes/zion.py",
-      "description": "API REST dos painéis Zion."
+      "description": "REST dos painéis Zion."
     },
     {
       "id": "sai-zion-panels",
@@ -358,35 +650,815 @@
       "color": "#3b82f6",
       "size": 0.85,
       "file": "backend/app/services/zion_panels.py",
-      "description": "Coleta SNMP/WMI/ports, serialize cards, card_exclusions."
+      "description": "Coleta SNMP/WMI/ports, exclusions, serialize cards."
     },
     {
-      "id": "sai-wmi",
-      "label": "wmi_collector.py",
-      "parent": "sai-discovery-task",
+      "id": "sai-zion-svc",
+      "label": "zion_service.py",
+      "parent": "sai-zion",
       "layer": "file",
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
       "size": 0.85,
-      "file": "backend/app/engines/discovery/wmi_collector.py",
-      "description": "Coleta Windows via Impacket: hostname, vendor, CPU, RAM, disco, temp."
+      "file": "backend/app/services/zion_service.py",
+      "description": "Overview, inventário corporativo, templates, capabilities."
     },
     {
-      "id": "sai-sse",
-      "label": "Realtime SSE",
+      "id": "sai-zion-schema",
+      "label": "zion.py (schemas)",
+      "parent": "sai-zion",
+      "layer": "file",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 0.85,
+      "file": "backend/app/schemas/zion.py",
+      "description": "Pydantic dos painéis e cards."
+    },
+    {
+      "id": "sai-ai",
+      "label": "AI & Copilot",
       "parent": "sai-root",
       "layer": "module",
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
       "size": 1.35,
-      "file": "backend/app/services/realtime_events.py",
-      "description": "Stream de monitoramento (hoje in-memory; Fase 1 → Redis pub/sub)."
+      "file": "backend/app/engines/ai/noc_copilot.py",
+      "description": "NOC Copilot, chatbot de produto, anomalias, visão."
     },
     {
-      "id": "sai-stabilize",
-      "label": "Estabilização Fase 0",
+      "id": "sai-copilot-api",
+      "label": "copilot.py",
+      "parent": "sai-ai",
+      "layer": "file",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 0.85,
+      "file": "backend/app/api/routes/copilot.py",
+      "description": "API do NOC Copilot."
+    },
+    {
+      "id": "sai-llm",
+      "label": "llm_client.py",
+      "parent": "sai-ai",
+      "layer": "file",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 0.85,
+      "file": "backend/app/engines/ai/llm_client.py",
+      "description": "Cliente LLM (OpenAI-compatible)."
+    },
+    {
+      "id": "sai-chatbot",
+      "label": "chatbot_service.py",
+      "parent": "sai-ai",
+      "layer": "file",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 0.85,
+      "file": "backend/app/engines/ai/chatbot_service.py",
+      "description": "Assistente do produto SentinelAI."
+    },
+    {
+      "id": "sai-chatbot-api",
+      "label": "chatbot.py",
+      "parent": "sai-ai",
+      "layer": "file",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 0.85,
+      "file": "backend/app/api/routes/chatbot.py",
+      "description": "Rotas do chatbot."
+    },
+    {
+      "id": "sai-product-knowledge",
+      "label": "product_knowledge.py",
+      "parent": "sai-ai",
+      "layer": "file",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 0.85,
+      "file": "backend/app/engines/ai/product_knowledge.py",
+      "description": "Base de conhecimento do produto."
+    },
+    {
+      "id": "sai-anomaly",
+      "label": "anomaly_detector.py",
+      "parent": "sai-ai",
+      "layer": "file",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 0.85,
+      "file": "backend/app/engines/ai/anomaly_detector.py",
+      "description": "Detecção de anomalias em métricas."
+    },
+    {
+      "id": "sai-vision",
+      "label": "vision_client.py",
+      "parent": "sai-ai",
+      "layer": "file",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 0.85,
+      "file": "backend/app/engines/ai/vision_client.py",
+      "description": "Cliente de visão / AR overlay."
+    },
+    {
+      "id": "sai-vision-api",
+      "label": "vision.py",
+      "parent": "sai-ai",
+      "layer": "file",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 0.85,
+      "file": "backend/app/api/routes/vision.py",
+      "description": "API Vision / WebXR."
+    },
+    {
+      "id": "sai-workers",
+      "label": "Celery Workers",
+      "parent": "sai-root",
+      "layer": "module",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 1.35,
+      "file": "backend/app/workers/tasks.py",
+      "description": "Tasks de monitor, reports, enterprise e AI."
+    },
+    {
+      "id": "sai-worker-tasks",
+      "label": "tasks.py",
+      "parent": "sai-workers",
+      "layer": "file",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 0.85,
+      "file": "backend/app/workers/tasks.py",
+      "description": "Loop principal de monitores."
+    },
+    {
+      "id": "sai-ai-tasks",
+      "label": "ai_tasks.py",
+      "parent": "sai-workers",
+      "layer": "file",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 0.85,
+      "file": "backend/app/workers/ai_tasks.py",
+      "description": "Jobs assíncronos de IA."
+    },
+    {
+      "id": "sai-report-tasks",
+      "label": "report_tasks.py",
+      "parent": "sai-workers",
+      "layer": "file",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 0.85,
+      "file": "backend/app/workers/report_tasks.py",
+      "description": "Geração de relatórios PDF/XLSX."
+    },
+    {
+      "id": "sai-enterprise-tasks",
+      "label": "enterprise_tasks.py",
+      "parent": "sai-workers",
+      "layer": "file",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 0.85,
+      "file": "backend/app/workers/enterprise_tasks.py",
+      "description": "Tasks enterprise / multi-tenant."
+    },
+    {
+      "id": "sai-phase10-tasks",
+      "label": "phase10_tasks.py",
+      "parent": "sai-workers",
+      "layer": "file",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 0.85,
+      "file": "backend/app/workers/phase10_tasks.py",
+      "description": "Plugins sync e traps."
+    },
+    {
+      "id": "sai-plugins",
+      "label": "Plugins & Flows",
+      "parent": "sai-root",
+      "layer": "module",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 1.35,
+      "file": "backend/app/engines/plugins/registry.py",
+      "description": "Registry de plugins cloud/VM, NetFlow, traps SNMP."
+    },
+    {
+      "id": "sai-plugin-base",
+      "label": "base.py",
+      "parent": "sai-plugins",
+      "layer": "file",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 0.85,
+      "file": "backend/app/engines/plugins/base.py",
+      "description": "Interface base de plugin."
+    },
+    {
+      "id": "sai-plugin-sync",
+      "label": "plugin_sync_service.py",
+      "parent": "sai-plugins",
+      "layer": "file",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 0.85,
+      "file": "backend/app/services/plugin_sync_service.py",
+      "description": "Sync plugins → Device VM."
+    },
+    {
+      "id": "sai-plugins-api",
+      "label": "plugins.py",
+      "parent": "sai-plugins",
+      "layer": "file",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 0.85,
+      "file": "backend/app/api/routes/plugins.py",
+      "description": "API de plugins."
+    },
+    {
+      "id": "sai-netflow",
+      "label": "netflow/collector.py",
+      "parent": "sai-plugins",
+      "layer": "file",
+      "category": "network",
+      "categoryLabel": "Rede / Scan",
+      "color": "#22d3ee",
+      "size": 0.85,
+      "file": "backend/app/engines/netflow/collector.py",
+      "description": "Coletor NetFlow/sFlow."
+    },
+    {
+      "id": "sai-flows-api",
+      "label": "flows.py",
+      "parent": "sai-plugins",
+      "layer": "file",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 0.85,
+      "file": "backend/app/api/routes/flows.py",
+      "description": "API de flows."
+    },
+    {
+      "id": "sai-snmp-trap",
+      "label": "trap_collector.py",
+      "parent": "sai-plugins",
+      "layer": "file",
+      "category": "network",
+      "categoryLabel": "Rede / Scan",
+      "color": "#22d3ee",
+      "size": 0.85,
+      "file": "backend/app/engines/snmp/trap_collector.py",
+      "description": "Listener de SNMP traps."
+    },
+    {
+      "id": "sai-scanner",
+      "label": "port_scanner.py",
+      "parent": "sai-plugins",
+      "layer": "file",
+      "category": "network",
+      "categoryLabel": "Rede / Scan",
+      "color": "#22d3ee",
+      "size": 0.85,
+      "file": "backend/app/engines/scanner/port_scanner.py",
+      "description": "Scanner de portas dedicado."
+    },
+    {
+      "id": "sai-vault",
+      "label": "vault_client.py",
+      "parent": "sai-plugins",
+      "layer": "file",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 0.85,
+      "file": "backend/app/engines/secrets/vault_client.py",
+      "description": "Cliente Vault / secrets."
+    },
+    {
+      "id": "sai-platform",
+      "label": "Platform & SaaS",
+      "parent": "sai-root",
+      "layer": "module",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 1.35,
+      "file": "backend/app/api/routes/platform.py",
+      "description": "Billing, scale, auditor, CDN, phases 15–21."
+    },
+    {
+      "id": "sai-billing",
+      "label": "billing.py",
+      "parent": "sai-platform",
+      "layer": "file",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 0.85,
+      "file": "backend/app/api/routes/billing.py",
+      "description": "Planos e tax/VAT regional."
+    },
+    {
+      "id": "sai-payments",
+      "label": "payments.py",
+      "parent": "sai-platform",
+      "layer": "file",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 0.85,
+      "file": "backend/app/api/routes/payments.py",
+      "description": "Stripe invoices."
+    },
+    {
+      "id": "sai-scale",
+      "label": "scale.py",
+      "parent": "sai-platform",
+      "layer": "file",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 0.85,
+      "file": "backend/app/api/routes/scale.py",
+      "description": "Marketplace playbooks / scale features."
+    },
+    {
+      "id": "sai-auditor",
+      "label": "auditor.py",
+      "parent": "sai-platform",
+      "layer": "file",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 0.85,
+      "file": "backend/app/api/routes/auditor.py",
+      "description": "Portal auditor multi-tenant."
+    },
+    {
+      "id": "sai-cdn",
+      "label": "cdn.py",
+      "parent": "sai-platform",
+      "layer": "file",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 0.85,
+      "file": "backend/app/api/routes/cdn.py",
+      "description": "CDN cost AI / auto-purge."
+    },
+    {
+      "id": "sai-mobile-api",
+      "label": "mobile.py",
+      "parent": "sai-platform",
+      "layer": "file",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 0.85,
+      "file": "backend/app/api/routes/mobile.py",
+      "description": "API mobile / push tokens."
+    },
+    {
+      "id": "sai-auth",
+      "label": "auth.py",
+      "parent": "sai-platform",
+      "layer": "file",
+      "category": "auth",
+      "categoryLabel": "Seguranca",
+      "color": "#ef4444",
+      "size": 0.85,
+      "file": "backend/app/api/routes/auth.py",
+      "description": "Login JWT / RBAC."
+    },
+    {
+      "id": "sai-users",
+      "label": "users.py",
+      "parent": "sai-platform",
+      "layer": "file",
+      "category": "auth",
+      "categoryLabel": "Seguranca",
+      "color": "#ef4444",
+      "size": 0.85,
+      "file": "backend/app/api/routes/users.py",
+      "description": "CRUD usuários."
+    },
+    {
+      "id": "sai-orgs",
+      "label": "organizations.py",
+      "parent": "sai-platform",
+      "layer": "file",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 0.85,
+      "file": "backend/app/api/routes/organizations.py",
+      "description": "Multi-tenant organizations."
+    },
+    {
+      "id": "sai-phase20",
+      "label": "phase20_service.py",
+      "parent": "sai-platform",
+      "layer": "file",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 0.85,
+      "file": "backend/app/services/phase20_service.py",
+      "description": "Fase 20: multi-currency / marketplace."
+    },
+    {
+      "id": "sai-phase21",
+      "label": "phase21_service.py",
+      "parent": "sai-platform",
+      "layer": "file",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 0.85,
+      "file": "backend/app/services/phase21_service.py",
+      "description": "Fase 21: tax regional, WebXR, CDN purge."
+    },
+    {
+      "id": "sai-observability",
+      "label": "metrics.py",
+      "parent": "sai-platform",
+      "layer": "file",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 0.85,
+      "file": "backend/app/engines/observability/metrics.py",
+      "description": "Métricas Prometheus."
+    },
+    {
+      "id": "sai-reports-api",
+      "label": "reports.py",
+      "parent": "sai-platform",
+      "layer": "file",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 0.85,
+      "file": "backend/app/api/routes/reports.py",
+      "description": "Jobs de relatório."
+    },
+    {
+      "id": "sai-remediation",
+      "label": "remediation.py",
+      "parent": "sai-platform",
+      "layer": "file",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 0.85,
+      "file": "backend/app/api/routes/remediation.py",
+      "description": "Playbooks de remediação."
+    },
+    {
+      "id": "sai-frontend",
+      "label": "Frontend React",
+      "parent": "sai-root",
+      "layer": "module",
+      "category": "frontend",
+      "categoryLabel": "Frontend",
+      "color": "#eab308",
+      "size": 1.35,
+      "file": "frontend/src/App.tsx",
+      "description": "SPA Vite: dashboard, mapa, Zion, alertas, plataforma."
+    },
+    {
+      "id": "sai-appshell",
+      "label": "AppShell.tsx",
+      "parent": "sai-frontend",
+      "layer": "file",
+      "category": "frontend",
+      "categoryLabel": "Frontend",
+      "color": "#eab308",
+      "size": 0.85,
+      "file": "frontend/src/components/layout/AppShell.tsx",
+      "description": "Shell de navegação."
+    },
+    {
+      "id": "sai-api-client",
+      "label": "client.ts",
+      "parent": "sai-frontend",
+      "layer": "file",
+      "category": "frontend",
+      "categoryLabel": "Frontend",
+      "color": "#eab308",
+      "size": 0.85,
+      "file": "frontend/src/api/client.ts",
+      "description": "Cliente HTTP tipado da API."
+    },
+    {
+      "id": "sai-dashboard",
+      "label": "Dashboard.tsx",
+      "parent": "sai-frontend",
+      "layer": "file",
+      "category": "frontend",
+      "categoryLabel": "Frontend",
+      "color": "#eab308",
+      "size": 0.85,
+      "file": "frontend/src/pages/Dashboard.tsx",
+      "description": "Discovery UI, KPIs, devices paginados, eventos 10/100."
+    },
+    {
+      "id": "sai-device-list",
+      "label": "DeviceList.tsx",
+      "parent": "sai-frontend",
+      "layer": "file",
+      "category": "frontend",
+      "categoryLabel": "Frontend",
+      "color": "#eab308",
+      "size": 0.85,
+      "file": "frontend/src/components/DeviceList.tsx",
+      "description": "Tabela de dispositivos (pageSize 10)."
+    },
+    {
+      "id": "sai-datatable",
+      "label": "DataTable.tsx",
+      "parent": "sai-frontend",
+      "layer": "file",
+      "category": "frontend",
+      "categoryLabel": "Frontend",
+      "color": "#eab308",
+      "size": 0.85,
+      "file": "frontend/src/components/ui/DataTable.tsx",
+      "description": "Tabela genérica com busca e paginação."
+    },
+    {
+      "id": "sai-scan-ui",
+      "label": "DiscoveryScanOptions.tsx",
+      "parent": "sai-frontend",
+      "layer": "file",
+      "category": "frontend",
+      "categoryLabel": "Frontend",
+      "color": "#eab308",
+      "size": 0.85,
+      "file": "frontend/src/components/DiscoveryScanOptions.tsx",
+      "description": "UI de perfis nmap."
+    },
+    {
+      "id": "sai-job-progress",
+      "label": "DiscoveryJobProgress.tsx",
+      "parent": "sai-frontend",
+      "layer": "file",
+      "category": "frontend",
+      "categoryLabel": "Frontend",
+      "color": "#eab308",
+      "size": 0.85,
+      "file": "frontend/src/components/DiscoveryJobProgress.tsx",
+      "description": "Progresso e banner do scan."
+    },
+    {
+      "id": "sai-topo-map",
+      "label": "TopologyMap.tsx",
+      "parent": "sai-frontend",
+      "layer": "file",
+      "category": "frontend",
+      "categoryLabel": "Frontend",
+      "color": "#eab308",
+      "size": 0.85,
+      "file": "frontend/src/pages/TopologyMap.tsx",
+      "description": "Editor React Flow 2D."
+    },
+    {
+      "id": "sai-map-3d",
+      "label": "Map3DView.tsx",
+      "parent": "sai-frontend",
+      "layer": "file",
+      "category": "frontend",
+      "categoryLabel": "Frontend",
+      "color": "#eab308",
+      "size": 0.85,
+      "file": "frontend/src/components/map/Map3DView.tsx",
+      "description": "Vista 3D CSS do grafo."
+    },
+    {
+      "id": "sai-map-toolbar",
+      "label": "MapToolbar.tsx",
+      "parent": "sai-frontend",
+      "layer": "file",
+      "category": "frontend",
+      "categoryLabel": "Frontend",
+      "color": "#eab308",
+      "size": 0.85,
+      "file": "frontend/src/components/map/MapToolbar.tsx",
+      "description": "Toolbar do mapa (camadas, tráfego, 3D)."
+    },
+    {
+      "id": "sai-traffic-edge",
+      "label": "TrafficEdge.tsx",
+      "parent": "sai-frontend",
+      "layer": "file",
+      "category": "frontend",
+      "categoryLabel": "Frontend",
+      "color": "#eab308",
+      "size": 0.85,
+      "file": "frontend/src/components/map/TrafficEdge.tsx",
+      "description": "Aresta animada com tráfego."
+    },
+    {
+      "id": "sai-device-library",
+      "label": "DeviceLibrary.tsx",
+      "parent": "sai-frontend",
+      "layer": "file",
+      "category": "frontend",
+      "categoryLabel": "Frontend",
+      "color": "#eab308",
+      "size": 0.85,
+      "file": "frontend/src/components/map/DeviceLibrary.tsx",
+      "description": "Biblioteca drag-drop de equipamentos."
+    },
+    {
+      "id": "sai-map-history",
+      "label": "useMapHistory.ts",
+      "parent": "sai-frontend",
+      "layer": "file",
+      "category": "frontend",
+      "categoryLabel": "Frontend",
+      "color": "#eab308",
+      "size": 0.85,
+      "file": "frontend/src/hooks/useMapHistory.ts",
+      "description": "Undo/redo ilimitado do mapa."
+    },
+    {
+      "id": "sai-map-collab",
+      "label": "useMapCollaboration.ts",
+      "parent": "sai-frontend",
+      "layer": "file",
+      "category": "frontend",
+      "categoryLabel": "Frontend",
+      "color": "#eab308",
+      "size": 0.85,
+      "file": "frontend/src/hooks/useMapCollaboration.ts",
+      "description": "Presença multi-admin no mapa."
+    },
+    {
+      "id": "sai-mon-stream",
+      "label": "useMonitoringStream.ts",
+      "parent": "sai-frontend",
+      "layer": "file",
+      "category": "frontend",
+      "categoryLabel": "Frontend",
+      "color": "#eab308",
+      "size": 0.85,
+      "file": "frontend/src/hooks/useMonitoringStream.ts",
+      "description": "Hook SSE de eventos ao vivo."
+    },
+    {
+      "id": "sai-dash-layout",
+      "label": "useDashboardLayout.ts",
+      "parent": "sai-frontend",
+      "layer": "file",
+      "category": "frontend",
+      "categoryLabel": "Frontend",
+      "color": "#eab308",
+      "size": 0.85,
+      "file": "frontend/src/hooks/useDashboardLayout.ts",
+      "description": "Widgets show/hide/reorder."
+    },
+    {
+      "id": "sai-alerts-page",
+      "label": "AlertsPage.tsx",
+      "parent": "sai-frontend",
+      "layer": "file",
+      "category": "frontend",
+      "categoryLabel": "Frontend",
+      "color": "#eab308",
+      "size": 0.85,
+      "file": "frontend/src/pages/AlertsPage.tsx",
+      "description": "UI de alertas."
+    },
+    {
+      "id": "sai-platform-page",
+      "label": "PlatformPage.tsx",
+      "parent": "sai-frontend",
+      "layer": "file",
+      "category": "frontend",
+      "categoryLabel": "Frontend",
+      "color": "#eab308",
+      "size": 0.85,
+      "file": "frontend/src/pages/PlatformPage.tsx",
+      "description": "UI fases / plataforma."
+    },
+    {
+      "id": "sai-copilot-page",
+      "label": "NocCopilotPage.tsx",
+      "parent": "sai-frontend",
+      "layer": "file",
+      "category": "frontend",
+      "categoryLabel": "Frontend",
+      "color": "#eab308",
+      "size": 0.85,
+      "file": "frontend/src/pages/NocCopilotPage.tsx",
+      "description": "Chat NOC Copilot."
+    },
+    {
+      "id": "sai-chatbot-page",
+      "label": "ChatbotPage.tsx",
+      "parent": "sai-frontend",
+      "layer": "file",
+      "category": "frontend",
+      "categoryLabel": "Frontend",
+      "color": "#eab308",
+      "size": 0.85,
+      "file": "frontend/src/pages/ChatbotPage.tsx",
+      "description": "Página do chatbot de produto."
+    },
+    {
+      "id": "sai-chatbot-widget",
+      "label": "ChatbotWidget.tsx",
+      "parent": "sai-frontend",
+      "layer": "file",
+      "category": "frontend",
+      "categoryLabel": "Frontend",
+      "color": "#eab308",
+      "size": 0.85,
+      "file": "frontend/src/components/ChatbotWidget.tsx",
+      "description": "Widget flutuante do chatbot."
+    },
+    {
+      "id": "sai-scanner-page",
+      "label": "ScannerPage.tsx",
+      "parent": "sai-frontend",
+      "layer": "file",
+      "category": "frontend",
+      "categoryLabel": "Frontend",
+      "color": "#eab308",
+      "size": 0.85,
+      "file": "frontend/src/pages/ScannerPage.tsx",
+      "description": "UI de port scan."
+    },
+    {
+      "id": "sai-reports-page",
+      "label": "ReportsPage.tsx",
+      "parent": "sai-frontend",
+      "layer": "file",
+      "category": "frontend",
+      "categoryLabel": "Frontend",
+      "color": "#eab308",
+      "size": 0.85,
+      "file": "frontend/src/pages/ReportsPage.tsx",
+      "description": "UI de relatórios."
+    },
+    {
+      "id": "sai-login",
+      "label": "LoginPage.tsx",
+      "parent": "sai-frontend",
+      "layer": "file",
+      "category": "frontend",
+      "categoryLabel": "Frontend",
+      "color": "#eab308",
+      "size": 0.85,
+      "file": "frontend/src/pages/LoginPage.tsx",
+      "description": "Tela de login JWT."
+    },
+    {
+      "id": "sai-mobile-app",
+      "label": "mobile/App.tsx",
+      "parent": "sai-frontend",
+      "layer": "file",
+      "category": "frontend",
+      "categoryLabel": "Frontend",
+      "color": "#eab308",
+      "size": 0.85,
+      "file": "mobile/App.tsx",
+      "description": "App Expo mobile."
+    },
+    {
+      "id": "sai-docs",
+      "label": "Docs & Estabilização",
       "parent": "sai-root",
       "layer": "module",
       "category": "core",
@@ -394,19 +1466,91 @@
       "color": "#3b82f6",
       "size": 1.35,
       "file": "docs/PHASE-0-BASELINE.md",
-      "description": "Baseline operacional, inventário honesto e backup Postgres/.env."
+      "description": "Baseline Fase 0, cronograma e inventário de features."
+    },
+    {
+      "id": "sai-cronograma",
+      "label": "CRONOGRAMA-ESTABILIZACAO.md",
+      "parent": "sai-docs",
+      "layer": "file",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 0.85,
+      "file": "docs/CRONOGRAMA-ESTABILIZACAO.md",
+      "description": "Plano 16 semanas (Fases 0–8 estabilização)."
     },
     {
       "id": "sai-feature-inv",
       "label": "feature-inventory.json",
-      "parent": "sai-stabilize",
+      "parent": "sai-docs",
       "layer": "file",
-      "category": "other",
-      "categoryLabel": "Outros",
-      "color": "#64748b",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
       "size": 0.85,
       "file": "docs/feature-inventory.json",
-      "description": "Inventário de features Map Editor + NMS + stabilization gaps."
+      "description": "Inventário Map Editor + NMS + ops gaps."
+    },
+    {
+      "id": "sai-backup-script",
+      "label": "backup-sentinel.ps1",
+      "parent": "sai-docs",
+      "layer": "file",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 0.85,
+      "file": "scripts/backup-sentinel.ps1",
+      "description": "Backup Postgres + .env."
+    },
+    {
+      "id": "sai-wmi-script",
+      "label": "set-wmi-credentials.ps1",
+      "parent": "sai-docs",
+      "layer": "file",
+      "category": "network",
+      "categoryLabel": "Rede / Scan",
+      "color": "#22d3ee",
+      "size": 0.85,
+      "file": "scripts/set-wmi-credentials.ps1",
+      "description": "Config interativa de credenciais WMI."
+    },
+    {
+      "id": "sai-map-roadmap",
+      "label": "MAP-EDITOR-ROADMAP.md",
+      "parent": "sai-docs",
+      "layer": "file",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 0.85,
+      "file": "docs/MAP-EDITOR-ROADMAP.md",
+      "description": "Roadmap The Dude++ Map Editor."
+    },
+    {
+      "id": "sai-phase20-doc",
+      "label": "PHASE-20-ROADMAP.md",
+      "parent": "sai-docs",
+      "layer": "file",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 0.85,
+      "file": "docs/PHASE-20-ROADMAP.md",
+      "description": "Roadmap SaaS v2.0."
+    },
+    {
+      "id": "sai-phase21-doc",
+      "label": "PHASE-21-ROADMAP.md",
+      "parent": "sai-docs",
+      "layer": "file",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 0.85,
+      "file": "docs/PHASE-21-ROADMAP.md",
+      "description": "Roadmap Regional SaaS v2.1."
     }
   ],
   "links": [
@@ -416,118 +1560,238 @@
       "type": "dependency"
     },
     {
-      "source": "sai-root",
-      "target": "sai-discovery-api",
-      "type": "dependency"
-    },
-    {
-      "source": "sai-discovery-api",
-      "target": "sai-discovery-task",
-      "type": "dependency"
-    },
-    {
-      "source": "sai-discovery-task",
-      "target": "sai-nmap",
-      "type": "dependency"
-    },
-    {
-      "source": "sai-discovery-task",
-      "target": "sai-scan-options",
-      "type": "dependency"
-    },
-    {
-      "source": "sai-discovery-task",
-      "target": "sai-subnet",
-      "type": "dependency"
-    },
-    {
-      "source": "sai-discovery-task",
-      "target": "sai-snmp",
-      "type": "dependency"
-    },
-    {
-      "source": "sai-discovery-task",
-      "target": "sai-inventory",
-      "type": "dependency"
-    },
-    {
-      "source": "sai-discovery-api",
-      "target": "sai-discovery-svc",
-      "type": "dependency"
-    },
-    {
-      "source": "sai-root",
-      "target": "sai-topology-api",
-      "type": "dependency"
-    },
-    {
-      "source": "sai-topology-api",
-      "target": "sai-topology-svc",
-      "type": "dependency"
-    },
-    {
-      "source": "sai-topology-api",
-      "target": "sai-neighbor",
-      "type": "dependency"
-    },
-    {
-      "source": "sai-root",
-      "target": "sai-devices-api",
-      "type": "dependency"
-    },
-    {
-      "source": "sai-root",
+      "source": "sai-arch",
       "target": "sai-main",
       "type": "dependency"
     },
     {
-      "source": "sai-root",
+      "source": "sai-arch",
+      "target": "sai-config",
+      "type": "dependency"
+    },
+    {
+      "source": "sai-arch",
       "target": "sai-models",
       "type": "dependency"
     },
     {
-      "source": "sai-root",
-      "target": "sai-dashboard",
-      "type": "dependency"
-    },
-    {
-      "source": "sai-dashboard",
-      "target": "sai-scan-options-ui",
-      "type": "dependency"
-    },
-    {
-      "source": "sai-dashboard",
-      "target": "sai-job-progress",
-      "type": "dependency"
-    },
-    {
-      "source": "sai-root",
-      "target": "sai-topology-map",
-      "type": "dependency"
-    },
-    {
-      "source": "sai-topology-map",
-      "target": "sai-map-3d",
-      "type": "dependency"
-    },
-    {
-      "source": "sai-root",
-      "target": "sai-api-client",
-      "type": "dependency"
-    },
-    {
-      "source": "sai-root",
-      "target": "sai-docker",
-      "type": "dependency"
-    },
-    {
-      "source": "sai-root",
+      "source": "sai-arch",
       "target": "sai-celery",
       "type": "dependency"
     },
     {
       "source": "sai-root",
+      "target": "sai-discovery",
+      "type": "dependency"
+    },
+    {
+      "source": "sai-discovery",
+      "target": "sai-discovery-task",
+      "type": "dependency"
+    },
+    {
+      "source": "sai-discovery",
+      "target": "sai-nmap",
+      "type": "dependency"
+    },
+    {
+      "source": "sai-discovery",
+      "target": "sai-scan-options",
+      "type": "dependency"
+    },
+    {
+      "source": "sai-discovery",
+      "target": "sai-subnet",
+      "type": "dependency"
+    },
+    {
+      "source": "sai-discovery",
+      "target": "sai-snmp",
+      "type": "dependency"
+    },
+    {
+      "source": "sai-discovery",
+      "target": "sai-wmi",
+      "type": "dependency"
+    },
+    {
+      "source": "sai-discovery",
+      "target": "sai-ssh-collector",
+      "type": "dependency"
+    },
+    {
+      "source": "sai-discovery",
+      "target": "sai-software",
+      "type": "dependency"
+    },
+    {
+      "source": "sai-discovery",
+      "target": "sai-dns",
+      "type": "dependency"
+    },
+    {
+      "source": "sai-discovery",
+      "target": "sai-oui",
+      "type": "dependency"
+    },
+    {
+      "source": "sai-discovery",
+      "target": "sai-progress",
+      "type": "dependency"
+    },
+    {
+      "source": "sai-discovery",
+      "target": "sai-inventory",
+      "type": "dependency"
+    },
+    {
+      "source": "sai-discovery",
+      "target": "sai-discovery-svc",
+      "type": "dependency"
+    },
+    {
+      "source": "sai-root",
+      "target": "sai-devices",
+      "type": "dependency"
+    },
+    {
+      "source": "sai-devices",
+      "target": "sai-devices-svc",
+      "type": "dependency"
+    },
+    {
+      "source": "sai-devices",
+      "target": "sai-hardware",
+      "type": "dependency"
+    },
+    {
+      "source": "sai-devices",
+      "target": "sai-monitors-api",
+      "type": "dependency"
+    },
+    {
+      "source": "sai-devices",
+      "target": "sai-monitor-svc",
+      "type": "dependency"
+    },
+    {
+      "source": "sai-devices",
+      "target": "sai-ping",
+      "type": "dependency"
+    },
+    {
+      "source": "sai-devices",
+      "target": "sai-http-check",
+      "type": "dependency"
+    },
+    {
+      "source": "sai-devices",
+      "target": "sai-tcp-check",
+      "type": "dependency"
+    },
+    {
+      "source": "sai-devices",
+      "target": "sai-protocol-probes",
+      "type": "dependency"
+    },
+    {
+      "source": "sai-devices",
+      "target": "sai-events-api",
+      "type": "dependency"
+    },
+    {
+      "source": "sai-devices",
+      "target": "sai-stream",
+      "type": "dependency"
+    },
+    {
+      "source": "sai-devices",
+      "target": "sai-realtime",
+      "type": "dependency"
+    },
+    {
+      "source": "sai-devices",
+      "target": "sai-ad-identity",
+      "type": "dependency"
+    },
+    {
+      "source": "sai-root",
+      "target": "sai-topology",
+      "type": "dependency"
+    },
+    {
+      "source": "sai-topology",
+      "target": "sai-topology-svc",
+      "type": "dependency"
+    },
+    {
+      "source": "sai-topology",
+      "target": "sai-neighbor",
+      "type": "dependency"
+    },
+    {
+      "source": "sai-topology",
+      "target": "sai-traffic",
+      "type": "dependency"
+    },
+    {
+      "source": "sai-topology",
+      "target": "sai-topo-pdf",
+      "type": "dependency"
+    },
+    {
+      "source": "sai-topology",
+      "target": "sai-topo-vsdx",
+      "type": "dependency"
+    },
+    {
+      "source": "sai-topology",
+      "target": "sai-ws",
+      "type": "dependency"
+    },
+    {
+      "source": "sai-topology",
+      "target": "sai-topology-tasks",
+      "type": "dependency"
+    },
+    {
+      "source": "sai-root",
       "target": "sai-alerts",
+      "type": "dependency"
+    },
+    {
+      "source": "sai-alerts",
+      "target": "sai-alerts-api",
+      "type": "dependency"
+    },
+    {
+      "source": "sai-alerts",
+      "target": "sai-alert-rules",
+      "type": "dependency"
+    },
+    {
+      "source": "sai-alerts",
+      "target": "sai-alert-email",
+      "type": "dependency"
+    },
+    {
+      "source": "sai-alerts",
+      "target": "sai-alert-sms",
+      "type": "dependency"
+    },
+    {
+      "source": "sai-alerts",
+      "target": "sai-alert-push",
+      "type": "dependency"
+    },
+    {
+      "source": "sai-alerts",
+      "target": "sai-rule-engine",
+      "type": "dependency"
+    },
+    {
+      "source": "sai-alerts",
+      "target": "sai-alert-svc",
       "type": "dependency"
     },
     {
@@ -546,23 +1810,378 @@
       "type": "dependency"
     },
     {
-      "source": "sai-discovery-task",
-      "target": "sai-wmi",
+      "source": "sai-zion",
+      "target": "sai-zion-svc",
+      "type": "dependency"
+    },
+    {
+      "source": "sai-zion",
+      "target": "sai-zion-schema",
       "type": "dependency"
     },
     {
       "source": "sai-root",
-      "target": "sai-sse",
+      "target": "sai-ai",
+      "type": "dependency"
+    },
+    {
+      "source": "sai-ai",
+      "target": "sai-copilot-api",
+      "type": "dependency"
+    },
+    {
+      "source": "sai-ai",
+      "target": "sai-llm",
+      "type": "dependency"
+    },
+    {
+      "source": "sai-ai",
+      "target": "sai-chatbot",
+      "type": "dependency"
+    },
+    {
+      "source": "sai-ai",
+      "target": "sai-chatbot-api",
+      "type": "dependency"
+    },
+    {
+      "source": "sai-ai",
+      "target": "sai-product-knowledge",
+      "type": "dependency"
+    },
+    {
+      "source": "sai-ai",
+      "target": "sai-anomaly",
+      "type": "dependency"
+    },
+    {
+      "source": "sai-ai",
+      "target": "sai-vision",
+      "type": "dependency"
+    },
+    {
+      "source": "sai-ai",
+      "target": "sai-vision-api",
       "type": "dependency"
     },
     {
       "source": "sai-root",
-      "target": "sai-stabilize",
+      "target": "sai-workers",
       "type": "dependency"
     },
     {
-      "source": "sai-stabilize",
+      "source": "sai-workers",
+      "target": "sai-worker-tasks",
+      "type": "dependency"
+    },
+    {
+      "source": "sai-workers",
+      "target": "sai-ai-tasks",
+      "type": "dependency"
+    },
+    {
+      "source": "sai-workers",
+      "target": "sai-report-tasks",
+      "type": "dependency"
+    },
+    {
+      "source": "sai-workers",
+      "target": "sai-enterprise-tasks",
+      "type": "dependency"
+    },
+    {
+      "source": "sai-workers",
+      "target": "sai-phase10-tasks",
+      "type": "dependency"
+    },
+    {
+      "source": "sai-root",
+      "target": "sai-plugins",
+      "type": "dependency"
+    },
+    {
+      "source": "sai-plugins",
+      "target": "sai-plugin-base",
+      "type": "dependency"
+    },
+    {
+      "source": "sai-plugins",
+      "target": "sai-plugin-sync",
+      "type": "dependency"
+    },
+    {
+      "source": "sai-plugins",
+      "target": "sai-plugins-api",
+      "type": "dependency"
+    },
+    {
+      "source": "sai-plugins",
+      "target": "sai-netflow",
+      "type": "dependency"
+    },
+    {
+      "source": "sai-plugins",
+      "target": "sai-flows-api",
+      "type": "dependency"
+    },
+    {
+      "source": "sai-plugins",
+      "target": "sai-snmp-trap",
+      "type": "dependency"
+    },
+    {
+      "source": "sai-plugins",
+      "target": "sai-scanner",
+      "type": "dependency"
+    },
+    {
+      "source": "sai-plugins",
+      "target": "sai-vault",
+      "type": "dependency"
+    },
+    {
+      "source": "sai-root",
+      "target": "sai-platform",
+      "type": "dependency"
+    },
+    {
+      "source": "sai-platform",
+      "target": "sai-billing",
+      "type": "dependency"
+    },
+    {
+      "source": "sai-platform",
+      "target": "sai-payments",
+      "type": "dependency"
+    },
+    {
+      "source": "sai-platform",
+      "target": "sai-scale",
+      "type": "dependency"
+    },
+    {
+      "source": "sai-platform",
+      "target": "sai-auditor",
+      "type": "dependency"
+    },
+    {
+      "source": "sai-platform",
+      "target": "sai-cdn",
+      "type": "dependency"
+    },
+    {
+      "source": "sai-platform",
+      "target": "sai-mobile-api",
+      "type": "dependency"
+    },
+    {
+      "source": "sai-platform",
+      "target": "sai-auth",
+      "type": "dependency"
+    },
+    {
+      "source": "sai-platform",
+      "target": "sai-users",
+      "type": "dependency"
+    },
+    {
+      "source": "sai-platform",
+      "target": "sai-orgs",
+      "type": "dependency"
+    },
+    {
+      "source": "sai-platform",
+      "target": "sai-phase20",
+      "type": "dependency"
+    },
+    {
+      "source": "sai-platform",
+      "target": "sai-phase21",
+      "type": "dependency"
+    },
+    {
+      "source": "sai-platform",
+      "target": "sai-observability",
+      "type": "dependency"
+    },
+    {
+      "source": "sai-platform",
+      "target": "sai-reports-api",
+      "type": "dependency"
+    },
+    {
+      "source": "sai-platform",
+      "target": "sai-remediation",
+      "type": "dependency"
+    },
+    {
+      "source": "sai-root",
+      "target": "sai-frontend",
+      "type": "dependency"
+    },
+    {
+      "source": "sai-frontend",
+      "target": "sai-appshell",
+      "type": "dependency"
+    },
+    {
+      "source": "sai-frontend",
+      "target": "sai-api-client",
+      "type": "dependency"
+    },
+    {
+      "source": "sai-frontend",
+      "target": "sai-dashboard",
+      "type": "dependency"
+    },
+    {
+      "source": "sai-frontend",
+      "target": "sai-device-list",
+      "type": "dependency"
+    },
+    {
+      "source": "sai-frontend",
+      "target": "sai-datatable",
+      "type": "dependency"
+    },
+    {
+      "source": "sai-frontend",
+      "target": "sai-scan-ui",
+      "type": "dependency"
+    },
+    {
+      "source": "sai-frontend",
+      "target": "sai-job-progress",
+      "type": "dependency"
+    },
+    {
+      "source": "sai-frontend",
+      "target": "sai-topo-map",
+      "type": "dependency"
+    },
+    {
+      "source": "sai-frontend",
+      "target": "sai-map-3d",
+      "type": "dependency"
+    },
+    {
+      "source": "sai-frontend",
+      "target": "sai-map-toolbar",
+      "type": "dependency"
+    },
+    {
+      "source": "sai-frontend",
+      "target": "sai-traffic-edge",
+      "type": "dependency"
+    },
+    {
+      "source": "sai-frontend",
+      "target": "sai-device-library",
+      "type": "dependency"
+    },
+    {
+      "source": "sai-frontend",
+      "target": "sai-map-history",
+      "type": "dependency"
+    },
+    {
+      "source": "sai-frontend",
+      "target": "sai-map-collab",
+      "type": "dependency"
+    },
+    {
+      "source": "sai-frontend",
+      "target": "sai-mon-stream",
+      "type": "dependency"
+    },
+    {
+      "source": "sai-frontend",
+      "target": "sai-dash-layout",
+      "type": "dependency"
+    },
+    {
+      "source": "sai-frontend",
+      "target": "sai-alerts-page",
+      "type": "dependency"
+    },
+    {
+      "source": "sai-frontend",
+      "target": "sai-platform-page",
+      "type": "dependency"
+    },
+    {
+      "source": "sai-frontend",
+      "target": "sai-copilot-page",
+      "type": "dependency"
+    },
+    {
+      "source": "sai-frontend",
+      "target": "sai-chatbot-page",
+      "type": "dependency"
+    },
+    {
+      "source": "sai-frontend",
+      "target": "sai-chatbot-widget",
+      "type": "dependency"
+    },
+    {
+      "source": "sai-frontend",
+      "target": "sai-scanner-page",
+      "type": "dependency"
+    },
+    {
+      "source": "sai-frontend",
+      "target": "sai-reports-page",
+      "type": "dependency"
+    },
+    {
+      "source": "sai-frontend",
+      "target": "sai-login",
+      "type": "dependency"
+    },
+    {
+      "source": "sai-frontend",
+      "target": "sai-mobile-app",
+      "type": "dependency"
+    },
+    {
+      "source": "sai-root",
+      "target": "sai-docs",
+      "type": "dependency"
+    },
+    {
+      "source": "sai-docs",
+      "target": "sai-cronograma",
+      "type": "dependency"
+    },
+    {
+      "source": "sai-docs",
       "target": "sai-feature-inv",
+      "type": "dependency"
+    },
+    {
+      "source": "sai-docs",
+      "target": "sai-backup-script",
+      "type": "dependency"
+    },
+    {
+      "source": "sai-docs",
+      "target": "sai-wmi-script",
+      "type": "dependency"
+    },
+    {
+      "source": "sai-docs",
+      "target": "sai-map-roadmap",
+      "type": "dependency"
+    },
+    {
+      "source": "sai-docs",
+      "target": "sai-phase20-doc",
+      "type": "dependency"
+    },
+    {
+      "source": "sai-docs",
+      "target": "sai-phase21-doc",
       "type": "dependency"
     }
   ]
