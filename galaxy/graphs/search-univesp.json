@@ -4,7 +4,7 @@
   "repoUrl": "https://github.com/CanonEngineer/SearchUnivespProject",
   "color": "#2dd4bf",
   "demoUrl": "",
-  "nodeCount": 28,
+  "nodeCount": 52,
   "categories": {
     "core": {
       "label": "Backend",
@@ -33,7 +33,7 @@
   },
   "nodes": [
     {
-      "id": "sea-root",
+      "id": "search-univesp-root",
       "label": "SearchUnivespProject",
       "parent": null,
       "layer": "root",
@@ -41,468 +41,876 @@
       "categoryLabel": "Backend",
       "color": "#3b82f6",
       "size": 2.2,
-      "file": "index.html",
+      "file": "README.md",
       "description": "Projeto integrador UNIVESP com pesquisa e páginas de saúde."
     },
     {
-      "id": "sea-inc",
-      "label": "inc",
-      "parent": "sea-root",
-      "layer": "module",
-      "category": "core",
-      "categoryLabel": "Backend",
-      "color": "#3b82f6",
-      "size": 1.35,
-      "file": "inc/",
-      "description": "Módulo/pasta `inc/` com arquivos-chave do projeto."
-    },
-    {
-      "id": "sea-inc-contact-js",
-      "label": "contact.js",
-      "parent": "sea-inc",
-      "layer": "file",
-      "category": "core",
-      "categoryLabel": "Backend",
-      "color": "#3b82f6",
-      "size": 0.85,
-      "file": "inc/contact.js",
-      "description": "Arquivo `inc/contact.js` mapeado a partir do repositório original."
-    },
-    {
-      "id": "sea-inc-db-js",
-      "label": "db.js",
-      "parent": "sea-inc",
-      "layer": "file",
-      "category": "oracle",
-      "categoryLabel": "Oracle / DB",
-      "color": "#c084fc",
-      "size": 0.85,
-      "file": "inc/db.js",
-      "description": "Arquivo `inc/db.js` mapeado a partir do repositório original."
-    },
-    {
-      "id": "sea-inc-search-js",
-      "label": "search.js",
-      "parent": "sea-inc",
-      "layer": "file",
-      "category": "core",
-      "categoryLabel": "Backend",
-      "color": "#3b82f6",
-      "size": 0.85,
-      "file": "inc/search.js",
-      "description": "Arquivo `inc/search.js` mapeado a partir do repositório original."
-    },
-    {
-      "id": "sea-routes",
-      "label": "routes",
-      "parent": "sea-root",
-      "layer": "module",
-      "category": "network",
-      "categoryLabel": "Rede / Scan",
-      "color": "#22d3ee",
-      "size": 1.35,
-      "file": "routes/",
-      "description": "Módulo/pasta `routes/` com arquivos-chave do projeto."
-    },
-    {
-      "id": "sea-routes-index-js",
-      "label": "index.js",
-      "parent": "sea-routes",
-      "layer": "file",
-      "category": "network",
-      "categoryLabel": "Rede / Scan",
-      "color": "#22d3ee",
-      "size": 0.85,
-      "file": "routes/index.js",
-      "description": "Arquivo `routes/index.js` mapeado a partir do repositório original."
-    },
-    {
-      "id": "sea-routes-users-js",
-      "label": "users.js",
-      "parent": "sea-routes",
-      "layer": "file",
-      "category": "network",
-      "categoryLabel": "Rede / Scan",
-      "color": "#22d3ee",
-      "size": 0.85,
-      "file": "routes/users.js",
-      "description": "Arquivo `routes/users.js` mapeado a partir do repositório original."
-    },
-    {
-      "id": "sea-views",
-      "label": "views",
-      "parent": "sea-root",
-      "layer": "module",
-      "category": "frontend",
-      "categoryLabel": "Frontend",
-      "color": "#eab308",
-      "size": 1.35,
-      "file": "views/",
-      "description": "Módulo/pasta `views/` com arquivos-chave do projeto."
-    },
-    {
-      "id": "sea-views-contact-ejs",
-      "label": "contact.ejs",
-      "parent": "sea-views",
-      "layer": "file",
-      "category": "frontend",
-      "categoryLabel": "Frontend",
-      "color": "#eab308",
-      "size": 0.85,
-      "file": "views/contact.ejs",
-      "description": "Arquivo `views/contact.ejs` mapeado a partir do repositório original."
-    },
-    {
-      "id": "sea-views-index-ejs",
-      "label": "index.ejs",
-      "parent": "sea-views",
-      "layer": "file",
-      "category": "frontend",
-      "categoryLabel": "Frontend",
-      "color": "#eab308",
-      "size": 0.85,
-      "file": "views/index.ejs",
-      "description": "Arquivo `views/index.ejs` mapeado a partir do repositório original."
-    },
-    {
-      "id": "sea-views-result-ejs",
-      "label": "result.ejs",
-      "parent": "sea-views",
-      "layer": "file",
-      "category": "frontend",
-      "categoryLabel": "Frontend",
-      "color": "#eab308",
-      "size": 0.85,
-      "file": "views/result.ejs",
-      "description": "Arquivo `views/result.ejs` mapeado a partir do repositório original."
-    },
-    {
-      "id": "sea-views-search-ejs",
-      "label": "search.ejs",
-      "parent": "sea-views",
-      "layer": "file",
-      "category": "frontend",
-      "categoryLabel": "Frontend",
-      "color": "#eab308",
-      "size": 0.85,
-      "file": "views/search.ejs",
-      "description": "Arquivo `views/search.ejs` mapeado a partir do repositório original."
-    },
-    {
-      "id": "sea-views-inc-alerts-ejs",
-      "label": "alerts.ejs",
-      "parent": "sea-views",
-      "layer": "file",
-      "category": "frontend",
-      "categoryLabel": "Frontend",
-      "color": "#eab308",
-      "size": 0.85,
-      "file": "views/inc/alerts.ejs",
-      "description": "Arquivo `views/inc/alerts.ejs` mapeado a partir do repositório original."
-    },
-    {
-      "id": "sea-views-inc-cep-scripts-ejs",
-      "label": "cep-scripts.ejs",
-      "parent": "sea-views",
-      "layer": "file",
-      "category": "frontend",
-      "categoryLabel": "Frontend",
-      "color": "#eab308",
-      "size": 0.85,
-      "file": "views/inc/cep-scripts.ejs",
-      "description": "Arquivo `views/inc/cep-scripts.ejs` mapeado a partir do repositório original."
-    },
-    {
-      "id": "sea-views-inc-footer-scripts-health-ejs",
-      "label": "footer-scripts-health.ejs",
-      "parent": "sea-views",
-      "layer": "file",
-      "category": "frontend",
-      "categoryLabel": "Frontend",
-      "color": "#eab308",
-      "size": 0.85,
-      "file": "views/inc/footer-scripts-health.ejs",
-      "description": "Arquivo `views/inc/footer-scripts-health.ejs` mapeado a partir do repositório original."
-    },
-    {
-      "id": "sea-views-inc-footer-scripts-ejs",
-      "label": "footer-scripts.ejs",
-      "parent": "sea-views",
-      "layer": "file",
-      "category": "frontend",
-      "categoryLabel": "Frontend",
-      "color": "#eab308",
-      "size": 0.85,
-      "file": "views/inc/footer-scripts.ejs",
-      "description": "Arquivo `views/inc/footer-scripts.ejs` mapeado a partir do repositório original."
-    },
-    {
-      "id": "sea-public",
-      "label": "public",
-      "parent": "sea-root",
-      "layer": "module",
-      "category": "core",
-      "categoryLabel": "Backend",
-      "color": "#3b82f6",
-      "size": 1.35,
-      "file": "public/",
-      "description": "Módulo/pasta `public/` com arquivos-chave do projeto."
-    },
-    {
-      "id": "sea-public-assests-script-busca-cep-js",
-      "label": "busca-cep.js",
-      "parent": "sea-public",
-      "layer": "file",
-      "category": "scripts",
-      "categoryLabel": "Scripts",
-      "color": "#64748b",
-      "size": 0.85,
-      "file": "public/assests/script/busca-cep.js",
-      "description": "Arquivo `public/assests/script/busca-cep.js` mapeado a partir do repositório original."
-    },
-    {
-      "id": "sea-public-assests-script-mobile-navbar-js",
-      "label": "mobile-navbar.js",
-      "parent": "sea-public",
-      "layer": "file",
-      "category": "scripts",
-      "categoryLabel": "Scripts",
-      "color": "#64748b",
-      "size": 0.85,
-      "file": "public/assests/script/mobile-navbar.js",
-      "description": "Arquivo `public/assests/script/mobile-navbar.js` mapeado a partir do repositório original."
-    },
-    {
-      "id": "sea-public-assests-css-variaveis-css",
-      "label": "_variaveis.css",
-      "parent": "sea-public",
-      "layer": "file",
-      "category": "frontend",
-      "categoryLabel": "Frontend",
-      "color": "#eab308",
-      "size": 0.85,
-      "file": "public/assests/css/_variaveis.css",
-      "description": "Arquivo `public/assests/css/_variaveis.css` mapeado a partir do repositório original."
-    },
-    {
-      "id": "sea-public-assests-css-form-css",
-      "label": "form.css",
-      "parent": "sea-public",
-      "layer": "file",
-      "category": "frontend",
-      "categoryLabel": "Frontend",
-      "color": "#eab308",
-      "size": 0.85,
-      "file": "public/assests/css/form.css",
-      "description": "Arquivo `public/assests/css/form.css` mapeado a partir do repositório original."
-    },
-    {
-      "id": "sea-public-assests-css-pesquisa-css",
-      "label": "pesquisa.css",
-      "parent": "sea-public",
-      "layer": "file",
-      "category": "frontend",
-      "categoryLabel": "Frontend",
-      "color": "#eab308",
-      "size": 0.85,
-      "file": "public/assests/css/pesquisa.css",
-      "description": "Arquivo `public/assests/css/pesquisa.css` mapeado a partir do repositório original."
-    },
-    {
-      "id": "sea-public-assests-css-reset-css",
-      "label": "reset.css",
-      "parent": "sea-public",
-      "layer": "file",
-      "category": "frontend",
-      "categoryLabel": "Frontend",
-      "color": "#eab308",
-      "size": 0.85,
-      "file": "public/assests/css/reset.css",
-      "description": "Arquivo `public/assests/css/reset.css` mapeado a partir do repositório original."
-    },
-    {
-      "id": "sea-public-assests-css-style-css",
-      "label": "style.css",
-      "parent": "sea-public",
-      "layer": "file",
-      "category": "frontend",
-      "categoryLabel": "Frontend",
-      "color": "#eab308",
-      "size": 0.85,
-      "file": "public/assests/css/style.css",
-      "description": "Arquivo `public/assests/css/style.css` mapeado a partir do repositório original."
-    },
-    {
-      "id": "sea-assests",
-      "label": "assests",
-      "parent": "sea-root",
+      "id": "search-univesp-dir-assests",
+      "label": "assests/",
+      "parent": "search-univesp-root",
       "layer": "module",
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
       "size": 1.35,
       "file": "assests/",
-      "description": "Módulo/pasta `assests/` com arquivos-chave do projeto."
+      "description": "Pacote/pasta `assests/` do projeto."
     },
     {
-      "id": "sea-assests-script-busca-cep-js",
+      "id": "search-univesp-dir-bin",
+      "label": "bin/",
+      "parent": "search-univesp-root",
+      "layer": "module",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 1.35,
+      "file": "bin/",
+      "description": "Pacote/pasta `bin/` do projeto."
+    },
+    {
+      "id": "search-univesp-dir-inc",
+      "label": "inc/",
+      "parent": "search-univesp-root",
+      "layer": "module",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 1.35,
+      "file": "inc/",
+      "description": "Pacote/pasta `inc/` do projeto."
+    },
+    {
+      "id": "search-univesp-dir-public",
+      "label": "public/",
+      "parent": "search-univesp-root",
+      "layer": "module",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 1.35,
+      "file": "public/",
+      "description": "Pacote/pasta `public/` do projeto."
+    },
+    {
+      "id": "search-univesp-dir-routes",
+      "label": "routes/",
+      "parent": "search-univesp-root",
+      "layer": "module",
+      "category": "network",
+      "categoryLabel": "Rede / Scan",
+      "color": "#22d3ee",
+      "size": 1.35,
+      "file": "routes/",
+      "description": "Pacote/pasta `routes/` do projeto."
+    },
+    {
+      "id": "search-univesp-dir-views",
+      "label": "views/",
+      "parent": "search-univesp-root",
+      "layer": "module",
+      "category": "frontend",
+      "categoryLabel": "Frontend",
+      "color": "#eab308",
+      "size": 1.35,
+      "file": "views/",
+      "description": "Pacote/pasta `views/` do projeto."
+    },
+    {
+      "id": "search-univesp-dir-assests-css",
+      "label": "css/",
+      "parent": "search-univesp-dir-assests",
+      "layer": "module",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 1.35,
+      "file": "assests/css/",
+      "description": "Pacote/pasta `assests/css/` do projeto."
+    },
+    {
+      "id": "search-univesp-dir-assests-script",
+      "label": "script/",
+      "parent": "search-univesp-dir-assests",
+      "layer": "module",
+      "category": "scripts",
+      "categoryLabel": "Scripts",
+      "color": "#64748b",
+      "size": 1.35,
+      "file": "assests/script/",
+      "description": "Pacote/pasta `assests/script/` do projeto."
+    },
+    {
+      "id": "search-univesp-dir-public-assests",
+      "label": "assests/",
+      "parent": "search-univesp-dir-public",
+      "layer": "module",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 1.35,
+      "file": "public/assests/",
+      "description": "Pacote/pasta `public/assests/` do projeto."
+    },
+    {
+      "id": "search-univesp-dir-views-inc",
+      "label": "inc/",
+      "parent": "search-univesp-dir-views",
+      "layer": "module",
+      "category": "frontend",
+      "categoryLabel": "Frontend",
+      "color": "#eab308",
+      "size": 1.35,
+      "file": "views/inc/",
+      "description": "Pacote/pasta `views/inc/` do projeto."
+    },
+    {
+      "id": "search-univesp-dir-public-assests-css",
+      "label": "css/",
+      "parent": "search-univesp-dir-public-assests",
+      "layer": "module",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 1.35,
+      "file": "public/assests/css/",
+      "description": "Pacote/pasta `public/assests/css/` do projeto."
+    },
+    {
+      "id": "search-univesp-dir-public-assests-script",
+      "label": "script/",
+      "parent": "search-univesp-dir-public-assests",
+      "layer": "module",
+      "category": "scripts",
+      "categoryLabel": "Scripts",
+      "color": "#64748b",
+      "size": 1.35,
+      "file": "public/assests/script/",
+      "description": "Pacote/pasta `public/assests/script/` do projeto."
+    },
+    {
+      "id": "search-univesp-file-app-js",
+      "label": "app.js",
+      "parent": "search-univesp-root",
+      "layer": "file",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 0.85,
+      "file": "app.js",
+      "description": "Código-fonte: `app.js`"
+    },
+    {
+      "id": "search-univesp-file-contato-html",
+      "label": "contato.html",
+      "parent": "search-univesp-root",
+      "layer": "file",
+      "category": "frontend",
+      "categoryLabel": "Frontend",
+      "color": "#eab308",
+      "size": 0.85,
+      "file": "contato.html",
+      "description": "Código-fonte: `contato.html`"
+    },
+    {
+      "id": "search-univesp-file-index-html",
+      "label": "index.html",
+      "parent": "search-univesp-root",
+      "layer": "file",
+      "category": "frontend",
+      "categoryLabel": "Frontend",
+      "color": "#eab308",
+      "size": 0.85,
+      "file": "index.html",
+      "description": "Código-fonte: `index.html`"
+    },
+    {
+      "id": "search-univesp-file-package-json",
+      "label": "package.json",
+      "parent": "search-univesp-root",
+      "layer": "file",
+      "category": "other",
+      "categoryLabel": "Outros",
+      "color": "#64748b",
+      "size": 0.85,
+      "file": "package.json",
+      "description": "Código-fonte: `package.json`"
+    },
+    {
+      "id": "search-univesp-file-pesquisa-html",
+      "label": "pesquisa.html",
+      "parent": "search-univesp-root",
+      "layer": "file",
+      "category": "frontend",
+      "categoryLabel": "Frontend",
+      "color": "#eab308",
+      "size": 0.85,
+      "file": "pesquisa.html",
+      "description": "Código-fonte: `pesquisa.html`"
+    },
+    {
+      "id": "search-univesp-file-resultado-html",
+      "label": "resultado.html",
+      "parent": "search-univesp-root",
+      "layer": "file",
+      "category": "frontend",
+      "categoryLabel": "Frontend",
+      "color": "#eab308",
+      "size": 0.85,
+      "file": "resultado.html",
+      "description": "Código-fonte: `resultado.html`"
+    },
+    {
+      "id": "search-univesp-file-saude-html",
+      "label": "saude.html",
+      "parent": "search-univesp-root",
+      "layer": "file",
+      "category": "frontend",
+      "categoryLabel": "Frontend",
+      "color": "#eab308",
+      "size": 0.85,
+      "file": "saude.html",
+      "description": "Código-fonte: `saude.html`"
+    },
+    {
+      "id": "search-univesp-file-assests-css-variaveis-css",
+      "label": "_variaveis.css",
+      "parent": "search-univesp-dir-assests-css",
+      "layer": "file",
+      "category": "frontend",
+      "categoryLabel": "Frontend",
+      "color": "#eab308",
+      "size": 0.85,
+      "file": "assests/css/_variaveis.css",
+      "description": "Código-fonte: `assests/css/_variaveis.css`"
+    },
+    {
+      "id": "search-univesp-file-assests-css-pesquisa-css",
+      "label": "pesquisa.css",
+      "parent": "search-univesp-dir-assests-css",
+      "layer": "file",
+      "category": "frontend",
+      "categoryLabel": "Frontend",
+      "color": "#eab308",
+      "size": 0.85,
+      "file": "assests/css/pesquisa.css",
+      "description": "Código-fonte: `assests/css/pesquisa.css`"
+    },
+    {
+      "id": "search-univesp-file-assests-css-reset-css",
+      "label": "reset.css",
+      "parent": "search-univesp-dir-assests-css",
+      "layer": "file",
+      "category": "frontend",
+      "categoryLabel": "Frontend",
+      "color": "#eab308",
+      "size": 0.85,
+      "file": "assests/css/reset.css",
+      "description": "Código-fonte: `assests/css/reset.css`"
+    },
+    {
+      "id": "search-univesp-file-assests-css-style-css",
+      "label": "style.css",
+      "parent": "search-univesp-dir-assests-css",
+      "layer": "file",
+      "category": "frontend",
+      "categoryLabel": "Frontend",
+      "color": "#eab308",
+      "size": 0.85,
+      "file": "assests/css/style.css",
+      "description": "Código-fonte: `assests/css/style.css`"
+    },
+    {
+      "id": "search-univesp-file-assests-script-busca-cep-js",
       "label": "busca-cep.js",
-      "parent": "sea-assests",
+      "parent": "search-univesp-dir-assests-script",
       "layer": "file",
       "category": "scripts",
       "categoryLabel": "Scripts",
       "color": "#64748b",
       "size": 0.85,
       "file": "assests/script/busca-cep.js",
-      "description": "Arquivo `assests/script/busca-cep.js` mapeado a partir do repositório original."
+      "description": "Código-fonte: `assests/script/busca-cep.js`"
     },
     {
-      "id": "sea-assests-script-mobile-navbar-js",
+      "id": "search-univesp-file-assests-script-mobile-navbar-js",
       "label": "mobile-navbar.js",
-      "parent": "sea-assests",
+      "parent": "search-univesp-dir-assests-script",
       "layer": "file",
       "category": "scripts",
       "categoryLabel": "Scripts",
       "color": "#64748b",
       "size": 0.85,
       "file": "assests/script/mobile-navbar.js",
-      "description": "Arquivo `assests/script/mobile-navbar.js` mapeado a partir do repositório original."
+      "description": "Código-fonte: `assests/script/mobile-navbar.js`"
+    },
+    {
+      "id": "search-univesp-file-bin-www",
+      "label": "www",
+      "parent": "search-univesp-dir-bin",
+      "layer": "file",
+      "category": "other",
+      "categoryLabel": "Outros",
+      "color": "#64748b",
+      "size": 0.85,
+      "file": "bin/www",
+      "description": "Código-fonte: `bin/www`"
+    },
+    {
+      "id": "search-univesp-file-inc-contact-js",
+      "label": "contact.js",
+      "parent": "search-univesp-dir-inc",
+      "layer": "file",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 0.85,
+      "file": "inc/contact.js",
+      "description": "Código-fonte: `inc/contact.js`"
+    },
+    {
+      "id": "search-univesp-file-inc-db-js",
+      "label": "db.js",
+      "parent": "search-univesp-dir-inc",
+      "layer": "file",
+      "category": "oracle",
+      "categoryLabel": "Oracle / DB",
+      "color": "#c084fc",
+      "size": 0.85,
+      "file": "inc/db.js",
+      "description": "Código-fonte: `inc/db.js`"
+    },
+    {
+      "id": "search-univesp-file-inc-search-js",
+      "label": "search.js",
+      "parent": "search-univesp-dir-inc",
+      "layer": "file",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 0.85,
+      "file": "inc/search.js",
+      "description": "Código-fonte: `inc/search.js`"
+    },
+    {
+      "id": "search-univesp-file-public-assests-css-variaveis-css",
+      "label": "_variaveis.css",
+      "parent": "search-univesp-dir-public-assests-css",
+      "layer": "file",
+      "category": "frontend",
+      "categoryLabel": "Frontend",
+      "color": "#eab308",
+      "size": 0.85,
+      "file": "public/assests/css/_variaveis.css",
+      "description": "Código-fonte: `public/assests/css/_variaveis.css`"
+    },
+    {
+      "id": "search-univesp-file-public-assests-css-form-css",
+      "label": "form.css",
+      "parent": "search-univesp-dir-public-assests-css",
+      "layer": "file",
+      "category": "frontend",
+      "categoryLabel": "Frontend",
+      "color": "#eab308",
+      "size": 0.85,
+      "file": "public/assests/css/form.css",
+      "description": "Código-fonte: `public/assests/css/form.css`"
+    },
+    {
+      "id": "search-univesp-file-public-assests-css-pesquisa-css",
+      "label": "pesquisa.css",
+      "parent": "search-univesp-dir-public-assests-css",
+      "layer": "file",
+      "category": "frontend",
+      "categoryLabel": "Frontend",
+      "color": "#eab308",
+      "size": 0.85,
+      "file": "public/assests/css/pesquisa.css",
+      "description": "Código-fonte: `public/assests/css/pesquisa.css`"
+    },
+    {
+      "id": "search-univesp-file-public-assests-css-reset-css",
+      "label": "reset.css",
+      "parent": "search-univesp-dir-public-assests-css",
+      "layer": "file",
+      "category": "frontend",
+      "categoryLabel": "Frontend",
+      "color": "#eab308",
+      "size": 0.85,
+      "file": "public/assests/css/reset.css",
+      "description": "Código-fonte: `public/assests/css/reset.css`"
+    },
+    {
+      "id": "search-univesp-file-public-assests-css-style-css",
+      "label": "style.css",
+      "parent": "search-univesp-dir-public-assests-css",
+      "layer": "file",
+      "category": "frontend",
+      "categoryLabel": "Frontend",
+      "color": "#eab308",
+      "size": 0.85,
+      "file": "public/assests/css/style.css",
+      "description": "Código-fonte: `public/assests/css/style.css`"
+    },
+    {
+      "id": "search-univesp-file-public-assests-script-busca-cep-js",
+      "label": "busca-cep.js",
+      "parent": "search-univesp-dir-public-assests-script",
+      "layer": "file",
+      "category": "scripts",
+      "categoryLabel": "Scripts",
+      "color": "#64748b",
+      "size": 0.85,
+      "file": "public/assests/script/busca-cep.js",
+      "description": "Código-fonte: `public/assests/script/busca-cep.js`"
+    },
+    {
+      "id": "search-univesp-file-public-assests-script-mobile-navbar-js",
+      "label": "mobile-navbar.js",
+      "parent": "search-univesp-dir-public-assests-script",
+      "layer": "file",
+      "category": "scripts",
+      "categoryLabel": "Scripts",
+      "color": "#64748b",
+      "size": 0.85,
+      "file": "public/assests/script/mobile-navbar.js",
+      "description": "Código-fonte: `public/assests/script/mobile-navbar.js`"
+    },
+    {
+      "id": "search-univesp-file-routes-index-js",
+      "label": "index.js",
+      "parent": "search-univesp-dir-routes",
+      "layer": "file",
+      "category": "network",
+      "categoryLabel": "Rede / Scan",
+      "color": "#22d3ee",
+      "size": 0.85,
+      "file": "routes/index.js",
+      "description": "Código-fonte: `routes/index.js`"
+    },
+    {
+      "id": "search-univesp-file-routes-users-js",
+      "label": "users.js",
+      "parent": "search-univesp-dir-routes",
+      "layer": "file",
+      "category": "network",
+      "categoryLabel": "Rede / Scan",
+      "color": "#22d3ee",
+      "size": 0.85,
+      "file": "routes/users.js",
+      "description": "Código-fonte: `routes/users.js`"
+    },
+    {
+      "id": "search-univesp-file-views-contact-ejs",
+      "label": "contact.ejs",
+      "parent": "search-univesp-dir-views",
+      "layer": "file",
+      "category": "frontend",
+      "categoryLabel": "Frontend",
+      "color": "#eab308",
+      "size": 0.85,
+      "file": "views/contact.ejs",
+      "description": "Código-fonte: `views/contact.ejs`"
+    },
+    {
+      "id": "search-univesp-file-views-error-ejs",
+      "label": "error.ejs",
+      "parent": "search-univesp-dir-views",
+      "layer": "file",
+      "category": "frontend",
+      "categoryLabel": "Frontend",
+      "color": "#eab308",
+      "size": 0.85,
+      "file": "views/error.ejs",
+      "description": "Código-fonte: `views/error.ejs`"
+    },
+    {
+      "id": "search-univesp-file-views-index-ejs",
+      "label": "index.ejs",
+      "parent": "search-univesp-dir-views",
+      "layer": "file",
+      "category": "frontend",
+      "categoryLabel": "Frontend",
+      "color": "#eab308",
+      "size": 0.85,
+      "file": "views/index.ejs",
+      "description": "Código-fonte: `views/index.ejs`"
+    },
+    {
+      "id": "search-univesp-file-views-result-ejs",
+      "label": "result.ejs",
+      "parent": "search-univesp-dir-views",
+      "layer": "file",
+      "category": "frontend",
+      "categoryLabel": "Frontend",
+      "color": "#eab308",
+      "size": 0.85,
+      "file": "views/result.ejs",
+      "description": "Código-fonte: `views/result.ejs`"
+    },
+    {
+      "id": "search-univesp-file-views-search-ejs",
+      "label": "search.ejs",
+      "parent": "search-univesp-dir-views",
+      "layer": "file",
+      "category": "frontend",
+      "categoryLabel": "Frontend",
+      "color": "#eab308",
+      "size": 0.85,
+      "file": "views/search.ejs",
+      "description": "Código-fonte: `views/search.ejs`"
+    },
+    {
+      "id": "search-univesp-file-views-inc-alerts-ejs",
+      "label": "alerts.ejs",
+      "parent": "search-univesp-dir-views-inc",
+      "layer": "file",
+      "category": "frontend",
+      "categoryLabel": "Frontend",
+      "color": "#eab308",
+      "size": 0.85,
+      "file": "views/inc/alerts.ejs",
+      "description": "Código-fonte: `views/inc/alerts.ejs`"
+    },
+    {
+      "id": "search-univesp-file-views-inc-cep-scripts-ejs",
+      "label": "cep-scripts.ejs",
+      "parent": "search-univesp-dir-views-inc",
+      "layer": "file",
+      "category": "frontend",
+      "categoryLabel": "Frontend",
+      "color": "#eab308",
+      "size": 0.85,
+      "file": "views/inc/cep-scripts.ejs",
+      "description": "Código-fonte: `views/inc/cep-scripts.ejs`"
+    },
+    {
+      "id": "search-univesp-file-views-inc-footer-scripts-health-ejs",
+      "label": "footer-scripts-health.ejs",
+      "parent": "search-univesp-dir-views-inc",
+      "layer": "file",
+      "category": "frontend",
+      "categoryLabel": "Frontend",
+      "color": "#eab308",
+      "size": 0.85,
+      "file": "views/inc/footer-scripts-health.ejs",
+      "description": "Código-fonte: `views/inc/footer-scripts-health.ejs`"
+    },
+    {
+      "id": "search-univesp-file-views-inc-footer-scripts-ejs",
+      "label": "footer-scripts.ejs",
+      "parent": "search-univesp-dir-views-inc",
+      "layer": "file",
+      "category": "frontend",
+      "categoryLabel": "Frontend",
+      "color": "#eab308",
+      "size": 0.85,
+      "file": "views/inc/footer-scripts.ejs",
+      "description": "Código-fonte: `views/inc/footer-scripts.ejs`"
+    },
+    {
+      "id": "search-univesp-file-views-inc-footer-ejs",
+      "label": "footer.ejs",
+      "parent": "search-univesp-dir-views-inc",
+      "layer": "file",
+      "category": "frontend",
+      "categoryLabel": "Frontend",
+      "color": "#eab308",
+      "size": 0.85,
+      "file": "views/inc/footer.ejs",
+      "description": "Código-fonte: `views/inc/footer.ejs`"
+    },
+    {
+      "id": "search-univesp-file-views-inc-head-search-ejs",
+      "label": "head-search.ejs",
+      "parent": "search-univesp-dir-views-inc",
+      "layer": "file",
+      "category": "frontend",
+      "categoryLabel": "Frontend",
+      "color": "#eab308",
+      "size": 0.85,
+      "file": "views/inc/head-search.ejs",
+      "description": "Código-fonte: `views/inc/head-search.ejs`"
+    },
+    {
+      "id": "search-univesp-file-views-inc-head-ejs",
+      "label": "head.ejs",
+      "parent": "search-univesp-dir-views-inc",
+      "layer": "file",
+      "category": "frontend",
+      "categoryLabel": "Frontend",
+      "color": "#eab308",
+      "size": 0.85,
+      "file": "views/inc/head.ejs",
+      "description": "Código-fonte: `views/inc/head.ejs`"
+    },
+    {
+      "id": "search-univesp-file-views-inc-header-menu-ejs",
+      "label": "header-menu.ejs",
+      "parent": "search-univesp-dir-views-inc",
+      "layer": "file",
+      "category": "frontend",
+      "categoryLabel": "Frontend",
+      "color": "#eab308",
+      "size": 0.85,
+      "file": "views/inc/header-menu.ejs",
+      "description": "Código-fonte: `views/inc/header-menu.ejs`"
     }
   ],
   "links": [
     {
-      "source": "sea-root",
-      "target": "sea-inc",
+      "source": "search-univesp-root",
+      "target": "search-univesp-dir-assests",
       "type": "dependency"
     },
     {
-      "source": "sea-inc",
-      "target": "sea-inc-contact-js",
+      "source": "search-univesp-root",
+      "target": "search-univesp-dir-bin",
       "type": "dependency"
     },
     {
-      "source": "sea-inc",
-      "target": "sea-inc-db-js",
+      "source": "search-univesp-root",
+      "target": "search-univesp-dir-inc",
       "type": "dependency"
     },
     {
-      "source": "sea-inc",
-      "target": "sea-inc-search-js",
+      "source": "search-univesp-root",
+      "target": "search-univesp-dir-public",
       "type": "dependency"
     },
     {
-      "source": "sea-root",
-      "target": "sea-routes",
+      "source": "search-univesp-root",
+      "target": "search-univesp-dir-routes",
       "type": "dependency"
     },
     {
-      "source": "sea-routes",
-      "target": "sea-routes-index-js",
+      "source": "search-univesp-root",
+      "target": "search-univesp-dir-views",
       "type": "dependency"
     },
     {
-      "source": "sea-routes",
-      "target": "sea-routes-users-js",
+      "source": "search-univesp-dir-assests",
+      "target": "search-univesp-dir-assests-css",
       "type": "dependency"
     },
     {
-      "source": "sea-root",
-      "target": "sea-views",
+      "source": "search-univesp-dir-assests",
+      "target": "search-univesp-dir-assests-script",
       "type": "dependency"
     },
     {
-      "source": "sea-views",
-      "target": "sea-views-contact-ejs",
+      "source": "search-univesp-dir-public",
+      "target": "search-univesp-dir-public-assests",
       "type": "dependency"
     },
     {
-      "source": "sea-views",
-      "target": "sea-views-index-ejs",
+      "source": "search-univesp-dir-views",
+      "target": "search-univesp-dir-views-inc",
       "type": "dependency"
     },
     {
-      "source": "sea-views",
-      "target": "sea-views-result-ejs",
+      "source": "search-univesp-dir-public-assests",
+      "target": "search-univesp-dir-public-assests-css",
       "type": "dependency"
     },
     {
-      "source": "sea-views",
-      "target": "sea-views-search-ejs",
+      "source": "search-univesp-dir-public-assests",
+      "target": "search-univesp-dir-public-assests-script",
       "type": "dependency"
     },
     {
-      "source": "sea-views",
-      "target": "sea-views-inc-alerts-ejs",
+      "source": "search-univesp-root",
+      "target": "search-univesp-file-app-js",
       "type": "dependency"
     },
     {
-      "source": "sea-views",
-      "target": "sea-views-inc-cep-scripts-ejs",
+      "source": "search-univesp-root",
+      "target": "search-univesp-file-contato-html",
       "type": "dependency"
     },
     {
-      "source": "sea-views",
-      "target": "sea-views-inc-footer-scripts-health-ejs",
+      "source": "search-univesp-root",
+      "target": "search-univesp-file-index-html",
       "type": "dependency"
     },
     {
-      "source": "sea-views",
-      "target": "sea-views-inc-footer-scripts-ejs",
+      "source": "search-univesp-root",
+      "target": "search-univesp-file-package-json",
       "type": "dependency"
     },
     {
-      "source": "sea-root",
-      "target": "sea-public",
+      "source": "search-univesp-root",
+      "target": "search-univesp-file-pesquisa-html",
       "type": "dependency"
     },
     {
-      "source": "sea-public",
-      "target": "sea-public-assests-script-busca-cep-js",
+      "source": "search-univesp-root",
+      "target": "search-univesp-file-resultado-html",
       "type": "dependency"
     },
     {
-      "source": "sea-public",
-      "target": "sea-public-assests-script-mobile-navbar-js",
+      "source": "search-univesp-root",
+      "target": "search-univesp-file-saude-html",
       "type": "dependency"
     },
     {
-      "source": "sea-public",
-      "target": "sea-public-assests-css-variaveis-css",
+      "source": "search-univesp-dir-assests-css",
+      "target": "search-univesp-file-assests-css-variaveis-css",
       "type": "dependency"
     },
     {
-      "source": "sea-public",
-      "target": "sea-public-assests-css-form-css",
+      "source": "search-univesp-dir-assests-css",
+      "target": "search-univesp-file-assests-css-pesquisa-css",
       "type": "dependency"
     },
     {
-      "source": "sea-public",
-      "target": "sea-public-assests-css-pesquisa-css",
+      "source": "search-univesp-dir-assests-css",
+      "target": "search-univesp-file-assests-css-reset-css",
       "type": "dependency"
     },
     {
-      "source": "sea-public",
-      "target": "sea-public-assests-css-reset-css",
+      "source": "search-univesp-dir-assests-css",
+      "target": "search-univesp-file-assests-css-style-css",
       "type": "dependency"
     },
     {
-      "source": "sea-public",
-      "target": "sea-public-assests-css-style-css",
+      "source": "search-univesp-dir-assests-script",
+      "target": "search-univesp-file-assests-script-busca-cep-js",
       "type": "dependency"
     },
     {
-      "source": "sea-root",
-      "target": "sea-assests",
+      "source": "search-univesp-dir-assests-script",
+      "target": "search-univesp-file-assests-script-mobile-navbar-js",
       "type": "dependency"
     },
     {
-      "source": "sea-assests",
-      "target": "sea-assests-script-busca-cep-js",
+      "source": "search-univesp-dir-bin",
+      "target": "search-univesp-file-bin-www",
       "type": "dependency"
     },
     {
-      "source": "sea-assests",
-      "target": "sea-assests-script-mobile-navbar-js",
+      "source": "search-univesp-dir-inc",
+      "target": "search-univesp-file-inc-contact-js",
+      "type": "dependency"
+    },
+    {
+      "source": "search-univesp-dir-inc",
+      "target": "search-univesp-file-inc-db-js",
+      "type": "dependency"
+    },
+    {
+      "source": "search-univesp-dir-inc",
+      "target": "search-univesp-file-inc-search-js",
+      "type": "dependency"
+    },
+    {
+      "source": "search-univesp-dir-public-assests-css",
+      "target": "search-univesp-file-public-assests-css-variaveis-css",
+      "type": "dependency"
+    },
+    {
+      "source": "search-univesp-dir-public-assests-css",
+      "target": "search-univesp-file-public-assests-css-form-css",
+      "type": "dependency"
+    },
+    {
+      "source": "search-univesp-dir-public-assests-css",
+      "target": "search-univesp-file-public-assests-css-pesquisa-css",
+      "type": "dependency"
+    },
+    {
+      "source": "search-univesp-dir-public-assests-css",
+      "target": "search-univesp-file-public-assests-css-reset-css",
+      "type": "dependency"
+    },
+    {
+      "source": "search-univesp-dir-public-assests-css",
+      "target": "search-univesp-file-public-assests-css-style-css",
+      "type": "dependency"
+    },
+    {
+      "source": "search-univesp-dir-public-assests-script",
+      "target": "search-univesp-file-public-assests-script-busca-cep-js",
+      "type": "dependency"
+    },
+    {
+      "source": "search-univesp-dir-public-assests-script",
+      "target": "search-univesp-file-public-assests-script-mobile-navbar-js",
+      "type": "dependency"
+    },
+    {
+      "source": "search-univesp-dir-routes",
+      "target": "search-univesp-file-routes-index-js",
+      "type": "dependency"
+    },
+    {
+      "source": "search-univesp-dir-routes",
+      "target": "search-univesp-file-routes-users-js",
+      "type": "dependency"
+    },
+    {
+      "source": "search-univesp-dir-views",
+      "target": "search-univesp-file-views-contact-ejs",
+      "type": "dependency"
+    },
+    {
+      "source": "search-univesp-dir-views",
+      "target": "search-univesp-file-views-error-ejs",
+      "type": "dependency"
+    },
+    {
+      "source": "search-univesp-dir-views",
+      "target": "search-univesp-file-views-index-ejs",
+      "type": "dependency"
+    },
+    {
+      "source": "search-univesp-dir-views",
+      "target": "search-univesp-file-views-result-ejs",
+      "type": "dependency"
+    },
+    {
+      "source": "search-univesp-dir-views",
+      "target": "search-univesp-file-views-search-ejs",
+      "type": "dependency"
+    },
+    {
+      "source": "search-univesp-dir-views-inc",
+      "target": "search-univesp-file-views-inc-alerts-ejs",
+      "type": "dependency"
+    },
+    {
+      "source": "search-univesp-dir-views-inc",
+      "target": "search-univesp-file-views-inc-cep-scripts-ejs",
+      "type": "dependency"
+    },
+    {
+      "source": "search-univesp-dir-views-inc",
+      "target": "search-univesp-file-views-inc-footer-scripts-health-ejs",
+      "type": "dependency"
+    },
+    {
+      "source": "search-univesp-dir-views-inc",
+      "target": "search-univesp-file-views-inc-footer-scripts-ejs",
+      "type": "dependency"
+    },
+    {
+      "source": "search-univesp-dir-views-inc",
+      "target": "search-univesp-file-views-inc-footer-ejs",
+      "type": "dependency"
+    },
+    {
+      "source": "search-univesp-dir-views-inc",
+      "target": "search-univesp-file-views-inc-head-search-ejs",
+      "type": "dependency"
+    },
+    {
+      "source": "search-univesp-dir-views-inc",
+      "target": "search-univesp-file-views-inc-head-ejs",
+      "type": "dependency"
+    },
+    {
+      "source": "search-univesp-dir-views-inc",
+      "target": "search-univesp-file-views-inc-header-menu-ejs",
       "type": "dependency"
     }
   ]

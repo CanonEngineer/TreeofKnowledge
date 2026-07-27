@@ -4,15 +4,23 @@
   "repoUrl": "https://github.com/CanonEngineer/NeighborhoodBoysProject",
   "color": "#c084fc",
   "demoUrl": "",
-  "nodeCount": 28,
+  "nodeCount": 80,
   "categories": {
     "core": {
       "label": "Backend",
       "color": "#3b82f6"
     },
+    "oracle": {
+      "label": "Oracle / DB",
+      "color": "#c084fc"
+    },
     "frontend": {
       "label": "Frontend",
       "color": "#eab308"
+    },
+    "tests": {
+      "label": "Testes",
+      "color": "#94a3b8"
     },
     "other": {
       "label": "Outros",
@@ -21,7 +29,7 @@
   },
   "nodes": [
     {
-      "id": "nei-root",
+      "id": "neighborhood-boys-root",
       "label": "NeighborhoodBoysProject",
       "parent": null,
       "layer": "root",
@@ -29,468 +37,1352 @@
       "categoryLabel": "Backend",
       "color": "#3b82f6",
       "size": 2.2,
-      "file": "manage.py",
+      "file": "README.md",
       "description": "Sistema de salão Meninos da Vila — contas, agenda e clientes."
     },
     {
-      "id": "nei-accounts",
-      "label": "accounts",
-      "parent": "nei-root",
+      "id": "neighborhood-boys-dir-accounts",
+      "label": "accounts/",
+      "parent": "neighborhood-boys-root",
       "layer": "module",
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
       "size": 1.35,
       "file": "accounts/",
-      "description": "Módulo/pasta `accounts/` com arquivos-chave do projeto."
+      "description": "Pacote/pasta `accounts/` do projeto."
     },
     {
-      "id": "nei-accounts-admin-py",
-      "label": "admin.py",
-      "parent": "nei-accounts",
-      "layer": "file",
-      "category": "core",
-      "categoryLabel": "Backend",
-      "color": "#3b82f6",
-      "size": 0.85,
-      "file": "accounts/admin.py",
-      "description": "Arquivo `accounts/admin.py` mapeado a partir do repositório original."
-    },
-    {
-      "id": "nei-accounts-forms-py",
-      "label": "forms.py",
-      "parent": "nei-accounts",
-      "layer": "file",
-      "category": "core",
-      "categoryLabel": "Backend",
-      "color": "#3b82f6",
-      "size": 0.85,
-      "file": "accounts/forms.py",
-      "description": "Arquivo `accounts/forms.py` mapeado a partir do repositório original."
-    },
-    {
-      "id": "nei-accounts-models-py",
-      "label": "models.py",
-      "parent": "nei-accounts",
-      "layer": "file",
-      "category": "core",
-      "categoryLabel": "Backend",
-      "color": "#3b82f6",
-      "size": 0.85,
-      "file": "accounts/models.py",
-      "description": "Arquivo `accounts/models.py` mapeado a partir do repositório original."
-    },
-    {
-      "id": "nei-accounts-urls-py",
-      "label": "urls.py",
-      "parent": "nei-accounts",
-      "layer": "file",
-      "category": "core",
-      "categoryLabel": "Backend",
-      "color": "#3b82f6",
-      "size": 0.85,
-      "file": "accounts/urls.py",
-      "description": "Arquivo `accounts/urls.py` mapeado a partir do repositório original."
-    },
-    {
-      "id": "nei-accounts-views-py",
-      "label": "views.py",
-      "parent": "nei-accounts",
-      "layer": "file",
-      "category": "frontend",
-      "categoryLabel": "Frontend",
-      "color": "#eab308",
-      "size": 0.85,
-      "file": "accounts/views.py",
-      "description": "Arquivo `accounts/views.py` mapeado a partir do repositório original."
-    },
-    {
-      "id": "nei-accounts-templates-accounts-index-html",
-      "label": "index.html",
-      "parent": "nei-accounts",
-      "layer": "file",
-      "category": "frontend",
-      "categoryLabel": "Frontend",
-      "color": "#eab308",
-      "size": 0.85,
-      "file": "accounts/templates/accounts/index.html",
-      "description": "Arquivo `accounts/templates/accounts/index.html` mapeado a partir do repositório original."
-    },
-    {
-      "id": "nei-accounts-backends-py",
-      "label": "backends.py",
-      "parent": "nei-accounts",
-      "layer": "file",
-      "category": "core",
-      "categoryLabel": "Backend",
-      "color": "#3b82f6",
-      "size": 0.85,
-      "file": "accounts/backends.py",
-      "description": "Arquivo `accounts/backends.py` mapeado a partir do repositório original."
-    },
-    {
-      "id": "nei-accounts-templates-accounts-register-htm",
-      "label": "register.html",
-      "parent": "nei-accounts",
-      "layer": "file",
-      "category": "frontend",
-      "categoryLabel": "Frontend",
-      "color": "#eab308",
-      "size": 0.85,
-      "file": "accounts/templates/accounts/register.html",
-      "description": "Arquivo `accounts/templates/accounts/register.html` mapeado a partir do repositório original."
-    },
-    {
-      "id": "nei-agenda",
-      "label": "agenda",
-      "parent": "nei-root",
+      "id": "neighborhood-boys-dir-agenda",
+      "label": "agenda/",
+      "parent": "neighborhood-boys-root",
       "layer": "module",
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
       "size": 1.35,
       "file": "agenda/",
-      "description": "Módulo/pasta `agenda/` com arquivos-chave do projeto."
+      "description": "Pacote/pasta `agenda/` do projeto."
     },
     {
-      "id": "nei-agenda-admin-py",
-      "label": "admin.py",
-      "parent": "nei-agenda",
-      "layer": "file",
-      "category": "core",
-      "categoryLabel": "Backend",
-      "color": "#3b82f6",
-      "size": 0.85,
-      "file": "agenda/admin.py",
-      "description": "Arquivo `agenda/admin.py` mapeado a partir do repositório original."
-    },
-    {
-      "id": "nei-agenda-forms-py",
-      "label": "forms.py",
-      "parent": "nei-agenda",
-      "layer": "file",
-      "category": "core",
-      "categoryLabel": "Backend",
-      "color": "#3b82f6",
-      "size": 0.85,
-      "file": "agenda/forms.py",
-      "description": "Arquivo `agenda/forms.py` mapeado a partir do repositório original."
-    },
-    {
-      "id": "nei-agenda-models-py",
-      "label": "models.py",
-      "parent": "nei-agenda",
-      "layer": "file",
-      "category": "core",
-      "categoryLabel": "Backend",
-      "color": "#3b82f6",
-      "size": 0.85,
-      "file": "agenda/models.py",
-      "description": "Arquivo `agenda/models.py` mapeado a partir do repositório original."
-    },
-    {
-      "id": "nei-agenda-views-py",
-      "label": "views.py",
-      "parent": "nei-agenda",
-      "layer": "file",
-      "category": "frontend",
-      "categoryLabel": "Frontend",
-      "color": "#eab308",
-      "size": 0.85,
-      "file": "agenda/views.py",
-      "description": "Arquivo `agenda/views.py` mapeado a partir do repositório original."
-    },
-    {
-      "id": "nei-agenda-templates-deletar-cliente-html",
-      "label": "deletar_cliente.html",
-      "parent": "nei-agenda",
-      "layer": "file",
-      "category": "frontend",
-      "categoryLabel": "Frontend",
-      "color": "#eab308",
-      "size": 0.85,
-      "file": "agenda/templates/deletar_cliente.html",
-      "description": "Arquivo `agenda/templates/deletar_cliente.html` mapeado a partir do repositório original."
-    },
-    {
-      "id": "nei-agenda-templates-detalhes-cliente-html",
-      "label": "detalhes_cliente.html",
-      "parent": "nei-agenda",
-      "layer": "file",
-      "category": "frontend",
-      "categoryLabel": "Frontend",
-      "color": "#eab308",
-      "size": 0.85,
-      "file": "agenda/templates/detalhes_cliente.html",
-      "description": "Arquivo `agenda/templates/detalhes_cliente.html` mapeado a partir do repositório original."
-    },
-    {
-      "id": "nei-agenda-templates-editar-cliente-html",
-      "label": "editar_cliente.html",
-      "parent": "nei-agenda",
-      "layer": "file",
-      "category": "frontend",
-      "categoryLabel": "Frontend",
-      "color": "#eab308",
-      "size": 0.85,
-      "file": "agenda/templates/editar_cliente.html",
-      "description": "Arquivo `agenda/templates/editar_cliente.html` mapeado a partir do repositório original."
-    },
-    {
-      "id": "nei-agenda-templates-home-page-html",
-      "label": "home_page.html",
-      "parent": "nei-agenda",
-      "layer": "file",
-      "category": "frontend",
-      "categoryLabel": "Frontend",
-      "color": "#eab308",
-      "size": 0.85,
-      "file": "agenda/templates/home_page.html",
-      "description": "Arquivo `agenda/templates/home_page.html` mapeado a partir do repositório original."
-    },
-    {
-      "id": "nei-app",
-      "label": "app",
-      "parent": "nei-root",
+      "id": "neighborhood-boys-dir-app",
+      "label": "app/",
+      "parent": "neighborhood-boys-root",
       "layer": "module",
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
       "size": 1.35,
       "file": "app/",
-      "description": "Módulo/pasta `app/` com arquivos-chave do projeto."
+      "description": "Pacote/pasta `app/` do projeto."
     },
     {
-      "id": "nei-app-forms-py",
+      "id": "neighborhood-boys-dir-banco-de-dados",
+      "label": "banco de dados/",
+      "parent": "neighborhood-boys-root",
+      "layer": "module",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 1.35,
+      "file": "banco de dados/",
+      "description": "Pacote/pasta `banco de dados/` do projeto."
+    },
+    {
+      "id": "neighborhood-boys-dir-meninos-da-vila",
+      "label": "meninos_da_vila/",
+      "parent": "neighborhood-boys-root",
+      "layer": "module",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 1.35,
+      "file": "meninos_da_vila/",
+      "description": "Pacote/pasta `meninos_da_vila/` do projeto."
+    },
+    {
+      "id": "neighborhood-boys-dir-accounts-migrations",
+      "label": "migrations/",
+      "parent": "neighborhood-boys-dir-accounts",
+      "layer": "module",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 1.35,
+      "file": "accounts/migrations/",
+      "description": "Pacote/pasta `accounts/migrations/` do projeto."
+    },
+    {
+      "id": "neighborhood-boys-dir-accounts-templates",
+      "label": "templates/",
+      "parent": "neighborhood-boys-dir-accounts",
+      "layer": "module",
+      "category": "frontend",
+      "categoryLabel": "Frontend",
+      "color": "#eab308",
+      "size": 1.35,
+      "file": "accounts/templates/",
+      "description": "Pacote/pasta `accounts/templates/` do projeto."
+    },
+    {
+      "id": "neighborhood-boys-dir-agenda-migrations",
+      "label": "migrations/",
+      "parent": "neighborhood-boys-dir-agenda",
+      "layer": "module",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 1.35,
+      "file": "agenda/migrations/",
+      "description": "Pacote/pasta `agenda/migrations/` do projeto."
+    },
+    {
+      "id": "neighborhood-boys-dir-agenda-templates",
+      "label": "templates/",
+      "parent": "neighborhood-boys-dir-agenda",
+      "layer": "module",
+      "category": "frontend",
+      "categoryLabel": "Frontend",
+      "color": "#eab308",
+      "size": 1.35,
+      "file": "agenda/templates/",
+      "description": "Pacote/pasta `agenda/templates/` do projeto."
+    },
+    {
+      "id": "neighborhood-boys-dir-app-migrations",
+      "label": "migrations/",
+      "parent": "neighborhood-boys-dir-app",
+      "layer": "module",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 1.35,
+      "file": "app/migrations/",
+      "description": "Pacote/pasta `app/migrations/` do projeto."
+    },
+    {
+      "id": "neighborhood-boys-dir-app-static",
+      "label": "static/",
+      "parent": "neighborhood-boys-dir-app",
+      "layer": "module",
+      "category": "frontend",
+      "categoryLabel": "Frontend",
+      "color": "#eab308",
+      "size": 1.35,
+      "file": "app/static/",
+      "description": "Pacote/pasta `app/static/` do projeto."
+    },
+    {
+      "id": "neighborhood-boys-dir-app-templates",
+      "label": "templates/",
+      "parent": "neighborhood-boys-dir-app",
+      "layer": "module",
+      "category": "frontend",
+      "categoryLabel": "Frontend",
+      "color": "#eab308",
+      "size": 1.35,
+      "file": "app/templates/",
+      "description": "Pacote/pasta `app/templates/` do projeto."
+    },
+    {
+      "id": "neighborhood-boys-dir-accounts-templates-accounts",
+      "label": "accounts/",
+      "parent": "neighborhood-boys-dir-accounts-templates",
+      "layer": "module",
+      "category": "frontend",
+      "categoryLabel": "Frontend",
+      "color": "#eab308",
+      "size": 1.35,
+      "file": "accounts/templates/accounts/",
+      "description": "Pacote/pasta `accounts/templates/accounts/` do projeto."
+    },
+    {
+      "id": "neighborhood-boys-dir-app-static-css",
+      "label": "css/",
+      "parent": "neighborhood-boys-dir-app-static",
+      "layer": "module",
+      "category": "frontend",
+      "categoryLabel": "Frontend",
+      "color": "#eab308",
+      "size": 1.35,
+      "file": "app/static/css/",
+      "description": "Pacote/pasta `app/static/css/` do projeto."
+    },
+    {
+      "id": "neighborhood-boys-dir-app-static-js",
+      "label": "js/",
+      "parent": "neighborhood-boys-dir-app-static",
+      "layer": "module",
+      "category": "frontend",
+      "categoryLabel": "Frontend",
+      "color": "#eab308",
+      "size": 1.35,
+      "file": "app/static/js/",
+      "description": "Pacote/pasta `app/static/js/` do projeto."
+    },
+    {
+      "id": "neighborhood-boys-dir-app-templates-admin",
+      "label": "admin/",
+      "parent": "neighborhood-boys-dir-app-templates",
+      "layer": "module",
+      "category": "frontend",
+      "categoryLabel": "Frontend",
+      "color": "#eab308",
+      "size": 1.35,
+      "file": "app/templates/admin/",
+      "description": "Pacote/pasta `app/templates/admin/` do projeto."
+    },
+    {
+      "id": "neighborhood-boys-file-manage-py",
+      "label": "manage.py",
+      "parent": "neighborhood-boys-root",
+      "layer": "file",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 0.85,
+      "file": "manage.py",
+      "description": "Código-fonte: `manage.py`"
+    },
+    {
+      "id": "neighborhood-boys-file-accounts-init-py",
+      "label": "__init__.py",
+      "parent": "neighborhood-boys-dir-accounts",
+      "layer": "file",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 0.85,
+      "file": "accounts/__init__.py",
+      "description": "Código-fonte: `accounts/__init__.py`"
+    },
+    {
+      "id": "neighborhood-boys-file-accounts-admin-py",
+      "label": "admin.py",
+      "parent": "neighborhood-boys-dir-accounts",
+      "layer": "file",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 0.85,
+      "file": "accounts/admin.py",
+      "description": "Código-fonte: `accounts/admin.py`"
+    },
+    {
+      "id": "neighborhood-boys-file-accounts-apps-py",
+      "label": "apps.py",
+      "parent": "neighborhood-boys-dir-accounts",
+      "layer": "file",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 0.85,
+      "file": "accounts/apps.py",
+      "description": "Código-fonte: `accounts/apps.py`"
+    },
+    {
+      "id": "neighborhood-boys-file-accounts-backends-py",
+      "label": "backends.py",
+      "parent": "neighborhood-boys-dir-accounts",
+      "layer": "file",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 0.85,
+      "file": "accounts/backends.py",
+      "description": "Código-fonte: `accounts/backends.py`"
+    },
+    {
+      "id": "neighborhood-boys-file-accounts-forms-py",
       "label": "forms.py",
-      "parent": "nei-app",
+      "parent": "neighborhood-boys-dir-accounts",
+      "layer": "file",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 0.85,
+      "file": "accounts/forms.py",
+      "description": "Código-fonte: `accounts/forms.py`"
+    },
+    {
+      "id": "neighborhood-boys-file-accounts-models-py",
+      "label": "models.py",
+      "parent": "neighborhood-boys-dir-accounts",
+      "layer": "file",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 0.85,
+      "file": "accounts/models.py",
+      "description": "Código-fonte: `accounts/models.py`"
+    },
+    {
+      "id": "neighborhood-boys-file-accounts-tests-py",
+      "label": "tests.py",
+      "parent": "neighborhood-boys-dir-accounts",
+      "layer": "file",
+      "category": "tests",
+      "categoryLabel": "Testes",
+      "color": "#94a3b8",
+      "size": 0.85,
+      "file": "accounts/tests.py",
+      "description": "Código-fonte: `accounts/tests.py`"
+    },
+    {
+      "id": "neighborhood-boys-file-accounts-urls-py",
+      "label": "urls.py",
+      "parent": "neighborhood-boys-dir-accounts",
+      "layer": "file",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 0.85,
+      "file": "accounts/urls.py",
+      "description": "Código-fonte: `accounts/urls.py`"
+    },
+    {
+      "id": "neighborhood-boys-file-accounts-views-py",
+      "label": "views.py",
+      "parent": "neighborhood-boys-dir-accounts",
+      "layer": "file",
+      "category": "frontend",
+      "categoryLabel": "Frontend",
+      "color": "#eab308",
+      "size": 0.85,
+      "file": "accounts/views.py",
+      "description": "Código-fonte: `accounts/views.py`"
+    },
+    {
+      "id": "neighborhood-boys-file-accounts-migrations-0001-initial-py",
+      "label": "0001_initial.py",
+      "parent": "neighborhood-boys-dir-accounts-migrations",
+      "layer": "file",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 0.85,
+      "file": "accounts/migrations/0001_initial.py",
+      "description": "Código-fonte: `accounts/migrations/0001_initial.py`"
+    },
+    {
+      "id": "neighborhood-boys-file-accounts-migrations-init-py",
+      "label": "__init__.py",
+      "parent": "neighborhood-boys-dir-accounts-migrations",
+      "layer": "file",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 0.85,
+      "file": "accounts/migrations/__init__.py",
+      "description": "Código-fonte: `accounts/migrations/__init__.py`"
+    },
+    {
+      "id": "neighborhood-boys-file-accounts-templates-accounts-index-html",
+      "label": "index.html",
+      "parent": "neighborhood-boys-dir-accounts-templates-accounts",
+      "layer": "file",
+      "category": "frontend",
+      "categoryLabel": "Frontend",
+      "color": "#eab308",
+      "size": 0.85,
+      "file": "accounts/templates/accounts/index.html",
+      "description": "Código-fonte: `accounts/templates/accounts/index.html`"
+    },
+    {
+      "id": "neighborhood-boys-file-accounts-templates-accounts-register-html",
+      "label": "register.html",
+      "parent": "neighborhood-boys-dir-accounts-templates-accounts",
+      "layer": "file",
+      "category": "frontend",
+      "categoryLabel": "Frontend",
+      "color": "#eab308",
+      "size": 0.85,
+      "file": "accounts/templates/accounts/register.html",
+      "description": "Código-fonte: `accounts/templates/accounts/register.html`"
+    },
+    {
+      "id": "neighborhood-boys-file-accounts-templates-accounts-update-password-html",
+      "label": "update_password.html",
+      "parent": "neighborhood-boys-dir-accounts-templates-accounts",
+      "layer": "file",
+      "category": "frontend",
+      "categoryLabel": "Frontend",
+      "color": "#eab308",
+      "size": 0.85,
+      "file": "accounts/templates/accounts/update_password.html",
+      "description": "Código-fonte: `accounts/templates/accounts/update_password.html`"
+    },
+    {
+      "id": "neighborhood-boys-file-accounts-templates-accounts-update-user-html",
+      "label": "update_user.html",
+      "parent": "neighborhood-boys-dir-accounts-templates-accounts",
+      "layer": "file",
+      "category": "frontend",
+      "categoryLabel": "Frontend",
+      "color": "#eab308",
+      "size": 0.85,
+      "file": "accounts/templates/accounts/update_user.html",
+      "description": "Código-fonte: `accounts/templates/accounts/update_user.html`"
+    },
+    {
+      "id": "neighborhood-boys-file-agenda-init-py",
+      "label": "__init__.py",
+      "parent": "neighborhood-boys-dir-agenda",
+      "layer": "file",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 0.85,
+      "file": "agenda/__init__.py",
+      "description": "Código-fonte: `agenda/__init__.py`"
+    },
+    {
+      "id": "neighborhood-boys-file-agenda-admin-py",
+      "label": "admin.py",
+      "parent": "neighborhood-boys-dir-agenda",
+      "layer": "file",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 0.85,
+      "file": "agenda/admin.py",
+      "description": "Código-fonte: `agenda/admin.py`"
+    },
+    {
+      "id": "neighborhood-boys-file-agenda-apps-py",
+      "label": "apps.py",
+      "parent": "neighborhood-boys-dir-agenda",
+      "layer": "file",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 0.85,
+      "file": "agenda/apps.py",
+      "description": "Código-fonte: `agenda/apps.py`"
+    },
+    {
+      "id": "neighborhood-boys-file-agenda-forms-py",
+      "label": "forms.py",
+      "parent": "neighborhood-boys-dir-agenda",
+      "layer": "file",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 0.85,
+      "file": "agenda/forms.py",
+      "description": "Código-fonte: `agenda/forms.py`"
+    },
+    {
+      "id": "neighborhood-boys-file-agenda-models-py",
+      "label": "models.py",
+      "parent": "neighborhood-boys-dir-agenda",
+      "layer": "file",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 0.85,
+      "file": "agenda/models.py",
+      "description": "Código-fonte: `agenda/models.py`"
+    },
+    {
+      "id": "neighborhood-boys-file-agenda-tests-py",
+      "label": "tests.py",
+      "parent": "neighborhood-boys-dir-agenda",
+      "layer": "file",
+      "category": "tests",
+      "categoryLabel": "Testes",
+      "color": "#94a3b8",
+      "size": 0.85,
+      "file": "agenda/tests.py",
+      "description": "Código-fonte: `agenda/tests.py`"
+    },
+    {
+      "id": "neighborhood-boys-file-agenda-views-py",
+      "label": "views.py",
+      "parent": "neighborhood-boys-dir-agenda",
+      "layer": "file",
+      "category": "frontend",
+      "categoryLabel": "Frontend",
+      "color": "#eab308",
+      "size": 0.85,
+      "file": "agenda/views.py",
+      "description": "Código-fonte: `agenda/views.py`"
+    },
+    {
+      "id": "neighborhood-boys-file-agenda-migrations-0001-initial-py",
+      "label": "0001_initial.py",
+      "parent": "neighborhood-boys-dir-agenda-migrations",
+      "layer": "file",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 0.85,
+      "file": "agenda/migrations/0001_initial.py",
+      "description": "Código-fonte: `agenda/migrations/0001_initial.py`"
+    },
+    {
+      "id": "neighborhood-boys-file-agenda-migrations-0002-auto-20220615-2040-py",
+      "label": "0002_auto_20220615_2040.py",
+      "parent": "neighborhood-boys-dir-agenda-migrations",
+      "layer": "file",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 0.85,
+      "file": "agenda/migrations/0002_auto_20220615_2040.py",
+      "description": "Código-fonte: `agenda/migrations/0002_auto_20220615_2040.py`"
+    },
+    {
+      "id": "neighborhood-boys-file-agenda-migrations-0003-auto-20220616-0740-py",
+      "label": "0003_auto_20220616_0740.py",
+      "parent": "neighborhood-boys-dir-agenda-migrations",
+      "layer": "file",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 0.85,
+      "file": "agenda/migrations/0003_auto_20220616_0740.py",
+      "description": "Código-fonte: `agenda/migrations/0003_auto_20220616_0740.py`"
+    },
+    {
+      "id": "neighborhood-boys-file-agenda-migrations-0004-alter-clientes-imagem-py",
+      "label": "0004_alter_clientes_imagem.py",
+      "parent": "neighborhood-boys-dir-agenda-migrations",
+      "layer": "file",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 0.85,
+      "file": "agenda/migrations/0004_alter_clientes_imagem.py",
+      "description": "Código-fonte: `agenda/migrations/0004_alter_clientes_imagem.py`"
+    },
+    {
+      "id": "neighborhood-boys-file-agenda-migrations-init-py",
+      "label": "__init__.py",
+      "parent": "neighborhood-boys-dir-agenda-migrations",
+      "layer": "file",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 0.85,
+      "file": "agenda/migrations/__init__.py",
+      "description": "Código-fonte: `agenda/migrations/__init__.py`"
+    },
+    {
+      "id": "neighborhood-boys-file-agenda-templates-deletar-cliente-html",
+      "label": "deletar_cliente.html",
+      "parent": "neighborhood-boys-dir-agenda-templates",
+      "layer": "file",
+      "category": "frontend",
+      "categoryLabel": "Frontend",
+      "color": "#eab308",
+      "size": 0.85,
+      "file": "agenda/templates/deletar_cliente.html",
+      "description": "Código-fonte: `agenda/templates/deletar_cliente.html`"
+    },
+    {
+      "id": "neighborhood-boys-file-agenda-templates-detalhes-cliente-html",
+      "label": "detalhes_cliente.html",
+      "parent": "neighborhood-boys-dir-agenda-templates",
+      "layer": "file",
+      "category": "frontend",
+      "categoryLabel": "Frontend",
+      "color": "#eab308",
+      "size": 0.85,
+      "file": "agenda/templates/detalhes_cliente.html",
+      "description": "Código-fonte: `agenda/templates/detalhes_cliente.html`"
+    },
+    {
+      "id": "neighborhood-boys-file-agenda-templates-editar-cliente-html",
+      "label": "editar_cliente.html",
+      "parent": "neighborhood-boys-dir-agenda-templates",
+      "layer": "file",
+      "category": "frontend",
+      "categoryLabel": "Frontend",
+      "color": "#eab308",
+      "size": 0.85,
+      "file": "agenda/templates/editar_cliente.html",
+      "description": "Código-fonte: `agenda/templates/editar_cliente.html`"
+    },
+    {
+      "id": "neighborhood-boys-file-agenda-templates-home-page-html",
+      "label": "home_page.html",
+      "parent": "neighborhood-boys-dir-agenda-templates",
+      "layer": "file",
+      "category": "frontend",
+      "categoryLabel": "Frontend",
+      "color": "#eab308",
+      "size": 0.85,
+      "file": "agenda/templates/home_page.html",
+      "description": "Código-fonte: `agenda/templates/home_page.html`"
+    },
+    {
+      "id": "neighborhood-boys-file-agenda-templates-novo-cliente-html",
+      "label": "novo_cliente.html",
+      "parent": "neighborhood-boys-dir-agenda-templates",
+      "layer": "file",
+      "category": "frontend",
+      "categoryLabel": "Frontend",
+      "color": "#eab308",
+      "size": 0.85,
+      "file": "agenda/templates/novo_cliente.html",
+      "description": "Código-fonte: `agenda/templates/novo_cliente.html`"
+    },
+    {
+      "id": "neighborhood-boys-file-app-init-py",
+      "label": "__init__.py",
+      "parent": "neighborhood-boys-dir-app",
+      "layer": "file",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 0.85,
+      "file": "app/__init__.py",
+      "description": "Código-fonte: `app/__init__.py`"
+    },
+    {
+      "id": "neighborhood-boys-file-app-admin-py",
+      "label": "admin.py",
+      "parent": "neighborhood-boys-dir-app",
+      "layer": "file",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 0.85,
+      "file": "app/admin.py",
+      "description": "Código-fonte: `app/admin.py`"
+    },
+    {
+      "id": "neighborhood-boys-file-app-apps-py",
+      "label": "apps.py",
+      "parent": "neighborhood-boys-dir-app",
+      "layer": "file",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 0.85,
+      "file": "app/apps.py",
+      "description": "Código-fonte: `app/apps.py`"
+    },
+    {
+      "id": "neighborhood-boys-file-app-forms-py",
+      "label": "forms.py",
+      "parent": "neighborhood-boys-dir-app",
       "layer": "file",
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
       "size": 0.85,
       "file": "app/forms.py",
-      "description": "Arquivo `app/forms.py` mapeado a partir do repositório original."
+      "description": "Código-fonte: `app/forms.py`"
     },
     {
-      "id": "nei-app-models-py",
+      "id": "neighborhood-boys-file-app-models-py",
       "label": "models.py",
-      "parent": "nei-app",
+      "parent": "neighborhood-boys-dir-app",
       "layer": "file",
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
       "size": 0.85,
       "file": "app/models.py",
-      "description": "Arquivo `app/models.py` mapeado a partir do repositório original."
+      "description": "Código-fonte: `app/models.py`"
     },
     {
-      "id": "nei-app-views-py",
+      "id": "neighborhood-boys-file-app-tests-py",
+      "label": "tests.py",
+      "parent": "neighborhood-boys-dir-app",
+      "layer": "file",
+      "category": "tests",
+      "categoryLabel": "Testes",
+      "color": "#94a3b8",
+      "size": 0.85,
+      "file": "app/tests.py",
+      "description": "Código-fonte: `app/tests.py`"
+    },
+    {
+      "id": "neighborhood-boys-file-app-views-py",
       "label": "views.py",
-      "parent": "nei-app",
+      "parent": "neighborhood-boys-dir-app",
       "layer": "file",
       "category": "frontend",
       "categoryLabel": "Frontend",
       "color": "#eab308",
       "size": 0.85,
       "file": "app/views.py",
-      "description": "Arquivo `app/views.py` mapeado a partir do repositório original."
+      "description": "Código-fonte: `app/views.py`"
     },
     {
-      "id": "nei-app-static-js-jquery-cart-js",
+      "id": "neighborhood-boys-file-app-migrations-0001-initial-py",
+      "label": "0001_initial.py",
+      "parent": "neighborhood-boys-dir-app-migrations",
+      "layer": "file",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 0.85,
+      "file": "app/migrations/0001_initial.py",
+      "description": "Código-fonte: `app/migrations/0001_initial.py`"
+    },
+    {
+      "id": "neighborhood-boys-file-app-migrations-init-py",
+      "label": "__init__.py",
+      "parent": "neighborhood-boys-dir-app-migrations",
+      "layer": "file",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 0.85,
+      "file": "app/migrations/__init__.py",
+      "description": "Código-fonte: `app/migrations/__init__.py`"
+    },
+    {
+      "id": "neighborhood-boys-file-app-static-css-bootstrap-min-css",
+      "label": "bootstrap.min.css",
+      "parent": "neighborhood-boys-dir-app-static-css",
+      "layer": "file",
+      "category": "frontend",
+      "categoryLabel": "Frontend",
+      "color": "#eab308",
+      "size": 0.85,
+      "file": "app/static/css/bootstrap.min.css",
+      "description": "Código-fonte: `app/static/css/bootstrap.min.css`"
+    },
+    {
+      "id": "neighborhood-boys-file-app-static-css-login-css",
+      "label": "login.css",
+      "parent": "neighborhood-boys-dir-app-static-css",
+      "layer": "file",
+      "category": "frontend",
+      "categoryLabel": "Frontend",
+      "color": "#eab308",
+      "size": 0.85,
+      "file": "app/static/css/login.css",
+      "description": "Código-fonte: `app/static/css/login.css`"
+    },
+    {
+      "id": "neighborhood-boys-file-app-static-css-main-css",
+      "label": "main.css",
+      "parent": "neighborhood-boys-dir-app-static-css",
+      "layer": "file",
+      "category": "frontend",
+      "categoryLabel": "Frontend",
+      "color": "#eab308",
+      "size": 0.85,
+      "file": "app/static/css/main.css",
+      "description": "Código-fonte: `app/static/css/main.css`"
+    },
+    {
+      "id": "neighborhood-boys-file-app-static-css-style-css",
+      "label": "style.css",
+      "parent": "neighborhood-boys-dir-app-static-css",
+      "layer": "file",
+      "category": "frontend",
+      "categoryLabel": "Frontend",
+      "color": "#eab308",
+      "size": 0.85,
+      "file": "app/static/css/style.css",
+      "description": "Código-fonte: `app/static/css/style.css`"
+    },
+    {
+      "id": "neighborhood-boys-file-app-static-js-bootstrap-min-js",
+      "label": "bootstrap.min.js",
+      "parent": "neighborhood-boys-dir-app-static-js",
+      "layer": "file",
+      "category": "frontend",
+      "categoryLabel": "Frontend",
+      "color": "#eab308",
+      "size": 0.85,
+      "file": "app/static/js/bootstrap.min.js",
+      "description": "Código-fonte: `app/static/js/bootstrap.min.js`"
+    },
+    {
+      "id": "neighborhood-boys-file-app-static-js-javascript-js",
+      "label": "javascript.js",
+      "parent": "neighborhood-boys-dir-app-static-js",
+      "layer": "file",
+      "category": "frontend",
+      "categoryLabel": "Frontend",
+      "color": "#eab308",
+      "size": 0.85,
+      "file": "app/static/js/javascript.js",
+      "description": "Código-fonte: `app/static/js/javascript.js`"
+    },
+    {
+      "id": "neighborhood-boys-file-app-static-js-jquery-cart-js",
       "label": "jquery.cart.js",
-      "parent": "nei-app",
+      "parent": "neighborhood-boys-dir-app-static-js",
       "layer": "file",
       "category": "frontend",
       "categoryLabel": "Frontend",
       "color": "#eab308",
       "size": 0.85,
       "file": "app/static/js/jquery.cart.js",
-      "description": "Arquivo `app/static/js/jquery.cart.js` mapeado a partir do repositório original."
+      "description": "Código-fonte: `app/static/js/jquery.cart.js`"
     },
     {
-      "id": "nei-app-templates-agendamento-html",
+      "id": "neighborhood-boys-file-app-templates-agendamento-html",
       "label": "agendamento.html",
-      "parent": "nei-app",
+      "parent": "neighborhood-boys-dir-app-templates",
       "layer": "file",
       "category": "frontend",
       "categoryLabel": "Frontend",
       "color": "#eab308",
       "size": 0.85,
       "file": "app/templates/agendamento.html",
-      "description": "Arquivo `app/templates/agendamento.html` mapeado a partir do repositório original."
+      "description": "Código-fonte: `app/templates/agendamento.html`"
     },
     {
-      "id": "nei-app-templates-catalogo-html",
+      "id": "neighborhood-boys-file-app-templates-catalogo-html",
       "label": "catalogo.html",
-      "parent": "nei-app",
+      "parent": "neighborhood-boys-dir-app-templates",
       "layer": "file",
       "category": "frontend",
       "categoryLabel": "Frontend",
       "color": "#eab308",
       "size": 0.85,
       "file": "app/templates/catalogo.html",
-      "description": "Arquivo `app/templates/catalogo.html` mapeado a partir do repositório original."
+      "description": "Código-fonte: `app/templates/catalogo.html`"
     },
     {
-      "id": "nei-app-templates-contact-html",
+      "id": "neighborhood-boys-file-app-templates-contact-html",
       "label": "contact.html",
-      "parent": "nei-app",
+      "parent": "neighborhood-boys-dir-app-templates",
       "layer": "file",
       "category": "frontend",
       "categoryLabel": "Frontend",
       "color": "#eab308",
       "size": 0.85,
       "file": "app/templates/contact.html",
-      "description": "Arquivo `app/templates/contact.html` mapeado a partir do repositório original."
+      "description": "Código-fonte: `app/templates/contact.html`"
     },
     {
-      "id": "nei-app-templates-home-html",
+      "id": "neighborhood-boys-file-app-templates-home-html",
       "label": "home.html",
-      "parent": "nei-app",
+      "parent": "neighborhood-boys-dir-app-templates",
       "layer": "file",
       "category": "frontend",
       "categoryLabel": "Frontend",
       "color": "#eab308",
       "size": 0.85,
       "file": "app/templates/home.html",
-      "description": "Arquivo `app/templates/home.html` mapeado a partir do repositório original."
+      "description": "Código-fonte: `app/templates/home.html`"
+    },
+    {
+      "id": "neighborhood-boys-file-app-templates-login-html",
+      "label": "login.html",
+      "parent": "neighborhood-boys-dir-app-templates",
+      "layer": "file",
+      "category": "frontend",
+      "categoryLabel": "Frontend",
+      "color": "#eab308",
+      "size": 0.85,
+      "file": "app/templates/login.html",
+      "description": "Código-fonte: `app/templates/login.html`"
+    },
+    {
+      "id": "neighborhood-boys-file-app-templates-main-html",
+      "label": "main.html",
+      "parent": "neighborhood-boys-dir-app-templates",
+      "layer": "file",
+      "category": "frontend",
+      "categoryLabel": "Frontend",
+      "color": "#eab308",
+      "size": 0.85,
+      "file": "app/templates/main.html",
+      "description": "Código-fonte: `app/templates/main.html`"
+    },
+    {
+      "id": "neighborhood-boys-file-app-templates-admin-form-html",
+      "label": "form.html",
+      "parent": "neighborhood-boys-dir-app-templates-admin",
+      "layer": "file",
+      "category": "frontend",
+      "categoryLabel": "Frontend",
+      "color": "#eab308",
+      "size": 0.85,
+      "file": "app/templates/admin/form.html",
+      "description": "Código-fonte: `app/templates/admin/form.html`"
+    },
+    {
+      "id": "neighborhood-boys-file-banco-de-dados-dbmeninos-da-vila-sql",
+      "label": "dbmeninos_da_vila.sql",
+      "parent": "neighborhood-boys-dir-banco-de-dados",
+      "layer": "file",
+      "category": "oracle",
+      "categoryLabel": "Oracle / DB",
+      "color": "#c084fc",
+      "size": 0.85,
+      "file": "banco de dados/dbmeninos_da_vila.sql",
+      "description": "Código-fonte: `banco de dados/dbmeninos_da_vila.sql`"
+    },
+    {
+      "id": "neighborhood-boys-file-meninos-da-vila-init-py",
+      "label": "__init__.py",
+      "parent": "neighborhood-boys-dir-meninos-da-vila",
+      "layer": "file",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 0.85,
+      "file": "meninos_da_vila/__init__.py",
+      "description": "Código-fonte: `meninos_da_vila/__init__.py`"
+    },
+    {
+      "id": "neighborhood-boys-file-meninos-da-vila-asgi-py",
+      "label": "asgi.py",
+      "parent": "neighborhood-boys-dir-meninos-da-vila",
+      "layer": "file",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 0.85,
+      "file": "meninos_da_vila/asgi.py",
+      "description": "Código-fonte: `meninos_da_vila/asgi.py`"
+    },
+    {
+      "id": "neighborhood-boys-file-meninos-da-vila-local-settings-py",
+      "label": "local_settings.py",
+      "parent": "neighborhood-boys-dir-meninos-da-vila",
+      "layer": "file",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 0.85,
+      "file": "meninos_da_vila/local_settings.py",
+      "description": "Código-fonte: `meninos_da_vila/local_settings.py`"
+    },
+    {
+      "id": "neighborhood-boys-file-meninos-da-vila-settings-py",
+      "label": "settings.py",
+      "parent": "neighborhood-boys-dir-meninos-da-vila",
+      "layer": "file",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 0.85,
+      "file": "meninos_da_vila/settings.py",
+      "description": "Código-fonte: `meninos_da_vila/settings.py`"
+    },
+    {
+      "id": "neighborhood-boys-file-meninos-da-vila-urls-py",
+      "label": "urls.py",
+      "parent": "neighborhood-boys-dir-meninos-da-vila",
+      "layer": "file",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 0.85,
+      "file": "meninos_da_vila/urls.py",
+      "description": "Código-fonte: `meninos_da_vila/urls.py`"
+    },
+    {
+      "id": "neighborhood-boys-file-meninos-da-vila-wsgi-py",
+      "label": "wsgi.py",
+      "parent": "neighborhood-boys-dir-meninos-da-vila",
+      "layer": "file",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 0.85,
+      "file": "meninos_da_vila/wsgi.py",
+      "description": "Código-fonte: `meninos_da_vila/wsgi.py`"
     }
   ],
   "links": [
     {
-      "source": "nei-root",
-      "target": "nei-accounts",
+      "source": "neighborhood-boys-root",
+      "target": "neighborhood-boys-dir-accounts",
       "type": "dependency"
     },
     {
-      "source": "nei-accounts",
-      "target": "nei-accounts-admin-py",
+      "source": "neighborhood-boys-root",
+      "target": "neighborhood-boys-dir-agenda",
       "type": "dependency"
     },
     {
-      "source": "nei-accounts",
-      "target": "nei-accounts-forms-py",
+      "source": "neighborhood-boys-root",
+      "target": "neighborhood-boys-dir-app",
       "type": "dependency"
     },
     {
-      "source": "nei-accounts",
-      "target": "nei-accounts-models-py",
+      "source": "neighborhood-boys-root",
+      "target": "neighborhood-boys-dir-banco-de-dados",
       "type": "dependency"
     },
     {
-      "source": "nei-accounts",
-      "target": "nei-accounts-urls-py",
+      "source": "neighborhood-boys-root",
+      "target": "neighborhood-boys-dir-meninos-da-vila",
       "type": "dependency"
     },
     {
-      "source": "nei-accounts",
-      "target": "nei-accounts-views-py",
+      "source": "neighborhood-boys-dir-accounts",
+      "target": "neighborhood-boys-dir-accounts-migrations",
       "type": "dependency"
     },
     {
-      "source": "nei-accounts",
-      "target": "nei-accounts-templates-accounts-index-html",
+      "source": "neighborhood-boys-dir-accounts",
+      "target": "neighborhood-boys-dir-accounts-templates",
       "type": "dependency"
     },
     {
-      "source": "nei-accounts",
-      "target": "nei-accounts-backends-py",
+      "source": "neighborhood-boys-dir-agenda",
+      "target": "neighborhood-boys-dir-agenda-migrations",
       "type": "dependency"
     },
     {
-      "source": "nei-accounts",
-      "target": "nei-accounts-templates-accounts-register-htm",
+      "source": "neighborhood-boys-dir-agenda",
+      "target": "neighborhood-boys-dir-agenda-templates",
       "type": "dependency"
     },
     {
-      "source": "nei-root",
-      "target": "nei-agenda",
+      "source": "neighborhood-boys-dir-app",
+      "target": "neighborhood-boys-dir-app-migrations",
       "type": "dependency"
     },
     {
-      "source": "nei-agenda",
-      "target": "nei-agenda-admin-py",
+      "source": "neighborhood-boys-dir-app",
+      "target": "neighborhood-boys-dir-app-static",
       "type": "dependency"
     },
     {
-      "source": "nei-agenda",
-      "target": "nei-agenda-forms-py",
+      "source": "neighborhood-boys-dir-app",
+      "target": "neighborhood-boys-dir-app-templates",
       "type": "dependency"
     },
     {
-      "source": "nei-agenda",
-      "target": "nei-agenda-models-py",
+      "source": "neighborhood-boys-dir-accounts-templates",
+      "target": "neighborhood-boys-dir-accounts-templates-accounts",
       "type": "dependency"
     },
     {
-      "source": "nei-agenda",
-      "target": "nei-agenda-views-py",
+      "source": "neighborhood-boys-dir-app-static",
+      "target": "neighborhood-boys-dir-app-static-css",
       "type": "dependency"
     },
     {
-      "source": "nei-agenda",
-      "target": "nei-agenda-templates-deletar-cliente-html",
+      "source": "neighborhood-boys-dir-app-static",
+      "target": "neighborhood-boys-dir-app-static-js",
       "type": "dependency"
     },
     {
-      "source": "nei-agenda",
-      "target": "nei-agenda-templates-detalhes-cliente-html",
+      "source": "neighborhood-boys-dir-app-templates",
+      "target": "neighborhood-boys-dir-app-templates-admin",
       "type": "dependency"
     },
     {
-      "source": "nei-agenda",
-      "target": "nei-agenda-templates-editar-cliente-html",
+      "source": "neighborhood-boys-root",
+      "target": "neighborhood-boys-file-manage-py",
       "type": "dependency"
     },
     {
-      "source": "nei-agenda",
-      "target": "nei-agenda-templates-home-page-html",
+      "source": "neighborhood-boys-dir-accounts",
+      "target": "neighborhood-boys-file-accounts-init-py",
       "type": "dependency"
     },
     {
-      "source": "nei-root",
-      "target": "nei-app",
+      "source": "neighborhood-boys-dir-accounts",
+      "target": "neighborhood-boys-file-accounts-admin-py",
       "type": "dependency"
     },
     {
-      "source": "nei-app",
-      "target": "nei-app-forms-py",
+      "source": "neighborhood-boys-dir-accounts",
+      "target": "neighborhood-boys-file-accounts-apps-py",
       "type": "dependency"
     },
     {
-      "source": "nei-app",
-      "target": "nei-app-models-py",
+      "source": "neighborhood-boys-dir-accounts",
+      "target": "neighborhood-boys-file-accounts-backends-py",
       "type": "dependency"
     },
     {
-      "source": "nei-app",
-      "target": "nei-app-views-py",
+      "source": "neighborhood-boys-dir-accounts",
+      "target": "neighborhood-boys-file-accounts-forms-py",
       "type": "dependency"
     },
     {
-      "source": "nei-app",
-      "target": "nei-app-static-js-jquery-cart-js",
+      "source": "neighborhood-boys-dir-accounts",
+      "target": "neighborhood-boys-file-accounts-models-py",
       "type": "dependency"
     },
     {
-      "source": "nei-app",
-      "target": "nei-app-templates-agendamento-html",
+      "source": "neighborhood-boys-dir-accounts",
+      "target": "neighborhood-boys-file-accounts-tests-py",
       "type": "dependency"
     },
     {
-      "source": "nei-app",
-      "target": "nei-app-templates-catalogo-html",
+      "source": "neighborhood-boys-dir-accounts",
+      "target": "neighborhood-boys-file-accounts-urls-py",
       "type": "dependency"
     },
     {
-      "source": "nei-app",
-      "target": "nei-app-templates-contact-html",
+      "source": "neighborhood-boys-dir-accounts",
+      "target": "neighborhood-boys-file-accounts-views-py",
       "type": "dependency"
     },
     {
-      "source": "nei-app",
-      "target": "nei-app-templates-home-html",
+      "source": "neighborhood-boys-dir-accounts-migrations",
+      "target": "neighborhood-boys-file-accounts-migrations-0001-initial-py",
+      "type": "dependency"
+    },
+    {
+      "source": "neighborhood-boys-dir-accounts-migrations",
+      "target": "neighborhood-boys-file-accounts-migrations-init-py",
+      "type": "dependency"
+    },
+    {
+      "source": "neighborhood-boys-dir-accounts-templates-accounts",
+      "target": "neighborhood-boys-file-accounts-templates-accounts-index-html",
+      "type": "dependency"
+    },
+    {
+      "source": "neighborhood-boys-dir-accounts-templates-accounts",
+      "target": "neighborhood-boys-file-accounts-templates-accounts-register-html",
+      "type": "dependency"
+    },
+    {
+      "source": "neighborhood-boys-dir-accounts-templates-accounts",
+      "target": "neighborhood-boys-file-accounts-templates-accounts-update-password-html",
+      "type": "dependency"
+    },
+    {
+      "source": "neighborhood-boys-dir-accounts-templates-accounts",
+      "target": "neighborhood-boys-file-accounts-templates-accounts-update-user-html",
+      "type": "dependency"
+    },
+    {
+      "source": "neighborhood-boys-dir-agenda",
+      "target": "neighborhood-boys-file-agenda-init-py",
+      "type": "dependency"
+    },
+    {
+      "source": "neighborhood-boys-dir-agenda",
+      "target": "neighborhood-boys-file-agenda-admin-py",
+      "type": "dependency"
+    },
+    {
+      "source": "neighborhood-boys-dir-agenda",
+      "target": "neighborhood-boys-file-agenda-apps-py",
+      "type": "dependency"
+    },
+    {
+      "source": "neighborhood-boys-dir-agenda",
+      "target": "neighborhood-boys-file-agenda-forms-py",
+      "type": "dependency"
+    },
+    {
+      "source": "neighborhood-boys-dir-agenda",
+      "target": "neighborhood-boys-file-agenda-models-py",
+      "type": "dependency"
+    },
+    {
+      "source": "neighborhood-boys-dir-agenda",
+      "target": "neighborhood-boys-file-agenda-tests-py",
+      "type": "dependency"
+    },
+    {
+      "source": "neighborhood-boys-dir-agenda",
+      "target": "neighborhood-boys-file-agenda-views-py",
+      "type": "dependency"
+    },
+    {
+      "source": "neighborhood-boys-dir-agenda-migrations",
+      "target": "neighborhood-boys-file-agenda-migrations-0001-initial-py",
+      "type": "dependency"
+    },
+    {
+      "source": "neighborhood-boys-dir-agenda-migrations",
+      "target": "neighborhood-boys-file-agenda-migrations-0002-auto-20220615-2040-py",
+      "type": "dependency"
+    },
+    {
+      "source": "neighborhood-boys-dir-agenda-migrations",
+      "target": "neighborhood-boys-file-agenda-migrations-0003-auto-20220616-0740-py",
+      "type": "dependency"
+    },
+    {
+      "source": "neighborhood-boys-dir-agenda-migrations",
+      "target": "neighborhood-boys-file-agenda-migrations-0004-alter-clientes-imagem-py",
+      "type": "dependency"
+    },
+    {
+      "source": "neighborhood-boys-dir-agenda-migrations",
+      "target": "neighborhood-boys-file-agenda-migrations-init-py",
+      "type": "dependency"
+    },
+    {
+      "source": "neighborhood-boys-dir-agenda-templates",
+      "target": "neighborhood-boys-file-agenda-templates-deletar-cliente-html",
+      "type": "dependency"
+    },
+    {
+      "source": "neighborhood-boys-dir-agenda-templates",
+      "target": "neighborhood-boys-file-agenda-templates-detalhes-cliente-html",
+      "type": "dependency"
+    },
+    {
+      "source": "neighborhood-boys-dir-agenda-templates",
+      "target": "neighborhood-boys-file-agenda-templates-editar-cliente-html",
+      "type": "dependency"
+    },
+    {
+      "source": "neighborhood-boys-dir-agenda-templates",
+      "target": "neighborhood-boys-file-agenda-templates-home-page-html",
+      "type": "dependency"
+    },
+    {
+      "source": "neighborhood-boys-dir-agenda-templates",
+      "target": "neighborhood-boys-file-agenda-templates-novo-cliente-html",
+      "type": "dependency"
+    },
+    {
+      "source": "neighborhood-boys-dir-app",
+      "target": "neighborhood-boys-file-app-init-py",
+      "type": "dependency"
+    },
+    {
+      "source": "neighborhood-boys-dir-app",
+      "target": "neighborhood-boys-file-app-admin-py",
+      "type": "dependency"
+    },
+    {
+      "source": "neighborhood-boys-dir-app",
+      "target": "neighborhood-boys-file-app-apps-py",
+      "type": "dependency"
+    },
+    {
+      "source": "neighborhood-boys-dir-app",
+      "target": "neighborhood-boys-file-app-forms-py",
+      "type": "dependency"
+    },
+    {
+      "source": "neighborhood-boys-dir-app",
+      "target": "neighborhood-boys-file-app-models-py",
+      "type": "dependency"
+    },
+    {
+      "source": "neighborhood-boys-dir-app",
+      "target": "neighborhood-boys-file-app-tests-py",
+      "type": "dependency"
+    },
+    {
+      "source": "neighborhood-boys-dir-app",
+      "target": "neighborhood-boys-file-app-views-py",
+      "type": "dependency"
+    },
+    {
+      "source": "neighborhood-boys-dir-app-migrations",
+      "target": "neighborhood-boys-file-app-migrations-0001-initial-py",
+      "type": "dependency"
+    },
+    {
+      "source": "neighborhood-boys-dir-app-migrations",
+      "target": "neighborhood-boys-file-app-migrations-init-py",
+      "type": "dependency"
+    },
+    {
+      "source": "neighborhood-boys-dir-app-static-css",
+      "target": "neighborhood-boys-file-app-static-css-bootstrap-min-css",
+      "type": "dependency"
+    },
+    {
+      "source": "neighborhood-boys-dir-app-static-css",
+      "target": "neighborhood-boys-file-app-static-css-login-css",
+      "type": "dependency"
+    },
+    {
+      "source": "neighborhood-boys-dir-app-static-css",
+      "target": "neighborhood-boys-file-app-static-css-main-css",
+      "type": "dependency"
+    },
+    {
+      "source": "neighborhood-boys-dir-app-static-css",
+      "target": "neighborhood-boys-file-app-static-css-style-css",
+      "type": "dependency"
+    },
+    {
+      "source": "neighborhood-boys-dir-app-static-js",
+      "target": "neighborhood-boys-file-app-static-js-bootstrap-min-js",
+      "type": "dependency"
+    },
+    {
+      "source": "neighborhood-boys-dir-app-static-js",
+      "target": "neighborhood-boys-file-app-static-js-javascript-js",
+      "type": "dependency"
+    },
+    {
+      "source": "neighborhood-boys-dir-app-static-js",
+      "target": "neighborhood-boys-file-app-static-js-jquery-cart-js",
+      "type": "dependency"
+    },
+    {
+      "source": "neighborhood-boys-dir-app-templates",
+      "target": "neighborhood-boys-file-app-templates-agendamento-html",
+      "type": "dependency"
+    },
+    {
+      "source": "neighborhood-boys-dir-app-templates",
+      "target": "neighborhood-boys-file-app-templates-catalogo-html",
+      "type": "dependency"
+    },
+    {
+      "source": "neighborhood-boys-dir-app-templates",
+      "target": "neighborhood-boys-file-app-templates-contact-html",
+      "type": "dependency"
+    },
+    {
+      "source": "neighborhood-boys-dir-app-templates",
+      "target": "neighborhood-boys-file-app-templates-home-html",
+      "type": "dependency"
+    },
+    {
+      "source": "neighborhood-boys-dir-app-templates",
+      "target": "neighborhood-boys-file-app-templates-login-html",
+      "type": "dependency"
+    },
+    {
+      "source": "neighborhood-boys-dir-app-templates",
+      "target": "neighborhood-boys-file-app-templates-main-html",
+      "type": "dependency"
+    },
+    {
+      "source": "neighborhood-boys-dir-app-templates-admin",
+      "target": "neighborhood-boys-file-app-templates-admin-form-html",
+      "type": "dependency"
+    },
+    {
+      "source": "neighborhood-boys-dir-banco-de-dados",
+      "target": "neighborhood-boys-file-banco-de-dados-dbmeninos-da-vila-sql",
+      "type": "dependency"
+    },
+    {
+      "source": "neighborhood-boys-dir-meninos-da-vila",
+      "target": "neighborhood-boys-file-meninos-da-vila-init-py",
+      "type": "dependency"
+    },
+    {
+      "source": "neighborhood-boys-dir-meninos-da-vila",
+      "target": "neighborhood-boys-file-meninos-da-vila-asgi-py",
+      "type": "dependency"
+    },
+    {
+      "source": "neighborhood-boys-dir-meninos-da-vila",
+      "target": "neighborhood-boys-file-meninos-da-vila-local-settings-py",
+      "type": "dependency"
+    },
+    {
+      "source": "neighborhood-boys-dir-meninos-da-vila",
+      "target": "neighborhood-boys-file-meninos-da-vila-settings-py",
+      "type": "dependency"
+    },
+    {
+      "source": "neighborhood-boys-dir-meninos-da-vila",
+      "target": "neighborhood-boys-file-meninos-da-vila-urls-py",
+      "type": "dependency"
+    },
+    {
+      "source": "neighborhood-boys-dir-meninos-da-vila",
+      "target": "neighborhood-boys-file-meninos-da-vila-wsgi-py",
       "type": "dependency"
     }
   ]

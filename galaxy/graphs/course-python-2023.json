@@ -4,7 +4,7 @@
   "repoUrl": "https://github.com/CanonEngineer/CoursePython2023",
   "color": "#facc15",
   "demoUrl": "",
-  "nodeCount": 28,
+  "nodeCount": 338,
   "categories": {
     "core": {
       "label": "Backend",
@@ -14,6 +14,10 @@
       "label": "Frontend",
       "color": "#eab308"
     },
+    "tests": {
+      "label": "Testes",
+      "color": "#94a3b8"
+    },
     "other": {
       "label": "Outros",
       "color": "#64748b"
@@ -21,7 +25,7 @@
   },
   "nodes": [
     {
-      "id": "cp2-root",
+      "id": "course-python-2023-root",
       "label": "CoursePython2023",
       "parent": null,
       "layer": "root",
@@ -33,464 +37,5734 @@
       "description": "Exercícios e práticas do curso de Python 2023."
     },
     {
-      "id": "cp2-readme-md",
-      "label": "README.md",
-      "parent": "cp2-root",
-      "layer": "file",
-      "category": "other",
-      "categoryLabel": "Outros",
-      "color": "#64748b",
-      "size": 0.85,
-      "file": "README.md",
-      "description": "Arquivo `README.md` mapeado a partir do repositório original."
-    },
-    {
-      "id": "cp2-aula100-py",
-      "label": "aula100.py",
-      "parent": "cp2-root",
-      "layer": "file",
+      "id": "course-python-2023-dir-vscode",
+      "label": ".vscode/",
+      "parent": "course-python-2023-root",
+      "layer": "module",
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
-      "size": 0.85,
-      "file": "aula100.py",
-      "description": "Arquivo `aula100.py` mapeado a partir do repositório original."
+      "size": 1.35,
+      "file": ".vscode/",
+      "description": "Pacote/pasta `.vscode/` do projeto."
     },
     {
-      "id": "cp2-aula101-py",
-      "label": "aula101.py",
-      "parent": "cp2-root",
-      "layer": "file",
-      "category": "core",
-      "categoryLabel": "Backend",
-      "color": "#3b82f6",
-      "size": 0.85,
-      "file": "aula101.py",
-      "description": "Arquivo `aula101.py` mapeado a partir do repositório original."
-    },
-    {
-      "id": "cp2-aula102-py",
-      "label": "aula102.py",
-      "parent": "cp2-root",
-      "layer": "file",
-      "category": "core",
-      "categoryLabel": "Backend",
-      "color": "#3b82f6",
-      "size": 0.85,
-      "file": "aula102.py",
-      "description": "Arquivo `aula102.py` mapeado a partir do repositório original."
-    },
-    {
-      "id": "cp2-aula103-py",
-      "label": "aula103.py",
-      "parent": "cp2-root",
-      "layer": "file",
-      "category": "core",
-      "categoryLabel": "Backend",
-      "color": "#3b82f6",
-      "size": 0.85,
-      "file": "aula103.py",
-      "description": "Arquivo `aula103.py` mapeado a partir do repositório original."
-    },
-    {
-      "id": "cp2-aula104-py",
-      "label": "aula104.py",
-      "parent": "cp2-root",
-      "layer": "file",
-      "category": "core",
-      "categoryLabel": "Backend",
-      "color": "#3b82f6",
-      "size": 0.85,
-      "file": "aula104.py",
-      "description": "Arquivo `aula104.py` mapeado a partir do repositório original."
-    },
-    {
-      "id": "cp2-aula105-py",
-      "label": "aula105.py",
-      "parent": "cp2-root",
-      "layer": "file",
-      "category": "core",
-      "categoryLabel": "Backend",
-      "color": "#3b82f6",
-      "size": 0.85,
-      "file": "aula105.py",
-      "description": "Arquivo `aula105.py` mapeado a partir do repositório original."
-    },
-    {
-      "id": "cp2-aula106-py",
-      "label": "aula106.py",
-      "parent": "cp2-root",
-      "layer": "file",
-      "category": "core",
-      "categoryLabel": "Backend",
-      "color": "#3b82f6",
-      "size": 0.85,
-      "file": "aula106.py",
-      "description": "Arquivo `aula106.py` mapeado a partir do repositório original."
-    },
-    {
-      "id": "cp2-aula141",
-      "label": "aula141",
-      "parent": "cp2-root",
+      "id": "course-python-2023-dir-aula141",
+      "label": "aula141/",
+      "parent": "course-python-2023-root",
       "layer": "module",
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
       "size": 1.35,
       "file": "aula141/",
-      "description": "Módulo/pasta `aula141/` com arquivos-chave do projeto."
+      "description": "Pacote/pasta `aula141/` do projeto."
     },
     {
-      "id": "cp2-aula141-eletronico-py",
-      "label": "eletronico.py",
-      "parent": "cp2-aula141",
-      "layer": "file",
-      "category": "core",
-      "categoryLabel": "Backend",
-      "color": "#3b82f6",
-      "size": 0.85,
-      "file": "aula141/eletronico.py",
-      "description": "Arquivo `aula141/eletronico.py` mapeado a partir do repositório original."
-    },
-    {
-      "id": "cp2-aula141-log-py",
-      "label": "log.py",
-      "parent": "cp2-aula141",
-      "layer": "file",
-      "category": "core",
-      "categoryLabel": "Backend",
-      "color": "#3b82f6",
-      "size": 0.85,
-      "file": "aula141/log.py",
-      "description": "Arquivo `aula141/log.py` mapeado a partir do repositório original."
-    },
-    {
-      "id": "cp2-aula141-main-py",
-      "label": "main.py",
-      "parent": "cp2-aula141",
-      "layer": "file",
-      "category": "core",
-      "categoryLabel": "Backend",
-      "color": "#3b82f6",
-      "size": 0.85,
-      "file": "aula141/main.py",
-      "description": "Arquivo `aula141/main.py` mapeado a partir do repositório original."
-    },
-    {
-      "id": "cp2-aula156",
-      "label": "aula156",
-      "parent": "cp2-root",
+      "id": "course-python-2023-dir-aula156",
+      "label": "aula156/",
+      "parent": "course-python-2023-root",
       "layer": "module",
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
       "size": 1.35,
       "file": "aula156/",
-      "description": "Módulo/pasta `aula156/` com arquivos-chave do projeto."
+      "description": "Pacote/pasta `aula156/` do projeto."
     },
     {
-      "id": "cp2-aula156-documentando-class-py",
-      "label": "documentando_class.py",
-      "parent": "cp2-aula156",
-      "layer": "file",
-      "category": "core",
-      "categoryLabel": "Backend",
-      "color": "#3b82f6",
-      "size": 0.85,
-      "file": "aula156/documentando_class.py",
-      "description": "Arquivo `aula156/documentando_class.py` mapeado a partir do repositório original."
-    },
-    {
-      "id": "cp2-aula156-documentando-funcoes-py",
-      "label": "documentando_funcoes.py",
-      "parent": "cp2-aula156",
-      "layer": "file",
-      "category": "core",
-      "categoryLabel": "Backend",
-      "color": "#3b82f6",
-      "size": 0.85,
-      "file": "aula156/documentando_funcoes.py",
-      "description": "Arquivo `aula156/documentando_funcoes.py` mapeado a partir do repositório original."
-    },
-    {
-      "id": "cp2-aula156-main-py",
-      "label": "main.py",
-      "parent": "cp2-aula156",
-      "layer": "file",
-      "category": "core",
-      "categoryLabel": "Backend",
-      "color": "#3b82f6",
-      "size": 0.85,
-      "file": "aula156/main.py",
-      "description": "Arquivo `aula156/main.py` mapeado a partir do repositório original."
-    },
-    {
-      "id": "cp2-aula156-varias-linhas-py",
-      "label": "varias_linhas.py",
-      "parent": "cp2-aula156",
-      "layer": "file",
-      "category": "core",
-      "categoryLabel": "Backend",
-      "color": "#3b82f6",
-      "size": 0.85,
-      "file": "aula156/varias_linhas.py",
-      "description": "Arquivo `aula156/varias_linhas.py` mapeado a partir do repositório original."
-    },
-    {
-      "id": "cp2-aula156-uma-linha-py",
-      "label": "uma_linha.py",
-      "parent": "cp2-aula156",
-      "layer": "file",
-      "category": "core",
-      "categoryLabel": "Backend",
-      "color": "#3b82f6",
-      "size": 0.85,
-      "file": "aula156/uma_linha.py",
-      "description": "Arquivo `aula156/uma_linha.py` mapeado a partir do repositório original."
-    },
-    {
-      "id": "cp2-aula158",
-      "label": "aula158",
-      "parent": "cp2-root",
+      "id": "course-python-2023-dir-aula158",
+      "label": "aula158/",
+      "parent": "course-python-2023-root",
       "layer": "module",
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
       "size": 1.35,
       "file": "aula158/",
-      "description": "Módulo/pasta `aula158/` com arquivos-chave do projeto."
+      "description": "Pacote/pasta `aula158/` do projeto."
     },
     {
-      "id": "cp2-aula158-banco-py",
-      "label": "banco.py",
-      "parent": "cp2-aula158",
-      "layer": "file",
-      "category": "core",
-      "categoryLabel": "Backend",
-      "color": "#3b82f6",
-      "size": 0.85,
-      "file": "aula158/banco.py",
-      "description": "Arquivo `aula158/banco.py` mapeado a partir do repositório original."
-    },
-    {
-      "id": "cp2-aula158-contas-py",
-      "label": "contas.py",
-      "parent": "cp2-aula158",
-      "layer": "file",
-      "category": "core",
-      "categoryLabel": "Backend",
-      "color": "#3b82f6",
-      "size": 0.85,
-      "file": "aula158/contas.py",
-      "description": "Arquivo `aula158/contas.py` mapeado a partir do repositório original."
-    },
-    {
-      "id": "cp2-aula158-main-py",
-      "label": "main.py",
-      "parent": "cp2-aula158",
-      "layer": "file",
-      "category": "core",
-      "categoryLabel": "Backend",
-      "color": "#3b82f6",
-      "size": 0.85,
-      "file": "aula158/main.py",
-      "description": "Arquivo `aula158/main.py` mapeado a partir do repositório original."
-    },
-    {
-      "id": "cp2-aula158-pessoas-py",
-      "label": "pessoas.py",
-      "parent": "cp2-aula158",
-      "layer": "file",
-      "category": "core",
-      "categoryLabel": "Backend",
-      "color": "#3b82f6",
-      "size": 0.85,
-      "file": "aula158/pessoas.py",
-      "description": "Arquivo `aula158/pessoas.py` mapeado a partir do repositório original."
-    },
-    {
-      "id": "cp2-aula190-site",
-      "label": "aula190_site",
-      "parent": "cp2-root",
+      "id": "course-python-2023-dir-aula190-site",
+      "label": "aula190_site/",
+      "parent": "course-python-2023-root",
       "layer": "module",
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
       "size": 1.35,
       "file": "aula190_site/",
-      "description": "Módulo/pasta `aula190_site/` com arquivos-chave do projeto."
+      "description": "Pacote/pasta `aula190_site/` do projeto."
     },
     {
-      "id": "cp2-aula190-site-index-html",
-      "label": "index.html",
-      "parent": "cp2-aula190-site",
-      "layer": "file",
-      "category": "frontend",
-      "categoryLabel": "Frontend",
-      "color": "#eab308",
-      "size": 0.85,
-      "file": "aula190_site/index.html",
-      "description": "Arquivo `aula190_site/index.html` mapeado a partir do repositório original."
-    },
-    {
-      "id": "cp2-aula190-site-style-css",
-      "label": "style.css",
-      "parent": "cp2-aula190-site",
-      "layer": "file",
-      "category": "frontend",
-      "categoryLabel": "Frontend",
-      "color": "#eab308",
-      "size": 0.85,
-      "file": "aula190_site/style.css",
-      "description": "Arquivo `aula190_site/style.css` mapeado a partir do repositório original."
-    },
-    {
-      "id": "cp2-aula193",
-      "label": "aula193",
-      "parent": "cp2-root",
+      "id": "course-python-2023-dir-aula193",
+      "label": "aula193/",
+      "parent": "course-python-2023-root",
       "layer": "module",
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
       "size": 1.35,
       "file": "aula193/",
-      "description": "Módulo/pasta `aula193/` com arquivos-chave do projeto."
+      "description": "Pacote/pasta `aula193/` do projeto."
+    },
+    {
+      "id": "course-python-2023-dir-aula197",
+      "label": "aula197/",
+      "parent": "course-python-2023-root",
+      "layer": "module",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 1.35,
+      "file": "aula197/",
+      "description": "Pacote/pasta `aula197/` do projeto."
+    },
+    {
+      "id": "course-python-2023-dir-aula199",
+      "label": "aula199/",
+      "parent": "course-python-2023-root",
+      "layer": "module",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 1.35,
+      "file": "aula199/",
+      "description": "Pacote/pasta `aula199/` do projeto."
+    },
+    {
+      "id": "course-python-2023-dir-aula200",
+      "label": "aula200/",
+      "parent": "course-python-2023-root",
+      "layer": "module",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 1.35,
+      "file": "aula200/",
+      "description": "Pacote/pasta `aula200/` do projeto."
+    },
+    {
+      "id": "course-python-2023-dir-aula201",
+      "label": "aula201/",
+      "parent": "course-python-2023-root",
+      "layer": "module",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 1.35,
+      "file": "aula201/",
+      "description": "Pacote/pasta `aula201/` do projeto."
+    },
+    {
+      "id": "course-python-2023-dir-aula202-calculadora",
+      "label": "aula202-calculadora/",
+      "parent": "course-python-2023-root",
+      "layer": "module",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 1.35,
+      "file": "aula202-calculadora/",
+      "description": "Pacote/pasta `aula202-calculadora/` do projeto."
+    },
+    {
+      "id": "course-python-2023-dir-aula203-qtdesigner",
+      "label": "aula203-qtdesigner/",
+      "parent": "course-python-2023-root",
+      "layer": "module",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 1.35,
+      "file": "aula203-qtdesigner/",
+      "description": "Pacote/pasta `aula203-qtdesigner/` do projeto."
+    },
+    {
+      "id": "course-python-2023-dir-aula204",
+      "label": "aula204/",
+      "parent": "course-python-2023-root",
+      "layer": "module",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 1.35,
+      "file": "aula204/",
+      "description": "Pacote/pasta `aula204/` do projeto."
+    },
+    {
+      "id": "course-python-2023-dir-aula205",
+      "label": "aula205/",
+      "parent": "course-python-2023-root",
+      "layer": "module",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 1.35,
+      "file": "aula205/",
+      "description": "Pacote/pasta `aula205/` do projeto."
+    },
+    {
+      "id": "course-python-2023-dir-aula206",
+      "label": "aula206/",
+      "parent": "course-python-2023-root",
+      "layer": "module",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 1.35,
+      "file": "aula206/",
+      "description": "Pacote/pasta `aula206/` do projeto."
+    },
+    {
+      "id": "course-python-2023-dir-aula207-ola-django",
+      "label": "aula207_ola_django/",
+      "parent": "course-python-2023-root",
+      "layer": "module",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 1.35,
+      "file": "aula207_ola_django/",
+      "description": "Pacote/pasta `aula207_ola_django/` do projeto."
+    },
+    {
+      "id": "course-python-2023-dir-aula99-package",
+      "label": "aula99_package/",
+      "parent": "course-python-2023-root",
+      "layer": "module",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 1.35,
+      "file": "aula99_package/",
+      "description": "Pacote/pasta `aula99_package/` do projeto."
+    },
+    {
+      "id": "course-python-2023-dir-dados",
+      "label": "dados/",
+      "parent": "course-python-2023-root",
+      "layer": "module",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 1.35,
+      "file": "dados/",
+      "description": "Pacote/pasta `dados/` do projeto."
+    },
+    {
+      "id": "course-python-2023-dir-aula203-qtdesigner-src",
+      "label": "src/",
+      "parent": "course-python-2023-dir-aula203-qtdesigner",
+      "layer": "module",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 1.35,
+      "file": "aula203-qtdesigner/src/",
+      "description": "Pacote/pasta `aula203-qtdesigner/src/` do projeto."
+    },
+    {
+      "id": "course-python-2023-dir-aula203-qtdesigner-ui",
+      "label": "ui/",
+      "parent": "course-python-2023-dir-aula203-qtdesigner",
+      "layer": "module",
+      "category": "frontend",
+      "categoryLabel": "Frontend",
+      "color": "#eab308",
+      "size": 1.35,
+      "file": "aula203-qtdesigner/ui/",
+      "description": "Pacote/pasta `aula203-qtdesigner/ui/` do projeto."
+    },
+    {
+      "id": "course-python-2023-dir-aula207-ola-django-base",
+      "label": "base/",
+      "parent": "course-python-2023-dir-aula207-ola-django",
+      "layer": "module",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 1.35,
+      "file": "aula207_ola_django/base/",
+      "description": "Pacote/pasta `aula207_ola_django/base/` do projeto."
+    },
+    {
+      "id": "course-python-2023-dir-aula207-ola-django-blog",
+      "label": "blog/",
+      "parent": "course-python-2023-dir-aula207-ola-django",
+      "layer": "module",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 1.35,
+      "file": "aula207_ola_django/blog/",
+      "description": "Pacote/pasta `aula207_ola_django/blog/` do projeto."
+    },
+    {
+      "id": "course-python-2023-dir-aula207-ola-django-home",
+      "label": "home/",
+      "parent": "course-python-2023-dir-aula207-ola-django",
+      "layer": "module",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 1.35,
+      "file": "aula207_ola_django/home/",
+      "description": "Pacote/pasta `aula207_ola_django/home/` do projeto."
+    },
+    {
+      "id": "course-python-2023-dir-aula207-ola-django-project",
+      "label": "project/",
+      "parent": "course-python-2023-dir-aula207-ola-django",
+      "layer": "module",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 1.35,
+      "file": "aula207_ola_django/project/",
+      "description": "Pacote/pasta `aula207_ola_django/project/` do projeto."
+    },
+    {
+      "id": "course-python-2023-dir-aula207-ola-django-base-global",
+      "label": "global/",
+      "parent": "course-python-2023-dir-aula207-ola-django-base",
+      "layer": "module",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 1.35,
+      "file": "aula207_ola_django/base/global/",
+      "description": "Pacote/pasta `aula207_ola_django/base/global/` do projeto."
+    },
+    {
+      "id": "course-python-2023-dir-aula207-ola-django-base-static",
+      "label": "static/",
+      "parent": "course-python-2023-dir-aula207-ola-django-base",
+      "layer": "module",
+      "category": "frontend",
+      "categoryLabel": "Frontend",
+      "color": "#eab308",
+      "size": 1.35,
+      "file": "aula207_ola_django/base/static/",
+      "description": "Pacote/pasta `aula207_ola_django/base/static/` do projeto."
+    },
+    {
+      "id": "course-python-2023-dir-aula207-ola-django-blog-migrations",
+      "label": "migrations/",
+      "parent": "course-python-2023-dir-aula207-ola-django-blog",
+      "layer": "module",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 1.35,
+      "file": "aula207_ola_django/blog/migrations/",
+      "description": "Pacote/pasta `aula207_ola_django/blog/migrations/` do projeto."
+    },
+    {
+      "id": "course-python-2023-dir-aula207-ola-django-blog-templates",
+      "label": "templates/",
+      "parent": "course-python-2023-dir-aula207-ola-django-blog",
+      "layer": "module",
+      "category": "frontend",
+      "categoryLabel": "Frontend",
+      "color": "#eab308",
+      "size": 1.35,
+      "file": "aula207_ola_django/blog/templates/",
+      "description": "Pacote/pasta `aula207_ola_django/blog/templates/` do projeto."
+    },
+    {
+      "id": "course-python-2023-dir-aula207-ola-django-home-migrations",
+      "label": "migrations/",
+      "parent": "course-python-2023-dir-aula207-ola-django-home",
+      "layer": "module",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 1.35,
+      "file": "aula207_ola_django/home/migrations/",
+      "description": "Pacote/pasta `aula207_ola_django/home/migrations/` do projeto."
+    },
+    {
+      "id": "course-python-2023-dir-aula207-ola-django-home-templates",
+      "label": "templates/",
+      "parent": "course-python-2023-dir-aula207-ola-django-home",
+      "layer": "module",
+      "category": "frontend",
+      "categoryLabel": "Frontend",
+      "color": "#eab308",
+      "size": 1.35,
+      "file": "aula207_ola_django/home/templates/",
+      "description": "Pacote/pasta `aula207_ola_django/home/templates/` do projeto."
+    },
+    {
+      "id": "course-python-2023-dir-aula207-ola-django-base-global-partials",
+      "label": "partials/",
+      "parent": "course-python-2023-dir-aula207-ola-django-base-global",
+      "layer": "module",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 1.35,
+      "file": "aula207_ola_django/base/global/partials/",
+      "description": "Pacote/pasta `aula207_ola_django/base/global/partials/` do projeto."
+    },
+    {
+      "id": "course-python-2023-dir-aula207-ola-django-base-static-global",
+      "label": "global/",
+      "parent": "course-python-2023-dir-aula207-ola-django-base-static",
+      "layer": "module",
+      "category": "frontend",
+      "categoryLabel": "Frontend",
+      "color": "#eab308",
+      "size": 1.35,
+      "file": "aula207_ola_django/base/static/global/",
+      "description": "Pacote/pasta `aula207_ola_django/base/static/global/` do projeto."
+    },
+    {
+      "id": "course-python-2023-dir-aula207-ola-django-blog-templates-blog",
+      "label": "blog/",
+      "parent": "course-python-2023-dir-aula207-ola-django-blog-templates",
+      "layer": "module",
+      "category": "frontend",
+      "categoryLabel": "Frontend",
+      "color": "#eab308",
+      "size": 1.35,
+      "file": "aula207_ola_django/blog/templates/blog/",
+      "description": "Pacote/pasta `aula207_ola_django/blog/templates/blog/` do projeto."
+    },
+    {
+      "id": "course-python-2023-dir-aula207-ola-django-home-templates-home",
+      "label": "home/",
+      "parent": "course-python-2023-dir-aula207-ola-django-home-templates",
+      "layer": "module",
+      "category": "frontend",
+      "categoryLabel": "Frontend",
+      "color": "#eab308",
+      "size": 1.35,
+      "file": "aula207_ola_django/home/templates/home/",
+      "description": "Pacote/pasta `aula207_ola_django/home/templates/home/` do projeto."
+    },
+    {
+      "id": "course-python-2023-dir-aula207-ola-django-base-static-global-css",
+      "label": "css/",
+      "parent": "course-python-2023-dir-aula207-ola-django-base-static-global",
+      "layer": "module",
+      "category": "frontend",
+      "categoryLabel": "Frontend",
+      "color": "#eab308",
+      "size": 1.35,
+      "file": "aula207_ola_django/base/static/global/css/",
+      "description": "Pacote/pasta `aula207_ola_django/base/static/global/css/` do projeto."
+    },
+    {
+      "id": "course-python-2023-grp-files",
+      "label": "Arquivos #",
+      "parent": "course-python-2023-root",
+      "layer": "module",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 1.35,
+      "file": "[files-#]",
+      "description": "Grupo de arquivos em `./` — Arquivos #"
+    },
+    {
+      "id": "course-python-2023-grp-files-a-1-12",
+      "label": "Arquivos A (1–12)",
+      "parent": "course-python-2023-root",
+      "layer": "module",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 1.35,
+      "file": "[files-a-1-12]",
+      "description": "Grupo de arquivos em `./` — Arquivos A (1–12)"
+    },
+    {
+      "id": "course-python-2023-grp-files-a-13-24",
+      "label": "Arquivos A (13–24)",
+      "parent": "course-python-2023-root",
+      "layer": "module",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 1.35,
+      "file": "[files-a-13-24]",
+      "description": "Grupo de arquivos em `./` — Arquivos A (13–24)"
+    },
+    {
+      "id": "course-python-2023-grp-files-a-25-36",
+      "label": "Arquivos A (25–36)",
+      "parent": "course-python-2023-root",
+      "layer": "module",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 1.35,
+      "file": "[files-a-25-36]",
+      "description": "Grupo de arquivos em `./` — Arquivos A (25–36)"
+    },
+    {
+      "id": "course-python-2023-grp-files-a-37-48",
+      "label": "Arquivos A (37–48)",
+      "parent": "course-python-2023-root",
+      "layer": "module",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 1.35,
+      "file": "[files-a-37-48]",
+      "description": "Grupo de arquivos em `./` — Arquivos A (37–48)"
+    },
+    {
+      "id": "course-python-2023-grp-files-a-49-60",
+      "label": "Arquivos A (49–60)",
+      "parent": "course-python-2023-root",
+      "layer": "module",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 1.35,
+      "file": "[files-a-49-60]",
+      "description": "Grupo de arquivos em `./` — Arquivos A (49–60)"
+    },
+    {
+      "id": "course-python-2023-grp-files-a-61-72",
+      "label": "Arquivos A (61–72)",
+      "parent": "course-python-2023-root",
+      "layer": "module",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 1.35,
+      "file": "[files-a-61-72]",
+      "description": "Grupo de arquivos em `./` — Arquivos A (61–72)"
+    },
+    {
+      "id": "course-python-2023-grp-files-a-73-84",
+      "label": "Arquivos A (73–84)",
+      "parent": "course-python-2023-root",
+      "layer": "module",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 1.35,
+      "file": "[files-a-73-84]",
+      "description": "Grupo de arquivos em `./` — Arquivos A (73–84)"
+    },
+    {
+      "id": "course-python-2023-grp-files-a-85-96",
+      "label": "Arquivos A (85–96)",
+      "parent": "course-python-2023-root",
+      "layer": "module",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 1.35,
+      "file": "[files-a-85-96]",
+      "description": "Grupo de arquivos em `./` — Arquivos A (85–96)"
+    },
+    {
+      "id": "course-python-2023-grp-files-a-97-108",
+      "label": "Arquivos A (97–108)",
+      "parent": "course-python-2023-root",
+      "layer": "module",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 1.35,
+      "file": "[files-a-97-108]",
+      "description": "Grupo de arquivos em `./` — Arquivos A (97–108)"
+    },
+    {
+      "id": "course-python-2023-grp-files-a-109-120",
+      "label": "Arquivos A (109–120)",
+      "parent": "course-python-2023-root",
+      "layer": "module",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 1.35,
+      "file": "[files-a-109-120]",
+      "description": "Grupo de arquivos em `./` — Arquivos A (109–120)"
+    },
+    {
+      "id": "course-python-2023-grp-files-a-121-132",
+      "label": "Arquivos A (121–132)",
+      "parent": "course-python-2023-root",
+      "layer": "module",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 1.35,
+      "file": "[files-a-121-132]",
+      "description": "Grupo de arquivos em `./` — Arquivos A (121–132)"
+    },
+    {
+      "id": "course-python-2023-grp-files-a-133-144",
+      "label": "Arquivos A (133–144)",
+      "parent": "course-python-2023-root",
+      "layer": "module",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 1.35,
+      "file": "[files-a-133-144]",
+      "description": "Grupo de arquivos em `./` — Arquivos A (133–144)"
+    },
+    {
+      "id": "course-python-2023-grp-files-a-145-156",
+      "label": "Arquivos A (145–156)",
+      "parent": "course-python-2023-root",
+      "layer": "module",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 1.35,
+      "file": "[files-a-145-156]",
+      "description": "Grupo de arquivos em `./` — Arquivos A (145–156)"
+    },
+    {
+      "id": "course-python-2023-grp-files-a-157-168",
+      "label": "Arquivos A (157–168)",
+      "parent": "course-python-2023-root",
+      "layer": "module",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 1.35,
+      "file": "[files-a-157-168]",
+      "description": "Grupo de arquivos em `./` — Arquivos A (157–168)"
+    },
+    {
+      "id": "course-python-2023-grp-files-a-169-180",
+      "label": "Arquivos A (169–180)",
+      "parent": "course-python-2023-root",
+      "layer": "module",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 1.35,
+      "file": "[files-a-169-180]",
+      "description": "Grupo de arquivos em `./` — Arquivos A (169–180)"
+    },
+    {
+      "id": "course-python-2023-grp-files-a-181-192",
+      "label": "Arquivos A (181–192)",
+      "parent": "course-python-2023-root",
+      "layer": "module",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 1.35,
+      "file": "[files-a-181-192]",
+      "description": "Grupo de arquivos em `./` — Arquivos A (181–192)"
+    },
+    {
+      "id": "course-python-2023-grp-files-a-193-201",
+      "label": "Arquivos A (193–201)",
+      "parent": "course-python-2023-root",
+      "layer": "module",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 1.35,
+      "file": "[files-a-193-201]",
+      "description": "Grupo de arquivos em `./` — Arquivos A (193–201)"
+    },
+    {
+      "id": "course-python-2023-file-gitignore",
+      "label": ".gitignore",
+      "parent": "course-python-2023-grp-files",
+      "layer": "file",
+      "category": "other",
+      "categoryLabel": "Outros",
+      "color": "#64748b",
+      "size": 0.85,
+      "file": ".gitignore",
+      "description": "Código-fonte: `.gitignore`"
+    },
+    {
+      "id": "course-python-2023-file-aula1-py",
+      "label": "aula1.py",
+      "parent": "course-python-2023-grp-files-a-1-12",
+      "layer": "file",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 0.85,
+      "file": "aula1.py",
+      "description": "Código-fonte: `aula1.py`"
+    },
+    {
+      "id": "course-python-2023-file-aula10-py",
+      "label": "aula10.py",
+      "parent": "course-python-2023-grp-files-a-1-12",
+      "layer": "file",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 0.85,
+      "file": "aula10.py",
+      "description": "Código-fonte: `aula10.py`"
+    },
+    {
+      "id": "course-python-2023-file-aula100-py",
+      "label": "aula100.py",
+      "parent": "course-python-2023-grp-files-a-1-12",
+      "layer": "file",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 0.85,
+      "file": "aula100.py",
+      "description": "Código-fonte: `aula100.py`"
+    },
+    {
+      "id": "course-python-2023-file-aula101-py",
+      "label": "aula101.py",
+      "parent": "course-python-2023-grp-files-a-1-12",
+      "layer": "file",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 0.85,
+      "file": "aula101.py",
+      "description": "Código-fonte: `aula101.py`"
+    },
+    {
+      "id": "course-python-2023-file-aula102-py",
+      "label": "aula102.py",
+      "parent": "course-python-2023-grp-files-a-1-12",
+      "layer": "file",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 0.85,
+      "file": "aula102.py",
+      "description": "Código-fonte: `aula102.py`"
+    },
+    {
+      "id": "course-python-2023-file-aula103-py",
+      "label": "aula103.py",
+      "parent": "course-python-2023-grp-files-a-1-12",
+      "layer": "file",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 0.85,
+      "file": "aula103.py",
+      "description": "Código-fonte: `aula103.py`"
+    },
+    {
+      "id": "course-python-2023-file-aula104-py",
+      "label": "aula104.py",
+      "parent": "course-python-2023-grp-files-a-1-12",
+      "layer": "file",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 0.85,
+      "file": "aula104.py",
+      "description": "Código-fonte: `aula104.py`"
+    },
+    {
+      "id": "course-python-2023-file-aula105-py",
+      "label": "aula105.py",
+      "parent": "course-python-2023-grp-files-a-1-12",
+      "layer": "file",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 0.85,
+      "file": "aula105.py",
+      "description": "Código-fonte: `aula105.py`"
+    },
+    {
+      "id": "course-python-2023-file-aula106-py",
+      "label": "aula106.py",
+      "parent": "course-python-2023-grp-files-a-1-12",
+      "layer": "file",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 0.85,
+      "file": "aula106.py",
+      "description": "Código-fonte: `aula106.py`"
+    },
+    {
+      "id": "course-python-2023-file-aula107-py",
+      "label": "aula107.py",
+      "parent": "course-python-2023-grp-files-a-1-12",
+      "layer": "file",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 0.85,
+      "file": "aula107.py",
+      "description": "Código-fonte: `aula107.py`"
+    },
+    {
+      "id": "course-python-2023-file-aula108-py",
+      "label": "aula108.py",
+      "parent": "course-python-2023-grp-files-a-1-12",
+      "layer": "file",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 0.85,
+      "file": "aula108.py",
+      "description": "Código-fonte: `aula108.py`"
+    },
+    {
+      "id": "course-python-2023-file-aula109-py",
+      "label": "aula109.py",
+      "parent": "course-python-2023-grp-files-a-1-12",
+      "layer": "file",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 0.85,
+      "file": "aula109.py",
+      "description": "Código-fonte: `aula109.py`"
+    },
+    {
+      "id": "course-python-2023-file-aula11-py",
+      "label": "aula11.py",
+      "parent": "course-python-2023-grp-files-a-13-24",
+      "layer": "file",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 0.85,
+      "file": "aula11.py",
+      "description": "Código-fonte: `aula11.py`"
+    },
+    {
+      "id": "course-python-2023-file-aula110-py",
+      "label": "aula110.py",
+      "parent": "course-python-2023-grp-files-a-13-24",
+      "layer": "file",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 0.85,
+      "file": "aula110.py",
+      "description": "Código-fonte: `aula110.py`"
+    },
+    {
+      "id": "course-python-2023-file-aula111-py",
+      "label": "aula111.py",
+      "parent": "course-python-2023-grp-files-a-13-24",
+      "layer": "file",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 0.85,
+      "file": "aula111.py",
+      "description": "Código-fonte: `aula111.py`"
+    },
+    {
+      "id": "course-python-2023-file-aula112-py",
+      "label": "aula112.py",
+      "parent": "course-python-2023-grp-files-a-13-24",
+      "layer": "file",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 0.85,
+      "file": "aula112.py",
+      "description": "Código-fonte: `aula112.py`"
+    },
+    {
+      "id": "course-python-2023-file-aula113-py",
+      "label": "aula113.py",
+      "parent": "course-python-2023-grp-files-a-13-24",
+      "layer": "file",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 0.85,
+      "file": "aula113.py",
+      "description": "Código-fonte: `aula113.py`"
+    },
+    {
+      "id": "course-python-2023-file-aula114-py",
+      "label": "aula114.py",
+      "parent": "course-python-2023-grp-files-a-13-24",
+      "layer": "file",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 0.85,
+      "file": "aula114.py",
+      "description": "Código-fonte: `aula114.py`"
+    },
+    {
+      "id": "course-python-2023-file-aula115-py",
+      "label": "aula115.py",
+      "parent": "course-python-2023-grp-files-a-13-24",
+      "layer": "file",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 0.85,
+      "file": "aula115.py",
+      "description": "Código-fonte: `aula115.py`"
+    },
+    {
+      "id": "course-python-2023-file-aula116-py",
+      "label": "aula116.py",
+      "parent": "course-python-2023-grp-files-a-13-24",
+      "layer": "file",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 0.85,
+      "file": "aula116.py",
+      "description": "Código-fonte: `aula116.py`"
+    },
+    {
+      "id": "course-python-2023-file-aula117-json",
+      "label": "aula117.json",
+      "parent": "course-python-2023-grp-files-a-13-24",
+      "layer": "file",
+      "category": "other",
+      "categoryLabel": "Outros",
+      "color": "#64748b",
+      "size": 0.85,
+      "file": "aula117.json",
+      "description": "Código-fonte: `aula117.json`"
+    },
+    {
+      "id": "course-python-2023-file-aula117-py",
+      "label": "aula117.py",
+      "parent": "course-python-2023-grp-files-a-13-24",
+      "layer": "file",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 0.85,
+      "file": "aula117.py",
+      "description": "Código-fonte: `aula117.py`"
+    },
+    {
+      "id": "course-python-2023-file-aula118-py",
+      "label": "aula118.py",
+      "parent": "course-python-2023-grp-files-a-13-24",
+      "layer": "file",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 0.85,
+      "file": "aula118.py",
+      "description": "Código-fonte: `aula118.py`"
+    },
+    {
+      "id": "course-python-2023-file-aula119-json",
+      "label": "aula119.json",
+      "parent": "course-python-2023-grp-files-a-13-24",
+      "layer": "file",
+      "category": "other",
+      "categoryLabel": "Outros",
+      "color": "#64748b",
+      "size": 0.85,
+      "file": "aula119.json",
+      "description": "Código-fonte: `aula119.json`"
+    },
+    {
+      "id": "course-python-2023-file-aula119-py",
+      "label": "aula119.py",
+      "parent": "course-python-2023-grp-files-a-25-36",
+      "layer": "file",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 0.85,
+      "file": "aula119.py",
+      "description": "Código-fonte: `aula119.py`"
+    },
+    {
+      "id": "course-python-2023-file-aula12-py",
+      "label": "aula12.py",
+      "parent": "course-python-2023-grp-files-a-25-36",
+      "layer": "file",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 0.85,
+      "file": "aula12.py",
+      "description": "Código-fonte: `aula12.py`"
+    },
+    {
+      "id": "course-python-2023-file-aula120-py",
+      "label": "aula120.py",
+      "parent": "course-python-2023-grp-files-a-25-36",
+      "layer": "file",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 0.85,
+      "file": "aula120.py",
+      "description": "Código-fonte: `aula120.py`"
+    },
+    {
+      "id": "course-python-2023-file-aula121-py",
+      "label": "aula121.py",
+      "parent": "course-python-2023-grp-files-a-25-36",
+      "layer": "file",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 0.85,
+      "file": "aula121.py",
+      "description": "Código-fonte: `aula121.py`"
+    },
+    {
+      "id": "course-python-2023-file-aula122-py",
+      "label": "aula122.py",
+      "parent": "course-python-2023-grp-files-a-25-36",
+      "layer": "file",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 0.85,
+      "file": "aula122.py",
+      "description": "Código-fonte: `aula122.py`"
+    },
+    {
+      "id": "course-python-2023-file-aula123-py",
+      "label": "aula123.py",
+      "parent": "course-python-2023-grp-files-a-25-36",
+      "layer": "file",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 0.85,
+      "file": "aula123.py",
+      "description": "Código-fonte: `aula123.py`"
+    },
+    {
+      "id": "course-python-2023-file-aula124-py",
+      "label": "aula124.py",
+      "parent": "course-python-2023-grp-files-a-25-36",
+      "layer": "file",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 0.85,
+      "file": "aula124.py",
+      "description": "Código-fonte: `aula124.py`"
+    },
+    {
+      "id": "course-python-2023-file-aula125-py",
+      "label": "aula125.py",
+      "parent": "course-python-2023-grp-files-a-25-36",
+      "layer": "file",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 0.85,
+      "file": "aula125.py",
+      "description": "Código-fonte: `aula125.py`"
+    },
+    {
+      "id": "course-python-2023-file-aula126-py",
+      "label": "aula126.py",
+      "parent": "course-python-2023-grp-files-a-25-36",
+      "layer": "file",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 0.85,
+      "file": "aula126.py",
+      "description": "Código-fonte: `aula126.py`"
+    },
+    {
+      "id": "course-python-2023-file-aula127-json",
+      "label": "aula127.json",
+      "parent": "course-python-2023-grp-files-a-25-36",
+      "layer": "file",
+      "category": "other",
+      "categoryLabel": "Outros",
+      "color": "#64748b",
+      "size": 0.85,
+      "file": "aula127.json",
+      "description": "Código-fonte: `aula127.json`"
+    },
+    {
+      "id": "course-python-2023-file-aula127-a-py",
+      "label": "aula127_a.py",
+      "parent": "course-python-2023-grp-files-a-25-36",
+      "layer": "file",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 0.85,
+      "file": "aula127_a.py",
+      "description": "Código-fonte: `aula127_a.py`"
+    },
+    {
+      "id": "course-python-2023-file-aula127-b-py",
+      "label": "aula127_b.py",
+      "parent": "course-python-2023-grp-files-a-25-36",
+      "layer": "file",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 0.85,
+      "file": "aula127_b.py",
+      "description": "Código-fonte: `aula127_b.py`"
+    },
+    {
+      "id": "course-python-2023-file-aula128-py",
+      "label": "aula128.py",
+      "parent": "course-python-2023-grp-files-a-37-48",
+      "layer": "file",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 0.85,
+      "file": "aula128.py",
+      "description": "Código-fonte: `aula128.py`"
+    },
+    {
+      "id": "course-python-2023-file-aula129-py",
+      "label": "aula129.py",
+      "parent": "course-python-2023-grp-files-a-37-48",
+      "layer": "file",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 0.85,
+      "file": "aula129.py",
+      "description": "Código-fonte: `aula129.py`"
+    },
+    {
+      "id": "course-python-2023-file-aula13-py",
+      "label": "aula13.py",
+      "parent": "course-python-2023-grp-files-a-37-48",
+      "layer": "file",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 0.85,
+      "file": "aula13.py",
+      "description": "Código-fonte: `aula13.py`"
+    },
+    {
+      "id": "course-python-2023-file-aula130-py",
+      "label": "aula130.py",
+      "parent": "course-python-2023-grp-files-a-37-48",
+      "layer": "file",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 0.85,
+      "file": "aula130.py",
+      "description": "Código-fonte: `aula130.py`"
+    },
+    {
+      "id": "course-python-2023-file-aula131-py",
+      "label": "aula131.py",
+      "parent": "course-python-2023-grp-files-a-37-48",
+      "layer": "file",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 0.85,
+      "file": "aula131.py",
+      "description": "Código-fonte: `aula131.py`"
+    },
+    {
+      "id": "course-python-2023-file-aula132-py",
+      "label": "aula132.py",
+      "parent": "course-python-2023-grp-files-a-37-48",
+      "layer": "file",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 0.85,
+      "file": "aula132.py",
+      "description": "Código-fonte: `aula132.py`"
+    },
+    {
+      "id": "course-python-2023-file-aula133-py",
+      "label": "aula133.py",
+      "parent": "course-python-2023-grp-files-a-37-48",
+      "layer": "file",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 0.85,
+      "file": "aula133.py",
+      "description": "Código-fonte: `aula133.py`"
+    },
+    {
+      "id": "course-python-2023-file-aula134-py",
+      "label": "aula134.py",
+      "parent": "course-python-2023-grp-files-a-37-48",
+      "layer": "file",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 0.85,
+      "file": "aula134.py",
+      "description": "Código-fonte: `aula134.py`"
+    },
+    {
+      "id": "course-python-2023-file-aula135-py",
+      "label": "aula135.py",
+      "parent": "course-python-2023-grp-files-a-37-48",
+      "layer": "file",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 0.85,
+      "file": "aula135.py",
+      "description": "Código-fonte: `aula135.py`"
+    },
+    {
+      "id": "course-python-2023-file-aula136-py",
+      "label": "aula136.py",
+      "parent": "course-python-2023-grp-files-a-37-48",
+      "layer": "file",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 0.85,
+      "file": "aula136.py",
+      "description": "Código-fonte: `aula136.py`"
+    },
+    {
+      "id": "course-python-2023-file-aula137-py",
+      "label": "aula137.py",
+      "parent": "course-python-2023-grp-files-a-37-48",
+      "layer": "file",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 0.85,
+      "file": "aula137.py",
+      "description": "Código-fonte: `aula137.py`"
+    },
+    {
+      "id": "course-python-2023-file-aula138-py",
+      "label": "aula138.py",
+      "parent": "course-python-2023-grp-files-a-37-48",
+      "layer": "file",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 0.85,
+      "file": "aula138.py",
+      "description": "Código-fonte: `aula138.py`"
+    },
+    {
+      "id": "course-python-2023-file-aula139-py",
+      "label": "aula139.py",
+      "parent": "course-python-2023-grp-files-a-49-60",
+      "layer": "file",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 0.85,
+      "file": "aula139.py",
+      "description": "Código-fonte: `aula139.py`"
+    },
+    {
+      "id": "course-python-2023-file-aula14-py",
+      "label": "aula14.py",
+      "parent": "course-python-2023-grp-files-a-49-60",
+      "layer": "file",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 0.85,
+      "file": "aula14.py",
+      "description": "Código-fonte: `aula14.py`"
+    },
+    {
+      "id": "course-python-2023-file-aula140-py",
+      "label": "aula140.py",
+      "parent": "course-python-2023-grp-files-a-49-60",
+      "layer": "file",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 0.85,
+      "file": "aula140.py",
+      "description": "Código-fonte: `aula140.py`"
+    },
+    {
+      "id": "course-python-2023-file-aula142-py",
+      "label": "aula142.py",
+      "parent": "course-python-2023-grp-files-a-49-60",
+      "layer": "file",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 0.85,
+      "file": "aula142.py",
+      "description": "Código-fonte: `aula142.py`"
+    },
+    {
+      "id": "course-python-2023-file-aula143-py",
+      "label": "aula143.py",
+      "parent": "course-python-2023-grp-files-a-49-60",
+      "layer": "file",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 0.85,
+      "file": "aula143.py",
+      "description": "Código-fonte: `aula143.py`"
+    },
+    {
+      "id": "course-python-2023-file-aula144-py",
+      "label": "aula144.py",
+      "parent": "course-python-2023-grp-files-a-49-60",
+      "layer": "file",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 0.85,
+      "file": "aula144.py",
+      "description": "Código-fonte: `aula144.py`"
+    },
+    {
+      "id": "course-python-2023-file-aula145-py",
+      "label": "aula145.py",
+      "parent": "course-python-2023-grp-files-a-49-60",
+      "layer": "file",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 0.85,
+      "file": "aula145.py",
+      "description": "Código-fonte: `aula145.py`"
+    },
+    {
+      "id": "course-python-2023-file-aula146-py",
+      "label": "aula146.py",
+      "parent": "course-python-2023-grp-files-a-49-60",
+      "layer": "file",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 0.85,
+      "file": "aula146.py",
+      "description": "Código-fonte: `aula146.py`"
+    },
+    {
+      "id": "course-python-2023-file-aula147-py",
+      "label": "aula147.py",
+      "parent": "course-python-2023-grp-files-a-49-60",
+      "layer": "file",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 0.85,
+      "file": "aula147.py",
+      "description": "Código-fonte: `aula147.py`"
+    },
+    {
+      "id": "course-python-2023-file-aula148-py",
+      "label": "aula148.py",
+      "parent": "course-python-2023-grp-files-a-49-60",
+      "layer": "file",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 0.85,
+      "file": "aula148.py",
+      "description": "Código-fonte: `aula148.py`"
+    },
+    {
+      "id": "course-python-2023-file-aula149-py",
+      "label": "aula149.py",
+      "parent": "course-python-2023-grp-files-a-49-60",
+      "layer": "file",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 0.85,
+      "file": "aula149.py",
+      "description": "Código-fonte: `aula149.py`"
+    },
+    {
+      "id": "course-python-2023-file-aula15-py",
+      "label": "aula15.py",
+      "parent": "course-python-2023-grp-files-a-49-60",
+      "layer": "file",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 0.85,
+      "file": "aula15.py",
+      "description": "Código-fonte: `aula15.py`"
+    },
+    {
+      "id": "course-python-2023-file-aula150-py",
+      "label": "aula150.py",
+      "parent": "course-python-2023-grp-files-a-61-72",
+      "layer": "file",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 0.85,
+      "file": "aula150.py",
+      "description": "Código-fonte: `aula150.py`"
+    },
+    {
+      "id": "course-python-2023-file-aula151-py",
+      "label": "aula151.py",
+      "parent": "course-python-2023-grp-files-a-61-72",
+      "layer": "file",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 0.85,
+      "file": "aula151.py",
+      "description": "Código-fonte: `aula151.py`"
+    },
+    {
+      "id": "course-python-2023-file-aula152-py",
+      "label": "aula152.py",
+      "parent": "course-python-2023-grp-files-a-61-72",
+      "layer": "file",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 0.85,
+      "file": "aula152.py",
+      "description": "Código-fonte: `aula152.py`"
+    },
+    {
+      "id": "course-python-2023-file-aula153-py",
+      "label": "aula153.py",
+      "parent": "course-python-2023-grp-files-a-61-72",
+      "layer": "file",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 0.85,
+      "file": "aula153.py",
+      "description": "Código-fonte: `aula153.py`"
+    },
+    {
+      "id": "course-python-2023-file-aula154-py",
+      "label": "aula154.py",
+      "parent": "course-python-2023-grp-files-a-61-72",
+      "layer": "file",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 0.85,
+      "file": "aula154.py",
+      "description": "Código-fonte: `aula154.py`"
+    },
+    {
+      "id": "course-python-2023-file-aula155-py",
+      "label": "aula155.py",
+      "parent": "course-python-2023-grp-files-a-61-72",
+      "layer": "file",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 0.85,
+      "file": "aula155.py",
+      "description": "Código-fonte: `aula155.py`"
+    },
+    {
+      "id": "course-python-2023-file-aula157-py",
+      "label": "aula157.py",
+      "parent": "course-python-2023-grp-files-a-61-72",
+      "layer": "file",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 0.85,
+      "file": "aula157.py",
+      "description": "Código-fonte: `aula157.py`"
+    },
+    {
+      "id": "course-python-2023-file-aula159-py",
+      "label": "aula159.py",
+      "parent": "course-python-2023-grp-files-a-61-72",
+      "layer": "file",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 0.85,
+      "file": "aula159.py",
+      "description": "Código-fonte: `aula159.py`"
+    },
+    {
+      "id": "course-python-2023-file-aula16-py",
+      "label": "aula16.py",
+      "parent": "course-python-2023-grp-files-a-61-72",
+      "layer": "file",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 0.85,
+      "file": "aula16.py",
+      "description": "Código-fonte: `aula16.py`"
+    },
+    {
+      "id": "course-python-2023-file-aula160-py",
+      "label": "aula160.py",
+      "parent": "course-python-2023-grp-files-a-61-72",
+      "layer": "file",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 0.85,
+      "file": "aula160.py",
+      "description": "Código-fonte: `aula160.py`"
+    },
+    {
+      "id": "course-python-2023-file-aula161-py",
+      "label": "aula161.py",
+      "parent": "course-python-2023-grp-files-a-61-72",
+      "layer": "file",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 0.85,
+      "file": "aula161.py",
+      "description": "Código-fonte: `aula161.py`"
+    },
+    {
+      "id": "course-python-2023-file-aula162-py",
+      "label": "aula162.py",
+      "parent": "course-python-2023-grp-files-a-61-72",
+      "layer": "file",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 0.85,
+      "file": "aula162.py",
+      "description": "Código-fonte: `aula162.py`"
+    },
+    {
+      "id": "course-python-2023-file-aula163-py",
+      "label": "aula163.py",
+      "parent": "course-python-2023-grp-files-a-73-84",
+      "layer": "file",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 0.85,
+      "file": "aula163.py",
+      "description": "Código-fonte: `aula163.py`"
+    },
+    {
+      "id": "course-python-2023-file-aula164-py",
+      "label": "aula164.py",
+      "parent": "course-python-2023-grp-files-a-73-84",
+      "layer": "file",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 0.85,
+      "file": "aula164.py",
+      "description": "Código-fonte: `aula164.py`"
+    },
+    {
+      "id": "course-python-2023-file-aula165-py",
+      "label": "aula165.py",
+      "parent": "course-python-2023-grp-files-a-73-84",
+      "layer": "file",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 0.85,
+      "file": "aula165.py",
+      "description": "Código-fonte: `aula165.py`"
+    },
+    {
+      "id": "course-python-2023-file-aula166-py",
+      "label": "aula166.py",
+      "parent": "course-python-2023-grp-files-a-73-84",
+      "layer": "file",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 0.85,
+      "file": "aula166.py",
+      "description": "Código-fonte: `aula166.py`"
+    },
+    {
+      "id": "course-python-2023-file-aula167-py",
+      "label": "aula167.py",
+      "parent": "course-python-2023-grp-files-a-73-84",
+      "layer": "file",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 0.85,
+      "file": "aula167.py",
+      "description": "Código-fonte: `aula167.py`"
+    },
+    {
+      "id": "course-python-2023-file-aula168-py",
+      "label": "aula168.py",
+      "parent": "course-python-2023-grp-files-a-73-84",
+      "layer": "file",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 0.85,
+      "file": "aula168.py",
+      "description": "Código-fonte: `aula168.py`"
+    },
+    {
+      "id": "course-python-2023-file-aula169-py",
+      "label": "aula169.py",
+      "parent": "course-python-2023-grp-files-a-73-84",
+      "layer": "file",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 0.85,
+      "file": "aula169.py",
+      "description": "Código-fonte: `aula169.py`"
+    },
+    {
+      "id": "course-python-2023-file-aula17-py",
+      "label": "aula17.py",
+      "parent": "course-python-2023-grp-files-a-73-84",
+      "layer": "file",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 0.85,
+      "file": "aula17.py",
+      "description": "Código-fonte: `aula17.py`"
+    },
+    {
+      "id": "course-python-2023-file-aula170-py",
+      "label": "aula170.py",
+      "parent": "course-python-2023-grp-files-a-73-84",
+      "layer": "file",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 0.85,
+      "file": "aula170.py",
+      "description": "Código-fonte: `aula170.py`"
+    },
+    {
+      "id": "course-python-2023-file-aula171-py",
+      "label": "aula171.py",
+      "parent": "course-python-2023-grp-files-a-73-84",
+      "layer": "file",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 0.85,
+      "file": "aula171.py",
+      "description": "Código-fonte: `aula171.py`"
+    },
+    {
+      "id": "course-python-2023-file-aula172-py",
+      "label": "aula172.py",
+      "parent": "course-python-2023-grp-files-a-73-84",
+      "layer": "file",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 0.85,
+      "file": "aula172.py",
+      "description": "Código-fonte: `aula172.py`"
+    },
+    {
+      "id": "course-python-2023-file-aula173-py",
+      "label": "aula173.py",
+      "parent": "course-python-2023-grp-files-a-73-84",
+      "layer": "file",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 0.85,
+      "file": "aula173.py",
+      "description": "Código-fonte: `aula173.py`"
+    },
+    {
+      "id": "course-python-2023-file-aula174-py",
+      "label": "aula174.py",
+      "parent": "course-python-2023-grp-files-a-85-96",
+      "layer": "file",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 0.85,
+      "file": "aula174.py",
+      "description": "Código-fonte: `aula174.py`"
+    },
+    {
+      "id": "course-python-2023-file-aula175-json",
+      "label": "aula175.json",
+      "parent": "course-python-2023-grp-files-a-85-96",
+      "layer": "file",
+      "category": "other",
+      "categoryLabel": "Outros",
+      "color": "#64748b",
+      "size": 0.85,
+      "file": "aula175.json",
+      "description": "Código-fonte: `aula175.json`"
+    },
+    {
+      "id": "course-python-2023-file-aula175-py",
+      "label": "aula175.py",
+      "parent": "course-python-2023-grp-files-a-85-96",
+      "layer": "file",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 0.85,
+      "file": "aula175.py",
+      "description": "Código-fonte: `aula175.py`"
+    },
+    {
+      "id": "course-python-2023-file-aula176-py",
+      "label": "aula176.py",
+      "parent": "course-python-2023-grp-files-a-85-96",
+      "layer": "file",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 0.85,
+      "file": "aula176.py",
+      "description": "Código-fonte: `aula176.py`"
+    },
+    {
+      "id": "course-python-2023-file-aula177-json",
+      "label": "aula177.json",
+      "parent": "course-python-2023-grp-files-a-85-96",
+      "layer": "file",
+      "category": "other",
+      "categoryLabel": "Outros",
+      "color": "#64748b",
+      "size": 0.85,
+      "file": "aula177.json",
+      "description": "Código-fonte: `aula177.json`"
+    },
+    {
+      "id": "course-python-2023-file-aula177-py",
+      "label": "aula177.py",
+      "parent": "course-python-2023-grp-files-a-85-96",
+      "layer": "file",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 0.85,
+      "file": "aula177.py",
+      "description": "Código-fonte: `aula177.py`"
+    },
+    {
+      "id": "course-python-2023-file-aula178-py",
+      "label": "aula178.py",
+      "parent": "course-python-2023-grp-files-a-85-96",
+      "layer": "file",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 0.85,
+      "file": "aula178.py",
+      "description": "Código-fonte: `aula178.py`"
+    },
+    {
+      "id": "course-python-2023-file-aula179-py",
+      "label": "aula179.py",
+      "parent": "course-python-2023-grp-files-a-85-96",
+      "layer": "file",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 0.85,
+      "file": "aula179.py",
+      "description": "Código-fonte: `aula179.py`"
+    },
+    {
+      "id": "course-python-2023-file-aula18-py",
+      "label": "aula18.py",
+      "parent": "course-python-2023-grp-files-a-85-96",
+      "layer": "file",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 0.85,
+      "file": "aula18.py",
+      "description": "Código-fonte: `aula18.py`"
+    },
+    {
+      "id": "course-python-2023-file-aula180-py",
+      "label": "aula180.py",
+      "parent": "course-python-2023-grp-files-a-85-96",
+      "layer": "file",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 0.85,
+      "file": "aula180.py",
+      "description": "Código-fonte: `aula180.py`"
+    },
+    {
+      "id": "course-python-2023-file-aula181-py",
+      "label": "aula181.py",
+      "parent": "course-python-2023-grp-files-a-85-96",
+      "layer": "file",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 0.85,
+      "file": "aula181.py",
+      "description": "Código-fonte: `aula181.py`"
+    },
+    {
+      "id": "course-python-2023-file-aula182-py",
+      "label": "aula182.py",
+      "parent": "course-python-2023-grp-files-a-85-96",
+      "layer": "file",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 0.85,
+      "file": "aula182.py",
+      "description": "Código-fonte: `aula182.py`"
+    },
+    {
+      "id": "course-python-2023-file-aula183-py",
+      "label": "aula183.py",
+      "parent": "course-python-2023-grp-files-a-97-108",
+      "layer": "file",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 0.85,
+      "file": "aula183.py",
+      "description": "Código-fonte: `aula183.py`"
+    },
+    {
+      "id": "course-python-2023-file-aula184-py",
+      "label": "aula184.py",
+      "parent": "course-python-2023-grp-files-a-97-108",
+      "layer": "file",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 0.85,
+      "file": "aula184.py",
+      "description": "Código-fonte: `aula184.py`"
+    },
+    {
+      "id": "course-python-2023-file-aula185-html",
+      "label": "aula185.html",
+      "parent": "course-python-2023-grp-files-a-97-108",
+      "layer": "file",
+      "category": "frontend",
+      "categoryLabel": "Frontend",
+      "color": "#eab308",
+      "size": 0.85,
+      "file": "aula185.html",
+      "description": "Código-fonte: `aula185.html`"
+    },
+    {
+      "id": "course-python-2023-file-aula185-py",
+      "label": "aula185.py",
+      "parent": "course-python-2023-grp-files-a-97-108",
+      "layer": "file",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 0.85,
+      "file": "aula185.py",
+      "description": "Código-fonte: `aula185.py`"
+    },
+    {
+      "id": "course-python-2023-file-aula186-py",
+      "label": "aula186.py",
+      "parent": "course-python-2023-grp-files-a-97-108",
+      "layer": "file",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 0.85,
+      "file": "aula186.py",
+      "description": "Código-fonte: `aula186.py`"
+    },
+    {
+      "id": "course-python-2023-file-aula187-py",
+      "label": "aula187.py",
+      "parent": "course-python-2023-grp-files-a-97-108",
+      "layer": "file",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 0.85,
+      "file": "aula187.py",
+      "description": "Código-fonte: `aula187.py`"
+    },
+    {
+      "id": "course-python-2023-file-aula188-py",
+      "label": "aula188.py",
+      "parent": "course-python-2023-grp-files-a-97-108",
+      "layer": "file",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 0.85,
+      "file": "aula188.py",
+      "description": "Código-fonte: `aula188.py`"
+    },
+    {
+      "id": "course-python-2023-file-aula189-py",
+      "label": "aula189.py",
+      "parent": "course-python-2023-grp-files-a-97-108",
+      "layer": "file",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 0.85,
+      "file": "aula189.py",
+      "description": "Código-fonte: `aula189.py`"
+    },
+    {
+      "id": "course-python-2023-file-aula19-py",
+      "label": "aula19.py",
+      "parent": "course-python-2023-grp-files-a-97-108",
+      "layer": "file",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 0.85,
+      "file": "aula19.py",
+      "description": "Código-fonte: `aula19.py`"
+    },
+    {
+      "id": "course-python-2023-file-aula191-py",
+      "label": "aula191.py",
+      "parent": "course-python-2023-grp-files-a-97-108",
+      "layer": "file",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 0.85,
+      "file": "aula191.py",
+      "description": "Código-fonte: `aula191.py`"
+    },
+    {
+      "id": "course-python-2023-file-aula192-py",
+      "label": "aula192.py",
+      "parent": "course-python-2023-grp-files-a-97-108",
+      "layer": "file",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 0.85,
+      "file": "aula192.py",
+      "description": "Código-fonte: `aula192.py`"
+    },
+    {
+      "id": "course-python-2023-file-aula194-py",
+      "label": "aula194.py",
+      "parent": "course-python-2023-grp-files-a-97-108",
+      "layer": "file",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 0.85,
+      "file": "aula194.py",
+      "description": "Código-fonte: `aula194.py`"
+    },
+    {
+      "id": "course-python-2023-file-aula195-py",
+      "label": "aula195.py",
+      "parent": "course-python-2023-grp-files-a-109-120",
+      "layer": "file",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 0.85,
+      "file": "aula195.py",
+      "description": "Código-fonte: `aula195.py`"
+    },
+    {
+      "id": "course-python-2023-file-aula196-py",
+      "label": "aula196.py",
+      "parent": "course-python-2023-grp-files-a-109-120",
+      "layer": "file",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 0.85,
+      "file": "aula196.py",
+      "description": "Código-fonte: `aula196.py`"
+    },
+    {
+      "id": "course-python-2023-file-aula198-py",
+      "label": "aula198.py",
+      "parent": "course-python-2023-grp-files-a-109-120",
+      "layer": "file",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 0.85,
+      "file": "aula198.py",
+      "description": "Código-fonte: `aula198.py`"
+    },
+    {
+      "id": "course-python-2023-file-aula2-py",
+      "label": "aula2.py",
+      "parent": "course-python-2023-grp-files-a-109-120",
+      "layer": "file",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 0.85,
+      "file": "aula2.py",
+      "description": "Código-fonte: `aula2.py`"
+    },
+    {
+      "id": "course-python-2023-file-aula20-py",
+      "label": "aula20.py",
+      "parent": "course-python-2023-grp-files-a-109-120",
+      "layer": "file",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 0.85,
+      "file": "aula20.py",
+      "description": "Código-fonte: `aula20.py`"
+    },
+    {
+      "id": "course-python-2023-file-aula21-py",
+      "label": "aula21.py",
+      "parent": "course-python-2023-grp-files-a-109-120",
+      "layer": "file",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 0.85,
+      "file": "aula21.py",
+      "description": "Código-fonte: `aula21.py`"
+    },
+    {
+      "id": "course-python-2023-file-aula22-py",
+      "label": "aula22.py",
+      "parent": "course-python-2023-grp-files-a-109-120",
+      "layer": "file",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 0.85,
+      "file": "aula22.py",
+      "description": "Código-fonte: `aula22.py`"
+    },
+    {
+      "id": "course-python-2023-file-aula23-py",
+      "label": "aula23.py",
+      "parent": "course-python-2023-grp-files-a-109-120",
+      "layer": "file",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 0.85,
+      "file": "aula23.py",
+      "description": "Código-fonte: `aula23.py`"
+    },
+    {
+      "id": "course-python-2023-file-aula24-py",
+      "label": "aula24.py",
+      "parent": "course-python-2023-grp-files-a-109-120",
+      "layer": "file",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 0.85,
+      "file": "aula24.py",
+      "description": "Código-fonte: `aula24.py`"
+    },
+    {
+      "id": "course-python-2023-file-aula25-py",
+      "label": "aula25.py",
+      "parent": "course-python-2023-grp-files-a-109-120",
+      "layer": "file",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 0.85,
+      "file": "aula25.py",
+      "description": "Código-fonte: `aula25.py`"
+    },
+    {
+      "id": "course-python-2023-file-aula26-py",
+      "label": "aula26.py",
+      "parent": "course-python-2023-grp-files-a-109-120",
+      "layer": "file",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 0.85,
+      "file": "aula26.py",
+      "description": "Código-fonte: `aula26.py`"
+    },
+    {
+      "id": "course-python-2023-file-aula27-py",
+      "label": "aula27.py",
+      "parent": "course-python-2023-grp-files-a-109-120",
+      "layer": "file",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 0.85,
+      "file": "aula27.py",
+      "description": "Código-fonte: `aula27.py`"
+    },
+    {
+      "id": "course-python-2023-file-aula28-py",
+      "label": "aula28.py",
+      "parent": "course-python-2023-grp-files-a-121-132",
+      "layer": "file",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 0.85,
+      "file": "aula28.py",
+      "description": "Código-fonte: `aula28.py`"
+    },
+    {
+      "id": "course-python-2023-file-aula29-py",
+      "label": "aula29.py",
+      "parent": "course-python-2023-grp-files-a-121-132",
+      "layer": "file",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 0.85,
+      "file": "aula29.py",
+      "description": "Código-fonte: `aula29.py`"
+    },
+    {
+      "id": "course-python-2023-file-aula3-py",
+      "label": "aula3.py",
+      "parent": "course-python-2023-grp-files-a-121-132",
+      "layer": "file",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 0.85,
+      "file": "aula3.py",
+      "description": "Código-fonte: `aula3.py`"
+    },
+    {
+      "id": "course-python-2023-file-aula30-py",
+      "label": "aula30.py",
+      "parent": "course-python-2023-grp-files-a-121-132",
+      "layer": "file",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 0.85,
+      "file": "aula30.py",
+      "description": "Código-fonte: `aula30.py`"
+    },
+    {
+      "id": "course-python-2023-file-aula31-py",
+      "label": "aula31.py",
+      "parent": "course-python-2023-grp-files-a-121-132",
+      "layer": "file",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 0.85,
+      "file": "aula31.py",
+      "description": "Código-fonte: `aula31.py`"
+    },
+    {
+      "id": "course-python-2023-file-aula32-py",
+      "label": "aula32.py",
+      "parent": "course-python-2023-grp-files-a-121-132",
+      "layer": "file",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 0.85,
+      "file": "aula32.py",
+      "description": "Código-fonte: `aula32.py`"
+    },
+    {
+      "id": "course-python-2023-file-aula33-py",
+      "label": "aula33.py",
+      "parent": "course-python-2023-grp-files-a-121-132",
+      "layer": "file",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 0.85,
+      "file": "aula33.py",
+      "description": "Código-fonte: `aula33.py`"
+    },
+    {
+      "id": "course-python-2023-file-aula34-py",
+      "label": "aula34.py",
+      "parent": "course-python-2023-grp-files-a-121-132",
+      "layer": "file",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 0.85,
+      "file": "aula34.py",
+      "description": "Código-fonte: `aula34.py`"
+    },
+    {
+      "id": "course-python-2023-file-aula35-py",
+      "label": "aula35.py",
+      "parent": "course-python-2023-grp-files-a-121-132",
+      "layer": "file",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 0.85,
+      "file": "aula35.py",
+      "description": "Código-fonte: `aula35.py`"
+    },
+    {
+      "id": "course-python-2023-file-aula36-py",
+      "label": "aula36.py",
+      "parent": "course-python-2023-grp-files-a-121-132",
+      "layer": "file",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 0.85,
+      "file": "aula36.py",
+      "description": "Código-fonte: `aula36.py`"
+    },
+    {
+      "id": "course-python-2023-file-aula37-py",
+      "label": "aula37.py",
+      "parent": "course-python-2023-grp-files-a-121-132",
+      "layer": "file",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 0.85,
+      "file": "aula37.py",
+      "description": "Código-fonte: `aula37.py`"
+    },
+    {
+      "id": "course-python-2023-file-aula38-py",
+      "label": "aula38.py",
+      "parent": "course-python-2023-grp-files-a-121-132",
+      "layer": "file",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 0.85,
+      "file": "aula38.py",
+      "description": "Código-fonte: `aula38.py`"
+    },
+    {
+      "id": "course-python-2023-file-aula39-py",
+      "label": "aula39.py",
+      "parent": "course-python-2023-grp-files-a-133-144",
+      "layer": "file",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 0.85,
+      "file": "aula39.py",
+      "description": "Código-fonte: `aula39.py`"
+    },
+    {
+      "id": "course-python-2023-file-aula4-py",
+      "label": "aula4.py",
+      "parent": "course-python-2023-grp-files-a-133-144",
+      "layer": "file",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 0.85,
+      "file": "aula4.py",
+      "description": "Código-fonte: `aula4.py`"
+    },
+    {
+      "id": "course-python-2023-file-aula40-py",
+      "label": "aula40.py",
+      "parent": "course-python-2023-grp-files-a-133-144",
+      "layer": "file",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 0.85,
+      "file": "aula40.py",
+      "description": "Código-fonte: `aula40.py`"
+    },
+    {
+      "id": "course-python-2023-file-aula41-py",
+      "label": "aula41.py",
+      "parent": "course-python-2023-grp-files-a-133-144",
+      "layer": "file",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 0.85,
+      "file": "aula41.py",
+      "description": "Código-fonte: `aula41.py`"
+    },
+    {
+      "id": "course-python-2023-file-aula42-py",
+      "label": "aula42.py",
+      "parent": "course-python-2023-grp-files-a-133-144",
+      "layer": "file",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 0.85,
+      "file": "aula42.py",
+      "description": "Código-fonte: `aula42.py`"
+    },
+    {
+      "id": "course-python-2023-file-aula43-py",
+      "label": "aula43.py",
+      "parent": "course-python-2023-grp-files-a-133-144",
+      "layer": "file",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 0.85,
+      "file": "aula43.py",
+      "description": "Código-fonte: `aula43.py`"
+    },
+    {
+      "id": "course-python-2023-file-aula44-py",
+      "label": "aula44.py",
+      "parent": "course-python-2023-grp-files-a-133-144",
+      "layer": "file",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 0.85,
+      "file": "aula44.py",
+      "description": "Código-fonte: `aula44.py`"
+    },
+    {
+      "id": "course-python-2023-file-aula45-py",
+      "label": "aula45.py",
+      "parent": "course-python-2023-grp-files-a-133-144",
+      "layer": "file",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 0.85,
+      "file": "aula45.py",
+      "description": "Código-fonte: `aula45.py`"
+    },
+    {
+      "id": "course-python-2023-file-aula46-py",
+      "label": "aula46.py",
+      "parent": "course-python-2023-grp-files-a-133-144",
+      "layer": "file",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 0.85,
+      "file": "aula46.py",
+      "description": "Código-fonte: `aula46.py`"
+    },
+    {
+      "id": "course-python-2023-file-aula47-py",
+      "label": "aula47.py",
+      "parent": "course-python-2023-grp-files-a-133-144",
+      "layer": "file",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 0.85,
+      "file": "aula47.py",
+      "description": "Código-fonte: `aula47.py`"
+    },
+    {
+      "id": "course-python-2023-file-aula48-py",
+      "label": "aula48.py",
+      "parent": "course-python-2023-grp-files-a-133-144",
+      "layer": "file",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 0.85,
+      "file": "aula48.py",
+      "description": "Código-fonte: `aula48.py`"
+    },
+    {
+      "id": "course-python-2023-file-aula49-py",
+      "label": "aula49.py",
+      "parent": "course-python-2023-grp-files-a-133-144",
+      "layer": "file",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 0.85,
+      "file": "aula49.py",
+      "description": "Código-fonte: `aula49.py`"
+    },
+    {
+      "id": "course-python-2023-file-aula5-py",
+      "label": "aula5.py",
+      "parent": "course-python-2023-grp-files-a-145-156",
+      "layer": "file",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 0.85,
+      "file": "aula5.py",
+      "description": "Código-fonte: `aula5.py`"
+    },
+    {
+      "id": "course-python-2023-file-aula50-py",
+      "label": "aula50.py",
+      "parent": "course-python-2023-grp-files-a-145-156",
+      "layer": "file",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 0.85,
+      "file": "aula50.py",
+      "description": "Código-fonte: `aula50.py`"
+    },
+    {
+      "id": "course-python-2023-file-aula51-py",
+      "label": "aula51.py",
+      "parent": "course-python-2023-grp-files-a-145-156",
+      "layer": "file",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 0.85,
+      "file": "aula51.py",
+      "description": "Código-fonte: `aula51.py`"
+    },
+    {
+      "id": "course-python-2023-file-aula52-py",
+      "label": "aula52.py",
+      "parent": "course-python-2023-grp-files-a-145-156",
+      "layer": "file",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 0.85,
+      "file": "aula52.py",
+      "description": "Código-fonte: `aula52.py`"
+    },
+    {
+      "id": "course-python-2023-file-aula53-py",
+      "label": "aula53.py",
+      "parent": "course-python-2023-grp-files-a-145-156",
+      "layer": "file",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 0.85,
+      "file": "aula53.py",
+      "description": "Código-fonte: `aula53.py`"
+    },
+    {
+      "id": "course-python-2023-file-aula54-py",
+      "label": "aula54.py",
+      "parent": "course-python-2023-grp-files-a-145-156",
+      "layer": "file",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 0.85,
+      "file": "aula54.py",
+      "description": "Código-fonte: `aula54.py`"
+    },
+    {
+      "id": "course-python-2023-file-aula55-py",
+      "label": "aula55.py",
+      "parent": "course-python-2023-grp-files-a-145-156",
+      "layer": "file",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 0.85,
+      "file": "aula55.py",
+      "description": "Código-fonte: `aula55.py`"
+    },
+    {
+      "id": "course-python-2023-file-aula56-py",
+      "label": "aula56.py",
+      "parent": "course-python-2023-grp-files-a-145-156",
+      "layer": "file",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 0.85,
+      "file": "aula56.py",
+      "description": "Código-fonte: `aula56.py`"
+    },
+    {
+      "id": "course-python-2023-file-aula57-py",
+      "label": "aula57.py",
+      "parent": "course-python-2023-grp-files-a-145-156",
+      "layer": "file",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 0.85,
+      "file": "aula57.py",
+      "description": "Código-fonte: `aula57.py`"
+    },
+    {
+      "id": "course-python-2023-file-aula58-py",
+      "label": "aula58.py",
+      "parent": "course-python-2023-grp-files-a-145-156",
+      "layer": "file",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 0.85,
+      "file": "aula58.py",
+      "description": "Código-fonte: `aula58.py`"
+    },
+    {
+      "id": "course-python-2023-file-aula59-py",
+      "label": "aula59.py",
+      "parent": "course-python-2023-grp-files-a-145-156",
+      "layer": "file",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 0.85,
+      "file": "aula59.py",
+      "description": "Código-fonte: `aula59.py`"
+    },
+    {
+      "id": "course-python-2023-file-aula6-py",
+      "label": "aula6.py",
+      "parent": "course-python-2023-grp-files-a-145-156",
+      "layer": "file",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 0.85,
+      "file": "aula6.py",
+      "description": "Código-fonte: `aula6.py`"
+    },
+    {
+      "id": "course-python-2023-file-aula60-py",
+      "label": "aula60.py",
+      "parent": "course-python-2023-grp-files-a-157-168",
+      "layer": "file",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 0.85,
+      "file": "aula60.py",
+      "description": "Código-fonte: `aula60.py`"
+    },
+    {
+      "id": "course-python-2023-file-aula61-py",
+      "label": "aula61.py",
+      "parent": "course-python-2023-grp-files-a-157-168",
+      "layer": "file",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 0.85,
+      "file": "aula61.py",
+      "description": "Código-fonte: `aula61.py`"
+    },
+    {
+      "id": "course-python-2023-file-aula62-py",
+      "label": "aula62.py",
+      "parent": "course-python-2023-grp-files-a-157-168",
+      "layer": "file",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 0.85,
+      "file": "aula62.py",
+      "description": "Código-fonte: `aula62.py`"
+    },
+    {
+      "id": "course-python-2023-file-aula63-py",
+      "label": "aula63.py",
+      "parent": "course-python-2023-grp-files-a-157-168",
+      "layer": "file",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 0.85,
+      "file": "aula63.py",
+      "description": "Código-fonte: `aula63.py`"
+    },
+    {
+      "id": "course-python-2023-file-aula64-py",
+      "label": "aula64.py",
+      "parent": "course-python-2023-grp-files-a-157-168",
+      "layer": "file",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 0.85,
+      "file": "aula64.py",
+      "description": "Código-fonte: `aula64.py`"
+    },
+    {
+      "id": "course-python-2023-file-aula65-py",
+      "label": "aula65.py",
+      "parent": "course-python-2023-grp-files-a-157-168",
+      "layer": "file",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 0.85,
+      "file": "aula65.py",
+      "description": "Código-fonte: `aula65.py`"
+    },
+    {
+      "id": "course-python-2023-file-aula66-py",
+      "label": "aula66.py",
+      "parent": "course-python-2023-grp-files-a-157-168",
+      "layer": "file",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 0.85,
+      "file": "aula66.py",
+      "description": "Código-fonte: `aula66.py`"
+    },
+    {
+      "id": "course-python-2023-file-aula67-py",
+      "label": "aula67.py",
+      "parent": "course-python-2023-grp-files-a-157-168",
+      "layer": "file",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 0.85,
+      "file": "aula67.py",
+      "description": "Código-fonte: `aula67.py`"
+    },
+    {
+      "id": "course-python-2023-file-aula68-py",
+      "label": "aula68.py",
+      "parent": "course-python-2023-grp-files-a-157-168",
+      "layer": "file",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 0.85,
+      "file": "aula68.py",
+      "description": "Código-fonte: `aula68.py`"
+    },
+    {
+      "id": "course-python-2023-file-aula69-py",
+      "label": "aula69.py",
+      "parent": "course-python-2023-grp-files-a-157-168",
+      "layer": "file",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 0.85,
+      "file": "aula69.py",
+      "description": "Código-fonte: `aula69.py`"
+    },
+    {
+      "id": "course-python-2023-file-aula7-py",
+      "label": "aula7.py",
+      "parent": "course-python-2023-grp-files-a-157-168",
+      "layer": "file",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 0.85,
+      "file": "aula7.py",
+      "description": "Código-fonte: `aula7.py`"
+    },
+    {
+      "id": "course-python-2023-file-aula70-py",
+      "label": "aula70.py",
+      "parent": "course-python-2023-grp-files-a-157-168",
+      "layer": "file",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 0.85,
+      "file": "aula70.py",
+      "description": "Código-fonte: `aula70.py`"
+    },
+    {
+      "id": "course-python-2023-file-aula71-py",
+      "label": "aula71.py",
+      "parent": "course-python-2023-grp-files-a-169-180",
+      "layer": "file",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 0.85,
+      "file": "aula71.py",
+      "description": "Código-fonte: `aula71.py`"
+    },
+    {
+      "id": "course-python-2023-file-aula72-py",
+      "label": "aula72.py",
+      "parent": "course-python-2023-grp-files-a-169-180",
+      "layer": "file",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 0.85,
+      "file": "aula72.py",
+      "description": "Código-fonte: `aula72.py`"
+    },
+    {
+      "id": "course-python-2023-file-aula73-py",
+      "label": "aula73.py",
+      "parent": "course-python-2023-grp-files-a-169-180",
+      "layer": "file",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 0.85,
+      "file": "aula73.py",
+      "description": "Código-fonte: `aula73.py`"
+    },
+    {
+      "id": "course-python-2023-file-aula74-py",
+      "label": "aula74.py",
+      "parent": "course-python-2023-grp-files-a-169-180",
+      "layer": "file",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 0.85,
+      "file": "aula74.py",
+      "description": "Código-fonte: `aula74.py`"
+    },
+    {
+      "id": "course-python-2023-file-aula75-py",
+      "label": "aula75.py",
+      "parent": "course-python-2023-grp-files-a-169-180",
+      "layer": "file",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 0.85,
+      "file": "aula75.py",
+      "description": "Código-fonte: `aula75.py`"
+    },
+    {
+      "id": "course-python-2023-file-aula76-py",
+      "label": "aula76.py",
+      "parent": "course-python-2023-grp-files-a-169-180",
+      "layer": "file",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 0.85,
+      "file": "aula76.py",
+      "description": "Código-fonte: `aula76.py`"
+    },
+    {
+      "id": "course-python-2023-file-aula77-py",
+      "label": "aula77.py",
+      "parent": "course-python-2023-grp-files-a-169-180",
+      "layer": "file",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 0.85,
+      "file": "aula77.py",
+      "description": "Código-fonte: `aula77.py`"
+    },
+    {
+      "id": "course-python-2023-file-aula78-py",
+      "label": "aula78.py",
+      "parent": "course-python-2023-grp-files-a-169-180",
+      "layer": "file",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 0.85,
+      "file": "aula78.py",
+      "description": "Código-fonte: `aula78.py`"
+    },
+    {
+      "id": "course-python-2023-file-aula79-py",
+      "label": "aula79.py",
+      "parent": "course-python-2023-grp-files-a-169-180",
+      "layer": "file",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 0.85,
+      "file": "aula79.py",
+      "description": "Código-fonte: `aula79.py`"
+    },
+    {
+      "id": "course-python-2023-file-aula8-py",
+      "label": "aula8.py",
+      "parent": "course-python-2023-grp-files-a-169-180",
+      "layer": "file",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 0.85,
+      "file": "aula8.py",
+      "description": "Código-fonte: `aula8.py`"
+    },
+    {
+      "id": "course-python-2023-file-aula80-py",
+      "label": "aula80.py",
+      "parent": "course-python-2023-grp-files-a-169-180",
+      "layer": "file",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 0.85,
+      "file": "aula80.py",
+      "description": "Código-fonte: `aula80.py`"
+    },
+    {
+      "id": "course-python-2023-file-aula81-py",
+      "label": "aula81.py",
+      "parent": "course-python-2023-grp-files-a-169-180",
+      "layer": "file",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 0.85,
+      "file": "aula81.py",
+      "description": "Código-fonte: `aula81.py`"
+    },
+    {
+      "id": "course-python-2023-file-aula82-py",
+      "label": "aula82.py",
+      "parent": "course-python-2023-grp-files-a-181-192",
+      "layer": "file",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 0.85,
+      "file": "aula82.py",
+      "description": "Código-fonte: `aula82.py`"
+    },
+    {
+      "id": "course-python-2023-file-aula83-py",
+      "label": "aula83.py",
+      "parent": "course-python-2023-grp-files-a-181-192",
+      "layer": "file",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 0.85,
+      "file": "aula83.py",
+      "description": "Código-fonte: `aula83.py`"
+    },
+    {
+      "id": "course-python-2023-file-aula84-py",
+      "label": "aula84.py",
+      "parent": "course-python-2023-grp-files-a-181-192",
+      "layer": "file",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 0.85,
+      "file": "aula84.py",
+      "description": "Código-fonte: `aula84.py`"
+    },
+    {
+      "id": "course-python-2023-file-aula85-py",
+      "label": "aula85.py",
+      "parent": "course-python-2023-grp-files-a-181-192",
+      "layer": "file",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 0.85,
+      "file": "aula85.py",
+      "description": "Código-fonte: `aula85.py`"
+    },
+    {
+      "id": "course-python-2023-file-aula86-py",
+      "label": "aula86.py",
+      "parent": "course-python-2023-grp-files-a-181-192",
+      "layer": "file",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 0.85,
+      "file": "aula86.py",
+      "description": "Código-fonte: `aula86.py`"
+    },
+    {
+      "id": "course-python-2023-file-aula87-py",
+      "label": "aula87.py",
+      "parent": "course-python-2023-grp-files-a-181-192",
+      "layer": "file",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 0.85,
+      "file": "aula87.py",
+      "description": "Código-fonte: `aula87.py`"
+    },
+    {
+      "id": "course-python-2023-file-aula88-py",
+      "label": "aula88.py",
+      "parent": "course-python-2023-grp-files-a-181-192",
+      "layer": "file",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 0.85,
+      "file": "aula88.py",
+      "description": "Código-fonte: `aula88.py`"
+    },
+    {
+      "id": "course-python-2023-file-aula89-py",
+      "label": "aula89.py",
+      "parent": "course-python-2023-grp-files-a-181-192",
+      "layer": "file",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 0.85,
+      "file": "aula89.py",
+      "description": "Código-fonte: `aula89.py`"
+    },
+    {
+      "id": "course-python-2023-file-aula9-py",
+      "label": "aula9.py",
+      "parent": "course-python-2023-grp-files-a-181-192",
+      "layer": "file",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 0.85,
+      "file": "aula9.py",
+      "description": "Código-fonte: `aula9.py`"
+    },
+    {
+      "id": "course-python-2023-file-aula90-py",
+      "label": "aula90.py",
+      "parent": "course-python-2023-grp-files-a-181-192",
+      "layer": "file",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 0.85,
+      "file": "aula90.py",
+      "description": "Código-fonte: `aula90.py`"
+    },
+    {
+      "id": "course-python-2023-file-aula91-py",
+      "label": "aula91.py",
+      "parent": "course-python-2023-grp-files-a-181-192",
+      "layer": "file",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 0.85,
+      "file": "aula91.py",
+      "description": "Código-fonte: `aula91.py`"
+    },
+    {
+      "id": "course-python-2023-file-aula92-py",
+      "label": "aula92.py",
+      "parent": "course-python-2023-grp-files-a-181-192",
+      "layer": "file",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 0.85,
+      "file": "aula92.py",
+      "description": "Código-fonte: `aula92.py`"
+    },
+    {
+      "id": "course-python-2023-file-aula93-py",
+      "label": "aula93.py",
+      "parent": "course-python-2023-grp-files-a-193-201",
+      "layer": "file",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 0.85,
+      "file": "aula93.py",
+      "description": "Código-fonte: `aula93.py`"
+    },
+    {
+      "id": "course-python-2023-file-aula94-py",
+      "label": "aula94.py",
+      "parent": "course-python-2023-grp-files-a-193-201",
+      "layer": "file",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 0.85,
+      "file": "aula94.py",
+      "description": "Código-fonte: `aula94.py`"
+    },
+    {
+      "id": "course-python-2023-file-aula95-py",
+      "label": "aula95.py",
+      "parent": "course-python-2023-grp-files-a-193-201",
+      "layer": "file",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 0.85,
+      "file": "aula95.py",
+      "description": "Código-fonte: `aula95.py`"
+    },
+    {
+      "id": "course-python-2023-file-aula96-py",
+      "label": "aula96.py",
+      "parent": "course-python-2023-grp-files-a-193-201",
+      "layer": "file",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 0.85,
+      "file": "aula96.py",
+      "description": "Código-fonte: `aula96.py`"
+    },
+    {
+      "id": "course-python-2023-file-aula97-py",
+      "label": "aula97.py",
+      "parent": "course-python-2023-grp-files-a-193-201",
+      "layer": "file",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 0.85,
+      "file": "aula97.py",
+      "description": "Código-fonte: `aula97.py`"
+    },
+    {
+      "id": "course-python-2023-file-aula97-m-py",
+      "label": "aula97_m.py",
+      "parent": "course-python-2023-grp-files-a-193-201",
+      "layer": "file",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 0.85,
+      "file": "aula97_m.py",
+      "description": "Código-fonte: `aula97_m.py`"
+    },
+    {
+      "id": "course-python-2023-file-aula98-py",
+      "label": "aula98.py",
+      "parent": "course-python-2023-grp-files-a-193-201",
+      "layer": "file",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 0.85,
+      "file": "aula98.py",
+      "description": "Código-fonte: `aula98.py`"
+    },
+    {
+      "id": "course-python-2023-file-aula98-m-py",
+      "label": "aula98_m.py",
+      "parent": "course-python-2023-grp-files-a-193-201",
+      "layer": "file",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 0.85,
+      "file": "aula98_m.py",
+      "description": "Código-fonte: `aula98_m.py`"
+    },
+    {
+      "id": "course-python-2023-file-aula99-py",
+      "label": "aula99.py",
+      "parent": "course-python-2023-grp-files-a-193-201",
+      "layer": "file",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 0.85,
+      "file": "aula99.py",
+      "description": "Código-fonte: `aula99.py`"
+    },
+    {
+      "id": "course-python-2023-file-vscode-keybindings-json",
+      "label": "keybindings.json",
+      "parent": "course-python-2023-dir-vscode",
+      "layer": "file",
+      "category": "other",
+      "categoryLabel": "Outros",
+      "color": "#64748b",
+      "size": 0.85,
+      "file": ".vscode/keybindings.json",
+      "description": "Código-fonte: `.vscode/keybindings.json`"
+    },
+    {
+      "id": "course-python-2023-file-vscode-launch-json",
+      "label": "launch.json",
+      "parent": "course-python-2023-dir-vscode",
+      "layer": "file",
+      "category": "other",
+      "categoryLabel": "Outros",
+      "color": "#64748b",
+      "size": 0.85,
+      "file": ".vscode/launch.json",
+      "description": "Código-fonte: `.vscode/launch.json`"
+    },
+    {
+      "id": "course-python-2023-file-vscode-settings-json",
+      "label": "settings.json",
+      "parent": "course-python-2023-dir-vscode",
+      "layer": "file",
+      "category": "other",
+      "categoryLabel": "Outros",
+      "color": "#64748b",
+      "size": 0.85,
+      "file": ".vscode/settings.json",
+      "description": "Código-fonte: `.vscode/settings.json`"
+    },
+    {
+      "id": "course-python-2023-file-aula141-eletronico-py",
+      "label": "eletronico.py",
+      "parent": "course-python-2023-dir-aula141",
+      "layer": "file",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 0.85,
+      "file": "aula141/eletronico.py",
+      "description": "Código-fonte: `aula141/eletronico.py`"
+    },
+    {
+      "id": "course-python-2023-file-aula141-log-py",
+      "label": "log.py",
+      "parent": "course-python-2023-dir-aula141",
+      "layer": "file",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 0.85,
+      "file": "aula141/log.py",
+      "description": "Código-fonte: `aula141/log.py`"
+    },
+    {
+      "id": "course-python-2023-file-aula141-main-py",
+      "label": "main.py",
+      "parent": "course-python-2023-dir-aula141",
+      "layer": "file",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 0.85,
+      "file": "aula141/main.py",
+      "description": "Código-fonte: `aula141/main.py`"
+    },
+    {
+      "id": "course-python-2023-file-aula156-documentando-class-py",
+      "label": "documentando_class.py",
+      "parent": "course-python-2023-dir-aula156",
+      "layer": "file",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 0.85,
+      "file": "aula156/documentando_class.py",
+      "description": "Código-fonte: `aula156/documentando_class.py`"
+    },
+    {
+      "id": "course-python-2023-file-aula156-documentando-funcoes-py",
+      "label": "documentando_funcoes.py",
+      "parent": "course-python-2023-dir-aula156",
+      "layer": "file",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 0.85,
+      "file": "aula156/documentando_funcoes.py",
+      "description": "Código-fonte: `aula156/documentando_funcoes.py`"
+    },
+    {
+      "id": "course-python-2023-file-aula156-main-py",
+      "label": "main.py",
+      "parent": "course-python-2023-dir-aula156",
+      "layer": "file",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 0.85,
+      "file": "aula156/main.py",
+      "description": "Código-fonte: `aula156/main.py`"
+    },
+    {
+      "id": "course-python-2023-file-aula156-uma-linha-py",
+      "label": "uma_linha.py",
+      "parent": "course-python-2023-dir-aula156",
+      "layer": "file",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 0.85,
+      "file": "aula156/uma_linha.py",
+      "description": "Código-fonte: `aula156/uma_linha.py`"
+    },
+    {
+      "id": "course-python-2023-file-aula156-varias-linhas-py",
+      "label": "varias_linhas.py",
+      "parent": "course-python-2023-dir-aula156",
+      "layer": "file",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 0.85,
+      "file": "aula156/varias_linhas.py",
+      "description": "Código-fonte: `aula156/varias_linhas.py`"
+    },
+    {
+      "id": "course-python-2023-file-aula158-banco-py",
+      "label": "banco.py",
+      "parent": "course-python-2023-dir-aula158",
+      "layer": "file",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 0.85,
+      "file": "aula158/banco.py",
+      "description": "Código-fonte: `aula158/banco.py`"
+    },
+    {
+      "id": "course-python-2023-file-aula158-contas-py",
+      "label": "contas.py",
+      "parent": "course-python-2023-dir-aula158",
+      "layer": "file",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 0.85,
+      "file": "aula158/contas.py",
+      "description": "Código-fonte: `aula158/contas.py`"
+    },
+    {
+      "id": "course-python-2023-file-aula158-main-py",
+      "label": "main.py",
+      "parent": "course-python-2023-dir-aula158",
+      "layer": "file",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 0.85,
+      "file": "aula158/main.py",
+      "description": "Código-fonte: `aula158/main.py`"
+    },
+    {
+      "id": "course-python-2023-file-aula158-pessoas-py",
+      "label": "pessoas.py",
+      "parent": "course-python-2023-dir-aula158",
+      "layer": "file",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 0.85,
+      "file": "aula158/pessoas.py",
+      "description": "Código-fonte: `aula158/pessoas.py`"
+    },
+    {
+      "id": "course-python-2023-file-aula190-site-index-html",
+      "label": "index.html",
+      "parent": "course-python-2023-dir-aula190-site",
+      "layer": "file",
+      "category": "frontend",
+      "categoryLabel": "Frontend",
+      "color": "#eab308",
+      "size": 0.85,
+      "file": "aula190_site/index.html",
+      "description": "Código-fonte: `aula190_site/index.html`"
+    },
+    {
+      "id": "course-python-2023-file-aula190-site-style-css",
+      "label": "style.css",
+      "parent": "course-python-2023-dir-aula190-site",
+      "layer": "file",
+      "category": "frontend",
+      "categoryLabel": "Frontend",
+      "color": "#eab308",
+      "size": 0.85,
+      "file": "aula190_site/style.css",
+      "description": "Código-fonte: `aula190_site/style.css`"
+    },
+    {
+      "id": "course-python-2023-file-aula193-main-py",
+      "label": "main.py",
+      "parent": "course-python-2023-dir-aula193",
+      "layer": "file",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 0.85,
+      "file": "aula193/main.py",
+      "description": "Código-fonte: `aula193/main.py`"
+    },
+    {
+      "id": "course-python-2023-file-aula197-main-py",
+      "label": "main.py",
+      "parent": "course-python-2023-dir-aula197",
+      "layer": "file",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 0.85,
+      "file": "aula197/main.py",
+      "description": "Código-fonte: `aula197/main.py`"
+    },
+    {
+      "id": "course-python-2023-file-aula199-creating-py",
+      "label": "creating.py",
+      "parent": "course-python-2023-dir-aula199",
+      "layer": "file",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 0.85,
+      "file": "aula199/creating.py",
+      "description": "Código-fonte: `aula199/creating.py`"
+    },
+    {
+      "id": "course-python-2023-file-aula199-reading-py",
+      "label": "reading.py",
+      "parent": "course-python-2023-dir-aula199",
+      "layer": "file",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 0.85,
+      "file": "aula199/reading.py",
+      "description": "Código-fonte: `aula199/reading.py`"
+    },
+    {
+      "id": "course-python-2023-file-aula200-main-py",
+      "label": "main.py",
+      "parent": "course-python-2023-dir-aula200",
+      "layer": "file",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 0.85,
+      "file": "aula200/main.py",
+      "description": "Código-fonte: `aula200/main.py`"
+    },
+    {
+      "id": "course-python-2023-file-aula201-aula0001-py",
+      "label": "aula0001.py",
+      "parent": "course-python-2023-dir-aula201",
+      "layer": "file",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 0.85,
+      "file": "aula201/aula0001.py",
+      "description": "Código-fonte: `aula201/aula0001.py`"
+    },
+    {
+      "id": "course-python-2023-file-aula201-aula0002-py",
+      "label": "aula0002.py",
+      "parent": "course-python-2023-dir-aula201",
+      "layer": "file",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 0.85,
+      "file": "aula201/aula0002.py",
+      "description": "Código-fonte: `aula201/aula0002.py`"
+    },
+    {
+      "id": "course-python-2023-file-aula201-aula0003-py",
+      "label": "aula0003.py",
+      "parent": "course-python-2023-dir-aula201",
+      "layer": "file",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 0.85,
+      "file": "aula201/aula0003.py",
+      "description": "Código-fonte: `aula201/aula0003.py`"
+    },
+    {
+      "id": "course-python-2023-file-aula201-aula0004-py",
+      "label": "aula0004.py",
+      "parent": "course-python-2023-dir-aula201",
+      "layer": "file",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 0.85,
+      "file": "aula201/aula0004.py",
+      "description": "Código-fonte: `aula201/aula0004.py`"
+    },
+    {
+      "id": "course-python-2023-file-aula201-aula0005-py",
+      "label": "aula0005.py",
+      "parent": "course-python-2023-dir-aula201",
+      "layer": "file",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 0.85,
+      "file": "aula201/aula0005.py",
+      "description": "Código-fonte: `aula201/aula0005.py`"
+    },
+    {
+      "id": "course-python-2023-file-aula201-aula0006-py",
+      "label": "aula0006.py",
+      "parent": "course-python-2023-dir-aula201",
+      "layer": "file",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 0.85,
+      "file": "aula201/aula0006.py",
+      "description": "Código-fonte: `aula201/aula0006.py`"
+    },
+    {
+      "id": "course-python-2023-file-aula202-calculadora-buttons-py",
+      "label": "buttons.py",
+      "parent": "course-python-2023-dir-aula202-calculadora",
+      "layer": "file",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 0.85,
+      "file": "aula202-calculadora/buttons.py",
+      "description": "Código-fonte: `aula202-calculadora/buttons.py`"
+    },
+    {
+      "id": "course-python-2023-file-aula202-calculadora-display-py",
+      "label": "display.py",
+      "parent": "course-python-2023-dir-aula202-calculadora",
+      "layer": "file",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 0.85,
+      "file": "aula202-calculadora/display.py",
+      "description": "Código-fonte: `aula202-calculadora/display.py`"
+    },
+    {
+      "id": "course-python-2023-file-aula202-calculadora-info-py",
+      "label": "info.py",
+      "parent": "course-python-2023-dir-aula202-calculadora",
+      "layer": "file",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 0.85,
+      "file": "aula202-calculadora/info.py",
+      "description": "Código-fonte: `aula202-calculadora/info.py`"
+    },
+    {
+      "id": "course-python-2023-file-aula202-calculadora-main-py",
+      "label": "main.py",
+      "parent": "course-python-2023-dir-aula202-calculadora",
+      "layer": "file",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 0.85,
+      "file": "aula202-calculadora/main.py",
+      "description": "Código-fonte: `aula202-calculadora/main.py`"
+    },
+    {
+      "id": "course-python-2023-file-aula202-calculadora-main-window-py",
+      "label": "main_window.py",
+      "parent": "course-python-2023-dir-aula202-calculadora",
+      "layer": "file",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 0.85,
+      "file": "aula202-calculadora/main_window.py",
+      "description": "Código-fonte: `aula202-calculadora/main_window.py`"
+    },
+    {
+      "id": "course-python-2023-file-aula202-calculadora-styles-py",
+      "label": "styles.py",
+      "parent": "course-python-2023-dir-aula202-calculadora",
+      "layer": "file",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 0.85,
+      "file": "aula202-calculadora/styles.py",
+      "description": "Código-fonte: `aula202-calculadora/styles.py`"
+    },
+    {
+      "id": "course-python-2023-file-aula202-calculadora-utils-py",
+      "label": "utils.py",
+      "parent": "course-python-2023-dir-aula202-calculadora",
+      "layer": "file",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 0.85,
+      "file": "aula202-calculadora/utils.py",
+      "description": "Código-fonte: `aula202-calculadora/utils.py`"
+    },
+    {
+      "id": "course-python-2023-file-aula202-calculadora-variables-py",
+      "label": "variables.py",
+      "parent": "course-python-2023-dir-aula202-calculadora",
+      "layer": "file",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 0.85,
+      "file": "aula202-calculadora/variables.py",
+      "description": "Código-fonte: `aula202-calculadora/variables.py`"
+    },
+    {
+      "id": "course-python-2023-file-aula203-qtdesigner-src-main-window-py",
+      "label": "main_window.py",
+      "parent": "course-python-2023-dir-aula203-qtdesigner-src",
+      "layer": "file",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 0.85,
+      "file": "aula203-qtdesigner/src/main_window.py",
+      "description": "Código-fonte: `aula203-qtdesigner/src/main_window.py`"
+    },
+    {
+      "id": "course-python-2023-file-aula203-qtdesigner-src-window-py",
+      "label": "window.py",
+      "parent": "course-python-2023-dir-aula203-qtdesigner-src",
+      "layer": "file",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 0.85,
+      "file": "aula203-qtdesigner/src/window.py",
+      "description": "Código-fonte: `aula203-qtdesigner/src/window.py`"
+    },
+    {
+      "id": "course-python-2023-file-aula203-qtdesigner-ui-ui-window-py",
+      "label": "ui_window.py",
+      "parent": "course-python-2023-dir-aula203-qtdesigner-ui",
+      "layer": "file",
+      "category": "frontend",
+      "categoryLabel": "Frontend",
+      "color": "#eab308",
+      "size": 0.85,
+      "file": "aula203-qtdesigner/ui/ui_window.py",
+      "description": "Código-fonte: `aula203-qtdesigner/ui/ui_window.py`"
+    },
+    {
+      "id": "course-python-2023-file-aula204-main-py",
+      "label": "main.py",
+      "parent": "course-python-2023-dir-aula204",
+      "layer": "file",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 0.85,
+      "file": "aula204/main.py",
+      "description": "Código-fonte: `aula204/main.py`"
+    },
+    {
+      "id": "course-python-2023-file-aula204-ui-workerui-py",
+      "label": "ui_workerui.py",
+      "parent": "course-python-2023-dir-aula204",
+      "layer": "file",
+      "category": "frontend",
+      "categoryLabel": "Frontend",
+      "color": "#eab308",
+      "size": 0.85,
+      "file": "aula204/ui_workerui.py",
+      "description": "Código-fonte: `aula204/ui_workerui.py`"
+    },
+    {
+      "id": "course-python-2023-file-aula205-main-py",
+      "label": "main.py",
+      "parent": "course-python-2023-dir-aula205",
+      "layer": "file",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 0.85,
+      "file": "aula205/main.py",
+      "description": "Código-fonte: `aula205/main.py`"
+    },
+    {
+      "id": "course-python-2023-file-aula205-select-py",
+      "label": "select.py",
+      "parent": "course-python-2023-dir-aula205",
+      "layer": "file",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 0.85,
+      "file": "aula205/select.py",
+      "description": "Código-fonte: `aula205/select.py`"
+    },
+    {
+      "id": "course-python-2023-file-aula206-docker-compose-yml",
+      "label": "docker-compose.yml",
+      "parent": "course-python-2023-dir-aula206",
+      "layer": "file",
+      "category": "other",
+      "categoryLabel": "Outros",
+      "color": "#64748b",
+      "size": 0.85,
+      "file": "aula206/docker-compose.yml",
+      "description": "Código-fonte: `aula206/docker-compose.yml`"
+    },
+    {
+      "id": "course-python-2023-file-aula206-main-py",
+      "label": "main.py",
+      "parent": "course-python-2023-dir-aula206",
+      "layer": "file",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 0.85,
+      "file": "aula206/main.py",
+      "description": "Código-fonte: `aula206/main.py`"
+    },
+    {
+      "id": "course-python-2023-file-aula207-ola-django-manage-py",
+      "label": "manage.py",
+      "parent": "course-python-2023-dir-aula207-ola-django",
+      "layer": "file",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 0.85,
+      "file": "aula207_ola_django/manage.py",
+      "description": "Código-fonte: `aula207_ola_django/manage.py`"
+    },
+    {
+      "id": "course-python-2023-file-aula207-ola-django-base-global-base-html",
+      "label": "base.html",
+      "parent": "course-python-2023-dir-aula207-ola-django-base-global",
+      "layer": "file",
+      "category": "frontend",
+      "categoryLabel": "Frontend",
+      "color": "#eab308",
+      "size": 0.85,
+      "file": "aula207_ola_django/base/global/base.html",
+      "description": "Código-fonte: `aula207_ola_django/base/global/base.html`"
+    },
+    {
+      "id": "course-python-2023-file-aula207-ola-django-base-global-partials-head-html",
+      "label": "head.html",
+      "parent": "course-python-2023-dir-aula207-ola-django-base-global-partials",
+      "layer": "file",
+      "category": "frontend",
+      "categoryLabel": "Frontend",
+      "color": "#eab308",
+      "size": 0.85,
+      "file": "aula207_ola_django/base/global/partials/head.html",
+      "description": "Código-fonte: `aula207_ola_django/base/global/partials/head.html`"
+    },
+    {
+      "id": "course-python-2023-file-aula207-ola-django-base-global-partials-menu-html",
+      "label": "menu.html",
+      "parent": "course-python-2023-dir-aula207-ola-django-base-global-partials",
+      "layer": "file",
+      "category": "frontend",
+      "categoryLabel": "Frontend",
+      "color": "#eab308",
+      "size": 0.85,
+      "file": "aula207_ola_django/base/global/partials/menu.html",
+      "description": "Código-fonte: `aula207_ola_django/base/global/partials/menu.html`"
+    },
+    {
+      "id": "course-python-2023-file-aula207-ola-django-base-global-partials-postblock-html",
+      "label": "postblock.html",
+      "parent": "course-python-2023-dir-aula207-ola-django-base-global-partials",
+      "layer": "file",
+      "category": "frontend",
+      "categoryLabel": "Frontend",
+      "color": "#eab308",
+      "size": 0.85,
+      "file": "aula207_ola_django/base/global/partials/postblock.html",
+      "description": "Código-fonte: `aula207_ola_django/base/global/partials/postblock.html`"
+    },
+    {
+      "id": "course-python-2023-file-aula207-ola-django-base-static-global-css-style-css",
+      "label": "style.css",
+      "parent": "course-python-2023-dir-aula207-ola-django-base-static-global-css",
+      "layer": "file",
+      "category": "frontend",
+      "categoryLabel": "Frontend",
+      "color": "#eab308",
+      "size": 0.85,
+      "file": "aula207_ola_django/base/static/global/css/style.css",
+      "description": "Código-fonte: `aula207_ola_django/base/static/global/css/style.css`"
+    },
+    {
+      "id": "course-python-2023-file-aula207-ola-django-blog-init-py",
+      "label": "__init__.py",
+      "parent": "course-python-2023-dir-aula207-ola-django-blog",
+      "layer": "file",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 0.85,
+      "file": "aula207_ola_django/blog/__init__.py",
+      "description": "Código-fonte: `aula207_ola_django/blog/__init__.py`"
+    },
+    {
+      "id": "course-python-2023-file-aula207-ola-django-blog-admin-py",
+      "label": "admin.py",
+      "parent": "course-python-2023-dir-aula207-ola-django-blog",
+      "layer": "file",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 0.85,
+      "file": "aula207_ola_django/blog/admin.py",
+      "description": "Código-fonte: `aula207_ola_django/blog/admin.py`"
+    },
+    {
+      "id": "course-python-2023-file-aula207-ola-django-blog-apps-py",
+      "label": "apps.py",
+      "parent": "course-python-2023-dir-aula207-ola-django-blog",
+      "layer": "file",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 0.85,
+      "file": "aula207_ola_django/blog/apps.py",
+      "description": "Código-fonte: `aula207_ola_django/blog/apps.py`"
+    },
+    {
+      "id": "course-python-2023-file-aula207-ola-django-blog-data-py",
+      "label": "data.py",
+      "parent": "course-python-2023-dir-aula207-ola-django-blog",
+      "layer": "file",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 0.85,
+      "file": "aula207_ola_django/blog/data.py",
+      "description": "Código-fonte: `aula207_ola_django/blog/data.py`"
+    },
+    {
+      "id": "course-python-2023-file-aula207-ola-django-blog-models-py",
+      "label": "models.py",
+      "parent": "course-python-2023-dir-aula207-ola-django-blog",
+      "layer": "file",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 0.85,
+      "file": "aula207_ola_django/blog/models.py",
+      "description": "Código-fonte: `aula207_ola_django/blog/models.py`"
+    },
+    {
+      "id": "course-python-2023-file-aula207-ola-django-blog-tests-py",
+      "label": "tests.py",
+      "parent": "course-python-2023-dir-aula207-ola-django-blog",
+      "layer": "file",
+      "category": "tests",
+      "categoryLabel": "Testes",
+      "color": "#94a3b8",
+      "size": 0.85,
+      "file": "aula207_ola_django/blog/tests.py",
+      "description": "Código-fonte: `aula207_ola_django/blog/tests.py`"
+    },
+    {
+      "id": "course-python-2023-file-aula207-ola-django-blog-urls-py",
+      "label": "urls.py",
+      "parent": "course-python-2023-dir-aula207-ola-django-blog",
+      "layer": "file",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 0.85,
+      "file": "aula207_ola_django/blog/urls.py",
+      "description": "Código-fonte: `aula207_ola_django/blog/urls.py`"
+    },
+    {
+      "id": "course-python-2023-file-aula207-ola-django-blog-views-py",
+      "label": "views.py",
+      "parent": "course-python-2023-dir-aula207-ola-django-blog",
+      "layer": "file",
+      "category": "frontend",
+      "categoryLabel": "Frontend",
+      "color": "#eab308",
+      "size": 0.85,
+      "file": "aula207_ola_django/blog/views.py",
+      "description": "Código-fonte: `aula207_ola_django/blog/views.py`"
+    },
+    {
+      "id": "course-python-2023-file-aula207-ola-django-blog-migrations-init-py",
+      "label": "__init__.py",
+      "parent": "course-python-2023-dir-aula207-ola-django-blog-migrations",
+      "layer": "file",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 0.85,
+      "file": "aula207_ola_django/blog/migrations/__init__.py",
+      "description": "Código-fonte: `aula207_ola_django/blog/migrations/__init__.py`"
+    },
+    {
+      "id": "course-python-2023-file-aula207-ola-django-blog-templates-blog-exemplo-html",
+      "label": "exemplo.html",
+      "parent": "course-python-2023-dir-aula207-ola-django-blog-templates-blog",
+      "layer": "file",
+      "category": "frontend",
+      "categoryLabel": "Frontend",
+      "color": "#eab308",
+      "size": 0.85,
+      "file": "aula207_ola_django/blog/templates/blog/exemplo.html",
+      "description": "Código-fonte: `aula207_ola_django/blog/templates/blog/exemplo.html`"
+    },
+    {
+      "id": "course-python-2023-file-aula207-ola-django-blog-templates-blog-index-html",
+      "label": "index.html",
+      "parent": "course-python-2023-dir-aula207-ola-django-blog-templates-blog",
+      "layer": "file",
+      "category": "frontend",
+      "categoryLabel": "Frontend",
+      "color": "#eab308",
+      "size": 0.85,
+      "file": "aula207_ola_django/blog/templates/blog/index.html",
+      "description": "Código-fonte: `aula207_ola_django/blog/templates/blog/index.html`"
+    },
+    {
+      "id": "course-python-2023-file-aula207-ola-django-blog-templates-blog-post-html",
+      "label": "post.html",
+      "parent": "course-python-2023-dir-aula207-ola-django-blog-templates-blog",
+      "layer": "file",
+      "category": "frontend",
+      "categoryLabel": "Frontend",
+      "color": "#eab308",
+      "size": 0.85,
+      "file": "aula207_ola_django/blog/templates/blog/post.html",
+      "description": "Código-fonte: `aula207_ola_django/blog/templates/blog/post.html`"
+    },
+    {
+      "id": "course-python-2023-file-aula207-ola-django-home-init-py",
+      "label": "__init__.py",
+      "parent": "course-python-2023-dir-aula207-ola-django-home",
+      "layer": "file",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 0.85,
+      "file": "aula207_ola_django/home/__init__.py",
+      "description": "Código-fonte: `aula207_ola_django/home/__init__.py`"
+    },
+    {
+      "id": "course-python-2023-file-aula207-ola-django-home-admin-py",
+      "label": "admin.py",
+      "parent": "course-python-2023-dir-aula207-ola-django-home",
+      "layer": "file",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 0.85,
+      "file": "aula207_ola_django/home/admin.py",
+      "description": "Código-fonte: `aula207_ola_django/home/admin.py`"
+    },
+    {
+      "id": "course-python-2023-file-aula207-ola-django-home-apps-py",
+      "label": "apps.py",
+      "parent": "course-python-2023-dir-aula207-ola-django-home",
+      "layer": "file",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 0.85,
+      "file": "aula207_ola_django/home/apps.py",
+      "description": "Código-fonte: `aula207_ola_django/home/apps.py`"
+    },
+    {
+      "id": "course-python-2023-file-aula207-ola-django-home-models-py",
+      "label": "models.py",
+      "parent": "course-python-2023-dir-aula207-ola-django-home",
+      "layer": "file",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 0.85,
+      "file": "aula207_ola_django/home/models.py",
+      "description": "Código-fonte: `aula207_ola_django/home/models.py`"
+    },
+    {
+      "id": "course-python-2023-file-aula207-ola-django-home-tests-py",
+      "label": "tests.py",
+      "parent": "course-python-2023-dir-aula207-ola-django-home",
+      "layer": "file",
+      "category": "tests",
+      "categoryLabel": "Testes",
+      "color": "#94a3b8",
+      "size": 0.85,
+      "file": "aula207_ola_django/home/tests.py",
+      "description": "Código-fonte: `aula207_ola_django/home/tests.py`"
+    },
+    {
+      "id": "course-python-2023-file-aula207-ola-django-home-urls-py",
+      "label": "urls.py",
+      "parent": "course-python-2023-dir-aula207-ola-django-home",
+      "layer": "file",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 0.85,
+      "file": "aula207_ola_django/home/urls.py",
+      "description": "Código-fonte: `aula207_ola_django/home/urls.py`"
+    },
+    {
+      "id": "course-python-2023-file-aula207-ola-django-home-views-py",
+      "label": "views.py",
+      "parent": "course-python-2023-dir-aula207-ola-django-home",
+      "layer": "file",
+      "category": "frontend",
+      "categoryLabel": "Frontend",
+      "color": "#eab308",
+      "size": 0.85,
+      "file": "aula207_ola_django/home/views.py",
+      "description": "Código-fonte: `aula207_ola_django/home/views.py`"
+    },
+    {
+      "id": "course-python-2023-file-aula207-ola-django-home-migrations-init-py",
+      "label": "__init__.py",
+      "parent": "course-python-2023-dir-aula207-ola-django-home-migrations",
+      "layer": "file",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 0.85,
+      "file": "aula207_ola_django/home/migrations/__init__.py",
+      "description": "Código-fonte: `aula207_ola_django/home/migrations/__init__.py`"
+    },
+    {
+      "id": "course-python-2023-file-aula207-ola-django-home-templates-home-index-html",
+      "label": "index.html",
+      "parent": "course-python-2023-dir-aula207-ola-django-home-templates-home",
+      "layer": "file",
+      "category": "frontend",
+      "categoryLabel": "Frontend",
+      "color": "#eab308",
+      "size": 0.85,
+      "file": "aula207_ola_django/home/templates/home/index.html",
+      "description": "Código-fonte: `aula207_ola_django/home/templates/home/index.html`"
+    },
+    {
+      "id": "course-python-2023-file-aula207-ola-django-project-init-py",
+      "label": "__init__.py",
+      "parent": "course-python-2023-dir-aula207-ola-django-project",
+      "layer": "file",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 0.85,
+      "file": "aula207_ola_django/project/__init__.py",
+      "description": "Código-fonte: `aula207_ola_django/project/__init__.py`"
+    },
+    {
+      "id": "course-python-2023-file-aula207-ola-django-project-asgi-py",
+      "label": "asgi.py",
+      "parent": "course-python-2023-dir-aula207-ola-django-project",
+      "layer": "file",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 0.85,
+      "file": "aula207_ola_django/project/asgi.py",
+      "description": "Código-fonte: `aula207_ola_django/project/asgi.py`"
+    },
+    {
+      "id": "course-python-2023-file-aula207-ola-django-project-settings-py",
+      "label": "settings.py",
+      "parent": "course-python-2023-dir-aula207-ola-django-project",
+      "layer": "file",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 0.85,
+      "file": "aula207_ola_django/project/settings.py",
+      "description": "Código-fonte: `aula207_ola_django/project/settings.py`"
+    },
+    {
+      "id": "course-python-2023-file-aula207-ola-django-project-urls-py",
+      "label": "urls.py",
+      "parent": "course-python-2023-dir-aula207-ola-django-project",
+      "layer": "file",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 0.85,
+      "file": "aula207_ola_django/project/urls.py",
+      "description": "Código-fonte: `aula207_ola_django/project/urls.py`"
+    },
+    {
+      "id": "course-python-2023-file-aula207-ola-django-project-wsgi-py",
+      "label": "wsgi.py",
+      "parent": "course-python-2023-dir-aula207-ola-django-project",
+      "layer": "file",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 0.85,
+      "file": "aula207_ola_django/project/wsgi.py",
+      "description": "Código-fonte: `aula207_ola_django/project/wsgi.py`"
+    },
+    {
+      "id": "course-python-2023-file-aula99-package-init-py",
+      "label": "__init__.py",
+      "parent": "course-python-2023-dir-aula99-package",
+      "layer": "file",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 0.85,
+      "file": "aula99_package/__init__.py",
+      "description": "Código-fonte: `aula99_package/__init__.py`"
+    },
+    {
+      "id": "course-python-2023-file-aula99-package-modulo-py",
+      "label": "modulo.py",
+      "parent": "course-python-2023-dir-aula99-package",
+      "layer": "file",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 0.85,
+      "file": "aula99_package/modulo.py",
+      "description": "Código-fonte: `aula99_package/modulo.py`"
+    },
+    {
+      "id": "course-python-2023-file-aula99-package-modulo-b-py",
+      "label": "modulo_b.py",
+      "parent": "course-python-2023-dir-aula99-package",
+      "layer": "file",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 0.85,
+      "file": "aula99_package/modulo_b.py",
+      "description": "Código-fonte: `aula99_package/modulo_b.py`"
+    },
+    {
+      "id": "course-python-2023-file-dados-init-py",
+      "label": "__init__.py",
+      "parent": "course-python-2023-dir-dados",
+      "layer": "file",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 0.85,
+      "file": "dados/__init__.py",
+      "description": "Código-fonte: `dados/__init__.py`"
+    },
+    {
+      "id": "course-python-2023-file-dados-produtos-modulo-py",
+      "label": "produtos_modulo.py",
+      "parent": "course-python-2023-dir-dados",
+      "layer": "file",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 0.85,
+      "file": "dados/produtos_modulo.py",
+      "description": "Código-fonte: `dados/produtos_modulo.py`"
     }
   ],
   "links": [
     {
-      "source": "cp2-root",
-      "target": "cp2-readme-md",
+      "source": "course-python-2023-root",
+      "target": "course-python-2023-dir-vscode",
       "type": "dependency"
     },
     {
-      "source": "cp2-root",
-      "target": "cp2-aula100-py",
+      "source": "course-python-2023-root",
+      "target": "course-python-2023-dir-aula141",
       "type": "dependency"
     },
     {
-      "source": "cp2-root",
-      "target": "cp2-aula101-py",
+      "source": "course-python-2023-root",
+      "target": "course-python-2023-dir-aula156",
       "type": "dependency"
     },
     {
-      "source": "cp2-root",
-      "target": "cp2-aula102-py",
+      "source": "course-python-2023-root",
+      "target": "course-python-2023-dir-aula158",
       "type": "dependency"
     },
     {
-      "source": "cp2-root",
-      "target": "cp2-aula103-py",
+      "source": "course-python-2023-root",
+      "target": "course-python-2023-dir-aula190-site",
       "type": "dependency"
     },
     {
-      "source": "cp2-root",
-      "target": "cp2-aula104-py",
+      "source": "course-python-2023-root",
+      "target": "course-python-2023-dir-aula193",
       "type": "dependency"
     },
     {
-      "source": "cp2-root",
-      "target": "cp2-aula105-py",
+      "source": "course-python-2023-root",
+      "target": "course-python-2023-dir-aula197",
       "type": "dependency"
     },
     {
-      "source": "cp2-root",
-      "target": "cp2-aula106-py",
+      "source": "course-python-2023-root",
+      "target": "course-python-2023-dir-aula199",
       "type": "dependency"
     },
     {
-      "source": "cp2-root",
-      "target": "cp2-aula141",
+      "source": "course-python-2023-root",
+      "target": "course-python-2023-dir-aula200",
       "type": "dependency"
     },
     {
-      "source": "cp2-aula141",
-      "target": "cp2-aula141-eletronico-py",
+      "source": "course-python-2023-root",
+      "target": "course-python-2023-dir-aula201",
       "type": "dependency"
     },
     {
-      "source": "cp2-aula141",
-      "target": "cp2-aula141-log-py",
+      "source": "course-python-2023-root",
+      "target": "course-python-2023-dir-aula202-calculadora",
       "type": "dependency"
     },
     {
-      "source": "cp2-aula141",
-      "target": "cp2-aula141-main-py",
+      "source": "course-python-2023-root",
+      "target": "course-python-2023-dir-aula203-qtdesigner",
       "type": "dependency"
     },
     {
-      "source": "cp2-root",
-      "target": "cp2-aula156",
+      "source": "course-python-2023-root",
+      "target": "course-python-2023-dir-aula204",
       "type": "dependency"
     },
     {
-      "source": "cp2-aula156",
-      "target": "cp2-aula156-documentando-class-py",
+      "source": "course-python-2023-root",
+      "target": "course-python-2023-dir-aula205",
       "type": "dependency"
     },
     {
-      "source": "cp2-aula156",
-      "target": "cp2-aula156-documentando-funcoes-py",
+      "source": "course-python-2023-root",
+      "target": "course-python-2023-dir-aula206",
       "type": "dependency"
     },
     {
-      "source": "cp2-aula156",
-      "target": "cp2-aula156-main-py",
+      "source": "course-python-2023-root",
+      "target": "course-python-2023-dir-aula207-ola-django",
       "type": "dependency"
     },
     {
-      "source": "cp2-aula156",
-      "target": "cp2-aula156-varias-linhas-py",
+      "source": "course-python-2023-root",
+      "target": "course-python-2023-dir-aula99-package",
       "type": "dependency"
     },
     {
-      "source": "cp2-aula156",
-      "target": "cp2-aula156-uma-linha-py",
+      "source": "course-python-2023-root",
+      "target": "course-python-2023-dir-dados",
       "type": "dependency"
     },
     {
-      "source": "cp2-root",
-      "target": "cp2-aula158",
+      "source": "course-python-2023-dir-aula203-qtdesigner",
+      "target": "course-python-2023-dir-aula203-qtdesigner-src",
       "type": "dependency"
     },
     {
-      "source": "cp2-aula158",
-      "target": "cp2-aula158-banco-py",
+      "source": "course-python-2023-dir-aula203-qtdesigner",
+      "target": "course-python-2023-dir-aula203-qtdesigner-ui",
       "type": "dependency"
     },
     {
-      "source": "cp2-aula158",
-      "target": "cp2-aula158-contas-py",
+      "source": "course-python-2023-dir-aula207-ola-django",
+      "target": "course-python-2023-dir-aula207-ola-django-base",
       "type": "dependency"
     },
     {
-      "source": "cp2-aula158",
-      "target": "cp2-aula158-main-py",
+      "source": "course-python-2023-dir-aula207-ola-django",
+      "target": "course-python-2023-dir-aula207-ola-django-blog",
       "type": "dependency"
     },
     {
-      "source": "cp2-aula158",
-      "target": "cp2-aula158-pessoas-py",
+      "source": "course-python-2023-dir-aula207-ola-django",
+      "target": "course-python-2023-dir-aula207-ola-django-home",
       "type": "dependency"
     },
     {
-      "source": "cp2-root",
-      "target": "cp2-aula190-site",
+      "source": "course-python-2023-dir-aula207-ola-django",
+      "target": "course-python-2023-dir-aula207-ola-django-project",
       "type": "dependency"
     },
     {
-      "source": "cp2-aula190-site",
-      "target": "cp2-aula190-site-index-html",
+      "source": "course-python-2023-dir-aula207-ola-django-base",
+      "target": "course-python-2023-dir-aula207-ola-django-base-global",
       "type": "dependency"
     },
     {
-      "source": "cp2-aula190-site",
-      "target": "cp2-aula190-site-style-css",
+      "source": "course-python-2023-dir-aula207-ola-django-base",
+      "target": "course-python-2023-dir-aula207-ola-django-base-static",
       "type": "dependency"
     },
     {
-      "source": "cp2-root",
-      "target": "cp2-aula193",
+      "source": "course-python-2023-dir-aula207-ola-django-blog",
+      "target": "course-python-2023-dir-aula207-ola-django-blog-migrations",
+      "type": "dependency"
+    },
+    {
+      "source": "course-python-2023-dir-aula207-ola-django-blog",
+      "target": "course-python-2023-dir-aula207-ola-django-blog-templates",
+      "type": "dependency"
+    },
+    {
+      "source": "course-python-2023-dir-aula207-ola-django-home",
+      "target": "course-python-2023-dir-aula207-ola-django-home-migrations",
+      "type": "dependency"
+    },
+    {
+      "source": "course-python-2023-dir-aula207-ola-django-home",
+      "target": "course-python-2023-dir-aula207-ola-django-home-templates",
+      "type": "dependency"
+    },
+    {
+      "source": "course-python-2023-dir-aula207-ola-django-base-global",
+      "target": "course-python-2023-dir-aula207-ola-django-base-global-partials",
+      "type": "dependency"
+    },
+    {
+      "source": "course-python-2023-dir-aula207-ola-django-base-static",
+      "target": "course-python-2023-dir-aula207-ola-django-base-static-global",
+      "type": "dependency"
+    },
+    {
+      "source": "course-python-2023-dir-aula207-ola-django-blog-templates",
+      "target": "course-python-2023-dir-aula207-ola-django-blog-templates-blog",
+      "type": "dependency"
+    },
+    {
+      "source": "course-python-2023-dir-aula207-ola-django-home-templates",
+      "target": "course-python-2023-dir-aula207-ola-django-home-templates-home",
+      "type": "dependency"
+    },
+    {
+      "source": "course-python-2023-dir-aula207-ola-django-base-static-global",
+      "target": "course-python-2023-dir-aula207-ola-django-base-static-global-css",
+      "type": "dependency"
+    },
+    {
+      "source": "course-python-2023-root",
+      "target": "course-python-2023-grp-files",
+      "type": "dependency"
+    },
+    {
+      "source": "course-python-2023-root",
+      "target": "course-python-2023-grp-files-a-1-12",
+      "type": "dependency"
+    },
+    {
+      "source": "course-python-2023-root",
+      "target": "course-python-2023-grp-files-a-13-24",
+      "type": "dependency"
+    },
+    {
+      "source": "course-python-2023-root",
+      "target": "course-python-2023-grp-files-a-25-36",
+      "type": "dependency"
+    },
+    {
+      "source": "course-python-2023-root",
+      "target": "course-python-2023-grp-files-a-37-48",
+      "type": "dependency"
+    },
+    {
+      "source": "course-python-2023-root",
+      "target": "course-python-2023-grp-files-a-49-60",
+      "type": "dependency"
+    },
+    {
+      "source": "course-python-2023-root",
+      "target": "course-python-2023-grp-files-a-61-72",
+      "type": "dependency"
+    },
+    {
+      "source": "course-python-2023-root",
+      "target": "course-python-2023-grp-files-a-73-84",
+      "type": "dependency"
+    },
+    {
+      "source": "course-python-2023-root",
+      "target": "course-python-2023-grp-files-a-85-96",
+      "type": "dependency"
+    },
+    {
+      "source": "course-python-2023-root",
+      "target": "course-python-2023-grp-files-a-97-108",
+      "type": "dependency"
+    },
+    {
+      "source": "course-python-2023-root",
+      "target": "course-python-2023-grp-files-a-109-120",
+      "type": "dependency"
+    },
+    {
+      "source": "course-python-2023-root",
+      "target": "course-python-2023-grp-files-a-121-132",
+      "type": "dependency"
+    },
+    {
+      "source": "course-python-2023-root",
+      "target": "course-python-2023-grp-files-a-133-144",
+      "type": "dependency"
+    },
+    {
+      "source": "course-python-2023-root",
+      "target": "course-python-2023-grp-files-a-145-156",
+      "type": "dependency"
+    },
+    {
+      "source": "course-python-2023-root",
+      "target": "course-python-2023-grp-files-a-157-168",
+      "type": "dependency"
+    },
+    {
+      "source": "course-python-2023-root",
+      "target": "course-python-2023-grp-files-a-169-180",
+      "type": "dependency"
+    },
+    {
+      "source": "course-python-2023-root",
+      "target": "course-python-2023-grp-files-a-181-192",
+      "type": "dependency"
+    },
+    {
+      "source": "course-python-2023-root",
+      "target": "course-python-2023-grp-files-a-193-201",
+      "type": "dependency"
+    },
+    {
+      "source": "course-python-2023-grp-files",
+      "target": "course-python-2023-file-gitignore",
+      "type": "dependency"
+    },
+    {
+      "source": "course-python-2023-grp-files-a-1-12",
+      "target": "course-python-2023-file-aula1-py",
+      "type": "dependency"
+    },
+    {
+      "source": "course-python-2023-grp-files-a-1-12",
+      "target": "course-python-2023-file-aula10-py",
+      "type": "dependency"
+    },
+    {
+      "source": "course-python-2023-grp-files-a-1-12",
+      "target": "course-python-2023-file-aula100-py",
+      "type": "dependency"
+    },
+    {
+      "source": "course-python-2023-grp-files-a-1-12",
+      "target": "course-python-2023-file-aula101-py",
+      "type": "dependency"
+    },
+    {
+      "source": "course-python-2023-grp-files-a-1-12",
+      "target": "course-python-2023-file-aula102-py",
+      "type": "dependency"
+    },
+    {
+      "source": "course-python-2023-grp-files-a-1-12",
+      "target": "course-python-2023-file-aula103-py",
+      "type": "dependency"
+    },
+    {
+      "source": "course-python-2023-grp-files-a-1-12",
+      "target": "course-python-2023-file-aula104-py",
+      "type": "dependency"
+    },
+    {
+      "source": "course-python-2023-grp-files-a-1-12",
+      "target": "course-python-2023-file-aula105-py",
+      "type": "dependency"
+    },
+    {
+      "source": "course-python-2023-grp-files-a-1-12",
+      "target": "course-python-2023-file-aula106-py",
+      "type": "dependency"
+    },
+    {
+      "source": "course-python-2023-grp-files-a-1-12",
+      "target": "course-python-2023-file-aula107-py",
+      "type": "dependency"
+    },
+    {
+      "source": "course-python-2023-grp-files-a-1-12",
+      "target": "course-python-2023-file-aula108-py",
+      "type": "dependency"
+    },
+    {
+      "source": "course-python-2023-grp-files-a-1-12",
+      "target": "course-python-2023-file-aula109-py",
+      "type": "dependency"
+    },
+    {
+      "source": "course-python-2023-grp-files-a-13-24",
+      "target": "course-python-2023-file-aula11-py",
+      "type": "dependency"
+    },
+    {
+      "source": "course-python-2023-grp-files-a-13-24",
+      "target": "course-python-2023-file-aula110-py",
+      "type": "dependency"
+    },
+    {
+      "source": "course-python-2023-grp-files-a-13-24",
+      "target": "course-python-2023-file-aula111-py",
+      "type": "dependency"
+    },
+    {
+      "source": "course-python-2023-grp-files-a-13-24",
+      "target": "course-python-2023-file-aula112-py",
+      "type": "dependency"
+    },
+    {
+      "source": "course-python-2023-grp-files-a-13-24",
+      "target": "course-python-2023-file-aula113-py",
+      "type": "dependency"
+    },
+    {
+      "source": "course-python-2023-grp-files-a-13-24",
+      "target": "course-python-2023-file-aula114-py",
+      "type": "dependency"
+    },
+    {
+      "source": "course-python-2023-grp-files-a-13-24",
+      "target": "course-python-2023-file-aula115-py",
+      "type": "dependency"
+    },
+    {
+      "source": "course-python-2023-grp-files-a-13-24",
+      "target": "course-python-2023-file-aula116-py",
+      "type": "dependency"
+    },
+    {
+      "source": "course-python-2023-grp-files-a-13-24",
+      "target": "course-python-2023-file-aula117-json",
+      "type": "dependency"
+    },
+    {
+      "source": "course-python-2023-grp-files-a-13-24",
+      "target": "course-python-2023-file-aula117-py",
+      "type": "dependency"
+    },
+    {
+      "source": "course-python-2023-grp-files-a-13-24",
+      "target": "course-python-2023-file-aula118-py",
+      "type": "dependency"
+    },
+    {
+      "source": "course-python-2023-grp-files-a-13-24",
+      "target": "course-python-2023-file-aula119-json",
+      "type": "dependency"
+    },
+    {
+      "source": "course-python-2023-grp-files-a-25-36",
+      "target": "course-python-2023-file-aula119-py",
+      "type": "dependency"
+    },
+    {
+      "source": "course-python-2023-grp-files-a-25-36",
+      "target": "course-python-2023-file-aula12-py",
+      "type": "dependency"
+    },
+    {
+      "source": "course-python-2023-grp-files-a-25-36",
+      "target": "course-python-2023-file-aula120-py",
+      "type": "dependency"
+    },
+    {
+      "source": "course-python-2023-grp-files-a-25-36",
+      "target": "course-python-2023-file-aula121-py",
+      "type": "dependency"
+    },
+    {
+      "source": "course-python-2023-grp-files-a-25-36",
+      "target": "course-python-2023-file-aula122-py",
+      "type": "dependency"
+    },
+    {
+      "source": "course-python-2023-grp-files-a-25-36",
+      "target": "course-python-2023-file-aula123-py",
+      "type": "dependency"
+    },
+    {
+      "source": "course-python-2023-grp-files-a-25-36",
+      "target": "course-python-2023-file-aula124-py",
+      "type": "dependency"
+    },
+    {
+      "source": "course-python-2023-grp-files-a-25-36",
+      "target": "course-python-2023-file-aula125-py",
+      "type": "dependency"
+    },
+    {
+      "source": "course-python-2023-grp-files-a-25-36",
+      "target": "course-python-2023-file-aula126-py",
+      "type": "dependency"
+    },
+    {
+      "source": "course-python-2023-grp-files-a-25-36",
+      "target": "course-python-2023-file-aula127-json",
+      "type": "dependency"
+    },
+    {
+      "source": "course-python-2023-grp-files-a-25-36",
+      "target": "course-python-2023-file-aula127-a-py",
+      "type": "dependency"
+    },
+    {
+      "source": "course-python-2023-grp-files-a-25-36",
+      "target": "course-python-2023-file-aula127-b-py",
+      "type": "dependency"
+    },
+    {
+      "source": "course-python-2023-grp-files-a-37-48",
+      "target": "course-python-2023-file-aula128-py",
+      "type": "dependency"
+    },
+    {
+      "source": "course-python-2023-grp-files-a-37-48",
+      "target": "course-python-2023-file-aula129-py",
+      "type": "dependency"
+    },
+    {
+      "source": "course-python-2023-grp-files-a-37-48",
+      "target": "course-python-2023-file-aula13-py",
+      "type": "dependency"
+    },
+    {
+      "source": "course-python-2023-grp-files-a-37-48",
+      "target": "course-python-2023-file-aula130-py",
+      "type": "dependency"
+    },
+    {
+      "source": "course-python-2023-grp-files-a-37-48",
+      "target": "course-python-2023-file-aula131-py",
+      "type": "dependency"
+    },
+    {
+      "source": "course-python-2023-grp-files-a-37-48",
+      "target": "course-python-2023-file-aula132-py",
+      "type": "dependency"
+    },
+    {
+      "source": "course-python-2023-grp-files-a-37-48",
+      "target": "course-python-2023-file-aula133-py",
+      "type": "dependency"
+    },
+    {
+      "source": "course-python-2023-grp-files-a-37-48",
+      "target": "course-python-2023-file-aula134-py",
+      "type": "dependency"
+    },
+    {
+      "source": "course-python-2023-grp-files-a-37-48",
+      "target": "course-python-2023-file-aula135-py",
+      "type": "dependency"
+    },
+    {
+      "source": "course-python-2023-grp-files-a-37-48",
+      "target": "course-python-2023-file-aula136-py",
+      "type": "dependency"
+    },
+    {
+      "source": "course-python-2023-grp-files-a-37-48",
+      "target": "course-python-2023-file-aula137-py",
+      "type": "dependency"
+    },
+    {
+      "source": "course-python-2023-grp-files-a-37-48",
+      "target": "course-python-2023-file-aula138-py",
+      "type": "dependency"
+    },
+    {
+      "source": "course-python-2023-grp-files-a-49-60",
+      "target": "course-python-2023-file-aula139-py",
+      "type": "dependency"
+    },
+    {
+      "source": "course-python-2023-grp-files-a-49-60",
+      "target": "course-python-2023-file-aula14-py",
+      "type": "dependency"
+    },
+    {
+      "source": "course-python-2023-grp-files-a-49-60",
+      "target": "course-python-2023-file-aula140-py",
+      "type": "dependency"
+    },
+    {
+      "source": "course-python-2023-grp-files-a-49-60",
+      "target": "course-python-2023-file-aula142-py",
+      "type": "dependency"
+    },
+    {
+      "source": "course-python-2023-grp-files-a-49-60",
+      "target": "course-python-2023-file-aula143-py",
+      "type": "dependency"
+    },
+    {
+      "source": "course-python-2023-grp-files-a-49-60",
+      "target": "course-python-2023-file-aula144-py",
+      "type": "dependency"
+    },
+    {
+      "source": "course-python-2023-grp-files-a-49-60",
+      "target": "course-python-2023-file-aula145-py",
+      "type": "dependency"
+    },
+    {
+      "source": "course-python-2023-grp-files-a-49-60",
+      "target": "course-python-2023-file-aula146-py",
+      "type": "dependency"
+    },
+    {
+      "source": "course-python-2023-grp-files-a-49-60",
+      "target": "course-python-2023-file-aula147-py",
+      "type": "dependency"
+    },
+    {
+      "source": "course-python-2023-grp-files-a-49-60",
+      "target": "course-python-2023-file-aula148-py",
+      "type": "dependency"
+    },
+    {
+      "source": "course-python-2023-grp-files-a-49-60",
+      "target": "course-python-2023-file-aula149-py",
+      "type": "dependency"
+    },
+    {
+      "source": "course-python-2023-grp-files-a-49-60",
+      "target": "course-python-2023-file-aula15-py",
+      "type": "dependency"
+    },
+    {
+      "source": "course-python-2023-grp-files-a-61-72",
+      "target": "course-python-2023-file-aula150-py",
+      "type": "dependency"
+    },
+    {
+      "source": "course-python-2023-grp-files-a-61-72",
+      "target": "course-python-2023-file-aula151-py",
+      "type": "dependency"
+    },
+    {
+      "source": "course-python-2023-grp-files-a-61-72",
+      "target": "course-python-2023-file-aula152-py",
+      "type": "dependency"
+    },
+    {
+      "source": "course-python-2023-grp-files-a-61-72",
+      "target": "course-python-2023-file-aula153-py",
+      "type": "dependency"
+    },
+    {
+      "source": "course-python-2023-grp-files-a-61-72",
+      "target": "course-python-2023-file-aula154-py",
+      "type": "dependency"
+    },
+    {
+      "source": "course-python-2023-grp-files-a-61-72",
+      "target": "course-python-2023-file-aula155-py",
+      "type": "dependency"
+    },
+    {
+      "source": "course-python-2023-grp-files-a-61-72",
+      "target": "course-python-2023-file-aula157-py",
+      "type": "dependency"
+    },
+    {
+      "source": "course-python-2023-grp-files-a-61-72",
+      "target": "course-python-2023-file-aula159-py",
+      "type": "dependency"
+    },
+    {
+      "source": "course-python-2023-grp-files-a-61-72",
+      "target": "course-python-2023-file-aula16-py",
+      "type": "dependency"
+    },
+    {
+      "source": "course-python-2023-grp-files-a-61-72",
+      "target": "course-python-2023-file-aula160-py",
+      "type": "dependency"
+    },
+    {
+      "source": "course-python-2023-grp-files-a-61-72",
+      "target": "course-python-2023-file-aula161-py",
+      "type": "dependency"
+    },
+    {
+      "source": "course-python-2023-grp-files-a-61-72",
+      "target": "course-python-2023-file-aula162-py",
+      "type": "dependency"
+    },
+    {
+      "source": "course-python-2023-grp-files-a-73-84",
+      "target": "course-python-2023-file-aula163-py",
+      "type": "dependency"
+    },
+    {
+      "source": "course-python-2023-grp-files-a-73-84",
+      "target": "course-python-2023-file-aula164-py",
+      "type": "dependency"
+    },
+    {
+      "source": "course-python-2023-grp-files-a-73-84",
+      "target": "course-python-2023-file-aula165-py",
+      "type": "dependency"
+    },
+    {
+      "source": "course-python-2023-grp-files-a-73-84",
+      "target": "course-python-2023-file-aula166-py",
+      "type": "dependency"
+    },
+    {
+      "source": "course-python-2023-grp-files-a-73-84",
+      "target": "course-python-2023-file-aula167-py",
+      "type": "dependency"
+    },
+    {
+      "source": "course-python-2023-grp-files-a-73-84",
+      "target": "course-python-2023-file-aula168-py",
+      "type": "dependency"
+    },
+    {
+      "source": "course-python-2023-grp-files-a-73-84",
+      "target": "course-python-2023-file-aula169-py",
+      "type": "dependency"
+    },
+    {
+      "source": "course-python-2023-grp-files-a-73-84",
+      "target": "course-python-2023-file-aula17-py",
+      "type": "dependency"
+    },
+    {
+      "source": "course-python-2023-grp-files-a-73-84",
+      "target": "course-python-2023-file-aula170-py",
+      "type": "dependency"
+    },
+    {
+      "source": "course-python-2023-grp-files-a-73-84",
+      "target": "course-python-2023-file-aula171-py",
+      "type": "dependency"
+    },
+    {
+      "source": "course-python-2023-grp-files-a-73-84",
+      "target": "course-python-2023-file-aula172-py",
+      "type": "dependency"
+    },
+    {
+      "source": "course-python-2023-grp-files-a-73-84",
+      "target": "course-python-2023-file-aula173-py",
+      "type": "dependency"
+    },
+    {
+      "source": "course-python-2023-grp-files-a-85-96",
+      "target": "course-python-2023-file-aula174-py",
+      "type": "dependency"
+    },
+    {
+      "source": "course-python-2023-grp-files-a-85-96",
+      "target": "course-python-2023-file-aula175-json",
+      "type": "dependency"
+    },
+    {
+      "source": "course-python-2023-grp-files-a-85-96",
+      "target": "course-python-2023-file-aula175-py",
+      "type": "dependency"
+    },
+    {
+      "source": "course-python-2023-grp-files-a-85-96",
+      "target": "course-python-2023-file-aula176-py",
+      "type": "dependency"
+    },
+    {
+      "source": "course-python-2023-grp-files-a-85-96",
+      "target": "course-python-2023-file-aula177-json",
+      "type": "dependency"
+    },
+    {
+      "source": "course-python-2023-grp-files-a-85-96",
+      "target": "course-python-2023-file-aula177-py",
+      "type": "dependency"
+    },
+    {
+      "source": "course-python-2023-grp-files-a-85-96",
+      "target": "course-python-2023-file-aula178-py",
+      "type": "dependency"
+    },
+    {
+      "source": "course-python-2023-grp-files-a-85-96",
+      "target": "course-python-2023-file-aula179-py",
+      "type": "dependency"
+    },
+    {
+      "source": "course-python-2023-grp-files-a-85-96",
+      "target": "course-python-2023-file-aula18-py",
+      "type": "dependency"
+    },
+    {
+      "source": "course-python-2023-grp-files-a-85-96",
+      "target": "course-python-2023-file-aula180-py",
+      "type": "dependency"
+    },
+    {
+      "source": "course-python-2023-grp-files-a-85-96",
+      "target": "course-python-2023-file-aula181-py",
+      "type": "dependency"
+    },
+    {
+      "source": "course-python-2023-grp-files-a-85-96",
+      "target": "course-python-2023-file-aula182-py",
+      "type": "dependency"
+    },
+    {
+      "source": "course-python-2023-grp-files-a-97-108",
+      "target": "course-python-2023-file-aula183-py",
+      "type": "dependency"
+    },
+    {
+      "source": "course-python-2023-grp-files-a-97-108",
+      "target": "course-python-2023-file-aula184-py",
+      "type": "dependency"
+    },
+    {
+      "source": "course-python-2023-grp-files-a-97-108",
+      "target": "course-python-2023-file-aula185-html",
+      "type": "dependency"
+    },
+    {
+      "source": "course-python-2023-grp-files-a-97-108",
+      "target": "course-python-2023-file-aula185-py",
+      "type": "dependency"
+    },
+    {
+      "source": "course-python-2023-grp-files-a-97-108",
+      "target": "course-python-2023-file-aula186-py",
+      "type": "dependency"
+    },
+    {
+      "source": "course-python-2023-grp-files-a-97-108",
+      "target": "course-python-2023-file-aula187-py",
+      "type": "dependency"
+    },
+    {
+      "source": "course-python-2023-grp-files-a-97-108",
+      "target": "course-python-2023-file-aula188-py",
+      "type": "dependency"
+    },
+    {
+      "source": "course-python-2023-grp-files-a-97-108",
+      "target": "course-python-2023-file-aula189-py",
+      "type": "dependency"
+    },
+    {
+      "source": "course-python-2023-grp-files-a-97-108",
+      "target": "course-python-2023-file-aula19-py",
+      "type": "dependency"
+    },
+    {
+      "source": "course-python-2023-grp-files-a-97-108",
+      "target": "course-python-2023-file-aula191-py",
+      "type": "dependency"
+    },
+    {
+      "source": "course-python-2023-grp-files-a-97-108",
+      "target": "course-python-2023-file-aula192-py",
+      "type": "dependency"
+    },
+    {
+      "source": "course-python-2023-grp-files-a-97-108",
+      "target": "course-python-2023-file-aula194-py",
+      "type": "dependency"
+    },
+    {
+      "source": "course-python-2023-grp-files-a-109-120",
+      "target": "course-python-2023-file-aula195-py",
+      "type": "dependency"
+    },
+    {
+      "source": "course-python-2023-grp-files-a-109-120",
+      "target": "course-python-2023-file-aula196-py",
+      "type": "dependency"
+    },
+    {
+      "source": "course-python-2023-grp-files-a-109-120",
+      "target": "course-python-2023-file-aula198-py",
+      "type": "dependency"
+    },
+    {
+      "source": "course-python-2023-grp-files-a-109-120",
+      "target": "course-python-2023-file-aula2-py",
+      "type": "dependency"
+    },
+    {
+      "source": "course-python-2023-grp-files-a-109-120",
+      "target": "course-python-2023-file-aula20-py",
+      "type": "dependency"
+    },
+    {
+      "source": "course-python-2023-grp-files-a-109-120",
+      "target": "course-python-2023-file-aula21-py",
+      "type": "dependency"
+    },
+    {
+      "source": "course-python-2023-grp-files-a-109-120",
+      "target": "course-python-2023-file-aula22-py",
+      "type": "dependency"
+    },
+    {
+      "source": "course-python-2023-grp-files-a-109-120",
+      "target": "course-python-2023-file-aula23-py",
+      "type": "dependency"
+    },
+    {
+      "source": "course-python-2023-grp-files-a-109-120",
+      "target": "course-python-2023-file-aula24-py",
+      "type": "dependency"
+    },
+    {
+      "source": "course-python-2023-grp-files-a-109-120",
+      "target": "course-python-2023-file-aula25-py",
+      "type": "dependency"
+    },
+    {
+      "source": "course-python-2023-grp-files-a-109-120",
+      "target": "course-python-2023-file-aula26-py",
+      "type": "dependency"
+    },
+    {
+      "source": "course-python-2023-grp-files-a-109-120",
+      "target": "course-python-2023-file-aula27-py",
+      "type": "dependency"
+    },
+    {
+      "source": "course-python-2023-grp-files-a-121-132",
+      "target": "course-python-2023-file-aula28-py",
+      "type": "dependency"
+    },
+    {
+      "source": "course-python-2023-grp-files-a-121-132",
+      "target": "course-python-2023-file-aula29-py",
+      "type": "dependency"
+    },
+    {
+      "source": "course-python-2023-grp-files-a-121-132",
+      "target": "course-python-2023-file-aula3-py",
+      "type": "dependency"
+    },
+    {
+      "source": "course-python-2023-grp-files-a-121-132",
+      "target": "course-python-2023-file-aula30-py",
+      "type": "dependency"
+    },
+    {
+      "source": "course-python-2023-grp-files-a-121-132",
+      "target": "course-python-2023-file-aula31-py",
+      "type": "dependency"
+    },
+    {
+      "source": "course-python-2023-grp-files-a-121-132",
+      "target": "course-python-2023-file-aula32-py",
+      "type": "dependency"
+    },
+    {
+      "source": "course-python-2023-grp-files-a-121-132",
+      "target": "course-python-2023-file-aula33-py",
+      "type": "dependency"
+    },
+    {
+      "source": "course-python-2023-grp-files-a-121-132",
+      "target": "course-python-2023-file-aula34-py",
+      "type": "dependency"
+    },
+    {
+      "source": "course-python-2023-grp-files-a-121-132",
+      "target": "course-python-2023-file-aula35-py",
+      "type": "dependency"
+    },
+    {
+      "source": "course-python-2023-grp-files-a-121-132",
+      "target": "course-python-2023-file-aula36-py",
+      "type": "dependency"
+    },
+    {
+      "source": "course-python-2023-grp-files-a-121-132",
+      "target": "course-python-2023-file-aula37-py",
+      "type": "dependency"
+    },
+    {
+      "source": "course-python-2023-grp-files-a-121-132",
+      "target": "course-python-2023-file-aula38-py",
+      "type": "dependency"
+    },
+    {
+      "source": "course-python-2023-grp-files-a-133-144",
+      "target": "course-python-2023-file-aula39-py",
+      "type": "dependency"
+    },
+    {
+      "source": "course-python-2023-grp-files-a-133-144",
+      "target": "course-python-2023-file-aula4-py",
+      "type": "dependency"
+    },
+    {
+      "source": "course-python-2023-grp-files-a-133-144",
+      "target": "course-python-2023-file-aula40-py",
+      "type": "dependency"
+    },
+    {
+      "source": "course-python-2023-grp-files-a-133-144",
+      "target": "course-python-2023-file-aula41-py",
+      "type": "dependency"
+    },
+    {
+      "source": "course-python-2023-grp-files-a-133-144",
+      "target": "course-python-2023-file-aula42-py",
+      "type": "dependency"
+    },
+    {
+      "source": "course-python-2023-grp-files-a-133-144",
+      "target": "course-python-2023-file-aula43-py",
+      "type": "dependency"
+    },
+    {
+      "source": "course-python-2023-grp-files-a-133-144",
+      "target": "course-python-2023-file-aula44-py",
+      "type": "dependency"
+    },
+    {
+      "source": "course-python-2023-grp-files-a-133-144",
+      "target": "course-python-2023-file-aula45-py",
+      "type": "dependency"
+    },
+    {
+      "source": "course-python-2023-grp-files-a-133-144",
+      "target": "course-python-2023-file-aula46-py",
+      "type": "dependency"
+    },
+    {
+      "source": "course-python-2023-grp-files-a-133-144",
+      "target": "course-python-2023-file-aula47-py",
+      "type": "dependency"
+    },
+    {
+      "source": "course-python-2023-grp-files-a-133-144",
+      "target": "course-python-2023-file-aula48-py",
+      "type": "dependency"
+    },
+    {
+      "source": "course-python-2023-grp-files-a-133-144",
+      "target": "course-python-2023-file-aula49-py",
+      "type": "dependency"
+    },
+    {
+      "source": "course-python-2023-grp-files-a-145-156",
+      "target": "course-python-2023-file-aula5-py",
+      "type": "dependency"
+    },
+    {
+      "source": "course-python-2023-grp-files-a-145-156",
+      "target": "course-python-2023-file-aula50-py",
+      "type": "dependency"
+    },
+    {
+      "source": "course-python-2023-grp-files-a-145-156",
+      "target": "course-python-2023-file-aula51-py",
+      "type": "dependency"
+    },
+    {
+      "source": "course-python-2023-grp-files-a-145-156",
+      "target": "course-python-2023-file-aula52-py",
+      "type": "dependency"
+    },
+    {
+      "source": "course-python-2023-grp-files-a-145-156",
+      "target": "course-python-2023-file-aula53-py",
+      "type": "dependency"
+    },
+    {
+      "source": "course-python-2023-grp-files-a-145-156",
+      "target": "course-python-2023-file-aula54-py",
+      "type": "dependency"
+    },
+    {
+      "source": "course-python-2023-grp-files-a-145-156",
+      "target": "course-python-2023-file-aula55-py",
+      "type": "dependency"
+    },
+    {
+      "source": "course-python-2023-grp-files-a-145-156",
+      "target": "course-python-2023-file-aula56-py",
+      "type": "dependency"
+    },
+    {
+      "source": "course-python-2023-grp-files-a-145-156",
+      "target": "course-python-2023-file-aula57-py",
+      "type": "dependency"
+    },
+    {
+      "source": "course-python-2023-grp-files-a-145-156",
+      "target": "course-python-2023-file-aula58-py",
+      "type": "dependency"
+    },
+    {
+      "source": "course-python-2023-grp-files-a-145-156",
+      "target": "course-python-2023-file-aula59-py",
+      "type": "dependency"
+    },
+    {
+      "source": "course-python-2023-grp-files-a-145-156",
+      "target": "course-python-2023-file-aula6-py",
+      "type": "dependency"
+    },
+    {
+      "source": "course-python-2023-grp-files-a-157-168",
+      "target": "course-python-2023-file-aula60-py",
+      "type": "dependency"
+    },
+    {
+      "source": "course-python-2023-grp-files-a-157-168",
+      "target": "course-python-2023-file-aula61-py",
+      "type": "dependency"
+    },
+    {
+      "source": "course-python-2023-grp-files-a-157-168",
+      "target": "course-python-2023-file-aula62-py",
+      "type": "dependency"
+    },
+    {
+      "source": "course-python-2023-grp-files-a-157-168",
+      "target": "course-python-2023-file-aula63-py",
+      "type": "dependency"
+    },
+    {
+      "source": "course-python-2023-grp-files-a-157-168",
+      "target": "course-python-2023-file-aula64-py",
+      "type": "dependency"
+    },
+    {
+      "source": "course-python-2023-grp-files-a-157-168",
+      "target": "course-python-2023-file-aula65-py",
+      "type": "dependency"
+    },
+    {
+      "source": "course-python-2023-grp-files-a-157-168",
+      "target": "course-python-2023-file-aula66-py",
+      "type": "dependency"
+    },
+    {
+      "source": "course-python-2023-grp-files-a-157-168",
+      "target": "course-python-2023-file-aula67-py",
+      "type": "dependency"
+    },
+    {
+      "source": "course-python-2023-grp-files-a-157-168",
+      "target": "course-python-2023-file-aula68-py",
+      "type": "dependency"
+    },
+    {
+      "source": "course-python-2023-grp-files-a-157-168",
+      "target": "course-python-2023-file-aula69-py",
+      "type": "dependency"
+    },
+    {
+      "source": "course-python-2023-grp-files-a-157-168",
+      "target": "course-python-2023-file-aula7-py",
+      "type": "dependency"
+    },
+    {
+      "source": "course-python-2023-grp-files-a-157-168",
+      "target": "course-python-2023-file-aula70-py",
+      "type": "dependency"
+    },
+    {
+      "source": "course-python-2023-grp-files-a-169-180",
+      "target": "course-python-2023-file-aula71-py",
+      "type": "dependency"
+    },
+    {
+      "source": "course-python-2023-grp-files-a-169-180",
+      "target": "course-python-2023-file-aula72-py",
+      "type": "dependency"
+    },
+    {
+      "source": "course-python-2023-grp-files-a-169-180",
+      "target": "course-python-2023-file-aula73-py",
+      "type": "dependency"
+    },
+    {
+      "source": "course-python-2023-grp-files-a-169-180",
+      "target": "course-python-2023-file-aula74-py",
+      "type": "dependency"
+    },
+    {
+      "source": "course-python-2023-grp-files-a-169-180",
+      "target": "course-python-2023-file-aula75-py",
+      "type": "dependency"
+    },
+    {
+      "source": "course-python-2023-grp-files-a-169-180",
+      "target": "course-python-2023-file-aula76-py",
+      "type": "dependency"
+    },
+    {
+      "source": "course-python-2023-grp-files-a-169-180",
+      "target": "course-python-2023-file-aula77-py",
+      "type": "dependency"
+    },
+    {
+      "source": "course-python-2023-grp-files-a-169-180",
+      "target": "course-python-2023-file-aula78-py",
+      "type": "dependency"
+    },
+    {
+      "source": "course-python-2023-grp-files-a-169-180",
+      "target": "course-python-2023-file-aula79-py",
+      "type": "dependency"
+    },
+    {
+      "source": "course-python-2023-grp-files-a-169-180",
+      "target": "course-python-2023-file-aula8-py",
+      "type": "dependency"
+    },
+    {
+      "source": "course-python-2023-grp-files-a-169-180",
+      "target": "course-python-2023-file-aula80-py",
+      "type": "dependency"
+    },
+    {
+      "source": "course-python-2023-grp-files-a-169-180",
+      "target": "course-python-2023-file-aula81-py",
+      "type": "dependency"
+    },
+    {
+      "source": "course-python-2023-grp-files-a-181-192",
+      "target": "course-python-2023-file-aula82-py",
+      "type": "dependency"
+    },
+    {
+      "source": "course-python-2023-grp-files-a-181-192",
+      "target": "course-python-2023-file-aula83-py",
+      "type": "dependency"
+    },
+    {
+      "source": "course-python-2023-grp-files-a-181-192",
+      "target": "course-python-2023-file-aula84-py",
+      "type": "dependency"
+    },
+    {
+      "source": "course-python-2023-grp-files-a-181-192",
+      "target": "course-python-2023-file-aula85-py",
+      "type": "dependency"
+    },
+    {
+      "source": "course-python-2023-grp-files-a-181-192",
+      "target": "course-python-2023-file-aula86-py",
+      "type": "dependency"
+    },
+    {
+      "source": "course-python-2023-grp-files-a-181-192",
+      "target": "course-python-2023-file-aula87-py",
+      "type": "dependency"
+    },
+    {
+      "source": "course-python-2023-grp-files-a-181-192",
+      "target": "course-python-2023-file-aula88-py",
+      "type": "dependency"
+    },
+    {
+      "source": "course-python-2023-grp-files-a-181-192",
+      "target": "course-python-2023-file-aula89-py",
+      "type": "dependency"
+    },
+    {
+      "source": "course-python-2023-grp-files-a-181-192",
+      "target": "course-python-2023-file-aula9-py",
+      "type": "dependency"
+    },
+    {
+      "source": "course-python-2023-grp-files-a-181-192",
+      "target": "course-python-2023-file-aula90-py",
+      "type": "dependency"
+    },
+    {
+      "source": "course-python-2023-grp-files-a-181-192",
+      "target": "course-python-2023-file-aula91-py",
+      "type": "dependency"
+    },
+    {
+      "source": "course-python-2023-grp-files-a-181-192",
+      "target": "course-python-2023-file-aula92-py",
+      "type": "dependency"
+    },
+    {
+      "source": "course-python-2023-grp-files-a-193-201",
+      "target": "course-python-2023-file-aula93-py",
+      "type": "dependency"
+    },
+    {
+      "source": "course-python-2023-grp-files-a-193-201",
+      "target": "course-python-2023-file-aula94-py",
+      "type": "dependency"
+    },
+    {
+      "source": "course-python-2023-grp-files-a-193-201",
+      "target": "course-python-2023-file-aula95-py",
+      "type": "dependency"
+    },
+    {
+      "source": "course-python-2023-grp-files-a-193-201",
+      "target": "course-python-2023-file-aula96-py",
+      "type": "dependency"
+    },
+    {
+      "source": "course-python-2023-grp-files-a-193-201",
+      "target": "course-python-2023-file-aula97-py",
+      "type": "dependency"
+    },
+    {
+      "source": "course-python-2023-grp-files-a-193-201",
+      "target": "course-python-2023-file-aula97-m-py",
+      "type": "dependency"
+    },
+    {
+      "source": "course-python-2023-grp-files-a-193-201",
+      "target": "course-python-2023-file-aula98-py",
+      "type": "dependency"
+    },
+    {
+      "source": "course-python-2023-grp-files-a-193-201",
+      "target": "course-python-2023-file-aula98-m-py",
+      "type": "dependency"
+    },
+    {
+      "source": "course-python-2023-grp-files-a-193-201",
+      "target": "course-python-2023-file-aula99-py",
+      "type": "dependency"
+    },
+    {
+      "source": "course-python-2023-dir-vscode",
+      "target": "course-python-2023-file-vscode-keybindings-json",
+      "type": "dependency"
+    },
+    {
+      "source": "course-python-2023-dir-vscode",
+      "target": "course-python-2023-file-vscode-launch-json",
+      "type": "dependency"
+    },
+    {
+      "source": "course-python-2023-dir-vscode",
+      "target": "course-python-2023-file-vscode-settings-json",
+      "type": "dependency"
+    },
+    {
+      "source": "course-python-2023-dir-aula141",
+      "target": "course-python-2023-file-aula141-eletronico-py",
+      "type": "dependency"
+    },
+    {
+      "source": "course-python-2023-dir-aula141",
+      "target": "course-python-2023-file-aula141-log-py",
+      "type": "dependency"
+    },
+    {
+      "source": "course-python-2023-dir-aula141",
+      "target": "course-python-2023-file-aula141-main-py",
+      "type": "dependency"
+    },
+    {
+      "source": "course-python-2023-dir-aula156",
+      "target": "course-python-2023-file-aula156-documentando-class-py",
+      "type": "dependency"
+    },
+    {
+      "source": "course-python-2023-dir-aula156",
+      "target": "course-python-2023-file-aula156-documentando-funcoes-py",
+      "type": "dependency"
+    },
+    {
+      "source": "course-python-2023-dir-aula156",
+      "target": "course-python-2023-file-aula156-main-py",
+      "type": "dependency"
+    },
+    {
+      "source": "course-python-2023-dir-aula156",
+      "target": "course-python-2023-file-aula156-uma-linha-py",
+      "type": "dependency"
+    },
+    {
+      "source": "course-python-2023-dir-aula156",
+      "target": "course-python-2023-file-aula156-varias-linhas-py",
+      "type": "dependency"
+    },
+    {
+      "source": "course-python-2023-dir-aula158",
+      "target": "course-python-2023-file-aula158-banco-py",
+      "type": "dependency"
+    },
+    {
+      "source": "course-python-2023-dir-aula158",
+      "target": "course-python-2023-file-aula158-contas-py",
+      "type": "dependency"
+    },
+    {
+      "source": "course-python-2023-dir-aula158",
+      "target": "course-python-2023-file-aula158-main-py",
+      "type": "dependency"
+    },
+    {
+      "source": "course-python-2023-dir-aula158",
+      "target": "course-python-2023-file-aula158-pessoas-py",
+      "type": "dependency"
+    },
+    {
+      "source": "course-python-2023-dir-aula190-site",
+      "target": "course-python-2023-file-aula190-site-index-html",
+      "type": "dependency"
+    },
+    {
+      "source": "course-python-2023-dir-aula190-site",
+      "target": "course-python-2023-file-aula190-site-style-css",
+      "type": "dependency"
+    },
+    {
+      "source": "course-python-2023-dir-aula193",
+      "target": "course-python-2023-file-aula193-main-py",
+      "type": "dependency"
+    },
+    {
+      "source": "course-python-2023-dir-aula197",
+      "target": "course-python-2023-file-aula197-main-py",
+      "type": "dependency"
+    },
+    {
+      "source": "course-python-2023-dir-aula199",
+      "target": "course-python-2023-file-aula199-creating-py",
+      "type": "dependency"
+    },
+    {
+      "source": "course-python-2023-dir-aula199",
+      "target": "course-python-2023-file-aula199-reading-py",
+      "type": "dependency"
+    },
+    {
+      "source": "course-python-2023-dir-aula200",
+      "target": "course-python-2023-file-aula200-main-py",
+      "type": "dependency"
+    },
+    {
+      "source": "course-python-2023-dir-aula201",
+      "target": "course-python-2023-file-aula201-aula0001-py",
+      "type": "dependency"
+    },
+    {
+      "source": "course-python-2023-dir-aula201",
+      "target": "course-python-2023-file-aula201-aula0002-py",
+      "type": "dependency"
+    },
+    {
+      "source": "course-python-2023-dir-aula201",
+      "target": "course-python-2023-file-aula201-aula0003-py",
+      "type": "dependency"
+    },
+    {
+      "source": "course-python-2023-dir-aula201",
+      "target": "course-python-2023-file-aula201-aula0004-py",
+      "type": "dependency"
+    },
+    {
+      "source": "course-python-2023-dir-aula201",
+      "target": "course-python-2023-file-aula201-aula0005-py",
+      "type": "dependency"
+    },
+    {
+      "source": "course-python-2023-dir-aula201",
+      "target": "course-python-2023-file-aula201-aula0006-py",
+      "type": "dependency"
+    },
+    {
+      "source": "course-python-2023-dir-aula202-calculadora",
+      "target": "course-python-2023-file-aula202-calculadora-buttons-py",
+      "type": "dependency"
+    },
+    {
+      "source": "course-python-2023-dir-aula202-calculadora",
+      "target": "course-python-2023-file-aula202-calculadora-display-py",
+      "type": "dependency"
+    },
+    {
+      "source": "course-python-2023-dir-aula202-calculadora",
+      "target": "course-python-2023-file-aula202-calculadora-info-py",
+      "type": "dependency"
+    },
+    {
+      "source": "course-python-2023-dir-aula202-calculadora",
+      "target": "course-python-2023-file-aula202-calculadora-main-py",
+      "type": "dependency"
+    },
+    {
+      "source": "course-python-2023-dir-aula202-calculadora",
+      "target": "course-python-2023-file-aula202-calculadora-main-window-py",
+      "type": "dependency"
+    },
+    {
+      "source": "course-python-2023-dir-aula202-calculadora",
+      "target": "course-python-2023-file-aula202-calculadora-styles-py",
+      "type": "dependency"
+    },
+    {
+      "source": "course-python-2023-dir-aula202-calculadora",
+      "target": "course-python-2023-file-aula202-calculadora-utils-py",
+      "type": "dependency"
+    },
+    {
+      "source": "course-python-2023-dir-aula202-calculadora",
+      "target": "course-python-2023-file-aula202-calculadora-variables-py",
+      "type": "dependency"
+    },
+    {
+      "source": "course-python-2023-dir-aula203-qtdesigner-src",
+      "target": "course-python-2023-file-aula203-qtdesigner-src-main-window-py",
+      "type": "dependency"
+    },
+    {
+      "source": "course-python-2023-dir-aula203-qtdesigner-src",
+      "target": "course-python-2023-file-aula203-qtdesigner-src-window-py",
+      "type": "dependency"
+    },
+    {
+      "source": "course-python-2023-dir-aula203-qtdesigner-ui",
+      "target": "course-python-2023-file-aula203-qtdesigner-ui-ui-window-py",
+      "type": "dependency"
+    },
+    {
+      "source": "course-python-2023-dir-aula204",
+      "target": "course-python-2023-file-aula204-main-py",
+      "type": "dependency"
+    },
+    {
+      "source": "course-python-2023-dir-aula204",
+      "target": "course-python-2023-file-aula204-ui-workerui-py",
+      "type": "dependency"
+    },
+    {
+      "source": "course-python-2023-dir-aula205",
+      "target": "course-python-2023-file-aula205-main-py",
+      "type": "dependency"
+    },
+    {
+      "source": "course-python-2023-dir-aula205",
+      "target": "course-python-2023-file-aula205-select-py",
+      "type": "dependency"
+    },
+    {
+      "source": "course-python-2023-dir-aula206",
+      "target": "course-python-2023-file-aula206-docker-compose-yml",
+      "type": "dependency"
+    },
+    {
+      "source": "course-python-2023-dir-aula206",
+      "target": "course-python-2023-file-aula206-main-py",
+      "type": "dependency"
+    },
+    {
+      "source": "course-python-2023-dir-aula207-ola-django",
+      "target": "course-python-2023-file-aula207-ola-django-manage-py",
+      "type": "dependency"
+    },
+    {
+      "source": "course-python-2023-dir-aula207-ola-django-base-global",
+      "target": "course-python-2023-file-aula207-ola-django-base-global-base-html",
+      "type": "dependency"
+    },
+    {
+      "source": "course-python-2023-dir-aula207-ola-django-base-global-partials",
+      "target": "course-python-2023-file-aula207-ola-django-base-global-partials-head-html",
+      "type": "dependency"
+    },
+    {
+      "source": "course-python-2023-dir-aula207-ola-django-base-global-partials",
+      "target": "course-python-2023-file-aula207-ola-django-base-global-partials-menu-html",
+      "type": "dependency"
+    },
+    {
+      "source": "course-python-2023-dir-aula207-ola-django-base-global-partials",
+      "target": "course-python-2023-file-aula207-ola-django-base-global-partials-postblock-html",
+      "type": "dependency"
+    },
+    {
+      "source": "course-python-2023-dir-aula207-ola-django-base-static-global-css",
+      "target": "course-python-2023-file-aula207-ola-django-base-static-global-css-style-css",
+      "type": "dependency"
+    },
+    {
+      "source": "course-python-2023-dir-aula207-ola-django-blog",
+      "target": "course-python-2023-file-aula207-ola-django-blog-init-py",
+      "type": "dependency"
+    },
+    {
+      "source": "course-python-2023-dir-aula207-ola-django-blog",
+      "target": "course-python-2023-file-aula207-ola-django-blog-admin-py",
+      "type": "dependency"
+    },
+    {
+      "source": "course-python-2023-dir-aula207-ola-django-blog",
+      "target": "course-python-2023-file-aula207-ola-django-blog-apps-py",
+      "type": "dependency"
+    },
+    {
+      "source": "course-python-2023-dir-aula207-ola-django-blog",
+      "target": "course-python-2023-file-aula207-ola-django-blog-data-py",
+      "type": "dependency"
+    },
+    {
+      "source": "course-python-2023-dir-aula207-ola-django-blog",
+      "target": "course-python-2023-file-aula207-ola-django-blog-models-py",
+      "type": "dependency"
+    },
+    {
+      "source": "course-python-2023-dir-aula207-ola-django-blog",
+      "target": "course-python-2023-file-aula207-ola-django-blog-tests-py",
+      "type": "dependency"
+    },
+    {
+      "source": "course-python-2023-dir-aula207-ola-django-blog",
+      "target": "course-python-2023-file-aula207-ola-django-blog-urls-py",
+      "type": "dependency"
+    },
+    {
+      "source": "course-python-2023-dir-aula207-ola-django-blog",
+      "target": "course-python-2023-file-aula207-ola-django-blog-views-py",
+      "type": "dependency"
+    },
+    {
+      "source": "course-python-2023-dir-aula207-ola-django-blog-migrations",
+      "target": "course-python-2023-file-aula207-ola-django-blog-migrations-init-py",
+      "type": "dependency"
+    },
+    {
+      "source": "course-python-2023-dir-aula207-ola-django-blog-templates-blog",
+      "target": "course-python-2023-file-aula207-ola-django-blog-templates-blog-exemplo-html",
+      "type": "dependency"
+    },
+    {
+      "source": "course-python-2023-dir-aula207-ola-django-blog-templates-blog",
+      "target": "course-python-2023-file-aula207-ola-django-blog-templates-blog-index-html",
+      "type": "dependency"
+    },
+    {
+      "source": "course-python-2023-dir-aula207-ola-django-blog-templates-blog",
+      "target": "course-python-2023-file-aula207-ola-django-blog-templates-blog-post-html",
+      "type": "dependency"
+    },
+    {
+      "source": "course-python-2023-dir-aula207-ola-django-home",
+      "target": "course-python-2023-file-aula207-ola-django-home-init-py",
+      "type": "dependency"
+    },
+    {
+      "source": "course-python-2023-dir-aula207-ola-django-home",
+      "target": "course-python-2023-file-aula207-ola-django-home-admin-py",
+      "type": "dependency"
+    },
+    {
+      "source": "course-python-2023-dir-aula207-ola-django-home",
+      "target": "course-python-2023-file-aula207-ola-django-home-apps-py",
+      "type": "dependency"
+    },
+    {
+      "source": "course-python-2023-dir-aula207-ola-django-home",
+      "target": "course-python-2023-file-aula207-ola-django-home-models-py",
+      "type": "dependency"
+    },
+    {
+      "source": "course-python-2023-dir-aula207-ola-django-home",
+      "target": "course-python-2023-file-aula207-ola-django-home-tests-py",
+      "type": "dependency"
+    },
+    {
+      "source": "course-python-2023-dir-aula207-ola-django-home",
+      "target": "course-python-2023-file-aula207-ola-django-home-urls-py",
+      "type": "dependency"
+    },
+    {
+      "source": "course-python-2023-dir-aula207-ola-django-home",
+      "target": "course-python-2023-file-aula207-ola-django-home-views-py",
+      "type": "dependency"
+    },
+    {
+      "source": "course-python-2023-dir-aula207-ola-django-home-migrations",
+      "target": "course-python-2023-file-aula207-ola-django-home-migrations-init-py",
+      "type": "dependency"
+    },
+    {
+      "source": "course-python-2023-dir-aula207-ola-django-home-templates-home",
+      "target": "course-python-2023-file-aula207-ola-django-home-templates-home-index-html",
+      "type": "dependency"
+    },
+    {
+      "source": "course-python-2023-dir-aula207-ola-django-project",
+      "target": "course-python-2023-file-aula207-ola-django-project-init-py",
+      "type": "dependency"
+    },
+    {
+      "source": "course-python-2023-dir-aula207-ola-django-project",
+      "target": "course-python-2023-file-aula207-ola-django-project-asgi-py",
+      "type": "dependency"
+    },
+    {
+      "source": "course-python-2023-dir-aula207-ola-django-project",
+      "target": "course-python-2023-file-aula207-ola-django-project-settings-py",
+      "type": "dependency"
+    },
+    {
+      "source": "course-python-2023-dir-aula207-ola-django-project",
+      "target": "course-python-2023-file-aula207-ola-django-project-urls-py",
+      "type": "dependency"
+    },
+    {
+      "source": "course-python-2023-dir-aula207-ola-django-project",
+      "target": "course-python-2023-file-aula207-ola-django-project-wsgi-py",
+      "type": "dependency"
+    },
+    {
+      "source": "course-python-2023-dir-aula99-package",
+      "target": "course-python-2023-file-aula99-package-init-py",
+      "type": "dependency"
+    },
+    {
+      "source": "course-python-2023-dir-aula99-package",
+      "target": "course-python-2023-file-aula99-package-modulo-py",
+      "type": "dependency"
+    },
+    {
+      "source": "course-python-2023-dir-aula99-package",
+      "target": "course-python-2023-file-aula99-package-modulo-b-py",
+      "type": "dependency"
+    },
+    {
+      "source": "course-python-2023-dir-dados",
+      "target": "course-python-2023-file-dados-init-py",
+      "type": "dependency"
+    },
+    {
+      "source": "course-python-2023-dir-dados",
+      "target": "course-python-2023-file-dados-produtos-modulo-py",
       "type": "dependency"
     }
   ]

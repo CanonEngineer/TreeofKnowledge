@@ -4,7 +4,7 @@
   "repoUrl": "https://github.com/CanonEngineer/SmartFerrariIOT",
   "color": "#e10600",
   "demoUrl": "https://canonengineer.github.io/SmartFerrariIOT/demo/standalone.html?v=2026-07-14",
-  "nodeCount": 28,
+  "nodeCount": 56,
   "categories": {
     "core": {
       "label": "Backend",
@@ -13,6 +13,10 @@
     "network": {
       "label": "Rede / Scan",
       "color": "#22d3ee"
+    },
+    "oracle": {
+      "label": "Oracle / DB",
+      "color": "#c084fc"
     },
     "auth": {
       "label": "Segurança",
@@ -37,7 +41,7 @@
   },
   "nodes": [
     {
-      "id": "sf-root",
+      "id": "smartferrari-iot-root",
       "label": "SmartFerrariIOT",
       "parent": null,
       "layer": "root",
@@ -46,467 +50,943 @@
       "color": "#3b82f6",
       "size": 2.2,
       "file": "README.md",
-      "description": "Lab de pós em Engenharia da Computação: gêmeo digital Ferrari, sync Arduino↔Raspberry, HIL/QoS, Web Audio e Research Lab (Demo GitHub Pages + local :8001)."
+      "description": "Gêmeo digital Ferrari + Arduino↔Raspberry, HIL/QoS, invariantes e Demo Lab no GitHub Pages — pós em Engenharia da Computação."
     },
     {
-      "id": "sf-server",
-      "label": "python_server",
-      "parent": "sf-root",
+      "id": "smartferrari-iot-dir-github",
+      "label": ".github/",
+      "parent": "smartferrari-iot-root",
+      "layer": "module",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 1.35,
+      "file": ".github/",
+      "description": "Pacote/pasta `.github/` do projeto."
+    },
+    {
+      "id": "smartferrari-iot-dir-arduino",
+      "label": "arduino/",
+      "parent": "smartferrari-iot-root",
+      "layer": "module",
+      "category": "frontend",
+      "categoryLabel": "Frontend",
+      "color": "#eab308",
+      "size": 1.35,
+      "file": "arduino/",
+      "description": "Pacote/pasta `arduino/` do projeto."
+    },
+    {
+      "id": "smartferrari-iot-dir-docs",
+      "label": "docs/",
+      "parent": "smartferrari-iot-root",
+      "layer": "module",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 1.35,
+      "file": "docs/",
+      "description": "Pacote/pasta `docs/` do projeto."
+    },
+    {
+      "id": "smartferrari-iot-dir-python-server",
+      "label": "python_server/",
+      "parent": "smartferrari-iot-root",
       "layer": "module",
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
       "size": 1.35,
       "file": "python_server/",
-      "description": "Orquestração FastAPI :8001 — estado, MQTT, telemetria SQI, research API."
+      "description": "Pacote/pasta `python_server/` do projeto."
     },
     {
-      "id": "sf-app",
-      "label": "app.py",
-      "parent": "sf-server",
-      "layer": "file",
-      "category": "core",
-      "categoryLabel": "Backend",
-      "color": "#3b82f6",
-      "size": 0.85,
-      "file": "python_server/app.py",
-      "description": "Entry point FastAPI: lifespan MQTT, rotas API/research, static web."
-    },
-    {
-      "id": "sf-api",
-      "label": "api.py",
-      "parent": "sf-server",
-      "layer": "file",
-      "category": "network",
-      "categoryLabel": "Rede / Scan",
-      "color": "#22d3ee",
-      "size": 0.85,
-      "file": "python_server/api.py",
-      "description": "REST + WebSocket: atuadores, login, status; rejeita INV com 409."
-    },
-    {
-      "id": "sf-state",
-      "label": "state.py",
-      "parent": "sf-server",
-      "layer": "file",
-      "category": "core",
-      "categoryLabel": "Backend",
-      "color": "#3b82f6",
-      "size": 0.85,
-      "file": "python_server/state.py",
-      "description": "Estado vivo da Ferrari: atuadores, sensores, broadcast, HIL timed."
-    },
-    {
-      "id": "sf-twin",
-      "label": "statemachine.py",
-      "parent": "sf-server",
-      "layer": "file",
-      "category": "core",
-      "categoryLabel": "Backend",
-      "color": "#3b82f6",
-      "size": 0.85,
-      "file": "python_server/statemachine.py",
-      "description": "Gêmeo formal SECURE→SPORT com invariantes INV-01…06."
-    },
-    {
-      "id": "sf-hil",
-      "label": "hil.py",
-      "parent": "sf-server",
-      "layer": "file",
-      "category": "core",
-      "categoryLabel": "Backend",
-      "color": "#3b82f6",
-      "size": 0.85,
-      "file": "python_server/hil.py",
-      "description": "Fault injection: delay_ms, loss_rate, métricas QoS."
-    },
-    {
-      "id": "sf-security",
-      "label": "security.py",
-      "parent": "sf-server",
-      "layer": "file",
-      "category": "auth",
-      "categoryLabel": "Segurança",
-      "color": "#ef4444",
-      "size": 0.85,
-      "file": "python_server/security.py",
-      "description": "HMAC de comandos + cadeia hash de auditoria verificável."
-    },
-    {
-      "id": "sf-energy",
-      "label": "energy.py",
-      "parent": "sf-server",
-      "layer": "file",
-      "category": "core",
-      "categoryLabel": "Backend",
-      "color": "#3b82f6",
-      "size": 0.85,
-      "file": "python_server/energy.py",
-      "description": "Modelo P_motor/P_total/ΔE_bat e combustível documentado."
-    },
-    {
-      "id": "sf-research",
-      "label": "research_api.py",
-      "parent": "sf-server",
-      "layer": "file",
-      "category": "core",
-      "categoryLabel": "Backend",
-      "color": "#3b82f6",
-      "size": 0.85,
-      "file": "python_server/research_api.py",
-      "description": "Endpoints Lab: HIL, audit, visão, paper-pack LaTeX, experimentos."
-    },
-    {
-      "id": "sf-telemetry",
-      "label": "telemetry.py",
-      "parent": "sf-server",
-      "layer": "file",
-      "category": "core",
-      "categoryLabel": "Backend",
-      "color": "#3b82f6",
-      "size": 0.85,
-      "file": "python_server/telemetry.py",
-      "description": "SQI e estatísticas de latência de comando."
-    },
-    {
-      "id": "sf-mqtt",
-      "label": "mqtt_bridge.py",
-      "parent": "sf-server",
-      "layer": "file",
-      "category": "core",
-      "categoryLabel": "Backend",
-      "color": "#3b82f6",
-      "size": 0.85,
-      "file": "python_server/mqtt_bridge.py",
-      "description": "Bridge MQTT ferrari/* com fallback simulação se broker ausente."
-    },
-    {
-      "id": "sf-paper",
-      "label": "paperpack.py",
-      "parent": "sf-server",
-      "layer": "file",
-      "category": "core",
-      "categoryLabel": "Backend",
-      "color": "#3b82f6",
-      "size": 0.85,
-      "file": "python_server/paperpack.py",
-      "description": "Gera figuras/tabelas LaTeX a partir de experimentos e QoS."
-    },
-    {
-      "id": "sf-web",
-      "label": "web",
-      "parent": "sf-root",
-      "layer": "module",
-      "category": "core",
-      "categoryLabel": "Backend",
-      "color": "#3b82f6",
-      "size": 1.35,
-      "file": "web/",
-      "description": "Digital Twin UI: SVG SF90, áudio, visão, Research Lab."
-    },
-    {
-      "id": "sf-index",
-      "label": "index.html",
-      "parent": "sf-web",
-      "layer": "file",
-      "category": "frontend",
-      "categoryLabel": "Frontend",
-      "color": "#eab308",
-      "size": 0.85,
-      "file": "web/index.html",
-      "description": "Layout Lab: stage SVG, comandos, HIL, espectro, visão."
-    },
-    {
-      "id": "sf-script",
-      "label": "script.js",
-      "parent": "sf-web",
-      "layer": "file",
-      "category": "scripts",
-      "categoryLabel": "Scripts",
-      "color": "#64748b",
-      "size": 0.85,
-      "file": "web/script.js",
-      "description": "WS client, applyState, animações e botões de campo."
-    },
-    {
-      "id": "sf-audio",
-      "label": "audio.js",
-      "parent": "sf-web",
-      "layer": "file",
-      "category": "core",
-      "categoryLabel": "Backend",
-      "color": "#3b82f6",
-      "size": 0.85,
-      "file": "web/audio.js",
-      "description": "Web Audio: buzina dual-tone, sirene, ronco RPM, clique de trava."
-    },
-    {
-      "id": "sf-vision",
-      "label": "vision.js",
-      "parent": "sf-web",
-      "layer": "file",
-      "category": "core",
-      "categoryLabel": "Backend",
-      "color": "#3b82f6",
-      "size": 0.85,
-      "file": "web/vision.js",
-      "description": "Webcam leve: gesto de partida e QR track na pit lane."
-    },
-    {
-      "id": "sf-style",
-      "label": "style.css",
-      "parent": "sf-web",
-      "layer": "file",
-      "category": "frontend",
-      "categoryLabel": "Frontend",
-      "color": "#eab308",
-      "size": 0.85,
-      "file": "web/style.css",
-      "description": "UI lab carbon/rosso — tipografia Archivo, painéis e animações."
-    },
-    {
-      "id": "sf-arduino",
-      "label": "arduino",
-      "parent": "sf-root",
-      "layer": "module",
-      "category": "frontend",
-      "categoryLabel": "Frontend",
-      "color": "#eab308",
-      "size": 1.35,
-      "file": "arduino/FerrariNode/",
-      "description": "Firmware nó Ferrari — L1 atuadores/sensores."
-    },
-    {
-      "id": "sf-ino",
-      "label": "FerrariNode.ino",
-      "parent": "sf-arduino",
-      "layer": "file",
-      "category": "other",
-      "categoryLabel": "Outros",
-      "color": "#64748b",
-      "size": 0.85,
-      "file": "arduino/FerrariNode/FerrariNode.ino",
-      "description": "Sketch principal do nó Arduino Ferrari."
-    },
-    {
-      "id": "sf-pi",
-      "label": "raspberry",
-      "parent": "sf-root",
+      "id": "smartferrari-iot-dir-raspberry",
+      "label": "raspberry/",
+      "parent": "smartferrari-iot-root",
       "layer": "module",
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
       "size": 1.35,
       "file": "raspberry/",
-      "description": "Agent hub Raspberry — bridge e heartbeat."
+      "description": "Pacote/pasta `raspberry/` do projeto."
     },
     {
-      "id": "sf-agent",
-      "label": "agent.py",
-      "parent": "sf-pi",
-      "layer": "file",
+      "id": "smartferrari-iot-dir-tests",
+      "label": "tests/",
+      "parent": "smartferrari-iot-root",
+      "layer": "module",
+      "category": "tests",
+      "categoryLabel": "Testes",
+      "color": "#94a3b8",
+      "size": 1.35,
+      "file": "tests/",
+      "description": "Pacote/pasta `tests/` do projeto."
+    },
+    {
+      "id": "smartferrari-iot-dir-web",
+      "label": "web/",
+      "parent": "smartferrari-iot-root",
+      "layer": "module",
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
-      "size": 0.85,
-      "file": "raspberry/agent.py",
-      "description": "Loop do hub: sync, telemetria e comandos downstream."
+      "size": 1.35,
+      "file": "web/",
+      "description": "Pacote/pasta `web/` do projeto."
     },
     {
-      "id": "sf-actuators",
-      "label": "actuators.py",
-      "parent": "sf-pi",
-      "layer": "file",
+      "id": "smartferrari-iot-dir-github-workflows",
+      "label": "workflows/",
+      "parent": "smartferrari-iot-dir-github",
+      "layer": "module",
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
-      "size": 0.85,
-      "file": "raspberry/actuators.py",
-      "description": "Abstração de atuadores no lado Raspberry."
+      "size": 1.35,
+      "file": ".github/workflows/",
+      "description": "Pacote/pasta `.github/workflows/` do projeto."
     },
     {
-      "id": "sf-demo",
-      "label": "docs/demo/standalone.html",
-      "parent": "sf-root",
-      "layer": "file",
+      "id": "smartferrari-iot-dir-arduino-ferrarinode",
+      "label": "FerrariNode/",
+      "parent": "smartferrari-iot-dir-arduino",
+      "layer": "module",
       "category": "frontend",
       "categoryLabel": "Frontend",
       "color": "#eab308",
-      "size": 0.85,
-      "file": "docs/demo/standalone.html",
-      "description": "Demo standalone no GitHub Pages (sem backend) — abre no celular ou qualquer browser."
+      "size": 1.35,
+      "file": "arduino/FerrariNode/",
+      "description": "Pacote/pasta `arduino/FerrariNode/` do projeto."
     },
     {
-      "id": "sf-start",
+      "id": "smartferrari-iot-dir-docs-assets",
+      "label": "assets/",
+      "parent": "smartferrari-iot-dir-docs",
+      "layer": "module",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 1.35,
+      "file": "docs/assets/",
+      "description": "Pacote/pasta `docs/assets/` do projeto."
+    },
+    {
+      "id": "smartferrari-iot-dir-docs-demo",
+      "label": "demo/",
+      "parent": "smartferrari-iot-dir-docs",
+      "layer": "module",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 1.35,
+      "file": "docs/demo/",
+      "description": "Pacote/pasta `docs/demo/` do projeto."
+    },
+    {
+      "id": "smartferrari-iot-file-gitignore",
+      "label": ".gitignore",
+      "parent": "smartferrari-iot-root",
+      "layer": "file",
+      "category": "other",
+      "categoryLabel": "Outros",
+      "color": "#64748b",
+      "size": 0.85,
+      "file": ".gitignore",
+      "description": "Código-fonte: `.gitignore`"
+    },
+    {
+      "id": "smartferrari-iot-file-start-ps1",
       "label": "start.ps1",
-      "parent": "sf-root",
+      "parent": "smartferrari-iot-root",
       "layer": "file",
       "category": "scripts",
       "categoryLabel": "Scripts",
       "color": "#64748b",
       "size": 0.85,
       "file": "start.ps1",
-      "description": "Bootstrap Windows: venv, deps e sobe Lab em :8001."
+      "description": "Código-fonte: `start.ps1`"
     },
     {
-      "id": "sf-protocol",
+      "id": "smartferrari-iot-file-github-workflows-deploy-pages-yml",
+      "label": "deploy-pages.yml",
+      "parent": "smartferrari-iot-dir-github-workflows",
+      "layer": "file",
+      "category": "other",
+      "categoryLabel": "Outros",
+      "color": "#64748b",
+      "size": 0.85,
+      "file": ".github/workflows/deploy-pages.yml",
+      "description": "Código-fonte: `.github/workflows/deploy-pages.yml`"
+    },
+    {
+      "id": "smartferrari-iot-file-arduino-ferrarinode-ferrarinode-ino",
+      "label": "FerrariNode.ino",
+      "parent": "smartferrari-iot-dir-arduino-ferrarinode",
+      "layer": "file",
+      "category": "frontend",
+      "categoryLabel": "Frontend",
+      "color": "#eab308",
+      "size": 0.85,
+      "file": "arduino/FerrariNode/FerrariNode.ino",
+      "description": "Código-fonte: `arduino/FerrariNode/FerrariNode.ino`"
+    },
+    {
+      "id": "smartferrari-iot-file-docs-architecture-md",
+      "label": "ARCHITECTURE.md",
+      "parent": "smartferrari-iot-dir-docs",
+      "layer": "file",
+      "category": "other",
+      "categoryLabel": "Outros",
+      "color": "#64748b",
+      "size": 0.85,
+      "file": "docs/ARCHITECTURE.md",
+      "description": "Código-fonte: `docs/ARCHITECTURE.md`"
+    },
+    {
+      "id": "smartferrari-iot-file-docs-index-html",
+      "label": "index.html",
+      "parent": "smartferrari-iot-dir-docs",
+      "layer": "file",
+      "category": "frontend",
+      "categoryLabel": "Frontend",
+      "color": "#eab308",
+      "size": 0.85,
+      "file": "docs/index.html",
+      "description": "Código-fonte: `docs/index.html`"
+    },
+    {
+      "id": "smartferrari-iot-file-docs-methodology-md",
+      "label": "METHODOLOGY.md",
+      "parent": "smartferrari-iot-dir-docs",
+      "layer": "file",
+      "category": "other",
+      "categoryLabel": "Outros",
+      "color": "#64748b",
+      "size": 0.85,
+      "file": "docs/METHODOLOGY.md",
+      "description": "Código-fonte: `docs/METHODOLOGY.md`"
+    },
+    {
+      "id": "smartferrari-iot-file-docs-pages-setup-md",
+      "label": "PAGES_SETUP.md",
+      "parent": "smartferrari-iot-dir-docs",
+      "layer": "file",
+      "category": "other",
+      "categoryLabel": "Outros",
+      "color": "#64748b",
+      "size": 0.85,
+      "file": "docs/PAGES_SETUP.md",
+      "description": "Código-fonte: `docs/PAGES_SETUP.md`"
+    },
+    {
+      "id": "smartferrari-iot-file-docs-protocol-md",
+      "label": "PROTOCOL.md",
+      "parent": "smartferrari-iot-dir-docs",
+      "layer": "file",
+      "category": "other",
+      "categoryLabel": "Outros",
+      "color": "#64748b",
+      "size": 0.85,
+      "file": "docs/PROTOCOL.md",
+      "description": "Código-fonte: `docs/PROTOCOL.md`"
+    },
+    {
+      "id": "smartferrari-iot-file-docs-assets-gen-figures-py",
+      "label": "gen_figures.py",
+      "parent": "smartferrari-iot-dir-docs-assets",
+      "layer": "file",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 0.85,
+      "file": "docs/assets/gen_figures.py",
+      "description": "Código-fonte: `docs/assets/gen_figures.py`"
+    },
+    {
+      "id": "smartferrari-iot-file-docs-demo-audio-js",
+      "label": "audio.js",
+      "parent": "smartferrari-iot-dir-docs-demo",
+      "layer": "file",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 0.85,
+      "file": "docs/demo/audio.js",
+      "description": "Código-fonte: `docs/demo/audio.js`"
+    },
+    {
+      "id": "smartferrari-iot-file-docs-demo-build-demo-py",
+      "label": "build_demo.py",
+      "parent": "smartferrari-iot-dir-docs-demo",
+      "layer": "file",
+      "category": "frontend",
+      "categoryLabel": "Frontend",
+      "color": "#eab308",
+      "size": 0.85,
+      "file": "docs/demo/build_demo.py",
+      "description": "Código-fonte: `docs/demo/build_demo.py`"
+    },
+    {
+      "id": "smartferrari-iot-file-docs-demo-demo-js",
+      "label": "demo.js",
+      "parent": "smartferrari-iot-dir-docs-demo",
+      "layer": "file",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 0.85,
+      "file": "docs/demo/demo.js",
+      "description": "Código-fonte: `docs/demo/demo.js`"
+    },
+    {
+      "id": "smartferrari-iot-file-docs-demo-index-html",
+      "label": "index.html",
+      "parent": "smartferrari-iot-dir-docs-demo",
+      "layer": "file",
+      "category": "frontend",
+      "categoryLabel": "Frontend",
+      "color": "#eab308",
+      "size": 0.85,
+      "file": "docs/demo/index.html",
+      "description": "Código-fonte: `docs/demo/index.html`"
+    },
+    {
+      "id": "smartferrari-iot-file-docs-demo-standalone-html",
+      "label": "standalone.html",
+      "parent": "smartferrari-iot-dir-docs-demo",
+      "layer": "file",
+      "category": "frontend",
+      "categoryLabel": "Frontend",
+      "color": "#eab308",
+      "size": 0.85,
+      "file": "docs/demo/standalone.html",
+      "description": "Código-fonte: `docs/demo/standalone.html`"
+    },
+    {
+      "id": "smartferrari-iot-file-docs-demo-style-css",
+      "label": "style.css",
+      "parent": "smartferrari-iot-dir-docs-demo",
+      "layer": "file",
+      "category": "frontend",
+      "categoryLabel": "Frontend",
+      "color": "#eab308",
+      "size": 0.85,
+      "file": "docs/demo/style.css",
+      "description": "Código-fonte: `docs/demo/style.css`"
+    },
+    {
+      "id": "smartferrari-iot-grp-python-server-files-a-c-d-e-h-m-p",
+      "label": "Arquivos A–C–D–E–H–M–P",
+      "parent": "smartferrari-iot-dir-python-server",
+      "layer": "module",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 1.35,
+      "file": "python_server/[files-a–c–d–e–h–m–p]",
+      "description": "Grupo de arquivos em `python_server/` — Arquivos A–C–D–E–H–M–P"
+    },
+    {
+      "id": "smartferrari-iot-grp-python-server-files-r-s-t",
+      "label": "Arquivos R–S–T",
+      "parent": "smartferrari-iot-dir-python-server",
+      "layer": "module",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 1.35,
+      "file": "python_server/[files-r–s–t]",
+      "description": "Grupo de arquivos em `python_server/` — Arquivos R–S–T"
+    },
+    {
+      "id": "smartferrari-iot-file-python-server-api-py",
+      "label": "api.py",
+      "parent": "smartferrari-iot-grp-python-server-files-a-c-d-e-h-m-p",
+      "layer": "file",
+      "category": "network",
+      "categoryLabel": "Rede / Scan",
+      "color": "#22d3ee",
+      "size": 0.85,
+      "file": "python_server/api.py",
+      "description": "Código-fonte: `python_server/api.py`"
+    },
+    {
+      "id": "smartferrari-iot-file-python-server-app-py",
+      "label": "app.py",
+      "parent": "smartferrari-iot-grp-python-server-files-a-c-d-e-h-m-p",
+      "layer": "file",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 0.85,
+      "file": "python_server/app.py",
+      "description": "Código-fonte: `python_server/app.py`"
+    },
+    {
+      "id": "smartferrari-iot-file-python-server-auth-py",
+      "label": "auth.py",
+      "parent": "smartferrari-iot-grp-python-server-files-a-c-d-e-h-m-p",
+      "layer": "file",
+      "category": "auth",
+      "categoryLabel": "Segurança",
+      "color": "#ef4444",
+      "size": 0.85,
+      "file": "python_server/auth.py",
+      "description": "Código-fonte: `python_server/auth.py`"
+    },
+    {
+      "id": "smartferrari-iot-file-python-server-config-py",
+      "label": "config.py",
+      "parent": "smartferrari-iot-grp-python-server-files-a-c-d-e-h-m-p",
+      "layer": "file",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 0.85,
+      "file": "python_server/config.py",
+      "description": "Código-fonte: `python_server/config.py`"
+    },
+    {
+      "id": "smartferrari-iot-file-python-server-database-py",
+      "label": "database.py",
+      "parent": "smartferrari-iot-grp-python-server-files-a-c-d-e-h-m-p",
+      "layer": "file",
+      "category": "oracle",
+      "categoryLabel": "Oracle / DB",
+      "color": "#c084fc",
+      "size": 0.85,
+      "file": "python_server/database.py",
+      "description": "Código-fonte: `python_server/database.py`"
+    },
+    {
+      "id": "smartferrari-iot-file-python-server-energy-py",
+      "label": "energy.py",
+      "parent": "smartferrari-iot-grp-python-server-files-a-c-d-e-h-m-p",
+      "layer": "file",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 0.85,
+      "file": "python_server/energy.py",
+      "description": "Código-fonte: `python_server/energy.py`"
+    },
+    {
+      "id": "smartferrari-iot-file-python-server-experiments-py",
+      "label": "experiments.py",
+      "parent": "smartferrari-iot-grp-python-server-files-a-c-d-e-h-m-p",
+      "layer": "file",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 0.85,
+      "file": "python_server/experiments.py",
+      "description": "Código-fonte: `python_server/experiments.py`"
+    },
+    {
+      "id": "smartferrari-iot-file-python-server-hil-py",
+      "label": "hil.py",
+      "parent": "smartferrari-iot-grp-python-server-files-a-c-d-e-h-m-p",
+      "layer": "file",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 0.85,
+      "file": "python_server/hil.py",
+      "description": "Código-fonte: `python_server/hil.py`"
+    },
+    {
+      "id": "smartferrari-iot-file-python-server-models-py",
+      "label": "models.py",
+      "parent": "smartferrari-iot-grp-python-server-files-a-c-d-e-h-m-p",
+      "layer": "file",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 0.85,
+      "file": "python_server/models.py",
+      "description": "Código-fonte: `python_server/models.py`"
+    },
+    {
+      "id": "smartferrari-iot-file-python-server-mqtt-bridge-py",
+      "label": "mqtt_bridge.py",
+      "parent": "smartferrari-iot-grp-python-server-files-a-c-d-e-h-m-p",
+      "layer": "file",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 0.85,
+      "file": "python_server/mqtt_bridge.py",
+      "description": "Código-fonte: `python_server/mqtt_bridge.py`"
+    },
+    {
+      "id": "smartferrari-iot-file-python-server-paperpack-py",
+      "label": "paperpack.py",
+      "parent": "smartferrari-iot-grp-python-server-files-a-c-d-e-h-m-p",
+      "layer": "file",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 0.85,
+      "file": "python_server/paperpack.py",
+      "description": "Código-fonte: `python_server/paperpack.py`"
+    },
+    {
+      "id": "smartferrari-iot-file-python-server-protocol-py",
       "label": "protocol.py",
-      "parent": "sf-root",
+      "parent": "smartferrari-iot-grp-python-server-files-a-c-d-e-h-m-p",
       "layer": "file",
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
       "size": 0.85,
       "file": "python_server/protocol.py",
-      "description": "Versão de protocolo e QoS MQTT do Ferrari IoT."
+      "description": "Código-fonte: `python_server/protocol.py`"
     },
     {
-      "id": "sf-tests",
+      "id": "smartferrari-iot-file-python-server-research-api-py",
+      "label": "research_api.py",
+      "parent": "smartferrari-iot-grp-python-server-files-r-s-t",
+      "layer": "file",
+      "category": "network",
+      "categoryLabel": "Rede / Scan",
+      "color": "#22d3ee",
+      "size": 0.85,
+      "file": "python_server/research_api.py",
+      "description": "Código-fonte: `python_server/research_api.py`"
+    },
+    {
+      "id": "smartferrari-iot-file-python-server-security-py",
+      "label": "security.py",
+      "parent": "smartferrari-iot-grp-python-server-files-r-s-t",
+      "layer": "file",
+      "category": "auth",
+      "categoryLabel": "Segurança",
+      "color": "#ef4444",
+      "size": 0.85,
+      "file": "python_server/security.py",
+      "description": "Código-fonte: `python_server/security.py`"
+    },
+    {
+      "id": "smartferrari-iot-file-python-server-simulator-py",
+      "label": "simulator.py",
+      "parent": "smartferrari-iot-grp-python-server-files-r-s-t",
+      "layer": "file",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 0.85,
+      "file": "python_server/simulator.py",
+      "description": "Código-fonte: `python_server/simulator.py`"
+    },
+    {
+      "id": "smartferrari-iot-file-python-server-state-py",
+      "label": "state.py",
+      "parent": "smartferrari-iot-grp-python-server-files-r-s-t",
+      "layer": "file",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 0.85,
+      "file": "python_server/state.py",
+      "description": "Código-fonte: `python_server/state.py`"
+    },
+    {
+      "id": "smartferrari-iot-file-python-server-statemachine-py",
+      "label": "statemachine.py",
+      "parent": "smartferrari-iot-grp-python-server-files-r-s-t",
+      "layer": "file",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 0.85,
+      "file": "python_server/statemachine.py",
+      "description": "Código-fonte: `python_server/statemachine.py`"
+    },
+    {
+      "id": "smartferrari-iot-file-python-server-telemetry-py",
+      "label": "telemetry.py",
+      "parent": "smartferrari-iot-grp-python-server-files-r-s-t",
+      "layer": "file",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 0.85,
+      "file": "python_server/telemetry.py",
+      "description": "Código-fonte: `python_server/telemetry.py`"
+    },
+    {
+      "id": "smartferrari-iot-file-raspberry-actuators-py",
+      "label": "actuators.py",
+      "parent": "smartferrari-iot-dir-raspberry",
+      "layer": "file",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 0.85,
+      "file": "raspberry/actuators.py",
+      "description": "Código-fonte: `raspberry/actuators.py`"
+    },
+    {
+      "id": "smartferrari-iot-file-raspberry-agent-py",
+      "label": "agent.py",
+      "parent": "smartferrari-iot-dir-raspberry",
+      "layer": "file",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 0.85,
+      "file": "raspberry/agent.py",
+      "description": "Código-fonte: `raspberry/agent.py`"
+    },
+    {
+      "id": "smartferrari-iot-file-tests-test-engineering-py",
       "label": "test_engineering.py",
-      "parent": "sf-root",
+      "parent": "smartferrari-iot-dir-tests",
       "layer": "file",
       "category": "tests",
       "categoryLabel": "Testes",
       "color": "#94a3b8",
       "size": 0.85,
       "file": "tests/test_engineering.py",
-      "description": "Testes de engenharia do lab (invariantes / SQI)."
+      "description": "Código-fonte: `tests/test_engineering.py`"
+    },
+    {
+      "id": "smartferrari-iot-file-web-audio-js",
+      "label": "audio.js",
+      "parent": "smartferrari-iot-dir-web",
+      "layer": "file",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 0.85,
+      "file": "web/audio.js",
+      "description": "Código-fonte: `web/audio.js`"
+    },
+    {
+      "id": "smartferrari-iot-file-web-index-html",
+      "label": "index.html",
+      "parent": "smartferrari-iot-dir-web",
+      "layer": "file",
+      "category": "frontend",
+      "categoryLabel": "Frontend",
+      "color": "#eab308",
+      "size": 0.85,
+      "file": "web/index.html",
+      "description": "Código-fonte: `web/index.html`"
+    },
+    {
+      "id": "smartferrari-iot-file-web-script-js",
+      "label": "script.js",
+      "parent": "smartferrari-iot-dir-web",
+      "layer": "file",
+      "category": "scripts",
+      "categoryLabel": "Scripts",
+      "color": "#64748b",
+      "size": 0.85,
+      "file": "web/script.js",
+      "description": "Código-fonte: `web/script.js`"
+    },
+    {
+      "id": "smartferrari-iot-file-web-style-css",
+      "label": "style.css",
+      "parent": "smartferrari-iot-dir-web",
+      "layer": "file",
+      "category": "frontend",
+      "categoryLabel": "Frontend",
+      "color": "#eab308",
+      "size": 0.85,
+      "file": "web/style.css",
+      "description": "Código-fonte: `web/style.css`"
+    },
+    {
+      "id": "smartferrari-iot-file-web-vision-js",
+      "label": "vision.js",
+      "parent": "smartferrari-iot-dir-web",
+      "layer": "file",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 0.85,
+      "file": "web/vision.js",
+      "description": "Código-fonte: `web/vision.js`"
     }
   ],
   "links": [
     {
-      "source": "sf-root",
-      "target": "sf-server",
+      "source": "smartferrari-iot-root",
+      "target": "smartferrari-iot-dir-github",
       "type": "dependency"
     },
     {
-      "source": "sf-server",
-      "target": "sf-app",
+      "source": "smartferrari-iot-root",
+      "target": "smartferrari-iot-dir-arduino",
       "type": "dependency"
     },
     {
-      "source": "sf-server",
-      "target": "sf-api",
+      "source": "smartferrari-iot-root",
+      "target": "smartferrari-iot-dir-docs",
       "type": "dependency"
     },
     {
-      "source": "sf-server",
-      "target": "sf-state",
+      "source": "smartferrari-iot-root",
+      "target": "smartferrari-iot-dir-python-server",
       "type": "dependency"
     },
     {
-      "source": "sf-server",
-      "target": "sf-twin",
+      "source": "smartferrari-iot-root",
+      "target": "smartferrari-iot-dir-raspberry",
       "type": "dependency"
     },
     {
-      "source": "sf-server",
-      "target": "sf-hil",
+      "source": "smartferrari-iot-root",
+      "target": "smartferrari-iot-dir-tests",
       "type": "dependency"
     },
     {
-      "source": "sf-server",
-      "target": "sf-security",
+      "source": "smartferrari-iot-root",
+      "target": "smartferrari-iot-dir-web",
       "type": "dependency"
     },
     {
-      "source": "sf-server",
-      "target": "sf-energy",
+      "source": "smartferrari-iot-dir-github",
+      "target": "smartferrari-iot-dir-github-workflows",
       "type": "dependency"
     },
     {
-      "source": "sf-server",
-      "target": "sf-research",
+      "source": "smartferrari-iot-dir-arduino",
+      "target": "smartferrari-iot-dir-arduino-ferrarinode",
       "type": "dependency"
     },
     {
-      "source": "sf-server",
-      "target": "sf-telemetry",
+      "source": "smartferrari-iot-dir-docs",
+      "target": "smartferrari-iot-dir-docs-assets",
       "type": "dependency"
     },
     {
-      "source": "sf-server",
-      "target": "sf-mqtt",
+      "source": "smartferrari-iot-dir-docs",
+      "target": "smartferrari-iot-dir-docs-demo",
       "type": "dependency"
     },
     {
-      "source": "sf-server",
-      "target": "sf-paper",
+      "source": "smartferrari-iot-root",
+      "target": "smartferrari-iot-file-gitignore",
       "type": "dependency"
     },
     {
-      "source": "sf-root",
-      "target": "sf-web",
+      "source": "smartferrari-iot-root",
+      "target": "smartferrari-iot-file-start-ps1",
       "type": "dependency"
     },
     {
-      "source": "sf-web",
-      "target": "sf-index",
+      "source": "smartferrari-iot-dir-github-workflows",
+      "target": "smartferrari-iot-file-github-workflows-deploy-pages-yml",
       "type": "dependency"
     },
     {
-      "source": "sf-web",
-      "target": "sf-script",
+      "source": "smartferrari-iot-dir-arduino-ferrarinode",
+      "target": "smartferrari-iot-file-arduino-ferrarinode-ferrarinode-ino",
       "type": "dependency"
     },
     {
-      "source": "sf-web",
-      "target": "sf-audio",
+      "source": "smartferrari-iot-dir-docs",
+      "target": "smartferrari-iot-file-docs-architecture-md",
       "type": "dependency"
     },
     {
-      "source": "sf-web",
-      "target": "sf-vision",
+      "source": "smartferrari-iot-dir-docs",
+      "target": "smartferrari-iot-file-docs-index-html",
       "type": "dependency"
     },
     {
-      "source": "sf-web",
-      "target": "sf-style",
+      "source": "smartferrari-iot-dir-docs",
+      "target": "smartferrari-iot-file-docs-methodology-md",
       "type": "dependency"
     },
     {
-      "source": "sf-root",
-      "target": "sf-arduino",
+      "source": "smartferrari-iot-dir-docs",
+      "target": "smartferrari-iot-file-docs-pages-setup-md",
       "type": "dependency"
     },
     {
-      "source": "sf-arduino",
-      "target": "sf-ino",
+      "source": "smartferrari-iot-dir-docs",
+      "target": "smartferrari-iot-file-docs-protocol-md",
       "type": "dependency"
     },
     {
-      "source": "sf-root",
-      "target": "sf-pi",
+      "source": "smartferrari-iot-dir-docs-assets",
+      "target": "smartferrari-iot-file-docs-assets-gen-figures-py",
       "type": "dependency"
     },
     {
-      "source": "sf-pi",
-      "target": "sf-agent",
+      "source": "smartferrari-iot-dir-docs-demo",
+      "target": "smartferrari-iot-file-docs-demo-audio-js",
       "type": "dependency"
     },
     {
-      "source": "sf-pi",
-      "target": "sf-actuators",
+      "source": "smartferrari-iot-dir-docs-demo",
+      "target": "smartferrari-iot-file-docs-demo-build-demo-py",
       "type": "dependency"
     },
     {
-      "source": "sf-root",
-      "target": "sf-demo",
+      "source": "smartferrari-iot-dir-docs-demo",
+      "target": "smartferrari-iot-file-docs-demo-demo-js",
       "type": "dependency"
     },
     {
-      "source": "sf-root",
-      "target": "sf-start",
+      "source": "smartferrari-iot-dir-docs-demo",
+      "target": "smartferrari-iot-file-docs-demo-index-html",
       "type": "dependency"
     },
     {
-      "source": "sf-root",
-      "target": "sf-protocol",
+      "source": "smartferrari-iot-dir-docs-demo",
+      "target": "smartferrari-iot-file-docs-demo-standalone-html",
       "type": "dependency"
     },
     {
-      "source": "sf-root",
-      "target": "sf-tests",
+      "source": "smartferrari-iot-dir-docs-demo",
+      "target": "smartferrari-iot-file-docs-demo-style-css",
+      "type": "dependency"
+    },
+    {
+      "source": "smartferrari-iot-dir-python-server",
+      "target": "smartferrari-iot-grp-python-server-files-a-c-d-e-h-m-p",
+      "type": "dependency"
+    },
+    {
+      "source": "smartferrari-iot-dir-python-server",
+      "target": "smartferrari-iot-grp-python-server-files-r-s-t",
+      "type": "dependency"
+    },
+    {
+      "source": "smartferrari-iot-grp-python-server-files-a-c-d-e-h-m-p",
+      "target": "smartferrari-iot-file-python-server-api-py",
+      "type": "dependency"
+    },
+    {
+      "source": "smartferrari-iot-grp-python-server-files-a-c-d-e-h-m-p",
+      "target": "smartferrari-iot-file-python-server-app-py",
+      "type": "dependency"
+    },
+    {
+      "source": "smartferrari-iot-grp-python-server-files-a-c-d-e-h-m-p",
+      "target": "smartferrari-iot-file-python-server-auth-py",
+      "type": "dependency"
+    },
+    {
+      "source": "smartferrari-iot-grp-python-server-files-a-c-d-e-h-m-p",
+      "target": "smartferrari-iot-file-python-server-config-py",
+      "type": "dependency"
+    },
+    {
+      "source": "smartferrari-iot-grp-python-server-files-a-c-d-e-h-m-p",
+      "target": "smartferrari-iot-file-python-server-database-py",
+      "type": "dependency"
+    },
+    {
+      "source": "smartferrari-iot-grp-python-server-files-a-c-d-e-h-m-p",
+      "target": "smartferrari-iot-file-python-server-energy-py",
+      "type": "dependency"
+    },
+    {
+      "source": "smartferrari-iot-grp-python-server-files-a-c-d-e-h-m-p",
+      "target": "smartferrari-iot-file-python-server-experiments-py",
+      "type": "dependency"
+    },
+    {
+      "source": "smartferrari-iot-grp-python-server-files-a-c-d-e-h-m-p",
+      "target": "smartferrari-iot-file-python-server-hil-py",
+      "type": "dependency"
+    },
+    {
+      "source": "smartferrari-iot-grp-python-server-files-a-c-d-e-h-m-p",
+      "target": "smartferrari-iot-file-python-server-models-py",
+      "type": "dependency"
+    },
+    {
+      "source": "smartferrari-iot-grp-python-server-files-a-c-d-e-h-m-p",
+      "target": "smartferrari-iot-file-python-server-mqtt-bridge-py",
+      "type": "dependency"
+    },
+    {
+      "source": "smartferrari-iot-grp-python-server-files-a-c-d-e-h-m-p",
+      "target": "smartferrari-iot-file-python-server-paperpack-py",
+      "type": "dependency"
+    },
+    {
+      "source": "smartferrari-iot-grp-python-server-files-a-c-d-e-h-m-p",
+      "target": "smartferrari-iot-file-python-server-protocol-py",
+      "type": "dependency"
+    },
+    {
+      "source": "smartferrari-iot-grp-python-server-files-r-s-t",
+      "target": "smartferrari-iot-file-python-server-research-api-py",
+      "type": "dependency"
+    },
+    {
+      "source": "smartferrari-iot-grp-python-server-files-r-s-t",
+      "target": "smartferrari-iot-file-python-server-security-py",
+      "type": "dependency"
+    },
+    {
+      "source": "smartferrari-iot-grp-python-server-files-r-s-t",
+      "target": "smartferrari-iot-file-python-server-simulator-py",
+      "type": "dependency"
+    },
+    {
+      "source": "smartferrari-iot-grp-python-server-files-r-s-t",
+      "target": "smartferrari-iot-file-python-server-state-py",
+      "type": "dependency"
+    },
+    {
+      "source": "smartferrari-iot-grp-python-server-files-r-s-t",
+      "target": "smartferrari-iot-file-python-server-statemachine-py",
+      "type": "dependency"
+    },
+    {
+      "source": "smartferrari-iot-grp-python-server-files-r-s-t",
+      "target": "smartferrari-iot-file-python-server-telemetry-py",
+      "type": "dependency"
+    },
+    {
+      "source": "smartferrari-iot-dir-raspberry",
+      "target": "smartferrari-iot-file-raspberry-actuators-py",
+      "type": "dependency"
+    },
+    {
+      "source": "smartferrari-iot-dir-raspberry",
+      "target": "smartferrari-iot-file-raspberry-agent-py",
+      "type": "dependency"
+    },
+    {
+      "source": "smartferrari-iot-dir-tests",
+      "target": "smartferrari-iot-file-tests-test-engineering-py",
+      "type": "dependency"
+    },
+    {
+      "source": "smartferrari-iot-dir-web",
+      "target": "smartferrari-iot-file-web-audio-js",
+      "type": "dependency"
+    },
+    {
+      "source": "smartferrari-iot-dir-web",
+      "target": "smartferrari-iot-file-web-index-html",
+      "type": "dependency"
+    },
+    {
+      "source": "smartferrari-iot-dir-web",
+      "target": "smartferrari-iot-file-web-script-js",
+      "type": "dependency"
+    },
+    {
+      "source": "smartferrari-iot-dir-web",
+      "target": "smartferrari-iot-file-web-style-css",
+      "type": "dependency"
+    },
+    {
+      "source": "smartferrari-iot-dir-web",
+      "target": "smartferrari-iot-file-web-vision-js",
       "type": "dependency"
     }
   ]

@@ -4,7 +4,7 @@
   "repoUrl": "https://github.com/CanonEngineer/AnkiUnivespProject",
   "color": "#818cf8",
   "demoUrl": "",
-  "nodeCount": 28,
+  "nodeCount": 64,
   "categories": {
     "core": {
       "label": "Backend",
@@ -14,6 +14,10 @@
       "label": "Frontend",
       "color": "#eab308"
     },
+    "tests": {
+      "label": "Testes",
+      "color": "#94a3b8"
+    },
     "other": {
       "label": "Outros",
       "color": "#64748b"
@@ -21,7 +25,7 @@
   },
   "nodes": [
     {
-      "id": "ank-root",
+      "id": "anki-univesp-root",
       "label": "AnkiUnivespProject",
       "parent": null,
       "layer": "root",
@@ -29,468 +33,1080 @@
       "categoryLabel": "Backend",
       "color": "#3b82f6",
       "size": 2.2,
-      "file": "manage.py",
+      "file": "README.md",
       "description": "App estilo Anki para estudos UNIVESP com accounts e core."
     },
     {
-      "id": "ank-accounts",
-      "label": "accounts",
-      "parent": "ank-root",
+      "id": "anki-univesp-dir-accounts",
+      "label": "accounts/",
+      "parent": "anki-univesp-root",
       "layer": "module",
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
       "size": 1.35,
       "file": "accounts/",
-      "description": "Módulo/pasta `accounts/` com arquivos-chave do projeto."
+      "description": "Pacote/pasta `accounts/` do projeto."
     },
     {
-      "id": "ank-accounts-admin-py",
-      "label": "admin.py",
-      "parent": "ank-accounts",
-      "layer": "file",
-      "category": "core",
-      "categoryLabel": "Backend",
-      "color": "#3b82f6",
-      "size": 0.85,
-      "file": "accounts/admin.py",
-      "description": "Arquivo `accounts/admin.py` mapeado a partir do repositório original."
-    },
-    {
-      "id": "ank-accounts-forms-py",
-      "label": "forms.py",
-      "parent": "ank-accounts",
-      "layer": "file",
-      "category": "core",
-      "categoryLabel": "Backend",
-      "color": "#3b82f6",
-      "size": 0.85,
-      "file": "accounts/forms.py",
-      "description": "Arquivo `accounts/forms.py` mapeado a partir do repositório original."
-    },
-    {
-      "id": "ank-accounts-models-py",
-      "label": "models.py",
-      "parent": "ank-accounts",
-      "layer": "file",
-      "category": "core",
-      "categoryLabel": "Backend",
-      "color": "#3b82f6",
-      "size": 0.85,
-      "file": "accounts/models.py",
-      "description": "Arquivo `accounts/models.py` mapeado a partir do repositório original."
-    },
-    {
-      "id": "ank-accounts-urls-py",
-      "label": "urls.py",
-      "parent": "ank-accounts",
-      "layer": "file",
-      "category": "core",
-      "categoryLabel": "Backend",
-      "color": "#3b82f6",
-      "size": 0.85,
-      "file": "accounts/urls.py",
-      "description": "Arquivo `accounts/urls.py` mapeado a partir do repositório original."
-    },
-    {
-      "id": "ank-accounts-views-py",
-      "label": "views.py",
-      "parent": "ank-accounts",
-      "layer": "file",
-      "category": "frontend",
-      "categoryLabel": "Frontend",
-      "color": "#eab308",
-      "size": 0.85,
-      "file": "accounts/views.py",
-      "description": "Arquivo `accounts/views.py` mapeado a partir do repositório original."
-    },
-    {
-      "id": "ank-accounts-templates-accounts-index-html",
-      "label": "index.html",
-      "parent": "ank-accounts",
-      "layer": "file",
-      "category": "frontend",
-      "categoryLabel": "Frontend",
-      "color": "#eab308",
-      "size": 0.85,
-      "file": "accounts/templates/accounts/index.html",
-      "description": "Arquivo `accounts/templates/accounts/index.html` mapeado a partir do repositório original."
-    },
-    {
-      "id": "ank-accounts-backends-py",
-      "label": "backends.py",
-      "parent": "ank-accounts",
-      "layer": "file",
-      "category": "core",
-      "categoryLabel": "Backend",
-      "color": "#3b82f6",
-      "size": 0.85,
-      "file": "accounts/backends.py",
-      "description": "Arquivo `accounts/backends.py` mapeado a partir do repositório original."
-    },
-    {
-      "id": "ank-accounts-templates-accounts-register-htm",
-      "label": "register.html",
-      "parent": "ank-accounts",
-      "layer": "file",
-      "category": "frontend",
-      "categoryLabel": "Frontend",
-      "color": "#eab308",
-      "size": 0.85,
-      "file": "accounts/templates/accounts/register.html",
-      "description": "Arquivo `accounts/templates/accounts/register.html` mapeado a partir do repositório original."
-    },
-    {
-      "id": "ank-core",
-      "label": "core",
-      "parent": "ank-root",
+      "id": "anki-univesp-dir-core",
+      "label": "core/",
+      "parent": "anki-univesp-root",
       "layer": "module",
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
       "size": 1.35,
       "file": "core/",
-      "description": "Módulo/pasta `core/` com arquivos-chave do projeto."
+      "description": "Pacote/pasta `core/` do projeto."
     },
     {
-      "id": "ank-core-forms-py",
-      "label": "forms.py",
-      "parent": "ank-core",
-      "layer": "file",
-      "category": "core",
-      "categoryLabel": "Backend",
-      "color": "#3b82f6",
-      "size": 0.85,
-      "file": "core/forms.py",
-      "description": "Arquivo `core/forms.py` mapeado a partir do repositório original."
-    },
-    {
-      "id": "ank-core-views-py",
-      "label": "views.py",
-      "parent": "ank-core",
-      "layer": "file",
-      "category": "frontend",
-      "categoryLabel": "Frontend",
-      "color": "#eab308",
-      "size": 0.85,
-      "file": "core/views.py",
-      "description": "Arquivo `core/views.py` mapeado a partir do repositório original."
-    },
-    {
-      "id": "ank-core-templates-index-html",
-      "label": "index.html",
-      "parent": "ank-core",
-      "layer": "file",
-      "category": "frontend",
-      "categoryLabel": "Frontend",
-      "color": "#eab308",
-      "size": 0.85,
-      "file": "core/templates/index.html",
-      "description": "Arquivo `core/templates/index.html` mapeado a partir do repositório original."
-    },
-    {
-      "id": "ank-core-tests-test-views-py",
-      "label": "test_views.py",
-      "parent": "ank-core",
-      "layer": "file",
-      "category": "frontend",
-      "categoryLabel": "Frontend",
-      "color": "#eab308",
-      "size": 0.85,
-      "file": "core/tests/test_views.py",
-      "description": "Arquivo `core/tests/test_views.py` mapeado a partir do repositório original."
-    },
-    {
-      "id": "ank-core-templates-base-html",
-      "label": "base.html",
-      "parent": "ank-core",
-      "layer": "file",
-      "category": "frontend",
-      "categoryLabel": "Frontend",
-      "color": "#eab308",
-      "size": 0.85,
-      "file": "core/templates/base.html",
-      "description": "Arquivo `core/templates/base.html` mapeado a partir do repositório original."
-    },
-    {
-      "id": "ank-core-templates-contact-html",
-      "label": "contact.html",
-      "parent": "ank-core",
-      "layer": "file",
-      "category": "frontend",
-      "categoryLabel": "Frontend",
-      "color": "#eab308",
-      "size": 0.85,
-      "file": "core/templates/contact.html",
-      "description": "Arquivo `core/templates/contact.html` mapeado a partir do repositório original."
-    },
-    {
-      "id": "ank-core-templates-file-html",
-      "label": "file.html",
-      "parent": "ank-core",
-      "layer": "file",
-      "category": "frontend",
-      "categoryLabel": "Frontend",
-      "color": "#eab308",
-      "size": 0.85,
-      "file": "core/templates/file.html",
-      "description": "Arquivo `core/templates/file.html` mapeado a partir do repositório original."
-    },
-    {
-      "id": "ank-core-templates-help-html",
-      "label": "help.html",
-      "parent": "ank-core",
-      "layer": "file",
-      "category": "frontend",
-      "categoryLabel": "Frontend",
-      "color": "#eab308",
-      "size": 0.85,
-      "file": "core/templates/help.html",
-      "description": "Arquivo `core/templates/help.html` mapeado a partir do repositório original."
-    },
-    {
-      "id": "ank-projetoankiunivesp",
-      "label": "ProjetoAnkiUnivesp",
-      "parent": "ank-root",
-      "layer": "module",
-      "category": "core",
-      "categoryLabel": "Backend",
-      "color": "#3b82f6",
-      "size": 1.35,
-      "file": "ProjetoAnkiUnivesp/",
-      "description": "Módulo/pasta `ProjetoAnkiUnivesp/` com arquivos-chave do projeto."
-    },
-    {
-      "id": "ank-projetoankiunivesp-settings-py",
-      "label": "settings.py",
-      "parent": "ank-projetoankiunivesp",
-      "layer": "file",
-      "category": "core",
-      "categoryLabel": "Backend",
-      "color": "#3b82f6",
-      "size": 0.85,
-      "file": "ProjetoAnkiUnivesp/settings.py",
-      "description": "Arquivo `ProjetoAnkiUnivesp/settings.py` mapeado a partir do repositório original."
-    },
-    {
-      "id": "ank-projetoankiunivesp-urls-py",
-      "label": "urls.py",
-      "parent": "ank-projetoankiunivesp",
-      "layer": "file",
-      "category": "core",
-      "categoryLabel": "Backend",
-      "color": "#3b82f6",
-      "size": 0.85,
-      "file": "ProjetoAnkiUnivesp/urls.py",
-      "description": "Arquivo `ProjetoAnkiUnivesp/urls.py` mapeado a partir do repositório original."
-    },
-    {
-      "id": "ank-projetoankiunivesp-asgi-py",
-      "label": "asgi.py",
-      "parent": "ank-projetoankiunivesp",
-      "layer": "file",
-      "category": "core",
-      "categoryLabel": "Backend",
-      "color": "#3b82f6",
-      "size": 0.85,
-      "file": "ProjetoAnkiUnivesp/asgi.py",
-      "description": "Arquivo `ProjetoAnkiUnivesp/asgi.py` mapeado a partir do repositório original."
-    },
-    {
-      "id": "ank-projetoankiunivesp-local-settings-py",
-      "label": "local_settings.py",
-      "parent": "ank-projetoankiunivesp",
-      "layer": "file",
-      "category": "core",
-      "categoryLabel": "Backend",
-      "color": "#3b82f6",
-      "size": 0.85,
-      "file": "ProjetoAnkiUnivesp/local_settings.py",
-      "description": "Arquivo `ProjetoAnkiUnivesp/local_settings.py` mapeado a partir do repositório original."
-    },
-    {
-      "id": "ank-projetoankiunivesp-wsgi-py",
-      "label": "wsgi.py",
-      "parent": "ank-projetoankiunivesp",
-      "layer": "file",
-      "category": "core",
-      "categoryLabel": "Backend",
-      "color": "#3b82f6",
-      "size": 0.85,
-      "file": "ProjetoAnkiUnivesp/wsgi.py",
-      "description": "Arquivo `ProjetoAnkiUnivesp/wsgi.py` mapeado a partir do repositório original."
-    },
-    {
-      "id": "ank-design",
-      "label": "design",
-      "parent": "ank-root",
+      "id": "anki-univesp-dir-design",
+      "label": "design/",
+      "parent": "anki-univesp-root",
       "layer": "module",
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
       "size": 1.35,
       "file": "design/",
-      "description": "Módulo/pasta `design/` com arquivos-chave do projeto."
+      "description": "Pacote/pasta `design/` do projeto."
     },
     {
-      "id": "ank-design-index-html",
-      "label": "index.html",
-      "parent": "ank-design",
+      "id": "anki-univesp-dir-projetoankiunivesp",
+      "label": "ProjetoAnkiUnivesp/",
+      "parent": "anki-univesp-root",
+      "layer": "module",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 1.35,
+      "file": "ProjetoAnkiUnivesp/",
+      "description": "Pacote/pasta `ProjetoAnkiUnivesp/` do projeto."
+    },
+    {
+      "id": "anki-univesp-dir-accounts-migrations",
+      "label": "migrations/",
+      "parent": "anki-univesp-dir-accounts",
+      "layer": "module",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 1.35,
+      "file": "accounts/migrations/",
+      "description": "Pacote/pasta `accounts/migrations/` do projeto."
+    },
+    {
+      "id": "anki-univesp-dir-accounts-templates",
+      "label": "templates/",
+      "parent": "anki-univesp-dir-accounts",
+      "layer": "module",
+      "category": "frontend",
+      "categoryLabel": "Frontend",
+      "color": "#eab308",
+      "size": 1.35,
+      "file": "accounts/templates/",
+      "description": "Pacote/pasta `accounts/templates/` do projeto."
+    },
+    {
+      "id": "anki-univesp-dir-core-migrations",
+      "label": "migrations/",
+      "parent": "anki-univesp-dir-core",
+      "layer": "module",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 1.35,
+      "file": "core/migrations/",
+      "description": "Pacote/pasta `core/migrations/` do projeto."
+    },
+    {
+      "id": "anki-univesp-dir-core-static",
+      "label": "static/",
+      "parent": "anki-univesp-dir-core",
+      "layer": "module",
+      "category": "frontend",
+      "categoryLabel": "Frontend",
+      "color": "#eab308",
+      "size": 1.35,
+      "file": "core/static/",
+      "description": "Pacote/pasta `core/static/` do projeto."
+    },
+    {
+      "id": "anki-univesp-dir-core-templates",
+      "label": "templates/",
+      "parent": "anki-univesp-dir-core",
+      "layer": "module",
+      "category": "frontend",
+      "categoryLabel": "Frontend",
+      "color": "#eab308",
+      "size": 1.35,
+      "file": "core/templates/",
+      "description": "Pacote/pasta `core/templates/` do projeto."
+    },
+    {
+      "id": "anki-univesp-dir-core-tests",
+      "label": "tests/",
+      "parent": "anki-univesp-dir-core",
+      "layer": "module",
+      "category": "tests",
+      "categoryLabel": "Testes",
+      "color": "#94a3b8",
+      "size": 1.35,
+      "file": "core/tests/",
+      "description": "Pacote/pasta `core/tests/` do projeto."
+    },
+    {
+      "id": "anki-univesp-dir-design-assets",
+      "label": "assets/",
+      "parent": "anki-univesp-dir-design",
+      "layer": "module",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 1.35,
+      "file": "design/assets/",
+      "description": "Pacote/pasta `design/assets/` do projeto."
+    },
+    {
+      "id": "anki-univesp-dir-accounts-templates-accounts",
+      "label": "accounts/",
+      "parent": "anki-univesp-dir-accounts-templates",
+      "layer": "module",
+      "category": "frontend",
+      "categoryLabel": "Frontend",
+      "color": "#eab308",
+      "size": 1.35,
+      "file": "accounts/templates/accounts/",
+      "description": "Pacote/pasta `accounts/templates/accounts/` do projeto."
+    },
+    {
+      "id": "anki-univesp-dir-core-static-assets",
+      "label": "assets/",
+      "parent": "anki-univesp-dir-core-static",
+      "layer": "module",
+      "category": "frontend",
+      "categoryLabel": "Frontend",
+      "color": "#eab308",
+      "size": 1.35,
+      "file": "core/static/assets/",
+      "description": "Pacote/pasta `core/static/assets/` do projeto."
+    },
+    {
+      "id": "anki-univesp-file-manage-py",
+      "label": "manage.py",
+      "parent": "anki-univesp-root",
+      "layer": "file",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 0.85,
+      "file": "manage.py",
+      "description": "Código-fonte: `manage.py`"
+    },
+    {
+      "id": "anki-univesp-file-accounts-init-py",
+      "label": "__init__.py",
+      "parent": "anki-univesp-dir-accounts",
+      "layer": "file",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 0.85,
+      "file": "accounts/__init__.py",
+      "description": "Código-fonte: `accounts/__init__.py`"
+    },
+    {
+      "id": "anki-univesp-file-accounts-admin-py",
+      "label": "admin.py",
+      "parent": "anki-univesp-dir-accounts",
+      "layer": "file",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 0.85,
+      "file": "accounts/admin.py",
+      "description": "Código-fonte: `accounts/admin.py`"
+    },
+    {
+      "id": "anki-univesp-file-accounts-apps-py",
+      "label": "apps.py",
+      "parent": "anki-univesp-dir-accounts",
+      "layer": "file",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 0.85,
+      "file": "accounts/apps.py",
+      "description": "Código-fonte: `accounts/apps.py`"
+    },
+    {
+      "id": "anki-univesp-file-accounts-backends-py",
+      "label": "backends.py",
+      "parent": "anki-univesp-dir-accounts",
+      "layer": "file",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 0.85,
+      "file": "accounts/backends.py",
+      "description": "Código-fonte: `accounts/backends.py`"
+    },
+    {
+      "id": "anki-univesp-file-accounts-forms-py",
+      "label": "forms.py",
+      "parent": "anki-univesp-dir-accounts",
+      "layer": "file",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 0.85,
+      "file": "accounts/forms.py",
+      "description": "Código-fonte: `accounts/forms.py`"
+    },
+    {
+      "id": "anki-univesp-file-accounts-models-py",
+      "label": "models.py",
+      "parent": "anki-univesp-dir-accounts",
+      "layer": "file",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 0.85,
+      "file": "accounts/models.py",
+      "description": "Código-fonte: `accounts/models.py`"
+    },
+    {
+      "id": "anki-univesp-file-accounts-tests-py",
+      "label": "tests.py",
+      "parent": "anki-univesp-dir-accounts",
+      "layer": "file",
+      "category": "tests",
+      "categoryLabel": "Testes",
+      "color": "#94a3b8",
+      "size": 0.85,
+      "file": "accounts/tests.py",
+      "description": "Código-fonte: `accounts/tests.py`"
+    },
+    {
+      "id": "anki-univesp-file-accounts-urls-py",
+      "label": "urls.py",
+      "parent": "anki-univesp-dir-accounts",
+      "layer": "file",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 0.85,
+      "file": "accounts/urls.py",
+      "description": "Código-fonte: `accounts/urls.py`"
+    },
+    {
+      "id": "anki-univesp-file-accounts-views-py",
+      "label": "views.py",
+      "parent": "anki-univesp-dir-accounts",
       "layer": "file",
       "category": "frontend",
       "categoryLabel": "Frontend",
       "color": "#eab308",
       "size": 0.85,
-      "file": "design/index.html",
-      "description": "Arquivo `design/index.html` mapeado a partir do repositório original."
+      "file": "accounts/views.py",
+      "description": "Código-fonte: `accounts/views.py`"
     },
     {
-      "id": "ank-design-base-html",
+      "id": "anki-univesp-file-accounts-migrations-0001-initial-py",
+      "label": "0001_initial.py",
+      "parent": "anki-univesp-dir-accounts-migrations",
+      "layer": "file",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 0.85,
+      "file": "accounts/migrations/0001_initial.py",
+      "description": "Código-fonte: `accounts/migrations/0001_initial.py`"
+    },
+    {
+      "id": "anki-univesp-file-accounts-migrations-init-py",
+      "label": "__init__.py",
+      "parent": "anki-univesp-dir-accounts-migrations",
+      "layer": "file",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 0.85,
+      "file": "accounts/migrations/__init__.py",
+      "description": "Código-fonte: `accounts/migrations/__init__.py`"
+    },
+    {
+      "id": "anki-univesp-file-accounts-templates-accounts-index-html",
+      "label": "index.html",
+      "parent": "anki-univesp-dir-accounts-templates-accounts",
+      "layer": "file",
+      "category": "frontend",
+      "categoryLabel": "Frontend",
+      "color": "#eab308",
+      "size": 0.85,
+      "file": "accounts/templates/accounts/index.html",
+      "description": "Código-fonte: `accounts/templates/accounts/index.html`"
+    },
+    {
+      "id": "anki-univesp-file-accounts-templates-accounts-register-html",
+      "label": "register.html",
+      "parent": "anki-univesp-dir-accounts-templates-accounts",
+      "layer": "file",
+      "category": "frontend",
+      "categoryLabel": "Frontend",
+      "color": "#eab308",
+      "size": 0.85,
+      "file": "accounts/templates/accounts/register.html",
+      "description": "Código-fonte: `accounts/templates/accounts/register.html`"
+    },
+    {
+      "id": "anki-univesp-file-accounts-templates-accounts-update-password-html",
+      "label": "update_password.html",
+      "parent": "anki-univesp-dir-accounts-templates-accounts",
+      "layer": "file",
+      "category": "frontend",
+      "categoryLabel": "Frontend",
+      "color": "#eab308",
+      "size": 0.85,
+      "file": "accounts/templates/accounts/update_password.html",
+      "description": "Código-fonte: `accounts/templates/accounts/update_password.html`"
+    },
+    {
+      "id": "anki-univesp-file-accounts-templates-accounts-update-user-html",
+      "label": "update_user.html",
+      "parent": "anki-univesp-dir-accounts-templates-accounts",
+      "layer": "file",
+      "category": "frontend",
+      "categoryLabel": "Frontend",
+      "color": "#eab308",
+      "size": 0.85,
+      "file": "accounts/templates/accounts/update_user.html",
+      "description": "Código-fonte: `accounts/templates/accounts/update_user.html`"
+    },
+    {
+      "id": "anki-univesp-file-core-init-py",
+      "label": "__init__.py",
+      "parent": "anki-univesp-dir-core",
+      "layer": "file",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 0.85,
+      "file": "core/__init__.py",
+      "description": "Código-fonte: `core/__init__.py`"
+    },
+    {
+      "id": "anki-univesp-file-core-admin-py",
+      "label": "admin.py",
+      "parent": "anki-univesp-dir-core",
+      "layer": "file",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 0.85,
+      "file": "core/admin.py",
+      "description": "Código-fonte: `core/admin.py`"
+    },
+    {
+      "id": "anki-univesp-file-core-apps-py",
+      "label": "apps.py",
+      "parent": "anki-univesp-dir-core",
+      "layer": "file",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 0.85,
+      "file": "core/apps.py",
+      "description": "Código-fonte: `core/apps.py`"
+    },
+    {
+      "id": "anki-univesp-file-core-forms-py",
+      "label": "forms.py",
+      "parent": "anki-univesp-dir-core",
+      "layer": "file",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 0.85,
+      "file": "core/forms.py",
+      "description": "Código-fonte: `core/forms.py`"
+    },
+    {
+      "id": "anki-univesp-file-core-models-py",
+      "label": "models.py",
+      "parent": "anki-univesp-dir-core",
+      "layer": "file",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 0.85,
+      "file": "core/models.py",
+      "description": "Código-fonte: `core/models.py`"
+    },
+    {
+      "id": "anki-univesp-file-core-views-py",
+      "label": "views.py",
+      "parent": "anki-univesp-dir-core",
+      "layer": "file",
+      "category": "frontend",
+      "categoryLabel": "Frontend",
+      "color": "#eab308",
+      "size": 0.85,
+      "file": "core/views.py",
+      "description": "Código-fonte: `core/views.py`"
+    },
+    {
+      "id": "anki-univesp-file-core-migrations-init-py",
+      "label": "__init__.py",
+      "parent": "anki-univesp-dir-core-migrations",
+      "layer": "file",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 0.85,
+      "file": "core/migrations/__init__.py",
+      "description": "Código-fonte: `core/migrations/__init__.py`"
+    },
+    {
+      "id": "anki-univesp-file-core-static-assets-bootstrap-min-css",
+      "label": "bootstrap.min.css",
+      "parent": "anki-univesp-dir-core-static-assets",
+      "layer": "file",
+      "category": "frontend",
+      "categoryLabel": "Frontend",
+      "color": "#eab308",
+      "size": 0.85,
+      "file": "core/static/assets/bootstrap.min.css",
+      "description": "Código-fonte: `core/static/assets/bootstrap.min.css`"
+    },
+    {
+      "id": "anki-univesp-file-core-static-assets-bootstrap-min-js",
+      "label": "bootstrap.min.js",
+      "parent": "anki-univesp-dir-core-static-assets",
+      "layer": "file",
+      "category": "frontend",
+      "categoryLabel": "Frontend",
+      "color": "#eab308",
+      "size": 0.85,
+      "file": "core/static/assets/bootstrap.min.js",
+      "description": "Código-fonte: `core/static/assets/bootstrap.min.js`"
+    },
+    {
+      "id": "anki-univesp-file-core-static-assets-custom-min-css",
+      "label": "custom.min.css",
+      "parent": "anki-univesp-dir-core-static-assets",
+      "layer": "file",
+      "category": "frontend",
+      "categoryLabel": "Frontend",
+      "color": "#eab308",
+      "size": 0.85,
+      "file": "core/static/assets/custom.min.css",
+      "description": "Código-fonte: `core/static/assets/custom.min.css`"
+    },
+    {
+      "id": "anki-univesp-file-core-static-assets-main-css",
+      "label": "main.css",
+      "parent": "anki-univesp-dir-core-static-assets",
+      "layer": "file",
+      "category": "frontend",
+      "categoryLabel": "Frontend",
+      "color": "#eab308",
+      "size": 0.85,
+      "file": "core/static/assets/main.css",
+      "description": "Código-fonte: `core/static/assets/main.css`"
+    },
+    {
+      "id": "anki-univesp-file-core-templates-base-html",
       "label": "base.html",
-      "parent": "ank-design",
+      "parent": "anki-univesp-dir-core-templates",
+      "layer": "file",
+      "category": "frontend",
+      "categoryLabel": "Frontend",
+      "color": "#eab308",
+      "size": 0.85,
+      "file": "core/templates/base.html",
+      "description": "Código-fonte: `core/templates/base.html`"
+    },
+    {
+      "id": "anki-univesp-file-core-templates-contact-html",
+      "label": "contact.html",
+      "parent": "anki-univesp-dir-core-templates",
+      "layer": "file",
+      "category": "frontend",
+      "categoryLabel": "Frontend",
+      "color": "#eab308",
+      "size": 0.85,
+      "file": "core/templates/contact.html",
+      "description": "Código-fonte: `core/templates/contact.html`"
+    },
+    {
+      "id": "anki-univesp-file-core-templates-file-html",
+      "label": "file.html",
+      "parent": "anki-univesp-dir-core-templates",
+      "layer": "file",
+      "category": "frontend",
+      "categoryLabel": "Frontend",
+      "color": "#eab308",
+      "size": 0.85,
+      "file": "core/templates/file.html",
+      "description": "Código-fonte: `core/templates/file.html`"
+    },
+    {
+      "id": "anki-univesp-file-core-templates-help-html",
+      "label": "help.html",
+      "parent": "anki-univesp-dir-core-templates",
+      "layer": "file",
+      "category": "frontend",
+      "categoryLabel": "Frontend",
+      "color": "#eab308",
+      "size": 0.85,
+      "file": "core/templates/help.html",
+      "description": "Código-fonte: `core/templates/help.html`"
+    },
+    {
+      "id": "anki-univesp-file-core-templates-index-html",
+      "label": "index.html",
+      "parent": "anki-univesp-dir-core-templates",
+      "layer": "file",
+      "category": "frontend",
+      "categoryLabel": "Frontend",
+      "color": "#eab308",
+      "size": 0.85,
+      "file": "core/templates/index.html",
+      "description": "Código-fonte: `core/templates/index.html`"
+    },
+    {
+      "id": "anki-univesp-file-core-templates-login-html",
+      "label": "login.html",
+      "parent": "anki-univesp-dir-core-templates",
+      "layer": "file",
+      "category": "frontend",
+      "categoryLabel": "Frontend",
+      "color": "#eab308",
+      "size": 0.85,
+      "file": "core/templates/login.html",
+      "description": "Código-fonte: `core/templates/login.html`"
+    },
+    {
+      "id": "anki-univesp-file-core-templates-project-html",
+      "label": "project.html",
+      "parent": "anki-univesp-dir-core-templates",
+      "layer": "file",
+      "category": "frontend",
+      "categoryLabel": "Frontend",
+      "color": "#eab308",
+      "size": 0.85,
+      "file": "core/templates/project.html",
+      "description": "Código-fonte: `core/templates/project.html`"
+    },
+    {
+      "id": "anki-univesp-file-core-tests-init-py",
+      "label": "__init__.py",
+      "parent": "anki-univesp-dir-core-tests",
+      "layer": "file",
+      "category": "tests",
+      "categoryLabel": "Testes",
+      "color": "#94a3b8",
+      "size": 0.85,
+      "file": "core/tests/__init__.py",
+      "description": "Código-fonte: `core/tests/__init__.py`"
+    },
+    {
+      "id": "anki-univesp-file-core-tests-test-views-py",
+      "label": "test_views.py",
+      "parent": "anki-univesp-dir-core-tests",
+      "layer": "file",
+      "category": "frontend",
+      "categoryLabel": "Frontend",
+      "color": "#eab308",
+      "size": 0.85,
+      "file": "core/tests/test_views.py",
+      "description": "Código-fonte: `core/tests/test_views.py`"
+    },
+    {
+      "id": "anki-univesp-file-design-base-html",
+      "label": "base.html",
+      "parent": "anki-univesp-dir-design",
       "layer": "file",
       "category": "frontend",
       "categoryLabel": "Frontend",
       "color": "#eab308",
       "size": 0.85,
       "file": "design/base.html",
-      "description": "Arquivo `design/base.html` mapeado a partir do repositório original."
+      "description": "Código-fonte: `design/base.html`"
+    },
+    {
+      "id": "anki-univesp-file-design-contact-html",
+      "label": "contact.html",
+      "parent": "anki-univesp-dir-design",
+      "layer": "file",
+      "category": "frontend",
+      "categoryLabel": "Frontend",
+      "color": "#eab308",
+      "size": 0.85,
+      "file": "design/contact.html",
+      "description": "Código-fonte: `design/contact.html`"
+    },
+    {
+      "id": "anki-univesp-file-design-file-html",
+      "label": "file.html",
+      "parent": "anki-univesp-dir-design",
+      "layer": "file",
+      "category": "frontend",
+      "categoryLabel": "Frontend",
+      "color": "#eab308",
+      "size": 0.85,
+      "file": "design/file.html",
+      "description": "Código-fonte: `design/file.html`"
+    },
+    {
+      "id": "anki-univesp-file-design-help-html",
+      "label": "help.html",
+      "parent": "anki-univesp-dir-design",
+      "layer": "file",
+      "category": "frontend",
+      "categoryLabel": "Frontend",
+      "color": "#eab308",
+      "size": 0.85,
+      "file": "design/help.html",
+      "description": "Código-fonte: `design/help.html`"
+    },
+    {
+      "id": "anki-univesp-file-design-index-html",
+      "label": "index.html",
+      "parent": "anki-univesp-dir-design",
+      "layer": "file",
+      "category": "frontend",
+      "categoryLabel": "Frontend",
+      "color": "#eab308",
+      "size": 0.85,
+      "file": "design/index.html",
+      "description": "Código-fonte: `design/index.html`"
+    },
+    {
+      "id": "anki-univesp-file-design-assets-bootstrap-min-css",
+      "label": "bootstrap.min.css",
+      "parent": "anki-univesp-dir-design-assets",
+      "layer": "file",
+      "category": "frontend",
+      "categoryLabel": "Frontend",
+      "color": "#eab308",
+      "size": 0.85,
+      "file": "design/assets/bootstrap.min.css",
+      "description": "Código-fonte: `design/assets/bootstrap.min.css`"
+    },
+    {
+      "id": "anki-univesp-file-design-assets-bootstrap-min-js",
+      "label": "bootstrap.min.js",
+      "parent": "anki-univesp-dir-design-assets",
+      "layer": "file",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 0.85,
+      "file": "design/assets/bootstrap.min.js",
+      "description": "Código-fonte: `design/assets/bootstrap.min.js`"
+    },
+    {
+      "id": "anki-univesp-file-design-assets-custom-min-css",
+      "label": "custom.min.css",
+      "parent": "anki-univesp-dir-design-assets",
+      "layer": "file",
+      "category": "frontend",
+      "categoryLabel": "Frontend",
+      "color": "#eab308",
+      "size": 0.85,
+      "file": "design/assets/custom.min.css",
+      "description": "Código-fonte: `design/assets/custom.min.css`"
+    },
+    {
+      "id": "anki-univesp-file-projetoankiunivesp-init-py",
+      "label": "__init__.py",
+      "parent": "anki-univesp-dir-projetoankiunivesp",
+      "layer": "file",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 0.85,
+      "file": "ProjetoAnkiUnivesp/__init__.py",
+      "description": "Código-fonte: `ProjetoAnkiUnivesp/__init__.py`"
+    },
+    {
+      "id": "anki-univesp-file-projetoankiunivesp-asgi-py",
+      "label": "asgi.py",
+      "parent": "anki-univesp-dir-projetoankiunivesp",
+      "layer": "file",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 0.85,
+      "file": "ProjetoAnkiUnivesp/asgi.py",
+      "description": "Código-fonte: `ProjetoAnkiUnivesp/asgi.py`"
+    },
+    {
+      "id": "anki-univesp-file-projetoankiunivesp-local-settings-py",
+      "label": "local_settings.py",
+      "parent": "anki-univesp-dir-projetoankiunivesp",
+      "layer": "file",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 0.85,
+      "file": "ProjetoAnkiUnivesp/local_settings.py",
+      "description": "Código-fonte: `ProjetoAnkiUnivesp/local_settings.py`"
+    },
+    {
+      "id": "anki-univesp-file-projetoankiunivesp-settings-py",
+      "label": "settings.py",
+      "parent": "anki-univesp-dir-projetoankiunivesp",
+      "layer": "file",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 0.85,
+      "file": "ProjetoAnkiUnivesp/settings.py",
+      "description": "Código-fonte: `ProjetoAnkiUnivesp/settings.py`"
+    },
+    {
+      "id": "anki-univesp-file-projetoankiunivesp-urls-py",
+      "label": "urls.py",
+      "parent": "anki-univesp-dir-projetoankiunivesp",
+      "layer": "file",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 0.85,
+      "file": "ProjetoAnkiUnivesp/urls.py",
+      "description": "Código-fonte: `ProjetoAnkiUnivesp/urls.py`"
+    },
+    {
+      "id": "anki-univesp-file-projetoankiunivesp-wsgi-py",
+      "label": "wsgi.py",
+      "parent": "anki-univesp-dir-projetoankiunivesp",
+      "layer": "file",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 0.85,
+      "file": "ProjetoAnkiUnivesp/wsgi.py",
+      "description": "Código-fonte: `ProjetoAnkiUnivesp/wsgi.py`"
     }
   ],
   "links": [
     {
-      "source": "ank-root",
-      "target": "ank-accounts",
+      "source": "anki-univesp-root",
+      "target": "anki-univesp-dir-accounts",
       "type": "dependency"
     },
     {
-      "source": "ank-accounts",
-      "target": "ank-accounts-admin-py",
+      "source": "anki-univesp-root",
+      "target": "anki-univesp-dir-core",
       "type": "dependency"
     },
     {
-      "source": "ank-accounts",
-      "target": "ank-accounts-forms-py",
+      "source": "anki-univesp-root",
+      "target": "anki-univesp-dir-design",
       "type": "dependency"
     },
     {
-      "source": "ank-accounts",
-      "target": "ank-accounts-models-py",
+      "source": "anki-univesp-root",
+      "target": "anki-univesp-dir-projetoankiunivesp",
       "type": "dependency"
     },
     {
-      "source": "ank-accounts",
-      "target": "ank-accounts-urls-py",
+      "source": "anki-univesp-dir-accounts",
+      "target": "anki-univesp-dir-accounts-migrations",
       "type": "dependency"
     },
     {
-      "source": "ank-accounts",
-      "target": "ank-accounts-views-py",
+      "source": "anki-univesp-dir-accounts",
+      "target": "anki-univesp-dir-accounts-templates",
       "type": "dependency"
     },
     {
-      "source": "ank-accounts",
-      "target": "ank-accounts-templates-accounts-index-html",
+      "source": "anki-univesp-dir-core",
+      "target": "anki-univesp-dir-core-migrations",
       "type": "dependency"
     },
     {
-      "source": "ank-accounts",
-      "target": "ank-accounts-backends-py",
+      "source": "anki-univesp-dir-core",
+      "target": "anki-univesp-dir-core-static",
       "type": "dependency"
     },
     {
-      "source": "ank-accounts",
-      "target": "ank-accounts-templates-accounts-register-htm",
+      "source": "anki-univesp-dir-core",
+      "target": "anki-univesp-dir-core-templates",
       "type": "dependency"
     },
     {
-      "source": "ank-root",
-      "target": "ank-core",
+      "source": "anki-univesp-dir-core",
+      "target": "anki-univesp-dir-core-tests",
       "type": "dependency"
     },
     {
-      "source": "ank-core",
-      "target": "ank-core-forms-py",
+      "source": "anki-univesp-dir-design",
+      "target": "anki-univesp-dir-design-assets",
       "type": "dependency"
     },
     {
-      "source": "ank-core",
-      "target": "ank-core-views-py",
+      "source": "anki-univesp-dir-accounts-templates",
+      "target": "anki-univesp-dir-accounts-templates-accounts",
       "type": "dependency"
     },
     {
-      "source": "ank-core",
-      "target": "ank-core-templates-index-html",
+      "source": "anki-univesp-dir-core-static",
+      "target": "anki-univesp-dir-core-static-assets",
       "type": "dependency"
     },
     {
-      "source": "ank-core",
-      "target": "ank-core-tests-test-views-py",
+      "source": "anki-univesp-root",
+      "target": "anki-univesp-file-manage-py",
       "type": "dependency"
     },
     {
-      "source": "ank-core",
-      "target": "ank-core-templates-base-html",
+      "source": "anki-univesp-dir-accounts",
+      "target": "anki-univesp-file-accounts-init-py",
       "type": "dependency"
     },
     {
-      "source": "ank-core",
-      "target": "ank-core-templates-contact-html",
+      "source": "anki-univesp-dir-accounts",
+      "target": "anki-univesp-file-accounts-admin-py",
       "type": "dependency"
     },
     {
-      "source": "ank-core",
-      "target": "ank-core-templates-file-html",
+      "source": "anki-univesp-dir-accounts",
+      "target": "anki-univesp-file-accounts-apps-py",
       "type": "dependency"
     },
     {
-      "source": "ank-core",
-      "target": "ank-core-templates-help-html",
+      "source": "anki-univesp-dir-accounts",
+      "target": "anki-univesp-file-accounts-backends-py",
       "type": "dependency"
     },
     {
-      "source": "ank-root",
-      "target": "ank-projetoankiunivesp",
+      "source": "anki-univesp-dir-accounts",
+      "target": "anki-univesp-file-accounts-forms-py",
       "type": "dependency"
     },
     {
-      "source": "ank-projetoankiunivesp",
-      "target": "ank-projetoankiunivesp-settings-py",
+      "source": "anki-univesp-dir-accounts",
+      "target": "anki-univesp-file-accounts-models-py",
       "type": "dependency"
     },
     {
-      "source": "ank-projetoankiunivesp",
-      "target": "ank-projetoankiunivesp-urls-py",
+      "source": "anki-univesp-dir-accounts",
+      "target": "anki-univesp-file-accounts-tests-py",
       "type": "dependency"
     },
     {
-      "source": "ank-projetoankiunivesp",
-      "target": "ank-projetoankiunivesp-asgi-py",
+      "source": "anki-univesp-dir-accounts",
+      "target": "anki-univesp-file-accounts-urls-py",
       "type": "dependency"
     },
     {
-      "source": "ank-projetoankiunivesp",
-      "target": "ank-projetoankiunivesp-local-settings-py",
+      "source": "anki-univesp-dir-accounts",
+      "target": "anki-univesp-file-accounts-views-py",
       "type": "dependency"
     },
     {
-      "source": "ank-projetoankiunivesp",
-      "target": "ank-projetoankiunivesp-wsgi-py",
+      "source": "anki-univesp-dir-accounts-migrations",
+      "target": "anki-univesp-file-accounts-migrations-0001-initial-py",
       "type": "dependency"
     },
     {
-      "source": "ank-root",
-      "target": "ank-design",
+      "source": "anki-univesp-dir-accounts-migrations",
+      "target": "anki-univesp-file-accounts-migrations-init-py",
       "type": "dependency"
     },
     {
-      "source": "ank-design",
-      "target": "ank-design-index-html",
+      "source": "anki-univesp-dir-accounts-templates-accounts",
+      "target": "anki-univesp-file-accounts-templates-accounts-index-html",
       "type": "dependency"
     },
     {
-      "source": "ank-design",
-      "target": "ank-design-base-html",
+      "source": "anki-univesp-dir-accounts-templates-accounts",
+      "target": "anki-univesp-file-accounts-templates-accounts-register-html",
+      "type": "dependency"
+    },
+    {
+      "source": "anki-univesp-dir-accounts-templates-accounts",
+      "target": "anki-univesp-file-accounts-templates-accounts-update-password-html",
+      "type": "dependency"
+    },
+    {
+      "source": "anki-univesp-dir-accounts-templates-accounts",
+      "target": "anki-univesp-file-accounts-templates-accounts-update-user-html",
+      "type": "dependency"
+    },
+    {
+      "source": "anki-univesp-dir-core",
+      "target": "anki-univesp-file-core-init-py",
+      "type": "dependency"
+    },
+    {
+      "source": "anki-univesp-dir-core",
+      "target": "anki-univesp-file-core-admin-py",
+      "type": "dependency"
+    },
+    {
+      "source": "anki-univesp-dir-core",
+      "target": "anki-univesp-file-core-apps-py",
+      "type": "dependency"
+    },
+    {
+      "source": "anki-univesp-dir-core",
+      "target": "anki-univesp-file-core-forms-py",
+      "type": "dependency"
+    },
+    {
+      "source": "anki-univesp-dir-core",
+      "target": "anki-univesp-file-core-models-py",
+      "type": "dependency"
+    },
+    {
+      "source": "anki-univesp-dir-core",
+      "target": "anki-univesp-file-core-views-py",
+      "type": "dependency"
+    },
+    {
+      "source": "anki-univesp-dir-core-migrations",
+      "target": "anki-univesp-file-core-migrations-init-py",
+      "type": "dependency"
+    },
+    {
+      "source": "anki-univesp-dir-core-static-assets",
+      "target": "anki-univesp-file-core-static-assets-bootstrap-min-css",
+      "type": "dependency"
+    },
+    {
+      "source": "anki-univesp-dir-core-static-assets",
+      "target": "anki-univesp-file-core-static-assets-bootstrap-min-js",
+      "type": "dependency"
+    },
+    {
+      "source": "anki-univesp-dir-core-static-assets",
+      "target": "anki-univesp-file-core-static-assets-custom-min-css",
+      "type": "dependency"
+    },
+    {
+      "source": "anki-univesp-dir-core-static-assets",
+      "target": "anki-univesp-file-core-static-assets-main-css",
+      "type": "dependency"
+    },
+    {
+      "source": "anki-univesp-dir-core-templates",
+      "target": "anki-univesp-file-core-templates-base-html",
+      "type": "dependency"
+    },
+    {
+      "source": "anki-univesp-dir-core-templates",
+      "target": "anki-univesp-file-core-templates-contact-html",
+      "type": "dependency"
+    },
+    {
+      "source": "anki-univesp-dir-core-templates",
+      "target": "anki-univesp-file-core-templates-file-html",
+      "type": "dependency"
+    },
+    {
+      "source": "anki-univesp-dir-core-templates",
+      "target": "anki-univesp-file-core-templates-help-html",
+      "type": "dependency"
+    },
+    {
+      "source": "anki-univesp-dir-core-templates",
+      "target": "anki-univesp-file-core-templates-index-html",
+      "type": "dependency"
+    },
+    {
+      "source": "anki-univesp-dir-core-templates",
+      "target": "anki-univesp-file-core-templates-login-html",
+      "type": "dependency"
+    },
+    {
+      "source": "anki-univesp-dir-core-templates",
+      "target": "anki-univesp-file-core-templates-project-html",
+      "type": "dependency"
+    },
+    {
+      "source": "anki-univesp-dir-core-tests",
+      "target": "anki-univesp-file-core-tests-init-py",
+      "type": "dependency"
+    },
+    {
+      "source": "anki-univesp-dir-core-tests",
+      "target": "anki-univesp-file-core-tests-test-views-py",
+      "type": "dependency"
+    },
+    {
+      "source": "anki-univesp-dir-design",
+      "target": "anki-univesp-file-design-base-html",
+      "type": "dependency"
+    },
+    {
+      "source": "anki-univesp-dir-design",
+      "target": "anki-univesp-file-design-contact-html",
+      "type": "dependency"
+    },
+    {
+      "source": "anki-univesp-dir-design",
+      "target": "anki-univesp-file-design-file-html",
+      "type": "dependency"
+    },
+    {
+      "source": "anki-univesp-dir-design",
+      "target": "anki-univesp-file-design-help-html",
+      "type": "dependency"
+    },
+    {
+      "source": "anki-univesp-dir-design",
+      "target": "anki-univesp-file-design-index-html",
+      "type": "dependency"
+    },
+    {
+      "source": "anki-univesp-dir-design-assets",
+      "target": "anki-univesp-file-design-assets-bootstrap-min-css",
+      "type": "dependency"
+    },
+    {
+      "source": "anki-univesp-dir-design-assets",
+      "target": "anki-univesp-file-design-assets-bootstrap-min-js",
+      "type": "dependency"
+    },
+    {
+      "source": "anki-univesp-dir-design-assets",
+      "target": "anki-univesp-file-design-assets-custom-min-css",
+      "type": "dependency"
+    },
+    {
+      "source": "anki-univesp-dir-projetoankiunivesp",
+      "target": "anki-univesp-file-projetoankiunivesp-init-py",
+      "type": "dependency"
+    },
+    {
+      "source": "anki-univesp-dir-projetoankiunivesp",
+      "target": "anki-univesp-file-projetoankiunivesp-asgi-py",
+      "type": "dependency"
+    },
+    {
+      "source": "anki-univesp-dir-projetoankiunivesp",
+      "target": "anki-univesp-file-projetoankiunivesp-local-settings-py",
+      "type": "dependency"
+    },
+    {
+      "source": "anki-univesp-dir-projetoankiunivesp",
+      "target": "anki-univesp-file-projetoankiunivesp-settings-py",
+      "type": "dependency"
+    },
+    {
+      "source": "anki-univesp-dir-projetoankiunivesp",
+      "target": "anki-univesp-file-projetoankiunivesp-urls-py",
+      "type": "dependency"
+    },
+    {
+      "source": "anki-univesp-dir-projetoankiunivesp",
+      "target": "anki-univesp-file-projetoankiunivesp-wsgi-py",
       "type": "dependency"
     }
   ]

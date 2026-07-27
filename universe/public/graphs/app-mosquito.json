@@ -4,7 +4,7 @@
   "repoUrl": "https://github.com/CanonEngineer/AppMosquito",
   "color": "#f472b6",
   "demoUrl": "",
-  "nodeCount": 8,
+  "nodeCount": 7,
   "categories": {
     "core": {
       "label": "Backend",
@@ -21,7 +21,7 @@
   },
   "nodes": [
     {
-      "id": "app-root",
+      "id": "app-mosquito-root",
       "label": "AppMosquito",
       "parent": null,
       "layer": "root",
@@ -29,128 +29,111 @@
       "categoryLabel": "Backend",
       "color": "#3b82f6",
       "size": 2.2,
-      "file": "index.html",
+      "file": "README.md",
       "description": "Jogo Mata Mosquito com níveis e telas de vitória/derrota."
     },
     {
-      "id": "app-jogo-js",
-      "label": "jogo.js",
-      "parent": "app-root",
-      "layer": "file",
-      "category": "core",
-      "categoryLabel": "Backend",
-      "color": "#3b82f6",
-      "size": 0.85,
-      "file": "jogo.js",
-      "description": "Arquivo `jogo.js` mapeado a partir do repositório original."
-    },
-    {
-      "id": "app-app-html",
+      "id": "app-mosquito-file-app-html",
       "label": "app.html",
-      "parent": "app-root",
+      "parent": "app-mosquito-root",
       "layer": "file",
       "category": "frontend",
       "categoryLabel": "Frontend",
       "color": "#eab308",
       "size": 0.85,
       "file": "app.html",
-      "description": "Arquivo `app.html` mapeado a partir do repositório original."
+      "description": "Código-fonte: `app.html`"
     },
     {
-      "id": "app-index-html",
-      "label": "index.html",
-      "parent": "app-root",
-      "layer": "file",
-      "category": "frontend",
-      "categoryLabel": "Frontend",
-      "color": "#eab308",
-      "size": 0.85,
-      "file": "index.html",
-      "description": "Arquivo `index.html` mapeado a partir do repositório original."
-    },
-    {
-      "id": "app-estilo-css",
+      "id": "app-mosquito-file-estilo-css",
       "label": "estilo.css",
-      "parent": "app-root",
+      "parent": "app-mosquito-root",
       "layer": "file",
       "category": "frontend",
       "categoryLabel": "Frontend",
       "color": "#eab308",
       "size": 0.85,
       "file": "estilo.css",
-      "description": "Arquivo `estilo.css` mapeado a partir do repositório original."
+      "description": "Código-fonte: `estilo.css`"
     },
     {
-      "id": "app-fim-de-jogo-html",
+      "id": "app-mosquito-file-fim-de-jogo-html",
       "label": "fim_de_jogo.html",
-      "parent": "app-root",
+      "parent": "app-mosquito-root",
       "layer": "file",
       "category": "frontend",
       "categoryLabel": "Frontend",
       "color": "#eab308",
       "size": 0.85,
       "file": "fim_de_jogo.html",
-      "description": "Arquivo `fim_de_jogo.html` mapeado a partir do repositório original."
+      "description": "Código-fonte: `fim_de_jogo.html`"
     },
     {
-      "id": "app-vitoria-html",
+      "id": "app-mosquito-file-index-html",
+      "label": "index.html",
+      "parent": "app-mosquito-root",
+      "layer": "file",
+      "category": "frontend",
+      "categoryLabel": "Frontend",
+      "color": "#eab308",
+      "size": 0.85,
+      "file": "index.html",
+      "description": "Código-fonte: `index.html`"
+    },
+    {
+      "id": "app-mosquito-file-jogo-js",
+      "label": "jogo.js",
+      "parent": "app-mosquito-root",
+      "layer": "file",
+      "category": "frontend",
+      "categoryLabel": "Frontend",
+      "color": "#eab308",
+      "size": 0.85,
+      "file": "jogo.js",
+      "description": "Código-fonte: `jogo.js`"
+    },
+    {
+      "id": "app-mosquito-file-vitoria-html",
       "label": "vitoria.html",
-      "parent": "app-root",
+      "parent": "app-mosquito-root",
       "layer": "file",
       "category": "frontend",
       "categoryLabel": "Frontend",
       "color": "#eab308",
       "size": 0.85,
       "file": "vitoria.html",
-      "description": "Arquivo `vitoria.html` mapeado a partir do repositório original."
-    },
-    {
-      "id": "app-readme-md",
-      "label": "README.md",
-      "parent": "app-root",
-      "layer": "file",
-      "category": "other",
-      "categoryLabel": "Outros",
-      "color": "#64748b",
-      "size": 0.85,
-      "file": "README.md",
-      "description": "Arquivo `README.md` mapeado a partir do repositório original."
+      "description": "Código-fonte: `vitoria.html`"
     }
   ],
   "links": [
     {
-      "source": "app-root",
-      "target": "app-jogo-js",
+      "source": "app-mosquito-root",
+      "target": "app-mosquito-file-app-html",
       "type": "dependency"
     },
     {
-      "source": "app-root",
-      "target": "app-app-html",
+      "source": "app-mosquito-root",
+      "target": "app-mosquito-file-estilo-css",
       "type": "dependency"
     },
     {
-      "source": "app-root",
-      "target": "app-index-html",
+      "source": "app-mosquito-root",
+      "target": "app-mosquito-file-fim-de-jogo-html",
       "type": "dependency"
     },
     {
-      "source": "app-root",
-      "target": "app-estilo-css",
+      "source": "app-mosquito-root",
+      "target": "app-mosquito-file-index-html",
       "type": "dependency"
     },
     {
-      "source": "app-root",
-      "target": "app-fim-de-jogo-html",
+      "source": "app-mosquito-root",
+      "target": "app-mosquito-file-jogo-js",
       "type": "dependency"
     },
     {
-      "source": "app-root",
-      "target": "app-vitoria-html",
-      "type": "dependency"
-    },
-    {
-      "source": "app-root",
-      "target": "app-readme-md",
+      "source": "app-mosquito-root",
+      "target": "app-mosquito-file-vitoria-html",
       "type": "dependency"
     }
   ]

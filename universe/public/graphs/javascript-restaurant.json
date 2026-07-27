@@ -4,27 +4,23 @@
   "repoUrl": "https://github.com/CanonEngineer/JavaScriptRestaurantProject",
   "color": "#f97316",
   "demoUrl": "",
-  "nodeCount": 31,
+  "nodeCount": 186,
   "categories": {
     "core": {
       "label": "Backend",
       "color": "#3b82f6"
     },
-    "network": {
-      "label": "Rede / Scan",
-      "color": "#22d3ee"
-    },
     "oracle": {
       "label": "Oracle / DB",
       "color": "#c084fc"
     },
-    "auth": {
-      "label": "Segurança",
-      "color": "#ef4444"
-    },
     "frontend": {
       "label": "Frontend",
       "color": "#eab308"
+    },
+    "scripts": {
+      "label": "Scripts",
+      "color": "#64748b"
     },
     "other": {
       "label": "Outros",
@@ -33,7 +29,7 @@
   },
   "nodes": [
     {
-      "id": "jsr-root",
+      "id": "javascript-restaurant-root",
       "label": "JavaScriptRestaurantProject",
       "parent": null,
       "layer": "root",
@@ -41,519 +37,3154 @@
       "categoryLabel": "Backend",
       "color": "#3b82f6",
       "size": 2.2,
-      "file": "app.js",
-      "description": "Restaurante Saboroso — site + painel admin com Express, EJS, MySQL, Redis e AdminLTE."
+      "file": "README.md",
+      "description": "Restaurante Saboroso — cardápio, reservas, contato e painel AdminLTE com MySQL."
     },
     {
-      "id": "jsr-backend",
-      "label": "Backend Express",
-      "parent": "jsr-root",
+      "id": "javascript-restaurant-dir-bin",
+      "label": "bin/",
+      "parent": "javascript-restaurant-root",
       "layer": "module",
-      "category": "core",
-      "categoryLabel": "Backend",
-      "color": "#3b82f6",
-      "size": 1.35,
-      "file": "app.js",
-      "description": "Servidor com sessão Redis, upload Formidable e rotas públicas/admin."
-    },
-    {
-      "id": "jsr-app",
-      "label": "app.js",
-      "parent": "jsr-backend",
-      "layer": "file",
-      "category": "core",
-      "categoryLabel": "Backend",
-      "color": "#3b82f6",
-      "size": 0.85,
-      "file": "app.js",
-      "description": "Bootstrap: sessão Redis, parsers, static e routers."
-    },
-    {
-      "id": "jsr-bin-www",
-      "label": "bin/www",
-      "parent": "jsr-backend",
-      "layer": "file",
-      "category": "other",
-      "categoryLabel": "Outros",
+      "category": "scripts",
+      "categoryLabel": "Scripts",
       "color": "#64748b",
-      "size": 0.85,
-      "file": "bin/www",
-      "description": "HTTP server na porta 3000 com nodemon."
-    },
-    {
-      "id": "jsr-formidable",
-      "label": "Middleware Formidable",
-      "parent": "jsr-app",
-      "layer": "function",
-      "category": "core",
-      "categoryLabel": "Backend",
-      "color": "#3b82f6",
-      "size": 0.62,
-      "file": "app.js",
-      "description": "Parse multipart antes das rotas — upload de fotos do cardápio."
-    },
-    {
-      "id": "jsr-session",
-      "label": "Sessão Redis",
-      "parent": "jsr-app",
-      "layer": "function",
-      "category": "core",
-      "categoryLabel": "Backend",
-      "color": "#3b82f6",
-      "size": 0.62,
-      "file": "app.js",
-      "description": "express-session com connect-redis para painel admin."
-    },
-    {
-      "id": "jsr-db",
-      "label": "Banco MySQL",
-      "parent": "jsr-root",
-      "layer": "module",
-      "category": "oracle",
-      "categoryLabel": "Oracle / DB",
-      "color": "#c084fc",
       "size": 1.35,
-      "file": "inc/db.js",
-      "description": "Conexão mysql2 com database saboroso."
+      "file": "bin/",
+      "description": "Pacote/pasta `bin/` do projeto."
     },
     {
-      "id": "jsr-routes-public",
-      "label": "Rotas públicas",
-      "parent": "jsr-root",
+      "id": "javascript-restaurant-dir-inc",
+      "label": "inc/",
+      "parent": "javascript-restaurant-root",
       "layer": "module",
-      "category": "network",
-      "categoryLabel": "Rede / Scan",
-      "color": "#22d3ee",
+      "category": "scripts",
+      "categoryLabel": "Scripts",
+      "color": "#64748b",
       "size": 1.35,
-      "file": "routes/index.js",
-      "description": "Site do cliente: home, cardápio, reservas e contato."
+      "file": "inc/",
+      "description": "Pacote/pasta `inc/` do projeto."
     },
     {
-      "id": "jsr-home",
-      "label": "GET /",
-      "parent": "jsr-routes-public",
-      "layer": "function",
-      "category": "core",
-      "categoryLabel": "Backend",
-      "color": "#3b82f6",
-      "size": 0.62,
-      "file": "routes/index.js",
-      "description": "Home com lista de menus em destaque."
-    },
-    {
-      "id": "jsr-menus-page",
-      "label": "GET /menus",
-      "parent": "jsr-routes-public",
-      "layer": "function",
-      "category": "core",
-      "categoryLabel": "Backend",
-      "color": "#3b82f6",
-      "size": 0.62,
-      "file": "routes/index.js",
-      "description": "Página do cardápio completo com preços."
-    },
-    {
-      "id": "jsr-reservations-page",
-      "label": "POST /reservations",
-      "parent": "jsr-routes-public",
-      "layer": "function",
-      "category": "core",
-      "categoryLabel": "Backend",
-      "color": "#3b82f6",
-      "size": 0.62,
-      "file": "routes/index.js",
-      "description": "Formulário de reserva de mesa com validação."
-    },
-    {
-      "id": "jsr-contacts-page",
-      "label": "POST /contacts",
-      "parent": "jsr-routes-public",
-      "layer": "function",
-      "category": "core",
-      "categoryLabel": "Backend",
-      "color": "#3b82f6",
-      "size": 0.62,
-      "file": "routes/index.js",
-      "description": "Formulário de contato gravado em tb_contacts."
-    },
-    {
-      "id": "jsr-admin-routes",
-      "label": "Painel Admin",
-      "parent": "jsr-root",
+      "id": "javascript-restaurant-dir-public",
+      "label": "public/",
+      "parent": "javascript-restaurant-root",
       "layer": "module",
-      "category": "network",
-      "categoryLabel": "Rede / Scan",
-      "color": "#22d3ee",
+      "category": "scripts",
+      "categoryLabel": "Scripts",
+      "color": "#64748b",
       "size": 1.35,
-      "file": "routes/admin.js",
-      "description": "AdminLTE: dashboard, CRUD menus, reservas, usuários."
+      "file": "public/",
+      "description": "Pacote/pasta `public/` do projeto."
     },
     {
-      "id": "jsr-dashboard",
-      "label": "admin.dashboard()",
-      "parent": "jsr-admin-routes",
-      "layer": "function",
-      "category": "core",
-      "categoryLabel": "Backend",
-      "color": "#3b82f6",
-      "size": 0.62,
-      "file": "inc/admin.js",
-      "description": "Contadores de contatos, menus, reservas e usuários."
-    },
-    {
-      "id": "jsr-admin-login",
-      "label": "POST /admin/login",
-      "parent": "jsr-admin-routes",
-      "layer": "function",
-      "category": "auth",
-      "categoryLabel": "Segurança",
-      "color": "#ef4444",
-      "size": 0.62,
-      "file": "inc/users.js",
-      "description": "Autenticação por email/senha em tb_users."
-    },
-    {
-      "id": "jsr-menus-mod",
-      "label": "CRUD Cardápio",
-      "parent": "jsr-root",
+      "id": "javascript-restaurant-dir-routes",
+      "label": "routes/",
+      "parent": "javascript-restaurant-root",
       "layer": "module",
-      "category": "core",
-      "categoryLabel": "Backend",
-      "color": "#3b82f6",
+      "category": "scripts",
+      "categoryLabel": "Scripts",
+      "color": "#64748b",
       "size": 1.35,
-      "file": "inc/menus.js",
-      "description": "Gerencia tb_menus com foto, título, descrição e preço."
+      "file": "routes/",
+      "description": "Pacote/pasta `routes/` do projeto."
     },
     {
-      "id": "jsr-menus-get",
-      "label": "getMenus()",
-      "parent": "jsr-menus-mod",
-      "layer": "function",
-      "category": "core",
-      "categoryLabel": "Backend",
-      "color": "#3b82f6",
-      "size": 0.62,
-      "file": "inc/menus.js",
-      "description": "SELECT * FROM tb_menus ORDER BY title."
-    },
-    {
-      "id": "jsr-menus-save",
-      "label": "save()",
-      "parent": "jsr-menus-mod",
-      "layer": "function",
-      "category": "core",
-      "categoryLabel": "Backend",
-      "color": "#3b82f6",
-      "size": 0.62,
-      "file": "inc/menus.js",
-      "description": "INSERT/UPDATE com foto opcional via Formidable."
-    },
-    {
-      "id": "jsr-reservations-mod",
-      "label": "Reservas",
-      "parent": "jsr-root",
-      "layer": "module",
-      "category": "core",
-      "categoryLabel": "Backend",
-      "color": "#3b82f6",
-      "size": 1.35,
-      "file": "inc/reservations.js",
-      "description": "tb_reservations com paginação e moment.js."
-    },
-    {
-      "id": "jsr-reservations-save",
-      "label": "save()",
-      "parent": "jsr-reservations-mod",
-      "layer": "function",
-      "category": "core",
-      "categoryLabel": "Backend",
-      "color": "#3b82f6",
-      "size": 0.62,
-      "file": "inc/reservations.js",
-      "description": "Grava reserva com nome, email, pessoas, data e hora."
-    },
-    {
-      "id": "jsr-pagination",
-      "label": "Pagination.js",
-      "parent": "jsr-reservations-mod",
-      "layer": "file",
-      "category": "core",
-      "categoryLabel": "Backend",
-      "color": "#3b82f6",
-      "size": 0.85,
-      "file": "inc/Pagination.js",
-      "description": "Paginação SQL com FOUND_ROWS e navegação."
-    },
-    {
-      "id": "jsr-users-mod",
-      "label": "Usuários Admin",
-      "parent": "jsr-root",
-      "layer": "module",
-      "category": "core",
-      "categoryLabel": "Backend",
-      "color": "#3b82f6",
-      "size": 1.35,
-      "file": "inc/users.js",
-      "description": "Login e CRUD de tb_users."
-    },
-    {
-      "id": "jsr-contacts-mod",
-      "label": "Contatos",
-      "parent": "jsr-root",
-      "layer": "module",
-      "category": "core",
-      "categoryLabel": "Backend",
-      "color": "#3b82f6",
-      "size": 1.35,
-      "file": "inc/contacts.js",
-      "description": "Mensagens do formulário público."
-    },
-    {
-      "id": "jsr-emails-mod",
-      "label": "Lista de E-mails",
-      "parent": "jsr-root",
-      "layer": "module",
-      "category": "core",
-      "categoryLabel": "Backend",
-      "color": "#3b82f6",
-      "size": 1.35,
-      "file": "inc/emails.js",
-      "description": "Newsletter / captura de e-mails."
-    },
-    {
-      "id": "jsr-admin-inc",
-      "label": "admin.js",
-      "parent": "jsr-admin-routes",
-      "layer": "file",
-      "category": "core",
-      "categoryLabel": "Backend",
-      "color": "#3b82f6",
-      "size": 0.85,
-      "file": "inc/admin.js",
-      "description": "Sidebar AdminLTE e helper getParams."
-    },
-    {
-      "id": "jsr-frontend",
-      "label": "Frontend EJS",
-      "parent": "jsr-root",
+      "id": "javascript-restaurant-dir-views",
+      "label": "views/",
+      "parent": "javascript-restaurant-root",
       "layer": "module",
       "category": "frontend",
       "categoryLabel": "Frontend",
       "color": "#eab308",
       "size": 1.35,
       "file": "views/",
-      "description": "Templates públicos com hero e Bootstrap."
+      "description": "Pacote/pasta `views/` do projeto."
     },
     {
-      "id": "jsr-adminlte",
-      "label": "AdminLTE",
-      "parent": "jsr-admin-routes",
+      "id": "javascript-restaurant-dir-public-admin",
+      "label": "admin/",
+      "parent": "javascript-restaurant-dir-public",
+      "layer": "module",
+      "category": "scripts",
+      "categoryLabel": "Scripts",
+      "color": "#64748b",
+      "size": 1.35,
+      "file": "public/admin/",
+      "description": "Pacote/pasta `public/admin/` do projeto."
+    },
+    {
+      "id": "javascript-restaurant-dir-public-css",
+      "label": "css/",
+      "parent": "javascript-restaurant-dir-public",
+      "layer": "module",
+      "category": "scripts",
+      "categoryLabel": "Scripts",
+      "color": "#64748b",
+      "size": 1.35,
+      "file": "public/css/",
+      "description": "Pacote/pasta `public/css/` do projeto."
+    },
+    {
+      "id": "javascript-restaurant-dir-public-db",
+      "label": "db/",
+      "parent": "javascript-restaurant-dir-public",
+      "layer": "module",
+      "category": "oracle",
+      "categoryLabel": "Oracle / DB",
+      "color": "#c084fc",
+      "size": 1.35,
+      "file": "public/db/",
+      "description": "Pacote/pasta `public/db/` do projeto."
+    },
+    {
+      "id": "javascript-restaurant-dir-public-js",
+      "label": "js/",
+      "parent": "javascript-restaurant-dir-public",
+      "layer": "module",
+      "category": "scripts",
+      "categoryLabel": "Scripts",
+      "color": "#64748b",
+      "size": 1.35,
+      "file": "public/js/",
+      "description": "Pacote/pasta `public/js/` do projeto."
+    },
+    {
+      "id": "javascript-restaurant-dir-views-admin",
+      "label": "admin/",
+      "parent": "javascript-restaurant-dir-views",
+      "layer": "module",
+      "category": "frontend",
+      "categoryLabel": "Frontend",
+      "color": "#eab308",
+      "size": 1.35,
+      "file": "views/admin/",
+      "description": "Pacote/pasta `views/admin/` do projeto."
+    },
+    {
+      "id": "javascript-restaurant-dir-views-inc",
+      "label": "inc/",
+      "parent": "javascript-restaurant-dir-views",
+      "layer": "module",
+      "category": "frontend",
+      "categoryLabel": "Frontend",
+      "color": "#eab308",
+      "size": 1.35,
+      "file": "views/inc/",
+      "description": "Pacote/pasta `views/inc/` do projeto."
+    },
+    {
+      "id": "javascript-restaurant-dir-public-admin-plugins",
+      "label": "plugins/",
+      "parent": "javascript-restaurant-dir-public-admin",
+      "layer": "module",
+      "category": "scripts",
+      "categoryLabel": "Scripts",
+      "color": "#64748b",
+      "size": 1.35,
+      "file": "public/admin/plugins/",
+      "description": "Pacote/pasta `public/admin/plugins/` do projeto."
+    },
+    {
+      "id": "javascript-restaurant-dir-views-admin-inc",
+      "label": "inc/",
+      "parent": "javascript-restaurant-dir-views-admin",
+      "layer": "module",
+      "category": "frontend",
+      "categoryLabel": "Frontend",
+      "color": "#eab308",
+      "size": 1.35,
+      "file": "views/admin/inc/",
+      "description": "Pacote/pasta `views/admin/inc/` do projeto."
+    },
+    {
+      "id": "javascript-restaurant-dir-views-inc-content",
+      "label": "content/",
+      "parent": "javascript-restaurant-dir-views-inc",
+      "layer": "module",
+      "category": "frontend",
+      "categoryLabel": "Frontend",
+      "color": "#eab308",
+      "size": 1.35,
+      "file": "views/inc/content/",
+      "description": "Pacote/pasta `views/inc/content/` do projeto."
+    },
+    {
+      "id": "javascript-restaurant-dir-public-admin-plugins-bootstrap-slider",
+      "label": "bootstrap-slider/",
+      "parent": "javascript-restaurant-dir-public-admin-plugins",
+      "layer": "module",
+      "category": "scripts",
+      "categoryLabel": "Scripts",
+      "color": "#64748b",
+      "size": 1.35,
+      "file": "public/admin/plugins/bootstrap-slider/",
+      "description": "Pacote/pasta `public/admin/plugins/bootstrap-slider/` do projeto."
+    },
+    {
+      "id": "javascript-restaurant-dir-public-admin-plugins-bootstrap-wysihtml5",
+      "label": "bootstrap-wysihtml5/",
+      "parent": "javascript-restaurant-dir-public-admin-plugins",
+      "layer": "module",
+      "category": "scripts",
+      "categoryLabel": "Scripts",
+      "color": "#64748b",
+      "size": 1.35,
+      "file": "public/admin/plugins/bootstrap-wysihtml5/",
+      "description": "Pacote/pasta `public/admin/plugins/bootstrap-wysihtml5/` do projeto."
+    },
+    {
+      "id": "javascript-restaurant-dir-public-admin-plugins-icheck",
+      "label": "iCheck/",
+      "parent": "javascript-restaurant-dir-public-admin-plugins",
+      "layer": "module",
+      "category": "scripts",
+      "categoryLabel": "Scripts",
+      "color": "#64748b",
+      "size": 1.35,
+      "file": "public/admin/plugins/iCheck/",
+      "description": "Pacote/pasta `public/admin/plugins/iCheck/` do projeto."
+    },
+    {
+      "id": "javascript-restaurant-dir-public-admin-plugins-input-mask",
+      "label": "input-mask/",
+      "parent": "javascript-restaurant-dir-public-admin-plugins",
+      "layer": "module",
+      "category": "scripts",
+      "categoryLabel": "Scripts",
+      "color": "#64748b",
+      "size": 1.35,
+      "file": "public/admin/plugins/input-mask/",
+      "description": "Pacote/pasta `public/admin/plugins/input-mask/` do projeto."
+    },
+    {
+      "id": "javascript-restaurant-dir-public-admin-plugins-jqueryui",
+      "label": "jQueryUI/",
+      "parent": "javascript-restaurant-dir-public-admin-plugins",
+      "layer": "module",
+      "category": "frontend",
+      "categoryLabel": "Frontend",
+      "color": "#eab308",
+      "size": 1.35,
+      "file": "public/admin/plugins/jQueryUI/",
+      "description": "Pacote/pasta `public/admin/plugins/jQueryUI/` do projeto."
+    },
+    {
+      "id": "javascript-restaurant-dir-public-admin-plugins-jvectormap",
+      "label": "jvectormap/",
+      "parent": "javascript-restaurant-dir-public-admin-plugins",
+      "layer": "module",
+      "category": "scripts",
+      "categoryLabel": "Scripts",
+      "color": "#64748b",
+      "size": 1.35,
+      "file": "public/admin/plugins/jvectormap/",
+      "description": "Pacote/pasta `public/admin/plugins/jvectormap/` do projeto."
+    },
+    {
+      "id": "javascript-restaurant-dir-public-admin-plugins-pace",
+      "label": "pace/",
+      "parent": "javascript-restaurant-dir-public-admin-plugins",
+      "layer": "module",
+      "category": "scripts",
+      "categoryLabel": "Scripts",
+      "color": "#64748b",
+      "size": 1.35,
+      "file": "public/admin/plugins/pace/",
+      "description": "Pacote/pasta `public/admin/plugins/pace/` do projeto."
+    },
+    {
+      "id": "javascript-restaurant-dir-public-admin-plugins-timepicker",
+      "label": "timepicker/",
+      "parent": "javascript-restaurant-dir-public-admin-plugins",
+      "layer": "module",
+      "category": "scripts",
+      "categoryLabel": "Scripts",
+      "color": "#64748b",
+      "size": 1.35,
+      "file": "public/admin/plugins/timepicker/",
+      "description": "Pacote/pasta `public/admin/plugins/timepicker/` do projeto."
+    },
+    {
+      "id": "javascript-restaurant-dir-public-admin-plugins-icheck-flat",
+      "label": "flat/",
+      "parent": "javascript-restaurant-dir-public-admin-plugins-icheck",
+      "layer": "module",
+      "category": "scripts",
+      "categoryLabel": "Scripts",
+      "color": "#64748b",
+      "size": 1.35,
+      "file": "public/admin/plugins/iCheck/flat/",
+      "description": "Pacote/pasta `public/admin/plugins/iCheck/flat/` do projeto."
+    },
+    {
+      "id": "javascript-restaurant-dir-public-admin-plugins-icheck-futurico",
+      "label": "futurico/",
+      "parent": "javascript-restaurant-dir-public-admin-plugins-icheck",
+      "layer": "module",
+      "category": "scripts",
+      "categoryLabel": "Scripts",
+      "color": "#64748b",
+      "size": 1.35,
+      "file": "public/admin/plugins/iCheck/futurico/",
+      "description": "Pacote/pasta `public/admin/plugins/iCheck/futurico/` do projeto."
+    },
+    {
+      "id": "javascript-restaurant-dir-public-admin-plugins-icheck-line",
+      "label": "line/",
+      "parent": "javascript-restaurant-dir-public-admin-plugins-icheck",
+      "layer": "module",
+      "category": "scripts",
+      "categoryLabel": "Scripts",
+      "color": "#64748b",
+      "size": 1.35,
+      "file": "public/admin/plugins/iCheck/line/",
+      "description": "Pacote/pasta `public/admin/plugins/iCheck/line/` do projeto."
+    },
+    {
+      "id": "javascript-restaurant-dir-public-admin-plugins-icheck-minimal",
+      "label": "minimal/",
+      "parent": "javascript-restaurant-dir-public-admin-plugins-icheck",
+      "layer": "module",
+      "category": "scripts",
+      "categoryLabel": "Scripts",
+      "color": "#64748b",
+      "size": 1.35,
+      "file": "public/admin/plugins/iCheck/minimal/",
+      "description": "Pacote/pasta `public/admin/plugins/iCheck/minimal/` do projeto."
+    },
+    {
+      "id": "javascript-restaurant-dir-public-admin-plugins-icheck-polaris",
+      "label": "polaris/",
+      "parent": "javascript-restaurant-dir-public-admin-plugins-icheck",
+      "layer": "module",
+      "category": "scripts",
+      "categoryLabel": "Scripts",
+      "color": "#64748b",
+      "size": 1.35,
+      "file": "public/admin/plugins/iCheck/polaris/",
+      "description": "Pacote/pasta `public/admin/plugins/iCheck/polaris/` do projeto."
+    },
+    {
+      "id": "javascript-restaurant-dir-public-admin-plugins-icheck-square",
+      "label": "square/",
+      "parent": "javascript-restaurant-dir-public-admin-plugins-icheck",
+      "layer": "module",
+      "category": "scripts",
+      "categoryLabel": "Scripts",
+      "color": "#64748b",
+      "size": 1.35,
+      "file": "public/admin/plugins/iCheck/square/",
+      "description": "Pacote/pasta `public/admin/plugins/iCheck/square/` do projeto."
+    },
+    {
+      "id": "javascript-restaurant-dir-public-admin-plugins-input-mask-phone-codes",
+      "label": "phone-codes/",
+      "parent": "javascript-restaurant-dir-public-admin-plugins-input-mask",
+      "layer": "module",
+      "category": "scripts",
+      "categoryLabel": "Scripts",
+      "color": "#64748b",
+      "size": 1.35,
+      "file": "public/admin/plugins/input-mask/phone-codes/",
+      "description": "Pacote/pasta `public/admin/plugins/input-mask/phone-codes/` do projeto."
+    },
+    {
+      "id": "javascript-restaurant-file-app-js",
+      "label": "app.js",
+      "parent": "javascript-restaurant-root",
       "layer": "file",
-      "category": "other",
-      "categoryLabel": "Outros",
+      "category": "scripts",
+      "categoryLabel": "Scripts",
       "color": "#64748b",
       "size": 0.85,
-      "file": "public/admin/",
-      "description": "Painel admin com tema AdminLTE e Bower."
+      "file": "app.js",
+      "description": "Código-fonte: `app.js`"
     },
     {
-      "id": "jsr-moment",
-      "label": "moment pt-BR",
-      "parent": "jsr-reservations-mod",
-      "layer": "function",
-      "category": "core",
-      "categoryLabel": "Backend",
-      "color": "#3b82f6",
-      "size": 0.62,
-      "file": "routes/admin.js",
-      "description": "Formatação de datas nas views admin."
+      "id": "javascript-restaurant-file-package-json",
+      "label": "package.json",
+      "parent": "javascript-restaurant-root",
+      "layer": "file",
+      "category": "scripts",
+      "categoryLabel": "Scripts",
+      "color": "#64748b",
+      "size": 0.85,
+      "file": "package.json",
+      "description": "Código-fonte: `package.json`"
     },
     {
-      "id": "jsr-mysql-tables",
-      "label": "Schema MySQL",
-      "parent": "jsr-db",
+      "id": "javascript-restaurant-file-bin-www",
+      "label": "www",
+      "parent": "javascript-restaurant-dir-bin",
+      "layer": "file",
+      "category": "scripts",
+      "categoryLabel": "Scripts",
+      "color": "#64748b",
+      "size": 0.85,
+      "file": "bin/www",
+      "description": "Código-fonte: `bin/www`"
+    },
+    {
+      "id": "javascript-restaurant-file-inc-admin-js",
+      "label": "admin.js",
+      "parent": "javascript-restaurant-dir-inc",
+      "layer": "file",
+      "category": "scripts",
+      "categoryLabel": "Scripts",
+      "color": "#64748b",
+      "size": 0.85,
+      "file": "inc/admin.js",
+      "description": "Código-fonte: `inc/admin.js`"
+    },
+    {
+      "id": "javascript-restaurant-file-inc-contacts-js",
+      "label": "contacts.js",
+      "parent": "javascript-restaurant-dir-inc",
+      "layer": "file",
+      "category": "scripts",
+      "categoryLabel": "Scripts",
+      "color": "#64748b",
+      "size": 0.85,
+      "file": "inc/contacts.js",
+      "description": "Código-fonte: `inc/contacts.js`"
+    },
+    {
+      "id": "javascript-restaurant-file-inc-db-js",
+      "label": "db.js",
+      "parent": "javascript-restaurant-dir-inc",
+      "layer": "file",
+      "category": "oracle",
+      "categoryLabel": "Oracle / DB",
+      "color": "#c084fc",
+      "size": 0.85,
+      "file": "inc/db.js",
+      "description": "Código-fonte: `inc/db.js`"
+    },
+    {
+      "id": "javascript-restaurant-file-inc-emails-js",
+      "label": "emails.js",
+      "parent": "javascript-restaurant-dir-inc",
+      "layer": "file",
+      "category": "scripts",
+      "categoryLabel": "Scripts",
+      "color": "#64748b",
+      "size": 0.85,
+      "file": "inc/emails.js",
+      "description": "Código-fonte: `inc/emails.js`"
+    },
+    {
+      "id": "javascript-restaurant-file-inc-menus-js",
+      "label": "menus.js",
+      "parent": "javascript-restaurant-dir-inc",
+      "layer": "file",
+      "category": "scripts",
+      "categoryLabel": "Scripts",
+      "color": "#64748b",
+      "size": 0.85,
+      "file": "inc/menus.js",
+      "description": "Código-fonte: `inc/menus.js`"
+    },
+    {
+      "id": "javascript-restaurant-file-inc-pagination-js",
+      "label": "Pagination.js",
+      "parent": "javascript-restaurant-dir-inc",
+      "layer": "file",
+      "category": "scripts",
+      "categoryLabel": "Scripts",
+      "color": "#64748b",
+      "size": 0.85,
+      "file": "inc/Pagination.js",
+      "description": "Código-fonte: `inc/Pagination.js`"
+    },
+    {
+      "id": "javascript-restaurant-file-inc-reservations-js",
+      "label": "reservations.js",
+      "parent": "javascript-restaurant-dir-inc",
+      "layer": "file",
+      "category": "scripts",
+      "categoryLabel": "Scripts",
+      "color": "#64748b",
+      "size": 0.85,
+      "file": "inc/reservations.js",
+      "description": "Código-fonte: `inc/reservations.js`"
+    },
+    {
+      "id": "javascript-restaurant-file-inc-users-js",
+      "label": "users.js",
+      "parent": "javascript-restaurant-dir-inc",
+      "layer": "file",
+      "category": "scripts",
+      "categoryLabel": "Scripts",
+      "color": "#64748b",
+      "size": 0.85,
+      "file": "inc/users.js",
+      "description": "Código-fonte: `inc/users.js`"
+    },
+    {
+      "id": "javascript-restaurant-file-public-admin-bower-json",
+      "label": "bower.json",
+      "parent": "javascript-restaurant-dir-public-admin",
+      "layer": "file",
+      "category": "scripts",
+      "categoryLabel": "Scripts",
+      "color": "#64748b",
+      "size": 0.85,
+      "file": "public/admin/bower.json",
+      "description": "Código-fonte: `public/admin/bower.json`"
+    },
+    {
+      "id": "javascript-restaurant-file-public-admin-plugins-bootstrap-slider-bootstrap-slider-js",
+      "label": "bootstrap-slider.js",
+      "parent": "javascript-restaurant-dir-public-admin-plugins-bootstrap-slider",
+      "layer": "file",
+      "category": "scripts",
+      "categoryLabel": "Scripts",
+      "color": "#64748b",
+      "size": 0.85,
+      "file": "public/admin/plugins/bootstrap-slider/bootstrap-slider.js",
+      "description": "Código-fonte: `public/admin/plugins/bootstrap-slider/bootstrap-slider.js`"
+    },
+    {
+      "id": "javascript-restaurant-file-public-admin-plugins-bootstrap-slider-slider-css",
+      "label": "slider.css",
+      "parent": "javascript-restaurant-dir-public-admin-plugins-bootstrap-slider",
+      "layer": "file",
+      "category": "frontend",
+      "categoryLabel": "Frontend",
+      "color": "#eab308",
+      "size": 0.85,
+      "file": "public/admin/plugins/bootstrap-slider/slider.css",
+      "description": "Código-fonte: `public/admin/plugins/bootstrap-slider/slider.css`"
+    },
+    {
+      "id": "javascript-restaurant-file-public-admin-plugins-bootstrap-wysihtml5-bootstrap3-wysihtml5-all-js",
+      "label": "bootstrap3-wysihtml5.all.js",
+      "parent": "javascript-restaurant-dir-public-admin-plugins-bootstrap-wysihtml5",
+      "layer": "file",
+      "category": "scripts",
+      "categoryLabel": "Scripts",
+      "color": "#64748b",
+      "size": 0.85,
+      "file": "public/admin/plugins/bootstrap-wysihtml5/bootstrap3-wysihtml5.all.js",
+      "description": "Código-fonte: `public/admin/plugins/bootstrap-wysihtml5/bootstrap3-wysihtml5.all.js`"
+    },
+    {
+      "id": "javascript-restaurant-file-public-admin-plugins-bootstrap-wysihtml5-bootstrap3-wysihtml5-all-min-js",
+      "label": "bootstrap3-wysihtml5.all.min.js",
+      "parent": "javascript-restaurant-dir-public-admin-plugins-bootstrap-wysihtml5",
+      "layer": "file",
+      "category": "scripts",
+      "categoryLabel": "Scripts",
+      "color": "#64748b",
+      "size": 0.85,
+      "file": "public/admin/plugins/bootstrap-wysihtml5/bootstrap3-wysihtml5.all.min.js",
+      "description": "Código-fonte: `public/admin/plugins/bootstrap-wysihtml5/bootstrap3-wysihtml5.all.min.js`"
+    },
+    {
+      "id": "javascript-restaurant-file-public-admin-plugins-bootstrap-wysihtml5-bootstrap3-wysihtml5-css",
+      "label": "bootstrap3-wysihtml5.css",
+      "parent": "javascript-restaurant-dir-public-admin-plugins-bootstrap-wysihtml5",
+      "layer": "file",
+      "category": "frontend",
+      "categoryLabel": "Frontend",
+      "color": "#eab308",
+      "size": 0.85,
+      "file": "public/admin/plugins/bootstrap-wysihtml5/bootstrap3-wysihtml5.css",
+      "description": "Código-fonte: `public/admin/plugins/bootstrap-wysihtml5/bootstrap3-wysihtml5.css`"
+    },
+    {
+      "id": "javascript-restaurant-file-public-admin-plugins-bootstrap-wysihtml5-bootstrap3-wysihtml5-min-css",
+      "label": "bootstrap3-wysihtml5.min.css",
+      "parent": "javascript-restaurant-dir-public-admin-plugins-bootstrap-wysihtml5",
+      "layer": "file",
+      "category": "frontend",
+      "categoryLabel": "Frontend",
+      "color": "#eab308",
+      "size": 0.85,
+      "file": "public/admin/plugins/bootstrap-wysihtml5/bootstrap3-wysihtml5.min.css",
+      "description": "Código-fonte: `public/admin/plugins/bootstrap-wysihtml5/bootstrap3-wysihtml5.min.css`"
+    },
+    {
+      "id": "javascript-restaurant-file-public-admin-plugins-icheck-all-css",
+      "label": "all.css",
+      "parent": "javascript-restaurant-dir-public-admin-plugins-icheck",
+      "layer": "file",
+      "category": "frontend",
+      "categoryLabel": "Frontend",
+      "color": "#eab308",
+      "size": 0.85,
+      "file": "public/admin/plugins/iCheck/all.css",
+      "description": "Código-fonte: `public/admin/plugins/iCheck/all.css`"
+    },
+    {
+      "id": "javascript-restaurant-file-public-admin-plugins-icheck-icheck-js",
+      "label": "icheck.js",
+      "parent": "javascript-restaurant-dir-public-admin-plugins-icheck",
+      "layer": "file",
+      "category": "scripts",
+      "categoryLabel": "Scripts",
+      "color": "#64748b",
+      "size": 0.85,
+      "file": "public/admin/plugins/iCheck/icheck.js",
+      "description": "Código-fonte: `public/admin/plugins/iCheck/icheck.js`"
+    },
+    {
+      "id": "javascript-restaurant-file-public-admin-plugins-icheck-icheck-min-js",
+      "label": "icheck.min.js",
+      "parent": "javascript-restaurant-dir-public-admin-plugins-icheck",
+      "layer": "file",
+      "category": "scripts",
+      "categoryLabel": "Scripts",
+      "color": "#64748b",
+      "size": 0.85,
+      "file": "public/admin/plugins/iCheck/icheck.min.js",
+      "description": "Código-fonte: `public/admin/plugins/iCheck/icheck.min.js`"
+    },
+    {
+      "id": "javascript-restaurant-file-public-admin-plugins-icheck-flat-all-css",
+      "label": "_all.css",
+      "parent": "javascript-restaurant-dir-public-admin-plugins-icheck-flat",
+      "layer": "file",
+      "category": "frontend",
+      "categoryLabel": "Frontend",
+      "color": "#eab308",
+      "size": 0.85,
+      "file": "public/admin/plugins/iCheck/flat/_all.css",
+      "description": "Código-fonte: `public/admin/plugins/iCheck/flat/_all.css`"
+    },
+    {
+      "id": "javascript-restaurant-file-public-admin-plugins-icheck-flat-aero-css",
+      "label": "aero.css",
+      "parent": "javascript-restaurant-dir-public-admin-plugins-icheck-flat",
+      "layer": "file",
+      "category": "frontend",
+      "categoryLabel": "Frontend",
+      "color": "#eab308",
+      "size": 0.85,
+      "file": "public/admin/plugins/iCheck/flat/aero.css",
+      "description": "Código-fonte: `public/admin/plugins/iCheck/flat/aero.css`"
+    },
+    {
+      "id": "javascript-restaurant-file-public-admin-plugins-icheck-flat-blue-css",
+      "label": "blue.css",
+      "parent": "javascript-restaurant-dir-public-admin-plugins-icheck-flat",
+      "layer": "file",
+      "category": "frontend",
+      "categoryLabel": "Frontend",
+      "color": "#eab308",
+      "size": 0.85,
+      "file": "public/admin/plugins/iCheck/flat/blue.css",
+      "description": "Código-fonte: `public/admin/plugins/iCheck/flat/blue.css`"
+    },
+    {
+      "id": "javascript-restaurant-file-public-admin-plugins-icheck-flat-flat-css",
+      "label": "flat.css",
+      "parent": "javascript-restaurant-dir-public-admin-plugins-icheck-flat",
+      "layer": "file",
+      "category": "frontend",
+      "categoryLabel": "Frontend",
+      "color": "#eab308",
+      "size": 0.85,
+      "file": "public/admin/plugins/iCheck/flat/flat.css",
+      "description": "Código-fonte: `public/admin/plugins/iCheck/flat/flat.css`"
+    },
+    {
+      "id": "javascript-restaurant-file-public-admin-plugins-icheck-flat-green-css",
+      "label": "green.css",
+      "parent": "javascript-restaurant-dir-public-admin-plugins-icheck-flat",
+      "layer": "file",
+      "category": "frontend",
+      "categoryLabel": "Frontend",
+      "color": "#eab308",
+      "size": 0.85,
+      "file": "public/admin/plugins/iCheck/flat/green.css",
+      "description": "Código-fonte: `public/admin/plugins/iCheck/flat/green.css`"
+    },
+    {
+      "id": "javascript-restaurant-file-public-admin-plugins-icheck-flat-grey-css",
+      "label": "grey.css",
+      "parent": "javascript-restaurant-dir-public-admin-plugins-icheck-flat",
+      "layer": "file",
+      "category": "frontend",
+      "categoryLabel": "Frontend",
+      "color": "#eab308",
+      "size": 0.85,
+      "file": "public/admin/plugins/iCheck/flat/grey.css",
+      "description": "Código-fonte: `public/admin/plugins/iCheck/flat/grey.css`"
+    },
+    {
+      "id": "javascript-restaurant-file-public-admin-plugins-icheck-flat-orange-css",
+      "label": "orange.css",
+      "parent": "javascript-restaurant-dir-public-admin-plugins-icheck-flat",
+      "layer": "file",
+      "category": "frontend",
+      "categoryLabel": "Frontend",
+      "color": "#eab308",
+      "size": 0.85,
+      "file": "public/admin/plugins/iCheck/flat/orange.css",
+      "description": "Código-fonte: `public/admin/plugins/iCheck/flat/orange.css`"
+    },
+    {
+      "id": "javascript-restaurant-file-public-admin-plugins-icheck-flat-pink-css",
+      "label": "pink.css",
+      "parent": "javascript-restaurant-dir-public-admin-plugins-icheck-flat",
+      "layer": "file",
+      "category": "frontend",
+      "categoryLabel": "Frontend",
+      "color": "#eab308",
+      "size": 0.85,
+      "file": "public/admin/plugins/iCheck/flat/pink.css",
+      "description": "Código-fonte: `public/admin/plugins/iCheck/flat/pink.css`"
+    },
+    {
+      "id": "javascript-restaurant-file-public-admin-plugins-icheck-flat-purple-css",
+      "label": "purple.css",
+      "parent": "javascript-restaurant-dir-public-admin-plugins-icheck-flat",
+      "layer": "file",
+      "category": "frontend",
+      "categoryLabel": "Frontend",
+      "color": "#eab308",
+      "size": 0.85,
+      "file": "public/admin/plugins/iCheck/flat/purple.css",
+      "description": "Código-fonte: `public/admin/plugins/iCheck/flat/purple.css`"
+    },
+    {
+      "id": "javascript-restaurant-file-public-admin-plugins-icheck-flat-red-css",
+      "label": "red.css",
+      "parent": "javascript-restaurant-dir-public-admin-plugins-icheck-flat",
+      "layer": "file",
+      "category": "frontend",
+      "categoryLabel": "Frontend",
+      "color": "#eab308",
+      "size": 0.85,
+      "file": "public/admin/plugins/iCheck/flat/red.css",
+      "description": "Código-fonte: `public/admin/plugins/iCheck/flat/red.css`"
+    },
+    {
+      "id": "javascript-restaurant-file-public-admin-plugins-icheck-flat-yellow-css",
+      "label": "yellow.css",
+      "parent": "javascript-restaurant-dir-public-admin-plugins-icheck-flat",
+      "layer": "file",
+      "category": "frontend",
+      "categoryLabel": "Frontend",
+      "color": "#eab308",
+      "size": 0.85,
+      "file": "public/admin/plugins/iCheck/flat/yellow.css",
+      "description": "Código-fonte: `public/admin/plugins/iCheck/flat/yellow.css`"
+    },
+    {
+      "id": "javascript-restaurant-file-public-admin-plugins-icheck-futurico-futurico-css",
+      "label": "futurico.css",
+      "parent": "javascript-restaurant-dir-public-admin-plugins-icheck-futurico",
+      "layer": "file",
+      "category": "frontend",
+      "categoryLabel": "Frontend",
+      "color": "#eab308",
+      "size": 0.85,
+      "file": "public/admin/plugins/iCheck/futurico/futurico.css",
+      "description": "Código-fonte: `public/admin/plugins/iCheck/futurico/futurico.css`"
+    },
+    {
+      "id": "javascript-restaurant-file-public-admin-plugins-icheck-line-all-css",
+      "label": "_all.css",
+      "parent": "javascript-restaurant-dir-public-admin-plugins-icheck-line",
+      "layer": "file",
+      "category": "frontend",
+      "categoryLabel": "Frontend",
+      "color": "#eab308",
+      "size": 0.85,
+      "file": "public/admin/plugins/iCheck/line/_all.css",
+      "description": "Código-fonte: `public/admin/plugins/iCheck/line/_all.css`"
+    },
+    {
+      "id": "javascript-restaurant-file-public-admin-plugins-icheck-line-aero-css",
+      "label": "aero.css",
+      "parent": "javascript-restaurant-dir-public-admin-plugins-icheck-line",
+      "layer": "file",
+      "category": "frontend",
+      "categoryLabel": "Frontend",
+      "color": "#eab308",
+      "size": 0.85,
+      "file": "public/admin/plugins/iCheck/line/aero.css",
+      "description": "Código-fonte: `public/admin/plugins/iCheck/line/aero.css`"
+    },
+    {
+      "id": "javascript-restaurant-file-public-admin-plugins-icheck-line-blue-css",
+      "label": "blue.css",
+      "parent": "javascript-restaurant-dir-public-admin-plugins-icheck-line",
+      "layer": "file",
+      "category": "frontend",
+      "categoryLabel": "Frontend",
+      "color": "#eab308",
+      "size": 0.85,
+      "file": "public/admin/plugins/iCheck/line/blue.css",
+      "description": "Código-fonte: `public/admin/plugins/iCheck/line/blue.css`"
+    },
+    {
+      "id": "javascript-restaurant-file-public-admin-plugins-icheck-line-green-css",
+      "label": "green.css",
+      "parent": "javascript-restaurant-dir-public-admin-plugins-icheck-line",
+      "layer": "file",
+      "category": "frontend",
+      "categoryLabel": "Frontend",
+      "color": "#eab308",
+      "size": 0.85,
+      "file": "public/admin/plugins/iCheck/line/green.css",
+      "description": "Código-fonte: `public/admin/plugins/iCheck/line/green.css`"
+    },
+    {
+      "id": "javascript-restaurant-file-public-admin-plugins-icheck-line-grey-css",
+      "label": "grey.css",
+      "parent": "javascript-restaurant-dir-public-admin-plugins-icheck-line",
+      "layer": "file",
+      "category": "frontend",
+      "categoryLabel": "Frontend",
+      "color": "#eab308",
+      "size": 0.85,
+      "file": "public/admin/plugins/iCheck/line/grey.css",
+      "description": "Código-fonte: `public/admin/plugins/iCheck/line/grey.css`"
+    },
+    {
+      "id": "javascript-restaurant-file-public-admin-plugins-icheck-line-line-css",
+      "label": "line.css",
+      "parent": "javascript-restaurant-dir-public-admin-plugins-icheck-line",
+      "layer": "file",
+      "category": "frontend",
+      "categoryLabel": "Frontend",
+      "color": "#eab308",
+      "size": 0.85,
+      "file": "public/admin/plugins/iCheck/line/line.css",
+      "description": "Código-fonte: `public/admin/plugins/iCheck/line/line.css`"
+    },
+    {
+      "id": "javascript-restaurant-file-public-admin-plugins-icheck-line-orange-css",
+      "label": "orange.css",
+      "parent": "javascript-restaurant-dir-public-admin-plugins-icheck-line",
+      "layer": "file",
+      "category": "frontend",
+      "categoryLabel": "Frontend",
+      "color": "#eab308",
+      "size": 0.85,
+      "file": "public/admin/plugins/iCheck/line/orange.css",
+      "description": "Código-fonte: `public/admin/plugins/iCheck/line/orange.css`"
+    },
+    {
+      "id": "javascript-restaurant-file-public-admin-plugins-icheck-line-pink-css",
+      "label": "pink.css",
+      "parent": "javascript-restaurant-dir-public-admin-plugins-icheck-line",
+      "layer": "file",
+      "category": "frontend",
+      "categoryLabel": "Frontend",
+      "color": "#eab308",
+      "size": 0.85,
+      "file": "public/admin/plugins/iCheck/line/pink.css",
+      "description": "Código-fonte: `public/admin/plugins/iCheck/line/pink.css`"
+    },
+    {
+      "id": "javascript-restaurant-file-public-admin-plugins-icheck-line-purple-css",
+      "label": "purple.css",
+      "parent": "javascript-restaurant-dir-public-admin-plugins-icheck-line",
+      "layer": "file",
+      "category": "frontend",
+      "categoryLabel": "Frontend",
+      "color": "#eab308",
+      "size": 0.85,
+      "file": "public/admin/plugins/iCheck/line/purple.css",
+      "description": "Código-fonte: `public/admin/plugins/iCheck/line/purple.css`"
+    },
+    {
+      "id": "javascript-restaurant-file-public-admin-plugins-icheck-line-red-css",
+      "label": "red.css",
+      "parent": "javascript-restaurant-dir-public-admin-plugins-icheck-line",
+      "layer": "file",
+      "category": "frontend",
+      "categoryLabel": "Frontend",
+      "color": "#eab308",
+      "size": 0.85,
+      "file": "public/admin/plugins/iCheck/line/red.css",
+      "description": "Código-fonte: `public/admin/plugins/iCheck/line/red.css`"
+    },
+    {
+      "id": "javascript-restaurant-file-public-admin-plugins-icheck-line-yellow-css",
+      "label": "yellow.css",
+      "parent": "javascript-restaurant-dir-public-admin-plugins-icheck-line",
+      "layer": "file",
+      "category": "frontend",
+      "categoryLabel": "Frontend",
+      "color": "#eab308",
+      "size": 0.85,
+      "file": "public/admin/plugins/iCheck/line/yellow.css",
+      "description": "Código-fonte: `public/admin/plugins/iCheck/line/yellow.css`"
+    },
+    {
+      "id": "javascript-restaurant-file-public-admin-plugins-icheck-minimal-all-css",
+      "label": "_all.css",
+      "parent": "javascript-restaurant-dir-public-admin-plugins-icheck-minimal",
+      "layer": "file",
+      "category": "frontend",
+      "categoryLabel": "Frontend",
+      "color": "#eab308",
+      "size": 0.85,
+      "file": "public/admin/plugins/iCheck/minimal/_all.css",
+      "description": "Código-fonte: `public/admin/plugins/iCheck/minimal/_all.css`"
+    },
+    {
+      "id": "javascript-restaurant-file-public-admin-plugins-icheck-minimal-aero-css",
+      "label": "aero.css",
+      "parent": "javascript-restaurant-dir-public-admin-plugins-icheck-minimal",
+      "layer": "file",
+      "category": "frontend",
+      "categoryLabel": "Frontend",
+      "color": "#eab308",
+      "size": 0.85,
+      "file": "public/admin/plugins/iCheck/minimal/aero.css",
+      "description": "Código-fonte: `public/admin/plugins/iCheck/minimal/aero.css`"
+    },
+    {
+      "id": "javascript-restaurant-file-public-admin-plugins-icheck-minimal-blue-css",
+      "label": "blue.css",
+      "parent": "javascript-restaurant-dir-public-admin-plugins-icheck-minimal",
+      "layer": "file",
+      "category": "frontend",
+      "categoryLabel": "Frontend",
+      "color": "#eab308",
+      "size": 0.85,
+      "file": "public/admin/plugins/iCheck/minimal/blue.css",
+      "description": "Código-fonte: `public/admin/plugins/iCheck/minimal/blue.css`"
+    },
+    {
+      "id": "javascript-restaurant-file-public-admin-plugins-icheck-minimal-green-css",
+      "label": "green.css",
+      "parent": "javascript-restaurant-dir-public-admin-plugins-icheck-minimal",
+      "layer": "file",
+      "category": "frontend",
+      "categoryLabel": "Frontend",
+      "color": "#eab308",
+      "size": 0.85,
+      "file": "public/admin/plugins/iCheck/minimal/green.css",
+      "description": "Código-fonte: `public/admin/plugins/iCheck/minimal/green.css`"
+    },
+    {
+      "id": "javascript-restaurant-file-public-admin-plugins-icheck-minimal-grey-css",
+      "label": "grey.css",
+      "parent": "javascript-restaurant-dir-public-admin-plugins-icheck-minimal",
+      "layer": "file",
+      "category": "frontend",
+      "categoryLabel": "Frontend",
+      "color": "#eab308",
+      "size": 0.85,
+      "file": "public/admin/plugins/iCheck/minimal/grey.css",
+      "description": "Código-fonte: `public/admin/plugins/iCheck/minimal/grey.css`"
+    },
+    {
+      "id": "javascript-restaurant-file-public-admin-plugins-icheck-minimal-minimal-css",
+      "label": "minimal.css",
+      "parent": "javascript-restaurant-dir-public-admin-plugins-icheck-minimal",
+      "layer": "file",
+      "category": "frontend",
+      "categoryLabel": "Frontend",
+      "color": "#eab308",
+      "size": 0.85,
+      "file": "public/admin/plugins/iCheck/minimal/minimal.css",
+      "description": "Código-fonte: `public/admin/plugins/iCheck/minimal/minimal.css`"
+    },
+    {
+      "id": "javascript-restaurant-file-public-admin-plugins-icheck-minimal-orange-css",
+      "label": "orange.css",
+      "parent": "javascript-restaurant-dir-public-admin-plugins-icheck-minimal",
+      "layer": "file",
+      "category": "frontend",
+      "categoryLabel": "Frontend",
+      "color": "#eab308",
+      "size": 0.85,
+      "file": "public/admin/plugins/iCheck/minimal/orange.css",
+      "description": "Código-fonte: `public/admin/plugins/iCheck/minimal/orange.css`"
+    },
+    {
+      "id": "javascript-restaurant-file-public-admin-plugins-icheck-minimal-pink-css",
+      "label": "pink.css",
+      "parent": "javascript-restaurant-dir-public-admin-plugins-icheck-minimal",
+      "layer": "file",
+      "category": "frontend",
+      "categoryLabel": "Frontend",
+      "color": "#eab308",
+      "size": 0.85,
+      "file": "public/admin/plugins/iCheck/minimal/pink.css",
+      "description": "Código-fonte: `public/admin/plugins/iCheck/minimal/pink.css`"
+    },
+    {
+      "id": "javascript-restaurant-file-public-admin-plugins-icheck-minimal-purple-css",
+      "label": "purple.css",
+      "parent": "javascript-restaurant-dir-public-admin-plugins-icheck-minimal",
+      "layer": "file",
+      "category": "frontend",
+      "categoryLabel": "Frontend",
+      "color": "#eab308",
+      "size": 0.85,
+      "file": "public/admin/plugins/iCheck/minimal/purple.css",
+      "description": "Código-fonte: `public/admin/plugins/iCheck/minimal/purple.css`"
+    },
+    {
+      "id": "javascript-restaurant-file-public-admin-plugins-icheck-minimal-red-css",
+      "label": "red.css",
+      "parent": "javascript-restaurant-dir-public-admin-plugins-icheck-minimal",
+      "layer": "file",
+      "category": "frontend",
+      "categoryLabel": "Frontend",
+      "color": "#eab308",
+      "size": 0.85,
+      "file": "public/admin/plugins/iCheck/minimal/red.css",
+      "description": "Código-fonte: `public/admin/plugins/iCheck/minimal/red.css`"
+    },
+    {
+      "id": "javascript-restaurant-file-public-admin-plugins-icheck-minimal-yellow-css",
+      "label": "yellow.css",
+      "parent": "javascript-restaurant-dir-public-admin-plugins-icheck-minimal",
+      "layer": "file",
+      "category": "frontend",
+      "categoryLabel": "Frontend",
+      "color": "#eab308",
+      "size": 0.85,
+      "file": "public/admin/plugins/iCheck/minimal/yellow.css",
+      "description": "Código-fonte: `public/admin/plugins/iCheck/minimal/yellow.css`"
+    },
+    {
+      "id": "javascript-restaurant-file-public-admin-plugins-icheck-polaris-polaris-css",
+      "label": "polaris.css",
+      "parent": "javascript-restaurant-dir-public-admin-plugins-icheck-polaris",
+      "layer": "file",
+      "category": "frontend",
+      "categoryLabel": "Frontend",
+      "color": "#eab308",
+      "size": 0.85,
+      "file": "public/admin/plugins/iCheck/polaris/polaris.css",
+      "description": "Código-fonte: `public/admin/plugins/iCheck/polaris/polaris.css`"
+    },
+    {
+      "id": "javascript-restaurant-file-public-admin-plugins-icheck-square-all-css",
+      "label": "_all.css",
+      "parent": "javascript-restaurant-dir-public-admin-plugins-icheck-square",
+      "layer": "file",
+      "category": "frontend",
+      "categoryLabel": "Frontend",
+      "color": "#eab308",
+      "size": 0.85,
+      "file": "public/admin/plugins/iCheck/square/_all.css",
+      "description": "Código-fonte: `public/admin/plugins/iCheck/square/_all.css`"
+    },
+    {
+      "id": "javascript-restaurant-file-public-admin-plugins-icheck-square-aero-css",
+      "label": "aero.css",
+      "parent": "javascript-restaurant-dir-public-admin-plugins-icheck-square",
+      "layer": "file",
+      "category": "frontend",
+      "categoryLabel": "Frontend",
+      "color": "#eab308",
+      "size": 0.85,
+      "file": "public/admin/plugins/iCheck/square/aero.css",
+      "description": "Código-fonte: `public/admin/plugins/iCheck/square/aero.css`"
+    },
+    {
+      "id": "javascript-restaurant-file-public-admin-plugins-icheck-square-blue-css",
+      "label": "blue.css",
+      "parent": "javascript-restaurant-dir-public-admin-plugins-icheck-square",
+      "layer": "file",
+      "category": "frontend",
+      "categoryLabel": "Frontend",
+      "color": "#eab308",
+      "size": 0.85,
+      "file": "public/admin/plugins/iCheck/square/blue.css",
+      "description": "Código-fonte: `public/admin/plugins/iCheck/square/blue.css`"
+    },
+    {
+      "id": "javascript-restaurant-file-public-admin-plugins-icheck-square-green-css",
+      "label": "green.css",
+      "parent": "javascript-restaurant-dir-public-admin-plugins-icheck-square",
+      "layer": "file",
+      "category": "frontend",
+      "categoryLabel": "Frontend",
+      "color": "#eab308",
+      "size": 0.85,
+      "file": "public/admin/plugins/iCheck/square/green.css",
+      "description": "Código-fonte: `public/admin/plugins/iCheck/square/green.css`"
+    },
+    {
+      "id": "javascript-restaurant-file-public-admin-plugins-icheck-square-grey-css",
+      "label": "grey.css",
+      "parent": "javascript-restaurant-dir-public-admin-plugins-icheck-square",
+      "layer": "file",
+      "category": "frontend",
+      "categoryLabel": "Frontend",
+      "color": "#eab308",
+      "size": 0.85,
+      "file": "public/admin/plugins/iCheck/square/grey.css",
+      "description": "Código-fonte: `public/admin/plugins/iCheck/square/grey.css`"
+    },
+    {
+      "id": "javascript-restaurant-file-public-admin-plugins-icheck-square-orange-css",
+      "label": "orange.css",
+      "parent": "javascript-restaurant-dir-public-admin-plugins-icheck-square",
+      "layer": "file",
+      "category": "frontend",
+      "categoryLabel": "Frontend",
+      "color": "#eab308",
+      "size": 0.85,
+      "file": "public/admin/plugins/iCheck/square/orange.css",
+      "description": "Código-fonte: `public/admin/plugins/iCheck/square/orange.css`"
+    },
+    {
+      "id": "javascript-restaurant-file-public-admin-plugins-icheck-square-pink-css",
+      "label": "pink.css",
+      "parent": "javascript-restaurant-dir-public-admin-plugins-icheck-square",
+      "layer": "file",
+      "category": "frontend",
+      "categoryLabel": "Frontend",
+      "color": "#eab308",
+      "size": 0.85,
+      "file": "public/admin/plugins/iCheck/square/pink.css",
+      "description": "Código-fonte: `public/admin/plugins/iCheck/square/pink.css`"
+    },
+    {
+      "id": "javascript-restaurant-file-public-admin-plugins-icheck-square-purple-css",
+      "label": "purple.css",
+      "parent": "javascript-restaurant-dir-public-admin-plugins-icheck-square",
+      "layer": "file",
+      "category": "frontend",
+      "categoryLabel": "Frontend",
+      "color": "#eab308",
+      "size": 0.85,
+      "file": "public/admin/plugins/iCheck/square/purple.css",
+      "description": "Código-fonte: `public/admin/plugins/iCheck/square/purple.css`"
+    },
+    {
+      "id": "javascript-restaurant-file-public-admin-plugins-icheck-square-red-css",
+      "label": "red.css",
+      "parent": "javascript-restaurant-dir-public-admin-plugins-icheck-square",
+      "layer": "file",
+      "category": "frontend",
+      "categoryLabel": "Frontend",
+      "color": "#eab308",
+      "size": 0.85,
+      "file": "public/admin/plugins/iCheck/square/red.css",
+      "description": "Código-fonte: `public/admin/plugins/iCheck/square/red.css`"
+    },
+    {
+      "id": "javascript-restaurant-file-public-admin-plugins-icheck-square-square-css",
+      "label": "square.css",
+      "parent": "javascript-restaurant-dir-public-admin-plugins-icheck-square",
+      "layer": "file",
+      "category": "frontend",
+      "categoryLabel": "Frontend",
+      "color": "#eab308",
+      "size": 0.85,
+      "file": "public/admin/plugins/iCheck/square/square.css",
+      "description": "Código-fonte: `public/admin/plugins/iCheck/square/square.css`"
+    },
+    {
+      "id": "javascript-restaurant-file-public-admin-plugins-icheck-square-yellow-css",
+      "label": "yellow.css",
+      "parent": "javascript-restaurant-dir-public-admin-plugins-icheck-square",
+      "layer": "file",
+      "category": "frontend",
+      "categoryLabel": "Frontend",
+      "color": "#eab308",
+      "size": 0.85,
+      "file": "public/admin/plugins/iCheck/square/yellow.css",
+      "description": "Código-fonte: `public/admin/plugins/iCheck/square/yellow.css`"
+    },
+    {
+      "id": "javascript-restaurant-file-public-admin-plugins-input-mask-jquery-inputmask-date-extensions-js",
+      "label": "jquery.inputmask.date.extensions.js",
+      "parent": "javascript-restaurant-dir-public-admin-plugins-input-mask",
+      "layer": "file",
+      "category": "scripts",
+      "categoryLabel": "Scripts",
+      "color": "#64748b",
+      "size": 0.85,
+      "file": "public/admin/plugins/input-mask/jquery.inputmask.date.extensions.js",
+      "description": "Código-fonte: `public/admin/plugins/input-mask/jquery.inputmask.date.extensions.js`"
+    },
+    {
+      "id": "javascript-restaurant-file-public-admin-plugins-input-mask-jquery-inputmask-extensions-js",
+      "label": "jquery.inputmask.extensions.js",
+      "parent": "javascript-restaurant-dir-public-admin-plugins-input-mask",
+      "layer": "file",
+      "category": "scripts",
+      "categoryLabel": "Scripts",
+      "color": "#64748b",
+      "size": 0.85,
+      "file": "public/admin/plugins/input-mask/jquery.inputmask.extensions.js",
+      "description": "Código-fonte: `public/admin/plugins/input-mask/jquery.inputmask.extensions.js`"
+    },
+    {
+      "id": "javascript-restaurant-file-public-admin-plugins-input-mask-jquery-inputmask-js",
+      "label": "jquery.inputmask.js",
+      "parent": "javascript-restaurant-dir-public-admin-plugins-input-mask",
+      "layer": "file",
+      "category": "scripts",
+      "categoryLabel": "Scripts",
+      "color": "#64748b",
+      "size": 0.85,
+      "file": "public/admin/plugins/input-mask/jquery.inputmask.js",
+      "description": "Código-fonte: `public/admin/plugins/input-mask/jquery.inputmask.js`"
+    },
+    {
+      "id": "javascript-restaurant-file-public-admin-plugins-input-mask-jquery-inputmask-numeric-extensions-js",
+      "label": "jquery.inputmask.numeric.extensions.js",
+      "parent": "javascript-restaurant-dir-public-admin-plugins-input-mask",
+      "layer": "file",
+      "category": "scripts",
+      "categoryLabel": "Scripts",
+      "color": "#64748b",
+      "size": 0.85,
+      "file": "public/admin/plugins/input-mask/jquery.inputmask.numeric.extensions.js",
+      "description": "Código-fonte: `public/admin/plugins/input-mask/jquery.inputmask.numeric.extensions.js`"
+    },
+    {
+      "id": "javascript-restaurant-file-public-admin-plugins-input-mask-jquery-inputmask-phone-extensions-js",
+      "label": "jquery.inputmask.phone.extensions.js",
+      "parent": "javascript-restaurant-dir-public-admin-plugins-input-mask",
+      "layer": "file",
+      "category": "scripts",
+      "categoryLabel": "Scripts",
+      "color": "#64748b",
+      "size": 0.85,
+      "file": "public/admin/plugins/input-mask/jquery.inputmask.phone.extensions.js",
+      "description": "Código-fonte: `public/admin/plugins/input-mask/jquery.inputmask.phone.extensions.js`"
+    },
+    {
+      "id": "javascript-restaurant-file-public-admin-plugins-input-mask-jquery-inputmask-regex-extensions-js",
+      "label": "jquery.inputmask.regex.extensions.js",
+      "parent": "javascript-restaurant-dir-public-admin-plugins-input-mask",
+      "layer": "file",
+      "category": "scripts",
+      "categoryLabel": "Scripts",
+      "color": "#64748b",
+      "size": 0.85,
+      "file": "public/admin/plugins/input-mask/jquery.inputmask.regex.extensions.js",
+      "description": "Código-fonte: `public/admin/plugins/input-mask/jquery.inputmask.regex.extensions.js`"
+    },
+    {
+      "id": "javascript-restaurant-file-public-admin-plugins-input-mask-phone-codes-phone-be-json",
+      "label": "phone-be.json",
+      "parent": "javascript-restaurant-dir-public-admin-plugins-input-mask-phone-codes",
+      "layer": "file",
+      "category": "scripts",
+      "categoryLabel": "Scripts",
+      "color": "#64748b",
+      "size": 0.85,
+      "file": "public/admin/plugins/input-mask/phone-codes/phone-be.json",
+      "description": "Código-fonte: `public/admin/plugins/input-mask/phone-codes/phone-be.json`"
+    },
+    {
+      "id": "javascript-restaurant-file-public-admin-plugins-input-mask-phone-codes-phone-codes-json",
+      "label": "phone-codes.json",
+      "parent": "javascript-restaurant-dir-public-admin-plugins-input-mask-phone-codes",
+      "layer": "file",
+      "category": "scripts",
+      "categoryLabel": "Scripts",
+      "color": "#64748b",
+      "size": 0.85,
+      "file": "public/admin/plugins/input-mask/phone-codes/phone-codes.json",
+      "description": "Código-fonte: `public/admin/plugins/input-mask/phone-codes/phone-codes.json`"
+    },
+    {
+      "id": "javascript-restaurant-file-public-admin-plugins-jqueryui-jquery-ui-js",
+      "label": "jquery-ui.js",
+      "parent": "javascript-restaurant-dir-public-admin-plugins-jqueryui",
+      "layer": "file",
+      "category": "frontend",
+      "categoryLabel": "Frontend",
+      "color": "#eab308",
+      "size": 0.85,
+      "file": "public/admin/plugins/jQueryUI/jquery-ui.js",
+      "description": "Código-fonte: `public/admin/plugins/jQueryUI/jquery-ui.js`"
+    },
+    {
+      "id": "javascript-restaurant-file-public-admin-plugins-jqueryui-jquery-ui-min-js",
+      "label": "jquery-ui.min.js",
+      "parent": "javascript-restaurant-dir-public-admin-plugins-jqueryui",
+      "layer": "file",
+      "category": "frontend",
+      "categoryLabel": "Frontend",
+      "color": "#eab308",
+      "size": 0.85,
+      "file": "public/admin/plugins/jQueryUI/jquery-ui.min.js",
+      "description": "Código-fonte: `public/admin/plugins/jQueryUI/jquery-ui.min.js`"
+    },
+    {
+      "id": "javascript-restaurant-file-public-admin-plugins-jvectormap-jquery-jvectormap-1-2-2-css",
+      "label": "jquery-jvectormap-1.2.2.css",
+      "parent": "javascript-restaurant-dir-public-admin-plugins-jvectormap",
+      "layer": "file",
+      "category": "frontend",
+      "categoryLabel": "Frontend",
+      "color": "#eab308",
+      "size": 0.85,
+      "file": "public/admin/plugins/jvectormap/jquery-jvectormap-1.2.2.css",
+      "description": "Código-fonte: `public/admin/plugins/jvectormap/jquery-jvectormap-1.2.2.css`"
+    },
+    {
+      "id": "javascript-restaurant-file-public-admin-plugins-jvectormap-jquery-jvectormap-1-2-2-min-js",
+      "label": "jquery-jvectormap-1.2.2.min.js",
+      "parent": "javascript-restaurant-dir-public-admin-plugins-jvectormap",
+      "layer": "file",
+      "category": "scripts",
+      "categoryLabel": "Scripts",
+      "color": "#64748b",
+      "size": 0.85,
+      "file": "public/admin/plugins/jvectormap/jquery-jvectormap-1.2.2.min.js",
+      "description": "Código-fonte: `public/admin/plugins/jvectormap/jquery-jvectormap-1.2.2.min.js`"
+    },
+    {
+      "id": "javascript-restaurant-file-public-admin-plugins-jvectormap-jquery-jvectormap-usa-en-js",
+      "label": "jquery-jvectormap-usa-en.js",
+      "parent": "javascript-restaurant-dir-public-admin-plugins-jvectormap",
+      "layer": "file",
+      "category": "scripts",
+      "categoryLabel": "Scripts",
+      "color": "#64748b",
+      "size": 0.85,
+      "file": "public/admin/plugins/jvectormap/jquery-jvectormap-usa-en.js",
+      "description": "Código-fonte: `public/admin/plugins/jvectormap/jquery-jvectormap-usa-en.js`"
+    },
+    {
+      "id": "javascript-restaurant-file-public-admin-plugins-jvectormap-jquery-jvectormap-world-mill-en-js",
+      "label": "jquery-jvectormap-world-mill-en.js",
+      "parent": "javascript-restaurant-dir-public-admin-plugins-jvectormap",
+      "layer": "file",
+      "category": "scripts",
+      "categoryLabel": "Scripts",
+      "color": "#64748b",
+      "size": 0.85,
+      "file": "public/admin/plugins/jvectormap/jquery-jvectormap-world-mill-en.js",
+      "description": "Código-fonte: `public/admin/plugins/jvectormap/jquery-jvectormap-world-mill-en.js`"
+    },
+    {
+      "id": "javascript-restaurant-file-public-admin-plugins-pace-pace-css",
+      "label": "pace.css",
+      "parent": "javascript-restaurant-dir-public-admin-plugins-pace",
+      "layer": "file",
+      "category": "frontend",
+      "categoryLabel": "Frontend",
+      "color": "#eab308",
+      "size": 0.85,
+      "file": "public/admin/plugins/pace/pace.css",
+      "description": "Código-fonte: `public/admin/plugins/pace/pace.css`"
+    },
+    {
+      "id": "javascript-restaurant-file-public-admin-plugins-pace-pace-js",
+      "label": "pace.js",
+      "parent": "javascript-restaurant-dir-public-admin-plugins-pace",
+      "layer": "file",
+      "category": "scripts",
+      "categoryLabel": "Scripts",
+      "color": "#64748b",
+      "size": 0.85,
+      "file": "public/admin/plugins/pace/pace.js",
+      "description": "Código-fonte: `public/admin/plugins/pace/pace.js`"
+    },
+    {
+      "id": "javascript-restaurant-file-public-admin-plugins-pace-pace-min-css",
+      "label": "pace.min.css",
+      "parent": "javascript-restaurant-dir-public-admin-plugins-pace",
+      "layer": "file",
+      "category": "frontend",
+      "categoryLabel": "Frontend",
+      "color": "#eab308",
+      "size": 0.85,
+      "file": "public/admin/plugins/pace/pace.min.css",
+      "description": "Código-fonte: `public/admin/plugins/pace/pace.min.css`"
+    },
+    {
+      "id": "javascript-restaurant-file-public-admin-plugins-pace-pace-min-js",
+      "label": "pace.min.js",
+      "parent": "javascript-restaurant-dir-public-admin-plugins-pace",
+      "layer": "file",
+      "category": "scripts",
+      "categoryLabel": "Scripts",
+      "color": "#64748b",
+      "size": 0.85,
+      "file": "public/admin/plugins/pace/pace.min.js",
+      "description": "Código-fonte: `public/admin/plugins/pace/pace.min.js`"
+    },
+    {
+      "id": "javascript-restaurant-file-public-admin-plugins-timepicker-bootstrap-timepicker-css",
+      "label": "bootstrap-timepicker.css",
+      "parent": "javascript-restaurant-dir-public-admin-plugins-timepicker",
+      "layer": "file",
+      "category": "frontend",
+      "categoryLabel": "Frontend",
+      "color": "#eab308",
+      "size": 0.85,
+      "file": "public/admin/plugins/timepicker/bootstrap-timepicker.css",
+      "description": "Código-fonte: `public/admin/plugins/timepicker/bootstrap-timepicker.css`"
+    },
+    {
+      "id": "javascript-restaurant-file-public-admin-plugins-timepicker-bootstrap-timepicker-js",
+      "label": "bootstrap-timepicker.js",
+      "parent": "javascript-restaurant-dir-public-admin-plugins-timepicker",
+      "layer": "file",
+      "category": "scripts",
+      "categoryLabel": "Scripts",
+      "color": "#64748b",
+      "size": 0.85,
+      "file": "public/admin/plugins/timepicker/bootstrap-timepicker.js",
+      "description": "Código-fonte: `public/admin/plugins/timepicker/bootstrap-timepicker.js`"
+    },
+    {
+      "id": "javascript-restaurant-file-public-admin-plugins-timepicker-bootstrap-timepicker-min-css",
+      "label": "bootstrap-timepicker.min.css",
+      "parent": "javascript-restaurant-dir-public-admin-plugins-timepicker",
+      "layer": "file",
+      "category": "frontend",
+      "categoryLabel": "Frontend",
+      "color": "#eab308",
+      "size": 0.85,
+      "file": "public/admin/plugins/timepicker/bootstrap-timepicker.min.css",
+      "description": "Código-fonte: `public/admin/plugins/timepicker/bootstrap-timepicker.min.css`"
+    },
+    {
+      "id": "javascript-restaurant-file-public-admin-plugins-timepicker-bootstrap-timepicker-min-js",
+      "label": "bootstrap-timepicker.min.js",
+      "parent": "javascript-restaurant-dir-public-admin-plugins-timepicker",
+      "layer": "file",
+      "category": "scripts",
+      "categoryLabel": "Scripts",
+      "color": "#64748b",
+      "size": 0.85,
+      "file": "public/admin/plugins/timepicker/bootstrap-timepicker.min.js",
+      "description": "Código-fonte: `public/admin/plugins/timepicker/bootstrap-timepicker.min.js`"
+    },
+    {
+      "id": "javascript-restaurant-file-public-css-animate-css",
+      "label": "animate.css",
+      "parent": "javascript-restaurant-dir-public-css",
+      "layer": "file",
+      "category": "frontend",
+      "categoryLabel": "Frontend",
+      "color": "#eab308",
+      "size": 0.85,
+      "file": "public/css/animate.css",
+      "description": "Código-fonte: `public/css/animate.css`"
+    },
+    {
+      "id": "javascript-restaurant-file-public-css-bootstrap-datepicker-min-css",
+      "label": "bootstrap-datepicker.min.css",
+      "parent": "javascript-restaurant-dir-public-css",
+      "layer": "file",
+      "category": "frontend",
+      "categoryLabel": "Frontend",
+      "color": "#eab308",
+      "size": 0.85,
+      "file": "public/css/bootstrap-datepicker.min.css",
+      "description": "Código-fonte: `public/css/bootstrap-datepicker.min.css`"
+    },
+    {
+      "id": "javascript-restaurant-file-public-css-bootstrap-datetimepicker-min-css",
+      "label": "bootstrap-datetimepicker.min.css",
+      "parent": "javascript-restaurant-dir-public-css",
+      "layer": "file",
+      "category": "frontend",
+      "categoryLabel": "Frontend",
+      "color": "#eab308",
+      "size": 0.85,
+      "file": "public/css/bootstrap-datetimepicker.min.css",
+      "description": "Código-fonte: `public/css/bootstrap-datetimepicker.min.css`"
+    },
+    {
+      "id": "javascript-restaurant-file-public-css-bootstrap-css",
+      "label": "bootstrap.css",
+      "parent": "javascript-restaurant-dir-public-css",
+      "layer": "file",
+      "category": "frontend",
+      "categoryLabel": "Frontend",
+      "color": "#eab308",
+      "size": 0.85,
+      "file": "public/css/bootstrap.css",
+      "description": "Código-fonte: `public/css/bootstrap.css`"
+    },
+    {
+      "id": "javascript-restaurant-file-public-css-flexslider-css",
+      "label": "flexslider.css",
+      "parent": "javascript-restaurant-dir-public-css",
+      "layer": "file",
+      "category": "frontend",
+      "categoryLabel": "Frontend",
+      "color": "#eab308",
+      "size": 0.85,
+      "file": "public/css/flexslider.css",
+      "description": "Código-fonte: `public/css/flexslider.css`"
+    },
+    {
+      "id": "javascript-restaurant-file-public-css-icomoon-css",
+      "label": "icomoon.css",
+      "parent": "javascript-restaurant-dir-public-css",
+      "layer": "file",
+      "category": "frontend",
+      "categoryLabel": "Frontend",
+      "color": "#eab308",
+      "size": 0.85,
+      "file": "public/css/icomoon.css",
+      "description": "Código-fonte: `public/css/icomoon.css`"
+    },
+    {
+      "id": "javascript-restaurant-file-public-css-magnific-popup-css",
+      "label": "magnific-popup.css",
+      "parent": "javascript-restaurant-dir-public-css",
+      "layer": "file",
+      "category": "frontend",
+      "categoryLabel": "Frontend",
+      "color": "#eab308",
+      "size": 0.85,
+      "file": "public/css/magnific-popup.css",
+      "description": "Código-fonte: `public/css/magnific-popup.css`"
+    },
+    {
+      "id": "javascript-restaurant-file-public-css-owl-carousel-min-css",
+      "label": "owl.carousel.min.css",
+      "parent": "javascript-restaurant-dir-public-css",
+      "layer": "file",
+      "category": "frontend",
+      "categoryLabel": "Frontend",
+      "color": "#eab308",
+      "size": 0.85,
+      "file": "public/css/owl.carousel.min.css",
+      "description": "Código-fonte: `public/css/owl.carousel.min.css`"
+    },
+    {
+      "id": "javascript-restaurant-file-public-css-owl-theme-default-min-css",
+      "label": "owl.theme.default.min.css",
+      "parent": "javascript-restaurant-dir-public-css",
+      "layer": "file",
+      "category": "frontend",
+      "categoryLabel": "Frontend",
+      "color": "#eab308",
+      "size": 0.85,
+      "file": "public/css/owl.theme.default.min.css",
+      "description": "Código-fonte: `public/css/owl.theme.default.min.css`"
+    },
+    {
+      "id": "javascript-restaurant-file-public-css-style-css",
+      "label": "style.css",
+      "parent": "javascript-restaurant-dir-public-css",
+      "layer": "file",
+      "category": "frontend",
+      "categoryLabel": "Frontend",
+      "color": "#eab308",
+      "size": 0.85,
+      "file": "public/css/style.css",
+      "description": "Código-fonte: `public/css/style.css`"
+    },
+    {
+      "id": "javascript-restaurant-file-public-css-themify-icons-css",
+      "label": "themify-icons.css",
+      "parent": "javascript-restaurant-dir-public-css",
+      "layer": "file",
+      "category": "frontend",
+      "categoryLabel": "Frontend",
+      "color": "#eab308",
+      "size": 0.85,
+      "file": "public/css/themify-icons.css",
+      "description": "Código-fonte: `public/css/themify-icons.css`"
+    },
+    {
+      "id": "javascript-restaurant-file-public-db-mysql-sql",
+      "label": "mysql.sql",
+      "parent": "javascript-restaurant-dir-public-db",
       "layer": "file",
       "category": "oracle",
       "categoryLabel": "Oracle / DB",
       "color": "#c084fc",
       "size": 0.85,
       "file": "public/db/mysql.sql",
-      "description": "Tabelas do restaurante saboroso."
+      "description": "Código-fonte: `public/db/mysql.sql`"
     },
     {
-      "id": "jsr-redis",
-      "label": "Redis",
-      "parent": "jsr-session",
-      "layer": "file",
-      "category": "core",
-      "categoryLabel": "Backend",
-      "color": "#3b82f6",
-      "size": 0.85,
-      "file": "app.js",
-      "description": "Store de sessão para admin."
+      "id": "javascript-restaurant-grp-public-js-files-b-g-h",
+      "label": "Arquivos B–G–H",
+      "parent": "javascript-restaurant-dir-public-js",
+      "layer": "module",
+      "category": "scripts",
+      "categoryLabel": "Scripts",
+      "color": "#64748b",
+      "size": 1.35,
+      "file": "public/js/[files-b–g–h]",
+      "description": "Grupo de arquivos em `public/js/` — Arquivos B–G–H"
     },
     {
-      "id": "jsr-package",
-      "label": "package.json",
-      "parent": "jsr-backend",
+      "id": "javascript-restaurant-grp-public-js-files-j-m-o-r",
+      "label": "Arquivos J–M–O–R",
+      "parent": "javascript-restaurant-dir-public-js",
+      "layer": "module",
+      "category": "scripts",
+      "categoryLabel": "Scripts",
+      "color": "#64748b",
+      "size": 1.35,
+      "file": "public/js/[files-j–m–o–r]",
+      "description": "Grupo de arquivos em `public/js/` — Arquivos J–M–O–R"
+    },
+    {
+      "id": "javascript-restaurant-file-public-js-bootstrap-datepicker-min-js",
+      "label": "bootstrap-datepicker.min.js",
+      "parent": "javascript-restaurant-grp-public-js-files-b-g-h",
       "layer": "file",
-      "category": "other",
-      "categoryLabel": "Outros",
+      "category": "scripts",
+      "categoryLabel": "Scripts",
       "color": "#64748b",
       "size": 0.85,
-      "file": "package.json",
-      "description": "Dependências: express, mysql2, ejs, formidable, moment."
+      "file": "public/js/bootstrap-datepicker.min.js",
+      "description": "Código-fonte: `public/js/bootstrap-datepicker.min.js`"
+    },
+    {
+      "id": "javascript-restaurant-file-public-js-bootstrap-datetimepicker-min-js",
+      "label": "bootstrap-datetimepicker.min.js",
+      "parent": "javascript-restaurant-grp-public-js-files-b-g-h",
+      "layer": "file",
+      "category": "scripts",
+      "categoryLabel": "Scripts",
+      "color": "#64748b",
+      "size": 0.85,
+      "file": "public/js/bootstrap-datetimepicker.min.js",
+      "description": "Código-fonte: `public/js/bootstrap-datetimepicker.min.js`"
+    },
+    {
+      "id": "javascript-restaurant-file-public-js-bootstrap-min-js",
+      "label": "bootstrap.min.js",
+      "parent": "javascript-restaurant-grp-public-js-files-b-g-h",
+      "layer": "file",
+      "category": "scripts",
+      "categoryLabel": "Scripts",
+      "color": "#64748b",
+      "size": 0.85,
+      "file": "public/js/bootstrap.min.js",
+      "description": "Código-fonte: `public/js/bootstrap.min.js`"
+    },
+    {
+      "id": "javascript-restaurant-file-public-js-google-map-js",
+      "label": "google_map.js",
+      "parent": "javascript-restaurant-grp-public-js-files-b-g-h",
+      "layer": "file",
+      "category": "scripts",
+      "categoryLabel": "Scripts",
+      "color": "#64748b",
+      "size": 0.85,
+      "file": "public/js/google_map.js",
+      "description": "Código-fonte: `public/js/google_map.js`"
+    },
+    {
+      "id": "javascript-restaurant-file-public-js-hcode-filereader-js",
+      "label": "hcode-filereader.js",
+      "parent": "javascript-restaurant-grp-public-js-files-b-g-h",
+      "layer": "file",
+      "category": "scripts",
+      "categoryLabel": "Scripts",
+      "color": "#64748b",
+      "size": 0.85,
+      "file": "public/js/hcode-filereader.js",
+      "description": "Código-fonte: `public/js/hcode-filereader.js`"
+    },
+    {
+      "id": "javascript-restaurant-file-public-js-hcode-formsave-js",
+      "label": "hcode-formsave.js",
+      "parent": "javascript-restaurant-grp-public-js-files-b-g-h",
+      "layer": "file",
+      "category": "scripts",
+      "categoryLabel": "Scripts",
+      "color": "#64748b",
+      "size": 0.85,
+      "file": "public/js/hcode-formsave.js",
+      "description": "Código-fonte: `public/js/hcode-formsave.js`"
+    },
+    {
+      "id": "javascript-restaurant-file-public-js-hcode-grid-js",
+      "label": "hcode-grid.js",
+      "parent": "javascript-restaurant-grp-public-js-files-b-g-h",
+      "layer": "file",
+      "category": "scripts",
+      "categoryLabel": "Scripts",
+      "color": "#64748b",
+      "size": 0.85,
+      "file": "public/js/hcode-grid.js",
+      "description": "Código-fonte: `public/js/hcode-grid.js`"
+    },
+    {
+      "id": "javascript-restaurant-file-public-js-jquery-countto-js",
+      "label": "jquery.countTo.js",
+      "parent": "javascript-restaurant-grp-public-js-files-j-m-o-r",
+      "layer": "file",
+      "category": "scripts",
+      "categoryLabel": "Scripts",
+      "color": "#64748b",
+      "size": 0.85,
+      "file": "public/js/jquery.countTo.js",
+      "description": "Código-fonte: `public/js/jquery.countTo.js`"
+    },
+    {
+      "id": "javascript-restaurant-file-public-js-jquery-easing-1-3-js",
+      "label": "jquery.easing.1.3.js",
+      "parent": "javascript-restaurant-grp-public-js-files-j-m-o-r",
+      "layer": "file",
+      "category": "scripts",
+      "categoryLabel": "Scripts",
+      "color": "#64748b",
+      "size": 0.85,
+      "file": "public/js/jquery.easing.1.3.js",
+      "description": "Código-fonte: `public/js/jquery.easing.1.3.js`"
+    },
+    {
+      "id": "javascript-restaurant-file-public-js-jquery-magnific-popup-min-js",
+      "label": "jquery.magnific-popup.min.js",
+      "parent": "javascript-restaurant-grp-public-js-files-j-m-o-r",
+      "layer": "file",
+      "category": "scripts",
+      "categoryLabel": "Scripts",
+      "color": "#64748b",
+      "size": 0.85,
+      "file": "public/js/jquery.magnific-popup.min.js",
+      "description": "Código-fonte: `public/js/jquery.magnific-popup.min.js`"
+    },
+    {
+      "id": "javascript-restaurant-file-public-js-jquery-min-js",
+      "label": "jquery.min.js",
+      "parent": "javascript-restaurant-grp-public-js-files-j-m-o-r",
+      "layer": "file",
+      "category": "scripts",
+      "categoryLabel": "Scripts",
+      "color": "#64748b",
+      "size": 0.85,
+      "file": "public/js/jquery.min.js",
+      "description": "Código-fonte: `public/js/jquery.min.js`"
+    },
+    {
+      "id": "javascript-restaurant-file-public-js-jquery-stellar-min-js",
+      "label": "jquery.stellar.min.js",
+      "parent": "javascript-restaurant-grp-public-js-files-j-m-o-r",
+      "layer": "file",
+      "category": "scripts",
+      "categoryLabel": "Scripts",
+      "color": "#64748b",
+      "size": 0.85,
+      "file": "public/js/jquery.stellar.min.js",
+      "description": "Código-fonte: `public/js/jquery.stellar.min.js`"
+    },
+    {
+      "id": "javascript-restaurant-file-public-js-jquery-waypoints-min-js",
+      "label": "jquery.waypoints.min.js",
+      "parent": "javascript-restaurant-grp-public-js-files-j-m-o-r",
+      "layer": "file",
+      "category": "scripts",
+      "categoryLabel": "Scripts",
+      "color": "#64748b",
+      "size": 0.85,
+      "file": "public/js/jquery.waypoints.min.js",
+      "description": "Código-fonte: `public/js/jquery.waypoints.min.js`"
+    },
+    {
+      "id": "javascript-restaurant-file-public-js-magnific-popup-options-js",
+      "label": "magnific-popup-options.js",
+      "parent": "javascript-restaurant-grp-public-js-files-j-m-o-r",
+      "layer": "file",
+      "category": "scripts",
+      "categoryLabel": "Scripts",
+      "color": "#64748b",
+      "size": 0.85,
+      "file": "public/js/magnific-popup-options.js",
+      "description": "Código-fonte: `public/js/magnific-popup-options.js`"
+    },
+    {
+      "id": "javascript-restaurant-file-public-js-main-js",
+      "label": "main.js",
+      "parent": "javascript-restaurant-grp-public-js-files-j-m-o-r",
+      "layer": "file",
+      "category": "scripts",
+      "categoryLabel": "Scripts",
+      "color": "#64748b",
+      "size": 0.85,
+      "file": "public/js/main.js",
+      "description": "Código-fonte: `public/js/main.js`"
+    },
+    {
+      "id": "javascript-restaurant-file-public-js-modernizr-2-6-2-min-js",
+      "label": "modernizr-2.6.2.min.js",
+      "parent": "javascript-restaurant-grp-public-js-files-j-m-o-r",
+      "layer": "file",
+      "category": "scripts",
+      "categoryLabel": "Scripts",
+      "color": "#64748b",
+      "size": 0.85,
+      "file": "public/js/modernizr-2.6.2.min.js",
+      "description": "Código-fonte: `public/js/modernizr-2.6.2.min.js`"
+    },
+    {
+      "id": "javascript-restaurant-file-public-js-moment-min-js",
+      "label": "moment.min.js",
+      "parent": "javascript-restaurant-grp-public-js-files-j-m-o-r",
+      "layer": "file",
+      "category": "scripts",
+      "categoryLabel": "Scripts",
+      "color": "#64748b",
+      "size": 0.85,
+      "file": "public/js/moment.min.js",
+      "description": "Código-fonte: `public/js/moment.min.js`"
+    },
+    {
+      "id": "javascript-restaurant-file-public-js-owl-carousel-min-js",
+      "label": "owl.carousel.min.js",
+      "parent": "javascript-restaurant-grp-public-js-files-j-m-o-r",
+      "layer": "file",
+      "category": "scripts",
+      "categoryLabel": "Scripts",
+      "color": "#64748b",
+      "size": 0.85,
+      "file": "public/js/owl.carousel.min.js",
+      "description": "Código-fonte: `public/js/owl.carousel.min.js`"
+    },
+    {
+      "id": "javascript-restaurant-file-public-js-respond-min-js",
+      "label": "respond.min.js",
+      "parent": "javascript-restaurant-grp-public-js-files-j-m-o-r",
+      "layer": "file",
+      "category": "scripts",
+      "categoryLabel": "Scripts",
+      "color": "#64748b",
+      "size": 0.85,
+      "file": "public/js/respond.min.js",
+      "description": "Código-fonte: `public/js/respond.min.js`"
+    },
+    {
+      "id": "javascript-restaurant-file-routes-admin-js",
+      "label": "admin.js",
+      "parent": "javascript-restaurant-dir-routes",
+      "layer": "file",
+      "category": "scripts",
+      "categoryLabel": "Scripts",
+      "color": "#64748b",
+      "size": 0.85,
+      "file": "routes/admin.js",
+      "description": "Código-fonte: `routes/admin.js`"
+    },
+    {
+      "id": "javascript-restaurant-file-routes-index-js",
+      "label": "index.js",
+      "parent": "javascript-restaurant-dir-routes",
+      "layer": "file",
+      "category": "scripts",
+      "categoryLabel": "Scripts",
+      "color": "#64748b",
+      "size": 0.85,
+      "file": "routes/index.js",
+      "description": "Código-fonte: `routes/index.js`"
+    },
+    {
+      "id": "javascript-restaurant-file-views-contacts-ejs",
+      "label": "contacts.ejs",
+      "parent": "javascript-restaurant-dir-views",
+      "layer": "file",
+      "category": "frontend",
+      "categoryLabel": "Frontend",
+      "color": "#eab308",
+      "size": 0.85,
+      "file": "views/contacts.ejs",
+      "description": "Código-fonte: `views/contacts.ejs`"
+    },
+    {
+      "id": "javascript-restaurant-file-views-error-ejs",
+      "label": "error.ejs",
+      "parent": "javascript-restaurant-dir-views",
+      "layer": "file",
+      "category": "frontend",
+      "categoryLabel": "Frontend",
+      "color": "#eab308",
+      "size": 0.85,
+      "file": "views/error.ejs",
+      "description": "Código-fonte: `views/error.ejs`"
+    },
+    {
+      "id": "javascript-restaurant-file-views-index-ejs",
+      "label": "index.ejs",
+      "parent": "javascript-restaurant-dir-views",
+      "layer": "file",
+      "category": "frontend",
+      "categoryLabel": "Frontend",
+      "color": "#eab308",
+      "size": 0.85,
+      "file": "views/index.ejs",
+      "description": "Código-fonte: `views/index.ejs`"
+    },
+    {
+      "id": "javascript-restaurant-file-views-menus-ejs",
+      "label": "menus.ejs",
+      "parent": "javascript-restaurant-dir-views",
+      "layer": "file",
+      "category": "frontend",
+      "categoryLabel": "Frontend",
+      "color": "#eab308",
+      "size": 0.85,
+      "file": "views/menus.ejs",
+      "description": "Código-fonte: `views/menus.ejs`"
+    },
+    {
+      "id": "javascript-restaurant-file-views-reservations-ejs",
+      "label": "reservations.ejs",
+      "parent": "javascript-restaurant-dir-views",
+      "layer": "file",
+      "category": "frontend",
+      "categoryLabel": "Frontend",
+      "color": "#eab308",
+      "size": 0.85,
+      "file": "views/reservations.ejs",
+      "description": "Código-fonte: `views/reservations.ejs`"
+    },
+    {
+      "id": "javascript-restaurant-file-views-services-ejs",
+      "label": "services.ejs",
+      "parent": "javascript-restaurant-dir-views",
+      "layer": "file",
+      "category": "frontend",
+      "categoryLabel": "Frontend",
+      "color": "#eab308",
+      "size": 0.85,
+      "file": "views/services.ejs",
+      "description": "Código-fonte: `views/services.ejs`"
+    },
+    {
+      "id": "javascript-restaurant-file-views-admin-contacts-ejs",
+      "label": "contacts.ejs",
+      "parent": "javascript-restaurant-dir-views-admin",
+      "layer": "file",
+      "category": "frontend",
+      "categoryLabel": "Frontend",
+      "color": "#eab308",
+      "size": 0.85,
+      "file": "views/admin/contacts.ejs",
+      "description": "Código-fonte: `views/admin/contacts.ejs`"
+    },
+    {
+      "id": "javascript-restaurant-file-views-admin-emails-ejs",
+      "label": "emails.ejs",
+      "parent": "javascript-restaurant-dir-views-admin",
+      "layer": "file",
+      "category": "frontend",
+      "categoryLabel": "Frontend",
+      "color": "#eab308",
+      "size": 0.85,
+      "file": "views/admin/emails.ejs",
+      "description": "Código-fonte: `views/admin/emails.ejs`"
+    },
+    {
+      "id": "javascript-restaurant-file-views-admin-index-ejs",
+      "label": "index.ejs",
+      "parent": "javascript-restaurant-dir-views-admin",
+      "layer": "file",
+      "category": "frontend",
+      "categoryLabel": "Frontend",
+      "color": "#eab308",
+      "size": 0.85,
+      "file": "views/admin/index.ejs",
+      "description": "Código-fonte: `views/admin/index.ejs`"
+    },
+    {
+      "id": "javascript-restaurant-file-views-admin-login-ejs",
+      "label": "login.ejs",
+      "parent": "javascript-restaurant-dir-views-admin",
+      "layer": "file",
+      "category": "frontend",
+      "categoryLabel": "Frontend",
+      "color": "#eab308",
+      "size": 0.85,
+      "file": "views/admin/login.ejs",
+      "description": "Código-fonte: `views/admin/login.ejs`"
+    },
+    {
+      "id": "javascript-restaurant-file-views-admin-menus-ejs",
+      "label": "menus.ejs",
+      "parent": "javascript-restaurant-dir-views-admin",
+      "layer": "file",
+      "category": "frontend",
+      "categoryLabel": "Frontend",
+      "color": "#eab308",
+      "size": 0.85,
+      "file": "views/admin/menus.ejs",
+      "description": "Código-fonte: `views/admin/menus.ejs`"
+    },
+    {
+      "id": "javascript-restaurant-file-views-admin-reservations-ejs",
+      "label": "reservations.ejs",
+      "parent": "javascript-restaurant-dir-views-admin",
+      "layer": "file",
+      "category": "frontend",
+      "categoryLabel": "Frontend",
+      "color": "#eab308",
+      "size": 0.85,
+      "file": "views/admin/reservations.ejs",
+      "description": "Código-fonte: `views/admin/reservations.ejs`"
+    },
+    {
+      "id": "javascript-restaurant-file-views-admin-users-ejs",
+      "label": "users.ejs",
+      "parent": "javascript-restaurant-dir-views-admin",
+      "layer": "file",
+      "category": "frontend",
+      "categoryLabel": "Frontend",
+      "color": "#eab308",
+      "size": 0.85,
+      "file": "views/admin/users.ejs",
+      "description": "Código-fonte: `views/admin/users.ejs`"
+    },
+    {
+      "id": "javascript-restaurant-file-views-admin-inc-footer-ejs",
+      "label": "footer.ejs",
+      "parent": "javascript-restaurant-dir-views-admin-inc",
+      "layer": "file",
+      "category": "frontend",
+      "categoryLabel": "Frontend",
+      "color": "#eab308",
+      "size": 0.85,
+      "file": "views/admin/inc/footer.ejs",
+      "description": "Código-fonte: `views/admin/inc/footer.ejs`"
+    },
+    {
+      "id": "javascript-restaurant-file-views-admin-inc-header-ejs",
+      "label": "header.ejs",
+      "parent": "javascript-restaurant-dir-views-admin-inc",
+      "layer": "file",
+      "category": "frontend",
+      "categoryLabel": "Frontend",
+      "color": "#eab308",
+      "size": 0.85,
+      "file": "views/admin/inc/header.ejs",
+      "description": "Código-fonte: `views/admin/inc/header.ejs`"
+    },
+    {
+      "id": "javascript-restaurant-file-views-inc-footer-gototop-ejs",
+      "label": "footer-gototop.ejs",
+      "parent": "javascript-restaurant-dir-views-inc",
+      "layer": "file",
+      "category": "frontend",
+      "categoryLabel": "Frontend",
+      "color": "#eab308",
+      "size": 0.85,
+      "file": "views/inc/footer-gototop.ejs",
+      "description": "Código-fonte: `views/inc/footer-gototop.ejs`"
+    },
+    {
+      "id": "javascript-restaurant-file-views-inc-footer-scripts-ejs",
+      "label": "footer-scripts.ejs",
+      "parent": "javascript-restaurant-dir-views-inc",
+      "layer": "file",
+      "category": "frontend",
+      "categoryLabel": "Frontend",
+      "color": "#eab308",
+      "size": 0.85,
+      "file": "views/inc/footer-scripts.ejs",
+      "description": "Código-fonte: `views/inc/footer-scripts.ejs`"
+    },
+    {
+      "id": "javascript-restaurant-file-views-inc-footer-ejs",
+      "label": "footer.ejs",
+      "parent": "javascript-restaurant-dir-views-inc",
+      "layer": "file",
+      "category": "frontend",
+      "categoryLabel": "Frontend",
+      "color": "#eab308",
+      "size": 0.85,
+      "file": "views/inc/footer.ejs",
+      "description": "Código-fonte: `views/inc/footer.ejs`"
+    },
+    {
+      "id": "javascript-restaurant-file-views-inc-head-ejs",
+      "label": "head.ejs",
+      "parent": "javascript-restaurant-dir-views-inc",
+      "layer": "file",
+      "category": "frontend",
+      "categoryLabel": "Frontend",
+      "color": "#eab308",
+      "size": 0.85,
+      "file": "views/inc/head.ejs",
+      "description": "Código-fonte: `views/inc/head.ejs`"
+    },
+    {
+      "id": "javascript-restaurant-file-views-inc-header-index-ejs",
+      "label": "header-index.ejs",
+      "parent": "javascript-restaurant-dir-views-inc",
+      "layer": "file",
+      "category": "frontend",
+      "categoryLabel": "Frontend",
+      "color": "#eab308",
+      "size": 0.85,
+      "file": "views/inc/header-index.ejs",
+      "description": "Código-fonte: `views/inc/header-index.ejs`"
+    },
+    {
+      "id": "javascript-restaurant-file-views-inc-header-menu-ejs",
+      "label": "header-menu.ejs",
+      "parent": "javascript-restaurant-dir-views-inc",
+      "layer": "file",
+      "category": "frontend",
+      "categoryLabel": "Frontend",
+      "color": "#eab308",
+      "size": 0.85,
+      "file": "views/inc/header-menu.ejs",
+      "description": "Código-fonte: `views/inc/header-menu.ejs`"
+    },
+    {
+      "id": "javascript-restaurant-file-views-inc-header-ejs",
+      "label": "header.ejs",
+      "parent": "javascript-restaurant-dir-views-inc",
+      "layer": "file",
+      "category": "frontend",
+      "categoryLabel": "Frontend",
+      "color": "#eab308",
+      "size": 0.85,
+      "file": "views/inc/header.ejs",
+      "description": "Código-fonte: `views/inc/header.ejs`"
+    },
+    {
+      "id": "javascript-restaurant-file-views-inc-page-footer-ejs",
+      "label": "page-footer.ejs",
+      "parent": "javascript-restaurant-dir-views-inc",
+      "layer": "file",
+      "category": "frontend",
+      "categoryLabel": "Frontend",
+      "color": "#eab308",
+      "size": 0.85,
+      "file": "views/inc/page-footer.ejs",
+      "description": "Código-fonte: `views/inc/page-footer.ejs`"
+    },
+    {
+      "id": "javascript-restaurant-file-views-inc-page-header-ejs",
+      "label": "page-header.ejs",
+      "parent": "javascript-restaurant-dir-views-inc",
+      "layer": "file",
+      "category": "frontend",
+      "categoryLabel": "Frontend",
+      "color": "#eab308",
+      "size": 0.85,
+      "file": "views/inc/page-header.ejs",
+      "description": "Código-fonte: `views/inc/page-header.ejs`"
+    },
+    {
+      "id": "javascript-restaurant-file-views-inc-content-alerts-ejs",
+      "label": "alerts.ejs",
+      "parent": "javascript-restaurant-dir-views-inc-content",
+      "layer": "file",
+      "category": "frontend",
+      "categoryLabel": "Frontend",
+      "color": "#eab308",
+      "size": 0.85,
+      "file": "views/inc/content/alerts.ejs",
+      "description": "Código-fonte: `views/inc/content/alerts.ejs`"
+    },
+    {
+      "id": "javascript-restaurant-file-views-inc-content-contacts-ejs",
+      "label": "contacts.ejs",
+      "parent": "javascript-restaurant-dir-views-inc-content",
+      "layer": "file",
+      "category": "frontend",
+      "categoryLabel": "Frontend",
+      "color": "#eab308",
+      "size": 0.85,
+      "file": "views/inc/content/contacts.ejs",
+      "description": "Código-fonte: `views/inc/content/contacts.ejs`"
+    },
+    {
+      "id": "javascript-restaurant-file-views-inc-content-facts-ejs",
+      "label": "facts.ejs",
+      "parent": "javascript-restaurant-dir-views-inc-content",
+      "layer": "file",
+      "category": "frontend",
+      "categoryLabel": "Frontend",
+      "color": "#eab308",
+      "size": 0.85,
+      "file": "views/inc/content/facts.ejs",
+      "description": "Código-fonte: `views/inc/content/facts.ejs`"
+    },
+    {
+      "id": "javascript-restaurant-file-views-inc-content-menus-ejs",
+      "label": "menus.ejs",
+      "parent": "javascript-restaurant-dir-views-inc-content",
+      "layer": "file",
+      "category": "frontend",
+      "categoryLabel": "Frontend",
+      "color": "#eab308",
+      "size": 0.85,
+      "file": "views/inc/content/menus.ejs",
+      "description": "Código-fonte: `views/inc/content/menus.ejs`"
+    },
+    {
+      "id": "javascript-restaurant-file-views-inc-content-reservations-ejs",
+      "label": "reservations.ejs",
+      "parent": "javascript-restaurant-dir-views-inc-content",
+      "layer": "file",
+      "category": "frontend",
+      "categoryLabel": "Frontend",
+      "color": "#eab308",
+      "size": 0.85,
+      "file": "views/inc/content/reservations.ejs",
+      "description": "Código-fonte: `views/inc/content/reservations.ejs`"
+    },
+    {
+      "id": "javascript-restaurant-file-views-inc-content-services-ejs",
+      "label": "services.ejs",
+      "parent": "javascript-restaurant-dir-views-inc-content",
+      "layer": "file",
+      "category": "frontend",
+      "categoryLabel": "Frontend",
+      "color": "#eab308",
+      "size": 0.85,
+      "file": "views/inc/content/services.ejs",
+      "description": "Código-fonte: `views/inc/content/services.ejs`"
+    },
+    {
+      "id": "javascript-restaurant-file-views-inc-content-subscribes-ejs",
+      "label": "subscribes.ejs",
+      "parent": "javascript-restaurant-dir-views-inc-content",
+      "layer": "file",
+      "category": "frontend",
+      "categoryLabel": "Frontend",
+      "color": "#eab308",
+      "size": 0.85,
+      "file": "views/inc/content/subscribes.ejs",
+      "description": "Código-fonte: `views/inc/content/subscribes.ejs`"
+    },
+    {
+      "id": "javascript-restaurant-file-views-inc-content-text-ejs",
+      "label": "text.ejs",
+      "parent": "javascript-restaurant-dir-views-inc-content",
+      "layer": "file",
+      "category": "frontend",
+      "categoryLabel": "Frontend",
+      "color": "#eab308",
+      "size": 0.85,
+      "file": "views/inc/content/text.ejs",
+      "description": "Código-fonte: `views/inc/content/text.ejs`"
     }
   ],
   "links": [
     {
-      "source": "jsr-root",
-      "target": "jsr-backend",
+      "source": "javascript-restaurant-root",
+      "target": "javascript-restaurant-dir-bin",
       "type": "dependency"
     },
     {
-      "source": "jsr-backend",
-      "target": "jsr-app",
+      "source": "javascript-restaurant-root",
+      "target": "javascript-restaurant-dir-inc",
       "type": "dependency"
     },
     {
-      "source": "jsr-backend",
-      "target": "jsr-bin-www",
+      "source": "javascript-restaurant-root",
+      "target": "javascript-restaurant-dir-public",
       "type": "dependency"
     },
     {
-      "source": "jsr-app",
-      "target": "jsr-formidable",
+      "source": "javascript-restaurant-root",
+      "target": "javascript-restaurant-dir-routes",
       "type": "dependency"
     },
     {
-      "source": "jsr-app",
-      "target": "jsr-session",
+      "source": "javascript-restaurant-root",
+      "target": "javascript-restaurant-dir-views",
       "type": "dependency"
     },
     {
-      "source": "jsr-root",
-      "target": "jsr-db",
+      "source": "javascript-restaurant-dir-public",
+      "target": "javascript-restaurant-dir-public-admin",
       "type": "dependency"
     },
     {
-      "source": "jsr-root",
-      "target": "jsr-routes-public",
+      "source": "javascript-restaurant-dir-public",
+      "target": "javascript-restaurant-dir-public-css",
       "type": "dependency"
     },
     {
-      "source": "jsr-routes-public",
-      "target": "jsr-home",
+      "source": "javascript-restaurant-dir-public",
+      "target": "javascript-restaurant-dir-public-db",
       "type": "dependency"
     },
     {
-      "source": "jsr-routes-public",
-      "target": "jsr-menus-page",
+      "source": "javascript-restaurant-dir-public",
+      "target": "javascript-restaurant-dir-public-js",
       "type": "dependency"
     },
     {
-      "source": "jsr-routes-public",
-      "target": "jsr-reservations-page",
+      "source": "javascript-restaurant-dir-views",
+      "target": "javascript-restaurant-dir-views-admin",
       "type": "dependency"
     },
     {
-      "source": "jsr-routes-public",
-      "target": "jsr-contacts-page",
+      "source": "javascript-restaurant-dir-views",
+      "target": "javascript-restaurant-dir-views-inc",
       "type": "dependency"
     },
     {
-      "source": "jsr-root",
-      "target": "jsr-admin-routes",
+      "source": "javascript-restaurant-dir-public-admin",
+      "target": "javascript-restaurant-dir-public-admin-plugins",
       "type": "dependency"
     },
     {
-      "source": "jsr-admin-routes",
-      "target": "jsr-dashboard",
+      "source": "javascript-restaurant-dir-views-admin",
+      "target": "javascript-restaurant-dir-views-admin-inc",
       "type": "dependency"
     },
     {
-      "source": "jsr-admin-routes",
-      "target": "jsr-admin-login",
+      "source": "javascript-restaurant-dir-views-inc",
+      "target": "javascript-restaurant-dir-views-inc-content",
       "type": "dependency"
     },
     {
-      "source": "jsr-root",
-      "target": "jsr-menus-mod",
+      "source": "javascript-restaurant-dir-public-admin-plugins",
+      "target": "javascript-restaurant-dir-public-admin-plugins-bootstrap-slider",
       "type": "dependency"
     },
     {
-      "source": "jsr-menus-mod",
-      "target": "jsr-menus-get",
+      "source": "javascript-restaurant-dir-public-admin-plugins",
+      "target": "javascript-restaurant-dir-public-admin-plugins-bootstrap-wysihtml5",
       "type": "dependency"
     },
     {
-      "source": "jsr-menus-mod",
-      "target": "jsr-menus-save",
+      "source": "javascript-restaurant-dir-public-admin-plugins",
+      "target": "javascript-restaurant-dir-public-admin-plugins-icheck",
       "type": "dependency"
     },
     {
-      "source": "jsr-root",
-      "target": "jsr-reservations-mod",
+      "source": "javascript-restaurant-dir-public-admin-plugins",
+      "target": "javascript-restaurant-dir-public-admin-plugins-input-mask",
       "type": "dependency"
     },
     {
-      "source": "jsr-reservations-mod",
-      "target": "jsr-reservations-save",
+      "source": "javascript-restaurant-dir-public-admin-plugins",
+      "target": "javascript-restaurant-dir-public-admin-plugins-jqueryui",
       "type": "dependency"
     },
     {
-      "source": "jsr-reservations-mod",
-      "target": "jsr-pagination",
+      "source": "javascript-restaurant-dir-public-admin-plugins",
+      "target": "javascript-restaurant-dir-public-admin-plugins-jvectormap",
       "type": "dependency"
     },
     {
-      "source": "jsr-root",
-      "target": "jsr-users-mod",
+      "source": "javascript-restaurant-dir-public-admin-plugins",
+      "target": "javascript-restaurant-dir-public-admin-plugins-pace",
       "type": "dependency"
     },
     {
-      "source": "jsr-root",
-      "target": "jsr-contacts-mod",
+      "source": "javascript-restaurant-dir-public-admin-plugins",
+      "target": "javascript-restaurant-dir-public-admin-plugins-timepicker",
       "type": "dependency"
     },
     {
-      "source": "jsr-root",
-      "target": "jsr-emails-mod",
+      "source": "javascript-restaurant-dir-public-admin-plugins-icheck",
+      "target": "javascript-restaurant-dir-public-admin-plugins-icheck-flat",
       "type": "dependency"
     },
     {
-      "source": "jsr-admin-routes",
-      "target": "jsr-admin-inc",
+      "source": "javascript-restaurant-dir-public-admin-plugins-icheck",
+      "target": "javascript-restaurant-dir-public-admin-plugins-icheck-futurico",
       "type": "dependency"
     },
     {
-      "source": "jsr-root",
-      "target": "jsr-frontend",
+      "source": "javascript-restaurant-dir-public-admin-plugins-icheck",
+      "target": "javascript-restaurant-dir-public-admin-plugins-icheck-line",
       "type": "dependency"
     },
     {
-      "source": "jsr-admin-routes",
-      "target": "jsr-adminlte",
+      "source": "javascript-restaurant-dir-public-admin-plugins-icheck",
+      "target": "javascript-restaurant-dir-public-admin-plugins-icheck-minimal",
       "type": "dependency"
     },
     {
-      "source": "jsr-reservations-mod",
-      "target": "jsr-moment",
+      "source": "javascript-restaurant-dir-public-admin-plugins-icheck",
+      "target": "javascript-restaurant-dir-public-admin-plugins-icheck-polaris",
       "type": "dependency"
     },
     {
-      "source": "jsr-db",
-      "target": "jsr-mysql-tables",
+      "source": "javascript-restaurant-dir-public-admin-plugins-icheck",
+      "target": "javascript-restaurant-dir-public-admin-plugins-icheck-square",
       "type": "dependency"
     },
     {
-      "source": "jsr-session",
-      "target": "jsr-redis",
+      "source": "javascript-restaurant-dir-public-admin-plugins-input-mask",
+      "target": "javascript-restaurant-dir-public-admin-plugins-input-mask-phone-codes",
       "type": "dependency"
     },
     {
-      "source": "jsr-backend",
-      "target": "jsr-package",
+      "source": "javascript-restaurant-root",
+      "target": "javascript-restaurant-file-app-js",
+      "type": "dependency"
+    },
+    {
+      "source": "javascript-restaurant-root",
+      "target": "javascript-restaurant-file-package-json",
+      "type": "dependency"
+    },
+    {
+      "source": "javascript-restaurant-dir-bin",
+      "target": "javascript-restaurant-file-bin-www",
+      "type": "dependency"
+    },
+    {
+      "source": "javascript-restaurant-dir-inc",
+      "target": "javascript-restaurant-file-inc-admin-js",
+      "type": "dependency"
+    },
+    {
+      "source": "javascript-restaurant-dir-inc",
+      "target": "javascript-restaurant-file-inc-contacts-js",
+      "type": "dependency"
+    },
+    {
+      "source": "javascript-restaurant-dir-inc",
+      "target": "javascript-restaurant-file-inc-db-js",
+      "type": "dependency"
+    },
+    {
+      "source": "javascript-restaurant-dir-inc",
+      "target": "javascript-restaurant-file-inc-emails-js",
+      "type": "dependency"
+    },
+    {
+      "source": "javascript-restaurant-dir-inc",
+      "target": "javascript-restaurant-file-inc-menus-js",
+      "type": "dependency"
+    },
+    {
+      "source": "javascript-restaurant-dir-inc",
+      "target": "javascript-restaurant-file-inc-pagination-js",
+      "type": "dependency"
+    },
+    {
+      "source": "javascript-restaurant-dir-inc",
+      "target": "javascript-restaurant-file-inc-reservations-js",
+      "type": "dependency"
+    },
+    {
+      "source": "javascript-restaurant-dir-inc",
+      "target": "javascript-restaurant-file-inc-users-js",
+      "type": "dependency"
+    },
+    {
+      "source": "javascript-restaurant-dir-public-admin",
+      "target": "javascript-restaurant-file-public-admin-bower-json",
+      "type": "dependency"
+    },
+    {
+      "source": "javascript-restaurant-dir-public-admin-plugins-bootstrap-slider",
+      "target": "javascript-restaurant-file-public-admin-plugins-bootstrap-slider-bootstrap-slider-js",
+      "type": "dependency"
+    },
+    {
+      "source": "javascript-restaurant-dir-public-admin-plugins-bootstrap-slider",
+      "target": "javascript-restaurant-file-public-admin-plugins-bootstrap-slider-slider-css",
+      "type": "dependency"
+    },
+    {
+      "source": "javascript-restaurant-dir-public-admin-plugins-bootstrap-wysihtml5",
+      "target": "javascript-restaurant-file-public-admin-plugins-bootstrap-wysihtml5-bootstrap3-wysihtml5-all-js",
+      "type": "dependency"
+    },
+    {
+      "source": "javascript-restaurant-dir-public-admin-plugins-bootstrap-wysihtml5",
+      "target": "javascript-restaurant-file-public-admin-plugins-bootstrap-wysihtml5-bootstrap3-wysihtml5-all-min-js",
+      "type": "dependency"
+    },
+    {
+      "source": "javascript-restaurant-dir-public-admin-plugins-bootstrap-wysihtml5",
+      "target": "javascript-restaurant-file-public-admin-plugins-bootstrap-wysihtml5-bootstrap3-wysihtml5-css",
+      "type": "dependency"
+    },
+    {
+      "source": "javascript-restaurant-dir-public-admin-plugins-bootstrap-wysihtml5",
+      "target": "javascript-restaurant-file-public-admin-plugins-bootstrap-wysihtml5-bootstrap3-wysihtml5-min-css",
+      "type": "dependency"
+    },
+    {
+      "source": "javascript-restaurant-dir-public-admin-plugins-icheck",
+      "target": "javascript-restaurant-file-public-admin-plugins-icheck-all-css",
+      "type": "dependency"
+    },
+    {
+      "source": "javascript-restaurant-dir-public-admin-plugins-icheck",
+      "target": "javascript-restaurant-file-public-admin-plugins-icheck-icheck-js",
+      "type": "dependency"
+    },
+    {
+      "source": "javascript-restaurant-dir-public-admin-plugins-icheck",
+      "target": "javascript-restaurant-file-public-admin-plugins-icheck-icheck-min-js",
+      "type": "dependency"
+    },
+    {
+      "source": "javascript-restaurant-dir-public-admin-plugins-icheck-flat",
+      "target": "javascript-restaurant-file-public-admin-plugins-icheck-flat-all-css",
+      "type": "dependency"
+    },
+    {
+      "source": "javascript-restaurant-dir-public-admin-plugins-icheck-flat",
+      "target": "javascript-restaurant-file-public-admin-plugins-icheck-flat-aero-css",
+      "type": "dependency"
+    },
+    {
+      "source": "javascript-restaurant-dir-public-admin-plugins-icheck-flat",
+      "target": "javascript-restaurant-file-public-admin-plugins-icheck-flat-blue-css",
+      "type": "dependency"
+    },
+    {
+      "source": "javascript-restaurant-dir-public-admin-plugins-icheck-flat",
+      "target": "javascript-restaurant-file-public-admin-plugins-icheck-flat-flat-css",
+      "type": "dependency"
+    },
+    {
+      "source": "javascript-restaurant-dir-public-admin-plugins-icheck-flat",
+      "target": "javascript-restaurant-file-public-admin-plugins-icheck-flat-green-css",
+      "type": "dependency"
+    },
+    {
+      "source": "javascript-restaurant-dir-public-admin-plugins-icheck-flat",
+      "target": "javascript-restaurant-file-public-admin-plugins-icheck-flat-grey-css",
+      "type": "dependency"
+    },
+    {
+      "source": "javascript-restaurant-dir-public-admin-plugins-icheck-flat",
+      "target": "javascript-restaurant-file-public-admin-plugins-icheck-flat-orange-css",
+      "type": "dependency"
+    },
+    {
+      "source": "javascript-restaurant-dir-public-admin-plugins-icheck-flat",
+      "target": "javascript-restaurant-file-public-admin-plugins-icheck-flat-pink-css",
+      "type": "dependency"
+    },
+    {
+      "source": "javascript-restaurant-dir-public-admin-plugins-icheck-flat",
+      "target": "javascript-restaurant-file-public-admin-plugins-icheck-flat-purple-css",
+      "type": "dependency"
+    },
+    {
+      "source": "javascript-restaurant-dir-public-admin-plugins-icheck-flat",
+      "target": "javascript-restaurant-file-public-admin-plugins-icheck-flat-red-css",
+      "type": "dependency"
+    },
+    {
+      "source": "javascript-restaurant-dir-public-admin-plugins-icheck-flat",
+      "target": "javascript-restaurant-file-public-admin-plugins-icheck-flat-yellow-css",
+      "type": "dependency"
+    },
+    {
+      "source": "javascript-restaurant-dir-public-admin-plugins-icheck-futurico",
+      "target": "javascript-restaurant-file-public-admin-plugins-icheck-futurico-futurico-css",
+      "type": "dependency"
+    },
+    {
+      "source": "javascript-restaurant-dir-public-admin-plugins-icheck-line",
+      "target": "javascript-restaurant-file-public-admin-plugins-icheck-line-all-css",
+      "type": "dependency"
+    },
+    {
+      "source": "javascript-restaurant-dir-public-admin-plugins-icheck-line",
+      "target": "javascript-restaurant-file-public-admin-plugins-icheck-line-aero-css",
+      "type": "dependency"
+    },
+    {
+      "source": "javascript-restaurant-dir-public-admin-plugins-icheck-line",
+      "target": "javascript-restaurant-file-public-admin-plugins-icheck-line-blue-css",
+      "type": "dependency"
+    },
+    {
+      "source": "javascript-restaurant-dir-public-admin-plugins-icheck-line",
+      "target": "javascript-restaurant-file-public-admin-plugins-icheck-line-green-css",
+      "type": "dependency"
+    },
+    {
+      "source": "javascript-restaurant-dir-public-admin-plugins-icheck-line",
+      "target": "javascript-restaurant-file-public-admin-plugins-icheck-line-grey-css",
+      "type": "dependency"
+    },
+    {
+      "source": "javascript-restaurant-dir-public-admin-plugins-icheck-line",
+      "target": "javascript-restaurant-file-public-admin-plugins-icheck-line-line-css",
+      "type": "dependency"
+    },
+    {
+      "source": "javascript-restaurant-dir-public-admin-plugins-icheck-line",
+      "target": "javascript-restaurant-file-public-admin-plugins-icheck-line-orange-css",
+      "type": "dependency"
+    },
+    {
+      "source": "javascript-restaurant-dir-public-admin-plugins-icheck-line",
+      "target": "javascript-restaurant-file-public-admin-plugins-icheck-line-pink-css",
+      "type": "dependency"
+    },
+    {
+      "source": "javascript-restaurant-dir-public-admin-plugins-icheck-line",
+      "target": "javascript-restaurant-file-public-admin-plugins-icheck-line-purple-css",
+      "type": "dependency"
+    },
+    {
+      "source": "javascript-restaurant-dir-public-admin-plugins-icheck-line",
+      "target": "javascript-restaurant-file-public-admin-plugins-icheck-line-red-css",
+      "type": "dependency"
+    },
+    {
+      "source": "javascript-restaurant-dir-public-admin-plugins-icheck-line",
+      "target": "javascript-restaurant-file-public-admin-plugins-icheck-line-yellow-css",
+      "type": "dependency"
+    },
+    {
+      "source": "javascript-restaurant-dir-public-admin-plugins-icheck-minimal",
+      "target": "javascript-restaurant-file-public-admin-plugins-icheck-minimal-all-css",
+      "type": "dependency"
+    },
+    {
+      "source": "javascript-restaurant-dir-public-admin-plugins-icheck-minimal",
+      "target": "javascript-restaurant-file-public-admin-plugins-icheck-minimal-aero-css",
+      "type": "dependency"
+    },
+    {
+      "source": "javascript-restaurant-dir-public-admin-plugins-icheck-minimal",
+      "target": "javascript-restaurant-file-public-admin-plugins-icheck-minimal-blue-css",
+      "type": "dependency"
+    },
+    {
+      "source": "javascript-restaurant-dir-public-admin-plugins-icheck-minimal",
+      "target": "javascript-restaurant-file-public-admin-plugins-icheck-minimal-green-css",
+      "type": "dependency"
+    },
+    {
+      "source": "javascript-restaurant-dir-public-admin-plugins-icheck-minimal",
+      "target": "javascript-restaurant-file-public-admin-plugins-icheck-minimal-grey-css",
+      "type": "dependency"
+    },
+    {
+      "source": "javascript-restaurant-dir-public-admin-plugins-icheck-minimal",
+      "target": "javascript-restaurant-file-public-admin-plugins-icheck-minimal-minimal-css",
+      "type": "dependency"
+    },
+    {
+      "source": "javascript-restaurant-dir-public-admin-plugins-icheck-minimal",
+      "target": "javascript-restaurant-file-public-admin-plugins-icheck-minimal-orange-css",
+      "type": "dependency"
+    },
+    {
+      "source": "javascript-restaurant-dir-public-admin-plugins-icheck-minimal",
+      "target": "javascript-restaurant-file-public-admin-plugins-icheck-minimal-pink-css",
+      "type": "dependency"
+    },
+    {
+      "source": "javascript-restaurant-dir-public-admin-plugins-icheck-minimal",
+      "target": "javascript-restaurant-file-public-admin-plugins-icheck-minimal-purple-css",
+      "type": "dependency"
+    },
+    {
+      "source": "javascript-restaurant-dir-public-admin-plugins-icheck-minimal",
+      "target": "javascript-restaurant-file-public-admin-plugins-icheck-minimal-red-css",
+      "type": "dependency"
+    },
+    {
+      "source": "javascript-restaurant-dir-public-admin-plugins-icheck-minimal",
+      "target": "javascript-restaurant-file-public-admin-plugins-icheck-minimal-yellow-css",
+      "type": "dependency"
+    },
+    {
+      "source": "javascript-restaurant-dir-public-admin-plugins-icheck-polaris",
+      "target": "javascript-restaurant-file-public-admin-plugins-icheck-polaris-polaris-css",
+      "type": "dependency"
+    },
+    {
+      "source": "javascript-restaurant-dir-public-admin-plugins-icheck-square",
+      "target": "javascript-restaurant-file-public-admin-plugins-icheck-square-all-css",
+      "type": "dependency"
+    },
+    {
+      "source": "javascript-restaurant-dir-public-admin-plugins-icheck-square",
+      "target": "javascript-restaurant-file-public-admin-plugins-icheck-square-aero-css",
+      "type": "dependency"
+    },
+    {
+      "source": "javascript-restaurant-dir-public-admin-plugins-icheck-square",
+      "target": "javascript-restaurant-file-public-admin-plugins-icheck-square-blue-css",
+      "type": "dependency"
+    },
+    {
+      "source": "javascript-restaurant-dir-public-admin-plugins-icheck-square",
+      "target": "javascript-restaurant-file-public-admin-plugins-icheck-square-green-css",
+      "type": "dependency"
+    },
+    {
+      "source": "javascript-restaurant-dir-public-admin-plugins-icheck-square",
+      "target": "javascript-restaurant-file-public-admin-plugins-icheck-square-grey-css",
+      "type": "dependency"
+    },
+    {
+      "source": "javascript-restaurant-dir-public-admin-plugins-icheck-square",
+      "target": "javascript-restaurant-file-public-admin-plugins-icheck-square-orange-css",
+      "type": "dependency"
+    },
+    {
+      "source": "javascript-restaurant-dir-public-admin-plugins-icheck-square",
+      "target": "javascript-restaurant-file-public-admin-plugins-icheck-square-pink-css",
+      "type": "dependency"
+    },
+    {
+      "source": "javascript-restaurant-dir-public-admin-plugins-icheck-square",
+      "target": "javascript-restaurant-file-public-admin-plugins-icheck-square-purple-css",
+      "type": "dependency"
+    },
+    {
+      "source": "javascript-restaurant-dir-public-admin-plugins-icheck-square",
+      "target": "javascript-restaurant-file-public-admin-plugins-icheck-square-red-css",
+      "type": "dependency"
+    },
+    {
+      "source": "javascript-restaurant-dir-public-admin-plugins-icheck-square",
+      "target": "javascript-restaurant-file-public-admin-plugins-icheck-square-square-css",
+      "type": "dependency"
+    },
+    {
+      "source": "javascript-restaurant-dir-public-admin-plugins-icheck-square",
+      "target": "javascript-restaurant-file-public-admin-plugins-icheck-square-yellow-css",
+      "type": "dependency"
+    },
+    {
+      "source": "javascript-restaurant-dir-public-admin-plugins-input-mask",
+      "target": "javascript-restaurant-file-public-admin-plugins-input-mask-jquery-inputmask-date-extensions-js",
+      "type": "dependency"
+    },
+    {
+      "source": "javascript-restaurant-dir-public-admin-plugins-input-mask",
+      "target": "javascript-restaurant-file-public-admin-plugins-input-mask-jquery-inputmask-extensions-js",
+      "type": "dependency"
+    },
+    {
+      "source": "javascript-restaurant-dir-public-admin-plugins-input-mask",
+      "target": "javascript-restaurant-file-public-admin-plugins-input-mask-jquery-inputmask-js",
+      "type": "dependency"
+    },
+    {
+      "source": "javascript-restaurant-dir-public-admin-plugins-input-mask",
+      "target": "javascript-restaurant-file-public-admin-plugins-input-mask-jquery-inputmask-numeric-extensions-js",
+      "type": "dependency"
+    },
+    {
+      "source": "javascript-restaurant-dir-public-admin-plugins-input-mask",
+      "target": "javascript-restaurant-file-public-admin-plugins-input-mask-jquery-inputmask-phone-extensions-js",
+      "type": "dependency"
+    },
+    {
+      "source": "javascript-restaurant-dir-public-admin-plugins-input-mask",
+      "target": "javascript-restaurant-file-public-admin-plugins-input-mask-jquery-inputmask-regex-extensions-js",
+      "type": "dependency"
+    },
+    {
+      "source": "javascript-restaurant-dir-public-admin-plugins-input-mask-phone-codes",
+      "target": "javascript-restaurant-file-public-admin-plugins-input-mask-phone-codes-phone-be-json",
+      "type": "dependency"
+    },
+    {
+      "source": "javascript-restaurant-dir-public-admin-plugins-input-mask-phone-codes",
+      "target": "javascript-restaurant-file-public-admin-plugins-input-mask-phone-codes-phone-codes-json",
+      "type": "dependency"
+    },
+    {
+      "source": "javascript-restaurant-dir-public-admin-plugins-jqueryui",
+      "target": "javascript-restaurant-file-public-admin-plugins-jqueryui-jquery-ui-js",
+      "type": "dependency"
+    },
+    {
+      "source": "javascript-restaurant-dir-public-admin-plugins-jqueryui",
+      "target": "javascript-restaurant-file-public-admin-plugins-jqueryui-jquery-ui-min-js",
+      "type": "dependency"
+    },
+    {
+      "source": "javascript-restaurant-dir-public-admin-plugins-jvectormap",
+      "target": "javascript-restaurant-file-public-admin-plugins-jvectormap-jquery-jvectormap-1-2-2-css",
+      "type": "dependency"
+    },
+    {
+      "source": "javascript-restaurant-dir-public-admin-plugins-jvectormap",
+      "target": "javascript-restaurant-file-public-admin-plugins-jvectormap-jquery-jvectormap-1-2-2-min-js",
+      "type": "dependency"
+    },
+    {
+      "source": "javascript-restaurant-dir-public-admin-plugins-jvectormap",
+      "target": "javascript-restaurant-file-public-admin-plugins-jvectormap-jquery-jvectormap-usa-en-js",
+      "type": "dependency"
+    },
+    {
+      "source": "javascript-restaurant-dir-public-admin-plugins-jvectormap",
+      "target": "javascript-restaurant-file-public-admin-plugins-jvectormap-jquery-jvectormap-world-mill-en-js",
+      "type": "dependency"
+    },
+    {
+      "source": "javascript-restaurant-dir-public-admin-plugins-pace",
+      "target": "javascript-restaurant-file-public-admin-plugins-pace-pace-css",
+      "type": "dependency"
+    },
+    {
+      "source": "javascript-restaurant-dir-public-admin-plugins-pace",
+      "target": "javascript-restaurant-file-public-admin-plugins-pace-pace-js",
+      "type": "dependency"
+    },
+    {
+      "source": "javascript-restaurant-dir-public-admin-plugins-pace",
+      "target": "javascript-restaurant-file-public-admin-plugins-pace-pace-min-css",
+      "type": "dependency"
+    },
+    {
+      "source": "javascript-restaurant-dir-public-admin-plugins-pace",
+      "target": "javascript-restaurant-file-public-admin-plugins-pace-pace-min-js",
+      "type": "dependency"
+    },
+    {
+      "source": "javascript-restaurant-dir-public-admin-plugins-timepicker",
+      "target": "javascript-restaurant-file-public-admin-plugins-timepicker-bootstrap-timepicker-css",
+      "type": "dependency"
+    },
+    {
+      "source": "javascript-restaurant-dir-public-admin-plugins-timepicker",
+      "target": "javascript-restaurant-file-public-admin-plugins-timepicker-bootstrap-timepicker-js",
+      "type": "dependency"
+    },
+    {
+      "source": "javascript-restaurant-dir-public-admin-plugins-timepicker",
+      "target": "javascript-restaurant-file-public-admin-plugins-timepicker-bootstrap-timepicker-min-css",
+      "type": "dependency"
+    },
+    {
+      "source": "javascript-restaurant-dir-public-admin-plugins-timepicker",
+      "target": "javascript-restaurant-file-public-admin-plugins-timepicker-bootstrap-timepicker-min-js",
+      "type": "dependency"
+    },
+    {
+      "source": "javascript-restaurant-dir-public-css",
+      "target": "javascript-restaurant-file-public-css-animate-css",
+      "type": "dependency"
+    },
+    {
+      "source": "javascript-restaurant-dir-public-css",
+      "target": "javascript-restaurant-file-public-css-bootstrap-datepicker-min-css",
+      "type": "dependency"
+    },
+    {
+      "source": "javascript-restaurant-dir-public-css",
+      "target": "javascript-restaurant-file-public-css-bootstrap-datetimepicker-min-css",
+      "type": "dependency"
+    },
+    {
+      "source": "javascript-restaurant-dir-public-css",
+      "target": "javascript-restaurant-file-public-css-bootstrap-css",
+      "type": "dependency"
+    },
+    {
+      "source": "javascript-restaurant-dir-public-css",
+      "target": "javascript-restaurant-file-public-css-flexslider-css",
+      "type": "dependency"
+    },
+    {
+      "source": "javascript-restaurant-dir-public-css",
+      "target": "javascript-restaurant-file-public-css-icomoon-css",
+      "type": "dependency"
+    },
+    {
+      "source": "javascript-restaurant-dir-public-css",
+      "target": "javascript-restaurant-file-public-css-magnific-popup-css",
+      "type": "dependency"
+    },
+    {
+      "source": "javascript-restaurant-dir-public-css",
+      "target": "javascript-restaurant-file-public-css-owl-carousel-min-css",
+      "type": "dependency"
+    },
+    {
+      "source": "javascript-restaurant-dir-public-css",
+      "target": "javascript-restaurant-file-public-css-owl-theme-default-min-css",
+      "type": "dependency"
+    },
+    {
+      "source": "javascript-restaurant-dir-public-css",
+      "target": "javascript-restaurant-file-public-css-style-css",
+      "type": "dependency"
+    },
+    {
+      "source": "javascript-restaurant-dir-public-css",
+      "target": "javascript-restaurant-file-public-css-themify-icons-css",
+      "type": "dependency"
+    },
+    {
+      "source": "javascript-restaurant-dir-public-db",
+      "target": "javascript-restaurant-file-public-db-mysql-sql",
+      "type": "dependency"
+    },
+    {
+      "source": "javascript-restaurant-dir-public-js",
+      "target": "javascript-restaurant-grp-public-js-files-b-g-h",
+      "type": "dependency"
+    },
+    {
+      "source": "javascript-restaurant-dir-public-js",
+      "target": "javascript-restaurant-grp-public-js-files-j-m-o-r",
+      "type": "dependency"
+    },
+    {
+      "source": "javascript-restaurant-grp-public-js-files-b-g-h",
+      "target": "javascript-restaurant-file-public-js-bootstrap-datepicker-min-js",
+      "type": "dependency"
+    },
+    {
+      "source": "javascript-restaurant-grp-public-js-files-b-g-h",
+      "target": "javascript-restaurant-file-public-js-bootstrap-datetimepicker-min-js",
+      "type": "dependency"
+    },
+    {
+      "source": "javascript-restaurant-grp-public-js-files-b-g-h",
+      "target": "javascript-restaurant-file-public-js-bootstrap-min-js",
+      "type": "dependency"
+    },
+    {
+      "source": "javascript-restaurant-grp-public-js-files-b-g-h",
+      "target": "javascript-restaurant-file-public-js-google-map-js",
+      "type": "dependency"
+    },
+    {
+      "source": "javascript-restaurant-grp-public-js-files-b-g-h",
+      "target": "javascript-restaurant-file-public-js-hcode-filereader-js",
+      "type": "dependency"
+    },
+    {
+      "source": "javascript-restaurant-grp-public-js-files-b-g-h",
+      "target": "javascript-restaurant-file-public-js-hcode-formsave-js",
+      "type": "dependency"
+    },
+    {
+      "source": "javascript-restaurant-grp-public-js-files-b-g-h",
+      "target": "javascript-restaurant-file-public-js-hcode-grid-js",
+      "type": "dependency"
+    },
+    {
+      "source": "javascript-restaurant-grp-public-js-files-j-m-o-r",
+      "target": "javascript-restaurant-file-public-js-jquery-countto-js",
+      "type": "dependency"
+    },
+    {
+      "source": "javascript-restaurant-grp-public-js-files-j-m-o-r",
+      "target": "javascript-restaurant-file-public-js-jquery-easing-1-3-js",
+      "type": "dependency"
+    },
+    {
+      "source": "javascript-restaurant-grp-public-js-files-j-m-o-r",
+      "target": "javascript-restaurant-file-public-js-jquery-magnific-popup-min-js",
+      "type": "dependency"
+    },
+    {
+      "source": "javascript-restaurant-grp-public-js-files-j-m-o-r",
+      "target": "javascript-restaurant-file-public-js-jquery-min-js",
+      "type": "dependency"
+    },
+    {
+      "source": "javascript-restaurant-grp-public-js-files-j-m-o-r",
+      "target": "javascript-restaurant-file-public-js-jquery-stellar-min-js",
+      "type": "dependency"
+    },
+    {
+      "source": "javascript-restaurant-grp-public-js-files-j-m-o-r",
+      "target": "javascript-restaurant-file-public-js-jquery-waypoints-min-js",
+      "type": "dependency"
+    },
+    {
+      "source": "javascript-restaurant-grp-public-js-files-j-m-o-r",
+      "target": "javascript-restaurant-file-public-js-magnific-popup-options-js",
+      "type": "dependency"
+    },
+    {
+      "source": "javascript-restaurant-grp-public-js-files-j-m-o-r",
+      "target": "javascript-restaurant-file-public-js-main-js",
+      "type": "dependency"
+    },
+    {
+      "source": "javascript-restaurant-grp-public-js-files-j-m-o-r",
+      "target": "javascript-restaurant-file-public-js-modernizr-2-6-2-min-js",
+      "type": "dependency"
+    },
+    {
+      "source": "javascript-restaurant-grp-public-js-files-j-m-o-r",
+      "target": "javascript-restaurant-file-public-js-moment-min-js",
+      "type": "dependency"
+    },
+    {
+      "source": "javascript-restaurant-grp-public-js-files-j-m-o-r",
+      "target": "javascript-restaurant-file-public-js-owl-carousel-min-js",
+      "type": "dependency"
+    },
+    {
+      "source": "javascript-restaurant-grp-public-js-files-j-m-o-r",
+      "target": "javascript-restaurant-file-public-js-respond-min-js",
+      "type": "dependency"
+    },
+    {
+      "source": "javascript-restaurant-dir-routes",
+      "target": "javascript-restaurant-file-routes-admin-js",
+      "type": "dependency"
+    },
+    {
+      "source": "javascript-restaurant-dir-routes",
+      "target": "javascript-restaurant-file-routes-index-js",
+      "type": "dependency"
+    },
+    {
+      "source": "javascript-restaurant-dir-views",
+      "target": "javascript-restaurant-file-views-contacts-ejs",
+      "type": "dependency"
+    },
+    {
+      "source": "javascript-restaurant-dir-views",
+      "target": "javascript-restaurant-file-views-error-ejs",
+      "type": "dependency"
+    },
+    {
+      "source": "javascript-restaurant-dir-views",
+      "target": "javascript-restaurant-file-views-index-ejs",
+      "type": "dependency"
+    },
+    {
+      "source": "javascript-restaurant-dir-views",
+      "target": "javascript-restaurant-file-views-menus-ejs",
+      "type": "dependency"
+    },
+    {
+      "source": "javascript-restaurant-dir-views",
+      "target": "javascript-restaurant-file-views-reservations-ejs",
+      "type": "dependency"
+    },
+    {
+      "source": "javascript-restaurant-dir-views",
+      "target": "javascript-restaurant-file-views-services-ejs",
+      "type": "dependency"
+    },
+    {
+      "source": "javascript-restaurant-dir-views-admin",
+      "target": "javascript-restaurant-file-views-admin-contacts-ejs",
+      "type": "dependency"
+    },
+    {
+      "source": "javascript-restaurant-dir-views-admin",
+      "target": "javascript-restaurant-file-views-admin-emails-ejs",
+      "type": "dependency"
+    },
+    {
+      "source": "javascript-restaurant-dir-views-admin",
+      "target": "javascript-restaurant-file-views-admin-index-ejs",
+      "type": "dependency"
+    },
+    {
+      "source": "javascript-restaurant-dir-views-admin",
+      "target": "javascript-restaurant-file-views-admin-login-ejs",
+      "type": "dependency"
+    },
+    {
+      "source": "javascript-restaurant-dir-views-admin",
+      "target": "javascript-restaurant-file-views-admin-menus-ejs",
+      "type": "dependency"
+    },
+    {
+      "source": "javascript-restaurant-dir-views-admin",
+      "target": "javascript-restaurant-file-views-admin-reservations-ejs",
+      "type": "dependency"
+    },
+    {
+      "source": "javascript-restaurant-dir-views-admin",
+      "target": "javascript-restaurant-file-views-admin-users-ejs",
+      "type": "dependency"
+    },
+    {
+      "source": "javascript-restaurant-dir-views-admin-inc",
+      "target": "javascript-restaurant-file-views-admin-inc-footer-ejs",
+      "type": "dependency"
+    },
+    {
+      "source": "javascript-restaurant-dir-views-admin-inc",
+      "target": "javascript-restaurant-file-views-admin-inc-header-ejs",
+      "type": "dependency"
+    },
+    {
+      "source": "javascript-restaurant-dir-views-inc",
+      "target": "javascript-restaurant-file-views-inc-footer-gototop-ejs",
+      "type": "dependency"
+    },
+    {
+      "source": "javascript-restaurant-dir-views-inc",
+      "target": "javascript-restaurant-file-views-inc-footer-scripts-ejs",
+      "type": "dependency"
+    },
+    {
+      "source": "javascript-restaurant-dir-views-inc",
+      "target": "javascript-restaurant-file-views-inc-footer-ejs",
+      "type": "dependency"
+    },
+    {
+      "source": "javascript-restaurant-dir-views-inc",
+      "target": "javascript-restaurant-file-views-inc-head-ejs",
+      "type": "dependency"
+    },
+    {
+      "source": "javascript-restaurant-dir-views-inc",
+      "target": "javascript-restaurant-file-views-inc-header-index-ejs",
+      "type": "dependency"
+    },
+    {
+      "source": "javascript-restaurant-dir-views-inc",
+      "target": "javascript-restaurant-file-views-inc-header-menu-ejs",
+      "type": "dependency"
+    },
+    {
+      "source": "javascript-restaurant-dir-views-inc",
+      "target": "javascript-restaurant-file-views-inc-header-ejs",
+      "type": "dependency"
+    },
+    {
+      "source": "javascript-restaurant-dir-views-inc",
+      "target": "javascript-restaurant-file-views-inc-page-footer-ejs",
+      "type": "dependency"
+    },
+    {
+      "source": "javascript-restaurant-dir-views-inc",
+      "target": "javascript-restaurant-file-views-inc-page-header-ejs",
+      "type": "dependency"
+    },
+    {
+      "source": "javascript-restaurant-dir-views-inc-content",
+      "target": "javascript-restaurant-file-views-inc-content-alerts-ejs",
+      "type": "dependency"
+    },
+    {
+      "source": "javascript-restaurant-dir-views-inc-content",
+      "target": "javascript-restaurant-file-views-inc-content-contacts-ejs",
+      "type": "dependency"
+    },
+    {
+      "source": "javascript-restaurant-dir-views-inc-content",
+      "target": "javascript-restaurant-file-views-inc-content-facts-ejs",
+      "type": "dependency"
+    },
+    {
+      "source": "javascript-restaurant-dir-views-inc-content",
+      "target": "javascript-restaurant-file-views-inc-content-menus-ejs",
+      "type": "dependency"
+    },
+    {
+      "source": "javascript-restaurant-dir-views-inc-content",
+      "target": "javascript-restaurant-file-views-inc-content-reservations-ejs",
+      "type": "dependency"
+    },
+    {
+      "source": "javascript-restaurant-dir-views-inc-content",
+      "target": "javascript-restaurant-file-views-inc-content-services-ejs",
+      "type": "dependency"
+    },
+    {
+      "source": "javascript-restaurant-dir-views-inc-content",
+      "target": "javascript-restaurant-file-views-inc-content-subscribes-ejs",
+      "type": "dependency"
+    },
+    {
+      "source": "javascript-restaurant-dir-views-inc-content",
+      "target": "javascript-restaurant-file-views-inc-content-text-ejs",
       "type": "dependency"
     }
   ]

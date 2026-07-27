@@ -4,7 +4,7 @@
   "repoUrl": "https://github.com/CanonEngineer/DangerZone",
   "color": "#ef4444",
   "demoUrl": "",
-  "nodeCount": 133,
+  "nodeCount": 118,
   "categories": {
     "core": {
       "label": "Backend",
@@ -14,10 +14,6 @@
       "label": "Rede / Scan",
       "color": "#22d3ee"
     },
-    "frontend": {
-      "label": "Frontend",
-      "color": "#eab308"
-    },
     "other": {
       "label": "Outros",
       "color": "#64748b"
@@ -25,7 +21,7 @@
   },
   "nodes": [
     {
-      "id": "dz-root",
+      "id": "danger-zone-root",
       "label": "DangerZone",
       "parent": null,
       "layer": "root",
@@ -34,2252 +30,1997 @@
       "color": "#3b82f6",
       "size": 2.2,
       "file": "README.md",
-      "description": "Laboratório educacional: catálogo de pragas, labs, prevenção empresarial e defesa."
+      "description": "Catálogo de pragas virtuais, labs não funcionais e prevenção empresarial para conferências de cibersegurança."
     },
     {
-      "id": "dz-common",
-      "label": "common/",
-      "parent": "dz-root",
-      "layer": "module",
-      "category": "core",
-      "categoryLabel": "Backend",
-      "color": "#3b82f6",
-      "size": 1.35,
-      "file": "common/",
-      "description": "Biblioteca VFS + telemetria segura"
-    },
-    {
-      "id": "dz-catalog",
+      "id": "danger-zone-dir-catalog",
       "label": "catalog/",
-      "parent": "dz-root",
+      "parent": "danger-zone-root",
       "layer": "module",
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
       "size": 1.35,
       "file": "catalog/",
-      "description": "28 famílias ilustrativas não funcionais"
+      "description": "Pacote/pasta `catalog/` do projeto."
     },
     {
-      "id": "dz-labs-sim",
-      "label": "labs/sims",
-      "parent": "dz-root",
+      "id": "danger-zone-dir-common",
+      "label": "common/",
+      "parent": "danger-zone-root",
       "layer": "module",
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
       "size": 1.35,
-      "file": "labs/",
-      "description": "Labs 01–05 e 10–19 (simulação)"
+      "file": "common/",
+      "description": "Pacote/pasta `common/` do projeto."
     },
     {
-      "id": "dz-labs-def",
-      "label": "labs/defense",
-      "parent": "dz-root",
-      "layer": "module",
-      "category": "core",
-      "categoryLabel": "Backend",
-      "color": "#3b82f6",
-      "size": 1.35,
-      "file": "labs/",
-      "description": "Labs 06–09 defesa + 20 hardening"
-    },
-    {
-      "id": "dz-docs",
-      "label": "docs/",
-      "parent": "dz-root",
-      "layer": "module",
-      "category": "core",
-      "categoryLabel": "Backend",
-      "color": "#3b82f6",
-      "size": 1.35,
-      "file": "docs/",
-      "description": "Catálogo, kill chain, prevenção, risco"
-    },
-    {
-      "id": "dz-conference",
+      "id": "danger-zone-dir-conference",
       "label": "conference/",
-      "parent": "dz-root",
+      "parent": "danger-zone-root",
       "layer": "module",
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
       "size": 1.35,
       "file": "conference/",
-      "description": "Roteiro e talking points"
+      "description": "Pacote/pasta `conference/` do projeto."
     },
     {
-      "id": "dz-prevention",
-      "label": "prevention/",
-      "parent": "dz-root",
-      "layer": "module",
-      "category": "core",
-      "categoryLabel": "Backend",
-      "color": "#3b82f6",
-      "size": 1.35,
-      "file": "prevention/",
-      "description": "Controles empresariais imprimíveis"
-    },
-    {
-      "id": "dz-demos",
+      "id": "danger-zone-dir-demos",
       "label": "demos/",
-      "parent": "dz-root",
+      "parent": "danger-zone-root",
       "layer": "module",
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
       "size": 1.35,
       "file": "demos/",
-      "description": "Pipeline da palestra"
+      "description": "Pacote/pasta `demos/` do projeto."
     },
     {
-      "id": "dz-lab-users",
-      "label": "Users",
-      "parent": "dz-labs-sim",
+      "id": "danger-zone-dir-docs",
+      "label": "docs/",
+      "parent": "danger-zone-root",
       "layer": "module",
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
       "size": 1.35,
-      "file": "labs/Users/",
-      "description": "Laboratório educacional Users"
+      "file": "docs/",
+      "description": "Pacote/pasta `docs/` do projeto."
     },
     {
-      "id": "dz-catalog-adware-py",
-      "label": "adware.py",
-      "parent": "dz-catalog",
-      "layer": "file",
+      "id": "danger-zone-dir-labs",
+      "label": "labs/",
+      "parent": "danger-zone-root",
+      "layer": "module",
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
-      "size": 0.85,
-      "file": "catalog/adware.py",
-      "description": "Ilustração não funcional: adware"
+      "size": 1.35,
+      "file": "labs/",
+      "description": "Pacote/pasta `labs/` do projeto."
     },
     {
-      "id": "dz-catalog-adware-py-illustrative-adware",
-      "label": "ILLUSTRATIVE_adware()",
-      "parent": "dz-catalog-adware-py",
-      "layer": "function",
+      "id": "danger-zone-dir-prevention",
+      "label": "prevention/",
+      "parent": "danger-zone-root",
+      "layer": "module",
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
-      "size": 0.62,
-      "file": "catalog/adware.py",
-      "description": "Função ilustrativa/defensiva `ILLUSTRATIVE_adware`"
+      "size": 1.35,
+      "file": "prevention/",
+      "description": "Pacote/pasta `prevention/` do projeto."
     },
     {
-      "id": "dz-catalog-apt-campaign-py",
-      "label": "apt_campaign.py",
-      "parent": "dz-catalog",
-      "layer": "file",
+      "id": "danger-zone-dir-tools",
+      "label": "tools/",
+      "parent": "danger-zone-root",
+      "layer": "module",
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
-      "size": 0.85,
-      "file": "catalog/apt_campaign.py",
-      "description": "Ilustração não funcional: apt_campaign"
+      "size": 1.35,
+      "file": "tools/",
+      "description": "Pacote/pasta `tools/` do projeto."
     },
     {
-      "id": "dz-catalog-apt-campaign-py-illustrative-apt-stages",
-      "label": "ILLUSTRATIVE_apt_stages()",
-      "parent": "dz-catalog-apt-campaign-py",
-      "layer": "function",
+      "id": "danger-zone-dir-labs-01-virus-lifecycle",
+      "label": "01_virus_lifecycle/",
+      "parent": "danger-zone-dir-labs",
+      "layer": "module",
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
-      "size": 0.62,
-      "file": "catalog/apt_campaign.py",
-      "description": "Função ilustrativa/defensiva `ILLUSTRATIVE_apt_stages`"
+      "size": 1.35,
+      "file": "labs/01_virus_lifecycle/",
+      "description": "Pacote/pasta `labs/01_virus_lifecycle/` do projeto."
     },
     {
-      "id": "dz-catalog-backdoor-py",
-      "label": "backdoor.py",
-      "parent": "dz-catalog",
-      "layer": "file",
+      "id": "danger-zone-dir-labs-02-worm-propagation",
+      "label": "02_worm_propagation/",
+      "parent": "danger-zone-dir-labs",
+      "layer": "module",
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
-      "size": 0.85,
-      "file": "catalog/backdoor.py",
-      "description": "Ilustração não funcional: backdoor"
+      "size": 1.35,
+      "file": "labs/02_worm_propagation/",
+      "description": "Pacote/pasta `labs/02_worm_propagation/` do projeto."
     },
     {
-      "id": "dz-catalog-backdoor-py-illustrative-backdoor",
-      "label": "ILLUSTRATIVE_backdoor()",
-      "parent": "dz-catalog-backdoor-py",
-      "layer": "function",
+      "id": "danger-zone-dir-labs-03-trojan-behavior",
+      "label": "03_trojan_behavior/",
+      "parent": "danger-zone-dir-labs",
+      "layer": "module",
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
-      "size": 0.62,
-      "file": "catalog/backdoor.py",
-      "description": "Função ilustrativa/defensiva `ILLUSTRATIVE_backdoor`"
+      "size": 1.35,
+      "file": "labs/03_trojan_behavior/",
+      "description": "Pacote/pasta `labs/03_trojan_behavior/` do projeto."
     },
     {
-      "id": "dz-catalog-banking-trojan-py",
-      "label": "banking_trojan.py",
-      "parent": "dz-catalog",
-      "layer": "file",
+      "id": "danger-zone-dir-labs-04-ransomware-concept",
+      "label": "04_ransomware_concept/",
+      "parent": "danger-zone-dir-labs",
+      "layer": "module",
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
-      "size": 0.85,
-      "file": "catalog/banking_trojan.py",
-      "description": "Ilustração não funcional: banking_trojan"
+      "size": 1.35,
+      "file": "labs/04_ransomware_concept/",
+      "description": "Pacote/pasta `labs/04_ransomware_concept/` do projeto."
     },
     {
-      "id": "dz-catalog-banking-trojan-py-illustrative-bank",
-      "label": "ILLUSTRATIVE_bank()",
-      "parent": "dz-catalog-banking-trojan-py",
-      "layer": "function",
+      "id": "danger-zone-dir-labs-05-spyware-telemetry",
+      "label": "05_spyware_telemetry/",
+      "parent": "danger-zone-dir-labs",
+      "layer": "module",
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
-      "size": 0.62,
-      "file": "catalog/banking_trojan.py",
-      "description": "Função ilustrativa/defensiva `ILLUSTRATIVE_bank`"
+      "size": 1.35,
+      "file": "labs/05_spyware_telemetry/",
+      "description": "Pacote/pasta `labs/05_spyware_telemetry/` do projeto."
     },
     {
-      "id": "dz-catalog-bootkit-py",
-      "label": "bootkit.py",
-      "parent": "dz-catalog",
-      "layer": "file",
+      "id": "danger-zone-dir-labs-06-ioc-detector",
+      "label": "06_ioc_detector/",
+      "parent": "danger-zone-dir-labs",
+      "layer": "module",
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
-      "size": 0.85,
-      "file": "catalog/bootkit.py",
-      "description": "Ilustração não funcional: bootkit"
+      "size": 1.35,
+      "file": "labs/06_ioc_detector/",
+      "description": "Pacote/pasta `labs/06_ioc_detector/` do projeto."
     },
     {
-      "id": "dz-catalog-bootkit-py-illustrative-bootkit",
-      "label": "ILLUSTRATIVE_bootkit()",
-      "parent": "dz-catalog-bootkit-py",
-      "layer": "function",
+      "id": "danger-zone-dir-labs-07-hash-integrity",
+      "label": "07_hash_integrity/",
+      "parent": "danger-zone-dir-labs",
+      "layer": "module",
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
-      "size": 0.62,
-      "file": "catalog/bootkit.py",
-      "description": "Função ilustrativa/defensiva `ILLUSTRATIVE_bootkit`"
+      "size": 1.35,
+      "file": "labs/07_hash_integrity/",
+      "description": "Pacote/pasta `labs/07_hash_integrity/` do projeto."
     },
     {
-      "id": "dz-catalog-botnet-py",
-      "label": "botnet.py",
-      "parent": "dz-catalog",
-      "layer": "file",
+      "id": "danger-zone-dir-labs-08-behavioral-analyzer",
+      "label": "08_behavioral_analyzer/",
+      "parent": "danger-zone-dir-labs",
+      "layer": "module",
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
-      "size": 0.85,
-      "file": "catalog/botnet.py",
-      "description": "Ilustração não funcional: botnet"
+      "size": 1.35,
+      "file": "labs/08_behavioral_analyzer/",
+      "description": "Pacote/pasta `labs/08_behavioral_analyzer/` do projeto."
     },
     {
-      "id": "dz-catalog-botnet-py-illustrative-bot-loop",
-      "label": "ILLUSTRATIVE_bot_loop()",
-      "parent": "dz-catalog-botnet-py",
-      "layer": "function",
-      "category": "core",
-      "categoryLabel": "Backend",
-      "color": "#3b82f6",
-      "size": 0.62,
-      "file": "catalog/botnet.py",
-      "description": "Função ilustrativa/defensiva `ILLUSTRATIVE_bot_loop`"
-    },
-    {
-      "id": "dz-catalog-browser-hijacker-py",
-      "label": "browser_hijacker.py",
-      "parent": "dz-catalog",
-      "layer": "file",
-      "category": "core",
-      "categoryLabel": "Backend",
-      "color": "#3b82f6",
-      "size": 0.85,
-      "file": "catalog/browser_hijacker.py",
-      "description": "Ilustração não funcional: browser_hijacker"
-    },
-    {
-      "id": "dz-catalog-browser-hijacker-py-illustrative-hijack",
-      "label": "ILLUSTRATIVE_hijack()",
-      "parent": "dz-catalog-browser-hijacker-py",
-      "layer": "function",
-      "category": "core",
-      "categoryLabel": "Backend",
-      "color": "#3b82f6",
-      "size": 0.62,
-      "file": "catalog/browser_hijacker.py",
-      "description": "Função ilustrativa/defensiva `ILLUSTRATIVE_hijack`"
-    },
-    {
-      "id": "dz-catalog-cryptojacker-py",
-      "label": "cryptojacker.py",
-      "parent": "dz-catalog",
-      "layer": "file",
-      "category": "core",
-      "categoryLabel": "Backend",
-      "color": "#3b82f6",
-      "size": 0.85,
-      "file": "catalog/cryptojacker.py",
-      "description": "Ilustração não funcional: cryptojacker"
-    },
-    {
-      "id": "dz-catalog-cryptojacker-py-illustrative-mine",
-      "label": "ILLUSTRATIVE_mine()",
-      "parent": "dz-catalog-cryptojacker-py",
-      "layer": "function",
-      "category": "core",
-      "categoryLabel": "Backend",
-      "color": "#3b82f6",
-      "size": 0.62,
-      "file": "catalog/cryptojacker.py",
-      "description": "Função ilustrativa/defensiva `ILLUSTRATIVE_mine`"
-    },
-    {
-      "id": "dz-catalog-double-extortion-py",
-      "label": "double_extortion.py",
-      "parent": "dz-catalog",
-      "layer": "file",
-      "category": "core",
-      "categoryLabel": "Backend",
-      "color": "#3b82f6",
-      "size": 0.85,
-      "file": "catalog/double_extortion.py",
-      "description": "Ilustração não funcional: double_extortion"
-    },
-    {
-      "id": "dz-catalog-double-extortion-py-illustrative-double-",
-      "label": "ILLUSTRATIVE_double_extortion()",
-      "parent": "dz-catalog-double-extortion-py",
-      "layer": "function",
-      "category": "core",
-      "categoryLabel": "Backend",
-      "color": "#3b82f6",
-      "size": 0.62,
-      "file": "catalog/double_extortion.py",
-      "description": "Função ilustrativa/defensiva `ILLUSTRATIVE_double_extortion`"
-    },
-    {
-      "id": "dz-catalog-dropper-loader-py",
-      "label": "dropper_loader.py",
-      "parent": "dz-catalog",
-      "layer": "file",
-      "category": "core",
-      "categoryLabel": "Backend",
-      "color": "#3b82f6",
-      "size": 0.85,
-      "file": "catalog/dropper_loader.py",
-      "description": "Ilustração não funcional: dropper_loader"
-    },
-    {
-      "id": "dz-catalog-dropper-loader-py-illustrative-dropper",
-      "label": "ILLUSTRATIVE_dropper()",
-      "parent": "dz-catalog-dropper-loader-py",
-      "layer": "function",
-      "category": "core",
-      "categoryLabel": "Backend",
-      "color": "#3b82f6",
-      "size": 0.62,
-      "file": "catalog/dropper_loader.py",
-      "description": "Função ilustrativa/defensiva `ILLUSTRATIVE_dropper`"
-    },
-    {
-      "id": "dz-catalog-fileless-py",
-      "label": "fileless.py",
-      "parent": "dz-catalog",
-      "layer": "file",
-      "category": "core",
-      "categoryLabel": "Backend",
-      "color": "#3b82f6",
-      "size": 0.85,
-      "file": "catalog/fileless.py",
-      "description": "Ilustração não funcional: fileless"
-    },
-    {
-      "id": "dz-catalog-fileless-py-illustrative-fileless",
-      "label": "ILLUSTRATIVE_fileless()",
-      "parent": "dz-catalog-fileless-py",
-      "layer": "function",
-      "category": "core",
-      "categoryLabel": "Backend",
-      "color": "#3b82f6",
-      "size": 0.62,
-      "file": "catalog/fileless.py",
-      "description": "Função ilustrativa/defensiva `ILLUSTRATIVE_fileless`"
-    },
-    {
-      "id": "dz-catalog-infostealer-py",
-      "label": "infostealer.py",
-      "parent": "dz-catalog",
-      "layer": "file",
-      "category": "core",
-      "categoryLabel": "Backend",
-      "color": "#3b82f6",
-      "size": 0.85,
-      "file": "catalog/infostealer.py",
-      "description": "Ilustração não funcional: infostealer"
-    },
-    {
-      "id": "dz-catalog-infostealer-py-illustrative-steal",
-      "label": "ILLUSTRATIVE_steal()",
-      "parent": "dz-catalog-infostealer-py",
-      "layer": "function",
-      "category": "core",
-      "categoryLabel": "Backend",
-      "color": "#3b82f6",
-      "size": 0.62,
-      "file": "catalog/infostealer.py",
-      "description": "Função ilustrativa/defensiva `ILLUSTRATIVE_steal`"
-    },
-    {
-      "id": "dz-catalog-iot-malware-py",
-      "label": "iot_malware.py",
-      "parent": "dz-catalog",
-      "layer": "file",
-      "category": "core",
-      "categoryLabel": "Backend",
-      "color": "#3b82f6",
-      "size": 0.85,
-      "file": "catalog/iot_malware.py",
-      "description": "Ilustração não funcional: iot_malware"
-    },
-    {
-      "id": "dz-catalog-iot-malware-py-illustrative-iot",
-      "label": "ILLUSTRATIVE_iot()",
-      "parent": "dz-catalog-iot-malware-py",
-      "layer": "function",
-      "category": "core",
-      "categoryLabel": "Backend",
-      "color": "#3b82f6",
-      "size": 0.62,
-      "file": "catalog/iot_malware.py",
-      "description": "Função ilustrativa/defensiva `ILLUSTRATIVE_iot`"
-    },
-    {
-      "id": "dz-catalog-logic-bomb-py",
-      "label": "logic_bomb.py",
-      "parent": "dz-catalog",
-      "layer": "file",
-      "category": "core",
-      "categoryLabel": "Backend",
-      "color": "#3b82f6",
-      "size": 0.85,
-      "file": "catalog/logic_bomb.py",
-      "description": "Ilustração não funcional: logic_bomb"
-    },
-    {
-      "id": "dz-catalog-logic-bomb-py-illustrative-logic-bomb",
-      "label": "ILLUSTRATIVE_logic_bomb()",
-      "parent": "dz-catalog-logic-bomb-py",
-      "layer": "function",
-      "category": "core",
-      "categoryLabel": "Backend",
-      "color": "#3b82f6",
-      "size": 0.62,
-      "file": "catalog/logic_bomb.py",
-      "description": "Função ilustrativa/defensiva `ILLUSTRATIVE_logic_bomb`"
-    },
-    {
-      "id": "dz-catalog-macro-malware-py",
-      "label": "macro_malware.py",
-      "parent": "dz-catalog",
-      "layer": "file",
-      "category": "core",
-      "categoryLabel": "Backend",
-      "color": "#3b82f6",
-      "size": 0.85,
-      "file": "catalog/macro_malware.py",
-      "description": "Ilustração não funcional: macro_malware"
-    },
-    {
-      "id": "dz-catalog-macro-malware-py-illustrative-macro",
-      "label": "ILLUSTRATIVE_macro()",
-      "parent": "dz-catalog-macro-malware-py",
-      "layer": "function",
-      "category": "core",
-      "categoryLabel": "Backend",
-      "color": "#3b82f6",
-      "size": 0.62,
-      "file": "catalog/macro_malware.py",
-      "description": "Função ilustrativa/defensiva `ILLUSTRATIVE_macro`"
-    },
-    {
-      "id": "dz-catalog-mobile-malware-py",
-      "label": "mobile_malware.py",
-      "parent": "dz-catalog",
-      "layer": "file",
-      "category": "core",
-      "categoryLabel": "Backend",
-      "color": "#3b82f6",
-      "size": 0.85,
-      "file": "catalog/mobile_malware.py",
-      "description": "Ilustração não funcional: mobile_malware"
-    },
-    {
-      "id": "dz-catalog-mobile-malware-py-illustrative-mobile",
-      "label": "ILLUSTRATIVE_mobile()",
-      "parent": "dz-catalog-mobile-malware-py",
-      "layer": "function",
-      "category": "core",
-      "categoryLabel": "Backend",
-      "color": "#3b82f6",
-      "size": 0.62,
-      "file": "catalog/mobile_malware.py",
-      "description": "Função ilustrativa/defensiva `ILLUSTRATIVE_mobile`"
-    },
-    {
-      "id": "dz-catalog-packer-obfuscation-py",
-      "label": "packer_obfuscation.py",
-      "parent": "dz-catalog",
-      "layer": "file",
-      "category": "core",
-      "categoryLabel": "Backend",
-      "color": "#3b82f6",
-      "size": 0.85,
-      "file": "catalog/packer_obfuscation.py",
-      "description": "Ilustração não funcional: packer_obfuscation"
-    },
-    {
-      "id": "dz-catalog-packer-obfuscation-py-illustrative-packe",
-      "label": "ILLUSTRATIVE_packed()",
-      "parent": "dz-catalog-packer-obfuscation-py",
-      "layer": "function",
-      "category": "core",
-      "categoryLabel": "Backend",
-      "color": "#3b82f6",
-      "size": 0.62,
-      "file": "catalog/packer_obfuscation.py",
-      "description": "Função ilustrativa/defensiva `ILLUSTRATIVE_packed`"
-    },
-    {
-      "id": "dz-catalog-phishing-lure-py",
-      "label": "phishing_lure.py",
-      "parent": "dz-catalog",
-      "layer": "file",
-      "category": "core",
-      "categoryLabel": "Backend",
-      "color": "#3b82f6",
-      "size": 0.85,
-      "file": "catalog/phishing_lure.py",
-      "description": "Ilustração não funcional: phishing_lure"
-    },
-    {
-      "id": "dz-catalog-phishing-lure-py-illustrative-phish",
-      "label": "ILLUSTRATIVE_phish()",
-      "parent": "dz-catalog-phishing-lure-py",
-      "layer": "function",
-      "category": "core",
-      "categoryLabel": "Backend",
-      "color": "#3b82f6",
-      "size": 0.62,
-      "file": "catalog/phishing_lure.py",
-      "description": "Função ilustrativa/defensiva `ILLUSTRATIVE_phish`"
-    },
-    {
-      "id": "dz-catalog-polymorphic-py",
-      "label": "polymorphic.py",
-      "parent": "dz-catalog",
-      "layer": "file",
-      "category": "core",
-      "categoryLabel": "Backend",
-      "color": "#3b82f6",
-      "size": 0.85,
-      "file": "catalog/polymorphic.py",
-      "description": "Ilustração não funcional: polymorphic"
-    },
-    {
-      "id": "dz-catalog-polymorphic-py-illustrative-mutate",
-      "label": "ILLUSTRATIVE_mutate()",
-      "parent": "dz-catalog-polymorphic-py",
-      "layer": "function",
-      "category": "core",
-      "categoryLabel": "Backend",
-      "color": "#3b82f6",
-      "size": 0.62,
-      "file": "catalog/polymorphic.py",
-      "description": "Função ilustrativa/defensiva `ILLUSTRATIVE_mutate`"
-    },
-    {
-      "id": "dz-catalog-ransomware-py",
-      "label": "ransomware.py",
-      "parent": "dz-catalog",
-      "layer": "file",
-      "category": "core",
-      "categoryLabel": "Backend",
-      "color": "#3b82f6",
-      "size": 0.85,
-      "file": "catalog/ransomware.py",
-      "description": "Ilustração não funcional: ransomware"
-    },
-    {
-      "id": "dz-catalog-ransomware-py-illustrative-encrypt",
-      "label": "ILLUSTRATIVE_encrypt()",
-      "parent": "dz-catalog-ransomware-py",
-      "layer": "function",
-      "category": "core",
-      "categoryLabel": "Backend",
-      "color": "#3b82f6",
-      "size": 0.62,
-      "file": "catalog/ransomware.py",
-      "description": "Função ilustrativa/defensiva `ILLUSTRATIVE_encrypt`"
-    },
-    {
-      "id": "dz-catalog-readme-md",
-      "label": "README.md",
-      "parent": "dz-catalog",
-      "layer": "file",
-      "category": "other",
-      "categoryLabel": "Outros",
-      "color": "#64748b",
-      "size": 0.85,
-      "file": "catalog/README.md",
-      "description": "Documentação: README"
-    },
-    {
-      "id": "dz-catalog-rootkit-py",
-      "label": "rootkit.py",
-      "parent": "dz-catalog",
-      "layer": "file",
-      "category": "core",
-      "categoryLabel": "Backend",
-      "color": "#3b82f6",
-      "size": 0.85,
-      "file": "catalog/rootkit.py",
-      "description": "Ilustração não funcional: rootkit"
-    },
-    {
-      "id": "dz-catalog-rootkit-py-illustrative-hide",
-      "label": "ILLUSTRATIVE_hide()",
-      "parent": "dz-catalog-rootkit-py",
-      "layer": "function",
-      "category": "core",
-      "categoryLabel": "Backend",
-      "color": "#3b82f6",
-      "size": 0.62,
-      "file": "catalog/rootkit.py",
-      "description": "Função ilustrativa/defensiva `ILLUSTRATIVE_hide`"
-    },
-    {
-      "id": "dz-catalog-scareware-py",
-      "label": "scareware.py",
-      "parent": "dz-catalog",
-      "layer": "file",
-      "category": "core",
-      "categoryLabel": "Backend",
-      "color": "#3b82f6",
-      "size": 0.85,
-      "file": "catalog/scareware.py",
-      "description": "Ilustração não funcional: scareware"
-    },
-    {
-      "id": "dz-catalog-scareware-py-illustrative-scare",
-      "label": "ILLUSTRATIVE_scare()",
-      "parent": "dz-catalog-scareware-py",
-      "layer": "function",
-      "category": "core",
-      "categoryLabel": "Backend",
-      "color": "#3b82f6",
-      "size": 0.62,
-      "file": "catalog/scareware.py",
-      "description": "Função ilustrativa/defensiva `ILLUSTRATIVE_scare`"
-    },
-    {
-      "id": "dz-catalog-spyware-keylogger-py",
-      "label": "spyware_keylogger.py",
-      "parent": "dz-catalog",
-      "layer": "file",
-      "category": "core",
-      "categoryLabel": "Backend",
-      "color": "#3b82f6",
-      "size": 0.85,
-      "file": "catalog/spyware_keylogger.py",
-      "description": "Ilustração não funcional: spyware_keylogger"
-    },
-    {
-      "id": "dz-catalog-spyware-keylogger-py-illustrative-keylog",
-      "label": "ILLUSTRATIVE_keylog()",
-      "parent": "dz-catalog-spyware-keylogger-py",
-      "layer": "function",
-      "category": "core",
-      "categoryLabel": "Backend",
-      "color": "#3b82f6",
-      "size": 0.62,
-      "file": "catalog/spyware_keylogger.py",
-      "description": "Função ilustrativa/defensiva `ILLUSTRATIVE_keylog`"
-    },
-    {
-      "id": "dz-catalog-supply-chain-py",
-      "label": "supply_chain.py",
-      "parent": "dz-catalog",
-      "layer": "file",
-      "category": "core",
-      "categoryLabel": "Backend",
-      "color": "#3b82f6",
-      "size": 0.85,
-      "file": "catalog/supply_chain.py",
-      "description": "Ilustração não funcional: supply_chain"
-    },
-    {
-      "id": "dz-catalog-supply-chain-py-illustrative-supply-chai",
-      "label": "ILLUSTRATIVE_supply_chain()",
-      "parent": "dz-catalog-supply-chain-py",
-      "layer": "function",
-      "category": "core",
-      "categoryLabel": "Backend",
-      "color": "#3b82f6",
-      "size": 0.62,
-      "file": "catalog/supply_chain.py",
-      "description": "Função ilustrativa/defensiva `ILLUSTRATIVE_supply_chain`"
-    },
-    {
-      "id": "dz-catalog-trojan-rat-py",
-      "label": "trojan_rat.py",
-      "parent": "dz-catalog",
-      "layer": "file",
-      "category": "core",
-      "categoryLabel": "Backend",
-      "color": "#3b82f6",
-      "size": 0.85,
-      "file": "catalog/trojan_rat.py",
-      "description": "Ilustração não funcional: trojan_rat"
-    },
-    {
-      "id": "dz-catalog-trojan-rat-py-illustrative-trojan-ui",
-      "label": "ILLUSTRATIVE_trojan_ui()",
-      "parent": "dz-catalog-trojan-rat-py",
-      "layer": "function",
-      "category": "frontend",
-      "categoryLabel": "Frontend",
-      "color": "#eab308",
-      "size": 0.62,
-      "file": "catalog/trojan_rat.py",
-      "description": "Função ilustrativa/defensiva `ILLUSTRATIVE_trojan_ui`"
-    },
-    {
-      "id": "dz-catalog-trojan-rat-py-illustrative-hidden-channe",
-      "label": "ILLUSTRATIVE_hidden_channel()",
-      "parent": "dz-catalog-trojan-rat-py",
-      "layer": "function",
-      "category": "core",
-      "categoryLabel": "Backend",
-      "color": "#3b82f6",
-      "size": 0.62,
-      "file": "catalog/trojan_rat.py",
-      "description": "Função ilustrativa/defensiva `ILLUSTRATIVE_hidden_channel`"
-    },
-    {
-      "id": "dz-catalog-virus-file-infector-py",
-      "label": "virus_file_infector.py",
-      "parent": "dz-catalog",
-      "layer": "file",
-      "category": "core",
-      "categoryLabel": "Backend",
-      "color": "#3b82f6",
-      "size": 0.85,
-      "file": "catalog/virus_file_infector.py",
-      "description": "Ilustração não funcional: virus_file_infector"
-    },
-    {
-      "id": "dz-catalog-virus-file-infector-py-illustrative-infe",
-      "label": "ILLUSTRATIVE_infect()",
-      "parent": "dz-catalog-virus-file-infector-py",
-      "layer": "function",
-      "category": "core",
-      "categoryLabel": "Backend",
-      "color": "#3b82f6",
-      "size": 0.62,
-      "file": "catalog/virus_file_infector.py",
-      "description": "Função ilustrativa/defensiva `ILLUSTRATIVE_infect`"
-    },
-    {
-      "id": "dz-catalog-wiper-py",
-      "label": "wiper.py",
-      "parent": "dz-catalog",
-      "layer": "file",
-      "category": "core",
-      "categoryLabel": "Backend",
-      "color": "#3b82f6",
-      "size": 0.85,
-      "file": "catalog/wiper.py",
-      "description": "Ilustração não funcional: wiper"
-    },
-    {
-      "id": "dz-catalog-wiper-py-illustrative-wipe",
-      "label": "ILLUSTRATIVE_wipe()",
-      "parent": "dz-catalog-wiper-py",
-      "layer": "function",
-      "category": "core",
-      "categoryLabel": "Backend",
-      "color": "#3b82f6",
-      "size": 0.62,
-      "file": "catalog/wiper.py",
-      "description": "Função ilustrativa/defensiva `ILLUSTRATIVE_wipe`"
-    },
-    {
-      "id": "dz-catalog-worm-network-py",
-      "label": "worm_network.py",
-      "parent": "dz-catalog",
-      "layer": "file",
+      "id": "danger-zone-dir-labs-09-yara-like-scanner",
+      "label": "09_yara_like_scanner/",
+      "parent": "danger-zone-dir-labs",
+      "layer": "module",
       "category": "network",
       "categoryLabel": "Rede / Scan",
       "color": "#22d3ee",
-      "size": 0.85,
-      "file": "catalog/worm_network.py",
-      "description": "Ilustração não funcional: worm_network"
+      "size": 1.35,
+      "file": "labs/09_yara_like_scanner/",
+      "description": "Pacote/pasta `labs/09_yara_like_scanner/` do projeto."
     },
     {
-      "id": "dz-catalog-worm-network-py-illustrative-spread",
-      "label": "ILLUSTRATIVE_spread()",
-      "parent": "dz-catalog-worm-network-py",
-      "layer": "function",
-      "category": "network",
-      "categoryLabel": "Rede / Scan",
-      "color": "#22d3ee",
-      "size": 0.62,
-      "file": "catalog/worm_network.py",
-      "description": "Função ilustrativa/defensiva `ILLUSTRATIVE_spread`"
-    },
-    {
-      "id": "dz-common-init-py",
-      "label": "__init__.py",
-      "parent": "dz-common",
-      "layer": "file",
+      "id": "danger-zone-dir-labs-10-rootkit-concept",
+      "label": "10_rootkit_concept/",
+      "parent": "danger-zone-dir-labs",
+      "layer": "module",
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
-      "size": 0.85,
-      "file": "common/__init__.py",
-      "description": "Arquivo educacional `common/__init__.py` — risco/conceito/prevenção."
+      "size": 1.35,
+      "file": "labs/10_rootkit_concept/",
+      "description": "Pacote/pasta `labs/10_rootkit_concept/` do projeto."
     },
     {
-      "id": "dz-common-banner-py",
-      "label": "banner.py",
-      "parent": "dz-common",
-      "layer": "file",
+      "id": "danger-zone-dir-labs-11-botnet-concept",
+      "label": "11_botnet_concept/",
+      "parent": "danger-zone-dir-labs",
+      "layer": "module",
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
-      "size": 0.85,
-      "file": "common/banner.py",
-      "description": "Arquivo educacional `common/banner.py` — risco/conceito/prevenção."
+      "size": 1.35,
+      "file": "labs/11_botnet_concept/",
+      "description": "Pacote/pasta `labs/11_botnet_concept/` do projeto."
     },
     {
-      "id": "dz-common-telemetry-py",
-      "label": "telemetry.py",
-      "parent": "dz-common",
-      "layer": "file",
+      "id": "danger-zone-dir-labs-12-adware-scareware",
+      "label": "12_adware_scareware/",
+      "parent": "danger-zone-dir-labs",
+      "layer": "module",
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
-      "size": 0.85,
-      "file": "common/telemetry.py",
-      "description": "Arquivo educacional `common/telemetry.py` — risco/conceito/prevenção."
+      "size": 1.35,
+      "file": "labs/12_adware_scareware/",
+      "description": "Pacote/pasta `labs/12_adware_scareware/` do projeto."
     },
     {
-      "id": "dz-common-virtual-fs-py",
-      "label": "virtual_fs.py",
-      "parent": "dz-common",
-      "layer": "file",
+      "id": "danger-zone-dir-labs-13-cryptojacker",
+      "label": "13_cryptojacker/",
+      "parent": "danger-zone-dir-labs",
+      "layer": "module",
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
-      "size": 0.85,
-      "file": "common/virtual_fs.py",
-      "description": "Arquivo educacional `common/virtual_fs.py` — risco/conceito/prevenção."
+      "size": 1.35,
+      "file": "labs/13_cryptojacker/",
+      "description": "Pacote/pasta `labs/13_cryptojacker/` do projeto."
     },
     {
-      "id": "dz-conference-outline-md",
-      "label": "outline.md",
-      "parent": "dz-conference",
+      "id": "danger-zone-dir-labs-14-fileless-concept",
+      "label": "14_fileless_concept/",
+      "parent": "danger-zone-dir-labs",
+      "layer": "module",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 1.35,
+      "file": "labs/14_fileless_concept/",
+      "description": "Pacote/pasta `labs/14_fileless_concept/` do projeto."
+    },
+    {
+      "id": "danger-zone-dir-labs-15-macro-malware",
+      "label": "15_macro_malware/",
+      "parent": "danger-zone-dir-labs",
+      "layer": "module",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 1.35,
+      "file": "labs/15_macro_malware/",
+      "description": "Pacote/pasta `labs/15_macro_malware/` do projeto."
+    },
+    {
+      "id": "danger-zone-dir-labs-16-logic-bomb",
+      "label": "16_logic_bomb/",
+      "parent": "danger-zone-dir-labs",
+      "layer": "module",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 1.35,
+      "file": "labs/16_logic_bomb/",
+      "description": "Pacote/pasta `labs/16_logic_bomb/` do projeto."
+    },
+    {
+      "id": "danger-zone-dir-labs-17-backdoor-dropper",
+      "label": "17_backdoor_dropper/",
+      "parent": "danger-zone-dir-labs",
+      "layer": "module",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 1.35,
+      "file": "labs/17_backdoor_dropper/",
+      "description": "Pacote/pasta `labs/17_backdoor_dropper/` do projeto."
+    },
+    {
+      "id": "danger-zone-dir-labs-18-phishing-lure",
+      "label": "18_phishing_lure/",
+      "parent": "danger-zone-dir-labs",
+      "layer": "module",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 1.35,
+      "file": "labs/18_phishing_lure/",
+      "description": "Pacote/pasta `labs/18_phishing_lure/` do projeto."
+    },
+    {
+      "id": "danger-zone-dir-labs-19-supply-chain",
+      "label": "19_supply_chain/",
+      "parent": "danger-zone-dir-labs",
+      "layer": "module",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 1.35,
+      "file": "labs/19_supply_chain/",
+      "description": "Pacote/pasta `labs/19_supply_chain/` do projeto."
+    },
+    {
+      "id": "danger-zone-dir-labs-20-enterprise-hardening",
+      "label": "20_enterprise_hardening/",
+      "parent": "danger-zone-dir-labs",
+      "layer": "module",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 1.35,
+      "file": "labs/20_enterprise_hardening/",
+      "description": "Pacote/pasta `labs/20_enterprise_hardening/` do projeto."
+    },
+    {
+      "id": "danger-zone-file-gitignore",
+      "label": ".gitignore",
+      "parent": "danger-zone-root",
       "layer": "file",
       "category": "other",
       "categoryLabel": "Outros",
       "color": "#64748b",
       "size": 0.85,
-      "file": "conference/outline.md",
-      "description": "Documentação: outline"
+      "file": ".gitignore",
+      "description": "Código-fonte: `.gitignore`"
     },
     {
-      "id": "dz-conference-talking-points-md",
-      "label": "talking-points.md",
-      "parent": "dz-conference",
-      "layer": "file",
-      "category": "other",
-      "categoryLabel": "Outros",
-      "color": "#64748b",
-      "size": 0.85,
-      "file": "conference/talking-points.md",
-      "description": "Documentação: talking-points"
-    },
-    {
-      "id": "dz-demos-run-all-sims-py",
-      "label": "run_all_sims.py",
-      "parent": "dz-demos",
-      "layer": "file",
-      "category": "core",
-      "categoryLabel": "Backend",
-      "color": "#3b82f6",
-      "size": 0.85,
-      "file": "demos/run_all_sims.py",
-      "description": "Arquivo educacional `demos/run_all_sims.py` — risco/conceito/prevenção."
-    },
-    {
-      "id": "dz-disclaimer-md",
+      "id": "danger-zone-file-disclaimer-md",
       "label": "DISCLAIMER.md",
-      "parent": "dz-root",
+      "parent": "danger-zone-root",
       "layer": "file",
       "category": "other",
       "categoryLabel": "Outros",
       "color": "#64748b",
       "size": 0.85,
       "file": "DISCLAIMER.md",
-      "description": "Documentação: DISCLAIMER"
+      "description": "Código-fonte: `DISCLAIMER.md`"
     },
     {
-      "id": "dz-docs-detection-playbook-md",
+      "id": "danger-zone-grp-catalog-files-a-b-c-d-f",
+      "label": "Arquivos A–B–C–D–F",
+      "parent": "danger-zone-dir-catalog",
+      "layer": "module",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 1.35,
+      "file": "catalog/[files-a–b–c–d–f]",
+      "description": "Grupo de arquivos em `catalog/` — Arquivos A–B–C–D–F"
+    },
+    {
+      "id": "danger-zone-grp-catalog-files-i-l-m-p-r",
+      "label": "Arquivos I–L–M–P–R",
+      "parent": "danger-zone-dir-catalog",
+      "layer": "module",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 1.35,
+      "file": "catalog/[files-i–l–m–p–r]",
+      "description": "Grupo de arquivos em `catalog/` — Arquivos I–L–M–P–R"
+    },
+    {
+      "id": "danger-zone-grp-catalog-files-s-t-v-w",
+      "label": "Arquivos S–T–V–W",
+      "parent": "danger-zone-dir-catalog",
+      "layer": "module",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 1.35,
+      "file": "catalog/[files-s–t–v–w]",
+      "description": "Grupo de arquivos em `catalog/` — Arquivos S–T–V–W"
+    },
+    {
+      "id": "danger-zone-file-catalog-adware-py",
+      "label": "adware.py",
+      "parent": "danger-zone-grp-catalog-files-a-b-c-d-f",
+      "layer": "file",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 0.85,
+      "file": "catalog/adware.py",
+      "description": "Código-fonte: `catalog/adware.py`"
+    },
+    {
+      "id": "danger-zone-file-catalog-apt-campaign-py",
+      "label": "apt_campaign.py",
+      "parent": "danger-zone-grp-catalog-files-a-b-c-d-f",
+      "layer": "file",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 0.85,
+      "file": "catalog/apt_campaign.py",
+      "description": "Código-fonte: `catalog/apt_campaign.py`"
+    },
+    {
+      "id": "danger-zone-file-catalog-backdoor-py",
+      "label": "backdoor.py",
+      "parent": "danger-zone-grp-catalog-files-a-b-c-d-f",
+      "layer": "file",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 0.85,
+      "file": "catalog/backdoor.py",
+      "description": "Código-fonte: `catalog/backdoor.py`"
+    },
+    {
+      "id": "danger-zone-file-catalog-banking-trojan-py",
+      "label": "banking_trojan.py",
+      "parent": "danger-zone-grp-catalog-files-a-b-c-d-f",
+      "layer": "file",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 0.85,
+      "file": "catalog/banking_trojan.py",
+      "description": "Código-fonte: `catalog/banking_trojan.py`"
+    },
+    {
+      "id": "danger-zone-file-catalog-bootkit-py",
+      "label": "bootkit.py",
+      "parent": "danger-zone-grp-catalog-files-a-b-c-d-f",
+      "layer": "file",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 0.85,
+      "file": "catalog/bootkit.py",
+      "description": "Código-fonte: `catalog/bootkit.py`"
+    },
+    {
+      "id": "danger-zone-file-catalog-botnet-py",
+      "label": "botnet.py",
+      "parent": "danger-zone-grp-catalog-files-a-b-c-d-f",
+      "layer": "file",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 0.85,
+      "file": "catalog/botnet.py",
+      "description": "Código-fonte: `catalog/botnet.py`"
+    },
+    {
+      "id": "danger-zone-file-catalog-browser-hijacker-py",
+      "label": "browser_hijacker.py",
+      "parent": "danger-zone-grp-catalog-files-a-b-c-d-f",
+      "layer": "file",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 0.85,
+      "file": "catalog/browser_hijacker.py",
+      "description": "Código-fonte: `catalog/browser_hijacker.py`"
+    },
+    {
+      "id": "danger-zone-file-catalog-cryptojacker-py",
+      "label": "cryptojacker.py",
+      "parent": "danger-zone-grp-catalog-files-a-b-c-d-f",
+      "layer": "file",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 0.85,
+      "file": "catalog/cryptojacker.py",
+      "description": "Código-fonte: `catalog/cryptojacker.py`"
+    },
+    {
+      "id": "danger-zone-file-catalog-double-extortion-py",
+      "label": "double_extortion.py",
+      "parent": "danger-zone-grp-catalog-files-a-b-c-d-f",
+      "layer": "file",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 0.85,
+      "file": "catalog/double_extortion.py",
+      "description": "Código-fonte: `catalog/double_extortion.py`"
+    },
+    {
+      "id": "danger-zone-file-catalog-dropper-loader-py",
+      "label": "dropper_loader.py",
+      "parent": "danger-zone-grp-catalog-files-a-b-c-d-f",
+      "layer": "file",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 0.85,
+      "file": "catalog/dropper_loader.py",
+      "description": "Código-fonte: `catalog/dropper_loader.py`"
+    },
+    {
+      "id": "danger-zone-file-catalog-fileless-py",
+      "label": "fileless.py",
+      "parent": "danger-zone-grp-catalog-files-a-b-c-d-f",
+      "layer": "file",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 0.85,
+      "file": "catalog/fileless.py",
+      "description": "Código-fonte: `catalog/fileless.py`"
+    },
+    {
+      "id": "danger-zone-file-catalog-infostealer-py",
+      "label": "infostealer.py",
+      "parent": "danger-zone-grp-catalog-files-i-l-m-p-r",
+      "layer": "file",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 0.85,
+      "file": "catalog/infostealer.py",
+      "description": "Código-fonte: `catalog/infostealer.py`"
+    },
+    {
+      "id": "danger-zone-file-catalog-iot-malware-py",
+      "label": "iot_malware.py",
+      "parent": "danger-zone-grp-catalog-files-i-l-m-p-r",
+      "layer": "file",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 0.85,
+      "file": "catalog/iot_malware.py",
+      "description": "Código-fonte: `catalog/iot_malware.py`"
+    },
+    {
+      "id": "danger-zone-file-catalog-logic-bomb-py",
+      "label": "logic_bomb.py",
+      "parent": "danger-zone-grp-catalog-files-i-l-m-p-r",
+      "layer": "file",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 0.85,
+      "file": "catalog/logic_bomb.py",
+      "description": "Código-fonte: `catalog/logic_bomb.py`"
+    },
+    {
+      "id": "danger-zone-file-catalog-macro-malware-py",
+      "label": "macro_malware.py",
+      "parent": "danger-zone-grp-catalog-files-i-l-m-p-r",
+      "layer": "file",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 0.85,
+      "file": "catalog/macro_malware.py",
+      "description": "Código-fonte: `catalog/macro_malware.py`"
+    },
+    {
+      "id": "danger-zone-file-catalog-mobile-malware-py",
+      "label": "mobile_malware.py",
+      "parent": "danger-zone-grp-catalog-files-i-l-m-p-r",
+      "layer": "file",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 0.85,
+      "file": "catalog/mobile_malware.py",
+      "description": "Código-fonte: `catalog/mobile_malware.py`"
+    },
+    {
+      "id": "danger-zone-file-catalog-packer-obfuscation-py",
+      "label": "packer_obfuscation.py",
+      "parent": "danger-zone-grp-catalog-files-i-l-m-p-r",
+      "layer": "file",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 0.85,
+      "file": "catalog/packer_obfuscation.py",
+      "description": "Código-fonte: `catalog/packer_obfuscation.py`"
+    },
+    {
+      "id": "danger-zone-file-catalog-phishing-lure-py",
+      "label": "phishing_lure.py",
+      "parent": "danger-zone-grp-catalog-files-i-l-m-p-r",
+      "layer": "file",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 0.85,
+      "file": "catalog/phishing_lure.py",
+      "description": "Código-fonte: `catalog/phishing_lure.py`"
+    },
+    {
+      "id": "danger-zone-file-catalog-polymorphic-py",
+      "label": "polymorphic.py",
+      "parent": "danger-zone-grp-catalog-files-i-l-m-p-r",
+      "layer": "file",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 0.85,
+      "file": "catalog/polymorphic.py",
+      "description": "Código-fonte: `catalog/polymorphic.py`"
+    },
+    {
+      "id": "danger-zone-file-catalog-ransomware-py",
+      "label": "ransomware.py",
+      "parent": "danger-zone-grp-catalog-files-i-l-m-p-r",
+      "layer": "file",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 0.85,
+      "file": "catalog/ransomware.py",
+      "description": "Código-fonte: `catalog/ransomware.py`"
+    },
+    {
+      "id": "danger-zone-file-catalog-readme-md",
+      "label": "README.md",
+      "parent": "danger-zone-grp-catalog-files-i-l-m-p-r",
+      "layer": "file",
+      "category": "other",
+      "categoryLabel": "Outros",
+      "color": "#64748b",
+      "size": 0.85,
+      "file": "catalog/README.md",
+      "description": "Código-fonte: `catalog/README.md`"
+    },
+    {
+      "id": "danger-zone-file-catalog-rootkit-py",
+      "label": "rootkit.py",
+      "parent": "danger-zone-grp-catalog-files-i-l-m-p-r",
+      "layer": "file",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 0.85,
+      "file": "catalog/rootkit.py",
+      "description": "Código-fonte: `catalog/rootkit.py`"
+    },
+    {
+      "id": "danger-zone-file-catalog-scareware-py",
+      "label": "scareware.py",
+      "parent": "danger-zone-grp-catalog-files-s-t-v-w",
+      "layer": "file",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 0.85,
+      "file": "catalog/scareware.py",
+      "description": "Código-fonte: `catalog/scareware.py`"
+    },
+    {
+      "id": "danger-zone-file-catalog-spyware-keylogger-py",
+      "label": "spyware_keylogger.py",
+      "parent": "danger-zone-grp-catalog-files-s-t-v-w",
+      "layer": "file",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 0.85,
+      "file": "catalog/spyware_keylogger.py",
+      "description": "Código-fonte: `catalog/spyware_keylogger.py`"
+    },
+    {
+      "id": "danger-zone-file-catalog-supply-chain-py",
+      "label": "supply_chain.py",
+      "parent": "danger-zone-grp-catalog-files-s-t-v-w",
+      "layer": "file",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 0.85,
+      "file": "catalog/supply_chain.py",
+      "description": "Código-fonte: `catalog/supply_chain.py`"
+    },
+    {
+      "id": "danger-zone-file-catalog-trojan-rat-py",
+      "label": "trojan_rat.py",
+      "parent": "danger-zone-grp-catalog-files-s-t-v-w",
+      "layer": "file",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 0.85,
+      "file": "catalog/trojan_rat.py",
+      "description": "Código-fonte: `catalog/trojan_rat.py`"
+    },
+    {
+      "id": "danger-zone-file-catalog-virus-file-infector-py",
+      "label": "virus_file_infector.py",
+      "parent": "danger-zone-grp-catalog-files-s-t-v-w",
+      "layer": "file",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 0.85,
+      "file": "catalog/virus_file_infector.py",
+      "description": "Código-fonte: `catalog/virus_file_infector.py`"
+    },
+    {
+      "id": "danger-zone-file-catalog-wiper-py",
+      "label": "wiper.py",
+      "parent": "danger-zone-grp-catalog-files-s-t-v-w",
+      "layer": "file",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 0.85,
+      "file": "catalog/wiper.py",
+      "description": "Código-fonte: `catalog/wiper.py`"
+    },
+    {
+      "id": "danger-zone-file-catalog-worm-network-py",
+      "label": "worm_network.py",
+      "parent": "danger-zone-grp-catalog-files-s-t-v-w",
+      "layer": "file",
+      "category": "network",
+      "categoryLabel": "Rede / Scan",
+      "color": "#22d3ee",
+      "size": 0.85,
+      "file": "catalog/worm_network.py",
+      "description": "Código-fonte: `catalog/worm_network.py`"
+    },
+    {
+      "id": "danger-zone-file-common-init-py",
+      "label": "__init__.py",
+      "parent": "danger-zone-dir-common",
+      "layer": "file",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 0.85,
+      "file": "common/__init__.py",
+      "description": "Código-fonte: `common/__init__.py`"
+    },
+    {
+      "id": "danger-zone-file-common-banner-py",
+      "label": "banner.py",
+      "parent": "danger-zone-dir-common",
+      "layer": "file",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 0.85,
+      "file": "common/banner.py",
+      "description": "Código-fonte: `common/banner.py`"
+    },
+    {
+      "id": "danger-zone-file-common-telemetry-py",
+      "label": "telemetry.py",
+      "parent": "danger-zone-dir-common",
+      "layer": "file",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 0.85,
+      "file": "common/telemetry.py",
+      "description": "Código-fonte: `common/telemetry.py`"
+    },
+    {
+      "id": "danger-zone-file-common-virtual-fs-py",
+      "label": "virtual_fs.py",
+      "parent": "danger-zone-dir-common",
+      "layer": "file",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 0.85,
+      "file": "common/virtual_fs.py",
+      "description": "Código-fonte: `common/virtual_fs.py`"
+    },
+    {
+      "id": "danger-zone-file-conference-outline-md",
+      "label": "outline.md",
+      "parent": "danger-zone-dir-conference",
+      "layer": "file",
+      "category": "other",
+      "categoryLabel": "Outros",
+      "color": "#64748b",
+      "size": 0.85,
+      "file": "conference/outline.md",
+      "description": "Código-fonte: `conference/outline.md`"
+    },
+    {
+      "id": "danger-zone-file-conference-talking-points-md",
+      "label": "talking-points.md",
+      "parent": "danger-zone-dir-conference",
+      "layer": "file",
+      "category": "other",
+      "categoryLabel": "Outros",
+      "color": "#64748b",
+      "size": 0.85,
+      "file": "conference/talking-points.md",
+      "description": "Código-fonte: `conference/talking-points.md`"
+    },
+    {
+      "id": "danger-zone-file-demos-run-all-sims-py",
+      "label": "run_all_sims.py",
+      "parent": "danger-zone-dir-demos",
+      "layer": "file",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 0.85,
+      "file": "demos/run_all_sims.py",
+      "description": "Código-fonte: `demos/run_all_sims.py`"
+    },
+    {
+      "id": "danger-zone-file-docs-detection-playbook-md",
       "label": "detection-playbook.md",
-      "parent": "dz-docs",
+      "parent": "danger-zone-dir-docs",
       "layer": "file",
       "category": "other",
       "categoryLabel": "Outros",
       "color": "#64748b",
       "size": 0.85,
       "file": "docs/detection-playbook.md",
-      "description": "Documentação: detection-playbook"
+      "description": "Código-fonte: `docs/detection-playbook.md`"
     },
     {
-      "id": "dz-docs-enterprise-prevention-md",
+      "id": "danger-zone-file-docs-enterprise-prevention-md",
       "label": "enterprise_prevention.md",
-      "parent": "dz-docs",
+      "parent": "danger-zone-dir-docs",
       "layer": "file",
       "category": "other",
       "categoryLabel": "Outros",
       "color": "#64748b",
       "size": 0.85,
       "file": "docs/enterprise_prevention.md",
-      "description": "Documentação: enterprise prevention"
+      "description": "Código-fonte: `docs/enterprise_prevention.md`"
     },
     {
-      "id": "dz-docs-kill-chain-md",
+      "id": "danger-zone-file-docs-kill-chain-md",
       "label": "kill-chain.md",
-      "parent": "dz-docs",
+      "parent": "danger-zone-dir-docs",
       "layer": "file",
       "category": "other",
       "categoryLabel": "Outros",
       "color": "#64748b",
       "size": 0.85,
       "file": "docs/kill-chain.md",
-      "description": "Documentação: kill-chain"
+      "description": "Código-fonte: `docs/kill-chain.md`"
     },
     {
-      "id": "dz-docs-malware-catalog-md",
+      "id": "danger-zone-file-docs-malware-catalog-md",
       "label": "malware_catalog.md",
-      "parent": "dz-docs",
+      "parent": "danger-zone-dir-docs",
       "layer": "file",
       "category": "other",
       "categoryLabel": "Outros",
       "color": "#64748b",
       "size": 0.85,
       "file": "docs/malware_catalog.md",
-      "description": "Documentação: malware catalog"
+      "description": "Código-fonte: `docs/malware_catalog.md`"
     },
     {
-      "id": "dz-docs-risk-matrix-md",
+      "id": "danger-zone-file-docs-risk-matrix-md",
       "label": "risk_matrix.md",
-      "parent": "dz-docs",
+      "parent": "danger-zone-dir-docs",
       "layer": "file",
       "category": "other",
       "categoryLabel": "Outros",
       "color": "#64748b",
       "size": 0.85,
       "file": "docs/risk_matrix.md",
-      "description": "Documentação: risk matrix"
+      "description": "Código-fonte: `docs/risk_matrix.md`"
     },
     {
-      "id": "dz-docs-taxonomy-md",
+      "id": "danger-zone-file-docs-taxonomy-md",
       "label": "taxonomy.md",
-      "parent": "dz-docs",
+      "parent": "danger-zone-dir-docs",
       "layer": "file",
       "category": "other",
       "categoryLabel": "Outros",
       "color": "#64748b",
       "size": 0.85,
       "file": "docs/taxonomy.md",
-      "description": "Documentação: taxonomy"
+      "description": "Código-fonte: `docs/taxonomy.md`"
     },
     {
-      "id": "dz-labs-01-virus-lifecycle-readme-md",
+      "id": "danger-zone-file-labs-01-virus-lifecycle-readme-md",
       "label": "README.md",
-      "parent": "dz-labs-sim",
+      "parent": "danger-zone-dir-labs-01-virus-lifecycle",
       "layer": "file",
       "category": "other",
       "categoryLabel": "Outros",
       "color": "#64748b",
       "size": 0.85,
       "file": "labs/01_virus_lifecycle/README.md",
-      "description": "Documentação: README"
+      "description": "Código-fonte: `labs/01_virus_lifecycle/README.md`"
     },
     {
-      "id": "dz-labs-01-virus-lifecycle-simulate-virus-py",
+      "id": "danger-zone-file-labs-01-virus-lifecycle-simulate-virus-py",
       "label": "simulate_virus.py",
-      "parent": "dz-labs-sim",
+      "parent": "danger-zone-dir-labs-01-virus-lifecycle",
       "layer": "file",
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
       "size": 0.85,
       "file": "labs/01_virus_lifecycle/simulate_virus.py",
-      "description": "Ilustração não funcional: simulate_virus"
+      "description": "Código-fonte: `labs/01_virus_lifecycle/simulate_virus.py`"
     },
     {
-      "id": "dz-labs-01-virus-lifecycle-simulate-virus-py-simula",
-      "label": "simulate_virus()",
-      "parent": "dz-labs-01-virus-lifecycle-simulate-virus-py",
-      "layer": "function",
-      "category": "core",
-      "categoryLabel": "Backend",
-      "color": "#3b82f6",
-      "size": 0.62,
-      "file": "labs/01_virus_lifecycle/simulate_virus.py",
-      "description": "Função ilustrativa/defensiva `simulate_virus`"
-    },
-    {
-      "id": "dz-labs-02-worm-propagation-readme-md",
+      "id": "danger-zone-file-labs-02-worm-propagation-readme-md",
       "label": "README.md",
-      "parent": "dz-labs-sim",
+      "parent": "danger-zone-dir-labs-02-worm-propagation",
       "layer": "file",
       "category": "other",
       "categoryLabel": "Outros",
       "color": "#64748b",
       "size": 0.85,
       "file": "labs/02_worm_propagation/README.md",
-      "description": "Documentação: README"
+      "description": "Código-fonte: `labs/02_worm_propagation/README.md`"
     },
     {
-      "id": "dz-labs-02-worm-propagation-simulate-worm-py",
+      "id": "danger-zone-file-labs-02-worm-propagation-simulate-worm-py",
       "label": "simulate_worm.py",
-      "parent": "dz-labs-sim",
+      "parent": "danger-zone-dir-labs-02-worm-propagation",
       "layer": "file",
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
       "size": 0.85,
       "file": "labs/02_worm_propagation/simulate_worm.py",
-      "description": "Ilustração não funcional: simulate_worm"
+      "description": "Código-fonte: `labs/02_worm_propagation/simulate_worm.py`"
     },
     {
-      "id": "dz-labs-02-worm-propagation-simulate-worm-py-simula",
-      "label": "simulate_worm()",
-      "parent": "dz-labs-02-worm-propagation-simulate-worm-py",
-      "layer": "function",
-      "category": "core",
-      "categoryLabel": "Backend",
-      "color": "#3b82f6",
-      "size": 0.62,
-      "file": "labs/02_worm_propagation/simulate_worm.py",
-      "description": "Função ilustrativa/defensiva `simulate_worm`"
-    },
-    {
-      "id": "dz-labs-03-trojan-behavior-readme-md",
+      "id": "danger-zone-file-labs-03-trojan-behavior-readme-md",
       "label": "README.md",
-      "parent": "dz-labs-sim",
+      "parent": "danger-zone-dir-labs-03-trojan-behavior",
       "layer": "file",
       "category": "other",
       "categoryLabel": "Outros",
       "color": "#64748b",
       "size": 0.85,
       "file": "labs/03_trojan_behavior/README.md",
-      "description": "Documentação: README"
+      "description": "Código-fonte: `labs/03_trojan_behavior/README.md`"
     },
     {
-      "id": "dz-labs-03-trojan-behavior-simulate-trojan-py",
+      "id": "danger-zone-file-labs-03-trojan-behavior-simulate-trojan-py",
       "label": "simulate_trojan.py",
-      "parent": "dz-labs-sim",
+      "parent": "danger-zone-dir-labs-03-trojan-behavior",
       "layer": "file",
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
       "size": 0.85,
       "file": "labs/03_trojan_behavior/simulate_trojan.py",
-      "description": "Ilustração não funcional: simulate_trojan"
+      "description": "Código-fonte: `labs/03_trojan_behavior/simulate_trojan.py`"
     },
     {
-      "id": "dz-labs-04-ransomware-concept-readme-md",
+      "id": "danger-zone-file-labs-04-ransomware-concept-readme-md",
       "label": "README.md",
-      "parent": "dz-labs-sim",
+      "parent": "danger-zone-dir-labs-04-ransomware-concept",
       "layer": "file",
       "category": "other",
       "categoryLabel": "Outros",
       "color": "#64748b",
       "size": 0.85,
       "file": "labs/04_ransomware_concept/README.md",
-      "description": "Documentação: README"
+      "description": "Código-fonte: `labs/04_ransomware_concept/README.md`"
     },
     {
-      "id": "dz-labs-04-ransomware-concept-simulate-ransomware-p",
+      "id": "danger-zone-file-labs-04-ransomware-concept-simulate-ransomware-py",
       "label": "simulate_ransomware.py",
-      "parent": "dz-labs-sim",
+      "parent": "danger-zone-dir-labs-04-ransomware-concept",
       "layer": "file",
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
       "size": 0.85,
       "file": "labs/04_ransomware_concept/simulate_ransomware.py",
-      "description": "Ilustração não funcional: simulate_ransomware"
+      "description": "Código-fonte: `labs/04_ransomware_concept/simulate_ransomware.py`"
     },
     {
-      "id": "dz-labs-04-ransomware-concept-simulate-ransomware-p-2",
-      "label": "xor_bytes()",
-      "parent": "dz-labs-04-ransomware-concept-simulate-ransomware-p",
-      "layer": "function",
-      "category": "core",
-      "categoryLabel": "Backend",
-      "color": "#3b82f6",
-      "size": 0.62,
-      "file": "labs/04_ransomware_concept/simulate_ransomware.py",
-      "description": "Função ilustrativa/defensiva `xor_bytes`"
-    },
-    {
-      "id": "dz-labs-04-ransomware-concept-simulate-ransomware-p-3",
-      "label": "lock_docs()",
-      "parent": "dz-labs-04-ransomware-concept-simulate-ransomware-p",
-      "layer": "function",
-      "category": "core",
-      "categoryLabel": "Backend",
-      "color": "#3b82f6",
-      "size": 0.62,
-      "file": "labs/04_ransomware_concept/simulate_ransomware.py",
-      "description": "Função ilustrativa/defensiva `lock_docs`"
-    },
-    {
-      "id": "dz-labs-04-ransomware-concept-simulate-ransomware-p-4",
-      "label": "recover()",
-      "parent": "dz-labs-04-ransomware-concept-simulate-ransomware-p",
-      "layer": "function",
-      "category": "core",
-      "categoryLabel": "Backend",
-      "color": "#3b82f6",
-      "size": 0.62,
-      "file": "labs/04_ransomware_concept/simulate_ransomware.py",
-      "description": "Função ilustrativa/defensiva `recover`"
-    },
-    {
-      "id": "dz-labs-05-spyware-telemetry-readme-md",
+      "id": "danger-zone-file-labs-05-spyware-telemetry-readme-md",
       "label": "README.md",
-      "parent": "dz-labs-sim",
+      "parent": "danger-zone-dir-labs-05-spyware-telemetry",
       "layer": "file",
       "category": "other",
       "categoryLabel": "Outros",
       "color": "#64748b",
       "size": 0.85,
       "file": "labs/05_spyware_telemetry/README.md",
-      "description": "Documentação: README"
+      "description": "Código-fonte: `labs/05_spyware_telemetry/README.md`"
     },
     {
-      "id": "dz-labs-05-spyware-telemetry-simulate-spyware-py",
+      "id": "danger-zone-file-labs-05-spyware-telemetry-simulate-spyware-py",
       "label": "simulate_spyware.py",
-      "parent": "dz-labs-sim",
+      "parent": "danger-zone-dir-labs-05-spyware-telemetry",
       "layer": "file",
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
       "size": 0.85,
       "file": "labs/05_spyware_telemetry/simulate_spyware.py",
-      "description": "Ilustração não funcional: simulate_spyware"
+      "description": "Código-fonte: `labs/05_spyware_telemetry/simulate_spyware.py`"
     },
     {
-      "id": "dz-labs-05-spyware-telemetry-simulate-spyware-py-si",
-      "label": "simulate_spyware()",
-      "parent": "dz-labs-05-spyware-telemetry-simulate-spyware-py",
-      "layer": "function",
-      "category": "core",
-      "categoryLabel": "Backend",
-      "color": "#3b82f6",
-      "size": 0.62,
-      "file": "labs/05_spyware_telemetry/simulate_spyware.py",
-      "description": "Função ilustrativa/defensiva `simulate_spyware`"
-    },
-    {
-      "id": "dz-labs-06-ioc-detector-detector-py",
+      "id": "danger-zone-file-labs-06-ioc-detector-detector-py",
       "label": "detector.py",
-      "parent": "dz-labs-def",
+      "parent": "danger-zone-dir-labs-06-ioc-detector",
       "layer": "file",
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
       "size": 0.85,
       "file": "labs/06_ioc_detector/detector.py",
-      "description": "Arquivo educacional `labs/06_ioc_detector/detector.py` — risco/conceito/prevenção."
+      "description": "Código-fonte: `labs/06_ioc_detector/detector.py`"
     },
     {
-      "id": "dz-labs-06-ioc-detector-detector-py-match",
-      "label": "match()",
-      "parent": "dz-labs-06-ioc-detector-detector-py",
-      "layer": "function",
-      "category": "core",
-      "categoryLabel": "Backend",
-      "color": "#3b82f6",
-      "size": 0.62,
-      "file": "labs/06_ioc_detector/detector.py",
-      "description": "Função ilustrativa/defensiva `match`"
-    },
-    {
-      "id": "dz-labs-06-ioc-detector-readme-md",
+      "id": "danger-zone-file-labs-06-ioc-detector-readme-md",
       "label": "README.md",
-      "parent": "dz-labs-def",
+      "parent": "danger-zone-dir-labs-06-ioc-detector",
       "layer": "file",
       "category": "other",
       "categoryLabel": "Outros",
       "color": "#64748b",
       "size": 0.85,
       "file": "labs/06_ioc_detector/README.md",
-      "description": "Documentação: README"
+      "description": "Código-fonte: `labs/06_ioc_detector/README.md`"
     },
     {
-      "id": "dz-labs-07-hash-integrity-integrity-py",
+      "id": "danger-zone-file-labs-07-hash-integrity-integrity-py",
       "label": "integrity.py",
-      "parent": "dz-labs-def",
+      "parent": "danger-zone-dir-labs-07-hash-integrity",
       "layer": "file",
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
       "size": 0.85,
       "file": "labs/07_hash_integrity/integrity.py",
-      "description": "Arquivo educacional `labs/07_hash_integrity/integrity.py` — risco/conceito/prevenção."
+      "description": "Código-fonte: `labs/07_hash_integrity/integrity.py`"
     },
     {
-      "id": "dz-labs-07-hash-integrity-integrity-py-baseline",
-      "label": "baseline()",
-      "parent": "dz-labs-07-hash-integrity-integrity-py",
-      "layer": "function",
-      "category": "core",
-      "categoryLabel": "Backend",
-      "color": "#3b82f6",
-      "size": 0.62,
-      "file": "labs/07_hash_integrity/integrity.py",
-      "description": "Função ilustrativa/defensiva `baseline`"
-    },
-    {
-      "id": "dz-labs-07-hash-integrity-readme-md",
+      "id": "danger-zone-file-labs-07-hash-integrity-readme-md",
       "label": "README.md",
-      "parent": "dz-labs-def",
+      "parent": "danger-zone-dir-labs-07-hash-integrity",
       "layer": "file",
       "category": "other",
       "categoryLabel": "Outros",
       "color": "#64748b",
       "size": 0.85,
       "file": "labs/07_hash_integrity/README.md",
-      "description": "Documentação: README"
+      "description": "Código-fonte: `labs/07_hash_integrity/README.md`"
     },
     {
-      "id": "dz-labs-08-behavioral-analyzer-analyzer-py",
+      "id": "danger-zone-file-labs-08-behavioral-analyzer-analyzer-py",
       "label": "analyzer.py",
-      "parent": "dz-labs-def",
+      "parent": "danger-zone-dir-labs-08-behavioral-analyzer",
       "layer": "file",
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
       "size": 0.85,
       "file": "labs/08_behavioral_analyzer/analyzer.py",
-      "description": "Arquivo educacional `labs/08_behavioral_analyzer/analyzer.py` — risco/conceito/prevenção."
+      "description": "Código-fonte: `labs/08_behavioral_analyzer/analyzer.py`"
     },
     {
-      "id": "dz-labs-08-behavioral-analyzer-analyzer-py-score-fi",
-      "label": "score_file()",
-      "parent": "dz-labs-08-behavioral-analyzer-analyzer-py",
-      "layer": "function",
-      "category": "core",
-      "categoryLabel": "Backend",
-      "color": "#3b82f6",
-      "size": 0.62,
-      "file": "labs/08_behavioral_analyzer/analyzer.py",
-      "description": "Função ilustrativa/defensiva `score_file`"
-    },
-    {
-      "id": "dz-labs-08-behavioral-analyzer-readme-md",
+      "id": "danger-zone-file-labs-08-behavioral-analyzer-readme-md",
       "label": "README.md",
-      "parent": "dz-labs-def",
+      "parent": "danger-zone-dir-labs-08-behavioral-analyzer",
       "layer": "file",
       "category": "other",
       "categoryLabel": "Outros",
       "color": "#64748b",
       "size": 0.85,
       "file": "labs/08_behavioral_analyzer/README.md",
-      "description": "Documentação: README"
+      "description": "Código-fonte: `labs/08_behavioral_analyzer/README.md`"
     },
     {
-      "id": "dz-labs-09-yara-like-scanner-pattern-scanner-py",
+      "id": "danger-zone-file-labs-09-yara-like-scanner-pattern-scanner-py",
       "label": "pattern_scanner.py",
-      "parent": "dz-labs-def",
+      "parent": "danger-zone-dir-labs-09-yara-like-scanner",
       "layer": "file",
       "category": "network",
       "categoryLabel": "Rede / Scan",
       "color": "#22d3ee",
       "size": 0.85,
       "file": "labs/09_yara_like_scanner/pattern_scanner.py",
-      "description": "Arquivo educacional `labs/09_yara_like_scanner/pattern_scanner.py` — risco/conceito/prevenção."
+      "description": "Código-fonte: `labs/09_yara_like_scanner/pattern_scanner.py`"
     },
     {
-      "id": "dz-labs-09-yara-like-scanner-pattern-scanner-py-sca",
-      "label": "scan_vfs()",
-      "parent": "dz-labs-09-yara-like-scanner-pattern-scanner-py",
-      "layer": "function",
-      "category": "network",
-      "categoryLabel": "Rede / Scan",
-      "color": "#22d3ee",
-      "size": 0.62,
-      "file": "labs/09_yara_like_scanner/pattern_scanner.py",
-      "description": "Função ilustrativa/defensiva `scan_vfs`"
-    },
-    {
-      "id": "dz-labs-09-yara-like-scanner-readme-md",
+      "id": "danger-zone-file-labs-09-yara-like-scanner-readme-md",
       "label": "README.md",
-      "parent": "dz-labs-def",
+      "parent": "danger-zone-dir-labs-09-yara-like-scanner",
       "layer": "file",
       "category": "network",
       "categoryLabel": "Rede / Scan",
       "color": "#22d3ee",
       "size": 0.85,
       "file": "labs/09_yara_like_scanner/README.md",
-      "description": "Documentação: README"
+      "description": "Código-fonte: `labs/09_yara_like_scanner/README.md`"
     },
     {
-      "id": "dz-labs-10-rootkit-concept-readme-md",
+      "id": "danger-zone-file-labs-10-rootkit-concept-readme-md",
       "label": "README.md",
-      "parent": "dz-labs-sim",
+      "parent": "danger-zone-dir-labs-10-rootkit-concept",
       "layer": "file",
       "category": "other",
       "categoryLabel": "Outros",
       "color": "#64748b",
       "size": 0.85,
       "file": "labs/10_rootkit_concept/README.md",
-      "description": "Documentação: README"
+      "description": "Código-fonte: `labs/10_rootkit_concept/README.md`"
     },
     {
-      "id": "dz-labs-10-rootkit-concept-simulate-rootkit-py",
+      "id": "danger-zone-file-labs-10-rootkit-concept-simulate-rootkit-py",
       "label": "simulate_rootkit.py",
-      "parent": "dz-labs-sim",
+      "parent": "danger-zone-dir-labs-10-rootkit-concept",
       "layer": "file",
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
       "size": 0.85,
       "file": "labs/10_rootkit_concept/simulate_rootkit.py",
-      "description": "Ilustração não funcional: simulate_rootkit"
+      "description": "Código-fonte: `labs/10_rootkit_concept/simulate_rootkit.py`"
     },
     {
-      "id": "dz-labs-11-botnet-concept-readme-md",
+      "id": "danger-zone-file-labs-11-botnet-concept-readme-md",
       "label": "README.md",
-      "parent": "dz-labs-sim",
+      "parent": "danger-zone-dir-labs-11-botnet-concept",
       "layer": "file",
       "category": "other",
       "categoryLabel": "Outros",
       "color": "#64748b",
       "size": 0.85,
       "file": "labs/11_botnet_concept/README.md",
-      "description": "Documentação: README"
+      "description": "Código-fonte: `labs/11_botnet_concept/README.md`"
     },
     {
-      "id": "dz-labs-11-botnet-concept-simulate-botnet-py",
+      "id": "danger-zone-file-labs-11-botnet-concept-simulate-botnet-py",
       "label": "simulate_botnet.py",
-      "parent": "dz-labs-sim",
+      "parent": "danger-zone-dir-labs-11-botnet-concept",
       "layer": "file",
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
       "size": 0.85,
       "file": "labs/11_botnet_concept/simulate_botnet.py",
-      "description": "Ilustração não funcional: simulate_botnet"
+      "description": "Código-fonte: `labs/11_botnet_concept/simulate_botnet.py`"
     },
     {
-      "id": "dz-labs-12-adware-scareware-readme-md",
+      "id": "danger-zone-file-labs-12-adware-scareware-readme-md",
       "label": "README.md",
-      "parent": "dz-labs-sim",
+      "parent": "danger-zone-dir-labs-12-adware-scareware",
       "layer": "file",
       "category": "other",
       "categoryLabel": "Outros",
       "color": "#64748b",
       "size": 0.85,
       "file": "labs/12_adware_scareware/README.md",
-      "description": "Documentação: README"
+      "description": "Código-fonte: `labs/12_adware_scareware/README.md`"
     },
     {
-      "id": "dz-labs-12-adware-scareware-simulate-adware-py",
+      "id": "danger-zone-file-labs-12-adware-scareware-simulate-adware-py",
       "label": "simulate_adware.py",
-      "parent": "dz-labs-sim",
+      "parent": "danger-zone-dir-labs-12-adware-scareware",
       "layer": "file",
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
       "size": 0.85,
       "file": "labs/12_adware_scareware/simulate_adware.py",
-      "description": "Ilustração não funcional: simulate_adware"
+      "description": "Código-fonte: `labs/12_adware_scareware/simulate_adware.py`"
     },
     {
-      "id": "dz-labs-13-cryptojacker-readme-md",
+      "id": "danger-zone-file-labs-13-cryptojacker-readme-md",
       "label": "README.md",
-      "parent": "dz-labs-sim",
+      "parent": "danger-zone-dir-labs-13-cryptojacker",
       "layer": "file",
       "category": "other",
       "categoryLabel": "Outros",
       "color": "#64748b",
       "size": 0.85,
       "file": "labs/13_cryptojacker/README.md",
-      "description": "Documentação: README"
+      "description": "Código-fonte: `labs/13_cryptojacker/README.md`"
     },
     {
-      "id": "dz-labs-13-cryptojacker-simulate-cryptojacker-py",
+      "id": "danger-zone-file-labs-13-cryptojacker-simulate-cryptojacker-py",
       "label": "simulate_cryptojacker.py",
-      "parent": "dz-labs-sim",
+      "parent": "danger-zone-dir-labs-13-cryptojacker",
       "layer": "file",
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
       "size": 0.85,
       "file": "labs/13_cryptojacker/simulate_cryptojacker.py",
-      "description": "Ilustração não funcional: simulate_cryptojacker"
+      "description": "Código-fonte: `labs/13_cryptojacker/simulate_cryptojacker.py`"
     },
     {
-      "id": "dz-labs-14-fileless-concept-readme-md",
+      "id": "danger-zone-file-labs-14-fileless-concept-readme-md",
       "label": "README.md",
-      "parent": "dz-labs-sim",
+      "parent": "danger-zone-dir-labs-14-fileless-concept",
       "layer": "file",
       "category": "other",
       "categoryLabel": "Outros",
       "color": "#64748b",
       "size": 0.85,
       "file": "labs/14_fileless_concept/README.md",
-      "description": "Documentação: README"
+      "description": "Código-fonte: `labs/14_fileless_concept/README.md`"
     },
     {
-      "id": "dz-labs-14-fileless-concept-simulate-fileless-py",
+      "id": "danger-zone-file-labs-14-fileless-concept-simulate-fileless-py",
       "label": "simulate_fileless.py",
-      "parent": "dz-labs-sim",
+      "parent": "danger-zone-dir-labs-14-fileless-concept",
       "layer": "file",
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
       "size": 0.85,
       "file": "labs/14_fileless_concept/simulate_fileless.py",
-      "description": "Ilustração não funcional: simulate_fileless"
+      "description": "Código-fonte: `labs/14_fileless_concept/simulate_fileless.py`"
     },
     {
-      "id": "dz-labs-15-macro-malware-readme-md",
+      "id": "danger-zone-file-labs-15-macro-malware-readme-md",
       "label": "README.md",
-      "parent": "dz-labs-sim",
+      "parent": "danger-zone-dir-labs-15-macro-malware",
       "layer": "file",
       "category": "other",
       "categoryLabel": "Outros",
       "color": "#64748b",
       "size": 0.85,
       "file": "labs/15_macro_malware/README.md",
-      "description": "Documentação: README"
+      "description": "Código-fonte: `labs/15_macro_malware/README.md`"
     },
     {
-      "id": "dz-labs-15-macro-malware-simulate-macro-py",
+      "id": "danger-zone-file-labs-15-macro-malware-simulate-macro-py",
       "label": "simulate_macro.py",
-      "parent": "dz-labs-sim",
+      "parent": "danger-zone-dir-labs-15-macro-malware",
       "layer": "file",
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
       "size": 0.85,
       "file": "labs/15_macro_malware/simulate_macro.py",
-      "description": "Ilustração não funcional: simulate_macro"
+      "description": "Código-fonte: `labs/15_macro_malware/simulate_macro.py`"
     },
     {
-      "id": "dz-labs-16-logic-bomb-readme-md",
+      "id": "danger-zone-file-labs-16-logic-bomb-readme-md",
       "label": "README.md",
-      "parent": "dz-labs-sim",
+      "parent": "danger-zone-dir-labs-16-logic-bomb",
       "layer": "file",
       "category": "other",
       "categoryLabel": "Outros",
       "color": "#64748b",
       "size": 0.85,
       "file": "labs/16_logic_bomb/README.md",
-      "description": "Documentação: README"
+      "description": "Código-fonte: `labs/16_logic_bomb/README.md`"
     },
     {
-      "id": "dz-labs-16-logic-bomb-simulate-logic-bomb-py",
+      "id": "danger-zone-file-labs-16-logic-bomb-simulate-logic-bomb-py",
       "label": "simulate_logic_bomb.py",
-      "parent": "dz-labs-sim",
+      "parent": "danger-zone-dir-labs-16-logic-bomb",
       "layer": "file",
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
       "size": 0.85,
       "file": "labs/16_logic_bomb/simulate_logic_bomb.py",
-      "description": "Ilustração não funcional: simulate_logic_bomb"
+      "description": "Código-fonte: `labs/16_logic_bomb/simulate_logic_bomb.py`"
     },
     {
-      "id": "dz-labs-17-backdoor-dropper-readme-md",
+      "id": "danger-zone-file-labs-17-backdoor-dropper-readme-md",
       "label": "README.md",
-      "parent": "dz-labs-sim",
+      "parent": "danger-zone-dir-labs-17-backdoor-dropper",
       "layer": "file",
       "category": "other",
       "categoryLabel": "Outros",
       "color": "#64748b",
       "size": 0.85,
       "file": "labs/17_backdoor_dropper/README.md",
-      "description": "Documentação: README"
+      "description": "Código-fonte: `labs/17_backdoor_dropper/README.md`"
     },
     {
-      "id": "dz-labs-17-backdoor-dropper-simulate-backdoor-py",
+      "id": "danger-zone-file-labs-17-backdoor-dropper-simulate-backdoor-py",
       "label": "simulate_backdoor.py",
-      "parent": "dz-labs-sim",
+      "parent": "danger-zone-dir-labs-17-backdoor-dropper",
       "layer": "file",
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
       "size": 0.85,
       "file": "labs/17_backdoor_dropper/simulate_backdoor.py",
-      "description": "Ilustração não funcional: simulate_backdoor"
+      "description": "Código-fonte: `labs/17_backdoor_dropper/simulate_backdoor.py`"
     },
     {
-      "id": "dz-labs-18-phishing-lure-readme-md",
+      "id": "danger-zone-file-labs-18-phishing-lure-readme-md",
       "label": "README.md",
-      "parent": "dz-labs-sim",
+      "parent": "danger-zone-dir-labs-18-phishing-lure",
       "layer": "file",
       "category": "other",
       "categoryLabel": "Outros",
       "color": "#64748b",
       "size": 0.85,
       "file": "labs/18_phishing_lure/README.md",
-      "description": "Documentação: README"
+      "description": "Código-fonte: `labs/18_phishing_lure/README.md`"
     },
     {
-      "id": "dz-labs-18-phishing-lure-simulate-phishing-py",
+      "id": "danger-zone-file-labs-18-phishing-lure-simulate-phishing-py",
       "label": "simulate_phishing.py",
-      "parent": "dz-labs-sim",
+      "parent": "danger-zone-dir-labs-18-phishing-lure",
       "layer": "file",
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
       "size": 0.85,
       "file": "labs/18_phishing_lure/simulate_phishing.py",
-      "description": "Ilustração não funcional: simulate_phishing"
+      "description": "Código-fonte: `labs/18_phishing_lure/simulate_phishing.py`"
     },
     {
-      "id": "dz-labs-19-supply-chain-readme-md",
+      "id": "danger-zone-file-labs-19-supply-chain-readme-md",
       "label": "README.md",
-      "parent": "dz-labs-sim",
+      "parent": "danger-zone-dir-labs-19-supply-chain",
       "layer": "file",
       "category": "other",
       "categoryLabel": "Outros",
       "color": "#64748b",
       "size": 0.85,
       "file": "labs/19_supply_chain/README.md",
-      "description": "Documentação: README"
+      "description": "Código-fonte: `labs/19_supply_chain/README.md`"
     },
     {
-      "id": "dz-labs-19-supply-chain-simulate-supply-chain-py",
+      "id": "danger-zone-file-labs-19-supply-chain-simulate-supply-chain-py",
       "label": "simulate_supply_chain.py",
-      "parent": "dz-labs-sim",
+      "parent": "danger-zone-dir-labs-19-supply-chain",
       "layer": "file",
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
       "size": 0.85,
       "file": "labs/19_supply_chain/simulate_supply_chain.py",
-      "description": "Ilustração não funcional: simulate_supply_chain"
+      "description": "Código-fonte: `labs/19_supply_chain/simulate_supply_chain.py`"
     },
     {
-      "id": "dz-labs-20-enterprise-hardening-checklist-py",
+      "id": "danger-zone-file-labs-20-enterprise-hardening-checklist-py",
       "label": "checklist.py",
-      "parent": "dz-labs-def",
+      "parent": "danger-zone-dir-labs-20-enterprise-hardening",
       "layer": "file",
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
       "size": 0.85,
       "file": "labs/20_enterprise_hardening/checklist.py",
-      "description": "Arquivo educacional `labs/20_enterprise_hardening/checklist.py` — risco/conceito/prevenção."
+      "description": "Código-fonte: `labs/20_enterprise_hardening/checklist.py`"
     },
     {
-      "id": "dz-labs-20-enterprise-hardening-readme-md",
+      "id": "danger-zone-file-labs-20-enterprise-hardening-readme-md",
       "label": "README.md",
-      "parent": "dz-labs-def",
+      "parent": "danger-zone-dir-labs-20-enterprise-hardening",
       "layer": "file",
       "category": "other",
       "categoryLabel": "Outros",
       "color": "#64748b",
       "size": 0.85,
       "file": "labs/20_enterprise_hardening/README.md",
-      "description": "Documentação: README"
+      "description": "Código-fonte: `labs/20_enterprise_hardening/README.md`"
     },
     {
-      "id": "dz-prevention-print-controls-py",
+      "id": "danger-zone-file-prevention-print-controls-py",
       "label": "print_controls.py",
-      "parent": "dz-prevention",
+      "parent": "danger-zone-dir-prevention",
       "layer": "file",
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
       "size": 0.85,
       "file": "prevention/print_controls.py",
-      "description": "Arquivo educacional `prevention/print_controls.py` — risco/conceito/prevenção."
+      "description": "Código-fonte: `prevention/print_controls.py`"
+    },
+    {
+      "id": "danger-zone-file-tools-generate-catalog-py",
+      "label": "generate_catalog.py",
+      "parent": "danger-zone-dir-tools",
+      "layer": "file",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 0.85,
+      "file": "tools/generate_catalog.py",
+      "description": "Código-fonte: `tools/generate_catalog.py`"
     }
   ],
   "links": [
     {
-      "source": "dz-root",
-      "target": "dz-common",
+      "source": "danger-zone-root",
+      "target": "danger-zone-dir-catalog",
       "type": "dependency"
     },
     {
-      "source": "dz-root",
-      "target": "dz-catalog",
+      "source": "danger-zone-root",
+      "target": "danger-zone-dir-common",
       "type": "dependency"
     },
     {
-      "source": "dz-root",
-      "target": "dz-labs-sim",
+      "source": "danger-zone-root",
+      "target": "danger-zone-dir-conference",
       "type": "dependency"
     },
     {
-      "source": "dz-root",
-      "target": "dz-labs-def",
+      "source": "danger-zone-root",
+      "target": "danger-zone-dir-demos",
       "type": "dependency"
     },
     {
-      "source": "dz-root",
-      "target": "dz-docs",
+      "source": "danger-zone-root",
+      "target": "danger-zone-dir-docs",
       "type": "dependency"
     },
     {
-      "source": "dz-root",
-      "target": "dz-conference",
+      "source": "danger-zone-root",
+      "target": "danger-zone-dir-labs",
       "type": "dependency"
     },
     {
-      "source": "dz-root",
-      "target": "dz-prevention",
+      "source": "danger-zone-root",
+      "target": "danger-zone-dir-prevention",
       "type": "dependency"
     },
     {
-      "source": "dz-root",
-      "target": "dz-demos",
+      "source": "danger-zone-root",
+      "target": "danger-zone-dir-tools",
       "type": "dependency"
     },
     {
-      "source": "dz-labs-sim",
-      "target": "dz-lab-users",
+      "source": "danger-zone-dir-labs",
+      "target": "danger-zone-dir-labs-01-virus-lifecycle",
       "type": "dependency"
     },
     {
-      "source": "dz-catalog",
-      "target": "dz-catalog-adware-py",
+      "source": "danger-zone-dir-labs",
+      "target": "danger-zone-dir-labs-02-worm-propagation",
       "type": "dependency"
     },
     {
-      "source": "dz-catalog-adware-py",
-      "target": "dz-catalog-adware-py-illustrative-adware",
+      "source": "danger-zone-dir-labs",
+      "target": "danger-zone-dir-labs-03-trojan-behavior",
       "type": "dependency"
     },
     {
-      "source": "dz-catalog",
-      "target": "dz-catalog-apt-campaign-py",
+      "source": "danger-zone-dir-labs",
+      "target": "danger-zone-dir-labs-04-ransomware-concept",
       "type": "dependency"
     },
     {
-      "source": "dz-catalog-apt-campaign-py",
-      "target": "dz-catalog-apt-campaign-py-illustrative-apt-stages",
+      "source": "danger-zone-dir-labs",
+      "target": "danger-zone-dir-labs-05-spyware-telemetry",
       "type": "dependency"
     },
     {
-      "source": "dz-catalog",
-      "target": "dz-catalog-backdoor-py",
+      "source": "danger-zone-dir-labs",
+      "target": "danger-zone-dir-labs-06-ioc-detector",
       "type": "dependency"
     },
     {
-      "source": "dz-catalog-backdoor-py",
-      "target": "dz-catalog-backdoor-py-illustrative-backdoor",
+      "source": "danger-zone-dir-labs",
+      "target": "danger-zone-dir-labs-07-hash-integrity",
       "type": "dependency"
     },
     {
-      "source": "dz-catalog",
-      "target": "dz-catalog-banking-trojan-py",
+      "source": "danger-zone-dir-labs",
+      "target": "danger-zone-dir-labs-08-behavioral-analyzer",
       "type": "dependency"
     },
     {
-      "source": "dz-catalog-banking-trojan-py",
-      "target": "dz-catalog-banking-trojan-py-illustrative-bank",
+      "source": "danger-zone-dir-labs",
+      "target": "danger-zone-dir-labs-09-yara-like-scanner",
       "type": "dependency"
     },
     {
-      "source": "dz-catalog",
-      "target": "dz-catalog-bootkit-py",
+      "source": "danger-zone-dir-labs",
+      "target": "danger-zone-dir-labs-10-rootkit-concept",
       "type": "dependency"
     },
     {
-      "source": "dz-catalog-bootkit-py",
-      "target": "dz-catalog-bootkit-py-illustrative-bootkit",
+      "source": "danger-zone-dir-labs",
+      "target": "danger-zone-dir-labs-11-botnet-concept",
       "type": "dependency"
     },
     {
-      "source": "dz-catalog",
-      "target": "dz-catalog-botnet-py",
+      "source": "danger-zone-dir-labs",
+      "target": "danger-zone-dir-labs-12-adware-scareware",
       "type": "dependency"
     },
     {
-      "source": "dz-catalog-botnet-py",
-      "target": "dz-catalog-botnet-py-illustrative-bot-loop",
+      "source": "danger-zone-dir-labs",
+      "target": "danger-zone-dir-labs-13-cryptojacker",
       "type": "dependency"
     },
     {
-      "source": "dz-catalog",
-      "target": "dz-catalog-browser-hijacker-py",
+      "source": "danger-zone-dir-labs",
+      "target": "danger-zone-dir-labs-14-fileless-concept",
       "type": "dependency"
     },
     {
-      "source": "dz-catalog-browser-hijacker-py",
-      "target": "dz-catalog-browser-hijacker-py-illustrative-hijack",
+      "source": "danger-zone-dir-labs",
+      "target": "danger-zone-dir-labs-15-macro-malware",
       "type": "dependency"
     },
     {
-      "source": "dz-catalog",
-      "target": "dz-catalog-cryptojacker-py",
+      "source": "danger-zone-dir-labs",
+      "target": "danger-zone-dir-labs-16-logic-bomb",
       "type": "dependency"
     },
     {
-      "source": "dz-catalog-cryptojacker-py",
-      "target": "dz-catalog-cryptojacker-py-illustrative-mine",
+      "source": "danger-zone-dir-labs",
+      "target": "danger-zone-dir-labs-17-backdoor-dropper",
       "type": "dependency"
     },
     {
-      "source": "dz-catalog",
-      "target": "dz-catalog-double-extortion-py",
+      "source": "danger-zone-dir-labs",
+      "target": "danger-zone-dir-labs-18-phishing-lure",
       "type": "dependency"
     },
     {
-      "source": "dz-catalog-double-extortion-py",
-      "target": "dz-catalog-double-extortion-py-illustrative-double-",
+      "source": "danger-zone-dir-labs",
+      "target": "danger-zone-dir-labs-19-supply-chain",
       "type": "dependency"
     },
     {
-      "source": "dz-catalog",
-      "target": "dz-catalog-dropper-loader-py",
+      "source": "danger-zone-dir-labs",
+      "target": "danger-zone-dir-labs-20-enterprise-hardening",
       "type": "dependency"
     },
     {
-      "source": "dz-catalog-dropper-loader-py",
-      "target": "dz-catalog-dropper-loader-py-illustrative-dropper",
+      "source": "danger-zone-root",
+      "target": "danger-zone-file-gitignore",
       "type": "dependency"
     },
     {
-      "source": "dz-catalog",
-      "target": "dz-catalog-fileless-py",
+      "source": "danger-zone-root",
+      "target": "danger-zone-file-disclaimer-md",
       "type": "dependency"
     },
     {
-      "source": "dz-catalog-fileless-py",
-      "target": "dz-catalog-fileless-py-illustrative-fileless",
+      "source": "danger-zone-dir-catalog",
+      "target": "danger-zone-grp-catalog-files-a-b-c-d-f",
       "type": "dependency"
     },
     {
-      "source": "dz-catalog",
-      "target": "dz-catalog-infostealer-py",
+      "source": "danger-zone-dir-catalog",
+      "target": "danger-zone-grp-catalog-files-i-l-m-p-r",
       "type": "dependency"
     },
     {
-      "source": "dz-catalog-infostealer-py",
-      "target": "dz-catalog-infostealer-py-illustrative-steal",
+      "source": "danger-zone-dir-catalog",
+      "target": "danger-zone-grp-catalog-files-s-t-v-w",
       "type": "dependency"
     },
     {
-      "source": "dz-catalog",
-      "target": "dz-catalog-iot-malware-py",
+      "source": "danger-zone-grp-catalog-files-a-b-c-d-f",
+      "target": "danger-zone-file-catalog-adware-py",
       "type": "dependency"
     },
     {
-      "source": "dz-catalog-iot-malware-py",
-      "target": "dz-catalog-iot-malware-py-illustrative-iot",
+      "source": "danger-zone-grp-catalog-files-a-b-c-d-f",
+      "target": "danger-zone-file-catalog-apt-campaign-py",
       "type": "dependency"
     },
     {
-      "source": "dz-catalog",
-      "target": "dz-catalog-logic-bomb-py",
+      "source": "danger-zone-grp-catalog-files-a-b-c-d-f",
+      "target": "danger-zone-file-catalog-backdoor-py",
       "type": "dependency"
     },
     {
-      "source": "dz-catalog-logic-bomb-py",
-      "target": "dz-catalog-logic-bomb-py-illustrative-logic-bomb",
+      "source": "danger-zone-grp-catalog-files-a-b-c-d-f",
+      "target": "danger-zone-file-catalog-banking-trojan-py",
       "type": "dependency"
     },
     {
-      "source": "dz-catalog",
-      "target": "dz-catalog-macro-malware-py",
+      "source": "danger-zone-grp-catalog-files-a-b-c-d-f",
+      "target": "danger-zone-file-catalog-bootkit-py",
       "type": "dependency"
     },
     {
-      "source": "dz-catalog-macro-malware-py",
-      "target": "dz-catalog-macro-malware-py-illustrative-macro",
+      "source": "danger-zone-grp-catalog-files-a-b-c-d-f",
+      "target": "danger-zone-file-catalog-botnet-py",
       "type": "dependency"
     },
     {
-      "source": "dz-catalog",
-      "target": "dz-catalog-mobile-malware-py",
+      "source": "danger-zone-grp-catalog-files-a-b-c-d-f",
+      "target": "danger-zone-file-catalog-browser-hijacker-py",
       "type": "dependency"
     },
     {
-      "source": "dz-catalog-mobile-malware-py",
-      "target": "dz-catalog-mobile-malware-py-illustrative-mobile",
+      "source": "danger-zone-grp-catalog-files-a-b-c-d-f",
+      "target": "danger-zone-file-catalog-cryptojacker-py",
       "type": "dependency"
     },
     {
-      "source": "dz-catalog",
-      "target": "dz-catalog-packer-obfuscation-py",
+      "source": "danger-zone-grp-catalog-files-a-b-c-d-f",
+      "target": "danger-zone-file-catalog-double-extortion-py",
       "type": "dependency"
     },
     {
-      "source": "dz-catalog-packer-obfuscation-py",
-      "target": "dz-catalog-packer-obfuscation-py-illustrative-packe",
+      "source": "danger-zone-grp-catalog-files-a-b-c-d-f",
+      "target": "danger-zone-file-catalog-dropper-loader-py",
       "type": "dependency"
     },
     {
-      "source": "dz-catalog",
-      "target": "dz-catalog-phishing-lure-py",
+      "source": "danger-zone-grp-catalog-files-a-b-c-d-f",
+      "target": "danger-zone-file-catalog-fileless-py",
       "type": "dependency"
     },
     {
-      "source": "dz-catalog-phishing-lure-py",
-      "target": "dz-catalog-phishing-lure-py-illustrative-phish",
+      "source": "danger-zone-grp-catalog-files-i-l-m-p-r",
+      "target": "danger-zone-file-catalog-infostealer-py",
       "type": "dependency"
     },
     {
-      "source": "dz-catalog",
-      "target": "dz-catalog-polymorphic-py",
+      "source": "danger-zone-grp-catalog-files-i-l-m-p-r",
+      "target": "danger-zone-file-catalog-iot-malware-py",
       "type": "dependency"
     },
     {
-      "source": "dz-catalog-polymorphic-py",
-      "target": "dz-catalog-polymorphic-py-illustrative-mutate",
+      "source": "danger-zone-grp-catalog-files-i-l-m-p-r",
+      "target": "danger-zone-file-catalog-logic-bomb-py",
       "type": "dependency"
     },
     {
-      "source": "dz-catalog",
-      "target": "dz-catalog-ransomware-py",
+      "source": "danger-zone-grp-catalog-files-i-l-m-p-r",
+      "target": "danger-zone-file-catalog-macro-malware-py",
       "type": "dependency"
     },
     {
-      "source": "dz-catalog-ransomware-py",
-      "target": "dz-catalog-ransomware-py-illustrative-encrypt",
+      "source": "danger-zone-grp-catalog-files-i-l-m-p-r",
+      "target": "danger-zone-file-catalog-mobile-malware-py",
       "type": "dependency"
     },
     {
-      "source": "dz-catalog",
-      "target": "dz-catalog-readme-md",
+      "source": "danger-zone-grp-catalog-files-i-l-m-p-r",
+      "target": "danger-zone-file-catalog-packer-obfuscation-py",
       "type": "dependency"
     },
     {
-      "source": "dz-catalog",
-      "target": "dz-catalog-rootkit-py",
+      "source": "danger-zone-grp-catalog-files-i-l-m-p-r",
+      "target": "danger-zone-file-catalog-phishing-lure-py",
       "type": "dependency"
     },
     {
-      "source": "dz-catalog-rootkit-py",
-      "target": "dz-catalog-rootkit-py-illustrative-hide",
+      "source": "danger-zone-grp-catalog-files-i-l-m-p-r",
+      "target": "danger-zone-file-catalog-polymorphic-py",
       "type": "dependency"
     },
     {
-      "source": "dz-catalog",
-      "target": "dz-catalog-scareware-py",
+      "source": "danger-zone-grp-catalog-files-i-l-m-p-r",
+      "target": "danger-zone-file-catalog-ransomware-py",
       "type": "dependency"
     },
     {
-      "source": "dz-catalog-scareware-py",
-      "target": "dz-catalog-scareware-py-illustrative-scare",
+      "source": "danger-zone-grp-catalog-files-i-l-m-p-r",
+      "target": "danger-zone-file-catalog-readme-md",
       "type": "dependency"
     },
     {
-      "source": "dz-catalog",
-      "target": "dz-catalog-spyware-keylogger-py",
+      "source": "danger-zone-grp-catalog-files-i-l-m-p-r",
+      "target": "danger-zone-file-catalog-rootkit-py",
       "type": "dependency"
     },
     {
-      "source": "dz-catalog-spyware-keylogger-py",
-      "target": "dz-catalog-spyware-keylogger-py-illustrative-keylog",
+      "source": "danger-zone-grp-catalog-files-s-t-v-w",
+      "target": "danger-zone-file-catalog-scareware-py",
       "type": "dependency"
     },
     {
-      "source": "dz-catalog",
-      "target": "dz-catalog-supply-chain-py",
+      "source": "danger-zone-grp-catalog-files-s-t-v-w",
+      "target": "danger-zone-file-catalog-spyware-keylogger-py",
       "type": "dependency"
     },
     {
-      "source": "dz-catalog-supply-chain-py",
-      "target": "dz-catalog-supply-chain-py-illustrative-supply-chai",
+      "source": "danger-zone-grp-catalog-files-s-t-v-w",
+      "target": "danger-zone-file-catalog-supply-chain-py",
       "type": "dependency"
     },
     {
-      "source": "dz-catalog",
-      "target": "dz-catalog-trojan-rat-py",
+      "source": "danger-zone-grp-catalog-files-s-t-v-w",
+      "target": "danger-zone-file-catalog-trojan-rat-py",
       "type": "dependency"
     },
     {
-      "source": "dz-catalog-trojan-rat-py",
-      "target": "dz-catalog-trojan-rat-py-illustrative-trojan-ui",
+      "source": "danger-zone-grp-catalog-files-s-t-v-w",
+      "target": "danger-zone-file-catalog-virus-file-infector-py",
       "type": "dependency"
     },
     {
-      "source": "dz-catalog-trojan-rat-py",
-      "target": "dz-catalog-trojan-rat-py-illustrative-hidden-channe",
+      "source": "danger-zone-grp-catalog-files-s-t-v-w",
+      "target": "danger-zone-file-catalog-wiper-py",
       "type": "dependency"
     },
     {
-      "source": "dz-catalog",
-      "target": "dz-catalog-virus-file-infector-py",
+      "source": "danger-zone-grp-catalog-files-s-t-v-w",
+      "target": "danger-zone-file-catalog-worm-network-py",
       "type": "dependency"
     },
     {
-      "source": "dz-catalog-virus-file-infector-py",
-      "target": "dz-catalog-virus-file-infector-py-illustrative-infe",
+      "source": "danger-zone-dir-common",
+      "target": "danger-zone-file-common-init-py",
       "type": "dependency"
     },
     {
-      "source": "dz-catalog",
-      "target": "dz-catalog-wiper-py",
+      "source": "danger-zone-dir-common",
+      "target": "danger-zone-file-common-banner-py",
       "type": "dependency"
     },
     {
-      "source": "dz-catalog-wiper-py",
-      "target": "dz-catalog-wiper-py-illustrative-wipe",
+      "source": "danger-zone-dir-common",
+      "target": "danger-zone-file-common-telemetry-py",
       "type": "dependency"
     },
     {
-      "source": "dz-catalog",
-      "target": "dz-catalog-worm-network-py",
+      "source": "danger-zone-dir-common",
+      "target": "danger-zone-file-common-virtual-fs-py",
       "type": "dependency"
     },
     {
-      "source": "dz-catalog-worm-network-py",
-      "target": "dz-catalog-worm-network-py-illustrative-spread",
+      "source": "danger-zone-dir-conference",
+      "target": "danger-zone-file-conference-outline-md",
       "type": "dependency"
     },
     {
-      "source": "dz-common",
-      "target": "dz-common-init-py",
+      "source": "danger-zone-dir-conference",
+      "target": "danger-zone-file-conference-talking-points-md",
       "type": "dependency"
     },
     {
-      "source": "dz-common",
-      "target": "dz-common-banner-py",
+      "source": "danger-zone-dir-demos",
+      "target": "danger-zone-file-demos-run-all-sims-py",
       "type": "dependency"
     },
     {
-      "source": "dz-common",
-      "target": "dz-common-telemetry-py",
+      "source": "danger-zone-dir-docs",
+      "target": "danger-zone-file-docs-detection-playbook-md",
       "type": "dependency"
     },
     {
-      "source": "dz-common",
-      "target": "dz-common-virtual-fs-py",
+      "source": "danger-zone-dir-docs",
+      "target": "danger-zone-file-docs-enterprise-prevention-md",
       "type": "dependency"
     },
     {
-      "source": "dz-conference",
-      "target": "dz-conference-outline-md",
+      "source": "danger-zone-dir-docs",
+      "target": "danger-zone-file-docs-kill-chain-md",
       "type": "dependency"
     },
     {
-      "source": "dz-conference",
-      "target": "dz-conference-talking-points-md",
+      "source": "danger-zone-dir-docs",
+      "target": "danger-zone-file-docs-malware-catalog-md",
       "type": "dependency"
     },
     {
-      "source": "dz-demos",
-      "target": "dz-demos-run-all-sims-py",
+      "source": "danger-zone-dir-docs",
+      "target": "danger-zone-file-docs-risk-matrix-md",
       "type": "dependency"
     },
     {
-      "source": "dz-root",
-      "target": "dz-disclaimer-md",
+      "source": "danger-zone-dir-docs",
+      "target": "danger-zone-file-docs-taxonomy-md",
       "type": "dependency"
     },
     {
-      "source": "dz-docs",
-      "target": "dz-docs-detection-playbook-md",
+      "source": "danger-zone-dir-labs-01-virus-lifecycle",
+      "target": "danger-zone-file-labs-01-virus-lifecycle-readme-md",
       "type": "dependency"
     },
     {
-      "source": "dz-docs",
-      "target": "dz-docs-enterprise-prevention-md",
+      "source": "danger-zone-dir-labs-01-virus-lifecycle",
+      "target": "danger-zone-file-labs-01-virus-lifecycle-simulate-virus-py",
       "type": "dependency"
     },
     {
-      "source": "dz-docs",
-      "target": "dz-docs-kill-chain-md",
+      "source": "danger-zone-dir-labs-02-worm-propagation",
+      "target": "danger-zone-file-labs-02-worm-propagation-readme-md",
       "type": "dependency"
     },
     {
-      "source": "dz-docs",
-      "target": "dz-docs-malware-catalog-md",
+      "source": "danger-zone-dir-labs-02-worm-propagation",
+      "target": "danger-zone-file-labs-02-worm-propagation-simulate-worm-py",
       "type": "dependency"
     },
     {
-      "source": "dz-docs",
-      "target": "dz-docs-risk-matrix-md",
+      "source": "danger-zone-dir-labs-03-trojan-behavior",
+      "target": "danger-zone-file-labs-03-trojan-behavior-readme-md",
       "type": "dependency"
     },
     {
-      "source": "dz-docs",
-      "target": "dz-docs-taxonomy-md",
+      "source": "danger-zone-dir-labs-03-trojan-behavior",
+      "target": "danger-zone-file-labs-03-trojan-behavior-simulate-trojan-py",
       "type": "dependency"
     },
     {
-      "source": "dz-labs-sim",
-      "target": "dz-labs-01-virus-lifecycle-readme-md",
+      "source": "danger-zone-dir-labs-04-ransomware-concept",
+      "target": "danger-zone-file-labs-04-ransomware-concept-readme-md",
       "type": "dependency"
     },
     {
-      "source": "dz-labs-sim",
-      "target": "dz-labs-01-virus-lifecycle-simulate-virus-py",
+      "source": "danger-zone-dir-labs-04-ransomware-concept",
+      "target": "danger-zone-file-labs-04-ransomware-concept-simulate-ransomware-py",
       "type": "dependency"
     },
     {
-      "source": "dz-labs-01-virus-lifecycle-simulate-virus-py",
-      "target": "dz-labs-01-virus-lifecycle-simulate-virus-py-simula",
+      "source": "danger-zone-dir-labs-05-spyware-telemetry",
+      "target": "danger-zone-file-labs-05-spyware-telemetry-readme-md",
       "type": "dependency"
     },
     {
-      "source": "dz-labs-sim",
-      "target": "dz-labs-02-worm-propagation-readme-md",
+      "source": "danger-zone-dir-labs-05-spyware-telemetry",
+      "target": "danger-zone-file-labs-05-spyware-telemetry-simulate-spyware-py",
       "type": "dependency"
     },
     {
-      "source": "dz-labs-sim",
-      "target": "dz-labs-02-worm-propagation-simulate-worm-py",
+      "source": "danger-zone-dir-labs-06-ioc-detector",
+      "target": "danger-zone-file-labs-06-ioc-detector-detector-py",
       "type": "dependency"
     },
     {
-      "source": "dz-labs-02-worm-propagation-simulate-worm-py",
-      "target": "dz-labs-02-worm-propagation-simulate-worm-py-simula",
+      "source": "danger-zone-dir-labs-06-ioc-detector",
+      "target": "danger-zone-file-labs-06-ioc-detector-readme-md",
       "type": "dependency"
     },
     {
-      "source": "dz-labs-sim",
-      "target": "dz-labs-03-trojan-behavior-readme-md",
+      "source": "danger-zone-dir-labs-07-hash-integrity",
+      "target": "danger-zone-file-labs-07-hash-integrity-integrity-py",
       "type": "dependency"
     },
     {
-      "source": "dz-labs-sim",
-      "target": "dz-labs-03-trojan-behavior-simulate-trojan-py",
+      "source": "danger-zone-dir-labs-07-hash-integrity",
+      "target": "danger-zone-file-labs-07-hash-integrity-readme-md",
       "type": "dependency"
     },
     {
-      "source": "dz-labs-sim",
-      "target": "dz-labs-04-ransomware-concept-readme-md",
+      "source": "danger-zone-dir-labs-08-behavioral-analyzer",
+      "target": "danger-zone-file-labs-08-behavioral-analyzer-analyzer-py",
       "type": "dependency"
     },
     {
-      "source": "dz-labs-sim",
-      "target": "dz-labs-04-ransomware-concept-simulate-ransomware-p",
+      "source": "danger-zone-dir-labs-08-behavioral-analyzer",
+      "target": "danger-zone-file-labs-08-behavioral-analyzer-readme-md",
       "type": "dependency"
     },
     {
-      "source": "dz-labs-04-ransomware-concept-simulate-ransomware-p",
-      "target": "dz-labs-04-ransomware-concept-simulate-ransomware-p-2",
+      "source": "danger-zone-dir-labs-09-yara-like-scanner",
+      "target": "danger-zone-file-labs-09-yara-like-scanner-pattern-scanner-py",
       "type": "dependency"
     },
     {
-      "source": "dz-labs-04-ransomware-concept-simulate-ransomware-p",
-      "target": "dz-labs-04-ransomware-concept-simulate-ransomware-p-3",
+      "source": "danger-zone-dir-labs-09-yara-like-scanner",
+      "target": "danger-zone-file-labs-09-yara-like-scanner-readme-md",
       "type": "dependency"
     },
     {
-      "source": "dz-labs-04-ransomware-concept-simulate-ransomware-p",
-      "target": "dz-labs-04-ransomware-concept-simulate-ransomware-p-4",
+      "source": "danger-zone-dir-labs-10-rootkit-concept",
+      "target": "danger-zone-file-labs-10-rootkit-concept-readme-md",
       "type": "dependency"
     },
     {
-      "source": "dz-labs-sim",
-      "target": "dz-labs-05-spyware-telemetry-readme-md",
+      "source": "danger-zone-dir-labs-10-rootkit-concept",
+      "target": "danger-zone-file-labs-10-rootkit-concept-simulate-rootkit-py",
       "type": "dependency"
     },
     {
-      "source": "dz-labs-sim",
-      "target": "dz-labs-05-spyware-telemetry-simulate-spyware-py",
+      "source": "danger-zone-dir-labs-11-botnet-concept",
+      "target": "danger-zone-file-labs-11-botnet-concept-readme-md",
       "type": "dependency"
     },
     {
-      "source": "dz-labs-05-spyware-telemetry-simulate-spyware-py",
-      "target": "dz-labs-05-spyware-telemetry-simulate-spyware-py-si",
+      "source": "danger-zone-dir-labs-11-botnet-concept",
+      "target": "danger-zone-file-labs-11-botnet-concept-simulate-botnet-py",
       "type": "dependency"
     },
     {
-      "source": "dz-labs-def",
-      "target": "dz-labs-06-ioc-detector-detector-py",
+      "source": "danger-zone-dir-labs-12-adware-scareware",
+      "target": "danger-zone-file-labs-12-adware-scareware-readme-md",
       "type": "dependency"
     },
     {
-      "source": "dz-labs-06-ioc-detector-detector-py",
-      "target": "dz-labs-06-ioc-detector-detector-py-match",
+      "source": "danger-zone-dir-labs-12-adware-scareware",
+      "target": "danger-zone-file-labs-12-adware-scareware-simulate-adware-py",
       "type": "dependency"
     },
     {
-      "source": "dz-labs-def",
-      "target": "dz-labs-06-ioc-detector-readme-md",
+      "source": "danger-zone-dir-labs-13-cryptojacker",
+      "target": "danger-zone-file-labs-13-cryptojacker-readme-md",
       "type": "dependency"
     },
     {
-      "source": "dz-labs-def",
-      "target": "dz-labs-07-hash-integrity-integrity-py",
+      "source": "danger-zone-dir-labs-13-cryptojacker",
+      "target": "danger-zone-file-labs-13-cryptojacker-simulate-cryptojacker-py",
       "type": "dependency"
     },
     {
-      "source": "dz-labs-07-hash-integrity-integrity-py",
-      "target": "dz-labs-07-hash-integrity-integrity-py-baseline",
+      "source": "danger-zone-dir-labs-14-fileless-concept",
+      "target": "danger-zone-file-labs-14-fileless-concept-readme-md",
       "type": "dependency"
     },
     {
-      "source": "dz-labs-def",
-      "target": "dz-labs-07-hash-integrity-readme-md",
+      "source": "danger-zone-dir-labs-14-fileless-concept",
+      "target": "danger-zone-file-labs-14-fileless-concept-simulate-fileless-py",
       "type": "dependency"
     },
     {
-      "source": "dz-labs-def",
-      "target": "dz-labs-08-behavioral-analyzer-analyzer-py",
+      "source": "danger-zone-dir-labs-15-macro-malware",
+      "target": "danger-zone-file-labs-15-macro-malware-readme-md",
       "type": "dependency"
     },
     {
-      "source": "dz-labs-08-behavioral-analyzer-analyzer-py",
-      "target": "dz-labs-08-behavioral-analyzer-analyzer-py-score-fi",
+      "source": "danger-zone-dir-labs-15-macro-malware",
+      "target": "danger-zone-file-labs-15-macro-malware-simulate-macro-py",
       "type": "dependency"
     },
     {
-      "source": "dz-labs-def",
-      "target": "dz-labs-08-behavioral-analyzer-readme-md",
+      "source": "danger-zone-dir-labs-16-logic-bomb",
+      "target": "danger-zone-file-labs-16-logic-bomb-readme-md",
       "type": "dependency"
     },
     {
-      "source": "dz-labs-def",
-      "target": "dz-labs-09-yara-like-scanner-pattern-scanner-py",
+      "source": "danger-zone-dir-labs-16-logic-bomb",
+      "target": "danger-zone-file-labs-16-logic-bomb-simulate-logic-bomb-py",
       "type": "dependency"
     },
     {
-      "source": "dz-labs-09-yara-like-scanner-pattern-scanner-py",
-      "target": "dz-labs-09-yara-like-scanner-pattern-scanner-py-sca",
+      "source": "danger-zone-dir-labs-17-backdoor-dropper",
+      "target": "danger-zone-file-labs-17-backdoor-dropper-readme-md",
       "type": "dependency"
     },
     {
-      "source": "dz-labs-def",
-      "target": "dz-labs-09-yara-like-scanner-readme-md",
+      "source": "danger-zone-dir-labs-17-backdoor-dropper",
+      "target": "danger-zone-file-labs-17-backdoor-dropper-simulate-backdoor-py",
       "type": "dependency"
     },
     {
-      "source": "dz-labs-sim",
-      "target": "dz-labs-10-rootkit-concept-readme-md",
+      "source": "danger-zone-dir-labs-18-phishing-lure",
+      "target": "danger-zone-file-labs-18-phishing-lure-readme-md",
       "type": "dependency"
     },
     {
-      "source": "dz-labs-sim",
-      "target": "dz-labs-10-rootkit-concept-simulate-rootkit-py",
+      "source": "danger-zone-dir-labs-18-phishing-lure",
+      "target": "danger-zone-file-labs-18-phishing-lure-simulate-phishing-py",
       "type": "dependency"
     },
     {
-      "source": "dz-labs-sim",
-      "target": "dz-labs-11-botnet-concept-readme-md",
+      "source": "danger-zone-dir-labs-19-supply-chain",
+      "target": "danger-zone-file-labs-19-supply-chain-readme-md",
       "type": "dependency"
     },
     {
-      "source": "dz-labs-sim",
-      "target": "dz-labs-11-botnet-concept-simulate-botnet-py",
+      "source": "danger-zone-dir-labs-19-supply-chain",
+      "target": "danger-zone-file-labs-19-supply-chain-simulate-supply-chain-py",
       "type": "dependency"
     },
     {
-      "source": "dz-labs-sim",
-      "target": "dz-labs-12-adware-scareware-readme-md",
+      "source": "danger-zone-dir-labs-20-enterprise-hardening",
+      "target": "danger-zone-file-labs-20-enterprise-hardening-checklist-py",
       "type": "dependency"
     },
     {
-      "source": "dz-labs-sim",
-      "target": "dz-labs-12-adware-scareware-simulate-adware-py",
+      "source": "danger-zone-dir-labs-20-enterprise-hardening",
+      "target": "danger-zone-file-labs-20-enterprise-hardening-readme-md",
       "type": "dependency"
     },
     {
-      "source": "dz-labs-sim",
-      "target": "dz-labs-13-cryptojacker-readme-md",
+      "source": "danger-zone-dir-prevention",
+      "target": "danger-zone-file-prevention-print-controls-py",
       "type": "dependency"
     },
     {
-      "source": "dz-labs-sim",
-      "target": "dz-labs-13-cryptojacker-simulate-cryptojacker-py",
-      "type": "dependency"
-    },
-    {
-      "source": "dz-labs-sim",
-      "target": "dz-labs-14-fileless-concept-readme-md",
-      "type": "dependency"
-    },
-    {
-      "source": "dz-labs-sim",
-      "target": "dz-labs-14-fileless-concept-simulate-fileless-py",
-      "type": "dependency"
-    },
-    {
-      "source": "dz-labs-sim",
-      "target": "dz-labs-15-macro-malware-readme-md",
-      "type": "dependency"
-    },
-    {
-      "source": "dz-labs-sim",
-      "target": "dz-labs-15-macro-malware-simulate-macro-py",
-      "type": "dependency"
-    },
-    {
-      "source": "dz-labs-sim",
-      "target": "dz-labs-16-logic-bomb-readme-md",
-      "type": "dependency"
-    },
-    {
-      "source": "dz-labs-sim",
-      "target": "dz-labs-16-logic-bomb-simulate-logic-bomb-py",
-      "type": "dependency"
-    },
-    {
-      "source": "dz-labs-sim",
-      "target": "dz-labs-17-backdoor-dropper-readme-md",
-      "type": "dependency"
-    },
-    {
-      "source": "dz-labs-sim",
-      "target": "dz-labs-17-backdoor-dropper-simulate-backdoor-py",
-      "type": "dependency"
-    },
-    {
-      "source": "dz-labs-sim",
-      "target": "dz-labs-18-phishing-lure-readme-md",
-      "type": "dependency"
-    },
-    {
-      "source": "dz-labs-sim",
-      "target": "dz-labs-18-phishing-lure-simulate-phishing-py",
-      "type": "dependency"
-    },
-    {
-      "source": "dz-labs-sim",
-      "target": "dz-labs-19-supply-chain-readme-md",
-      "type": "dependency"
-    },
-    {
-      "source": "dz-labs-sim",
-      "target": "dz-labs-19-supply-chain-simulate-supply-chain-py",
-      "type": "dependency"
-    },
-    {
-      "source": "dz-labs-def",
-      "target": "dz-labs-20-enterprise-hardening-checklist-py",
-      "type": "dependency"
-    },
-    {
-      "source": "dz-labs-def",
-      "target": "dz-labs-20-enterprise-hardening-readme-md",
-      "type": "dependency"
-    },
-    {
-      "source": "dz-prevention",
-      "target": "dz-prevention-print-controls-py",
+      "source": "danger-zone-dir-tools",
+      "target": "danger-zone-file-tools-generate-catalog-py",
       "type": "dependency"
     }
   ]

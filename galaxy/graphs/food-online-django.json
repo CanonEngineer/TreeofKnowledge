@@ -4,11 +4,19 @@
   "repoUrl": "https://github.com/CanonEngineer/FoodOnlineDjango",
   "color": "#f97316",
   "demoUrl": "",
-  "nodeCount": 20,
+  "nodeCount": 206,
   "categories": {
     "core": {
       "label": "Backend",
       "color": "#3b82f6"
+    },
+    "frontend": {
+      "label": "Frontend",
+      "color": "#eab308"
+    },
+    "tests": {
+      "label": "Testes",
+      "color": "#94a3b8"
     },
     "other": {
       "label": "Outros",
@@ -17,7 +25,7 @@
   },
   "nodes": [
     {
-      "id": "fod-root",
+      "id": "food-online-django-root",
       "label": "FoodOnlineDjango",
       "parent": null,
       "layer": "root",
@@ -25,332 +33,3494 @@
       "categoryLabel": "Backend",
       "color": "#3b82f6",
       "size": 2.2,
-      "file": "foodOnline/",
-      "description": "Plataforma multi-vendor de delivery com Django 5, PostGIS e RazorPay."
+      "file": "README.md",
+      "description": "Marketplace multi-vendor com RazorPay, roles Vendor/Customer e busca geoespacial."
     },
     {
-      "id": "fod-settings",
-      "label": "foodOnline/settings.py",
-      "parent": "fod-root",
-      "layer": "module",
-      "category": "core",
-      "categoryLabel": "Backend",
-      "color": "#3b82f6",
-      "size": 1.35,
-      "file": "foodOnline/settings.py",
-      "description": "Secrets via decouple, PostGIS, context processors e middleware customizado."
-    },
-    {
-      "id": "fod-urls",
-      "label": "urls.py",
-      "parent": "fod-settings",
-      "layer": "file",
-      "category": "core",
-      "categoryLabel": "Backend",
-      "color": "#3b82f6",
-      "size": 0.85,
-      "file": "foodOnline/urls.py",
-      "description": "Roteador raiz: accounts, vendor, marketplace, cart, checkout e orders."
-    },
-    {
-      "id": "fod-accounts",
-      "label": "accounts",
-      "parent": "fod-root",
+      "id": "food-online-django-dir-accounts",
+      "label": "accounts/",
+      "parent": "food-online-django-root",
       "layer": "module",
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
       "size": 1.35,
       "file": "accounts/",
-      "description": "Auth customizada com roles Vendor (1) e Customer (2)."
+      "description": "Pacote/pasta `accounts/` do projeto."
     },
     {
-      "id": "fod-user-model",
-      "label": "User",
-      "parent": "fod-accounts",
-      "layer": "file",
-      "category": "core",
-      "categoryLabel": "Backend",
-      "color": "#3b82f6",
-      "size": 0.85,
-      "file": "accounts/models.py",
-      "description": "User customizado com email único e campo role."
-    },
-    {
-      "id": "fod-roles",
-      "label": "check_role_vendor()",
-      "parent": "fod-accounts",
-      "layer": "function",
-      "category": "core",
-      "categoryLabel": "Backend",
-      "color": "#3b82f6",
-      "size": 0.62,
-      "file": "accounts/views.py",
-      "description": "Decorators RBAC que restringem dashboards por role."
-    },
-    {
-      "id": "fod-register-user",
-      "label": "registerUser()",
-      "parent": "fod-accounts",
-      "layer": "function",
-      "category": "core",
-      "categoryLabel": "Backend",
-      "color": "#3b82f6",
-      "size": 0.62,
-      "file": "accounts/views.py",
-      "description": "Cadastro de Customer com create_user e e-mail de verificação."
-    },
-    {
-      "id": "fod-register-vendor",
-      "label": "registerVendor()",
-      "parent": "fod-accounts",
-      "layer": "function",
-      "category": "core",
-      "categoryLabel": "Backend",
-      "color": "#3b82f6",
-      "size": 0.62,
-      "file": "accounts/views.py",
-      "description": "Cadastro de restaurante: User + Vendor + slug único."
-    },
-    {
-      "id": "fod-activate",
-      "label": "activate()",
-      "parent": "fod-accounts",
-      "layer": "function",
-      "category": "core",
-      "categoryLabel": "Backend",
-      "color": "#3b82f6",
-      "size": 0.62,
-      "file": "accounts/views.py",
-      "description": "Ativa conta via uid/token do e-mail."
-    },
-    {
-      "id": "fod-vendor",
-      "label": "vendor",
-      "parent": "fod-root",
+      "id": "food-online-django-dir-customers",
+      "label": "customers/",
+      "parent": "food-online-django-root",
       "layer": "module",
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
       "size": 1.35,
-      "file": "vendor/",
-      "description": "Perfil de restaurante, horários e aprovação admin."
+      "file": "customers/",
+      "description": "Pacote/pasta `customers/` do projeto."
     },
     {
-      "id": "fod-vendor-model",
-      "label": "Vendor",
-      "parent": "fod-vendor",
-      "layer": "file",
-      "category": "core",
-      "categoryLabel": "Backend",
-      "color": "#3b82f6",
-      "size": 0.85,
-      "file": "vendor/models.py",
-      "description": "Modelo Vendor com slug e verificação de horário."
-    },
-    {
-      "id": "fod-menu",
-      "label": "menu",
-      "parent": "fod-root",
+      "id": "food-online-django-dir-foodonline",
+      "label": "foodOnline/",
+      "parent": "food-online-django-root",
       "layer": "module",
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
       "size": 1.35,
-      "file": "menu/",
-      "description": "Categorias e itens de comida por vendor."
+      "file": "foodOnline/",
+      "description": "Pacote/pasta `foodOnline/` do projeto."
     },
     {
-      "id": "fod-fooditem",
-      "label": "FoodItem",
-      "parent": "fod-menu",
-      "layer": "file",
-      "category": "core",
-      "categoryLabel": "Backend",
-      "color": "#3b82f6",
-      "size": 0.85,
-      "file": "menu/models.py",
-      "description": "Item do cardápio com preço e disponibilidade."
-    },
-    {
-      "id": "fod-marketplace",
-      "label": "marketplace",
-      "parent": "fod-root",
+      "id": "food-online-django-dir-marketplace",
+      "label": "marketplace/",
+      "parent": "food-online-django-root",
       "layer": "module",
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
       "size": 1.35,
       "file": "marketplace/",
-      "description": "Listagem, carrinho AJAX e busca geoespacial."
+      "description": "Pacote/pasta `marketplace/` do projeto."
     },
     {
-      "id": "fod-cart-counter",
-      "label": "get_cart_counter()",
-      "parent": "fod-marketplace",
-      "layer": "function",
+      "id": "food-online-django-dir-menu",
+      "label": "menu/",
+      "parent": "food-online-django-root",
+      "layer": "module",
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
-      "size": 0.62,
-      "file": "marketplace/context_processors.py",
-      "description": "Context processor com badge de quantidade no navbar."
+      "size": 1.35,
+      "file": "menu/",
+      "description": "Pacote/pasta `menu/` do projeto."
     },
     {
-      "id": "fod-add-cart",
-      "label": "add_to_cart()",
-      "parent": "fod-marketplace",
-      "layer": "function",
-      "category": "core",
-      "categoryLabel": "Backend",
-      "color": "#3b82f6",
-      "size": 0.62,
-      "file": "marketplace/views.py",
-      "description": "Adiciona item via AJAX incrementando quantity."
-    },
-    {
-      "id": "fod-search",
-      "label": "search()",
-      "parent": "fod-marketplace",
-      "layer": "function",
-      "category": "core",
-      "categoryLabel": "Backend",
-      "color": "#3b82f6",
-      "size": 0.62,
-      "file": "marketplace/views.py",
-      "description": "Busca vendors por keyword e raio PostGIS."
-    },
-    {
-      "id": "fod-orders",
-      "label": "orders",
-      "parent": "fod-root",
+      "id": "food-online-django-dir-orders",
+      "label": "orders/",
+      "parent": "food-online-django-root",
       "layer": "module",
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
       "size": 1.35,
       "file": "orders/",
-      "description": "Checkout multi-vendor, Payment e OrderedFood."
+      "description": "Pacote/pasta `orders/` do projeto."
     },
     {
-      "id": "fod-place-order",
-      "label": "place_order()",
-      "parent": "fod-orders",
-      "layer": "function",
+      "id": "food-online-django-dir-static",
+      "label": "static/",
+      "parent": "food-online-django-root",
+      "layer": "module",
+      "category": "frontend",
+      "categoryLabel": "Frontend",
+      "color": "#eab308",
+      "size": 1.35,
+      "file": "static/",
+      "description": "Pacote/pasta `static/` do projeto."
+    },
+    {
+      "id": "food-online-django-dir-templates",
+      "label": "templates/",
+      "parent": "food-online-django-root",
+      "layer": "module",
+      "category": "frontend",
+      "categoryLabel": "Frontend",
+      "color": "#eab308",
+      "size": 1.35,
+      "file": "templates/",
+      "description": "Pacote/pasta `templates/` do projeto."
+    },
+    {
+      "id": "food-online-django-dir-accounts-migrations",
+      "label": "migrations/",
+      "parent": "food-online-django-dir-accounts",
+      "layer": "module",
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
-      "size": 0.62,
-      "file": "orders/views.py",
-      "description": "Cria pedido pendente agrupando taxas por vendor."
+      "size": 1.35,
+      "file": "accounts/migrations/",
+      "description": "Pacote/pasta `accounts/migrations/` do projeto."
     },
     {
-      "id": "fod-payments",
-      "label": "payments()",
-      "parent": "fod-orders",
-      "layer": "function",
+      "id": "food-online-django-dir-customers-migrations",
+      "label": "migrations/",
+      "parent": "food-online-django-dir-customers",
+      "layer": "module",
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
-      "size": 0.62,
+      "size": 1.35,
+      "file": "customers/migrations/",
+      "description": "Pacote/pasta `customers/migrations/` do projeto."
+    },
+    {
+      "id": "food-online-django-dir-foodonline-static",
+      "label": "static/",
+      "parent": "food-online-django-dir-foodonline",
+      "layer": "module",
+      "category": "frontend",
+      "categoryLabel": "Frontend",
+      "color": "#eab308",
+      "size": 1.35,
+      "file": "foodOnline/static/",
+      "description": "Pacote/pasta `foodOnline/static/` do projeto."
+    },
+    {
+      "id": "food-online-django-dir-marketplace-migrations",
+      "label": "migrations/",
+      "parent": "food-online-django-dir-marketplace",
+      "layer": "module",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 1.35,
+      "file": "marketplace/migrations/",
+      "description": "Pacote/pasta `marketplace/migrations/` do projeto."
+    },
+    {
+      "id": "food-online-django-dir-menu-migrations",
+      "label": "migrations/",
+      "parent": "food-online-django-dir-menu",
+      "layer": "module",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 1.35,
+      "file": "menu/migrations/",
+      "description": "Pacote/pasta `menu/migrations/` do projeto."
+    },
+    {
+      "id": "food-online-django-dir-orders-migrations",
+      "label": "migrations/",
+      "parent": "food-online-django-dir-orders",
+      "layer": "module",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 1.35,
+      "file": "orders/migrations/",
+      "description": "Pacote/pasta `orders/migrations/` do projeto."
+    },
+    {
+      "id": "food-online-django-dir-static-admin",
+      "label": "admin/",
+      "parent": "food-online-django-dir-static",
+      "layer": "module",
+      "category": "frontend",
+      "categoryLabel": "Frontend",
+      "color": "#eab308",
+      "size": 1.35,
+      "file": "static/admin/",
+      "description": "Pacote/pasta `static/admin/` do projeto."
+    },
+    {
+      "id": "food-online-django-dir-static-css",
+      "label": "css/",
+      "parent": "food-online-django-dir-static",
+      "layer": "module",
+      "category": "frontend",
+      "categoryLabel": "Frontend",
+      "color": "#eab308",
+      "size": 1.35,
+      "file": "static/css/",
+      "description": "Pacote/pasta `static/css/` do projeto."
+    },
+    {
+      "id": "food-online-django-dir-static-js",
+      "label": "js/",
+      "parent": "food-online-django-dir-static",
+      "layer": "module",
+      "category": "frontend",
+      "categoryLabel": "Frontend",
+      "color": "#eab308",
+      "size": 1.35,
+      "file": "static/js/",
+      "description": "Pacote/pasta `static/js/` do projeto."
+    },
+    {
+      "id": "food-online-django-dir-templates-accounts",
+      "label": "accounts/",
+      "parent": "food-online-django-dir-templates",
+      "layer": "module",
+      "category": "frontend",
+      "categoryLabel": "Frontend",
+      "color": "#eab308",
+      "size": 1.35,
+      "file": "templates/accounts/",
+      "description": "Pacote/pasta `templates/accounts/` do projeto."
+    },
+    {
+      "id": "food-online-django-dir-templates-customers",
+      "label": "customers/",
+      "parent": "food-online-django-dir-templates",
+      "layer": "module",
+      "category": "frontend",
+      "categoryLabel": "Frontend",
+      "color": "#eab308",
+      "size": 1.35,
+      "file": "templates/customers/",
+      "description": "Pacote/pasta `templates/customers/` do projeto."
+    },
+    {
+      "id": "food-online-django-dir-templates-includes",
+      "label": "includes/",
+      "parent": "food-online-django-dir-templates",
+      "layer": "module",
+      "category": "frontend",
+      "categoryLabel": "Frontend",
+      "color": "#eab308",
+      "size": 1.35,
+      "file": "templates/includes/",
+      "description": "Pacote/pasta `templates/includes/` do projeto."
+    },
+    {
+      "id": "food-online-django-dir-templates-marketplace",
+      "label": "marketplace/",
+      "parent": "food-online-django-dir-templates",
+      "layer": "module",
+      "category": "frontend",
+      "categoryLabel": "Frontend",
+      "color": "#eab308",
+      "size": 1.35,
+      "file": "templates/marketplace/",
+      "description": "Pacote/pasta `templates/marketplace/` do projeto."
+    },
+    {
+      "id": "food-online-django-dir-templates-orders",
+      "label": "orders/",
+      "parent": "food-online-django-dir-templates",
+      "layer": "module",
+      "category": "frontend",
+      "categoryLabel": "Frontend",
+      "color": "#eab308",
+      "size": 1.35,
+      "file": "templates/orders/",
+      "description": "Pacote/pasta `templates/orders/` do projeto."
+    },
+    {
+      "id": "food-online-django-dir-foodonline-static-css",
+      "label": "css/",
+      "parent": "food-online-django-dir-foodonline-static",
+      "layer": "module",
+      "category": "frontend",
+      "categoryLabel": "Frontend",
+      "color": "#eab308",
+      "size": 1.35,
+      "file": "foodOnline/static/css/",
+      "description": "Pacote/pasta `foodOnline/static/css/` do projeto."
+    },
+    {
+      "id": "food-online-django-dir-foodonline-static-js",
+      "label": "js/",
+      "parent": "food-online-django-dir-foodonline-static",
+      "layer": "module",
+      "category": "frontend",
+      "categoryLabel": "Frontend",
+      "color": "#eab308",
+      "size": 1.35,
+      "file": "foodOnline/static/js/",
+      "description": "Pacote/pasta `foodOnline/static/js/` do projeto."
+    },
+    {
+      "id": "food-online-django-dir-static-admin-css",
+      "label": "css/",
+      "parent": "food-online-django-dir-static-admin",
+      "layer": "module",
+      "category": "frontend",
+      "categoryLabel": "Frontend",
+      "color": "#eab308",
+      "size": 1.35,
+      "file": "static/admin/css/",
+      "description": "Pacote/pasta `static/admin/css/` do projeto."
+    },
+    {
+      "id": "food-online-django-dir-static-admin-js",
+      "label": "js/",
+      "parent": "food-online-django-dir-static-admin",
+      "layer": "module",
+      "category": "frontend",
+      "categoryLabel": "Frontend",
+      "color": "#eab308",
+      "size": 1.35,
+      "file": "static/admin/js/",
+      "description": "Pacote/pasta `static/admin/js/` do projeto."
+    },
+    {
+      "id": "food-online-django-dir-templates-accounts-emails",
+      "label": "emails/",
+      "parent": "food-online-django-dir-templates-accounts",
+      "layer": "module",
+      "category": "frontend",
+      "categoryLabel": "Frontend",
+      "color": "#eab308",
+      "size": 1.35,
+      "file": "templates/accounts/emails/",
+      "description": "Pacote/pasta `templates/accounts/emails/` do projeto."
+    },
+    {
+      "id": "food-online-django-dir-static-admin-js-admin",
+      "label": "admin/",
+      "parent": "food-online-django-dir-static-admin-js",
+      "layer": "module",
+      "category": "frontend",
+      "categoryLabel": "Frontend",
+      "color": "#eab308",
+      "size": 1.35,
+      "file": "static/admin/js/admin/",
+      "description": "Pacote/pasta `static/admin/js/admin/` do projeto."
+    },
+    {
+      "id": "food-online-django-file-env-sample",
+      "label": ".env-sample",
+      "parent": "food-online-django-root",
+      "layer": "file",
+      "category": "other",
+      "categoryLabel": "Outros",
+      "color": "#64748b",
+      "size": 0.85,
+      "file": ".env-sample",
+      "description": "Código-fonte: `.env-sample`"
+    },
+    {
+      "id": "food-online-django-file-gitignore",
+      "label": ".gitignore",
+      "parent": "food-online-django-root",
+      "layer": "file",
+      "category": "other",
+      "categoryLabel": "Outros",
+      "color": "#64748b",
+      "size": 0.85,
+      "file": ".gitignore",
+      "description": "Código-fonte: `.gitignore`"
+    },
+    {
+      "id": "food-online-django-file-manage-py",
+      "label": "manage.py",
+      "parent": "food-online-django-root",
+      "layer": "file",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 0.85,
+      "file": "manage.py",
+      "description": "Código-fonte: `manage.py`"
+    },
+    {
+      "id": "food-online-django-file-test-py",
+      "label": "test.py",
+      "parent": "food-online-django-root",
+      "layer": "file",
+      "category": "tests",
+      "categoryLabel": "Testes",
+      "color": "#94a3b8",
+      "size": 0.85,
+      "file": "test.py",
+      "description": "Código-fonte: `test.py`"
+    },
+    {
+      "id": "food-online-django-file-accounts-init-py",
+      "label": "__init__.py",
+      "parent": "food-online-django-dir-accounts",
+      "layer": "file",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 0.85,
+      "file": "accounts/__init__.py",
+      "description": "Código-fonte: `accounts/__init__.py`"
+    },
+    {
+      "id": "food-online-django-file-accounts-admin-py",
+      "label": "admin.py",
+      "parent": "food-online-django-dir-accounts",
+      "layer": "file",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 0.85,
+      "file": "accounts/admin.py",
+      "description": "Código-fonte: `accounts/admin.py`"
+    },
+    {
+      "id": "food-online-django-file-accounts-apps-py",
+      "label": "apps.py",
+      "parent": "food-online-django-dir-accounts",
+      "layer": "file",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 0.85,
+      "file": "accounts/apps.py",
+      "description": "Código-fonte: `accounts/apps.py`"
+    },
+    {
+      "id": "food-online-django-file-accounts-context-processors-py",
+      "label": "context_processors.py",
+      "parent": "food-online-django-dir-accounts",
+      "layer": "file",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 0.85,
+      "file": "accounts/context_processors.py",
+      "description": "Código-fonte: `accounts/context_processors.py`"
+    },
+    {
+      "id": "food-online-django-file-accounts-forms-py",
+      "label": "forms.py",
+      "parent": "food-online-django-dir-accounts",
+      "layer": "file",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 0.85,
+      "file": "accounts/forms.py",
+      "description": "Código-fonte: `accounts/forms.py`"
+    },
+    {
+      "id": "food-online-django-file-accounts-models-py",
+      "label": "models.py",
+      "parent": "food-online-django-dir-accounts",
+      "layer": "file",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 0.85,
+      "file": "accounts/models.py",
+      "description": "Código-fonte: `accounts/models.py`"
+    },
+    {
+      "id": "food-online-django-file-accounts-signals-py",
+      "label": "signals.py",
+      "parent": "food-online-django-dir-accounts",
+      "layer": "file",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 0.85,
+      "file": "accounts/signals.py",
+      "description": "Código-fonte: `accounts/signals.py`"
+    },
+    {
+      "id": "food-online-django-file-accounts-tests-py",
+      "label": "tests.py",
+      "parent": "food-online-django-dir-accounts",
+      "layer": "file",
+      "category": "tests",
+      "categoryLabel": "Testes",
+      "color": "#94a3b8",
+      "size": 0.85,
+      "file": "accounts/tests.py",
+      "description": "Código-fonte: `accounts/tests.py`"
+    },
+    {
+      "id": "food-online-django-file-accounts-urls-py",
+      "label": "urls.py",
+      "parent": "food-online-django-dir-accounts",
+      "layer": "file",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 0.85,
+      "file": "accounts/urls.py",
+      "description": "Código-fonte: `accounts/urls.py`"
+    },
+    {
+      "id": "food-online-django-file-accounts-utils-py",
+      "label": "utils.py",
+      "parent": "food-online-django-dir-accounts",
+      "layer": "file",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 0.85,
+      "file": "accounts/utils.py",
+      "description": "Código-fonte: `accounts/utils.py`"
+    },
+    {
+      "id": "food-online-django-file-accounts-validators-py",
+      "label": "validators.py",
+      "parent": "food-online-django-dir-accounts",
+      "layer": "file",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 0.85,
+      "file": "accounts/validators.py",
+      "description": "Código-fonte: `accounts/validators.py`"
+    },
+    {
+      "id": "food-online-django-file-accounts-views-py",
+      "label": "views.py",
+      "parent": "food-online-django-dir-accounts",
+      "layer": "file",
+      "category": "frontend",
+      "categoryLabel": "Frontend",
+      "color": "#eab308",
+      "size": 0.85,
+      "file": "accounts/views.py",
+      "description": "Código-fonte: `accounts/views.py`"
+    },
+    {
+      "id": "food-online-django-file-accounts-migrations-0001-initial-py",
+      "label": "0001_initial.py",
+      "parent": "food-online-django-dir-accounts-migrations",
+      "layer": "file",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 0.85,
+      "file": "accounts/migrations/0001_initial.py",
+      "description": "Código-fonte: `accounts/migrations/0001_initial.py`"
+    },
+    {
+      "id": "food-online-django-file-accounts-migrations-0002-userprofile-py",
+      "label": "0002_userprofile.py",
+      "parent": "food-online-django-dir-accounts-migrations",
+      "layer": "file",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 0.85,
+      "file": "accounts/migrations/0002_userprofile.py",
+      "description": "Código-fonte: `accounts/migrations/0002_userprofile.py`"
+    },
+    {
+      "id": "food-online-django-file-accounts-migrations-0003-alter-user-role-py",
+      "label": "0003_alter_user_role.py",
+      "parent": "food-online-django-dir-accounts-migrations",
+      "layer": "file",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 0.85,
+      "file": "accounts/migrations/0003_alter_user_role.py",
+      "description": "Código-fonte: `accounts/migrations/0003_alter_user_role.py`"
+    },
+    {
+      "id": "food-online-django-file-accounts-migrations-0004-rename-latidude-userprofile-latitude-py",
+      "label": "0004_rename_latidude_userprofile_latitude.py",
+      "parent": "food-online-django-dir-accounts-migrations",
+      "layer": "file",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 0.85,
+      "file": "accounts/migrations/0004_rename_latidude_userprofile_latitude.py",
+      "description": "Código-fonte: `accounts/migrations/0004_rename_latidude_userprofile_latitude.py`"
+    },
+    {
+      "id": "food-online-django-file-accounts-migrations-0005-remove-userprofile-address-line-1-and-more-py",
+      "label": "0005_remove_userprofile_address_line_1_and_more.py",
+      "parent": "food-online-django-dir-accounts-migrations",
+      "layer": "file",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 0.85,
+      "file": "accounts/migrations/0005_remove_userprofile_address_line_1_and_more.py",
+      "description": "Código-fonte: `accounts/migrations/0005_remove_userprofile_address_line_1_and_more.py`"
+    },
+    {
+      "id": "food-online-django-file-accounts-migrations-0006-userprofile-location-py",
+      "label": "0006_userprofile_location.py",
+      "parent": "food-online-django-dir-accounts-migrations",
+      "layer": "file",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 0.85,
+      "file": "accounts/migrations/0006_userprofile_location.py",
+      "description": "Código-fonte: `accounts/migrations/0006_userprofile_location.py`"
+    },
+    {
+      "id": "food-online-django-file-accounts-migrations-init-py",
+      "label": "__init__.py",
+      "parent": "food-online-django-dir-accounts-migrations",
+      "layer": "file",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 0.85,
+      "file": "accounts/migrations/__init__.py",
+      "description": "Código-fonte: `accounts/migrations/__init__.py`"
+    },
+    {
+      "id": "food-online-django-file-customers-init-py",
+      "label": "__init__.py",
+      "parent": "food-online-django-dir-customers",
+      "layer": "file",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 0.85,
+      "file": "customers/__init__.py",
+      "description": "Código-fonte: `customers/__init__.py`"
+    },
+    {
+      "id": "food-online-django-file-customers-admin-py",
+      "label": "admin.py",
+      "parent": "food-online-django-dir-customers",
+      "layer": "file",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 0.85,
+      "file": "customers/admin.py",
+      "description": "Código-fonte: `customers/admin.py`"
+    },
+    {
+      "id": "food-online-django-file-customers-apps-py",
+      "label": "apps.py",
+      "parent": "food-online-django-dir-customers",
+      "layer": "file",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 0.85,
+      "file": "customers/apps.py",
+      "description": "Código-fonte: `customers/apps.py`"
+    },
+    {
+      "id": "food-online-django-file-customers-models-py",
+      "label": "models.py",
+      "parent": "food-online-django-dir-customers",
+      "layer": "file",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 0.85,
+      "file": "customers/models.py",
+      "description": "Código-fonte: `customers/models.py`"
+    },
+    {
+      "id": "food-online-django-file-customers-tests-py",
+      "label": "tests.py",
+      "parent": "food-online-django-dir-customers",
+      "layer": "file",
+      "category": "tests",
+      "categoryLabel": "Testes",
+      "color": "#94a3b8",
+      "size": 0.85,
+      "file": "customers/tests.py",
+      "description": "Código-fonte: `customers/tests.py`"
+    },
+    {
+      "id": "food-online-django-file-customers-urls-py",
+      "label": "urls.py",
+      "parent": "food-online-django-dir-customers",
+      "layer": "file",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 0.85,
+      "file": "customers/urls.py",
+      "description": "Código-fonte: `customers/urls.py`"
+    },
+    {
+      "id": "food-online-django-file-customers-views-py",
+      "label": "views.py",
+      "parent": "food-online-django-dir-customers",
+      "layer": "file",
+      "category": "frontend",
+      "categoryLabel": "Frontend",
+      "color": "#eab308",
+      "size": 0.85,
+      "file": "customers/views.py",
+      "description": "Código-fonte: `customers/views.py`"
+    },
+    {
+      "id": "food-online-django-file-customers-migrations-init-py",
+      "label": "__init__.py",
+      "parent": "food-online-django-dir-customers-migrations",
+      "layer": "file",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 0.85,
+      "file": "customers/migrations/__init__.py",
+      "description": "Código-fonte: `customers/migrations/__init__.py`"
+    },
+    {
+      "id": "food-online-django-file-foodonline-init-py",
+      "label": "__init__.py",
+      "parent": "food-online-django-dir-foodonline",
+      "layer": "file",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 0.85,
+      "file": "foodOnline/__init__.py",
+      "description": "Código-fonte: `foodOnline/__init__.py`"
+    },
+    {
+      "id": "food-online-django-file-foodonline-asgi-py",
+      "label": "asgi.py",
+      "parent": "food-online-django-dir-foodonline",
+      "layer": "file",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 0.85,
+      "file": "foodOnline/asgi.py",
+      "description": "Código-fonte: `foodOnline/asgi.py`"
+    },
+    {
+      "id": "food-online-django-file-foodonline-settings-py",
+      "label": "settings.py",
+      "parent": "food-online-django-dir-foodonline",
+      "layer": "file",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 0.85,
+      "file": "foodOnline/settings.py",
+      "description": "Código-fonte: `foodOnline/settings.py`"
+    },
+    {
+      "id": "food-online-django-file-foodonline-urls-py",
+      "label": "urls.py",
+      "parent": "food-online-django-dir-foodonline",
+      "layer": "file",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 0.85,
+      "file": "foodOnline/urls.py",
+      "description": "Código-fonte: `foodOnline/urls.py`"
+    },
+    {
+      "id": "food-online-django-file-foodonline-views-py",
+      "label": "views.py",
+      "parent": "food-online-django-dir-foodonline",
+      "layer": "file",
+      "category": "frontend",
+      "categoryLabel": "Frontend",
+      "color": "#eab308",
+      "size": 0.85,
+      "file": "foodOnline/views.py",
+      "description": "Código-fonte: `foodOnline/views.py`"
+    },
+    {
+      "id": "food-online-django-file-foodonline-wsgi-py",
+      "label": "wsgi.py",
+      "parent": "food-online-django-dir-foodonline",
+      "layer": "file",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 0.85,
+      "file": "foodOnline/wsgi.py",
+      "description": "Código-fonte: `foodOnline/wsgi.py`"
+    },
+    {
+      "id": "food-online-django-file-foodonline-static-css-bootstrap-datepicker-css",
+      "label": "bootstrap-datepicker.css",
+      "parent": "food-online-django-dir-foodonline-static-css",
+      "layer": "file",
+      "category": "frontend",
+      "categoryLabel": "Frontend",
+      "color": "#eab308",
+      "size": 0.85,
+      "file": "foodOnline/static/css/bootstrap-datepicker.css",
+      "description": "Código-fonte: `foodOnline/static/css/bootstrap-datepicker.css`"
+    },
+    {
+      "id": "food-online-django-file-foodonline-static-css-bootstrap-slider-css",
+      "label": "bootstrap-slider.css",
+      "parent": "food-online-django-dir-foodonline-static-css",
+      "layer": "file",
+      "category": "frontend",
+      "categoryLabel": "Frontend",
+      "color": "#eab308",
+      "size": 0.85,
+      "file": "foodOnline/static/css/bootstrap-slider.css",
+      "description": "Código-fonte: `foodOnline/static/css/bootstrap-slider.css`"
+    },
+    {
+      "id": "food-online-django-file-foodonline-static-css-bootstrap-theme-css",
+      "label": "bootstrap-theme.css",
+      "parent": "food-online-django-dir-foodonline-static-css",
+      "layer": "file",
+      "category": "frontend",
+      "categoryLabel": "Frontend",
+      "color": "#eab308",
+      "size": 0.85,
+      "file": "foodOnline/static/css/bootstrap-theme.css",
+      "description": "Código-fonte: `foodOnline/static/css/bootstrap-theme.css`"
+    },
+    {
+      "id": "food-online-django-file-foodonline-static-css-bootstrap-css",
+      "label": "bootstrap.css",
+      "parent": "food-online-django-dir-foodonline-static-css",
+      "layer": "file",
+      "category": "frontend",
+      "categoryLabel": "Frontend",
+      "color": "#eab308",
+      "size": 0.85,
+      "file": "foodOnline/static/css/bootstrap.css",
+      "description": "Código-fonte: `foodOnline/static/css/bootstrap.css`"
+    },
+    {
+      "id": "food-online-django-file-foodonline-static-css-cs-foodbakery-plugin-css",
+      "label": "cs-foodbakery-plugin.css",
+      "parent": "food-online-django-dir-foodonline-static-css",
+      "layer": "file",
+      "category": "frontend",
+      "categoryLabel": "Frontend",
+      "color": "#eab308",
+      "size": 0.85,
+      "file": "foodOnline/static/css/cs-foodbakery-plugin.css",
+      "description": "Código-fonte: `foodOnline/static/css/cs-foodbakery-plugin.css`"
+    },
+    {
+      "id": "food-online-django-file-foodonline-static-css-custom-css",
+      "label": "custom.css",
+      "parent": "food-online-django-dir-foodonline-static-css",
+      "layer": "file",
+      "category": "frontend",
+      "categoryLabel": "Frontend",
+      "color": "#eab308",
+      "size": 0.85,
+      "file": "foodOnline/static/css/custom.css",
+      "description": "Código-fonte: `foodOnline/static/css/custom.css`"
+    },
+    {
+      "id": "food-online-django-file-foodonline-static-css-iconmoon-css",
+      "label": "iconmoon.css",
+      "parent": "food-online-django-dir-foodonline-static-css",
+      "layer": "file",
+      "category": "frontend",
+      "categoryLabel": "Frontend",
+      "color": "#eab308",
+      "size": 0.85,
+      "file": "foodOnline/static/css/iconmoon.css",
+      "description": "Código-fonte: `foodOnline/static/css/iconmoon.css`"
+    },
+    {
+      "id": "food-online-django-file-foodonline-static-css-style-css",
+      "label": "style.css",
+      "parent": "food-online-django-dir-foodonline-static-css",
+      "layer": "file",
+      "category": "frontend",
+      "categoryLabel": "Frontend",
+      "color": "#eab308",
+      "size": 0.85,
+      "file": "foodOnline/static/css/style.css",
+      "description": "Código-fonte: `foodOnline/static/css/style.css`"
+    },
+    {
+      "id": "food-online-django-file-foodonline-static-js-bootstrap-js",
+      "label": "bootstrap.js",
+      "parent": "food-online-django-dir-foodonline-static-js",
+      "layer": "file",
+      "category": "frontend",
+      "categoryLabel": "Frontend",
+      "color": "#eab308",
+      "size": 0.85,
+      "file": "foodOnline/static/js/bootstrap.js",
+      "description": "Código-fonte: `foodOnline/static/js/bootstrap.js`"
+    },
+    {
+      "id": "food-online-django-file-foodonline-static-js-custom-js",
+      "label": "custom.js",
+      "parent": "food-online-django-dir-foodonline-static-js",
+      "layer": "file",
+      "category": "frontend",
+      "categoryLabel": "Frontend",
+      "color": "#eab308",
+      "size": 0.85,
+      "file": "foodOnline/static/js/custom.js",
+      "description": "Código-fonte: `foodOnline/static/js/custom.js`"
+    },
+    {
+      "id": "food-online-django-file-foodonline-static-js-daterangepicker-js",
+      "label": "daterangepicker.js",
+      "parent": "food-online-django-dir-foodonline-static-js",
+      "layer": "file",
+      "category": "frontend",
+      "categoryLabel": "Frontend",
+      "color": "#eab308",
+      "size": 0.85,
+      "file": "foodOnline/static/js/daterangepicker.js",
+      "description": "Código-fonte: `foodOnline/static/js/daterangepicker.js`"
+    },
+    {
+      "id": "food-online-django-file-foodonline-static-js-functions-js",
+      "label": "functions.js",
+      "parent": "food-online-django-dir-foodonline-static-js",
+      "layer": "file",
+      "category": "frontend",
+      "categoryLabel": "Frontend",
+      "color": "#eab308",
+      "size": 0.85,
+      "file": "foodOnline/static/js/functions.js",
+      "description": "Código-fonte: `foodOnline/static/js/functions.js`"
+    },
+    {
+      "id": "food-online-django-file-foodonline-static-js-jquery-te-1-4-0-min-js",
+      "label": "jquery-te-1.4.0.min.js",
+      "parent": "food-online-django-dir-foodonline-static-js",
+      "layer": "file",
+      "category": "frontend",
+      "categoryLabel": "Frontend",
+      "color": "#eab308",
+      "size": 0.85,
+      "file": "foodOnline/static/js/jquery-te-1.4.0.min.js",
+      "description": "Código-fonte: `foodOnline/static/js/jquery-te-1.4.0.min.js`"
+    },
+    {
+      "id": "food-online-django-file-foodonline-static-js-jquery-ui-js",
+      "label": "jquery-ui.js",
+      "parent": "food-online-django-dir-foodonline-static-js",
+      "layer": "file",
+      "category": "frontend",
+      "categoryLabel": "Frontend",
+      "color": "#eab308",
+      "size": 0.85,
+      "file": "foodOnline/static/js/jquery-ui.js",
+      "description": "Código-fonte: `foodOnline/static/js/jquery-ui.js`"
+    },
+    {
+      "id": "food-online-django-file-foodonline-static-js-jquery-js",
+      "label": "jquery.js",
+      "parent": "food-online-django-dir-foodonline-static-js",
+      "layer": "file",
+      "category": "frontend",
+      "categoryLabel": "Frontend",
+      "color": "#eab308",
+      "size": 0.85,
+      "file": "foodOnline/static/js/jquery.js",
+      "description": "Código-fonte: `foodOnline/static/js/jquery.js`"
+    },
+    {
+      "id": "food-online-django-file-foodonline-static-js-jquery-mcustomscrollbar-concat-min-js",
+      "label": "jquery.mCustomScrollbar.concat.min.js",
+      "parent": "food-online-django-dir-foodonline-static-js",
+      "layer": "file",
+      "category": "frontend",
+      "categoryLabel": "Frontend",
+      "color": "#eab308",
+      "size": 0.85,
+      "file": "foodOnline/static/js/jquery.mCustomScrollbar.concat.min.js",
+      "description": "Código-fonte: `foodOnline/static/js/jquery.mCustomScrollbar.concat.min.js`"
+    },
+    {
+      "id": "food-online-django-file-foodonline-static-js-modernizr-js",
+      "label": "modernizr.js",
+      "parent": "food-online-django-dir-foodonline-static-js",
+      "layer": "file",
+      "category": "frontend",
+      "categoryLabel": "Frontend",
+      "color": "#eab308",
+      "size": 0.85,
+      "file": "foodOnline/static/js/modernizr.js",
+      "description": "Código-fonte: `foodOnline/static/js/modernizr.js`"
+    },
+    {
+      "id": "food-online-django-file-foodonline-static-js-scripts-js",
+      "label": "scripts.js",
+      "parent": "food-online-django-dir-foodonline-static-js",
+      "layer": "file",
+      "category": "frontend",
+      "categoryLabel": "Frontend",
+      "color": "#eab308",
+      "size": 0.85,
+      "file": "foodOnline/static/js/scripts.js",
+      "description": "Código-fonte: `foodOnline/static/js/scripts.js`"
+    },
+    {
+      "id": "food-online-django-file-foodonline-static-js-tag-it-js",
+      "label": "tag-it.js",
+      "parent": "food-online-django-dir-foodonline-static-js",
+      "layer": "file",
+      "category": "frontend",
+      "categoryLabel": "Frontend",
+      "color": "#eab308",
+      "size": 0.85,
+      "file": "foodOnline/static/js/tag-it.js",
+      "description": "Código-fonte: `foodOnline/static/js/tag-it.js`"
+    },
+    {
+      "id": "food-online-django-file-foodonline-static-js-theia-sticky-sidebar-js",
+      "label": "theia-sticky-sidebar.js",
+      "parent": "food-online-django-dir-foodonline-static-js",
+      "layer": "file",
+      "category": "frontend",
+      "categoryLabel": "Frontend",
+      "color": "#eab308",
+      "size": 0.85,
+      "file": "foodOnline/static/js/theia-sticky-sidebar.js",
+      "description": "Código-fonte: `foodOnline/static/js/theia-sticky-sidebar.js`"
+    },
+    {
+      "id": "food-online-django-file-marketplace-init-py",
+      "label": "__init__.py",
+      "parent": "food-online-django-dir-marketplace",
+      "layer": "file",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 0.85,
+      "file": "marketplace/__init__.py",
+      "description": "Código-fonte: `marketplace/__init__.py`"
+    },
+    {
+      "id": "food-online-django-file-marketplace-admin-py",
+      "label": "admin.py",
+      "parent": "food-online-django-dir-marketplace",
+      "layer": "file",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 0.85,
+      "file": "marketplace/admin.py",
+      "description": "Código-fonte: `marketplace/admin.py`"
+    },
+    {
+      "id": "food-online-django-file-marketplace-apps-py",
+      "label": "apps.py",
+      "parent": "food-online-django-dir-marketplace",
+      "layer": "file",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 0.85,
+      "file": "marketplace/apps.py",
+      "description": "Código-fonte: `marketplace/apps.py`"
+    },
+    {
+      "id": "food-online-django-file-marketplace-context-processors-py",
+      "label": "context_processors.py",
+      "parent": "food-online-django-dir-marketplace",
+      "layer": "file",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 0.85,
+      "file": "marketplace/context_processors.py",
+      "description": "Código-fonte: `marketplace/context_processors.py`"
+    },
+    {
+      "id": "food-online-django-file-marketplace-models-py",
+      "label": "models.py",
+      "parent": "food-online-django-dir-marketplace",
+      "layer": "file",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 0.85,
+      "file": "marketplace/models.py",
+      "description": "Código-fonte: `marketplace/models.py`"
+    },
+    {
+      "id": "food-online-django-file-marketplace-tests-py",
+      "label": "tests.py",
+      "parent": "food-online-django-dir-marketplace",
+      "layer": "file",
+      "category": "tests",
+      "categoryLabel": "Testes",
+      "color": "#94a3b8",
+      "size": 0.85,
+      "file": "marketplace/tests.py",
+      "description": "Código-fonte: `marketplace/tests.py`"
+    },
+    {
+      "id": "food-online-django-file-marketplace-urls-py",
+      "label": "urls.py",
+      "parent": "food-online-django-dir-marketplace",
+      "layer": "file",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 0.85,
+      "file": "marketplace/urls.py",
+      "description": "Código-fonte: `marketplace/urls.py`"
+    },
+    {
+      "id": "food-online-django-file-marketplace-views-py",
+      "label": "views.py",
+      "parent": "food-online-django-dir-marketplace",
+      "layer": "file",
+      "category": "frontend",
+      "categoryLabel": "Frontend",
+      "color": "#eab308",
+      "size": 0.85,
+      "file": "marketplace/views.py",
+      "description": "Código-fonte: `marketplace/views.py`"
+    },
+    {
+      "id": "food-online-django-file-marketplace-migrations-0001-initial-py",
+      "label": "0001_initial.py",
+      "parent": "food-online-django-dir-marketplace-migrations",
+      "layer": "file",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 0.85,
+      "file": "marketplace/migrations/0001_initial.py",
+      "description": "Código-fonte: `marketplace/migrations/0001_initial.py`"
+    },
+    {
+      "id": "food-online-django-file-marketplace-migrations-0002-tax-py",
+      "label": "0002_tax.py",
+      "parent": "food-online-django-dir-marketplace-migrations",
+      "layer": "file",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 0.85,
+      "file": "marketplace/migrations/0002_tax.py",
+      "description": "Código-fonte: `marketplace/migrations/0002_tax.py`"
+    },
+    {
+      "id": "food-online-django-file-marketplace-migrations-init-py",
+      "label": "__init__.py",
+      "parent": "food-online-django-dir-marketplace-migrations",
+      "layer": "file",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 0.85,
+      "file": "marketplace/migrations/__init__.py",
+      "description": "Código-fonte: `marketplace/migrations/__init__.py`"
+    },
+    {
+      "id": "food-online-django-file-menu-init-py",
+      "label": "__init__.py",
+      "parent": "food-online-django-dir-menu",
+      "layer": "file",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 0.85,
+      "file": "menu/__init__.py",
+      "description": "Código-fonte: `menu/__init__.py`"
+    },
+    {
+      "id": "food-online-django-file-menu-admin-py",
+      "label": "admin.py",
+      "parent": "food-online-django-dir-menu",
+      "layer": "file",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 0.85,
+      "file": "menu/admin.py",
+      "description": "Código-fonte: `menu/admin.py`"
+    },
+    {
+      "id": "food-online-django-file-menu-apps-py",
+      "label": "apps.py",
+      "parent": "food-online-django-dir-menu",
+      "layer": "file",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 0.85,
+      "file": "menu/apps.py",
+      "description": "Código-fonte: `menu/apps.py`"
+    },
+    {
+      "id": "food-online-django-file-menu-forms-py",
+      "label": "forms.py",
+      "parent": "food-online-django-dir-menu",
+      "layer": "file",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 0.85,
+      "file": "menu/forms.py",
+      "description": "Código-fonte: `menu/forms.py`"
+    },
+    {
+      "id": "food-online-django-file-menu-models-py",
+      "label": "models.py",
+      "parent": "food-online-django-dir-menu",
+      "layer": "file",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 0.85,
+      "file": "menu/models.py",
+      "description": "Código-fonte: `menu/models.py`"
+    },
+    {
+      "id": "food-online-django-file-menu-tests-py",
+      "label": "tests.py",
+      "parent": "food-online-django-dir-menu",
+      "layer": "file",
+      "category": "tests",
+      "categoryLabel": "Testes",
+      "color": "#94a3b8",
+      "size": 0.85,
+      "file": "menu/tests.py",
+      "description": "Código-fonte: `menu/tests.py`"
+    },
+    {
+      "id": "food-online-django-file-menu-views-py",
+      "label": "views.py",
+      "parent": "food-online-django-dir-menu",
+      "layer": "file",
+      "category": "frontend",
+      "categoryLabel": "Frontend",
+      "color": "#eab308",
+      "size": 0.85,
+      "file": "menu/views.py",
+      "description": "Código-fonte: `menu/views.py`"
+    },
+    {
+      "id": "food-online-django-file-menu-migrations-0001-initial-py",
+      "label": "0001_initial.py",
+      "parent": "food-online-django-dir-menu-migrations",
+      "layer": "file",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 0.85,
+      "file": "menu/migrations/0001_initial.py",
+      "description": "Código-fonte: `menu/migrations/0001_initial.py`"
+    },
+    {
+      "id": "food-online-django-file-menu-migrations-0002-alter-category-options-alter-fooditem-options-py",
+      "label": "0002_alter_category_options_alter_fooditem_options.py",
+      "parent": "food-online-django-dir-menu-migrations",
+      "layer": "file",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 0.85,
+      "file": "menu/migrations/0002_alter_category_options_alter_fooditem_options.py",
+      "description": "Código-fonte: `menu/migrations/0002_alter_category_options_alter_fooditem_options.py`"
+    },
+    {
+      "id": "food-online-django-file-menu-migrations-0003-alter-fooditem-category-py",
+      "label": "0003_alter_fooditem_category.py",
+      "parent": "food-online-django-dir-menu-migrations",
+      "layer": "file",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 0.85,
+      "file": "menu/migrations/0003_alter_fooditem_category.py",
+      "description": "Código-fonte: `menu/migrations/0003_alter_fooditem_category.py`"
+    },
+    {
+      "id": "food-online-django-file-menu-migrations-0004-alter-category-category-name-py",
+      "label": "0004_alter_category_category_name.py",
+      "parent": "food-online-django-dir-menu-migrations",
+      "layer": "file",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 0.85,
+      "file": "menu/migrations/0004_alter_category_category_name.py",
+      "description": "Código-fonte: `menu/migrations/0004_alter_category_category_name.py`"
+    },
+    {
+      "id": "food-online-django-file-menu-migrations-init-py",
+      "label": "__init__.py",
+      "parent": "food-online-django-dir-menu-migrations",
+      "layer": "file",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 0.85,
+      "file": "menu/migrations/__init__.py",
+      "description": "Código-fonte: `menu/migrations/__init__.py`"
+    },
+    {
+      "id": "food-online-django-file-orders-init-py",
+      "label": "__init__.py",
+      "parent": "food-online-django-dir-orders",
+      "layer": "file",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 0.85,
+      "file": "orders/__init__.py",
+      "description": "Código-fonte: `orders/__init__.py`"
+    },
+    {
+      "id": "food-online-django-file-orders-admin-py",
+      "label": "admin.py",
+      "parent": "food-online-django-dir-orders",
+      "layer": "file",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 0.85,
+      "file": "orders/admin.py",
+      "description": "Código-fonte: `orders/admin.py`"
+    },
+    {
+      "id": "food-online-django-file-orders-apps-py",
+      "label": "apps.py",
+      "parent": "food-online-django-dir-orders",
+      "layer": "file",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 0.85,
+      "file": "orders/apps.py",
+      "description": "Código-fonte: `orders/apps.py`"
+    },
+    {
+      "id": "food-online-django-file-orders-forms-py",
+      "label": "forms.py",
+      "parent": "food-online-django-dir-orders",
+      "layer": "file",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 0.85,
+      "file": "orders/forms.py",
+      "description": "Código-fonte: `orders/forms.py`"
+    },
+    {
+      "id": "food-online-django-file-orders-models-py",
+      "label": "models.py",
+      "parent": "food-online-django-dir-orders",
+      "layer": "file",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 0.85,
+      "file": "orders/models.py",
+      "description": "Código-fonte: `orders/models.py`"
+    },
+    {
+      "id": "food-online-django-file-orders-request-object-py",
+      "label": "request_object.py",
+      "parent": "food-online-django-dir-orders",
+      "layer": "file",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 0.85,
+      "file": "orders/request_object.py",
+      "description": "Código-fonte: `orders/request_object.py`"
+    },
+    {
+      "id": "food-online-django-file-orders-tests-py",
+      "label": "tests.py",
+      "parent": "food-online-django-dir-orders",
+      "layer": "file",
+      "category": "tests",
+      "categoryLabel": "Testes",
+      "color": "#94a3b8",
+      "size": 0.85,
+      "file": "orders/tests.py",
+      "description": "Código-fonte: `orders/tests.py`"
+    },
+    {
+      "id": "food-online-django-file-orders-urls-py",
+      "label": "urls.py",
+      "parent": "food-online-django-dir-orders",
+      "layer": "file",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 0.85,
+      "file": "orders/urls.py",
+      "description": "Código-fonte: `orders/urls.py`"
+    },
+    {
+      "id": "food-online-django-file-orders-utils-py",
+      "label": "utils.py",
+      "parent": "food-online-django-dir-orders",
+      "layer": "file",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 0.85,
+      "file": "orders/utils.py",
+      "description": "Código-fonte: `orders/utils.py`"
+    },
+    {
+      "id": "food-online-django-file-orders-views-py",
+      "label": "views.py",
+      "parent": "food-online-django-dir-orders",
+      "layer": "file",
+      "category": "frontend",
+      "categoryLabel": "Frontend",
+      "color": "#eab308",
+      "size": 0.85,
       "file": "orders/views.py",
-      "description": "Confirma pagamento AJAX e notifica vendors."
+      "description": "Código-fonte: `orders/views.py`"
+    },
+    {
+      "id": "food-online-django-file-orders-migrations-0001-initial-py",
+      "label": "0001_initial.py",
+      "parent": "food-online-django-dir-orders-migrations",
+      "layer": "file",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 0.85,
+      "file": "orders/migrations/0001_initial.py",
+      "description": "Código-fonte: `orders/migrations/0001_initial.py`"
+    },
+    {
+      "id": "food-online-django-file-orders-migrations-0002-order-total-data-order-vendors-py",
+      "label": "0002_order_total_data_order_vendors.py",
+      "parent": "food-online-django-dir-orders-migrations",
+      "layer": "file",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 0.85,
+      "file": "orders/migrations/0002_order_total_data_order_vendors.py",
+      "description": "Código-fonte: `orders/migrations/0002_order_total_data_order_vendors.py`"
+    },
+    {
+      "id": "food-online-django-file-orders-migrations-0003-alter-order-tax-data-py",
+      "label": "0003_alter_order_tax_data.py",
+      "parent": "food-online-django-dir-orders-migrations",
+      "layer": "file",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 0.85,
+      "file": "orders/migrations/0003_alter_order_tax_data.py",
+      "description": "Código-fonte: `orders/migrations/0003_alter_order_tax_data.py`"
+    },
+    {
+      "id": "food-online-django-file-orders-migrations-init-py",
+      "label": "__init__.py",
+      "parent": "food-online-django-dir-orders-migrations",
+      "layer": "file",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 0.85,
+      "file": "orders/migrations/__init__.py",
+      "description": "Código-fonte: `orders/migrations/__init__.py`"
+    },
+    {
+      "id": "food-online-django-file-static-admin-css-autocomplete-css",
+      "label": "autocomplete.css",
+      "parent": "food-online-django-dir-static-admin-css",
+      "layer": "file",
+      "category": "frontend",
+      "categoryLabel": "Frontend",
+      "color": "#eab308",
+      "size": 0.85,
+      "file": "static/admin/css/autocomplete.css",
+      "description": "Código-fonte: `static/admin/css/autocomplete.css`"
+    },
+    {
+      "id": "food-online-django-file-static-admin-css-base-css",
+      "label": "base.css",
+      "parent": "food-online-django-dir-static-admin-css",
+      "layer": "file",
+      "category": "frontend",
+      "categoryLabel": "Frontend",
+      "color": "#eab308",
+      "size": 0.85,
+      "file": "static/admin/css/base.css",
+      "description": "Código-fonte: `static/admin/css/base.css`"
+    },
+    {
+      "id": "food-online-django-file-static-admin-css-changelists-css",
+      "label": "changelists.css",
+      "parent": "food-online-django-dir-static-admin-css",
+      "layer": "file",
+      "category": "frontend",
+      "categoryLabel": "Frontend",
+      "color": "#eab308",
+      "size": 0.85,
+      "file": "static/admin/css/changelists.css",
+      "description": "Código-fonte: `static/admin/css/changelists.css`"
+    },
+    {
+      "id": "food-online-django-file-static-admin-css-dark-mode-css",
+      "label": "dark_mode.css",
+      "parent": "food-online-django-dir-static-admin-css",
+      "layer": "file",
+      "category": "frontend",
+      "categoryLabel": "Frontend",
+      "color": "#eab308",
+      "size": 0.85,
+      "file": "static/admin/css/dark_mode.css",
+      "description": "Código-fonte: `static/admin/css/dark_mode.css`"
+    },
+    {
+      "id": "food-online-django-file-static-admin-css-dashboard-css",
+      "label": "dashboard.css",
+      "parent": "food-online-django-dir-static-admin-css",
+      "layer": "file",
+      "category": "frontend",
+      "categoryLabel": "Frontend",
+      "color": "#eab308",
+      "size": 0.85,
+      "file": "static/admin/css/dashboard.css",
+      "description": "Código-fonte: `static/admin/css/dashboard.css`"
+    },
+    {
+      "id": "food-online-django-file-static-admin-css-forms-css",
+      "label": "forms.css",
+      "parent": "food-online-django-dir-static-admin-css",
+      "layer": "file",
+      "category": "frontend",
+      "categoryLabel": "Frontend",
+      "color": "#eab308",
+      "size": 0.85,
+      "file": "static/admin/css/forms.css",
+      "description": "Código-fonte: `static/admin/css/forms.css`"
+    },
+    {
+      "id": "food-online-django-file-static-admin-css-login-css",
+      "label": "login.css",
+      "parent": "food-online-django-dir-static-admin-css",
+      "layer": "file",
+      "category": "frontend",
+      "categoryLabel": "Frontend",
+      "color": "#eab308",
+      "size": 0.85,
+      "file": "static/admin/css/login.css",
+      "description": "Código-fonte: `static/admin/css/login.css`"
+    },
+    {
+      "id": "food-online-django-file-static-admin-css-nav-sidebar-css",
+      "label": "nav_sidebar.css",
+      "parent": "food-online-django-dir-static-admin-css",
+      "layer": "file",
+      "category": "frontend",
+      "categoryLabel": "Frontend",
+      "color": "#eab308",
+      "size": 0.85,
+      "file": "static/admin/css/nav_sidebar.css",
+      "description": "Código-fonte: `static/admin/css/nav_sidebar.css`"
+    },
+    {
+      "id": "food-online-django-file-static-admin-css-responsive-css",
+      "label": "responsive.css",
+      "parent": "food-online-django-dir-static-admin-css",
+      "layer": "file",
+      "category": "frontend",
+      "categoryLabel": "Frontend",
+      "color": "#eab308",
+      "size": 0.85,
+      "file": "static/admin/css/responsive.css",
+      "description": "Código-fonte: `static/admin/css/responsive.css`"
+    },
+    {
+      "id": "food-online-django-file-static-admin-css-responsive-rtl-css",
+      "label": "responsive_rtl.css",
+      "parent": "food-online-django-dir-static-admin-css",
+      "layer": "file",
+      "category": "frontend",
+      "categoryLabel": "Frontend",
+      "color": "#eab308",
+      "size": 0.85,
+      "file": "static/admin/css/responsive_rtl.css",
+      "description": "Código-fonte: `static/admin/css/responsive_rtl.css`"
+    },
+    {
+      "id": "food-online-django-file-static-admin-css-rtl-css",
+      "label": "rtl.css",
+      "parent": "food-online-django-dir-static-admin-css",
+      "layer": "file",
+      "category": "frontend",
+      "categoryLabel": "Frontend",
+      "color": "#eab308",
+      "size": 0.85,
+      "file": "static/admin/css/rtl.css",
+      "description": "Código-fonte: `static/admin/css/rtl.css`"
+    },
+    {
+      "id": "food-online-django-file-static-admin-css-widgets-css",
+      "label": "widgets.css",
+      "parent": "food-online-django-dir-static-admin-css",
+      "layer": "file",
+      "category": "frontend",
+      "categoryLabel": "Frontend",
+      "color": "#eab308",
+      "size": 0.85,
+      "file": "static/admin/css/widgets.css",
+      "description": "Código-fonte: `static/admin/css/widgets.css`"
+    },
+    {
+      "id": "food-online-django-grp-static-admin-js-files-a-c-f-i-j-n",
+      "label": "Arquivos A–C–F–I–J–N",
+      "parent": "food-online-django-dir-static-admin-js",
+      "layer": "module",
+      "category": "frontend",
+      "categoryLabel": "Frontend",
+      "color": "#eab308",
+      "size": 1.35,
+      "file": "static/admin/js/[files-a–c–f–i–j–n]",
+      "description": "Grupo de arquivos em `static/admin/js/` — Arquivos A–C–F–I–J–N"
+    },
+    {
+      "id": "food-online-django-grp-static-admin-js-files-p-s-t-u",
+      "label": "Arquivos P–S–T–U",
+      "parent": "food-online-django-dir-static-admin-js",
+      "layer": "module",
+      "category": "frontend",
+      "categoryLabel": "Frontend",
+      "color": "#eab308",
+      "size": 1.35,
+      "file": "static/admin/js/[files-p–s–t–u]",
+      "description": "Grupo de arquivos em `static/admin/js/` — Arquivos P–S–T–U"
+    },
+    {
+      "id": "food-online-django-file-static-admin-js-actions-js",
+      "label": "actions.js",
+      "parent": "food-online-django-grp-static-admin-js-files-a-c-f-i-j-n",
+      "layer": "file",
+      "category": "frontend",
+      "categoryLabel": "Frontend",
+      "color": "#eab308",
+      "size": 0.85,
+      "file": "static/admin/js/actions.js",
+      "description": "Código-fonte: `static/admin/js/actions.js`"
+    },
+    {
+      "id": "food-online-django-file-static-admin-js-autocomplete-js",
+      "label": "autocomplete.js",
+      "parent": "food-online-django-grp-static-admin-js-files-a-c-f-i-j-n",
+      "layer": "file",
+      "category": "frontend",
+      "categoryLabel": "Frontend",
+      "color": "#eab308",
+      "size": 0.85,
+      "file": "static/admin/js/autocomplete.js",
+      "description": "Código-fonte: `static/admin/js/autocomplete.js`"
+    },
+    {
+      "id": "food-online-django-file-static-admin-js-calendar-js",
+      "label": "calendar.js",
+      "parent": "food-online-django-grp-static-admin-js-files-a-c-f-i-j-n",
+      "layer": "file",
+      "category": "frontend",
+      "categoryLabel": "Frontend",
+      "color": "#eab308",
+      "size": 0.85,
+      "file": "static/admin/js/calendar.js",
+      "description": "Código-fonte: `static/admin/js/calendar.js`"
+    },
+    {
+      "id": "food-online-django-file-static-admin-js-cancel-js",
+      "label": "cancel.js",
+      "parent": "food-online-django-grp-static-admin-js-files-a-c-f-i-j-n",
+      "layer": "file",
+      "category": "frontend",
+      "categoryLabel": "Frontend",
+      "color": "#eab308",
+      "size": 0.85,
+      "file": "static/admin/js/cancel.js",
+      "description": "Código-fonte: `static/admin/js/cancel.js`"
+    },
+    {
+      "id": "food-online-django-file-static-admin-js-change-form-js",
+      "label": "change_form.js",
+      "parent": "food-online-django-grp-static-admin-js-files-a-c-f-i-j-n",
+      "layer": "file",
+      "category": "frontend",
+      "categoryLabel": "Frontend",
+      "color": "#eab308",
+      "size": 0.85,
+      "file": "static/admin/js/change_form.js",
+      "description": "Código-fonte: `static/admin/js/change_form.js`"
+    },
+    {
+      "id": "food-online-django-file-static-admin-js-collapse-js",
+      "label": "collapse.js",
+      "parent": "food-online-django-grp-static-admin-js-files-a-c-f-i-j-n",
+      "layer": "file",
+      "category": "frontend",
+      "categoryLabel": "Frontend",
+      "color": "#eab308",
+      "size": 0.85,
+      "file": "static/admin/js/collapse.js",
+      "description": "Código-fonte: `static/admin/js/collapse.js`"
+    },
+    {
+      "id": "food-online-django-file-static-admin-js-core-js",
+      "label": "core.js",
+      "parent": "food-online-django-grp-static-admin-js-files-a-c-f-i-j-n",
+      "layer": "file",
+      "category": "frontend",
+      "categoryLabel": "Frontend",
+      "color": "#eab308",
+      "size": 0.85,
+      "file": "static/admin/js/core.js",
+      "description": "Código-fonte: `static/admin/js/core.js`"
+    },
+    {
+      "id": "food-online-django-file-static-admin-js-filters-js",
+      "label": "filters.js",
+      "parent": "food-online-django-grp-static-admin-js-files-a-c-f-i-j-n",
+      "layer": "file",
+      "category": "frontend",
+      "categoryLabel": "Frontend",
+      "color": "#eab308",
+      "size": 0.85,
+      "file": "static/admin/js/filters.js",
+      "description": "Código-fonte: `static/admin/js/filters.js`"
+    },
+    {
+      "id": "food-online-django-file-static-admin-js-inlines-js",
+      "label": "inlines.js",
+      "parent": "food-online-django-grp-static-admin-js-files-a-c-f-i-j-n",
+      "layer": "file",
+      "category": "frontend",
+      "categoryLabel": "Frontend",
+      "color": "#eab308",
+      "size": 0.85,
+      "file": "static/admin/js/inlines.js",
+      "description": "Código-fonte: `static/admin/js/inlines.js`"
+    },
+    {
+      "id": "food-online-django-file-static-admin-js-jquery-init-js",
+      "label": "jquery.init.js",
+      "parent": "food-online-django-grp-static-admin-js-files-a-c-f-i-j-n",
+      "layer": "file",
+      "category": "frontend",
+      "categoryLabel": "Frontend",
+      "color": "#eab308",
+      "size": 0.85,
+      "file": "static/admin/js/jquery.init.js",
+      "description": "Código-fonte: `static/admin/js/jquery.init.js`"
+    },
+    {
+      "id": "food-online-django-file-static-admin-js-nav-sidebar-js",
+      "label": "nav_sidebar.js",
+      "parent": "food-online-django-grp-static-admin-js-files-a-c-f-i-j-n",
+      "layer": "file",
+      "category": "frontend",
+      "categoryLabel": "Frontend",
+      "color": "#eab308",
+      "size": 0.85,
+      "file": "static/admin/js/nav_sidebar.js",
+      "description": "Código-fonte: `static/admin/js/nav_sidebar.js`"
+    },
+    {
+      "id": "food-online-django-file-static-admin-js-popup-response-js",
+      "label": "popup_response.js",
+      "parent": "food-online-django-grp-static-admin-js-files-p-s-t-u",
+      "layer": "file",
+      "category": "frontend",
+      "categoryLabel": "Frontend",
+      "color": "#eab308",
+      "size": 0.85,
+      "file": "static/admin/js/popup_response.js",
+      "description": "Código-fonte: `static/admin/js/popup_response.js`"
+    },
+    {
+      "id": "food-online-django-file-static-admin-js-prepopulate-js",
+      "label": "prepopulate.js",
+      "parent": "food-online-django-grp-static-admin-js-files-p-s-t-u",
+      "layer": "file",
+      "category": "frontend",
+      "categoryLabel": "Frontend",
+      "color": "#eab308",
+      "size": 0.85,
+      "file": "static/admin/js/prepopulate.js",
+      "description": "Código-fonte: `static/admin/js/prepopulate.js`"
+    },
+    {
+      "id": "food-online-django-file-static-admin-js-prepopulate-init-js",
+      "label": "prepopulate_init.js",
+      "parent": "food-online-django-grp-static-admin-js-files-p-s-t-u",
+      "layer": "file",
+      "category": "frontend",
+      "categoryLabel": "Frontend",
+      "color": "#eab308",
+      "size": 0.85,
+      "file": "static/admin/js/prepopulate_init.js",
+      "description": "Código-fonte: `static/admin/js/prepopulate_init.js`"
+    },
+    {
+      "id": "food-online-django-file-static-admin-js-selectbox-js",
+      "label": "SelectBox.js",
+      "parent": "food-online-django-grp-static-admin-js-files-p-s-t-u",
+      "layer": "file",
+      "category": "frontend",
+      "categoryLabel": "Frontend",
+      "color": "#eab308",
+      "size": 0.85,
+      "file": "static/admin/js/SelectBox.js",
+      "description": "Código-fonte: `static/admin/js/SelectBox.js`"
+    },
+    {
+      "id": "food-online-django-file-static-admin-js-selectfilter2-js",
+      "label": "SelectFilter2.js",
+      "parent": "food-online-django-grp-static-admin-js-files-p-s-t-u",
+      "layer": "file",
+      "category": "frontend",
+      "categoryLabel": "Frontend",
+      "color": "#eab308",
+      "size": 0.85,
+      "file": "static/admin/js/SelectFilter2.js",
+      "description": "Código-fonte: `static/admin/js/SelectFilter2.js`"
+    },
+    {
+      "id": "food-online-django-file-static-admin-js-theme-js",
+      "label": "theme.js",
+      "parent": "food-online-django-grp-static-admin-js-files-p-s-t-u",
+      "layer": "file",
+      "category": "frontend",
+      "categoryLabel": "Frontend",
+      "color": "#eab308",
+      "size": 0.85,
+      "file": "static/admin/js/theme.js",
+      "description": "Código-fonte: `static/admin/js/theme.js`"
+    },
+    {
+      "id": "food-online-django-file-static-admin-js-urlify-js",
+      "label": "urlify.js",
+      "parent": "food-online-django-grp-static-admin-js-files-p-s-t-u",
+      "layer": "file",
+      "category": "frontend",
+      "categoryLabel": "Frontend",
+      "color": "#eab308",
+      "size": 0.85,
+      "file": "static/admin/js/urlify.js",
+      "description": "Código-fonte: `static/admin/js/urlify.js`"
+    },
+    {
+      "id": "food-online-django-file-static-admin-js-admin-datetimeshortcuts-js",
+      "label": "DateTimeShortcuts.js",
+      "parent": "food-online-django-dir-static-admin-js-admin",
+      "layer": "file",
+      "category": "frontend",
+      "categoryLabel": "Frontend",
+      "color": "#eab308",
+      "size": 0.85,
+      "file": "static/admin/js/admin/DateTimeShortcuts.js",
+      "description": "Código-fonte: `static/admin/js/admin/DateTimeShortcuts.js`"
+    },
+    {
+      "id": "food-online-django-file-static-admin-js-admin-relatedobjectlookups-js",
+      "label": "RelatedObjectLookups.js",
+      "parent": "food-online-django-dir-static-admin-js-admin",
+      "layer": "file",
+      "category": "frontend",
+      "categoryLabel": "Frontend",
+      "color": "#eab308",
+      "size": 0.85,
+      "file": "static/admin/js/admin/RelatedObjectLookups.js",
+      "description": "Código-fonte: `static/admin/js/admin/RelatedObjectLookups.js`"
+    },
+    {
+      "id": "food-online-django-file-static-css-bootstrap-datepicker-css",
+      "label": "bootstrap-datepicker.css",
+      "parent": "food-online-django-dir-static-css",
+      "layer": "file",
+      "category": "frontend",
+      "categoryLabel": "Frontend",
+      "color": "#eab308",
+      "size": 0.85,
+      "file": "static/css/bootstrap-datepicker.css",
+      "description": "Código-fonte: `static/css/bootstrap-datepicker.css`"
+    },
+    {
+      "id": "food-online-django-file-static-css-bootstrap-slider-css",
+      "label": "bootstrap-slider.css",
+      "parent": "food-online-django-dir-static-css",
+      "layer": "file",
+      "category": "frontend",
+      "categoryLabel": "Frontend",
+      "color": "#eab308",
+      "size": 0.85,
+      "file": "static/css/bootstrap-slider.css",
+      "description": "Código-fonte: `static/css/bootstrap-slider.css`"
+    },
+    {
+      "id": "food-online-django-file-static-css-bootstrap-theme-css",
+      "label": "bootstrap-theme.css",
+      "parent": "food-online-django-dir-static-css",
+      "layer": "file",
+      "category": "frontend",
+      "categoryLabel": "Frontend",
+      "color": "#eab308",
+      "size": 0.85,
+      "file": "static/css/bootstrap-theme.css",
+      "description": "Código-fonte: `static/css/bootstrap-theme.css`"
+    },
+    {
+      "id": "food-online-django-file-static-css-bootstrap-css",
+      "label": "bootstrap.css",
+      "parent": "food-online-django-dir-static-css",
+      "layer": "file",
+      "category": "frontend",
+      "categoryLabel": "Frontend",
+      "color": "#eab308",
+      "size": 0.85,
+      "file": "static/css/bootstrap.css",
+      "description": "Código-fonte: `static/css/bootstrap.css`"
+    },
+    {
+      "id": "food-online-django-file-static-css-cs-foodbakery-plugin-css",
+      "label": "cs-foodbakery-plugin.css",
+      "parent": "food-online-django-dir-static-css",
+      "layer": "file",
+      "category": "frontend",
+      "categoryLabel": "Frontend",
+      "color": "#eab308",
+      "size": 0.85,
+      "file": "static/css/cs-foodbakery-plugin.css",
+      "description": "Código-fonte: `static/css/cs-foodbakery-plugin.css`"
+    },
+    {
+      "id": "food-online-django-file-static-css-iconmoon-css",
+      "label": "iconmoon.css",
+      "parent": "food-online-django-dir-static-css",
+      "layer": "file",
+      "category": "frontend",
+      "categoryLabel": "Frontend",
+      "color": "#eab308",
+      "size": 0.85,
+      "file": "static/css/iconmoon.css",
+      "description": "Código-fonte: `static/css/iconmoon.css`"
+    },
+    {
+      "id": "food-online-django-file-static-css-style-css",
+      "label": "style.css",
+      "parent": "food-online-django-dir-static-css",
+      "layer": "file",
+      "category": "frontend",
+      "categoryLabel": "Frontend",
+      "color": "#eab308",
+      "size": 0.85,
+      "file": "static/css/style.css",
+      "description": "Código-fonte: `static/css/style.css`"
+    },
+    {
+      "id": "food-online-django-file-static-js-bootstrap-js",
+      "label": "bootstrap.js",
+      "parent": "food-online-django-dir-static-js",
+      "layer": "file",
+      "category": "frontend",
+      "categoryLabel": "Frontend",
+      "color": "#eab308",
+      "size": 0.85,
+      "file": "static/js/bootstrap.js",
+      "description": "Código-fonte: `static/js/bootstrap.js`"
+    },
+    {
+      "id": "food-online-django-file-static-js-daterangepicker-js",
+      "label": "daterangepicker.js",
+      "parent": "food-online-django-dir-static-js",
+      "layer": "file",
+      "category": "frontend",
+      "categoryLabel": "Frontend",
+      "color": "#eab308",
+      "size": 0.85,
+      "file": "static/js/daterangepicker.js",
+      "description": "Código-fonte: `static/js/daterangepicker.js`"
+    },
+    {
+      "id": "food-online-django-file-static-js-functions-js",
+      "label": "functions.js",
+      "parent": "food-online-django-dir-static-js",
+      "layer": "file",
+      "category": "frontend",
+      "categoryLabel": "Frontend",
+      "color": "#eab308",
+      "size": 0.85,
+      "file": "static/js/functions.js",
+      "description": "Código-fonte: `static/js/functions.js`"
+    },
+    {
+      "id": "food-online-django-file-static-js-jquery-te-1-4-0-min-js",
+      "label": "jquery-te-1.4.0.min.js",
+      "parent": "food-online-django-dir-static-js",
+      "layer": "file",
+      "category": "frontend",
+      "categoryLabel": "Frontend",
+      "color": "#eab308",
+      "size": 0.85,
+      "file": "static/js/jquery-te-1.4.0.min.js",
+      "description": "Código-fonte: `static/js/jquery-te-1.4.0.min.js`"
+    },
+    {
+      "id": "food-online-django-file-static-js-jquery-ui-js",
+      "label": "jquery-ui.js",
+      "parent": "food-online-django-dir-static-js",
+      "layer": "file",
+      "category": "frontend",
+      "categoryLabel": "Frontend",
+      "color": "#eab308",
+      "size": 0.85,
+      "file": "static/js/jquery-ui.js",
+      "description": "Código-fonte: `static/js/jquery-ui.js`"
+    },
+    {
+      "id": "food-online-django-file-static-js-jquery-js",
+      "label": "jquery.js",
+      "parent": "food-online-django-dir-static-js",
+      "layer": "file",
+      "category": "frontend",
+      "categoryLabel": "Frontend",
+      "color": "#eab308",
+      "size": 0.85,
+      "file": "static/js/jquery.js",
+      "description": "Código-fonte: `static/js/jquery.js`"
+    },
+    {
+      "id": "food-online-django-file-static-js-jquery-mcustomscrollbar-concat-min-js",
+      "label": "jquery.mCustomScrollbar.concat.min.js",
+      "parent": "food-online-django-dir-static-js",
+      "layer": "file",
+      "category": "frontend",
+      "categoryLabel": "Frontend",
+      "color": "#eab308",
+      "size": 0.85,
+      "file": "static/js/jquery.mCustomScrollbar.concat.min.js",
+      "description": "Código-fonte: `static/js/jquery.mCustomScrollbar.concat.min.js`"
+    },
+    {
+      "id": "food-online-django-file-static-js-modernizr-js",
+      "label": "modernizr.js",
+      "parent": "food-online-django-dir-static-js",
+      "layer": "file",
+      "category": "frontend",
+      "categoryLabel": "Frontend",
+      "color": "#eab308",
+      "size": 0.85,
+      "file": "static/js/modernizr.js",
+      "description": "Código-fonte: `static/js/modernizr.js`"
+    },
+    {
+      "id": "food-online-django-file-static-js-scripts-js",
+      "label": "scripts.js",
+      "parent": "food-online-django-dir-static-js",
+      "layer": "file",
+      "category": "frontend",
+      "categoryLabel": "Frontend",
+      "color": "#eab308",
+      "size": 0.85,
+      "file": "static/js/scripts.js",
+      "description": "Código-fonte: `static/js/scripts.js`"
+    },
+    {
+      "id": "food-online-django-file-static-js-tag-it-js",
+      "label": "tag-it.js",
+      "parent": "food-online-django-dir-static-js",
+      "layer": "file",
+      "category": "frontend",
+      "categoryLabel": "Frontend",
+      "color": "#eab308",
+      "size": 0.85,
+      "file": "static/js/tag-it.js",
+      "description": "Código-fonte: `static/js/tag-it.js`"
+    },
+    {
+      "id": "food-online-django-file-static-js-theia-sticky-sidebar-js",
+      "label": "theia-sticky-sidebar.js",
+      "parent": "food-online-django-dir-static-js",
+      "layer": "file",
+      "category": "frontend",
+      "categoryLabel": "Frontend",
+      "color": "#eab308",
+      "size": 0.85,
+      "file": "static/js/theia-sticky-sidebar.js",
+      "description": "Código-fonte: `static/js/theia-sticky-sidebar.js`"
+    },
+    {
+      "id": "food-online-django-file-templates-403-html",
+      "label": "403.html",
+      "parent": "food-online-django-dir-templates",
+      "layer": "file",
+      "category": "frontend",
+      "categoryLabel": "Frontend",
+      "color": "#eab308",
+      "size": 0.85,
+      "file": "templates/403.html",
+      "description": "Código-fonte: `templates/403.html`"
+    },
+    {
+      "id": "food-online-django-file-templates-base-html",
+      "label": "base.html",
+      "parent": "food-online-django-dir-templates",
+      "layer": "file",
+      "category": "frontend",
+      "categoryLabel": "Frontend",
+      "color": "#eab308",
+      "size": 0.85,
+      "file": "templates/base.html",
+      "description": "Código-fonte: `templates/base.html`"
+    },
+    {
+      "id": "food-online-django-file-templates-home-html",
+      "label": "home.html",
+      "parent": "food-online-django-dir-templates",
+      "layer": "file",
+      "category": "frontend",
+      "categoryLabel": "Frontend",
+      "color": "#eab308",
+      "size": 0.85,
+      "file": "templates/home.html",
+      "description": "Código-fonte: `templates/home.html`"
+    },
+    {
+      "id": "food-online-django-file-templates-accounts-custdashboard-html",
+      "label": "custDashboard.html",
+      "parent": "food-online-django-dir-templates-accounts",
+      "layer": "file",
+      "category": "frontend",
+      "categoryLabel": "Frontend",
+      "color": "#eab308",
+      "size": 0.85,
+      "file": "templates/accounts/custDashboard.html",
+      "description": "Código-fonte: `templates/accounts/custDashboard.html`"
+    },
+    {
+      "id": "food-online-django-file-templates-accounts-forgot-password-html",
+      "label": "forgot_password.html",
+      "parent": "food-online-django-dir-templates-accounts",
+      "layer": "file",
+      "category": "frontend",
+      "categoryLabel": "Frontend",
+      "color": "#eab308",
+      "size": 0.85,
+      "file": "templates/accounts/forgot_password.html",
+      "description": "Código-fonte: `templates/accounts/forgot_password.html`"
+    },
+    {
+      "id": "food-online-django-file-templates-accounts-login-html",
+      "label": "login.html",
+      "parent": "food-online-django-dir-templates-accounts",
+      "layer": "file",
+      "category": "frontend",
+      "categoryLabel": "Frontend",
+      "color": "#eab308",
+      "size": 0.85,
+      "file": "templates/accounts/login.html",
+      "description": "Código-fonte: `templates/accounts/login.html`"
+    },
+    {
+      "id": "food-online-django-file-templates-accounts-registeruser-html",
+      "label": "registerUser.html",
+      "parent": "food-online-django-dir-templates-accounts",
+      "layer": "file",
+      "category": "frontend",
+      "categoryLabel": "Frontend",
+      "color": "#eab308",
+      "size": 0.85,
+      "file": "templates/accounts/registerUser.html",
+      "description": "Código-fonte: `templates/accounts/registerUser.html`"
+    },
+    {
+      "id": "food-online-django-file-templates-accounts-registervendor-html",
+      "label": "registerVendor.html",
+      "parent": "food-online-django-dir-templates-accounts",
+      "layer": "file",
+      "category": "frontend",
+      "categoryLabel": "Frontend",
+      "color": "#eab308",
+      "size": 0.85,
+      "file": "templates/accounts/registerVendor.html",
+      "description": "Código-fonte: `templates/accounts/registerVendor.html`"
+    },
+    {
+      "id": "food-online-django-file-templates-accounts-reset-password-html",
+      "label": "reset_password.html",
+      "parent": "food-online-django-dir-templates-accounts",
+      "layer": "file",
+      "category": "frontend",
+      "categoryLabel": "Frontend",
+      "color": "#eab308",
+      "size": 0.85,
+      "file": "templates/accounts/reset_password.html",
+      "description": "Código-fonte: `templates/accounts/reset_password.html`"
+    },
+    {
+      "id": "food-online-django-file-templates-accounts-vendordashboard-html",
+      "label": "vendorDashboard.html",
+      "parent": "food-online-django-dir-templates-accounts",
+      "layer": "file",
+      "category": "frontend",
+      "categoryLabel": "Frontend",
+      "color": "#eab308",
+      "size": 0.85,
+      "file": "templates/accounts/vendorDashboard.html",
+      "description": "Código-fonte: `templates/accounts/vendorDashboard.html`"
+    },
+    {
+      "id": "food-online-django-file-templates-accounts-emails-account-verification-email-html",
+      "label": "account_verification_email.html",
+      "parent": "food-online-django-dir-templates-accounts-emails",
+      "layer": "file",
+      "category": "frontend",
+      "categoryLabel": "Frontend",
+      "color": "#eab308",
+      "size": 0.85,
+      "file": "templates/accounts/emails/account_verification_email.html",
+      "description": "Código-fonte: `templates/accounts/emails/account_verification_email.html`"
+    },
+    {
+      "id": "food-online-django-file-templates-accounts-emails-admin-approval-email-html",
+      "label": "admin_approval_email.html",
+      "parent": "food-online-django-dir-templates-accounts-emails",
+      "layer": "file",
+      "category": "frontend",
+      "categoryLabel": "Frontend",
+      "color": "#eab308",
+      "size": 0.85,
+      "file": "templates/accounts/emails/admin_approval_email.html",
+      "description": "Código-fonte: `templates/accounts/emails/admin_approval_email.html`"
+    },
+    {
+      "id": "food-online-django-file-templates-accounts-emails-reset-password-email-html",
+      "label": "reset_password_email.html",
+      "parent": "food-online-django-dir-templates-accounts-emails",
+      "layer": "file",
+      "category": "frontend",
+      "categoryLabel": "Frontend",
+      "color": "#eab308",
+      "size": 0.85,
+      "file": "templates/accounts/emails/reset_password_email.html",
+      "description": "Código-fonte: `templates/accounts/emails/reset_password_email.html`"
+    },
+    {
+      "id": "food-online-django-file-templates-customers-cover-html",
+      "label": "cover.html",
+      "parent": "food-online-django-dir-templates-customers",
+      "layer": "file",
+      "category": "frontend",
+      "categoryLabel": "Frontend",
+      "color": "#eab308",
+      "size": 0.85,
+      "file": "templates/customers/cover.html",
+      "description": "Código-fonte: `templates/customers/cover.html`"
+    },
+    {
+      "id": "food-online-django-file-templates-customers-cprofile-html",
+      "label": "cprofile.html",
+      "parent": "food-online-django-dir-templates-customers",
+      "layer": "file",
+      "category": "frontend",
+      "categoryLabel": "Frontend",
+      "color": "#eab308",
+      "size": 0.85,
+      "file": "templates/customers/cprofile.html",
+      "description": "Código-fonte: `templates/customers/cprofile.html`"
+    },
+    {
+      "id": "food-online-django-file-templates-customers-my-orders-html",
+      "label": "my_orders.html",
+      "parent": "food-online-django-dir-templates-customers",
+      "layer": "file",
+      "category": "frontend",
+      "categoryLabel": "Frontend",
+      "color": "#eab308",
+      "size": 0.85,
+      "file": "templates/customers/my_orders.html",
+      "description": "Código-fonte: `templates/customers/my_orders.html`"
+    },
+    {
+      "id": "food-online-django-file-templates-customers-order-details-html",
+      "label": "order_details.html",
+      "parent": "food-online-django-dir-templates-customers",
+      "layer": "file",
+      "category": "frontend",
+      "categoryLabel": "Frontend",
+      "color": "#eab308",
+      "size": 0.85,
+      "file": "templates/customers/order_details.html",
+      "description": "Código-fonte: `templates/customers/order_details.html`"
+    },
+    {
+      "id": "food-online-django-file-templates-includes-alerts-html",
+      "label": "alerts.html",
+      "parent": "food-online-django-dir-templates-includes",
+      "layer": "file",
+      "category": "frontend",
+      "categoryLabel": "Frontend",
+      "color": "#eab308",
+      "size": 0.85,
+      "file": "templates/includes/alerts.html",
+      "description": "Código-fonte: `templates/includes/alerts.html`"
+    },
+    {
+      "id": "food-online-django-file-templates-includes-c-sidebar-html",
+      "label": "c_sidebar.html",
+      "parent": "food-online-django-dir-templates-includes",
+      "layer": "file",
+      "category": "frontend",
+      "categoryLabel": "Frontend",
+      "color": "#eab308",
+      "size": 0.85,
+      "file": "templates/includes/c_sidebar.html",
+      "description": "Código-fonte: `templates/includes/c_sidebar.html`"
+    },
+    {
+      "id": "food-online-django-file-templates-includes-cover-html",
+      "label": "cover.html",
+      "parent": "food-online-django-dir-templates-includes",
+      "layer": "file",
+      "category": "frontend",
+      "categoryLabel": "Frontend",
+      "color": "#eab308",
+      "size": 0.85,
+      "file": "templates/includes/cover.html",
+      "description": "Código-fonte: `templates/includes/cover.html`"
+    },
+    {
+      "id": "food-online-django-file-templates-includes-footer-html",
+      "label": "footer.html",
+      "parent": "food-online-django-dir-templates-includes",
+      "layer": "file",
+      "category": "frontend",
+      "categoryLabel": "Frontend",
+      "color": "#eab308",
+      "size": 0.85,
+      "file": "templates/includes/footer.html",
+      "description": "Código-fonte: `templates/includes/footer.html`"
+    },
+    {
+      "id": "food-online-django-file-templates-includes-navbar-html",
+      "label": "navbar.html",
+      "parent": "food-online-django-dir-templates-includes",
+      "layer": "file",
+      "category": "frontend",
+      "categoryLabel": "Frontend",
+      "color": "#eab308",
+      "size": 0.85,
+      "file": "templates/includes/navbar.html",
+      "description": "Código-fonte: `templates/includes/navbar.html`"
+    },
+    {
+      "id": "food-online-django-file-templates-includes-v-sidebar-html",
+      "label": "v_sidebar.html",
+      "parent": "food-online-django-dir-templates-includes",
+      "layer": "file",
+      "category": "frontend",
+      "categoryLabel": "Frontend",
+      "color": "#eab308",
+      "size": 0.85,
+      "file": "templates/includes/v_sidebar.html",
+      "description": "Código-fonte: `templates/includes/v_sidebar.html`"
+    },
+    {
+      "id": "food-online-django-file-templates-marketplace-cart-html",
+      "label": "cart.html",
+      "parent": "food-online-django-dir-templates-marketplace",
+      "layer": "file",
+      "category": "frontend",
+      "categoryLabel": "Frontend",
+      "color": "#eab308",
+      "size": 0.85,
+      "file": "templates/marketplace/cart.html",
+      "description": "Código-fonte: `templates/marketplace/cart.html`"
+    },
+    {
+      "id": "food-online-django-file-templates-marketplace-checkout-html",
+      "label": "checkout.html",
+      "parent": "food-online-django-dir-templates-marketplace",
+      "layer": "file",
+      "category": "frontend",
+      "categoryLabel": "Frontend",
+      "color": "#eab308",
+      "size": 0.85,
+      "file": "templates/marketplace/checkout.html",
+      "description": "Código-fonte: `templates/marketplace/checkout.html`"
+    },
+    {
+      "id": "food-online-django-file-templates-marketplace-listings-html",
+      "label": "listings.html",
+      "parent": "food-online-django-dir-templates-marketplace",
+      "layer": "file",
+      "category": "frontend",
+      "categoryLabel": "Frontend",
+      "color": "#eab308",
+      "size": 0.85,
+      "file": "templates/marketplace/listings.html",
+      "description": "Código-fonte: `templates/marketplace/listings.html`"
+    },
+    {
+      "id": "food-online-django-file-templates-marketplace-vendor-detail-html",
+      "label": "vendor_detail.html",
+      "parent": "food-online-django-dir-templates-marketplace",
+      "layer": "file",
+      "category": "frontend",
+      "categoryLabel": "Frontend",
+      "color": "#eab308",
+      "size": 0.85,
+      "file": "templates/marketplace/vendor_detail.html",
+      "description": "Código-fonte: `templates/marketplace/vendor_detail.html`"
+    },
+    {
+      "id": "food-online-django-file-templates-orders-new-order-received-html",
+      "label": "new_order_received.html",
+      "parent": "food-online-django-dir-templates-orders",
+      "layer": "file",
+      "category": "frontend",
+      "categoryLabel": "Frontend",
+      "color": "#eab308",
+      "size": 0.85,
+      "file": "templates/orders/new_order_received.html",
+      "description": "Código-fonte: `templates/orders/new_order_received.html`"
+    },
+    {
+      "id": "food-online-django-file-templates-orders-order-complete-html",
+      "label": "order_complete.html",
+      "parent": "food-online-django-dir-templates-orders",
+      "layer": "file",
+      "category": "frontend",
+      "categoryLabel": "Frontend",
+      "color": "#eab308",
+      "size": 0.85,
+      "file": "templates/orders/order_complete.html",
+      "description": "Código-fonte: `templates/orders/order_complete.html`"
+    },
+    {
+      "id": "food-online-django-file-templates-orders-order-confirmation-email-html",
+      "label": "order_confirmation_email.html",
+      "parent": "food-online-django-dir-templates-orders",
+      "layer": "file",
+      "category": "frontend",
+      "categoryLabel": "Frontend",
+      "color": "#eab308",
+      "size": 0.85,
+      "file": "templates/orders/order_confirmation_email.html",
+      "description": "Código-fonte: `templates/orders/order_confirmation_email.html`"
+    },
+    {
+      "id": "food-online-django-file-templates-orders-place-order-html",
+      "label": "place_order.html",
+      "parent": "food-online-django-dir-templates-orders",
+      "layer": "file",
+      "category": "frontend",
+      "categoryLabel": "Frontend",
+      "color": "#eab308",
+      "size": 0.85,
+      "file": "templates/orders/place_order.html",
+      "description": "Código-fonte: `templates/orders/place_order.html`"
     }
   ],
   "links": [
     {
-      "source": "fod-root",
-      "target": "fod-settings",
+      "source": "food-online-django-root",
+      "target": "food-online-django-dir-accounts",
       "type": "dependency"
     },
     {
-      "source": "fod-settings",
-      "target": "fod-urls",
+      "source": "food-online-django-root",
+      "target": "food-online-django-dir-customers",
       "type": "dependency"
     },
     {
-      "source": "fod-root",
-      "target": "fod-accounts",
+      "source": "food-online-django-root",
+      "target": "food-online-django-dir-foodonline",
       "type": "dependency"
     },
     {
-      "source": "fod-accounts",
-      "target": "fod-user-model",
+      "source": "food-online-django-root",
+      "target": "food-online-django-dir-marketplace",
       "type": "dependency"
     },
     {
-      "source": "fod-accounts",
-      "target": "fod-roles",
+      "source": "food-online-django-root",
+      "target": "food-online-django-dir-menu",
       "type": "dependency"
     },
     {
-      "source": "fod-accounts",
-      "target": "fod-register-user",
+      "source": "food-online-django-root",
+      "target": "food-online-django-dir-orders",
       "type": "dependency"
     },
     {
-      "source": "fod-accounts",
-      "target": "fod-register-vendor",
+      "source": "food-online-django-root",
+      "target": "food-online-django-dir-static",
       "type": "dependency"
     },
     {
-      "source": "fod-accounts",
-      "target": "fod-activate",
+      "source": "food-online-django-root",
+      "target": "food-online-django-dir-templates",
       "type": "dependency"
     },
     {
-      "source": "fod-root",
-      "target": "fod-vendor",
+      "source": "food-online-django-dir-accounts",
+      "target": "food-online-django-dir-accounts-migrations",
       "type": "dependency"
     },
     {
-      "source": "fod-vendor",
-      "target": "fod-vendor-model",
+      "source": "food-online-django-dir-customers",
+      "target": "food-online-django-dir-customers-migrations",
       "type": "dependency"
     },
     {
-      "source": "fod-root",
-      "target": "fod-menu",
+      "source": "food-online-django-dir-foodonline",
+      "target": "food-online-django-dir-foodonline-static",
       "type": "dependency"
     },
     {
-      "source": "fod-menu",
-      "target": "fod-fooditem",
+      "source": "food-online-django-dir-marketplace",
+      "target": "food-online-django-dir-marketplace-migrations",
       "type": "dependency"
     },
     {
-      "source": "fod-root",
-      "target": "fod-marketplace",
+      "source": "food-online-django-dir-menu",
+      "target": "food-online-django-dir-menu-migrations",
       "type": "dependency"
     },
     {
-      "source": "fod-marketplace",
-      "target": "fod-cart-counter",
+      "source": "food-online-django-dir-orders",
+      "target": "food-online-django-dir-orders-migrations",
       "type": "dependency"
     },
     {
-      "source": "fod-marketplace",
-      "target": "fod-add-cart",
+      "source": "food-online-django-dir-static",
+      "target": "food-online-django-dir-static-admin",
       "type": "dependency"
     },
     {
-      "source": "fod-marketplace",
-      "target": "fod-search",
+      "source": "food-online-django-dir-static",
+      "target": "food-online-django-dir-static-css",
       "type": "dependency"
     },
     {
-      "source": "fod-root",
-      "target": "fod-orders",
+      "source": "food-online-django-dir-static",
+      "target": "food-online-django-dir-static-js",
       "type": "dependency"
     },
     {
-      "source": "fod-orders",
-      "target": "fod-place-order",
+      "source": "food-online-django-dir-templates",
+      "target": "food-online-django-dir-templates-accounts",
       "type": "dependency"
     },
     {
-      "source": "fod-orders",
-      "target": "fod-payments",
+      "source": "food-online-django-dir-templates",
+      "target": "food-online-django-dir-templates-customers",
+      "type": "dependency"
+    },
+    {
+      "source": "food-online-django-dir-templates",
+      "target": "food-online-django-dir-templates-includes",
+      "type": "dependency"
+    },
+    {
+      "source": "food-online-django-dir-templates",
+      "target": "food-online-django-dir-templates-marketplace",
+      "type": "dependency"
+    },
+    {
+      "source": "food-online-django-dir-templates",
+      "target": "food-online-django-dir-templates-orders",
+      "type": "dependency"
+    },
+    {
+      "source": "food-online-django-dir-foodonline-static",
+      "target": "food-online-django-dir-foodonline-static-css",
+      "type": "dependency"
+    },
+    {
+      "source": "food-online-django-dir-foodonline-static",
+      "target": "food-online-django-dir-foodonline-static-js",
+      "type": "dependency"
+    },
+    {
+      "source": "food-online-django-dir-static-admin",
+      "target": "food-online-django-dir-static-admin-css",
+      "type": "dependency"
+    },
+    {
+      "source": "food-online-django-dir-static-admin",
+      "target": "food-online-django-dir-static-admin-js",
+      "type": "dependency"
+    },
+    {
+      "source": "food-online-django-dir-templates-accounts",
+      "target": "food-online-django-dir-templates-accounts-emails",
+      "type": "dependency"
+    },
+    {
+      "source": "food-online-django-dir-static-admin-js",
+      "target": "food-online-django-dir-static-admin-js-admin",
+      "type": "dependency"
+    },
+    {
+      "source": "food-online-django-root",
+      "target": "food-online-django-file-env-sample",
+      "type": "dependency"
+    },
+    {
+      "source": "food-online-django-root",
+      "target": "food-online-django-file-gitignore",
+      "type": "dependency"
+    },
+    {
+      "source": "food-online-django-root",
+      "target": "food-online-django-file-manage-py",
+      "type": "dependency"
+    },
+    {
+      "source": "food-online-django-root",
+      "target": "food-online-django-file-test-py",
+      "type": "dependency"
+    },
+    {
+      "source": "food-online-django-dir-accounts",
+      "target": "food-online-django-file-accounts-init-py",
+      "type": "dependency"
+    },
+    {
+      "source": "food-online-django-dir-accounts",
+      "target": "food-online-django-file-accounts-admin-py",
+      "type": "dependency"
+    },
+    {
+      "source": "food-online-django-dir-accounts",
+      "target": "food-online-django-file-accounts-apps-py",
+      "type": "dependency"
+    },
+    {
+      "source": "food-online-django-dir-accounts",
+      "target": "food-online-django-file-accounts-context-processors-py",
+      "type": "dependency"
+    },
+    {
+      "source": "food-online-django-dir-accounts",
+      "target": "food-online-django-file-accounts-forms-py",
+      "type": "dependency"
+    },
+    {
+      "source": "food-online-django-dir-accounts",
+      "target": "food-online-django-file-accounts-models-py",
+      "type": "dependency"
+    },
+    {
+      "source": "food-online-django-dir-accounts",
+      "target": "food-online-django-file-accounts-signals-py",
+      "type": "dependency"
+    },
+    {
+      "source": "food-online-django-dir-accounts",
+      "target": "food-online-django-file-accounts-tests-py",
+      "type": "dependency"
+    },
+    {
+      "source": "food-online-django-dir-accounts",
+      "target": "food-online-django-file-accounts-urls-py",
+      "type": "dependency"
+    },
+    {
+      "source": "food-online-django-dir-accounts",
+      "target": "food-online-django-file-accounts-utils-py",
+      "type": "dependency"
+    },
+    {
+      "source": "food-online-django-dir-accounts",
+      "target": "food-online-django-file-accounts-validators-py",
+      "type": "dependency"
+    },
+    {
+      "source": "food-online-django-dir-accounts",
+      "target": "food-online-django-file-accounts-views-py",
+      "type": "dependency"
+    },
+    {
+      "source": "food-online-django-dir-accounts-migrations",
+      "target": "food-online-django-file-accounts-migrations-0001-initial-py",
+      "type": "dependency"
+    },
+    {
+      "source": "food-online-django-dir-accounts-migrations",
+      "target": "food-online-django-file-accounts-migrations-0002-userprofile-py",
+      "type": "dependency"
+    },
+    {
+      "source": "food-online-django-dir-accounts-migrations",
+      "target": "food-online-django-file-accounts-migrations-0003-alter-user-role-py",
+      "type": "dependency"
+    },
+    {
+      "source": "food-online-django-dir-accounts-migrations",
+      "target": "food-online-django-file-accounts-migrations-0004-rename-latidude-userprofile-latitude-py",
+      "type": "dependency"
+    },
+    {
+      "source": "food-online-django-dir-accounts-migrations",
+      "target": "food-online-django-file-accounts-migrations-0005-remove-userprofile-address-line-1-and-more-py",
+      "type": "dependency"
+    },
+    {
+      "source": "food-online-django-dir-accounts-migrations",
+      "target": "food-online-django-file-accounts-migrations-0006-userprofile-location-py",
+      "type": "dependency"
+    },
+    {
+      "source": "food-online-django-dir-accounts-migrations",
+      "target": "food-online-django-file-accounts-migrations-init-py",
+      "type": "dependency"
+    },
+    {
+      "source": "food-online-django-dir-customers",
+      "target": "food-online-django-file-customers-init-py",
+      "type": "dependency"
+    },
+    {
+      "source": "food-online-django-dir-customers",
+      "target": "food-online-django-file-customers-admin-py",
+      "type": "dependency"
+    },
+    {
+      "source": "food-online-django-dir-customers",
+      "target": "food-online-django-file-customers-apps-py",
+      "type": "dependency"
+    },
+    {
+      "source": "food-online-django-dir-customers",
+      "target": "food-online-django-file-customers-models-py",
+      "type": "dependency"
+    },
+    {
+      "source": "food-online-django-dir-customers",
+      "target": "food-online-django-file-customers-tests-py",
+      "type": "dependency"
+    },
+    {
+      "source": "food-online-django-dir-customers",
+      "target": "food-online-django-file-customers-urls-py",
+      "type": "dependency"
+    },
+    {
+      "source": "food-online-django-dir-customers",
+      "target": "food-online-django-file-customers-views-py",
+      "type": "dependency"
+    },
+    {
+      "source": "food-online-django-dir-customers-migrations",
+      "target": "food-online-django-file-customers-migrations-init-py",
+      "type": "dependency"
+    },
+    {
+      "source": "food-online-django-dir-foodonline",
+      "target": "food-online-django-file-foodonline-init-py",
+      "type": "dependency"
+    },
+    {
+      "source": "food-online-django-dir-foodonline",
+      "target": "food-online-django-file-foodonline-asgi-py",
+      "type": "dependency"
+    },
+    {
+      "source": "food-online-django-dir-foodonline",
+      "target": "food-online-django-file-foodonline-settings-py",
+      "type": "dependency"
+    },
+    {
+      "source": "food-online-django-dir-foodonline",
+      "target": "food-online-django-file-foodonline-urls-py",
+      "type": "dependency"
+    },
+    {
+      "source": "food-online-django-dir-foodonline",
+      "target": "food-online-django-file-foodonline-views-py",
+      "type": "dependency"
+    },
+    {
+      "source": "food-online-django-dir-foodonline",
+      "target": "food-online-django-file-foodonline-wsgi-py",
+      "type": "dependency"
+    },
+    {
+      "source": "food-online-django-dir-foodonline-static-css",
+      "target": "food-online-django-file-foodonline-static-css-bootstrap-datepicker-css",
+      "type": "dependency"
+    },
+    {
+      "source": "food-online-django-dir-foodonline-static-css",
+      "target": "food-online-django-file-foodonline-static-css-bootstrap-slider-css",
+      "type": "dependency"
+    },
+    {
+      "source": "food-online-django-dir-foodonline-static-css",
+      "target": "food-online-django-file-foodonline-static-css-bootstrap-theme-css",
+      "type": "dependency"
+    },
+    {
+      "source": "food-online-django-dir-foodonline-static-css",
+      "target": "food-online-django-file-foodonline-static-css-bootstrap-css",
+      "type": "dependency"
+    },
+    {
+      "source": "food-online-django-dir-foodonline-static-css",
+      "target": "food-online-django-file-foodonline-static-css-cs-foodbakery-plugin-css",
+      "type": "dependency"
+    },
+    {
+      "source": "food-online-django-dir-foodonline-static-css",
+      "target": "food-online-django-file-foodonline-static-css-custom-css",
+      "type": "dependency"
+    },
+    {
+      "source": "food-online-django-dir-foodonline-static-css",
+      "target": "food-online-django-file-foodonline-static-css-iconmoon-css",
+      "type": "dependency"
+    },
+    {
+      "source": "food-online-django-dir-foodonline-static-css",
+      "target": "food-online-django-file-foodonline-static-css-style-css",
+      "type": "dependency"
+    },
+    {
+      "source": "food-online-django-dir-foodonline-static-js",
+      "target": "food-online-django-file-foodonline-static-js-bootstrap-js",
+      "type": "dependency"
+    },
+    {
+      "source": "food-online-django-dir-foodonline-static-js",
+      "target": "food-online-django-file-foodonline-static-js-custom-js",
+      "type": "dependency"
+    },
+    {
+      "source": "food-online-django-dir-foodonline-static-js",
+      "target": "food-online-django-file-foodonline-static-js-daterangepicker-js",
+      "type": "dependency"
+    },
+    {
+      "source": "food-online-django-dir-foodonline-static-js",
+      "target": "food-online-django-file-foodonline-static-js-functions-js",
+      "type": "dependency"
+    },
+    {
+      "source": "food-online-django-dir-foodonline-static-js",
+      "target": "food-online-django-file-foodonline-static-js-jquery-te-1-4-0-min-js",
+      "type": "dependency"
+    },
+    {
+      "source": "food-online-django-dir-foodonline-static-js",
+      "target": "food-online-django-file-foodonline-static-js-jquery-ui-js",
+      "type": "dependency"
+    },
+    {
+      "source": "food-online-django-dir-foodonline-static-js",
+      "target": "food-online-django-file-foodonline-static-js-jquery-js",
+      "type": "dependency"
+    },
+    {
+      "source": "food-online-django-dir-foodonline-static-js",
+      "target": "food-online-django-file-foodonline-static-js-jquery-mcustomscrollbar-concat-min-js",
+      "type": "dependency"
+    },
+    {
+      "source": "food-online-django-dir-foodonline-static-js",
+      "target": "food-online-django-file-foodonline-static-js-modernizr-js",
+      "type": "dependency"
+    },
+    {
+      "source": "food-online-django-dir-foodonline-static-js",
+      "target": "food-online-django-file-foodonline-static-js-scripts-js",
+      "type": "dependency"
+    },
+    {
+      "source": "food-online-django-dir-foodonline-static-js",
+      "target": "food-online-django-file-foodonline-static-js-tag-it-js",
+      "type": "dependency"
+    },
+    {
+      "source": "food-online-django-dir-foodonline-static-js",
+      "target": "food-online-django-file-foodonline-static-js-theia-sticky-sidebar-js",
+      "type": "dependency"
+    },
+    {
+      "source": "food-online-django-dir-marketplace",
+      "target": "food-online-django-file-marketplace-init-py",
+      "type": "dependency"
+    },
+    {
+      "source": "food-online-django-dir-marketplace",
+      "target": "food-online-django-file-marketplace-admin-py",
+      "type": "dependency"
+    },
+    {
+      "source": "food-online-django-dir-marketplace",
+      "target": "food-online-django-file-marketplace-apps-py",
+      "type": "dependency"
+    },
+    {
+      "source": "food-online-django-dir-marketplace",
+      "target": "food-online-django-file-marketplace-context-processors-py",
+      "type": "dependency"
+    },
+    {
+      "source": "food-online-django-dir-marketplace",
+      "target": "food-online-django-file-marketplace-models-py",
+      "type": "dependency"
+    },
+    {
+      "source": "food-online-django-dir-marketplace",
+      "target": "food-online-django-file-marketplace-tests-py",
+      "type": "dependency"
+    },
+    {
+      "source": "food-online-django-dir-marketplace",
+      "target": "food-online-django-file-marketplace-urls-py",
+      "type": "dependency"
+    },
+    {
+      "source": "food-online-django-dir-marketplace",
+      "target": "food-online-django-file-marketplace-views-py",
+      "type": "dependency"
+    },
+    {
+      "source": "food-online-django-dir-marketplace-migrations",
+      "target": "food-online-django-file-marketplace-migrations-0001-initial-py",
+      "type": "dependency"
+    },
+    {
+      "source": "food-online-django-dir-marketplace-migrations",
+      "target": "food-online-django-file-marketplace-migrations-0002-tax-py",
+      "type": "dependency"
+    },
+    {
+      "source": "food-online-django-dir-marketplace-migrations",
+      "target": "food-online-django-file-marketplace-migrations-init-py",
+      "type": "dependency"
+    },
+    {
+      "source": "food-online-django-dir-menu",
+      "target": "food-online-django-file-menu-init-py",
+      "type": "dependency"
+    },
+    {
+      "source": "food-online-django-dir-menu",
+      "target": "food-online-django-file-menu-admin-py",
+      "type": "dependency"
+    },
+    {
+      "source": "food-online-django-dir-menu",
+      "target": "food-online-django-file-menu-apps-py",
+      "type": "dependency"
+    },
+    {
+      "source": "food-online-django-dir-menu",
+      "target": "food-online-django-file-menu-forms-py",
+      "type": "dependency"
+    },
+    {
+      "source": "food-online-django-dir-menu",
+      "target": "food-online-django-file-menu-models-py",
+      "type": "dependency"
+    },
+    {
+      "source": "food-online-django-dir-menu",
+      "target": "food-online-django-file-menu-tests-py",
+      "type": "dependency"
+    },
+    {
+      "source": "food-online-django-dir-menu",
+      "target": "food-online-django-file-menu-views-py",
+      "type": "dependency"
+    },
+    {
+      "source": "food-online-django-dir-menu-migrations",
+      "target": "food-online-django-file-menu-migrations-0001-initial-py",
+      "type": "dependency"
+    },
+    {
+      "source": "food-online-django-dir-menu-migrations",
+      "target": "food-online-django-file-menu-migrations-0002-alter-category-options-alter-fooditem-options-py",
+      "type": "dependency"
+    },
+    {
+      "source": "food-online-django-dir-menu-migrations",
+      "target": "food-online-django-file-menu-migrations-0003-alter-fooditem-category-py",
+      "type": "dependency"
+    },
+    {
+      "source": "food-online-django-dir-menu-migrations",
+      "target": "food-online-django-file-menu-migrations-0004-alter-category-category-name-py",
+      "type": "dependency"
+    },
+    {
+      "source": "food-online-django-dir-menu-migrations",
+      "target": "food-online-django-file-menu-migrations-init-py",
+      "type": "dependency"
+    },
+    {
+      "source": "food-online-django-dir-orders",
+      "target": "food-online-django-file-orders-init-py",
+      "type": "dependency"
+    },
+    {
+      "source": "food-online-django-dir-orders",
+      "target": "food-online-django-file-orders-admin-py",
+      "type": "dependency"
+    },
+    {
+      "source": "food-online-django-dir-orders",
+      "target": "food-online-django-file-orders-apps-py",
+      "type": "dependency"
+    },
+    {
+      "source": "food-online-django-dir-orders",
+      "target": "food-online-django-file-orders-forms-py",
+      "type": "dependency"
+    },
+    {
+      "source": "food-online-django-dir-orders",
+      "target": "food-online-django-file-orders-models-py",
+      "type": "dependency"
+    },
+    {
+      "source": "food-online-django-dir-orders",
+      "target": "food-online-django-file-orders-request-object-py",
+      "type": "dependency"
+    },
+    {
+      "source": "food-online-django-dir-orders",
+      "target": "food-online-django-file-orders-tests-py",
+      "type": "dependency"
+    },
+    {
+      "source": "food-online-django-dir-orders",
+      "target": "food-online-django-file-orders-urls-py",
+      "type": "dependency"
+    },
+    {
+      "source": "food-online-django-dir-orders",
+      "target": "food-online-django-file-orders-utils-py",
+      "type": "dependency"
+    },
+    {
+      "source": "food-online-django-dir-orders",
+      "target": "food-online-django-file-orders-views-py",
+      "type": "dependency"
+    },
+    {
+      "source": "food-online-django-dir-orders-migrations",
+      "target": "food-online-django-file-orders-migrations-0001-initial-py",
+      "type": "dependency"
+    },
+    {
+      "source": "food-online-django-dir-orders-migrations",
+      "target": "food-online-django-file-orders-migrations-0002-order-total-data-order-vendors-py",
+      "type": "dependency"
+    },
+    {
+      "source": "food-online-django-dir-orders-migrations",
+      "target": "food-online-django-file-orders-migrations-0003-alter-order-tax-data-py",
+      "type": "dependency"
+    },
+    {
+      "source": "food-online-django-dir-orders-migrations",
+      "target": "food-online-django-file-orders-migrations-init-py",
+      "type": "dependency"
+    },
+    {
+      "source": "food-online-django-dir-static-admin-css",
+      "target": "food-online-django-file-static-admin-css-autocomplete-css",
+      "type": "dependency"
+    },
+    {
+      "source": "food-online-django-dir-static-admin-css",
+      "target": "food-online-django-file-static-admin-css-base-css",
+      "type": "dependency"
+    },
+    {
+      "source": "food-online-django-dir-static-admin-css",
+      "target": "food-online-django-file-static-admin-css-changelists-css",
+      "type": "dependency"
+    },
+    {
+      "source": "food-online-django-dir-static-admin-css",
+      "target": "food-online-django-file-static-admin-css-dark-mode-css",
+      "type": "dependency"
+    },
+    {
+      "source": "food-online-django-dir-static-admin-css",
+      "target": "food-online-django-file-static-admin-css-dashboard-css",
+      "type": "dependency"
+    },
+    {
+      "source": "food-online-django-dir-static-admin-css",
+      "target": "food-online-django-file-static-admin-css-forms-css",
+      "type": "dependency"
+    },
+    {
+      "source": "food-online-django-dir-static-admin-css",
+      "target": "food-online-django-file-static-admin-css-login-css",
+      "type": "dependency"
+    },
+    {
+      "source": "food-online-django-dir-static-admin-css",
+      "target": "food-online-django-file-static-admin-css-nav-sidebar-css",
+      "type": "dependency"
+    },
+    {
+      "source": "food-online-django-dir-static-admin-css",
+      "target": "food-online-django-file-static-admin-css-responsive-css",
+      "type": "dependency"
+    },
+    {
+      "source": "food-online-django-dir-static-admin-css",
+      "target": "food-online-django-file-static-admin-css-responsive-rtl-css",
+      "type": "dependency"
+    },
+    {
+      "source": "food-online-django-dir-static-admin-css",
+      "target": "food-online-django-file-static-admin-css-rtl-css",
+      "type": "dependency"
+    },
+    {
+      "source": "food-online-django-dir-static-admin-css",
+      "target": "food-online-django-file-static-admin-css-widgets-css",
+      "type": "dependency"
+    },
+    {
+      "source": "food-online-django-dir-static-admin-js",
+      "target": "food-online-django-grp-static-admin-js-files-a-c-f-i-j-n",
+      "type": "dependency"
+    },
+    {
+      "source": "food-online-django-dir-static-admin-js",
+      "target": "food-online-django-grp-static-admin-js-files-p-s-t-u",
+      "type": "dependency"
+    },
+    {
+      "source": "food-online-django-grp-static-admin-js-files-a-c-f-i-j-n",
+      "target": "food-online-django-file-static-admin-js-actions-js",
+      "type": "dependency"
+    },
+    {
+      "source": "food-online-django-grp-static-admin-js-files-a-c-f-i-j-n",
+      "target": "food-online-django-file-static-admin-js-autocomplete-js",
+      "type": "dependency"
+    },
+    {
+      "source": "food-online-django-grp-static-admin-js-files-a-c-f-i-j-n",
+      "target": "food-online-django-file-static-admin-js-calendar-js",
+      "type": "dependency"
+    },
+    {
+      "source": "food-online-django-grp-static-admin-js-files-a-c-f-i-j-n",
+      "target": "food-online-django-file-static-admin-js-cancel-js",
+      "type": "dependency"
+    },
+    {
+      "source": "food-online-django-grp-static-admin-js-files-a-c-f-i-j-n",
+      "target": "food-online-django-file-static-admin-js-change-form-js",
+      "type": "dependency"
+    },
+    {
+      "source": "food-online-django-grp-static-admin-js-files-a-c-f-i-j-n",
+      "target": "food-online-django-file-static-admin-js-collapse-js",
+      "type": "dependency"
+    },
+    {
+      "source": "food-online-django-grp-static-admin-js-files-a-c-f-i-j-n",
+      "target": "food-online-django-file-static-admin-js-core-js",
+      "type": "dependency"
+    },
+    {
+      "source": "food-online-django-grp-static-admin-js-files-a-c-f-i-j-n",
+      "target": "food-online-django-file-static-admin-js-filters-js",
+      "type": "dependency"
+    },
+    {
+      "source": "food-online-django-grp-static-admin-js-files-a-c-f-i-j-n",
+      "target": "food-online-django-file-static-admin-js-inlines-js",
+      "type": "dependency"
+    },
+    {
+      "source": "food-online-django-grp-static-admin-js-files-a-c-f-i-j-n",
+      "target": "food-online-django-file-static-admin-js-jquery-init-js",
+      "type": "dependency"
+    },
+    {
+      "source": "food-online-django-grp-static-admin-js-files-a-c-f-i-j-n",
+      "target": "food-online-django-file-static-admin-js-nav-sidebar-js",
+      "type": "dependency"
+    },
+    {
+      "source": "food-online-django-grp-static-admin-js-files-p-s-t-u",
+      "target": "food-online-django-file-static-admin-js-popup-response-js",
+      "type": "dependency"
+    },
+    {
+      "source": "food-online-django-grp-static-admin-js-files-p-s-t-u",
+      "target": "food-online-django-file-static-admin-js-prepopulate-js",
+      "type": "dependency"
+    },
+    {
+      "source": "food-online-django-grp-static-admin-js-files-p-s-t-u",
+      "target": "food-online-django-file-static-admin-js-prepopulate-init-js",
+      "type": "dependency"
+    },
+    {
+      "source": "food-online-django-grp-static-admin-js-files-p-s-t-u",
+      "target": "food-online-django-file-static-admin-js-selectbox-js",
+      "type": "dependency"
+    },
+    {
+      "source": "food-online-django-grp-static-admin-js-files-p-s-t-u",
+      "target": "food-online-django-file-static-admin-js-selectfilter2-js",
+      "type": "dependency"
+    },
+    {
+      "source": "food-online-django-grp-static-admin-js-files-p-s-t-u",
+      "target": "food-online-django-file-static-admin-js-theme-js",
+      "type": "dependency"
+    },
+    {
+      "source": "food-online-django-grp-static-admin-js-files-p-s-t-u",
+      "target": "food-online-django-file-static-admin-js-urlify-js",
+      "type": "dependency"
+    },
+    {
+      "source": "food-online-django-dir-static-admin-js-admin",
+      "target": "food-online-django-file-static-admin-js-admin-datetimeshortcuts-js",
+      "type": "dependency"
+    },
+    {
+      "source": "food-online-django-dir-static-admin-js-admin",
+      "target": "food-online-django-file-static-admin-js-admin-relatedobjectlookups-js",
+      "type": "dependency"
+    },
+    {
+      "source": "food-online-django-dir-static-css",
+      "target": "food-online-django-file-static-css-bootstrap-datepicker-css",
+      "type": "dependency"
+    },
+    {
+      "source": "food-online-django-dir-static-css",
+      "target": "food-online-django-file-static-css-bootstrap-slider-css",
+      "type": "dependency"
+    },
+    {
+      "source": "food-online-django-dir-static-css",
+      "target": "food-online-django-file-static-css-bootstrap-theme-css",
+      "type": "dependency"
+    },
+    {
+      "source": "food-online-django-dir-static-css",
+      "target": "food-online-django-file-static-css-bootstrap-css",
+      "type": "dependency"
+    },
+    {
+      "source": "food-online-django-dir-static-css",
+      "target": "food-online-django-file-static-css-cs-foodbakery-plugin-css",
+      "type": "dependency"
+    },
+    {
+      "source": "food-online-django-dir-static-css",
+      "target": "food-online-django-file-static-css-iconmoon-css",
+      "type": "dependency"
+    },
+    {
+      "source": "food-online-django-dir-static-css",
+      "target": "food-online-django-file-static-css-style-css",
+      "type": "dependency"
+    },
+    {
+      "source": "food-online-django-dir-static-js",
+      "target": "food-online-django-file-static-js-bootstrap-js",
+      "type": "dependency"
+    },
+    {
+      "source": "food-online-django-dir-static-js",
+      "target": "food-online-django-file-static-js-daterangepicker-js",
+      "type": "dependency"
+    },
+    {
+      "source": "food-online-django-dir-static-js",
+      "target": "food-online-django-file-static-js-functions-js",
+      "type": "dependency"
+    },
+    {
+      "source": "food-online-django-dir-static-js",
+      "target": "food-online-django-file-static-js-jquery-te-1-4-0-min-js",
+      "type": "dependency"
+    },
+    {
+      "source": "food-online-django-dir-static-js",
+      "target": "food-online-django-file-static-js-jquery-ui-js",
+      "type": "dependency"
+    },
+    {
+      "source": "food-online-django-dir-static-js",
+      "target": "food-online-django-file-static-js-jquery-js",
+      "type": "dependency"
+    },
+    {
+      "source": "food-online-django-dir-static-js",
+      "target": "food-online-django-file-static-js-jquery-mcustomscrollbar-concat-min-js",
+      "type": "dependency"
+    },
+    {
+      "source": "food-online-django-dir-static-js",
+      "target": "food-online-django-file-static-js-modernizr-js",
+      "type": "dependency"
+    },
+    {
+      "source": "food-online-django-dir-static-js",
+      "target": "food-online-django-file-static-js-scripts-js",
+      "type": "dependency"
+    },
+    {
+      "source": "food-online-django-dir-static-js",
+      "target": "food-online-django-file-static-js-tag-it-js",
+      "type": "dependency"
+    },
+    {
+      "source": "food-online-django-dir-static-js",
+      "target": "food-online-django-file-static-js-theia-sticky-sidebar-js",
+      "type": "dependency"
+    },
+    {
+      "source": "food-online-django-dir-templates",
+      "target": "food-online-django-file-templates-403-html",
+      "type": "dependency"
+    },
+    {
+      "source": "food-online-django-dir-templates",
+      "target": "food-online-django-file-templates-base-html",
+      "type": "dependency"
+    },
+    {
+      "source": "food-online-django-dir-templates",
+      "target": "food-online-django-file-templates-home-html",
+      "type": "dependency"
+    },
+    {
+      "source": "food-online-django-dir-templates-accounts",
+      "target": "food-online-django-file-templates-accounts-custdashboard-html",
+      "type": "dependency"
+    },
+    {
+      "source": "food-online-django-dir-templates-accounts",
+      "target": "food-online-django-file-templates-accounts-forgot-password-html",
+      "type": "dependency"
+    },
+    {
+      "source": "food-online-django-dir-templates-accounts",
+      "target": "food-online-django-file-templates-accounts-login-html",
+      "type": "dependency"
+    },
+    {
+      "source": "food-online-django-dir-templates-accounts",
+      "target": "food-online-django-file-templates-accounts-registeruser-html",
+      "type": "dependency"
+    },
+    {
+      "source": "food-online-django-dir-templates-accounts",
+      "target": "food-online-django-file-templates-accounts-registervendor-html",
+      "type": "dependency"
+    },
+    {
+      "source": "food-online-django-dir-templates-accounts",
+      "target": "food-online-django-file-templates-accounts-reset-password-html",
+      "type": "dependency"
+    },
+    {
+      "source": "food-online-django-dir-templates-accounts",
+      "target": "food-online-django-file-templates-accounts-vendordashboard-html",
+      "type": "dependency"
+    },
+    {
+      "source": "food-online-django-dir-templates-accounts-emails",
+      "target": "food-online-django-file-templates-accounts-emails-account-verification-email-html",
+      "type": "dependency"
+    },
+    {
+      "source": "food-online-django-dir-templates-accounts-emails",
+      "target": "food-online-django-file-templates-accounts-emails-admin-approval-email-html",
+      "type": "dependency"
+    },
+    {
+      "source": "food-online-django-dir-templates-accounts-emails",
+      "target": "food-online-django-file-templates-accounts-emails-reset-password-email-html",
+      "type": "dependency"
+    },
+    {
+      "source": "food-online-django-dir-templates-customers",
+      "target": "food-online-django-file-templates-customers-cover-html",
+      "type": "dependency"
+    },
+    {
+      "source": "food-online-django-dir-templates-customers",
+      "target": "food-online-django-file-templates-customers-cprofile-html",
+      "type": "dependency"
+    },
+    {
+      "source": "food-online-django-dir-templates-customers",
+      "target": "food-online-django-file-templates-customers-my-orders-html",
+      "type": "dependency"
+    },
+    {
+      "source": "food-online-django-dir-templates-customers",
+      "target": "food-online-django-file-templates-customers-order-details-html",
+      "type": "dependency"
+    },
+    {
+      "source": "food-online-django-dir-templates-includes",
+      "target": "food-online-django-file-templates-includes-alerts-html",
+      "type": "dependency"
+    },
+    {
+      "source": "food-online-django-dir-templates-includes",
+      "target": "food-online-django-file-templates-includes-c-sidebar-html",
+      "type": "dependency"
+    },
+    {
+      "source": "food-online-django-dir-templates-includes",
+      "target": "food-online-django-file-templates-includes-cover-html",
+      "type": "dependency"
+    },
+    {
+      "source": "food-online-django-dir-templates-includes",
+      "target": "food-online-django-file-templates-includes-footer-html",
+      "type": "dependency"
+    },
+    {
+      "source": "food-online-django-dir-templates-includes",
+      "target": "food-online-django-file-templates-includes-navbar-html",
+      "type": "dependency"
+    },
+    {
+      "source": "food-online-django-dir-templates-includes",
+      "target": "food-online-django-file-templates-includes-v-sidebar-html",
+      "type": "dependency"
+    },
+    {
+      "source": "food-online-django-dir-templates-marketplace",
+      "target": "food-online-django-file-templates-marketplace-cart-html",
+      "type": "dependency"
+    },
+    {
+      "source": "food-online-django-dir-templates-marketplace",
+      "target": "food-online-django-file-templates-marketplace-checkout-html",
+      "type": "dependency"
+    },
+    {
+      "source": "food-online-django-dir-templates-marketplace",
+      "target": "food-online-django-file-templates-marketplace-listings-html",
+      "type": "dependency"
+    },
+    {
+      "source": "food-online-django-dir-templates-marketplace",
+      "target": "food-online-django-file-templates-marketplace-vendor-detail-html",
+      "type": "dependency"
+    },
+    {
+      "source": "food-online-django-dir-templates-orders",
+      "target": "food-online-django-file-templates-orders-new-order-received-html",
+      "type": "dependency"
+    },
+    {
+      "source": "food-online-django-dir-templates-orders",
+      "target": "food-online-django-file-templates-orders-order-complete-html",
+      "type": "dependency"
+    },
+    {
+      "source": "food-online-django-dir-templates-orders",
+      "target": "food-online-django-file-templates-orders-order-confirmation-email-html",
+      "type": "dependency"
+    },
+    {
+      "source": "food-online-django-dir-templates-orders",
+      "target": "food-online-django-file-templates-orders-place-order-html",
       "type": "dependency"
     }
   ]

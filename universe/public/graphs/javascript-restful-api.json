@@ -4,19 +4,15 @@
   "repoUrl": "https://github.com/CanonEngineer/JavaScriptRestfulApiProject",
   "color": "#8b5cf6",
   "demoUrl": "",
-  "nodeCount": 20,
+  "nodeCount": 9,
   "categories": {
     "core": {
       "label": "Backend",
       "color": "#3b82f6"
     },
-    "network": {
-      "label": "Rede / Scan",
-      "color": "#22d3ee"
-    },
-    "oracle": {
-      "label": "Oracle / DB",
-      "color": "#c084fc"
+    "scripts": {
+      "label": "Scripts",
+      "color": "#64748b"
     },
     "other": {
       "label": "Outros",
@@ -25,7 +21,7 @@
   },
   "nodes": [
     {
-      "id": "jra-root",
+      "id": "javascript-restful-api-root",
       "label": "JavaScriptRestfulApiProject",
       "parent": null,
       "layer": "root",
@@ -33,332 +29,145 @@
       "categoryLabel": "Backend",
       "color": "#3b82f6",
       "size": 2.2,
-      "file": "index.js",
-      "description": "API REST com Express, consign e banco NeDB embarcado."
+      "file": "README.md",
+      "description": "API REST de usuários com NeDB, consign e express-validator."
     },
     {
-      "id": "jra-index",
+      "id": "javascript-restful-api-dir-routes",
+      "label": "routes/",
+      "parent": "javascript-restful-api-root",
+      "layer": "module",
+      "category": "scripts",
+      "categoryLabel": "Scripts",
+      "color": "#64748b",
+      "size": 1.35,
+      "file": "routes/",
+      "description": "Pacote/pasta `routes/` do projeto."
+    },
+    {
+      "id": "javascript-restful-api-dir-utils",
+      "label": "utils/",
+      "parent": "javascript-restful-api-root",
+      "layer": "module",
+      "category": "scripts",
+      "categoryLabel": "Scripts",
+      "color": "#64748b",
+      "size": 1.35,
+      "file": "utils/",
+      "description": "Pacote/pasta `utils/` do projeto."
+    },
+    {
+      "id": "javascript-restful-api-file-index-js",
       "label": "index.js",
-      "parent": "jra-root",
+      "parent": "javascript-restful-api-root",
       "layer": "file",
-      "category": "core",
-      "categoryLabel": "Backend",
-      "color": "#3b82f6",
+      "category": "scripts",
+      "categoryLabel": "Scripts",
+      "color": "#64748b",
       "size": 0.85,
       "file": "index.js",
-      "description": "Bootstrap Express com body-parser e consign."
+      "description": "Código-fonte: `index.js`"
     },
     {
-      "id": "jra-routes-index",
-      "label": "routes/index.js",
-      "parent": "jra-root",
-      "layer": "file",
-      "category": "network",
-      "categoryLabel": "Rede / Scan",
-      "color": "#22d3ee",
-      "size": 0.85,
-      "file": "routes/index.js",
-      "description": "Rota raiz HTML de boas-vindas."
-    },
-    {
-      "id": "jra-users",
-      "label": "routes/users.js",
-      "parent": "jra-root",
-      "layer": "module",
-      "category": "core",
-      "categoryLabel": "Backend",
-      "color": "#3b82f6",
-      "size": 1.35,
-      "file": "routes/users.js",
-      "description": "CRUD completo GET/POST/PUT/DELETE em /users."
-    },
-    {
-      "id": "jra-get-users",
-      "label": "GET /users",
-      "parent": "jra-users",
-      "layer": "function",
-      "category": "core",
-      "categoryLabel": "Backend",
-      "color": "#3b82f6",
-      "size": 0.62,
-      "file": "routes/users.js",
-      "description": "Lista todos os usuários ordenados por nome."
-    },
-    {
-      "id": "jra-post-user",
-      "label": "POST /users",
-      "parent": "jra-users",
-      "layer": "function",
-      "category": "core",
-      "categoryLabel": "Backend",
-      "color": "#3b82f6",
-      "size": 0.62,
-      "file": "routes/users.js",
-      "description": "Insere novo usuário após validação."
-    },
-    {
-      "id": "jra-get-id",
-      "label": "GET /users/:id",
-      "parent": "jra-users",
-      "layer": "function",
-      "category": "core",
-      "categoryLabel": "Backend",
-      "color": "#3b82f6",
-      "size": 0.62,
-      "file": "routes/users.js",
-      "description": "Busca um usuário pelo _id do NeDB."
-    },
-    {
-      "id": "jra-put-user",
-      "label": "PUT /users/:id",
-      "parent": "jra-users",
-      "layer": "function",
-      "category": "core",
-      "categoryLabel": "Backend",
-      "color": "#3b82f6",
-      "size": 0.62,
-      "file": "routes/users.js",
-      "description": "Atualiza usuário existente no NeDB."
-    },
-    {
-      "id": "jra-delete-user",
-      "label": "DELETE /users/:id",
-      "parent": "jra-users",
-      "layer": "function",
-      "category": "core",
-      "categoryLabel": "Backend",
-      "color": "#3b82f6",
-      "size": 0.62,
-      "file": "routes/users.js",
-      "description": "Remove usuário do banco NeDB."
-    },
-    {
-      "id": "jra-admin",
-      "label": "GET /users/admin",
-      "parent": "jra-users",
-      "layer": "function",
-      "category": "core",
-      "categoryLabel": "Backend",
-      "color": "#3b82f6",
-      "size": 0.62,
-      "file": "routes/users.js",
-      "description": "Rota mock com lista fixa de admins."
-    },
-    {
-      "id": "jra-nedb",
-      "label": "NeDB",
-      "parent": "jra-users",
-      "layer": "file",
-      "category": "oracle",
-      "categoryLabel": "Oracle / DB",
-      "color": "#c084fc",
-      "size": 0.85,
-      "file": "routes/users.js",
-      "description": "Banco embarcado com autoload em users.db."
-    },
-    {
-      "id": "jra-validator",
-      "label": "utils/validator.js",
-      "parent": "jra-root",
-      "layer": "module",
-      "category": "core",
-      "categoryLabel": "Backend",
-      "color": "#3b82f6",
-      "size": 1.35,
-      "file": "utils/validator.js",
-      "description": "Valida nome obrigatório e e-mail válido no POST/PUT."
-    },
-    {
-      "id": "jra-error",
-      "label": "utils/error.js",
-      "parent": "jra-root",
-      "layer": "module",
-      "category": "core",
-      "categoryLabel": "Backend",
-      "color": "#3b82f6",
-      "size": 1.35,
-      "file": "utils/error.js",
-      "description": "Padroniza respostas de erro da API."
-    },
-    {
-      "id": "jra-consign",
-      "label": "consign()",
-      "parent": "jra-index",
-      "layer": "function",
-      "category": "core",
-      "categoryLabel": "Backend",
-      "color": "#3b82f6",
-      "size": 0.62,
-      "file": "index.js",
-      "description": "Carrega routes/ e utils/ automaticamente no app."
-    },
-    {
-      "id": "jra-body-parser",
-      "label": "body-parser",
-      "parent": "jra-index",
-      "layer": "file",
-      "category": "core",
-      "categoryLabel": "Backend",
-      "color": "#3b82f6",
-      "size": 0.85,
-      "file": "index.js",
-      "description": "Parse JSON e urlencoded com limite 50mb."
-    },
-    {
-      "id": "jra-express-validator",
-      "label": "express-validator",
-      "parent": "jra-index",
-      "layer": "file",
-      "category": "core",
-      "categoryLabel": "Backend",
-      "color": "#3b82f6",
-      "size": 0.85,
-      "file": "index.js",
-      "description": "Middleware global de validação."
-    },
-    {
-      "id": "jra-route-id",
-      "label": "routeId",
-      "parent": "jra-users",
-      "layer": "file",
-      "category": "network",
-      "categoryLabel": "Rede / Scan",
-      "color": "#22d3ee",
-      "size": 0.85,
-      "file": "routes/users.js",
-      "description": "Agrupa rotas REST por :id."
-    },
-    {
-      "id": "jra-package",
+      "id": "javascript-restful-api-file-package-json",
       "label": "package.json",
-      "parent": "jra-root",
+      "parent": "javascript-restful-api-root",
       "layer": "file",
-      "category": "other",
-      "categoryLabel": "Outros",
+      "category": "scripts",
+      "categoryLabel": "Scripts",
       "color": "#64748b",
       "size": 0.85,
       "file": "package.json",
-      "description": "Dependências e entry point index.js."
+      "description": "Código-fonte: `package.json`"
     },
     {
-      "id": "jra-listen",
-      "label": "app.listen()",
-      "parent": "jra-index",
-      "layer": "function",
-      "category": "core",
-      "categoryLabel": "Backend",
-      "color": "#3b82f6",
-      "size": 0.62,
-      "file": "index.js",
-      "description": "Inicia servidor na porta 4000."
+      "id": "javascript-restful-api-file-routes-index-js",
+      "label": "index.js",
+      "parent": "javascript-restful-api-dir-routes",
+      "layer": "file",
+      "category": "scripts",
+      "categoryLabel": "Scripts",
+      "color": "#64748b",
+      "size": 0.85,
+      "file": "routes/index.js",
+      "description": "Código-fonte: `routes/index.js`"
     },
     {
-      "id": "jra-error-handling",
-      "label": "Tratamento de erros",
-      "parent": "jra-users",
-      "layer": "function",
-      "category": "core",
-      "categoryLabel": "Backend",
-      "color": "#3b82f6",
-      "size": 0.62,
+      "id": "javascript-restful-api-file-routes-users-js",
+      "label": "users.js",
+      "parent": "javascript-restful-api-dir-routes",
+      "layer": "file",
+      "category": "scripts",
+      "categoryLabel": "Scripts",
+      "color": "#64748b",
+      "size": 0.85,
       "file": "routes/users.js",
-      "description": "Padrão if(err) em todos os callbacks NeDB."
+      "description": "Código-fonte: `routes/users.js`"
+    },
+    {
+      "id": "javascript-restful-api-file-utils-error-js",
+      "label": "error.js",
+      "parent": "javascript-restful-api-dir-utils",
+      "layer": "file",
+      "category": "scripts",
+      "categoryLabel": "Scripts",
+      "color": "#64748b",
+      "size": 0.85,
+      "file": "utils/error.js",
+      "description": "Código-fonte: `utils/error.js`"
+    },
+    {
+      "id": "javascript-restful-api-file-utils-validator-js",
+      "label": "validator.js",
+      "parent": "javascript-restful-api-dir-utils",
+      "layer": "file",
+      "category": "scripts",
+      "categoryLabel": "Scripts",
+      "color": "#64748b",
+      "size": 0.85,
+      "file": "utils/validator.js",
+      "description": "Código-fonte: `utils/validator.js`"
     }
   ],
   "links": [
     {
-      "source": "jra-root",
-      "target": "jra-index",
+      "source": "javascript-restful-api-root",
+      "target": "javascript-restful-api-dir-routes",
       "type": "dependency"
     },
     {
-      "source": "jra-root",
-      "target": "jra-routes-index",
+      "source": "javascript-restful-api-root",
+      "target": "javascript-restful-api-dir-utils",
       "type": "dependency"
     },
     {
-      "source": "jra-root",
-      "target": "jra-users",
+      "source": "javascript-restful-api-root",
+      "target": "javascript-restful-api-file-index-js",
       "type": "dependency"
     },
     {
-      "source": "jra-users",
-      "target": "jra-get-users",
+      "source": "javascript-restful-api-root",
+      "target": "javascript-restful-api-file-package-json",
       "type": "dependency"
     },
     {
-      "source": "jra-users",
-      "target": "jra-post-user",
+      "source": "javascript-restful-api-dir-routes",
+      "target": "javascript-restful-api-file-routes-index-js",
       "type": "dependency"
     },
     {
-      "source": "jra-users",
-      "target": "jra-get-id",
+      "source": "javascript-restful-api-dir-routes",
+      "target": "javascript-restful-api-file-routes-users-js",
       "type": "dependency"
     },
     {
-      "source": "jra-users",
-      "target": "jra-put-user",
+      "source": "javascript-restful-api-dir-utils",
+      "target": "javascript-restful-api-file-utils-error-js",
       "type": "dependency"
     },
     {
-      "source": "jra-users",
-      "target": "jra-delete-user",
-      "type": "dependency"
-    },
-    {
-      "source": "jra-users",
-      "target": "jra-admin",
-      "type": "dependency"
-    },
-    {
-      "source": "jra-users",
-      "target": "jra-nedb",
-      "type": "dependency"
-    },
-    {
-      "source": "jra-root",
-      "target": "jra-validator",
-      "type": "dependency"
-    },
-    {
-      "source": "jra-root",
-      "target": "jra-error",
-      "type": "dependency"
-    },
-    {
-      "source": "jra-index",
-      "target": "jra-consign",
-      "type": "dependency"
-    },
-    {
-      "source": "jra-index",
-      "target": "jra-body-parser",
-      "type": "dependency"
-    },
-    {
-      "source": "jra-index",
-      "target": "jra-express-validator",
-      "type": "dependency"
-    },
-    {
-      "source": "jra-users",
-      "target": "jra-route-id",
-      "type": "dependency"
-    },
-    {
-      "source": "jra-root",
-      "target": "jra-package",
-      "type": "dependency"
-    },
-    {
-      "source": "jra-index",
-      "target": "jra-listen",
-      "type": "dependency"
-    },
-    {
-      "source": "jra-users",
-      "target": "jra-error-handling",
+      "source": "javascript-restful-api-dir-utils",
+      "target": "javascript-restful-api-file-utils-validator-js",
       "type": "dependency"
     }
   ]

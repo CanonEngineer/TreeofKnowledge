@@ -4,19 +4,19 @@
   "repoUrl": "https://github.com/CanonEngineer/JavaScriptDropBoxProject",
   "color": "#eab308",
   "demoUrl": "",
-  "nodeCount": 38,
+  "nodeCount": 22,
   "categories": {
     "core": {
       "label": "Backend",
       "color": "#3b82f6"
     },
-    "oracle": {
-      "label": "Oracle / DB",
-      "color": "#c084fc"
-    },
     "frontend": {
       "label": "Frontend",
       "color": "#eab308"
+    },
+    "scripts": {
+      "label": "Scripts",
+      "color": "#64748b"
     },
     "other": {
       "label": "Outros",
@@ -25,7 +25,7 @@
   },
   "nodes": [
     {
-      "id": "jdb-root",
+      "id": "javascript-dropbox-root",
       "label": "JavaScriptDropBoxProject",
       "parent": null,
       "layer": "root",
@@ -33,638 +33,366 @@
       "categoryLabel": "Backend",
       "color": "#3b82f6",
       "size": 2.2,
-      "file": "public/src/",
-      "description": "Clone Dropbox no browser — Express serve a SPA, Firebase Realtime DB + Storage, upload com barra de progresso."
+      "file": "README.md",
+      "description": "Clone Dropbox — Firebase Storage, barra de progresso, seleção Ctrl/Shift e ícones por MIME."
     },
     {
-      "id": "jdb-backend",
-      "label": "Backend Express",
-      "parent": "jdb-root",
+      "id": "javascript-dropbox-dir-bin",
+      "label": "bin/",
+      "parent": "javascript-dropbox-root",
       "layer": "module",
-      "category": "oracle",
-      "categoryLabel": "Oracle / DB",
-      "color": "#c084fc",
+      "category": "scripts",
+      "categoryLabel": "Scripts",
+      "color": "#64748b",
       "size": 1.35,
-      "file": "app.js",
-      "description": "Servidor Node com EJS, static em public/ e rotas legacy com Formidable."
+      "file": "bin/",
+      "description": "Pacote/pasta `bin/` do projeto."
     },
     {
-      "id": "jdb-app",
-      "label": "app.js",
-      "parent": "jdb-backend",
-      "layer": "file",
-      "category": "oracle",
-      "categoryLabel": "Oracle / DB",
-      "color": "#c084fc",
-      "size": 0.85,
-      "file": "app.js",
-      "description": "Bootstrap do Express: middlewares, views e routers."
-    },
-    {
-      "id": "jdb-bin-www",
-      "label": "bin/www",
-      "parent": "jdb-backend",
-      "layer": "file",
-      "category": "oracle",
-      "categoryLabel": "Oracle / DB",
-      "color": "#c084fc",
-      "size": 0.85,
-      "file": "bin/www",
-      "description": "HTTP server na porta 3000 com tratamento EADDRINUSE."
-    },
-    {
-      "id": "jdb-routes-mod",
-      "label": "routes/index.js",
-      "parent": "jdb-backend",
+      "id": "javascript-dropbox-dir-public",
+      "label": "public/",
+      "parent": "javascript-dropbox-root",
       "layer": "module",
-      "category": "oracle",
-      "categoryLabel": "Oracle / DB",
-      "color": "#c084fc",
+      "category": "scripts",
+      "categoryLabel": "Scripts",
+      "color": "#64748b",
       "size": 1.35,
-      "file": "routes/index.js",
-      "description": "Rotas REST para home, upload multipart e delete de arquivos locais."
+      "file": "public/",
+      "description": "Pacote/pasta `public/` do projeto."
     },
     {
-      "id": "jdb-route-home",
-      "label": "GET /",
-      "parent": "jdb-routes-mod",
-      "layer": "function",
-      "category": "oracle",
-      "categoryLabel": "Oracle / DB",
-      "color": "#c084fc",
-      "size": 0.62,
-      "file": "routes/index.js",
-      "description": "Renderiza index.ejs com layout Dropbox clone."
+      "id": "javascript-dropbox-dir-routes",
+      "label": "routes/",
+      "parent": "javascript-dropbox-root",
+      "layer": "module",
+      "category": "scripts",
+      "categoryLabel": "Scripts",
+      "color": "#64748b",
+      "size": 1.35,
+      "file": "routes/",
+      "description": "Pacote/pasta `routes/` do projeto."
     },
     {
-      "id": "jdb-route-upload",
-      "label": "POST /upload",
-      "parent": "jdb-routes-mod",
-      "layer": "function",
-      "category": "oracle",
-      "categoryLabel": "Oracle / DB",
-      "color": "#c084fc",
-      "size": 0.62,
-      "file": "routes/index.js",
-      "description": "Upload local via Formidable (legado antes do Firebase)."
-    },
-    {
-      "id": "jdb-route-file-get",
-      "label": "GET /file",
-      "parent": "jdb-routes-mod",
-      "layer": "function",
-      "category": "oracle",
-      "categoryLabel": "Oracle / DB",
-      "color": "#c084fc",
-      "size": 0.62,
-      "file": "routes/index.js",
-      "description": "Serve arquivo do disco por query ?path=."
-    },
-    {
-      "id": "jdb-route-delete",
-      "label": "DELETE /file",
-      "parent": "jdb-routes-mod",
-      "layer": "function",
-      "category": "oracle",
-      "categoryLabel": "Oracle / DB",
-      "color": "#c084fc",
-      "size": 0.62,
-      "file": "routes/index.js",
-      "description": "Remove arquivo local via Formidable fields."
-    },
-    {
-      "id": "jdb-frontend",
-      "label": "Frontend SPA",
-      "parent": "jdb-root",
+      "id": "javascript-dropbox-dir-views",
+      "label": "views/",
+      "parent": "javascript-dropbox-root",
       "layer": "module",
       "category": "frontend",
       "categoryLabel": "Frontend",
       "color": "#eab308",
       "size": 1.35,
-      "file": "views/index.ejs",
-      "description": "Interface estilo Dropbox com sidebar, breadcrumb e grid de arquivos."
+      "file": "views/",
+      "description": "Pacote/pasta `views/` do projeto."
     },
     {
-      "id": "jdb-index-ejs",
-      "label": "views/index.ejs",
-      "parent": "jdb-frontend",
+      "id": "javascript-dropbox-dir-public-assets",
+      "label": "assets/",
+      "parent": "javascript-dropbox-dir-public",
+      "layer": "module",
+      "category": "scripts",
+      "categoryLabel": "Scripts",
+      "color": "#64748b",
+      "size": 1.35,
+      "file": "public/assets/",
+      "description": "Pacote/pasta `public/assets/` do projeto."
+    },
+    {
+      "id": "javascript-dropbox-dir-public-src",
+      "label": "src/",
+      "parent": "javascript-dropbox-dir-public",
+      "layer": "module",
+      "category": "scripts",
+      "categoryLabel": "Scripts",
+      "color": "#64748b",
+      "size": 1.35,
+      "file": "public/src/",
+      "description": "Pacote/pasta `public/src/` do projeto."
+    },
+    {
+      "id": "javascript-dropbox-dir-public-assets-css",
+      "label": "css/",
+      "parent": "javascript-dropbox-dir-public-assets",
+      "layer": "module",
+      "category": "scripts",
+      "categoryLabel": "Scripts",
+      "color": "#64748b",
+      "size": 1.35,
+      "file": "public/assets/css/",
+      "description": "Pacote/pasta `public/assets/css/` do projeto."
+    },
+    {
+      "id": "javascript-dropbox-dir-public-src-controller",
+      "label": "controller/",
+      "parent": "javascript-dropbox-dir-public-src",
+      "layer": "module",
+      "category": "scripts",
+      "categoryLabel": "Scripts",
+      "color": "#64748b",
+      "size": 1.35,
+      "file": "public/src/controller/",
+      "description": "Pacote/pasta `public/src/controller/` do projeto."
+    },
+    {
+      "id": "javascript-dropbox-file-app-js",
+      "label": "app.js",
+      "parent": "javascript-dropbox-root",
       "layer": "file",
-      "category": "oracle",
-      "categoryLabel": "Oracle / DB",
-      "color": "#c084fc",
+      "category": "scripts",
+      "categoryLabel": "Scripts",
+      "color": "#64748b",
       "size": 0.85,
-      "file": "views/index.ejs",
-      "description": "Template EJS com sidebar Hiperware e área de arquivos."
+      "file": "app.js",
+      "description": "Código-fonte: `app.js`"
     },
     {
-      "id": "jdb-index-js",
-      "label": "public/src/index.js",
-      "parent": "jdb-frontend",
+      "id": "javascript-dropbox-file-package-json",
+      "label": "package.json",
+      "parent": "javascript-dropbox-root",
       "layer": "file",
-      "category": "oracle",
-      "categoryLabel": "Oracle / DB",
-      "color": "#c084fc",
+      "category": "scripts",
+      "categoryLabel": "Scripts",
+      "color": "#64748b",
       "size": 0.85,
-      "file": "public/src/index.js",
-      "description": "Bootstrap do controller após DOM pronto."
+      "file": "package.json",
+      "description": "Código-fonte: `package.json`"
     },
     {
-      "id": "jdb-dropbox-css",
+      "id": "javascript-dropbox-file-bin-www",
+      "label": "www",
+      "parent": "javascript-dropbox-dir-bin",
+      "layer": "file",
+      "category": "scripts",
+      "categoryLabel": "Scripts",
+      "color": "#64748b",
+      "size": 0.85,
+      "file": "bin/www",
+      "description": "Código-fonte: `bin/www`"
+    },
+    {
+      "id": "javascript-dropbox-file-public-bower-json",
+      "label": "bower.json",
+      "parent": "javascript-dropbox-dir-public",
+      "layer": "file",
+      "category": "scripts",
+      "categoryLabel": "Scripts",
+      "color": "#64748b",
+      "size": 0.85,
+      "file": "public/bower.json",
+      "description": "Código-fonte: `public/bower.json`"
+    },
+    {
+      "id": "javascript-dropbox-file-public-package-json",
+      "label": "package.json",
+      "parent": "javascript-dropbox-dir-public",
+      "layer": "file",
+      "category": "scripts",
+      "categoryLabel": "Scripts",
+      "color": "#64748b",
+      "size": 0.85,
+      "file": "public/package.json",
+      "description": "Código-fonte: `public/package.json`"
+    },
+    {
+      "id": "javascript-dropbox-file-public-readme-md",
+      "label": "README.md",
+      "parent": "javascript-dropbox-dir-public",
+      "layer": "file",
+      "category": "scripts",
+      "categoryLabel": "Scripts",
+      "color": "#64748b",
+      "size": 0.85,
+      "file": "public/README.md",
+      "description": "Código-fonte: `public/README.md`"
+    },
+    {
+      "id": "javascript-dropbox-file-public-assets-css-dropbox-clone-css",
       "label": "dropbox-clone.css",
-      "parent": "jdb-frontend",
+      "parent": "javascript-dropbox-dir-public-assets-css",
       "layer": "file",
       "category": "frontend",
       "categoryLabel": "Frontend",
       "color": "#eab308",
       "size": 0.85,
       "file": "public/assets/css/dropbox-clone.css",
-      "description": "Estilos do grid, seleção múltipla e snackbar de upload."
+      "description": "Código-fonte: `public/assets/css/dropbox-clone.css`"
     },
     {
-      "id": "jdb-controller",
-      "label": "DropBoxController",
-      "parent": "jdb-root",
-      "layer": "module",
-      "category": "oracle",
-      "categoryLabel": "Oracle / DB",
-      "color": "#c084fc",
-      "size": 1.35,
+      "id": "javascript-dropbox-file-public-src-index-js",
+      "label": "index.js",
+      "parent": "javascript-dropbox-dir-public-src",
+      "layer": "file",
+      "category": "scripts",
+      "categoryLabel": "Scripts",
+      "color": "#64748b",
+      "size": 0.85,
+      "file": "public/src/index.js",
+      "description": "Código-fonte: `public/src/index.js`"
+    },
+    {
+      "id": "javascript-dropbox-file-public-src-controller-dropboxcontroller-js",
+      "label": "DropBoxController.js",
+      "parent": "javascript-dropbox-dir-public-src-controller",
+      "layer": "file",
+      "category": "scripts",
+      "categoryLabel": "Scripts",
+      "color": "#64748b",
+      "size": 0.85,
       "file": "public/src/controller/DropBoxController.js",
-      "description": "Classe central: Firebase, navegação, CRUD e seleção Ctrl/Shift."
+      "description": "Código-fonte: `public/src/controller/DropBoxController.js`"
     },
     {
-      "id": "jdb-conn-db",
-      "label": "connDatabase()",
-      "parent": "jdb-controller",
-      "layer": "function",
-      "category": "oracle",
-      "categoryLabel": "Oracle / DB",
-      "color": "#c084fc",
-      "size": 0.62,
-      "file": "public/src/controller/DropBoxController.js",
-      "description": "Inicializa Firebase App com config do projeto."
+      "id": "javascript-dropbox-file-routes-index-js",
+      "label": "index.js",
+      "parent": "javascript-dropbox-dir-routes",
+      "layer": "file",
+      "category": "scripts",
+      "categoryLabel": "Scripts",
+      "color": "#64748b",
+      "size": 0.85,
+      "file": "routes/index.js",
+      "description": "Código-fonte: `routes/index.js`"
     },
     {
-      "id": "jdb-firebase-ref",
-      "label": "getFirebaseRef()",
-      "parent": "jdb-controller",
-      "layer": "function",
-      "category": "oracle",
-      "categoryLabel": "Oracle / DB",
-      "color": "#c084fc",
-      "size": 0.62,
-      "file": "public/src/controller/DropBoxController.js",
-      "description": "Retorna ref do Realtime DB para o path atual."
+      "id": "javascript-dropbox-file-routes-users-js",
+      "label": "users.js",
+      "parent": "javascript-dropbox-dir-routes",
+      "layer": "file",
+      "category": "scripts",
+      "categoryLabel": "Scripts",
+      "color": "#64748b",
+      "size": 0.85,
+      "file": "routes/users.js",
+      "description": "Código-fonte: `routes/users.js`"
     },
     {
-      "id": "jdb-navigation",
-      "label": "Navegação de pastas",
-      "parent": "jdb-root",
-      "layer": "module",
-      "category": "oracle",
-      "categoryLabel": "Oracle / DB",
-      "color": "#c084fc",
-      "size": 1.35,
-      "file": "public/src/controller/DropBoxController.js",
-      "description": "Breadcrumb, leitura reativa e duplo-clique para entrar em pastas."
-    },
-    {
-      "id": "jdb-open-folder",
-      "label": "openFolder()",
-      "parent": "jdb-navigation",
-      "layer": "function",
-      "category": "oracle",
-      "categoryLabel": "Oracle / DB",
-      "color": "#c084fc",
-      "size": 0.62,
-      "file": "public/src/controller/DropBoxController.js",
-      "description": "Troca de pasta: desliga listener antigo e recarrega lista."
-    },
-    {
-      "id": "jdb-render-nav",
-      "label": "renderNav()",
-      "parent": "jdb-navigation",
-      "layer": "function",
-      "category": "oracle",
-      "categoryLabel": "Oracle / DB",
-      "color": "#c084fc",
-      "size": 0.62,
-      "file": "public/src/controller/DropBoxController.js",
-      "description": "Monta breadcrumb clicável da pilha currentFolder."
-    },
-    {
-      "id": "jdb-read-files",
-      "label": "readFiles()",
-      "parent": "jdb-navigation",
-      "layer": "function",
-      "category": "oracle",
-      "categoryLabel": "Oracle / DB",
-      "color": "#c084fc",
-      "size": 0.62,
-      "file": "public/src/controller/DropBoxController.js",
-      "description": "Escuta Firebase value e renderiza grid de arquivos."
-    },
-    {
-      "id": "jdb-upload-mod",
-      "label": "Upload Firebase Storage",
-      "parent": "jdb-root",
-      "layer": "module",
-      "category": "oracle",
-      "categoryLabel": "Oracle / DB",
-      "color": "#c084fc",
-      "size": 1.35,
-      "file": "public/src/controller/DropBoxController.js",
-      "description": "Envio com barra de progresso, ETA e metadata downloadURL."
-    },
-    {
-      "id": "jdb-upload-task",
-      "label": "uploadTask()",
-      "parent": "jdb-upload-mod",
-      "layer": "function",
-      "category": "oracle",
-      "categoryLabel": "Oracle / DB",
-      "color": "#c084fc",
-      "size": 0.62,
-      "file": "public/src/controller/DropBoxController.js",
-      "description": "fileRef.put(file) com state_changed e getDownloadURL."
-    },
-    {
-      "id": "jdb-upload-progress",
-      "label": "uploadProgress()",
-      "parent": "jdb-upload-mod",
-      "layer": "function",
-      "category": "oracle",
-      "categoryLabel": "Oracle / DB",
-      "color": "#c084fc",
-      "size": 0.62,
-      "file": "public/src/controller/DropBoxController.js",
-      "description": "Calcula % e tempo restante com base em bytesTransferred."
-    },
-    {
-      "id": "jdb-format-time",
-      "label": "formatTimeToHuman()",
-      "parent": "jdb-upload-mod",
-      "layer": "function",
-      "category": "oracle",
-      "categoryLabel": "Oracle / DB",
-      "color": "#c084fc",
-      "size": 0.62,
-      "file": "public/src/controller/DropBoxController.js",
-      "description": "Converte ms restantes em texto PT-BR legível."
-    },
-    {
-      "id": "jdb-modal-show",
-      "label": "modalShow()",
-      "parent": "jdb-upload-mod",
-      "layer": "function",
-      "category": "oracle",
-      "categoryLabel": "Oracle / DB",
-      "color": "#c084fc",
-      "size": 0.62,
-      "file": "public/src/controller/DropBoxController.js",
-      "description": "Exibe/oculta snackbar de progresso (#react-snackbar-root)."
-    },
-    {
-      "id": "jdb-crud",
-      "label": "CRUD arquivos e pastas",
-      "parent": "jdb-root",
-      "layer": "module",
-      "category": "oracle",
-      "categoryLabel": "Oracle / DB",
-      "color": "#c084fc",
-      "size": 1.35,
-      "file": "public/src/controller/DropBoxController.js",
-      "description": "Criar pasta, renomear, excluir recursivo no DB + Storage."
-    },
-    {
-      "id": "jdb-init-events",
-      "label": "initEvents()",
-      "parent": "jdb-crud",
-      "layer": "function",
-      "category": "oracle",
-      "categoryLabel": "Oracle / DB",
-      "color": "#c084fc",
-      "size": 0.62,
-      "file": "public/src/controller/DropBoxController.js",
-      "description": "Bind nova pasta, delete, rename e input de upload."
-    },
-    {
-      "id": "jdb-remove-task",
-      "label": "removeTask()",
-      "parent": "jdb-crud",
-      "layer": "function",
-      "category": "oracle",
-      "categoryLabel": "Oracle / DB",
-      "color": "#c084fc",
-      "size": 0.62,
-      "file": "public/src/controller/DropBoxController.js",
-      "description": "Deleta todos os itens selecionados com Promise.all."
-    },
-    {
-      "id": "jdb-remove-folder",
-      "label": "removeFolder()",
-      "parent": "jdb-crud",
-      "layer": "function",
-      "category": "oracle",
-      "categoryLabel": "Oracle / DB",
-      "color": "#c084fc",
-      "size": 0.62,
-      "file": "public/src/controller/DropBoxController.js",
-      "description": "Recursão: percorre snapshot e apaga subpastas/arquivos."
-    },
-    {
-      "id": "jdb-remove-file",
-      "label": "removeFile()",
-      "parent": "jdb-crud",
-      "layer": "function",
-      "category": "oracle",
-      "categoryLabel": "Oracle / DB",
-      "color": "#c084fc",
-      "size": 0.62,
-      "file": "public/src/controller/DropBoxController.js",
-      "description": "firebase.storage().ref(ref).child(name).delete()."
-    },
-    {
-      "id": "jdb-selection",
-      "label": "Seleção Ctrl / Shift",
-      "parent": "jdb-root",
-      "layer": "module",
-      "category": "oracle",
-      "categoryLabel": "Oracle / DB",
-      "color": "#c084fc",
-      "size": 1.35,
-      "file": "public/src/controller/DropBoxController.js",
-      "description": "Lógica de multi-select estilo explorador de arquivos."
-    },
-    {
-      "id": "jdb-get-selection",
-      "label": "getSelection()",
-      "parent": "jdb-selection",
-      "layer": "function",
-      "category": "oracle",
-      "categoryLabel": "Oracle / DB",
-      "color": "#c084fc",
-      "size": 0.62,
-      "file": "public/src/controller/DropBoxController.js",
-      "description": "querySelectorAll('.selected') na lista de arquivos."
-    },
-    {
-      "id": "jdb-init-events-li",
-      "label": "initEventsLi()",
-      "parent": "jdb-selection",
-      "layer": "function",
-      "category": "oracle",
-      "categoryLabel": "Oracle / DB",
-      "color": "#c084fc",
-      "size": 0.62,
-      "file": "public/src/controller/DropBoxController.js",
-      "description": "Click com Ctrl toggle; Shift seleciona intervalo; dblclick abre."
-    },
-    {
-      "id": "jdb-icons",
-      "label": "Ícones por MIME type",
-      "parent": "jdb-root",
-      "layer": "module",
-      "category": "oracle",
-      "categoryLabel": "Oracle / DB",
-      "color": "#c084fc",
-      "size": 1.35,
-      "file": "public/src/controller/DropBoxController.js",
-      "description": "SVG inline para pasta, imagem, PDF, Office, áudio e vídeo."
-    },
-    {
-      "id": "jdb-get-file-icon",
-      "label": "getFileIconView()",
-      "parent": "jdb-icons",
-      "layer": "function",
-      "category": "oracle",
-      "categoryLabel": "Oracle / DB",
-      "color": "#c084fc",
-      "size": 0.62,
-      "file": "public/src/controller/DropBoxController.js",
-      "description": "Switch por MIME retornando template SVG 160×160."
-    },
-    {
-      "id": "jdb-get-file-view",
-      "label": "getFileView()",
-      "parent": "jdb-icons",
-      "layer": "function",
+      "id": "javascript-dropbox-file-views-error-ejs",
+      "label": "error.ejs",
+      "parent": "javascript-dropbox-dir-views",
+      "layer": "file",
       "category": "frontend",
       "categoryLabel": "Frontend",
       "color": "#eab308",
-      "size": 0.62,
-      "file": "public/src/controller/DropBoxController.js",
-      "description": "Cria <li> com dataset.file JSON e ícone + nome."
-    },
-    {
-      "id": "jdb-ajax",
-      "label": "ajax()",
-      "parent": "jdb-backend",
-      "layer": "function",
-      "category": "oracle",
-      "categoryLabel": "Oracle / DB",
-      "color": "#c084fc",
-      "size": 0.62,
-      "file": "public/src/controller/DropBoxController.js",
-      "description": "XHR Promise com upload.onprogress (modo local legado)."
-    },
-    {
-      "id": "jdb-firebase-storage",
-      "label": "Firebase Storage",
-      "parent": "jdb-upload-mod",
-      "layer": "file",
-      "category": "oracle",
-      "categoryLabel": "Oracle / DB",
-      "color": "#c084fc",
       "size": 0.85,
-      "file": "public/src/controller/DropBoxController.js",
-      "description": "Blob storage na nuvem com downloadURL em customMetadata."
+      "file": "views/error.ejs",
+      "description": "Código-fonte: `views/error.ejs`"
+    },
+    {
+      "id": "javascript-dropbox-file-views-index-ejs",
+      "label": "index.ejs",
+      "parent": "javascript-dropbox-dir-views",
+      "layer": "file",
+      "category": "frontend",
+      "categoryLabel": "Frontend",
+      "color": "#eab308",
+      "size": 0.85,
+      "file": "views/index.ejs",
+      "description": "Código-fonte: `views/index.ejs`"
     }
   ],
   "links": [
     {
-      "source": "jdb-root",
-      "target": "jdb-backend",
+      "source": "javascript-dropbox-root",
+      "target": "javascript-dropbox-dir-bin",
       "type": "dependency"
     },
     {
-      "source": "jdb-backend",
-      "target": "jdb-app",
+      "source": "javascript-dropbox-root",
+      "target": "javascript-dropbox-dir-public",
       "type": "dependency"
     },
     {
-      "source": "jdb-backend",
-      "target": "jdb-bin-www",
+      "source": "javascript-dropbox-root",
+      "target": "javascript-dropbox-dir-routes",
       "type": "dependency"
     },
     {
-      "source": "jdb-backend",
-      "target": "jdb-routes-mod",
+      "source": "javascript-dropbox-root",
+      "target": "javascript-dropbox-dir-views",
       "type": "dependency"
     },
     {
-      "source": "jdb-routes-mod",
-      "target": "jdb-route-home",
+      "source": "javascript-dropbox-dir-public",
+      "target": "javascript-dropbox-dir-public-assets",
       "type": "dependency"
     },
     {
-      "source": "jdb-routes-mod",
-      "target": "jdb-route-upload",
+      "source": "javascript-dropbox-dir-public",
+      "target": "javascript-dropbox-dir-public-src",
       "type": "dependency"
     },
     {
-      "source": "jdb-routes-mod",
-      "target": "jdb-route-file-get",
+      "source": "javascript-dropbox-dir-public-assets",
+      "target": "javascript-dropbox-dir-public-assets-css",
       "type": "dependency"
     },
     {
-      "source": "jdb-routes-mod",
-      "target": "jdb-route-delete",
+      "source": "javascript-dropbox-dir-public-src",
+      "target": "javascript-dropbox-dir-public-src-controller",
       "type": "dependency"
     },
     {
-      "source": "jdb-root",
-      "target": "jdb-frontend",
+      "source": "javascript-dropbox-root",
+      "target": "javascript-dropbox-file-app-js",
       "type": "dependency"
     },
     {
-      "source": "jdb-frontend",
-      "target": "jdb-index-ejs",
+      "source": "javascript-dropbox-root",
+      "target": "javascript-dropbox-file-package-json",
       "type": "dependency"
     },
     {
-      "source": "jdb-frontend",
-      "target": "jdb-index-js",
+      "source": "javascript-dropbox-dir-bin",
+      "target": "javascript-dropbox-file-bin-www",
       "type": "dependency"
     },
     {
-      "source": "jdb-frontend",
-      "target": "jdb-dropbox-css",
+      "source": "javascript-dropbox-dir-public",
+      "target": "javascript-dropbox-file-public-bower-json",
       "type": "dependency"
     },
     {
-      "source": "jdb-root",
-      "target": "jdb-controller",
+      "source": "javascript-dropbox-dir-public",
+      "target": "javascript-dropbox-file-public-package-json",
       "type": "dependency"
     },
     {
-      "source": "jdb-controller",
-      "target": "jdb-conn-db",
+      "source": "javascript-dropbox-dir-public",
+      "target": "javascript-dropbox-file-public-readme-md",
       "type": "dependency"
     },
     {
-      "source": "jdb-controller",
-      "target": "jdb-firebase-ref",
+      "source": "javascript-dropbox-dir-public-assets-css",
+      "target": "javascript-dropbox-file-public-assets-css-dropbox-clone-css",
       "type": "dependency"
     },
     {
-      "source": "jdb-root",
-      "target": "jdb-navigation",
+      "source": "javascript-dropbox-dir-public-src",
+      "target": "javascript-dropbox-file-public-src-index-js",
       "type": "dependency"
     },
     {
-      "source": "jdb-navigation",
-      "target": "jdb-open-folder",
+      "source": "javascript-dropbox-dir-public-src-controller",
+      "target": "javascript-dropbox-file-public-src-controller-dropboxcontroller-js",
       "type": "dependency"
     },
     {
-      "source": "jdb-navigation",
-      "target": "jdb-render-nav",
+      "source": "javascript-dropbox-dir-routes",
+      "target": "javascript-dropbox-file-routes-index-js",
       "type": "dependency"
     },
     {
-      "source": "jdb-navigation",
-      "target": "jdb-read-files",
+      "source": "javascript-dropbox-dir-routes",
+      "target": "javascript-dropbox-file-routes-users-js",
       "type": "dependency"
     },
     {
-      "source": "jdb-root",
-      "target": "jdb-upload-mod",
+      "source": "javascript-dropbox-dir-views",
+      "target": "javascript-dropbox-file-views-error-ejs",
       "type": "dependency"
     },
     {
-      "source": "jdb-upload-mod",
-      "target": "jdb-upload-task",
-      "type": "dependency"
-    },
-    {
-      "source": "jdb-upload-mod",
-      "target": "jdb-upload-progress",
-      "type": "dependency"
-    },
-    {
-      "source": "jdb-upload-mod",
-      "target": "jdb-format-time",
-      "type": "dependency"
-    },
-    {
-      "source": "jdb-upload-mod",
-      "target": "jdb-modal-show",
-      "type": "dependency"
-    },
-    {
-      "source": "jdb-root",
-      "target": "jdb-crud",
-      "type": "dependency"
-    },
-    {
-      "source": "jdb-crud",
-      "target": "jdb-init-events",
-      "type": "dependency"
-    },
-    {
-      "source": "jdb-crud",
-      "target": "jdb-remove-task",
-      "type": "dependency"
-    },
-    {
-      "source": "jdb-crud",
-      "target": "jdb-remove-folder",
-      "type": "dependency"
-    },
-    {
-      "source": "jdb-crud",
-      "target": "jdb-remove-file",
-      "type": "dependency"
-    },
-    {
-      "source": "jdb-root",
-      "target": "jdb-selection",
-      "type": "dependency"
-    },
-    {
-      "source": "jdb-selection",
-      "target": "jdb-get-selection",
-      "type": "dependency"
-    },
-    {
-      "source": "jdb-selection",
-      "target": "jdb-init-events-li",
-      "type": "dependency"
-    },
-    {
-      "source": "jdb-root",
-      "target": "jdb-icons",
-      "type": "dependency"
-    },
-    {
-      "source": "jdb-icons",
-      "target": "jdb-get-file-icon",
-      "type": "dependency"
-    },
-    {
-      "source": "jdb-icons",
-      "target": "jdb-get-file-view",
-      "type": "dependency"
-    },
-    {
-      "source": "jdb-backend",
-      "target": "jdb-ajax",
-      "type": "dependency"
-    },
-    {
-      "source": "jdb-upload-mod",
-      "target": "jdb-firebase-storage",
+      "source": "javascript-dropbox-dir-views",
+      "target": "javascript-dropbox-file-views-index-ejs",
       "type": "dependency"
     }
   ]

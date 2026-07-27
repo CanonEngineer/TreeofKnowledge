@@ -4,7 +4,7 @@
   "repoUrl": "https://github.com/CanonEngineer/JavaScriptWhatsAppProject",
   "color": "#22c55e",
   "demoUrl": "",
-  "nodeCount": 16,
+  "nodeCount": 22,
   "categories": {
     "core": {
       "label": "Backend",
@@ -14,6 +14,10 @@
       "label": "Frontend",
       "color": "#eab308"
     },
+    "scripts": {
+      "label": "Scripts",
+      "color": "#64748b"
+    },
     "other": {
       "label": "Outros",
       "color": "#64748b"
@@ -21,7 +25,7 @@
   },
   "nodes": [
     {
-      "id": "jav-root",
+      "id": "javascript-whatsapp-root",
       "label": "JavaScriptWhatsAppProject",
       "parent": null,
       "layer": "root",
@@ -29,264 +33,366 @@
       "categoryLabel": "Backend",
       "color": "#3b82f6",
       "size": 2.2,
-      "file": "index.html",
+      "file": "README.md",
       "description": "Clone do WhatsApp com Webpack, Firebase Auth, Firestore e Storage."
     },
     {
-      "id": "jav-src",
-      "label": "src",
-      "parent": "jav-root",
+      "id": "javascript-whatsapp-dir-css",
+      "label": "css/",
+      "parent": "javascript-whatsapp-root",
       "layer": "module",
-      "category": "core",
-      "categoryLabel": "Backend",
-      "color": "#3b82f6",
+      "category": "scripts",
+      "categoryLabel": "Scripts",
+      "color": "#64748b",
+      "size": 1.35,
+      "file": "css/",
+      "description": "Pacote/pasta `css/` do projeto."
+    },
+    {
+      "id": "javascript-whatsapp-dir-src",
+      "label": "src/",
+      "parent": "javascript-whatsapp-root",
+      "layer": "module",
+      "category": "scripts",
+      "categoryLabel": "Scripts",
+      "color": "#64748b",
       "size": 1.35,
       "file": "src/",
-      "description": "Módulo/pasta `src/` com arquivos-chave do projeto."
+      "description": "Pacote/pasta `src/` do projeto."
     },
     {
-      "id": "jav-src-controller-cameracontroller-js",
-      "label": "CameraController.js",
-      "parent": "jav-src",
+      "id": "javascript-whatsapp-dir-src-controller",
+      "label": "controller/",
+      "parent": "javascript-whatsapp-dir-src",
+      "layer": "module",
+      "category": "scripts",
+      "categoryLabel": "Scripts",
+      "color": "#64748b",
+      "size": 1.35,
+      "file": "src/controller/",
+      "description": "Pacote/pasta `src/controller/` do projeto."
+    },
+    {
+      "id": "javascript-whatsapp-dir-src-model",
+      "label": "model/",
+      "parent": "javascript-whatsapp-dir-src",
+      "layer": "module",
+      "category": "scripts",
+      "categoryLabel": "Scripts",
+      "color": "#64748b",
+      "size": 1.35,
+      "file": "src/model/",
+      "description": "Pacote/pasta `src/model/` do projeto."
+    },
+    {
+      "id": "javascript-whatsapp-dir-src-util",
+      "label": "util/",
+      "parent": "javascript-whatsapp-dir-src",
+      "layer": "module",
+      "category": "scripts",
+      "categoryLabel": "Scripts",
+      "color": "#64748b",
+      "size": 1.35,
+      "file": "src/util/",
+      "description": "Pacote/pasta `src/util/` do projeto."
+    },
+    {
+      "id": "javascript-whatsapp-file-gitignore",
+      "label": ".gitignore",
+      "parent": "javascript-whatsapp-root",
       "layer": "file",
-      "category": "core",
-      "categoryLabel": "Backend",
-      "color": "#3b82f6",
+      "category": "scripts",
+      "categoryLabel": "Scripts",
+      "color": "#64748b",
       "size": 0.85,
-      "file": "src/controller/CameraController.js",
-      "description": "Arquivo `src/controller/CameraController.js` mapeado a partir do repositório original."
+      "file": ".gitignore",
+      "description": "Código-fonte: `.gitignore`"
     },
     {
-      "id": "jav-src-util-classevent-js",
-      "label": "ClassEvent.js",
-      "parent": "jav-src",
-      "layer": "file",
-      "category": "core",
-      "categoryLabel": "Backend",
-      "color": "#3b82f6",
-      "size": 0.85,
-      "file": "src/util/ClassEvent.js",
-      "description": "Arquivo `src/util/ClassEvent.js` mapeado a partir do repositório original."
-    },
-    {
-      "id": "jav-src-controller-documentpreviewcontroller",
-      "label": "DocumentPreviewController.js",
-      "parent": "jav-src",
+      "id": "javascript-whatsapp-file-index-html",
+      "label": "index.html",
+      "parent": "javascript-whatsapp-root",
       "layer": "file",
       "category": "frontend",
       "categoryLabel": "Frontend",
       "color": "#eab308",
       "size": 0.85,
-      "file": "src/controller/DocumentPreviewController.js",
-      "description": "Arquivo `src/controller/DocumentPreviewController.js` mapeado a partir do repositório original."
+      "file": "index.html",
+      "description": "Código-fonte: `index.html`"
     },
     {
-      "id": "jav-src-util-firebase-js",
-      "label": "Firebase.js",
-      "parent": "jav-src",
+      "id": "javascript-whatsapp-file-package-json",
+      "label": "package.json",
+      "parent": "javascript-whatsapp-root",
       "layer": "file",
-      "category": "core",
-      "categoryLabel": "Backend",
-      "color": "#3b82f6",
+      "category": "scripts",
+      "categoryLabel": "Scripts",
+      "color": "#64748b",
       "size": 0.85,
-      "file": "src/util/Firebase.js",
-      "description": "Arquivo `src/util/Firebase.js` mapeado a partir do repositório original."
+      "file": "package.json",
+      "description": "Código-fonte: `package.json`"
     },
     {
-      "id": "jav-src-util-format-js",
-      "label": "Format.js",
-      "parent": "jav-src",
+      "id": "javascript-whatsapp-file-webpack-config-js",
+      "label": "webpack.config.js",
+      "parent": "javascript-whatsapp-root",
       "layer": "file",
-      "category": "core",
-      "categoryLabel": "Backend",
-      "color": "#3b82f6",
+      "category": "scripts",
+      "categoryLabel": "Scripts",
+      "color": "#64748b",
       "size": 0.85,
-      "file": "src/util/Format.js",
-      "description": "Arquivo `src/util/Format.js` mapeado a partir do repositório original."
+      "file": "webpack.config.js",
+      "description": "Código-fonte: `webpack.config.js`"
     },
     {
-      "id": "jav-src-model-message-js",
-      "label": "Message.js",
-      "parent": "jav-src",
-      "layer": "file",
-      "category": "core",
-      "categoryLabel": "Backend",
-      "color": "#3b82f6",
-      "size": 0.85,
-      "file": "src/model/Message.js",
-      "description": "Arquivo `src/model/Message.js` mapeado a partir do repositório original."
-    },
-    {
-      "id": "jav-src-controller-microphonecontroller-js",
-      "label": "MicrophoneController.js",
-      "parent": "jav-src",
-      "layer": "file",
-      "category": "core",
-      "categoryLabel": "Backend",
-      "color": "#3b82f6",
-      "size": 0.85,
-      "file": "src/controller/MicrophoneController.js",
-      "description": "Arquivo `src/controller/MicrophoneController.js` mapeado a partir do repositório original."
-    },
-    {
-      "id": "jav-src-model-model-js",
-      "label": "Model.js",
-      "parent": "jav-src",
-      "layer": "file",
-      "category": "core",
-      "categoryLabel": "Backend",
-      "color": "#3b82f6",
-      "size": 0.85,
-      "file": "src/model/Model.js",
-      "description": "Arquivo `src/model/Model.js` mapeado a partir do repositório original."
-    },
-    {
-      "id": "jav-css",
-      "label": "css",
-      "parent": "jav-root",
-      "layer": "module",
-      "category": "core",
-      "categoryLabel": "Backend",
-      "color": "#3b82f6",
-      "size": 1.35,
-      "file": "css/",
-      "description": "Módulo/pasta `css/` com arquivos-chave do projeto."
-    },
-    {
-      "id": "jav-css-style-css",
+      "id": "javascript-whatsapp-file-css-style-css",
       "label": "style.css",
-      "parent": "jav-css",
+      "parent": "javascript-whatsapp-dir-css",
       "layer": "file",
       "category": "frontend",
       "categoryLabel": "Frontend",
       "color": "#eab308",
       "size": 0.85,
       "file": "css/style.css",
-      "description": "Arquivo `css/style.css` mapeado a partir do repositório original."
+      "description": "Código-fonte: `css/style.css`"
     },
     {
-      "id": "jav-webpack-config-js",
-      "label": "webpack.config.js",
-      "parent": "jav-root",
+      "id": "javascript-whatsapp-file-src-app-js",
+      "label": "app.js",
+      "parent": "javascript-whatsapp-dir-src",
       "layer": "file",
-      "category": "core",
-      "categoryLabel": "Backend",
-      "color": "#3b82f6",
+      "category": "scripts",
+      "categoryLabel": "Scripts",
+      "color": "#64748b",
       "size": 0.85,
-      "file": "webpack.config.js",
-      "description": "Arquivo `webpack.config.js` mapeado a partir do repositório original."
+      "file": "src/app.js",
+      "description": "Código-fonte: `src/app.js`"
     },
     {
-      "id": "jav-index-html",
-      "label": "index.html",
-      "parent": "jav-root",
+      "id": "javascript-whatsapp-file-src-controller-cameracontroller-js",
+      "label": "CameraController.js",
+      "parent": "javascript-whatsapp-dir-src-controller",
+      "layer": "file",
+      "category": "scripts",
+      "categoryLabel": "Scripts",
+      "color": "#64748b",
+      "size": 0.85,
+      "file": "src/controller/CameraController.js",
+      "description": "Código-fonte: `src/controller/CameraController.js`"
+    },
+    {
+      "id": "javascript-whatsapp-file-src-controller-documentpreviewcontroller-js",
+      "label": "DocumentPreviewController.js",
+      "parent": "javascript-whatsapp-dir-src-controller",
       "layer": "file",
       "category": "frontend",
       "categoryLabel": "Frontend",
       "color": "#eab308",
       "size": 0.85,
-      "file": "index.html",
-      "description": "Arquivo `index.html` mapeado a partir do repositório original."
+      "file": "src/controller/DocumentPreviewController.js",
+      "description": "Código-fonte: `src/controller/DocumentPreviewController.js`"
     },
     {
-      "id": "jav-package-json",
-      "label": "package.json",
-      "parent": "jav-root",
+      "id": "javascript-whatsapp-file-src-controller-microphonecontroller-js",
+      "label": "MicrophoneController.js",
+      "parent": "javascript-whatsapp-dir-src-controller",
       "layer": "file",
-      "category": "other",
-      "categoryLabel": "Outros",
+      "category": "scripts",
+      "categoryLabel": "Scripts",
       "color": "#64748b",
       "size": 0.85,
-      "file": "package.json",
-      "description": "Arquivo `package.json` mapeado a partir do repositório original."
+      "file": "src/controller/MicrophoneController.js",
+      "description": "Código-fonte: `src/controller/MicrophoneController.js`"
     },
     {
-      "id": "jav-readme-md",
-      "label": "README.md",
-      "parent": "jav-root",
+      "id": "javascript-whatsapp-file-src-controller-whatsappcontroller-js",
+      "label": "WhatsAppController.js",
+      "parent": "javascript-whatsapp-dir-src-controller",
       "layer": "file",
-      "category": "other",
-      "categoryLabel": "Outros",
+      "category": "scripts",
+      "categoryLabel": "Scripts",
       "color": "#64748b",
       "size": 0.85,
-      "file": "README.md",
-      "description": "Arquivo `README.md` mapeado a partir do repositório original."
+      "file": "src/controller/WhatsAppController.js",
+      "description": "Código-fonte: `src/controller/WhatsAppController.js`"
+    },
+    {
+      "id": "javascript-whatsapp-file-src-model-message-js",
+      "label": "Message.js",
+      "parent": "javascript-whatsapp-dir-src-model",
+      "layer": "file",
+      "category": "scripts",
+      "categoryLabel": "Scripts",
+      "color": "#64748b",
+      "size": 0.85,
+      "file": "src/model/Message.js",
+      "description": "Código-fonte: `src/model/Message.js`"
+    },
+    {
+      "id": "javascript-whatsapp-file-src-model-model-js",
+      "label": "Model.js",
+      "parent": "javascript-whatsapp-dir-src-model",
+      "layer": "file",
+      "category": "scripts",
+      "categoryLabel": "Scripts",
+      "color": "#64748b",
+      "size": 0.85,
+      "file": "src/model/Model.js",
+      "description": "Código-fonte: `src/model/Model.js`"
+    },
+    {
+      "id": "javascript-whatsapp-file-src-model-user-js",
+      "label": "User.js",
+      "parent": "javascript-whatsapp-dir-src-model",
+      "layer": "file",
+      "category": "scripts",
+      "categoryLabel": "Scripts",
+      "color": "#64748b",
+      "size": 0.85,
+      "file": "src/model/User.js",
+      "description": "Código-fonte: `src/model/User.js`"
+    },
+    {
+      "id": "javascript-whatsapp-file-src-util-classevent-js",
+      "label": "ClassEvent.js",
+      "parent": "javascript-whatsapp-dir-src-util",
+      "layer": "file",
+      "category": "scripts",
+      "categoryLabel": "Scripts",
+      "color": "#64748b",
+      "size": 0.85,
+      "file": "src/util/ClassEvent.js",
+      "description": "Código-fonte: `src/util/ClassEvent.js`"
+    },
+    {
+      "id": "javascript-whatsapp-file-src-util-firebase-js",
+      "label": "Firebase.js",
+      "parent": "javascript-whatsapp-dir-src-util",
+      "layer": "file",
+      "category": "scripts",
+      "categoryLabel": "Scripts",
+      "color": "#64748b",
+      "size": 0.85,
+      "file": "src/util/Firebase.js",
+      "description": "Código-fonte: `src/util/Firebase.js`"
+    },
+    {
+      "id": "javascript-whatsapp-file-src-util-format-js",
+      "label": "Format.js",
+      "parent": "javascript-whatsapp-dir-src-util",
+      "layer": "file",
+      "category": "scripts",
+      "categoryLabel": "Scripts",
+      "color": "#64748b",
+      "size": 0.85,
+      "file": "src/util/Format.js",
+      "description": "Código-fonte: `src/util/Format.js`"
     }
   ],
   "links": [
     {
-      "source": "jav-root",
-      "target": "jav-src",
+      "source": "javascript-whatsapp-root",
+      "target": "javascript-whatsapp-dir-css",
       "type": "dependency"
     },
     {
-      "source": "jav-src",
-      "target": "jav-src-controller-cameracontroller-js",
+      "source": "javascript-whatsapp-root",
+      "target": "javascript-whatsapp-dir-src",
       "type": "dependency"
     },
     {
-      "source": "jav-src",
-      "target": "jav-src-util-classevent-js",
+      "source": "javascript-whatsapp-dir-src",
+      "target": "javascript-whatsapp-dir-src-controller",
       "type": "dependency"
     },
     {
-      "source": "jav-src",
-      "target": "jav-src-controller-documentpreviewcontroller",
+      "source": "javascript-whatsapp-dir-src",
+      "target": "javascript-whatsapp-dir-src-model",
       "type": "dependency"
     },
     {
-      "source": "jav-src",
-      "target": "jav-src-util-firebase-js",
+      "source": "javascript-whatsapp-dir-src",
+      "target": "javascript-whatsapp-dir-src-util",
       "type": "dependency"
     },
     {
-      "source": "jav-src",
-      "target": "jav-src-util-format-js",
+      "source": "javascript-whatsapp-root",
+      "target": "javascript-whatsapp-file-gitignore",
       "type": "dependency"
     },
     {
-      "source": "jav-src",
-      "target": "jav-src-model-message-js",
+      "source": "javascript-whatsapp-root",
+      "target": "javascript-whatsapp-file-index-html",
       "type": "dependency"
     },
     {
-      "source": "jav-src",
-      "target": "jav-src-controller-microphonecontroller-js",
+      "source": "javascript-whatsapp-root",
+      "target": "javascript-whatsapp-file-package-json",
       "type": "dependency"
     },
     {
-      "source": "jav-src",
-      "target": "jav-src-model-model-js",
+      "source": "javascript-whatsapp-root",
+      "target": "javascript-whatsapp-file-webpack-config-js",
       "type": "dependency"
     },
     {
-      "source": "jav-root",
-      "target": "jav-css",
+      "source": "javascript-whatsapp-dir-css",
+      "target": "javascript-whatsapp-file-css-style-css",
       "type": "dependency"
     },
     {
-      "source": "jav-css",
-      "target": "jav-css-style-css",
+      "source": "javascript-whatsapp-dir-src",
+      "target": "javascript-whatsapp-file-src-app-js",
       "type": "dependency"
     },
     {
-      "source": "jav-root",
-      "target": "jav-webpack-config-js",
+      "source": "javascript-whatsapp-dir-src-controller",
+      "target": "javascript-whatsapp-file-src-controller-cameracontroller-js",
       "type": "dependency"
     },
     {
-      "source": "jav-root",
-      "target": "jav-index-html",
+      "source": "javascript-whatsapp-dir-src-controller",
+      "target": "javascript-whatsapp-file-src-controller-documentpreviewcontroller-js",
       "type": "dependency"
     },
     {
-      "source": "jav-root",
-      "target": "jav-package-json",
+      "source": "javascript-whatsapp-dir-src-controller",
+      "target": "javascript-whatsapp-file-src-controller-microphonecontroller-js",
       "type": "dependency"
     },
     {
-      "source": "jav-root",
-      "target": "jav-readme-md",
+      "source": "javascript-whatsapp-dir-src-controller",
+      "target": "javascript-whatsapp-file-src-controller-whatsappcontroller-js",
+      "type": "dependency"
+    },
+    {
+      "source": "javascript-whatsapp-dir-src-model",
+      "target": "javascript-whatsapp-file-src-model-message-js",
+      "type": "dependency"
+    },
+    {
+      "source": "javascript-whatsapp-dir-src-model",
+      "target": "javascript-whatsapp-file-src-model-model-js",
+      "type": "dependency"
+    },
+    {
+      "source": "javascript-whatsapp-dir-src-model",
+      "target": "javascript-whatsapp-file-src-model-user-js",
+      "type": "dependency"
+    },
+    {
+      "source": "javascript-whatsapp-dir-src-util",
+      "target": "javascript-whatsapp-file-src-util-classevent-js",
+      "type": "dependency"
+    },
+    {
+      "source": "javascript-whatsapp-dir-src-util",
+      "target": "javascript-whatsapp-file-src-util-firebase-js",
+      "type": "dependency"
+    },
+    {
+      "source": "javascript-whatsapp-dir-src-util",
+      "target": "javascript-whatsapp-file-src-util-format-js",
       "type": "dependency"
     }
   ]

@@ -4,7 +4,7 @@
   "repoUrl": "https://github.com/CanonEngineer/PythonEmployeeList",
   "color": "#fb7185",
   "demoUrl": "",
-  "nodeCount": 19,
+  "nodeCount": 26,
   "categories": {
     "core": {
       "label": "Backend",
@@ -25,7 +25,7 @@
   },
   "nodes": [
     {
-      "id": "pel-root",
+      "id": "python-employee-list-root",
       "label": "PythonEmployeeList",
       "parent": null,
       "layer": "root",
@@ -33,315 +33,434 @@
       "categoryLabel": "Backend",
       "color": "#3b82f6",
       "size": 2.2,
-      "file": "manage.py",
+      "file": "README.md",
       "description": "Lista de funcionários com Django, models e templates."
     },
     {
-      "id": "pel-employees",
-      "label": "employees",
-      "parent": "pel-root",
+      "id": "python-employee-list-dir-employees",
+      "label": "employees/",
+      "parent": "python-employee-list-root",
       "layer": "module",
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
       "size": 1.35,
       "file": "employees/",
-      "description": "Módulo/pasta `employees/` com arquivos-chave do projeto."
+      "description": "Pacote/pasta `employees/` do projeto."
     },
     {
-      "id": "pel-employees-models-py",
-      "label": "models.py",
-      "parent": "pel-employees",
-      "layer": "file",
-      "category": "core",
-      "categoryLabel": "Backend",
-      "color": "#3b82f6",
-      "size": 0.85,
-      "file": "employees/models.py",
-      "description": "Arquivo `employees/models.py` mapeado a partir do repositório original."
-    },
-    {
-      "id": "pel-employees-views-py",
-      "label": "views.py",
-      "parent": "pel-employees",
-      "layer": "file",
-      "category": "frontend",
-      "categoryLabel": "Frontend",
-      "color": "#eab308",
-      "size": 0.85,
-      "file": "employees/views.py",
-      "description": "Arquivo `employees/views.py` mapeado a partir do repositório original."
-    },
-    {
-      "id": "pel-employees-admin-py",
-      "label": "admin.py",
-      "parent": "pel-employees",
-      "layer": "file",
-      "category": "core",
-      "categoryLabel": "Backend",
-      "color": "#3b82f6",
-      "size": 0.85,
-      "file": "employees/admin.py",
-      "description": "Arquivo `employees/admin.py` mapeado a partir do repositório original."
-    },
-    {
-      "id": "pel-employees-urls-py",
-      "label": "urls.py",
-      "parent": "pel-employees",
-      "layer": "file",
-      "category": "core",
-      "categoryLabel": "Backend",
-      "color": "#3b82f6",
-      "size": 0.85,
-      "file": "employees/urls.py",
-      "description": "Arquivo `employees/urls.py` mapeado a partir do repositório original."
-    },
-    {
-      "id": "pel-employees-apps-py",
-      "label": "apps.py",
-      "parent": "pel-employees",
-      "layer": "file",
-      "category": "core",
-      "categoryLabel": "Backend",
-      "color": "#3b82f6",
-      "size": 0.85,
-      "file": "employees/apps.py",
-      "description": "Arquivo `employees/apps.py` mapeado a partir do repositório original."
-    },
-    {
-      "id": "pel-employees-tests-py",
-      "label": "tests.py",
-      "parent": "pel-employees",
-      "layer": "file",
-      "category": "tests",
-      "categoryLabel": "Testes",
-      "color": "#94a3b8",
-      "size": 0.85,
-      "file": "employees/tests.py",
-      "description": "Arquivo `employees/tests.py` mapeado a partir do repositório original."
-    },
-    {
-      "id": "pel-mysite",
-      "label": "mysite",
-      "parent": "pel-root",
+      "id": "python-employee-list-dir-mysite",
+      "label": "mysite/",
+      "parent": "python-employee-list-root",
       "layer": "module",
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
       "size": 1.35,
       "file": "mysite/",
-      "description": "Módulo/pasta `mysite/` com arquivos-chave do projeto."
+      "description": "Pacote/pasta `mysite/` do projeto."
     },
     {
-      "id": "pel-mysite-settings-py",
-      "label": "settings.py",
-      "parent": "pel-mysite",
-      "layer": "file",
-      "category": "core",
-      "categoryLabel": "Backend",
-      "color": "#3b82f6",
-      "size": 0.85,
-      "file": "mysite/settings.py",
-      "description": "Arquivo `mysite/settings.py` mapeado a partir do repositório original."
-    },
-    {
-      "id": "pel-mysite-urls-py",
-      "label": "urls.py",
-      "parent": "pel-mysite",
-      "layer": "file",
-      "category": "core",
-      "categoryLabel": "Backend",
-      "color": "#3b82f6",
-      "size": 0.85,
-      "file": "mysite/urls.py",
-      "description": "Arquivo `mysite/urls.py` mapeado a partir do repositório original."
-    },
-    {
-      "id": "pel-mysite-views-py",
-      "label": "views.py",
-      "parent": "pel-mysite",
-      "layer": "file",
-      "category": "frontend",
-      "categoryLabel": "Frontend",
-      "color": "#eab308",
-      "size": 0.85,
-      "file": "mysite/views.py",
-      "description": "Arquivo `mysite/views.py` mapeado a partir do repositório original."
-    },
-    {
-      "id": "pel-mysite-asgi-py",
-      "label": "asgi.py",
-      "parent": "pel-mysite",
-      "layer": "file",
-      "category": "core",
-      "categoryLabel": "Backend",
-      "color": "#3b82f6",
-      "size": 0.85,
-      "file": "mysite/asgi.py",
-      "description": "Arquivo `mysite/asgi.py` mapeado a partir do repositório original."
-    },
-    {
-      "id": "pel-mysite-wsgi-py",
-      "label": "wsgi.py",
-      "parent": "pel-mysite",
-      "layer": "file",
-      "category": "core",
-      "categoryLabel": "Backend",
-      "color": "#3b82f6",
-      "size": 0.85,
-      "file": "mysite/wsgi.py",
-      "description": "Arquivo `mysite/wsgi.py` mapeado a partir do repositório original."
-    },
-    {
-      "id": "pel-mysite-static-css-style-css",
-      "label": "style.css",
-      "parent": "pel-mysite",
-      "layer": "file",
-      "category": "frontend",
-      "categoryLabel": "Frontend",
-      "color": "#eab308",
-      "size": 0.85,
-      "file": "mysite/static/css/style.css",
-      "description": "Arquivo `mysite/static/css/style.css` mapeado a partir do repositório original."
-    },
-    {
-      "id": "pel-templates",
-      "label": "templates",
-      "parent": "pel-root",
+      "id": "python-employee-list-dir-templates",
+      "label": "templates/",
+      "parent": "python-employee-list-root",
       "layer": "module",
       "category": "frontend",
       "categoryLabel": "Frontend",
       "color": "#eab308",
       "size": 1.35,
       "file": "templates/",
-      "description": "Módulo/pasta `templates/` com arquivos-chave do projeto."
+      "description": "Pacote/pasta `templates/` do projeto."
     },
     {
-      "id": "pel-templates-employee-detail-html",
-      "label": "employee_detail.html",
-      "parent": "pel-templates",
-      "layer": "file",
+      "id": "python-employee-list-dir-employees-migrations",
+      "label": "migrations/",
+      "parent": "python-employee-list-dir-employees",
+      "layer": "module",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 1.35,
+      "file": "employees/migrations/",
+      "description": "Pacote/pasta `employees/migrations/` do projeto."
+    },
+    {
+      "id": "python-employee-list-dir-mysite-static",
+      "label": "static/",
+      "parent": "python-employee-list-dir-mysite",
+      "layer": "module",
       "category": "frontend",
       "categoryLabel": "Frontend",
       "color": "#eab308",
-      "size": 0.85,
-      "file": "templates/employee_detail.html",
-      "description": "Arquivo `templates/employee_detail.html` mapeado a partir do repositório original."
+      "size": 1.35,
+      "file": "mysite/static/",
+      "description": "Pacote/pasta `mysite/static/` do projeto."
     },
     {
-      "id": "pel-templates-home-html",
-      "label": "home.html",
-      "parent": "pel-templates",
-      "layer": "file",
+      "id": "python-employee-list-dir-mysite-static-css",
+      "label": "css/",
+      "parent": "python-employee-list-dir-mysite-static",
+      "layer": "module",
       "category": "frontend",
       "categoryLabel": "Frontend",
       "color": "#eab308",
-      "size": 0.85,
-      "file": "templates/home.html",
-      "description": "Arquivo `templates/home.html` mapeado a partir do repositório original."
+      "size": 1.35,
+      "file": "mysite/static/css/",
+      "description": "Pacote/pasta `mysite/static/css/` do projeto."
     },
     {
-      "id": "pel-manage-py",
+      "id": "python-employee-list-file-manage-py",
       "label": "manage.py",
-      "parent": "pel-root",
+      "parent": "python-employee-list-root",
       "layer": "file",
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
       "size": 0.85,
       "file": "manage.py",
-      "description": "Arquivo `manage.py` mapeado a partir do repositório original."
+      "description": "Código-fonte: `manage.py`"
+    },
+    {
+      "id": "python-employee-list-file-employees-init-py",
+      "label": "__init__.py",
+      "parent": "python-employee-list-dir-employees",
+      "layer": "file",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 0.85,
+      "file": "employees/__init__.py",
+      "description": "Código-fonte: `employees/__init__.py`"
+    },
+    {
+      "id": "python-employee-list-file-employees-admin-py",
+      "label": "admin.py",
+      "parent": "python-employee-list-dir-employees",
+      "layer": "file",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 0.85,
+      "file": "employees/admin.py",
+      "description": "Código-fonte: `employees/admin.py`"
+    },
+    {
+      "id": "python-employee-list-file-employees-apps-py",
+      "label": "apps.py",
+      "parent": "python-employee-list-dir-employees",
+      "layer": "file",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 0.85,
+      "file": "employees/apps.py",
+      "description": "Código-fonte: `employees/apps.py`"
+    },
+    {
+      "id": "python-employee-list-file-employees-models-py",
+      "label": "models.py",
+      "parent": "python-employee-list-dir-employees",
+      "layer": "file",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 0.85,
+      "file": "employees/models.py",
+      "description": "Código-fonte: `employees/models.py`"
+    },
+    {
+      "id": "python-employee-list-file-employees-tests-py",
+      "label": "tests.py",
+      "parent": "python-employee-list-dir-employees",
+      "layer": "file",
+      "category": "tests",
+      "categoryLabel": "Testes",
+      "color": "#94a3b8",
+      "size": 0.85,
+      "file": "employees/tests.py",
+      "description": "Código-fonte: `employees/tests.py`"
+    },
+    {
+      "id": "python-employee-list-file-employees-urls-py",
+      "label": "urls.py",
+      "parent": "python-employee-list-dir-employees",
+      "layer": "file",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 0.85,
+      "file": "employees/urls.py",
+      "description": "Código-fonte: `employees/urls.py`"
+    },
+    {
+      "id": "python-employee-list-file-employees-views-py",
+      "label": "views.py",
+      "parent": "python-employee-list-dir-employees",
+      "layer": "file",
+      "category": "frontend",
+      "categoryLabel": "Frontend",
+      "color": "#eab308",
+      "size": 0.85,
+      "file": "employees/views.py",
+      "description": "Código-fonte: `employees/views.py`"
+    },
+    {
+      "id": "python-employee-list-file-employees-migrations-0001-initial-py",
+      "label": "0001_initial.py",
+      "parent": "python-employee-list-dir-employees-migrations",
+      "layer": "file",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 0.85,
+      "file": "employees/migrations/0001_initial.py",
+      "description": "Código-fonte: `employees/migrations/0001_initial.py`"
+    },
+    {
+      "id": "python-employee-list-file-employees-migrations-init-py",
+      "label": "__init__.py",
+      "parent": "python-employee-list-dir-employees-migrations",
+      "layer": "file",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 0.85,
+      "file": "employees/migrations/__init__.py",
+      "description": "Código-fonte: `employees/migrations/__init__.py`"
+    },
+    {
+      "id": "python-employee-list-file-mysite-init-py",
+      "label": "__init__.py",
+      "parent": "python-employee-list-dir-mysite",
+      "layer": "file",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 0.85,
+      "file": "mysite/__init__.py",
+      "description": "Código-fonte: `mysite/__init__.py`"
+    },
+    {
+      "id": "python-employee-list-file-mysite-asgi-py",
+      "label": "asgi.py",
+      "parent": "python-employee-list-dir-mysite",
+      "layer": "file",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 0.85,
+      "file": "mysite/asgi.py",
+      "description": "Código-fonte: `mysite/asgi.py`"
+    },
+    {
+      "id": "python-employee-list-file-mysite-settings-py",
+      "label": "settings.py",
+      "parent": "python-employee-list-dir-mysite",
+      "layer": "file",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 0.85,
+      "file": "mysite/settings.py",
+      "description": "Código-fonte: `mysite/settings.py`"
+    },
+    {
+      "id": "python-employee-list-file-mysite-urls-py",
+      "label": "urls.py",
+      "parent": "python-employee-list-dir-mysite",
+      "layer": "file",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 0.85,
+      "file": "mysite/urls.py",
+      "description": "Código-fonte: `mysite/urls.py`"
+    },
+    {
+      "id": "python-employee-list-file-mysite-views-py",
+      "label": "views.py",
+      "parent": "python-employee-list-dir-mysite",
+      "layer": "file",
+      "category": "frontend",
+      "categoryLabel": "Frontend",
+      "color": "#eab308",
+      "size": 0.85,
+      "file": "mysite/views.py",
+      "description": "Código-fonte: `mysite/views.py`"
+    },
+    {
+      "id": "python-employee-list-file-mysite-wsgi-py",
+      "label": "wsgi.py",
+      "parent": "python-employee-list-dir-mysite",
+      "layer": "file",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 0.85,
+      "file": "mysite/wsgi.py",
+      "description": "Código-fonte: `mysite/wsgi.py`"
+    },
+    {
+      "id": "python-employee-list-file-mysite-static-css-style-css",
+      "label": "style.css",
+      "parent": "python-employee-list-dir-mysite-static-css",
+      "layer": "file",
+      "category": "frontend",
+      "categoryLabel": "Frontend",
+      "color": "#eab308",
+      "size": 0.85,
+      "file": "mysite/static/css/style.css",
+      "description": "Código-fonte: `mysite/static/css/style.css`"
+    },
+    {
+      "id": "python-employee-list-file-templates-employee-detail-html",
+      "label": "employee_detail.html",
+      "parent": "python-employee-list-dir-templates",
+      "layer": "file",
+      "category": "frontend",
+      "categoryLabel": "Frontend",
+      "color": "#eab308",
+      "size": 0.85,
+      "file": "templates/employee_detail.html",
+      "description": "Código-fonte: `templates/employee_detail.html`"
+    },
+    {
+      "id": "python-employee-list-file-templates-home-html",
+      "label": "home.html",
+      "parent": "python-employee-list-dir-templates",
+      "layer": "file",
+      "category": "frontend",
+      "categoryLabel": "Frontend",
+      "color": "#eab308",
+      "size": 0.85,
+      "file": "templates/home.html",
+      "description": "Código-fonte: `templates/home.html`"
     }
   ],
   "links": [
     {
-      "source": "pel-root",
-      "target": "pel-employees",
+      "source": "python-employee-list-root",
+      "target": "python-employee-list-dir-employees",
       "type": "dependency"
     },
     {
-      "source": "pel-employees",
-      "target": "pel-employees-models-py",
+      "source": "python-employee-list-root",
+      "target": "python-employee-list-dir-mysite",
       "type": "dependency"
     },
     {
-      "source": "pel-employees",
-      "target": "pel-employees-views-py",
+      "source": "python-employee-list-root",
+      "target": "python-employee-list-dir-templates",
       "type": "dependency"
     },
     {
-      "source": "pel-employees",
-      "target": "pel-employees-admin-py",
+      "source": "python-employee-list-dir-employees",
+      "target": "python-employee-list-dir-employees-migrations",
       "type": "dependency"
     },
     {
-      "source": "pel-employees",
-      "target": "pel-employees-urls-py",
+      "source": "python-employee-list-dir-mysite",
+      "target": "python-employee-list-dir-mysite-static",
       "type": "dependency"
     },
     {
-      "source": "pel-employees",
-      "target": "pel-employees-apps-py",
+      "source": "python-employee-list-dir-mysite-static",
+      "target": "python-employee-list-dir-mysite-static-css",
       "type": "dependency"
     },
     {
-      "source": "pel-employees",
-      "target": "pel-employees-tests-py",
+      "source": "python-employee-list-root",
+      "target": "python-employee-list-file-manage-py",
       "type": "dependency"
     },
     {
-      "source": "pel-root",
-      "target": "pel-mysite",
+      "source": "python-employee-list-dir-employees",
+      "target": "python-employee-list-file-employees-init-py",
       "type": "dependency"
     },
     {
-      "source": "pel-mysite",
-      "target": "pel-mysite-settings-py",
+      "source": "python-employee-list-dir-employees",
+      "target": "python-employee-list-file-employees-admin-py",
       "type": "dependency"
     },
     {
-      "source": "pel-mysite",
-      "target": "pel-mysite-urls-py",
+      "source": "python-employee-list-dir-employees",
+      "target": "python-employee-list-file-employees-apps-py",
       "type": "dependency"
     },
     {
-      "source": "pel-mysite",
-      "target": "pel-mysite-views-py",
+      "source": "python-employee-list-dir-employees",
+      "target": "python-employee-list-file-employees-models-py",
       "type": "dependency"
     },
     {
-      "source": "pel-mysite",
-      "target": "pel-mysite-asgi-py",
+      "source": "python-employee-list-dir-employees",
+      "target": "python-employee-list-file-employees-tests-py",
       "type": "dependency"
     },
     {
-      "source": "pel-mysite",
-      "target": "pel-mysite-wsgi-py",
+      "source": "python-employee-list-dir-employees",
+      "target": "python-employee-list-file-employees-urls-py",
       "type": "dependency"
     },
     {
-      "source": "pel-mysite",
-      "target": "pel-mysite-static-css-style-css",
+      "source": "python-employee-list-dir-employees",
+      "target": "python-employee-list-file-employees-views-py",
       "type": "dependency"
     },
     {
-      "source": "pel-root",
-      "target": "pel-templates",
+      "source": "python-employee-list-dir-employees-migrations",
+      "target": "python-employee-list-file-employees-migrations-0001-initial-py",
       "type": "dependency"
     },
     {
-      "source": "pel-templates",
-      "target": "pel-templates-employee-detail-html",
+      "source": "python-employee-list-dir-employees-migrations",
+      "target": "python-employee-list-file-employees-migrations-init-py",
       "type": "dependency"
     },
     {
-      "source": "pel-templates",
-      "target": "pel-templates-home-html",
+      "source": "python-employee-list-dir-mysite",
+      "target": "python-employee-list-file-mysite-init-py",
       "type": "dependency"
     },
     {
-      "source": "pel-root",
-      "target": "pel-manage-py",
+      "source": "python-employee-list-dir-mysite",
+      "target": "python-employee-list-file-mysite-asgi-py",
+      "type": "dependency"
+    },
+    {
+      "source": "python-employee-list-dir-mysite",
+      "target": "python-employee-list-file-mysite-settings-py",
+      "type": "dependency"
+    },
+    {
+      "source": "python-employee-list-dir-mysite",
+      "target": "python-employee-list-file-mysite-urls-py",
+      "type": "dependency"
+    },
+    {
+      "source": "python-employee-list-dir-mysite",
+      "target": "python-employee-list-file-mysite-views-py",
+      "type": "dependency"
+    },
+    {
+      "source": "python-employee-list-dir-mysite",
+      "target": "python-employee-list-file-mysite-wsgi-py",
+      "type": "dependency"
+    },
+    {
+      "source": "python-employee-list-dir-mysite-static-css",
+      "target": "python-employee-list-file-mysite-static-css-style-css",
+      "type": "dependency"
+    },
+    {
+      "source": "python-employee-list-dir-templates",
+      "target": "python-employee-list-file-templates-employee-detail-html",
+      "type": "dependency"
+    },
+    {
+      "source": "python-employee-list-dir-templates",
+      "target": "python-employee-list-file-templates-home-html",
       "type": "dependency"
     }
   ]

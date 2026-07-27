@@ -4,7 +4,7 @@
   "repoUrl": "https://github.com/CanonEngineer/SmartHomeIOT",
   "color": "#7dd3c0",
   "demoUrl": "https://canonengineer.github.io/SmartHomeIOT/demo/standalone.html?v=2026-07-14b",
-  "nodeCount": 28,
+  "nodeCount": 57,
   "categories": {
     "core": {
       "label": "Backend",
@@ -17,6 +17,10 @@
     "oracle": {
       "label": "Oracle / DB",
       "color": "#c084fc"
+    },
+    "auth": {
+      "label": "Segurança",
+      "color": "#ef4444"
     },
     "frontend": {
       "label": "Frontend",
@@ -37,7 +41,7 @@
   },
   "nodes": [
     {
-      "id": "smi-root",
+      "id": "smarthome-iot-root",
       "label": "SmartHomeIOT",
       "parent": null,
       "layer": "root",
@@ -46,467 +50,960 @@
       "color": "#3b82f6",
       "size": 2.2,
       "file": "README.md",
-      "description": "Bancada experimental IoT edge para doutorado: Arduino ↔ Raspberry, servos/portas, FastAPI, SQI e Research Lab."
+      "description": "Plataforma IoT de doutorado: sync Arduino↔Raspberry, servos/portas, FastAPI, SQI e Research Lab visual."
     },
     {
-      "id": "smi-arch",
-      "label": "Arquitetura L1–L5",
-      "parent": "smi-root",
+      "id": "smarthome-iot-dir-github",
+      "label": ".github/",
+      "parent": "smarthome-iot-root",
       "layer": "module",
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
       "size": 1.35,
-      "file": "docs/ARCHITECTURE.md",
-      "description": "Camadas de engenharia: percepção, comunicação, edge, serviço e experimentação."
+      "file": ".github/",
+      "description": "Pacote/pasta `.github/` do projeto."
     },
     {
-      "id": "smi-protocol",
-      "label": "Protocolo v1.0.0",
-      "parent": "smi-root",
-      "layer": "module",
-      "category": "core",
-      "categoryLabel": "Backend",
-      "color": "#3b82f6",
-      "size": 1.35,
-      "file": "python_server/protocol.py",
-      "description": "Contratos de mensagem house/* com envelope versionado."
-    },
-    {
-      "id": "smi-backend",
-      "label": "Backend FastAPI",
-      "parent": "smi-root",
-      "layer": "module",
-      "category": "core",
-      "categoryLabel": "Backend",
-      "color": "#3b82f6",
-      "size": 1.35,
-      "file": "python_server/app.py",
-      "description": "Serviço L4: estado, API REST, WebSocket, auth e research endpoints."
-    },
-    {
-      "id": "smi-app",
-      "label": "app.py",
-      "parent": "smi-backend",
-      "layer": "file",
-      "category": "core",
-      "categoryLabel": "Backend",
-      "color": "#3b82f6",
-      "size": 0.85,
-      "file": "python_server/app.py",
-      "description": "Bootstrap FastAPI, CORS, MQTT bridge e lifespan do simulador."
-    },
-    {
-      "id": "smi-api",
-      "label": "api.py",
-      "parent": "smi-backend",
-      "layer": "file",
-      "category": "network",
-      "categoryLabel": "Rede / Scan",
-      "color": "#22d3ee",
-      "size": 0.85,
-      "file": "python_server/api.py",
-      "description": "Rotas de atuação: LED, relé, servo, porta, cenários e WebSocket."
-    },
-    {
-      "id": "smi-state",
-      "label": "state.py",
-      "parent": "smi-backend",
-      "layer": "file",
-      "category": "core",
-      "categoryLabel": "Backend",
-      "color": "#3b82f6",
-      "size": 0.85,
-      "file": "python_server/state.py",
-      "description": "HouseState — fonte de verdade em runtime com versionamento e sync."
-    },
-    {
-      "id": "smi-telemetry",
-      "label": "telemetry.py",
-      "parent": "smi-backend",
-      "layer": "file",
-      "category": "core",
-      "categoryLabel": "Backend",
-      "color": "#3b82f6",
-      "size": 0.85,
-      "file": "python_server/telemetry.py",
-      "description": "TelemetryEngine: latência, skew Arduino↔Raspberry e Sync Quality Index."
-    },
-    {
-      "id": "smi-research",
-      "label": "research_api.py",
-      "parent": "smi-backend",
-      "layer": "file",
-      "category": "core",
-      "categoryLabel": "Backend",
-      "color": "#3b82f6",
-      "size": 0.85,
-      "file": "python_server/research_api.py",
-      "description": "API científica: overview, experimentos, export CSV/JSON e thesis-brief."
-    },
-    {
-      "id": "smi-experiments",
-      "label": "experiments.py",
-      "parent": "smi-research",
-      "layer": "file",
-      "category": "core",
-      "categoryLabel": "Backend",
-      "color": "#3b82f6",
-      "size": 0.85,
-      "file": "python_server/experiments.py",
-      "description": "Bancada reproduzível: sync_latency, actuator_response, fault_injection, E2E."
-    },
-    {
-      "id": "smi-sim",
-      "label": "simulator.py",
-      "parent": "smi-backend",
-      "layer": "file",
-      "category": "core",
-      "categoryLabel": "Backend",
-      "color": "#3b82f6",
-      "size": 0.85,
-      "file": "python_server/simulator.py",
-      "description": "Simulador de sensores e cenários welcome/garage/alarm/night/sync_test."
-    },
-    {
-      "id": "smi-db",
-      "label": "database.py",
-      "parent": "smi-backend",
-      "layer": "file",
-      "category": "oracle",
-      "categoryLabel": "Oracle / DB",
-      "color": "#c084fc",
-      "size": 0.85,
-      "file": "python_server/database.py",
-      "description": "SQLite + SQLAlchemy: users, devices, sensors, logs; bcrypt nativo."
-    },
-    {
-      "id": "smi-models",
-      "label": "models.py",
-      "parent": "smi-db",
-      "layer": "file",
-      "category": "core",
-      "categoryLabel": "Backend",
-      "color": "#3b82f6",
-      "size": 0.85,
-      "file": "python_server/models.py",
-      "description": "Modelos ORM User, Device, SensorReading, ActionLog."
-    },
-    {
-      "id": "smi-mqtt",
-      "label": "mqtt_bridge.py",
-      "parent": "smi-backend",
-      "layer": "file",
-      "category": "core",
-      "categoryLabel": "Backend",
-      "color": "#3b82f6",
-      "size": 0.85,
-      "file": "python_server/mqtt_bridge.py",
-      "description": "Ponte MQTT opcional (Mosquitto) — desligada por padrão em simulação."
-    },
-    {
-      "id": "smi-arduino",
-      "label": "Firmware Arduino/ESP32",
-      "parent": "smi-root",
+      "id": "smarthome-iot-dir-arduino",
+      "label": "arduino/",
+      "parent": "smarthome-iot-root",
       "layer": "module",
       "category": "frontend",
       "categoryLabel": "Frontend",
       "color": "#eab308",
       "size": 1.35,
-      "file": "arduino/SmartHomeNode/SmartHomeNode.ino",
-      "description": "Nó L1: sensores DHT/LDR/PIR e atuação LED/relé/servo via MQTT."
+      "file": "arduino/",
+      "description": "Pacote/pasta `arduino/` do projeto."
     },
     {
-      "id": "smi-ino",
-      "label": "SmartHomeNode.ino",
-      "parent": "smi-arduino",
+      "id": "smarthome-iot-dir-docs",
+      "label": "docs/",
+      "parent": "smarthome-iot-root",
+      "layer": "module",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 1.35,
+      "file": "docs/",
+      "description": "Pacote/pasta `docs/` do projeto."
+    },
+    {
+      "id": "smarthome-iot-dir-java-client",
+      "label": "java_client/",
+      "parent": "smarthome-iot-root",
+      "layer": "module",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 1.35,
+      "file": "java_client/",
+      "description": "Pacote/pasta `java_client/` do projeto."
+    },
+    {
+      "id": "smarthome-iot-dir-python-server",
+      "label": "python_server/",
+      "parent": "smarthome-iot-root",
+      "layer": "module",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 1.35,
+      "file": "python_server/",
+      "description": "Pacote/pasta `python_server/` do projeto."
+    },
+    {
+      "id": "smarthome-iot-dir-raspberry",
+      "label": "raspberry/",
+      "parent": "smarthome-iot-root",
+      "layer": "module",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 1.35,
+      "file": "raspberry/",
+      "description": "Pacote/pasta `raspberry/` do projeto."
+    },
+    {
+      "id": "smarthome-iot-dir-tests",
+      "label": "tests/",
+      "parent": "smarthome-iot-root",
+      "layer": "module",
+      "category": "tests",
+      "categoryLabel": "Testes",
+      "color": "#94a3b8",
+      "size": 1.35,
+      "file": "tests/",
+      "description": "Pacote/pasta `tests/` do projeto."
+    },
+    {
+      "id": "smarthome-iot-dir-web",
+      "label": "web/",
+      "parent": "smarthome-iot-root",
+      "layer": "module",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 1.35,
+      "file": "web/",
+      "description": "Pacote/pasta `web/` do projeto."
+    },
+    {
+      "id": "smarthome-iot-dir-github-workflows",
+      "label": "workflows/",
+      "parent": "smarthome-iot-dir-github",
+      "layer": "module",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 1.35,
+      "file": ".github/workflows/",
+      "description": "Pacote/pasta `.github/workflows/` do projeto."
+    },
+    {
+      "id": "smarthome-iot-dir-arduino-smarthomenode",
+      "label": "SmartHomeNode/",
+      "parent": "smarthome-iot-dir-arduino",
+      "layer": "module",
+      "category": "frontend",
+      "categoryLabel": "Frontend",
+      "color": "#eab308",
+      "size": 1.35,
+      "file": "arduino/SmartHomeNode/",
+      "description": "Pacote/pasta `arduino/SmartHomeNode/` do projeto."
+    },
+    {
+      "id": "smarthome-iot-dir-docs-demo",
+      "label": "demo/",
+      "parent": "smarthome-iot-dir-docs",
+      "layer": "module",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 1.35,
+      "file": "docs/demo/",
+      "description": "Pacote/pasta `docs/demo/` do projeto."
+    },
+    {
+      "id": "smarthome-iot-dir-java-client-src",
+      "label": "src/",
+      "parent": "smarthome-iot-dir-java-client",
+      "layer": "module",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 1.35,
+      "file": "java_client/src/",
+      "description": "Pacote/pasta `java_client/src/` do projeto."
+    },
+    {
+      "id": "smarthome-iot-dir-java-client-src-main",
+      "label": "main/",
+      "parent": "smarthome-iot-dir-java-client-src",
+      "layer": "module",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 1.35,
+      "file": "java_client/src/main/",
+      "description": "Pacote/pasta `java_client/src/main/` do projeto."
+    },
+    {
+      "id": "smarthome-iot-dir-java-client-src-main-java",
+      "label": "java/",
+      "parent": "smarthome-iot-dir-java-client-src-main",
+      "layer": "module",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 1.35,
+      "file": "java_client/src/main/java/",
+      "description": "Pacote/pasta `java_client/src/main/java/` do projeto."
+    },
+    {
+      "id": "smarthome-iot-dir-java-client-src-main-java-smarthome",
+      "label": "smarthome/",
+      "parent": "smarthome-iot-dir-java-client-src-main-java",
+      "layer": "module",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 1.35,
+      "file": "java_client/src/main/java/smarthome/",
+      "description": "Pacote/pasta `java_client/src/main/java/smarthome/` do projeto."
+    },
+    {
+      "id": "smarthome-iot-file-gitignore",
+      "label": ".gitignore",
+      "parent": "smarthome-iot-root",
       "layer": "file",
       "category": "other",
       "categoryLabel": "Outros",
       "color": "#64748b",
       "size": 0.85,
-      "file": "arduino/SmartHomeNode/SmartHomeNode.ino",
-      "description": "Loop de sensores e callback onMessage para house/led|relay|servo|door."
+      "file": ".gitignore",
+      "description": "Código-fonte: `.gitignore`"
     },
     {
-      "id": "smi-raspberry",
-      "label": "Agente Raspberry Pi",
-      "parent": "smi-root",
-      "layer": "module",
-      "category": "core",
-      "categoryLabel": "Backend",
-      "color": "#3b82f6",
-      "size": 1.35,
-      "file": "raspberry/agent.py",
-      "description": "L3 edge: espelha comandos MQTT/API e envia heartbeat de sincronia."
-    },
-    {
-      "id": "smi-agent",
-      "label": "agent.py",
-      "parent": "smi-raspberry",
+      "id": "smarthome-iot-file-docker-compose-yml",
+      "label": "docker-compose.yml",
+      "parent": "smarthome-iot-root",
       "layer": "file",
-      "category": "core",
-      "categoryLabel": "Backend",
-      "color": "#3b82f6",
+      "category": "other",
+      "categoryLabel": "Outros",
+      "color": "#64748b",
       "size": 0.85,
-      "file": "raspberry/agent.py",
-      "description": "Loop MQTT ou espelhamento via GET /api/status."
+      "file": "docker-compose.yml",
+      "description": "Código-fonte: `docker-compose.yml`"
     },
     {
-      "id": "smi-actuators",
-      "label": "actuators.py",
-      "parent": "smi-raspberry",
-      "layer": "file",
-      "category": "core",
-      "categoryLabel": "Backend",
-      "color": "#3b82f6",
-      "size": 0.85,
-      "file": "raspberry/actuators.py",
-      "description": "Atuadores locais LED/buzzer/relé/servo/porta (GPIO real ou stub)."
-    },
-    {
-      "id": "smi-web",
-      "label": "Simulador Web + Research Lab",
-      "parent": "smi-root",
-      "layer": "module",
-      "category": "frontend",
-      "categoryLabel": "Frontend",
-      "color": "#eab308",
-      "size": 1.35,
-      "file": "web/index.html",
-      "description": "L5: planta da casa, placas, mecanismos e painel de métricas/experimentos."
-    },
-    {
-      "id": "smi-html",
-      "label": "index.html",
-      "parent": "smi-web",
-      "layer": "file",
-      "category": "frontend",
-      "categoryLabel": "Frontend",
-      "color": "#eab308",
-      "size": 0.85,
-      "file": "web/index.html",
-      "description": "Layout do laboratório visual e controles manuais."
-    },
-    {
-      "id": "smi-js",
-      "label": "script.js",
-      "parent": "smi-web",
-      "layer": "file",
-      "category": "core",
-      "categoryLabel": "Backend",
-      "color": "#3b82f6",
-      "size": 0.85,
-      "file": "web/script.js",
-      "description": "Cliente WS/REST: aplica estado, gráficos e roda experimentos."
-    },
-    {
-      "id": "smi-css",
-      "label": "style.css",
-      "parent": "smi-web",
-      "layer": "file",
-      "category": "frontend",
-      "categoryLabel": "Frontend",
-      "color": "#eab308",
-      "size": 0.85,
-      "file": "web/style.css",
-      "description": "Tema de engenharia (teal/amber) e animações de porta/servo."
-    },
-    {
-      "id": "smi-demo",
-      "label": "docs/demo/standalone.html",
-      "parent": "smi-web",
-      "layer": "file",
-      "category": "frontend",
-      "categoryLabel": "Frontend",
-      "color": "#eab308",
-      "size": 0.85,
-      "file": "docs/demo/standalone.html",
-      "description": "Demo standalone no GitHub Pages (sem backend)."
-    },
-    {
-      "id": "smi-java",
-      "label": "Dashboard Java",
-      "parent": "smi-root",
-      "layer": "module",
-      "category": "core",
-      "categoryLabel": "Backend",
-      "color": "#3b82f6",
-      "size": 1.35,
-      "file": "java_client/src/main/java/smarthome/Dashboard.java",
-      "description": "Cliente desktop Swing consumindo a mesma API REST."
-    },
-    {
-      "id": "smi-method",
-      "label": "Metodologia experimental",
-      "parent": "smi-root",
-      "layer": "module",
-      "category": "core",
-      "categoryLabel": "Backend",
-      "color": "#3b82f6",
-      "size": 1.35,
-      "file": "docs/METHODOLOGY.md",
-      "description": "Perguntas de pesquisa, variáveis, ameaças à validade e entregáveis de tese."
-    },
-    {
-      "id": "smi-tests",
-      "label": "tests/test_engineering.py",
-      "parent": "smi-root",
-      "layer": "file",
-      "category": "tests",
-      "categoryLabel": "Testes",
-      "color": "#94a3b8",
-      "size": 0.85,
-      "file": "tests/test_engineering.py",
-      "description": "Testes de protocolo, SQI, latência e máquina de estados."
-    },
-    {
-      "id": "smi-start",
+      "id": "smarthome-iot-file-start-ps1",
       "label": "start.ps1",
-      "parent": "smi-root",
+      "parent": "smarthome-iot-root",
       "layer": "file",
       "category": "scripts",
       "categoryLabel": "Scripts",
       "color": "#64748b",
       "size": 0.85,
       "file": "start.ps1",
-      "description": "Bootstrap Windows: venv, deps e sobe o servidor."
+      "description": "Código-fonte: `start.ps1`"
+    },
+    {
+      "id": "smarthome-iot-file-github-workflows-deploy-pages-yml",
+      "label": "deploy-pages.yml",
+      "parent": "smarthome-iot-dir-github-workflows",
+      "layer": "file",
+      "category": "other",
+      "categoryLabel": "Outros",
+      "color": "#64748b",
+      "size": 0.85,
+      "file": ".github/workflows/deploy-pages.yml",
+      "description": "Código-fonte: `.github/workflows/deploy-pages.yml`"
+    },
+    {
+      "id": "smarthome-iot-file-arduino-pinout-md",
+      "label": "PINOUT.md",
+      "parent": "smarthome-iot-dir-arduino",
+      "layer": "file",
+      "category": "frontend",
+      "categoryLabel": "Frontend",
+      "color": "#eab308",
+      "size": 0.85,
+      "file": "arduino/PINOUT.md",
+      "description": "Código-fonte: `arduino/PINOUT.md`"
+    },
+    {
+      "id": "smarthome-iot-file-arduino-smarthomenode-smarthomenode-ino",
+      "label": "SmartHomeNode.ino",
+      "parent": "smarthome-iot-dir-arduino-smarthomenode",
+      "layer": "file",
+      "category": "frontend",
+      "categoryLabel": "Frontend",
+      "color": "#eab308",
+      "size": 0.85,
+      "file": "arduino/SmartHomeNode/SmartHomeNode.ino",
+      "description": "Código-fonte: `arduino/SmartHomeNode/SmartHomeNode.ino`"
+    },
+    {
+      "id": "smarthome-iot-file-docs-nojekyll",
+      "label": ".nojekyll",
+      "parent": "smarthome-iot-dir-docs",
+      "layer": "file",
+      "category": "other",
+      "categoryLabel": "Outros",
+      "color": "#64748b",
+      "size": 0.85,
+      "file": "docs/.nojekyll",
+      "description": "Código-fonte: `docs/.nojekyll`"
+    },
+    {
+      "id": "smarthome-iot-file-docs-architecture-md",
+      "label": "ARCHITECTURE.md",
+      "parent": "smarthome-iot-dir-docs",
+      "layer": "file",
+      "category": "other",
+      "categoryLabel": "Outros",
+      "color": "#64748b",
+      "size": 0.85,
+      "file": "docs/ARCHITECTURE.md",
+      "description": "Código-fonte: `docs/ARCHITECTURE.md`"
+    },
+    {
+      "id": "smarthome-iot-file-docs-index-html",
+      "label": "index.html",
+      "parent": "smarthome-iot-dir-docs",
+      "layer": "file",
+      "category": "frontend",
+      "categoryLabel": "Frontend",
+      "color": "#eab308",
+      "size": 0.85,
+      "file": "docs/index.html",
+      "description": "Código-fonte: `docs/index.html`"
+    },
+    {
+      "id": "smarthome-iot-file-docs-methodology-md",
+      "label": "METHODOLOGY.md",
+      "parent": "smarthome-iot-dir-docs",
+      "layer": "file",
+      "category": "other",
+      "categoryLabel": "Outros",
+      "color": "#64748b",
+      "size": 0.85,
+      "file": "docs/METHODOLOGY.md",
+      "description": "Código-fonte: `docs/METHODOLOGY.md`"
+    },
+    {
+      "id": "smarthome-iot-file-docs-pages-setup-md",
+      "label": "PAGES_SETUP.md",
+      "parent": "smarthome-iot-dir-docs",
+      "layer": "file",
+      "category": "other",
+      "categoryLabel": "Outros",
+      "color": "#64748b",
+      "size": 0.85,
+      "file": "docs/PAGES_SETUP.md",
+      "description": "Código-fonte: `docs/PAGES_SETUP.md`"
+    },
+    {
+      "id": "smarthome-iot-file-docs-protocol-md",
+      "label": "PROTOCOL.md",
+      "parent": "smarthome-iot-dir-docs",
+      "layer": "file",
+      "category": "other",
+      "categoryLabel": "Outros",
+      "color": "#64748b",
+      "size": 0.85,
+      "file": "docs/PROTOCOL.md",
+      "description": "Código-fonte: `docs/PROTOCOL.md`"
+    },
+    {
+      "id": "smarthome-iot-file-docs-demo-demo-js",
+      "label": "demo.js",
+      "parent": "smarthome-iot-dir-docs-demo",
+      "layer": "file",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 0.85,
+      "file": "docs/demo/demo.js",
+      "description": "Código-fonte: `docs/demo/demo.js`"
+    },
+    {
+      "id": "smarthome-iot-file-docs-demo-index-html",
+      "label": "index.html",
+      "parent": "smarthome-iot-dir-docs-demo",
+      "layer": "file",
+      "category": "frontend",
+      "categoryLabel": "Frontend",
+      "color": "#eab308",
+      "size": 0.85,
+      "file": "docs/demo/index.html",
+      "description": "Código-fonte: `docs/demo/index.html`"
+    },
+    {
+      "id": "smarthome-iot-file-docs-demo-standalone-html",
+      "label": "standalone.html",
+      "parent": "smarthome-iot-dir-docs-demo",
+      "layer": "file",
+      "category": "frontend",
+      "categoryLabel": "Frontend",
+      "color": "#eab308",
+      "size": 0.85,
+      "file": "docs/demo/standalone.html",
+      "description": "Código-fonte: `docs/demo/standalone.html`"
+    },
+    {
+      "id": "smarthome-iot-file-docs-demo-style-css",
+      "label": "style.css",
+      "parent": "smarthome-iot-dir-docs-demo",
+      "layer": "file",
+      "category": "frontend",
+      "categoryLabel": "Frontend",
+      "color": "#eab308",
+      "size": 0.85,
+      "file": "docs/demo/style.css",
+      "description": "Código-fonte: `docs/demo/style.css`"
+    },
+    {
+      "id": "smarthome-iot-file-java-client-src-main-java-smarthome-apiclient-java",
+      "label": "ApiClient.java",
+      "parent": "smarthome-iot-dir-java-client-src-main-java-smarthome",
+      "layer": "file",
+      "category": "network",
+      "categoryLabel": "Rede / Scan",
+      "color": "#22d3ee",
+      "size": 0.85,
+      "file": "java_client/src/main/java/smarthome/ApiClient.java",
+      "description": "Código-fonte: `java_client/src/main/java/smarthome/ApiClient.java`"
+    },
+    {
+      "id": "smarthome-iot-file-java-client-src-main-java-smarthome-dashboard-java",
+      "label": "Dashboard.java",
+      "parent": "smarthome-iot-dir-java-client-src-main-java-smarthome",
+      "layer": "file",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 0.85,
+      "file": "java_client/src/main/java/smarthome/Dashboard.java",
+      "description": "Código-fonte: `java_client/src/main/java/smarthome/Dashboard.java`"
+    },
+    {
+      "id": "smarthome-iot-grp-python-server-files-a-c-d-e-m-p-r",
+      "label": "Arquivos #–A–C–D–E–M–P–R",
+      "parent": "smarthome-iot-dir-python-server",
+      "layer": "module",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 1.35,
+      "file": "python_server/[files-#–a–c–d–e–m–p–r]",
+      "description": "Grupo de arquivos em `python_server/` — Arquivos #–A–C–D–E–M–P–R"
+    },
+    {
+      "id": "smarthome-iot-grp-python-server-files-s-t",
+      "label": "Arquivos S–T",
+      "parent": "smarthome-iot-dir-python-server",
+      "layer": "module",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 1.35,
+      "file": "python_server/[files-s–t]",
+      "description": "Grupo de arquivos em `python_server/` — Arquivos S–T"
+    },
+    {
+      "id": "smarthome-iot-file-python-server-env-example",
+      "label": ".env.example",
+      "parent": "smarthome-iot-grp-python-server-files-a-c-d-e-m-p-r",
+      "layer": "file",
+      "category": "other",
+      "categoryLabel": "Outros",
+      "color": "#64748b",
+      "size": 0.85,
+      "file": "python_server/.env.example",
+      "description": "Código-fonte: `python_server/.env.example`"
+    },
+    {
+      "id": "smarthome-iot-file-python-server-api-py",
+      "label": "api.py",
+      "parent": "smarthome-iot-grp-python-server-files-a-c-d-e-m-p-r",
+      "layer": "file",
+      "category": "network",
+      "categoryLabel": "Rede / Scan",
+      "color": "#22d3ee",
+      "size": 0.85,
+      "file": "python_server/api.py",
+      "description": "Código-fonte: `python_server/api.py`"
+    },
+    {
+      "id": "smarthome-iot-file-python-server-app-py",
+      "label": "app.py",
+      "parent": "smarthome-iot-grp-python-server-files-a-c-d-e-m-p-r",
+      "layer": "file",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 0.85,
+      "file": "python_server/app.py",
+      "description": "Código-fonte: `python_server/app.py`"
+    },
+    {
+      "id": "smarthome-iot-file-python-server-auth-py",
+      "label": "auth.py",
+      "parent": "smarthome-iot-grp-python-server-files-a-c-d-e-m-p-r",
+      "layer": "file",
+      "category": "auth",
+      "categoryLabel": "Segurança",
+      "color": "#ef4444",
+      "size": 0.85,
+      "file": "python_server/auth.py",
+      "description": "Código-fonte: `python_server/auth.py`"
+    },
+    {
+      "id": "smarthome-iot-file-python-server-config-py",
+      "label": "config.py",
+      "parent": "smarthome-iot-grp-python-server-files-a-c-d-e-m-p-r",
+      "layer": "file",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 0.85,
+      "file": "python_server/config.py",
+      "description": "Código-fonte: `python_server/config.py`"
+    },
+    {
+      "id": "smarthome-iot-file-python-server-database-py",
+      "label": "database.py",
+      "parent": "smarthome-iot-grp-python-server-files-a-c-d-e-m-p-r",
+      "layer": "file",
+      "category": "oracle",
+      "categoryLabel": "Oracle / DB",
+      "color": "#c084fc",
+      "size": 0.85,
+      "file": "python_server/database.py",
+      "description": "Código-fonte: `python_server/database.py`"
+    },
+    {
+      "id": "smarthome-iot-file-python-server-experiments-py",
+      "label": "experiments.py",
+      "parent": "smarthome-iot-grp-python-server-files-a-c-d-e-m-p-r",
+      "layer": "file",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 0.85,
+      "file": "python_server/experiments.py",
+      "description": "Código-fonte: `python_server/experiments.py`"
+    },
+    {
+      "id": "smarthome-iot-file-python-server-models-py",
+      "label": "models.py",
+      "parent": "smarthome-iot-grp-python-server-files-a-c-d-e-m-p-r",
+      "layer": "file",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 0.85,
+      "file": "python_server/models.py",
+      "description": "Código-fonte: `python_server/models.py`"
+    },
+    {
+      "id": "smarthome-iot-file-python-server-mqtt-bridge-py",
+      "label": "mqtt_bridge.py",
+      "parent": "smarthome-iot-grp-python-server-files-a-c-d-e-m-p-r",
+      "layer": "file",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 0.85,
+      "file": "python_server/mqtt_bridge.py",
+      "description": "Código-fonte: `python_server/mqtt_bridge.py`"
+    },
+    {
+      "id": "smarthome-iot-file-python-server-protocol-py",
+      "label": "protocol.py",
+      "parent": "smarthome-iot-grp-python-server-files-a-c-d-e-m-p-r",
+      "layer": "file",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 0.85,
+      "file": "python_server/protocol.py",
+      "description": "Código-fonte: `python_server/protocol.py`"
+    },
+    {
+      "id": "smarthome-iot-file-python-server-research-api-py",
+      "label": "research_api.py",
+      "parent": "smarthome-iot-grp-python-server-files-a-c-d-e-m-p-r",
+      "layer": "file",
+      "category": "network",
+      "categoryLabel": "Rede / Scan",
+      "color": "#22d3ee",
+      "size": 0.85,
+      "file": "python_server/research_api.py",
+      "description": "Código-fonte: `python_server/research_api.py`"
+    },
+    {
+      "id": "smarthome-iot-file-python-server-simulator-py",
+      "label": "simulator.py",
+      "parent": "smarthome-iot-grp-python-server-files-s-t",
+      "layer": "file",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 0.85,
+      "file": "python_server/simulator.py",
+      "description": "Código-fonte: `python_server/simulator.py`"
+    },
+    {
+      "id": "smarthome-iot-file-python-server-state-py",
+      "label": "state.py",
+      "parent": "smarthome-iot-grp-python-server-files-s-t",
+      "layer": "file",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 0.85,
+      "file": "python_server/state.py",
+      "description": "Código-fonte: `python_server/state.py`"
+    },
+    {
+      "id": "smarthome-iot-file-python-server-telemetry-py",
+      "label": "telemetry.py",
+      "parent": "smarthome-iot-grp-python-server-files-s-t",
+      "layer": "file",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 0.85,
+      "file": "python_server/telemetry.py",
+      "description": "Código-fonte: `python_server/telemetry.py`"
+    },
+    {
+      "id": "smarthome-iot-file-raspberry-actuators-py",
+      "label": "actuators.py",
+      "parent": "smarthome-iot-dir-raspberry",
+      "layer": "file",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 0.85,
+      "file": "raspberry/actuators.py",
+      "description": "Código-fonte: `raspberry/actuators.py`"
+    },
+    {
+      "id": "smarthome-iot-file-raspberry-agent-py",
+      "label": "agent.py",
+      "parent": "smarthome-iot-dir-raspberry",
+      "layer": "file",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 0.85,
+      "file": "raspberry/agent.py",
+      "description": "Código-fonte: `raspberry/agent.py`"
+    },
+    {
+      "id": "smarthome-iot-file-raspberry-config-py",
+      "label": "config.py",
+      "parent": "smarthome-iot-dir-raspberry",
+      "layer": "file",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 0.85,
+      "file": "raspberry/config.py",
+      "description": "Código-fonte: `raspberry/config.py`"
+    },
+    {
+      "id": "smarthome-iot-file-tests-test-engineering-py",
+      "label": "test_engineering.py",
+      "parent": "smarthome-iot-dir-tests",
+      "layer": "file",
+      "category": "tests",
+      "categoryLabel": "Testes",
+      "color": "#94a3b8",
+      "size": 0.85,
+      "file": "tests/test_engineering.py",
+      "description": "Código-fonte: `tests/test_engineering.py`"
+    },
+    {
+      "id": "smarthome-iot-file-web-index-html",
+      "label": "index.html",
+      "parent": "smarthome-iot-dir-web",
+      "layer": "file",
+      "category": "frontend",
+      "categoryLabel": "Frontend",
+      "color": "#eab308",
+      "size": 0.85,
+      "file": "web/index.html",
+      "description": "Código-fonte: `web/index.html`"
+    },
+    {
+      "id": "smarthome-iot-file-web-script-js",
+      "label": "script.js",
+      "parent": "smarthome-iot-dir-web",
+      "layer": "file",
+      "category": "scripts",
+      "categoryLabel": "Scripts",
+      "color": "#64748b",
+      "size": 0.85,
+      "file": "web/script.js",
+      "description": "Código-fonte: `web/script.js`"
+    },
+    {
+      "id": "smarthome-iot-file-web-style-css",
+      "label": "style.css",
+      "parent": "smarthome-iot-dir-web",
+      "layer": "file",
+      "category": "frontend",
+      "categoryLabel": "Frontend",
+      "color": "#eab308",
+      "size": 0.85,
+      "file": "web/style.css",
+      "description": "Código-fonte: `web/style.css`"
     }
   ],
   "links": [
     {
-      "source": "smi-root",
-      "target": "smi-arch",
+      "source": "smarthome-iot-root",
+      "target": "smarthome-iot-dir-github",
       "type": "dependency"
     },
     {
-      "source": "smi-root",
-      "target": "smi-protocol",
+      "source": "smarthome-iot-root",
+      "target": "smarthome-iot-dir-arduino",
       "type": "dependency"
     },
     {
-      "source": "smi-root",
-      "target": "smi-backend",
+      "source": "smarthome-iot-root",
+      "target": "smarthome-iot-dir-docs",
       "type": "dependency"
     },
     {
-      "source": "smi-backend",
-      "target": "smi-app",
+      "source": "smarthome-iot-root",
+      "target": "smarthome-iot-dir-java-client",
       "type": "dependency"
     },
     {
-      "source": "smi-backend",
-      "target": "smi-api",
+      "source": "smarthome-iot-root",
+      "target": "smarthome-iot-dir-python-server",
       "type": "dependency"
     },
     {
-      "source": "smi-backend",
-      "target": "smi-state",
+      "source": "smarthome-iot-root",
+      "target": "smarthome-iot-dir-raspberry",
       "type": "dependency"
     },
     {
-      "source": "smi-backend",
-      "target": "smi-telemetry",
+      "source": "smarthome-iot-root",
+      "target": "smarthome-iot-dir-tests",
       "type": "dependency"
     },
     {
-      "source": "smi-backend",
-      "target": "smi-research",
+      "source": "smarthome-iot-root",
+      "target": "smarthome-iot-dir-web",
       "type": "dependency"
     },
     {
-      "source": "smi-research",
-      "target": "smi-experiments",
+      "source": "smarthome-iot-dir-github",
+      "target": "smarthome-iot-dir-github-workflows",
       "type": "dependency"
     },
     {
-      "source": "smi-backend",
-      "target": "smi-sim",
+      "source": "smarthome-iot-dir-arduino",
+      "target": "smarthome-iot-dir-arduino-smarthomenode",
       "type": "dependency"
     },
     {
-      "source": "smi-backend",
-      "target": "smi-db",
+      "source": "smarthome-iot-dir-docs",
+      "target": "smarthome-iot-dir-docs-demo",
       "type": "dependency"
     },
     {
-      "source": "smi-db",
-      "target": "smi-models",
+      "source": "smarthome-iot-dir-java-client",
+      "target": "smarthome-iot-dir-java-client-src",
       "type": "dependency"
     },
     {
-      "source": "smi-backend",
-      "target": "smi-mqtt",
+      "source": "smarthome-iot-dir-java-client-src",
+      "target": "smarthome-iot-dir-java-client-src-main",
       "type": "dependency"
     },
     {
-      "source": "smi-root",
-      "target": "smi-arduino",
+      "source": "smarthome-iot-dir-java-client-src-main",
+      "target": "smarthome-iot-dir-java-client-src-main-java",
       "type": "dependency"
     },
     {
-      "source": "smi-arduino",
-      "target": "smi-ino",
+      "source": "smarthome-iot-dir-java-client-src-main-java",
+      "target": "smarthome-iot-dir-java-client-src-main-java-smarthome",
       "type": "dependency"
     },
     {
-      "source": "smi-root",
-      "target": "smi-raspberry",
+      "source": "smarthome-iot-root",
+      "target": "smarthome-iot-file-gitignore",
       "type": "dependency"
     },
     {
-      "source": "smi-raspberry",
-      "target": "smi-agent",
+      "source": "smarthome-iot-root",
+      "target": "smarthome-iot-file-docker-compose-yml",
       "type": "dependency"
     },
     {
-      "source": "smi-raspberry",
-      "target": "smi-actuators",
+      "source": "smarthome-iot-root",
+      "target": "smarthome-iot-file-start-ps1",
       "type": "dependency"
     },
     {
-      "source": "smi-root",
-      "target": "smi-web",
+      "source": "smarthome-iot-dir-github-workflows",
+      "target": "smarthome-iot-file-github-workflows-deploy-pages-yml",
       "type": "dependency"
     },
     {
-      "source": "smi-web",
-      "target": "smi-html",
+      "source": "smarthome-iot-dir-arduino",
+      "target": "smarthome-iot-file-arduino-pinout-md",
       "type": "dependency"
     },
     {
-      "source": "smi-web",
-      "target": "smi-js",
+      "source": "smarthome-iot-dir-arduino-smarthomenode",
+      "target": "smarthome-iot-file-arduino-smarthomenode-smarthomenode-ino",
       "type": "dependency"
     },
     {
-      "source": "smi-web",
-      "target": "smi-css",
+      "source": "smarthome-iot-dir-docs",
+      "target": "smarthome-iot-file-docs-nojekyll",
       "type": "dependency"
     },
     {
-      "source": "smi-web",
-      "target": "smi-demo",
+      "source": "smarthome-iot-dir-docs",
+      "target": "smarthome-iot-file-docs-architecture-md",
       "type": "dependency"
     },
     {
-      "source": "smi-root",
-      "target": "smi-java",
+      "source": "smarthome-iot-dir-docs",
+      "target": "smarthome-iot-file-docs-index-html",
       "type": "dependency"
     },
     {
-      "source": "smi-root",
-      "target": "smi-method",
+      "source": "smarthome-iot-dir-docs",
+      "target": "smarthome-iot-file-docs-methodology-md",
       "type": "dependency"
     },
     {
-      "source": "smi-root",
-      "target": "smi-tests",
+      "source": "smarthome-iot-dir-docs",
+      "target": "smarthome-iot-file-docs-pages-setup-md",
       "type": "dependency"
     },
     {
-      "source": "smi-root",
-      "target": "smi-start",
+      "source": "smarthome-iot-dir-docs",
+      "target": "smarthome-iot-file-docs-protocol-md",
+      "type": "dependency"
+    },
+    {
+      "source": "smarthome-iot-dir-docs-demo",
+      "target": "smarthome-iot-file-docs-demo-demo-js",
+      "type": "dependency"
+    },
+    {
+      "source": "smarthome-iot-dir-docs-demo",
+      "target": "smarthome-iot-file-docs-demo-index-html",
+      "type": "dependency"
+    },
+    {
+      "source": "smarthome-iot-dir-docs-demo",
+      "target": "smarthome-iot-file-docs-demo-standalone-html",
+      "type": "dependency"
+    },
+    {
+      "source": "smarthome-iot-dir-docs-demo",
+      "target": "smarthome-iot-file-docs-demo-style-css",
+      "type": "dependency"
+    },
+    {
+      "source": "smarthome-iot-dir-java-client-src-main-java-smarthome",
+      "target": "smarthome-iot-file-java-client-src-main-java-smarthome-apiclient-java",
+      "type": "dependency"
+    },
+    {
+      "source": "smarthome-iot-dir-java-client-src-main-java-smarthome",
+      "target": "smarthome-iot-file-java-client-src-main-java-smarthome-dashboard-java",
+      "type": "dependency"
+    },
+    {
+      "source": "smarthome-iot-dir-python-server",
+      "target": "smarthome-iot-grp-python-server-files-a-c-d-e-m-p-r",
+      "type": "dependency"
+    },
+    {
+      "source": "smarthome-iot-dir-python-server",
+      "target": "smarthome-iot-grp-python-server-files-s-t",
+      "type": "dependency"
+    },
+    {
+      "source": "smarthome-iot-grp-python-server-files-a-c-d-e-m-p-r",
+      "target": "smarthome-iot-file-python-server-env-example",
+      "type": "dependency"
+    },
+    {
+      "source": "smarthome-iot-grp-python-server-files-a-c-d-e-m-p-r",
+      "target": "smarthome-iot-file-python-server-api-py",
+      "type": "dependency"
+    },
+    {
+      "source": "smarthome-iot-grp-python-server-files-a-c-d-e-m-p-r",
+      "target": "smarthome-iot-file-python-server-app-py",
+      "type": "dependency"
+    },
+    {
+      "source": "smarthome-iot-grp-python-server-files-a-c-d-e-m-p-r",
+      "target": "smarthome-iot-file-python-server-auth-py",
+      "type": "dependency"
+    },
+    {
+      "source": "smarthome-iot-grp-python-server-files-a-c-d-e-m-p-r",
+      "target": "smarthome-iot-file-python-server-config-py",
+      "type": "dependency"
+    },
+    {
+      "source": "smarthome-iot-grp-python-server-files-a-c-d-e-m-p-r",
+      "target": "smarthome-iot-file-python-server-database-py",
+      "type": "dependency"
+    },
+    {
+      "source": "smarthome-iot-grp-python-server-files-a-c-d-e-m-p-r",
+      "target": "smarthome-iot-file-python-server-experiments-py",
+      "type": "dependency"
+    },
+    {
+      "source": "smarthome-iot-grp-python-server-files-a-c-d-e-m-p-r",
+      "target": "smarthome-iot-file-python-server-models-py",
+      "type": "dependency"
+    },
+    {
+      "source": "smarthome-iot-grp-python-server-files-a-c-d-e-m-p-r",
+      "target": "smarthome-iot-file-python-server-mqtt-bridge-py",
+      "type": "dependency"
+    },
+    {
+      "source": "smarthome-iot-grp-python-server-files-a-c-d-e-m-p-r",
+      "target": "smarthome-iot-file-python-server-protocol-py",
+      "type": "dependency"
+    },
+    {
+      "source": "smarthome-iot-grp-python-server-files-a-c-d-e-m-p-r",
+      "target": "smarthome-iot-file-python-server-research-api-py",
+      "type": "dependency"
+    },
+    {
+      "source": "smarthome-iot-grp-python-server-files-s-t",
+      "target": "smarthome-iot-file-python-server-simulator-py",
+      "type": "dependency"
+    },
+    {
+      "source": "smarthome-iot-grp-python-server-files-s-t",
+      "target": "smarthome-iot-file-python-server-state-py",
+      "type": "dependency"
+    },
+    {
+      "source": "smarthome-iot-grp-python-server-files-s-t",
+      "target": "smarthome-iot-file-python-server-telemetry-py",
+      "type": "dependency"
+    },
+    {
+      "source": "smarthome-iot-dir-raspberry",
+      "target": "smarthome-iot-file-raspberry-actuators-py",
+      "type": "dependency"
+    },
+    {
+      "source": "smarthome-iot-dir-raspberry",
+      "target": "smarthome-iot-file-raspberry-agent-py",
+      "type": "dependency"
+    },
+    {
+      "source": "smarthome-iot-dir-raspberry",
+      "target": "smarthome-iot-file-raspberry-config-py",
+      "type": "dependency"
+    },
+    {
+      "source": "smarthome-iot-dir-tests",
+      "target": "smarthome-iot-file-tests-test-engineering-py",
+      "type": "dependency"
+    },
+    {
+      "source": "smarthome-iot-dir-web",
+      "target": "smarthome-iot-file-web-index-html",
+      "type": "dependency"
+    },
+    {
+      "source": "smarthome-iot-dir-web",
+      "target": "smarthome-iot-file-web-script-js",
+      "type": "dependency"
+    },
+    {
+      "source": "smarthome-iot-dir-web",
+      "target": "smarthome-iot-file-web-style-css",
       "type": "dependency"
     }
   ]

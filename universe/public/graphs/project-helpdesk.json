@@ -21,7 +21,7 @@
   },
   "nodes": [
     {
-      "id": "pro-root",
+      "id": "project-helpdesk-root",
       "label": "ProjectHelpDesk",
       "parent": null,
       "layer": "root",
@@ -29,145 +29,145 @@
       "categoryLabel": "Backend",
       "color": "#3b82f6",
       "size": 2.2,
-      "file": "index.php",
+      "file": "README.md",
       "description": "Help Desk em PHP: login, abrir e consultar chamados."
     },
     {
-      "id": "pro-index-php",
-      "label": "index.php",
-      "parent": "pro-root",
-      "layer": "file",
-      "category": "core",
-      "categoryLabel": "Backend",
-      "color": "#3b82f6",
-      "size": 0.85,
-      "file": "index.php",
-      "description": "Arquivo `index.php` mapeado a partir do repositório original."
-    },
-    {
-      "id": "pro-abrir-chamado-php",
+      "id": "project-helpdesk-file-abrir-chamado-php",
       "label": "abrir_chamado.php",
-      "parent": "pro-root",
+      "parent": "project-helpdesk-root",
       "layer": "file",
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
       "size": 0.85,
       "file": "abrir_chamado.php",
-      "description": "Arquivo `abrir_chamado.php` mapeado a partir do repositório original."
+      "description": "Código-fonte: `abrir_chamado.php`"
     },
     {
-      "id": "pro-consultar-chamado-php",
+      "id": "project-helpdesk-file-consultar-chamado-php",
       "label": "consultar_chamado.php",
-      "parent": "pro-root",
+      "parent": "project-helpdesk-root",
       "layer": "file",
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
       "size": 0.85,
       "file": "consultar_chamado.php",
-      "description": "Arquivo `consultar_chamado.php` mapeado a partir do repositório original."
+      "description": "Código-fonte: `consultar_chamado.php`"
     },
     {
-      "id": "pro-home-php",
+      "id": "project-helpdesk-file-home-php",
       "label": "home.php",
-      "parent": "pro-root",
+      "parent": "project-helpdesk-root",
       "layer": "file",
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
       "size": 0.85,
       "file": "home.php",
-      "description": "Arquivo `home.php` mapeado a partir do repositório original."
+      "description": "Código-fonte: `home.php`"
     },
     {
-      "id": "pro-logoff-php",
+      "id": "project-helpdesk-file-index-php",
+      "label": "index.php",
+      "parent": "project-helpdesk-root",
+      "layer": "file",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 0.85,
+      "file": "index.php",
+      "description": "Código-fonte: `index.php`"
+    },
+    {
+      "id": "project-helpdesk-file-logoff-php",
       "label": "logoff.php",
-      "parent": "pro-root",
+      "parent": "project-helpdesk-root",
       "layer": "file",
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
       "size": 0.85,
       "file": "logoff.php",
-      "description": "Arquivo `logoff.php` mapeado a partir do repositório original."
+      "description": "Código-fonte: `logoff.php`"
     },
     {
-      "id": "pro-registra-chamado-php",
+      "id": "project-helpdesk-file-registra-chamado-php",
       "label": "registra_chamado.php",
-      "parent": "pro-root",
+      "parent": "project-helpdesk-root",
       "layer": "file",
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
       "size": 0.85,
       "file": "registra_chamado.php",
-      "description": "Arquivo `registra_chamado.php` mapeado a partir do repositório original."
+      "description": "Código-fonte: `registra_chamado.php`"
     },
     {
-      "id": "pro-valida-login-php",
+      "id": "project-helpdesk-file-valida-login-php",
       "label": "valida_login.php",
-      "parent": "pro-root",
+      "parent": "project-helpdesk-root",
       "layer": "file",
       "category": "auth",
       "categoryLabel": "Segurança",
       "color": "#ef4444",
       "size": 0.85,
       "file": "valida_login.php",
-      "description": "Arquivo `valida_login.php` mapeado a partir do repositório original."
+      "description": "Código-fonte: `valida_login.php`"
     },
     {
-      "id": "pro-validador-acesso-php",
+      "id": "project-helpdesk-file-validador-acesso-php",
       "label": "validador_acesso.php",
-      "parent": "pro-root",
+      "parent": "project-helpdesk-root",
       "layer": "file",
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
       "size": 0.85,
       "file": "validador_acesso.php",
-      "description": "Arquivo `validador_acesso.php` mapeado a partir do repositório original."
+      "description": "Código-fonte: `validador_acesso.php`"
     }
   ],
   "links": [
     {
-      "source": "pro-root",
-      "target": "pro-index-php",
+      "source": "project-helpdesk-root",
+      "target": "project-helpdesk-file-abrir-chamado-php",
       "type": "dependency"
     },
     {
-      "source": "pro-root",
-      "target": "pro-abrir-chamado-php",
+      "source": "project-helpdesk-root",
+      "target": "project-helpdesk-file-consultar-chamado-php",
       "type": "dependency"
     },
     {
-      "source": "pro-root",
-      "target": "pro-consultar-chamado-php",
+      "source": "project-helpdesk-root",
+      "target": "project-helpdesk-file-home-php",
       "type": "dependency"
     },
     {
-      "source": "pro-root",
-      "target": "pro-home-php",
+      "source": "project-helpdesk-root",
+      "target": "project-helpdesk-file-index-php",
       "type": "dependency"
     },
     {
-      "source": "pro-root",
-      "target": "pro-logoff-php",
+      "source": "project-helpdesk-root",
+      "target": "project-helpdesk-file-logoff-php",
       "type": "dependency"
     },
     {
-      "source": "pro-root",
-      "target": "pro-registra-chamado-php",
+      "source": "project-helpdesk-root",
+      "target": "project-helpdesk-file-registra-chamado-php",
       "type": "dependency"
     },
     {
-      "source": "pro-root",
-      "target": "pro-valida-login-php",
+      "source": "project-helpdesk-root",
+      "target": "project-helpdesk-file-valida-login-php",
       "type": "dependency"
     },
     {
-      "source": "pro-root",
-      "target": "pro-validador-acesso-php",
+      "source": "project-helpdesk-root",
+      "target": "project-helpdesk-file-validador-acesso-php",
       "type": "dependency"
     }
   ]

@@ -4,15 +4,23 @@
   "repoUrl": "https://github.com/CanonEngineer/HyperwareProject",
   "color": "#94a3b8",
   "demoUrl": "",
-  "nodeCount": 10,
+  "nodeCount": 251,
   "categories": {
     "core": {
       "label": "Backend",
       "color": "#3b82f6"
     },
+    "network": {
+      "label": "Rede / Scan",
+      "color": "#22d3ee"
+    },
     "frontend": {
       "label": "Frontend",
       "color": "#eab308"
+    },
+    "scripts": {
+      "label": "Scripts",
+      "color": "#64748b"
     },
     "other": {
       "label": "Outros",
@@ -21,7 +29,7 @@
   },
   "nodes": [
     {
-      "id": "hyp-root",
+      "id": "hyperware-root",
       "label": "HyperwareProject",
       "parent": null,
       "layer": "root",
@@ -29,162 +37,4259 @@
       "categoryLabel": "Backend",
       "color": "#3b82f6",
       "size": 2.2,
-      "file": "web/stats/index.php",
+      "file": "README.md",
       "description": "Site Hyperware com estrutura web e scripts PHP."
     },
     {
-      "id": "hyp-web",
-      "label": "web",
-      "parent": "hyp-root",
+      "id": "hyperware-dir-web",
+      "label": "web/",
+      "parent": "hyperware-root",
       "layer": "module",
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
       "size": 1.35,
       "file": "web/",
-      "description": "Módulo/pasta `web/` com arquivos-chave do projeto."
+      "description": "Pacote/pasta `web/` do projeto."
     },
     {
-      "id": "hyp-web-stats-index-php",
-      "label": "index.php",
-      "parent": "hyp-web",
-      "layer": "file",
+      "id": "hyperware-dir-web-error",
+      "label": "error/",
+      "parent": "hyperware-dir-web",
+      "layer": "module",
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
-      "size": 0.85,
-      "file": "web/stats/index.php",
-      "description": "Arquivo `web/stats/index.php` mapeado a partir do repositório original."
+      "size": 1.35,
+      "file": "web/error/",
+      "description": "Pacote/pasta `web/error/` do projeto."
     },
     {
-      "id": "hyp-web-index-html",
+      "id": "hyperware-dir-web-site-hyper",
+      "label": "site-hyper/",
+      "parent": "hyperware-dir-web",
+      "layer": "module",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 1.35,
+      "file": "web/site-hyper/",
+      "description": "Pacote/pasta `web/site-hyper/` do projeto."
+    },
+    {
+      "id": "hyperware-dir-web-stats",
+      "label": "stats/",
+      "parent": "hyperware-dir-web",
+      "layer": "module",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 1.35,
+      "file": "web/stats/",
+      "description": "Pacote/pasta `web/stats/` do projeto."
+    },
+    {
+      "id": "hyperware-dir-web-site-hyper-css",
+      "label": "css/",
+      "parent": "hyperware-dir-web-site-hyper",
+      "layer": "module",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 1.35,
+      "file": "web/site-hyper/css/",
+      "description": "Pacote/pasta `web/site-hyper/css/` do projeto."
+    },
+    {
+      "id": "hyperware-dir-web-site-hyper-fonts",
+      "label": "fonts/",
+      "parent": "hyperware-dir-web-site-hyper",
+      "layer": "module",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 1.35,
+      "file": "web/site-hyper/fonts/",
+      "description": "Pacote/pasta `web/site-hyper/fonts/` do projeto."
+    },
+    {
+      "id": "hyperware-dir-web-site-hyper-js",
+      "label": "js/",
+      "parent": "hyperware-dir-web-site-hyper",
+      "layer": "module",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 1.35,
+      "file": "web/site-hyper/js/",
+      "description": "Pacote/pasta `web/site-hyper/js/` do projeto."
+    },
+    {
+      "id": "hyperware-dir-web-site-hyper-plugins",
+      "label": "plugins/",
+      "parent": "hyperware-dir-web-site-hyper",
+      "layer": "module",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 1.35,
+      "file": "web/site-hyper/plugins/",
+      "description": "Pacote/pasta `web/site-hyper/plugins/` do projeto."
+    },
+    {
+      "id": "hyperware-dir-web-stats-2020-6",
+      "label": "2020-6/",
+      "parent": "hyperware-dir-web-stats",
+      "layer": "module",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 1.35,
+      "file": "web/stats/2020-6/",
+      "description": "Pacote/pasta `web/stats/2020-6/` do projeto."
+    },
+    {
+      "id": "hyperware-dir-web-site-hyper-plugins-revolution",
+      "label": "revolution/",
+      "parent": "hyperware-dir-web-site-hyper-plugins",
+      "layer": "module",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 1.35,
+      "file": "web/site-hyper/plugins/revolution/",
+      "description": "Pacote/pasta `web/site-hyper/plugins/revolution/` do projeto."
+    },
+    {
+      "id": "hyperware-dir-web-site-hyper-plugins-revolution-assets",
+      "label": "assets/",
+      "parent": "hyperware-dir-web-site-hyper-plugins-revolution",
+      "layer": "module",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 1.35,
+      "file": "web/site-hyper/plugins/revolution/assets/",
+      "description": "Pacote/pasta `web/site-hyper/plugins/revolution/assets/` do projeto."
+    },
+    {
+      "id": "hyperware-dir-web-site-hyper-plugins-revolution-css",
+      "label": "css/",
+      "parent": "hyperware-dir-web-site-hyper-plugins-revolution",
+      "layer": "module",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 1.35,
+      "file": "web/site-hyper/plugins/revolution/css/",
+      "description": "Pacote/pasta `web/site-hyper/plugins/revolution/css/` do projeto."
+    },
+    {
+      "id": "hyperware-dir-web-site-hyper-plugins-revolution-fonts",
+      "label": "fonts/",
+      "parent": "hyperware-dir-web-site-hyper-plugins-revolution",
+      "layer": "module",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 1.35,
+      "file": "web/site-hyper/plugins/revolution/fonts/",
+      "description": "Pacote/pasta `web/site-hyper/plugins/revolution/fonts/` do projeto."
+    },
+    {
+      "id": "hyperware-dir-web-site-hyper-plugins-revolution-js",
+      "label": "js/",
+      "parent": "hyperware-dir-web-site-hyper-plugins-revolution",
+      "layer": "module",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 1.35,
+      "file": "web/site-hyper/plugins/revolution/js/",
+      "description": "Pacote/pasta `web/site-hyper/plugins/revolution/js/` do projeto."
+    },
+    {
+      "id": "hyperware-dir-web-site-hyper-plugins-revolution-php",
+      "label": "php/",
+      "parent": "hyperware-dir-web-site-hyper-plugins-revolution",
+      "layer": "module",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 1.35,
+      "file": "web/site-hyper/plugins/revolution/php/",
+      "description": "Pacote/pasta `web/site-hyper/plugins/revolution/php/` do projeto."
+    },
+    {
+      "id": "hyperware-dir-web-site-hyper-plugins-revolution-assets-svg",
+      "label": "svg/",
+      "parent": "hyperware-dir-web-site-hyper-plugins-revolution-assets",
+      "layer": "module",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 1.35,
+      "file": "web/site-hyper/plugins/revolution/assets/svg/",
+      "description": "Pacote/pasta `web/site-hyper/plugins/revolution/assets/svg/` do projeto."
+    },
+    {
+      "id": "hyperware-dir-web-site-hyper-plugins-revolution-css-navigation-skins",
+      "label": "navigation-skins/",
+      "parent": "hyperware-dir-web-site-hyper-plugins-revolution-css",
+      "layer": "module",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 1.35,
+      "file": "web/site-hyper/plugins/revolution/css/navigation-skins/",
+      "description": "Pacote/pasta `web/site-hyper/plugins/revolution/css/navigation-skins/` do projeto."
+    },
+    {
+      "id": "hyperware-dir-web-site-hyper-plugins-revolution-fonts-font-awesome",
+      "label": "font-awesome/",
+      "parent": "hyperware-dir-web-site-hyper-plugins-revolution-fonts",
+      "layer": "module",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 1.35,
+      "file": "web/site-hyper/plugins/revolution/fonts/font-awesome/",
+      "description": "Pacote/pasta `web/site-hyper/plugins/revolution/fonts/font-awesome/` do projeto."
+    },
+    {
+      "id": "hyperware-dir-web-site-hyper-plugins-revolution-fonts-pe-icon-7-stroke",
+      "label": "pe-icon-7-stroke/",
+      "parent": "hyperware-dir-web-site-hyper-plugins-revolution-fonts",
+      "layer": "module",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 1.35,
+      "file": "web/site-hyper/plugins/revolution/fonts/pe-icon-7-stroke/",
+      "description": "Pacote/pasta `web/site-hyper/plugins/revolution/fonts/pe-icon-7-stroke/` do projeto."
+    },
+    {
+      "id": "hyperware-dir-web-site-hyper-plugins-revolution-fonts-revicons",
+      "label": "revicons/",
+      "parent": "hyperware-dir-web-site-hyper-plugins-revolution-fonts",
+      "layer": "module",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 1.35,
+      "file": "web/site-hyper/plugins/revolution/fonts/revicons/",
+      "description": "Pacote/pasta `web/site-hyper/plugins/revolution/fonts/revicons/` do projeto."
+    },
+    {
+      "id": "hyperware-dir-web-site-hyper-plugins-revolution-js-extensions",
+      "label": "extensions/",
+      "parent": "hyperware-dir-web-site-hyper-plugins-revolution-js",
+      "layer": "module",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 1.35,
+      "file": "web/site-hyper/plugins/revolution/js/extensions/",
+      "description": "Pacote/pasta `web/site-hyper/plugins/revolution/js/extensions/` do projeto."
+    },
+    {
+      "id": "hyperware-dir-web-site-hyper-plugins-revolution-js-source",
+      "label": "source/",
+      "parent": "hyperware-dir-web-site-hyper-plugins-revolution-js",
+      "layer": "module",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 1.35,
+      "file": "web/site-hyper/plugins/revolution/js/source/",
+      "description": "Pacote/pasta `web/site-hyper/plugins/revolution/js/source/` do projeto."
+    },
+    {
+      "id": "hyperware-dir-web-site-hyper-plugins-revolution-php-facebook",
+      "label": "facebook/",
+      "parent": "hyperware-dir-web-site-hyper-plugins-revolution-php",
+      "layer": "module",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 1.35,
+      "file": "web/site-hyper/plugins/revolution/php/facebook/",
+      "description": "Pacote/pasta `web/site-hyper/plugins/revolution/php/facebook/` do projeto."
+    },
+    {
+      "id": "hyperware-dir-web-site-hyper-plugins-revolution-php-flickr",
+      "label": "flickr/",
+      "parent": "hyperware-dir-web-site-hyper-plugins-revolution-php",
+      "layer": "module",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 1.35,
+      "file": "web/site-hyper/plugins/revolution/php/flickr/",
+      "description": "Pacote/pasta `web/site-hyper/plugins/revolution/php/flickr/` do projeto."
+    },
+    {
+      "id": "hyperware-dir-web-site-hyper-plugins-revolution-php-instagram",
+      "label": "instagram/",
+      "parent": "hyperware-dir-web-site-hyper-plugins-revolution-php",
+      "layer": "module",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 1.35,
+      "file": "web/site-hyper/plugins/revolution/php/instagram/",
+      "description": "Pacote/pasta `web/site-hyper/plugins/revolution/php/instagram/` do projeto."
+    },
+    {
+      "id": "hyperware-dir-web-site-hyper-plugins-revolution-php-twitter",
+      "label": "twitter/",
+      "parent": "hyperware-dir-web-site-hyper-plugins-revolution-php",
+      "layer": "module",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 1.35,
+      "file": "web/site-hyper/plugins/revolution/php/twitter/",
+      "description": "Pacote/pasta `web/site-hyper/plugins/revolution/php/twitter/` do projeto."
+    },
+    {
+      "id": "hyperware-dir-web-site-hyper-plugins-revolution-php-vimeo",
+      "label": "vimeo/",
+      "parent": "hyperware-dir-web-site-hyper-plugins-revolution-php",
+      "layer": "module",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 1.35,
+      "file": "web/site-hyper/plugins/revolution/php/vimeo/",
+      "description": "Pacote/pasta `web/site-hyper/plugins/revolution/php/vimeo/` do projeto."
+    },
+    {
+      "id": "hyperware-dir-web-site-hyper-plugins-revolution-php-youtube",
+      "label": "youtube/",
+      "parent": "hyperware-dir-web-site-hyper-plugins-revolution-php",
+      "layer": "module",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 1.35,
+      "file": "web/site-hyper/plugins/revolution/php/youtube/",
+      "description": "Pacote/pasta `web/site-hyper/plugins/revolution/php/youtube/` do projeto."
+    },
+    {
+      "id": "hyperware-dir-web-site-hyper-plugins-revolution-fonts-font-awesome-css",
+      "label": "css/",
+      "parent": "hyperware-dir-web-site-hyper-plugins-revolution-fonts-font-awesome",
+      "layer": "module",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 1.35,
+      "file": "web/site-hyper/plugins/revolution/fonts/font-awesome/css/",
+      "description": "Pacote/pasta `web/site-hyper/plugins/revolution/fonts/font-awesome/css/` do projeto."
+    },
+    {
+      "id": "hyperware-dir-web-site-hyper-plugins-revolution-fonts-pe-icon-7-stroke-css",
+      "label": "css/",
+      "parent": "hyperware-dir-web-site-hyper-plugins-revolution-fonts-pe-icon-7-stroke",
+      "layer": "module",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 1.35,
+      "file": "web/site-hyper/plugins/revolution/fonts/pe-icon-7-stroke/css/",
+      "description": "Pacote/pasta `web/site-hyper/plugins/revolution/fonts/pe-icon-7-stroke/css/` do projeto."
+    },
+    {
+      "id": "hyperware-dir-web-site-hyper-plugins-revolution-fonts-pe-icon-7-stroke-fonts",
+      "label": "fonts/",
+      "parent": "hyperware-dir-web-site-hyper-plugins-revolution-fonts-pe-icon-7-stroke",
+      "layer": "module",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 1.35,
+      "file": "web/site-hyper/plugins/revolution/fonts/pe-icon-7-stroke/fonts/",
+      "description": "Pacote/pasta `web/site-hyper/plugins/revolution/fonts/pe-icon-7-stroke/fonts/` do projeto."
+    },
+    {
+      "id": "hyperware-dir-web-site-hyper-plugins-revolution-js-extensions-source",
+      "label": "source/",
+      "parent": "hyperware-dir-web-site-hyper-plugins-revolution-js-extensions",
+      "layer": "module",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 1.35,
+      "file": "web/site-hyper/plugins/revolution/js/extensions/source/",
+      "description": "Pacote/pasta `web/site-hyper/plugins/revolution/js/extensions/source/` do projeto."
+    },
+    {
+      "id": "hyperware-dir-web-site-hyper-plugins-revolution-php-twitter-connection",
+      "label": "connection/",
+      "parent": "hyperware-dir-web-site-hyper-plugins-revolution-php-twitter",
+      "layer": "module",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 1.35,
+      "file": "web/site-hyper/plugins/revolution/php/twitter/connection/",
+      "description": "Pacote/pasta `web/site-hyper/plugins/revolution/php/twitter/connection/` do projeto."
+    },
+    {
+      "id": "hyperware-file-web-index-html",
       "label": "index.html",
-      "parent": "hyp-web",
+      "parent": "hyperware-dir-web",
       "layer": "file",
       "category": "frontend",
       "categoryLabel": "Frontend",
       "color": "#eab308",
       "size": 0.85,
       "file": "web/index.html",
-      "description": "Arquivo `web/index.html` mapeado a partir do repositório original."
+      "description": "Código-fonte: `web/index.html`"
     },
     {
-      "id": "hyp-web-site-hyper-index-html",
-      "label": "index.html",
-      "parent": "hyp-web",
-      "layer": "file",
-      "category": "frontend",
-      "categoryLabel": "Frontend",
-      "color": "#eab308",
-      "size": 0.85,
-      "file": "web/site-hyper/index.html",
-      "description": "Arquivo `web/site-hyper/index.html` mapeado a partir do repositório original."
-    },
-    {
-      "id": "hyp-web-unzipper-php",
+      "id": "hyperware-file-web-unzipper-php",
       "label": "unzipper.php",
-      "parent": "hyp-web",
+      "parent": "hyperware-dir-web",
       "layer": "file",
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
       "size": 0.85,
       "file": "web/unzipper.php",
-      "description": "Arquivo `web/unzipper.php` mapeado a partir do repositório original."
+      "description": "Código-fonte: `web/unzipper.php`"
     },
     {
-      "id": "hyp-web-site-hyper-sendemail-php",
+      "id": "hyperware-file-web-error-400-html",
+      "label": "400.html",
+      "parent": "hyperware-dir-web-error",
+      "layer": "file",
+      "category": "frontend",
+      "categoryLabel": "Frontend",
+      "color": "#eab308",
+      "size": 0.85,
+      "file": "web/error/400.html",
+      "description": "Código-fonte: `web/error/400.html`"
+    },
+    {
+      "id": "hyperware-file-web-error-401-html",
+      "label": "401.html",
+      "parent": "hyperware-dir-web-error",
+      "layer": "file",
+      "category": "frontend",
+      "categoryLabel": "Frontend",
+      "color": "#eab308",
+      "size": 0.85,
+      "file": "web/error/401.html",
+      "description": "Código-fonte: `web/error/401.html`"
+    },
+    {
+      "id": "hyperware-file-web-error-403-html",
+      "label": "403.html",
+      "parent": "hyperware-dir-web-error",
+      "layer": "file",
+      "category": "frontend",
+      "categoryLabel": "Frontend",
+      "color": "#eab308",
+      "size": 0.85,
+      "file": "web/error/403.html",
+      "description": "Código-fonte: `web/error/403.html`"
+    },
+    {
+      "id": "hyperware-file-web-error-404-html",
+      "label": "404.html",
+      "parent": "hyperware-dir-web-error",
+      "layer": "file",
+      "category": "frontend",
+      "categoryLabel": "Frontend",
+      "color": "#eab308",
+      "size": 0.85,
+      "file": "web/error/404.html",
+      "description": "Código-fonte: `web/error/404.html`"
+    },
+    {
+      "id": "hyperware-file-web-error-405-html",
+      "label": "405.html",
+      "parent": "hyperware-dir-web-error",
+      "layer": "file",
+      "category": "frontend",
+      "categoryLabel": "Frontend",
+      "color": "#eab308",
+      "size": 0.85,
+      "file": "web/error/405.html",
+      "description": "Código-fonte: `web/error/405.html`"
+    },
+    {
+      "id": "hyperware-file-web-error-500-html",
+      "label": "500.html",
+      "parent": "hyperware-dir-web-error",
+      "layer": "file",
+      "category": "frontend",
+      "categoryLabel": "Frontend",
+      "color": "#eab308",
+      "size": 0.85,
+      "file": "web/error/500.html",
+      "description": "Código-fonte: `web/error/500.html`"
+    },
+    {
+      "id": "hyperware-file-web-error-502-html",
+      "label": "502.html",
+      "parent": "hyperware-dir-web-error",
+      "layer": "file",
+      "category": "frontend",
+      "categoryLabel": "Frontend",
+      "color": "#eab308",
+      "size": 0.85,
+      "file": "web/error/502.html",
+      "description": "Código-fonte: `web/error/502.html`"
+    },
+    {
+      "id": "hyperware-file-web-error-503-html",
+      "label": "503.html",
+      "parent": "hyperware-dir-web-error",
+      "layer": "file",
+      "category": "frontend",
+      "categoryLabel": "Frontend",
+      "color": "#eab308",
+      "size": 0.85,
+      "file": "web/error/503.html",
+      "description": "Código-fonte: `web/error/503.html`"
+    },
+    {
+      "id": "hyperware-grp-web-site-hyper-files-b-1-12",
+      "label": "Arquivos B (1–12)",
+      "parent": "hyperware-dir-web-site-hyper",
+      "layer": "module",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 1.35,
+      "file": "web/site-hyper/[files-b-1-12]",
+      "description": "Grupo de arquivos em `web/site-hyper/` — Arquivos B (1–12)"
+    },
+    {
+      "id": "hyperware-grp-web-site-hyper-files-b-13-16",
+      "label": "Arquivos B (13–16)",
+      "parent": "hyperware-dir-web-site-hyper",
+      "layer": "module",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 1.35,
+      "file": "web/site-hyper/[files-b-13-16]",
+      "description": "Grupo de arquivos em `web/site-hyper/` — Arquivos B (13–16)"
+    },
+    {
+      "id": "hyperware-grp-web-site-hyper-files-c-e-i-m",
+      "label": "Arquivos C–E–I–M",
+      "parent": "hyperware-dir-web-site-hyper",
+      "layer": "module",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 1.35,
+      "file": "web/site-hyper/[files-c–e–i–m]",
+      "description": "Grupo de arquivos em `web/site-hyper/` — Arquivos C–E–I–M"
+    },
+    {
+      "id": "hyperware-grp-web-site-hyper-files-p-1-12",
+      "label": "Arquivos P (1–12)",
+      "parent": "hyperware-dir-web-site-hyper",
+      "layer": "module",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 1.35,
+      "file": "web/site-hyper/[files-p-1-12]",
+      "description": "Grupo de arquivos em `web/site-hyper/` — Arquivos P (1–12)"
+    },
+    {
+      "id": "hyperware-grp-web-site-hyper-files-p-13-13",
+      "label": "Arquivos P (13–13)",
+      "parent": "hyperware-dir-web-site-hyper",
+      "layer": "module",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 1.35,
+      "file": "web/site-hyper/[files-p-13-13]",
+      "description": "Grupo de arquivos em `web/site-hyper/` — Arquivos P (13–13)"
+    },
+    {
+      "id": "hyperware-grp-web-site-hyper-files-s-w",
+      "label": "Arquivos S–W",
+      "parent": "hyperware-dir-web-site-hyper",
+      "layer": "module",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 1.35,
+      "file": "web/site-hyper/[files-s–w]",
+      "description": "Grupo de arquivos em `web/site-hyper/` — Arquivos S–W"
+    },
+    {
+      "id": "hyperware-file-web-site-hyper-blog-checkerboard-html",
+      "label": "blog-checkerboard.html",
+      "parent": "hyperware-grp-web-site-hyper-files-b-1-12",
+      "layer": "file",
+      "category": "frontend",
+      "categoryLabel": "Frontend",
+      "color": "#eab308",
+      "size": 0.85,
+      "file": "web/site-hyper/blog-checkerboard.html",
+      "description": "Código-fonte: `web/site-hyper/blog-checkerboard.html`"
+    },
+    {
+      "id": "hyperware-file-web-site-hyper-blog-four-col-wide-html",
+      "label": "blog-four-col-wide.html",
+      "parent": "hyperware-grp-web-site-hyper-files-b-1-12",
+      "layer": "file",
+      "category": "frontend",
+      "categoryLabel": "Frontend",
+      "color": "#eab308",
+      "size": 0.85,
+      "file": "web/site-hyper/blog-four-col-wide.html",
+      "description": "Código-fonte: `web/site-hyper/blog-four-col-wide.html`"
+    },
+    {
+      "id": "hyperware-file-web-site-hyper-blog-large-images-html",
+      "label": "blog-large-images.html",
+      "parent": "hyperware-grp-web-site-hyper-files-b-1-12",
+      "layer": "file",
+      "category": "frontend",
+      "categoryLabel": "Frontend",
+      "color": "#eab308",
+      "size": 0.85,
+      "file": "web/site-hyper/blog-large-images.html",
+      "description": "Código-fonte: `web/site-hyper/blog-large-images.html`"
+    },
+    {
+      "id": "hyperware-file-web-site-hyper-blog-left-sidebar-html",
+      "label": "blog-left-sidebar.html",
+      "parent": "hyperware-grp-web-site-hyper-files-b-1-12",
+      "layer": "file",
+      "category": "frontend",
+      "categoryLabel": "Frontend",
+      "color": "#eab308",
+      "size": 0.85,
+      "file": "web/site-hyper/blog-left-sidebar.html",
+      "description": "Código-fonte: `web/site-hyper/blog-left-sidebar.html`"
+    },
+    {
+      "id": "hyperware-file-web-site-hyper-blog-masonry-html",
+      "label": "blog-masonry.html",
+      "parent": "hyperware-grp-web-site-hyper-files-b-1-12",
+      "layer": "file",
+      "category": "frontend",
+      "categoryLabel": "Frontend",
+      "color": "#eab308",
+      "size": 0.85,
+      "file": "web/site-hyper/blog-masonry.html",
+      "description": "Código-fonte: `web/site-hyper/blog-masonry.html`"
+    },
+    {
+      "id": "hyperware-file-web-site-hyper-blog-post-audio-html",
+      "label": "blog-post-audio.html",
+      "parent": "hyperware-grp-web-site-hyper-files-b-1-12",
+      "layer": "file",
+      "category": "frontend",
+      "categoryLabel": "Frontend",
+      "color": "#eab308",
+      "size": 0.85,
+      "file": "web/site-hyper/blog-post-audio.html",
+      "description": "Código-fonte: `web/site-hyper/blog-post-audio.html`"
+    },
+    {
+      "id": "hyperware-file-web-site-hyper-blog-post-gallery-html",
+      "label": "blog-post-gallery.html",
+      "parent": "hyperware-grp-web-site-hyper-files-b-1-12",
+      "layer": "file",
+      "category": "frontend",
+      "categoryLabel": "Frontend",
+      "color": "#eab308",
+      "size": 0.85,
+      "file": "web/site-hyper/blog-post-gallery.html",
+      "description": "Código-fonte: `web/site-hyper/blog-post-gallery.html`"
+    },
+    {
+      "id": "hyperware-file-web-site-hyper-blog-post-image-html",
+      "label": "blog-post-image.html",
+      "parent": "hyperware-grp-web-site-hyper-files-b-1-12",
+      "layer": "file",
+      "category": "frontend",
+      "categoryLabel": "Frontend",
+      "color": "#eab308",
+      "size": 0.85,
+      "file": "web/site-hyper/blog-post-image.html",
+      "description": "Código-fonte: `web/site-hyper/blog-post-image.html`"
+    },
+    {
+      "id": "hyperware-file-web-site-hyper-blog-post-link-html",
+      "label": "blog-post-link.html",
+      "parent": "hyperware-grp-web-site-hyper-files-b-1-12",
+      "layer": "file",
+      "category": "frontend",
+      "categoryLabel": "Frontend",
+      "color": "#eab308",
+      "size": 0.85,
+      "file": "web/site-hyper/blog-post-link.html",
+      "description": "Código-fonte: `web/site-hyper/blog-post-link.html`"
+    },
+    {
+      "id": "hyperware-file-web-site-hyper-blog-post-quote-html",
+      "label": "blog-post-quote.html",
+      "parent": "hyperware-grp-web-site-hyper-files-b-1-12",
+      "layer": "file",
+      "category": "frontend",
+      "categoryLabel": "Frontend",
+      "color": "#eab308",
+      "size": 0.85,
+      "file": "web/site-hyper/blog-post-quote.html",
+      "description": "Código-fonte: `web/site-hyper/blog-post-quote.html`"
+    },
+    {
+      "id": "hyperware-file-web-site-hyper-blog-post-video-html",
+      "label": "blog-post-video.html",
+      "parent": "hyperware-grp-web-site-hyper-files-b-1-12",
+      "layer": "file",
+      "category": "frontend",
+      "categoryLabel": "Frontend",
+      "color": "#eab308",
+      "size": 0.85,
+      "file": "web/site-hyper/blog-post-video.html",
+      "description": "Código-fonte: `web/site-hyper/blog-post-video.html`"
+    },
+    {
+      "id": "hyperware-file-web-site-hyper-blog-right-sidebar-html",
+      "label": "blog-right-sidebar.html",
+      "parent": "hyperware-grp-web-site-hyper-files-b-1-12",
+      "layer": "file",
+      "category": "frontend",
+      "categoryLabel": "Frontend",
+      "color": "#eab308",
+      "size": 0.85,
+      "file": "web/site-hyper/blog-right-sidebar.html",
+      "description": "Código-fonte: `web/site-hyper/blog-right-sidebar.html`"
+    },
+    {
+      "id": "hyperware-file-web-site-hyper-blog-small-images-html",
+      "label": "blog-small-images.html",
+      "parent": "hyperware-grp-web-site-hyper-files-b-13-16",
+      "layer": "file",
+      "category": "frontend",
+      "categoryLabel": "Frontend",
+      "color": "#eab308",
+      "size": 0.85,
+      "file": "web/site-hyper/blog-small-images.html",
+      "description": "Código-fonte: `web/site-hyper/blog-small-images.html`"
+    },
+    {
+      "id": "hyperware-file-web-site-hyper-blog-three-col-wide-html",
+      "label": "blog-three-col-wide.html",
+      "parent": "hyperware-grp-web-site-hyper-files-b-13-16",
+      "layer": "file",
+      "category": "frontend",
+      "categoryLabel": "Frontend",
+      "color": "#eab308",
+      "size": 0.85,
+      "file": "web/site-hyper/blog-three-col-wide.html",
+      "description": "Código-fonte: `web/site-hyper/blog-three-col-wide.html`"
+    },
+    {
+      "id": "hyperware-file-web-site-hyper-blog-three-col-html",
+      "label": "blog-three-col.html",
+      "parent": "hyperware-grp-web-site-hyper-files-b-13-16",
+      "layer": "file",
+      "category": "frontend",
+      "categoryLabel": "Frontend",
+      "color": "#eab308",
+      "size": 0.85,
+      "file": "web/site-hyper/blog-three-col.html",
+      "description": "Código-fonte: `web/site-hyper/blog-three-col.html`"
+    },
+    {
+      "id": "hyperware-file-web-site-hyper-blog-two-col-html",
+      "label": "blog-two-col.html",
+      "parent": "hyperware-grp-web-site-hyper-files-b-13-16",
+      "layer": "file",
+      "category": "frontend",
+      "categoryLabel": "Frontend",
+      "color": "#eab308",
+      "size": 0.85,
+      "file": "web/site-hyper/blog-two-col.html",
+      "description": "Código-fonte: `web/site-hyper/blog-two-col.html`"
+    },
+    {
+      "id": "hyperware-file-web-site-hyper-case-study-html",
+      "label": "case-study.html",
+      "parent": "hyperware-grp-web-site-hyper-files-c-e-i-m",
+      "layer": "file",
+      "category": "frontend",
+      "categoryLabel": "Frontend",
+      "color": "#eab308",
+      "size": 0.85,
+      "file": "web/site-hyper/case-study.html",
+      "description": "Código-fonte: `web/site-hyper/case-study.html`"
+    },
+    {
+      "id": "hyperware-file-web-site-hyper-checkout-html",
+      "label": "checkout.html",
+      "parent": "hyperware-grp-web-site-hyper-files-c-e-i-m",
+      "layer": "file",
+      "category": "frontend",
+      "categoryLabel": "Frontend",
+      "color": "#eab308",
+      "size": 0.85,
+      "file": "web/site-hyper/checkout.html",
+      "description": "Código-fonte: `web/site-hyper/checkout.html`"
+    },
+    {
+      "id": "hyperware-file-web-site-hyper-contact-html",
+      "label": "contact.html",
+      "parent": "hyperware-grp-web-site-hyper-files-c-e-i-m",
+      "layer": "file",
+      "category": "frontend",
+      "categoryLabel": "Frontend",
+      "color": "#eab308",
+      "size": 0.85,
+      "file": "web/site-hyper/contact.html",
+      "description": "Código-fonte: `web/site-hyper/contact.html`"
+    },
+    {
+      "id": "hyperware-file-web-site-hyper-elements-html",
+      "label": "elements.html",
+      "parent": "hyperware-grp-web-site-hyper-files-c-e-i-m",
+      "layer": "file",
+      "category": "frontend",
+      "categoryLabel": "Frontend",
+      "color": "#eab308",
+      "size": 0.85,
+      "file": "web/site-hyper/elements.html",
+      "description": "Código-fonte: `web/site-hyper/elements.html`"
+    },
+    {
+      "id": "hyperware-file-web-site-hyper-empresa-html",
+      "label": "empresa.html",
+      "parent": "hyperware-grp-web-site-hyper-files-c-e-i-m",
+      "layer": "file",
+      "category": "frontend",
+      "categoryLabel": "Frontend",
+      "color": "#eab308",
+      "size": 0.85,
+      "file": "web/site-hyper/empresa.html",
+      "description": "Código-fonte: `web/site-hyper/empresa.html`"
+    },
+    {
+      "id": "hyperware-file-web-site-hyper-index-html",
+      "label": "index.html",
+      "parent": "hyperware-grp-web-site-hyper-files-c-e-i-m",
+      "layer": "file",
+      "category": "frontend",
+      "categoryLabel": "Frontend",
+      "color": "#eab308",
+      "size": 0.85,
+      "file": "web/site-hyper/index.html",
+      "description": "Código-fonte: `web/site-hyper/index.html`"
+    },
+    {
+      "id": "hyperware-file-web-site-hyper-it-consultancy-html",
+      "label": "it-consultancy.html",
+      "parent": "hyperware-grp-web-site-hyper-files-c-e-i-m",
+      "layer": "file",
+      "category": "frontend",
+      "categoryLabel": "Frontend",
+      "color": "#eab308",
+      "size": 0.85,
+      "file": "web/site-hyper/it-consultancy.html",
+      "description": "Código-fonte: `web/site-hyper/it-consultancy.html`"
+    },
+    {
+      "id": "hyperware-file-web-site-hyper-managed-it-html",
+      "label": "managed-it.html",
+      "parent": "hyperware-grp-web-site-hyper-files-c-e-i-m",
+      "layer": "file",
+      "category": "frontend",
+      "categoryLabel": "Frontend",
+      "color": "#eab308",
+      "size": 0.85,
+      "file": "web/site-hyper/managed-it.html",
+      "description": "Código-fonte: `web/site-hyper/managed-it.html`"
+    },
+    {
+      "id": "hyperware-file-web-site-hyper-portfolio-asymetric-html",
+      "label": "portfolio-asymetric.html",
+      "parent": "hyperware-grp-web-site-hyper-files-p-1-12",
+      "layer": "file",
+      "category": "frontend",
+      "categoryLabel": "Frontend",
+      "color": "#eab308",
+      "size": 0.85,
+      "file": "web/site-hyper/portfolio-asymetric.html",
+      "description": "Código-fonte: `web/site-hyper/portfolio-asymetric.html`"
+    },
+    {
+      "id": "hyperware-file-web-site-hyper-portfolio-masonry-html",
+      "label": "portfolio-masonry.html",
+      "parent": "hyperware-grp-web-site-hyper-files-p-1-12",
+      "layer": "file",
+      "category": "frontend",
+      "categoryLabel": "Frontend",
+      "color": "#eab308",
+      "size": 0.85,
+      "file": "web/site-hyper/portfolio-masonry.html",
+      "description": "Código-fonte: `web/site-hyper/portfolio-masonry.html`"
+    },
+    {
+      "id": "hyperware-file-web-site-hyper-portfolio-motion-category-html",
+      "label": "portfolio-motion-category.html",
+      "parent": "hyperware-grp-web-site-hyper-files-p-1-12",
+      "layer": "file",
+      "category": "frontend",
+      "categoryLabel": "Frontend",
+      "color": "#eab308",
+      "size": 0.85,
+      "file": "web/site-hyper/portfolio-motion-category.html",
+      "description": "Código-fonte: `web/site-hyper/portfolio-motion-category.html`"
+    },
+    {
+      "id": "hyperware-file-web-site-hyper-portfolio-single-gallery-html",
+      "label": "portfolio-single-gallery.html",
+      "parent": "hyperware-grp-web-site-hyper-files-p-1-12",
+      "layer": "file",
+      "category": "frontend",
+      "categoryLabel": "Frontend",
+      "color": "#eab308",
+      "size": 0.85,
+      "file": "web/site-hyper/portfolio-single-gallery.html",
+      "description": "Código-fonte: `web/site-hyper/portfolio-single-gallery.html`"
+    },
+    {
+      "id": "hyperware-file-web-site-hyper-portfolio-single-large-masonry-html",
+      "label": "portfolio-single-large-masonry.html",
+      "parent": "hyperware-grp-web-site-hyper-files-p-1-12",
+      "layer": "file",
+      "category": "frontend",
+      "categoryLabel": "Frontend",
+      "color": "#eab308",
+      "size": 0.85,
+      "file": "web/site-hyper/portfolio-single-large-masonry.html",
+      "description": "Código-fonte: `web/site-hyper/portfolio-single-large-masonry.html`"
+    },
+    {
+      "id": "hyperware-file-web-site-hyper-portfolio-single-large-slider-html",
+      "label": "portfolio-single-large-slider.html",
+      "parent": "hyperware-grp-web-site-hyper-files-p-1-12",
+      "layer": "file",
+      "category": "frontend",
+      "categoryLabel": "Frontend",
+      "color": "#eab308",
+      "size": 0.85,
+      "file": "web/site-hyper/portfolio-single-large-slider.html",
+      "description": "Código-fonte: `web/site-hyper/portfolio-single-large-slider.html`"
+    },
+    {
+      "id": "hyperware-file-web-site-hyper-portfolio-single-small-images-html",
+      "label": "portfolio-single-small-images.html",
+      "parent": "hyperware-grp-web-site-hyper-files-p-1-12",
+      "layer": "file",
+      "category": "frontend",
+      "categoryLabel": "Frontend",
+      "color": "#eab308",
+      "size": 0.85,
+      "file": "web/site-hyper/portfolio-single-small-images.html",
+      "description": "Código-fonte: `web/site-hyper/portfolio-single-small-images.html`"
+    },
+    {
+      "id": "hyperware-file-web-site-hyper-portfolio-single-small-masonry-html",
+      "label": "portfolio-single-small-masonry.html",
+      "parent": "hyperware-grp-web-site-hyper-files-p-1-12",
+      "layer": "file",
+      "category": "frontend",
+      "categoryLabel": "Frontend",
+      "color": "#eab308",
+      "size": 0.85,
+      "file": "web/site-hyper/portfolio-single-small-masonry.html",
+      "description": "Código-fonte: `web/site-hyper/portfolio-single-small-masonry.html`"
+    },
+    {
+      "id": "hyperware-file-web-site-hyper-portfolio-single-small-slider-html",
+      "label": "portfolio-single-small-slider.html",
+      "parent": "hyperware-grp-web-site-hyper-files-p-1-12",
+      "layer": "file",
+      "category": "frontend",
+      "categoryLabel": "Frontend",
+      "color": "#eab308",
+      "size": 0.85,
+      "file": "web/site-hyper/portfolio-single-small-slider.html",
+      "description": "Código-fonte: `web/site-hyper/portfolio-single-small-slider.html`"
+    },
+    {
+      "id": "hyperware-file-web-site-hyper-portfolio-slide-left-html",
+      "label": "portfolio-slide-left.html",
+      "parent": "hyperware-grp-web-site-hyper-files-p-1-12",
+      "layer": "file",
+      "category": "frontend",
+      "categoryLabel": "Frontend",
+      "color": "#eab308",
+      "size": 0.85,
+      "file": "web/site-hyper/portfolio-slide-left.html",
+      "description": "Código-fonte: `web/site-hyper/portfolio-slide-left.html`"
+    },
+    {
+      "id": "hyperware-file-web-site-hyper-portfolio-slider-html",
+      "label": "portfolio-slider.html",
+      "parent": "hyperware-grp-web-site-hyper-files-p-1-12",
+      "layer": "file",
+      "category": "frontend",
+      "categoryLabel": "Frontend",
+      "color": "#eab308",
+      "size": 0.85,
+      "file": "web/site-hyper/portfolio-slider.html",
+      "description": "Código-fonte: `web/site-hyper/portfolio-slider.html`"
+    },
+    {
+      "id": "hyperware-file-web-site-hyper-portfolio-three-col-html",
+      "label": "portfolio-three-col.html",
+      "parent": "hyperware-grp-web-site-hyper-files-p-1-12",
+      "layer": "file",
+      "category": "frontend",
+      "categoryLabel": "Frontend",
+      "color": "#eab308",
+      "size": 0.85,
+      "file": "web/site-hyper/portfolio-three-col.html",
+      "description": "Código-fonte: `web/site-hyper/portfolio-three-col.html`"
+    },
+    {
+      "id": "hyperware-file-web-site-hyper-pricing-plans-html",
+      "label": "pricing-plans.html",
+      "parent": "hyperware-grp-web-site-hyper-files-p-13-13",
+      "layer": "file",
+      "category": "frontend",
+      "categoryLabel": "Frontend",
+      "color": "#eab308",
+      "size": 0.85,
+      "file": "web/site-hyper/pricing-plans.html",
+      "description": "Código-fonte: `web/site-hyper/pricing-plans.html`"
+    },
+    {
+      "id": "hyperware-file-web-site-hyper-sendemail-php",
       "label": "sendemail.php",
-      "parent": "hyp-web",
+      "parent": "hyperware-grp-web-site-hyper-files-s-w",
       "layer": "file",
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
       "size": 0.85,
       "file": "web/site-hyper/sendemail.php",
-      "description": "Arquivo `web/site-hyper/sendemail.php` mapeado a partir do repositório original."
+      "description": "Código-fonte: `web/site-hyper/sendemail.php`"
     },
     {
-      "id": "hyp-web-site-hyper-sendnewslatters-php",
+      "id": "hyperware-file-web-site-hyper-sendnewslatters-php",
       "label": "sendnewslatters.php",
-      "parent": "hyp-web",
+      "parent": "hyperware-grp-web-site-hyper-files-s-w",
       "layer": "file",
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
       "size": 0.85,
       "file": "web/site-hyper/sendnewslatters.php",
-      "description": "Arquivo `web/site-hyper/sendnewslatters.php` mapeado a partir do repositório original."
+      "description": "Código-fonte: `web/site-hyper/sendnewslatters.php`"
     },
     {
-      "id": "hyp-web-site-hyper-js-appear-js",
+      "id": "hyperware-file-web-site-hyper-shop-single-html",
+      "label": "shop-single.html",
+      "parent": "hyperware-grp-web-site-hyper-files-s-w",
+      "layer": "file",
+      "category": "frontend",
+      "categoryLabel": "Frontend",
+      "color": "#eab308",
+      "size": 0.85,
+      "file": "web/site-hyper/shop-single.html",
+      "description": "Código-fonte: `web/site-hyper/shop-single.html`"
+    },
+    {
+      "id": "hyperware-file-web-site-hyper-shop-html",
+      "label": "shop.html",
+      "parent": "hyperware-grp-web-site-hyper-files-s-w",
+      "layer": "file",
+      "category": "frontend",
+      "categoryLabel": "Frontend",
+      "color": "#eab308",
+      "size": 0.85,
+      "file": "web/site-hyper/shop.html",
+      "description": "Código-fonte: `web/site-hyper/shop.html`"
+    },
+    {
+      "id": "hyperware-file-web-site-hyper-shopping-cart-html",
+      "label": "shopping-cart.html",
+      "parent": "hyperware-grp-web-site-hyper-files-s-w",
+      "layer": "file",
+      "category": "frontend",
+      "categoryLabel": "Frontend",
+      "color": "#eab308",
+      "size": 0.85,
+      "file": "web/site-hyper/shopping-cart.html",
+      "description": "Código-fonte: `web/site-hyper/shopping-cart.html`"
+    },
+    {
+      "id": "hyperware-file-web-site-hyper-why-choose-us-html",
+      "label": "why-choose-us.html",
+      "parent": "hyperware-grp-web-site-hyper-files-s-w",
+      "layer": "file",
+      "category": "frontend",
+      "categoryLabel": "Frontend",
+      "color": "#eab308",
+      "size": 0.85,
+      "file": "web/site-hyper/why-choose-us.html",
+      "description": "Código-fonte: `web/site-hyper/why-choose-us.html`"
+    },
+    {
+      "id": "hyperware-file-web-site-hyper-css-animate-css",
+      "label": "animate.css",
+      "parent": "hyperware-dir-web-site-hyper-css",
+      "layer": "file",
+      "category": "frontend",
+      "categoryLabel": "Frontend",
+      "color": "#eab308",
+      "size": 0.85,
+      "file": "web/site-hyper/css/animate.css",
+      "description": "Código-fonte: `web/site-hyper/css/animate.css`"
+    },
+    {
+      "id": "hyperware-file-web-site-hyper-css-bootstrap-css",
+      "label": "bootstrap.css",
+      "parent": "hyperware-dir-web-site-hyper-css",
+      "layer": "file",
+      "category": "frontend",
+      "categoryLabel": "Frontend",
+      "color": "#eab308",
+      "size": 0.85,
+      "file": "web/site-hyper/css/bootstrap.css",
+      "description": "Código-fonte: `web/site-hyper/css/bootstrap.css`"
+    },
+    {
+      "id": "hyperware-file-web-site-hyper-css-flaticon-css",
+      "label": "flaticon.css",
+      "parent": "hyperware-dir-web-site-hyper-css",
+      "layer": "file",
+      "category": "frontend",
+      "categoryLabel": "Frontend",
+      "color": "#eab308",
+      "size": 0.85,
+      "file": "web/site-hyper/css/flaticon.css",
+      "description": "Código-fonte: `web/site-hyper/css/flaticon.css`"
+    },
+    {
+      "id": "hyperware-file-web-site-hyper-css-fontawesome-all-css",
+      "label": "fontawesome-all.css",
+      "parent": "hyperware-dir-web-site-hyper-css",
+      "layer": "file",
+      "category": "frontend",
+      "categoryLabel": "Frontend",
+      "color": "#eab308",
+      "size": 0.85,
+      "file": "web/site-hyper/css/fontawesome-all.css",
+      "description": "Código-fonte: `web/site-hyper/css/fontawesome-all.css`"
+    },
+    {
+      "id": "hyperware-file-web-site-hyper-css-jquery-ui-min-css",
+      "label": "jquery-ui.min.css",
+      "parent": "hyperware-dir-web-site-hyper-css",
+      "layer": "file",
+      "category": "frontend",
+      "categoryLabel": "Frontend",
+      "color": "#eab308",
+      "size": 0.85,
+      "file": "web/site-hyper/css/jquery-ui.min.css",
+      "description": "Código-fonte: `web/site-hyper/css/jquery-ui.min.css`"
+    },
+    {
+      "id": "hyperware-file-web-site-hyper-css-jquery-fancybox-min-css",
+      "label": "jquery.fancybox.min.css",
+      "parent": "hyperware-dir-web-site-hyper-css",
+      "layer": "file",
+      "category": "frontend",
+      "categoryLabel": "Frontend",
+      "color": "#eab308",
+      "size": 0.85,
+      "file": "web/site-hyper/css/jquery.fancybox.min.css",
+      "description": "Código-fonte: `web/site-hyper/css/jquery.fancybox.min.css`"
+    },
+    {
+      "id": "hyperware-file-web-site-hyper-css-owl-css",
+      "label": "owl.css",
+      "parent": "hyperware-dir-web-site-hyper-css",
+      "layer": "file",
+      "category": "frontend",
+      "categoryLabel": "Frontend",
+      "color": "#eab308",
+      "size": 0.85,
+      "file": "web/site-hyper/css/owl.css",
+      "description": "Código-fonte: `web/site-hyper/css/owl.css`"
+    },
+    {
+      "id": "hyperware-file-web-site-hyper-css-responsive-css",
+      "label": "responsive.css",
+      "parent": "hyperware-dir-web-site-hyper-css",
+      "layer": "file",
+      "category": "frontend",
+      "categoryLabel": "Frontend",
+      "color": "#eab308",
+      "size": 0.85,
+      "file": "web/site-hyper/css/responsive.css",
+      "description": "Código-fonte: `web/site-hyper/css/responsive.css`"
+    },
+    {
+      "id": "hyperware-file-web-site-hyper-css-style-css",
+      "label": "style.css",
+      "parent": "hyperware-dir-web-site-hyper-css",
+      "layer": "file",
+      "category": "frontend",
+      "categoryLabel": "Frontend",
+      "color": "#eab308",
+      "size": 0.85,
+      "file": "web/site-hyper/css/style.css",
+      "description": "Código-fonte: `web/site-hyper/css/style.css`"
+    },
+    {
+      "id": "hyperware-file-web-site-hyper-fonts-flaticon-scss",
+      "label": "_flaticon.scss",
+      "parent": "hyperware-dir-web-site-hyper-fonts",
+      "layer": "file",
+      "category": "frontend",
+      "categoryLabel": "Frontend",
+      "color": "#eab308",
+      "size": 0.85,
+      "file": "web/site-hyper/fonts/_flaticon.scss",
+      "description": "Código-fonte: `web/site-hyper/fonts/_flaticon.scss`"
+    },
+    {
+      "id": "hyperware-file-web-site-hyper-fonts-demo-html",
+      "label": "demo.html",
+      "parent": "hyperware-dir-web-site-hyper-fonts",
+      "layer": "file",
+      "category": "frontend",
+      "categoryLabel": "Frontend",
+      "color": "#eab308",
+      "size": 0.85,
+      "file": "web/site-hyper/fonts/demo.html",
+      "description": "Código-fonte: `web/site-hyper/fonts/demo.html`"
+    },
+    {
+      "id": "hyperware-grp-web-site-hyper-js-files-a-b-h-i-j-m-o",
+      "label": "Arquivos A–B–H–I–J–M–O",
+      "parent": "hyperware-dir-web-site-hyper-js",
+      "layer": "module",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 1.35,
+      "file": "web/site-hyper/js/[files-a–b–h–i–j–m–o]",
+      "description": "Grupo de arquivos em `web/site-hyper/js/` — Arquivos A–B–H–I–J–M–O"
+    },
+    {
+      "id": "hyperware-grp-web-site-hyper-js-files-p-r-s-v-w",
+      "label": "Arquivos P–R–S–V–W",
+      "parent": "hyperware-dir-web-site-hyper-js",
+      "layer": "module",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 1.35,
+      "file": "web/site-hyper/js/[files-p–r–s–v–w]",
+      "description": "Grupo de arquivos em `web/site-hyper/js/` — Arquivos P–R–S–V–W"
+    },
+    {
+      "id": "hyperware-file-web-site-hyper-js-appear-js",
       "label": "appear.js",
-      "parent": "hyp-web",
+      "parent": "hyperware-grp-web-site-hyper-js-files-a-b-h-i-j-m-o",
       "layer": "file",
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
       "size": 0.85,
       "file": "web/site-hyper/js/appear.js",
-      "description": "Arquivo `web/site-hyper/js/appear.js` mapeado a partir do repositório original."
+      "description": "Código-fonte: `web/site-hyper/js/appear.js`"
     },
     {
-      "id": "hyp-web-site-hyper-js-horas-js",
+      "id": "hyperware-file-web-site-hyper-js-bootstrap-min-js",
+      "label": "bootstrap.min.js",
+      "parent": "hyperware-grp-web-site-hyper-js-files-a-b-h-i-j-m-o",
+      "layer": "file",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 0.85,
+      "file": "web/site-hyper/js/bootstrap.min.js",
+      "description": "Código-fonte: `web/site-hyper/js/bootstrap.min.js`"
+    },
+    {
+      "id": "hyperware-file-web-site-hyper-js-horas-js",
       "label": "horas.js",
-      "parent": "hyp-web",
+      "parent": "hyperware-grp-web-site-hyper-js-files-a-b-h-i-j-m-o",
       "layer": "file",
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
       "size": 0.85,
       "file": "web/site-hyper/js/horas.js",
-      "description": "Arquivo `web/site-hyper/js/horas.js` mapeado a partir do repositório original."
+      "description": "Código-fonte: `web/site-hyper/js/horas.js`"
+    },
+    {
+      "id": "hyperware-file-web-site-hyper-js-imagesloaded-min-js",
+      "label": "imagesloaded.min.js",
+      "parent": "hyperware-grp-web-site-hyper-js-files-a-b-h-i-j-m-o",
+      "layer": "file",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 0.85,
+      "file": "web/site-hyper/js/imagesloaded.min.js",
+      "description": "Código-fonte: `web/site-hyper/js/imagesloaded.min.js`"
+    },
+    {
+      "id": "hyperware-file-web-site-hyper-js-isotope-js",
+      "label": "isotope.js",
+      "parent": "hyperware-grp-web-site-hyper-js-files-a-b-h-i-j-m-o",
+      "layer": "file",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 0.85,
+      "file": "web/site-hyper/js/isotope.js",
+      "description": "Código-fonte: `web/site-hyper/js/isotope.js`"
+    },
+    {
+      "id": "hyperware-file-web-site-hyper-js-jquery-ui-min-js",
+      "label": "jquery-ui.min.js",
+      "parent": "hyperware-grp-web-site-hyper-js-files-a-b-h-i-j-m-o",
+      "layer": "file",
+      "category": "frontend",
+      "categoryLabel": "Frontend",
+      "color": "#eab308",
+      "size": 0.85,
+      "file": "web/site-hyper/js/jquery-ui.min.js",
+      "description": "Código-fonte: `web/site-hyper/js/jquery-ui.min.js`"
+    },
+    {
+      "id": "hyperware-file-web-site-hyper-js-jquery-fancybox-js",
+      "label": "jquery.fancybox.js",
+      "parent": "hyperware-grp-web-site-hyper-js-files-a-b-h-i-j-m-o",
+      "layer": "file",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 0.85,
+      "file": "web/site-hyper/js/jquery.fancybox.js",
+      "description": "Código-fonte: `web/site-hyper/js/jquery.fancybox.js`"
+    },
+    {
+      "id": "hyperware-file-web-site-hyper-js-jquery-js",
+      "label": "jquery.js",
+      "parent": "hyperware-grp-web-site-hyper-js-files-a-b-h-i-j-m-o",
+      "layer": "file",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 0.85,
+      "file": "web/site-hyper/js/jquery.js",
+      "description": "Código-fonte: `web/site-hyper/js/jquery.js`"
+    },
+    {
+      "id": "hyperware-file-web-site-hyper-js-jquery-parallax-scroll-js",
+      "label": "jquery.parallax-scroll.js",
+      "parent": "hyperware-grp-web-site-hyper-js-files-a-b-h-i-j-m-o",
+      "layer": "file",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 0.85,
+      "file": "web/site-hyper/js/jquery.parallax-scroll.js",
+      "description": "Código-fonte: `web/site-hyper/js/jquery.parallax-scroll.js`"
+    },
+    {
+      "id": "hyperware-file-web-site-hyper-js-main-slider-script-js",
+      "label": "main-slider-script.js",
+      "parent": "hyperware-grp-web-site-hyper-js-files-a-b-h-i-j-m-o",
+      "layer": "file",
+      "category": "scripts",
+      "categoryLabel": "Scripts",
+      "color": "#64748b",
+      "size": 0.85,
+      "file": "web/site-hyper/js/main-slider-script.js",
+      "description": "Código-fonte: `web/site-hyper/js/main-slider-script.js`"
+    },
+    {
+      "id": "hyperware-file-web-site-hyper-js-map-script-js",
+      "label": "map-script.js",
+      "parent": "hyperware-grp-web-site-hyper-js-files-a-b-h-i-j-m-o",
+      "layer": "file",
+      "category": "scripts",
+      "categoryLabel": "Scripts",
+      "color": "#64748b",
+      "size": 0.85,
+      "file": "web/site-hyper/js/map-script.js",
+      "description": "Código-fonte: `web/site-hyper/js/map-script.js`"
+    },
+    {
+      "id": "hyperware-file-web-site-hyper-js-owl-js",
+      "label": "owl.js",
+      "parent": "hyperware-grp-web-site-hyper-js-files-a-b-h-i-j-m-o",
+      "layer": "file",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 0.85,
+      "file": "web/site-hyper/js/owl.js",
+      "description": "Código-fonte: `web/site-hyper/js/owl.js`"
+    },
+    {
+      "id": "hyperware-file-web-site-hyper-js-popper-min-js",
+      "label": "popper.min.js",
+      "parent": "hyperware-grp-web-site-hyper-js-files-p-r-s-v-w",
+      "layer": "file",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 0.85,
+      "file": "web/site-hyper/js/popper.min.js",
+      "description": "Código-fonte: `web/site-hyper/js/popper.min.js`"
+    },
+    {
+      "id": "hyperware-file-web-site-hyper-js-respond-js",
+      "label": "respond.js",
+      "parent": "hyperware-grp-web-site-hyper-js-files-p-r-s-v-w",
+      "layer": "file",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 0.85,
+      "file": "web/site-hyper/js/respond.js",
+      "description": "Código-fonte: `web/site-hyper/js/respond.js`"
+    },
+    {
+      "id": "hyperware-file-web-site-hyper-js-script-js",
+      "label": "script.js",
+      "parent": "hyperware-grp-web-site-hyper-js-files-p-r-s-v-w",
+      "layer": "file",
+      "category": "scripts",
+      "categoryLabel": "Scripts",
+      "color": "#64748b",
+      "size": 0.85,
+      "file": "web/site-hyper/js/script.js",
+      "description": "Código-fonte: `web/site-hyper/js/script.js`"
+    },
+    {
+      "id": "hyperware-file-web-site-hyper-js-sticky-sidebar-min-js",
+      "label": "sticky_sidebar.min.js",
+      "parent": "hyperware-grp-web-site-hyper-js-files-p-r-s-v-w",
+      "layer": "file",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 0.85,
+      "file": "web/site-hyper/js/sticky_sidebar.min.js",
+      "description": "Código-fonte: `web/site-hyper/js/sticky_sidebar.min.js`"
+    },
+    {
+      "id": "hyperware-file-web-site-hyper-js-validate-js",
+      "label": "validate.js",
+      "parent": "hyperware-grp-web-site-hyper-js-files-p-r-s-v-w",
+      "layer": "file",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 0.85,
+      "file": "web/site-hyper/js/validate.js",
+      "description": "Código-fonte: `web/site-hyper/js/validate.js`"
+    },
+    {
+      "id": "hyperware-file-web-site-hyper-js-wow-js",
+      "label": "wow.js",
+      "parent": "hyperware-grp-web-site-hyper-js-files-p-r-s-v-w",
+      "layer": "file",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 0.85,
+      "file": "web/site-hyper/js/wow.js",
+      "description": "Código-fonte: `web/site-hyper/js/wow.js`"
+    },
+    {
+      "id": "hyperware-file-web-site-hyper-plugins-revolution-index-php",
+      "label": "index.php",
+      "parent": "hyperware-dir-web-site-hyper-plugins-revolution",
+      "layer": "file",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 0.85,
+      "file": "web/site-hyper/plugins/revolution/index.php",
+      "description": "Código-fonte: `web/site-hyper/plugins/revolution/index.php`"
+    },
+    {
+      "id": "hyperware-file-web-site-hyper-plugins-revolution-assets-index-php",
+      "label": "index.php",
+      "parent": "hyperware-dir-web-site-hyper-plugins-revolution-assets",
+      "layer": "file",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 0.85,
+      "file": "web/site-hyper/plugins/revolution/assets/index.php",
+      "description": "Código-fonte: `web/site-hyper/plugins/revolution/assets/index.php`"
+    },
+    {
+      "id": "hyperware-file-web-site-hyper-plugins-revolution-assets-svg-index-php",
+      "label": "index.php",
+      "parent": "hyperware-dir-web-site-hyper-plugins-revolution-assets-svg",
+      "layer": "file",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 0.85,
+      "file": "web/site-hyper/plugins/revolution/assets/svg/index.php",
+      "description": "Código-fonte: `web/site-hyper/plugins/revolution/assets/svg/index.php`"
+    },
+    {
+      "id": "hyperware-file-web-site-hyper-plugins-revolution-css-index-php",
+      "label": "index.php",
+      "parent": "hyperware-dir-web-site-hyper-plugins-revolution-css",
+      "layer": "file",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 0.85,
+      "file": "web/site-hyper/plugins/revolution/css/index.php",
+      "description": "Código-fonte: `web/site-hyper/plugins/revolution/css/index.php`"
+    },
+    {
+      "id": "hyperware-file-web-site-hyper-plugins-revolution-css-layers-css",
+      "label": "layers.css",
+      "parent": "hyperware-dir-web-site-hyper-plugins-revolution-css",
+      "layer": "file",
+      "category": "frontend",
+      "categoryLabel": "Frontend",
+      "color": "#eab308",
+      "size": 0.85,
+      "file": "web/site-hyper/plugins/revolution/css/layers.css",
+      "description": "Código-fonte: `web/site-hyper/plugins/revolution/css/layers.css`"
+    },
+    {
+      "id": "hyperware-file-web-site-hyper-plugins-revolution-css-navigation-css",
+      "label": "navigation.css",
+      "parent": "hyperware-dir-web-site-hyper-plugins-revolution-css",
+      "layer": "file",
+      "category": "frontend",
+      "categoryLabel": "Frontend",
+      "color": "#eab308",
+      "size": 0.85,
+      "file": "web/site-hyper/plugins/revolution/css/navigation.css",
+      "description": "Código-fonte: `web/site-hyper/plugins/revolution/css/navigation.css`"
+    },
+    {
+      "id": "hyperware-file-web-site-hyper-plugins-revolution-css-settings-source-css",
+      "label": "settings-source.css",
+      "parent": "hyperware-dir-web-site-hyper-plugins-revolution-css",
+      "layer": "file",
+      "category": "frontend",
+      "categoryLabel": "Frontend",
+      "color": "#eab308",
+      "size": 0.85,
+      "file": "web/site-hyper/plugins/revolution/css/settings-source.css",
+      "description": "Código-fonte: `web/site-hyper/plugins/revolution/css/settings-source.css`"
+    },
+    {
+      "id": "hyperware-file-web-site-hyper-plugins-revolution-css-settings-css",
+      "label": "settings.css",
+      "parent": "hyperware-dir-web-site-hyper-plugins-revolution-css",
+      "layer": "file",
+      "category": "frontend",
+      "categoryLabel": "Frontend",
+      "color": "#eab308",
+      "size": 0.85,
+      "file": "web/site-hyper/plugins/revolution/css/settings.css",
+      "description": "Código-fonte: `web/site-hyper/plugins/revolution/css/settings.css`"
+    },
+    {
+      "id": "hyperware-file-web-site-hyper-plugins-revolution-css-tp-color-picker-css",
+      "label": "tp-color-picker.css",
+      "parent": "hyperware-dir-web-site-hyper-plugins-revolution-css",
+      "layer": "file",
+      "category": "frontend",
+      "categoryLabel": "Frontend",
+      "color": "#eab308",
+      "size": 0.85,
+      "file": "web/site-hyper/plugins/revolution/css/tp-color-picker.css",
+      "description": "Código-fonte: `web/site-hyper/plugins/revolution/css/tp-color-picker.css`"
+    },
+    {
+      "id": "hyperware-grp-web-site-hyper-plugins-revolution-css-navigation-skins-files-a-c-d-e-g-h-m-p",
+      "label": "Arquivos A–C–D–E–G–H–M–P",
+      "parent": "hyperware-dir-web-site-hyper-plugins-revolution-css-navigation-skins",
+      "layer": "module",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 1.35,
+      "file": "web/site-hyper/plugins/revolution/css/navigation-skins/[files-a–c–d–e–g–h–m–p]",
+      "description": "Grupo de arquivos em `web/site-hyper/plugins/revolution/css/navigation-skins/` — Arquivos A–C–D–E–G–H–M–P"
+    },
+    {
+      "id": "hyperware-grp-web-site-hyper-plugins-revolution-css-navigation-skins-files-u-z",
+      "label": "Arquivos U–Z",
+      "parent": "hyperware-dir-web-site-hyper-plugins-revolution-css-navigation-skins",
+      "layer": "module",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 1.35,
+      "file": "web/site-hyper/plugins/revolution/css/navigation-skins/[files-u–z]",
+      "description": "Grupo de arquivos em `web/site-hyper/plugins/revolution/css/navigation-skins/` — Arquivos U–Z"
+    },
+    {
+      "id": "hyperware-file-web-site-hyper-plugins-revolution-css-navigation-skins-ares-css",
+      "label": "ares.css",
+      "parent": "hyperware-grp-web-site-hyper-plugins-revolution-css-navigation-skins-files-a-c-d-e-g-h-m-p",
+      "layer": "file",
+      "category": "frontend",
+      "categoryLabel": "Frontend",
+      "color": "#eab308",
+      "size": 0.85,
+      "file": "web/site-hyper/plugins/revolution/css/navigation-skins/ares.css",
+      "description": "Código-fonte: `web/site-hyper/plugins/revolution/css/navigation-skins/ares.css`"
+    },
+    {
+      "id": "hyperware-file-web-site-hyper-plugins-revolution-css-navigation-skins-custom-css",
+      "label": "custom.css",
+      "parent": "hyperware-grp-web-site-hyper-plugins-revolution-css-navigation-skins-files-a-c-d-e-g-h-m-p",
+      "layer": "file",
+      "category": "frontend",
+      "categoryLabel": "Frontend",
+      "color": "#eab308",
+      "size": 0.85,
+      "file": "web/site-hyper/plugins/revolution/css/navigation-skins/custom.css",
+      "description": "Código-fonte: `web/site-hyper/plugins/revolution/css/navigation-skins/custom.css`"
+    },
+    {
+      "id": "hyperware-file-web-site-hyper-plugins-revolution-css-navigation-skins-dione-css",
+      "label": "dione.css",
+      "parent": "hyperware-grp-web-site-hyper-plugins-revolution-css-navigation-skins-files-a-c-d-e-g-h-m-p",
+      "layer": "file",
+      "category": "frontend",
+      "categoryLabel": "Frontend",
+      "color": "#eab308",
+      "size": 0.85,
+      "file": "web/site-hyper/plugins/revolution/css/navigation-skins/dione.css",
+      "description": "Código-fonte: `web/site-hyper/plugins/revolution/css/navigation-skins/dione.css`"
+    },
+    {
+      "id": "hyperware-file-web-site-hyper-plugins-revolution-css-navigation-skins-erinyen-css",
+      "label": "erinyen.css",
+      "parent": "hyperware-grp-web-site-hyper-plugins-revolution-css-navigation-skins-files-a-c-d-e-g-h-m-p",
+      "layer": "file",
+      "category": "frontend",
+      "categoryLabel": "Frontend",
+      "color": "#eab308",
+      "size": 0.85,
+      "file": "web/site-hyper/plugins/revolution/css/navigation-skins/erinyen.css",
+      "description": "Código-fonte: `web/site-hyper/plugins/revolution/css/navigation-skins/erinyen.css`"
+    },
+    {
+      "id": "hyperware-file-web-site-hyper-plugins-revolution-css-navigation-skins-gyges-css",
+      "label": "gyges.css",
+      "parent": "hyperware-grp-web-site-hyper-plugins-revolution-css-navigation-skins-files-a-c-d-e-g-h-m-p",
+      "layer": "file",
+      "category": "frontend",
+      "categoryLabel": "Frontend",
+      "color": "#eab308",
+      "size": 0.85,
+      "file": "web/site-hyper/plugins/revolution/css/navigation-skins/gyges.css",
+      "description": "Código-fonte: `web/site-hyper/plugins/revolution/css/navigation-skins/gyges.css`"
+    },
+    {
+      "id": "hyperware-file-web-site-hyper-plugins-revolution-css-navigation-skins-hades-css",
+      "label": "hades.css",
+      "parent": "hyperware-grp-web-site-hyper-plugins-revolution-css-navigation-skins-files-a-c-d-e-g-h-m-p",
+      "layer": "file",
+      "category": "frontend",
+      "categoryLabel": "Frontend",
+      "color": "#eab308",
+      "size": 0.85,
+      "file": "web/site-hyper/plugins/revolution/css/navigation-skins/hades.css",
+      "description": "Código-fonte: `web/site-hyper/plugins/revolution/css/navigation-skins/hades.css`"
+    },
+    {
+      "id": "hyperware-file-web-site-hyper-plugins-revolution-css-navigation-skins-hebe-css",
+      "label": "hebe.css",
+      "parent": "hyperware-grp-web-site-hyper-plugins-revolution-css-navigation-skins-files-a-c-d-e-g-h-m-p",
+      "layer": "file",
+      "category": "frontend",
+      "categoryLabel": "Frontend",
+      "color": "#eab308",
+      "size": 0.85,
+      "file": "web/site-hyper/plugins/revolution/css/navigation-skins/hebe.css",
+      "description": "Código-fonte: `web/site-hyper/plugins/revolution/css/navigation-skins/hebe.css`"
+    },
+    {
+      "id": "hyperware-file-web-site-hyper-plugins-revolution-css-navigation-skins-hephaistos-css",
+      "label": "hephaistos.css",
+      "parent": "hyperware-grp-web-site-hyper-plugins-revolution-css-navigation-skins-files-a-c-d-e-g-h-m-p",
+      "layer": "file",
+      "category": "frontend",
+      "categoryLabel": "Frontend",
+      "color": "#eab308",
+      "size": 0.85,
+      "file": "web/site-hyper/plugins/revolution/css/navigation-skins/hephaistos.css",
+      "description": "Código-fonte: `web/site-hyper/plugins/revolution/css/navigation-skins/hephaistos.css`"
+    },
+    {
+      "id": "hyperware-file-web-site-hyper-plugins-revolution-css-navigation-skins-hermes-css",
+      "label": "hermes.css",
+      "parent": "hyperware-grp-web-site-hyper-plugins-revolution-css-navigation-skins-files-a-c-d-e-g-h-m-p",
+      "layer": "file",
+      "category": "frontend",
+      "categoryLabel": "Frontend",
+      "color": "#eab308",
+      "size": 0.85,
+      "file": "web/site-hyper/plugins/revolution/css/navigation-skins/hermes.css",
+      "description": "Código-fonte: `web/site-hyper/plugins/revolution/css/navigation-skins/hermes.css`"
+    },
+    {
+      "id": "hyperware-file-web-site-hyper-plugins-revolution-css-navigation-skins-hesperiden-css",
+      "label": "hesperiden.css",
+      "parent": "hyperware-grp-web-site-hyper-plugins-revolution-css-navigation-skins-files-a-c-d-e-g-h-m-p",
+      "layer": "file",
+      "category": "frontend",
+      "categoryLabel": "Frontend",
+      "color": "#eab308",
+      "size": 0.85,
+      "file": "web/site-hyper/plugins/revolution/css/navigation-skins/hesperiden.css",
+      "description": "Código-fonte: `web/site-hyper/plugins/revolution/css/navigation-skins/hesperiden.css`"
+    },
+    {
+      "id": "hyperware-file-web-site-hyper-plugins-revolution-css-navigation-skins-metis-css",
+      "label": "metis.css",
+      "parent": "hyperware-grp-web-site-hyper-plugins-revolution-css-navigation-skins-files-a-c-d-e-g-h-m-p",
+      "layer": "file",
+      "category": "frontend",
+      "categoryLabel": "Frontend",
+      "color": "#eab308",
+      "size": 0.85,
+      "file": "web/site-hyper/plugins/revolution/css/navigation-skins/metis.css",
+      "description": "Código-fonte: `web/site-hyper/plugins/revolution/css/navigation-skins/metis.css`"
+    },
+    {
+      "id": "hyperware-file-web-site-hyper-plugins-revolution-css-navigation-skins-persephone-css",
+      "label": "persephone.css",
+      "parent": "hyperware-grp-web-site-hyper-plugins-revolution-css-navigation-skins-files-a-c-d-e-g-h-m-p",
+      "layer": "file",
+      "category": "frontend",
+      "categoryLabel": "Frontend",
+      "color": "#eab308",
+      "size": 0.85,
+      "file": "web/site-hyper/plugins/revolution/css/navigation-skins/persephone.css",
+      "description": "Código-fonte: `web/site-hyper/plugins/revolution/css/navigation-skins/persephone.css`"
+    },
+    {
+      "id": "hyperware-file-web-site-hyper-plugins-revolution-css-navigation-skins-uranus-css",
+      "label": "uranus.css",
+      "parent": "hyperware-grp-web-site-hyper-plugins-revolution-css-navigation-skins-files-u-z",
+      "layer": "file",
+      "category": "frontend",
+      "categoryLabel": "Frontend",
+      "color": "#eab308",
+      "size": 0.85,
+      "file": "web/site-hyper/plugins/revolution/css/navigation-skins/uranus.css",
+      "description": "Código-fonte: `web/site-hyper/plugins/revolution/css/navigation-skins/uranus.css`"
+    },
+    {
+      "id": "hyperware-file-web-site-hyper-plugins-revolution-css-navigation-skins-zeus-css",
+      "label": "zeus.css",
+      "parent": "hyperware-grp-web-site-hyper-plugins-revolution-css-navigation-skins-files-u-z",
+      "layer": "file",
+      "category": "frontend",
+      "categoryLabel": "Frontend",
+      "color": "#eab308",
+      "size": 0.85,
+      "file": "web/site-hyper/plugins/revolution/css/navigation-skins/zeus.css",
+      "description": "Código-fonte: `web/site-hyper/plugins/revolution/css/navigation-skins/zeus.css`"
+    },
+    {
+      "id": "hyperware-file-web-site-hyper-plugins-revolution-fonts-index-php",
+      "label": "index.php",
+      "parent": "hyperware-dir-web-site-hyper-plugins-revolution-fonts",
+      "layer": "file",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 0.85,
+      "file": "web/site-hyper/plugins/revolution/fonts/index.php",
+      "description": "Código-fonte: `web/site-hyper/plugins/revolution/fonts/index.php`"
+    },
+    {
+      "id": "hyperware-file-web-site-hyper-plugins-revolution-fonts-font-awesome-index-php",
+      "label": "index.php",
+      "parent": "hyperware-dir-web-site-hyper-plugins-revolution-fonts-font-awesome",
+      "layer": "file",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 0.85,
+      "file": "web/site-hyper/plugins/revolution/fonts/font-awesome/index.php",
+      "description": "Código-fonte: `web/site-hyper/plugins/revolution/fonts/font-awesome/index.php`"
+    },
+    {
+      "id": "hyperware-file-web-site-hyper-plugins-revolution-fonts-font-awesome-css-font-awesome-css",
+      "label": "font-awesome.css",
+      "parent": "hyperware-dir-web-site-hyper-plugins-revolution-fonts-font-awesome-css",
+      "layer": "file",
+      "category": "frontend",
+      "categoryLabel": "Frontend",
+      "color": "#eab308",
+      "size": 0.85,
+      "file": "web/site-hyper/plugins/revolution/fonts/font-awesome/css/font-awesome.css",
+      "description": "Código-fonte: `web/site-hyper/plugins/revolution/fonts/font-awesome/css/font-awesome.css`"
+    },
+    {
+      "id": "hyperware-file-web-site-hyper-plugins-revolution-fonts-font-awesome-css-font-awesome-min-css",
+      "label": "font-awesome.min.css",
+      "parent": "hyperware-dir-web-site-hyper-plugins-revolution-fonts-font-awesome-css",
+      "layer": "file",
+      "category": "frontend",
+      "categoryLabel": "Frontend",
+      "color": "#eab308",
+      "size": 0.85,
+      "file": "web/site-hyper/plugins/revolution/fonts/font-awesome/css/font-awesome.min.css",
+      "description": "Código-fonte: `web/site-hyper/plugins/revolution/fonts/font-awesome/css/font-awesome.min.css`"
+    },
+    {
+      "id": "hyperware-file-web-site-hyper-plugins-revolution-fonts-pe-icon-7-stroke-index-php",
+      "label": "index.php",
+      "parent": "hyperware-dir-web-site-hyper-plugins-revolution-fonts-pe-icon-7-stroke",
+      "layer": "file",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 0.85,
+      "file": "web/site-hyper/plugins/revolution/fonts/pe-icon-7-stroke/index.php",
+      "description": "Código-fonte: `web/site-hyper/plugins/revolution/fonts/pe-icon-7-stroke/index.php`"
+    },
+    {
+      "id": "hyperware-file-web-site-hyper-plugins-revolution-fonts-pe-icon-7-stroke-css-helper-css",
+      "label": "helper.css",
+      "parent": "hyperware-dir-web-site-hyper-plugins-revolution-fonts-pe-icon-7-stroke-css",
+      "layer": "file",
+      "category": "frontend",
+      "categoryLabel": "Frontend",
+      "color": "#eab308",
+      "size": 0.85,
+      "file": "web/site-hyper/plugins/revolution/fonts/pe-icon-7-stroke/css/helper.css",
+      "description": "Código-fonte: `web/site-hyper/plugins/revolution/fonts/pe-icon-7-stroke/css/helper.css`"
+    },
+    {
+      "id": "hyperware-file-web-site-hyper-plugins-revolution-fonts-pe-icon-7-stroke-css-index-php",
+      "label": "index.php",
+      "parent": "hyperware-dir-web-site-hyper-plugins-revolution-fonts-pe-icon-7-stroke-css",
+      "layer": "file",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 0.85,
+      "file": "web/site-hyper/plugins/revolution/fonts/pe-icon-7-stroke/css/index.php",
+      "description": "Código-fonte: `web/site-hyper/plugins/revolution/fonts/pe-icon-7-stroke/css/index.php`"
+    },
+    {
+      "id": "hyperware-file-web-site-hyper-plugins-revolution-fonts-pe-icon-7-stroke-css-pe-icon-7-stroke-cs",
+      "label": "pe-icon-7-stroke.css",
+      "parent": "hyperware-dir-web-site-hyper-plugins-revolution-fonts-pe-icon-7-stroke-css",
+      "layer": "file",
+      "category": "frontend",
+      "categoryLabel": "Frontend",
+      "color": "#eab308",
+      "size": 0.85,
+      "file": "web/site-hyper/plugins/revolution/fonts/pe-icon-7-stroke/css/pe-icon-7-stroke.css",
+      "description": "Código-fonte: `web/site-hyper/plugins/revolution/fonts/pe-icon-7-stroke/css/pe-icon-7-stroke.css`"
+    },
+    {
+      "id": "hyperware-file-web-site-hyper-plugins-revolution-fonts-pe-icon-7-stroke-fonts-index-php",
+      "label": "index.php",
+      "parent": "hyperware-dir-web-site-hyper-plugins-revolution-fonts-pe-icon-7-stroke-fonts",
+      "layer": "file",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 0.85,
+      "file": "web/site-hyper/plugins/revolution/fonts/pe-icon-7-stroke/fonts/index.php",
+      "description": "Código-fonte: `web/site-hyper/plugins/revolution/fonts/pe-icon-7-stroke/fonts/index.php`"
+    },
+    {
+      "id": "hyperware-file-web-site-hyper-plugins-revolution-fonts-revicons-index-php",
+      "label": "index.php",
+      "parent": "hyperware-dir-web-site-hyper-plugins-revolution-fonts-revicons",
+      "layer": "file",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 0.85,
+      "file": "web/site-hyper/plugins/revolution/fonts/revicons/index.php",
+      "description": "Código-fonte: `web/site-hyper/plugins/revolution/fonts/revicons/index.php`"
+    },
+    {
+      "id": "hyperware-file-web-site-hyper-plugins-revolution-js-index-php",
+      "label": "index.php",
+      "parent": "hyperware-dir-web-site-hyper-plugins-revolution-js",
+      "layer": "file",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 0.85,
+      "file": "web/site-hyper/plugins/revolution/js/index.php",
+      "description": "Código-fonte: `web/site-hyper/plugins/revolution/js/index.php`"
+    },
+    {
+      "id": "hyperware-file-web-site-hyper-plugins-revolution-js-jquery-themepunch-enablelog-js",
+      "label": "jquery.themepunch.enablelog.js",
+      "parent": "hyperware-dir-web-site-hyper-plugins-revolution-js",
+      "layer": "file",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 0.85,
+      "file": "web/site-hyper/plugins/revolution/js/jquery.themepunch.enablelog.js",
+      "description": "Código-fonte: `web/site-hyper/plugins/revolution/js/jquery.themepunch.enablelog.js`"
+    },
+    {
+      "id": "hyperware-file-web-site-hyper-plugins-revolution-js-jquery-themepunch-revolution-min-js",
+      "label": "jquery.themepunch.revolution.min.js",
+      "parent": "hyperware-dir-web-site-hyper-plugins-revolution-js",
+      "layer": "file",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 0.85,
+      "file": "web/site-hyper/plugins/revolution/js/jquery.themepunch.revolution.min.js",
+      "description": "Código-fonte: `web/site-hyper/plugins/revolution/js/jquery.themepunch.revolution.min.js`"
+    },
+    {
+      "id": "hyperware-file-web-site-hyper-plugins-revolution-js-jquery-themepunch-tools-min-js",
+      "label": "jquery.themepunch.tools.min.js",
+      "parent": "hyperware-dir-web-site-hyper-plugins-revolution-js",
+      "layer": "file",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 0.85,
+      "file": "web/site-hyper/plugins/revolution/js/jquery.themepunch.tools.min.js",
+      "description": "Código-fonte: `web/site-hyper/plugins/revolution/js/jquery.themepunch.tools.min.js`"
+    },
+    {
+      "id": "hyperware-file-web-site-hyper-plugins-revolution-js-tp-color-picker-min-js",
+      "label": "tp-color-picker.min.js",
+      "parent": "hyperware-dir-web-site-hyper-plugins-revolution-js",
+      "layer": "file",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 0.85,
+      "file": "web/site-hyper/plugins/revolution/js/tp-color-picker.min.js",
+      "description": "Código-fonte: `web/site-hyper/plugins/revolution/js/tp-color-picker.min.js`"
+    },
+    {
+      "id": "hyperware-file-web-site-hyper-plugins-revolution-js-extensions-index-php",
+      "label": "index.php",
+      "parent": "hyperware-dir-web-site-hyper-plugins-revolution-js-extensions",
+      "layer": "file",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 0.85,
+      "file": "web/site-hyper/plugins/revolution/js/extensions/index.php",
+      "description": "Código-fonte: `web/site-hyper/plugins/revolution/js/extensions/index.php`"
+    },
+    {
+      "id": "hyperware-file-web-site-hyper-plugins-revolution-js-extensions-revolution-extension-actions-min",
+      "label": "revolution.extension.actions.min.js",
+      "parent": "hyperware-dir-web-site-hyper-plugins-revolution-js-extensions",
+      "layer": "file",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 0.85,
+      "file": "web/site-hyper/plugins/revolution/js/extensions/revolution.extension.actions.min.js",
+      "description": "Código-fonte: `web/site-hyper/plugins/revolution/js/extensions/revolution.extension.actions.min.js`"
+    },
+    {
+      "id": "hyperware-file-web-site-hyper-plugins-revolution-js-extensions-revolution-extension-carousel-mi",
+      "label": "revolution.extension.carousel.min.js",
+      "parent": "hyperware-dir-web-site-hyper-plugins-revolution-js-extensions",
+      "layer": "file",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 0.85,
+      "file": "web/site-hyper/plugins/revolution/js/extensions/revolution.extension.carousel.min.js",
+      "description": "Código-fonte: `web/site-hyper/plugins/revolution/js/extensions/revolution.extension.carousel.min.js`"
+    },
+    {
+      "id": "hyperware-file-web-site-hyper-plugins-revolution-js-extensions-revolution-extension-kenburn-min",
+      "label": "revolution.extension.kenburn.min.js",
+      "parent": "hyperware-dir-web-site-hyper-plugins-revolution-js-extensions",
+      "layer": "file",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 0.85,
+      "file": "web/site-hyper/plugins/revolution/js/extensions/revolution.extension.kenburn.min.js",
+      "description": "Código-fonte: `web/site-hyper/plugins/revolution/js/extensions/revolution.extension.kenburn.min.js`"
+    },
+    {
+      "id": "hyperware-file-web-site-hyper-plugins-revolution-js-extensions-revolution-extension-layeranimat",
+      "label": "revolution.extension.layeranimation.min.js",
+      "parent": "hyperware-dir-web-site-hyper-plugins-revolution-js-extensions",
+      "layer": "file",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 0.85,
+      "file": "web/site-hyper/plugins/revolution/js/extensions/revolution.extension.layeranimation.min.js",
+      "description": "Código-fonte: `web/site-hyper/plugins/revolution/js/extensions/revolution.extension.layeranimation.min.js`"
+    },
+    {
+      "id": "hyperware-file-web-site-hyper-plugins-revolution-js-extensions-revolution-extension-migration-m",
+      "label": "revolution.extension.migration.min.js",
+      "parent": "hyperware-dir-web-site-hyper-plugins-revolution-js-extensions",
+      "layer": "file",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 0.85,
+      "file": "web/site-hyper/plugins/revolution/js/extensions/revolution.extension.migration.min.js",
+      "description": "Código-fonte: `web/site-hyper/plugins/revolution/js/extensions/revolution.extension.migration.min.js`"
+    },
+    {
+      "id": "hyperware-file-web-site-hyper-plugins-revolution-js-extensions-revolution-extension-navigation-",
+      "label": "revolution.extension.navigation.min.js",
+      "parent": "hyperware-dir-web-site-hyper-plugins-revolution-js-extensions",
+      "layer": "file",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 0.85,
+      "file": "web/site-hyper/plugins/revolution/js/extensions/revolution.extension.navigation.min.js",
+      "description": "Código-fonte: `web/site-hyper/plugins/revolution/js/extensions/revolution.extension.navigation.min.js`"
+    },
+    {
+      "id": "hyperware-file-web-site-hyper-plugins-revolution-js-extensions-revolution-extension-parallax-mi",
+      "label": "revolution.extension.parallax.min.js",
+      "parent": "hyperware-dir-web-site-hyper-plugins-revolution-js-extensions",
+      "layer": "file",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 0.85,
+      "file": "web/site-hyper/plugins/revolution/js/extensions/revolution.extension.parallax.min.js",
+      "description": "Código-fonte: `web/site-hyper/plugins/revolution/js/extensions/revolution.extension.parallax.min.js`"
+    },
+    {
+      "id": "hyperware-file-web-site-hyper-plugins-revolution-js-extensions-revolution-extension-slideanims-",
+      "label": "revolution.extension.slideanims.min.js",
+      "parent": "hyperware-dir-web-site-hyper-plugins-revolution-js-extensions",
+      "layer": "file",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 0.85,
+      "file": "web/site-hyper/plugins/revolution/js/extensions/revolution.extension.slideanims.min.js",
+      "description": "Código-fonte: `web/site-hyper/plugins/revolution/js/extensions/revolution.extension.slideanims.min.js`"
+    },
+    {
+      "id": "hyperware-file-web-site-hyper-plugins-revolution-js-extensions-revolution-extension-video-min-j",
+      "label": "revolution.extension.video.min.js",
+      "parent": "hyperware-dir-web-site-hyper-plugins-revolution-js-extensions",
+      "layer": "file",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 0.85,
+      "file": "web/site-hyper/plugins/revolution/js/extensions/revolution.extension.video.min.js",
+      "description": "Código-fonte: `web/site-hyper/plugins/revolution/js/extensions/revolution.extension.video.min.js`"
+    },
+    {
+      "id": "hyperware-file-web-site-hyper-plugins-revolution-js-extensions-source-index-php",
+      "label": "index.php",
+      "parent": "hyperware-dir-web-site-hyper-plugins-revolution-js-extensions-source",
+      "layer": "file",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 0.85,
+      "file": "web/site-hyper/plugins/revolution/js/extensions/source/index.php",
+      "description": "Código-fonte: `web/site-hyper/plugins/revolution/js/extensions/source/index.php`"
+    },
+    {
+      "id": "hyperware-file-web-site-hyper-plugins-revolution-js-extensions-source-revolution-extension-acti",
+      "label": "revolution.extension.actions.js",
+      "parent": "hyperware-dir-web-site-hyper-plugins-revolution-js-extensions-source",
+      "layer": "file",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 0.85,
+      "file": "web/site-hyper/plugins/revolution/js/extensions/source/revolution.extension.actions.js",
+      "description": "Código-fonte: `web/site-hyper/plugins/revolution/js/extensions/source/revolution.extension.actions.js`"
+    },
+    {
+      "id": "hyperware-file-web-site-hyper-plugins-revolution-js-extensions-source-revolution-extension-caro",
+      "label": "revolution.extension.carousel.js",
+      "parent": "hyperware-dir-web-site-hyper-plugins-revolution-js-extensions-source",
+      "layer": "file",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 0.85,
+      "file": "web/site-hyper/plugins/revolution/js/extensions/source/revolution.extension.carousel.js",
+      "description": "Código-fonte: `web/site-hyper/plugins/revolution/js/extensions/source/revolution.extension.carousel.js`"
+    },
+    {
+      "id": "hyperware-file-web-site-hyper-plugins-revolution-js-extensions-source-revolution-extension-kenb",
+      "label": "revolution.extension.kenburn.js",
+      "parent": "hyperware-dir-web-site-hyper-plugins-revolution-js-extensions-source",
+      "layer": "file",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 0.85,
+      "file": "web/site-hyper/plugins/revolution/js/extensions/source/revolution.extension.kenburn.js",
+      "description": "Código-fonte: `web/site-hyper/plugins/revolution/js/extensions/source/revolution.extension.kenburn.js`"
+    },
+    {
+      "id": "hyperware-file-web-site-hyper-plugins-revolution-js-extensions-source-revolution-extension-laye",
+      "label": "revolution.extension.layeranimation.js",
+      "parent": "hyperware-dir-web-site-hyper-plugins-revolution-js-extensions-source",
+      "layer": "file",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 0.85,
+      "file": "web/site-hyper/plugins/revolution/js/extensions/source/revolution.extension.layeranimation.js",
+      "description": "Código-fonte: `web/site-hyper/plugins/revolution/js/extensions/source/revolution.extension.layeranimation.js`"
+    },
+    {
+      "id": "hyperware-file-web-site-hyper-plugins-revolution-js-extensions-source-revolution-extension-migr",
+      "label": "revolution.extension.migration.js",
+      "parent": "hyperware-dir-web-site-hyper-plugins-revolution-js-extensions-source",
+      "layer": "file",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 0.85,
+      "file": "web/site-hyper/plugins/revolution/js/extensions/source/revolution.extension.migration.js",
+      "description": "Código-fonte: `web/site-hyper/plugins/revolution/js/extensions/source/revolution.extension.migration.js`"
+    },
+    {
+      "id": "hyperware-file-web-site-hyper-plugins-revolution-js-extensions-source-revolution-extension-navi",
+      "label": "revolution.extension.navigation.js",
+      "parent": "hyperware-dir-web-site-hyper-plugins-revolution-js-extensions-source",
+      "layer": "file",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 0.85,
+      "file": "web/site-hyper/plugins/revolution/js/extensions/source/revolution.extension.navigation.js",
+      "description": "Código-fonte: `web/site-hyper/plugins/revolution/js/extensions/source/revolution.extension.navigation.js`"
+    },
+    {
+      "id": "hyperware-file-web-site-hyper-plugins-revolution-js-extensions-source-revolution-extension-para",
+      "label": "revolution.extension.parallax.js",
+      "parent": "hyperware-dir-web-site-hyper-plugins-revolution-js-extensions-source",
+      "layer": "file",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 0.85,
+      "file": "web/site-hyper/plugins/revolution/js/extensions/source/revolution.extension.parallax.js",
+      "description": "Código-fonte: `web/site-hyper/plugins/revolution/js/extensions/source/revolution.extension.parallax.js`"
+    },
+    {
+      "id": "hyperware-file-web-site-hyper-plugins-revolution-js-extensions-source-revolution-extension-slid",
+      "label": "revolution.extension.slideanims.js",
+      "parent": "hyperware-dir-web-site-hyper-plugins-revolution-js-extensions-source",
+      "layer": "file",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 0.85,
+      "file": "web/site-hyper/plugins/revolution/js/extensions/source/revolution.extension.slideanims.js",
+      "description": "Código-fonte: `web/site-hyper/plugins/revolution/js/extensions/source/revolution.extension.slideanims.js`"
+    },
+    {
+      "id": "hyperware-file-web-site-hyper-plugins-revolution-js-extensions-source-revolution-extension-vide",
+      "label": "revolution.extension.video.js",
+      "parent": "hyperware-dir-web-site-hyper-plugins-revolution-js-extensions-source",
+      "layer": "file",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 0.85,
+      "file": "web/site-hyper/plugins/revolution/js/extensions/source/revolution.extension.video.js",
+      "description": "Código-fonte: `web/site-hyper/plugins/revolution/js/extensions/source/revolution.extension.video.js`"
+    },
+    {
+      "id": "hyperware-file-web-site-hyper-plugins-revolution-js-source-index-php",
+      "label": "index.php",
+      "parent": "hyperware-dir-web-site-hyper-plugins-revolution-js-source",
+      "layer": "file",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 0.85,
+      "file": "web/site-hyper/plugins/revolution/js/source/index.php",
+      "description": "Código-fonte: `web/site-hyper/plugins/revolution/js/source/index.php`"
+    },
+    {
+      "id": "hyperware-file-web-site-hyper-plugins-revolution-js-source-jquery-themepunch-enablelog-js",
+      "label": "jquery.themepunch.enablelog.js",
+      "parent": "hyperware-dir-web-site-hyper-plugins-revolution-js-source",
+      "layer": "file",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 0.85,
+      "file": "web/site-hyper/plugins/revolution/js/source/jquery.themepunch.enablelog.js",
+      "description": "Código-fonte: `web/site-hyper/plugins/revolution/js/source/jquery.themepunch.enablelog.js`"
+    },
+    {
+      "id": "hyperware-file-web-site-hyper-plugins-revolution-js-source-jquery-themepunch-revolution-js",
+      "label": "jquery.themepunch.revolution.js",
+      "parent": "hyperware-dir-web-site-hyper-plugins-revolution-js-source",
+      "layer": "file",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 0.85,
+      "file": "web/site-hyper/plugins/revolution/js/source/jquery.themepunch.revolution.js",
+      "description": "Código-fonte: `web/site-hyper/plugins/revolution/js/source/jquery.themepunch.revolution.js`"
+    },
+    {
+      "id": "hyperware-file-web-site-hyper-plugins-revolution-js-source-jquery-themepunch-tools-min-js",
+      "label": "jquery.themepunch.tools.min.js",
+      "parent": "hyperware-dir-web-site-hyper-plugins-revolution-js-source",
+      "layer": "file",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 0.85,
+      "file": "web/site-hyper/plugins/revolution/js/source/jquery.themepunch.tools.min.js",
+      "description": "Código-fonte: `web/site-hyper/plugins/revolution/js/source/jquery.themepunch.tools.min.js`"
+    },
+    {
+      "id": "hyperware-file-web-site-hyper-plugins-revolution-js-source-tp-color-picker-js",
+      "label": "tp-color-picker.js",
+      "parent": "hyperware-dir-web-site-hyper-plugins-revolution-js-source",
+      "layer": "file",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 0.85,
+      "file": "web/site-hyper/plugins/revolution/js/source/tp-color-picker.js",
+      "description": "Código-fonte: `web/site-hyper/plugins/revolution/js/source/tp-color-picker.js`"
+    },
+    {
+      "id": "hyperware-file-web-site-hyper-plugins-revolution-php-facebook-class-facebook-php",
+      "label": "class-facebook.php",
+      "parent": "hyperware-dir-web-site-hyper-plugins-revolution-php-facebook",
+      "layer": "file",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 0.85,
+      "file": "web/site-hyper/plugins/revolution/php/facebook/class-facebook.php",
+      "description": "Código-fonte: `web/site-hyper/plugins/revolution/php/facebook/class-facebook.php`"
+    },
+    {
+      "id": "hyperware-file-web-site-hyper-plugins-revolution-php-flickr-class-flickr-php",
+      "label": "class-flickr.php",
+      "parent": "hyperware-dir-web-site-hyper-plugins-revolution-php-flickr",
+      "layer": "file",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 0.85,
+      "file": "web/site-hyper/plugins/revolution/php/flickr/class-flickr.php",
+      "description": "Código-fonte: `web/site-hyper/plugins/revolution/php/flickr/class-flickr.php`"
+    },
+    {
+      "id": "hyperware-file-web-site-hyper-plugins-revolution-php-instagram-class-instagram-php",
+      "label": "class-instagram.php",
+      "parent": "hyperware-dir-web-site-hyper-plugins-revolution-php-instagram",
+      "layer": "file",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 0.85,
+      "file": "web/site-hyper/plugins/revolution/php/instagram/class-instagram.php",
+      "description": "Código-fonte: `web/site-hyper/plugins/revolution/php/instagram/class-instagram.php`"
+    },
+    {
+      "id": "hyperware-file-web-site-hyper-plugins-revolution-php-twitter-class-twitter-php",
+      "label": "class-twitter.php",
+      "parent": "hyperware-dir-web-site-hyper-plugins-revolution-php-twitter",
+      "layer": "file",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 0.85,
+      "file": "web/site-hyper/plugins/revolution/php/twitter/class-twitter.php",
+      "description": "Código-fonte: `web/site-hyper/plugins/revolution/php/twitter/class-twitter.php`"
+    },
+    {
+      "id": "hyperware-file-web-site-hyper-plugins-revolution-php-twitter-restapi-php",
+      "label": "RestApi.php",
+      "parent": "hyperware-dir-web-site-hyper-plugins-revolution-php-twitter",
+      "layer": "file",
+      "category": "network",
+      "categoryLabel": "Rede / Scan",
+      "color": "#22d3ee",
+      "size": 0.85,
+      "file": "web/site-hyper/plugins/revolution/php/twitter/RestApi.php",
+      "description": "Código-fonte: `web/site-hyper/plugins/revolution/php/twitter/RestApi.php`"
+    },
+    {
+      "id": "hyperware-file-web-site-hyper-plugins-revolution-php-twitter-connection-application-php",
+      "label": "Application.php",
+      "parent": "hyperware-dir-web-site-hyper-plugins-revolution-php-twitter-connection",
+      "layer": "file",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 0.85,
+      "file": "web/site-hyper/plugins/revolution/php/twitter/connection/Application.php",
+      "description": "Código-fonte: `web/site-hyper/plugins/revolution/php/twitter/connection/Application.php`"
+    },
+    {
+      "id": "hyperware-file-web-site-hyper-plugins-revolution-php-twitter-connection-connectionabstract-php",
+      "label": "ConnectionAbstract.php",
+      "parent": "hyperware-dir-web-site-hyper-plugins-revolution-php-twitter-connection",
+      "layer": "file",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 0.85,
+      "file": "web/site-hyper/plugins/revolution/php/twitter/connection/ConnectionAbstract.php",
+      "description": "Código-fonte: `web/site-hyper/plugins/revolution/php/twitter/connection/ConnectionAbstract.php`"
+    },
+    {
+      "id": "hyperware-file-web-site-hyper-plugins-revolution-php-twitter-connection-user-php",
+      "label": "User.php",
+      "parent": "hyperware-dir-web-site-hyper-plugins-revolution-php-twitter-connection",
+      "layer": "file",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 0.85,
+      "file": "web/site-hyper/plugins/revolution/php/twitter/connection/User.php",
+      "description": "Código-fonte: `web/site-hyper/plugins/revolution/php/twitter/connection/User.php`"
+    },
+    {
+      "id": "hyperware-file-web-site-hyper-plugins-revolution-php-vimeo-class-vimeo-php",
+      "label": "class-vimeo.php",
+      "parent": "hyperware-dir-web-site-hyper-plugins-revolution-php-vimeo",
+      "layer": "file",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 0.85,
+      "file": "web/site-hyper/plugins/revolution/php/vimeo/class-vimeo.php",
+      "description": "Código-fonte: `web/site-hyper/plugins/revolution/php/vimeo/class-vimeo.php`"
+    },
+    {
+      "id": "hyperware-file-web-site-hyper-plugins-revolution-php-youtube-class-youtube-php",
+      "label": "class-youtube.php",
+      "parent": "hyperware-dir-web-site-hyper-plugins-revolution-php-youtube",
+      "layer": "file",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 0.85,
+      "file": "web/site-hyper/plugins/revolution/php/youtube/class-youtube.php",
+      "description": "Código-fonte: `web/site-hyper/plugins/revolution/php/youtube/class-youtube.php`"
+    },
+    {
+      "id": "hyperware-grp-web-stats-files-a-1-12",
+      "label": "Arquivos A (1–12)",
+      "parent": "hyperware-dir-web-stats",
+      "layer": "module",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 1.35,
+      "file": "web/stats/[files-a-1-12]",
+      "description": "Grupo de arquivos em `web/stats/` — Arquivos A (1–12)"
+    },
+    {
+      "id": "hyperware-grp-web-stats-files-a-13-23",
+      "label": "Arquivos A (13–23)",
+      "parent": "hyperware-dir-web-stats",
+      "layer": "module",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 1.35,
+      "file": "web/stats/[files-a-13-23]",
+      "description": "Grupo de arquivos em `web/stats/` — Arquivos A (13–23)"
+    },
+    {
+      "id": "hyperware-grp-web-stats-files-i",
+      "label": "Arquivos I",
+      "parent": "hyperware-dir-web-stats",
+      "layer": "module",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 1.35,
+      "file": "web/stats/[files-i]",
+      "description": "Grupo de arquivos em `web/stats/` — Arquivos I"
+    },
+    {
+      "id": "hyperware-file-web-stats-awsindex-html",
+      "label": "awsindex.html",
+      "parent": "hyperware-grp-web-stats-files-a-1-12",
+      "layer": "file",
+      "category": "frontend",
+      "categoryLabel": "Frontend",
+      "color": "#eab308",
+      "size": 0.85,
+      "file": "web/stats/awsindex.html",
+      "description": "Código-fonte: `web/stats/awsindex.html`"
+    },
+    {
+      "id": "hyperware-file-web-stats-awstats-hyperware-com-br-alldomains-html",
+      "label": "awstats.hyperware.com.br.alldomains.html",
+      "parent": "hyperware-grp-web-stats-files-a-1-12",
+      "layer": "file",
+      "category": "frontend",
+      "categoryLabel": "Frontend",
+      "color": "#eab308",
+      "size": 0.85,
+      "file": "web/stats/awstats.hyperware.com.br.alldomains.html",
+      "description": "Código-fonte: `web/stats/awstats.hyperware.com.br.alldomains.html`"
+    },
+    {
+      "id": "hyperware-file-web-stats-awstats-hyperware-com-br-allhosts-html",
+      "label": "awstats.hyperware.com.br.allhosts.html",
+      "parent": "hyperware-grp-web-stats-files-a-1-12",
+      "layer": "file",
+      "category": "frontend",
+      "categoryLabel": "Frontend",
+      "color": "#eab308",
+      "size": 0.85,
+      "file": "web/stats/awstats.hyperware.com.br.allhosts.html",
+      "description": "Código-fonte: `web/stats/awstats.hyperware.com.br.allhosts.html`"
+    },
+    {
+      "id": "hyperware-file-web-stats-awstats-hyperware-com-br-allrobots-html",
+      "label": "awstats.hyperware.com.br.allrobots.html",
+      "parent": "hyperware-grp-web-stats-files-a-1-12",
+      "layer": "file",
+      "category": "frontend",
+      "categoryLabel": "Frontend",
+      "color": "#eab308",
+      "size": 0.85,
+      "file": "web/stats/awstats.hyperware.com.br.allrobots.html",
+      "description": "Código-fonte: `web/stats/awstats.hyperware.com.br.allrobots.html`"
+    },
+    {
+      "id": "hyperware-file-web-stats-awstats-hyperware-com-br-browserdetail-html",
+      "label": "awstats.hyperware.com.br.browserdetail.html",
+      "parent": "hyperware-grp-web-stats-files-a-1-12",
+      "layer": "file",
+      "category": "frontend",
+      "categoryLabel": "Frontend",
+      "color": "#eab308",
+      "size": 0.85,
+      "file": "web/stats/awstats.hyperware.com.br.browserdetail.html",
+      "description": "Código-fonte: `web/stats/awstats.hyperware.com.br.browserdetail.html`"
+    },
+    {
+      "id": "hyperware-file-web-stats-awstats-hyperware-com-br-downloads-html",
+      "label": "awstats.hyperware.com.br.downloads.html",
+      "parent": "hyperware-grp-web-stats-files-a-1-12",
+      "layer": "file",
+      "category": "frontend",
+      "categoryLabel": "Frontend",
+      "color": "#eab308",
+      "size": 0.85,
+      "file": "web/stats/awstats.hyperware.com.br.downloads.html",
+      "description": "Código-fonte: `web/stats/awstats.hyperware.com.br.downloads.html`"
+    },
+    {
+      "id": "hyperware-file-web-stats-awstats-hyperware-com-br-errors400-html",
+      "label": "awstats.hyperware.com.br.errors400.html",
+      "parent": "hyperware-grp-web-stats-files-a-1-12",
+      "layer": "file",
+      "category": "frontend",
+      "categoryLabel": "Frontend",
+      "color": "#eab308",
+      "size": 0.85,
+      "file": "web/stats/awstats.hyperware.com.br.errors400.html",
+      "description": "Código-fonte: `web/stats/awstats.hyperware.com.br.errors400.html`"
+    },
+    {
+      "id": "hyperware-file-web-stats-awstats-hyperware-com-br-errors403-html",
+      "label": "awstats.hyperware.com.br.errors403.html",
+      "parent": "hyperware-grp-web-stats-files-a-1-12",
+      "layer": "file",
+      "category": "frontend",
+      "categoryLabel": "Frontend",
+      "color": "#eab308",
+      "size": 0.85,
+      "file": "web/stats/awstats.hyperware.com.br.errors403.html",
+      "description": "Código-fonte: `web/stats/awstats.hyperware.com.br.errors403.html`"
+    },
+    {
+      "id": "hyperware-file-web-stats-awstats-hyperware-com-br-errors404-html",
+      "label": "awstats.hyperware.com.br.errors404.html",
+      "parent": "hyperware-grp-web-stats-files-a-1-12",
+      "layer": "file",
+      "category": "frontend",
+      "categoryLabel": "Frontend",
+      "color": "#eab308",
+      "size": 0.85,
+      "file": "web/stats/awstats.hyperware.com.br.errors404.html",
+      "description": "Código-fonte: `web/stats/awstats.hyperware.com.br.errors404.html`"
+    },
+    {
+      "id": "hyperware-file-web-stats-awstats-hyperware-com-br-keyphrases-html",
+      "label": "awstats.hyperware.com.br.keyphrases.html",
+      "parent": "hyperware-grp-web-stats-files-a-1-12",
+      "layer": "file",
+      "category": "frontend",
+      "categoryLabel": "Frontend",
+      "color": "#eab308",
+      "size": 0.85,
+      "file": "web/stats/awstats.hyperware.com.br.keyphrases.html",
+      "description": "Código-fonte: `web/stats/awstats.hyperware.com.br.keyphrases.html`"
+    },
+    {
+      "id": "hyperware-file-web-stats-awstats-hyperware-com-br-keywords-html",
+      "label": "awstats.hyperware.com.br.keywords.html",
+      "parent": "hyperware-grp-web-stats-files-a-1-12",
+      "layer": "file",
+      "category": "frontend",
+      "categoryLabel": "Frontend",
+      "color": "#eab308",
+      "size": 0.85,
+      "file": "web/stats/awstats.hyperware.com.br.keywords.html",
+      "description": "Código-fonte: `web/stats/awstats.hyperware.com.br.keywords.html`"
+    },
+    {
+      "id": "hyperware-file-web-stats-awstats-hyperware-com-br-lasthosts-html",
+      "label": "awstats.hyperware.com.br.lasthosts.html",
+      "parent": "hyperware-grp-web-stats-files-a-1-12",
+      "layer": "file",
+      "category": "frontend",
+      "categoryLabel": "Frontend",
+      "color": "#eab308",
+      "size": 0.85,
+      "file": "web/stats/awstats.hyperware.com.br.lasthosts.html",
+      "description": "Código-fonte: `web/stats/awstats.hyperware.com.br.lasthosts.html`"
+    },
+    {
+      "id": "hyperware-file-web-stats-awstats-hyperware-com-br-lastrobots-html",
+      "label": "awstats.hyperware.com.br.lastrobots.html",
+      "parent": "hyperware-grp-web-stats-files-a-13-23",
+      "layer": "file",
+      "category": "frontend",
+      "categoryLabel": "Frontend",
+      "color": "#eab308",
+      "size": 0.85,
+      "file": "web/stats/awstats.hyperware.com.br.lastrobots.html",
+      "description": "Código-fonte: `web/stats/awstats.hyperware.com.br.lastrobots.html`"
+    },
+    {
+      "id": "hyperware-file-web-stats-awstats-hyperware-com-br-osdetail-html",
+      "label": "awstats.hyperware.com.br.osdetail.html",
+      "parent": "hyperware-grp-web-stats-files-a-13-23",
+      "layer": "file",
+      "category": "frontend",
+      "categoryLabel": "Frontend",
+      "color": "#eab308",
+      "size": 0.85,
+      "file": "web/stats/awstats.hyperware.com.br.osdetail.html",
+      "description": "Código-fonte: `web/stats/awstats.hyperware.com.br.osdetail.html`"
+    },
+    {
+      "id": "hyperware-file-web-stats-awstats-hyperware-com-br-refererpages-html",
+      "label": "awstats.hyperware.com.br.refererpages.html",
+      "parent": "hyperware-grp-web-stats-files-a-13-23",
+      "layer": "file",
+      "category": "frontend",
+      "categoryLabel": "Frontend",
+      "color": "#eab308",
+      "size": 0.85,
+      "file": "web/stats/awstats.hyperware.com.br.refererpages.html",
+      "description": "Código-fonte: `web/stats/awstats.hyperware.com.br.refererpages.html`"
+    },
+    {
+      "id": "hyperware-file-web-stats-awstats-hyperware-com-br-refererse-html",
+      "label": "awstats.hyperware.com.br.refererse.html",
+      "parent": "hyperware-grp-web-stats-files-a-13-23",
+      "layer": "file",
+      "category": "frontend",
+      "categoryLabel": "Frontend",
+      "color": "#eab308",
+      "size": 0.85,
+      "file": "web/stats/awstats.hyperware.com.br.refererse.html",
+      "description": "Código-fonte: `web/stats/awstats.hyperware.com.br.refererse.html`"
+    },
+    {
+      "id": "hyperware-file-web-stats-awstats-hyperware-com-br-session-html",
+      "label": "awstats.hyperware.com.br.session.html",
+      "parent": "hyperware-grp-web-stats-files-a-13-23",
+      "layer": "file",
+      "category": "frontend",
+      "categoryLabel": "Frontend",
+      "color": "#eab308",
+      "size": 0.85,
+      "file": "web/stats/awstats.hyperware.com.br.session.html",
+      "description": "Código-fonte: `web/stats/awstats.hyperware.com.br.session.html`"
+    },
+    {
+      "id": "hyperware-file-web-stats-awstats-hyperware-com-br-unknownbrowser-html",
+      "label": "awstats.hyperware.com.br.unknownbrowser.html",
+      "parent": "hyperware-grp-web-stats-files-a-13-23",
+      "layer": "file",
+      "category": "frontend",
+      "categoryLabel": "Frontend",
+      "color": "#eab308",
+      "size": 0.85,
+      "file": "web/stats/awstats.hyperware.com.br.unknownbrowser.html",
+      "description": "Código-fonte: `web/stats/awstats.hyperware.com.br.unknownbrowser.html`"
+    },
+    {
+      "id": "hyperware-file-web-stats-awstats-hyperware-com-br-unknownip-html",
+      "label": "awstats.hyperware.com.br.unknownip.html",
+      "parent": "hyperware-grp-web-stats-files-a-13-23",
+      "layer": "file",
+      "category": "frontend",
+      "categoryLabel": "Frontend",
+      "color": "#eab308",
+      "size": 0.85,
+      "file": "web/stats/awstats.hyperware.com.br.unknownip.html",
+      "description": "Código-fonte: `web/stats/awstats.hyperware.com.br.unknownip.html`"
+    },
+    {
+      "id": "hyperware-file-web-stats-awstats-hyperware-com-br-unknownos-html",
+      "label": "awstats.hyperware.com.br.unknownos.html",
+      "parent": "hyperware-grp-web-stats-files-a-13-23",
+      "layer": "file",
+      "category": "frontend",
+      "categoryLabel": "Frontend",
+      "color": "#eab308",
+      "size": 0.85,
+      "file": "web/stats/awstats.hyperware.com.br.unknownos.html",
+      "description": "Código-fonte: `web/stats/awstats.hyperware.com.br.unknownos.html`"
+    },
+    {
+      "id": "hyperware-file-web-stats-awstats-hyperware-com-br-urldetail-html",
+      "label": "awstats.hyperware.com.br.urldetail.html",
+      "parent": "hyperware-grp-web-stats-files-a-13-23",
+      "layer": "file",
+      "category": "frontend",
+      "categoryLabel": "Frontend",
+      "color": "#eab308",
+      "size": 0.85,
+      "file": "web/stats/awstats.hyperware.com.br.urldetail.html",
+      "description": "Código-fonte: `web/stats/awstats.hyperware.com.br.urldetail.html`"
+    },
+    {
+      "id": "hyperware-file-web-stats-awstats-hyperware-com-br-urlentry-html",
+      "label": "awstats.hyperware.com.br.urlentry.html",
+      "parent": "hyperware-grp-web-stats-files-a-13-23",
+      "layer": "file",
+      "category": "frontend",
+      "categoryLabel": "Frontend",
+      "color": "#eab308",
+      "size": 0.85,
+      "file": "web/stats/awstats.hyperware.com.br.urlentry.html",
+      "description": "Código-fonte: `web/stats/awstats.hyperware.com.br.urlentry.html`"
+    },
+    {
+      "id": "hyperware-file-web-stats-awstats-hyperware-com-br-urlexit-html",
+      "label": "awstats.hyperware.com.br.urlexit.html",
+      "parent": "hyperware-grp-web-stats-files-a-13-23",
+      "layer": "file",
+      "category": "frontend",
+      "categoryLabel": "Frontend",
+      "color": "#eab308",
+      "size": 0.85,
+      "file": "web/stats/awstats.hyperware.com.br.urlexit.html",
+      "description": "Código-fonte: `web/stats/awstats.hyperware.com.br.urlexit.html`"
+    },
+    {
+      "id": "hyperware-file-web-stats-index-php",
+      "label": "index.php",
+      "parent": "hyperware-grp-web-stats-files-i",
+      "layer": "file",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 0.85,
+      "file": "web/stats/index.php",
+      "description": "Código-fonte: `web/stats/index.php`"
+    },
+    {
+      "id": "hyperware-grp-web-stats-2020-6-files-a-1-12",
+      "label": "Arquivos A (1–12)",
+      "parent": "hyperware-dir-web-stats-2020-6",
+      "layer": "module",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 1.35,
+      "file": "web/stats/2020-6/[files-a-1-12]",
+      "description": "Grupo de arquivos em `web/stats/2020-6/` — Arquivos A (1–12)"
+    },
+    {
+      "id": "hyperware-grp-web-stats-2020-6-files-a-13-23",
+      "label": "Arquivos A (13–23)",
+      "parent": "hyperware-dir-web-stats-2020-6",
+      "layer": "module",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 1.35,
+      "file": "web/stats/2020-6/[files-a-13-23]",
+      "description": "Grupo de arquivos em `web/stats/2020-6/` — Arquivos A (13–23)"
+    },
+    {
+      "id": "hyperware-file-web-stats-2020-6-awsindex-html",
+      "label": "awsindex.html",
+      "parent": "hyperware-grp-web-stats-2020-6-files-a-1-12",
+      "layer": "file",
+      "category": "frontend",
+      "categoryLabel": "Frontend",
+      "color": "#eab308",
+      "size": 0.85,
+      "file": "web/stats/2020-6/awsindex.html",
+      "description": "Código-fonte: `web/stats/2020-6/awsindex.html`"
+    },
+    {
+      "id": "hyperware-file-web-stats-2020-6-awstats-hyperware-com-br-alldomains-html",
+      "label": "awstats.hyperware.com.br.alldomains.html",
+      "parent": "hyperware-grp-web-stats-2020-6-files-a-1-12",
+      "layer": "file",
+      "category": "frontend",
+      "categoryLabel": "Frontend",
+      "color": "#eab308",
+      "size": 0.85,
+      "file": "web/stats/2020-6/awstats.hyperware.com.br.alldomains.html",
+      "description": "Código-fonte: `web/stats/2020-6/awstats.hyperware.com.br.alldomains.html`"
+    },
+    {
+      "id": "hyperware-file-web-stats-2020-6-awstats-hyperware-com-br-allhosts-html",
+      "label": "awstats.hyperware.com.br.allhosts.html",
+      "parent": "hyperware-grp-web-stats-2020-6-files-a-1-12",
+      "layer": "file",
+      "category": "frontend",
+      "categoryLabel": "Frontend",
+      "color": "#eab308",
+      "size": 0.85,
+      "file": "web/stats/2020-6/awstats.hyperware.com.br.allhosts.html",
+      "description": "Código-fonte: `web/stats/2020-6/awstats.hyperware.com.br.allhosts.html`"
+    },
+    {
+      "id": "hyperware-file-web-stats-2020-6-awstats-hyperware-com-br-allrobots-html",
+      "label": "awstats.hyperware.com.br.allrobots.html",
+      "parent": "hyperware-grp-web-stats-2020-6-files-a-1-12",
+      "layer": "file",
+      "category": "frontend",
+      "categoryLabel": "Frontend",
+      "color": "#eab308",
+      "size": 0.85,
+      "file": "web/stats/2020-6/awstats.hyperware.com.br.allrobots.html",
+      "description": "Código-fonte: `web/stats/2020-6/awstats.hyperware.com.br.allrobots.html`"
+    },
+    {
+      "id": "hyperware-file-web-stats-2020-6-awstats-hyperware-com-br-browserdetail-html",
+      "label": "awstats.hyperware.com.br.browserdetail.html",
+      "parent": "hyperware-grp-web-stats-2020-6-files-a-1-12",
+      "layer": "file",
+      "category": "frontend",
+      "categoryLabel": "Frontend",
+      "color": "#eab308",
+      "size": 0.85,
+      "file": "web/stats/2020-6/awstats.hyperware.com.br.browserdetail.html",
+      "description": "Código-fonte: `web/stats/2020-6/awstats.hyperware.com.br.browserdetail.html`"
+    },
+    {
+      "id": "hyperware-file-web-stats-2020-6-awstats-hyperware-com-br-downloads-html",
+      "label": "awstats.hyperware.com.br.downloads.html",
+      "parent": "hyperware-grp-web-stats-2020-6-files-a-1-12",
+      "layer": "file",
+      "category": "frontend",
+      "categoryLabel": "Frontend",
+      "color": "#eab308",
+      "size": 0.85,
+      "file": "web/stats/2020-6/awstats.hyperware.com.br.downloads.html",
+      "description": "Código-fonte: `web/stats/2020-6/awstats.hyperware.com.br.downloads.html`"
+    },
+    {
+      "id": "hyperware-file-web-stats-2020-6-awstats-hyperware-com-br-errors400-html",
+      "label": "awstats.hyperware.com.br.errors400.html",
+      "parent": "hyperware-grp-web-stats-2020-6-files-a-1-12",
+      "layer": "file",
+      "category": "frontend",
+      "categoryLabel": "Frontend",
+      "color": "#eab308",
+      "size": 0.85,
+      "file": "web/stats/2020-6/awstats.hyperware.com.br.errors400.html",
+      "description": "Código-fonte: `web/stats/2020-6/awstats.hyperware.com.br.errors400.html`"
+    },
+    {
+      "id": "hyperware-file-web-stats-2020-6-awstats-hyperware-com-br-errors403-html",
+      "label": "awstats.hyperware.com.br.errors403.html",
+      "parent": "hyperware-grp-web-stats-2020-6-files-a-1-12",
+      "layer": "file",
+      "category": "frontend",
+      "categoryLabel": "Frontend",
+      "color": "#eab308",
+      "size": 0.85,
+      "file": "web/stats/2020-6/awstats.hyperware.com.br.errors403.html",
+      "description": "Código-fonte: `web/stats/2020-6/awstats.hyperware.com.br.errors403.html`"
+    },
+    {
+      "id": "hyperware-file-web-stats-2020-6-awstats-hyperware-com-br-errors404-html",
+      "label": "awstats.hyperware.com.br.errors404.html",
+      "parent": "hyperware-grp-web-stats-2020-6-files-a-1-12",
+      "layer": "file",
+      "category": "frontend",
+      "categoryLabel": "Frontend",
+      "color": "#eab308",
+      "size": 0.85,
+      "file": "web/stats/2020-6/awstats.hyperware.com.br.errors404.html",
+      "description": "Código-fonte: `web/stats/2020-6/awstats.hyperware.com.br.errors404.html`"
+    },
+    {
+      "id": "hyperware-file-web-stats-2020-6-awstats-hyperware-com-br-keyphrases-html",
+      "label": "awstats.hyperware.com.br.keyphrases.html",
+      "parent": "hyperware-grp-web-stats-2020-6-files-a-1-12",
+      "layer": "file",
+      "category": "frontend",
+      "categoryLabel": "Frontend",
+      "color": "#eab308",
+      "size": 0.85,
+      "file": "web/stats/2020-6/awstats.hyperware.com.br.keyphrases.html",
+      "description": "Código-fonte: `web/stats/2020-6/awstats.hyperware.com.br.keyphrases.html`"
+    },
+    {
+      "id": "hyperware-file-web-stats-2020-6-awstats-hyperware-com-br-keywords-html",
+      "label": "awstats.hyperware.com.br.keywords.html",
+      "parent": "hyperware-grp-web-stats-2020-6-files-a-1-12",
+      "layer": "file",
+      "category": "frontend",
+      "categoryLabel": "Frontend",
+      "color": "#eab308",
+      "size": 0.85,
+      "file": "web/stats/2020-6/awstats.hyperware.com.br.keywords.html",
+      "description": "Código-fonte: `web/stats/2020-6/awstats.hyperware.com.br.keywords.html`"
+    },
+    {
+      "id": "hyperware-file-web-stats-2020-6-awstats-hyperware-com-br-lasthosts-html",
+      "label": "awstats.hyperware.com.br.lasthosts.html",
+      "parent": "hyperware-grp-web-stats-2020-6-files-a-1-12",
+      "layer": "file",
+      "category": "frontend",
+      "categoryLabel": "Frontend",
+      "color": "#eab308",
+      "size": 0.85,
+      "file": "web/stats/2020-6/awstats.hyperware.com.br.lasthosts.html",
+      "description": "Código-fonte: `web/stats/2020-6/awstats.hyperware.com.br.lasthosts.html`"
+    },
+    {
+      "id": "hyperware-file-web-stats-2020-6-awstats-hyperware-com-br-lastrobots-html",
+      "label": "awstats.hyperware.com.br.lastrobots.html",
+      "parent": "hyperware-grp-web-stats-2020-6-files-a-13-23",
+      "layer": "file",
+      "category": "frontend",
+      "categoryLabel": "Frontend",
+      "color": "#eab308",
+      "size": 0.85,
+      "file": "web/stats/2020-6/awstats.hyperware.com.br.lastrobots.html",
+      "description": "Código-fonte: `web/stats/2020-6/awstats.hyperware.com.br.lastrobots.html`"
+    },
+    {
+      "id": "hyperware-file-web-stats-2020-6-awstats-hyperware-com-br-osdetail-html",
+      "label": "awstats.hyperware.com.br.osdetail.html",
+      "parent": "hyperware-grp-web-stats-2020-6-files-a-13-23",
+      "layer": "file",
+      "category": "frontend",
+      "categoryLabel": "Frontend",
+      "color": "#eab308",
+      "size": 0.85,
+      "file": "web/stats/2020-6/awstats.hyperware.com.br.osdetail.html",
+      "description": "Código-fonte: `web/stats/2020-6/awstats.hyperware.com.br.osdetail.html`"
+    },
+    {
+      "id": "hyperware-file-web-stats-2020-6-awstats-hyperware-com-br-refererpages-html",
+      "label": "awstats.hyperware.com.br.refererpages.html",
+      "parent": "hyperware-grp-web-stats-2020-6-files-a-13-23",
+      "layer": "file",
+      "category": "frontend",
+      "categoryLabel": "Frontend",
+      "color": "#eab308",
+      "size": 0.85,
+      "file": "web/stats/2020-6/awstats.hyperware.com.br.refererpages.html",
+      "description": "Código-fonte: `web/stats/2020-6/awstats.hyperware.com.br.refererpages.html`"
+    },
+    {
+      "id": "hyperware-file-web-stats-2020-6-awstats-hyperware-com-br-refererse-html",
+      "label": "awstats.hyperware.com.br.refererse.html",
+      "parent": "hyperware-grp-web-stats-2020-6-files-a-13-23",
+      "layer": "file",
+      "category": "frontend",
+      "categoryLabel": "Frontend",
+      "color": "#eab308",
+      "size": 0.85,
+      "file": "web/stats/2020-6/awstats.hyperware.com.br.refererse.html",
+      "description": "Código-fonte: `web/stats/2020-6/awstats.hyperware.com.br.refererse.html`"
+    },
+    {
+      "id": "hyperware-file-web-stats-2020-6-awstats-hyperware-com-br-session-html",
+      "label": "awstats.hyperware.com.br.session.html",
+      "parent": "hyperware-grp-web-stats-2020-6-files-a-13-23",
+      "layer": "file",
+      "category": "frontend",
+      "categoryLabel": "Frontend",
+      "color": "#eab308",
+      "size": 0.85,
+      "file": "web/stats/2020-6/awstats.hyperware.com.br.session.html",
+      "description": "Código-fonte: `web/stats/2020-6/awstats.hyperware.com.br.session.html`"
+    },
+    {
+      "id": "hyperware-file-web-stats-2020-6-awstats-hyperware-com-br-unknownbrowser-html",
+      "label": "awstats.hyperware.com.br.unknownbrowser.html",
+      "parent": "hyperware-grp-web-stats-2020-6-files-a-13-23",
+      "layer": "file",
+      "category": "frontend",
+      "categoryLabel": "Frontend",
+      "color": "#eab308",
+      "size": 0.85,
+      "file": "web/stats/2020-6/awstats.hyperware.com.br.unknownbrowser.html",
+      "description": "Código-fonte: `web/stats/2020-6/awstats.hyperware.com.br.unknownbrowser.html`"
+    },
+    {
+      "id": "hyperware-file-web-stats-2020-6-awstats-hyperware-com-br-unknownip-html",
+      "label": "awstats.hyperware.com.br.unknownip.html",
+      "parent": "hyperware-grp-web-stats-2020-6-files-a-13-23",
+      "layer": "file",
+      "category": "frontend",
+      "categoryLabel": "Frontend",
+      "color": "#eab308",
+      "size": 0.85,
+      "file": "web/stats/2020-6/awstats.hyperware.com.br.unknownip.html",
+      "description": "Código-fonte: `web/stats/2020-6/awstats.hyperware.com.br.unknownip.html`"
+    },
+    {
+      "id": "hyperware-file-web-stats-2020-6-awstats-hyperware-com-br-unknownos-html",
+      "label": "awstats.hyperware.com.br.unknownos.html",
+      "parent": "hyperware-grp-web-stats-2020-6-files-a-13-23",
+      "layer": "file",
+      "category": "frontend",
+      "categoryLabel": "Frontend",
+      "color": "#eab308",
+      "size": 0.85,
+      "file": "web/stats/2020-6/awstats.hyperware.com.br.unknownos.html",
+      "description": "Código-fonte: `web/stats/2020-6/awstats.hyperware.com.br.unknownos.html`"
+    },
+    {
+      "id": "hyperware-file-web-stats-2020-6-awstats-hyperware-com-br-urldetail-html",
+      "label": "awstats.hyperware.com.br.urldetail.html",
+      "parent": "hyperware-grp-web-stats-2020-6-files-a-13-23",
+      "layer": "file",
+      "category": "frontend",
+      "categoryLabel": "Frontend",
+      "color": "#eab308",
+      "size": 0.85,
+      "file": "web/stats/2020-6/awstats.hyperware.com.br.urldetail.html",
+      "description": "Código-fonte: `web/stats/2020-6/awstats.hyperware.com.br.urldetail.html`"
+    },
+    {
+      "id": "hyperware-file-web-stats-2020-6-awstats-hyperware-com-br-urlentry-html",
+      "label": "awstats.hyperware.com.br.urlentry.html",
+      "parent": "hyperware-grp-web-stats-2020-6-files-a-13-23",
+      "layer": "file",
+      "category": "frontend",
+      "categoryLabel": "Frontend",
+      "color": "#eab308",
+      "size": 0.85,
+      "file": "web/stats/2020-6/awstats.hyperware.com.br.urlentry.html",
+      "description": "Código-fonte: `web/stats/2020-6/awstats.hyperware.com.br.urlentry.html`"
+    },
+    {
+      "id": "hyperware-file-web-stats-2020-6-awstats-hyperware-com-br-urlexit-html",
+      "label": "awstats.hyperware.com.br.urlexit.html",
+      "parent": "hyperware-grp-web-stats-2020-6-files-a-13-23",
+      "layer": "file",
+      "category": "frontend",
+      "categoryLabel": "Frontend",
+      "color": "#eab308",
+      "size": 0.85,
+      "file": "web/stats/2020-6/awstats.hyperware.com.br.urlexit.html",
+      "description": "Código-fonte: `web/stats/2020-6/awstats.hyperware.com.br.urlexit.html`"
     }
   ],
   "links": [
     {
-      "source": "hyp-root",
-      "target": "hyp-web",
+      "source": "hyperware-root",
+      "target": "hyperware-dir-web",
       "type": "dependency"
     },
     {
-      "source": "hyp-web",
-      "target": "hyp-web-stats-index-php",
+      "source": "hyperware-dir-web",
+      "target": "hyperware-dir-web-error",
       "type": "dependency"
     },
     {
-      "source": "hyp-web",
-      "target": "hyp-web-index-html",
+      "source": "hyperware-dir-web",
+      "target": "hyperware-dir-web-site-hyper",
       "type": "dependency"
     },
     {
-      "source": "hyp-web",
-      "target": "hyp-web-site-hyper-index-html",
+      "source": "hyperware-dir-web",
+      "target": "hyperware-dir-web-stats",
       "type": "dependency"
     },
     {
-      "source": "hyp-web",
-      "target": "hyp-web-unzipper-php",
+      "source": "hyperware-dir-web-site-hyper",
+      "target": "hyperware-dir-web-site-hyper-css",
       "type": "dependency"
     },
     {
-      "source": "hyp-web",
-      "target": "hyp-web-site-hyper-sendemail-php",
+      "source": "hyperware-dir-web-site-hyper",
+      "target": "hyperware-dir-web-site-hyper-fonts",
       "type": "dependency"
     },
     {
-      "source": "hyp-web",
-      "target": "hyp-web-site-hyper-sendnewslatters-php",
+      "source": "hyperware-dir-web-site-hyper",
+      "target": "hyperware-dir-web-site-hyper-js",
       "type": "dependency"
     },
     {
-      "source": "hyp-web",
-      "target": "hyp-web-site-hyper-js-appear-js",
+      "source": "hyperware-dir-web-site-hyper",
+      "target": "hyperware-dir-web-site-hyper-plugins",
       "type": "dependency"
     },
     {
-      "source": "hyp-web",
-      "target": "hyp-web-site-hyper-js-horas-js",
+      "source": "hyperware-dir-web-stats",
+      "target": "hyperware-dir-web-stats-2020-6",
+      "type": "dependency"
+    },
+    {
+      "source": "hyperware-dir-web-site-hyper-plugins",
+      "target": "hyperware-dir-web-site-hyper-plugins-revolution",
+      "type": "dependency"
+    },
+    {
+      "source": "hyperware-dir-web-site-hyper-plugins-revolution",
+      "target": "hyperware-dir-web-site-hyper-plugins-revolution-assets",
+      "type": "dependency"
+    },
+    {
+      "source": "hyperware-dir-web-site-hyper-plugins-revolution",
+      "target": "hyperware-dir-web-site-hyper-plugins-revolution-css",
+      "type": "dependency"
+    },
+    {
+      "source": "hyperware-dir-web-site-hyper-plugins-revolution",
+      "target": "hyperware-dir-web-site-hyper-plugins-revolution-fonts",
+      "type": "dependency"
+    },
+    {
+      "source": "hyperware-dir-web-site-hyper-plugins-revolution",
+      "target": "hyperware-dir-web-site-hyper-plugins-revolution-js",
+      "type": "dependency"
+    },
+    {
+      "source": "hyperware-dir-web-site-hyper-plugins-revolution",
+      "target": "hyperware-dir-web-site-hyper-plugins-revolution-php",
+      "type": "dependency"
+    },
+    {
+      "source": "hyperware-dir-web-site-hyper-plugins-revolution-assets",
+      "target": "hyperware-dir-web-site-hyper-plugins-revolution-assets-svg",
+      "type": "dependency"
+    },
+    {
+      "source": "hyperware-dir-web-site-hyper-plugins-revolution-css",
+      "target": "hyperware-dir-web-site-hyper-plugins-revolution-css-navigation-skins",
+      "type": "dependency"
+    },
+    {
+      "source": "hyperware-dir-web-site-hyper-plugins-revolution-fonts",
+      "target": "hyperware-dir-web-site-hyper-plugins-revolution-fonts-font-awesome",
+      "type": "dependency"
+    },
+    {
+      "source": "hyperware-dir-web-site-hyper-plugins-revolution-fonts",
+      "target": "hyperware-dir-web-site-hyper-plugins-revolution-fonts-pe-icon-7-stroke",
+      "type": "dependency"
+    },
+    {
+      "source": "hyperware-dir-web-site-hyper-plugins-revolution-fonts",
+      "target": "hyperware-dir-web-site-hyper-plugins-revolution-fonts-revicons",
+      "type": "dependency"
+    },
+    {
+      "source": "hyperware-dir-web-site-hyper-plugins-revolution-js",
+      "target": "hyperware-dir-web-site-hyper-plugins-revolution-js-extensions",
+      "type": "dependency"
+    },
+    {
+      "source": "hyperware-dir-web-site-hyper-plugins-revolution-js",
+      "target": "hyperware-dir-web-site-hyper-plugins-revolution-js-source",
+      "type": "dependency"
+    },
+    {
+      "source": "hyperware-dir-web-site-hyper-plugins-revolution-php",
+      "target": "hyperware-dir-web-site-hyper-plugins-revolution-php-facebook",
+      "type": "dependency"
+    },
+    {
+      "source": "hyperware-dir-web-site-hyper-plugins-revolution-php",
+      "target": "hyperware-dir-web-site-hyper-plugins-revolution-php-flickr",
+      "type": "dependency"
+    },
+    {
+      "source": "hyperware-dir-web-site-hyper-plugins-revolution-php",
+      "target": "hyperware-dir-web-site-hyper-plugins-revolution-php-instagram",
+      "type": "dependency"
+    },
+    {
+      "source": "hyperware-dir-web-site-hyper-plugins-revolution-php",
+      "target": "hyperware-dir-web-site-hyper-plugins-revolution-php-twitter",
+      "type": "dependency"
+    },
+    {
+      "source": "hyperware-dir-web-site-hyper-plugins-revolution-php",
+      "target": "hyperware-dir-web-site-hyper-plugins-revolution-php-vimeo",
+      "type": "dependency"
+    },
+    {
+      "source": "hyperware-dir-web-site-hyper-plugins-revolution-php",
+      "target": "hyperware-dir-web-site-hyper-plugins-revolution-php-youtube",
+      "type": "dependency"
+    },
+    {
+      "source": "hyperware-dir-web-site-hyper-plugins-revolution-fonts-font-awesome",
+      "target": "hyperware-dir-web-site-hyper-plugins-revolution-fonts-font-awesome-css",
+      "type": "dependency"
+    },
+    {
+      "source": "hyperware-dir-web-site-hyper-plugins-revolution-fonts-pe-icon-7-stroke",
+      "target": "hyperware-dir-web-site-hyper-plugins-revolution-fonts-pe-icon-7-stroke-css",
+      "type": "dependency"
+    },
+    {
+      "source": "hyperware-dir-web-site-hyper-plugins-revolution-fonts-pe-icon-7-stroke",
+      "target": "hyperware-dir-web-site-hyper-plugins-revolution-fonts-pe-icon-7-stroke-fonts",
+      "type": "dependency"
+    },
+    {
+      "source": "hyperware-dir-web-site-hyper-plugins-revolution-js-extensions",
+      "target": "hyperware-dir-web-site-hyper-plugins-revolution-js-extensions-source",
+      "type": "dependency"
+    },
+    {
+      "source": "hyperware-dir-web-site-hyper-plugins-revolution-php-twitter",
+      "target": "hyperware-dir-web-site-hyper-plugins-revolution-php-twitter-connection",
+      "type": "dependency"
+    },
+    {
+      "source": "hyperware-dir-web",
+      "target": "hyperware-file-web-index-html",
+      "type": "dependency"
+    },
+    {
+      "source": "hyperware-dir-web",
+      "target": "hyperware-file-web-unzipper-php",
+      "type": "dependency"
+    },
+    {
+      "source": "hyperware-dir-web-error",
+      "target": "hyperware-file-web-error-400-html",
+      "type": "dependency"
+    },
+    {
+      "source": "hyperware-dir-web-error",
+      "target": "hyperware-file-web-error-401-html",
+      "type": "dependency"
+    },
+    {
+      "source": "hyperware-dir-web-error",
+      "target": "hyperware-file-web-error-403-html",
+      "type": "dependency"
+    },
+    {
+      "source": "hyperware-dir-web-error",
+      "target": "hyperware-file-web-error-404-html",
+      "type": "dependency"
+    },
+    {
+      "source": "hyperware-dir-web-error",
+      "target": "hyperware-file-web-error-405-html",
+      "type": "dependency"
+    },
+    {
+      "source": "hyperware-dir-web-error",
+      "target": "hyperware-file-web-error-500-html",
+      "type": "dependency"
+    },
+    {
+      "source": "hyperware-dir-web-error",
+      "target": "hyperware-file-web-error-502-html",
+      "type": "dependency"
+    },
+    {
+      "source": "hyperware-dir-web-error",
+      "target": "hyperware-file-web-error-503-html",
+      "type": "dependency"
+    },
+    {
+      "source": "hyperware-dir-web-site-hyper",
+      "target": "hyperware-grp-web-site-hyper-files-b-1-12",
+      "type": "dependency"
+    },
+    {
+      "source": "hyperware-dir-web-site-hyper",
+      "target": "hyperware-grp-web-site-hyper-files-b-13-16",
+      "type": "dependency"
+    },
+    {
+      "source": "hyperware-dir-web-site-hyper",
+      "target": "hyperware-grp-web-site-hyper-files-c-e-i-m",
+      "type": "dependency"
+    },
+    {
+      "source": "hyperware-dir-web-site-hyper",
+      "target": "hyperware-grp-web-site-hyper-files-p-1-12",
+      "type": "dependency"
+    },
+    {
+      "source": "hyperware-dir-web-site-hyper",
+      "target": "hyperware-grp-web-site-hyper-files-p-13-13",
+      "type": "dependency"
+    },
+    {
+      "source": "hyperware-dir-web-site-hyper",
+      "target": "hyperware-grp-web-site-hyper-files-s-w",
+      "type": "dependency"
+    },
+    {
+      "source": "hyperware-grp-web-site-hyper-files-b-1-12",
+      "target": "hyperware-file-web-site-hyper-blog-checkerboard-html",
+      "type": "dependency"
+    },
+    {
+      "source": "hyperware-grp-web-site-hyper-files-b-1-12",
+      "target": "hyperware-file-web-site-hyper-blog-four-col-wide-html",
+      "type": "dependency"
+    },
+    {
+      "source": "hyperware-grp-web-site-hyper-files-b-1-12",
+      "target": "hyperware-file-web-site-hyper-blog-large-images-html",
+      "type": "dependency"
+    },
+    {
+      "source": "hyperware-grp-web-site-hyper-files-b-1-12",
+      "target": "hyperware-file-web-site-hyper-blog-left-sidebar-html",
+      "type": "dependency"
+    },
+    {
+      "source": "hyperware-grp-web-site-hyper-files-b-1-12",
+      "target": "hyperware-file-web-site-hyper-blog-masonry-html",
+      "type": "dependency"
+    },
+    {
+      "source": "hyperware-grp-web-site-hyper-files-b-1-12",
+      "target": "hyperware-file-web-site-hyper-blog-post-audio-html",
+      "type": "dependency"
+    },
+    {
+      "source": "hyperware-grp-web-site-hyper-files-b-1-12",
+      "target": "hyperware-file-web-site-hyper-blog-post-gallery-html",
+      "type": "dependency"
+    },
+    {
+      "source": "hyperware-grp-web-site-hyper-files-b-1-12",
+      "target": "hyperware-file-web-site-hyper-blog-post-image-html",
+      "type": "dependency"
+    },
+    {
+      "source": "hyperware-grp-web-site-hyper-files-b-1-12",
+      "target": "hyperware-file-web-site-hyper-blog-post-link-html",
+      "type": "dependency"
+    },
+    {
+      "source": "hyperware-grp-web-site-hyper-files-b-1-12",
+      "target": "hyperware-file-web-site-hyper-blog-post-quote-html",
+      "type": "dependency"
+    },
+    {
+      "source": "hyperware-grp-web-site-hyper-files-b-1-12",
+      "target": "hyperware-file-web-site-hyper-blog-post-video-html",
+      "type": "dependency"
+    },
+    {
+      "source": "hyperware-grp-web-site-hyper-files-b-1-12",
+      "target": "hyperware-file-web-site-hyper-blog-right-sidebar-html",
+      "type": "dependency"
+    },
+    {
+      "source": "hyperware-grp-web-site-hyper-files-b-13-16",
+      "target": "hyperware-file-web-site-hyper-blog-small-images-html",
+      "type": "dependency"
+    },
+    {
+      "source": "hyperware-grp-web-site-hyper-files-b-13-16",
+      "target": "hyperware-file-web-site-hyper-blog-three-col-wide-html",
+      "type": "dependency"
+    },
+    {
+      "source": "hyperware-grp-web-site-hyper-files-b-13-16",
+      "target": "hyperware-file-web-site-hyper-blog-three-col-html",
+      "type": "dependency"
+    },
+    {
+      "source": "hyperware-grp-web-site-hyper-files-b-13-16",
+      "target": "hyperware-file-web-site-hyper-blog-two-col-html",
+      "type": "dependency"
+    },
+    {
+      "source": "hyperware-grp-web-site-hyper-files-c-e-i-m",
+      "target": "hyperware-file-web-site-hyper-case-study-html",
+      "type": "dependency"
+    },
+    {
+      "source": "hyperware-grp-web-site-hyper-files-c-e-i-m",
+      "target": "hyperware-file-web-site-hyper-checkout-html",
+      "type": "dependency"
+    },
+    {
+      "source": "hyperware-grp-web-site-hyper-files-c-e-i-m",
+      "target": "hyperware-file-web-site-hyper-contact-html",
+      "type": "dependency"
+    },
+    {
+      "source": "hyperware-grp-web-site-hyper-files-c-e-i-m",
+      "target": "hyperware-file-web-site-hyper-elements-html",
+      "type": "dependency"
+    },
+    {
+      "source": "hyperware-grp-web-site-hyper-files-c-e-i-m",
+      "target": "hyperware-file-web-site-hyper-empresa-html",
+      "type": "dependency"
+    },
+    {
+      "source": "hyperware-grp-web-site-hyper-files-c-e-i-m",
+      "target": "hyperware-file-web-site-hyper-index-html",
+      "type": "dependency"
+    },
+    {
+      "source": "hyperware-grp-web-site-hyper-files-c-e-i-m",
+      "target": "hyperware-file-web-site-hyper-it-consultancy-html",
+      "type": "dependency"
+    },
+    {
+      "source": "hyperware-grp-web-site-hyper-files-c-e-i-m",
+      "target": "hyperware-file-web-site-hyper-managed-it-html",
+      "type": "dependency"
+    },
+    {
+      "source": "hyperware-grp-web-site-hyper-files-p-1-12",
+      "target": "hyperware-file-web-site-hyper-portfolio-asymetric-html",
+      "type": "dependency"
+    },
+    {
+      "source": "hyperware-grp-web-site-hyper-files-p-1-12",
+      "target": "hyperware-file-web-site-hyper-portfolio-masonry-html",
+      "type": "dependency"
+    },
+    {
+      "source": "hyperware-grp-web-site-hyper-files-p-1-12",
+      "target": "hyperware-file-web-site-hyper-portfolio-motion-category-html",
+      "type": "dependency"
+    },
+    {
+      "source": "hyperware-grp-web-site-hyper-files-p-1-12",
+      "target": "hyperware-file-web-site-hyper-portfolio-single-gallery-html",
+      "type": "dependency"
+    },
+    {
+      "source": "hyperware-grp-web-site-hyper-files-p-1-12",
+      "target": "hyperware-file-web-site-hyper-portfolio-single-large-masonry-html",
+      "type": "dependency"
+    },
+    {
+      "source": "hyperware-grp-web-site-hyper-files-p-1-12",
+      "target": "hyperware-file-web-site-hyper-portfolio-single-large-slider-html",
+      "type": "dependency"
+    },
+    {
+      "source": "hyperware-grp-web-site-hyper-files-p-1-12",
+      "target": "hyperware-file-web-site-hyper-portfolio-single-small-images-html",
+      "type": "dependency"
+    },
+    {
+      "source": "hyperware-grp-web-site-hyper-files-p-1-12",
+      "target": "hyperware-file-web-site-hyper-portfolio-single-small-masonry-html",
+      "type": "dependency"
+    },
+    {
+      "source": "hyperware-grp-web-site-hyper-files-p-1-12",
+      "target": "hyperware-file-web-site-hyper-portfolio-single-small-slider-html",
+      "type": "dependency"
+    },
+    {
+      "source": "hyperware-grp-web-site-hyper-files-p-1-12",
+      "target": "hyperware-file-web-site-hyper-portfolio-slide-left-html",
+      "type": "dependency"
+    },
+    {
+      "source": "hyperware-grp-web-site-hyper-files-p-1-12",
+      "target": "hyperware-file-web-site-hyper-portfolio-slider-html",
+      "type": "dependency"
+    },
+    {
+      "source": "hyperware-grp-web-site-hyper-files-p-1-12",
+      "target": "hyperware-file-web-site-hyper-portfolio-three-col-html",
+      "type": "dependency"
+    },
+    {
+      "source": "hyperware-grp-web-site-hyper-files-p-13-13",
+      "target": "hyperware-file-web-site-hyper-pricing-plans-html",
+      "type": "dependency"
+    },
+    {
+      "source": "hyperware-grp-web-site-hyper-files-s-w",
+      "target": "hyperware-file-web-site-hyper-sendemail-php",
+      "type": "dependency"
+    },
+    {
+      "source": "hyperware-grp-web-site-hyper-files-s-w",
+      "target": "hyperware-file-web-site-hyper-sendnewslatters-php",
+      "type": "dependency"
+    },
+    {
+      "source": "hyperware-grp-web-site-hyper-files-s-w",
+      "target": "hyperware-file-web-site-hyper-shop-single-html",
+      "type": "dependency"
+    },
+    {
+      "source": "hyperware-grp-web-site-hyper-files-s-w",
+      "target": "hyperware-file-web-site-hyper-shop-html",
+      "type": "dependency"
+    },
+    {
+      "source": "hyperware-grp-web-site-hyper-files-s-w",
+      "target": "hyperware-file-web-site-hyper-shopping-cart-html",
+      "type": "dependency"
+    },
+    {
+      "source": "hyperware-grp-web-site-hyper-files-s-w",
+      "target": "hyperware-file-web-site-hyper-why-choose-us-html",
+      "type": "dependency"
+    },
+    {
+      "source": "hyperware-dir-web-site-hyper-css",
+      "target": "hyperware-file-web-site-hyper-css-animate-css",
+      "type": "dependency"
+    },
+    {
+      "source": "hyperware-dir-web-site-hyper-css",
+      "target": "hyperware-file-web-site-hyper-css-bootstrap-css",
+      "type": "dependency"
+    },
+    {
+      "source": "hyperware-dir-web-site-hyper-css",
+      "target": "hyperware-file-web-site-hyper-css-flaticon-css",
+      "type": "dependency"
+    },
+    {
+      "source": "hyperware-dir-web-site-hyper-css",
+      "target": "hyperware-file-web-site-hyper-css-fontawesome-all-css",
+      "type": "dependency"
+    },
+    {
+      "source": "hyperware-dir-web-site-hyper-css",
+      "target": "hyperware-file-web-site-hyper-css-jquery-ui-min-css",
+      "type": "dependency"
+    },
+    {
+      "source": "hyperware-dir-web-site-hyper-css",
+      "target": "hyperware-file-web-site-hyper-css-jquery-fancybox-min-css",
+      "type": "dependency"
+    },
+    {
+      "source": "hyperware-dir-web-site-hyper-css",
+      "target": "hyperware-file-web-site-hyper-css-owl-css",
+      "type": "dependency"
+    },
+    {
+      "source": "hyperware-dir-web-site-hyper-css",
+      "target": "hyperware-file-web-site-hyper-css-responsive-css",
+      "type": "dependency"
+    },
+    {
+      "source": "hyperware-dir-web-site-hyper-css",
+      "target": "hyperware-file-web-site-hyper-css-style-css",
+      "type": "dependency"
+    },
+    {
+      "source": "hyperware-dir-web-site-hyper-fonts",
+      "target": "hyperware-file-web-site-hyper-fonts-flaticon-scss",
+      "type": "dependency"
+    },
+    {
+      "source": "hyperware-dir-web-site-hyper-fonts",
+      "target": "hyperware-file-web-site-hyper-fonts-demo-html",
+      "type": "dependency"
+    },
+    {
+      "source": "hyperware-dir-web-site-hyper-js",
+      "target": "hyperware-grp-web-site-hyper-js-files-a-b-h-i-j-m-o",
+      "type": "dependency"
+    },
+    {
+      "source": "hyperware-dir-web-site-hyper-js",
+      "target": "hyperware-grp-web-site-hyper-js-files-p-r-s-v-w",
+      "type": "dependency"
+    },
+    {
+      "source": "hyperware-grp-web-site-hyper-js-files-a-b-h-i-j-m-o",
+      "target": "hyperware-file-web-site-hyper-js-appear-js",
+      "type": "dependency"
+    },
+    {
+      "source": "hyperware-grp-web-site-hyper-js-files-a-b-h-i-j-m-o",
+      "target": "hyperware-file-web-site-hyper-js-bootstrap-min-js",
+      "type": "dependency"
+    },
+    {
+      "source": "hyperware-grp-web-site-hyper-js-files-a-b-h-i-j-m-o",
+      "target": "hyperware-file-web-site-hyper-js-horas-js",
+      "type": "dependency"
+    },
+    {
+      "source": "hyperware-grp-web-site-hyper-js-files-a-b-h-i-j-m-o",
+      "target": "hyperware-file-web-site-hyper-js-imagesloaded-min-js",
+      "type": "dependency"
+    },
+    {
+      "source": "hyperware-grp-web-site-hyper-js-files-a-b-h-i-j-m-o",
+      "target": "hyperware-file-web-site-hyper-js-isotope-js",
+      "type": "dependency"
+    },
+    {
+      "source": "hyperware-grp-web-site-hyper-js-files-a-b-h-i-j-m-o",
+      "target": "hyperware-file-web-site-hyper-js-jquery-ui-min-js",
+      "type": "dependency"
+    },
+    {
+      "source": "hyperware-grp-web-site-hyper-js-files-a-b-h-i-j-m-o",
+      "target": "hyperware-file-web-site-hyper-js-jquery-fancybox-js",
+      "type": "dependency"
+    },
+    {
+      "source": "hyperware-grp-web-site-hyper-js-files-a-b-h-i-j-m-o",
+      "target": "hyperware-file-web-site-hyper-js-jquery-js",
+      "type": "dependency"
+    },
+    {
+      "source": "hyperware-grp-web-site-hyper-js-files-a-b-h-i-j-m-o",
+      "target": "hyperware-file-web-site-hyper-js-jquery-parallax-scroll-js",
+      "type": "dependency"
+    },
+    {
+      "source": "hyperware-grp-web-site-hyper-js-files-a-b-h-i-j-m-o",
+      "target": "hyperware-file-web-site-hyper-js-main-slider-script-js",
+      "type": "dependency"
+    },
+    {
+      "source": "hyperware-grp-web-site-hyper-js-files-a-b-h-i-j-m-o",
+      "target": "hyperware-file-web-site-hyper-js-map-script-js",
+      "type": "dependency"
+    },
+    {
+      "source": "hyperware-grp-web-site-hyper-js-files-a-b-h-i-j-m-o",
+      "target": "hyperware-file-web-site-hyper-js-owl-js",
+      "type": "dependency"
+    },
+    {
+      "source": "hyperware-grp-web-site-hyper-js-files-p-r-s-v-w",
+      "target": "hyperware-file-web-site-hyper-js-popper-min-js",
+      "type": "dependency"
+    },
+    {
+      "source": "hyperware-grp-web-site-hyper-js-files-p-r-s-v-w",
+      "target": "hyperware-file-web-site-hyper-js-respond-js",
+      "type": "dependency"
+    },
+    {
+      "source": "hyperware-grp-web-site-hyper-js-files-p-r-s-v-w",
+      "target": "hyperware-file-web-site-hyper-js-script-js",
+      "type": "dependency"
+    },
+    {
+      "source": "hyperware-grp-web-site-hyper-js-files-p-r-s-v-w",
+      "target": "hyperware-file-web-site-hyper-js-sticky-sidebar-min-js",
+      "type": "dependency"
+    },
+    {
+      "source": "hyperware-grp-web-site-hyper-js-files-p-r-s-v-w",
+      "target": "hyperware-file-web-site-hyper-js-validate-js",
+      "type": "dependency"
+    },
+    {
+      "source": "hyperware-grp-web-site-hyper-js-files-p-r-s-v-w",
+      "target": "hyperware-file-web-site-hyper-js-wow-js",
+      "type": "dependency"
+    },
+    {
+      "source": "hyperware-dir-web-site-hyper-plugins-revolution",
+      "target": "hyperware-file-web-site-hyper-plugins-revolution-index-php",
+      "type": "dependency"
+    },
+    {
+      "source": "hyperware-dir-web-site-hyper-plugins-revolution-assets",
+      "target": "hyperware-file-web-site-hyper-plugins-revolution-assets-index-php",
+      "type": "dependency"
+    },
+    {
+      "source": "hyperware-dir-web-site-hyper-plugins-revolution-assets-svg",
+      "target": "hyperware-file-web-site-hyper-plugins-revolution-assets-svg-index-php",
+      "type": "dependency"
+    },
+    {
+      "source": "hyperware-dir-web-site-hyper-plugins-revolution-css",
+      "target": "hyperware-file-web-site-hyper-plugins-revolution-css-index-php",
+      "type": "dependency"
+    },
+    {
+      "source": "hyperware-dir-web-site-hyper-plugins-revolution-css",
+      "target": "hyperware-file-web-site-hyper-plugins-revolution-css-layers-css",
+      "type": "dependency"
+    },
+    {
+      "source": "hyperware-dir-web-site-hyper-plugins-revolution-css",
+      "target": "hyperware-file-web-site-hyper-plugins-revolution-css-navigation-css",
+      "type": "dependency"
+    },
+    {
+      "source": "hyperware-dir-web-site-hyper-plugins-revolution-css",
+      "target": "hyperware-file-web-site-hyper-plugins-revolution-css-settings-source-css",
+      "type": "dependency"
+    },
+    {
+      "source": "hyperware-dir-web-site-hyper-plugins-revolution-css",
+      "target": "hyperware-file-web-site-hyper-plugins-revolution-css-settings-css",
+      "type": "dependency"
+    },
+    {
+      "source": "hyperware-dir-web-site-hyper-plugins-revolution-css",
+      "target": "hyperware-file-web-site-hyper-plugins-revolution-css-tp-color-picker-css",
+      "type": "dependency"
+    },
+    {
+      "source": "hyperware-dir-web-site-hyper-plugins-revolution-css-navigation-skins",
+      "target": "hyperware-grp-web-site-hyper-plugins-revolution-css-navigation-skins-files-a-c-d-e-g-h-m-p",
+      "type": "dependency"
+    },
+    {
+      "source": "hyperware-dir-web-site-hyper-plugins-revolution-css-navigation-skins",
+      "target": "hyperware-grp-web-site-hyper-plugins-revolution-css-navigation-skins-files-u-z",
+      "type": "dependency"
+    },
+    {
+      "source": "hyperware-grp-web-site-hyper-plugins-revolution-css-navigation-skins-files-a-c-d-e-g-h-m-p",
+      "target": "hyperware-file-web-site-hyper-plugins-revolution-css-navigation-skins-ares-css",
+      "type": "dependency"
+    },
+    {
+      "source": "hyperware-grp-web-site-hyper-plugins-revolution-css-navigation-skins-files-a-c-d-e-g-h-m-p",
+      "target": "hyperware-file-web-site-hyper-plugins-revolution-css-navigation-skins-custom-css",
+      "type": "dependency"
+    },
+    {
+      "source": "hyperware-grp-web-site-hyper-plugins-revolution-css-navigation-skins-files-a-c-d-e-g-h-m-p",
+      "target": "hyperware-file-web-site-hyper-plugins-revolution-css-navigation-skins-dione-css",
+      "type": "dependency"
+    },
+    {
+      "source": "hyperware-grp-web-site-hyper-plugins-revolution-css-navigation-skins-files-a-c-d-e-g-h-m-p",
+      "target": "hyperware-file-web-site-hyper-plugins-revolution-css-navigation-skins-erinyen-css",
+      "type": "dependency"
+    },
+    {
+      "source": "hyperware-grp-web-site-hyper-plugins-revolution-css-navigation-skins-files-a-c-d-e-g-h-m-p",
+      "target": "hyperware-file-web-site-hyper-plugins-revolution-css-navigation-skins-gyges-css",
+      "type": "dependency"
+    },
+    {
+      "source": "hyperware-grp-web-site-hyper-plugins-revolution-css-navigation-skins-files-a-c-d-e-g-h-m-p",
+      "target": "hyperware-file-web-site-hyper-plugins-revolution-css-navigation-skins-hades-css",
+      "type": "dependency"
+    },
+    {
+      "source": "hyperware-grp-web-site-hyper-plugins-revolution-css-navigation-skins-files-a-c-d-e-g-h-m-p",
+      "target": "hyperware-file-web-site-hyper-plugins-revolution-css-navigation-skins-hebe-css",
+      "type": "dependency"
+    },
+    {
+      "source": "hyperware-grp-web-site-hyper-plugins-revolution-css-navigation-skins-files-a-c-d-e-g-h-m-p",
+      "target": "hyperware-file-web-site-hyper-plugins-revolution-css-navigation-skins-hephaistos-css",
+      "type": "dependency"
+    },
+    {
+      "source": "hyperware-grp-web-site-hyper-plugins-revolution-css-navigation-skins-files-a-c-d-e-g-h-m-p",
+      "target": "hyperware-file-web-site-hyper-plugins-revolution-css-navigation-skins-hermes-css",
+      "type": "dependency"
+    },
+    {
+      "source": "hyperware-grp-web-site-hyper-plugins-revolution-css-navigation-skins-files-a-c-d-e-g-h-m-p",
+      "target": "hyperware-file-web-site-hyper-plugins-revolution-css-navigation-skins-hesperiden-css",
+      "type": "dependency"
+    },
+    {
+      "source": "hyperware-grp-web-site-hyper-plugins-revolution-css-navigation-skins-files-a-c-d-e-g-h-m-p",
+      "target": "hyperware-file-web-site-hyper-plugins-revolution-css-navigation-skins-metis-css",
+      "type": "dependency"
+    },
+    {
+      "source": "hyperware-grp-web-site-hyper-plugins-revolution-css-navigation-skins-files-a-c-d-e-g-h-m-p",
+      "target": "hyperware-file-web-site-hyper-plugins-revolution-css-navigation-skins-persephone-css",
+      "type": "dependency"
+    },
+    {
+      "source": "hyperware-grp-web-site-hyper-plugins-revolution-css-navigation-skins-files-u-z",
+      "target": "hyperware-file-web-site-hyper-plugins-revolution-css-navigation-skins-uranus-css",
+      "type": "dependency"
+    },
+    {
+      "source": "hyperware-grp-web-site-hyper-plugins-revolution-css-navigation-skins-files-u-z",
+      "target": "hyperware-file-web-site-hyper-plugins-revolution-css-navigation-skins-zeus-css",
+      "type": "dependency"
+    },
+    {
+      "source": "hyperware-dir-web-site-hyper-plugins-revolution-fonts",
+      "target": "hyperware-file-web-site-hyper-plugins-revolution-fonts-index-php",
+      "type": "dependency"
+    },
+    {
+      "source": "hyperware-dir-web-site-hyper-plugins-revolution-fonts-font-awesome",
+      "target": "hyperware-file-web-site-hyper-plugins-revolution-fonts-font-awesome-index-php",
+      "type": "dependency"
+    },
+    {
+      "source": "hyperware-dir-web-site-hyper-plugins-revolution-fonts-font-awesome-css",
+      "target": "hyperware-file-web-site-hyper-plugins-revolution-fonts-font-awesome-css-font-awesome-css",
+      "type": "dependency"
+    },
+    {
+      "source": "hyperware-dir-web-site-hyper-plugins-revolution-fonts-font-awesome-css",
+      "target": "hyperware-file-web-site-hyper-plugins-revolution-fonts-font-awesome-css-font-awesome-min-css",
+      "type": "dependency"
+    },
+    {
+      "source": "hyperware-dir-web-site-hyper-plugins-revolution-fonts-pe-icon-7-stroke",
+      "target": "hyperware-file-web-site-hyper-plugins-revolution-fonts-pe-icon-7-stroke-index-php",
+      "type": "dependency"
+    },
+    {
+      "source": "hyperware-dir-web-site-hyper-plugins-revolution-fonts-pe-icon-7-stroke-css",
+      "target": "hyperware-file-web-site-hyper-plugins-revolution-fonts-pe-icon-7-stroke-css-helper-css",
+      "type": "dependency"
+    },
+    {
+      "source": "hyperware-dir-web-site-hyper-plugins-revolution-fonts-pe-icon-7-stroke-css",
+      "target": "hyperware-file-web-site-hyper-plugins-revolution-fonts-pe-icon-7-stroke-css-index-php",
+      "type": "dependency"
+    },
+    {
+      "source": "hyperware-dir-web-site-hyper-plugins-revolution-fonts-pe-icon-7-stroke-css",
+      "target": "hyperware-file-web-site-hyper-plugins-revolution-fonts-pe-icon-7-stroke-css-pe-icon-7-stroke-cs",
+      "type": "dependency"
+    },
+    {
+      "source": "hyperware-dir-web-site-hyper-plugins-revolution-fonts-pe-icon-7-stroke-fonts",
+      "target": "hyperware-file-web-site-hyper-plugins-revolution-fonts-pe-icon-7-stroke-fonts-index-php",
+      "type": "dependency"
+    },
+    {
+      "source": "hyperware-dir-web-site-hyper-plugins-revolution-fonts-revicons",
+      "target": "hyperware-file-web-site-hyper-plugins-revolution-fonts-revicons-index-php",
+      "type": "dependency"
+    },
+    {
+      "source": "hyperware-dir-web-site-hyper-plugins-revolution-js",
+      "target": "hyperware-file-web-site-hyper-plugins-revolution-js-index-php",
+      "type": "dependency"
+    },
+    {
+      "source": "hyperware-dir-web-site-hyper-plugins-revolution-js",
+      "target": "hyperware-file-web-site-hyper-plugins-revolution-js-jquery-themepunch-enablelog-js",
+      "type": "dependency"
+    },
+    {
+      "source": "hyperware-dir-web-site-hyper-plugins-revolution-js",
+      "target": "hyperware-file-web-site-hyper-plugins-revolution-js-jquery-themepunch-revolution-min-js",
+      "type": "dependency"
+    },
+    {
+      "source": "hyperware-dir-web-site-hyper-plugins-revolution-js",
+      "target": "hyperware-file-web-site-hyper-plugins-revolution-js-jquery-themepunch-tools-min-js",
+      "type": "dependency"
+    },
+    {
+      "source": "hyperware-dir-web-site-hyper-plugins-revolution-js",
+      "target": "hyperware-file-web-site-hyper-plugins-revolution-js-tp-color-picker-min-js",
+      "type": "dependency"
+    },
+    {
+      "source": "hyperware-dir-web-site-hyper-plugins-revolution-js-extensions",
+      "target": "hyperware-file-web-site-hyper-plugins-revolution-js-extensions-index-php",
+      "type": "dependency"
+    },
+    {
+      "source": "hyperware-dir-web-site-hyper-plugins-revolution-js-extensions",
+      "target": "hyperware-file-web-site-hyper-plugins-revolution-js-extensions-revolution-extension-actions-min",
+      "type": "dependency"
+    },
+    {
+      "source": "hyperware-dir-web-site-hyper-plugins-revolution-js-extensions",
+      "target": "hyperware-file-web-site-hyper-plugins-revolution-js-extensions-revolution-extension-carousel-mi",
+      "type": "dependency"
+    },
+    {
+      "source": "hyperware-dir-web-site-hyper-plugins-revolution-js-extensions",
+      "target": "hyperware-file-web-site-hyper-plugins-revolution-js-extensions-revolution-extension-kenburn-min",
+      "type": "dependency"
+    },
+    {
+      "source": "hyperware-dir-web-site-hyper-plugins-revolution-js-extensions",
+      "target": "hyperware-file-web-site-hyper-plugins-revolution-js-extensions-revolution-extension-layeranimat",
+      "type": "dependency"
+    },
+    {
+      "source": "hyperware-dir-web-site-hyper-plugins-revolution-js-extensions",
+      "target": "hyperware-file-web-site-hyper-plugins-revolution-js-extensions-revolution-extension-migration-m",
+      "type": "dependency"
+    },
+    {
+      "source": "hyperware-dir-web-site-hyper-plugins-revolution-js-extensions",
+      "target": "hyperware-file-web-site-hyper-plugins-revolution-js-extensions-revolution-extension-navigation-",
+      "type": "dependency"
+    },
+    {
+      "source": "hyperware-dir-web-site-hyper-plugins-revolution-js-extensions",
+      "target": "hyperware-file-web-site-hyper-plugins-revolution-js-extensions-revolution-extension-parallax-mi",
+      "type": "dependency"
+    },
+    {
+      "source": "hyperware-dir-web-site-hyper-plugins-revolution-js-extensions",
+      "target": "hyperware-file-web-site-hyper-plugins-revolution-js-extensions-revolution-extension-slideanims-",
+      "type": "dependency"
+    },
+    {
+      "source": "hyperware-dir-web-site-hyper-plugins-revolution-js-extensions",
+      "target": "hyperware-file-web-site-hyper-plugins-revolution-js-extensions-revolution-extension-video-min-j",
+      "type": "dependency"
+    },
+    {
+      "source": "hyperware-dir-web-site-hyper-plugins-revolution-js-extensions-source",
+      "target": "hyperware-file-web-site-hyper-plugins-revolution-js-extensions-source-index-php",
+      "type": "dependency"
+    },
+    {
+      "source": "hyperware-dir-web-site-hyper-plugins-revolution-js-extensions-source",
+      "target": "hyperware-file-web-site-hyper-plugins-revolution-js-extensions-source-revolution-extension-acti",
+      "type": "dependency"
+    },
+    {
+      "source": "hyperware-dir-web-site-hyper-plugins-revolution-js-extensions-source",
+      "target": "hyperware-file-web-site-hyper-plugins-revolution-js-extensions-source-revolution-extension-caro",
+      "type": "dependency"
+    },
+    {
+      "source": "hyperware-dir-web-site-hyper-plugins-revolution-js-extensions-source",
+      "target": "hyperware-file-web-site-hyper-plugins-revolution-js-extensions-source-revolution-extension-kenb",
+      "type": "dependency"
+    },
+    {
+      "source": "hyperware-dir-web-site-hyper-plugins-revolution-js-extensions-source",
+      "target": "hyperware-file-web-site-hyper-plugins-revolution-js-extensions-source-revolution-extension-laye",
+      "type": "dependency"
+    },
+    {
+      "source": "hyperware-dir-web-site-hyper-plugins-revolution-js-extensions-source",
+      "target": "hyperware-file-web-site-hyper-plugins-revolution-js-extensions-source-revolution-extension-migr",
+      "type": "dependency"
+    },
+    {
+      "source": "hyperware-dir-web-site-hyper-plugins-revolution-js-extensions-source",
+      "target": "hyperware-file-web-site-hyper-plugins-revolution-js-extensions-source-revolution-extension-navi",
+      "type": "dependency"
+    },
+    {
+      "source": "hyperware-dir-web-site-hyper-plugins-revolution-js-extensions-source",
+      "target": "hyperware-file-web-site-hyper-plugins-revolution-js-extensions-source-revolution-extension-para",
+      "type": "dependency"
+    },
+    {
+      "source": "hyperware-dir-web-site-hyper-plugins-revolution-js-extensions-source",
+      "target": "hyperware-file-web-site-hyper-plugins-revolution-js-extensions-source-revolution-extension-slid",
+      "type": "dependency"
+    },
+    {
+      "source": "hyperware-dir-web-site-hyper-plugins-revolution-js-extensions-source",
+      "target": "hyperware-file-web-site-hyper-plugins-revolution-js-extensions-source-revolution-extension-vide",
+      "type": "dependency"
+    },
+    {
+      "source": "hyperware-dir-web-site-hyper-plugins-revolution-js-source",
+      "target": "hyperware-file-web-site-hyper-plugins-revolution-js-source-index-php",
+      "type": "dependency"
+    },
+    {
+      "source": "hyperware-dir-web-site-hyper-plugins-revolution-js-source",
+      "target": "hyperware-file-web-site-hyper-plugins-revolution-js-source-jquery-themepunch-enablelog-js",
+      "type": "dependency"
+    },
+    {
+      "source": "hyperware-dir-web-site-hyper-plugins-revolution-js-source",
+      "target": "hyperware-file-web-site-hyper-plugins-revolution-js-source-jquery-themepunch-revolution-js",
+      "type": "dependency"
+    },
+    {
+      "source": "hyperware-dir-web-site-hyper-plugins-revolution-js-source",
+      "target": "hyperware-file-web-site-hyper-plugins-revolution-js-source-jquery-themepunch-tools-min-js",
+      "type": "dependency"
+    },
+    {
+      "source": "hyperware-dir-web-site-hyper-plugins-revolution-js-source",
+      "target": "hyperware-file-web-site-hyper-plugins-revolution-js-source-tp-color-picker-js",
+      "type": "dependency"
+    },
+    {
+      "source": "hyperware-dir-web-site-hyper-plugins-revolution-php-facebook",
+      "target": "hyperware-file-web-site-hyper-plugins-revolution-php-facebook-class-facebook-php",
+      "type": "dependency"
+    },
+    {
+      "source": "hyperware-dir-web-site-hyper-plugins-revolution-php-flickr",
+      "target": "hyperware-file-web-site-hyper-plugins-revolution-php-flickr-class-flickr-php",
+      "type": "dependency"
+    },
+    {
+      "source": "hyperware-dir-web-site-hyper-plugins-revolution-php-instagram",
+      "target": "hyperware-file-web-site-hyper-plugins-revolution-php-instagram-class-instagram-php",
+      "type": "dependency"
+    },
+    {
+      "source": "hyperware-dir-web-site-hyper-plugins-revolution-php-twitter",
+      "target": "hyperware-file-web-site-hyper-plugins-revolution-php-twitter-class-twitter-php",
+      "type": "dependency"
+    },
+    {
+      "source": "hyperware-dir-web-site-hyper-plugins-revolution-php-twitter",
+      "target": "hyperware-file-web-site-hyper-plugins-revolution-php-twitter-restapi-php",
+      "type": "dependency"
+    },
+    {
+      "source": "hyperware-dir-web-site-hyper-plugins-revolution-php-twitter-connection",
+      "target": "hyperware-file-web-site-hyper-plugins-revolution-php-twitter-connection-application-php",
+      "type": "dependency"
+    },
+    {
+      "source": "hyperware-dir-web-site-hyper-plugins-revolution-php-twitter-connection",
+      "target": "hyperware-file-web-site-hyper-plugins-revolution-php-twitter-connection-connectionabstract-php",
+      "type": "dependency"
+    },
+    {
+      "source": "hyperware-dir-web-site-hyper-plugins-revolution-php-twitter-connection",
+      "target": "hyperware-file-web-site-hyper-plugins-revolution-php-twitter-connection-user-php",
+      "type": "dependency"
+    },
+    {
+      "source": "hyperware-dir-web-site-hyper-plugins-revolution-php-vimeo",
+      "target": "hyperware-file-web-site-hyper-plugins-revolution-php-vimeo-class-vimeo-php",
+      "type": "dependency"
+    },
+    {
+      "source": "hyperware-dir-web-site-hyper-plugins-revolution-php-youtube",
+      "target": "hyperware-file-web-site-hyper-plugins-revolution-php-youtube-class-youtube-php",
+      "type": "dependency"
+    },
+    {
+      "source": "hyperware-dir-web-stats",
+      "target": "hyperware-grp-web-stats-files-a-1-12",
+      "type": "dependency"
+    },
+    {
+      "source": "hyperware-dir-web-stats",
+      "target": "hyperware-grp-web-stats-files-a-13-23",
+      "type": "dependency"
+    },
+    {
+      "source": "hyperware-dir-web-stats",
+      "target": "hyperware-grp-web-stats-files-i",
+      "type": "dependency"
+    },
+    {
+      "source": "hyperware-grp-web-stats-files-a-1-12",
+      "target": "hyperware-file-web-stats-awsindex-html",
+      "type": "dependency"
+    },
+    {
+      "source": "hyperware-grp-web-stats-files-a-1-12",
+      "target": "hyperware-file-web-stats-awstats-hyperware-com-br-alldomains-html",
+      "type": "dependency"
+    },
+    {
+      "source": "hyperware-grp-web-stats-files-a-1-12",
+      "target": "hyperware-file-web-stats-awstats-hyperware-com-br-allhosts-html",
+      "type": "dependency"
+    },
+    {
+      "source": "hyperware-grp-web-stats-files-a-1-12",
+      "target": "hyperware-file-web-stats-awstats-hyperware-com-br-allrobots-html",
+      "type": "dependency"
+    },
+    {
+      "source": "hyperware-grp-web-stats-files-a-1-12",
+      "target": "hyperware-file-web-stats-awstats-hyperware-com-br-browserdetail-html",
+      "type": "dependency"
+    },
+    {
+      "source": "hyperware-grp-web-stats-files-a-1-12",
+      "target": "hyperware-file-web-stats-awstats-hyperware-com-br-downloads-html",
+      "type": "dependency"
+    },
+    {
+      "source": "hyperware-grp-web-stats-files-a-1-12",
+      "target": "hyperware-file-web-stats-awstats-hyperware-com-br-errors400-html",
+      "type": "dependency"
+    },
+    {
+      "source": "hyperware-grp-web-stats-files-a-1-12",
+      "target": "hyperware-file-web-stats-awstats-hyperware-com-br-errors403-html",
+      "type": "dependency"
+    },
+    {
+      "source": "hyperware-grp-web-stats-files-a-1-12",
+      "target": "hyperware-file-web-stats-awstats-hyperware-com-br-errors404-html",
+      "type": "dependency"
+    },
+    {
+      "source": "hyperware-grp-web-stats-files-a-1-12",
+      "target": "hyperware-file-web-stats-awstats-hyperware-com-br-keyphrases-html",
+      "type": "dependency"
+    },
+    {
+      "source": "hyperware-grp-web-stats-files-a-1-12",
+      "target": "hyperware-file-web-stats-awstats-hyperware-com-br-keywords-html",
+      "type": "dependency"
+    },
+    {
+      "source": "hyperware-grp-web-stats-files-a-1-12",
+      "target": "hyperware-file-web-stats-awstats-hyperware-com-br-lasthosts-html",
+      "type": "dependency"
+    },
+    {
+      "source": "hyperware-grp-web-stats-files-a-13-23",
+      "target": "hyperware-file-web-stats-awstats-hyperware-com-br-lastrobots-html",
+      "type": "dependency"
+    },
+    {
+      "source": "hyperware-grp-web-stats-files-a-13-23",
+      "target": "hyperware-file-web-stats-awstats-hyperware-com-br-osdetail-html",
+      "type": "dependency"
+    },
+    {
+      "source": "hyperware-grp-web-stats-files-a-13-23",
+      "target": "hyperware-file-web-stats-awstats-hyperware-com-br-refererpages-html",
+      "type": "dependency"
+    },
+    {
+      "source": "hyperware-grp-web-stats-files-a-13-23",
+      "target": "hyperware-file-web-stats-awstats-hyperware-com-br-refererse-html",
+      "type": "dependency"
+    },
+    {
+      "source": "hyperware-grp-web-stats-files-a-13-23",
+      "target": "hyperware-file-web-stats-awstats-hyperware-com-br-session-html",
+      "type": "dependency"
+    },
+    {
+      "source": "hyperware-grp-web-stats-files-a-13-23",
+      "target": "hyperware-file-web-stats-awstats-hyperware-com-br-unknownbrowser-html",
+      "type": "dependency"
+    },
+    {
+      "source": "hyperware-grp-web-stats-files-a-13-23",
+      "target": "hyperware-file-web-stats-awstats-hyperware-com-br-unknownip-html",
+      "type": "dependency"
+    },
+    {
+      "source": "hyperware-grp-web-stats-files-a-13-23",
+      "target": "hyperware-file-web-stats-awstats-hyperware-com-br-unknownos-html",
+      "type": "dependency"
+    },
+    {
+      "source": "hyperware-grp-web-stats-files-a-13-23",
+      "target": "hyperware-file-web-stats-awstats-hyperware-com-br-urldetail-html",
+      "type": "dependency"
+    },
+    {
+      "source": "hyperware-grp-web-stats-files-a-13-23",
+      "target": "hyperware-file-web-stats-awstats-hyperware-com-br-urlentry-html",
+      "type": "dependency"
+    },
+    {
+      "source": "hyperware-grp-web-stats-files-a-13-23",
+      "target": "hyperware-file-web-stats-awstats-hyperware-com-br-urlexit-html",
+      "type": "dependency"
+    },
+    {
+      "source": "hyperware-grp-web-stats-files-i",
+      "target": "hyperware-file-web-stats-index-php",
+      "type": "dependency"
+    },
+    {
+      "source": "hyperware-dir-web-stats-2020-6",
+      "target": "hyperware-grp-web-stats-2020-6-files-a-1-12",
+      "type": "dependency"
+    },
+    {
+      "source": "hyperware-dir-web-stats-2020-6",
+      "target": "hyperware-grp-web-stats-2020-6-files-a-13-23",
+      "type": "dependency"
+    },
+    {
+      "source": "hyperware-grp-web-stats-2020-6-files-a-1-12",
+      "target": "hyperware-file-web-stats-2020-6-awsindex-html",
+      "type": "dependency"
+    },
+    {
+      "source": "hyperware-grp-web-stats-2020-6-files-a-1-12",
+      "target": "hyperware-file-web-stats-2020-6-awstats-hyperware-com-br-alldomains-html",
+      "type": "dependency"
+    },
+    {
+      "source": "hyperware-grp-web-stats-2020-6-files-a-1-12",
+      "target": "hyperware-file-web-stats-2020-6-awstats-hyperware-com-br-allhosts-html",
+      "type": "dependency"
+    },
+    {
+      "source": "hyperware-grp-web-stats-2020-6-files-a-1-12",
+      "target": "hyperware-file-web-stats-2020-6-awstats-hyperware-com-br-allrobots-html",
+      "type": "dependency"
+    },
+    {
+      "source": "hyperware-grp-web-stats-2020-6-files-a-1-12",
+      "target": "hyperware-file-web-stats-2020-6-awstats-hyperware-com-br-browserdetail-html",
+      "type": "dependency"
+    },
+    {
+      "source": "hyperware-grp-web-stats-2020-6-files-a-1-12",
+      "target": "hyperware-file-web-stats-2020-6-awstats-hyperware-com-br-downloads-html",
+      "type": "dependency"
+    },
+    {
+      "source": "hyperware-grp-web-stats-2020-6-files-a-1-12",
+      "target": "hyperware-file-web-stats-2020-6-awstats-hyperware-com-br-errors400-html",
+      "type": "dependency"
+    },
+    {
+      "source": "hyperware-grp-web-stats-2020-6-files-a-1-12",
+      "target": "hyperware-file-web-stats-2020-6-awstats-hyperware-com-br-errors403-html",
+      "type": "dependency"
+    },
+    {
+      "source": "hyperware-grp-web-stats-2020-6-files-a-1-12",
+      "target": "hyperware-file-web-stats-2020-6-awstats-hyperware-com-br-errors404-html",
+      "type": "dependency"
+    },
+    {
+      "source": "hyperware-grp-web-stats-2020-6-files-a-1-12",
+      "target": "hyperware-file-web-stats-2020-6-awstats-hyperware-com-br-keyphrases-html",
+      "type": "dependency"
+    },
+    {
+      "source": "hyperware-grp-web-stats-2020-6-files-a-1-12",
+      "target": "hyperware-file-web-stats-2020-6-awstats-hyperware-com-br-keywords-html",
+      "type": "dependency"
+    },
+    {
+      "source": "hyperware-grp-web-stats-2020-6-files-a-1-12",
+      "target": "hyperware-file-web-stats-2020-6-awstats-hyperware-com-br-lasthosts-html",
+      "type": "dependency"
+    },
+    {
+      "source": "hyperware-grp-web-stats-2020-6-files-a-13-23",
+      "target": "hyperware-file-web-stats-2020-6-awstats-hyperware-com-br-lastrobots-html",
+      "type": "dependency"
+    },
+    {
+      "source": "hyperware-grp-web-stats-2020-6-files-a-13-23",
+      "target": "hyperware-file-web-stats-2020-6-awstats-hyperware-com-br-osdetail-html",
+      "type": "dependency"
+    },
+    {
+      "source": "hyperware-grp-web-stats-2020-6-files-a-13-23",
+      "target": "hyperware-file-web-stats-2020-6-awstats-hyperware-com-br-refererpages-html",
+      "type": "dependency"
+    },
+    {
+      "source": "hyperware-grp-web-stats-2020-6-files-a-13-23",
+      "target": "hyperware-file-web-stats-2020-6-awstats-hyperware-com-br-refererse-html",
+      "type": "dependency"
+    },
+    {
+      "source": "hyperware-grp-web-stats-2020-6-files-a-13-23",
+      "target": "hyperware-file-web-stats-2020-6-awstats-hyperware-com-br-session-html",
+      "type": "dependency"
+    },
+    {
+      "source": "hyperware-grp-web-stats-2020-6-files-a-13-23",
+      "target": "hyperware-file-web-stats-2020-6-awstats-hyperware-com-br-unknownbrowser-html",
+      "type": "dependency"
+    },
+    {
+      "source": "hyperware-grp-web-stats-2020-6-files-a-13-23",
+      "target": "hyperware-file-web-stats-2020-6-awstats-hyperware-com-br-unknownip-html",
+      "type": "dependency"
+    },
+    {
+      "source": "hyperware-grp-web-stats-2020-6-files-a-13-23",
+      "target": "hyperware-file-web-stats-2020-6-awstats-hyperware-com-br-unknownos-html",
+      "type": "dependency"
+    },
+    {
+      "source": "hyperware-grp-web-stats-2020-6-files-a-13-23",
+      "target": "hyperware-file-web-stats-2020-6-awstats-hyperware-com-br-urldetail-html",
+      "type": "dependency"
+    },
+    {
+      "source": "hyperware-grp-web-stats-2020-6-files-a-13-23",
+      "target": "hyperware-file-web-stats-2020-6-awstats-hyperware-com-br-urlentry-html",
+      "type": "dependency"
+    },
+    {
+      "source": "hyperware-grp-web-stats-2020-6-files-a-13-23",
+      "target": "hyperware-file-web-stats-2020-6-awstats-hyperware-com-br-urlexit-html",
       "type": "dependency"
     }
   ]
