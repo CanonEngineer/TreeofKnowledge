@@ -4,7 +4,7 @@
   "repoUrl": "https://github.com/CanonEngineer/SentinelAI",
   "color": "#38bdf8",
   "demoUrl": "http://localhost:5173",
-  "nodeCount": 378,
+  "nodeCount": 387,
   "categories": {
     "core": {
       "label": "Backend",
@@ -46,7 +46,7 @@
       "color": "#3b82f6",
       "size": 2.2,
       "file": "README.md",
-      "description": "Árvore completa do repositório — 301 arquivos de código mapeados (backend, frontend, mobile, docs, scripts, deploy)."
+      "description": "Árvore completa do repositório — 306 arquivos de código mapeados (backend, frontend, mobile, docs, scripts, deploy)."
     },
     {
       "id": "sai-dir-github",
@@ -793,9 +793,33 @@
       "description": "Pacote/pasta `frontend/src/components/ui/` do SentinelAI."
     },
     {
+      "id": "sai-grp-files",
+      "label": "Arquivos #",
+      "parent": "sai-root",
+      "layer": "module",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 1.35,
+      "file": "[files-#]",
+      "description": "Grupo de arquivos em `./` — Arquivos #"
+    },
+    {
+      "id": "sai-grp-files-d",
+      "label": "Arquivos D",
+      "parent": "sai-root",
+      "layer": "module",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 1.35,
+      "file": "[files-d]",
+      "description": "Grupo de arquivos em `./` — Arquivos D"
+    },
+    {
       "id": "sai-file-cursorignore",
       "label": ".cursorignore",
-      "parent": "sai-root",
+      "parent": "sai-grp-files",
       "layer": "file",
       "category": "other",
       "categoryLabel": "Outros",
@@ -807,7 +831,7 @@
     {
       "id": "sai-file-env-example",
       "label": ".env.example",
-      "parent": "sai-root",
+      "parent": "sai-grp-files",
       "layer": "file",
       "category": "other",
       "categoryLabel": "Outros",
@@ -819,7 +843,7 @@
     {
       "id": "sai-file-gitignore",
       "label": ".gitignore",
-      "parent": "sai-root",
+      "parent": "sai-grp-files",
       "layer": "file",
       "category": "other",
       "categoryLabel": "Outros",
@@ -829,9 +853,21 @@
       "description": "Código-fonte: `.gitignore`"
     },
     {
+      "id": "sai-file-docker-compose-dev-yml",
+      "label": "docker-compose.dev.yml",
+      "parent": "sai-grp-files-d",
+      "layer": "file",
+      "category": "other",
+      "categoryLabel": "Outros",
+      "color": "#64748b",
+      "size": 0.85,
+      "file": "docker-compose.dev.yml",
+      "description": "Código-fonte: `docker-compose.dev.yml`"
+    },
+    {
       "id": "sai-file-docker-compose-enterprise-yml",
       "label": "docker-compose.enterprise.yml",
-      "parent": "sai-root",
+      "parent": "sai-grp-files-d",
       "layer": "file",
       "category": "other",
       "categoryLabel": "Outros",
@@ -843,7 +879,7 @@
     {
       "id": "sai-file-docker-compose-ha-yml",
       "label": "docker-compose.ha.yml",
-      "parent": "sai-root",
+      "parent": "sai-grp-files-d",
       "layer": "file",
       "category": "other",
       "categoryLabel": "Outros",
@@ -855,7 +891,7 @@
     {
       "id": "sai-file-docker-compose-multiregion-yml",
       "label": "docker-compose.multiregion.yml",
-      "parent": "sai-root",
+      "parent": "sai-grp-files-d",
       "layer": "file",
       "category": "other",
       "categoryLabel": "Outros",
@@ -867,7 +903,7 @@
     {
       "id": "sai-file-docker-compose-observability-yml",
       "label": "docker-compose.observability.yml",
-      "parent": "sai-root",
+      "parent": "sai-grp-files-d",
       "layer": "file",
       "category": "other",
       "categoryLabel": "Outros",
@@ -879,7 +915,7 @@
     {
       "id": "sai-file-docker-compose-payments-yml",
       "label": "docker-compose.payments.yml",
-      "parent": "sai-root",
+      "parent": "sai-grp-files-d",
       "layer": "file",
       "category": "other",
       "categoryLabel": "Outros",
@@ -891,7 +927,7 @@
     {
       "id": "sai-file-docker-compose-replica-yml",
       "label": "docker-compose.replica.yml",
-      "parent": "sai-root",
+      "parent": "sai-grp-files-d",
       "layer": "file",
       "category": "other",
       "categoryLabel": "Outros",
@@ -903,7 +939,7 @@
     {
       "id": "sai-file-docker-compose-tracing-yml",
       "label": "docker-compose.tracing.yml",
-      "parent": "sai-root",
+      "parent": "sai-grp-files-d",
       "layer": "file",
       "category": "other",
       "categoryLabel": "Outros",
@@ -915,7 +951,7 @@
     {
       "id": "sai-file-docker-compose-yml",
       "label": "docker-compose.yml",
-      "parent": "sai-root",
+      "parent": "sai-grp-files-d",
       "layer": "file",
       "category": "other",
       "categoryLabel": "Outros",
@@ -927,7 +963,7 @@
     {
       "id": "sai-file-docker-compose-zerotrust-yml",
       "label": "docker-compose.zerotrust.yml",
-      "parent": "sai-root",
+      "parent": "sai-grp-files-d",
       "layer": "file",
       "category": "other",
       "categoryLabel": "Outros",
@@ -2641,16 +2677,16 @@
       "description": "Grupo de arquivos em `backend/app/services/` — Arquivos P (13–13)"
     },
     {
-      "id": "sai-grp-backend-app-services-files-r-t-z",
-      "label": "Arquivos R–T–Z",
+      "id": "sai-grp-backend-app-services-files-r-s-t-z",
+      "label": "Arquivos R–S–T–Z",
       "parent": "sai-dir-backend-app-services",
       "layer": "module",
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
       "size": 1.35,
-      "file": "backend/app/services/[files-r–t–z]",
-      "description": "Grupo de arquivos em `backend/app/services/` — Arquivos R–T–Z"
+      "file": "backend/app/services/[files-r–s–t–z]",
+      "description": "Grupo de arquivos em `backend/app/services/` — Arquivos R–S–T–Z"
     },
     {
       "id": "sai-file-backend-app-services-init-py",
@@ -2675,6 +2711,18 @@
       "size": 0.85,
       "file": "backend/app/services/ad_identity_service.py",
       "description": "Código-fonte: `backend/app/services/ad_identity_service.py`"
+    },
+    {
+      "id": "sai-file-backend-app-services-alert-channel-service-py",
+      "label": "alert_channel_service.py",
+      "parent": "sai-grp-backend-app-services-files-a-d-e-h-i-l-m",
+      "layer": "file",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 0.85,
+      "file": "backend/app/services/alert_channel_service.py",
+      "description": "Código-fonte: `backend/app/services/alert_channel_service.py`"
     },
     {
       "id": "sai-file-backend-app-services-alert-service-py",
@@ -2943,7 +2991,7 @@
     {
       "id": "sai-file-backend-app-services-realtime-events-py",
       "label": "realtime_events.py",
-      "parent": "sai-grp-backend-app-services-files-r-t-z",
+      "parent": "sai-grp-backend-app-services-files-r-s-t-z",
       "layer": "file",
       "category": "core",
       "categoryLabel": "Backend",
@@ -2953,9 +3001,21 @@
       "description": "Código-fonte: `backend/app/services/realtime_events.py`"
     },
     {
+      "id": "sai-file-backend-app-services-security-policy-py",
+      "label": "security_policy.py",
+      "parent": "sai-grp-backend-app-services-files-r-s-t-z",
+      "layer": "file",
+      "category": "auth",
+      "categoryLabel": "Segurança",
+      "color": "#ef4444",
+      "size": 0.85,
+      "file": "backend/app/services/security_policy.py",
+      "description": "Código-fonte: `backend/app/services/security_policy.py`"
+    },
+    {
       "id": "sai-file-backend-app-services-topology-service-py",
       "label": "topology_service.py",
-      "parent": "sai-grp-backend-app-services-files-r-t-z",
+      "parent": "sai-grp-backend-app-services-files-r-s-t-z",
       "layer": "file",
       "category": "core",
       "categoryLabel": "Backend",
@@ -2967,7 +3027,7 @@
     {
       "id": "sai-file-backend-app-services-traffic-service-py",
       "label": "traffic_service.py",
-      "parent": "sai-grp-backend-app-services-files-r-t-z",
+      "parent": "sai-grp-backend-app-services-files-r-s-t-z",
       "layer": "file",
       "category": "core",
       "categoryLabel": "Backend",
@@ -2979,7 +3039,7 @@
     {
       "id": "sai-file-backend-app-services-zion-panels-py",
       "label": "zion_panels.py",
-      "parent": "sai-grp-backend-app-services-files-r-t-z",
+      "parent": "sai-grp-backend-app-services-files-r-s-t-z",
       "layer": "file",
       "category": "core",
       "categoryLabel": "Backend",
@@ -2991,7 +3051,7 @@
     {
       "id": "sai-file-backend-app-services-zion-service-py",
       "label": "zion_service.py",
-      "parent": "sai-grp-backend-app-services-files-r-t-z",
+      "parent": "sai-grp-backend-app-services-files-r-s-t-z",
       "layer": "file",
       "category": "core",
       "categoryLabel": "Backend",
@@ -3793,6 +3853,18 @@
       "description": "Código-fonte: `frontend/src/vite-env.d.ts`"
     },
     {
+      "id": "sai-file-frontend-src-api-baseurl-ts",
+      "label": "baseUrl.ts",
+      "parent": "sai-dir-frontend-src-api",
+      "layer": "file",
+      "category": "frontend",
+      "categoryLabel": "Frontend",
+      "color": "#eab308",
+      "size": 0.85,
+      "file": "frontend/src/api/baseUrl.ts",
+      "description": "Código-fonte: `frontend/src/api/baseUrl.ts`"
+    },
+    {
       "id": "sai-file-frontend-src-api-client-ts",
       "label": "client.ts",
       "parent": "sai-dir-frontend-src-api",
@@ -4237,9 +4309,33 @@
       "description": "Código-fonte: `frontend/src/hooks/useMonitoringStream.ts`"
     },
     {
+      "id": "sai-grp-frontend-src-pages-files-a-c-d-i-l-n-p-r-s-t-u",
+      "label": "Arquivos A–C–D–I–L–N–P–R–S–T–U",
+      "parent": "sai-dir-frontend-src-pages",
+      "layer": "module",
+      "category": "frontend",
+      "categoryLabel": "Frontend",
+      "color": "#eab308",
+      "size": 1.35,
+      "file": "frontend/src/pages/[files-a–c–d–i–l–n–p–r–s–t–u]",
+      "description": "Grupo de arquivos em `frontend/src/pages/` — Arquivos A–C–D–I–L–N–P–R–S–T–U"
+    },
+    {
+      "id": "sai-grp-frontend-src-pages-files-z",
+      "label": "Arquivos Z",
+      "parent": "sai-dir-frontend-src-pages",
+      "layer": "module",
+      "category": "frontend",
+      "categoryLabel": "Frontend",
+      "color": "#eab308",
+      "size": 1.35,
+      "file": "frontend/src/pages/[files-z]",
+      "description": "Grupo de arquivos em `frontend/src/pages/` — Arquivos Z"
+    },
+    {
       "id": "sai-file-frontend-src-pages-alertspage-tsx",
       "label": "AlertsPage.tsx",
-      "parent": "sai-dir-frontend-src-pages",
+      "parent": "sai-grp-frontend-src-pages-files-a-c-d-i-l-n-p-r-s-t-u",
       "layer": "file",
       "category": "frontend",
       "categoryLabel": "Frontend",
@@ -4249,9 +4345,21 @@
       "description": "Código-fonte: `frontend/src/pages/AlertsPage.tsx`"
     },
     {
+      "id": "sai-file-frontend-src-pages-changepasswordpage-tsx",
+      "label": "ChangePasswordPage.tsx",
+      "parent": "sai-grp-frontend-src-pages-files-a-c-d-i-l-n-p-r-s-t-u",
+      "layer": "file",
+      "category": "frontend",
+      "categoryLabel": "Frontend",
+      "color": "#eab308",
+      "size": 0.85,
+      "file": "frontend/src/pages/ChangePasswordPage.tsx",
+      "description": "Código-fonte: `frontend/src/pages/ChangePasswordPage.tsx`"
+    },
+    {
       "id": "sai-file-frontend-src-pages-chatbotpage-tsx",
       "label": "ChatbotPage.tsx",
-      "parent": "sai-dir-frontend-src-pages",
+      "parent": "sai-grp-frontend-src-pages-files-a-c-d-i-l-n-p-r-s-t-u",
       "layer": "file",
       "category": "frontend",
       "categoryLabel": "Frontend",
@@ -4263,7 +4371,7 @@
     {
       "id": "sai-file-frontend-src-pages-dashboard-tsx",
       "label": "Dashboard.tsx",
-      "parent": "sai-dir-frontend-src-pages",
+      "parent": "sai-grp-frontend-src-pages-files-a-c-d-i-l-n-p-r-s-t-u",
       "layer": "file",
       "category": "frontend",
       "categoryLabel": "Frontend",
@@ -4275,7 +4383,7 @@
     {
       "id": "sai-file-frontend-src-pages-infrastructurepage-tsx",
       "label": "InfrastructurePage.tsx",
-      "parent": "sai-dir-frontend-src-pages",
+      "parent": "sai-grp-frontend-src-pages-files-a-c-d-i-l-n-p-r-s-t-u",
       "layer": "file",
       "category": "frontend",
       "categoryLabel": "Frontend",
@@ -4287,7 +4395,7 @@
     {
       "id": "sai-file-frontend-src-pages-loginpage-tsx",
       "label": "LoginPage.tsx",
-      "parent": "sai-dir-frontend-src-pages",
+      "parent": "sai-grp-frontend-src-pages-files-a-c-d-i-l-n-p-r-s-t-u",
       "layer": "file",
       "category": "frontend",
       "categoryLabel": "Frontend",
@@ -4299,7 +4407,7 @@
     {
       "id": "sai-file-frontend-src-pages-noccopilotpage-tsx",
       "label": "NocCopilotPage.tsx",
-      "parent": "sai-dir-frontend-src-pages",
+      "parent": "sai-grp-frontend-src-pages-files-a-c-d-i-l-n-p-r-s-t-u",
       "layer": "file",
       "category": "frontend",
       "categoryLabel": "Frontend",
@@ -4311,7 +4419,7 @@
     {
       "id": "sai-file-frontend-src-pages-platformpage-tsx",
       "label": "PlatformPage.tsx",
-      "parent": "sai-dir-frontend-src-pages",
+      "parent": "sai-grp-frontend-src-pages-files-a-c-d-i-l-n-p-r-s-t-u",
       "layer": "file",
       "category": "frontend",
       "categoryLabel": "Frontend",
@@ -4323,7 +4431,7 @@
     {
       "id": "sai-file-frontend-src-pages-reportspage-tsx",
       "label": "ReportsPage.tsx",
-      "parent": "sai-dir-frontend-src-pages",
+      "parent": "sai-grp-frontend-src-pages-files-a-c-d-i-l-n-p-r-s-t-u",
       "layer": "file",
       "category": "frontend",
       "categoryLabel": "Frontend",
@@ -4335,7 +4443,7 @@
     {
       "id": "sai-file-frontend-src-pages-scannerpage-tsx",
       "label": "ScannerPage.tsx",
-      "parent": "sai-dir-frontend-src-pages",
+      "parent": "sai-grp-frontend-src-pages-files-a-c-d-i-l-n-p-r-s-t-u",
       "layer": "file",
       "category": "frontend",
       "categoryLabel": "Frontend",
@@ -4347,7 +4455,7 @@
     {
       "id": "sai-file-frontend-src-pages-topologymap-tsx",
       "label": "TopologyMap.tsx",
-      "parent": "sai-dir-frontend-src-pages",
+      "parent": "sai-grp-frontend-src-pages-files-a-c-d-i-l-n-p-r-s-t-u",
       "layer": "file",
       "category": "frontend",
       "categoryLabel": "Frontend",
@@ -4359,7 +4467,7 @@
     {
       "id": "sai-file-frontend-src-pages-userspage-tsx",
       "label": "UsersPage.tsx",
-      "parent": "sai-dir-frontend-src-pages",
+      "parent": "sai-grp-frontend-src-pages-files-a-c-d-i-l-n-p-r-s-t-u",
       "layer": "file",
       "category": "frontend",
       "categoryLabel": "Frontend",
@@ -4371,7 +4479,7 @@
     {
       "id": "sai-file-frontend-src-pages-zionpage-tsx",
       "label": "ZionPage.tsx",
-      "parent": "sai-dir-frontend-src-pages",
+      "parent": "sai-grp-frontend-src-pages-files-z",
       "layer": "file",
       "category": "frontend",
       "categoryLabel": "Frontend",
@@ -4886,61 +4994,76 @@
     },
     {
       "source": "sai-root",
+      "target": "sai-grp-files",
+      "type": "dependency"
+    },
+    {
+      "source": "sai-root",
+      "target": "sai-grp-files-d",
+      "type": "dependency"
+    },
+    {
+      "source": "sai-grp-files",
       "target": "sai-file-cursorignore",
       "type": "dependency"
     },
     {
-      "source": "sai-root",
+      "source": "sai-grp-files",
       "target": "sai-file-env-example",
       "type": "dependency"
     },
     {
-      "source": "sai-root",
+      "source": "sai-grp-files",
       "target": "sai-file-gitignore",
       "type": "dependency"
     },
     {
-      "source": "sai-root",
+      "source": "sai-grp-files-d",
+      "target": "sai-file-docker-compose-dev-yml",
+      "type": "dependency"
+    },
+    {
+      "source": "sai-grp-files-d",
       "target": "sai-file-docker-compose-enterprise-yml",
       "type": "dependency"
     },
     {
-      "source": "sai-root",
+      "source": "sai-grp-files-d",
       "target": "sai-file-docker-compose-ha-yml",
       "type": "dependency"
     },
     {
-      "source": "sai-root",
+      "source": "sai-grp-files-d",
       "target": "sai-file-docker-compose-multiregion-yml",
       "type": "dependency"
     },
     {
-      "source": "sai-root",
+      "source": "sai-grp-files-d",
       "target": "sai-file-docker-compose-observability-yml",
       "type": "dependency"
     },
     {
-      "source": "sai-root",
+      "source": "sai-grp-files-d",
       "target": "sai-file-docker-compose-payments-yml",
       "type": "dependency"
     },
     {
-      "source": "sai-root",
+      "source": "sai-grp-files-d",
       "target": "sai-file-docker-compose-replica-yml",
       "type": "dependency"
     },
     {
-      "source": "sai-root",
+      "source": "sai-grp-files-d",
       "target": "sai-file-docker-compose-tracing-yml",
       "type": "dependency"
     },
     {
-      "source": "sai-root",
+      "source": "sai-grp-files-d",
       "target": "sai-file-docker-compose-yml",
       "type": "dependency"
     },
     {
-      "source": "sai-root",
+      "source": "sai-grp-files-d",
       "target": "sai-file-docker-compose-zerotrust-yml",
       "type": "dependency"
     },
@@ -5656,7 +5779,7 @@
     },
     {
       "source": "sai-dir-backend-app-services",
-      "target": "sai-grp-backend-app-services-files-r-t-z",
+      "target": "sai-grp-backend-app-services-files-r-s-t-z",
       "type": "dependency"
     },
     {
@@ -5667,6 +5790,11 @@
     {
       "source": "sai-grp-backend-app-services-files-a-d-e-h-i-l-m",
       "target": "sai-file-backend-app-services-ad-identity-service-py",
+      "type": "dependency"
+    },
+    {
+      "source": "sai-grp-backend-app-services-files-a-d-e-h-i-l-m",
+      "target": "sai-file-backend-app-services-alert-channel-service-py",
       "type": "dependency"
     },
     {
@@ -5780,27 +5908,32 @@
       "type": "dependency"
     },
     {
-      "source": "sai-grp-backend-app-services-files-r-t-z",
+      "source": "sai-grp-backend-app-services-files-r-s-t-z",
       "target": "sai-file-backend-app-services-realtime-events-py",
       "type": "dependency"
     },
     {
-      "source": "sai-grp-backend-app-services-files-r-t-z",
+      "source": "sai-grp-backend-app-services-files-r-s-t-z",
+      "target": "sai-file-backend-app-services-security-policy-py",
+      "type": "dependency"
+    },
+    {
+      "source": "sai-grp-backend-app-services-files-r-s-t-z",
       "target": "sai-file-backend-app-services-topology-service-py",
       "type": "dependency"
     },
     {
-      "source": "sai-grp-backend-app-services-files-r-t-z",
+      "source": "sai-grp-backend-app-services-files-r-s-t-z",
       "target": "sai-file-backend-app-services-traffic-service-py",
       "type": "dependency"
     },
     {
-      "source": "sai-grp-backend-app-services-files-r-t-z",
+      "source": "sai-grp-backend-app-services-files-r-s-t-z",
       "target": "sai-file-backend-app-services-zion-panels-py",
       "type": "dependency"
     },
     {
-      "source": "sai-grp-backend-app-services-files-r-t-z",
+      "source": "sai-grp-backend-app-services-files-r-s-t-z",
       "target": "sai-file-backend-app-services-zion-service-py",
       "type": "dependency"
     },
@@ -6136,6 +6269,11 @@
     },
     {
       "source": "sai-dir-frontend-src-api",
+      "target": "sai-file-frontend-src-api-baseurl-ts",
+      "type": "dependency"
+    },
+    {
+      "source": "sai-dir-frontend-src-api",
       "target": "sai-file-frontend-src-api-client-ts",
       "type": "dependency"
     },
@@ -6321,61 +6459,76 @@
     },
     {
       "source": "sai-dir-frontend-src-pages",
+      "target": "sai-grp-frontend-src-pages-files-a-c-d-i-l-n-p-r-s-t-u",
+      "type": "dependency"
+    },
+    {
+      "source": "sai-dir-frontend-src-pages",
+      "target": "sai-grp-frontend-src-pages-files-z",
+      "type": "dependency"
+    },
+    {
+      "source": "sai-grp-frontend-src-pages-files-a-c-d-i-l-n-p-r-s-t-u",
       "target": "sai-file-frontend-src-pages-alertspage-tsx",
       "type": "dependency"
     },
     {
-      "source": "sai-dir-frontend-src-pages",
+      "source": "sai-grp-frontend-src-pages-files-a-c-d-i-l-n-p-r-s-t-u",
+      "target": "sai-file-frontend-src-pages-changepasswordpage-tsx",
+      "type": "dependency"
+    },
+    {
+      "source": "sai-grp-frontend-src-pages-files-a-c-d-i-l-n-p-r-s-t-u",
       "target": "sai-file-frontend-src-pages-chatbotpage-tsx",
       "type": "dependency"
     },
     {
-      "source": "sai-dir-frontend-src-pages",
+      "source": "sai-grp-frontend-src-pages-files-a-c-d-i-l-n-p-r-s-t-u",
       "target": "sai-file-frontend-src-pages-dashboard-tsx",
       "type": "dependency"
     },
     {
-      "source": "sai-dir-frontend-src-pages",
+      "source": "sai-grp-frontend-src-pages-files-a-c-d-i-l-n-p-r-s-t-u",
       "target": "sai-file-frontend-src-pages-infrastructurepage-tsx",
       "type": "dependency"
     },
     {
-      "source": "sai-dir-frontend-src-pages",
+      "source": "sai-grp-frontend-src-pages-files-a-c-d-i-l-n-p-r-s-t-u",
       "target": "sai-file-frontend-src-pages-loginpage-tsx",
       "type": "dependency"
     },
     {
-      "source": "sai-dir-frontend-src-pages",
+      "source": "sai-grp-frontend-src-pages-files-a-c-d-i-l-n-p-r-s-t-u",
       "target": "sai-file-frontend-src-pages-noccopilotpage-tsx",
       "type": "dependency"
     },
     {
-      "source": "sai-dir-frontend-src-pages",
+      "source": "sai-grp-frontend-src-pages-files-a-c-d-i-l-n-p-r-s-t-u",
       "target": "sai-file-frontend-src-pages-platformpage-tsx",
       "type": "dependency"
     },
     {
-      "source": "sai-dir-frontend-src-pages",
+      "source": "sai-grp-frontend-src-pages-files-a-c-d-i-l-n-p-r-s-t-u",
       "target": "sai-file-frontend-src-pages-reportspage-tsx",
       "type": "dependency"
     },
     {
-      "source": "sai-dir-frontend-src-pages",
+      "source": "sai-grp-frontend-src-pages-files-a-c-d-i-l-n-p-r-s-t-u",
       "target": "sai-file-frontend-src-pages-scannerpage-tsx",
       "type": "dependency"
     },
     {
-      "source": "sai-dir-frontend-src-pages",
+      "source": "sai-grp-frontend-src-pages-files-a-c-d-i-l-n-p-r-s-t-u",
       "target": "sai-file-frontend-src-pages-topologymap-tsx",
       "type": "dependency"
     },
     {
-      "source": "sai-dir-frontend-src-pages",
+      "source": "sai-grp-frontend-src-pages-files-a-c-d-i-l-n-p-r-s-t-u",
       "target": "sai-file-frontend-src-pages-userspage-tsx",
       "type": "dependency"
     },
     {
-      "source": "sai-dir-frontend-src-pages",
+      "source": "sai-grp-frontend-src-pages-files-z",
       "target": "sai-file-frontend-src-pages-zionpage-tsx",
       "type": "dependency"
     },
