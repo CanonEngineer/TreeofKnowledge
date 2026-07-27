@@ -118,6 +118,7 @@ CODE_EXTS = {
 MAX_FILE_BYTES = 1_500_000
 CODE_LIMIT = 7000
 MAX_DIRECT_FILES = 12
+MAX_ROOT_CHILDREN = 16
 
 
 def slugify(text: str) -> str:
@@ -338,9 +339,14 @@ def build_project(meta: dict) -> dict:
 
             targets = []
             for label, chunk in buckets:
+                letter_parent = ensure_group(
+                    parent_path,
+                    parent_id,
+                    f"Arquivos {label}",
+                    f"files-{label.lower()}",
+                )
                 if len(chunk) <= MAX_DIRECT_FILES:
-                    gid = ensure_group(parent_path, parent_id, f"Arquivos {label}", f"files-{label.lower()}")
-                    targets.extend((gid, f) for f in chunk)
+                    targets.extend((letter_parent, f) for f in chunk)
                 else:
                     for start in range(0, len(chunk), MAX_DIRECT_FILES):
                         part = chunk[start:start + MAX_DIRECT_FILES]
@@ -348,8 +354,8 @@ def build_project(meta: dict) -> dict:
                         hi = start + len(part)
                         gid = ensure_group(
                             parent_path,
-                            parent_id,
-                            f"Arquivos {label} ({lo}–{hi})",
+                            letter_parent,
+                            f"{lo}–{hi}",
                             f"files-{label.lower()}-{lo}-{hi}",
                         )
                         targets.extend((gid, f) for f in part)
@@ -372,6 +378,51 @@ def build_project(meta: dict) -> dict:
                     ],
                 }
             )
+
+    # Se a raiz ainda tiver muitos filhos (pastas + grupos), agrupa módulos
+    root_id = dir_ids[""]
+    root_kids = [n for n in nodes if n.get("parent") == root_id]
+    if len(root_kids) > MAX_ROOT_CHILDREN:
+        by_letter: dict[str, list[dict]] = defaultdict(list)
+        for child in root_kids:
+            ch = (child.get("title") or child["id"])[0].upper()
+            key = ch if ch.isalpha() else "#"
+            by_letter[key].append(child)
+
+        buckets: list[tuple[str, list[dict]]] = []
+        cur_label: list[str] = []
+        cur_nodes: list[dict] = []
+        for letter in sorted(by_letter):
+            chunk = by_letter[letter]
+            if cur_nodes and len(cur_nodes) + len(chunk) > MAX_ROOT_CHILDREN:
+                buckets.append(("–".join(cur_label), cur_nodes))
+                cur_label, cur_nodes = [], []
+            cur_label.append(letter)
+            cur_nodes.extend(chunk)
+        if cur_nodes:
+            buckets.append(("–".join(cur_label), cur_nodes))
+
+        for label, chunk in buckets:
+            if len(chunk) <= 1:
+                continue
+            bucket_id = unique_id(
+                path_id(slug, f"root-bucket-{label.lower()}", is_dir=True).replace("-dir-", "-grp-"),
+                seen_ids,
+            )
+            nodes.append(
+                {
+                    "id": bucket_id,
+                    "parent": root_id,
+                    "layer": "module",
+                    "title": f"Pastas {label}",
+                    "description": f"Agrupamento de pastas/módulos na raiz — {label}",
+                    "file": f"[root-{label.lower()}]",
+                    "code": f"# Agrupamento da raiz: {label}\n",
+                    "implementation": ["agrupamento de fan-out da raiz", f"letras: {label}"],
+                }
+            )
+            for child in chunk:
+                child["parent"] = bucket_id
 
     out = dict(meta)
     out["summary"] = f"Cobertura completa: {len(files)} arquivos de código no repositório ({len(nodes)} nós na árvore incluindo pastas)."

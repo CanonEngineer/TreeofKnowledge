@@ -4,7 +4,7 @@
   "repoUrl": "https://github.com/CanonEngineer/CoursePython2023",
   "color": "#facc15",
   "demoUrl": "",
-  "nodeCount": 338,
+  "nodeCount": 340,
   "categories": {
     "core": {
       "label": "Backend",
@@ -34,7 +34,7 @@
       "color": "#3b82f6",
       "size": 2.2,
       "file": "README.md",
-      "description": "Exercícios e práticas do curso de Python 2023."
+      "description": "Cobertura completa: 285 arquivos de código no repositório (338 nós na árvore incluindo pastas)."
     },
     {
       "id": "course-python-2023-dir-vscode",
@@ -51,7 +51,7 @@
     {
       "id": "course-python-2023-dir-aula141",
       "label": "aula141/",
-      "parent": "course-python-2023-root",
+      "parent": "course-python-2023-grp-root-bucket-a",
       "layer": "module",
       "category": "core",
       "categoryLabel": "Backend",
@@ -63,7 +63,7 @@
     {
       "id": "course-python-2023-dir-aula156",
       "label": "aula156/",
-      "parent": "course-python-2023-root",
+      "parent": "course-python-2023-grp-root-bucket-a",
       "layer": "module",
       "category": "core",
       "categoryLabel": "Backend",
@@ -75,7 +75,7 @@
     {
       "id": "course-python-2023-dir-aula158",
       "label": "aula158/",
-      "parent": "course-python-2023-root",
+      "parent": "course-python-2023-grp-root-bucket-a",
       "layer": "module",
       "category": "core",
       "categoryLabel": "Backend",
@@ -87,7 +87,7 @@
     {
       "id": "course-python-2023-dir-aula190-site",
       "label": "aula190_site/",
-      "parent": "course-python-2023-root",
+      "parent": "course-python-2023-grp-root-bucket-a",
       "layer": "module",
       "category": "core",
       "categoryLabel": "Backend",
@@ -99,7 +99,7 @@
     {
       "id": "course-python-2023-dir-aula193",
       "label": "aula193/",
-      "parent": "course-python-2023-root",
+      "parent": "course-python-2023-grp-root-bucket-a",
       "layer": "module",
       "category": "core",
       "categoryLabel": "Backend",
@@ -111,7 +111,7 @@
     {
       "id": "course-python-2023-dir-aula197",
       "label": "aula197/",
-      "parent": "course-python-2023-root",
+      "parent": "course-python-2023-grp-root-bucket-a",
       "layer": "module",
       "category": "core",
       "categoryLabel": "Backend",
@@ -123,7 +123,7 @@
     {
       "id": "course-python-2023-dir-aula199",
       "label": "aula199/",
-      "parent": "course-python-2023-root",
+      "parent": "course-python-2023-grp-root-bucket-a",
       "layer": "module",
       "category": "core",
       "categoryLabel": "Backend",
@@ -135,7 +135,7 @@
     {
       "id": "course-python-2023-dir-aula200",
       "label": "aula200/",
-      "parent": "course-python-2023-root",
+      "parent": "course-python-2023-grp-root-bucket-a",
       "layer": "module",
       "category": "core",
       "categoryLabel": "Backend",
@@ -147,7 +147,7 @@
     {
       "id": "course-python-2023-dir-aula201",
       "label": "aula201/",
-      "parent": "course-python-2023-root",
+      "parent": "course-python-2023-grp-root-bucket-a",
       "layer": "module",
       "category": "core",
       "categoryLabel": "Backend",
@@ -159,7 +159,7 @@
     {
       "id": "course-python-2023-dir-aula202-calculadora",
       "label": "aula202-calculadora/",
-      "parent": "course-python-2023-root",
+      "parent": "course-python-2023-grp-root-bucket-a",
       "layer": "module",
       "category": "core",
       "categoryLabel": "Backend",
@@ -171,7 +171,7 @@
     {
       "id": "course-python-2023-dir-aula203-qtdesigner",
       "label": "aula203-qtdesigner/",
-      "parent": "course-python-2023-root",
+      "parent": "course-python-2023-grp-root-bucket-a",
       "layer": "module",
       "category": "core",
       "categoryLabel": "Backend",
@@ -183,7 +183,7 @@
     {
       "id": "course-python-2023-dir-aula204",
       "label": "aula204/",
-      "parent": "course-python-2023-root",
+      "parent": "course-python-2023-grp-root-bucket-a",
       "layer": "module",
       "category": "core",
       "categoryLabel": "Backend",
@@ -195,7 +195,7 @@
     {
       "id": "course-python-2023-dir-aula205",
       "label": "aula205/",
-      "parent": "course-python-2023-root",
+      "parent": "course-python-2023-grp-root-bucket-a",
       "layer": "module",
       "category": "core",
       "categoryLabel": "Backend",
@@ -207,7 +207,7 @@
     {
       "id": "course-python-2023-dir-aula206",
       "label": "aula206/",
-      "parent": "course-python-2023-root",
+      "parent": "course-python-2023-grp-root-bucket-a",
       "layer": "module",
       "category": "core",
       "categoryLabel": "Backend",
@@ -219,7 +219,7 @@
     {
       "id": "course-python-2023-dir-aula207-ola-django",
       "label": "aula207_ola_django/",
-      "parent": "course-python-2023-root",
+      "parent": "course-python-2023-grp-root-bucket-a",
       "layer": "module",
       "category": "core",
       "categoryLabel": "Backend",
@@ -231,7 +231,7 @@
     {
       "id": "course-python-2023-dir-aula99-package",
       "label": "aula99_package/",
-      "parent": "course-python-2023-root",
+      "parent": "course-python-2023-grp-root-bucket-a",
       "layer": "module",
       "category": "core",
       "categoryLabel": "Backend",
@@ -459,7 +459,7 @@
     {
       "id": "course-python-2023-grp-files",
       "label": "Arquivos #",
-      "parent": "course-python-2023-root",
+      "parent": "course-python-2023-grp-root-bucket-a",
       "layer": "module",
       "category": "core",
       "categoryLabel": "Backend",
@@ -469,208 +469,220 @@
       "description": "Grupo de arquivos em `./` — Arquivos #"
     },
     {
+      "id": "course-python-2023-grp-files-a",
+      "label": "Arquivos A",
+      "parent": "course-python-2023-grp-root-bucket-a",
+      "layer": "module",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 1.35,
+      "file": "[files-a]",
+      "description": "Grupo de arquivos em `./` — Arquivos A"
+    },
+    {
       "id": "course-python-2023-grp-files-a-1-12",
-      "label": "Arquivos A (1–12)",
-      "parent": "course-python-2023-root",
+      "label": "1–12",
+      "parent": "course-python-2023-grp-files-a",
       "layer": "module",
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
       "size": 1.35,
       "file": "[files-a-1-12]",
-      "description": "Grupo de arquivos em `./` — Arquivos A (1–12)"
+      "description": "Grupo de arquivos em `./` — 1–12"
     },
     {
       "id": "course-python-2023-grp-files-a-13-24",
-      "label": "Arquivos A (13–24)",
-      "parent": "course-python-2023-root",
+      "label": "13–24",
+      "parent": "course-python-2023-grp-files-a",
       "layer": "module",
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
       "size": 1.35,
       "file": "[files-a-13-24]",
-      "description": "Grupo de arquivos em `./` — Arquivos A (13–24)"
+      "description": "Grupo de arquivos em `./` — 13–24"
     },
     {
       "id": "course-python-2023-grp-files-a-25-36",
-      "label": "Arquivos A (25–36)",
-      "parent": "course-python-2023-root",
+      "label": "25–36",
+      "parent": "course-python-2023-grp-files-a",
       "layer": "module",
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
       "size": 1.35,
       "file": "[files-a-25-36]",
-      "description": "Grupo de arquivos em `./` — Arquivos A (25–36)"
+      "description": "Grupo de arquivos em `./` — 25–36"
     },
     {
       "id": "course-python-2023-grp-files-a-37-48",
-      "label": "Arquivos A (37–48)",
-      "parent": "course-python-2023-root",
+      "label": "37–48",
+      "parent": "course-python-2023-grp-files-a",
       "layer": "module",
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
       "size": 1.35,
       "file": "[files-a-37-48]",
-      "description": "Grupo de arquivos em `./` — Arquivos A (37–48)"
+      "description": "Grupo de arquivos em `./` — 37–48"
     },
     {
       "id": "course-python-2023-grp-files-a-49-60",
-      "label": "Arquivos A (49–60)",
-      "parent": "course-python-2023-root",
+      "label": "49–60",
+      "parent": "course-python-2023-grp-files-a",
       "layer": "module",
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
       "size": 1.35,
       "file": "[files-a-49-60]",
-      "description": "Grupo de arquivos em `./` — Arquivos A (49–60)"
+      "description": "Grupo de arquivos em `./` — 49–60"
     },
     {
       "id": "course-python-2023-grp-files-a-61-72",
-      "label": "Arquivos A (61–72)",
-      "parent": "course-python-2023-root",
+      "label": "61–72",
+      "parent": "course-python-2023-grp-files-a",
       "layer": "module",
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
       "size": 1.35,
       "file": "[files-a-61-72]",
-      "description": "Grupo de arquivos em `./` — Arquivos A (61–72)"
+      "description": "Grupo de arquivos em `./` — 61–72"
     },
     {
       "id": "course-python-2023-grp-files-a-73-84",
-      "label": "Arquivos A (73–84)",
-      "parent": "course-python-2023-root",
+      "label": "73–84",
+      "parent": "course-python-2023-grp-files-a",
       "layer": "module",
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
       "size": 1.35,
       "file": "[files-a-73-84]",
-      "description": "Grupo de arquivos em `./` — Arquivos A (73–84)"
+      "description": "Grupo de arquivos em `./` — 73–84"
     },
     {
       "id": "course-python-2023-grp-files-a-85-96",
-      "label": "Arquivos A (85–96)",
-      "parent": "course-python-2023-root",
+      "label": "85–96",
+      "parent": "course-python-2023-grp-files-a",
       "layer": "module",
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
       "size": 1.35,
       "file": "[files-a-85-96]",
-      "description": "Grupo de arquivos em `./` — Arquivos A (85–96)"
+      "description": "Grupo de arquivos em `./` — 85–96"
     },
     {
       "id": "course-python-2023-grp-files-a-97-108",
-      "label": "Arquivos A (97–108)",
-      "parent": "course-python-2023-root",
+      "label": "97–108",
+      "parent": "course-python-2023-grp-files-a",
       "layer": "module",
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
       "size": 1.35,
       "file": "[files-a-97-108]",
-      "description": "Grupo de arquivos em `./` — Arquivos A (97–108)"
+      "description": "Grupo de arquivos em `./` — 97–108"
     },
     {
       "id": "course-python-2023-grp-files-a-109-120",
-      "label": "Arquivos A (109–120)",
-      "parent": "course-python-2023-root",
+      "label": "109–120",
+      "parent": "course-python-2023-grp-files-a",
       "layer": "module",
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
       "size": 1.35,
       "file": "[files-a-109-120]",
-      "description": "Grupo de arquivos em `./` — Arquivos A (109–120)"
+      "description": "Grupo de arquivos em `./` — 109–120"
     },
     {
       "id": "course-python-2023-grp-files-a-121-132",
-      "label": "Arquivos A (121–132)",
-      "parent": "course-python-2023-root",
+      "label": "121–132",
+      "parent": "course-python-2023-grp-files-a",
       "layer": "module",
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
       "size": 1.35,
       "file": "[files-a-121-132]",
-      "description": "Grupo de arquivos em `./` — Arquivos A (121–132)"
+      "description": "Grupo de arquivos em `./` — 121–132"
     },
     {
       "id": "course-python-2023-grp-files-a-133-144",
-      "label": "Arquivos A (133–144)",
-      "parent": "course-python-2023-root",
+      "label": "133–144",
+      "parent": "course-python-2023-grp-files-a",
       "layer": "module",
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
       "size": 1.35,
       "file": "[files-a-133-144]",
-      "description": "Grupo de arquivos em `./` — Arquivos A (133–144)"
+      "description": "Grupo de arquivos em `./` — 133–144"
     },
     {
       "id": "course-python-2023-grp-files-a-145-156",
-      "label": "Arquivos A (145–156)",
-      "parent": "course-python-2023-root",
+      "label": "145–156",
+      "parent": "course-python-2023-grp-files-a",
       "layer": "module",
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
       "size": 1.35,
       "file": "[files-a-145-156]",
-      "description": "Grupo de arquivos em `./` — Arquivos A (145–156)"
+      "description": "Grupo de arquivos em `./` — 145–156"
     },
     {
       "id": "course-python-2023-grp-files-a-157-168",
-      "label": "Arquivos A (157–168)",
-      "parent": "course-python-2023-root",
+      "label": "157–168",
+      "parent": "course-python-2023-grp-files-a",
       "layer": "module",
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
       "size": 1.35,
       "file": "[files-a-157-168]",
-      "description": "Grupo de arquivos em `./` — Arquivos A (157–168)"
+      "description": "Grupo de arquivos em `./` — 157–168"
     },
     {
       "id": "course-python-2023-grp-files-a-169-180",
-      "label": "Arquivos A (169–180)",
-      "parent": "course-python-2023-root",
+      "label": "169–180",
+      "parent": "course-python-2023-grp-files-a",
       "layer": "module",
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
       "size": 1.35,
       "file": "[files-a-169-180]",
-      "description": "Grupo de arquivos em `./` — Arquivos A (169–180)"
+      "description": "Grupo de arquivos em `./` — 169–180"
     },
     {
       "id": "course-python-2023-grp-files-a-181-192",
-      "label": "Arquivos A (181–192)",
-      "parent": "course-python-2023-root",
+      "label": "181–192",
+      "parent": "course-python-2023-grp-files-a",
       "layer": "module",
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
       "size": 1.35,
       "file": "[files-a-181-192]",
-      "description": "Grupo de arquivos em `./` — Arquivos A (181–192)"
+      "description": "Grupo de arquivos em `./` — 181–192"
     },
     {
       "id": "course-python-2023-grp-files-a-193-201",
-      "label": "Arquivos A (193–201)",
-      "parent": "course-python-2023-root",
+      "label": "193–201",
+      "parent": "course-python-2023-grp-files-a",
       "layer": "module",
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
       "size": 1.35,
       "file": "[files-a-193-201]",
-      "description": "Grupo de arquivos em `./` — Arquivos A (193–201)"
+      "description": "Grupo de arquivos em `./` — 193–201"
     },
     {
       "id": "course-python-2023-file-gitignore",
@@ -4079,6 +4091,18 @@
       "size": 0.85,
       "file": "dados/produtos_modulo.py",
       "description": "Código-fonte: `dados/produtos_modulo.py`"
+    },
+    {
+      "id": "course-python-2023-grp-root-bucket-a",
+      "label": "Pastas A",
+      "parent": "course-python-2023-root",
+      "layer": "module",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 1.35,
+      "file": "[root-a]",
+      "description": "Agrupamento de pastas/módulos na raiz — A"
     }
   ],
   "links": [
@@ -4088,82 +4112,82 @@
       "type": "dependency"
     },
     {
-      "source": "course-python-2023-root",
+      "source": "course-python-2023-grp-root-bucket-a",
       "target": "course-python-2023-dir-aula141",
       "type": "dependency"
     },
     {
-      "source": "course-python-2023-root",
+      "source": "course-python-2023-grp-root-bucket-a",
       "target": "course-python-2023-dir-aula156",
       "type": "dependency"
     },
     {
-      "source": "course-python-2023-root",
+      "source": "course-python-2023-grp-root-bucket-a",
       "target": "course-python-2023-dir-aula158",
       "type": "dependency"
     },
     {
-      "source": "course-python-2023-root",
+      "source": "course-python-2023-grp-root-bucket-a",
       "target": "course-python-2023-dir-aula190-site",
       "type": "dependency"
     },
     {
-      "source": "course-python-2023-root",
+      "source": "course-python-2023-grp-root-bucket-a",
       "target": "course-python-2023-dir-aula193",
       "type": "dependency"
     },
     {
-      "source": "course-python-2023-root",
+      "source": "course-python-2023-grp-root-bucket-a",
       "target": "course-python-2023-dir-aula197",
       "type": "dependency"
     },
     {
-      "source": "course-python-2023-root",
+      "source": "course-python-2023-grp-root-bucket-a",
       "target": "course-python-2023-dir-aula199",
       "type": "dependency"
     },
     {
-      "source": "course-python-2023-root",
+      "source": "course-python-2023-grp-root-bucket-a",
       "target": "course-python-2023-dir-aula200",
       "type": "dependency"
     },
     {
-      "source": "course-python-2023-root",
+      "source": "course-python-2023-grp-root-bucket-a",
       "target": "course-python-2023-dir-aula201",
       "type": "dependency"
     },
     {
-      "source": "course-python-2023-root",
+      "source": "course-python-2023-grp-root-bucket-a",
       "target": "course-python-2023-dir-aula202-calculadora",
       "type": "dependency"
     },
     {
-      "source": "course-python-2023-root",
+      "source": "course-python-2023-grp-root-bucket-a",
       "target": "course-python-2023-dir-aula203-qtdesigner",
       "type": "dependency"
     },
     {
-      "source": "course-python-2023-root",
+      "source": "course-python-2023-grp-root-bucket-a",
       "target": "course-python-2023-dir-aula204",
       "type": "dependency"
     },
     {
-      "source": "course-python-2023-root",
+      "source": "course-python-2023-grp-root-bucket-a",
       "target": "course-python-2023-dir-aula205",
       "type": "dependency"
     },
     {
-      "source": "course-python-2023-root",
+      "source": "course-python-2023-grp-root-bucket-a",
       "target": "course-python-2023-dir-aula206",
       "type": "dependency"
     },
     {
-      "source": "course-python-2023-root",
+      "source": "course-python-2023-grp-root-bucket-a",
       "target": "course-python-2023-dir-aula207-ola-django",
       "type": "dependency"
     },
     {
-      "source": "course-python-2023-root",
+      "source": "course-python-2023-grp-root-bucket-a",
       "target": "course-python-2023-dir-aula99-package",
       "type": "dependency"
     },
@@ -4258,92 +4282,97 @@
       "type": "dependency"
     },
     {
-      "source": "course-python-2023-root",
+      "source": "course-python-2023-grp-root-bucket-a",
       "target": "course-python-2023-grp-files",
       "type": "dependency"
     },
     {
-      "source": "course-python-2023-root",
+      "source": "course-python-2023-grp-root-bucket-a",
+      "target": "course-python-2023-grp-files-a",
+      "type": "dependency"
+    },
+    {
+      "source": "course-python-2023-grp-files-a",
       "target": "course-python-2023-grp-files-a-1-12",
       "type": "dependency"
     },
     {
-      "source": "course-python-2023-root",
+      "source": "course-python-2023-grp-files-a",
       "target": "course-python-2023-grp-files-a-13-24",
       "type": "dependency"
     },
     {
-      "source": "course-python-2023-root",
+      "source": "course-python-2023-grp-files-a",
       "target": "course-python-2023-grp-files-a-25-36",
       "type": "dependency"
     },
     {
-      "source": "course-python-2023-root",
+      "source": "course-python-2023-grp-files-a",
       "target": "course-python-2023-grp-files-a-37-48",
       "type": "dependency"
     },
     {
-      "source": "course-python-2023-root",
+      "source": "course-python-2023-grp-files-a",
       "target": "course-python-2023-grp-files-a-49-60",
       "type": "dependency"
     },
     {
-      "source": "course-python-2023-root",
+      "source": "course-python-2023-grp-files-a",
       "target": "course-python-2023-grp-files-a-61-72",
       "type": "dependency"
     },
     {
-      "source": "course-python-2023-root",
+      "source": "course-python-2023-grp-files-a",
       "target": "course-python-2023-grp-files-a-73-84",
       "type": "dependency"
     },
     {
-      "source": "course-python-2023-root",
+      "source": "course-python-2023-grp-files-a",
       "target": "course-python-2023-grp-files-a-85-96",
       "type": "dependency"
     },
     {
-      "source": "course-python-2023-root",
+      "source": "course-python-2023-grp-files-a",
       "target": "course-python-2023-grp-files-a-97-108",
       "type": "dependency"
     },
     {
-      "source": "course-python-2023-root",
+      "source": "course-python-2023-grp-files-a",
       "target": "course-python-2023-grp-files-a-109-120",
       "type": "dependency"
     },
     {
-      "source": "course-python-2023-root",
+      "source": "course-python-2023-grp-files-a",
       "target": "course-python-2023-grp-files-a-121-132",
       "type": "dependency"
     },
     {
-      "source": "course-python-2023-root",
+      "source": "course-python-2023-grp-files-a",
       "target": "course-python-2023-grp-files-a-133-144",
       "type": "dependency"
     },
     {
-      "source": "course-python-2023-root",
+      "source": "course-python-2023-grp-files-a",
       "target": "course-python-2023-grp-files-a-145-156",
       "type": "dependency"
     },
     {
-      "source": "course-python-2023-root",
+      "source": "course-python-2023-grp-files-a",
       "target": "course-python-2023-grp-files-a-157-168",
       "type": "dependency"
     },
     {
-      "source": "course-python-2023-root",
+      "source": "course-python-2023-grp-files-a",
       "target": "course-python-2023-grp-files-a-169-180",
       "type": "dependency"
     },
     {
-      "source": "course-python-2023-root",
+      "source": "course-python-2023-grp-files-a",
       "target": "course-python-2023-grp-files-a-181-192",
       "type": "dependency"
     },
     {
-      "source": "course-python-2023-root",
+      "source": "course-python-2023-grp-files-a",
       "target": "course-python-2023-grp-files-a-193-201",
       "type": "dependency"
     },
@@ -5765,6 +5794,11 @@
     {
       "source": "course-python-2023-dir-dados",
       "target": "course-python-2023-file-dados-produtos-modulo-py",
+      "type": "dependency"
+    },
+    {
+      "source": "course-python-2023-root",
+      "target": "course-python-2023-grp-root-bucket-a",
       "type": "dependency"
     }
   ]

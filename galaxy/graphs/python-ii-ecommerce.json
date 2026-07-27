@@ -4,7 +4,7 @@
   "repoUrl": "https://github.com/CanonEngineer/PythonIIEcommerceProject",
   "color": "#f87171",
   "demoUrl": "",
-  "nodeCount": 295,
+  "nodeCount": 300,
   "categories": {
     "core": {
       "label": "Backend",
@@ -34,7 +34,7 @@
       "color": "#3b82f6",
       "size": 2.2,
       "file": "README.md",
-      "description": "E-commerce Django do curso Python II."
+      "description": "Cobertura completa: 236 arquivos de código no repositório (295 nós na árvore incluindo pastas)."
     },
     {
       "id": "python-ii-ecommerce-dir-loja",
@@ -1045,28 +1045,40 @@
       "description": "Código-fonte: `produto/views.py`"
     },
     {
-      "id": "python-ii-ecommerce-grp-produto-migrations-files-1-12",
-      "label": "Arquivos # (1–12)",
+      "id": "python-ii-ecommerce-grp-produto-migrations-files",
+      "label": "Arquivos #",
       "parent": "python-ii-ecommerce-dir-produto-migrations",
+      "layer": "module",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 1.35,
+      "file": "produto/migrations/[files-#]",
+      "description": "Grupo de arquivos em `produto/migrations/` — Arquivos #"
+    },
+    {
+      "id": "python-ii-ecommerce-grp-produto-migrations-files-1-12",
+      "label": "1–12",
+      "parent": "python-ii-ecommerce-grp-produto-migrations-files",
       "layer": "module",
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
       "size": 1.35,
       "file": "produto/migrations/[files-#-1-12]",
-      "description": "Grupo de arquivos em `produto/migrations/` — Arquivos # (1–12)"
+      "description": "Grupo de arquivos em `produto/migrations/` — 1–12"
     },
     {
       "id": "python-ii-ecommerce-grp-produto-migrations-files-13-13",
-      "label": "Arquivos # (13–13)",
-      "parent": "python-ii-ecommerce-dir-produto-migrations",
+      "label": "13–13",
+      "parent": "python-ii-ecommerce-grp-produto-migrations-files",
       "layer": "module",
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
       "size": 1.35,
       "file": "produto/migrations/[files-#-13-13]",
-      "description": "Grupo de arquivos em `produto/migrations/` — Arquivos # (13–13)"
+      "description": "Grupo de arquivos em `produto/migrations/` — 13–13"
     },
     {
       "id": "python-ii-ecommerce-file-produto-migrations-0001-initial-py",
@@ -1957,28 +1969,40 @@
       "description": "Código-fonte: `templates/static/assets/font-awesome/metadata/sponsors.yml`"
     },
     {
-      "id": "python-ii-ecommerce-grp-templates-static-assets-font-awesome-scss-files-1-12",
-      "label": "Arquivos # (1–12)",
+      "id": "python-ii-ecommerce-grp-templates-static-assets-font-awesome-scss-files",
+      "label": "Arquivos #",
       "parent": "python-ii-ecommerce-dir-templates-static-assets-font-awesome-scss",
+      "layer": "module",
+      "category": "frontend",
+      "categoryLabel": "Frontend",
+      "color": "#eab308",
+      "size": 1.35,
+      "file": "templates/static/assets/font-awesome/scss/[files-#]",
+      "description": "Grupo de arquivos em `templates/static/assets/font-awesome/scss/` — Arquivos #"
+    },
+    {
+      "id": "python-ii-ecommerce-grp-templates-static-assets-font-awesome-scss-files-1-12",
+      "label": "1–12",
+      "parent": "python-ii-ecommerce-grp-templates-static-assets-font-awesome-scss-files",
       "layer": "module",
       "category": "frontend",
       "categoryLabel": "Frontend",
       "color": "#eab308",
       "size": 1.35,
       "file": "templates/static/assets/font-awesome/scss/[files-#-1-12]",
-      "description": "Grupo de arquivos em `templates/static/assets/font-awesome/scss/` — Arquivos # (1–12)"
+      "description": "Grupo de arquivos em `templates/static/assets/font-awesome/scss/` — 1–12"
     },
     {
       "id": "python-ii-ecommerce-grp-templates-static-assets-font-awesome-scss-files-13-13",
-      "label": "Arquivos # (13–13)",
-      "parent": "python-ii-ecommerce-dir-templates-static-assets-font-awesome-scss",
+      "label": "13–13",
+      "parent": "python-ii-ecommerce-grp-templates-static-assets-font-awesome-scss-files",
       "layer": "module",
       "category": "frontend",
       "categoryLabel": "Frontend",
       "color": "#eab308",
       "size": 1.35,
       "file": "templates/static/assets/font-awesome/scss/[files-#-13-13]",
-      "description": "Grupo de arquivos em `templates/static/assets/font-awesome/scss/` — Arquivos # (13–13)"
+      "description": "Grupo de arquivos em `templates/static/assets/font-awesome/scss/` — 13–13"
     },
     {
       "id": "python-ii-ecommerce-grp-templates-static-assets-font-awesome-scss-files-b-f-r-s-v",
@@ -2353,52 +2377,64 @@
       "description": "Código-fonte: `templates/static/assets/login/scss/style.scss`"
     },
     {
-      "id": "python-ii-ecommerce-grp-templates-static-assets-login-scss-bootstrap-files-1-12",
-      "label": "Arquivos # (1–12)",
+      "id": "python-ii-ecommerce-grp-templates-static-assets-login-scss-bootstrap-files",
+      "label": "Arquivos #",
       "parent": "python-ii-ecommerce-dir-templates-static-assets-login-scss-bootstrap",
+      "layer": "module",
+      "category": "frontend",
+      "categoryLabel": "Frontend",
+      "color": "#eab308",
+      "size": 1.35,
+      "file": "templates/static/assets/login/scss/bootstrap/[files-#]",
+      "description": "Grupo de arquivos em `templates/static/assets/login/scss/bootstrap/` — Arquivos #"
+    },
+    {
+      "id": "python-ii-ecommerce-grp-templates-static-assets-login-scss-bootstrap-files-1-12",
+      "label": "1–12",
+      "parent": "python-ii-ecommerce-grp-templates-static-assets-login-scss-bootstrap-files",
       "layer": "module",
       "category": "frontend",
       "categoryLabel": "Frontend",
       "color": "#eab308",
       "size": 1.35,
       "file": "templates/static/assets/login/scss/bootstrap/[files-#-1-12]",
-      "description": "Grupo de arquivos em `templates/static/assets/login/scss/bootstrap/` — Arquivos # (1–12)"
+      "description": "Grupo de arquivos em `templates/static/assets/login/scss/bootstrap/` — 1–12"
     },
     {
       "id": "python-ii-ecommerce-grp-templates-static-assets-login-scss-bootstrap-files-13-24",
-      "label": "Arquivos # (13–24)",
-      "parent": "python-ii-ecommerce-dir-templates-static-assets-login-scss-bootstrap",
+      "label": "13–24",
+      "parent": "python-ii-ecommerce-grp-templates-static-assets-login-scss-bootstrap-files",
       "layer": "module",
       "category": "frontend",
       "categoryLabel": "Frontend",
       "color": "#eab308",
       "size": 1.35,
       "file": "templates/static/assets/login/scss/bootstrap/[files-#-13-24]",
-      "description": "Grupo de arquivos em `templates/static/assets/login/scss/bootstrap/` — Arquivos # (13–24)"
+      "description": "Grupo de arquivos em `templates/static/assets/login/scss/bootstrap/` — 13–24"
     },
     {
       "id": "python-ii-ecommerce-grp-templates-static-assets-login-scss-bootstrap-files-25-36",
-      "label": "Arquivos # (25–36)",
-      "parent": "python-ii-ecommerce-dir-templates-static-assets-login-scss-bootstrap",
+      "label": "25–36",
+      "parent": "python-ii-ecommerce-grp-templates-static-assets-login-scss-bootstrap-files",
       "layer": "module",
       "category": "frontend",
       "categoryLabel": "Frontend",
       "color": "#eab308",
       "size": 1.35,
       "file": "templates/static/assets/login/scss/bootstrap/[files-#-25-36]",
-      "description": "Grupo de arquivos em `templates/static/assets/login/scss/bootstrap/` — Arquivos # (25–36)"
+      "description": "Grupo de arquivos em `templates/static/assets/login/scss/bootstrap/` — 25–36"
     },
     {
       "id": "python-ii-ecommerce-grp-templates-static-assets-login-scss-bootstrap-files-37-37",
-      "label": "Arquivos # (37–37)",
-      "parent": "python-ii-ecommerce-dir-templates-static-assets-login-scss-bootstrap",
+      "label": "37–37",
+      "parent": "python-ii-ecommerce-grp-templates-static-assets-login-scss-bootstrap-files",
       "layer": "module",
       "category": "frontend",
       "categoryLabel": "Frontend",
       "color": "#eab308",
       "size": 1.35,
       "file": "templates/static/assets/login/scss/bootstrap/[files-#-37-37]",
-      "description": "Grupo de arquivos em `templates/static/assets/login/scss/bootstrap/` — Arquivos # (37–37)"
+      "description": "Grupo de arquivos em `templates/static/assets/login/scss/bootstrap/` — 37–37"
     },
     {
       "id": "python-ii-ecommerce-grp-templates-static-assets-login-scss-bootstrap-files-b",
@@ -2893,40 +2929,52 @@
       "description": "Código-fonte: `templates/static/assets/login/scss/bootstrap/bootstrap.scss`"
     },
     {
-      "id": "python-ii-ecommerce-grp-templates-static-assets-login-scss-bootstrap-mixins-files-1-12",
-      "label": "Arquivos # (1–12)",
+      "id": "python-ii-ecommerce-grp-templates-static-assets-login-scss-bootstrap-mixins-files",
+      "label": "Arquivos #",
       "parent": "python-ii-ecommerce-dir-templates-static-assets-login-scss-bootstrap-mixins",
+      "layer": "module",
+      "category": "frontend",
+      "categoryLabel": "Frontend",
+      "color": "#eab308",
+      "size": 1.35,
+      "file": "templates/static/assets/login/scss/bootstrap/mixins/[files-#]",
+      "description": "Grupo de arquivos em `templates/static/assets/login/scss/bootstrap/mixins/` — Arquivos #"
+    },
+    {
+      "id": "python-ii-ecommerce-grp-templates-static-assets-login-scss-bootstrap-mixins-files-1-12",
+      "label": "1–12",
+      "parent": "python-ii-ecommerce-grp-templates-static-assets-login-scss-bootstrap-mixins-files",
       "layer": "module",
       "category": "frontend",
       "categoryLabel": "Frontend",
       "color": "#eab308",
       "size": 1.35,
       "file": "templates/static/assets/login/scss/bootstrap/mixins/[files-#-1-12]",
-      "description": "Grupo de arquivos em `templates/static/assets/login/scss/bootstrap/mixins/` — Arquivos # (1–12)"
+      "description": "Grupo de arquivos em `templates/static/assets/login/scss/bootstrap/mixins/` — 1–12"
     },
     {
       "id": "python-ii-ecommerce-grp-templates-static-assets-login-scss-bootstrap-mixins-files-13-24",
-      "label": "Arquivos # (13–24)",
-      "parent": "python-ii-ecommerce-dir-templates-static-assets-login-scss-bootstrap-mixins",
+      "label": "13–24",
+      "parent": "python-ii-ecommerce-grp-templates-static-assets-login-scss-bootstrap-mixins-files",
       "layer": "module",
       "category": "frontend",
       "categoryLabel": "Frontend",
       "color": "#eab308",
       "size": 1.35,
       "file": "templates/static/assets/login/scss/bootstrap/mixins/[files-#-13-24]",
-      "description": "Grupo de arquivos em `templates/static/assets/login/scss/bootstrap/mixins/` — Arquivos # (13–24)"
+      "description": "Grupo de arquivos em `templates/static/assets/login/scss/bootstrap/mixins/` — 13–24"
     },
     {
       "id": "python-ii-ecommerce-grp-templates-static-assets-login-scss-bootstrap-mixins-files-25-31",
-      "label": "Arquivos # (25–31)",
-      "parent": "python-ii-ecommerce-dir-templates-static-assets-login-scss-bootstrap-mixins",
+      "label": "25–31",
+      "parent": "python-ii-ecommerce-grp-templates-static-assets-login-scss-bootstrap-mixins-files",
       "layer": "module",
       "category": "frontend",
       "categoryLabel": "Frontend",
       "color": "#eab308",
       "size": 1.35,
       "file": "templates/static/assets/login/scss/bootstrap/mixins/[files-#-25-31]",
-      "description": "Grupo de arquivos em `templates/static/assets/login/scss/bootstrap/mixins/` — Arquivos # (25–31)"
+      "description": "Grupo de arquivos em `templates/static/assets/login/scss/bootstrap/mixins/` — 25–31"
     },
     {
       "id": "python-ii-ecommerce-file-templates-static-assets-login-scss-bootstrap-mixins-alert-scss",
@@ -3301,28 +3349,40 @@
       "description": "Código-fonte: `templates/static/assets/login/scss/bootstrap/mixins/_visibility.scss`"
     },
     {
-      "id": "python-ii-ecommerce-grp-templates-static-assets-login-scss-bootstrap-utilities-files-1-12",
-      "label": "Arquivos # (1–12)",
+      "id": "python-ii-ecommerce-grp-templates-static-assets-login-scss-bootstrap-utilities-files",
+      "label": "Arquivos #",
       "parent": "python-ii-ecommerce-dir-templates-static-assets-login-scss-bootstrap-utilities",
+      "layer": "module",
+      "category": "frontend",
+      "categoryLabel": "Frontend",
+      "color": "#eab308",
+      "size": 1.35,
+      "file": "templates/static/assets/login/scss/bootstrap/utilities/[files-#]",
+      "description": "Grupo de arquivos em `templates/static/assets/login/scss/bootstrap/utilities/` — Arquivos #"
+    },
+    {
+      "id": "python-ii-ecommerce-grp-templates-static-assets-login-scss-bootstrap-utilities-files-1-12",
+      "label": "1–12",
+      "parent": "python-ii-ecommerce-grp-templates-static-assets-login-scss-bootstrap-utilities-files",
       "layer": "module",
       "category": "frontend",
       "categoryLabel": "Frontend",
       "color": "#eab308",
       "size": 1.35,
       "file": "templates/static/assets/login/scss/bootstrap/utilities/[files-#-1-12]",
-      "description": "Grupo de arquivos em `templates/static/assets/login/scss/bootstrap/utilities/` — Arquivos # (1–12)"
+      "description": "Grupo de arquivos em `templates/static/assets/login/scss/bootstrap/utilities/` — 1–12"
     },
     {
       "id": "python-ii-ecommerce-grp-templates-static-assets-login-scss-bootstrap-utilities-files-13-17",
-      "label": "Arquivos # (13–17)",
-      "parent": "python-ii-ecommerce-dir-templates-static-assets-login-scss-bootstrap-utilities",
+      "label": "13–17",
+      "parent": "python-ii-ecommerce-grp-templates-static-assets-login-scss-bootstrap-utilities-files",
       "layer": "module",
       "category": "frontend",
       "categoryLabel": "Frontend",
       "color": "#eab308",
       "size": 1.35,
       "file": "templates/static/assets/login/scss/bootstrap/utilities/[files-#-13-17]",
-      "description": "Grupo de arquivos em `templates/static/assets/login/scss/bootstrap/utilities/` — Arquivos # (13–17)"
+      "description": "Grupo de arquivos em `templates/static/assets/login/scss/bootstrap/utilities/` — 13–17"
     },
     {
       "id": "python-ii-ecommerce-file-templates-static-assets-login-scss-bootstrap-utilities-align-scss",
@@ -3988,11 +4048,16 @@
     },
     {
       "source": "python-ii-ecommerce-dir-produto-migrations",
+      "target": "python-ii-ecommerce-grp-produto-migrations-files",
+      "type": "dependency"
+    },
+    {
+      "source": "python-ii-ecommerce-grp-produto-migrations-files",
       "target": "python-ii-ecommerce-grp-produto-migrations-files-1-12",
       "type": "dependency"
     },
     {
-      "source": "python-ii-ecommerce-dir-produto-migrations",
+      "source": "python-ii-ecommerce-grp-produto-migrations-files",
       "target": "python-ii-ecommerce-grp-produto-migrations-files-13-13",
       "type": "dependency"
     },
@@ -4368,11 +4433,16 @@
     },
     {
       "source": "python-ii-ecommerce-dir-templates-static-assets-font-awesome-scss",
+      "target": "python-ii-ecommerce-grp-templates-static-assets-font-awesome-scss-files",
+      "type": "dependency"
+    },
+    {
+      "source": "python-ii-ecommerce-grp-templates-static-assets-font-awesome-scss-files",
       "target": "python-ii-ecommerce-grp-templates-static-assets-font-awesome-scss-files-1-12",
       "type": "dependency"
     },
     {
-      "source": "python-ii-ecommerce-dir-templates-static-assets-font-awesome-scss",
+      "source": "python-ii-ecommerce-grp-templates-static-assets-font-awesome-scss-files",
       "target": "python-ii-ecommerce-grp-templates-static-assets-font-awesome-scss-files-13-13",
       "type": "dependency"
     },
@@ -4533,21 +4603,26 @@
     },
     {
       "source": "python-ii-ecommerce-dir-templates-static-assets-login-scss-bootstrap",
+      "target": "python-ii-ecommerce-grp-templates-static-assets-login-scss-bootstrap-files",
+      "type": "dependency"
+    },
+    {
+      "source": "python-ii-ecommerce-grp-templates-static-assets-login-scss-bootstrap-files",
       "target": "python-ii-ecommerce-grp-templates-static-assets-login-scss-bootstrap-files-1-12",
       "type": "dependency"
     },
     {
-      "source": "python-ii-ecommerce-dir-templates-static-assets-login-scss-bootstrap",
+      "source": "python-ii-ecommerce-grp-templates-static-assets-login-scss-bootstrap-files",
       "target": "python-ii-ecommerce-grp-templates-static-assets-login-scss-bootstrap-files-13-24",
       "type": "dependency"
     },
     {
-      "source": "python-ii-ecommerce-dir-templates-static-assets-login-scss-bootstrap",
+      "source": "python-ii-ecommerce-grp-templates-static-assets-login-scss-bootstrap-files",
       "target": "python-ii-ecommerce-grp-templates-static-assets-login-scss-bootstrap-files-25-36",
       "type": "dependency"
     },
     {
-      "source": "python-ii-ecommerce-dir-templates-static-assets-login-scss-bootstrap",
+      "source": "python-ii-ecommerce-grp-templates-static-assets-login-scss-bootstrap-files",
       "target": "python-ii-ecommerce-grp-templates-static-assets-login-scss-bootstrap-files-37-37",
       "type": "dependency"
     },
@@ -4758,16 +4833,21 @@
     },
     {
       "source": "python-ii-ecommerce-dir-templates-static-assets-login-scss-bootstrap-mixins",
+      "target": "python-ii-ecommerce-grp-templates-static-assets-login-scss-bootstrap-mixins-files",
+      "type": "dependency"
+    },
+    {
+      "source": "python-ii-ecommerce-grp-templates-static-assets-login-scss-bootstrap-mixins-files",
       "target": "python-ii-ecommerce-grp-templates-static-assets-login-scss-bootstrap-mixins-files-1-12",
       "type": "dependency"
     },
     {
-      "source": "python-ii-ecommerce-dir-templates-static-assets-login-scss-bootstrap-mixins",
+      "source": "python-ii-ecommerce-grp-templates-static-assets-login-scss-bootstrap-mixins-files",
       "target": "python-ii-ecommerce-grp-templates-static-assets-login-scss-bootstrap-mixins-files-13-24",
       "type": "dependency"
     },
     {
-      "source": "python-ii-ecommerce-dir-templates-static-assets-login-scss-bootstrap-mixins",
+      "source": "python-ii-ecommerce-grp-templates-static-assets-login-scss-bootstrap-mixins-files",
       "target": "python-ii-ecommerce-grp-templates-static-assets-login-scss-bootstrap-mixins-files-25-31",
       "type": "dependency"
     },
@@ -4928,11 +5008,16 @@
     },
     {
       "source": "python-ii-ecommerce-dir-templates-static-assets-login-scss-bootstrap-utilities",
+      "target": "python-ii-ecommerce-grp-templates-static-assets-login-scss-bootstrap-utilities-files",
+      "type": "dependency"
+    },
+    {
+      "source": "python-ii-ecommerce-grp-templates-static-assets-login-scss-bootstrap-utilities-files",
       "target": "python-ii-ecommerce-grp-templates-static-assets-login-scss-bootstrap-utilities-files-1-12",
       "type": "dependency"
     },
     {
-      "source": "python-ii-ecommerce-dir-templates-static-assets-login-scss-bootstrap-utilities",
+      "source": "python-ii-ecommerce-grp-templates-static-assets-login-scss-bootstrap-utilities-files",
       "target": "python-ii-ecommerce-grp-templates-static-assets-login-scss-bootstrap-utilities-files-13-17",
       "type": "dependency"
     },

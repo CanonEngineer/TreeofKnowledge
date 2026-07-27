@@ -13,7 +13,7 @@
         "parent": null,
         "layer": "root",
         "title": "CanonEngineer.github.io",
-        "description": "Portfolio profissional e currículo — site CanonEngineer no GitHub Pages.",
+        "description": "Cobertura completa: 13 arquivos de código no repositório (18 nós na árvore incluindo pastas).",
         "file": "README.md",
         "code": "> **Mobile / UTF-8:** imagens com `width: 100%` (sem scroll horizontal). Arquivo gravado em UTF-8 para acentos corretos em qualquer dispositivo.\r\n\r\n<div align=\"center\">\r\n\r\n<p align=\"center\">\r\n  <img src=\"docs/images/banner.svg\" alt=\"Banner\" width=\"100%\" style=\"max-width:100%;height:auto;display:block;\" />\r\n</p># CanonEngineer.github.io\r\n\r\n### Meu currículo profissional e vitrine de projetos no GitHub Pages\r\n\r\n<img src=\"https://img.shields.io/badge/GitHub_Pages-Live-22c55e?style=for-the-badge&logo=githubpages&logoColor=white\" alt=\"Pages\"/>\r\n<img src=\"https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white\" alt=\"HTML\"/>\r\n<img src=\"https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white\" alt=\"CSS\"/>\r\n<img src=\"https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black\" alt=\"JS\"/>\r\n\r\n[Sobre](#-sobre) ·\r\n[Features](#-features) ·\r\n[Arquitetura](#-arquitetura--fluxo) ·\r\n[Stack](#-stack) ·\r\n[Estrutura](#-estrutura) ·\r\n[Setup](#-como-rodar) ·\r\n[Melhorias](#-melhorias-sugeridas) ·\r\n[Autor](#-autor)\r\n\r\n</div>\r\n\r\n---\r\n\r\n## 📌 Sobre\r\n\r\nSite pessoal do **CanonEngineer** hospedado em GitHub Pages. Centraliza apresentação profissional, links de projetos, blog e ponto de entrada para o restante do ecossistema (incluindo a [Tree of Knowledge](https://canonengineer.github.io/TreeofKnowledge/)).\r\n\r\n<div align=\"center\">\r\n\r\n<p align=\"center\">\r\n  <img src=\"docs/images/flow.svg\" alt=\"Fluxo\" width=\"100%\" style=\"max-width:100%;height:auto;display:block;\" />\r\n</p></div>\r\n\r\n---\r\n\r\n## ✨ Features\r\n\r\n| # | Capacidade |\r\n|---|------------|\r\n| 1 | Landing de portfólio com identidade visual própria |\r\n| 2 | Seção de projetos e experiências |\r\n| 3 | Blog estático em `blog/` |\r\n| 4 | Assets em `wwwroot/` prontos para Pages |\r\n| 5 | Deploy contínuo via push em `main` |\r\n\r\n---\r\n\r\n## 🏗️ Arquitetura / Fluxo\r\n\r\n```mermaid\r\nflowchart TB\r\n    U[Visitante] --> I[index.html]\r\n    I --> W[wwwroot assets]\r\n    I --> P[Projetos / links]\r\n    I --> B[blog]\r\n    P --> T[Tree of Knowledge]\r\n    P --> G[Repos GitHub]\r\n```\r\n\r\n---\r\n\r\n## 🛠️ Stack\r\n\r\n| Tecnologia | Papel |\r\n|------------|-------|\r\n| HTML5 | Estrutura |\r\n| CSS3 | Layout e visual |\r\n| JavaScript | Interatividade |\r\n| GitHub Pages | Hospedagem |\r\n\r\n---\r\n\r\n## 📂 Estrutura\r\n\r\n```text\r\nCanonEngineer.github.io/\r\n├── index.html\r\n├── wwwroot/          # assets públicos\r\n├── blog/             # posts\r\n├── scripts/          # utilitários\r\n└── README.md\r\n```\r\n\r\n---\r\n\r\n## 🚀 Como rodar\r\n\r\nClone e abra localmente:\r\n\r\n```bash\r\ngit clone https://github.com/CanonEngineer/CanonEngineer.github.io.git\r\ncd CanonEngineer.github.io\r\n# abra index.html no navegador ou use um server estático\r\nnpx serve .\r\n```\r\n\r\nSite ao vivo: **https://canonengineer.github.io**\r\n\r\n---\r\n\r\n## ▶️ Uso\r\n\r\nNavegue pelo portfólio, acesse o blog e use os links para os repositórios e para a Árvore do Conhecimento.\r\n\r\n---\r\n\r\n## 🌳 Tree of Knowledge\r\n\r\nEste projeto está mapeado na árvore interativa:\r\n\r\n<p>\r\n  <a href=\"https://canonengineer.github.io/TreeofKnowledge/index.html?tree=canon-engineer-github-io\">\r\n    <img src=\"https://img.shields.io/badge/Abrir_na_Árvore-Tree_of_Knowledge-38bdf8?style=for-the-badge&labelColor=0c2344\" alt=\"Tree of Knowledge\"/>\r\n  </a>\r\n</p>\r\n\r\n---\r\n\r\n## 📈 Melhorias sugeridas\r\n\r\n1. Dark/Light mode com preferência salva\r\n2. Filtro de projetos por stack\r\n3. i18n PT/EN\r\n4. Mais posts técnicos no blog\r\n\r\n---\r\n\r\n## 👨‍💻 Autor\r\n\r\n**Alessandro Canon (CanonEngineer)**  \r\nNetwork Analyst · Developer · Cybersecurity Enthusiast\r\n\r\n- GitHub: [https://github.com/CanonEngineer](https://github.com/CanonEngineer)\r\n- Portfolio: [https://canonengineer.github.io](https://canonengineer.github.io)\r\n- Tree of Knowledge: [https://canonengineer.github.io/TreeofKnowledge/](https://canonengineer.github.io/TreeofKnowledge/)\r\n\r\n---\r\n\r\n<div align=\"center\">\r\n\r\n⭐ Se este projeto te ajudou, deixe uma estrela!\r\n\r\n</div>\r\n",
         "implementation": [
@@ -264,7 +264,7 @@
         "parent": null,
         "layer": "root",
         "title": "JavaScriptWhatsAppProject",
-        "description": "Clone do WhatsApp com Webpack, Firebase Auth, Firestore e Storage.",
+        "description": "Cobertura completa: 17 arquivos de código no repositório (22 nós na árvore incluindo pastas).",
         "file": "README.md",
         "code": "> **Mobile / UTF-8:** imagens com `width: 100%` (sem scroll horizontal). Arquivo gravado em UTF-8 para acentos corretos em qualquer dispositivo.\r\n\r\n<div align=\"center\">\r\n\r\n<p align=\"center\">\r\n  <img src=\"docs/images/banner.svg\" alt=\"Banner\" width=\"100%\" style=\"max-width:100%;height:auto;display:block;\" />\r\n</p># JavaScript WhatsApp Clone\r\n\r\n### Clone do WhatsApp com JavaScript moderno, Webpack e Firebase\r\n\r\n<img src=\"https://img.shields.io/badge/JavaScript-ES6-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black\" alt=\"JS\"/>\r\n<img src=\"https://img.shields.io/badge/Webpack-8DD6F9?style=for-the-badge&logo=webpack&logoColor=black\" alt=\"Webpack\"/>\r\n<img src=\"https://img.shields.io/badge/Firebase-FFCA28?style=for-the-badge&logo=firebase&logoColor=black\" alt=\"Firebase\"/>\r\n\r\n[Sobre](#-sobre) ·\r\n[Features](#-features) ·\r\n[Arquitetura](#-arquitetura--fluxo) ·\r\n[Stack](#-stack) ·\r\n[Estrutura](#-estrutura) ·\r\n[Setup](#-como-rodar) ·\r\n[Melhorias](#-melhorias-sugeridas) ·\r\n[Autor](#-autor)\r\n\r\n</div>\r\n\r\n---\r\n\r\n## 📌 Sobre\r\n\r\nProjeto do curso Hcode: clone de interface e fluxos do WhatsApp usando **Webpack**, **Firebase Authentication**, **Cloud Firestore**, **Storage** e APIs de mídia (câmera, PDF.js).\r\n\r\n<div align=\"center\">\r\n\r\n<p align=\"center\">\r\n  <img src=\"docs/images/flow.svg\" alt=\"Fluxo\" width=\"100%\" style=\"max-width:100%;height:auto;display:block;\" />\r\n</p></div>\r\n\r\n---\r\n\r\n## ✨ Features\r\n\r\n| # | Capacidade |\r\n|---|------------|\r\n| 1 | Interface inspirada no WhatsApp Web |\r\n| 2 | Autenticação Firebase |\r\n| 3 | Mensagens em tempo real (Firestore) |\r\n| 4 | Upload de mídia (Storage) |\r\n| 5 | Build com Webpack |\r\n\r\n---\r\n\r\n## 🏗️ Arquitetura / Fluxo\r\n\r\n```mermaid\r\nsequenceDiagram\r\n    participant U as Usuário\r\n    participant A as App JS\r\n    participant F as Firebase\r\n    U->>A: Login\r\n    A->>F: Auth\r\n    F-->>A: Token\r\n    U->>A: Envia mensagem\r\n    A->>F: Firestore write\r\n    F-->>A: Snapshot realtime\r\n    A-->>U: Atualiza UI\r\n```\r\n\r\n---\r\n\r\n## 🛠️ Stack\r\n\r\n| Tecnologia | Papel |\r\n|------------|-------|\r\n| JavaScript | App client |\r\n| Webpack | Bundling |\r\n| Firebase Auth | Login |\r\n| Firestore | Chat |\r\n| Storage | Arquivos |\r\n\r\n---\r\n\r\n## 📂 Estrutura\r\n\r\n```text\r\nJavaScriptWhatsAppProject/\r\n├── index.html\r\n├── src/                 # código-fonte\r\n├── css/ img/ audio/\r\n├── webpack.config.js\r\n└── package.json\r\n```\r\n\r\n---\r\n\r\n## 🚀 Como rodar\r\n\r\n```bash\r\ngit clone https://github.com/CanonEngineer/JavaScriptWhatsAppProject.git\r\ncd JavaScriptWhatsAppProject\r\nnpm install\r\n# configure Firebase no projeto\r\nnpm start\r\n```\r\n\r\n---\r\n\r\n## ▶️ Uso\r\n\r\nFaça login, selecione um contato/conversa e envie mensagens/mídia. Recursos extras: PDF.js e getUserMedia para câmera.\r\n\r\n---\r\n\r\n## 🌳 Tree of Knowledge\r\n\r\nEste projeto está mapeado na árvore interativa:\r\n\r\n<p>\r\n  <a href=\"https://canonengineer.github.io/TreeofKnowledge/index.html?tree=javascript-whatsapp\">\r\n    <img src=\"https://img.shields.io/badge/Abrir_na_Árvore-Tree_of_Knowledge-38bdf8?style=for-the-badge&labelColor=0c2344\" alt=\"Tree of Knowledge\"/>\r\n  </a>\r\n</p>\r\n\r\n---\r\n\r\n## 📈 Melhorias sugeridas\r\n\r\n1. Migrar para Firebase Modular SDK v9+\r\n2. Testes unitários nos controllers\r\n3. PWA / notificações push\r\n4. Tema claro/escuro\r\n\r\n---\r\n\r\n## 👨‍💻 Autor\r\n\r\n**Alessandro Canon (CanonEngineer)**  \r\nNetwork Analyst · Developer · Cybersecurity Enthusiast\r\n\r\n- GitHub: [https://github.com/CanonEngineer](https://github.com/CanonEngineer)\r\n- Portfolio: [https://canonengineer.github.io](https://canonengineer.github.io)\r\n- Tree of Knowledge: [https://canonengineer.github.io/TreeofKnowledge/](https://canonengineer.github.io/TreeofKnowledge/)\r\n\r\n---\r\n\r\n<div align=\"center\">\r\n\r\n⭐ Se este projeto te ajudou, deixe uma estrela!\r\n\r\n</div>\r\n",
         "implementation": [
@@ -567,7 +567,7 @@
         "parent": null,
         "layer": "root",
         "title": "UserManagementProject",
-        "description": "CRUD de usuários com Express, rotas e views EJS.",
+        "description": "Cobertura completa: 13 arquivos de código no repositório (20 nós na árvore incluindo pastas).",
         "file": "README.md",
         "code": "> **Mobile / UTF-8:** imagens com `width: 100%` (sem scroll horizontal). Arquivo gravado em UTF-8 para acentos corretos em qualquer dispositivo.\r\n\r\n<div align=\"center\">\r\n\r\n<p align=\"center\">\r\n  <img src=\"docs/images/banner.svg\" alt=\"Banner\" width=\"100%\" style=\"max-width:100%;height:auto;display:block;\" />\r\n</p># User Management Project\r\n\r\n### Gestão de usuários com Express, rotas e templates EJS\r\n\r\n<img src=\"https://img.shields.io/badge/Node.js-339933?style=for-the-badge&logo=nodedotjs&logoColor=white\" alt=\"Node\"/>\r\n<img src=\"https://img.shields.io/badge/Express-000000?style=for-the-badge&logo=express&logoColor=white\" alt=\"Express\"/>\r\n<img src=\"https://img.shields.io/badge/EJS-Templates-a78bfa?style=for-the-badge\" alt=\"EJS\"/>\r\n\r\n[Sobre](#-sobre) ·\r\n[Features](#-features) ·\r\n[Arquitetura](#-arquitetura--fluxo) ·\r\n[Stack](#-stack) ·\r\n[Estrutura](#-estrutura) ·\r\n[Setup](#-como-rodar) ·\r\n[Melhorias](#-melhorias-sugeridas) ·\r\n[Autor](#-autor)\r\n\r\n</div>\r\n\r\n---\r\n\r\n## 📌 Sobre\r\n\r\nAplicação Node.js para **administrar usuários**: listar, criar, editar e organizar papéis/recursos, mantendo foco em segurança básica de sistemas de TI.\r\n\r\n<div align=\"center\">\r\n\r\n<p align=\"center\">\r\n  <img src=\"docs/images/flow.svg\" alt=\"Fluxo\" width=\"100%\" style=\"max-width:100%;height:auto;display:block;\" />\r\n</p></div>\r\n\r\n---\r\n\r\n## ✨ Features\r\n\r\n| # | Capacidade |\r\n|---|------------|\r\n| 1 | CRUD de usuários |\r\n| 2 | Rotas Express organizadas |\r\n| 3 | Views EJS |\r\n| 4 | Assets estáticos em `public/` |\r\n| 5 | Entry point `app.js` + `bin/` |\r\n\r\n---\r\n\r\n## 🏗️ Arquitetura / Fluxo\r\n\r\n```mermaid\r\nflowchart LR\r\n    B[Browser] --> A[app.js]\r\n    A --> R[routes/]\r\n    R --> V[views/*.ejs]\r\n    A --> P[public/]\r\n```\r\n\r\n---\r\n\r\n## 🛠️ Stack\r\n\r\n| Tecnologia | Papel |\r\n|------------|-------|\r\n| Node.js | Runtime |\r\n| Express | HTTP / rotas |\r\n| EJS | Views |\r\n| JavaScript | Lógica |\r\n\r\n---\r\n\r\n## 📂 Estrutura\r\n\r\n```text\r\nUserManagementProject/\r\n├── app.js\r\n├── bin/\r\n├── routes/\r\n├── views/\r\n├── public/\r\n└── package.json\r\n```\r\n\r\n---\r\n\r\n## 🚀 Como rodar\r\n\r\n```bash\r\ngit clone https://github.com/CanonEngineer/UserManagementProject.git\r\ncd UserManagementProject\r\nnpm install\r\nnpm start\r\n```\r\n\r\n---\r\n\r\n## ▶️ Uso\r\n\r\nAcesse a URL local do Express, navegue pelas telas de usuários e execute operações de cadastro/edição.\r\n\r\n---\r\n\r\n## 🌳 Tree of Knowledge\r\n\r\nEste projeto está mapeado na árvore interativa:\r\n\r\n<p>\r\n  <a href=\"https://canonengineer.github.io/TreeofKnowledge/index.html?tree=user-management\">\r\n    <img src=\"https://img.shields.io/badge/Abrir_na_Árvore-Tree_of_Knowledge-38bdf8?style=for-the-badge&labelColor=0c2344\" alt=\"Tree of Knowledge\"/>\r\n  </a>\r\n</p>\r\n\r\n---\r\n\r\n## 📈 Melhorias sugeridas\r\n\r\n1. Autenticação com sessões/JWT\r\n2. Validação com express-validator\r\n3. Banco relacional (PostgreSQL/MySQL)\r\n4. Testes com Jest + Supertest\r\n\r\n---\r\n\r\n## 👨‍💻 Autor\r\n\r\n**Alessandro Canon (CanonEngineer)**  \r\nNetwork Analyst · Developer · Cybersecurity Enthusiast\r\n\r\n- GitHub: [https://github.com/CanonEngineer](https://github.com/CanonEngineer)\r\n- Portfolio: [https://canonengineer.github.io](https://canonengineer.github.io)\r\n- Tree of Knowledge: [https://canonengineer.github.io/TreeofKnowledge/](https://canonengineer.github.io/TreeofKnowledge/)\r\n\r\n---\r\n\r\n<div align=\"center\">\r\n\r\n⭐ Se este projeto te ajudou, deixe uma estrela!\r\n\r\n</div>\r\n",
         "implementation": [
@@ -837,14 +837,14 @@
     "color": "#facc15",
     "icon": "python",
     "stack": "Python",
-    "summary": "Cobertura completa: 285 arquivos de código no repositório (338 nós na árvore incluindo pastas).",
+    "summary": "Cobertura completa: 285 arquivos de código no repositório (340 nós na árvore incluindo pastas).",
     "nodes": [
       {
         "id": "course-python-2023-root",
         "parent": null,
         "layer": "root",
         "title": "CoursePython2023",
-        "description": "Exercícios e práticas do curso de Python 2023.",
+        "description": "Cobertura completa: 285 arquivos de código no repositório (338 nós na árvore incluindo pastas).",
         "file": "README.md",
         "code": "> **Mobile / UTF-8:** imagens com `width: 100%` (sem scroll horizontal). Arquivo gravado em UTF-8 para acentos corretos em qualquer dispositivo.\r\n\r\n<div align=\"center\">\r\n\r\n<p align=\"center\">\r\n  <img src=\"docs/images/banner.svg\" alt=\"Banner\" width=\"100%\" style=\"max-width:100%;height:auto;display:block;\" />\r\n</p># Course Python 2023\r\n\r\n### Exercícios e práticas do curso de Python — evolução aula a aula\r\n\r\n<img src=\"https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white\" alt=\"Python\"/>\r\n<img src=\"https://img.shields.io/badge/Exercícios-Hands--on-facc15?style=for-the-badge\" alt=\"Exercícios\"/>\r\n\r\n[Sobre](#-sobre) ·\r\n[Features](#-features) ·\r\n[Arquitetura](#-arquitetura--fluxo) ·\r\n[Stack](#-stack) ·\r\n[Estrutura](#-estrutura) ·\r\n[Setup](#-como-rodar) ·\r\n[Melhorias](#-melhorias-sugeridas) ·\r\n[Autor](#-autor)\r\n\r\n</div>\r\n\r\n---\r\n\r\n## 📌 Sobre\r\n\r\nRepositório de **exercícios do curso Python 2023**: pastas por aula (`aula141`, `aula156`, …), zip/descompactação, sites de prática e experimentos progressivos.\r\n\r\n<div align=\"center\">\r\n\r\n<p align=\"center\">\r\n  <img src=\"docs/images/flow.svg\" alt=\"Fluxo\" width=\"100%\" style=\"max-width:100%;height:auto;display:block;\" />\r\n</p></div>\r\n\r\n---\r\n\r\n## ✨ Features\r\n\r\n| # | Capacidade |\r\n|---|------------|\r\n| 1 | Organização por número de aula |\r\n| 2 | Temas: arquivos, zip, sites, POO, etc. |\r\n| 3 | Material de estudo versionado |\r\n| 4 | Base para projetos maiores em Django |\r\n\r\n---\r\n\r\n## 🏗️ Arquitetura / Fluxo\r\n\r\n```mermaid\r\nflowchart TD\r\n    C[Curso Python 2023] --> B[Bases / sintaxe]\r\n    B --> F[Arquivos e zip]\r\n    F --> W[Sites / HTTP]\r\n    W --> A[Aplicações]\r\n```\r\n\r\n---\r\n\r\n## 🛠️ Stack\r\n\r\n| Tecnologia | Papel |\r\n|------------|-------|\r\n| Python 3 | Linguagem |\r\n| stdlib | Arquivos, zip, http |\r\n| VS Code | Editor |\r\n\r\n---\r\n\r\n## 📂 Estrutura\r\n\r\n```text\r\nCoursePython2023/\r\n├── aula141/\r\n├── aula156/\r\n├── aula186_descompactado/\r\n├── aula190_site/\r\n├── ...\r\n└── README.md\r\n```\r\n\r\n---\r\n\r\n## 🚀 Como rodar\r\n\r\n```bash\r\ngit clone https://github.com/CanonEngineer/CoursePython2023.git\r\ncd CoursePython2023\r\npython aula190_site/...   # conforme a aula\r\n```\r\n\r\n---\r\n\r\n## ▶️ Uso\r\n\r\nEntre na pasta da aula desejada, leia o enunciado/código e execute com `python`.\r\n\r\n---\r\n\r\n## 🌳 Tree of Knowledge\r\n\r\nEste projeto está mapeado na árvore interativa:\r\n\r\n<p>\r\n  <a href=\"https://canonengineer.github.io/TreeofKnowledge/index.html?tree=course-python-2023\">\r\n    <img src=\"https://img.shields.io/badge/Abrir_na_Árvore-Tree_of_Knowledge-38bdf8?style=for-the-badge&labelColor=0c2344\" alt=\"Tree of Knowledge\"/>\r\n  </a>\r\n</p>\r\n\r\n---\r\n\r\n## 📈 Melhorias sugeridas\r\n\r\n1. Índice de aulas no README com links\r\n2. Testes automatizados por aula\r\n3. Notebooks Jupyter para visualização\r\n\r\n---\r\n\r\n## 👨‍💻 Autor\r\n\r\n**Alessandro Canon (CanonEngineer)**  \r\nNetwork Analyst · Developer · Cybersecurity Enthusiast\r\n\r\n- GitHub: [https://github.com/CanonEngineer](https://github.com/CanonEngineer)\r\n- Portfolio: [https://canonengineer.github.io](https://canonengineer.github.io)\r\n- Tree of Knowledge: [https://canonengineer.github.io/TreeofKnowledge/](https://canonengineer.github.io/TreeofKnowledge/)\r\n\r\n---\r\n\r\n<div align=\"center\">\r\n\r\n⭐ Se este projeto te ajudou, deixe uma estrela!\r\n\r\n</div>\r\n",
         "implementation": [
@@ -868,7 +868,7 @@
       },
       {
         "id": "course-python-2023-dir-aula141",
-        "parent": "course-python-2023-root",
+        "parent": "course-python-2023-grp-root-bucket-a",
         "layer": "module",
         "title": "aula141/",
         "description": "Pacote/pasta `aula141/` do projeto.",
@@ -881,7 +881,7 @@
       },
       {
         "id": "course-python-2023-dir-aula156",
-        "parent": "course-python-2023-root",
+        "parent": "course-python-2023-grp-root-bucket-a",
         "layer": "module",
         "title": "aula156/",
         "description": "Pacote/pasta `aula156/` do projeto.",
@@ -894,7 +894,7 @@
       },
       {
         "id": "course-python-2023-dir-aula158",
-        "parent": "course-python-2023-root",
+        "parent": "course-python-2023-grp-root-bucket-a",
         "layer": "module",
         "title": "aula158/",
         "description": "Pacote/pasta `aula158/` do projeto.",
@@ -907,7 +907,7 @@
       },
       {
         "id": "course-python-2023-dir-aula190-site",
-        "parent": "course-python-2023-root",
+        "parent": "course-python-2023-grp-root-bucket-a",
         "layer": "module",
         "title": "aula190_site/",
         "description": "Pacote/pasta `aula190_site/` do projeto.",
@@ -920,7 +920,7 @@
       },
       {
         "id": "course-python-2023-dir-aula193",
-        "parent": "course-python-2023-root",
+        "parent": "course-python-2023-grp-root-bucket-a",
         "layer": "module",
         "title": "aula193/",
         "description": "Pacote/pasta `aula193/` do projeto.",
@@ -933,7 +933,7 @@
       },
       {
         "id": "course-python-2023-dir-aula197",
-        "parent": "course-python-2023-root",
+        "parent": "course-python-2023-grp-root-bucket-a",
         "layer": "module",
         "title": "aula197/",
         "description": "Pacote/pasta `aula197/` do projeto.",
@@ -946,7 +946,7 @@
       },
       {
         "id": "course-python-2023-dir-aula199",
-        "parent": "course-python-2023-root",
+        "parent": "course-python-2023-grp-root-bucket-a",
         "layer": "module",
         "title": "aula199/",
         "description": "Pacote/pasta `aula199/` do projeto.",
@@ -959,7 +959,7 @@
       },
       {
         "id": "course-python-2023-dir-aula200",
-        "parent": "course-python-2023-root",
+        "parent": "course-python-2023-grp-root-bucket-a",
         "layer": "module",
         "title": "aula200/",
         "description": "Pacote/pasta `aula200/` do projeto.",
@@ -972,7 +972,7 @@
       },
       {
         "id": "course-python-2023-dir-aula201",
-        "parent": "course-python-2023-root",
+        "parent": "course-python-2023-grp-root-bucket-a",
         "layer": "module",
         "title": "aula201/",
         "description": "Pacote/pasta `aula201/` do projeto.",
@@ -985,7 +985,7 @@
       },
       {
         "id": "course-python-2023-dir-aula202-calculadora",
-        "parent": "course-python-2023-root",
+        "parent": "course-python-2023-grp-root-bucket-a",
         "layer": "module",
         "title": "aula202-calculadora/",
         "description": "Pacote/pasta `aula202-calculadora/` do projeto.",
@@ -998,7 +998,7 @@
       },
       {
         "id": "course-python-2023-dir-aula203-qtdesigner",
-        "parent": "course-python-2023-root",
+        "parent": "course-python-2023-grp-root-bucket-a",
         "layer": "module",
         "title": "aula203-qtdesigner/",
         "description": "Pacote/pasta `aula203-qtdesigner/` do projeto.",
@@ -1011,7 +1011,7 @@
       },
       {
         "id": "course-python-2023-dir-aula204",
-        "parent": "course-python-2023-root",
+        "parent": "course-python-2023-grp-root-bucket-a",
         "layer": "module",
         "title": "aula204/",
         "description": "Pacote/pasta `aula204/` do projeto.",
@@ -1024,7 +1024,7 @@
       },
       {
         "id": "course-python-2023-dir-aula205",
-        "parent": "course-python-2023-root",
+        "parent": "course-python-2023-grp-root-bucket-a",
         "layer": "module",
         "title": "aula205/",
         "description": "Pacote/pasta `aula205/` do projeto.",
@@ -1037,7 +1037,7 @@
       },
       {
         "id": "course-python-2023-dir-aula206",
-        "parent": "course-python-2023-root",
+        "parent": "course-python-2023-grp-root-bucket-a",
         "layer": "module",
         "title": "aula206/",
         "description": "Pacote/pasta `aula206/` do projeto.",
@@ -1050,7 +1050,7 @@
       },
       {
         "id": "course-python-2023-dir-aula207-ola-django",
-        "parent": "course-python-2023-root",
+        "parent": "course-python-2023-grp-root-bucket-a",
         "layer": "module",
         "title": "aula207_ola_django/",
         "description": "Pacote/pasta `aula207_ola_django/` do projeto.",
@@ -1063,7 +1063,7 @@
       },
       {
         "id": "course-python-2023-dir-aula99-package",
-        "parent": "course-python-2023-root",
+        "parent": "course-python-2023-grp-root-bucket-a",
         "layer": "module",
         "title": "aula99_package/",
         "description": "Pacote/pasta `aula99_package/` do projeto.",
@@ -1310,7 +1310,7 @@
       },
       {
         "id": "course-python-2023-grp-files",
-        "parent": "course-python-2023-root",
+        "parent": "course-python-2023-grp-root-bucket-a",
         "layer": "module",
         "title": "Arquivos #",
         "description": "Grupo de arquivos em `./` — Arquivos #",
@@ -1322,13 +1322,26 @@
         ]
       },
       {
-        "id": "course-python-2023-grp-files-a-1-12",
-        "parent": "course-python-2023-root",
+        "id": "course-python-2023-grp-files-a",
+        "parent": "course-python-2023-grp-root-bucket-a",
         "layer": "module",
-        "title": "Arquivos A (1–12)",
-        "description": "Grupo de arquivos em `./` — Arquivos A (1–12)",
+        "title": "Arquivos A",
+        "description": "Grupo de arquivos em `./` — Arquivos A",
+        "file": "[files-a]",
+        "code": "# Grupo: Arquivos A\n# Pasta: ./\n",
+        "implementation": [
+          "agrupamento para layout 2D/3D",
+          "pasta: ./"
+        ]
+      },
+      {
+        "id": "course-python-2023-grp-files-a-1-12",
+        "parent": "course-python-2023-grp-files-a",
+        "layer": "module",
+        "title": "1–12",
+        "description": "Grupo de arquivos em `./` — 1–12",
         "file": "[files-a-1-12]",
-        "code": "# Grupo: Arquivos A (1–12)\n# Pasta: ./\n",
+        "code": "# Grupo: 1–12\n# Pasta: ./\n",
         "implementation": [
           "agrupamento para layout 2D/3D",
           "pasta: ./"
@@ -1336,12 +1349,12 @@
       },
       {
         "id": "course-python-2023-grp-files-a-13-24",
-        "parent": "course-python-2023-root",
+        "parent": "course-python-2023-grp-files-a",
         "layer": "module",
-        "title": "Arquivos A (13–24)",
-        "description": "Grupo de arquivos em `./` — Arquivos A (13–24)",
+        "title": "13–24",
+        "description": "Grupo de arquivos em `./` — 13–24",
         "file": "[files-a-13-24]",
-        "code": "# Grupo: Arquivos A (13–24)\n# Pasta: ./\n",
+        "code": "# Grupo: 13–24\n# Pasta: ./\n",
         "implementation": [
           "agrupamento para layout 2D/3D",
           "pasta: ./"
@@ -1349,12 +1362,12 @@
       },
       {
         "id": "course-python-2023-grp-files-a-25-36",
-        "parent": "course-python-2023-root",
+        "parent": "course-python-2023-grp-files-a",
         "layer": "module",
-        "title": "Arquivos A (25–36)",
-        "description": "Grupo de arquivos em `./` — Arquivos A (25–36)",
+        "title": "25–36",
+        "description": "Grupo de arquivos em `./` — 25–36",
         "file": "[files-a-25-36]",
-        "code": "# Grupo: Arquivos A (25–36)\n# Pasta: ./\n",
+        "code": "# Grupo: 25–36\n# Pasta: ./\n",
         "implementation": [
           "agrupamento para layout 2D/3D",
           "pasta: ./"
@@ -1362,12 +1375,12 @@
       },
       {
         "id": "course-python-2023-grp-files-a-37-48",
-        "parent": "course-python-2023-root",
+        "parent": "course-python-2023-grp-files-a",
         "layer": "module",
-        "title": "Arquivos A (37–48)",
-        "description": "Grupo de arquivos em `./` — Arquivos A (37–48)",
+        "title": "37–48",
+        "description": "Grupo de arquivos em `./` — 37–48",
         "file": "[files-a-37-48]",
-        "code": "# Grupo: Arquivos A (37–48)\n# Pasta: ./\n",
+        "code": "# Grupo: 37–48\n# Pasta: ./\n",
         "implementation": [
           "agrupamento para layout 2D/3D",
           "pasta: ./"
@@ -1375,12 +1388,12 @@
       },
       {
         "id": "course-python-2023-grp-files-a-49-60",
-        "parent": "course-python-2023-root",
+        "parent": "course-python-2023-grp-files-a",
         "layer": "module",
-        "title": "Arquivos A (49–60)",
-        "description": "Grupo de arquivos em `./` — Arquivos A (49–60)",
+        "title": "49–60",
+        "description": "Grupo de arquivos em `./` — 49–60",
         "file": "[files-a-49-60]",
-        "code": "# Grupo: Arquivos A (49–60)\n# Pasta: ./\n",
+        "code": "# Grupo: 49–60\n# Pasta: ./\n",
         "implementation": [
           "agrupamento para layout 2D/3D",
           "pasta: ./"
@@ -1388,12 +1401,12 @@
       },
       {
         "id": "course-python-2023-grp-files-a-61-72",
-        "parent": "course-python-2023-root",
+        "parent": "course-python-2023-grp-files-a",
         "layer": "module",
-        "title": "Arquivos A (61–72)",
-        "description": "Grupo de arquivos em `./` — Arquivos A (61–72)",
+        "title": "61–72",
+        "description": "Grupo de arquivos em `./` — 61–72",
         "file": "[files-a-61-72]",
-        "code": "# Grupo: Arquivos A (61–72)\n# Pasta: ./\n",
+        "code": "# Grupo: 61–72\n# Pasta: ./\n",
         "implementation": [
           "agrupamento para layout 2D/3D",
           "pasta: ./"
@@ -1401,12 +1414,12 @@
       },
       {
         "id": "course-python-2023-grp-files-a-73-84",
-        "parent": "course-python-2023-root",
+        "parent": "course-python-2023-grp-files-a",
         "layer": "module",
-        "title": "Arquivos A (73–84)",
-        "description": "Grupo de arquivos em `./` — Arquivos A (73–84)",
+        "title": "73–84",
+        "description": "Grupo de arquivos em `./` — 73–84",
         "file": "[files-a-73-84]",
-        "code": "# Grupo: Arquivos A (73–84)\n# Pasta: ./\n",
+        "code": "# Grupo: 73–84\n# Pasta: ./\n",
         "implementation": [
           "agrupamento para layout 2D/3D",
           "pasta: ./"
@@ -1414,12 +1427,12 @@
       },
       {
         "id": "course-python-2023-grp-files-a-85-96",
-        "parent": "course-python-2023-root",
+        "parent": "course-python-2023-grp-files-a",
         "layer": "module",
-        "title": "Arquivos A (85–96)",
-        "description": "Grupo de arquivos em `./` — Arquivos A (85–96)",
+        "title": "85–96",
+        "description": "Grupo de arquivos em `./` — 85–96",
         "file": "[files-a-85-96]",
-        "code": "# Grupo: Arquivos A (85–96)\n# Pasta: ./\n",
+        "code": "# Grupo: 85–96\n# Pasta: ./\n",
         "implementation": [
           "agrupamento para layout 2D/3D",
           "pasta: ./"
@@ -1427,12 +1440,12 @@
       },
       {
         "id": "course-python-2023-grp-files-a-97-108",
-        "parent": "course-python-2023-root",
+        "parent": "course-python-2023-grp-files-a",
         "layer": "module",
-        "title": "Arquivos A (97–108)",
-        "description": "Grupo de arquivos em `./` — Arquivos A (97–108)",
+        "title": "97–108",
+        "description": "Grupo de arquivos em `./` — 97–108",
         "file": "[files-a-97-108]",
-        "code": "# Grupo: Arquivos A (97–108)\n# Pasta: ./\n",
+        "code": "# Grupo: 97–108\n# Pasta: ./\n",
         "implementation": [
           "agrupamento para layout 2D/3D",
           "pasta: ./"
@@ -1440,12 +1453,12 @@
       },
       {
         "id": "course-python-2023-grp-files-a-109-120",
-        "parent": "course-python-2023-root",
+        "parent": "course-python-2023-grp-files-a",
         "layer": "module",
-        "title": "Arquivos A (109–120)",
-        "description": "Grupo de arquivos em `./` — Arquivos A (109–120)",
+        "title": "109–120",
+        "description": "Grupo de arquivos em `./` — 109–120",
         "file": "[files-a-109-120]",
-        "code": "# Grupo: Arquivos A (109–120)\n# Pasta: ./\n",
+        "code": "# Grupo: 109–120\n# Pasta: ./\n",
         "implementation": [
           "agrupamento para layout 2D/3D",
           "pasta: ./"
@@ -1453,12 +1466,12 @@
       },
       {
         "id": "course-python-2023-grp-files-a-121-132",
-        "parent": "course-python-2023-root",
+        "parent": "course-python-2023-grp-files-a",
         "layer": "module",
-        "title": "Arquivos A (121–132)",
-        "description": "Grupo de arquivos em `./` — Arquivos A (121–132)",
+        "title": "121–132",
+        "description": "Grupo de arquivos em `./` — 121–132",
         "file": "[files-a-121-132]",
-        "code": "# Grupo: Arquivos A (121–132)\n# Pasta: ./\n",
+        "code": "# Grupo: 121–132\n# Pasta: ./\n",
         "implementation": [
           "agrupamento para layout 2D/3D",
           "pasta: ./"
@@ -1466,12 +1479,12 @@
       },
       {
         "id": "course-python-2023-grp-files-a-133-144",
-        "parent": "course-python-2023-root",
+        "parent": "course-python-2023-grp-files-a",
         "layer": "module",
-        "title": "Arquivos A (133–144)",
-        "description": "Grupo de arquivos em `./` — Arquivos A (133–144)",
+        "title": "133–144",
+        "description": "Grupo de arquivos em `./` — 133–144",
         "file": "[files-a-133-144]",
-        "code": "# Grupo: Arquivos A (133–144)\n# Pasta: ./\n",
+        "code": "# Grupo: 133–144\n# Pasta: ./\n",
         "implementation": [
           "agrupamento para layout 2D/3D",
           "pasta: ./"
@@ -1479,12 +1492,12 @@
       },
       {
         "id": "course-python-2023-grp-files-a-145-156",
-        "parent": "course-python-2023-root",
+        "parent": "course-python-2023-grp-files-a",
         "layer": "module",
-        "title": "Arquivos A (145–156)",
-        "description": "Grupo de arquivos em `./` — Arquivos A (145–156)",
+        "title": "145–156",
+        "description": "Grupo de arquivos em `./` — 145–156",
         "file": "[files-a-145-156]",
-        "code": "# Grupo: Arquivos A (145–156)\n# Pasta: ./\n",
+        "code": "# Grupo: 145–156\n# Pasta: ./\n",
         "implementation": [
           "agrupamento para layout 2D/3D",
           "pasta: ./"
@@ -1492,12 +1505,12 @@
       },
       {
         "id": "course-python-2023-grp-files-a-157-168",
-        "parent": "course-python-2023-root",
+        "parent": "course-python-2023-grp-files-a",
         "layer": "module",
-        "title": "Arquivos A (157–168)",
-        "description": "Grupo de arquivos em `./` — Arquivos A (157–168)",
+        "title": "157–168",
+        "description": "Grupo de arquivos em `./` — 157–168",
         "file": "[files-a-157-168]",
-        "code": "# Grupo: Arquivos A (157–168)\n# Pasta: ./\n",
+        "code": "# Grupo: 157–168\n# Pasta: ./\n",
         "implementation": [
           "agrupamento para layout 2D/3D",
           "pasta: ./"
@@ -1505,12 +1518,12 @@
       },
       {
         "id": "course-python-2023-grp-files-a-169-180",
-        "parent": "course-python-2023-root",
+        "parent": "course-python-2023-grp-files-a",
         "layer": "module",
-        "title": "Arquivos A (169–180)",
-        "description": "Grupo de arquivos em `./` — Arquivos A (169–180)",
+        "title": "169–180",
+        "description": "Grupo de arquivos em `./` — 169–180",
         "file": "[files-a-169-180]",
-        "code": "# Grupo: Arquivos A (169–180)\n# Pasta: ./\n",
+        "code": "# Grupo: 169–180\n# Pasta: ./\n",
         "implementation": [
           "agrupamento para layout 2D/3D",
           "pasta: ./"
@@ -1518,12 +1531,12 @@
       },
       {
         "id": "course-python-2023-grp-files-a-181-192",
-        "parent": "course-python-2023-root",
+        "parent": "course-python-2023-grp-files-a",
         "layer": "module",
-        "title": "Arquivos A (181–192)",
-        "description": "Grupo de arquivos em `./` — Arquivos A (181–192)",
+        "title": "181–192",
+        "description": "Grupo de arquivos em `./` — 181–192",
         "file": "[files-a-181-192]",
-        "code": "# Grupo: Arquivos A (181–192)\n# Pasta: ./\n",
+        "code": "# Grupo: 181–192\n# Pasta: ./\n",
         "implementation": [
           "agrupamento para layout 2D/3D",
           "pasta: ./"
@@ -1531,12 +1544,12 @@
       },
       {
         "id": "course-python-2023-grp-files-a-193-201",
-        "parent": "course-python-2023-root",
+        "parent": "course-python-2023-grp-files-a",
         "layer": "module",
-        "title": "Arquivos A (193–201)",
-        "description": "Grupo de arquivos em `./` — Arquivos A (193–201)",
+        "title": "193–201",
+        "description": "Grupo de arquivos em `./` — 193–201",
         "file": "[files-a-193-201]",
-        "code": "# Grupo: Arquivos A (193–201)\n# Pasta: ./\n",
+        "code": "# Grupo: 193–201\n# Pasta: ./\n",
         "implementation": [
           "agrupamento para layout 2D/3D",
           "pasta: ./"
@@ -5233,11 +5246,24 @@
           "path: dados/produtos_modulo.py",
           "GitHub: https://github.com/CanonEngineer/CoursePython2023/blob/main/dados/produtos_modulo.py"
         ]
+      },
+      {
+        "id": "course-python-2023-grp-root-bucket-a",
+        "parent": "course-python-2023-root",
+        "layer": "module",
+        "title": "Pastas A",
+        "description": "Agrupamento de pastas/módulos na raiz — A",
+        "file": "[root-a]",
+        "code": "# Agrupamento da raiz: A\n",
+        "implementation": [
+          "agrupamento de fan-out da raiz",
+          "letras: A"
+        ]
       }
     ],
     "meta": {
       "sourceFiles": 285,
-      "treeNodes": 338,
+      "treeNodes": 340,
       "complete": true
     }
   },
@@ -5255,7 +5281,7 @@
         "parent": null,
         "layer": "root",
         "title": "PythonEmployeeList",
-        "description": "Lista de funcionários com Django, models e templates.",
+        "description": "Cobertura completa: 20 arquivos de código no repositório (26 nós na árvore incluindo pastas).",
         "file": "README.md",
         "code": "> **Mobile / UTF-8:** imagens com `width: 100%` (sem scroll horizontal). Arquivo gravado em UTF-8 para acentos corretos em qualquer dispositivo.\r\n\r\n<div align=\"center\">\r\n\r\n<p align=\"center\">\r\n  <img src=\"docs/images/banner.svg\" alt=\"Banner\" width=\"100%\" style=\"max-width:100%;height:auto;display:block;\" />\r\n</p># Python Employee List\r\n\r\n### Lista de funcionários com Django, models e templates\r\n\r\n<img src=\"https://img.shields.io/badge/Django-092E20?style=for-the-badge&logo=django&logoColor=white\" alt=\"Django\"/>\r\n<img src=\"https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white\" alt=\"Python\"/>\r\n\r\n[Sobre](#-sobre) ·\r\n[Features](#-features) ·\r\n[Arquitetura](#-arquitetura--fluxo) ·\r\n[Stack](#-stack) ·\r\n[Estrutura](#-estrutura) ·\r\n[Setup](#-como-rodar) ·\r\n[Melhorias](#-melhorias-sugeridas) ·\r\n[Autor](#-autor)\r\n\r\n</div>\r\n\r\n---\r\n\r\n## 📌 Sobre\r\n\r\nAplicação Django para **cadastro/listagem de funcionários**, com app `employees`, projeto `mysite`, templates e upload de imagens em `media/`.\r\n\r\n<div align=\"center\">\r\n\r\n<p align=\"center\">\r\n  <img src=\"docs/images/flow.svg\" alt=\"Fluxo\" width=\"100%\" style=\"max-width:100%;height:auto;display:block;\" />\r\n</p></div>\r\n\r\n---\r\n\r\n## ✨ Features\r\n\r\n| # | Capacidade |\r\n|---|------------|\r\n| 1 | App Django `employees` |\r\n| 2 | Templates HTML |\r\n| 3 | Mídia de imagens |\r\n| 4 | SQLite para desenvolvimento |\r\n\r\n---\r\n\r\n## 🏗️ Arquitetura / Fluxo\r\n\r\n```mermaid\r\nflowchart LR\r\n    U[Usuário] --> V[Views]\r\n    V --> M[Models employees]\r\n    V --> T[Templates]\r\n    M --> DB[(SQLite)]\r\n```\r\n\r\n---\r\n\r\n## 🛠️ Stack\r\n\r\n| Tecnologia | Papel |\r\n|------------|-------|\r\n| Django | Framework |\r\n| SQLite | DB local |\r\n| HTML templates | UI |\r\n\r\n---\r\n\r\n## 📂 Estrutura\r\n\r\n```text\r\nPythonEmployeeList/\r\n├── manage.py\r\n├── mysite/\r\n├── employees/\r\n├── templates/\r\n├── media/\r\n└── db.sqlite3\r\n```\r\n\r\n---\r\n\r\n## 🚀 Como rodar\r\n\r\n```bash\r\ngit clone https://github.com/CanonEngineer/PythonEmployeeList.git\r\ncd PythonEmployeeList\r\npython -m venv .venv && source .venv/bin/activate  # Windows: .venv\\Scripts\\activate\r\npip install django\r\npython manage.py migrate\r\npython manage.py runserver\r\n```\r\n\r\n---\r\n\r\n## ▶️ Uso\r\n\r\nAcesse `http://127.0.0.1:8000/` e navegue pelas telas de funcionários.\r\n\r\n---\r\n\r\n## 🌳 Tree of Knowledge\r\n\r\nEste projeto está mapeado na árvore interativa:\r\n\r\n<p>\r\n  <a href=\"https://canonengineer.github.io/TreeofKnowledge/index.html?tree=python-employee-list\">\r\n    <img src=\"https://img.shields.io/badge/Abrir_na_Árvore-Tree_of_Knowledge-38bdf8?style=for-the-badge&labelColor=0c2344\" alt=\"Tree of Knowledge\"/>\r\n  </a>\r\n</p>\r\n\r\n---\r\n\r\n## 📈 Melhorias sugeridas\r\n\r\n1. requirements.txt versionado\r\n2. Autenticação admin/usuários\r\n3. Paginação e busca\r\n4. Testes Django\r\n\r\n---\r\n\r\n## 👨‍💻 Autor\r\n\r\n**Alessandro Canon (CanonEngineer)**  \r\nNetwork Analyst · Developer · Cybersecurity Enthusiast\r\n\r\n- GitHub: [https://github.com/CanonEngineer](https://github.com/CanonEngineer)\r\n- Portfolio: [https://canonengineer.github.io](https://canonengineer.github.io)\r\n- Tree of Knowledge: [https://canonengineer.github.io/TreeofKnowledge/](https://canonengineer.github.io/TreeofKnowledge/)\r\n\r\n---\r\n\r\n<div align=\"center\">\r\n\r\n⭐ Se este projeto te ajudou, deixe uma estrela!\r\n\r\n</div>\r\n",
         "implementation": [
@@ -5610,7 +5636,7 @@
         "parent": null,
         "layer": "root",
         "title": "TodoApp",
-        "description": "TODO app Django com operações CRUD.",
+        "description": "Cobertura completa: 19 arquivos de código no repositório (23 nós na árvore incluindo pastas).",
         "file": "README.md",
         "code": "> **Mobile / UTF-8:** imagens com `width: 100%` (sem scroll horizontal). Arquivo gravado em UTF-8 para acentos corretos em qualquer dispositivo.\r\n\r\n<div align=\"center\">\r\n\r\n<p align=\"center\">\r\n  <img src=\"docs/images/banner.svg\" alt=\"Banner\" width=\"100%\" style=\"max-width:100%;height:auto;display:block;\" />\r\n</p># Django TODO App\r\n\r\n### Um dos primeiros projetos com operações CRUD em Python/Django\r\n\r\n<img src=\"https://img.shields.io/badge/Django-CRUD-092E20?style=for-the-badge&logo=django&logoColor=white\" alt=\"Django\"/>\r\n<img src=\"https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white\" alt=\"Python\"/>\r\n\r\n[Sobre](#-sobre) ·\r\n[Features](#-features) ·\r\n[Arquitetura](#-arquitetura--fluxo) ·\r\n[Stack](#-stack) ·\r\n[Estrutura](#-estrutura) ·\r\n[Setup](#-como-rodar) ·\r\n[Melhorias](#-melhorias-sugeridas) ·\r\n[Autor](#-autor)\r\n\r\n</div>\r\n\r\n---\r\n\r\n## 📌 Sobre\r\n\r\nTODO App em Django com apps `todo` e `todo_main`, templates e SQLite — foco em **Create, Read, Update, Delete**.\r\n\r\n<div align=\"center\">\r\n\r\n<p align=\"center\">\r\n  <img src=\"docs/images/flow.svg\" alt=\"Fluxo\" width=\"100%\" style=\"max-width:100%;height:auto;display:block;\" />\r\n</p></div>\r\n\r\n---\r\n\r\n## ✨ Features\r\n\r\n| # | Capacidade |\r\n|---|------------|\r\n| 1 | CRUD de tarefas |\r\n| 2 | Templates Django |\r\n| 3 | Projeto `todo_main` + app `todo` |\r\n| 4 | DB SQLite embutido |\r\n\r\n---\r\n\r\n## 🏗️ Arquitetura / Fluxo\r\n\r\n```mermaid\r\nflowchart TD\r\n    A[Lista de tarefas] --> B[Adicionar]\r\n    A --> C[Editar]\r\n    A --> D[Marcar concluída]\r\n    A --> E[Excluir]\r\n    B --> DB[(SQLite)]\r\n    C --> DB\r\n    D --> DB\r\n    E --> DB\r\n```\r\n\r\n---\r\n\r\n## 🛠️ Stack\r\n\r\n| Tecnologia | Papel |\r\n|------------|-------|\r\n| Django | MVC web |\r\n| SQLite | Persistência |\r\n| HTML | UI |\r\n\r\n---\r\n\r\n## 📂 Estrutura\r\n\r\n```text\r\nTodoApp/\r\n├── manage.py\r\n├── todo_main/\r\n├── todo/\r\n├── templates/\r\n└── db.sqlite3\r\n```\r\n\r\n---\r\n\r\n## 🚀 Como rodar\r\n\r\n```bash\r\ngit clone https://github.com/CanonEngineer/TodoApp.git\r\ncd TodoApp\r\npython -m venv .venv && source .venv/bin/activate\r\npip install django\r\npython manage.py migrate\r\npython manage.py runserver\r\n```\r\n\r\n---\r\n\r\n## ▶️ Uso\r\n\r\nAbra o servidor local e gerencie suas tarefas pela interface web.\r\n\r\n---\r\n\r\n## 🌳 Tree of Knowledge\r\n\r\nEste projeto está mapeado na árvore interativa:\r\n\r\n<p>\r\n  <a href=\"https://canonengineer.github.io/TreeofKnowledge/index.html?tree=todo-app\">\r\n    <img src=\"https://img.shields.io/badge/Abrir_na_Árvore-Tree_of_Knowledge-38bdf8?style=for-the-badge&labelColor=0c2344\" alt=\"Tree of Knowledge\"/>\r\n  </a>\r\n</p>\r\n\r\n---\r\n\r\n## 📈 Melhorias sugeridas\r\n\r\n1. Due dates e prioridades\r\n2. Login por usuário\r\n3. API REST opcional\r\n4. Deploy (Render/Railway)\r\n\r\n---\r\n\r\n## 👨‍💻 Autor\r\n\r\n**Alessandro Canon (CanonEngineer)**  \r\nNetwork Analyst · Developer · Cybersecurity Enthusiast\r\n\r\n- GitHub: [https://github.com/CanonEngineer](https://github.com/CanonEngineer)\r\n- Portfolio: [https://canonengineer.github.io](https://canonengineer.github.io)\r\n- Tree of Knowledge: [https://canonengineer.github.io/TreeofKnowledge/](https://canonengineer.github.io/TreeofKnowledge/)\r\n\r\n---\r\n\r\n<div align=\"center\">\r\n\r\n⭐ Se este projeto te ajudou, deixe uma estrela!\r\n\r\n</div>\r\n",
         "implementation": [
@@ -5926,7 +5952,7 @@
         "parent": null,
         "layer": "root",
         "title": "ProjectHelpDesk",
-        "description": "Help Desk em PHP: login, abrir e consultar chamados.",
+        "description": "Cobertura completa: 9 arquivos de código no repositório (9 nós na árvore incluindo pastas).",
         "file": "README.md",
         "code": "> **Mobile / UTF-8:** imagens com `width: 100%` (sem scroll horizontal). Arquivo gravado em UTF-8 para acentos corretos em qualquer dispositivo.\r\n\r\n<div align=\"center\">\r\n\r\n<p align=\"center\">\r\n  <img src=\"docs/images/banner.svg\" alt=\"Banner\" width=\"100%\" style=\"max-width:100%;height:auto;display:block;\" />\r\n</p># Project Help Desk\r\n\r\n### Sistema Help Desk em PHP: autenticação, abertura e consulta de chamados\r\n\r\n<img src=\"https://img.shields.io/badge/PHP-777BB4?style=for-the-badge&logo=php&logoColor=white\" alt=\"PHP\"/>\r\n<img src=\"https://img.shields.io/badge/Help%20Desk-Tickets-60a5fa?style=for-the-badge\" alt=\"HelpDesk\"/>\r\n\r\n[Sobre](#-sobre) ·\r\n[Features](#-features) ·\r\n[Arquitetura](#-arquitetura--fluxo) ·\r\n[Stack](#-stack) ·\r\n[Estrutura](#-estrutura) ·\r\n[Setup](#-como-rodar) ·\r\n[Melhorias](#-melhorias-sugeridas) ·\r\n[Autor](#-autor)\r\n\r\n</div>\r\n\r\n---\r\n\r\n## 📌 Sobre\r\n\r\nHelp Desk clássico em PHP procedural: login, validação de sessão, abertura de chamado, gravação em arquivo (`arquivo.hd`) e consulta.\r\n\r\n<div align=\"center\">\r\n\r\n<p align=\"center\">\r\n  <img src=\"docs/images/flow.svg\" alt=\"Fluxo\" width=\"100%\" style=\"max-width:100%;height:auto;display:block;\" />\r\n</p></div>\r\n\r\n---\r\n\r\n## ✨ Features\r\n\r\n| # | Capacidade |\r\n|---|------------|\r\n| 1 | Tela de login (`index.php` / `valida_login.php`) |\r\n| 2 | Proteção de rotas (`validador_acesso.php`) |\r\n| 3 | Abrir chamado + registro |\r\n| 4 | Consultar chamados |\r\n| 5 | Logoff |\r\n\r\n---\r\n\r\n## 🏗️ Arquitetura / Fluxo\r\n\r\n```mermaid\r\nflowchart TD\r\n    L[Login] -->|ok| H[Home]\r\n    H --> A[Abrir chamado]\r\n    A --> R[registra_chamado]\r\n    R --> F[(arquivo.hd)]\r\n    H --> C[Consultar]\r\n    C --> F\r\n    H --> O[Logoff]\r\n```\r\n\r\n---\r\n\r\n## 🛠️ Stack\r\n\r\n| Tecnologia | Papel |\r\n|------------|-------|\r\n| PHP | Backend |\r\n| HTML/CSS | UI |\r\n| Arquivo .hd | Persistência simples |\r\n\r\n---\r\n\r\n## 📂 Estrutura\r\n\r\n```text\r\nProjectHelpDesk/\r\n├── index.php\r\n├── home.php\r\n├── abrir_chamado.php\r\n├── registra_chamado.php\r\n├── consultar_chamado.php\r\n├── valida_login.php\r\n├── validador_acesso.php\r\n├── logoff.php\r\n└── arquivo.hd\r\n```\r\n\r\n---\r\n\r\n## 🚀 Como rodar\r\n\r\n```bash\r\ngit clone https://github.com/CanonEngineer/ProjectHelpDesk.git\r\ncd ProjectHelpDesk\r\n# use XAMPP/WAMP/Laragon ou:\r\nphp -S localhost:8080\r\n```\r\n\r\n---\r\n\r\n## ▶️ Uso\r\n\r\nEntre com as credenciais configuradas no validador, abra chamados e consulte a lista. Screenshots: `formulario_abrir_chamado.png`, `formulario_consultar_chamado.png`.\r\n\r\n---\r\n\r\n## 🌳 Tree of Knowledge\r\n\r\nEste projeto está mapeado na árvore interativa:\r\n\r\n<p>\r\n  <a href=\"https://canonengineer.github.io/TreeofKnowledge/index.html?tree=project-helpdesk\">\r\n    <img src=\"https://img.shields.io/badge/Abrir_na_Árvore-Tree_of_Knowledge-38bdf8?style=for-the-badge&labelColor=0c2344\" alt=\"Tree of Knowledge\"/>\r\n  </a>\r\n</p>\r\n\r\n---\r\n\r\n## 📈 Melhorias sugeridas\r\n\r\n1. Migrar persistência para MySQL\r\n2. Password hash + CSRF\r\n3. Painel admin com status do ticket\r\n4. Composer + estrutura MVC\r\n\r\n---\r\n\r\n## 👨‍💻 Autor\r\n\r\n**Alessandro Canon (CanonEngineer)**  \r\nNetwork Analyst · Developer · Cybersecurity Enthusiast\r\n\r\n- GitHub: [https://github.com/CanonEngineer](https://github.com/CanonEngineer)\r\n- Portfolio: [https://canonengineer.github.io](https://canonengineer.github.io)\r\n- Tree of Knowledge: [https://canonengineer.github.io/TreeofKnowledge/](https://canonengineer.github.io/TreeofKnowledge/)\r\n\r\n---\r\n\r\n<div align=\"center\">\r\n\r\n⭐ Se este projeto te ajudou, deixe uma estrela!\r\n\r\n</div>\r\n",
         "implementation": [
@@ -6060,7 +6086,7 @@
         "parent": null,
         "layer": "root",
         "title": "AppMosquito",
-        "description": "Jogo Mata Mosquito com níveis e telas de vitória/derrota.",
+        "description": "Cobertura completa: 7 arquivos de código no repositório (7 nós na árvore incluindo pastas).",
         "file": "README.md",
         "code": "> **Mobile / UTF-8:** imagens com `width: 100%` (sem scroll horizontal). Arquivo gravado em UTF-8 para acentos corretos em qualquer dispositivo.\r\n\r\n<div align=\"center\">\r\n\r\n<p align=\"center\">\r\n  <img src=\"docs/images/banner.svg\" alt=\"Banner\" width=\"100%\" style=\"max-width:100%;height:auto;display:block;\" />\r\n</p># App Mosquito\r\n\r\n### Jogo Mata Mosquito com níveis e telas de vitória/derrota\r\n\r\n<img src=\"https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white\" alt=\"HTML\"/>\r\n<img src=\"https://img.shields.io/badge/JavaScript-Game-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black\" alt=\"JS\"/>\r\n\r\n[Sobre](#-sobre) ·\r\n[Features](#-features) ·\r\n[Arquitetura](#-arquitetura--fluxo) ·\r\n[Stack](#-stack) ·\r\n[Estrutura](#-estrutura) ·\r\n[Setup](#-como-rodar) ·\r\n[Melhorias](#-melhorias-sugeridas) ·\r\n[Autor](#-autor)\r\n\r\n</div>\r\n\r\n---\r\n\r\n## 📌 Sobre\r\n\r\nMini-game no browser: escolha a dificuldade, mate mosquitos que aparecem na tela e evite perder todas as vidas.\r\n\r\n<div align=\"center\">\r\n\r\n<p align=\"center\">\r\n  <img src=\"docs/images/flow.svg\" alt=\"Fluxo\" width=\"100%\" style=\"max-width:100%;height:auto;display:block;\" />\r\n</p></div>\r\n\r\n---\r\n\r\n## ✨ Features\r\n\r\n| # | Capacidade |\r\n|---|------------|\r\n| 1 | Tela inicial com níveis |\r\n| 2 | Lógica em `jogo.js` |\r\n| 3 | Estilos em `estilo.css` |\r\n| 4 | Telas `vitoria.html` e `fim_de_jogo.html` |\r\n| 5 | Sprites em `imagens/` |\r\n\r\n---\r\n\r\n## 🏗️ Arquitetura / Fluxo\r\n\r\n```mermaid\r\nstateDiagram-v2\r\n    [*] --> Menu\r\n    Menu --> Playing: iniciar\r\n    Playing --> Victory: tempo/metas\r\n    Playing --> GameOver: vidas=0\r\n    Victory --> Menu\r\n    GameOver --> Menu\r\n```\r\n\r\n---\r\n\r\n## 🛠️ Stack\r\n\r\n| Tecnologia | Papel |\r\n|------------|-------|\r\n| HTML | Páginas |\r\n| CSS | Visual |\r\n| JavaScript | Gameplay |\r\n\r\n---\r\n\r\n## 📂 Estrutura\r\n\r\n```text\r\nAppMosquito/\r\n├── index.html\r\n├── app.html\r\n├── jogo.js\r\n├── estilo.css\r\n├── vitoria.html\r\n├── fim_de_jogo.html\r\n└── imagens/\r\n```\r\n\r\n---\r\n\r\n## 🚀 Como rodar\r\n\r\nAbra `index.html` no navegador (ou sirva a pasta com um static server).\r\n\r\n---\r\n\r\n## ▶️ Uso\r\n\r\nEscolha o nível, clique nos mosquitos e tente chegar à vitória antes do game over.\r\n\r\n---\r\n\r\n## 🌳 Tree of Knowledge\r\n\r\nEste projeto está mapeado na árvore interativa:\r\n\r\n<p>\r\n  <a href=\"https://canonengineer.github.io/TreeofKnowledge/index.html?tree=app-mosquito\">\r\n    <img src=\"https://img.shields.io/badge/Abrir_na_Árvore-Tree_of_Knowledge-38bdf8?style=for-the-badge&labelColor=0c2344\" alt=\"Tree of Knowledge\"/>\r\n  </a>\r\n</p>\r\n\r\n---\r\n\r\n## 📈 Melhorias sugeridas\r\n\r\n1. Placar com localStorage\r\n2. Sons e partículas\r\n3. Mobile touch otimizado\r\n4. Modo hardcore\r\n\r\n---\r\n\r\n## 👨‍💻 Autor\r\n\r\n**Alessandro Canon (CanonEngineer)**  \r\nNetwork Analyst · Developer · Cybersecurity Enthusiast\r\n\r\n- GitHub: [https://github.com/CanonEngineer](https://github.com/CanonEngineer)\r\n- Portfolio: [https://canonengineer.github.io](https://canonengineer.github.io)\r\n- Tree of Knowledge: [https://canonengineer.github.io/TreeofKnowledge/](https://canonengineer.github.io/TreeofKnowledge/)\r\n\r\n---\r\n\r\n<div align=\"center\">\r\n\r\n⭐ Se este projeto te ajudou, deixe uma estrela!\r\n\r\n</div>\r\n",
         "implementation": [
@@ -6168,7 +6194,7 @@
         "parent": null,
         "layer": "root",
         "title": "NeighborhoodBoysProject",
-        "description": "Sistema de salão Meninos da Vila — contas, agenda e clientes.",
+        "description": "Cobertura completa: 64 arquivos de código no repositório (80 nós na árvore incluindo pastas).",
         "file": "README.md",
         "code": "> **Mobile / UTF-8:** imagens com `width: 100%` (sem scroll horizontal). Arquivo gravado em UTF-8 para acentos corretos em qualquer dispositivo.\r\n\r\n<div align=\"center\">\r\n\r\n<p align=\"center\">\r\n  <img src=\"docs/images/banner.svg\" alt=\"Banner\" width=\"100%\" style=\"max-width:100%;height:auto;display:block;\" />\r\n</p># Neighborhood Boys Project\r\n\r\n### Software de salão Meninos da Vila — contas, agenda e comunicação\r\n\r\n<img src=\"https://img.shields.io/badge/Django-092E20?style=for-the-badge&logo=django&logoColor=white\" alt=\"Django\"/>\r\n<img src=\"https://img.shields.io/badge/MySQL-4479A1?style=for-the-badge&logo=mysql&logoColor=white\" alt=\"MySQL\"/>\r\n<img src=\"https://img.shields.io/badge/UNIVESP-Integrador-c084fc?style=for-the-badge\" alt=\"UNIVESP\"/>\r\n\r\n[Sobre](#-sobre) ·\r\n[Features](#-features) ·\r\n[Arquitetura](#-arquitetura--fluxo) ·\r\n[Stack](#-stack) ·\r\n[Estrutura](#-estrutura) ·\r\n[Setup](#-como-rodar) ·\r\n[Melhorias](#-melhorias-sugeridas) ·\r\n[Autor](#-autor)\r\n\r\n</div>\r\n\r\n---\r\n\r\n## 📌 Sobre\r\n\r\nProjeto Integrador II (UNIVESP): sistema para salão de beleza com **cadastro, senhas, agenda, contatos e redes sociais** para comunicação com clientes.\r\n\r\n<div align=\"center\">\r\n\r\n<p align=\"center\">\r\n  <img src=\"docs/images/flow.svg\" alt=\"Fluxo\" width=\"100%\" style=\"max-width:100%;height:auto;display:block;\" />\r\n</p></div>\r\n\r\n---\r\n\r\n## ✨ Features\r\n\r\n| # | Capacidade |\r\n|---|------------|\r\n| 1 | Apps `accounts`, `agenda`, `app` |\r\n| 2 | Projeto `meninos_da_vila` |\r\n| 3 | Mídia de clientes |\r\n| 4 | requirements.txt + MySQL client |\r\n| 5 | Scripts SQL em `banco de dados/` |\r\n\r\n---\r\n\r\n## 🏗️ Arquitetura / Fluxo\r\n\r\n```mermaid\r\nflowchart TB\r\n    C[Cliente/Admin] --> A[accounts]\r\n    C --> G[agenda]\r\n    C --> APP[app]\r\n    A --> DB[(MySQL)]\r\n    G --> DB\r\n    APP --> DB\r\n```\r\n\r\n---\r\n\r\n## 🛠️ Stack\r\n\r\n| Tecnologia | Papel |\r\n|------------|-------|\r\n| Django | Backend |\r\n| MySQL | Banco |\r\n| HTML/JS/CSS | Front |\r\n| SQLite | Dev local opcional |\r\n\r\n---\r\n\r\n## 📂 Estrutura\r\n\r\n```text\r\nNeighborhoodBoysProject/\r\n├── manage.py\r\n├── meninos_da_vila/\r\n├── accounts/\r\n├── agenda/\r\n├── app/\r\n├── media/clientes/\r\n├── banco de dados/\r\n└── requirements.txt\r\n```\r\n\r\n---\r\n\r\n## 🚀 Como rodar\r\n\r\n```bash\r\ngit clone https://github.com/CanonEngineer/NeighborhoodBoysProject.git\r\ncd NeighborhoodBoysProject\r\npython -m venv .venv && source .venv/bin/activate\r\npip install -r requirements.txt\r\n# configure MySQL em settings\r\npython manage.py migrate\r\npython manage.py runserver\r\n```\r\n\r\n---\r\n\r\n## ▶️ Uso\r\n\r\nCadastre usuários, gerencie agenda e clientes pelo painel web do salão.\r\n\r\n---\r\n\r\n## 🌳 Tree of Knowledge\r\n\r\nEste projeto está mapeado na árvore interativa:\r\n\r\n<p>\r\n  <a href=\"https://canonengineer.github.io/TreeofKnowledge/index.html?tree=neighborhood-boys\">\r\n    <img src=\"https://img.shields.io/badge/Abrir_na_Árvore-Tree_of_Knowledge-38bdf8?style=for-the-badge&labelColor=0c2344\" alt=\"Tree of Knowledge\"/>\r\n  </a>\r\n</p>\r\n\r\n---\r\n\r\n## 📈 Melhorias sugeridas\r\n\r\n1. Remover `venv` do repositório (usar .gitignore)\r\n2. Docker Compose MySQL + app\r\n3. Agendamento com calendário visual\r\n4. Notificações WhatsApp/e-mail\r\n\r\n---\r\n\r\n## 👨‍💻 Autor\r\n\r\n**Alessandro Canon (CanonEngineer)**  \r\nNetwork Analyst · Developer · Cybersecurity Enthusiast\r\n\r\n- GitHub: [https://github.com/CanonEngineer](https://github.com/CanonEngineer)\r\n- Portfolio: [https://canonengineer.github.io](https://canonengineer.github.io)\r\n- Tree of Knowledge: [https://canonengineer.github.io/TreeofKnowledge/](https://canonengineer.github.io/TreeofKnowledge/)\r\n\r\n---\r\n\r\n<div align=\"center\">\r\n\r\n⭐ Se este projeto te ajudou, deixe uma estrela!\r\n\r\n</div>\r\n",
         "implementation": [
@@ -7225,7 +7251,7 @@
         "parent": null,
         "layer": "root",
         "title": "SearchUnivespProject",
-        "description": "Projeto integrador UNIVESP com pesquisa e páginas de saúde.",
+        "description": "Cobertura completa: 40 arquivos de código no repositório (52 nós na árvore incluindo pastas).",
         "file": "README.md",
         "code": "> **Mobile / UTF-8:** imagens com `width: 100%` (sem scroll horizontal). Arquivo gravado em UTF-8 para acentos corretos em qualquer dispositivo.\r\n\r\n<div align=\"center\">\r\n\r\n<p align=\"center\">\r\n  <img src=\"docs/images/banner.svg\" alt=\"Banner\" width=\"100%\" style=\"max-width:100%;height:auto;display:block;\" />\r\n</p># Search UNIVESP Project\r\n\r\n### Projeto integrador UNIVESP com pesquisa, páginas de saúde e contato\r\n\r\n<img src=\"https://img.shields.io/badge/Node.js-339933?style=for-the-badge&logo=nodedotjs&logoColor=white\" alt=\"Node\"/>\r\n<img src=\"https://img.shields.io/badge/Express-000?style=for-the-badge&logo=express&logoColor=white\" alt=\"Express\"/>\r\n<img src=\"https://img.shields.io/badge/UNIVESP-Integrador-2dd4bf?style=for-the-badge\" alt=\"UNIVESP\"/>\r\n\r\n[Sobre](#-sobre) ·\r\n[Features](#-features) ·\r\n[Arquitetura](#-arquitetura--fluxo) ·\r\n[Stack](#-stack) ·\r\n[Estrutura](#-estrutura) ·\r\n[Setup](#-como-rodar) ·\r\n[Melhorias](#-melhorias-sugeridas) ·\r\n[Autor](#-autor)\r\n\r\n</div>\r\n\r\n---\r\n\r\n## 📌 Sobre\r\n\r\nAplicação web do Projeto Integrador III: páginas estáticas/EJS para **pesquisa**, **saúde**, **contato** e backend Express com rotas e includes.\r\n\r\n<div align=\"center\">\r\n\r\n<p align=\"center\">\r\n  <img src=\"docs/images/flow.svg\" alt=\"Fluxo\" width=\"100%\" style=\"max-width:100%;height:auto;display:block;\" />\r\n</p></div>\r\n\r\n---\r\n\r\n## ✨ Features\r\n\r\n| # | Capacidade |\r\n|---|------------|\r\n| 1 | Express `app.js` + `routes/` |\r\n| 2 | Views EJS |\r\n| 3 | Páginas `pesquisa.html`, `saude.html`, `contato.html` |\r\n| 4 | Assets em `assests/` / `public/` |\r\n\r\n---\r\n\r\n## 🏗️ Arquitetura / Fluxo\r\n\r\n```mermaid\r\nflowchart LR\r\n    U[Usuário] --> H[Home]\r\n    H --> P[Pesquisa]\r\n    P --> R[Resultado]\r\n    H --> S[Saúde]\r\n    H --> C[Contato]\r\n    H --> X[Express routes]\r\n```\r\n\r\n---\r\n\r\n## 🛠️ Stack\r\n\r\n| Tecnologia | Papel |\r\n|------------|-------|\r\n| Express | Servidor |\r\n| EJS | Templates |\r\n| HTML/CSS/JS | Front |\r\n\r\n---\r\n\r\n## 📂 Estrutura\r\n\r\n```text\r\nSearchUnivespProject/\r\n├── app.js\r\n├── routes/\r\n├── views/\r\n├── public/\r\n├── assests/\r\n├── pesquisa.html\r\n├── saude.html\r\n└── contato.html\r\n```\r\n\r\n---\r\n\r\n## 🚀 Como rodar\r\n\r\n```bash\r\ngit clone https://github.com/CanonEngineer/SearchUnivespProject.git\r\ncd SearchUnivespProject\r\nnpm install\r\nnpm start\r\n```\r\n\r\n---\r\n\r\n## ▶️ Uso\r\n\r\nNavegue pelas páginas de pesquisa e saúde; use o formulário de contato quando disponível.\r\n\r\n---\r\n\r\n## 🌳 Tree of Knowledge\r\n\r\nEste projeto está mapeado na árvore interativa:\r\n\r\n<p>\r\n  <a href=\"https://canonengineer.github.io/TreeofKnowledge/index.html?tree=search-univesp\">\r\n    <img src=\"https://img.shields.io/badge/Abrir_na_Árvore-Tree_of_Knowledge-38bdf8?style=for-the-badge&labelColor=0c2344\" alt=\"Tree of Knowledge\"/>\r\n  </a>\r\n</p>\r\n\r\n---\r\n\r\n## 📈 Melhorias sugeridas\r\n\r\n1. Corrigir pasta `assests` → `assets`\r\n2. Busca real em base/API\r\n3. Remover `node_modules` do Git\r\n4. Acessibilidade e SEO\r\n\r\n---\r\n\r\n## 👨‍💻 Autor\r\n\r\n**Alessandro Canon (CanonEngineer)**  \r\nNetwork Analyst · Developer · Cybersecurity Enthusiast\r\n\r\n- GitHub: [https://github.com/CanonEngineer](https://github.com/CanonEngineer)\r\n- Portfolio: [https://canonengineer.github.io](https://canonengineer.github.io)\r\n- Tree of Knowledge: [https://canonengineer.github.io/TreeofKnowledge/](https://canonengineer.github.io/TreeofKnowledge/)\r\n\r\n---\r\n\r\n<div align=\"center\">\r\n\r\n⭐ Se este projeto te ajudou, deixe uma estrela!\r\n\r\n</div>\r\n",
         "implementation": [
@@ -7918,7 +7944,7 @@
         "parent": null,
         "layer": "root",
         "title": "JavaScriptCalculatorProject",
-        "description": "Calculadora interativa em JavaScript com som de clique.",
+        "description": "Cobertura completa: 4 arquivos de código no repositório (6 nós na árvore incluindo pastas).",
         "file": "README.md",
         "code": "> **Mobile / UTF-8:** imagens com `width: 100%` (sem scroll horizontal). Arquivo gravado em UTF-8 para acentos corretos em qualquer dispositivo.\r\n\r\n<div align=\"center\">\r\n\r\n<p align=\"center\">\r\n  <img src=\"docs/images/banner.svg\" alt=\"Banner\" width=\"100%\" style=\"max-width:100%;height:auto;display:block;\" />\r\n</p># JavaScript Calculator\r\n\r\n### Calculadora interativa em JavaScript com feedback sonoro\r\n\r\n<img src=\"https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white\" alt=\"HTML\"/>\r\n<img src=\"https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black\" alt=\"JS\"/>\r\n\r\n[Sobre](#-sobre) ·\r\n[Features](#-features) ·\r\n[Arquitetura](#-arquitetura--fluxo) ·\r\n[Stack](#-stack) ·\r\n[Estrutura](#-estrutura) ·\r\n[Setup](#-como-rodar) ·\r\n[Melhorias](#-melhorias-sugeridas) ·\r\n[Autor](#-autor)\r\n\r\n</div>\r\n\r\n---\r\n\r\n## 📌 Sobre\r\n\r\nCalculadora visual com fonte digital (`digital-7.ttf`), som de clique (`click.mp3`) e lógica em `scripts/`.\r\n\r\n<div align=\"center\">\r\n\r\n<p align=\"center\">\r\n  <img src=\"docs/images/flow.svg\" alt=\"Fluxo\" width=\"100%\" style=\"max-width:100%;height:auto;display:block;\" />\r\n</p></div>\r\n\r\n---\r\n\r\n## ✨ Features\r\n\r\n| # | Capacidade |\r\n|---|------------|\r\n| 1 | UI estilo calculadora clássica |\r\n| 2 | Áudio por tecla |\r\n| 3 | Fonte digital customizada |\r\n| 4 | Lógica JS modular em `scripts/` |\r\n\r\n---\r\n\r\n## 🏗️ Arquitetura / Fluxo\r\n\r\n```mermaid\r\nflowchart LR\r\n    K[Click tecla] --> S[Som]\r\n    K --> E[Engine JS]\r\n    E --> D[Display]\r\n    E --> R[Resultado]\r\n```\r\n\r\n---\r\n\r\n## 🛠️ Stack\r\n\r\n| Tecnologia | Papel |\r\n|------------|-------|\r\n| HTML | Markup |\r\n| JavaScript | Cálculos |\r\n| CSS (inline/file) | Visual |\r\n\r\n---\r\n\r\n## 📂 Estrutura\r\n\r\n```text\r\nJavaScriptCalculatorProject/\r\n├── index.html\r\n├── scripts/\r\n├── click.mp3\r\n├── digital-7.ttf\r\n└── README.md\r\n```\r\n\r\n---\r\n\r\n## 🚀 Como rodar\r\n\r\nAbra `index.html` no navegador.\r\n\r\n---\r\n\r\n## ▶️ Uso\r\n\r\nDigite operações pelos botões e ouça o feedback sonoro a cada clique.\r\n\r\n---\r\n\r\n## 🌳 Tree of Knowledge\r\n\r\nEste projeto está mapeado na árvore interativa:\r\n\r\n<p>\r\n  <a href=\"https://canonengineer.github.io/TreeofKnowledge/index.html?tree=javascript-calculator\">\r\n    <img src=\"https://img.shields.io/badge/Abrir_na_Árvore-Tree_of_Knowledge-38bdf8?style=for-the-badge&labelColor=0c2344\" alt=\"Tree of Knowledge\"/>\r\n  </a>\r\n</p>\r\n\r\n---\r\n\r\n## 📈 Melhorias sugeridas\r\n\r\n1. Suporte a teclado físico\r\n2. Histórico de cálculos\r\n3. Modo científico\r\n4. Testes da engine\r\n\r\n---\r\n\r\n## 👨‍💻 Autor\r\n\r\n**Alessandro Canon (CanonEngineer)**  \r\nNetwork Analyst · Developer · Cybersecurity Enthusiast\r\n\r\n- GitHub: [https://github.com/CanonEngineer](https://github.com/CanonEngineer)\r\n- Portfolio: [https://canonengineer.github.io](https://canonengineer.github.io)\r\n- Tree of Knowledge: [https://canonengineer.github.io/TreeofKnowledge/](https://canonengineer.github.io/TreeofKnowledge/)\r\n\r\n---\r\n\r\n<div align=\"center\">\r\n\r\n⭐ Se este projeto te ajudou, deixe uma estrela!\r\n\r\n</div>\r\n",
         "implementation": [
@@ -8006,14 +8032,14 @@
     "color": "#f87171",
     "icon": "django",
     "stack": "Django e-commerce",
-    "summary": "Cobertura completa: 236 arquivos de código no repositório (295 nós na árvore incluindo pastas).",
+    "summary": "Cobertura completa: 236 arquivos de código no repositório (300 nós na árvore incluindo pastas).",
     "nodes": [
       {
         "id": "python-ii-ecommerce-root",
         "parent": null,
         "layer": "root",
         "title": "PythonIIEcommerceProject",
-        "description": "E-commerce Django do curso Python II.",
+        "description": "Cobertura completa: 236 arquivos de código no repositório (295 nós na árvore incluindo pastas).",
         "file": "README.md",
         "code": "> **Mobile / UTF-8:** imagens com `width: 100%` (sem scroll horizontal). Arquivo gravado em UTF-8 para acentos corretos em qualquer dispositivo.\r\n\r\n<div align=\"center\">\r\n\r\n<p align=\"center\">\r\n  <img src=\"docs/images/banner.svg\" alt=\"Banner\" width=\"100%\" style=\"max-width:100%;height:auto;display:block;\" />\r\n</p># Python II E-commerce\r\n\r\n### E-commerce Django do curso Python II — loja, produto, pedido e perfil\r\n\r\n<img src=\"https://img.shields.io/badge/Django-092E20?style=for-the-badge&logo=django&logoColor=white\" alt=\"Django\"/>\r\n<img src=\"https://img.shields.io/badge/E--commerce-f87171?style=for-the-badge\" alt=\"Ecommerce\"/>\r\n\r\n[Sobre](#-sobre) ·\r\n[Features](#-features) ·\r\n[Arquitetura](#-arquitetura--fluxo) ·\r\n[Stack](#-stack) ·\r\n[Estrutura](#-estrutura) ·\r\n[Setup](#-como-rodar) ·\r\n[Melhorias](#-melhorias-sugeridas) ·\r\n[Autor](#-autor)\r\n\r\n</div>\r\n\r\n---\r\n\r\n## 📌 Sobre\r\n\r\nLoja virtual em Django com apps `loja`, `produto`, `pedido`, `perfil` e utilitários — fluxo completo de catálogo a pedido.\r\n\r\n<div align=\"center\">\r\n\r\n<p align=\"center\">\r\n  <img src=\"docs/images/flow.svg\" alt=\"Fluxo\" width=\"100%\" style=\"max-width:100%;height:auto;display:block;\" />\r\n</p></div>\r\n\r\n---\r\n\r\n## ✨ Features\r\n\r\n| # | Capacidade |\r\n|---|------------|\r\n| 1 | Apps de domínio separados |\r\n| 2 | Templates da loja |\r\n| 3 | requirements.txt |\r\n| 4 | Manage.py / migrations ready |\r\n\r\n---\r\n\r\n## 🏗️ Arquitetura / Fluxo\r\n\r\n```mermaid\r\nflowchart TD\r\n    U[Cliente] --> L[loja]\r\n    L --> P[produto]\r\n    L --> C[carrinho/pedido]\r\n    C --> O[pedido]\r\n    U --> PR[perfil]\r\n    O --> DB[(Database)]\r\n    P --> DB\r\n    PR --> DB\r\n```\r\n\r\n---\r\n\r\n## 🛠️ Stack\r\n\r\n| Tecnologia | Papel |\r\n|------------|-------|\r\n| Django | Framework |\r\n| SQLite/MySQL | Dados |\r\n| HTML templates | UI |\r\n\r\n---\r\n\r\n## 📂 Estrutura\r\n\r\n```text\r\nPythonIIEcommerceProject/\r\n├── manage.py\r\n├── loja/\r\n├── produto/\r\n├── pedido/\r\n├── perfil/\r\n├── utils/\r\n├── templates/\r\n└── requirements.txt\r\n```\r\n\r\n---\r\n\r\n## 🚀 Como rodar\r\n\r\n```bash\r\ngit clone https://github.com/CanonEngineer/PythonIIEcommerceProject.git\r\ncd PythonIIEcommerceProject\r\npython -m venv .venv && source .venv/bin/activate\r\npip install -r requirements.txt\r\npython manage.py migrate\r\npython manage.py runserver\r\n```\r\n\r\n---\r\n\r\n## ▶️ Uso\r\n\r\nCadastre produtos (admin), navegue na loja, finalize pedidos e gerencie o perfil.\r\n\r\n---\r\n\r\n## 🌳 Tree of Knowledge\r\n\r\nEste projeto está mapeado na árvore interativa:\r\n\r\n<p>\r\n  <a href=\"https://canonengineer.github.io/TreeofKnowledge/index.html?tree=python-ii-ecommerce\">\r\n    <img src=\"https://img.shields.io/badge/Abrir_na_Árvore-Tree_of_Knowledge-38bdf8?style=for-the-badge&labelColor=0c2344\" alt=\"Tree of Knowledge\"/>\r\n  </a>\r\n</p>\r\n\r\n---\r\n\r\n## 📈 Melhorias sugeridas\r\n\r\n1. Gateway de pagamento\r\n2. Estoque e cupons\r\n3. Testes de pedido\r\n4. Deploy com variáveis de ambiente\r\n\r\n---\r\n\r\n## 👨‍💻 Autor\r\n\r\n**Alessandro Canon (CanonEngineer)**  \r\nNetwork Analyst · Developer · Cybersecurity Enthusiast\r\n\r\n- GitHub: [https://github.com/CanonEngineer](https://github.com/CanonEngineer)\r\n- Portfolio: [https://canonengineer.github.io](https://canonengineer.github.io)\r\n- Tree of Knowledge: [https://canonengineer.github.io/TreeofKnowledge/](https://canonengineer.github.io/TreeofKnowledge/)\r\n\r\n---\r\n\r\n<div align=\"center\">\r\n\r\n⭐ Se este projeto te ajudou, deixe uma estrela!\r\n\r\n</div>\r\n",
         "implementation": [
@@ -9115,13 +9141,26 @@
         ]
       },
       {
-        "id": "python-ii-ecommerce-grp-produto-migrations-files-1-12",
+        "id": "python-ii-ecommerce-grp-produto-migrations-files",
         "parent": "python-ii-ecommerce-dir-produto-migrations",
         "layer": "module",
-        "title": "Arquivos # (1–12)",
-        "description": "Grupo de arquivos em `produto/migrations/` — Arquivos # (1–12)",
+        "title": "Arquivos #",
+        "description": "Grupo de arquivos em `produto/migrations/` — Arquivos #",
+        "file": "produto/migrations/[files-#]",
+        "code": "# Grupo: Arquivos #\n# Pasta: produto/migrations/\n",
+        "implementation": [
+          "agrupamento para layout 2D/3D",
+          "pasta: produto/migrations/"
+        ]
+      },
+      {
+        "id": "python-ii-ecommerce-grp-produto-migrations-files-1-12",
+        "parent": "python-ii-ecommerce-grp-produto-migrations-files",
+        "layer": "module",
+        "title": "1–12",
+        "description": "Grupo de arquivos em `produto/migrations/` — 1–12",
         "file": "produto/migrations/[files-#-1-12]",
-        "code": "# Grupo: Arquivos # (1–12)\n# Pasta: produto/migrations/\n",
+        "code": "# Grupo: 1–12\n# Pasta: produto/migrations/\n",
         "implementation": [
           "agrupamento para layout 2D/3D",
           "pasta: produto/migrations/"
@@ -9129,12 +9168,12 @@
       },
       {
         "id": "python-ii-ecommerce-grp-produto-migrations-files-13-13",
-        "parent": "python-ii-ecommerce-dir-produto-migrations",
+        "parent": "python-ii-ecommerce-grp-produto-migrations-files",
         "layer": "module",
-        "title": "Arquivos # (13–13)",
-        "description": "Grupo de arquivos em `produto/migrations/` — Arquivos # (13–13)",
+        "title": "13–13",
+        "description": "Grupo de arquivos em `produto/migrations/` — 13–13",
         "file": "produto/migrations/[files-#-13-13]",
-        "code": "# Grupo: Arquivos # (13–13)\n# Pasta: produto/migrations/\n",
+        "code": "# Grupo: 13–13\n# Pasta: produto/migrations/\n",
         "implementation": [
           "agrupamento para layout 2D/3D",
           "pasta: produto/migrations/"
@@ -10103,13 +10142,26 @@
         ]
       },
       {
-        "id": "python-ii-ecommerce-grp-templates-static-assets-font-awesome-scss-files-1-12",
+        "id": "python-ii-ecommerce-grp-templates-static-assets-font-awesome-scss-files",
         "parent": "python-ii-ecommerce-dir-templates-static-assets-font-awesome-scss",
         "layer": "module",
-        "title": "Arquivos # (1–12)",
-        "description": "Grupo de arquivos em `templates/static/assets/font-awesome/scss/` — Arquivos # (1–12)",
+        "title": "Arquivos #",
+        "description": "Grupo de arquivos em `templates/static/assets/font-awesome/scss/` — Arquivos #",
+        "file": "templates/static/assets/font-awesome/scss/[files-#]",
+        "code": "# Grupo: Arquivos #\n# Pasta: templates/static/assets/font-awesome/scss/\n",
+        "implementation": [
+          "agrupamento para layout 2D/3D",
+          "pasta: templates/static/assets/font-awesome/scss/"
+        ]
+      },
+      {
+        "id": "python-ii-ecommerce-grp-templates-static-assets-font-awesome-scss-files-1-12",
+        "parent": "python-ii-ecommerce-grp-templates-static-assets-font-awesome-scss-files",
+        "layer": "module",
+        "title": "1–12",
+        "description": "Grupo de arquivos em `templates/static/assets/font-awesome/scss/` — 1–12",
         "file": "templates/static/assets/font-awesome/scss/[files-#-1-12]",
-        "code": "# Grupo: Arquivos # (1–12)\n# Pasta: templates/static/assets/font-awesome/scss/\n",
+        "code": "# Grupo: 1–12\n# Pasta: templates/static/assets/font-awesome/scss/\n",
         "implementation": [
           "agrupamento para layout 2D/3D",
           "pasta: templates/static/assets/font-awesome/scss/"
@@ -10117,12 +10169,12 @@
       },
       {
         "id": "python-ii-ecommerce-grp-templates-static-assets-font-awesome-scss-files-13-13",
-        "parent": "python-ii-ecommerce-dir-templates-static-assets-font-awesome-scss",
+        "parent": "python-ii-ecommerce-grp-templates-static-assets-font-awesome-scss-files",
         "layer": "module",
-        "title": "Arquivos # (13–13)",
-        "description": "Grupo de arquivos em `templates/static/assets/font-awesome/scss/` — Arquivos # (13–13)",
+        "title": "13–13",
+        "description": "Grupo de arquivos em `templates/static/assets/font-awesome/scss/` — 13–13",
         "file": "templates/static/assets/font-awesome/scss/[files-#-13-13]",
-        "code": "# Grupo: Arquivos # (13–13)\n# Pasta: templates/static/assets/font-awesome/scss/\n",
+        "code": "# Grupo: 13–13\n# Pasta: templates/static/assets/font-awesome/scss/\n",
         "implementation": [
           "agrupamento para layout 2D/3D",
           "pasta: templates/static/assets/font-awesome/scss/"
@@ -10532,13 +10584,26 @@
         ]
       },
       {
-        "id": "python-ii-ecommerce-grp-templates-static-assets-login-scss-bootstrap-files-1-12",
+        "id": "python-ii-ecommerce-grp-templates-static-assets-login-scss-bootstrap-files",
         "parent": "python-ii-ecommerce-dir-templates-static-assets-login-scss-bootstrap",
         "layer": "module",
-        "title": "Arquivos # (1–12)",
-        "description": "Grupo de arquivos em `templates/static/assets/login/scss/bootstrap/` — Arquivos # (1–12)",
+        "title": "Arquivos #",
+        "description": "Grupo de arquivos em `templates/static/assets/login/scss/bootstrap/` — Arquivos #",
+        "file": "templates/static/assets/login/scss/bootstrap/[files-#]",
+        "code": "# Grupo: Arquivos #\n# Pasta: templates/static/assets/login/scss/bootstrap/\n",
+        "implementation": [
+          "agrupamento para layout 2D/3D",
+          "pasta: templates/static/assets/login/scss/bootstrap/"
+        ]
+      },
+      {
+        "id": "python-ii-ecommerce-grp-templates-static-assets-login-scss-bootstrap-files-1-12",
+        "parent": "python-ii-ecommerce-grp-templates-static-assets-login-scss-bootstrap-files",
+        "layer": "module",
+        "title": "1–12",
+        "description": "Grupo de arquivos em `templates/static/assets/login/scss/bootstrap/` — 1–12",
         "file": "templates/static/assets/login/scss/bootstrap/[files-#-1-12]",
-        "code": "# Grupo: Arquivos # (1–12)\n# Pasta: templates/static/assets/login/scss/bootstrap/\n",
+        "code": "# Grupo: 1–12\n# Pasta: templates/static/assets/login/scss/bootstrap/\n",
         "implementation": [
           "agrupamento para layout 2D/3D",
           "pasta: templates/static/assets/login/scss/bootstrap/"
@@ -10546,12 +10611,12 @@
       },
       {
         "id": "python-ii-ecommerce-grp-templates-static-assets-login-scss-bootstrap-files-13-24",
-        "parent": "python-ii-ecommerce-dir-templates-static-assets-login-scss-bootstrap",
+        "parent": "python-ii-ecommerce-grp-templates-static-assets-login-scss-bootstrap-files",
         "layer": "module",
-        "title": "Arquivos # (13–24)",
-        "description": "Grupo de arquivos em `templates/static/assets/login/scss/bootstrap/` — Arquivos # (13–24)",
+        "title": "13–24",
+        "description": "Grupo de arquivos em `templates/static/assets/login/scss/bootstrap/` — 13–24",
         "file": "templates/static/assets/login/scss/bootstrap/[files-#-13-24]",
-        "code": "# Grupo: Arquivos # (13–24)\n# Pasta: templates/static/assets/login/scss/bootstrap/\n",
+        "code": "# Grupo: 13–24\n# Pasta: templates/static/assets/login/scss/bootstrap/\n",
         "implementation": [
           "agrupamento para layout 2D/3D",
           "pasta: templates/static/assets/login/scss/bootstrap/"
@@ -10559,12 +10624,12 @@
       },
       {
         "id": "python-ii-ecommerce-grp-templates-static-assets-login-scss-bootstrap-files-25-36",
-        "parent": "python-ii-ecommerce-dir-templates-static-assets-login-scss-bootstrap",
+        "parent": "python-ii-ecommerce-grp-templates-static-assets-login-scss-bootstrap-files",
         "layer": "module",
-        "title": "Arquivos # (25–36)",
-        "description": "Grupo de arquivos em `templates/static/assets/login/scss/bootstrap/` — Arquivos # (25–36)",
+        "title": "25–36",
+        "description": "Grupo de arquivos em `templates/static/assets/login/scss/bootstrap/` — 25–36",
         "file": "templates/static/assets/login/scss/bootstrap/[files-#-25-36]",
-        "code": "# Grupo: Arquivos # (25–36)\n# Pasta: templates/static/assets/login/scss/bootstrap/\n",
+        "code": "# Grupo: 25–36\n# Pasta: templates/static/assets/login/scss/bootstrap/\n",
         "implementation": [
           "agrupamento para layout 2D/3D",
           "pasta: templates/static/assets/login/scss/bootstrap/"
@@ -10572,12 +10637,12 @@
       },
       {
         "id": "python-ii-ecommerce-grp-templates-static-assets-login-scss-bootstrap-files-37-37",
-        "parent": "python-ii-ecommerce-dir-templates-static-assets-login-scss-bootstrap",
+        "parent": "python-ii-ecommerce-grp-templates-static-assets-login-scss-bootstrap-files",
         "layer": "module",
-        "title": "Arquivos # (37–37)",
-        "description": "Grupo de arquivos em `templates/static/assets/login/scss/bootstrap/` — Arquivos # (37–37)",
+        "title": "37–37",
+        "description": "Grupo de arquivos em `templates/static/assets/login/scss/bootstrap/` — 37–37",
         "file": "templates/static/assets/login/scss/bootstrap/[files-#-37-37]",
-        "code": "# Grupo: Arquivos # (37–37)\n# Pasta: templates/static/assets/login/scss/bootstrap/\n",
+        "code": "# Grupo: 37–37\n# Pasta: templates/static/assets/login/scss/bootstrap/\n",
         "implementation": [
           "agrupamento para layout 2D/3D",
           "pasta: templates/static/assets/login/scss/bootstrap/"
@@ -11117,13 +11182,26 @@
         ]
       },
       {
-        "id": "python-ii-ecommerce-grp-templates-static-assets-login-scss-bootstrap-mixins-files-1-12",
+        "id": "python-ii-ecommerce-grp-templates-static-assets-login-scss-bootstrap-mixins-files",
         "parent": "python-ii-ecommerce-dir-templates-static-assets-login-scss-bootstrap-mixins",
         "layer": "module",
-        "title": "Arquivos # (1–12)",
-        "description": "Grupo de arquivos em `templates/static/assets/login/scss/bootstrap/mixins/` — Arquivos # (1–12)",
+        "title": "Arquivos #",
+        "description": "Grupo de arquivos em `templates/static/assets/login/scss/bootstrap/mixins/` — Arquivos #",
+        "file": "templates/static/assets/login/scss/bootstrap/mixins/[files-#]",
+        "code": "# Grupo: Arquivos #\n# Pasta: templates/static/assets/login/scss/bootstrap/mixins/\n",
+        "implementation": [
+          "agrupamento para layout 2D/3D",
+          "pasta: templates/static/assets/login/scss/bootstrap/mixins/"
+        ]
+      },
+      {
+        "id": "python-ii-ecommerce-grp-templates-static-assets-login-scss-bootstrap-mixins-files-1-12",
+        "parent": "python-ii-ecommerce-grp-templates-static-assets-login-scss-bootstrap-mixins-files",
+        "layer": "module",
+        "title": "1–12",
+        "description": "Grupo de arquivos em `templates/static/assets/login/scss/bootstrap/mixins/` — 1–12",
         "file": "templates/static/assets/login/scss/bootstrap/mixins/[files-#-1-12]",
-        "code": "# Grupo: Arquivos # (1–12)\n# Pasta: templates/static/assets/login/scss/bootstrap/mixins/\n",
+        "code": "# Grupo: 1–12\n# Pasta: templates/static/assets/login/scss/bootstrap/mixins/\n",
         "implementation": [
           "agrupamento para layout 2D/3D",
           "pasta: templates/static/assets/login/scss/bootstrap/mixins/"
@@ -11131,12 +11209,12 @@
       },
       {
         "id": "python-ii-ecommerce-grp-templates-static-assets-login-scss-bootstrap-mixins-files-13-24",
-        "parent": "python-ii-ecommerce-dir-templates-static-assets-login-scss-bootstrap-mixins",
+        "parent": "python-ii-ecommerce-grp-templates-static-assets-login-scss-bootstrap-mixins-files",
         "layer": "module",
-        "title": "Arquivos # (13–24)",
-        "description": "Grupo de arquivos em `templates/static/assets/login/scss/bootstrap/mixins/` — Arquivos # (13–24)",
+        "title": "13–24",
+        "description": "Grupo de arquivos em `templates/static/assets/login/scss/bootstrap/mixins/` — 13–24",
         "file": "templates/static/assets/login/scss/bootstrap/mixins/[files-#-13-24]",
-        "code": "# Grupo: Arquivos # (13–24)\n# Pasta: templates/static/assets/login/scss/bootstrap/mixins/\n",
+        "code": "# Grupo: 13–24\n# Pasta: templates/static/assets/login/scss/bootstrap/mixins/\n",
         "implementation": [
           "agrupamento para layout 2D/3D",
           "pasta: templates/static/assets/login/scss/bootstrap/mixins/"
@@ -11144,12 +11222,12 @@
       },
       {
         "id": "python-ii-ecommerce-grp-templates-static-assets-login-scss-bootstrap-mixins-files-25-31",
-        "parent": "python-ii-ecommerce-dir-templates-static-assets-login-scss-bootstrap-mixins",
+        "parent": "python-ii-ecommerce-grp-templates-static-assets-login-scss-bootstrap-mixins-files",
         "layer": "module",
-        "title": "Arquivos # (25–31)",
-        "description": "Grupo de arquivos em `templates/static/assets/login/scss/bootstrap/mixins/` — Arquivos # (25–31)",
+        "title": "25–31",
+        "description": "Grupo de arquivos em `templates/static/assets/login/scss/bootstrap/mixins/` — 25–31",
         "file": "templates/static/assets/login/scss/bootstrap/mixins/[files-#-25-31]",
-        "code": "# Grupo: Arquivos # (25–31)\n# Pasta: templates/static/assets/login/scss/bootstrap/mixins/\n",
+        "code": "# Grupo: 25–31\n# Pasta: templates/static/assets/login/scss/bootstrap/mixins/\n",
         "implementation": [
           "agrupamento para layout 2D/3D",
           "pasta: templates/static/assets/login/scss/bootstrap/mixins/"
@@ -11559,13 +11637,26 @@
         ]
       },
       {
-        "id": "python-ii-ecommerce-grp-templates-static-assets-login-scss-bootstrap-utilities-files-1-12",
+        "id": "python-ii-ecommerce-grp-templates-static-assets-login-scss-bootstrap-utilities-files",
         "parent": "python-ii-ecommerce-dir-templates-static-assets-login-scss-bootstrap-utilities",
         "layer": "module",
-        "title": "Arquivos # (1–12)",
-        "description": "Grupo de arquivos em `templates/static/assets/login/scss/bootstrap/utilities/` — Arquivos # (1–12)",
+        "title": "Arquivos #",
+        "description": "Grupo de arquivos em `templates/static/assets/login/scss/bootstrap/utilities/` — Arquivos #",
+        "file": "templates/static/assets/login/scss/bootstrap/utilities/[files-#]",
+        "code": "# Grupo: Arquivos #\n# Pasta: templates/static/assets/login/scss/bootstrap/utilities/\n",
+        "implementation": [
+          "agrupamento para layout 2D/3D",
+          "pasta: templates/static/assets/login/scss/bootstrap/utilities/"
+        ]
+      },
+      {
+        "id": "python-ii-ecommerce-grp-templates-static-assets-login-scss-bootstrap-utilities-files-1-12",
+        "parent": "python-ii-ecommerce-grp-templates-static-assets-login-scss-bootstrap-utilities-files",
+        "layer": "module",
+        "title": "1–12",
+        "description": "Grupo de arquivos em `templates/static/assets/login/scss/bootstrap/utilities/` — 1–12",
         "file": "templates/static/assets/login/scss/bootstrap/utilities/[files-#-1-12]",
-        "code": "# Grupo: Arquivos # (1–12)\n# Pasta: templates/static/assets/login/scss/bootstrap/utilities/\n",
+        "code": "# Grupo: 1–12\n# Pasta: templates/static/assets/login/scss/bootstrap/utilities/\n",
         "implementation": [
           "agrupamento para layout 2D/3D",
           "pasta: templates/static/assets/login/scss/bootstrap/utilities/"
@@ -11573,12 +11664,12 @@
       },
       {
         "id": "python-ii-ecommerce-grp-templates-static-assets-login-scss-bootstrap-utilities-files-13-17",
-        "parent": "python-ii-ecommerce-dir-templates-static-assets-login-scss-bootstrap-utilities",
+        "parent": "python-ii-ecommerce-grp-templates-static-assets-login-scss-bootstrap-utilities-files",
         "layer": "module",
-        "title": "Arquivos # (13–17)",
-        "description": "Grupo de arquivos em `templates/static/assets/login/scss/bootstrap/utilities/` — Arquivos # (13–17)",
+        "title": "13–17",
+        "description": "Grupo de arquivos em `templates/static/assets/login/scss/bootstrap/utilities/` — 13–17",
         "file": "templates/static/assets/login/scss/bootstrap/utilities/[files-#-13-17]",
-        "code": "# Grupo: Arquivos # (13–17)\n# Pasta: templates/static/assets/login/scss/bootstrap/utilities/\n",
+        "code": "# Grupo: 13–17\n# Pasta: templates/static/assets/login/scss/bootstrap/utilities/\n",
         "implementation": [
           "agrupamento para layout 2D/3D",
           "pasta: templates/static/assets/login/scss/bootstrap/utilities/"
@@ -11847,7 +11938,7 @@
     ],
     "meta": {
       "sourceFiles": 236,
-      "treeNodes": 295,
+      "treeNodes": 300,
       "complete": true
     }
   },
@@ -11865,7 +11956,7 @@
         "parent": null,
         "layer": "root",
         "title": "HtmlWebsiteProject",
-        "description": "Coleção de sites HTML: Ana Bella, Chalé, Museu, TecBlog e mais.",
+        "description": "Cobertura completa: 23 arquivos de código no repositório (35 nós na árvore incluindo pastas).",
         "file": "README.md",
         "code": "> **Mobile / UTF-8:** imagens com `width: 100%` (sem scroll horizontal). Arquivo gravado em UTF-8 para acentos corretos em qualquer dispositivo.\r\n\r\n<div align=\"center\">\r\n\r\n<p align=\"center\">\r\n  <img src=\"docs/images/banner.svg\" alt=\"Banner\" width=\"100%\" style=\"max-width:100%;height:auto;display:block;\" />\r\n</p># HTML Website Project\r\n\r\n### Coleção de sites HTML/CSS: Ana Bella, Chalé Hotel, Museu, TecBlog e mais\r\n\r\n<img src=\"https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white\" alt=\"HTML\"/>\r\n<img src=\"https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white\" alt=\"CSS\"/>\r\n<img src=\"https://img.shields.io/badge/Bootstrap-7952B3?style=for-the-badge&logo=bootstrap&logoColor=white\" alt=\"Bootstrap\"/>\r\n\r\n[Sobre](#-sobre) ·\r\n[Features](#-features) ·\r\n[Arquitetura](#-arquitetura--fluxo) ·\r\n[Stack](#-stack) ·\r\n[Estrutura](#-estrutura) ·\r\n[Setup](#-como-rodar) ·\r\n[Melhorias](#-melhorias-sugeridas) ·\r\n[Autor](#-autor)\r\n\r\n</div>\r\n\r\n---\r\n\r\n## 📌 Sobre\r\n\r\nRepositório-coleção com vários projetos front-end: **Parallax**, **Ana Bella**, **Chalé Hotel**, **Museu Nacional**, **Notícias Cidade**, **TecBlog**, **Projeto Final** e **Bootstrap 4**.\r\n\r\n<div align=\"center\">\r\n\r\n<p align=\"center\">\r\n  <img src=\"docs/images/flow.svg\" alt=\"Fluxo\" width=\"100%\" style=\"max-width:100%;height:auto;display:block;\" />\r\n</p></div>\r\n\r\n---\r\n\r\n## ✨ Features\r\n\r\n| # | Capacidade |\r\n|---|------------|\r\n| 1 | Múltiplos sites em pastas independentes |\r\n| 2 | Layouts clássicos de curso HTML/CSS |\r\n| 3 | Exercício de Parallax |\r\n| 4 | Projeto Bootstrap 4 |\r\n\r\n---\r\n\r\n## 🏗️ Arquitetura / Fluxo\r\n\r\n```mermaid\r\nflowchart TB\r\n    R[HtmlWebsiteProject] --> A[Ana Bella]\r\n    R --> C[Chalé Hotel]\r\n    R --> M[Museu]\r\n    R --> N[Notícias]\r\n    R --> T[TecBlog]\r\n    R --> B[Bootstrap4]\r\n    R --> P[Parallax]\r\n```\r\n\r\n---\r\n\r\n## 🛠️ Stack\r\n\r\n| Tecnologia | Papel |\r\n|------------|-------|\r\n| HTML | Estrutura |\r\n| CSS | Estilo |\r\n| Bootstrap 4 | Grid/UI |\r\n\r\n---\r\n\r\n## 📂 Estrutura\r\n\r\n```text\r\nHtmlWebsiteProject/\r\n├── Parallax/\r\n├── ProjetoAnaBella/\r\n├── ProjetoChaleHotel/\r\n├── ProjetoMuseuNacional/\r\n├── ProjetoNoticiasCidade/\r\n├── ProjetoTecBlog/\r\n├── ProjetoFinalHtml/\r\n└── projeto-bootstrap4/\r\n```\r\n\r\n---\r\n\r\n## 🚀 Como rodar\r\n\r\nAbra o `index.html` de cada subpasta no navegador.\r\n\r\n---\r\n\r\n## ▶️ Uso\r\n\r\nEstude um site por vez: compare layouts, tipografia e responsividade.\r\n\r\n---\r\n\r\n## 🌳 Tree of Knowledge\r\n\r\nEste projeto está mapeado na árvore interativa:\r\n\r\n<p>\r\n  <a href=\"https://canonengineer.github.io/TreeofKnowledge/index.html?tree=html-website\">\r\n    <img src=\"https://img.shields.io/badge/Abrir_na_Árvore-Tree_of_Knowledge-38bdf8?style=for-the-badge&labelColor=0c2344\" alt=\"Tree of Knowledge\"/>\r\n  </a>\r\n</p>\r\n\r\n---\r\n\r\n## 📈 Melhorias sugeridas\r\n\r\n1. Índice HTML na raiz com cards de cada projeto\r\n2. Migrar trechos para CSS moderno (flex/grid)\r\n3. Lighthouse scores e melhorias a11y\r\n\r\n---\r\n\r\n## 👨‍💻 Autor\r\n\r\n**Alessandro Canon (CanonEngineer)**  \r\nNetwork Analyst · Developer · Cybersecurity Enthusiast\r\n\r\n- GitHub: [https://github.com/CanonEngineer](https://github.com/CanonEngineer)\r\n- Portfolio: [https://canonengineer.github.io](https://canonengineer.github.io)\r\n- Tree of Knowledge: [https://canonengineer.github.io/TreeofKnowledge/](https://canonengineer.github.io/TreeofKnowledge/)\r\n\r\n---\r\n\r\n<div align=\"center\">\r\n\r\n⭐ Se este projeto te ajudou, deixe uma estrela!\r\n\r\n</div>\r\n",
         "implementation": [
@@ -12337,7 +12428,7 @@
         "parent": null,
         "layer": "root",
         "title": "AnkiUnivespProject",
-        "description": "App estilo Anki para estudos UNIVESP com accounts e core.",
+        "description": "Cobertura completa: 51 arquivos de código no repositório (64 nós na árvore incluindo pastas).",
         "file": "README.md",
         "code": "> **Mobile / UTF-8:** imagens com `width: 100%` (sem scroll horizontal). Arquivo gravado em UTF-8 para acentos corretos em qualquer dispositivo.\r\n\r\n<div align=\"center\">\r\n\r\n<p align=\"center\">\r\n  <img src=\"docs/images/banner.svg\" alt=\"Banner\" width=\"100%\" style=\"max-width:100%;height:auto;display:block;\" />\r\n</p># Anki UNIVESP Project\r\n\r\n### App estilo Anki para estudos UNIVESP — accounts, core e design\r\n\r\n<img src=\"https://img.shields.io/badge/Django-092E20?style=for-the-badge&logo=django&logoColor=white\" alt=\"Django\"/>\r\n<img src=\"https://img.shields.io/badge/Flashcards-Anki--like-818cf8?style=for-the-badge\" alt=\"Anki\"/>\r\n\r\n[Sobre](#-sobre) ·\r\n[Features](#-features) ·\r\n[Arquitetura](#-arquitetura--fluxo) ·\r\n[Stack](#-stack) ·\r\n[Estrutura](#-estrutura) ·\r\n[Setup](#-como-rodar) ·\r\n[Melhorias](#-melhorias-sugeridas) ·\r\n[Autor](#-autor)\r\n\r\n</div>\r\n\r\n---\r\n\r\n## 📌 Sobre\r\n\r\nSistema de estudos com flashcards inspirado no Anki: apps `accounts` e `core`, pasta `design` e projeto `ProjetoAnkiUnivesp`.\r\n\r\n<div align=\"center\">\r\n\r\n<p align=\"center\">\r\n  <img src=\"docs/images/flow.svg\" alt=\"Fluxo\" width=\"100%\" style=\"max-width:100%;height:auto;display:block;\" />\r\n</p></div>\r\n\r\n---\r\n\r\n## ✨ Features\r\n\r\n| # | Capacidade |\r\n|---|------------|\r\n| 1 | Autenticação de contas |\r\n| 2 | Domínio core de cards/revisão |\r\n| 3 | Assets de design |\r\n| 4 | requirements.txt |\r\n\r\n---\r\n\r\n## 🏗️ Arquitetura / Fluxo\r\n\r\n```mermaid\r\nflowchart LR\r\n    U[Estudante] --> A[accounts]\r\n    U --> C[core]\r\n    C --> R[Revisão espaçada]\r\n    C --> DB[(SQLite)]\r\n    A --> DB\r\n```\r\n\r\n---\r\n\r\n## 🛠️ Stack\r\n\r\n| Tecnologia | Papel |\r\n|------------|-------|\r\n| Django | Backend |\r\n| HTML/JS/CSS | UI |\r\n| SQLite | Dev DB |\r\n\r\n---\r\n\r\n## 📂 Estrutura\r\n\r\n```text\r\nAnkiUnivespProject/\r\n├── manage.py\r\n├── ProjetoAnkiUnivesp/\r\n├── accounts/\r\n├── core/\r\n├── design/\r\n└── requirements.txt\r\n```\r\n\r\n---\r\n\r\n## 🚀 Como rodar\r\n\r\n```bash\r\ngit clone https://github.com/CanonEngineer/AnkiUnivespProject.git\r\ncd AnkiUnivespProject\r\npython -m venv .venv && source .venv/bin/activate\r\npip install -r requirements.txt\r\npython manage.py migrate\r\npython manage.py runserver\r\n```\r\n\r\n---\r\n\r\n## ▶️ Uso\r\n\r\nCrie conta, monte baralhos e revise cards no fluxo de estudo.\r\n\r\n---\r\n\r\n## 🌳 Tree of Knowledge\r\n\r\nEste projeto está mapeado na árvore interativa:\r\n\r\n<p>\r\n  <a href=\"https://canonengineer.github.io/TreeofKnowledge/index.html?tree=anki-univesp\">\r\n    <img src=\"https://img.shields.io/badge/Abrir_na_Árvore-Tree_of_Knowledge-38bdf8?style=for-the-badge&labelColor=0c2344\" alt=\"Tree of Knowledge\"/>\r\n  </a>\r\n</p>\r\n\r\n---\r\n\r\n## 📈 Melhorias sugeridas\r\n\r\n1. Algoritmo SM-2 completo\r\n2. Estatísticas de retenção\r\n3. Import/export de decks\r\n4. Remover venv do Git\r\n\r\n---\r\n\r\n## 👨‍💻 Autor\r\n\r\n**Alessandro Canon (CanonEngineer)**  \r\nNetwork Analyst · Developer · Cybersecurity Enthusiast\r\n\r\n- GitHub: [https://github.com/CanonEngineer](https://github.com/CanonEngineer)\r\n- Portfolio: [https://canonengineer.github.io](https://canonengineer.github.io)\r\n- Tree of Knowledge: [https://canonengineer.github.io/TreeofKnowledge/](https://canonengineer.github.io/TreeofKnowledge/)\r\n\r\n---\r\n\r\n<div align=\"center\">\r\n\r\n⭐ Se este projeto te ajudou, deixe uma estrela!\r\n\r\n</div>\r\n",
         "implementation": [
@@ -13179,14 +13270,14 @@
     "color": "#94a3b8",
     "icon": "php",
     "stack": "HTML + CSS + JS + PHP",
-    "summary": "Cobertura completa: 203 arquivos de código no repositório (251 nós na árvore incluindo pastas).",
+    "summary": "Cobertura completa: 203 arquivos de código no repositório (255 nós na árvore incluindo pastas).",
     "nodes": [
       {
         "id": "hyperware-root",
         "parent": null,
         "layer": "root",
         "title": "HyperwareProject",
-        "description": "Site Hyperware com estrutura web e scripts PHP.",
+        "description": "Cobertura completa: 203 arquivos de código no repositório (251 nós na árvore incluindo pastas).",
         "file": "README.md",
         "code": "> **Mobile / UTF-8:** imagens com `width: 100%` (sem scroll horizontal). Arquivo gravado em UTF-8 para acentos corretos em qualquer dispositivo.\r\n\r\n<div align=\"center\">\r\n\r\n<p align=\"center\">\r\n  <img src=\"docs/images/banner.svg\" alt=\"Banner\" width=\"100%\" style=\"max-width:100%;height:auto;display:block;\" />\r\n</p># Hyperware Project\r\n\r\n### Site Hyperware com front rico e endpoints PHP para formulários\r\n\r\n<img src=\"https://img.shields.io/badge/HTML%2FCSS%2FJS-Front-94a3b8?style=for-the-badge\" alt=\"Front\"/>\r\n<img src=\"https://img.shields.io/badge/PHP-Backend-777BB4?style=for-the-badge&logo=php&logoColor=white\" alt=\"PHP\"/>\r\n\r\n[Sobre](#-sobre) ·\r\n[Features](#-features) ·\r\n[Arquitetura](#-arquitetura--fluxo) ·\r\n[Stack](#-stack) ·\r\n[Estrutura](#-estrutura) ·\r\n[Setup](#-como-rodar) ·\r\n[Melhorias](#-melhorias-sugeridas) ·\r\n[Autor](#-autor)\r\n\r\n</div>\r\n\r\n---\r\n\r\n## 📌 Sobre\r\n\r\nProjeto web corporativo/comercial **Hyperware**: conteúdo em `web/site-hyper`, scripts de e-mail/newsletter e área `web/stats`.\r\n\r\n<div align=\"center\">\r\n\r\n<p align=\"center\">\r\n  <img src=\"docs/images/flow.svg\" alt=\"Fluxo\" width=\"100%\" style=\"max-width:100%;height:auto;display:block;\" />\r\n</p></div>\r\n\r\n---\r\n\r\n## ✨ Features\r\n\r\n| # | Capacidade |\r\n|---|------------|\r\n| 1 | Landing `web/site-hyper/index.html` |\r\n| 2 | JS de animações/interação |\r\n| 3 | `sendemail.php` / newsletter |\r\n| 4 | Área de estatísticas |\r\n\r\n---\r\n\r\n## 🏗️ Arquitetura / Fluxo\r\n\r\n```mermaid\r\nflowchart TB\r\n    V[Visitante] --> S[site-hyper]\r\n    S --> F[Formulário]\r\n    F --> P[sendemail.php]\r\n    V --> ST[stats]\r\n```\r\n\r\n---\r\n\r\n## 🛠️ Stack\r\n\r\n| Tecnologia | Papel |\r\n|------------|-------|\r\n| HTML/CSS/JS | Front |\r\n| PHP | Forms |\r\n| Apache/CGI | Hosting clássico |\r\n\r\n---\r\n\r\n## 📂 Estrutura\r\n\r\n```text\r\nHyperwareProject/\r\n├── web/\r\n│   ├── index.html\r\n│   ├── site-hyper/\r\n│   ├── stats/\r\n│   └── unzipper.php\r\n├── log/\r\n└── cgi-bin/\r\n```\r\n\r\n---\r\n\r\n## 🚀 Como rodar\r\n\r\nPublique a pasta `web/` em um host com PHP (Apache/XAMPP) e configure permissões de envio de e-mail.\r\n\r\n---\r\n\r\n## ▶️ Uso\r\n\r\nNavegue pelo site, envie formulários e monitore a área de stats conforme o ambiente.\r\n\r\n---\r\n\r\n## 🌳 Tree of Knowledge\r\n\r\nEste projeto está mapeado na árvore interativa:\r\n\r\n<p>\r\n  <a href=\"https://canonengineer.github.io/TreeofKnowledge/index.html?tree=hyperware\">\r\n    <img src=\"https://img.shields.io/badge/Abrir_na_Árvore-Tree_of_Knowledge-38bdf8?style=for-the-badge&labelColor=0c2344\" alt=\"Tree of Knowledge\"/>\r\n  </a>\r\n</p>\r\n\r\n---\r\n\r\n## 📈 Melhorias sugeridas\r\n\r\n1. Sanitização forte dos forms PHP\r\n2. Remover plugins/vendor desnecessários do Git\r\n3. Build moderno (Vite) para assets\r\n4. HTTPS e headers de segurança\r\n\r\n---\r\n\r\n## 👨‍💻 Autor\r\n\r\n**Alessandro Canon (CanonEngineer)**  \r\nNetwork Analyst · Developer · Cybersecurity Enthusiast\r\n\r\n- GitHub: [https://github.com/CanonEngineer](https://github.com/CanonEngineer)\r\n- Portfolio: [https://canonengineer.github.io](https://canonengineer.github.io)\r\n- Tree of Knowledge: [https://canonengineer.github.io/TreeofKnowledge/](https://canonengineer.github.io/TreeofKnowledge/)\r\n\r\n---\r\n\r\n<div align=\"center\">\r\n\r\n⭐ Se este projeto te ajudou, deixe uma estrela!\r\n\r\n</div>\r\n",
         "implementation": [
@@ -13755,13 +13846,26 @@
         ]
       },
       {
-        "id": "hyperware-grp-web-site-hyper-files-b-1-12",
+        "id": "hyperware-grp-web-site-hyper-files-b",
         "parent": "hyperware-dir-web-site-hyper",
         "layer": "module",
-        "title": "Arquivos B (1–12)",
-        "description": "Grupo de arquivos em `web/site-hyper/` — Arquivos B (1–12)",
+        "title": "Arquivos B",
+        "description": "Grupo de arquivos em `web/site-hyper/` — Arquivos B",
+        "file": "web/site-hyper/[files-b]",
+        "code": "# Grupo: Arquivos B\n# Pasta: web/site-hyper/\n",
+        "implementation": [
+          "agrupamento para layout 2D/3D",
+          "pasta: web/site-hyper/"
+        ]
+      },
+      {
+        "id": "hyperware-grp-web-site-hyper-files-b-1-12",
+        "parent": "hyperware-grp-web-site-hyper-files-b",
+        "layer": "module",
+        "title": "1–12",
+        "description": "Grupo de arquivos em `web/site-hyper/` — 1–12",
         "file": "web/site-hyper/[files-b-1-12]",
-        "code": "# Grupo: Arquivos B (1–12)\n# Pasta: web/site-hyper/\n",
+        "code": "# Grupo: 1–12\n# Pasta: web/site-hyper/\n",
         "implementation": [
           "agrupamento para layout 2D/3D",
           "pasta: web/site-hyper/"
@@ -13769,12 +13873,12 @@
       },
       {
         "id": "hyperware-grp-web-site-hyper-files-b-13-16",
-        "parent": "hyperware-dir-web-site-hyper",
+        "parent": "hyperware-grp-web-site-hyper-files-b",
         "layer": "module",
-        "title": "Arquivos B (13–16)",
-        "description": "Grupo de arquivos em `web/site-hyper/` — Arquivos B (13–16)",
+        "title": "13–16",
+        "description": "Grupo de arquivos em `web/site-hyper/` — 13–16",
         "file": "web/site-hyper/[files-b-13-16]",
-        "code": "# Grupo: Arquivos B (13–16)\n# Pasta: web/site-hyper/\n",
+        "code": "# Grupo: 13–16\n# Pasta: web/site-hyper/\n",
         "implementation": [
           "agrupamento para layout 2D/3D",
           "pasta: web/site-hyper/"
@@ -13794,13 +13898,26 @@
         ]
       },
       {
-        "id": "hyperware-grp-web-site-hyper-files-p-1-12",
+        "id": "hyperware-grp-web-site-hyper-files-p",
         "parent": "hyperware-dir-web-site-hyper",
         "layer": "module",
-        "title": "Arquivos P (1–12)",
-        "description": "Grupo de arquivos em `web/site-hyper/` — Arquivos P (1–12)",
+        "title": "Arquivos P",
+        "description": "Grupo de arquivos em `web/site-hyper/` — Arquivos P",
+        "file": "web/site-hyper/[files-p]",
+        "code": "# Grupo: Arquivos P\n# Pasta: web/site-hyper/\n",
+        "implementation": [
+          "agrupamento para layout 2D/3D",
+          "pasta: web/site-hyper/"
+        ]
+      },
+      {
+        "id": "hyperware-grp-web-site-hyper-files-p-1-12",
+        "parent": "hyperware-grp-web-site-hyper-files-p",
+        "layer": "module",
+        "title": "1–12",
+        "description": "Grupo de arquivos em `web/site-hyper/` — 1–12",
         "file": "web/site-hyper/[files-p-1-12]",
-        "code": "# Grupo: Arquivos P (1–12)\n# Pasta: web/site-hyper/\n",
+        "code": "# Grupo: 1–12\n# Pasta: web/site-hyper/\n",
         "implementation": [
           "agrupamento para layout 2D/3D",
           "pasta: web/site-hyper/"
@@ -13808,12 +13925,12 @@
       },
       {
         "id": "hyperware-grp-web-site-hyper-files-p-13-13",
-        "parent": "hyperware-dir-web-site-hyper",
+        "parent": "hyperware-grp-web-site-hyper-files-p",
         "layer": "module",
-        "title": "Arquivos P (13–13)",
-        "description": "Grupo de arquivos em `web/site-hyper/` — Arquivos P (13–13)",
+        "title": "13–13",
+        "description": "Grupo de arquivos em `web/site-hyper/` — 13–13",
         "file": "web/site-hyper/[files-p-13-13]",
-        "code": "# Grupo: Arquivos P (13–13)\n# Pasta: web/site-hyper/\n",
+        "code": "# Grupo: 13–13\n# Pasta: web/site-hyper/\n",
         "implementation": [
           "agrupamento para layout 2D/3D",
           "pasta: web/site-hyper/"
@@ -15770,13 +15887,26 @@
         ]
       },
       {
-        "id": "hyperware-grp-web-stats-files-a-1-12",
+        "id": "hyperware-grp-web-stats-files-a",
         "parent": "hyperware-dir-web-stats",
         "layer": "module",
-        "title": "Arquivos A (1–12)",
-        "description": "Grupo de arquivos em `web/stats/` — Arquivos A (1–12)",
+        "title": "Arquivos A",
+        "description": "Grupo de arquivos em `web/stats/` — Arquivos A",
+        "file": "web/stats/[files-a]",
+        "code": "# Grupo: Arquivos A\n# Pasta: web/stats/\n",
+        "implementation": [
+          "agrupamento para layout 2D/3D",
+          "pasta: web/stats/"
+        ]
+      },
+      {
+        "id": "hyperware-grp-web-stats-files-a-1-12",
+        "parent": "hyperware-grp-web-stats-files-a",
+        "layer": "module",
+        "title": "1–12",
+        "description": "Grupo de arquivos em `web/stats/` — 1–12",
         "file": "web/stats/[files-a-1-12]",
-        "code": "# Grupo: Arquivos A (1–12)\n# Pasta: web/stats/\n",
+        "code": "# Grupo: 1–12\n# Pasta: web/stats/\n",
         "implementation": [
           "agrupamento para layout 2D/3D",
           "pasta: web/stats/"
@@ -15784,12 +15914,12 @@
       },
       {
         "id": "hyperware-grp-web-stats-files-a-13-23",
-        "parent": "hyperware-dir-web-stats",
+        "parent": "hyperware-grp-web-stats-files-a",
         "layer": "module",
-        "title": "Arquivos A (13–23)",
-        "description": "Grupo de arquivos em `web/stats/` — Arquivos A (13–23)",
+        "title": "13–23",
+        "description": "Grupo de arquivos em `web/stats/` — 13–23",
         "file": "web/stats/[files-a-13-23]",
-        "code": "# Grupo: Arquivos A (13–23)\n# Pasta: web/stats/\n",
+        "code": "# Grupo: 13–23\n# Pasta: web/stats/\n",
         "implementation": [
           "agrupamento para layout 2D/3D",
           "pasta: web/stats/"
@@ -16121,13 +16251,26 @@
         ]
       },
       {
-        "id": "hyperware-grp-web-stats-2020-6-files-a-1-12",
+        "id": "hyperware-grp-web-stats-2020-6-files-a",
         "parent": "hyperware-dir-web-stats-2020-6",
         "layer": "module",
-        "title": "Arquivos A (1–12)",
-        "description": "Grupo de arquivos em `web/stats/2020-6/` — Arquivos A (1–12)",
+        "title": "Arquivos A",
+        "description": "Grupo de arquivos em `web/stats/2020-6/` — Arquivos A",
+        "file": "web/stats/2020-6/[files-a]",
+        "code": "# Grupo: Arquivos A\n# Pasta: web/stats/2020-6/\n",
+        "implementation": [
+          "agrupamento para layout 2D/3D",
+          "pasta: web/stats/2020-6/"
+        ]
+      },
+      {
+        "id": "hyperware-grp-web-stats-2020-6-files-a-1-12",
+        "parent": "hyperware-grp-web-stats-2020-6-files-a",
+        "layer": "module",
+        "title": "1–12",
+        "description": "Grupo de arquivos em `web/stats/2020-6/` — 1–12",
         "file": "web/stats/2020-6/[files-a-1-12]",
-        "code": "# Grupo: Arquivos A (1–12)\n# Pasta: web/stats/2020-6/\n",
+        "code": "# Grupo: 1–12\n# Pasta: web/stats/2020-6/\n",
         "implementation": [
           "agrupamento para layout 2D/3D",
           "pasta: web/stats/2020-6/"
@@ -16135,12 +16278,12 @@
       },
       {
         "id": "hyperware-grp-web-stats-2020-6-files-a-13-23",
-        "parent": "hyperware-dir-web-stats-2020-6",
+        "parent": "hyperware-grp-web-stats-2020-6-files-a",
         "layer": "module",
-        "title": "Arquivos A (13–23)",
-        "description": "Grupo de arquivos em `web/stats/2020-6/` — Arquivos A (13–23)",
+        "title": "13–23",
+        "description": "Grupo de arquivos em `web/stats/2020-6/` — 13–23",
         "file": "web/stats/2020-6/[files-a-13-23]",
-        "code": "# Grupo: Arquivos A (13–23)\n# Pasta: web/stats/2020-6/\n",
+        "code": "# Grupo: 13–23\n# Pasta: web/stats/2020-6/\n",
         "implementation": [
           "agrupamento para layout 2D/3D",
           "pasta: web/stats/2020-6/"
@@ -16448,7 +16591,7 @@
     ],
     "meta": {
       "sourceFiles": 203,
-      "treeNodes": 251,
+      "treeNodes": 255,
       "complete": true
     }
   },
@@ -16466,7 +16609,7 @@
         "parent": null,
         "layer": "root",
         "title": "PHPDaoProject",
-        "description": "Padrão DAO em PHP com classes e config de conexão.",
+        "description": "Cobertura completa: 5 arquivos de código no repositório (6 nós na árvore incluindo pastas).",
         "file": "README.md",
         "code": "> **Mobile / UTF-8:** imagens com `width: 100%` (sem scroll horizontal). Arquivo gravado em UTF-8 para acentos corretos em qualquer dispositivo.\r\n\r\n<div align=\"center\">\r\n\r\n<p align=\"center\">\r\n  <img src=\"docs/images/banner.svg\" alt=\"Banner\" width=\"100%\" style=\"max-width:100%;height:auto;display:block;\" />\r\n</p># PHP DAO Project\r\n\r\n### Padrão DAO em PHP — separação entre acesso a dados e apresentação\r\n\r\n<img src=\"https://img.shields.io/badge/PHP-777BB4?style=for-the-badge&logo=php&logoColor=white\" alt=\"PHP\"/>\r\n<img src=\"https://img.shields.io/badge/Design%20Pattern-DAO-e879f9?style=for-the-badge\" alt=\"DAO\"/>\r\n\r\n[Sobre](#-sobre) ·\r\n[Features](#-features) ·\r\n[Arquitetura](#-arquitetura--fluxo) ·\r\n[Stack](#-stack) ·\r\n[Estrutura](#-estrutura) ·\r\n[Setup](#-como-rodar) ·\r\n[Melhorias](#-melhorias-sugeridas) ·\r\n[Autor](#-autor)\r\n\r\n</div>\r\n\r\n---\r\n\r\n## 📌 Sobre\r\n\r\nProjeto didático de **Data Access Object (DAO)** em PHP: `config.php`, classes em `class/` e `index.php` consumindo a camada de dados.\r\n\r\n<div align=\"center\">\r\n\r\n<p align=\"center\">\r\n  <img src=\"docs/images/flow.svg\" alt=\"Fluxo\" width=\"100%\" style=\"max-width:100%;height:auto;display:block;\" />\r\n</p></div>\r\n\r\n---\r\n\r\n## ✨ Features\r\n\r\n| # | Capacidade |\r\n|---|------------|\r\n| 1 | Configuração central de conexão |\r\n| 2 | Classes DAO / entidades |\r\n| 3 | Exemplo de uso no `index.php` |\r\n| 4 | Foco em organização OOP |\r\n\r\n---\r\n\r\n## 🏗️ Arquitetura / Fluxo\r\n\r\n```mermaid\r\nflowchart LR\r\n    I[index.php] --> D[DAO classes]\r\n    D --> C[config.php]\r\n    C --> DB[(Database)]\r\n    D --> E[Entities]\r\n```\r\n\r\n---\r\n\r\n## 🛠️ Stack\r\n\r\n| Tecnologia | Papel |\r\n|------------|-------|\r\n| PHP | Linguagem |\r\n| DAO pattern | Arquitetura |\r\n| MySQL/PDO | Persistência |\r\n\r\n---\r\n\r\n## 📂 Estrutura\r\n\r\n```text\r\nPHPDaoProject/\r\n├── index.php\r\n├── config.php\r\n└── class/\r\n    └── ... DAO / models\r\n```\r\n\r\n---\r\n\r\n## 🚀 Como rodar\r\n\r\n```bash\r\ngit clone https://github.com/CanonEngineer/PHPDaoProject.git\r\ncd PHPDaoProject\r\n# ajuste credenciais em config.php\r\nphp -S localhost:8080\r\n```\r\n\r\n---\r\n\r\n## ▶️ Uso\r\n\r\nExecute `index.php` e observe como a UI/entrada usa DAOs em vez de SQL espalhado.\r\n\r\n---\r\n\r\n## 🌳 Tree of Knowledge\r\n\r\nEste projeto está mapeado na árvore interativa:\r\n\r\n<p>\r\n  <a href=\"https://canonengineer.github.io/TreeofKnowledge/index.html?tree=php-dao\">\r\n    <img src=\"https://img.shields.io/badge/Abrir_na_Árvore-Tree_of_Knowledge-38bdf8?style=for-the-badge&labelColor=0c2344\" alt=\"Tree of Knowledge\"/>\r\n  </a>\r\n</p>\r\n\r\n---\r\n\r\n## 📈 Melhorias sugeridas\r\n\r\n1. PDO prepared statements em todas as queries\r\n2. Autoload PSR-4 / Composer\r\n3. Camada Service entre Controller e DAO\r\n4. Testes PHPUnit\r\n\r\n---\r\n\r\n## 👨‍💻 Autor\r\n\r\n**Alessandro Canon (CanonEngineer)**  \r\nNetwork Analyst · Developer · Cybersecurity Enthusiast\r\n\r\n- GitHub: [https://github.com/CanonEngineer](https://github.com/CanonEngineer)\r\n- Portfolio: [https://canonengineer.github.io](https://canonengineer.github.io)\r\n- Tree of Knowledge: [https://canonengineer.github.io/TreeofKnowledge/](https://canonengineer.github.io/TreeofKnowledge/)\r\n\r\n---\r\n\r\n<div align=\"center\">\r\n\r\n⭐ Se este projeto te ajudou, deixe uma estrela!\r\n\r\n</div>\r\n",
         "implementation": [

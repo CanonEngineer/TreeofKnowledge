@@ -4,7 +4,7 @@
   "repoUrl": "https://github.com/CanonEngineer/HyperwareProject",
   "color": "#94a3b8",
   "demoUrl": "",
-  "nodeCount": 251,
+  "nodeCount": 255,
   "categories": {
     "core": {
       "label": "Backend",
@@ -38,7 +38,7 @@
       "color": "#3b82f6",
       "size": 2.2,
       "file": "README.md",
-      "description": "Site Hyperware com estrutura web e scripts PHP."
+      "description": "Cobertura completa: 203 arquivos de código no repositório (251 nós na árvore incluindo pastas)."
     },
     {
       "id": "hyperware-dir-web",
@@ -557,28 +557,40 @@
       "description": "Código-fonte: `web/error/503.html`"
     },
     {
-      "id": "hyperware-grp-web-site-hyper-files-b-1-12",
-      "label": "Arquivos B (1–12)",
+      "id": "hyperware-grp-web-site-hyper-files-b",
+      "label": "Arquivos B",
       "parent": "hyperware-dir-web-site-hyper",
+      "layer": "module",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 1.35,
+      "file": "web/site-hyper/[files-b]",
+      "description": "Grupo de arquivos em `web/site-hyper/` — Arquivos B"
+    },
+    {
+      "id": "hyperware-grp-web-site-hyper-files-b-1-12",
+      "label": "1–12",
+      "parent": "hyperware-grp-web-site-hyper-files-b",
       "layer": "module",
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
       "size": 1.35,
       "file": "web/site-hyper/[files-b-1-12]",
-      "description": "Grupo de arquivos em `web/site-hyper/` — Arquivos B (1–12)"
+      "description": "Grupo de arquivos em `web/site-hyper/` — 1–12"
     },
     {
       "id": "hyperware-grp-web-site-hyper-files-b-13-16",
-      "label": "Arquivos B (13–16)",
-      "parent": "hyperware-dir-web-site-hyper",
+      "label": "13–16",
+      "parent": "hyperware-grp-web-site-hyper-files-b",
       "layer": "module",
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
       "size": 1.35,
       "file": "web/site-hyper/[files-b-13-16]",
-      "description": "Grupo de arquivos em `web/site-hyper/` — Arquivos B (13–16)"
+      "description": "Grupo de arquivos em `web/site-hyper/` — 13–16"
     },
     {
       "id": "hyperware-grp-web-site-hyper-files-c-e-i-m",
@@ -593,28 +605,40 @@
       "description": "Grupo de arquivos em `web/site-hyper/` — Arquivos C–E–I–M"
     },
     {
-      "id": "hyperware-grp-web-site-hyper-files-p-1-12",
-      "label": "Arquivos P (1–12)",
+      "id": "hyperware-grp-web-site-hyper-files-p",
+      "label": "Arquivos P",
       "parent": "hyperware-dir-web-site-hyper",
+      "layer": "module",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 1.35,
+      "file": "web/site-hyper/[files-p]",
+      "description": "Grupo de arquivos em `web/site-hyper/` — Arquivos P"
+    },
+    {
+      "id": "hyperware-grp-web-site-hyper-files-p-1-12",
+      "label": "1–12",
+      "parent": "hyperware-grp-web-site-hyper-files-p",
       "layer": "module",
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
       "size": 1.35,
       "file": "web/site-hyper/[files-p-1-12]",
-      "description": "Grupo de arquivos em `web/site-hyper/` — Arquivos P (1–12)"
+      "description": "Grupo de arquivos em `web/site-hyper/` — 1–12"
     },
     {
       "id": "hyperware-grp-web-site-hyper-files-p-13-13",
-      "label": "Arquivos P (13–13)",
-      "parent": "hyperware-dir-web-site-hyper",
+      "label": "13–13",
+      "parent": "hyperware-grp-web-site-hyper-files-p",
       "layer": "module",
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
       "size": 1.35,
       "file": "web/site-hyper/[files-p-13-13]",
-      "description": "Grupo de arquivos em `web/site-hyper/` — Arquivos P (13–13)"
+      "description": "Grupo de arquivos em `web/site-hyper/` — 13–13"
     },
     {
       "id": "hyperware-grp-web-site-hyper-files-s-w",
@@ -2417,28 +2441,40 @@
       "description": "Código-fonte: `web/site-hyper/plugins/revolution/php/youtube/class-youtube.php`"
     },
     {
-      "id": "hyperware-grp-web-stats-files-a-1-12",
-      "label": "Arquivos A (1–12)",
+      "id": "hyperware-grp-web-stats-files-a",
+      "label": "Arquivos A",
       "parent": "hyperware-dir-web-stats",
+      "layer": "module",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 1.35,
+      "file": "web/stats/[files-a]",
+      "description": "Grupo de arquivos em `web/stats/` — Arquivos A"
+    },
+    {
+      "id": "hyperware-grp-web-stats-files-a-1-12",
+      "label": "1–12",
+      "parent": "hyperware-grp-web-stats-files-a",
       "layer": "module",
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
       "size": 1.35,
       "file": "web/stats/[files-a-1-12]",
-      "description": "Grupo de arquivos em `web/stats/` — Arquivos A (1–12)"
+      "description": "Grupo de arquivos em `web/stats/` — 1–12"
     },
     {
       "id": "hyperware-grp-web-stats-files-a-13-23",
-      "label": "Arquivos A (13–23)",
-      "parent": "hyperware-dir-web-stats",
+      "label": "13–23",
+      "parent": "hyperware-grp-web-stats-files-a",
       "layer": "module",
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
       "size": 1.35,
       "file": "web/stats/[files-a-13-23]",
-      "description": "Grupo de arquivos em `web/stats/` — Arquivos A (13–23)"
+      "description": "Grupo de arquivos em `web/stats/` — 13–23"
     },
     {
       "id": "hyperware-grp-web-stats-files-i",
@@ -2741,28 +2777,40 @@
       "description": "Código-fonte: `web/stats/index.php`"
     },
     {
-      "id": "hyperware-grp-web-stats-2020-6-files-a-1-12",
-      "label": "Arquivos A (1–12)",
+      "id": "hyperware-grp-web-stats-2020-6-files-a",
+      "label": "Arquivos A",
       "parent": "hyperware-dir-web-stats-2020-6",
+      "layer": "module",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 1.35,
+      "file": "web/stats/2020-6/[files-a]",
+      "description": "Grupo de arquivos em `web/stats/2020-6/` — Arquivos A"
+    },
+    {
+      "id": "hyperware-grp-web-stats-2020-6-files-a-1-12",
+      "label": "1–12",
+      "parent": "hyperware-grp-web-stats-2020-6-files-a",
       "layer": "module",
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
       "size": 1.35,
       "file": "web/stats/2020-6/[files-a-1-12]",
-      "description": "Grupo de arquivos em `web/stats/2020-6/` — Arquivos A (1–12)"
+      "description": "Grupo de arquivos em `web/stats/2020-6/` — 1–12"
     },
     {
       "id": "hyperware-grp-web-stats-2020-6-files-a-13-23",
-      "label": "Arquivos A (13–23)",
-      "parent": "hyperware-dir-web-stats-2020-6",
+      "label": "13–23",
+      "parent": "hyperware-grp-web-stats-2020-6-files-a",
       "layer": "module",
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
       "size": 1.35,
       "file": "web/stats/2020-6/[files-a-13-23]",
-      "description": "Grupo de arquivos em `web/stats/2020-6/` — Arquivos A (13–23)"
+      "description": "Grupo de arquivos em `web/stats/2020-6/` — 13–23"
     },
     {
       "id": "hyperware-file-web-stats-2020-6-awsindex-html",
@@ -3259,11 +3307,16 @@
     },
     {
       "source": "hyperware-dir-web-site-hyper",
+      "target": "hyperware-grp-web-site-hyper-files-b",
+      "type": "dependency"
+    },
+    {
+      "source": "hyperware-grp-web-site-hyper-files-b",
       "target": "hyperware-grp-web-site-hyper-files-b-1-12",
       "type": "dependency"
     },
     {
-      "source": "hyperware-dir-web-site-hyper",
+      "source": "hyperware-grp-web-site-hyper-files-b",
       "target": "hyperware-grp-web-site-hyper-files-b-13-16",
       "type": "dependency"
     },
@@ -3274,11 +3327,16 @@
     },
     {
       "source": "hyperware-dir-web-site-hyper",
+      "target": "hyperware-grp-web-site-hyper-files-p",
+      "type": "dependency"
+    },
+    {
+      "source": "hyperware-grp-web-site-hyper-files-p",
       "target": "hyperware-grp-web-site-hyper-files-p-1-12",
       "type": "dependency"
     },
     {
-      "source": "hyperware-dir-web-site-hyper",
+      "source": "hyperware-grp-web-site-hyper-files-p",
       "target": "hyperware-grp-web-site-hyper-files-p-13-13",
       "type": "dependency"
     },
@@ -4034,11 +4092,16 @@
     },
     {
       "source": "hyperware-dir-web-stats",
+      "target": "hyperware-grp-web-stats-files-a",
+      "type": "dependency"
+    },
+    {
+      "source": "hyperware-grp-web-stats-files-a",
       "target": "hyperware-grp-web-stats-files-a-1-12",
       "type": "dependency"
     },
     {
-      "source": "hyperware-dir-web-stats",
+      "source": "hyperware-grp-web-stats-files-a",
       "target": "hyperware-grp-web-stats-files-a-13-23",
       "type": "dependency"
     },
@@ -4169,11 +4232,16 @@
     },
     {
       "source": "hyperware-dir-web-stats-2020-6",
+      "target": "hyperware-grp-web-stats-2020-6-files-a",
+      "type": "dependency"
+    },
+    {
+      "source": "hyperware-grp-web-stats-2020-6-files-a",
       "target": "hyperware-grp-web-stats-2020-6-files-a-1-12",
       "type": "dependency"
     },
     {
-      "source": "hyperware-dir-web-stats-2020-6",
+      "source": "hyperware-grp-web-stats-2020-6-files-a",
       "target": "hyperware-grp-web-stats-2020-6-files-a-13-23",
       "type": "dependency"
     },

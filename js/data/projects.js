@@ -1,4 +1,4 @@
-/* Árvore do Conhecimento — 4092 nós */
+/* Árvore do Conhecimento — 4124 nós */
 const PROJECTS = [
   {
     "slug": "canon-python-ecommerce",
@@ -14,7 +14,7 @@ const PROJECTS = [
         "parent": null,
         "layer": "root",
         "title": "CanonPythonEcommerce",
-        "description": "E-commerce completo — 6 apps, PayPal, honeypot admin, reviews.",
+        "description": "Cobertura completa: 154 arquivos de código no repositório (192 nós na árvore incluindo pastas).",
         "file": "README.md",
         "code": "<div align=\"center\">\r\n\r\n![CanonPythonEcommerce Banner](docs/images/banner.svg)\r\n\r\n# CanonPythonEcommerce\r\n\r\n### Plataforma de E-commerce completa em Python + Django\r\n\r\n<img src=\"https://img.shields.io/badge/Python-3.10+-3776AB?style=for-the-badge&logo=python&logoColor=white\" alt=\"Python\"/>\r\n<img src=\"https://img.shields.io/badge/Django-5.0-092E20?style=for-the-badge&logo=django&logoColor=white\" alt=\"Django\"/>\r\n<img src=\"https://img.shields.io/badge/SQLite-003B57?style=for-the-badge&logo=sqlite&logoColor=white\" alt=\"SQLite\"/>\r\n<img src=\"https://img.shields.io/badge/PayPal-00457C?style=for-the-badge&logo=paypal&logoColor=white\" alt=\"PayPal\"/>\r\n<img src=\"https://img.shields.io/badge/License-MIT-yellow?style=for-the-badge\" alt=\"License\"/>\r\n\r\n**Loja virtual profissional com catálogo, carrinho, checkout, pagamentos PayPal, painel do cliente e painel administrativo seguro.**\r\n\r\n[Funcionalidades](#-funcionalidades) •\r\n[Arquitetura](#-arquitetura-do-sistema) •\r\n[Instalação](#-instalação) •\r\n[Fluxos](#-fluxos-do-sistema) •\r\n[Rotas](#-principais-rotas) •\r\n[Autor](#-autor)\r\n\r\n</div>\r\n\r\n---\r\n\r\n## 📌 Sobre o projeto\r\n\r\n**CanonPythonEcommerce** (baseado no projeto **GreatKart**) é uma aplicação web de e-commerce desenvolvida com **Django**, focada em demonstrar boas práticas de desenvolvimento backend em Python: autenticação customizada, gestão de produtos, carrinho de compras, pedidos, integração com **PayPal**, envio de e-mails transacionais e painel administrativo protegido.\r\n\r\nO projeto é ideal para:\r\n\r\n- Portfólio profissional de desenvolvimento Python\r\n- Estudo de arquitetura MVC em Django\r\n- Base para lojas virtuais reais com customizações\r\n- Aprendizado de fluxos completos de e-commerce\r\n\r\n---\r\n\r\n## 📸 Pré-visualizações\r\n\r\n### Loja e catálogo de produtos\r\n\r\n![Loja virtual](docs/images/store-preview.svg)\r\n\r\n### Checkout e pagamento PayPal\r\n\r\n![Checkout](docs/images/checkout-preview.svg)\r\n\r\n### Painel do cliente\r\n\r\n![Dashboard do cliente](docs/images/dashboard-preview.svg)\r\n\r\n---\r\n\r\n## ✨ Funcionalidades\r\n\r\n### 🛒 Loja virtual\r\n- Catálogo de produtos com categorias e slugs amigáveis\r\n- Página de detalhes do produto com galeria de imagens\r\n- Variações de produto (cor e tamanho)\r\n- Busca por produtos\r\n- Avaliações e classificação por estrelas\r\n\r\n### 🧺 Carrinho e checkout\r\n- Carrinho persistente por sessão/usuário\r\n- Adição, remoção e atualização de quantidades\r\n- Cálculo automático de subtotal, taxas e total\r\n- Checkout com formulário de entrega\r\n\r\n### 💳 Pagamentos e pedidos\r\n- Integração com **PayPal**\r\n- Registro de pagamentos e pedidos no banco\r\n- E-mail de confirmação de pedido\r\n- Histórico de pedidos no painel do cliente\r\n\r\n### 👤 Contas e autenticação\r\n- Cadastro de usuários com ativação por e-mail\r\n- Login e logout\r\n- Recuperação de senha\r\n- Perfil editável com foto e endereço\r\n- Dashboard do cliente\r\n\r\n### 🔐 Segurança\r\n- Modelo de usuário customizado (`Account`)\r\n- Admin real em rota protegida (`/securelogin/`)\r\n- **Admin Honeypot** em `/admin/` para detectar ataques\r\n- Expiração de sessão configurável\r\n- Proteção CSRF nativa do Django\r\n\r\n### 🛠 Painel administrativo\r\n- Gestão de categorias, produtos, variações e galeria\r\n- Gestão de pedidos e pagamentos\r\n- Moderação de avaliações\r\n\r\n---\r\n\r\n## 🏗 Arquitetura do sistema\r\n\r\n```mermaid\r\nflowchart TB\r\n    subgraph Cliente[\"Camada de Apresentação\"]\r\n        Browser[\"Navegador Web\"]\r\n        Templates[\"Templates HTML + Bootstrap\"]\r\n    end\r\n\r\n    subgraph Django[\"Camada de Aplicação - Django\"]\r\n        Views[\"Views\"]\r\n        Forms[\"Forms\"]\r\n        Context[\"Context Processors\"]\r\n    end\r\n\r\n    subgraph Apps[\"Apps do Projeto\"]\r\n        Accounts[\"accounts\"]\r\n        Store[\"store\"]\r\n        Carts[\"carts\"]\r\n        Orders[\"orders\"]\r\n        Category[\"category\"]\r\n    end\r\n\r\n    subgraph Servicos[\"Serviços Externos\"]\r\n        PayPal[\"PayPal SDK\"]\r\n        SMTP[\"Servidor SMTP\"]\r\n    end\r\n\r\n    subgraph Dados[\"Camada de Dados\"]\r\n        SQLite[\"SQLite / PostgreSQL\"]\r\n        Media[\"Arquivos de Mídia\"]\r\n    end\r\n\r\n    Browser --> Templates\r\n    Templates --> Views\r\n    Views --> Forms\r\n    Views --> Accounts\r\n    Views --> Store\r\n    Views --> Carts\r\n    Views --> Orders\r\n    Views --> Category\r\n    Orders --> PayPal\r\n    Accounts --> SMTP\r\n    Orders --> SMTP\r\n    Apps --> SQLite\r\n    Store --> Media\r\n```\r\n\r\n---\r\n\r\n## 🔄 Fluxo de compra\r\n\r\n```mermaid\r\nsequenceDiagram\r\n    autonumber\r\n    participant U as Usuário\r\n    participant S as Store\r\n    participant C as Carrinho\r\n    participant K as Checkout\r\n    participant P as PayPal\r\n    participant O as Orders\r\n    participant E as E-mail\r\n\r\n    U->>S: Navega e escolhe produto\r\n    U->>C: Adiciona ao carrinho\r\n    U->>K: Acessa checkout\r\n    K->>O: Cria pedido\r\n    U->>P: Realiza pagamento\r\n    P-->>O: Confirma transação\r\n    O->>E: Envia e-mail de confirmação\r\n    O-->>U: Exibe pedido concluído\r\n```\r\n\r\n---\r\n\r\n## 🧭 Fluxo de autenticação\r\n\r\n```mermaid\r\nflowchart TD\r\n    A[Cadastro] --> B{E-mail válido?}\r\n    B -- Não --> A\r\n    B -- Sim --> C[Conta criada inativa]\r\n    C --> D[E-mail de ativação]\r\n    D --> E[Usuário clica no link]\r\n    E --> F[Conta ativada]\r\n    F --> G[Login]\r\n    G --> H{Acesso ao painel}\r\n\r\n    G --> I[Esqueci minha senha]\r\n    I --> J[E-mail de recuperação]\r\n    J --> K[Redefinir senha]\r\n    K --> G\r\n```\r\n\r\n---\r\n\r\n## 🗄 Modelo de dados\r\n\r\n```mermaid\r\nerDiagram\r\n    ACCOUNT ||--o| USERPROFILE : possui\r\n    ACCOUNT ||--o{ ORDER : realiza\r\n    ACCOUNT ||--o{ CARTITEM : adiciona\r\n    ACCOUNT ||--o{ REVIEWRATING : avalia\r\n    ACCOUNT ||--o{ PAYMENT : paga\r\n\r\n    CATEGORY ||--o{ PRODUCT : contem\r\n    PRODUCT ||--o{ VARIATION : possui\r\n    PRODUCT ||--o{ PRODUCTGALLERY : exibe\r\n    PRODUCT ||--o{ REVIEWRATING : recebe\r\n\r\n    CART ||--o{ CARTITEM : contem\r\n    PRODUCT ||--o{ CARTITEM : referencia\r\n\r\n    ORDER ||--o{ ORDERPRODUCT : inclui\r\n    ORDER }o--|| PAYMENT : referencia\r\n    PRODUCT ||--o{ ORDERPRODUCT : vendido_em\r\n    VARIATION }o--o{ ORDERPRODUCT : selecionada_em\r\n\r\n    ACCOUNT {\r\n        string email PK\r\n        string username\r\n        string first_name\r\n        string last_name\r\n        string phone_number\r\n        bool is_active\r\n    }\r\n\r\n    PRODUCT {\r\n        string product_name\r\n        string slug\r\n        int price\r\n        int stock\r\n        bool is_available\r\n    }\r\n\r\n    ORDER {\r\n        string order_number\r\n        float order_total\r\n        string status\r\n        bool is_ordered\r\n    }\r\n```\r\n\r\n---\r\n\r\n## 🛠 Tecnologias\r\n\r\n| Tecnologia | Uso no projeto |\r\n|------------|----------------|\r\n| **Python 3.10+** | Linguagem principal |\r\n| **Django 5.0** | Framework web |\r\n| **SQLite** | Banco padrão em desenvolvimento |\r\n| **Pillow** | Upload e processamento de imagens |\r\n| **python-decouple** | Variáveis de ambiente |\r\n| **PayPal SDK** | Pagamentos online |\r\n| **Bootstrap** | Interface responsiva |\r\n| **Font Awesome** | Ícones |\r\n| **SMTP** | E-mails transacionais |\r\n| **django-admin-honeypot** | Segurança do admin |\r\n| **django-session-timeout** | Expiração de sessão |\r\n\r\n---\r\n\r\n## 📂 Estrutura do projeto\r\n\r\n```text\r\nCanonPythonEcommerce/\r\n│\r\n├── accounts/                 # Autenticação, perfil e dashboard\r\n│   ├── models.py             # Account, UserProfile\r\n│   ├── views.py\r\n│   └── urls.py\r\n│\r\n├── category/                 # Categorias de produtos\r\n│   ├── models.py\r\n│   └── context_processors.py\r\n│\r\n├── store/                    # Catálogo, busca e avaliações\r\n│   ├── models.py             # Product, Variation, ReviewRating\r\n│   └── urls.py\r\n│\r\n├── carts/                    # Carrinho e checkout\r\n│   ├── models.py             # Cart, CartItem\r\n│   └── views.py\r\n│\r\n├── orders/                   # Pedidos e pagamentos\r\n│   ├── models.py             # Order, OrderProduct, Payment\r\n│   └── views.py\r\n│\r\n├── greatkart/                # Configurações do projeto Django\r\n│   ├── settings.py\r\n│   ├── urls.py\r\n│   └── static/\r\n│\r\n├── templates/                # Templates HTML\r\n│   ├── accounts/\r\n│   ├── store/\r\n│   ├── orders/\r\n│   └── includes/\r\n│\r\n├── static/                   # CSS, JS e fontes\r\n├── media/                    # Uploads (produtos, perfis)\r\n├── docs/images/              # Ilustrações e banner do README\r\n├── manage.py\r\n├── requirements.txt\r\n└── .env-sample\r\n```\r\n\r\n---\r\n\r\n## 🚀 Instalação\r\n\r\n### Pré-requisitos\r\n\r\n- Python 3.10 ou superior (recomendado)\r\n- pip\r\n- Git\r\n- Conta PayPal Developer (para pagamentos)\r\n- Servidor SMTP (Gmail, Outlook, etc.)\r\n\r\n### 1. Clonar o repositório\r\n\r\n```bash\r\ngit clone https://github.com/CanonEngineer/CanonPythonEcommerce.git\r\ncd CanonPythonEcommerce\r\n```\r\n\r\n### 2. Criar ambiente virtual\r\n\r\n```bash\r\npython -m venv venv\r\n\r\n# Windows\r\nvenv\\Scripts\\activate\r\n\r\n# Linux / macOS\r\nsource venv/bin/activate\r\n```\r\n\r\n### 3. Instalar dependências\r\n\r\n```bash\r\npip install -r requirements.txt\r\n```\r\n\r\n### 4. Configurar variáveis de ambiente\r\n\r\nCopie o arquivo de exemplo:\r\n\r\n```bash\r\ncp .env-sample .env\r\n```\r\n\r\nEdite o `.env`:\r\n\r\n```env\r\nSECRET_KEY=sua-chave-secreta-django\r\nDEBUG=True\r\nEMAIL_HOST=smtp.gmail.com\r\nEMAIL_PORT=587\r\nEMAIL_HOST_USER=seu-email@gmail.com\r\nEMAIL_HOST_PASSWORD=sua-senha-de-app\r\nEMAIL_USE_TLS=True\r\n```\r\n\r\n### 5. Executar migrações\r\n\r\n```bash\r\npython manage.py migrate\r\n```\r\n\r\n### 6. Criar superusuário\r\n\r\n```bash\r\npython manage.py createsuperuser\r\n```\r\n\r\n### 7. Iniciar o servidor\r\n\r\n```bash\r\npython manage.py runserver\r\n```\r\n\r\nAcesse:\r\n\r\n- **Loja:** [http://127.0.0.1:8000/](http://127.0.0.1:8000/)\r\n- **Admin seguro:** [http://127.0.0.1:8000/securelogin/](http://127.0.0.1:8000/securelogin/)\r\n\r\n---\r\n\r\n## 💳 Configuração do PayPal\r\n\r\n1. Crie uma aplicação em [PayPal Developer](https://developer.paypal.com/)\r\n2. Copie o **Client ID** de sandbox ou produção\r\n3. Atualize o script em `templates/base.html`:\r\n\r\n```html\r\n<script src=\"https://www.paypal.com/sdk/js?client-id=SEU_CLIENT_ID&currency=USD\"></script>\r\n```\r\n\r\n4. Teste o fluxo em `orders/payments/`\r\n\r\n> **Importante:** nunca publique credenciais reais no repositório.\r\n\r\n---\r\n\r\n## 🌐 Principais rotas\r\n\r\n| Rota | Descrição |\r\n|------|-----------|\r\n| `/` | Página inicial |\r\n| `/store/` | Catálogo de produtos |\r\n| `/store/category/<slug>/` | Produtos por categoria |\r\n| `/store/category/<cat>/<produto>/` | Detalhe do produto |\r\n| `/store/search/` | Busca de produtos |\r\n| `/cart/` | Carrinho de compras |\r\n| `/cart/checkout/` | Checkout |\r\n| `/orders/payments/` | Pagamento PayPal |\r\n| `/orders/order_complete/` | Confirmação do pedido |\r\n| `/accounts/register/` | Cadastro |\r\n| `/accounts/login/` | Login |\r\n| `/accounts/dashboard/` | Painel do cliente |\r\n| `/accounts/my_orders/` | Histórico de pedidos |\r\n| `/securelogin/` | Admin Django real |\r\n| `/admin/` | Honeypot (falso admin) |\r\n\r\n---\r\n\r\n## 📧 E-mails do sistema\r\n\r\n| Evento | Template |\r\n|--------|----------|\r\n| Ativação de conta | `account_verification_email.html` |\r\n| Recuperação de senha | `reset_password_email.html` |\r\n| Pedido recebido | `order_receive_email.html` |\r\n\r\nConfigure corretamente o SMTP no `.env` para que os e-mails sejam enviados.\r\n\r\n---\r\n\r\n## 🔐 Boas práticas de segurança\r\n\r\n- Use `DEBUG=False` em produção\r\n- Defina `ALLOWED_HOSTS` em `settings.py`\r\n- Troque a `SECRET_KEY` em produção\r\n- Não versione o arquivo `.env`\r\n- Use HTTPS em produção\r\n- Mantenha o admin real apenas em `/securelogin/`\r\n- Faça backup regular do banco e da pasta `media/`\r\n\r\n---\r\n\r\n## 🧪 Comandos úteis\r\n\r\n```bash\r\n# Criar migrações\r\npython manage.py makemigrations\r\n\r\n# Aplicar migrações\r\npython manage.py migrate\r\n\r\n# Coletar arquivos estáticos (produção)\r\npython manage.py collectstatic\r\n\r\n# Executar testes\r\npython manage.py test\r\n```\r\n\r\n---\r\n\r\n## 🗺 Roadmap\r\n\r\n- [ ] Suporte a PostgreSQL em produção\r\n- [ ] Integração com Stripe / Mercado Pago\r\n- [ ] Cupons de desconto\r\n- [ ] Wishlist (lista de desejos)\r\n- [ ] API REST com Django REST Framework\r\n- [ ] Painel com gráficos de vendas\r\n- [ ] Internacionalização (PT/EN)\r\n- [ ] Docker e deploy automatizado\r\n\r\n---\r\n\r\n## 🤝 Contribuindo\r\n\r\nContribuições são bem-vindas.\r\n\r\n```bash\r\ngit checkout -b feature/minha\n\n/* … truncado na árvore (arquivo completo no GitHub) … */\n",
         "implementation": [
@@ -2527,7 +2527,7 @@ const PROJECTS = [
         "parent": null,
         "layer": "root",
         "title": "FoodOnlineDjango",
-        "description": "Marketplace multi-vendor com RazorPay, roles Vendor/Customer e busca geoespacial.",
+        "description": "Cobertura completa: 176 arquivos de código no repositório (206 nós na árvore incluindo pastas).",
         "file": "README.md",
         "code": "<div align=\"center\">\r\n\r\n![FoodOnlineDjango — Marketplace multi-vendor](docs/images/preview-banner.png)\r\n\r\n# FoodOnlineDjango\r\n\r\n### Marketplace de restaurantes multi-vendor — Django 5, PostGIS, PayPal e RazorPay\r\n\r\n<img src=\"https://img.shields.io/badge/Django-5.0-092E20?style=for-the-badge&logo=django&logoColor=white\" alt=\"Django 5\"/>\r\n<img src=\"https://img.shields.io/badge/PostgreSQL-PostGIS-336791?style=for-the-badge&logo=postgresql&logoColor=white\" alt=\"PostGIS\"/>\r\n<img src=\"https://img.shields.io/badge/Pagamentos-PayPal_·_RazorPay-003087?style=for-the-badge\" alt=\"Pagamentos\"/>\r\n<img src=\"https://img.shields.io/badge/Geo-Google_Maps_API-4285F4?style=for-the-badge&logo=googlemaps&logoColor=white\" alt=\"Google Maps\"/>\r\n<img src=\"https://img.shields.io/badge/Python-3.10-3776AB?style=for-the-badge&logo=python&logoColor=white\" alt=\"Python 3.10\"/>\r\n\r\n**Plataforma completa de delivery:** cadastro de restaurantes, cardápio por vendor, carrinho multi-loja, busca geoespacial por raio, checkout e pagamento online.\r\n\r\n<br>\r\n\r\n[Visão geral](#-visão-geral) •\r\n[Funcionalidades](#-funcionalidades) •\r\n[Arquitetura](#-arquitetura) •\r\n[Fluxos](#-fluxogramas) •\r\n[Instalação](#-instalação) •\r\n[Configuração](#-configuração-env) •\r\n[Estrutura](#-estrutura-do-projeto) •\r\n[APIs](#-integrações-externas)\r\n\r\n</div>\r\n\r\n---\r\n\r\n## 📌 Visão geral\r\n\r\nO **FoodOnlineDjango** é um marketplace de comida inspirado em apps de delivery, desenvolvido com **Django 5** e **PostGIS**. O sistema conecta **clientes** e **restaurantes (vendors)** em uma única plataforma:\r\n\r\n| Papel | O que faz na plataforma |\r\n|-------|-------------------------|\r\n| **Cliente** | Busca restaurantes por localização, monta carrinho, paga e acompanha pedidos |\r\n| **Vendor** | Gerencia perfil, cardápio, horários de funcionamento e pedidos recebidos |\r\n| **Admin** | Aprova novos restaurantes, impostos e modera o ecossistema |\r\n\r\n> Repositório: [github.com/CanonEngineer/FoodOnlineDjango](https://github.com/CanonEngineer/FoodOnlineDjango)\r\n\r\n### Ilustração — ecossistema\r\n\r\n```mermaid\r\nmindmap\r\n  root((FoodOnline))\r\n    Cliente\r\n      Busca por raio\r\n      Carrinho AJAX\r\n      PayPal / RazorPay\r\n      Histórico de pedidos\r\n    Vendor\r\n      Cadastro + licença\r\n      Menu builder\r\n      Horários de abertura\r\n      Dashboard de vendas\r\n    Infra\r\n      PostGIS PointField\r\n      SMTP verificação\r\n      Google Maps API\r\n      Admin Django\r\n```\r\n\r\n---\r\n\r\n## ✨ Funcionalidades\r\n\r\n### Autenticação e perfis (`accounts`)\r\n\r\n| Recurso | Detalhe |\r\n|---------|---------|\r\n| User customizado | Login por **e-mail** (`USERNAME_FIELD = 'email'`) |\r\n| Roles | **Vendor (1)** e **Customer (2)** |\r\n| Cadastro | `registerUser` / `registerVendor` com ativação por e-mail |\r\n| Segurança | Esqueci senha + reset com token |\r\n| Geo no perfil | `UserProfile.location` como `PointField` (lat/lng) |\r\n\r\n### Marketplace (`marketplace` + `vendor` + `menu`)\r\n\r\n| Recurso | Detalhe |\r\n|---------|---------|\r\n| Multi-vendor | Carrinho com itens de **vários restaurantes** no mesmo pedido |\r\n| Menu builder | CRUD de categorias e pratos por vendor |\r\n| Horários | `OpeningHour` + `Vendor.is_open()` |\r\n| Carrinho AJAX | Adicionar, diminuir e remover sem reload |\r\n| Impostos | Modelo `Tax` (ex.: CGST/SGST) via context processor |\r\n| Aprovação | Admin marca `is_approved` — e-mail automático ao vendor |\r\n\r\n### Geolocalização (`foodOnline` + PostGIS)\r\n\r\n| Recurso | Detalhe |\r\n|---------|---------|\r\n| Home | Restaurantes ordenados por **distância** (até 1000 km) |\r\n| Busca | Palavra-chave + **raio** com `distance_lte` |\r\n| Sessão | Lat/lng do navegador ou Google Places |\r\n| Mapas | Autocomplete e geocoding via **Google Maps API** |\r\n\r\n### Pedidos e pagamentos (`orders`)\r\n\r\n| Recurso | Detalhe |\r\n|---------|---------|\r\n| Checkout | `place_order` → página de pagamento |\r\n| PayPal | SDK JavaScript → AJAX `POST /orders/payments/` |\r\n| RazorPay | `checkout.js` → confirmação no backend |\r\n| E-mails | Confirmação ao cliente + notificação a cada vendor |\r\n| Multi-vendor | `Order.vendors` ManyToMany + `get_total_by_vendor()` |\r\n\r\n---\r\n\r\n## 🏗️ Arquitetura\r\n\r\n### Apps Django e dependências\r\n\r\n```mermaid\r\nflowchart TB\r\n    subgraph PROJECT[\"foodOnline/\"]\r\n        URLS[\"urls.py\"]\r\n        SETTINGS[\"settings.py · PostGIS\"]\r\n        HOME[\"views.home · geo sort\"]\r\n    end\r\n\r\n    subgraph APPS[\"Apps de negócio\"]\r\n        ACC[\"accounts<br/>User · UserProfile\"]\r\n        VEN[\"vendor<br/>Vendor · OpeningHour\"]\r\n        MEN[\"menu<br/>Category · FoodItem\"]\r\n        MKT[\"marketplace<br/>Cart · Tax\"]\r\n        ORD[\"orders<br/>Order · Payment\"]\r\n        CUS[\"customers<br/>perfil cliente\"]\r\n    end\r\n\r\n    URLS --> ACC\r\n    URLS --> VEN\r\n    URLS --> MKT\r\n    URLS --> ORD\r\n    ACC --> CUS\r\n    VEN --> MEN\r\n    MKT --> VEN\r\n    MKT --> MEN\r\n    ORD --> MKT\r\n    ORD --> VEN\r\n    HOME --> VEN\r\n```\r\n\r\n### Modelo de dados (resumo)\r\n\r\n```mermaid\r\nerDiagram\r\n    User ||--o| UserProfile : has\r\n    User ||--o| Vendor : owns\r\n    Vendor ||--o{ OpeningHour : has\r\n    Vendor ||--o{ Category : has\r\n    Category ||--o{ FoodItem : contains\r\n    User ||--o{ Cart : has\r\n    FoodItem ||--o{ Cart : in\r\n    User ||--o{ Order : places\r\n    Order ||--o{ OrderedFood : contains\r\n    Order }o--o{ Vendor : involves\r\n    Order ||--o| Payment : has\r\n```\r\n\r\n### Mapa de URLs principais\r\n\r\n| Rota | App | Descrição |\r\n|------|-----|-----------|\r\n| `/` | `foodOnline` | Home com vendors por distância |\r\n| `/registerUser/` · `/registerVendor/` | `accounts` | Cadastro |\r\n| `/login/` · `/logout/` | `accounts` | Sessão |\r\n| `/vendor/menu_builder/` | `vendor` | Cardápio |\r\n| `/marketplace/` | `marketplace` | Listagem de restaurantes |\r\n| `/marketplace/<slug>/` | `marketplace` | Detalhe + pratos |\r\n| `/cart/` · `/checkout/` | `marketplace` | Carrinho e checkout |\r\n| `/search/` | `marketplace` | Busca geo + keyword |\r\n| `/orders/place_order/` | `orders` | Cria pedido pendente |\r\n| `/orders/payments/` | `orders` | Confirma PayPal/RazorPay |\r\n| `/admin/` | Django | Aprovação de vendors |\r\n\r\n---\r\n\r\n## 🔀 Fluxogramas\r\n\r\n### 1 — Jornada do cliente (pedido completo)\r\n\r\n```mermaid\r\nsequenceDiagram\r\n    autonumber\r\n    participant C as Cliente\r\n    participant H as Home / Search\r\n    participant M as Marketplace\r\n    participant O as Orders\r\n    participant P as PayPal ou RazorPay\r\n    participant E as E-mail SMTP\r\n\r\n    C->>H: Define localização (GPS ou Places)\r\n    H->>M: Lista vendors por distância\r\n    C->>M: Adiciona pratos ao carrinho (AJAX)\r\n    C->>M: /checkout/\r\n    C->>O: POST /orders/place_order/\r\n    C->>P: Pagamento no browser\r\n    P->>O: AJAX POST /orders/payments/\r\n    O->>E: Confirmação + aviso aos vendors\r\n    O->>C: /orders/order_complete/\r\n```\r\n\r\n### 2 — Ciclo de vida do vendor\r\n\r\n```mermaid\r\nflowchart LR\r\n    A([\"registerVendor\"]) --> B[\"E-mail de ativação\"]\r\n    B --> C[\"activate/\"]\r\n    C --> D{\"Admin aprova?\"}\r\n    D -->|Não| E[\"Aguarda / rejeição\"]\r\n    D -->|Sim| F[\"menu_builder\"]\r\n    F --> G[\"opening_hours\"]\r\n    G --> H([\"Recebe pedidos\"])\r\n    H --> I[\"vendor/my_orders/\"]\r\n```\r\n\r\n### 3 — Busca geoespacial\r\n\r\n```mermaid\r\nflowchart TB\r\n    GPS[\"Browser geolocation<br/>ou Google Places\"] --> SESS[\"session lat/lng\"]\r\n    SESS --> HOME[\"home: annotate Distance<br/>order_by distance\"]\r\n    SESS --> SEARCH[\"search: filter distance_lte<br/>+ keyword\"]\r\n    HOME --> PG[(\"PostgreSQL + PostGIS<br/>PointField\")]\r\n    SEARCH --> PG\r\n```\r\n\r\n### 4 — Carrinho multi-vendor\r\n\r\n```mermaid\r\nflowchart TB\r\n    subgraph CARRINHO[\"Carrinho do cliente\"]\r\n        V1[\"Vendor A · Pizza\"]\r\n        V2[\"Vendor B · Sushi\"]\r\n    end\r\n\r\n    CARRINHO --> CHECKOUT[\"checkout\"]\r\n    CHECKOUT --> ORDER[\"Order único\"]\r\n    ORDER --> SPLIT[\"get_total_by_vendor()\"]\r\n    SPLIT --> E1[\"E-mail Vendor A\"]\r\n    SPLIT --> E2[\"E-mail Vendor B\"]\r\n```\r\n\r\n---\r\n\r\n## 🛠️ Stack tecnológica\r\n\r\n| Camada | Tecnologia |\r\n|--------|------------|\r\n| Backend | Django 5.0.1, Python 3.10 |\r\n| Banco | PostgreSQL + **PostGIS** (`django.contrib.gis`) |\r\n| Config | `python-decouple` (`.env`) |\r\n| Imagens | Pillow |\r\n| Pagamentos | PayPal JS SDK, RazorPay API |\r\n| Mapas | Google Maps JavaScript API |\r\n| Frontend | Bootstrap 4, jQuery, jQuery UI, SweetAlert, DataTables |\r\n| Deploy | Gunicorn (requirements.txt) |\r\n\r\n---\r\n\r\n## 📁 Estrutura do projeto\r\n\r\n```\r\nFoodOnlineDjango/\r\n├── foodOnline/           # Projeto Django (settings, urls, home)\r\n│   └── static/           # CSS, JS, fonts (fonte)\r\n├── accounts/             # User, perfil, auth, dashboards\r\n├── vendor/               # Restaurante, menu builder, pedidos vendor\r\n├── menu/                 # Models Category + FoodItem\r\n├── marketplace/          # Listagem, carrinho, busca, checkout\r\n├── orders/               # Pedido, pagamento, e-mails\r\n├── customers/            # Perfil e histórico do cliente\r\n├── templates/            # HTML compartilhado\r\n├── static/               # collectstatic (admin + assets)\r\n├── media/                # Uploads (gitignored)\r\n├── docs/images/          # Documentação e banner\r\n├── manage.py\r\n├── requirements.txt\r\n└── .env-sample\r\n```\r\n\r\n---\r\n\r\n## 🚀 Instalação\r\n\r\n### Pré-requisitos\r\n\r\n- **Python 3.10**\r\n- **PostgreSQL** com extensão **PostGIS**\r\n- **GDAL** (biblioteca do sistema — obrigatório para GIS)\r\n- Contas/API keys: Google Maps, PayPal, RazorPay (opcional), SMTP\r\n\r\n### Passo a passo\r\n\r\n```bash\r\ngit clone https://github.com/CanonEngineer/FoodOnlineDjango.git\r\ncd FoodOnlineDjango\r\n\r\npython -m venv venv\r\n# Windows:\r\nvenv\\Scripts\\activate\r\n# Linux/macOS:\r\n# source venv/bin/activate\r\n\r\npip install -r requirements.txt\r\n\r\ncopy .env-sample .env   # Windows\r\n# cp .env-sample .env   # Linux/macOS\r\n# Preencha todas as variáveis (ver seção abaixo)\r\n\r\n# No PostgreSQL:\r\n# CREATE DATABASE foodonline;\r\n# \\c foodonline\r\n# CREATE EXTENSION postgis;\r\n\r\npython manage.py migrate\r\npython manage.py createsuperuser\r\npython manage.py collectstatic --noinput\r\npython manage.py runserver\r\n```\r\n\r\nAcesse: **http://127.0.0.1:8000/** · Admin: **http://127.0.0.1:8000/admin/**\r\n\r\n### GDAL no Windows\r\n\r\nSe consultas GIS falharem, configure em `foodOnline/settings.py` (trecho comentado no arquivo):\r\n\r\n```python\r\n# GDAL_LIBRARY_PATH = r'C:\\OSGeo4W\\bin\\gdal306.dll'\r\n# PROJ_LIB = r'C:\\OSGeo4W\\share\\proj'\r\n```\r\n\r\nInstale [OSGeo4W](https://trac.osgeo.org/osgeo4w/) ou use o GDAL compatível com o pacote `pip install GDAL`.\r\n\r\n### Assets de imagem\r\n\r\nTemplates referenciam arquivos em `foodOnline/static/images/`, `logo/` e `extra-images/`. Adicione os PNG/JPG do tema antes do `collectstatic` para evitar imagens quebradas na UI (logo, capas, ícones PayPal/RazorPay).\r\n\r\n---\r\n\r\n## ⚙️ Configuração `.env`\r\n\r\nCopie `.env-sample` para `.env`:\r\n\r\n```env\r\nSECRET_KEY=sua-chave-django-secreta\r\nDEBUG=True\r\n\r\n# PostgreSQL + PostGIS\r\nDB_NAME=foodonline\r\nDB_USER=postgres\r\nDB_PASSWORD=\r\nDB_HOST=localhost\r\n\r\n# SMTP (verificação de conta, pedidos, aprovação vendor)\r\nEMAIL_HOST=smtp.gmail.com\r\nEMAIL_PORT=587\r\nEMAIL_HOST_USER=\r\nEMAIL_HOST_PASSWORD=\r\nDEFAULT_FROM_EMAIL=\r\n\r\n# Google Maps (Places + geocoding)\r\nGOOGLE_API_KEY=\r\n\r\n# PayPal (checkout USD)\r\nPAYPAL_CLIENT_ID=\r\n\r\n# RazorPay (checkout INR)\r\nRZP_KEY_ID=\r\nRZP_KEY_SECRET=\r\n```\r\n\r\n| Variável | Uso no código |\r\n|----------|----------------|\r\n| `SECRET_KEY` | `settings.SECRET_KEY` |\r\n| `DEBUG` | Modo desenvolvimento |\r\n| `DB_*` | Engine `postgis` |\r\n| `EMAIL_*` | `send_mail` em accounts/orders |\r\n| `GOOGLE_API_KEY` | Context processor → templates/maps |\r\n| `PAYPAL_CLIENT_ID` | SDK no checkout |\r\n| `RZP_*` | Assinatura RazorPay no backend |\r\n\r\n---\r\n\r\n## 🔌 Integrações externas\r\n\r\n### Google Maps API\r\n\r\n- Autocomplete de endereço no navbar\r\n- Geocoding para lat/lng na sessão\r\n- Habilitar: **Maps JavaScript API**, **Places API**, **Geocoding API**\r\n\r\n### PayPal\r\n\r\n1. Crie app em [developer.paypal.com](https://developer.paypal.com/)\r\n2. Cole `PAYPAL_CLIENT_ID` no `.env`\r\n3. Fluxo: checkout template → SDK → `POST /orders/payments/`\r\n\r\n### RazorPay\r\n\r\n1. Dashboard [razorpay.com](https://razorpay.com/)\r\n2. `RZP_KEY_ID` + `RZP_KEY_SECRET` no `.e\n\n/* … truncado na árvore (arquivo completo no GitHub) … */\n",
         "implementation": [
@@ -5222,7 +5222,7 @@ const PROJECTS = [
         "parent": null,
         "layer": "root",
         "title": "JavaScriptDropBoxProject",
-        "description": "Clone Dropbox — Firebase Storage, barra de progresso, seleção Ctrl/Shift e ícones por MIME.",
+        "description": "Cobertura completa: 14 arquivos de código no repositório (22 nós na árvore incluindo pastas).",
         "file": "README.md",
         "code": "<div align=\"center\">\r\n\r\n<p align=\"center\">\r\n  <img src=\"docs/images/banner.svg\" alt=\"JavaScript DropBox Project\" width=\"100%\" style=\"max-width:100%;height:auto;display:block;\" />\r\n</p>\r\n\r\n# JavaScript DropBox Project\r\n\r\n### Clone de cloud storage com Express, Firebase, Formidable e progresso de upload\r\n\r\n<img src=\"https://img.shields.io/badge/Express-000000?style=for-the-badge&logo=express&logoColor=white\" alt=\"Express\"/>\r\n<img src=\"https://img.shields.io/badge/Firebase-FFCA28?style=for-the-badge&logo=firebase&logoColor=black\" alt=\"Firebase\"/>\r\n<img src=\"https://img.shields.io/badge/Formidable-Upload-38bdf8?style=for-the-badge\" alt=\"Formidable\"/>\r\n<img src=\"https://img.shields.io/badge/EJS-Views-22c55e?style=for-the-badge\" alt=\"EJS\"/>\r\n\r\n</div>\r\n\r\n---\r\n\r\n> **Mobile / UTF-8:** imagens com `width: 100%` (sem scroll horizontal). Arquivo gravado em UTF-8 para acentos corretos em qualquer dispositivo.\r\n\r\n---\r\n\r\n[Sobre](#-sobre) ·\r\n[Ilustrações](#-ilustrações) ·\r\n[Features](#-features) ·\r\n[Arquitetura](#-arquitetura--fluxo) ·\r\n[Stack](#-stack) ·\r\n[Estrutura](#-estrutura) ·\r\n[Setup](#-como-rodar) ·\r\n[Melhorias](#-melhorias-sugeridas) ·\r\n[Autor](#-autor)\r\n\r\n---\r\n\r\n## 📌 Sobre\r\n\r\nClone inspirado no **Dropbox / Google Drive / iCloud**: armazenamento e compartilhamento de arquivos na nuvem com interface web. O projeto cobre upload com **Formidable**, **barra de progresso** e cálculo de tempo restante, **Firebase** (dados + Storage), seleção com Ctrl/Shift, eventos customizados e navegação de pastas em estilo SPA.\r\n\r\n---\r\n\r\n## 📸 Ilustrações\r\n\r\n### Fluxo\r\n\r\n<p align=\"center\">\r\n  <img src=\"docs/images/flow.svg\" alt=\"Fluxo do projeto\" width=\"100%\" style=\"max-width:100%;height:auto;display:block;\" />\r\n</p>\r\n\r\n### Arquitetura\r\n\r\n<p align=\"center\">\r\n  <img src=\"docs/images/architecture.svg\" alt=\"Arquitetura\" width=\"100%\" style=\"max-width:100%;height:auto;display:block;\" />\r\n</p>\r\n\r\n### Destaques\r\n\r\n<p align=\"center\">\r\n  <img src=\"docs/images/features.svg\" alt=\"Destaques\" width=\"100%\" style=\"max-width:100%;height:auto;display:block;\" />\r\n</p>\r\n\r\n### Interface (mock)\r\n\r\n<p align=\"center\">\r\n  <img src=\"docs/images/ui-mock.svg\" alt=\"Mock de interface\" width=\"100%\" style=\"max-width:100%;height:auto;display:block;\" />\r\n</p>\r\n\r\n---\r\n\r\n## ✨ Features\r\n\r\n| # | Capacidade |\r\n|---|------------|\r\n| 1 | Upload multipart com Formidable |\r\n| 2 | Progress bar e ETA de upload |\r\n| 3 | Firebase como banco + Firebase Storage |\r\n| 4 | Seleção de elementos com Ctrl e Shift |\r\n| 5 | Navegação de pastas via JavaScript (SPA-like) |\r\n| 6 | Customização de eventos no front |\r\n| 7 | Views EJS + assets em public/ |\r\n\r\n---\r\n\r\n## 🏗️ Arquitetura / Fluxo\r\n\r\n```mermaid\r\nsequenceDiagram\r\n    participant U as Usuário\r\n    participant F as Front JS\r\n    participant E as Express\r\n    participant FB as Firebase\r\n    U->>F: Seleciona arquivos\r\n    F->>E: POST multipart Formidable\r\n    E-->>F: Progresso / resposta\r\n    F->>FB: Salva metadata + Storage\r\n    FB-->>F: Snapshot / URL\r\n    F-->>U: Lista atualizada\r\n```\r\n\r\n\r\n\r\n---\r\n\r\n## 🛠️ Stack\r\n\r\n| Tecnologia | Papel |\r\n|------------|-------|\r\n| Node.js / Express | Servidor HTTP |\r\n| EJS | Templates |\r\n| Formidable | Upload multipart |\r\n| Firebase | DB + Storage |\r\n| Bower (public) | Componentes front |\r\n\r\n---\r\n\r\n## 📂 Estrutura\r\n\r\n```text\r\nJavaScriptDropBoxProject/\r\n├── app.js\r\n├── bin/www\r\n├── routes/\r\n├── views/\r\n├── public/          # front + bower\r\n├── package.json\r\n└── README.md\r\n```\r\n\r\n---\r\n\r\n## 🚀 Como rodar\r\n\r\n```bash\r\ngit clone https://github.com/CanonEngineer/JavaScriptDropBoxProject.git\r\ncd JavaScriptDropBoxProject\r\nnpm install\r\n# Na pasta public (componentes Bower):\r\ncd public && bower install && cd ..\r\n# Configure o Firebase no front/src\r\nnpm start\r\n```\r\n\r\n---\r\n\r\n## ▶️ Uso\r\n\r\nAbra a URL local do Express, navegue entre pastas, faça upload de arquivos e observe a barra de progresso. Use Ctrl/Shift para seleção múltipla.\r\n\r\n---\r\n\r\n## 🌳 Tree of Knowledge\r\n\r\nEste projeto está mapeado na árvore interativa:\r\n\r\n<p>\r\n  <a href=\"https://canonengineer.github.io/TreeofKnowledge/index.html?tree=javascript-dropbox\">\r\n    <img src=\"https://img.shields.io/badge/Abrir_na_Árvore-Tree_of_Knowledge-38bdf8?style=for-the-badge&labelColor=0c2344\" alt=\"Tree of Knowledge\"/>\r\n  </a>\r\n</p>\r\n\r\nHub: [https://canonengineer.github.io/TreeofKnowledge/](https://canonengineer.github.io/TreeofKnowledge/)\r\n\r\n---\r\n\r\n## 📈 Melhorias sugeridas\r\n\r\n1. Remover node_modules do Git e usar .gitignore\r\n2. Migrar Bower → npm/Vite\r\n3. Firebase Modular SDK v9+\r\n4. Testes de upload e seleção\r\n5. Auth obrigatória antes do file manager\r\n\r\n---\r\n\r\n## 👨‍💻 Autor\r\n\r\n**Alessandro Canon (CanonEngineer)**  \r\nNetwork Analyst · Developer · Cybersecurity Enthusiast\r\n\r\n- GitHub: [https://github.com/CanonEngineer](https://github.com/CanonEngineer)\r\n- Portfolio: [https://canonengineer.github.io](https://canonengineer.github.io)\r\n- Tree of Knowledge: [https://canonengineer.github.io/TreeofKnowledge/](https://canonengineer.github.io/TreeofKnowledge/)\r\n\r\n---\r\n\r\n<div align=\"center\">\r\n\r\n⭐ Se este projeto te ajudou, deixe uma estrela!\r\n\r\n</div>\r\n",
         "implementation": [
@@ -5525,7 +5525,7 @@ const PROJECTS = [
         "parent": null,
         "layer": "root",
         "title": "JavaScriptRestaurantProject",
-        "description": "Restaurante Saboroso — cardápio, reservas, contato e painel AdminLTE com MySQL.",
+        "description": "Cobertura completa: 155 arquivos de código no repositório (186 nós na árvore incluindo pastas).",
         "file": "README.md",
         "code": "<div align=\"center\">\r\n\r\n<p align=\"center\">\r\n  <img src=\"docs/images/banner.svg\" alt=\"JavaScript Restaurant Project\" width=\"100%\" style=\"max-width:100%;height:auto;display:block;\" />\r\n</p>\r\n\r\n# JavaScript Restaurant Project\r\n\r\n### Restaurante Saboroso — Express, EJS, MySQL, Redis e AdminLTE\r\n\r\n<img src=\"https://img.shields.io/badge/Express-000?style=for-the-badge&logo=express&logoColor=white\" alt=\"Express\"/>\r\n<img src=\"https://img.shields.io/badge/MySQL-4479A1?style=for-the-badge&logo=mysql&logoColor=white\" alt=\"MySQL\"/>\r\n<img src=\"https://img.shields.io/badge/Redis-DC382D?style=for-the-badge&logo=redis&logoColor=white\" alt=\"Redis\"/>\r\n<img src=\"https://img.shields.io/badge/AdminLTE-Panel-fb923c?style=for-the-badge\" alt=\"AdminLTE\"/>\r\n\r\n</div>\r\n\r\n---\r\n\r\n> **Mobile / UTF-8:** imagens com `width: 100%` (sem scroll horizontal). Arquivo gravado em UTF-8 para acentos corretos em qualquer dispositivo.\r\n\r\n---\r\n\r\n[Sobre](#-sobre) ·\r\n[Ilustrações](#-ilustrações) ·\r\n[Features](#-features) ·\r\n[Arquitetura](#-arquitetura--fluxo) ·\r\n[Stack](#-stack) ·\r\n[Estrutura](#-estrutura) ·\r\n[Setup](#-como-rodar) ·\r\n[Melhorias](#-melhorias-sugeridas) ·\r\n[Autor](#-autor)\r\n\r\n---\r\n\r\n## 📌 Sobre\r\n\r\n**Restaurante Saboroso**: site público + painel administrativo. Stack com **Express**, **EJS**, **MySQL** (`tb_menus`, `tb_reservations`, `tb_contacts`, …), **Redis** para sessão do admin, **Formidable** para upload de fotos do cardápio e UI AdminLTE no `/admin`.\r\n\r\n---\r\n\r\n## 📸 Ilustrações\r\n\r\n### Fluxo\r\n\r\n<p align=\"center\">\r\n  <img src=\"docs/images/flow.svg\" alt=\"Fluxo do projeto\" width=\"100%\" style=\"max-width:100%;height:auto;display:block;\" />\r\n</p>\r\n\r\n### Arquitetura\r\n\r\n<p align=\"center\">\r\n  <img src=\"docs/images/architecture.svg\" alt=\"Arquitetura\" width=\"100%\" style=\"max-width:100%;height:auto;display:block;\" />\r\n</p>\r\n\r\n### Destaques\r\n\r\n<p align=\"center\">\r\n  <img src=\"docs/images/features.svg\" alt=\"Destaques\" width=\"100%\" style=\"max-width:100%;height:auto;display:block;\" />\r\n</p>\r\n\r\n### Interface (mock)\r\n\r\n<p align=\"center\">\r\n  <img src=\"docs/images/ui-mock.svg\" alt=\"Mock de interface\" width=\"100%\" style=\"max-width:100%;height:auto;display:block;\" />\r\n</p>\r\n\r\n---\r\n\r\n## ✨ Features\r\n\r\n| # | Capacidade |\r\n|---|------------|\r\n| 1 | Home e cardápio públicos |\r\n| 2 | Reservas e formulário de contato |\r\n| 3 | Admin com dashboard e CRUDs |\r\n| 4 | Sessão Redis |\r\n| 5 | Upload de imagens do menu |\r\n| 6 | Módulos em inc/ (menus, reservations, users…) |\r\n\r\n---\r\n\r\n## 🏗️ Arquitetura / Fluxo\r\n\r\n```mermaid\r\nflowchart TB\r\n    V[Visitante] --> P[routes/index]\r\n    A[Admin] --> AD[routes/admin]\r\n    P --> INC[inc/*]\r\n    AD --> INC\r\n    INC --> DB[(MySQL)]\r\n    AD --> R[(Redis session)]\r\n    AD --> F[Formidable uploads]\r\n```\r\n\r\n\r\n\r\n---\r\n\r\n## 🛠️ Stack\r\n\r\n| Tecnologia | Papel |\r\n|------------|-------|\r\n| Express + EJS | Web app |\r\n| MySQL2 | Banco saboroso |\r\n| Redis + connect-redis | Sessão |\r\n| Formidable | Upload |\r\n| moment | Datas PT-BR |\r\n| AdminLTE | UI admin |\r\n\r\n---\r\n\r\n## 📂 Estrutura\r\n\r\n```text\r\nJavaScriptRestaurantProject/\r\n├── app.js\r\n├── bin/www\r\n├── routes/index.js\r\n├── routes/admin.js\r\n├── inc/            # db, menus, admin…\r\n├── views/\r\n├── public/\r\n└── package.json\r\n```\r\n\r\n---\r\n\r\n## 🚀 Como rodar\r\n\r\n```bash\r\ngit clone https://github.com/CanonEngineer/JavaScriptRestaurantProject.git\r\ncd JavaScriptRestaurantProject\r\nnpm install\r\n# Suba MySQL (database saboroso) e Redis (porta 6379)\r\n# Ajuste credenciais em inc/db.js\r\nnpm start\r\n```\r\n\r\n- Site: `http://localhost:3000`\r\n- Admin: `http://localhost:3000/admin`\r\n\r\n---\r\n\r\n## ▶️ Uso\r\n\r\nExplore menus e envie reserva/contato no site. No admin, faça login, gerencie cardápio, reservas, contatos e usuários.\r\n\r\n---\r\n\r\n## 🌳 Tree of Knowledge\r\n\r\nEste projeto está mapeado na árvore interativa:\r\n\r\n<p>\r\n  <a href=\"https://canonengineer.github.io/TreeofKnowledge/index.html?tree=javascript-restaurant\">\r\n    <img src=\"https://img.shields.io/badge/Abrir_na_Árvore-Tree_of_Knowledge-38bdf8?style=for-the-badge&labelColor=0c2344\" alt=\"Tree of Knowledge\"/>\r\n  </a>\r\n</p>\r\n\r\nHub: [https://canonengineer.github.io/TreeofKnowledge/](https://canonengineer.github.io/TreeofKnowledge/)\r\n\r\n---\r\n\r\n## 📈 Melhorias sugeridas\r\n\r\n1. Variáveis de ambiente para DB/Redis\r\n2. Hash forte de senha de admin\r\n3. Testes das rotas públicas/admin\r\n4. Docker Compose (app + MySQL + Redis)\r\n\r\n---\r\n\r\n## 👨‍💻 Autor\r\n\r\n**Alessandro Canon (CanonEngineer)**  \r\nNetwork Analyst · Developer · Cybersecurity Enthusiast\r\n\r\n- GitHub: [https://github.com/CanonEngineer](https://github.com/CanonEngineer)\r\n- Portfolio: [https://canonengineer.github.io](https://canonengineer.github.io)\r\n- Tree of Knowledge: [https://canonengineer.github.io/TreeofKnowledge/](https://canonengineer.github.io/TreeofKnowledge/)\r\n\r\n---\r\n\r\n<div align=\"center\">\r\n\r\n⭐ Se este projeto te ajudou, deixe uma estrela!\r\n\r\n</div>\r\n",
         "implementation": [
@@ -7960,7 +7960,7 @@ const PROJECTS = [
         "parent": null,
         "layer": "root",
         "title": "JavaScriptUsersProject",
-        "description": "CRUD de usuários com foto em Base64 no localStorage e AdminLTE.",
+        "description": "Cobertura completa: 5 arquivos de código no repositório (8 nós na árvore incluindo pastas).",
         "file": "README.md",
         "code": "<div align=\"center\">\r\n\r\n<p align=\"center\">\r\n  <img src=\"docs/images/banner.svg\" alt=\"JavaScript Users Project\" width=\"100%\" style=\"max-width:100%;height:auto;display:block;\" />\r\n</p>\r\n\r\n# JavaScript Users Project\r\n\r\n### CRUD de usuários no browser com ES6, Model/Controller e localStorage\r\n\r\n<img src=\"https://img.shields.io/badge/JavaScript-ES6-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black\" alt=\"JS\"/>\r\n<img src=\"https://img.shields.io/badge/localStorage-Persistência-a78bfa?style=for-the-badge\" alt=\"localStorage\"/>\r\n<img src=\"https://img.shields.io/badge/MVC-Front--end-38bdf8?style=for-the-badge\" alt=\"MVC\"/>\r\n\r\n</div>\r\n\r\n---\r\n\r\n> **Mobile / UTF-8:** imagens com `width: 100%` (sem scroll horizontal). Arquivo gravado em UTF-8 para acentos corretos em qualquer dispositivo.\r\n\r\n---\r\n\r\n[Sobre](#-sobre) ·\r\n[Ilustrações](#-ilustrações) ·\r\n[Features](#-features) ·\r\n[Arquitetura](#-arquitetura--fluxo) ·\r\n[Stack](#-stack) ·\r\n[Estrutura](#-estrutura) ·\r\n[Setup](#-como-rodar) ·\r\n[Melhorias](#-melhorias-sugeridas) ·\r\n[Autor](#-autor)\r\n\r\n---\r\n\r\n## 📌 Sobre\r\n\r\nProjeto front-end focado em **receber e gerenciar dados de usuários** com JavaScript: validações, interação dinâmica e persistência simples. Organizado em **models**, **controllers** e **classes**, com UI em `index.html` e build em `dist/`.\r\n\r\n---\r\n\r\n## 📸 Ilustrações\r\n\r\n### Fluxo\r\n\r\n<p align=\"center\">\r\n  <img src=\"docs/images/flow.svg\" alt=\"Fluxo do projeto\" width=\"100%\" style=\"max-width:100%;height:auto;display:block;\" />\r\n</p>\r\n\r\n### Arquitetura\r\n\r\n<p align=\"center\">\r\n  <img src=\"docs/images/architecture.svg\" alt=\"Arquitetura\" width=\"100%\" style=\"max-width:100%;height:auto;display:block;\" />\r\n</p>\r\n\r\n### Destaques\r\n\r\n<p align=\"center\">\r\n  <img src=\"docs/images/features.svg\" alt=\"Destaques\" width=\"100%\" style=\"max-width:100%;height:auto;display:block;\" />\r\n</p>\r\n\r\n### Interface (mock)\r\n\r\n<p align=\"center\">\r\n  <img src=\"docs/images/ui-mock.svg\" alt=\"Mock de interface\" width=\"100%\" style=\"max-width:100%;height:auto;display:block;\" />\r\n</p>\r\n\r\n---\r\n\r\n## ✨ Features\r\n\r\n| # | Capacidade |\r\n|---|------------|\r\n| 1 | CRUD completo de usuários no browser |\r\n| 2 | UserController com create/update/select |\r\n| 3 | Model User + helpers |\r\n| 4 | Persistência via localStorage |\r\n| 5 | Painéis create/update separados |\r\n| 6 | Contagem e seleção em tabela |\r\n\r\n---\r\n\r\n## 🏗️ Arquitetura / Fluxo\r\n\r\n```mermaid\r\nflowchart LR\r\n    H[index.html] --> C[UserController]\r\n    C --> M[User model]\r\n    M --> S[(localStorage)]\r\n    C --> T[Tabela DOM]\r\n    C --> F[Forms create/update]\r\n```\r\n\r\n\r\n\r\n---\r\n\r\n## 🛠️ Stack\r\n\r\n| Tecnologia | Papel |\r\n|------------|-------|\r\n| HTML5 | UI |\r\n| JavaScript ES6 | Lógica |\r\n| localStorage | Persistência |\r\n| Bower components | Libs auxiliares |\r\n\r\n---\r\n\r\n## 📂 Estrutura\r\n\r\n```text\r\nJavaScriptUsersProject/\r\n├── index.html\r\n├── classes/\r\n├── controllers/UserController.js\r\n├── models/User.js\r\n├── dist/\r\n└── bower_components/\r\n```\r\n\r\n---\r\n\r\n## 🚀 Como rodar\r\n\r\n```bash\r\ngit clone https://github.com/CanonEngineer/JavaScriptUsersProject.git\r\ncd JavaScriptUsersProject\r\n# abra index.html no navegador\r\n# ou: npx serve .\r\n```\r\n\r\n---\r\n\r\n## ▶️ Uso\r\n\r\nCadastre usuários pelo formulário, edite pelo painel de update, exclua linhas e veja os dados persistirem após recarregar a página.\r\n\r\n---\r\n\r\n## 🌳 Tree of Knowledge\r\n\r\nEste projeto está mapeado na árvore interativa:\r\n\r\n<p>\r\n  <a href=\"https://canonengineer.github.io/TreeofKnowledge/index.html?tree=javascript-users\">\r\n    <img src=\"https://img.shields.io/badge/Abrir_na_Árvore-Tree_of_Knowledge-38bdf8?style=for-the-badge&labelColor=0c2344\" alt=\"Tree of Knowledge\"/>\r\n  </a>\r\n</p>\r\n\r\nHub: [https://canonengineer.github.io/TreeofKnowledge/](https://canonengineer.github.io/TreeofKnowledge/)\r\n\r\n---\r\n\r\n## 📈 Melhorias sugeridas\r\n\r\n1. Validação mais rígida de e-mail/foto\r\n2. Export CSV/JSON\r\n3. Trocar Bower por npm\r\n4. Testes unitários do Controller\r\n\r\n---\r\n\r\n## 👨‍💻 Autor\r\n\r\n**Alessandro Canon (CanonEngineer)**  \r\nNetwork Analyst · Developer · Cybersecurity Enthusiast\r\n\r\n- GitHub: [https://github.com/CanonEngineer](https://github.com/CanonEngineer)\r\n- Portfolio: [https://canonengineer.github.io](https://canonengineer.github.io)\r\n- Tree of Knowledge: [https://canonengineer.github.io/TreeofKnowledge/](https://canonengineer.github.io/TreeofKnowledge/)\r\n\r\n---\r\n\r\n<div align=\"center\">\r\n\r\n⭐ Se este projeto te ajudou, deixe uma estrela!\r\n\r\n</div>\r\n",
         "implementation": [
@@ -8081,7 +8081,7 @@ const PROJECTS = [
         "parent": null,
         "layer": "root",
         "title": "JavaScriptRestfulApiProject",
-        "description": "API REST de usuários com NeDB, consign e express-validator.",
+        "description": "Cobertura completa: 7 arquivos de código no repositório (9 nós na árvore incluindo pastas).",
         "file": "README.md",
         "code": "<div align=\"center\">\r\n\r\n<p align=\"center\">\r\n  <img src=\"docs/images/banner.svg\" alt=\"JavaScript RESTful API Project\" width=\"100%\" style=\"max-width:100%;height:auto;display:block;\" />\r\n</p>\r\n\r\n# JavaScript RESTful API Project\r\n\r\n### API REST de usuários com Express, NeDB e express-validator\r\n\r\n<img src=\"https://img.shields.io/badge/Node.js-339933?style=for-the-badge&logo=nodedotjs&logoColor=white\" alt=\"Node\"/>\r\n<img src=\"https://img.shields.io/badge/Express-000?style=for-the-badge&logo=express&logoColor=white\" alt=\"Express\"/>\r\n<img src=\"https://img.shields.io/badge/NeDB-Embedded_DB-4ade80?style=for-the-badge\" alt=\"NeDB\"/>\r\n<img src=\"https://img.shields.io/badge/REST-API-38bdf8?style=for-the-badge\" alt=\"REST\"/>\r\n\r\n</div>\r\n\r\n---\r\n\r\n> **Mobile / UTF-8:** imagens com `width: 100%` (sem scroll horizontal). Arquivo gravado em UTF-8 para acentos corretos em qualquer dispositivo.\r\n\r\n---\r\n\r\n[Sobre](#-sobre) ·\r\n[Ilustrações](#-ilustrações) ·\r\n[Features](#-features) ·\r\n[Arquitetura](#-arquitetura--fluxo) ·\r\n[Stack](#-stack) ·\r\n[Estrutura](#-estrutura) ·\r\n[Setup](#-como-rodar) ·\r\n[Melhorias](#-melhorias-sugeridas) ·\r\n[Autor](#-autor)\r\n\r\n---\r\n\r\n## 📌 Sobre\r\n\r\nAPI **RESTful** em Node.js para troca segura de informações entre sistemas. CRUD de usuários com **Express**, persistência em **NeDB** (`users.db`), validação com **express-validator**, carregamento via **consign** e utilitários de erro.\r\n\r\n---\r\n\r\n## 📸 Ilustrações\r\n\r\n### Fluxo\r\n\r\n<p align=\"center\">\r\n  <img src=\"docs/images/flow.svg\" alt=\"Fluxo do projeto\" width=\"100%\" style=\"max-width:100%;height:auto;display:block;\" />\r\n</p>\r\n\r\n### Arquitetura\r\n\r\n<p align=\"center\">\r\n  <img src=\"docs/images/architecture.svg\" alt=\"Arquitetura\" width=\"100%\" style=\"max-width:100%;height:auto;display:block;\" />\r\n</p>\r\n\r\n### Destaques\r\n\r\n<p align=\"center\">\r\n  <img src=\"docs/images/features.svg\" alt=\"Destaques\" width=\"100%\" style=\"max-width:100%;height:auto;display:block;\" />\r\n</p>\r\n\r\n### Interface (mock)\r\n\r\n<p align=\"center\">\r\n  <img src=\"docs/images/ui-mock.svg\" alt=\"Mock de interface\" width=\"100%\" style=\"max-width:100%;height:auto;display:block;\" />\r\n</p>\r\n\r\n---\r\n\r\n## ✨ Features\r\n\r\n| # | Capacidade |\r\n|---|------------|\r\n| 1 | GET /users — listar |\r\n| 2 | POST /users — cadastrar |\r\n| 3 | GET /users/:id — detalhar |\r\n| 4 | PUT /users/:id — editar |\r\n| 5 | DELETE /users/:id — excluir |\r\n| 6 | Validação e tratamento de erros |\r\n\r\n---\r\n\r\n## 🏗️ Arquitetura / Fluxo\r\n\r\n```mermaid\r\nflowchart TB\r\n    C[Cliente HTTP] --> I[index.js]\r\n    I --> R[routes/users]\r\n    R --> V[validator]\r\n    R --> DB[(NeDB users.db)]\r\n    R --> E[utils/error]\r\n```\r\n\r\n### Mapa rápido das rotas\r\n\r\n| Método | Rota | Ação |\r\n|--------|------|------|\r\n| GET | `/users` | Lista usuários |\r\n| POST | `/users` | Cria usuário |\r\n| GET | `/users/:id` | Busca por id |\r\n| PUT | `/users/:id` | Atualiza |\r\n| DELETE | `/users/:id` | Remove |\r\n\r\n\r\n---\r\n\r\n## 🛠️ Stack\r\n\r\n| Tecnologia | Papel |\r\n|------------|-------|\r\n| Express | Framework HTTP |\r\n| NeDB | Banco embutido |\r\n| express-validator | Validação |\r\n| consign | Autoload de rotas |\r\n| body-parser | JSON body |\r\n\r\n---\r\n\r\n## 📂 Estrutura\r\n\r\n```text\r\nJavaScriptRestfulApiProject/\r\n├── index.js\r\n├── routes/users.js\r\n├── utils/\r\n├── users.db\r\n└── package.json\r\n```\r\n\r\n---\r\n\r\n## 🚀 Como rodar\r\n\r\n```bash\r\ngit clone https://github.com/CanonEngineer/JavaScriptRestfulApiProject.git\r\ncd JavaScriptRestfulApiProject\r\nnpm install\r\nnode index.js\r\n# ou npm start se configurado\r\n```\r\n\r\n---\r\n\r\n## ▶️ Uso\r\n\r\nExemplos:\r\n\r\n```http\r\nGET /users\r\nPOST /users\r\nContent-Type: application/json\r\n\r\n{ \"name\": \"Canon Oliveira\" }\r\n\r\nGET /users/:id\r\nPUT /users/:id\r\nDELETE /users/:id\r\n```\r\n\r\n---\r\n\r\n## 🌳 Tree of Knowledge\r\n\r\nEste projeto está mapeado na árvore interativa:\r\n\r\n<p>\r\n  <a href=\"https://canonengineer.github.io/TreeofKnowledge/index.html?tree=javascript-restful-api\">\r\n    <img src=\"https://img.shields.io/badge/Abrir_na_Árvore-Tree_of_Knowledge-38bdf8?style=for-the-badge&labelColor=0c2344\" alt=\"Tree of Knowledge\"/>\r\n  </a>\r\n</p>\r\n\r\nHub: [https://canonengineer.github.io/TreeofKnowledge/](https://canonengineer.github.io/TreeofKnowledge/)\r\n\r\n---\r\n\r\n## 📈 Melhorias sugeridas\r\n\r\n1. Script npm start oficial\r\n2. Autenticação JWT\r\n3. Remover node_modules do Git\r\n4. Migrar NeDB → SQLite/Mongo\r\n5. Documentação OpenAPI/Swagger\r\n\r\n---\r\n\r\n## 👨‍💻 Autor\r\n\r\n**Alessandro Canon (CanonEngineer)**  \r\nNetwork Analyst · Developer · Cybersecurity Enthusiast\r\n\r\n- GitHub: [https://github.com/CanonEngineer](https://github.com/CanonEngineer)\r\n- Portfolio: [https://canonengineer.github.io](https://canonengineer.github.io)\r\n- Tree of Knowledge: [https://canonengineer.github.io/TreeofKnowledge/](https://canonengineer.github.io/TreeofKnowledge/)\r\n\r\n---\r\n\r\n<div align=\"center\">\r\n\r\n⭐ Se este projeto te ajudou, deixe uma estrela!\r\n\r\n</div>\r\n",
         "implementation": [
@@ -8208,14 +8208,14 @@ const PROJECTS = [
     "color": "#06b6d4",
     "icon": "scanner",
     "stack": "Node.js + WebSocket + SNMP + AutoTest + Platform + AD Remote Auth",
-    "summary": "Cobertura completa: 106 arquivos de código no repositório (122 nós na árvore incluindo pastas).",
+    "summary": "Cobertura completa: 106 arquivos de código no repositório (123 nós na árvore incluindo pastas).",
     "nodes": [
       {
         "id": "professional-scanner-root",
         "parent": null,
         "layer": "root",
         "title": "Professional-Scanner",
-        "description": "NetScan Canon v2.5.0 — biblioteca permanente de dispositivos, Pastas/ACL fileserver, classificação endurecida (deviceTypeDetect), UI ociosos e sync por varredura.",
+        "description": "Cobertura completa: 106 arquivos de código no repositório (122 nós na árvore incluindo pastas).",
         "file": "README.md",
         "code": "<div align=\"center\">\r\n\r\n# NetScan Canon — Professional-Scanner\r\n\r\n<img src=\"https://img.shields.io/badge/Versão-2.5.0-blue\" />\r\n<img src=\"https://img.shields.io/badge/Node.js-20+-green\" />\r\n<img src=\"https://img.shields.io/badge/Plataforma-Windows-informational\" />\r\n<img src=\"https://img.shields.io/badge/License-MIT-yellow\" />\r\n\r\n**Plataforma profissional de descoberta de rede, diagnóstico, auditoria AD, AutoTest e monitoramento de infraestrutura hospitalar.**\r\n\r\n<br />\r\n\r\n<a href=\"https://github.com/CanonEngineer/Professional-Scanner/blob/main/docs/DOCUMENTATION.md\">\r\n  <img src=\"https://img.shields.io/badge/📖-Visualizar_Documentação-0ea5e9?style=for-the-badge&logo=readthedocs&logoColor=white&labelColor=0c4a6e\" alt=\"Visualizar documentação completa\" />\r\n</a>\r\n&nbsp;\r\n<a href=\"https://raw.githubusercontent.com/CanonEngineer/Professional-Scanner/main/docs/DOCUMENTATION.md\">\r\n  <img src=\"https://img.shields.io/badge/⬇️-Baixar_Documentação-6366f1?style=for-the-badge&logo=github&logoColor=white&labelColor=312e81\" alt=\"Baixar documentação (Markdown raw)\" />\r\n</a>\r\n\r\n<br /><br />\r\n\r\n[Repositório](https://github.com/CanonEngineer/Professional-Scanner) · [Documentação completa](docs/DOCUMENTATION.md) · [Tree of Knowledge — Professional-Scanner](https://canonengineer.github.io/TreeofKnowledge/index.html?tree=professional-scanner) · `http://localhost:3000`\r\n\r\n</div>\r\n\r\n---\r\n\r\n## Documentação\r\n\r\nA **documentação técnica completa** está em [`docs/DOCUMENTATION.md`](docs/DOCUMENTATION.md) e inclui arquitetura, diagramas Mermaid, módulos com explicação de código, API, instalação, exemplos e roadmap.\r\n\r\n| Ação | Link |\r\n|------|------|\r\n| 📖 Visualizar | [Documentação no GitHub](https://github.com/CanonEngineer/Professional-Scanner/blob/main/docs/DOCUMENTATION.md) |\r\n| ⬇️ Baixar | [Arquivo .md raw](https://raw.githubusercontent.com/CanonEngineer/Professional-Scanner/main/docs/DOCUMENTATION.md) |\r\n\r\n---\r\n\r\n## O que é?\r\n\r\nO **NetScan Canon** (Professional-Scanner) é um scanner de rede com interface web pensado para **equipes de TI em ambientes corporativos/hospitalares**. Ele combina:\r\n\r\n- Varredura multi-thread (ping, portas TCP/UDP, detecção de SO)\r\n- Mapa topológico interativo\r\n- Enriquecimento com **Active Directory**, SNMP, impressoras, VMs e VLANs\r\n- **AutoTest de rede** (L2/L3/L4) local ou remoto\r\n- Monitor **urgente de loop** SNMP em switches\r\n- Auditoria **AD** (usuários, computadores, departamentos, grupos, **Pastas/ACL em fileservers**)\r\n- Consulta **Oracle** via SQL\\*Plus\r\n- **Plataforma Canon** (drift, correlação de assets, NAC, CMDB, certificados TLS)\r\n- **Inventário Corporativo UNESP** — merge persistente scan + AD + histórico, com export Excel/PDF/CSV\r\n- **Biblioteca permanente de dispositivos** — categorias (Ativos/Inativos/tipos), busca e sync a cada varredura\r\n\r\nTudo roda em **Node.js + Express** na estação de operação (sala TI), com execução nativa **Windows/PowerShell** para comandos de rede e AD.\r\n\r\n---\r\n\r\n## Screenshots\r\n\r\n| Varredura + tabela | Mapa 3D (`/map`) | Modais Canon |\r\n|--------------------|------------------|--------------|\r\n| Interface principal em tempo real (WebSocket) | Topologia force-graph por subnet/VLAN | AD, Loop, AutoTest, Oracle, Inventário, Plataforma |\r\n\r\n### AutoTest de rede\r\n\r\nInterface do modal **AutoTest** — cards em 3 colunas, banner de engenharia e execução remota estilo Veyon.\r\n\r\n| Resultados L2/L3/L4 | Executando | Agente remoto | Histórico |\r\n|---------------------|------------|---------------|-----------|\r\n| ![AutoTest resultados](docs/images/autotest-results.png) | ![AutoTest executando](docs/images/autotest-running.png) | ![AutoTest remoto](docs/images/autotest-remote.png) | ![AutoTest histórico](docs/images/autotest-history.png) |\r\n\r\n**O que cada tela mostra:**\r\n\r\n| Imagem | Descrição |\r\n|--------|-----------|\r\n| **Resultados** | Grade de passos (OK / AVISO / FALHA), chips da NIC e banner com veredito, nota, métricas e causa provável |\r\n| **Executando** | Banner animado `EXECUTANDO` com spinner, camadas L2/L3/L4 e barra de progresso |\r\n| **Remoto** | Bloco de pareamento Veyon, código e comando PowerShell para instalar o agente na estação |\r\n| **Histórico** | Cards de execuções anteriores com PASS/AVISO/FALHA, nota e IP/gateway |\r\n\r\n> Regenerar imagens: `node scripts/generate-autotest-screenshot-html.mjs && node scripts/capture-autotest-screenshots-chrome.mjs`\r\n\r\n---\r\n\r\n## Início rápido\r\n\r\n### Pré-requisitos\r\n\r\n| Item | Detalhe |\r\n|------|---------|\r\n| **SO** | Windows 10/11 ou Windows Server |\r\n| **Node.js** | 20 ou superior |\r\n| **Rede** | Acesso às subnets que serão varridas |\r\n| **AD** (opcional) | PowerShell com módulo Active Directory |\r\n| **Oracle** (opcional) | SQL\\*Plus + Java (ponte JDBC) |\r\n| **SNMP** (opcional) | Switches com comunidade SNMP para Loop/AutoTest |\r\n\r\n### Instalação\r\n\r\n```powershell\r\ngit clone https://github.com/CanonEngineer/Professional-Scanner.git\r\ncd Professional-Scanner\r\nnpm install\r\nnpm start\r\n```\r\n\r\nAbra no navegador: **http://localhost:3000**\r\n\r\n> Após alterações no frontend, use **Ctrl+F5** para limpar o cache do browser.\r\n\r\n---\r\n\r\n## Módulos principais\r\n\r\n### 1. Varredura de rede\r\n\r\n- Alvo: IP único, intervalo ou CIDR\r\n- Ping sweep, scan TCP (presets ou portas customizadas), UDP opcional\r\n- Detecção de SO (TTL), hostname, MAC, fabricante (OUI)\r\n- Classificação: PC, impressora, câmera, PACS, OT, DMZ\r\n- Exportação **Excel** e **JSON**\r\n- Resultados em tempo real via **WebSocket**\r\n\r\n### 2. Mapa topológico\r\n\r\n- Visualização **3D** (force-graph) por subnet\r\n- Export PNG / SVG / XLSX\r\n- Rota: `/map`\r\n\r\n### 3. Hosts ociosos\r\n\r\n- Histórico persistente de IPs que “sumiram” da rede\r\n- Limiar configurável (minutos/horas/dias)\r\n- **Auditoria global** com chips interativos (ociosos, faixas, histórico, novos)\r\n- **Ativos de novo** — lista persistente de IPs que voltaram a responder; painel **Ver IPs**; saem da lista ao ficarem inativos de novo\r\n- Contagem corrigida `stillInactive` (não confundir com “novos na última varredura”)\r\n- Export Excel de ociosos\r\n- `DELETE /api/host-history` protegido + **backup automático** em `data/backups/` antes de limpar\r\n\r\n### 4. Auditoria Active Directory\r\n\r\nModal dedicado com abas:\r\n\r\n| Aba | Função |\r\n|-----|--------|\r\n| **Usuário** | Lookup por login — grupos, OU, último logon |\r\n| **Computador** | Objeto AD do hostname |\r\n| **Departamento** | Permissões comparadas entre colegas |\r\n| **Grupos** | Quem pertence a um grupo |\r\n| **Saídas** | Usuários desligados/arquivados |\r\n\r\nSincronização AD → índice IP/login para enriquecer hosts na varredura.\r\n\r\n### 5. Monitor de Loop (SNMP)\r\n\r\n- Cadastro de switches (Aruba, Cisco, Intelbras, D-Link, etc.)\r\n- Baseline de contadores + detecção de anomalias\r\n- Alertas em tempo real no dashboard\r\n- Modal de **urgência** com suspeitos e origem provável\r\n- Layout sticky padronizado (v2.3) — sem barra vertical na borda do modal; rolagem interna só na área de conteúdo\r\n\r\n### 6. AutoTest de rede\r\n\r\nTestes em camadas **L2 / L3 / L4** na estação local:\r\n\r\n| Passo | Exemplos |\r\n|-------|----------|\r\n| Interface | NIC, IP, gateway, DHCP, MAC, link speed |\r\n| L2 | VLAN 802.1Q, duplicidade IP |\r\n| L3 | Ping gateway/internet, traceroute, subnet |\r\n| L4 | DNS, TCP (portas), HTTP |\r\n\r\n**Perfis:** Escritório · Datacenter · Wi-Fi · Personalizado\r\n\r\n**Placa:** Automática · Primária · Secundária · Wi-Fi · Específica\r\n\r\n**Saídas:** cards por passo, banner de engenharia (veredito, nota, métricas), export **PDF** e **CSV**, histórico.\r\n\r\nVeja as capturas na seção [Screenshots → AutoTest](#autotest-de-rede).\r\n\r\n#### AutoTest remoto (estilo Veyon)\r\n\r\nExecute o teste **na estação de campo** a partir da sala TI:\r\n\r\n1. **Gerar código de pareamento** (requer login Canon)\r\n2. Na estação remota (PowerShell **como Administrador**, uma vez):\r\n\r\n```powershell\r\n.\\scripts\\install-autotest-agent-service.ps1 -ServerUrl \"http://IP-SERVIDOR:3000\" -PairingCode \"CODIGO\"\r\n```\r\n\r\n3. Na UI: **Atualizar agentes** → selecionar estação **online** → **Executar remoto**\r\n\r\nO agente instala em `C:\\ProgramData\\NetScan\\AutoTestAgent`, sobe com o Windows e usa **chaves + jobs assinados** (modo `veyon`).\r\n\r\n**Login AD remoto (v2.3):** pareamento, listagem de agentes e execução remota usam sessão **AD separada** (`HCFMB\\` / `UNESP\\`), independente do login Canon. A tela de login abre **acima** do modal AutoTest. **Executar remoto** solicita credenciais fresh a cada execução.\r\n\r\n**Segurança (v2.3):** rate limit em rotas sensíveis, snapshot de perfil assinado nos jobs, `stopOnFail` TCP/HTTP, timeouts pending/claimed, revogação de agente e sanitização de alvos de rede.\r\n\r\n### 7. Oracle — lookup de usuários\r\n\r\n- Connect String configurável (TNS ou `host:porta/serviço`; suporte Thick mode / SQL\\*Plus)\r\n- Busca por nome ou `cd_usuario` em `dbasgu.usuarios`\r\n- **Sugestões de login AD** (iniciais, `cd_usuario`, padrões corporativos)\r\n- **Cruzamento AD** opcional: badges **Livre no AD** / **Já existe no AD** por candidato de login\r\n- Modal dedicado na UI (aba Consulta + Configuração)\r\n\r\n### 8. Inventário Corporativo UNESP\r\n\r\nModal dedicado no dashboard — inventário **persistente** que acumula varreduras sem apagar registros automaticamente.\r\n\r\n| Recurso | Detalhe |\r\n|---------|---------|\r\n| **Merge incremental** | Scan + histórico + cache AD + agente Canon |\r\n| **Usuário AD** | Sessão ativa via `query user`, snapshot AD e `managedBy` |\r\n| **Rede** | Portas/serviços (scan + sonda), MAC via **ARP local + SNMP** (gateway/switches), fabricante OUI |\r\n| **Organização** | Domínio, OU, departamento, unidade, VLAN |\r\n| **1ª detecção** | Data/hora da primeira aparição no histórico |\r\n| **Sync** | Manual ou pós-varredura; modo AD-only após reinício; feedback MAC SNMP na barra de status |\r\n| **Status** | **Online** · **Offline** (confirmado inativo) · **Ausente** (não visto no scan, persistente) · **Inacessível** |\r\n| **Duplicidades** | Conflitos MAC/hostname **por sub-rede**; hostnames genéricos ignorados; badge **Nomes repetidos** vs **Conflitos** |\r\n| **UI** | Scroll horizontal da tabela; colunas compactas; **clique para expandir** portas/serviços truncados |\r\n| **Export** | Excel, PDF e CSV (stats incluem Ausente) |\r\n\r\n**MAC via SNMP:** na sincronização, consulta `ipNetToMedia` no **gateway padrão** (detectado via `route print`) e nos **switches** cadastrados no Loop Monitor ou `vlan-map.json`. Complementa o ARP local quando o host está em outra camada L2. Campos: `macSource`, `switchIp`.\r\n\r\n**API:** `/api/inventory/*` · **Core:** `inventory.js`, `switchMacLookup.js` · **UI:** `public/inventory.js`, `inventory.css`\r\n\r\nColunas principais: IP, hostname, usuário AD, nome completo, SO, MAC, fabricante, domínio, OU, departamento, portas abertas, serviços, 1ª detecção.\r\n\r\n### 9. Plataforma Canon\r\n\r\nPainel avançado de **governança e observabilidade de rede** — vai além da varredura de IPs. Abra pelo botão **Plataforma** no dashboard; o modal exibe abas em estilo pill (tema escuro Canon).\r\n\r\n> Não confundir com o scan principal nem com o AutoTest: aqui o foco é **baseline, correlação, segurança, CMDB e integrações** sobre os hosts já descobertos.\r\n\r\n#### Abas do modal\r\n\r\n| Aba | O que faz |\r\n|-----|-----------|\r\n| **Resumo** | Visão geral operacional da plataforma — status, métricas e atalhos |\r\n| **Drift** | Compara a rede **atual** com a **baseline** salva; detecta mudanças (hosts novos, sumidos, alterações) |\r\n| **Correlação** | Cruza **IP, MAC, porta de switch, AD** e demais fontes do host num único contexto |\r\n| **TLS** | Análise de **certificados TLS** (ex.: porta 443) — validade, emissor, alertas de expiração |\r\n| **NAC** | **Prontidão NAC** (Network Access Control) — score e gaps para onboarding 802.1X/NAC |\r\n| **CMDB** | **Ciclo de vida** dos assets (ativo, manutenção, aposentado…) — inventário operacional |\r\n| **Passivo** | **Descoberta passiva** — snapshot ARP/cache e sinais sem varredura ativa agressiva |\r\n| **Agente** | Relatórios do **agente Canon** instalado nas estações (telemetria complementar) |\r\n|\n\n/* … truncado na árvore (arquivo completo no GitHub) … */\n",
         "implementation": [
@@ -8329,13 +8329,26 @@ const PROJECTS = [
         ]
       },
       {
-        "id": "professional-scanner-grp-files-a-1-12",
+        "id": "professional-scanner-grp-files-a",
         "parent": "professional-scanner-root",
         "layer": "module",
-        "title": "Arquivos A (1–12)",
-        "description": "Grupo de arquivos em `./` — Arquivos A (1–12)",
+        "title": "Arquivos A",
+        "description": "Grupo de arquivos em `./` — Arquivos A",
+        "file": "[files-a]",
+        "code": "# Grupo: Arquivos A\n# Pasta: ./\n",
+        "implementation": [
+          "agrupamento para layout 2D/3D",
+          "pasta: ./"
+        ]
+      },
+      {
+        "id": "professional-scanner-grp-files-a-1-12",
+        "parent": "professional-scanner-grp-files-a",
+        "layer": "module",
+        "title": "1–12",
+        "description": "Grupo de arquivos em `./` — 1–12",
         "file": "[files-a-1-12]",
-        "code": "# Grupo: Arquivos A (1–12)\n# Pasta: ./\n",
+        "code": "# Grupo: 1–12\n# Pasta: ./\n",
         "implementation": [
           "agrupamento para layout 2D/3D",
           "pasta: ./"
@@ -8343,12 +8356,12 @@ const PROJECTS = [
       },
       {
         "id": "professional-scanner-grp-files-a-13-13",
-        "parent": "professional-scanner-root",
+        "parent": "professional-scanner-grp-files-a",
         "layer": "module",
-        "title": "Arquivos A (13–13)",
-        "description": "Grupo de arquivos em `./` — Arquivos A (13–13)",
+        "title": "13–13",
+        "description": "Grupo de arquivos em `./` — 13–13",
         "file": "[files-a-13-13]",
-        "code": "# Grupo: Arquivos A (13–13)\n# Pasta: ./\n",
+        "code": "# Grupo: 13–13\n# Pasta: ./\n",
         "implementation": [
           "agrupamento para layout 2D/3D",
           "pasta: ./"
@@ -9807,7 +9820,7 @@ const PROJECTS = [
     ],
     "meta": {
       "sourceFiles": 106,
-      "treeNodes": 122,
+      "treeNodes": 123,
       "complete": true
     }
   },
@@ -9818,14 +9831,14 @@ const PROJECTS = [
     "color": "#ef4444",
     "icon": "cpp",
     "stack": "Qt/C++ Veyon 4.10.4",
-    "summary": "Cobertura completa: 1223 arquivos de código no repositório (1486 nós na árvore incluindo pastas).",
+    "summary": "Cobertura completa: 1223 arquivos de código no repositório (1506 nós na árvore incluindo pastas).",
     "nodes": [
       {
         "id": "customize-veyon-root",
         "parent": null,
         "layer": "root",
         "title": "CustomizeVeyonProject",
-        "description": "Veyon CIMED/HCFMB — UI HiDPI, logs SHA-256 em UNC, anti-tampering, alerta versão incompatível (14/07/2026) e deploy portátil.",
+        "description": "Cobertura completa: 1223 arquivos de código no repositório (1486 nós na árvore incluindo pastas).",
         "file": "README.md",
         "code": "# Veyon - Virtual Eye On Networks\r\n\r\n[![.github/workflows/build.yml](https://github.com/veyon/veyon/actions/workflows/build.yml/badge.svg?branch=4.5)](https://github.com/veyon/veyon/actions/workflows/build.yml)\r\n[![Latest stable release](https://img.shields.io/github/release/veyon/veyon.svg?maxAge=3600)](https://github.com/veyon/veyon/releases)\r\n[![Overall downloads on Github](https://img.shields.io/github/downloads/veyon/veyon/total.svg?maxAge=3600)](https://github.com/veyon/veyon/releases)\r\n[![Documentation Status](https://readthedocs.org/projects/veyon/badge/?version=latest)](https://docs.veyon.io/)\r\n[![Localise on Transifex](https://img.shields.io/badge/localise-on_transifex-green.svg)](https://app.transifex.com/veyon-solutions/veyon/)\r\n[![license](https://img.shields.io/badge/license-GPLv2-green.svg)](LICENSE)\r\n\r\n\r\n## What is Veyon?\r\n\r\nVeyon is a free and open source software for monitoring and controlling\r\ncomputers across multiple platforms. Veyon supports you in teaching in digital\r\nlearning environments, performing virtual trainings or giving remote support.\r\n\r\nThe following features are available in Veyon:\r\n\r\n  * Overview: monitor all computers in one or multiple locations or classrooms\r\n  * Remote access: view or control computers to watch and support users\r\n  * Demo: broadcast the teacher's screen in realtime (fullscreen/window)\r\n  * Screen lock: draw attention to what matters right now\r\n  * Communication: send text messages to students\r\n  * Start and end lessons: log in and log out users all at once\r\n  * Screenshots: record learning progress and document infringements\r\n  * Programs & websites: launch programs and open website URLs remotely\r\n  * Teaching material: distribute and open documents, images and videos easily\r\n  * Administration: power on/off and reboot computers remotely\r\n\r\n\r\n## License\r\n\r\nCopyright (c) 2004-2026 Tobias Junghans / Veyon Solutions.\r\n\r\nSee the file COPYING for the GNU GENERAL PUBLIC LICENSE.\r\n\r\n\r\n## Installation and configuration\r\n\r\nPlease refer to the official Veyon Administrator Manual at https://docs.veyon.io/en/latest/admin/index.html\r\nfor information on the installation and configuration of Veyon.\r\n\r\n\r\n## Usage\r\n\r\nPlease refer to the official Veyon User Manual at https://docs.veyon.io/en/latest/user/index.html\r\nfor information on how to use Veyon.\r\n\r\n\r\n## Veyon on Linux\r\n\r\n### Downloading sources\r\n\r\nFirst grab the latest sources by cloning the Git repository and fetching all submodules:\r\n\r\n\tgit clone --recursive https://github.com/veyon/veyon.git && cd veyon\r\n\r\n\r\n### Installing dependencies\r\n\r\nRequirements for Debian-based distributions:\r\n\r\n- Build tools: g++ libc6-dev make cmake dpkg-dev\r\n- Qt5: qtbase5-dev qtbase5-private-dev qtbase5-dev-tools qttools5-dev qttools5-dev-tools\r\n- X11: xorg-dev libxtst-dev libfakekey-dev\r\n- libjpeg: libjpeg-dev provided by libjpeg-turbo8-dev or libjpeg62-turbo-dev\r\n- zlib: zlib1g-dev\r\n- OpenSSL: libssl-dev\r\n- PAM: libpam0g-dev\r\n- procps: libprocps-dev\r\n- LZO: liblzo2-dev\r\n- QCA: libqca-qt5-2-dev\r\n- LDAP: libldap2-dev\r\n- SASL: libsasl2-dev\r\n\r\nAs root you can run\r\n\r\n\tapt install g++ libc6-dev make cmake qtbase5-dev qtbase5-private-dev \\\r\n\t            qtbase5-dev-tools qttools5-dev qttools5-dev-tools \\\r\n\t            xorg-dev libxtst-dev libfakekey-dev libjpeg-dev zlib1g-dev libssl-dev libpam0g-dev \\\r\n\t            libprocps-dev liblzo2-dev libqca-qt5-2-dev libldap2-dev \\\r\n\t            libsasl2-dev\r\n\r\n\r\n\r\nRequirements for RedHat-based distributions:\r\n\r\n- Build tools: gcc-c++ make cmake rpm-build\r\n- Qt5: qt5-devel qt5-qtbase-private-devel\r\n- X11: libXtst-devel libXrandr-devel libXinerama-devel libXcursor-devel libXrandr-devel libXdamage-devel libXcomposite-devel libXfixes-devel libfakekey-devel\r\n- libjpeg: libjpeg-turbo-devel\r\n- zlib: zlib-devel\r\n- OpenSSL: openssl-devel\r\n- PAM: pam-devel\r\n- procps: procps-devel\r\n- LZO: lzo-devel\r\n- QCA: qca-devel qca-qt5-devel\r\n- LDAP: openldap-devel\r\n- SASL: cyrus-sasl-devel\r\n\r\nAs root you can run\r\n\r\n\tdnf install gcc-c++ make cmake rpm-build qt5-devel libXtst-devel libXrandr-devel libXinerama-devel libXcursor-devel \\\r\n             libXrandr-devel libXdamage-devel libXcomposite-devel libXfixes-devel libjpeg-turbo-devel zlib-devel \\\r\n             openssl-devel pam-devel procps-devel lzo-devel qca-devel qca-qt5-devel openldap-devel cyrus-sasl-devel\r\n\r\n\r\n### Configuring and building sources\r\n\r\nRun the following commands:\r\n\r\n\tmkdir build\r\n\tcd build\r\n\tcmake ..\r\n\tmake -j4\r\n\r\nNOTE: If you want to build a .deb or .rpm package for this software, instead of the provided cmake command, you should use:\r\n\r\n\tcmake -DCMAKE_INSTALL_PREFIX=/usr ..\r\n\r\nto install package files in /usr instead of /usr/local.\r\n\r\nIf some requirements are not fullfilled, CMake will inform you about it and\r\nyou will have to install the missing software before continuing.\r\n\r\nYou can now generate a package (.deb or .rpm depending what system you are in).\r\n\r\nFor generating a package you can run\r\n\r\n\tfakeroot make package\r\n\r\nThen you'll get something like veyon_x.y.z_arch.deb or veyon-x.y.z.arch.rpm\r\n\r\nAlternatively you can install the built binaries directly (not recommended for\r\nproduction systems) by running the following command as root:\r\n\r\n\tmake install\r\n\r\n### Arch linux\r\n\r\nA PKGBUILD can be found in the [AUR](https://aur.archlinux.org/packages/veyon/).\r\n\r\n### PPA\r\n\r\nThis PPA contains official Veyon packages for Ubuntu suitable for use both on desktop computers and ARM boards (e.g. Raspberry Pi). Even though only packages for LTS releases are available they should work for subsequent non-LTS releases as well.\r\n\r\n\tsudo add-apt-repository ppa:veyon/stable\r\n\tsudo apt-get update\r\n\r\n## Join development\r\n\r\nIf you are interested in Veyon, its programming, artwork, testing or something like that, you're welcome to participate in the development of Veyon!\r\n\r\nBefore starting the implementation of a new feature, please always open an issue at https://github.com/veyon/veyon/issues to start a discussion about your intended implementation. There may be different ideas, improvements, hints or maybe an already ongoing work on this feature.\r\n\r\n## Join translation team\r\n\r\nVeyon and its documentation are translated at the Transifex platform. Please go to https://app.transifex.com/veyon-solutions/veyon and join the corresponding translation team. Please DO NOT submit pull requests for modified translation files since this would require manual Transifex synchronizations on our side.\r\n\r\n## More information\r\n\r\n* https://veyon.io/\r\n* https://docs.veyon.io/\r\n",
         "implementation": [
@@ -9836,7 +9849,7 @@ const PROJECTS = [
       },
       {
         "id": "customize-veyon-dir-ci",
-        "parent": "customize-veyon-root",
+        "parent": "customize-veyon-grp-root-bucket-c-d-m-p",
         "layer": "module",
         "title": ".ci/",
         "description": "Pacote/pasta `.ci/` do projeto.",
@@ -9849,7 +9862,7 @@ const PROJECTS = [
       },
       {
         "id": "customize-veyon-dir-github",
-        "parent": "customize-veyon-root",
+        "parent": "customize-veyon-grp-root-bucket-c-d-m-p",
         "layer": "module",
         "title": ".github/",
         "description": "Pacote/pasta `.github/` do projeto.",
@@ -9862,7 +9875,7 @@ const PROJECTS = [
       },
       {
         "id": "customize-veyon-dir-3rdparty",
-        "parent": "customize-veyon-root",
+        "parent": "customize-veyon-grp-root-bucket-c-d-m-p",
         "layer": "module",
         "title": "3rdparty/",
         "description": "Pacote/pasta `3rdparty/` do projeto.",
@@ -9875,7 +9888,7 @@ const PROJECTS = [
       },
       {
         "id": "customize-veyon-dir-cli",
-        "parent": "customize-veyon-root",
+        "parent": "customize-veyon-grp-root-bucket-c-d-m-p",
         "layer": "module",
         "title": "cli/",
         "description": "Pacote/pasta `cli/` do projeto.",
@@ -9888,7 +9901,7 @@ const PROJECTS = [
       },
       {
         "id": "customize-veyon-dir-configurator",
-        "parent": "customize-veyon-root",
+        "parent": "customize-veyon-grp-root-bucket-c-d-m-p",
         "layer": "module",
         "title": "configurator/",
         "description": "Pacote/pasta `configurator/` do projeto.",
@@ -9901,7 +9914,7 @@ const PROJECTS = [
       },
       {
         "id": "customize-veyon-dir-core",
-        "parent": "customize-veyon-root",
+        "parent": "customize-veyon-grp-root-bucket-c-d-m-p",
         "layer": "module",
         "title": "core/",
         "description": "Pacote/pasta `core/` do projeto.",
@@ -9914,7 +9927,7 @@ const PROJECTS = [
       },
       {
         "id": "customize-veyon-dir-master",
-        "parent": "customize-veyon-root",
+        "parent": "customize-veyon-grp-root-bucket-c-d-m-p",
         "layer": "module",
         "title": "master/",
         "description": "Pacote/pasta `master/` do projeto.",
@@ -9927,7 +9940,7 @@ const PROJECTS = [
       },
       {
         "id": "customize-veyon-dir-plugins",
-        "parent": "customize-veyon-root",
+        "parent": "customize-veyon-grp-root-bucket-c-d-m-p",
         "layer": "module",
         "title": "plugins/",
         "description": "Pacote/pasta `plugins/` do projeto.",
@@ -9940,7 +9953,7 @@ const PROJECTS = [
       },
       {
         "id": "customize-veyon-dir-server",
-        "parent": "customize-veyon-root",
+        "parent": "customize-veyon-grp-root-bucket-s-t-w",
         "layer": "module",
         "title": "server/",
         "description": "Pacote/pasta `server/` do projeto.",
@@ -9953,7 +9966,7 @@ const PROJECTS = [
       },
       {
         "id": "customize-veyon-dir-service",
-        "parent": "customize-veyon-root",
+        "parent": "customize-veyon-grp-root-bucket-s-t-w",
         "layer": "module",
         "title": "service/",
         "description": "Pacote/pasta `service/` do projeto.",
@@ -9966,7 +9979,7 @@ const PROJECTS = [
       },
       {
         "id": "customize-veyon-dir-tests",
-        "parent": "customize-veyon-root",
+        "parent": "customize-veyon-grp-root-bucket-s-t-w",
         "layer": "module",
         "title": "tests/",
         "description": "Pacote/pasta `tests/` do projeto.",
@@ -9979,7 +9992,7 @@ const PROJECTS = [
       },
       {
         "id": "customize-veyon-dir-worker",
-        "parent": "customize-veyon-root",
+        "parent": "customize-veyon-grp-root-bucket-s-t-w",
         "layer": "module",
         "title": "worker/",
         "description": "Pacote/pasta `worker/` do projeto.",
@@ -11890,7 +11903,7 @@ const PROJECTS = [
       },
       {
         "id": "customize-veyon-file-gitignore",
-        "parent": "customize-veyon-root",
+        "parent": "customize-veyon-grp-root-bucket-c-d-m-p",
         "layer": "file",
         "title": ".gitignore",
         "description": "Código-fonte: `.gitignore`",
@@ -11903,7 +11916,7 @@ const PROJECTS = [
       },
       {
         "id": "customize-veyon-file-code-of-conduct-md",
-        "parent": "customize-veyon-root",
+        "parent": "customize-veyon-grp-root-bucket-c-d-m-p",
         "layer": "file",
         "title": "CODE_OF_CONDUCT.md",
         "description": "Código-fonte: `CODE_OF_CONDUCT.md`",
@@ -11916,7 +11929,7 @@ const PROJECTS = [
       },
       {
         "id": "customize-veyon-file-debug-tray-hover-icons-md",
-        "parent": "customize-veyon-root",
+        "parent": "customize-veyon-grp-root-bucket-c-d-m-p",
         "layer": "file",
         "title": "debug-tray-hover-icons.md",
         "description": "Código-fonte: `debug-tray-hover-icons.md`",
@@ -11929,7 +11942,7 @@ const PROJECTS = [
       },
       {
         "id": "customize-veyon-file-debug-tray-icon-hover-issue-md",
-        "parent": "customize-veyon-root",
+        "parent": "customize-veyon-grp-root-bucket-c-d-m-p",
         "layer": "file",
         "title": "debug-tray-icon-hover-issue.md",
         "description": "Código-fonte: `debug-tray-icon-hover-issue.md`",
@@ -11942,7 +11955,7 @@ const PROJECTS = [
       },
       {
         "id": "customize-veyon-file-debug-tray-icon-state-md",
-        "parent": "customize-veyon-root",
+        "parent": "customize-veyon-grp-root-bucket-c-d-m-p",
         "layer": "file",
         "title": "debug-tray-icon-state.md",
         "description": "Código-fonte: `debug-tray-icon-state.md`",
@@ -11955,7 +11968,7 @@ const PROJECTS = [
       },
       {
         "id": "customize-veyon-file-project-yml",
-        "parent": "customize-veyon-root",
+        "parent": "customize-veyon-grp-root-bucket-c-d-m-p",
         "layer": "file",
         "title": "project.yml",
         "description": "Código-fonte: `project.yml`",
@@ -11968,7 +11981,7 @@ const PROJECTS = [
       },
       {
         "id": "customize-veyon-file-security-md",
-        "parent": "customize-veyon-root",
+        "parent": "customize-veyon-grp-root-bucket-s-t-w",
         "layer": "file",
         "title": "SECURITY.md",
         "description": "Código-fonte: `SECURITY.md`",
@@ -12747,13 +12760,26 @@ const PROJECTS = [
         ]
       },
       {
-        "id": "customize-veyon-grp-3rdparty-kldap-qt5-src-core-files-l-1-12",
+        "id": "customize-veyon-grp-3rdparty-kldap-qt5-src-core-files-l",
         "parent": "customize-veyon-dir-3rdparty-kldap-qt5-src-core",
         "layer": "module",
-        "title": "Arquivos L (1–12)",
-        "description": "Grupo de arquivos em `3rdparty/kldap-qt5/src/core/` — Arquivos L (1–12)",
+        "title": "Arquivos L",
+        "description": "Grupo de arquivos em `3rdparty/kldap-qt5/src/core/` — Arquivos L",
+        "file": "3rdparty/kldap-qt5/src/core/[files-l]",
+        "code": "# Grupo: Arquivos L\n# Pasta: 3rdparty/kldap-qt5/src/core/\n",
+        "implementation": [
+          "agrupamento para layout 2D/3D",
+          "pasta: 3rdparty/kldap-qt5/src/core/"
+        ]
+      },
+      {
+        "id": "customize-veyon-grp-3rdparty-kldap-qt5-src-core-files-l-1-12",
+        "parent": "customize-veyon-grp-3rdparty-kldap-qt5-src-core-files-l",
+        "layer": "module",
+        "title": "1–12",
+        "description": "Grupo de arquivos em `3rdparty/kldap-qt5/src/core/` — 1–12",
         "file": "3rdparty/kldap-qt5/src/core/[files-l-1-12]",
-        "code": "# Grupo: Arquivos L (1–12)\n# Pasta: 3rdparty/kldap-qt5/src/core/\n",
+        "code": "# Grupo: 1–12\n# Pasta: 3rdparty/kldap-qt5/src/core/\n",
         "implementation": [
           "agrupamento para layout 2D/3D",
           "pasta: 3rdparty/kldap-qt5/src/core/"
@@ -12761,12 +12787,12 @@ const PROJECTS = [
       },
       {
         "id": "customize-veyon-grp-3rdparty-kldap-qt5-src-core-files-l-13-19",
-        "parent": "customize-veyon-dir-3rdparty-kldap-qt5-src-core",
+        "parent": "customize-veyon-grp-3rdparty-kldap-qt5-src-core-files-l",
         "layer": "module",
-        "title": "Arquivos L (13–19)",
-        "description": "Grupo de arquivos em `3rdparty/kldap-qt5/src/core/` — Arquivos L (13–19)",
+        "title": "13–19",
+        "description": "Grupo de arquivos em `3rdparty/kldap-qt5/src/core/` — 13–19",
         "file": "3rdparty/kldap-qt5/src/core/[files-l-13-19]",
-        "code": "# Grupo: Arquivos L (13–19)\n# Pasta: 3rdparty/kldap-qt5/src/core/\n",
+        "code": "# Grupo: 13–19\n# Pasta: 3rdparty/kldap-qt5/src/core/\n",
         "implementation": [
           "agrupamento para layout 2D/3D",
           "pasta: 3rdparty/kldap-qt5/src/core/"
@@ -13111,13 +13137,26 @@ const PROJECTS = [
         ]
       },
       {
-        "id": "customize-veyon-grp-3rdparty-kldap-qt5-src-widgets-files-l-1-12",
+        "id": "customize-veyon-grp-3rdparty-kldap-qt5-src-widgets-files-l",
         "parent": "customize-veyon-dir-3rdparty-kldap-qt5-src-widgets",
         "layer": "module",
-        "title": "Arquivos L (1–12)",
-        "description": "Grupo de arquivos em `3rdparty/kldap-qt5/src/widgets/` — Arquivos L (1–12)",
+        "title": "Arquivos L",
+        "description": "Grupo de arquivos em `3rdparty/kldap-qt5/src/widgets/` — Arquivos L",
+        "file": "3rdparty/kldap-qt5/src/widgets/[files-l]",
+        "code": "# Grupo: Arquivos L\n# Pasta: 3rdparty/kldap-qt5/src/widgets/\n",
+        "implementation": [
+          "agrupamento para layout 2D/3D",
+          "pasta: 3rdparty/kldap-qt5/src/widgets/"
+        ]
+      },
+      {
+        "id": "customize-veyon-grp-3rdparty-kldap-qt5-src-widgets-files-l-1-12",
+        "parent": "customize-veyon-grp-3rdparty-kldap-qt5-src-widgets-files-l",
+        "layer": "module",
+        "title": "1–12",
+        "description": "Grupo de arquivos em `3rdparty/kldap-qt5/src/widgets/` — 1–12",
         "file": "3rdparty/kldap-qt5/src/widgets/[files-l-1-12]",
-        "code": "# Grupo: Arquivos L (1–12)\n# Pasta: 3rdparty/kldap-qt5/src/widgets/\n",
+        "code": "# Grupo: 1–12\n# Pasta: 3rdparty/kldap-qt5/src/widgets/\n",
         "implementation": [
           "agrupamento para layout 2D/3D",
           "pasta: 3rdparty/kldap-qt5/src/widgets/"
@@ -13125,12 +13164,12 @@ const PROJECTS = [
       },
       {
         "id": "customize-veyon-grp-3rdparty-kldap-qt5-src-widgets-files-l-13-20",
-        "parent": "customize-veyon-dir-3rdparty-kldap-qt5-src-widgets",
+        "parent": "customize-veyon-grp-3rdparty-kldap-qt5-src-widgets-files-l",
         "layer": "module",
-        "title": "Arquivos L (13–20)",
-        "description": "Grupo de arquivos em `3rdparty/kldap-qt5/src/widgets/` — Arquivos L (13–20)",
+        "title": "13–20",
+        "description": "Grupo de arquivos em `3rdparty/kldap-qt5/src/widgets/` — 13–20",
         "file": "3rdparty/kldap-qt5/src/widgets/[files-l-13-20]",
-        "code": "# Grupo: Arquivos L (13–20)\n# Pasta: 3rdparty/kldap-qt5/src/widgets/\n",
+        "code": "# Grupo: 13–20\n# Pasta: 3rdparty/kldap-qt5/src/widgets/\n",
         "implementation": [
           "agrupamento para layout 2D/3D",
           "pasta: 3rdparty/kldap-qt5/src/widgets/"
@@ -13501,13 +13540,26 @@ const PROJECTS = [
         ]
       },
       {
-        "id": "customize-veyon-grp-3rdparty-kldap-src-core-files-l-1-12",
+        "id": "customize-veyon-grp-3rdparty-kldap-src-core-files-l",
         "parent": "customize-veyon-dir-3rdparty-kldap-src-core",
         "layer": "module",
-        "title": "Arquivos L (1–12)",
-        "description": "Grupo de arquivos em `3rdparty/kldap/src/core/` — Arquivos L (1–12)",
+        "title": "Arquivos L",
+        "description": "Grupo de arquivos em `3rdparty/kldap/src/core/` — Arquivos L",
+        "file": "3rdparty/kldap/src/core/[files-l]",
+        "code": "# Grupo: Arquivos L\n# Pasta: 3rdparty/kldap/src/core/\n",
+        "implementation": [
+          "agrupamento para layout 2D/3D",
+          "pasta: 3rdparty/kldap/src/core/"
+        ]
+      },
+      {
+        "id": "customize-veyon-grp-3rdparty-kldap-src-core-files-l-1-12",
+        "parent": "customize-veyon-grp-3rdparty-kldap-src-core-files-l",
+        "layer": "module",
+        "title": "1–12",
+        "description": "Grupo de arquivos em `3rdparty/kldap/src/core/` — 1–12",
         "file": "3rdparty/kldap/src/core/[files-l-1-12]",
-        "code": "# Grupo: Arquivos L (1–12)\n# Pasta: 3rdparty/kldap/src/core/\n",
+        "code": "# Grupo: 1–12\n# Pasta: 3rdparty/kldap/src/core/\n",
         "implementation": [
           "agrupamento para layout 2D/3D",
           "pasta: 3rdparty/kldap/src/core/"
@@ -13515,12 +13567,12 @@ const PROJECTS = [
       },
       {
         "id": "customize-veyon-grp-3rdparty-kldap-src-core-files-l-13-24",
-        "parent": "customize-veyon-dir-3rdparty-kldap-src-core",
+        "parent": "customize-veyon-grp-3rdparty-kldap-src-core-files-l",
         "layer": "module",
-        "title": "Arquivos L (13–24)",
-        "description": "Grupo de arquivos em `3rdparty/kldap/src/core/` — Arquivos L (13–24)",
+        "title": "13–24",
+        "description": "Grupo de arquivos em `3rdparty/kldap/src/core/` — 13–24",
         "file": "3rdparty/kldap/src/core/[files-l-13-24]",
-        "code": "# Grupo: Arquivos L (13–24)\n# Pasta: 3rdparty/kldap/src/core/\n",
+        "code": "# Grupo: 13–24\n# Pasta: 3rdparty/kldap/src/core/\n",
         "implementation": [
           "agrupamento para layout 2D/3D",
           "pasta: 3rdparty/kldap/src/core/"
@@ -13528,12 +13580,12 @@ const PROJECTS = [
       },
       {
         "id": "customize-veyon-grp-3rdparty-kldap-src-core-files-l-25-36",
-        "parent": "customize-veyon-dir-3rdparty-kldap-src-core",
+        "parent": "customize-veyon-grp-3rdparty-kldap-src-core-files-l",
         "layer": "module",
-        "title": "Arquivos L (25–36)",
-        "description": "Grupo de arquivos em `3rdparty/kldap/src/core/` — Arquivos L (25–36)",
+        "title": "25–36",
+        "description": "Grupo de arquivos em `3rdparty/kldap/src/core/` — 25–36",
         "file": "3rdparty/kldap/src/core/[files-l-25-36]",
-        "code": "# Grupo: Arquivos L (25–36)\n# Pasta: 3rdparty/kldap/src/core/\n",
+        "code": "# Grupo: 25–36\n# Pasta: 3rdparty/kldap/src/core/\n",
         "implementation": [
           "agrupamento para layout 2D/3D",
           "pasta: 3rdparty/kldap/src/core/"
@@ -13541,12 +13593,12 @@ const PROJECTS = [
       },
       {
         "id": "customize-veyon-grp-3rdparty-kldap-src-core-files-l-37-37",
-        "parent": "customize-veyon-dir-3rdparty-kldap-src-core",
+        "parent": "customize-veyon-grp-3rdparty-kldap-src-core-files-l",
         "layer": "module",
-        "title": "Arquivos L (37–37)",
-        "description": "Grupo de arquivos em `3rdparty/kldap/src/core/` — Arquivos L (37–37)",
+        "title": "37–37",
+        "description": "Grupo de arquivos em `3rdparty/kldap/src/core/` — 37–37",
         "file": "3rdparty/kldap/src/core/[files-l-37-37]",
-        "code": "# Grupo: Arquivos L (37–37)\n# Pasta: 3rdparty/kldap/src/core/\n",
+        "code": "# Grupo: 37–37\n# Pasta: 3rdparty/kldap/src/core/\n",
         "implementation": [
           "agrupamento para layout 2D/3D",
           "pasta: 3rdparty/kldap/src/core/"
@@ -16335,13 +16387,26 @@ const PROJECTS = [
         ]
       },
       {
-        "id": "customize-veyon-grp-3rdparty-qthttpserver-src-httpserver-files-q-1-12",
+        "id": "customize-veyon-grp-3rdparty-qthttpserver-src-httpserver-files-q",
         "parent": "customize-veyon-dir-3rdparty-qthttpserver-src-httpserver",
         "layer": "module",
-        "title": "Arquivos Q (1–12)",
-        "description": "Grupo de arquivos em `3rdparty/qthttpserver/src/httpserver/` — Arquivos Q (1–12)",
+        "title": "Arquivos Q",
+        "description": "Grupo de arquivos em `3rdparty/qthttpserver/src/httpserver/` — Arquivos Q",
+        "file": "3rdparty/qthttpserver/src/httpserver/[files-q]",
+        "code": "# Grupo: Arquivos Q\n# Pasta: 3rdparty/qthttpserver/src/httpserver/\n",
+        "implementation": [
+          "agrupamento para layout 2D/3D",
+          "pasta: 3rdparty/qthttpserver/src/httpserver/"
+        ]
+      },
+      {
+        "id": "customize-veyon-grp-3rdparty-qthttpserver-src-httpserver-files-q-1-12",
+        "parent": "customize-veyon-grp-3rdparty-qthttpserver-src-httpserver-files-q",
+        "layer": "module",
+        "title": "1–12",
+        "description": "Grupo de arquivos em `3rdparty/qthttpserver/src/httpserver/` — 1–12",
         "file": "3rdparty/qthttpserver/src/httpserver/[files-q-1-12]",
-        "code": "# Grupo: Arquivos Q (1–12)\n# Pasta: 3rdparty/qthttpserver/src/httpserver/\n",
+        "code": "# Grupo: 1–12\n# Pasta: 3rdparty/qthttpserver/src/httpserver/\n",
         "implementation": [
           "agrupamento para layout 2D/3D",
           "pasta: 3rdparty/qthttpserver/src/httpserver/"
@@ -16349,12 +16414,12 @@ const PROJECTS = [
       },
       {
         "id": "customize-veyon-grp-3rdparty-qthttpserver-src-httpserver-files-q-13-24",
-        "parent": "customize-veyon-dir-3rdparty-qthttpserver-src-httpserver",
+        "parent": "customize-veyon-grp-3rdparty-qthttpserver-src-httpserver-files-q",
         "layer": "module",
-        "title": "Arquivos Q (13–24)",
-        "description": "Grupo de arquivos em `3rdparty/qthttpserver/src/httpserver/` — Arquivos Q (13–24)",
+        "title": "13–24",
+        "description": "Grupo de arquivos em `3rdparty/qthttpserver/src/httpserver/` — 13–24",
         "file": "3rdparty/qthttpserver/src/httpserver/[files-q-13-24]",
-        "code": "# Grupo: Arquivos Q (13–24)\n# Pasta: 3rdparty/qthttpserver/src/httpserver/\n",
+        "code": "# Grupo: 13–24\n# Pasta: 3rdparty/qthttpserver/src/httpserver/\n",
         "implementation": [
           "agrupamento para layout 2D/3D",
           "pasta: 3rdparty/qthttpserver/src/httpserver/"
@@ -16362,12 +16427,12 @@ const PROJECTS = [
       },
       {
         "id": "customize-veyon-grp-3rdparty-qthttpserver-src-httpserver-files-q-25-29",
-        "parent": "customize-veyon-dir-3rdparty-qthttpserver-src-httpserver",
+        "parent": "customize-veyon-grp-3rdparty-qthttpserver-src-httpserver-files-q",
         "layer": "module",
-        "title": "Arquivos Q (25–29)",
-        "description": "Grupo de arquivos em `3rdparty/qthttpserver/src/httpserver/` — Arquivos Q (25–29)",
+        "title": "25–29",
+        "description": "Grupo de arquivos em `3rdparty/qthttpserver/src/httpserver/` — 25–29",
         "file": "3rdparty/qthttpserver/src/httpserver/[files-q-25-29]",
-        "code": "# Grupo: Arquivos Q (25–29)\n# Pasta: 3rdparty/qthttpserver/src/httpserver/\n",
+        "code": "# Grupo: 25–29\n# Pasta: 3rdparty/qthttpserver/src/httpserver/\n",
         "implementation": [
           "agrupamento para layout 2D/3D",
           "pasta: 3rdparty/qthttpserver/src/httpserver/"
@@ -18246,13 +18311,26 @@ const PROJECTS = [
         ]
       },
       {
-        "id": "customize-veyon-grp-3rdparty-ultravnc-winvnc-winvnc-files-v-1-12",
+        "id": "customize-veyon-grp-3rdparty-ultravnc-winvnc-winvnc-files-v",
         "parent": "customize-veyon-dir-3rdparty-ultravnc-winvnc-winvnc",
         "layer": "module",
-        "title": "Arquivos V (1–12)",
-        "description": "Grupo de arquivos em `3rdparty/ultravnc/winvnc/winvnc/` — Arquivos V (1–12)",
+        "title": "Arquivos V",
+        "description": "Grupo de arquivos em `3rdparty/ultravnc/winvnc/winvnc/` — Arquivos V",
+        "file": "3rdparty/ultravnc/winvnc/winvnc/[files-v]",
+        "code": "# Grupo: Arquivos V\n# Pasta: 3rdparty/ultravnc/winvnc/winvnc/\n",
+        "implementation": [
+          "agrupamento para layout 2D/3D",
+          "pasta: 3rdparty/ultravnc/winvnc/winvnc/"
+        ]
+      },
+      {
+        "id": "customize-veyon-grp-3rdparty-ultravnc-winvnc-winvnc-files-v-1-12",
+        "parent": "customize-veyon-grp-3rdparty-ultravnc-winvnc-winvnc-files-v",
+        "layer": "module",
+        "title": "1–12",
+        "description": "Grupo de arquivos em `3rdparty/ultravnc/winvnc/winvnc/` — 1–12",
         "file": "3rdparty/ultravnc/winvnc/winvnc/[files-v-1-12]",
-        "code": "# Grupo: Arquivos V (1–12)\n# Pasta: 3rdparty/ultravnc/winvnc/winvnc/\n",
+        "code": "# Grupo: 1–12\n# Pasta: 3rdparty/ultravnc/winvnc/winvnc/\n",
         "implementation": [
           "agrupamento para layout 2D/3D",
           "pasta: 3rdparty/ultravnc/winvnc/winvnc/"
@@ -18260,12 +18338,12 @@ const PROJECTS = [
       },
       {
         "id": "customize-veyon-grp-3rdparty-ultravnc-winvnc-winvnc-files-v-13-24",
-        "parent": "customize-veyon-dir-3rdparty-ultravnc-winvnc-winvnc",
+        "parent": "customize-veyon-grp-3rdparty-ultravnc-winvnc-winvnc-files-v",
         "layer": "module",
-        "title": "Arquivos V (13–24)",
-        "description": "Grupo de arquivos em `3rdparty/ultravnc/winvnc/winvnc/` — Arquivos V (13–24)",
+        "title": "13–24",
+        "description": "Grupo de arquivos em `3rdparty/ultravnc/winvnc/winvnc/` — 13–24",
         "file": "3rdparty/ultravnc/winvnc/winvnc/[files-v-13-24]",
-        "code": "# Grupo: Arquivos V (13–24)\n# Pasta: 3rdparty/ultravnc/winvnc/winvnc/\n",
+        "code": "# Grupo: 13–24\n# Pasta: 3rdparty/ultravnc/winvnc/winvnc/\n",
         "implementation": [
           "agrupamento para layout 2D/3D",
           "pasta: 3rdparty/ultravnc/winvnc/winvnc/"
@@ -18273,12 +18351,12 @@ const PROJECTS = [
       },
       {
         "id": "customize-veyon-grp-3rdparty-ultravnc-winvnc-winvnc-files-v-25-36",
-        "parent": "customize-veyon-dir-3rdparty-ultravnc-winvnc-winvnc",
+        "parent": "customize-veyon-grp-3rdparty-ultravnc-winvnc-winvnc-files-v",
         "layer": "module",
-        "title": "Arquivos V (25–36)",
-        "description": "Grupo de arquivos em `3rdparty/ultravnc/winvnc/winvnc/` — Arquivos V (25–36)",
+        "title": "25–36",
+        "description": "Grupo de arquivos em `3rdparty/ultravnc/winvnc/winvnc/` — 25–36",
         "file": "3rdparty/ultravnc/winvnc/winvnc/[files-v-25-36]",
-        "code": "# Grupo: Arquivos V (25–36)\n# Pasta: 3rdparty/ultravnc/winvnc/winvnc/\n",
+        "code": "# Grupo: 25–36\n# Pasta: 3rdparty/ultravnc/winvnc/winvnc/\n",
         "implementation": [
           "agrupamento para layout 2D/3D",
           "pasta: 3rdparty/ultravnc/winvnc/winvnc/"
@@ -18286,12 +18364,12 @@ const PROJECTS = [
       },
       {
         "id": "customize-veyon-grp-3rdparty-ultravnc-winvnc-winvnc-files-v-37-48",
-        "parent": "customize-veyon-dir-3rdparty-ultravnc-winvnc-winvnc",
+        "parent": "customize-veyon-grp-3rdparty-ultravnc-winvnc-winvnc-files-v",
         "layer": "module",
-        "title": "Arquivos V (37–48)",
-        "description": "Grupo de arquivos em `3rdparty/ultravnc/winvnc/winvnc/` — Arquivos V (37–48)",
+        "title": "37–48",
+        "description": "Grupo de arquivos em `3rdparty/ultravnc/winvnc/winvnc/` — 37–48",
         "file": "3rdparty/ultravnc/winvnc/winvnc/[files-v-37-48]",
-        "code": "# Grupo: Arquivos V (37–48)\n# Pasta: 3rdparty/ultravnc/winvnc/winvnc/\n",
+        "code": "# Grupo: 37–48\n# Pasta: 3rdparty/ultravnc/winvnc/winvnc/\n",
         "implementation": [
           "agrupamento para layout 2D/3D",
           "pasta: 3rdparty/ultravnc/winvnc/winvnc/"
@@ -18299,12 +18377,12 @@ const PROJECTS = [
       },
       {
         "id": "customize-veyon-grp-3rdparty-ultravnc-winvnc-winvnc-files-v-49-60",
-        "parent": "customize-veyon-dir-3rdparty-ultravnc-winvnc-winvnc",
+        "parent": "customize-veyon-grp-3rdparty-ultravnc-winvnc-winvnc-files-v",
         "layer": "module",
-        "title": "Arquivos V (49–60)",
-        "description": "Grupo de arquivos em `3rdparty/ultravnc/winvnc/winvnc/` — Arquivos V (49–60)",
+        "title": "49–60",
+        "description": "Grupo de arquivos em `3rdparty/ultravnc/winvnc/winvnc/` — 49–60",
         "file": "3rdparty/ultravnc/winvnc/winvnc/[files-v-49-60]",
-        "code": "# Grupo: Arquivos V (49–60)\n# Pasta: 3rdparty/ultravnc/winvnc/winvnc/\n",
+        "code": "# Grupo: 49–60\n# Pasta: 3rdparty/ultravnc/winvnc/winvnc/\n",
         "implementation": [
           "agrupamento para layout 2D/3D",
           "pasta: 3rdparty/ultravnc/winvnc/winvnc/"
@@ -18312,12 +18390,12 @@ const PROJECTS = [
       },
       {
         "id": "customize-veyon-grp-3rdparty-ultravnc-winvnc-winvnc-files-v-61-72",
-        "parent": "customize-veyon-dir-3rdparty-ultravnc-winvnc-winvnc",
+        "parent": "customize-veyon-grp-3rdparty-ultravnc-winvnc-winvnc-files-v",
         "layer": "module",
-        "title": "Arquivos V (61–72)",
-        "description": "Grupo de arquivos em `3rdparty/ultravnc/winvnc/winvnc/` — Arquivos V (61–72)",
+        "title": "61–72",
+        "description": "Grupo de arquivos em `3rdparty/ultravnc/winvnc/winvnc/` — 61–72",
         "file": "3rdparty/ultravnc/winvnc/winvnc/[files-v-61-72]",
-        "code": "# Grupo: Arquivos V (61–72)\n# Pasta: 3rdparty/ultravnc/winvnc/winvnc/\n",
+        "code": "# Grupo: 61–72\n# Pasta: 3rdparty/ultravnc/winvnc/winvnc/\n",
         "implementation": [
           "agrupamento para layout 2D/3D",
           "pasta: 3rdparty/ultravnc/winvnc/winvnc/"
@@ -18325,12 +18403,12 @@ const PROJECTS = [
       },
       {
         "id": "customize-veyon-grp-3rdparty-ultravnc-winvnc-winvnc-files-v-73-79",
-        "parent": "customize-veyon-dir-3rdparty-ultravnc-winvnc-winvnc",
+        "parent": "customize-veyon-grp-3rdparty-ultravnc-winvnc-winvnc-files-v",
         "layer": "module",
-        "title": "Arquivos V (73–79)",
-        "description": "Grupo de arquivos em `3rdparty/ultravnc/winvnc/winvnc/` — Arquivos V (73–79)",
+        "title": "73–79",
+        "description": "Grupo de arquivos em `3rdparty/ultravnc/winvnc/winvnc/` — 73–79",
         "file": "3rdparty/ultravnc/winvnc/winvnc/[files-v-73-79]",
-        "code": "# Grupo: Arquivos V (73–79)\n# Pasta: 3rdparty/ultravnc/winvnc/winvnc/\n",
+        "code": "# Grupo: 73–79\n# Pasta: 3rdparty/ultravnc/winvnc/winvnc/\n",
         "implementation": [
           "agrupamento para layout 2D/3D",
           "pasta: 3rdparty/ultravnc/winvnc/winvnc/"
@@ -20508,13 +20586,26 @@ const PROJECTS = [
         ]
       },
       {
-        "id": "customize-veyon-grp-3rdparty-x11vnc-src-files-s-1-12",
+        "id": "customize-veyon-grp-3rdparty-x11vnc-src-files-s",
         "parent": "customize-veyon-dir-3rdparty-x11vnc-src",
         "layer": "module",
-        "title": "Arquivos S (1–12)",
-        "description": "Grupo de arquivos em `3rdparty/x11vnc/src/` — Arquivos S (1–12)",
+        "title": "Arquivos S",
+        "description": "Grupo de arquivos em `3rdparty/x11vnc/src/` — Arquivos S",
+        "file": "3rdparty/x11vnc/src/[files-s]",
+        "code": "# Grupo: Arquivos S\n# Pasta: 3rdparty/x11vnc/src/\n",
+        "implementation": [
+          "agrupamento para layout 2D/3D",
+          "pasta: 3rdparty/x11vnc/src/"
+        ]
+      },
+      {
+        "id": "customize-veyon-grp-3rdparty-x11vnc-src-files-s-1-12",
+        "parent": "customize-veyon-grp-3rdparty-x11vnc-src-files-s",
+        "layer": "module",
+        "title": "1–12",
+        "description": "Grupo de arquivos em `3rdparty/x11vnc/src/` — 1–12",
         "file": "3rdparty/x11vnc/src/[files-s-1-12]",
-        "code": "# Grupo: Arquivos S (1–12)\n# Pasta: 3rdparty/x11vnc/src/\n",
+        "code": "# Grupo: 1–12\n# Pasta: 3rdparty/x11vnc/src/\n",
         "implementation": [
           "agrupamento para layout 2D/3D",
           "pasta: 3rdparty/x11vnc/src/"
@@ -20522,12 +20613,12 @@ const PROJECTS = [
       },
       {
         "id": "customize-veyon-grp-3rdparty-x11vnc-src-files-s-13-14",
-        "parent": "customize-veyon-dir-3rdparty-x11vnc-src",
+        "parent": "customize-veyon-grp-3rdparty-x11vnc-src-files-s",
         "layer": "module",
-        "title": "Arquivos S (13–14)",
-        "description": "Grupo de arquivos em `3rdparty/x11vnc/src/` — Arquivos S (13–14)",
+        "title": "13–14",
+        "description": "Grupo de arquivos em `3rdparty/x11vnc/src/` — 13–14",
         "file": "3rdparty/x11vnc/src/[files-s-13-14]",
-        "code": "# Grupo: Arquivos S (13–14)\n# Pasta: 3rdparty/x11vnc/src/\n",
+        "code": "# Grupo: 13–14\n# Pasta: 3rdparty/x11vnc/src/\n",
         "implementation": [
           "agrupamento para layout 2D/3D",
           "pasta: 3rdparty/x11vnc/src/"
@@ -20560,13 +20651,26 @@ const PROJECTS = [
         ]
       },
       {
-        "id": "customize-veyon-grp-3rdparty-x11vnc-src-files-x-1-12",
+        "id": "customize-veyon-grp-3rdparty-x11vnc-src-files-x",
         "parent": "customize-veyon-dir-3rdparty-x11vnc-src",
         "layer": "module",
-        "title": "Arquivos X (1–12)",
-        "description": "Grupo de arquivos em `3rdparty/x11vnc/src/` — Arquivos X (1–12)",
+        "title": "Arquivos X",
+        "description": "Grupo de arquivos em `3rdparty/x11vnc/src/` — Arquivos X",
+        "file": "3rdparty/x11vnc/src/[files-x]",
+        "code": "# Grupo: Arquivos X\n# Pasta: 3rdparty/x11vnc/src/\n",
+        "implementation": [
+          "agrupamento para layout 2D/3D",
+          "pasta: 3rdparty/x11vnc/src/"
+        ]
+      },
+      {
+        "id": "customize-veyon-grp-3rdparty-x11vnc-src-files-x-1-12",
+        "parent": "customize-veyon-grp-3rdparty-x11vnc-src-files-x",
+        "layer": "module",
+        "title": "1–12",
+        "description": "Grupo de arquivos em `3rdparty/x11vnc/src/` — 1–12",
         "file": "3rdparty/x11vnc/src/[files-x-1-12]",
-        "code": "# Grupo: Arquivos X (1–12)\n# Pasta: 3rdparty/x11vnc/src/\n",
+        "code": "# Grupo: 1–12\n# Pasta: 3rdparty/x11vnc/src/\n",
         "implementation": [
           "agrupamento para layout 2D/3D",
           "pasta: 3rdparty/x11vnc/src/"
@@ -20574,12 +20678,12 @@ const PROJECTS = [
       },
       {
         "id": "customize-veyon-grp-3rdparty-x11vnc-src-files-x-13-19",
-        "parent": "customize-veyon-dir-3rdparty-x11vnc-src",
+        "parent": "customize-veyon-grp-3rdparty-x11vnc-src-files-x",
         "layer": "module",
-        "title": "Arquivos X (13–19)",
-        "description": "Grupo de arquivos em `3rdparty/x11vnc/src/` — Arquivos X (13–19)",
+        "title": "13–19",
+        "description": "Grupo de arquivos em `3rdparty/x11vnc/src/` — 13–19",
         "file": "3rdparty/x11vnc/src/[files-x-13-19]",
-        "code": "# Grupo: Arquivos X (13–19)\n# Pasta: 3rdparty/x11vnc/src/\n",
+        "code": "# Grupo: 13–19\n# Pasta: 3rdparty/x11vnc/src/\n",
         "implementation": [
           "agrupamento para layout 2D/3D",
           "pasta: 3rdparty/x11vnc/src/"
@@ -22250,13 +22354,26 @@ const PROJECTS = [
         ]
       },
       {
-        "id": "customize-veyon-grp-core-src-files-a-1-12",
+        "id": "customize-veyon-grp-core-src-files-a",
         "parent": "customize-veyon-dir-core-src",
         "layer": "module",
-        "title": "Arquivos A (1–12)",
-        "description": "Grupo de arquivos em `core/src/` — Arquivos A (1–12)",
+        "title": "Arquivos A",
+        "description": "Grupo de arquivos em `core/src/` — Arquivos A",
+        "file": "core/src/[files-a]",
+        "code": "# Grupo: Arquivos A\n# Pasta: core/src/\n",
+        "implementation": [
+          "agrupamento para layout 2D/3D",
+          "pasta: core/src/"
+        ]
+      },
+      {
+        "id": "customize-veyon-grp-core-src-files-a-1-12",
+        "parent": "customize-veyon-grp-core-src-files-a",
+        "layer": "module",
+        "title": "1–12",
+        "description": "Grupo de arquivos em `core/src/` — 1–12",
         "file": "core/src/[files-a-1-12]",
-        "code": "# Grupo: Arquivos A (1–12)\n# Pasta: core/src/\n",
+        "code": "# Grupo: 1–12\n# Pasta: core/src/\n",
         "implementation": [
           "agrupamento para layout 2D/3D",
           "pasta: core/src/"
@@ -22264,12 +22381,12 @@ const PROJECTS = [
       },
       {
         "id": "customize-veyon-grp-core-src-files-a-13-17",
-        "parent": "customize-veyon-dir-core-src",
+        "parent": "customize-veyon-grp-core-src-files-a",
         "layer": "module",
-        "title": "Arquivos A (13–17)",
-        "description": "Grupo de arquivos em `core/src/` — Arquivos A (13–17)",
+        "title": "13–17",
+        "description": "Grupo de arquivos em `core/src/` — 13–17",
         "file": "core/src/[files-a-13-17]",
-        "code": "# Grupo: Arquivos A (13–17)\n# Pasta: core/src/\n",
+        "code": "# Grupo: 13–17\n# Pasta: core/src/\n",
         "implementation": [
           "agrupamento para layout 2D/3D",
           "pasta: core/src/"
@@ -22289,13 +22406,26 @@ const PROJECTS = [
         ]
       },
       {
-        "id": "customize-veyon-grp-core-src-files-c-1-12",
+        "id": "customize-veyon-grp-core-src-files-c",
         "parent": "customize-veyon-dir-core-src",
         "layer": "module",
-        "title": "Arquivos C (1–12)",
-        "description": "Grupo de arquivos em `core/src/` — Arquivos C (1–12)",
+        "title": "Arquivos C",
+        "description": "Grupo de arquivos em `core/src/` — Arquivos C",
+        "file": "core/src/[files-c]",
+        "code": "# Grupo: Arquivos C\n# Pasta: core/src/\n",
+        "implementation": [
+          "agrupamento para layout 2D/3D",
+          "pasta: core/src/"
+        ]
+      },
+      {
+        "id": "customize-veyon-grp-core-src-files-c-1-12",
+        "parent": "customize-veyon-grp-core-src-files-c",
+        "layer": "module",
+        "title": "1–12",
+        "description": "Grupo de arquivos em `core/src/` — 1–12",
         "file": "core/src/[files-c-1-12]",
-        "code": "# Grupo: Arquivos C (1–12)\n# Pasta: core/src/\n",
+        "code": "# Grupo: 1–12\n# Pasta: core/src/\n",
         "implementation": [
           "agrupamento para layout 2D/3D",
           "pasta: core/src/"
@@ -22303,12 +22433,12 @@ const PROJECTS = [
       },
       {
         "id": "customize-veyon-grp-core-src-files-c-13-24",
-        "parent": "customize-veyon-dir-core-src",
+        "parent": "customize-veyon-grp-core-src-files-c",
         "layer": "module",
-        "title": "Arquivos C (13–24)",
-        "description": "Grupo de arquivos em `core/src/` — Arquivos C (13–24)",
+        "title": "13–24",
+        "description": "Grupo de arquivos em `core/src/` — 13–24",
         "file": "core/src/[files-c-13-24]",
-        "code": "# Grupo: Arquivos C (13–24)\n# Pasta: core/src/\n",
+        "code": "# Grupo: 13–24\n# Pasta: core/src/\n",
         "implementation": [
           "agrupamento para layout 2D/3D",
           "pasta: core/src/"
@@ -22316,12 +22446,12 @@ const PROJECTS = [
       },
       {
         "id": "customize-veyon-grp-core-src-files-c-25-36",
-        "parent": "customize-veyon-dir-core-src",
+        "parent": "customize-veyon-grp-core-src-files-c",
         "layer": "module",
-        "title": "Arquivos C (25–36)",
-        "description": "Grupo de arquivos em `core/src/` — Arquivos C (25–36)",
+        "title": "25–36",
+        "description": "Grupo de arquivos em `core/src/` — 25–36",
         "file": "core/src/[files-c-25-36]",
-        "code": "# Grupo: Arquivos C (25–36)\n# Pasta: core/src/\n",
+        "code": "# Grupo: 25–36\n# Pasta: core/src/\n",
         "implementation": [
           "agrupamento para layout 2D/3D",
           "pasta: core/src/"
@@ -22380,13 +22510,26 @@ const PROJECTS = [
         ]
       },
       {
-        "id": "customize-veyon-grp-core-src-files-p-1-12",
+        "id": "customize-veyon-grp-core-src-files-p",
         "parent": "customize-veyon-dir-core-src",
         "layer": "module",
-        "title": "Arquivos P (1–12)",
-        "description": "Grupo de arquivos em `core/src/` — Arquivos P (1–12)",
+        "title": "Arquivos P",
+        "description": "Grupo de arquivos em `core/src/` — Arquivos P",
+        "file": "core/src/[files-p]",
+        "code": "# Grupo: Arquivos P\n# Pasta: core/src/\n",
+        "implementation": [
+          "agrupamento para layout 2D/3D",
+          "pasta: core/src/"
+        ]
+      },
+      {
+        "id": "customize-veyon-grp-core-src-files-p-1-12",
+        "parent": "customize-veyon-grp-core-src-files-p",
+        "layer": "module",
+        "title": "1–12",
+        "description": "Grupo de arquivos em `core/src/` — 1–12",
         "file": "core/src/[files-p-1-12]",
-        "code": "# Grupo: Arquivos P (1–12)\n# Pasta: core/src/\n",
+        "code": "# Grupo: 1–12\n# Pasta: core/src/\n",
         "implementation": [
           "agrupamento para layout 2D/3D",
           "pasta: core/src/"
@@ -22394,12 +22537,12 @@ const PROJECTS = [
       },
       {
         "id": "customize-veyon-grp-core-src-files-p-13-19",
-        "parent": "customize-veyon-dir-core-src",
+        "parent": "customize-veyon-grp-core-src-files-p",
         "layer": "module",
-        "title": "Arquivos P (13–19)",
-        "description": "Grupo de arquivos em `core/src/` — Arquivos P (13–19)",
+        "title": "13–19",
+        "description": "Grupo de arquivos em `core/src/` — 13–19",
         "file": "core/src/[files-p-13-19]",
-        "code": "# Grupo: Arquivos P (13–19)\n# Pasta: core/src/\n",
+        "code": "# Grupo: 13–19\n# Pasta: core/src/\n",
         "implementation": [
           "agrupamento para layout 2D/3D",
           "pasta: core/src/"
@@ -22445,13 +22588,26 @@ const PROJECTS = [
         ]
       },
       {
-        "id": "customize-veyon-grp-core-src-files-v-1-12",
+        "id": "customize-veyon-grp-core-src-files-v",
         "parent": "customize-veyon-dir-core-src",
         "layer": "module",
-        "title": "Arquivos V (1–12)",
-        "description": "Grupo de arquivos em `core/src/` — Arquivos V (1–12)",
+        "title": "Arquivos V",
+        "description": "Grupo de arquivos em `core/src/` — Arquivos V",
+        "file": "core/src/[files-v]",
+        "code": "# Grupo: Arquivos V\n# Pasta: core/src/\n",
+        "implementation": [
+          "agrupamento para layout 2D/3D",
+          "pasta: core/src/"
+        ]
+      },
+      {
+        "id": "customize-veyon-grp-core-src-files-v-1-12",
+        "parent": "customize-veyon-grp-core-src-files-v",
+        "layer": "module",
+        "title": "1–12",
+        "description": "Grupo de arquivos em `core/src/` — 1–12",
         "file": "core/src/[files-v-1-12]",
-        "code": "# Grupo: Arquivos V (1–12)\n# Pasta: core/src/\n",
+        "code": "# Grupo: 1–12\n# Pasta: core/src/\n",
         "implementation": [
           "agrupamento para layout 2D/3D",
           "pasta: core/src/"
@@ -22459,12 +22615,12 @@ const PROJECTS = [
       },
       {
         "id": "customize-veyon-grp-core-src-files-v-13-24",
-        "parent": "customize-veyon-dir-core-src",
+        "parent": "customize-veyon-grp-core-src-files-v",
         "layer": "module",
-        "title": "Arquivos V (13–24)",
-        "description": "Grupo de arquivos em `core/src/` — Arquivos V (13–24)",
+        "title": "13–24",
+        "description": "Grupo de arquivos em `core/src/` — 13–24",
         "file": "core/src/[files-v-13-24]",
-        "code": "# Grupo: Arquivos V (13–24)\n# Pasta: core/src/\n",
+        "code": "# Grupo: 13–24\n# Pasta: core/src/\n",
         "implementation": [
           "agrupamento para layout 2D/3D",
           "pasta: core/src/"
@@ -22472,12 +22628,12 @@ const PROJECTS = [
       },
       {
         "id": "customize-veyon-grp-core-src-files-v-25-33",
-        "parent": "customize-veyon-dir-core-src",
+        "parent": "customize-veyon-grp-core-src-files-v",
         "layer": "module",
-        "title": "Arquivos V (25–33)",
-        "description": "Grupo de arquivos em `core/src/` — Arquivos V (25–33)",
+        "title": "25–33",
+        "description": "Grupo de arquivos em `core/src/` — 25–33",
         "file": "core/src/[files-v-25-33]",
-        "code": "# Grupo: Arquivos V (25–33)\n# Pasta: core/src/\n",
+        "code": "# Grupo: 25–33\n# Pasta: core/src/\n",
         "implementation": [
           "agrupamento para layout 2D/3D",
           "pasta: core/src/"
@@ -24902,13 +25058,26 @@ const PROJECTS = [
         ]
       },
       {
-        "id": "customize-veyon-grp-master-src-files-c-1-12",
+        "id": "customize-veyon-grp-master-src-files-c",
         "parent": "customize-veyon-dir-master-src",
         "layer": "module",
-        "title": "Arquivos C (1–12)",
-        "description": "Grupo de arquivos em `master/src/` — Arquivos C (1–12)",
+        "title": "Arquivos C",
+        "description": "Grupo de arquivos em `master/src/` — Arquivos C",
+        "file": "master/src/[files-c]",
+        "code": "# Grupo: Arquivos C\n# Pasta: master/src/\n",
+        "implementation": [
+          "agrupamento para layout 2D/3D",
+          "pasta: master/src/"
+        ]
+      },
+      {
+        "id": "customize-veyon-grp-master-src-files-c-1-12",
+        "parent": "customize-veyon-grp-master-src-files-c",
+        "layer": "module",
+        "title": "1–12",
+        "description": "Grupo de arquivos em `master/src/` — 1–12",
         "file": "master/src/[files-c-1-12]",
-        "code": "# Grupo: Arquivos C (1–12)\n# Pasta: master/src/\n",
+        "code": "# Grupo: 1–12\n# Pasta: master/src/\n",
         "implementation": [
           "agrupamento para layout 2D/3D",
           "pasta: master/src/"
@@ -24916,12 +25085,12 @@ const PROJECTS = [
       },
       {
         "id": "customize-veyon-grp-master-src-files-c-13-18",
-        "parent": "customize-veyon-dir-master-src",
+        "parent": "customize-veyon-grp-master-src-files-c",
         "layer": "module",
-        "title": "Arquivos C (13–18)",
-        "description": "Grupo de arquivos em `master/src/` — Arquivos C (13–18)",
+        "title": "13–18",
+        "description": "Grupo de arquivos em `master/src/` — 13–18",
         "file": "master/src/[files-c-13-18]",
-        "code": "# Grupo: Arquivos C (13–18)\n# Pasta: master/src/\n",
+        "code": "# Grupo: 13–18\n# Pasta: master/src/\n",
         "implementation": [
           "agrupamento para layout 2D/3D",
           "pasta: master/src/"
@@ -25838,13 +26007,26 @@ const PROJECTS = [
         ]
       },
       {
-        "id": "customize-veyon-grp-plugins-demo-files-d-1-12",
+        "id": "customize-veyon-grp-plugins-demo-files-d",
         "parent": "customize-veyon-dir-plugins-demo",
         "layer": "module",
-        "title": "Arquivos D (1–12)",
-        "description": "Grupo de arquivos em `plugins/demo/` — Arquivos D (1–12)",
+        "title": "Arquivos D",
+        "description": "Grupo de arquivos em `plugins/demo/` — Arquivos D",
+        "file": "plugins/demo/[files-d]",
+        "code": "# Grupo: Arquivos D\n# Pasta: plugins/demo/\n",
+        "implementation": [
+          "agrupamento para layout 2D/3D",
+          "pasta: plugins/demo/"
+        ]
+      },
+      {
+        "id": "customize-veyon-grp-plugins-demo-files-d-1-12",
+        "parent": "customize-veyon-grp-plugins-demo-files-d",
+        "layer": "module",
+        "title": "1–12",
+        "description": "Grupo de arquivos em `plugins/demo/` — 1–12",
         "file": "plugins/demo/[files-d-1-12]",
-        "code": "# Grupo: Arquivos D (1–12)\n# Pasta: plugins/demo/\n",
+        "code": "# Grupo: 1–12\n# Pasta: plugins/demo/\n",
         "implementation": [
           "agrupamento para layout 2D/3D",
           "pasta: plugins/demo/"
@@ -25852,12 +26034,12 @@ const PROJECTS = [
       },
       {
         "id": "customize-veyon-grp-plugins-demo-files-d-13-13",
-        "parent": "customize-veyon-dir-plugins-demo",
+        "parent": "customize-veyon-grp-plugins-demo-files-d",
         "layer": "module",
-        "title": "Arquivos D (13–13)",
-        "description": "Grupo de arquivos em `plugins/demo/` — Arquivos D (13–13)",
+        "title": "13–13",
+        "description": "Grupo de arquivos em `plugins/demo/` — 13–13",
         "file": "plugins/demo/[files-d-13-13]",
-        "code": "# Grupo: Arquivos D (13–13)\n# Pasta: plugins/demo/\n",
+        "code": "# Grupo: 13–13\n# Pasta: plugins/demo/\n",
         "implementation": [
           "agrupamento para layout 2D/3D",
           "pasta: plugins/demo/"
@@ -26176,13 +26358,26 @@ const PROJECTS = [
         ]
       },
       {
-        "id": "customize-veyon-grp-plugins-filetransfer-files-f-1-12",
+        "id": "customize-veyon-grp-plugins-filetransfer-files-f",
         "parent": "customize-veyon-dir-plugins-filetransfer",
         "layer": "module",
-        "title": "Arquivos F (1–12)",
-        "description": "Grupo de arquivos em `plugins/filetransfer/` — Arquivos F (1–12)",
+        "title": "Arquivos F",
+        "description": "Grupo de arquivos em `plugins/filetransfer/` — Arquivos F",
+        "file": "plugins/filetransfer/[files-f]",
+        "code": "# Grupo: Arquivos F\n# Pasta: plugins/filetransfer/\n",
+        "implementation": [
+          "agrupamento para layout 2D/3D",
+          "pasta: plugins/filetransfer/"
+        ]
+      },
+      {
+        "id": "customize-veyon-grp-plugins-filetransfer-files-f-1-12",
+        "parent": "customize-veyon-grp-plugins-filetransfer-files-f",
+        "layer": "module",
+        "title": "1–12",
+        "description": "Grupo de arquivos em `plugins/filetransfer/` — 1–12",
         "file": "plugins/filetransfer/[files-f-1-12]",
-        "code": "# Grupo: Arquivos F (1–12)\n# Pasta: plugins/filetransfer/\n",
+        "code": "# Grupo: 1–12\n# Pasta: plugins/filetransfer/\n",
         "implementation": [
           "agrupamento para layout 2D/3D",
           "pasta: plugins/filetransfer/"
@@ -26190,12 +26385,12 @@ const PROJECTS = [
       },
       {
         "id": "customize-veyon-grp-plugins-filetransfer-files-f-13-23",
-        "parent": "customize-veyon-dir-plugins-filetransfer",
+        "parent": "customize-veyon-grp-plugins-filetransfer-files-f",
         "layer": "module",
-        "title": "Arquivos F (13–23)",
-        "description": "Grupo de arquivos em `plugins/filetransfer/` — Arquivos F (13–23)",
+        "title": "13–23",
+        "description": "Grupo de arquivos em `plugins/filetransfer/` — 13–23",
         "file": "plugins/filetransfer/[files-f-13-23]",
-        "code": "# Grupo: Arquivos F (13–23)\n# Pasta: plugins/filetransfer/\n",
+        "code": "# Grupo: 13–23\n# Pasta: plugins/filetransfer/\n",
         "implementation": [
           "agrupamento para layout 2D/3D",
           "pasta: plugins/filetransfer/"
@@ -26540,13 +26735,26 @@ const PROJECTS = [
         ]
       },
       {
-        "id": "customize-veyon-grp-plugins-ldap-files-l-1-12",
+        "id": "customize-veyon-grp-plugins-ldap-files-l",
         "parent": "customize-veyon-dir-plugins-ldap",
         "layer": "module",
-        "title": "Arquivos L (1–12)",
-        "description": "Grupo de arquivos em `plugins/ldap/` — Arquivos L (1–12)",
+        "title": "Arquivos L",
+        "description": "Grupo de arquivos em `plugins/ldap/` — Arquivos L",
+        "file": "plugins/ldap/[files-l]",
+        "code": "# Grupo: Arquivos L\n# Pasta: plugins/ldap/\n",
+        "implementation": [
+          "agrupamento para layout 2D/3D",
+          "pasta: plugins/ldap/"
+        ]
+      },
+      {
+        "id": "customize-veyon-grp-plugins-ldap-files-l-1-12",
+        "parent": "customize-veyon-grp-plugins-ldap-files-l",
+        "layer": "module",
+        "title": "1–12",
+        "description": "Grupo de arquivos em `plugins/ldap/` — 1–12",
         "file": "plugins/ldap/[files-l-1-12]",
-        "code": "# Grupo: Arquivos L (1–12)\n# Pasta: plugins/ldap/\n",
+        "code": "# Grupo: 1–12\n# Pasta: plugins/ldap/\n",
         "implementation": [
           "agrupamento para layout 2D/3D",
           "pasta: plugins/ldap/"
@@ -26554,12 +26762,12 @@ const PROJECTS = [
       },
       {
         "id": "customize-veyon-grp-plugins-ldap-files-l-13-17",
-        "parent": "customize-veyon-dir-plugins-ldap",
+        "parent": "customize-veyon-grp-plugins-ldap-files-l",
         "layer": "module",
-        "title": "Arquivos L (13–17)",
-        "description": "Grupo de arquivos em `plugins/ldap/` — Arquivos L (13–17)",
+        "title": "13–17",
+        "description": "Grupo de arquivos em `plugins/ldap/` — 13–17",
         "file": "plugins/ldap/[files-l-13-17]",
-        "code": "# Grupo: Arquivos L (13–17)\n# Pasta: plugins/ldap/\n",
+        "code": "# Grupo: 13–17\n# Pasta: plugins/ldap/\n",
         "implementation": [
           "agrupamento para layout 2D/3D",
           "pasta: plugins/ldap/"
@@ -26943,13 +27151,26 @@ const PROJECTS = [
         ]
       },
       {
-        "id": "customize-veyon-grp-plugins-platform-linux-files-l-1-12",
+        "id": "customize-veyon-grp-plugins-platform-linux-files-l",
         "parent": "customize-veyon-dir-plugins-platform-linux",
         "layer": "module",
-        "title": "Arquivos L (1–12)",
-        "description": "Grupo de arquivos em `plugins/platform/linux/` — Arquivos L (1–12)",
+        "title": "Arquivos L",
+        "description": "Grupo de arquivos em `plugins/platform/linux/` — Arquivos L",
+        "file": "plugins/platform/linux/[files-l]",
+        "code": "# Grupo: Arquivos L\n# Pasta: plugins/platform/linux/\n",
+        "implementation": [
+          "agrupamento para layout 2D/3D",
+          "pasta: plugins/platform/linux/"
+        ]
+      },
+      {
+        "id": "customize-veyon-grp-plugins-platform-linux-files-l-1-12",
+        "parent": "customize-veyon-grp-plugins-platform-linux-files-l",
+        "layer": "module",
+        "title": "1–12",
+        "description": "Grupo de arquivos em `plugins/platform/linux/` — 1–12",
         "file": "plugins/platform/linux/[files-l-1-12]",
-        "code": "# Grupo: Arquivos L (1–12)\n# Pasta: plugins/platform/linux/\n",
+        "code": "# Grupo: 1–12\n# Pasta: plugins/platform/linux/\n",
         "implementation": [
           "agrupamento para layout 2D/3D",
           "pasta: plugins/platform/linux/"
@@ -26957,12 +27178,12 @@ const PROJECTS = [
       },
       {
         "id": "customize-veyon-grp-plugins-platform-linux-files-l-13-24",
-        "parent": "customize-veyon-dir-plugins-platform-linux",
+        "parent": "customize-veyon-grp-plugins-platform-linux-files-l",
         "layer": "module",
-        "title": "Arquivos L (13–24)",
-        "description": "Grupo de arquivos em `plugins/platform/linux/` — Arquivos L (13–24)",
+        "title": "13–24",
+        "description": "Grupo de arquivos em `plugins/platform/linux/` — 13–24",
         "file": "plugins/platform/linux/[files-l-13-24]",
-        "code": "# Grupo: Arquivos L (13–24)\n# Pasta: plugins/platform/linux/\n",
+        "code": "# Grupo: 13–24\n# Pasta: plugins/platform/linux/\n",
         "implementation": [
           "agrupamento para layout 2D/3D",
           "pasta: plugins/platform/linux/"
@@ -26970,12 +27191,12 @@ const PROJECTS = [
       },
       {
         "id": "customize-veyon-grp-plugins-platform-linux-files-l-25-27",
-        "parent": "customize-veyon-dir-plugins-platform-linux",
+        "parent": "customize-veyon-grp-plugins-platform-linux-files-l",
         "layer": "module",
-        "title": "Arquivos L (25–27)",
-        "description": "Grupo de arquivos em `plugins/platform/linux/` — Arquivos L (25–27)",
+        "title": "25–27",
+        "description": "Grupo de arquivos em `plugins/platform/linux/` — 25–27",
         "file": "plugins/platform/linux/[files-l-25-27]",
-        "code": "# Grupo: Arquivos L (25–27)\n# Pasta: plugins/platform/linux/\n",
+        "code": "# Grupo: 25–27\n# Pasta: plugins/platform/linux/\n",
         "implementation": [
           "agrupamento para layout 2D/3D",
           "pasta: plugins/platform/linux/"
@@ -27359,13 +27580,26 @@ const PROJECTS = [
         ]
       },
       {
-        "id": "customize-veyon-grp-plugins-platform-windows-files-w-1-12",
+        "id": "customize-veyon-grp-plugins-platform-windows-files-w",
         "parent": "customize-veyon-dir-plugins-platform-windows",
         "layer": "module",
-        "title": "Arquivos W (1–12)",
-        "description": "Grupo de arquivos em `plugins/platform/windows/` — Arquivos W (1–12)",
+        "title": "Arquivos W",
+        "description": "Grupo de arquivos em `plugins/platform/windows/` — Arquivos W",
+        "file": "plugins/platform/windows/[files-w]",
+        "code": "# Grupo: Arquivos W\n# Pasta: plugins/platform/windows/\n",
+        "implementation": [
+          "agrupamento para layout 2D/3D",
+          "pasta: plugins/platform/windows/"
+        ]
+      },
+      {
+        "id": "customize-veyon-grp-plugins-platform-windows-files-w-1-12",
+        "parent": "customize-veyon-grp-plugins-platform-windows-files-w",
+        "layer": "module",
+        "title": "1–12",
+        "description": "Grupo de arquivos em `plugins/platform/windows/` — 1–12",
         "file": "plugins/platform/windows/[files-w-1-12]",
-        "code": "# Grupo: Arquivos W (1–12)\n# Pasta: plugins/platform/windows/\n",
+        "code": "# Grupo: 1–12\n# Pasta: plugins/platform/windows/\n",
         "implementation": [
           "agrupamento para layout 2D/3D",
           "pasta: plugins/platform/windows/"
@@ -27373,12 +27607,12 @@ const PROJECTS = [
       },
       {
         "id": "customize-veyon-grp-plugins-platform-windows-files-w-13-24",
-        "parent": "customize-veyon-dir-plugins-platform-windows",
+        "parent": "customize-veyon-grp-plugins-platform-windows-files-w",
         "layer": "module",
-        "title": "Arquivos W (13–24)",
-        "description": "Grupo de arquivos em `plugins/platform/windows/` — Arquivos W (13–24)",
+        "title": "13–24",
+        "description": "Grupo de arquivos em `plugins/platform/windows/` — 13–24",
         "file": "plugins/platform/windows/[files-w-13-24]",
-        "code": "# Grupo: Arquivos W (13–24)\n# Pasta: plugins/platform/windows/\n",
+        "code": "# Grupo: 13–24\n# Pasta: plugins/platform/windows/\n",
         "implementation": [
           "agrupamento para layout 2D/3D",
           "pasta: plugins/platform/windows/"
@@ -27386,12 +27620,12 @@ const PROJECTS = [
       },
       {
         "id": "customize-veyon-grp-plugins-platform-windows-files-w-25-31",
-        "parent": "customize-veyon-dir-plugins-platform-windows",
+        "parent": "customize-veyon-grp-plugins-platform-windows-files-w",
         "layer": "module",
-        "title": "Arquivos W (25–31)",
-        "description": "Grupo de arquivos em `plugins/platform/windows/` — Arquivos W (25–31)",
+        "title": "25–31",
+        "description": "Grupo de arquivos em `plugins/platform/windows/` — 25–31",
         "file": "plugins/platform/windows/[files-w-25-31]",
-        "code": "# Grupo: Arquivos W (25–31)\n# Pasta: plugins/platform/windows/\n",
+        "code": "# Grupo: 25–31\n# Pasta: plugins/platform/windows/\n",
         "implementation": [
           "agrupamento para layout 2D/3D",
           "pasta: plugins/platform/windows/"
@@ -28490,13 +28724,26 @@ const PROJECTS = [
         ]
       },
       {
-        "id": "customize-veyon-grp-plugins-webapi-files-w-1-12",
+        "id": "customize-veyon-grp-plugins-webapi-files-w",
         "parent": "customize-veyon-dir-plugins-webapi",
         "layer": "module",
-        "title": "Arquivos W (1–12)",
-        "description": "Grupo de arquivos em `plugins/webapi/` — Arquivos W (1–12)",
+        "title": "Arquivos W",
+        "description": "Grupo de arquivos em `plugins/webapi/` — Arquivos W",
+        "file": "plugins/webapi/[files-w]",
+        "code": "# Grupo: Arquivos W\n# Pasta: plugins/webapi/\n",
+        "implementation": [
+          "agrupamento para layout 2D/3D",
+          "pasta: plugins/webapi/"
+        ]
+      },
+      {
+        "id": "customize-veyon-grp-plugins-webapi-files-w-1-12",
+        "parent": "customize-veyon-grp-plugins-webapi-files-w",
+        "layer": "module",
+        "title": "1–12",
+        "description": "Grupo de arquivos em `plugins/webapi/` — 1–12",
         "file": "plugins/webapi/[files-w-1-12]",
-        "code": "# Grupo: Arquivos W (1–12)\n# Pasta: plugins/webapi/\n",
+        "code": "# Grupo: 1–12\n# Pasta: plugins/webapi/\n",
         "implementation": [
           "agrupamento para layout 2D/3D",
           "pasta: plugins/webapi/"
@@ -28504,12 +28751,12 @@ const PROJECTS = [
       },
       {
         "id": "customize-veyon-grp-plugins-webapi-files-w-13-13",
-        "parent": "customize-veyon-dir-plugins-webapi",
+        "parent": "customize-veyon-grp-plugins-webapi-files-w",
         "layer": "module",
-        "title": "Arquivos W (13–13)",
-        "description": "Grupo de arquivos em `plugins/webapi/` — Arquivos W (13–13)",
+        "title": "13–13",
+        "description": "Grupo de arquivos em `plugins/webapi/` — 13–13",
         "file": "plugins/webapi/[files-w-13-13]",
-        "code": "# Grupo: Arquivos W (13–13)\n# Pasta: plugins/webapi/\n",
+        "code": "# Grupo: 13–13\n# Pasta: plugins/webapi/\n",
         "implementation": [
           "agrupamento para layout 2D/3D",
           "pasta: plugins/webapi/"
@@ -29138,11 +29385,37 @@ const PROJECTS = [
           "path: worker/src/VeyonWorker.h",
           "GitHub: https://github.com/CanonEngineer/CustomizeVeyonProject/blob/main/worker/src/VeyonWorker.h"
         ]
+      },
+      {
+        "id": "customize-veyon-grp-root-bucket-c-d-m-p",
+        "parent": "customize-veyon-root",
+        "layer": "module",
+        "title": "Pastas #–C–D–M–P",
+        "description": "Agrupamento de pastas/módulos na raiz — #–C–D–M–P",
+        "file": "[root-#–c–d–m–p]",
+        "code": "# Agrupamento da raiz: #–C–D–M–P\n",
+        "implementation": [
+          "agrupamento de fan-out da raiz",
+          "letras: #–C–D–M–P"
+        ]
+      },
+      {
+        "id": "customize-veyon-grp-root-bucket-s-t-w",
+        "parent": "customize-veyon-root",
+        "layer": "module",
+        "title": "Pastas S–T–W",
+        "description": "Agrupamento de pastas/módulos na raiz — S–T–W",
+        "file": "[root-s–t–w]",
+        "code": "# Agrupamento da raiz: S–T–W\n",
+        "implementation": [
+          "agrupamento de fan-out da raiz",
+          "letras: S–T–W"
+        ]
       }
     ],
     "meta": {
       "sourceFiles": 1223,
-      "treeNodes": 1486,
+      "treeNodes": 1506,
       "complete": true
     }
   },
@@ -29160,7 +29433,7 @@ const PROJECTS = [
         "parent": null,
         "layer": "root",
         "title": "CanonEngineer.github.io",
-        "description": "Portfolio profissional e currículo — site CanonEngineer no GitHub Pages.",
+        "description": "Cobertura completa: 13 arquivos de código no repositório (18 nós na árvore incluindo pastas).",
         "file": "README.md",
         "code": "> **Mobile / UTF-8:** imagens com `width: 100%` (sem scroll horizontal). Arquivo gravado em UTF-8 para acentos corretos em qualquer dispositivo.\r\n\r\n<div align=\"center\">\r\n\r\n<p align=\"center\">\r\n  <img src=\"docs/images/banner.svg\" alt=\"Banner\" width=\"100%\" style=\"max-width:100%;height:auto;display:block;\" />\r\n</p># CanonEngineer.github.io\r\n\r\n### Meu currículo profissional e vitrine de projetos no GitHub Pages\r\n\r\n<img src=\"https://img.shields.io/badge/GitHub_Pages-Live-22c55e?style=for-the-badge&logo=githubpages&logoColor=white\" alt=\"Pages\"/>\r\n<img src=\"https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white\" alt=\"HTML\"/>\r\n<img src=\"https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white\" alt=\"CSS\"/>\r\n<img src=\"https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black\" alt=\"JS\"/>\r\n\r\n[Sobre](#-sobre) ·\r\n[Features](#-features) ·\r\n[Arquitetura](#-arquitetura--fluxo) ·\r\n[Stack](#-stack) ·\r\n[Estrutura](#-estrutura) ·\r\n[Setup](#-como-rodar) ·\r\n[Melhorias](#-melhorias-sugeridas) ·\r\n[Autor](#-autor)\r\n\r\n</div>\r\n\r\n---\r\n\r\n## 📌 Sobre\r\n\r\nSite pessoal do **CanonEngineer** hospedado em GitHub Pages. Centraliza apresentação profissional, links de projetos, blog e ponto de entrada para o restante do ecossistema (incluindo a [Tree of Knowledge](https://canonengineer.github.io/TreeofKnowledge/)).\r\n\r\n<div align=\"center\">\r\n\r\n<p align=\"center\">\r\n  <img src=\"docs/images/flow.svg\" alt=\"Fluxo\" width=\"100%\" style=\"max-width:100%;height:auto;display:block;\" />\r\n</p></div>\r\n\r\n---\r\n\r\n## ✨ Features\r\n\r\n| # | Capacidade |\r\n|---|------------|\r\n| 1 | Landing de portfólio com identidade visual própria |\r\n| 2 | Seção de projetos e experiências |\r\n| 3 | Blog estático em `blog/` |\r\n| 4 | Assets em `wwwroot/` prontos para Pages |\r\n| 5 | Deploy contínuo via push em `main` |\r\n\r\n---\r\n\r\n## 🏗️ Arquitetura / Fluxo\r\n\r\n```mermaid\r\nflowchart TB\r\n    U[Visitante] --> I[index.html]\r\n    I --> W[wwwroot assets]\r\n    I --> P[Projetos / links]\r\n    I --> B[blog]\r\n    P --> T[Tree of Knowledge]\r\n    P --> G[Repos GitHub]\r\n```\r\n\r\n---\r\n\r\n## 🛠️ Stack\r\n\r\n| Tecnologia | Papel |\r\n|------------|-------|\r\n| HTML5 | Estrutura |\r\n| CSS3 | Layout e visual |\r\n| JavaScript | Interatividade |\r\n| GitHub Pages | Hospedagem |\r\n\r\n---\r\n\r\n## 📂 Estrutura\r\n\r\n```text\r\nCanonEngineer.github.io/\r\n├── index.html\r\n├── wwwroot/          # assets públicos\r\n├── blog/             # posts\r\n├── scripts/          # utilitários\r\n└── README.md\r\n```\r\n\r\n---\r\n\r\n## 🚀 Como rodar\r\n\r\nClone e abra localmente:\r\n\r\n```bash\r\ngit clone https://github.com/CanonEngineer/CanonEngineer.github.io.git\r\ncd CanonEngineer.github.io\r\n# abra index.html no navegador ou use um server estático\r\nnpx serve .\r\n```\r\n\r\nSite ao vivo: **https://canonengineer.github.io**\r\n\r\n---\r\n\r\n## ▶️ Uso\r\n\r\nNavegue pelo portfólio, acesse o blog e use os links para os repositórios e para a Árvore do Conhecimento.\r\n\r\n---\r\n\r\n## 🌳 Tree of Knowledge\r\n\r\nEste projeto está mapeado na árvore interativa:\r\n\r\n<p>\r\n  <a href=\"https://canonengineer.github.io/TreeofKnowledge/index.html?tree=canon-engineer-github-io\">\r\n    <img src=\"https://img.shields.io/badge/Abrir_na_Árvore-Tree_of_Knowledge-38bdf8?style=for-the-badge&labelColor=0c2344\" alt=\"Tree of Knowledge\"/>\r\n  </a>\r\n</p>\r\n\r\n---\r\n\r\n## 📈 Melhorias sugeridas\r\n\r\n1. Dark/Light mode com preferência salva\r\n2. Filtro de projetos por stack\r\n3. i18n PT/EN\r\n4. Mais posts técnicos no blog\r\n\r\n---\r\n\r\n## 👨‍💻 Autor\r\n\r\n**Alessandro Canon (CanonEngineer)**  \r\nNetwork Analyst · Developer · Cybersecurity Enthusiast\r\n\r\n- GitHub: [https://github.com/CanonEngineer](https://github.com/CanonEngineer)\r\n- Portfolio: [https://canonengineer.github.io](https://canonengineer.github.io)\r\n- Tree of Knowledge: [https://canonengineer.github.io/TreeofKnowledge/](https://canonengineer.github.io/TreeofKnowledge/)\r\n\r\n---\r\n\r\n<div align=\"center\">\r\n\r\n⭐ Se este projeto te ajudou, deixe uma estrela!\r\n\r\n</div>\r\n",
         "implementation": [
@@ -29411,7 +29684,7 @@ const PROJECTS = [
         "parent": null,
         "layer": "root",
         "title": "JavaScriptWhatsAppProject",
-        "description": "Clone do WhatsApp com Webpack, Firebase Auth, Firestore e Storage.",
+        "description": "Cobertura completa: 17 arquivos de código no repositório (22 nós na árvore incluindo pastas).",
         "file": "README.md",
         "code": "> **Mobile / UTF-8:** imagens com `width: 100%` (sem scroll horizontal). Arquivo gravado em UTF-8 para acentos corretos em qualquer dispositivo.\r\n\r\n<div align=\"center\">\r\n\r\n<p align=\"center\">\r\n  <img src=\"docs/images/banner.svg\" alt=\"Banner\" width=\"100%\" style=\"max-width:100%;height:auto;display:block;\" />\r\n</p># JavaScript WhatsApp Clone\r\n\r\n### Clone do WhatsApp com JavaScript moderno, Webpack e Firebase\r\n\r\n<img src=\"https://img.shields.io/badge/JavaScript-ES6-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black\" alt=\"JS\"/>\r\n<img src=\"https://img.shields.io/badge/Webpack-8DD6F9?style=for-the-badge&logo=webpack&logoColor=black\" alt=\"Webpack\"/>\r\n<img src=\"https://img.shields.io/badge/Firebase-FFCA28?style=for-the-badge&logo=firebase&logoColor=black\" alt=\"Firebase\"/>\r\n\r\n[Sobre](#-sobre) ·\r\n[Features](#-features) ·\r\n[Arquitetura](#-arquitetura--fluxo) ·\r\n[Stack](#-stack) ·\r\n[Estrutura](#-estrutura) ·\r\n[Setup](#-como-rodar) ·\r\n[Melhorias](#-melhorias-sugeridas) ·\r\n[Autor](#-autor)\r\n\r\n</div>\r\n\r\n---\r\n\r\n## 📌 Sobre\r\n\r\nProjeto do curso Hcode: clone de interface e fluxos do WhatsApp usando **Webpack**, **Firebase Authentication**, **Cloud Firestore**, **Storage** e APIs de mídia (câmera, PDF.js).\r\n\r\n<div align=\"center\">\r\n\r\n<p align=\"center\">\r\n  <img src=\"docs/images/flow.svg\" alt=\"Fluxo\" width=\"100%\" style=\"max-width:100%;height:auto;display:block;\" />\r\n</p></div>\r\n\r\n---\r\n\r\n## ✨ Features\r\n\r\n| # | Capacidade |\r\n|---|------------|\r\n| 1 | Interface inspirada no WhatsApp Web |\r\n| 2 | Autenticação Firebase |\r\n| 3 | Mensagens em tempo real (Firestore) |\r\n| 4 | Upload de mídia (Storage) |\r\n| 5 | Build com Webpack |\r\n\r\n---\r\n\r\n## 🏗️ Arquitetura / Fluxo\r\n\r\n```mermaid\r\nsequenceDiagram\r\n    participant U as Usuário\r\n    participant A as App JS\r\n    participant F as Firebase\r\n    U->>A: Login\r\n    A->>F: Auth\r\n    F-->>A: Token\r\n    U->>A: Envia mensagem\r\n    A->>F: Firestore write\r\n    F-->>A: Snapshot realtime\r\n    A-->>U: Atualiza UI\r\n```\r\n\r\n---\r\n\r\n## 🛠️ Stack\r\n\r\n| Tecnologia | Papel |\r\n|------------|-------|\r\n| JavaScript | App client |\r\n| Webpack | Bundling |\r\n| Firebase Auth | Login |\r\n| Firestore | Chat |\r\n| Storage | Arquivos |\r\n\r\n---\r\n\r\n## 📂 Estrutura\r\n\r\n```text\r\nJavaScriptWhatsAppProject/\r\n├── index.html\r\n├── src/                 # código-fonte\r\n├── css/ img/ audio/\r\n├── webpack.config.js\r\n└── package.json\r\n```\r\n\r\n---\r\n\r\n## 🚀 Como rodar\r\n\r\n```bash\r\ngit clone https://github.com/CanonEngineer/JavaScriptWhatsAppProject.git\r\ncd JavaScriptWhatsAppProject\r\nnpm install\r\n# configure Firebase no projeto\r\nnpm start\r\n```\r\n\r\n---\r\n\r\n## ▶️ Uso\r\n\r\nFaça login, selecione um contato/conversa e envie mensagens/mídia. Recursos extras: PDF.js e getUserMedia para câmera.\r\n\r\n---\r\n\r\n## 🌳 Tree of Knowledge\r\n\r\nEste projeto está mapeado na árvore interativa:\r\n\r\n<p>\r\n  <a href=\"https://canonengineer.github.io/TreeofKnowledge/index.html?tree=javascript-whatsapp\">\r\n    <img src=\"https://img.shields.io/badge/Abrir_na_Árvore-Tree_of_Knowledge-38bdf8?style=for-the-badge&labelColor=0c2344\" alt=\"Tree of Knowledge\"/>\r\n  </a>\r\n</p>\r\n\r\n---\r\n\r\n## 📈 Melhorias sugeridas\r\n\r\n1. Migrar para Firebase Modular SDK v9+\r\n2. Testes unitários nos controllers\r\n3. PWA / notificações push\r\n4. Tema claro/escuro\r\n\r\n---\r\n\r\n## 👨‍💻 Autor\r\n\r\n**Alessandro Canon (CanonEngineer)**  \r\nNetwork Analyst · Developer · Cybersecurity Enthusiast\r\n\r\n- GitHub: [https://github.com/CanonEngineer](https://github.com/CanonEngineer)\r\n- Portfolio: [https://canonengineer.github.io](https://canonengineer.github.io)\r\n- Tree of Knowledge: [https://canonengineer.github.io/TreeofKnowledge/](https://canonengineer.github.io/TreeofKnowledge/)\r\n\r\n---\r\n\r\n<div align=\"center\">\r\n\r\n⭐ Se este projeto te ajudou, deixe uma estrela!\r\n\r\n</div>\r\n",
         "implementation": [
@@ -29714,7 +29987,7 @@ const PROJECTS = [
         "parent": null,
         "layer": "root",
         "title": "UserManagementProject",
-        "description": "CRUD de usuários com Express, rotas e views EJS.",
+        "description": "Cobertura completa: 13 arquivos de código no repositório (20 nós na árvore incluindo pastas).",
         "file": "README.md",
         "code": "> **Mobile / UTF-8:** imagens com `width: 100%` (sem scroll horizontal). Arquivo gravado em UTF-8 para acentos corretos em qualquer dispositivo.\r\n\r\n<div align=\"center\">\r\n\r\n<p align=\"center\">\r\n  <img src=\"docs/images/banner.svg\" alt=\"Banner\" width=\"100%\" style=\"max-width:100%;height:auto;display:block;\" />\r\n</p># User Management Project\r\n\r\n### Gestão de usuários com Express, rotas e templates EJS\r\n\r\n<img src=\"https://img.shields.io/badge/Node.js-339933?style=for-the-badge&logo=nodedotjs&logoColor=white\" alt=\"Node\"/>\r\n<img src=\"https://img.shields.io/badge/Express-000000?style=for-the-badge&logo=express&logoColor=white\" alt=\"Express\"/>\r\n<img src=\"https://img.shields.io/badge/EJS-Templates-a78bfa?style=for-the-badge\" alt=\"EJS\"/>\r\n\r\n[Sobre](#-sobre) ·\r\n[Features](#-features) ·\r\n[Arquitetura](#-arquitetura--fluxo) ·\r\n[Stack](#-stack) ·\r\n[Estrutura](#-estrutura) ·\r\n[Setup](#-como-rodar) ·\r\n[Melhorias](#-melhorias-sugeridas) ·\r\n[Autor](#-autor)\r\n\r\n</div>\r\n\r\n---\r\n\r\n## 📌 Sobre\r\n\r\nAplicação Node.js para **administrar usuários**: listar, criar, editar e organizar papéis/recursos, mantendo foco em segurança básica de sistemas de TI.\r\n\r\n<div align=\"center\">\r\n\r\n<p align=\"center\">\r\n  <img src=\"docs/images/flow.svg\" alt=\"Fluxo\" width=\"100%\" style=\"max-width:100%;height:auto;display:block;\" />\r\n</p></div>\r\n\r\n---\r\n\r\n## ✨ Features\r\n\r\n| # | Capacidade |\r\n|---|------------|\r\n| 1 | CRUD de usuários |\r\n| 2 | Rotas Express organizadas |\r\n| 3 | Views EJS |\r\n| 4 | Assets estáticos em `public/` |\r\n| 5 | Entry point `app.js` + `bin/` |\r\n\r\n---\r\n\r\n## 🏗️ Arquitetura / Fluxo\r\n\r\n```mermaid\r\nflowchart LR\r\n    B[Browser] --> A[app.js]\r\n    A --> R[routes/]\r\n    R --> V[views/*.ejs]\r\n    A --> P[public/]\r\n```\r\n\r\n---\r\n\r\n## 🛠️ Stack\r\n\r\n| Tecnologia | Papel |\r\n|------------|-------|\r\n| Node.js | Runtime |\r\n| Express | HTTP / rotas |\r\n| EJS | Views |\r\n| JavaScript | Lógica |\r\n\r\n---\r\n\r\n## 📂 Estrutura\r\n\r\n```text\r\nUserManagementProject/\r\n├── app.js\r\n├── bin/\r\n├── routes/\r\n├── views/\r\n├── public/\r\n└── package.json\r\n```\r\n\r\n---\r\n\r\n## 🚀 Como rodar\r\n\r\n```bash\r\ngit clone https://github.com/CanonEngineer/UserManagementProject.git\r\ncd UserManagementProject\r\nnpm install\r\nnpm start\r\n```\r\n\r\n---\r\n\r\n## ▶️ Uso\r\n\r\nAcesse a URL local do Express, navegue pelas telas de usuários e execute operações de cadastro/edição.\r\n\r\n---\r\n\r\n## 🌳 Tree of Knowledge\r\n\r\nEste projeto está mapeado na árvore interativa:\r\n\r\n<p>\r\n  <a href=\"https://canonengineer.github.io/TreeofKnowledge/index.html?tree=user-management\">\r\n    <img src=\"https://img.shields.io/badge/Abrir_na_Árvore-Tree_of_Knowledge-38bdf8?style=for-the-badge&labelColor=0c2344\" alt=\"Tree of Knowledge\"/>\r\n  </a>\r\n</p>\r\n\r\n---\r\n\r\n## 📈 Melhorias sugeridas\r\n\r\n1. Autenticação com sessões/JWT\r\n2. Validação com express-validator\r\n3. Banco relacional (PostgreSQL/MySQL)\r\n4. Testes com Jest + Supertest\r\n\r\n---\r\n\r\n## 👨‍💻 Autor\r\n\r\n**Alessandro Canon (CanonEngineer)**  \r\nNetwork Analyst · Developer · Cybersecurity Enthusiast\r\n\r\n- GitHub: [https://github.com/CanonEngineer](https://github.com/CanonEngineer)\r\n- Portfolio: [https://canonengineer.github.io](https://canonengineer.github.io)\r\n- Tree of Knowledge: [https://canonengineer.github.io/TreeofKnowledge/](https://canonengineer.github.io/TreeofKnowledge/)\r\n\r\n---\r\n\r\n<div align=\"center\">\r\n\r\n⭐ Se este projeto te ajudou, deixe uma estrela!\r\n\r\n</div>\r\n",
         "implementation": [
@@ -29984,14 +30257,14 @@ const PROJECTS = [
     "color": "#facc15",
     "icon": "python",
     "stack": "Python",
-    "summary": "Cobertura completa: 285 arquivos de código no repositório (338 nós na árvore incluindo pastas).",
+    "summary": "Cobertura completa: 285 arquivos de código no repositório (340 nós na árvore incluindo pastas).",
     "nodes": [
       {
         "id": "course-python-2023-root",
         "parent": null,
         "layer": "root",
         "title": "CoursePython2023",
-        "description": "Exercícios e práticas do curso de Python 2023.",
+        "description": "Cobertura completa: 285 arquivos de código no repositório (338 nós na árvore incluindo pastas).",
         "file": "README.md",
         "code": "> **Mobile / UTF-8:** imagens com `width: 100%` (sem scroll horizontal). Arquivo gravado em UTF-8 para acentos corretos em qualquer dispositivo.\r\n\r\n<div align=\"center\">\r\n\r\n<p align=\"center\">\r\n  <img src=\"docs/images/banner.svg\" alt=\"Banner\" width=\"100%\" style=\"max-width:100%;height:auto;display:block;\" />\r\n</p># Course Python 2023\r\n\r\n### Exercícios e práticas do curso de Python — evolução aula a aula\r\n\r\n<img src=\"https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white\" alt=\"Python\"/>\r\n<img src=\"https://img.shields.io/badge/Exercícios-Hands--on-facc15?style=for-the-badge\" alt=\"Exercícios\"/>\r\n\r\n[Sobre](#-sobre) ·\r\n[Features](#-features) ·\r\n[Arquitetura](#-arquitetura--fluxo) ·\r\n[Stack](#-stack) ·\r\n[Estrutura](#-estrutura) ·\r\n[Setup](#-como-rodar) ·\r\n[Melhorias](#-melhorias-sugeridas) ·\r\n[Autor](#-autor)\r\n\r\n</div>\r\n\r\n---\r\n\r\n## 📌 Sobre\r\n\r\nRepositório de **exercícios do curso Python 2023**: pastas por aula (`aula141`, `aula156`, …), zip/descompactação, sites de prática e experimentos progressivos.\r\n\r\n<div align=\"center\">\r\n\r\n<p align=\"center\">\r\n  <img src=\"docs/images/flow.svg\" alt=\"Fluxo\" width=\"100%\" style=\"max-width:100%;height:auto;display:block;\" />\r\n</p></div>\r\n\r\n---\r\n\r\n## ✨ Features\r\n\r\n| # | Capacidade |\r\n|---|------------|\r\n| 1 | Organização por número de aula |\r\n| 2 | Temas: arquivos, zip, sites, POO, etc. |\r\n| 3 | Material de estudo versionado |\r\n| 4 | Base para projetos maiores em Django |\r\n\r\n---\r\n\r\n## 🏗️ Arquitetura / Fluxo\r\n\r\n```mermaid\r\nflowchart TD\r\n    C[Curso Python 2023] --> B[Bases / sintaxe]\r\n    B --> F[Arquivos e zip]\r\n    F --> W[Sites / HTTP]\r\n    W --> A[Aplicações]\r\n```\r\n\r\n---\r\n\r\n## 🛠️ Stack\r\n\r\n| Tecnologia | Papel |\r\n|------------|-------|\r\n| Python 3 | Linguagem |\r\n| stdlib | Arquivos, zip, http |\r\n| VS Code | Editor |\r\n\r\n---\r\n\r\n## 📂 Estrutura\r\n\r\n```text\r\nCoursePython2023/\r\n├── aula141/\r\n├── aula156/\r\n├── aula186_descompactado/\r\n├── aula190_site/\r\n├── ...\r\n└── README.md\r\n```\r\n\r\n---\r\n\r\n## 🚀 Como rodar\r\n\r\n```bash\r\ngit clone https://github.com/CanonEngineer/CoursePython2023.git\r\ncd CoursePython2023\r\npython aula190_site/...   # conforme a aula\r\n```\r\n\r\n---\r\n\r\n## ▶️ Uso\r\n\r\nEntre na pasta da aula desejada, leia o enunciado/código e execute com `python`.\r\n\r\n---\r\n\r\n## 🌳 Tree of Knowledge\r\n\r\nEste projeto está mapeado na árvore interativa:\r\n\r\n<p>\r\n  <a href=\"https://canonengineer.github.io/TreeofKnowledge/index.html?tree=course-python-2023\">\r\n    <img src=\"https://img.shields.io/badge/Abrir_na_Árvore-Tree_of_Knowledge-38bdf8?style=for-the-badge&labelColor=0c2344\" alt=\"Tree of Knowledge\"/>\r\n  </a>\r\n</p>\r\n\r\n---\r\n\r\n## 📈 Melhorias sugeridas\r\n\r\n1. Índice de aulas no README com links\r\n2. Testes automatizados por aula\r\n3. Notebooks Jupyter para visualização\r\n\r\n---\r\n\r\n## 👨‍💻 Autor\r\n\r\n**Alessandro Canon (CanonEngineer)**  \r\nNetwork Analyst · Developer · Cybersecurity Enthusiast\r\n\r\n- GitHub: [https://github.com/CanonEngineer](https://github.com/CanonEngineer)\r\n- Portfolio: [https://canonengineer.github.io](https://canonengineer.github.io)\r\n- Tree of Knowledge: [https://canonengineer.github.io/TreeofKnowledge/](https://canonengineer.github.io/TreeofKnowledge/)\r\n\r\n---\r\n\r\n<div align=\"center\">\r\n\r\n⭐ Se este projeto te ajudou, deixe uma estrela!\r\n\r\n</div>\r\n",
         "implementation": [
@@ -30015,7 +30288,7 @@ const PROJECTS = [
       },
       {
         "id": "course-python-2023-dir-aula141",
-        "parent": "course-python-2023-root",
+        "parent": "course-python-2023-grp-root-bucket-a",
         "layer": "module",
         "title": "aula141/",
         "description": "Pacote/pasta `aula141/` do projeto.",
@@ -30028,7 +30301,7 @@ const PROJECTS = [
       },
       {
         "id": "course-python-2023-dir-aula156",
-        "parent": "course-python-2023-root",
+        "parent": "course-python-2023-grp-root-bucket-a",
         "layer": "module",
         "title": "aula156/",
         "description": "Pacote/pasta `aula156/` do projeto.",
@@ -30041,7 +30314,7 @@ const PROJECTS = [
       },
       {
         "id": "course-python-2023-dir-aula158",
-        "parent": "course-python-2023-root",
+        "parent": "course-python-2023-grp-root-bucket-a",
         "layer": "module",
         "title": "aula158/",
         "description": "Pacote/pasta `aula158/` do projeto.",
@@ -30054,7 +30327,7 @@ const PROJECTS = [
       },
       {
         "id": "course-python-2023-dir-aula190-site",
-        "parent": "course-python-2023-root",
+        "parent": "course-python-2023-grp-root-bucket-a",
         "layer": "module",
         "title": "aula190_site/",
         "description": "Pacote/pasta `aula190_site/` do projeto.",
@@ -30067,7 +30340,7 @@ const PROJECTS = [
       },
       {
         "id": "course-python-2023-dir-aula193",
-        "parent": "course-python-2023-root",
+        "parent": "course-python-2023-grp-root-bucket-a",
         "layer": "module",
         "title": "aula193/",
         "description": "Pacote/pasta `aula193/` do projeto.",
@@ -30080,7 +30353,7 @@ const PROJECTS = [
       },
       {
         "id": "course-python-2023-dir-aula197",
-        "parent": "course-python-2023-root",
+        "parent": "course-python-2023-grp-root-bucket-a",
         "layer": "module",
         "title": "aula197/",
         "description": "Pacote/pasta `aula197/` do projeto.",
@@ -30093,7 +30366,7 @@ const PROJECTS = [
       },
       {
         "id": "course-python-2023-dir-aula199",
-        "parent": "course-python-2023-root",
+        "parent": "course-python-2023-grp-root-bucket-a",
         "layer": "module",
         "title": "aula199/",
         "description": "Pacote/pasta `aula199/` do projeto.",
@@ -30106,7 +30379,7 @@ const PROJECTS = [
       },
       {
         "id": "course-python-2023-dir-aula200",
-        "parent": "course-python-2023-root",
+        "parent": "course-python-2023-grp-root-bucket-a",
         "layer": "module",
         "title": "aula200/",
         "description": "Pacote/pasta `aula200/` do projeto.",
@@ -30119,7 +30392,7 @@ const PROJECTS = [
       },
       {
         "id": "course-python-2023-dir-aula201",
-        "parent": "course-python-2023-root",
+        "parent": "course-python-2023-grp-root-bucket-a",
         "layer": "module",
         "title": "aula201/",
         "description": "Pacote/pasta `aula201/` do projeto.",
@@ -30132,7 +30405,7 @@ const PROJECTS = [
       },
       {
         "id": "course-python-2023-dir-aula202-calculadora",
-        "parent": "course-python-2023-root",
+        "parent": "course-python-2023-grp-root-bucket-a",
         "layer": "module",
         "title": "aula202-calculadora/",
         "description": "Pacote/pasta `aula202-calculadora/` do projeto.",
@@ -30145,7 +30418,7 @@ const PROJECTS = [
       },
       {
         "id": "course-python-2023-dir-aula203-qtdesigner",
-        "parent": "course-python-2023-root",
+        "parent": "course-python-2023-grp-root-bucket-a",
         "layer": "module",
         "title": "aula203-qtdesigner/",
         "description": "Pacote/pasta `aula203-qtdesigner/` do projeto.",
@@ -30158,7 +30431,7 @@ const PROJECTS = [
       },
       {
         "id": "course-python-2023-dir-aula204",
-        "parent": "course-python-2023-root",
+        "parent": "course-python-2023-grp-root-bucket-a",
         "layer": "module",
         "title": "aula204/",
         "description": "Pacote/pasta `aula204/` do projeto.",
@@ -30171,7 +30444,7 @@ const PROJECTS = [
       },
       {
         "id": "course-python-2023-dir-aula205",
-        "parent": "course-python-2023-root",
+        "parent": "course-python-2023-grp-root-bucket-a",
         "layer": "module",
         "title": "aula205/",
         "description": "Pacote/pasta `aula205/` do projeto.",
@@ -30184,7 +30457,7 @@ const PROJECTS = [
       },
       {
         "id": "course-python-2023-dir-aula206",
-        "parent": "course-python-2023-root",
+        "parent": "course-python-2023-grp-root-bucket-a",
         "layer": "module",
         "title": "aula206/",
         "description": "Pacote/pasta `aula206/` do projeto.",
@@ -30197,7 +30470,7 @@ const PROJECTS = [
       },
       {
         "id": "course-python-2023-dir-aula207-ola-django",
-        "parent": "course-python-2023-root",
+        "parent": "course-python-2023-grp-root-bucket-a",
         "layer": "module",
         "title": "aula207_ola_django/",
         "description": "Pacote/pasta `aula207_ola_django/` do projeto.",
@@ -30210,7 +30483,7 @@ const PROJECTS = [
       },
       {
         "id": "course-python-2023-dir-aula99-package",
-        "parent": "course-python-2023-root",
+        "parent": "course-python-2023-grp-root-bucket-a",
         "layer": "module",
         "title": "aula99_package/",
         "description": "Pacote/pasta `aula99_package/` do projeto.",
@@ -30457,7 +30730,7 @@ const PROJECTS = [
       },
       {
         "id": "course-python-2023-grp-files",
-        "parent": "course-python-2023-root",
+        "parent": "course-python-2023-grp-root-bucket-a",
         "layer": "module",
         "title": "Arquivos #",
         "description": "Grupo de arquivos em `./` — Arquivos #",
@@ -30469,13 +30742,26 @@ const PROJECTS = [
         ]
       },
       {
-        "id": "course-python-2023-grp-files-a-1-12",
-        "parent": "course-python-2023-root",
+        "id": "course-python-2023-grp-files-a",
+        "parent": "course-python-2023-grp-root-bucket-a",
         "layer": "module",
-        "title": "Arquivos A (1–12)",
-        "description": "Grupo de arquivos em `./` — Arquivos A (1–12)",
+        "title": "Arquivos A",
+        "description": "Grupo de arquivos em `./` — Arquivos A",
+        "file": "[files-a]",
+        "code": "# Grupo: Arquivos A\n# Pasta: ./\n",
+        "implementation": [
+          "agrupamento para layout 2D/3D",
+          "pasta: ./"
+        ]
+      },
+      {
+        "id": "course-python-2023-grp-files-a-1-12",
+        "parent": "course-python-2023-grp-files-a",
+        "layer": "module",
+        "title": "1–12",
+        "description": "Grupo de arquivos em `./` — 1–12",
         "file": "[files-a-1-12]",
-        "code": "# Grupo: Arquivos A (1–12)\n# Pasta: ./\n",
+        "code": "# Grupo: 1–12\n# Pasta: ./\n",
         "implementation": [
           "agrupamento para layout 2D/3D",
           "pasta: ./"
@@ -30483,12 +30769,12 @@ const PROJECTS = [
       },
       {
         "id": "course-python-2023-grp-files-a-13-24",
-        "parent": "course-python-2023-root",
+        "parent": "course-python-2023-grp-files-a",
         "layer": "module",
-        "title": "Arquivos A (13–24)",
-        "description": "Grupo de arquivos em `./` — Arquivos A (13–24)",
+        "title": "13–24",
+        "description": "Grupo de arquivos em `./` — 13–24",
         "file": "[files-a-13-24]",
-        "code": "# Grupo: Arquivos A (13–24)\n# Pasta: ./\n",
+        "code": "# Grupo: 13–24\n# Pasta: ./\n",
         "implementation": [
           "agrupamento para layout 2D/3D",
           "pasta: ./"
@@ -30496,12 +30782,12 @@ const PROJECTS = [
       },
       {
         "id": "course-python-2023-grp-files-a-25-36",
-        "parent": "course-python-2023-root",
+        "parent": "course-python-2023-grp-files-a",
         "layer": "module",
-        "title": "Arquivos A (25–36)",
-        "description": "Grupo de arquivos em `./` — Arquivos A (25–36)",
+        "title": "25–36",
+        "description": "Grupo de arquivos em `./` — 25–36",
         "file": "[files-a-25-36]",
-        "code": "# Grupo: Arquivos A (25–36)\n# Pasta: ./\n",
+        "code": "# Grupo: 25–36\n# Pasta: ./\n",
         "implementation": [
           "agrupamento para layout 2D/3D",
           "pasta: ./"
@@ -30509,12 +30795,12 @@ const PROJECTS = [
       },
       {
         "id": "course-python-2023-grp-files-a-37-48",
-        "parent": "course-python-2023-root",
+        "parent": "course-python-2023-grp-files-a",
         "layer": "module",
-        "title": "Arquivos A (37–48)",
-        "description": "Grupo de arquivos em `./` — Arquivos A (37–48)",
+        "title": "37–48",
+        "description": "Grupo de arquivos em `./` — 37–48",
         "file": "[files-a-37-48]",
-        "code": "# Grupo: Arquivos A (37–48)\n# Pasta: ./\n",
+        "code": "# Grupo: 37–48\n# Pasta: ./\n",
         "implementation": [
           "agrupamento para layout 2D/3D",
           "pasta: ./"
@@ -30522,12 +30808,12 @@ const PROJECTS = [
       },
       {
         "id": "course-python-2023-grp-files-a-49-60",
-        "parent": "course-python-2023-root",
+        "parent": "course-python-2023-grp-files-a",
         "layer": "module",
-        "title": "Arquivos A (49–60)",
-        "description": "Grupo de arquivos em `./` — Arquivos A (49–60)",
+        "title": "49–60",
+        "description": "Grupo de arquivos em `./` — 49–60",
         "file": "[files-a-49-60]",
-        "code": "# Grupo: Arquivos A (49–60)\n# Pasta: ./\n",
+        "code": "# Grupo: 49–60\n# Pasta: ./\n",
         "implementation": [
           "agrupamento para layout 2D/3D",
           "pasta: ./"
@@ -30535,12 +30821,12 @@ const PROJECTS = [
       },
       {
         "id": "course-python-2023-grp-files-a-61-72",
-        "parent": "course-python-2023-root",
+        "parent": "course-python-2023-grp-files-a",
         "layer": "module",
-        "title": "Arquivos A (61–72)",
-        "description": "Grupo de arquivos em `./` — Arquivos A (61–72)",
+        "title": "61–72",
+        "description": "Grupo de arquivos em `./` — 61–72",
         "file": "[files-a-61-72]",
-        "code": "# Grupo: Arquivos A (61–72)\n# Pasta: ./\n",
+        "code": "# Grupo: 61–72\n# Pasta: ./\n",
         "implementation": [
           "agrupamento para layout 2D/3D",
           "pasta: ./"
@@ -30548,12 +30834,12 @@ const PROJECTS = [
       },
       {
         "id": "course-python-2023-grp-files-a-73-84",
-        "parent": "course-python-2023-root",
+        "parent": "course-python-2023-grp-files-a",
         "layer": "module",
-        "title": "Arquivos A (73–84)",
-        "description": "Grupo de arquivos em `./` — Arquivos A (73–84)",
+        "title": "73–84",
+        "description": "Grupo de arquivos em `./` — 73–84",
         "file": "[files-a-73-84]",
-        "code": "# Grupo: Arquivos A (73–84)\n# Pasta: ./\n",
+        "code": "# Grupo: 73–84\n# Pasta: ./\n",
         "implementation": [
           "agrupamento para layout 2D/3D",
           "pasta: ./"
@@ -30561,12 +30847,12 @@ const PROJECTS = [
       },
       {
         "id": "course-python-2023-grp-files-a-85-96",
-        "parent": "course-python-2023-root",
+        "parent": "course-python-2023-grp-files-a",
         "layer": "module",
-        "title": "Arquivos A (85–96)",
-        "description": "Grupo de arquivos em `./` — Arquivos A (85–96)",
+        "title": "85–96",
+        "description": "Grupo de arquivos em `./` — 85–96",
         "file": "[files-a-85-96]",
-        "code": "# Grupo: Arquivos A (85–96)\n# Pasta: ./\n",
+        "code": "# Grupo: 85–96\n# Pasta: ./\n",
         "implementation": [
           "agrupamento para layout 2D/3D",
           "pasta: ./"
@@ -30574,12 +30860,12 @@ const PROJECTS = [
       },
       {
         "id": "course-python-2023-grp-files-a-97-108",
-        "parent": "course-python-2023-root",
+        "parent": "course-python-2023-grp-files-a",
         "layer": "module",
-        "title": "Arquivos A (97–108)",
-        "description": "Grupo de arquivos em `./` — Arquivos A (97–108)",
+        "title": "97–108",
+        "description": "Grupo de arquivos em `./` — 97–108",
         "file": "[files-a-97-108]",
-        "code": "# Grupo: Arquivos A (97–108)\n# Pasta: ./\n",
+        "code": "# Grupo: 97–108\n# Pasta: ./\n",
         "implementation": [
           "agrupamento para layout 2D/3D",
           "pasta: ./"
@@ -30587,12 +30873,12 @@ const PROJECTS = [
       },
       {
         "id": "course-python-2023-grp-files-a-109-120",
-        "parent": "course-python-2023-root",
+        "parent": "course-python-2023-grp-files-a",
         "layer": "module",
-        "title": "Arquivos A (109–120)",
-        "description": "Grupo de arquivos em `./` — Arquivos A (109–120)",
+        "title": "109–120",
+        "description": "Grupo de arquivos em `./` — 109–120",
         "file": "[files-a-109-120]",
-        "code": "# Grupo: Arquivos A (109–120)\n# Pasta: ./\n",
+        "code": "# Grupo: 109–120\n# Pasta: ./\n",
         "implementation": [
           "agrupamento para layout 2D/3D",
           "pasta: ./"
@@ -30600,12 +30886,12 @@ const PROJECTS = [
       },
       {
         "id": "course-python-2023-grp-files-a-121-132",
-        "parent": "course-python-2023-root",
+        "parent": "course-python-2023-grp-files-a",
         "layer": "module",
-        "title": "Arquivos A (121–132)",
-        "description": "Grupo de arquivos em `./` — Arquivos A (121–132)",
+        "title": "121–132",
+        "description": "Grupo de arquivos em `./` — 121–132",
         "file": "[files-a-121-132]",
-        "code": "# Grupo: Arquivos A (121–132)\n# Pasta: ./\n",
+        "code": "# Grupo: 121–132\n# Pasta: ./\n",
         "implementation": [
           "agrupamento para layout 2D/3D",
           "pasta: ./"
@@ -30613,12 +30899,12 @@ const PROJECTS = [
       },
       {
         "id": "course-python-2023-grp-files-a-133-144",
-        "parent": "course-python-2023-root",
+        "parent": "course-python-2023-grp-files-a",
         "layer": "module",
-        "title": "Arquivos A (133–144)",
-        "description": "Grupo de arquivos em `./` — Arquivos A (133–144)",
+        "title": "133–144",
+        "description": "Grupo de arquivos em `./` — 133–144",
         "file": "[files-a-133-144]",
-        "code": "# Grupo: Arquivos A (133–144)\n# Pasta: ./\n",
+        "code": "# Grupo: 133–144\n# Pasta: ./\n",
         "implementation": [
           "agrupamento para layout 2D/3D",
           "pasta: ./"
@@ -30626,12 +30912,12 @@ const PROJECTS = [
       },
       {
         "id": "course-python-2023-grp-files-a-145-156",
-        "parent": "course-python-2023-root",
+        "parent": "course-python-2023-grp-files-a",
         "layer": "module",
-        "title": "Arquivos A (145–156)",
-        "description": "Grupo de arquivos em `./` — Arquivos A (145–156)",
+        "title": "145–156",
+        "description": "Grupo de arquivos em `./` — 145–156",
         "file": "[files-a-145-156]",
-        "code": "# Grupo: Arquivos A (145–156)\n# Pasta: ./\n",
+        "code": "# Grupo: 145–156\n# Pasta: ./\n",
         "implementation": [
           "agrupamento para layout 2D/3D",
           "pasta: ./"
@@ -30639,12 +30925,12 @@ const PROJECTS = [
       },
       {
         "id": "course-python-2023-grp-files-a-157-168",
-        "parent": "course-python-2023-root",
+        "parent": "course-python-2023-grp-files-a",
         "layer": "module",
-        "title": "Arquivos A (157–168)",
-        "description": "Grupo de arquivos em `./` — Arquivos A (157–168)",
+        "title": "157–168",
+        "description": "Grupo de arquivos em `./` — 157–168",
         "file": "[files-a-157-168]",
-        "code": "# Grupo: Arquivos A (157–168)\n# Pasta: ./\n",
+        "code": "# Grupo: 157–168\n# Pasta: ./\n",
         "implementation": [
           "agrupamento para layout 2D/3D",
           "pasta: ./"
@@ -30652,12 +30938,12 @@ const PROJECTS = [
       },
       {
         "id": "course-python-2023-grp-files-a-169-180",
-        "parent": "course-python-2023-root",
+        "parent": "course-python-2023-grp-files-a",
         "layer": "module",
-        "title": "Arquivos A (169–180)",
-        "description": "Grupo de arquivos em `./` — Arquivos A (169–180)",
+        "title": "169–180",
+        "description": "Grupo de arquivos em `./` — 169–180",
         "file": "[files-a-169-180]",
-        "code": "# Grupo: Arquivos A (169–180)\n# Pasta: ./\n",
+        "code": "# Grupo: 169–180\n# Pasta: ./\n",
         "implementation": [
           "agrupamento para layout 2D/3D",
           "pasta: ./"
@@ -30665,12 +30951,12 @@ const PROJECTS = [
       },
       {
         "id": "course-python-2023-grp-files-a-181-192",
-        "parent": "course-python-2023-root",
+        "parent": "course-python-2023-grp-files-a",
         "layer": "module",
-        "title": "Arquivos A (181–192)",
-        "description": "Grupo de arquivos em `./` — Arquivos A (181–192)",
+        "title": "181–192",
+        "description": "Grupo de arquivos em `./` — 181–192",
         "file": "[files-a-181-192]",
-        "code": "# Grupo: Arquivos A (181–192)\n# Pasta: ./\n",
+        "code": "# Grupo: 181–192\n# Pasta: ./\n",
         "implementation": [
           "agrupamento para layout 2D/3D",
           "pasta: ./"
@@ -30678,12 +30964,12 @@ const PROJECTS = [
       },
       {
         "id": "course-python-2023-grp-files-a-193-201",
-        "parent": "course-python-2023-root",
+        "parent": "course-python-2023-grp-files-a",
         "layer": "module",
-        "title": "Arquivos A (193–201)",
-        "description": "Grupo de arquivos em `./` — Arquivos A (193–201)",
+        "title": "193–201",
+        "description": "Grupo de arquivos em `./` — 193–201",
         "file": "[files-a-193-201]",
-        "code": "# Grupo: Arquivos A (193–201)\n# Pasta: ./\n",
+        "code": "# Grupo: 193–201\n# Pasta: ./\n",
         "implementation": [
           "agrupamento para layout 2D/3D",
           "pasta: ./"
@@ -34380,11 +34666,24 @@ const PROJECTS = [
           "path: dados/produtos_modulo.py",
           "GitHub: https://github.com/CanonEngineer/CoursePython2023/blob/main/dados/produtos_modulo.py"
         ]
+      },
+      {
+        "id": "course-python-2023-grp-root-bucket-a",
+        "parent": "course-python-2023-root",
+        "layer": "module",
+        "title": "Pastas A",
+        "description": "Agrupamento de pastas/módulos na raiz — A",
+        "file": "[root-a]",
+        "code": "# Agrupamento da raiz: A\n",
+        "implementation": [
+          "agrupamento de fan-out da raiz",
+          "letras: A"
+        ]
       }
     ],
     "meta": {
       "sourceFiles": 285,
-      "treeNodes": 338,
+      "treeNodes": 340,
       "complete": true
     }
   },
@@ -34402,7 +34701,7 @@ const PROJECTS = [
         "parent": null,
         "layer": "root",
         "title": "PythonEmployeeList",
-        "description": "Lista de funcionários com Django, models e templates.",
+        "description": "Cobertura completa: 20 arquivos de código no repositório (26 nós na árvore incluindo pastas).",
         "file": "README.md",
         "code": "> **Mobile / UTF-8:** imagens com `width: 100%` (sem scroll horizontal). Arquivo gravado em UTF-8 para acentos corretos em qualquer dispositivo.\r\n\r\n<div align=\"center\">\r\n\r\n<p align=\"center\">\r\n  <img src=\"docs/images/banner.svg\" alt=\"Banner\" width=\"100%\" style=\"max-width:100%;height:auto;display:block;\" />\r\n</p># Python Employee List\r\n\r\n### Lista de funcionários com Django, models e templates\r\n\r\n<img src=\"https://img.shields.io/badge/Django-092E20?style=for-the-badge&logo=django&logoColor=white\" alt=\"Django\"/>\r\n<img src=\"https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white\" alt=\"Python\"/>\r\n\r\n[Sobre](#-sobre) ·\r\n[Features](#-features) ·\r\n[Arquitetura](#-arquitetura--fluxo) ·\r\n[Stack](#-stack) ·\r\n[Estrutura](#-estrutura) ·\r\n[Setup](#-como-rodar) ·\r\n[Melhorias](#-melhorias-sugeridas) ·\r\n[Autor](#-autor)\r\n\r\n</div>\r\n\r\n---\r\n\r\n## 📌 Sobre\r\n\r\nAplicação Django para **cadastro/listagem de funcionários**, com app `employees`, projeto `mysite`, templates e upload de imagens em `media/`.\r\n\r\n<div align=\"center\">\r\n\r\n<p align=\"center\">\r\n  <img src=\"docs/images/flow.svg\" alt=\"Fluxo\" width=\"100%\" style=\"max-width:100%;height:auto;display:block;\" />\r\n</p></div>\r\n\r\n---\r\n\r\n## ✨ Features\r\n\r\n| # | Capacidade |\r\n|---|------------|\r\n| 1 | App Django `employees` |\r\n| 2 | Templates HTML |\r\n| 3 | Mídia de imagens |\r\n| 4 | SQLite para desenvolvimento |\r\n\r\n---\r\n\r\n## 🏗️ Arquitetura / Fluxo\r\n\r\n```mermaid\r\nflowchart LR\r\n    U[Usuário] --> V[Views]\r\n    V --> M[Models employees]\r\n    V --> T[Templates]\r\n    M --> DB[(SQLite)]\r\n```\r\n\r\n---\r\n\r\n## 🛠️ Stack\r\n\r\n| Tecnologia | Papel |\r\n|------------|-------|\r\n| Django | Framework |\r\n| SQLite | DB local |\r\n| HTML templates | UI |\r\n\r\n---\r\n\r\n## 📂 Estrutura\r\n\r\n```text\r\nPythonEmployeeList/\r\n├── manage.py\r\n├── mysite/\r\n├── employees/\r\n├── templates/\r\n├── media/\r\n└── db.sqlite3\r\n```\r\n\r\n---\r\n\r\n## 🚀 Como rodar\r\n\r\n```bash\r\ngit clone https://github.com/CanonEngineer/PythonEmployeeList.git\r\ncd PythonEmployeeList\r\npython -m venv .venv && source .venv/bin/activate  # Windows: .venv\\Scripts\\activate\r\npip install django\r\npython manage.py migrate\r\npython manage.py runserver\r\n```\r\n\r\n---\r\n\r\n## ▶️ Uso\r\n\r\nAcesse `http://127.0.0.1:8000/` e navegue pelas telas de funcionários.\r\n\r\n---\r\n\r\n## 🌳 Tree of Knowledge\r\n\r\nEste projeto está mapeado na árvore interativa:\r\n\r\n<p>\r\n  <a href=\"https://canonengineer.github.io/TreeofKnowledge/index.html?tree=python-employee-list\">\r\n    <img src=\"https://img.shields.io/badge/Abrir_na_Árvore-Tree_of_Knowledge-38bdf8?style=for-the-badge&labelColor=0c2344\" alt=\"Tree of Knowledge\"/>\r\n  </a>\r\n</p>\r\n\r\n---\r\n\r\n## 📈 Melhorias sugeridas\r\n\r\n1. requirements.txt versionado\r\n2. Autenticação admin/usuários\r\n3. Paginação e busca\r\n4. Testes Django\r\n\r\n---\r\n\r\n## 👨‍💻 Autor\r\n\r\n**Alessandro Canon (CanonEngineer)**  \r\nNetwork Analyst · Developer · Cybersecurity Enthusiast\r\n\r\n- GitHub: [https://github.com/CanonEngineer](https://github.com/CanonEngineer)\r\n- Portfolio: [https://canonengineer.github.io](https://canonengineer.github.io)\r\n- Tree of Knowledge: [https://canonengineer.github.io/TreeofKnowledge/](https://canonengineer.github.io/TreeofKnowledge/)\r\n\r\n---\r\n\r\n<div align=\"center\">\r\n\r\n⭐ Se este projeto te ajudou, deixe uma estrela!\r\n\r\n</div>\r\n",
         "implementation": [
@@ -34757,7 +35056,7 @@ const PROJECTS = [
         "parent": null,
         "layer": "root",
         "title": "TodoApp",
-        "description": "TODO app Django com operações CRUD.",
+        "description": "Cobertura completa: 19 arquivos de código no repositório (23 nós na árvore incluindo pastas).",
         "file": "README.md",
         "code": "> **Mobile / UTF-8:** imagens com `width: 100%` (sem scroll horizontal). Arquivo gravado em UTF-8 para acentos corretos em qualquer dispositivo.\r\n\r\n<div align=\"center\">\r\n\r\n<p align=\"center\">\r\n  <img src=\"docs/images/banner.svg\" alt=\"Banner\" width=\"100%\" style=\"max-width:100%;height:auto;display:block;\" />\r\n</p># Django TODO App\r\n\r\n### Um dos primeiros projetos com operações CRUD em Python/Django\r\n\r\n<img src=\"https://img.shields.io/badge/Django-CRUD-092E20?style=for-the-badge&logo=django&logoColor=white\" alt=\"Django\"/>\r\n<img src=\"https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white\" alt=\"Python\"/>\r\n\r\n[Sobre](#-sobre) ·\r\n[Features](#-features) ·\r\n[Arquitetura](#-arquitetura--fluxo) ·\r\n[Stack](#-stack) ·\r\n[Estrutura](#-estrutura) ·\r\n[Setup](#-como-rodar) ·\r\n[Melhorias](#-melhorias-sugeridas) ·\r\n[Autor](#-autor)\r\n\r\n</div>\r\n\r\n---\r\n\r\n## 📌 Sobre\r\n\r\nTODO App em Django com apps `todo` e `todo_main`, templates e SQLite — foco em **Create, Read, Update, Delete**.\r\n\r\n<div align=\"center\">\r\n\r\n<p align=\"center\">\r\n  <img src=\"docs/images/flow.svg\" alt=\"Fluxo\" width=\"100%\" style=\"max-width:100%;height:auto;display:block;\" />\r\n</p></div>\r\n\r\n---\r\n\r\n## ✨ Features\r\n\r\n| # | Capacidade |\r\n|---|------------|\r\n| 1 | CRUD de tarefas |\r\n| 2 | Templates Django |\r\n| 3 | Projeto `todo_main` + app `todo` |\r\n| 4 | DB SQLite embutido |\r\n\r\n---\r\n\r\n## 🏗️ Arquitetura / Fluxo\r\n\r\n```mermaid\r\nflowchart TD\r\n    A[Lista de tarefas] --> B[Adicionar]\r\n    A --> C[Editar]\r\n    A --> D[Marcar concluída]\r\n    A --> E[Excluir]\r\n    B --> DB[(SQLite)]\r\n    C --> DB\r\n    D --> DB\r\n    E --> DB\r\n```\r\n\r\n---\r\n\r\n## 🛠️ Stack\r\n\r\n| Tecnologia | Papel |\r\n|------------|-------|\r\n| Django | MVC web |\r\n| SQLite | Persistência |\r\n| HTML | UI |\r\n\r\n---\r\n\r\n## 📂 Estrutura\r\n\r\n```text\r\nTodoApp/\r\n├── manage.py\r\n├── todo_main/\r\n├── todo/\r\n├── templates/\r\n└── db.sqlite3\r\n```\r\n\r\n---\r\n\r\n## 🚀 Como rodar\r\n\r\n```bash\r\ngit clone https://github.com/CanonEngineer/TodoApp.git\r\ncd TodoApp\r\npython -m venv .venv && source .venv/bin/activate\r\npip install django\r\npython manage.py migrate\r\npython manage.py runserver\r\n```\r\n\r\n---\r\n\r\n## ▶️ Uso\r\n\r\nAbra o servidor local e gerencie suas tarefas pela interface web.\r\n\r\n---\r\n\r\n## 🌳 Tree of Knowledge\r\n\r\nEste projeto está mapeado na árvore interativa:\r\n\r\n<p>\r\n  <a href=\"https://canonengineer.github.io/TreeofKnowledge/index.html?tree=todo-app\">\r\n    <img src=\"https://img.shields.io/badge/Abrir_na_Árvore-Tree_of_Knowledge-38bdf8?style=for-the-badge&labelColor=0c2344\" alt=\"Tree of Knowledge\"/>\r\n  </a>\r\n</p>\r\n\r\n---\r\n\r\n## 📈 Melhorias sugeridas\r\n\r\n1. Due dates e prioridades\r\n2. Login por usuário\r\n3. API REST opcional\r\n4. Deploy (Render/Railway)\r\n\r\n---\r\n\r\n## 👨‍💻 Autor\r\n\r\n**Alessandro Canon (CanonEngineer)**  \r\nNetwork Analyst · Developer · Cybersecurity Enthusiast\r\n\r\n- GitHub: [https://github.com/CanonEngineer](https://github.com/CanonEngineer)\r\n- Portfolio: [https://canonengineer.github.io](https://canonengineer.github.io)\r\n- Tree of Knowledge: [https://canonengineer.github.io/TreeofKnowledge/](https://canonengineer.github.io/TreeofKnowledge/)\r\n\r\n---\r\n\r\n<div align=\"center\">\r\n\r\n⭐ Se este projeto te ajudou, deixe uma estrela!\r\n\r\n</div>\r\n",
         "implementation": [
@@ -35073,7 +35372,7 @@ const PROJECTS = [
         "parent": null,
         "layer": "root",
         "title": "ProjectHelpDesk",
-        "description": "Help Desk em PHP: login, abrir e consultar chamados.",
+        "description": "Cobertura completa: 9 arquivos de código no repositório (9 nós na árvore incluindo pastas).",
         "file": "README.md",
         "code": "> **Mobile / UTF-8:** imagens com `width: 100%` (sem scroll horizontal). Arquivo gravado em UTF-8 para acentos corretos em qualquer dispositivo.\r\n\r\n<div align=\"center\">\r\n\r\n<p align=\"center\">\r\n  <img src=\"docs/images/banner.svg\" alt=\"Banner\" width=\"100%\" style=\"max-width:100%;height:auto;display:block;\" />\r\n</p># Project Help Desk\r\n\r\n### Sistema Help Desk em PHP: autenticação, abertura e consulta de chamados\r\n\r\n<img src=\"https://img.shields.io/badge/PHP-777BB4?style=for-the-badge&logo=php&logoColor=white\" alt=\"PHP\"/>\r\n<img src=\"https://img.shields.io/badge/Help%20Desk-Tickets-60a5fa?style=for-the-badge\" alt=\"HelpDesk\"/>\r\n\r\n[Sobre](#-sobre) ·\r\n[Features](#-features) ·\r\n[Arquitetura](#-arquitetura--fluxo) ·\r\n[Stack](#-stack) ·\r\n[Estrutura](#-estrutura) ·\r\n[Setup](#-como-rodar) ·\r\n[Melhorias](#-melhorias-sugeridas) ·\r\n[Autor](#-autor)\r\n\r\n</div>\r\n\r\n---\r\n\r\n## 📌 Sobre\r\n\r\nHelp Desk clássico em PHP procedural: login, validação de sessão, abertura de chamado, gravação em arquivo (`arquivo.hd`) e consulta.\r\n\r\n<div align=\"center\">\r\n\r\n<p align=\"center\">\r\n  <img src=\"docs/images/flow.svg\" alt=\"Fluxo\" width=\"100%\" style=\"max-width:100%;height:auto;display:block;\" />\r\n</p></div>\r\n\r\n---\r\n\r\n## ✨ Features\r\n\r\n| # | Capacidade |\r\n|---|------------|\r\n| 1 | Tela de login (`index.php` / `valida_login.php`) |\r\n| 2 | Proteção de rotas (`validador_acesso.php`) |\r\n| 3 | Abrir chamado + registro |\r\n| 4 | Consultar chamados |\r\n| 5 | Logoff |\r\n\r\n---\r\n\r\n## 🏗️ Arquitetura / Fluxo\r\n\r\n```mermaid\r\nflowchart TD\r\n    L[Login] -->|ok| H[Home]\r\n    H --> A[Abrir chamado]\r\n    A --> R[registra_chamado]\r\n    R --> F[(arquivo.hd)]\r\n    H --> C[Consultar]\r\n    C --> F\r\n    H --> O[Logoff]\r\n```\r\n\r\n---\r\n\r\n## 🛠️ Stack\r\n\r\n| Tecnologia | Papel |\r\n|------------|-------|\r\n| PHP | Backend |\r\n| HTML/CSS | UI |\r\n| Arquivo .hd | Persistência simples |\r\n\r\n---\r\n\r\n## 📂 Estrutura\r\n\r\n```text\r\nProjectHelpDesk/\r\n├── index.php\r\n├── home.php\r\n├── abrir_chamado.php\r\n├── registra_chamado.php\r\n├── consultar_chamado.php\r\n├── valida_login.php\r\n├── validador_acesso.php\r\n├── logoff.php\r\n└── arquivo.hd\r\n```\r\n\r\n---\r\n\r\n## 🚀 Como rodar\r\n\r\n```bash\r\ngit clone https://github.com/CanonEngineer/ProjectHelpDesk.git\r\ncd ProjectHelpDesk\r\n# use XAMPP/WAMP/Laragon ou:\r\nphp -S localhost:8080\r\n```\r\n\r\n---\r\n\r\n## ▶️ Uso\r\n\r\nEntre com as credenciais configuradas no validador, abra chamados e consulte a lista. Screenshots: `formulario_abrir_chamado.png`, `formulario_consultar_chamado.png`.\r\n\r\n---\r\n\r\n## 🌳 Tree of Knowledge\r\n\r\nEste projeto está mapeado na árvore interativa:\r\n\r\n<p>\r\n  <a href=\"https://canonengineer.github.io/TreeofKnowledge/index.html?tree=project-helpdesk\">\r\n    <img src=\"https://img.shields.io/badge/Abrir_na_Árvore-Tree_of_Knowledge-38bdf8?style=for-the-badge&labelColor=0c2344\" alt=\"Tree of Knowledge\"/>\r\n  </a>\r\n</p>\r\n\r\n---\r\n\r\n## 📈 Melhorias sugeridas\r\n\r\n1. Migrar persistência para MySQL\r\n2. Password hash + CSRF\r\n3. Painel admin com status do ticket\r\n4. Composer + estrutura MVC\r\n\r\n---\r\n\r\n## 👨‍💻 Autor\r\n\r\n**Alessandro Canon (CanonEngineer)**  \r\nNetwork Analyst · Developer · Cybersecurity Enthusiast\r\n\r\n- GitHub: [https://github.com/CanonEngineer](https://github.com/CanonEngineer)\r\n- Portfolio: [https://canonengineer.github.io](https://canonengineer.github.io)\r\n- Tree of Knowledge: [https://canonengineer.github.io/TreeofKnowledge/](https://canonengineer.github.io/TreeofKnowledge/)\r\n\r\n---\r\n\r\n<div align=\"center\">\r\n\r\n⭐ Se este projeto te ajudou, deixe uma estrela!\r\n\r\n</div>\r\n",
         "implementation": [
@@ -35207,7 +35506,7 @@ const PROJECTS = [
         "parent": null,
         "layer": "root",
         "title": "AppMosquito",
-        "description": "Jogo Mata Mosquito com níveis e telas de vitória/derrota.",
+        "description": "Cobertura completa: 7 arquivos de código no repositório (7 nós na árvore incluindo pastas).",
         "file": "README.md",
         "code": "> **Mobile / UTF-8:** imagens com `width: 100%` (sem scroll horizontal). Arquivo gravado em UTF-8 para acentos corretos em qualquer dispositivo.\r\n\r\n<div align=\"center\">\r\n\r\n<p align=\"center\">\r\n  <img src=\"docs/images/banner.svg\" alt=\"Banner\" width=\"100%\" style=\"max-width:100%;height:auto;display:block;\" />\r\n</p># App Mosquito\r\n\r\n### Jogo Mata Mosquito com níveis e telas de vitória/derrota\r\n\r\n<img src=\"https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white\" alt=\"HTML\"/>\r\n<img src=\"https://img.shields.io/badge/JavaScript-Game-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black\" alt=\"JS\"/>\r\n\r\n[Sobre](#-sobre) ·\r\n[Features](#-features) ·\r\n[Arquitetura](#-arquitetura--fluxo) ·\r\n[Stack](#-stack) ·\r\n[Estrutura](#-estrutura) ·\r\n[Setup](#-como-rodar) ·\r\n[Melhorias](#-melhorias-sugeridas) ·\r\n[Autor](#-autor)\r\n\r\n</div>\r\n\r\n---\r\n\r\n## 📌 Sobre\r\n\r\nMini-game no browser: escolha a dificuldade, mate mosquitos que aparecem na tela e evite perder todas as vidas.\r\n\r\n<div align=\"center\">\r\n\r\n<p align=\"center\">\r\n  <img src=\"docs/images/flow.svg\" alt=\"Fluxo\" width=\"100%\" style=\"max-width:100%;height:auto;display:block;\" />\r\n</p></div>\r\n\r\n---\r\n\r\n## ✨ Features\r\n\r\n| # | Capacidade |\r\n|---|------------|\r\n| 1 | Tela inicial com níveis |\r\n| 2 | Lógica em `jogo.js` |\r\n| 3 | Estilos em `estilo.css` |\r\n| 4 | Telas `vitoria.html` e `fim_de_jogo.html` |\r\n| 5 | Sprites em `imagens/` |\r\n\r\n---\r\n\r\n## 🏗️ Arquitetura / Fluxo\r\n\r\n```mermaid\r\nstateDiagram-v2\r\n    [*] --> Menu\r\n    Menu --> Playing: iniciar\r\n    Playing --> Victory: tempo/metas\r\n    Playing --> GameOver: vidas=0\r\n    Victory --> Menu\r\n    GameOver --> Menu\r\n```\r\n\r\n---\r\n\r\n## 🛠️ Stack\r\n\r\n| Tecnologia | Papel |\r\n|------------|-------|\r\n| HTML | Páginas |\r\n| CSS | Visual |\r\n| JavaScript | Gameplay |\r\n\r\n---\r\n\r\n## 📂 Estrutura\r\n\r\n```text\r\nAppMosquito/\r\n├── index.html\r\n├── app.html\r\n├── jogo.js\r\n├── estilo.css\r\n├── vitoria.html\r\n├── fim_de_jogo.html\r\n└── imagens/\r\n```\r\n\r\n---\r\n\r\n## 🚀 Como rodar\r\n\r\nAbra `index.html` no navegador (ou sirva a pasta com um static server).\r\n\r\n---\r\n\r\n## ▶️ Uso\r\n\r\nEscolha o nível, clique nos mosquitos e tente chegar à vitória antes do game over.\r\n\r\n---\r\n\r\n## 🌳 Tree of Knowledge\r\n\r\nEste projeto está mapeado na árvore interativa:\r\n\r\n<p>\r\n  <a href=\"https://canonengineer.github.io/TreeofKnowledge/index.html?tree=app-mosquito\">\r\n    <img src=\"https://img.shields.io/badge/Abrir_na_Árvore-Tree_of_Knowledge-38bdf8?style=for-the-badge&labelColor=0c2344\" alt=\"Tree of Knowledge\"/>\r\n  </a>\r\n</p>\r\n\r\n---\r\n\r\n## 📈 Melhorias sugeridas\r\n\r\n1. Placar com localStorage\r\n2. Sons e partículas\r\n3. Mobile touch otimizado\r\n4. Modo hardcore\r\n\r\n---\r\n\r\n## 👨‍💻 Autor\r\n\r\n**Alessandro Canon (CanonEngineer)**  \r\nNetwork Analyst · Developer · Cybersecurity Enthusiast\r\n\r\n- GitHub: [https://github.com/CanonEngineer](https://github.com/CanonEngineer)\r\n- Portfolio: [https://canonengineer.github.io](https://canonengineer.github.io)\r\n- Tree of Knowledge: [https://canonengineer.github.io/TreeofKnowledge/](https://canonengineer.github.io/TreeofKnowledge/)\r\n\r\n---\r\n\r\n<div align=\"center\">\r\n\r\n⭐ Se este projeto te ajudou, deixe uma estrela!\r\n\r\n</div>\r\n",
         "implementation": [
@@ -35315,7 +35614,7 @@ const PROJECTS = [
         "parent": null,
         "layer": "root",
         "title": "NeighborhoodBoysProject",
-        "description": "Sistema de salão Meninos da Vila — contas, agenda e clientes.",
+        "description": "Cobertura completa: 64 arquivos de código no repositório (80 nós na árvore incluindo pastas).",
         "file": "README.md",
         "code": "> **Mobile / UTF-8:** imagens com `width: 100%` (sem scroll horizontal). Arquivo gravado em UTF-8 para acentos corretos em qualquer dispositivo.\r\n\r\n<div align=\"center\">\r\n\r\n<p align=\"center\">\r\n  <img src=\"docs/images/banner.svg\" alt=\"Banner\" width=\"100%\" style=\"max-width:100%;height:auto;display:block;\" />\r\n</p># Neighborhood Boys Project\r\n\r\n### Software de salão Meninos da Vila — contas, agenda e comunicação\r\n\r\n<img src=\"https://img.shields.io/badge/Django-092E20?style=for-the-badge&logo=django&logoColor=white\" alt=\"Django\"/>\r\n<img src=\"https://img.shields.io/badge/MySQL-4479A1?style=for-the-badge&logo=mysql&logoColor=white\" alt=\"MySQL\"/>\r\n<img src=\"https://img.shields.io/badge/UNIVESP-Integrador-c084fc?style=for-the-badge\" alt=\"UNIVESP\"/>\r\n\r\n[Sobre](#-sobre) ·\r\n[Features](#-features) ·\r\n[Arquitetura](#-arquitetura--fluxo) ·\r\n[Stack](#-stack) ·\r\n[Estrutura](#-estrutura) ·\r\n[Setup](#-como-rodar) ·\r\n[Melhorias](#-melhorias-sugeridas) ·\r\n[Autor](#-autor)\r\n\r\n</div>\r\n\r\n---\r\n\r\n## 📌 Sobre\r\n\r\nProjeto Integrador II (UNIVESP): sistema para salão de beleza com **cadastro, senhas, agenda, contatos e redes sociais** para comunicação com clientes.\r\n\r\n<div align=\"center\">\r\n\r\n<p align=\"center\">\r\n  <img src=\"docs/images/flow.svg\" alt=\"Fluxo\" width=\"100%\" style=\"max-width:100%;height:auto;display:block;\" />\r\n</p></div>\r\n\r\n---\r\n\r\n## ✨ Features\r\n\r\n| # | Capacidade |\r\n|---|------------|\r\n| 1 | Apps `accounts`, `agenda`, `app` |\r\n| 2 | Projeto `meninos_da_vila` |\r\n| 3 | Mídia de clientes |\r\n| 4 | requirements.txt + MySQL client |\r\n| 5 | Scripts SQL em `banco de dados/` |\r\n\r\n---\r\n\r\n## 🏗️ Arquitetura / Fluxo\r\n\r\n```mermaid\r\nflowchart TB\r\n    C[Cliente/Admin] --> A[accounts]\r\n    C --> G[agenda]\r\n    C --> APP[app]\r\n    A --> DB[(MySQL)]\r\n    G --> DB\r\n    APP --> DB\r\n```\r\n\r\n---\r\n\r\n## 🛠️ Stack\r\n\r\n| Tecnologia | Papel |\r\n|------------|-------|\r\n| Django | Backend |\r\n| MySQL | Banco |\r\n| HTML/JS/CSS | Front |\r\n| SQLite | Dev local opcional |\r\n\r\n---\r\n\r\n## 📂 Estrutura\r\n\r\n```text\r\nNeighborhoodBoysProject/\r\n├── manage.py\r\n├── meninos_da_vila/\r\n├── accounts/\r\n├── agenda/\r\n├── app/\r\n├── media/clientes/\r\n├── banco de dados/\r\n└── requirements.txt\r\n```\r\n\r\n---\r\n\r\n## 🚀 Como rodar\r\n\r\n```bash\r\ngit clone https://github.com/CanonEngineer/NeighborhoodBoysProject.git\r\ncd NeighborhoodBoysProject\r\npython -m venv .venv && source .venv/bin/activate\r\npip install -r requirements.txt\r\n# configure MySQL em settings\r\npython manage.py migrate\r\npython manage.py runserver\r\n```\r\n\r\n---\r\n\r\n## ▶️ Uso\r\n\r\nCadastre usuários, gerencie agenda e clientes pelo painel web do salão.\r\n\r\n---\r\n\r\n## 🌳 Tree of Knowledge\r\n\r\nEste projeto está mapeado na árvore interativa:\r\n\r\n<p>\r\n  <a href=\"https://canonengineer.github.io/TreeofKnowledge/index.html?tree=neighborhood-boys\">\r\n    <img src=\"https://img.shields.io/badge/Abrir_na_Árvore-Tree_of_Knowledge-38bdf8?style=for-the-badge&labelColor=0c2344\" alt=\"Tree of Knowledge\"/>\r\n  </a>\r\n</p>\r\n\r\n---\r\n\r\n## 📈 Melhorias sugeridas\r\n\r\n1. Remover `venv` do repositório (usar .gitignore)\r\n2. Docker Compose MySQL + app\r\n3. Agendamento com calendário visual\r\n4. Notificações WhatsApp/e-mail\r\n\r\n---\r\n\r\n## 👨‍💻 Autor\r\n\r\n**Alessandro Canon (CanonEngineer)**  \r\nNetwork Analyst · Developer · Cybersecurity Enthusiast\r\n\r\n- GitHub: [https://github.com/CanonEngineer](https://github.com/CanonEngineer)\r\n- Portfolio: [https://canonengineer.github.io](https://canonengineer.github.io)\r\n- Tree of Knowledge: [https://canonengineer.github.io/TreeofKnowledge/](https://canonengineer.github.io/TreeofKnowledge/)\r\n\r\n---\r\n\r\n<div align=\"center\">\r\n\r\n⭐ Se este projeto te ajudou, deixe uma estrela!\r\n\r\n</div>\r\n",
         "implementation": [
@@ -36372,7 +36671,7 @@ const PROJECTS = [
         "parent": null,
         "layer": "root",
         "title": "SearchUnivespProject",
-        "description": "Projeto integrador UNIVESP com pesquisa e páginas de saúde.",
+        "description": "Cobertura completa: 40 arquivos de código no repositório (52 nós na árvore incluindo pastas).",
         "file": "README.md",
         "code": "> **Mobile / UTF-8:** imagens com `width: 100%` (sem scroll horizontal). Arquivo gravado em UTF-8 para acentos corretos em qualquer dispositivo.\r\n\r\n<div align=\"center\">\r\n\r\n<p align=\"center\">\r\n  <img src=\"docs/images/banner.svg\" alt=\"Banner\" width=\"100%\" style=\"max-width:100%;height:auto;display:block;\" />\r\n</p># Search UNIVESP Project\r\n\r\n### Projeto integrador UNIVESP com pesquisa, páginas de saúde e contato\r\n\r\n<img src=\"https://img.shields.io/badge/Node.js-339933?style=for-the-badge&logo=nodedotjs&logoColor=white\" alt=\"Node\"/>\r\n<img src=\"https://img.shields.io/badge/Express-000?style=for-the-badge&logo=express&logoColor=white\" alt=\"Express\"/>\r\n<img src=\"https://img.shields.io/badge/UNIVESP-Integrador-2dd4bf?style=for-the-badge\" alt=\"UNIVESP\"/>\r\n\r\n[Sobre](#-sobre) ·\r\n[Features](#-features) ·\r\n[Arquitetura](#-arquitetura--fluxo) ·\r\n[Stack](#-stack) ·\r\n[Estrutura](#-estrutura) ·\r\n[Setup](#-como-rodar) ·\r\n[Melhorias](#-melhorias-sugeridas) ·\r\n[Autor](#-autor)\r\n\r\n</div>\r\n\r\n---\r\n\r\n## 📌 Sobre\r\n\r\nAplicação web do Projeto Integrador III: páginas estáticas/EJS para **pesquisa**, **saúde**, **contato** e backend Express com rotas e includes.\r\n\r\n<div align=\"center\">\r\n\r\n<p align=\"center\">\r\n  <img src=\"docs/images/flow.svg\" alt=\"Fluxo\" width=\"100%\" style=\"max-width:100%;height:auto;display:block;\" />\r\n</p></div>\r\n\r\n---\r\n\r\n## ✨ Features\r\n\r\n| # | Capacidade |\r\n|---|------------|\r\n| 1 | Express `app.js` + `routes/` |\r\n| 2 | Views EJS |\r\n| 3 | Páginas `pesquisa.html`, `saude.html`, `contato.html` |\r\n| 4 | Assets em `assests/` / `public/` |\r\n\r\n---\r\n\r\n## 🏗️ Arquitetura / Fluxo\r\n\r\n```mermaid\r\nflowchart LR\r\n    U[Usuário] --> H[Home]\r\n    H --> P[Pesquisa]\r\n    P --> R[Resultado]\r\n    H --> S[Saúde]\r\n    H --> C[Contato]\r\n    H --> X[Express routes]\r\n```\r\n\r\n---\r\n\r\n## 🛠️ Stack\r\n\r\n| Tecnologia | Papel |\r\n|------------|-------|\r\n| Express | Servidor |\r\n| EJS | Templates |\r\n| HTML/CSS/JS | Front |\r\n\r\n---\r\n\r\n## 📂 Estrutura\r\n\r\n```text\r\nSearchUnivespProject/\r\n├── app.js\r\n├── routes/\r\n├── views/\r\n├── public/\r\n├── assests/\r\n├── pesquisa.html\r\n├── saude.html\r\n└── contato.html\r\n```\r\n\r\n---\r\n\r\n## 🚀 Como rodar\r\n\r\n```bash\r\ngit clone https://github.com/CanonEngineer/SearchUnivespProject.git\r\ncd SearchUnivespProject\r\nnpm install\r\nnpm start\r\n```\r\n\r\n---\r\n\r\n## ▶️ Uso\r\n\r\nNavegue pelas páginas de pesquisa e saúde; use o formulário de contato quando disponível.\r\n\r\n---\r\n\r\n## 🌳 Tree of Knowledge\r\n\r\nEste projeto está mapeado na árvore interativa:\r\n\r\n<p>\r\n  <a href=\"https://canonengineer.github.io/TreeofKnowledge/index.html?tree=search-univesp\">\r\n    <img src=\"https://img.shields.io/badge/Abrir_na_Árvore-Tree_of_Knowledge-38bdf8?style=for-the-badge&labelColor=0c2344\" alt=\"Tree of Knowledge\"/>\r\n  </a>\r\n</p>\r\n\r\n---\r\n\r\n## 📈 Melhorias sugeridas\r\n\r\n1. Corrigir pasta `assests` → `assets`\r\n2. Busca real em base/API\r\n3. Remover `node_modules` do Git\r\n4. Acessibilidade e SEO\r\n\r\n---\r\n\r\n## 👨‍💻 Autor\r\n\r\n**Alessandro Canon (CanonEngineer)**  \r\nNetwork Analyst · Developer · Cybersecurity Enthusiast\r\n\r\n- GitHub: [https://github.com/CanonEngineer](https://github.com/CanonEngineer)\r\n- Portfolio: [https://canonengineer.github.io](https://canonengineer.github.io)\r\n- Tree of Knowledge: [https://canonengineer.github.io/TreeofKnowledge/](https://canonengineer.github.io/TreeofKnowledge/)\r\n\r\n---\r\n\r\n<div align=\"center\">\r\n\r\n⭐ Se este projeto te ajudou, deixe uma estrela!\r\n\r\n</div>\r\n",
         "implementation": [
@@ -37065,7 +37364,7 @@ const PROJECTS = [
         "parent": null,
         "layer": "root",
         "title": "JavaScriptCalculatorProject",
-        "description": "Calculadora interativa em JavaScript com som de clique.",
+        "description": "Cobertura completa: 4 arquivos de código no repositório (6 nós na árvore incluindo pastas).",
         "file": "README.md",
         "code": "> **Mobile / UTF-8:** imagens com `width: 100%` (sem scroll horizontal). Arquivo gravado em UTF-8 para acentos corretos em qualquer dispositivo.\r\n\r\n<div align=\"center\">\r\n\r\n<p align=\"center\">\r\n  <img src=\"docs/images/banner.svg\" alt=\"Banner\" width=\"100%\" style=\"max-width:100%;height:auto;display:block;\" />\r\n</p># JavaScript Calculator\r\n\r\n### Calculadora interativa em JavaScript com feedback sonoro\r\n\r\n<img src=\"https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white\" alt=\"HTML\"/>\r\n<img src=\"https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black\" alt=\"JS\"/>\r\n\r\n[Sobre](#-sobre) ·\r\n[Features](#-features) ·\r\n[Arquitetura](#-arquitetura--fluxo) ·\r\n[Stack](#-stack) ·\r\n[Estrutura](#-estrutura) ·\r\n[Setup](#-como-rodar) ·\r\n[Melhorias](#-melhorias-sugeridas) ·\r\n[Autor](#-autor)\r\n\r\n</div>\r\n\r\n---\r\n\r\n## 📌 Sobre\r\n\r\nCalculadora visual com fonte digital (`digital-7.ttf`), som de clique (`click.mp3`) e lógica em `scripts/`.\r\n\r\n<div align=\"center\">\r\n\r\n<p align=\"center\">\r\n  <img src=\"docs/images/flow.svg\" alt=\"Fluxo\" width=\"100%\" style=\"max-width:100%;height:auto;display:block;\" />\r\n</p></div>\r\n\r\n---\r\n\r\n## ✨ Features\r\n\r\n| # | Capacidade |\r\n|---|------------|\r\n| 1 | UI estilo calculadora clássica |\r\n| 2 | Áudio por tecla |\r\n| 3 | Fonte digital customizada |\r\n| 4 | Lógica JS modular em `scripts/` |\r\n\r\n---\r\n\r\n## 🏗️ Arquitetura / Fluxo\r\n\r\n```mermaid\r\nflowchart LR\r\n    K[Click tecla] --> S[Som]\r\n    K --> E[Engine JS]\r\n    E --> D[Display]\r\n    E --> R[Resultado]\r\n```\r\n\r\n---\r\n\r\n## 🛠️ Stack\r\n\r\n| Tecnologia | Papel |\r\n|------------|-------|\r\n| HTML | Markup |\r\n| JavaScript | Cálculos |\r\n| CSS (inline/file) | Visual |\r\n\r\n---\r\n\r\n## 📂 Estrutura\r\n\r\n```text\r\nJavaScriptCalculatorProject/\r\n├── index.html\r\n├── scripts/\r\n├── click.mp3\r\n├── digital-7.ttf\r\n└── README.md\r\n```\r\n\r\n---\r\n\r\n## 🚀 Como rodar\r\n\r\nAbra `index.html` no navegador.\r\n\r\n---\r\n\r\n## ▶️ Uso\r\n\r\nDigite operações pelos botões e ouça o feedback sonoro a cada clique.\r\n\r\n---\r\n\r\n## 🌳 Tree of Knowledge\r\n\r\nEste projeto está mapeado na árvore interativa:\r\n\r\n<p>\r\n  <a href=\"https://canonengineer.github.io/TreeofKnowledge/index.html?tree=javascript-calculator\">\r\n    <img src=\"https://img.shields.io/badge/Abrir_na_Árvore-Tree_of_Knowledge-38bdf8?style=for-the-badge&labelColor=0c2344\" alt=\"Tree of Knowledge\"/>\r\n  </a>\r\n</p>\r\n\r\n---\r\n\r\n## 📈 Melhorias sugeridas\r\n\r\n1. Suporte a teclado físico\r\n2. Histórico de cálculos\r\n3. Modo científico\r\n4. Testes da engine\r\n\r\n---\r\n\r\n## 👨‍💻 Autor\r\n\r\n**Alessandro Canon (CanonEngineer)**  \r\nNetwork Analyst · Developer · Cybersecurity Enthusiast\r\n\r\n- GitHub: [https://github.com/CanonEngineer](https://github.com/CanonEngineer)\r\n- Portfolio: [https://canonengineer.github.io](https://canonengineer.github.io)\r\n- Tree of Knowledge: [https://canonengineer.github.io/TreeofKnowledge/](https://canonengineer.github.io/TreeofKnowledge/)\r\n\r\n---\r\n\r\n<div align=\"center\">\r\n\r\n⭐ Se este projeto te ajudou, deixe uma estrela!\r\n\r\n</div>\r\n",
         "implementation": [
@@ -37153,14 +37452,14 @@ const PROJECTS = [
     "color": "#f87171",
     "icon": "django",
     "stack": "Django e-commerce",
-    "summary": "Cobertura completa: 236 arquivos de código no repositório (295 nós na árvore incluindo pastas).",
+    "summary": "Cobertura completa: 236 arquivos de código no repositório (300 nós na árvore incluindo pastas).",
     "nodes": [
       {
         "id": "python-ii-ecommerce-root",
         "parent": null,
         "layer": "root",
         "title": "PythonIIEcommerceProject",
-        "description": "E-commerce Django do curso Python II.",
+        "description": "Cobertura completa: 236 arquivos de código no repositório (295 nós na árvore incluindo pastas).",
         "file": "README.md",
         "code": "> **Mobile / UTF-8:** imagens com `width: 100%` (sem scroll horizontal). Arquivo gravado em UTF-8 para acentos corretos em qualquer dispositivo.\r\n\r\n<div align=\"center\">\r\n\r\n<p align=\"center\">\r\n  <img src=\"docs/images/banner.svg\" alt=\"Banner\" width=\"100%\" style=\"max-width:100%;height:auto;display:block;\" />\r\n</p># Python II E-commerce\r\n\r\n### E-commerce Django do curso Python II — loja, produto, pedido e perfil\r\n\r\n<img src=\"https://img.shields.io/badge/Django-092E20?style=for-the-badge&logo=django&logoColor=white\" alt=\"Django\"/>\r\n<img src=\"https://img.shields.io/badge/E--commerce-f87171?style=for-the-badge\" alt=\"Ecommerce\"/>\r\n\r\n[Sobre](#-sobre) ·\r\n[Features](#-features) ·\r\n[Arquitetura](#-arquitetura--fluxo) ·\r\n[Stack](#-stack) ·\r\n[Estrutura](#-estrutura) ·\r\n[Setup](#-como-rodar) ·\r\n[Melhorias](#-melhorias-sugeridas) ·\r\n[Autor](#-autor)\r\n\r\n</div>\r\n\r\n---\r\n\r\n## 📌 Sobre\r\n\r\nLoja virtual em Django com apps `loja`, `produto`, `pedido`, `perfil` e utilitários — fluxo completo de catálogo a pedido.\r\n\r\n<div align=\"center\">\r\n\r\n<p align=\"center\">\r\n  <img src=\"docs/images/flow.svg\" alt=\"Fluxo\" width=\"100%\" style=\"max-width:100%;height:auto;display:block;\" />\r\n</p></div>\r\n\r\n---\r\n\r\n## ✨ Features\r\n\r\n| # | Capacidade |\r\n|---|------------|\r\n| 1 | Apps de domínio separados |\r\n| 2 | Templates da loja |\r\n| 3 | requirements.txt |\r\n| 4 | Manage.py / migrations ready |\r\n\r\n---\r\n\r\n## 🏗️ Arquitetura / Fluxo\r\n\r\n```mermaid\r\nflowchart TD\r\n    U[Cliente] --> L[loja]\r\n    L --> P[produto]\r\n    L --> C[carrinho/pedido]\r\n    C --> O[pedido]\r\n    U --> PR[perfil]\r\n    O --> DB[(Database)]\r\n    P --> DB\r\n    PR --> DB\r\n```\r\n\r\n---\r\n\r\n## 🛠️ Stack\r\n\r\n| Tecnologia | Papel |\r\n|------------|-------|\r\n| Django | Framework |\r\n| SQLite/MySQL | Dados |\r\n| HTML templates | UI |\r\n\r\n---\r\n\r\n## 📂 Estrutura\r\n\r\n```text\r\nPythonIIEcommerceProject/\r\n├── manage.py\r\n├── loja/\r\n├── produto/\r\n├── pedido/\r\n├── perfil/\r\n├── utils/\r\n├── templates/\r\n└── requirements.txt\r\n```\r\n\r\n---\r\n\r\n## 🚀 Como rodar\r\n\r\n```bash\r\ngit clone https://github.com/CanonEngineer/PythonIIEcommerceProject.git\r\ncd PythonIIEcommerceProject\r\npython -m venv .venv && source .venv/bin/activate\r\npip install -r requirements.txt\r\npython manage.py migrate\r\npython manage.py runserver\r\n```\r\n\r\n---\r\n\r\n## ▶️ Uso\r\n\r\nCadastre produtos (admin), navegue na loja, finalize pedidos e gerencie o perfil.\r\n\r\n---\r\n\r\n## 🌳 Tree of Knowledge\r\n\r\nEste projeto está mapeado na árvore interativa:\r\n\r\n<p>\r\n  <a href=\"https://canonengineer.github.io/TreeofKnowledge/index.html?tree=python-ii-ecommerce\">\r\n    <img src=\"https://img.shields.io/badge/Abrir_na_Árvore-Tree_of_Knowledge-38bdf8?style=for-the-badge&labelColor=0c2344\" alt=\"Tree of Knowledge\"/>\r\n  </a>\r\n</p>\r\n\r\n---\r\n\r\n## 📈 Melhorias sugeridas\r\n\r\n1. Gateway de pagamento\r\n2. Estoque e cupons\r\n3. Testes de pedido\r\n4. Deploy com variáveis de ambiente\r\n\r\n---\r\n\r\n## 👨‍💻 Autor\r\n\r\n**Alessandro Canon (CanonEngineer)**  \r\nNetwork Analyst · Developer · Cybersecurity Enthusiast\r\n\r\n- GitHub: [https://github.com/CanonEngineer](https://github.com/CanonEngineer)\r\n- Portfolio: [https://canonengineer.github.io](https://canonengineer.github.io)\r\n- Tree of Knowledge: [https://canonengineer.github.io/TreeofKnowledge/](https://canonengineer.github.io/TreeofKnowledge/)\r\n\r\n---\r\n\r\n<div align=\"center\">\r\n\r\n⭐ Se este projeto te ajudou, deixe uma estrela!\r\n\r\n</div>\r\n",
         "implementation": [
@@ -38262,13 +38561,26 @@ const PROJECTS = [
         ]
       },
       {
-        "id": "python-ii-ecommerce-grp-produto-migrations-files-1-12",
+        "id": "python-ii-ecommerce-grp-produto-migrations-files",
         "parent": "python-ii-ecommerce-dir-produto-migrations",
         "layer": "module",
-        "title": "Arquivos # (1–12)",
-        "description": "Grupo de arquivos em `produto/migrations/` — Arquivos # (1–12)",
+        "title": "Arquivos #",
+        "description": "Grupo de arquivos em `produto/migrations/` — Arquivos #",
+        "file": "produto/migrations/[files-#]",
+        "code": "# Grupo: Arquivos #\n# Pasta: produto/migrations/\n",
+        "implementation": [
+          "agrupamento para layout 2D/3D",
+          "pasta: produto/migrations/"
+        ]
+      },
+      {
+        "id": "python-ii-ecommerce-grp-produto-migrations-files-1-12",
+        "parent": "python-ii-ecommerce-grp-produto-migrations-files",
+        "layer": "module",
+        "title": "1–12",
+        "description": "Grupo de arquivos em `produto/migrations/` — 1–12",
         "file": "produto/migrations/[files-#-1-12]",
-        "code": "# Grupo: Arquivos # (1–12)\n# Pasta: produto/migrations/\n",
+        "code": "# Grupo: 1–12\n# Pasta: produto/migrations/\n",
         "implementation": [
           "agrupamento para layout 2D/3D",
           "pasta: produto/migrations/"
@@ -38276,12 +38588,12 @@ const PROJECTS = [
       },
       {
         "id": "python-ii-ecommerce-grp-produto-migrations-files-13-13",
-        "parent": "python-ii-ecommerce-dir-produto-migrations",
+        "parent": "python-ii-ecommerce-grp-produto-migrations-files",
         "layer": "module",
-        "title": "Arquivos # (13–13)",
-        "description": "Grupo de arquivos em `produto/migrations/` — Arquivos # (13–13)",
+        "title": "13–13",
+        "description": "Grupo de arquivos em `produto/migrations/` — 13–13",
         "file": "produto/migrations/[files-#-13-13]",
-        "code": "# Grupo: Arquivos # (13–13)\n# Pasta: produto/migrations/\n",
+        "code": "# Grupo: 13–13\n# Pasta: produto/migrations/\n",
         "implementation": [
           "agrupamento para layout 2D/3D",
           "pasta: produto/migrations/"
@@ -39250,13 +39562,26 @@ const PROJECTS = [
         ]
       },
       {
-        "id": "python-ii-ecommerce-grp-templates-static-assets-font-awesome-scss-files-1-12",
+        "id": "python-ii-ecommerce-grp-templates-static-assets-font-awesome-scss-files",
         "parent": "python-ii-ecommerce-dir-templates-static-assets-font-awesome-scss",
         "layer": "module",
-        "title": "Arquivos # (1–12)",
-        "description": "Grupo de arquivos em `templates/static/assets/font-awesome/scss/` — Arquivos # (1–12)",
+        "title": "Arquivos #",
+        "description": "Grupo de arquivos em `templates/static/assets/font-awesome/scss/` — Arquivos #",
+        "file": "templates/static/assets/font-awesome/scss/[files-#]",
+        "code": "# Grupo: Arquivos #\n# Pasta: templates/static/assets/font-awesome/scss/\n",
+        "implementation": [
+          "agrupamento para layout 2D/3D",
+          "pasta: templates/static/assets/font-awesome/scss/"
+        ]
+      },
+      {
+        "id": "python-ii-ecommerce-grp-templates-static-assets-font-awesome-scss-files-1-12",
+        "parent": "python-ii-ecommerce-grp-templates-static-assets-font-awesome-scss-files",
+        "layer": "module",
+        "title": "1–12",
+        "description": "Grupo de arquivos em `templates/static/assets/font-awesome/scss/` — 1–12",
         "file": "templates/static/assets/font-awesome/scss/[files-#-1-12]",
-        "code": "# Grupo: Arquivos # (1–12)\n# Pasta: templates/static/assets/font-awesome/scss/\n",
+        "code": "# Grupo: 1–12\n# Pasta: templates/static/assets/font-awesome/scss/\n",
         "implementation": [
           "agrupamento para layout 2D/3D",
           "pasta: templates/static/assets/font-awesome/scss/"
@@ -39264,12 +39589,12 @@ const PROJECTS = [
       },
       {
         "id": "python-ii-ecommerce-grp-templates-static-assets-font-awesome-scss-files-13-13",
-        "parent": "python-ii-ecommerce-dir-templates-static-assets-font-awesome-scss",
+        "parent": "python-ii-ecommerce-grp-templates-static-assets-font-awesome-scss-files",
         "layer": "module",
-        "title": "Arquivos # (13–13)",
-        "description": "Grupo de arquivos em `templates/static/assets/font-awesome/scss/` — Arquivos # (13–13)",
+        "title": "13–13",
+        "description": "Grupo de arquivos em `templates/static/assets/font-awesome/scss/` — 13–13",
         "file": "templates/static/assets/font-awesome/scss/[files-#-13-13]",
-        "code": "# Grupo: Arquivos # (13–13)\n# Pasta: templates/static/assets/font-awesome/scss/\n",
+        "code": "# Grupo: 13–13\n# Pasta: templates/static/assets/font-awesome/scss/\n",
         "implementation": [
           "agrupamento para layout 2D/3D",
           "pasta: templates/static/assets/font-awesome/scss/"
@@ -39679,13 +40004,26 @@ const PROJECTS = [
         ]
       },
       {
-        "id": "python-ii-ecommerce-grp-templates-static-assets-login-scss-bootstrap-files-1-12",
+        "id": "python-ii-ecommerce-grp-templates-static-assets-login-scss-bootstrap-files",
         "parent": "python-ii-ecommerce-dir-templates-static-assets-login-scss-bootstrap",
         "layer": "module",
-        "title": "Arquivos # (1–12)",
-        "description": "Grupo de arquivos em `templates/static/assets/login/scss/bootstrap/` — Arquivos # (1–12)",
+        "title": "Arquivos #",
+        "description": "Grupo de arquivos em `templates/static/assets/login/scss/bootstrap/` — Arquivos #",
+        "file": "templates/static/assets/login/scss/bootstrap/[files-#]",
+        "code": "# Grupo: Arquivos #\n# Pasta: templates/static/assets/login/scss/bootstrap/\n",
+        "implementation": [
+          "agrupamento para layout 2D/3D",
+          "pasta: templates/static/assets/login/scss/bootstrap/"
+        ]
+      },
+      {
+        "id": "python-ii-ecommerce-grp-templates-static-assets-login-scss-bootstrap-files-1-12",
+        "parent": "python-ii-ecommerce-grp-templates-static-assets-login-scss-bootstrap-files",
+        "layer": "module",
+        "title": "1–12",
+        "description": "Grupo de arquivos em `templates/static/assets/login/scss/bootstrap/` — 1–12",
         "file": "templates/static/assets/login/scss/bootstrap/[files-#-1-12]",
-        "code": "# Grupo: Arquivos # (1–12)\n# Pasta: templates/static/assets/login/scss/bootstrap/\n",
+        "code": "# Grupo: 1–12\n# Pasta: templates/static/assets/login/scss/bootstrap/\n",
         "implementation": [
           "agrupamento para layout 2D/3D",
           "pasta: templates/static/assets/login/scss/bootstrap/"
@@ -39693,12 +40031,12 @@ const PROJECTS = [
       },
       {
         "id": "python-ii-ecommerce-grp-templates-static-assets-login-scss-bootstrap-files-13-24",
-        "parent": "python-ii-ecommerce-dir-templates-static-assets-login-scss-bootstrap",
+        "parent": "python-ii-ecommerce-grp-templates-static-assets-login-scss-bootstrap-files",
         "layer": "module",
-        "title": "Arquivos # (13–24)",
-        "description": "Grupo de arquivos em `templates/static/assets/login/scss/bootstrap/` — Arquivos # (13–24)",
+        "title": "13–24",
+        "description": "Grupo de arquivos em `templates/static/assets/login/scss/bootstrap/` — 13–24",
         "file": "templates/static/assets/login/scss/bootstrap/[files-#-13-24]",
-        "code": "# Grupo: Arquivos # (13–24)\n# Pasta: templates/static/assets/login/scss/bootstrap/\n",
+        "code": "# Grupo: 13–24\n# Pasta: templates/static/assets/login/scss/bootstrap/\n",
         "implementation": [
           "agrupamento para layout 2D/3D",
           "pasta: templates/static/assets/login/scss/bootstrap/"
@@ -39706,12 +40044,12 @@ const PROJECTS = [
       },
       {
         "id": "python-ii-ecommerce-grp-templates-static-assets-login-scss-bootstrap-files-25-36",
-        "parent": "python-ii-ecommerce-dir-templates-static-assets-login-scss-bootstrap",
+        "parent": "python-ii-ecommerce-grp-templates-static-assets-login-scss-bootstrap-files",
         "layer": "module",
-        "title": "Arquivos # (25–36)",
-        "description": "Grupo de arquivos em `templates/static/assets/login/scss/bootstrap/` — Arquivos # (25–36)",
+        "title": "25–36",
+        "description": "Grupo de arquivos em `templates/static/assets/login/scss/bootstrap/` — 25–36",
         "file": "templates/static/assets/login/scss/bootstrap/[files-#-25-36]",
-        "code": "# Grupo: Arquivos # (25–36)\n# Pasta: templates/static/assets/login/scss/bootstrap/\n",
+        "code": "# Grupo: 25–36\n# Pasta: templates/static/assets/login/scss/bootstrap/\n",
         "implementation": [
           "agrupamento para layout 2D/3D",
           "pasta: templates/static/assets/login/scss/bootstrap/"
@@ -39719,12 +40057,12 @@ const PROJECTS = [
       },
       {
         "id": "python-ii-ecommerce-grp-templates-static-assets-login-scss-bootstrap-files-37-37",
-        "parent": "python-ii-ecommerce-dir-templates-static-assets-login-scss-bootstrap",
+        "parent": "python-ii-ecommerce-grp-templates-static-assets-login-scss-bootstrap-files",
         "layer": "module",
-        "title": "Arquivos # (37–37)",
-        "description": "Grupo de arquivos em `templates/static/assets/login/scss/bootstrap/` — Arquivos # (37–37)",
+        "title": "37–37",
+        "description": "Grupo de arquivos em `templates/static/assets/login/scss/bootstrap/` — 37–37",
         "file": "templates/static/assets/login/scss/bootstrap/[files-#-37-37]",
-        "code": "# Grupo: Arquivos # (37–37)\n# Pasta: templates/static/assets/login/scss/bootstrap/\n",
+        "code": "# Grupo: 37–37\n# Pasta: templates/static/assets/login/scss/bootstrap/\n",
         "implementation": [
           "agrupamento para layout 2D/3D",
           "pasta: templates/static/assets/login/scss/bootstrap/"
@@ -40264,13 +40602,26 @@ const PROJECTS = [
         ]
       },
       {
-        "id": "python-ii-ecommerce-grp-templates-static-assets-login-scss-bootstrap-mixins-files-1-12",
+        "id": "python-ii-ecommerce-grp-templates-static-assets-login-scss-bootstrap-mixins-files",
         "parent": "python-ii-ecommerce-dir-templates-static-assets-login-scss-bootstrap-mixins",
         "layer": "module",
-        "title": "Arquivos # (1–12)",
-        "description": "Grupo de arquivos em `templates/static/assets/login/scss/bootstrap/mixins/` — Arquivos # (1–12)",
+        "title": "Arquivos #",
+        "description": "Grupo de arquivos em `templates/static/assets/login/scss/bootstrap/mixins/` — Arquivos #",
+        "file": "templates/static/assets/login/scss/bootstrap/mixins/[files-#]",
+        "code": "# Grupo: Arquivos #\n# Pasta: templates/static/assets/login/scss/bootstrap/mixins/\n",
+        "implementation": [
+          "agrupamento para layout 2D/3D",
+          "pasta: templates/static/assets/login/scss/bootstrap/mixins/"
+        ]
+      },
+      {
+        "id": "python-ii-ecommerce-grp-templates-static-assets-login-scss-bootstrap-mixins-files-1-12",
+        "parent": "python-ii-ecommerce-grp-templates-static-assets-login-scss-bootstrap-mixins-files",
+        "layer": "module",
+        "title": "1–12",
+        "description": "Grupo de arquivos em `templates/static/assets/login/scss/bootstrap/mixins/` — 1–12",
         "file": "templates/static/assets/login/scss/bootstrap/mixins/[files-#-1-12]",
-        "code": "# Grupo: Arquivos # (1–12)\n# Pasta: templates/static/assets/login/scss/bootstrap/mixins/\n",
+        "code": "# Grupo: 1–12\n# Pasta: templates/static/assets/login/scss/bootstrap/mixins/\n",
         "implementation": [
           "agrupamento para layout 2D/3D",
           "pasta: templates/static/assets/login/scss/bootstrap/mixins/"
@@ -40278,12 +40629,12 @@ const PROJECTS = [
       },
       {
         "id": "python-ii-ecommerce-grp-templates-static-assets-login-scss-bootstrap-mixins-files-13-24",
-        "parent": "python-ii-ecommerce-dir-templates-static-assets-login-scss-bootstrap-mixins",
+        "parent": "python-ii-ecommerce-grp-templates-static-assets-login-scss-bootstrap-mixins-files",
         "layer": "module",
-        "title": "Arquivos # (13–24)",
-        "description": "Grupo de arquivos em `templates/static/assets/login/scss/bootstrap/mixins/` — Arquivos # (13–24)",
+        "title": "13–24",
+        "description": "Grupo de arquivos em `templates/static/assets/login/scss/bootstrap/mixins/` — 13–24",
         "file": "templates/static/assets/login/scss/bootstrap/mixins/[files-#-13-24]",
-        "code": "# Grupo: Arquivos # (13–24)\n# Pasta: templates/static/assets/login/scss/bootstrap/mixins/\n",
+        "code": "# Grupo: 13–24\n# Pasta: templates/static/assets/login/scss/bootstrap/mixins/\n",
         "implementation": [
           "agrupamento para layout 2D/3D",
           "pasta: templates/static/assets/login/scss/bootstrap/mixins/"
@@ -40291,12 +40642,12 @@ const PROJECTS = [
       },
       {
         "id": "python-ii-ecommerce-grp-templates-static-assets-login-scss-bootstrap-mixins-files-25-31",
-        "parent": "python-ii-ecommerce-dir-templates-static-assets-login-scss-bootstrap-mixins",
+        "parent": "python-ii-ecommerce-grp-templates-static-assets-login-scss-bootstrap-mixins-files",
         "layer": "module",
-        "title": "Arquivos # (25–31)",
-        "description": "Grupo de arquivos em `templates/static/assets/login/scss/bootstrap/mixins/` — Arquivos # (25–31)",
+        "title": "25–31",
+        "description": "Grupo de arquivos em `templates/static/assets/login/scss/bootstrap/mixins/` — 25–31",
         "file": "templates/static/assets/login/scss/bootstrap/mixins/[files-#-25-31]",
-        "code": "# Grupo: Arquivos # (25–31)\n# Pasta: templates/static/assets/login/scss/bootstrap/mixins/\n",
+        "code": "# Grupo: 25–31\n# Pasta: templates/static/assets/login/scss/bootstrap/mixins/\n",
         "implementation": [
           "agrupamento para layout 2D/3D",
           "pasta: templates/static/assets/login/scss/bootstrap/mixins/"
@@ -40706,13 +41057,26 @@ const PROJECTS = [
         ]
       },
       {
-        "id": "python-ii-ecommerce-grp-templates-static-assets-login-scss-bootstrap-utilities-files-1-12",
+        "id": "python-ii-ecommerce-grp-templates-static-assets-login-scss-bootstrap-utilities-files",
         "parent": "python-ii-ecommerce-dir-templates-static-assets-login-scss-bootstrap-utilities",
         "layer": "module",
-        "title": "Arquivos # (1–12)",
-        "description": "Grupo de arquivos em `templates/static/assets/login/scss/bootstrap/utilities/` — Arquivos # (1–12)",
+        "title": "Arquivos #",
+        "description": "Grupo de arquivos em `templates/static/assets/login/scss/bootstrap/utilities/` — Arquivos #",
+        "file": "templates/static/assets/login/scss/bootstrap/utilities/[files-#]",
+        "code": "# Grupo: Arquivos #\n# Pasta: templates/static/assets/login/scss/bootstrap/utilities/\n",
+        "implementation": [
+          "agrupamento para layout 2D/3D",
+          "pasta: templates/static/assets/login/scss/bootstrap/utilities/"
+        ]
+      },
+      {
+        "id": "python-ii-ecommerce-grp-templates-static-assets-login-scss-bootstrap-utilities-files-1-12",
+        "parent": "python-ii-ecommerce-grp-templates-static-assets-login-scss-bootstrap-utilities-files",
+        "layer": "module",
+        "title": "1–12",
+        "description": "Grupo de arquivos em `templates/static/assets/login/scss/bootstrap/utilities/` — 1–12",
         "file": "templates/static/assets/login/scss/bootstrap/utilities/[files-#-1-12]",
-        "code": "# Grupo: Arquivos # (1–12)\n# Pasta: templates/static/assets/login/scss/bootstrap/utilities/\n",
+        "code": "# Grupo: 1–12\n# Pasta: templates/static/assets/login/scss/bootstrap/utilities/\n",
         "implementation": [
           "agrupamento para layout 2D/3D",
           "pasta: templates/static/assets/login/scss/bootstrap/utilities/"
@@ -40720,12 +41084,12 @@ const PROJECTS = [
       },
       {
         "id": "python-ii-ecommerce-grp-templates-static-assets-login-scss-bootstrap-utilities-files-13-17",
-        "parent": "python-ii-ecommerce-dir-templates-static-assets-login-scss-bootstrap-utilities",
+        "parent": "python-ii-ecommerce-grp-templates-static-assets-login-scss-bootstrap-utilities-files",
         "layer": "module",
-        "title": "Arquivos # (13–17)",
-        "description": "Grupo de arquivos em `templates/static/assets/login/scss/bootstrap/utilities/` — Arquivos # (13–17)",
+        "title": "13–17",
+        "description": "Grupo de arquivos em `templates/static/assets/login/scss/bootstrap/utilities/` — 13–17",
         "file": "templates/static/assets/login/scss/bootstrap/utilities/[files-#-13-17]",
-        "code": "# Grupo: Arquivos # (13–17)\n# Pasta: templates/static/assets/login/scss/bootstrap/utilities/\n",
+        "code": "# Grupo: 13–17\n# Pasta: templates/static/assets/login/scss/bootstrap/utilities/\n",
         "implementation": [
           "agrupamento para layout 2D/3D",
           "pasta: templates/static/assets/login/scss/bootstrap/utilities/"
@@ -40994,7 +41358,7 @@ const PROJECTS = [
     ],
     "meta": {
       "sourceFiles": 236,
-      "treeNodes": 295,
+      "treeNodes": 300,
       "complete": true
     }
   },
@@ -41012,7 +41376,7 @@ const PROJECTS = [
         "parent": null,
         "layer": "root",
         "title": "HtmlWebsiteProject",
-        "description": "Coleção de sites HTML: Ana Bella, Chalé, Museu, TecBlog e mais.",
+        "description": "Cobertura completa: 23 arquivos de código no repositório (35 nós na árvore incluindo pastas).",
         "file": "README.md",
         "code": "> **Mobile / UTF-8:** imagens com `width: 100%` (sem scroll horizontal). Arquivo gravado em UTF-8 para acentos corretos em qualquer dispositivo.\r\n\r\n<div align=\"center\">\r\n\r\n<p align=\"center\">\r\n  <img src=\"docs/images/banner.svg\" alt=\"Banner\" width=\"100%\" style=\"max-width:100%;height:auto;display:block;\" />\r\n</p># HTML Website Project\r\n\r\n### Coleção de sites HTML/CSS: Ana Bella, Chalé Hotel, Museu, TecBlog e mais\r\n\r\n<img src=\"https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white\" alt=\"HTML\"/>\r\n<img src=\"https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white\" alt=\"CSS\"/>\r\n<img src=\"https://img.shields.io/badge/Bootstrap-7952B3?style=for-the-badge&logo=bootstrap&logoColor=white\" alt=\"Bootstrap\"/>\r\n\r\n[Sobre](#-sobre) ·\r\n[Features](#-features) ·\r\n[Arquitetura](#-arquitetura--fluxo) ·\r\n[Stack](#-stack) ·\r\n[Estrutura](#-estrutura) ·\r\n[Setup](#-como-rodar) ·\r\n[Melhorias](#-melhorias-sugeridas) ·\r\n[Autor](#-autor)\r\n\r\n</div>\r\n\r\n---\r\n\r\n## 📌 Sobre\r\n\r\nRepositório-coleção com vários projetos front-end: **Parallax**, **Ana Bella**, **Chalé Hotel**, **Museu Nacional**, **Notícias Cidade**, **TecBlog**, **Projeto Final** e **Bootstrap 4**.\r\n\r\n<div align=\"center\">\r\n\r\n<p align=\"center\">\r\n  <img src=\"docs/images/flow.svg\" alt=\"Fluxo\" width=\"100%\" style=\"max-width:100%;height:auto;display:block;\" />\r\n</p></div>\r\n\r\n---\r\n\r\n## ✨ Features\r\n\r\n| # | Capacidade |\r\n|---|------------|\r\n| 1 | Múltiplos sites em pastas independentes |\r\n| 2 | Layouts clássicos de curso HTML/CSS |\r\n| 3 | Exercício de Parallax |\r\n| 4 | Projeto Bootstrap 4 |\r\n\r\n---\r\n\r\n## 🏗️ Arquitetura / Fluxo\r\n\r\n```mermaid\r\nflowchart TB\r\n    R[HtmlWebsiteProject] --> A[Ana Bella]\r\n    R --> C[Chalé Hotel]\r\n    R --> M[Museu]\r\n    R --> N[Notícias]\r\n    R --> T[TecBlog]\r\n    R --> B[Bootstrap4]\r\n    R --> P[Parallax]\r\n```\r\n\r\n---\r\n\r\n## 🛠️ Stack\r\n\r\n| Tecnologia | Papel |\r\n|------------|-------|\r\n| HTML | Estrutura |\r\n| CSS | Estilo |\r\n| Bootstrap 4 | Grid/UI |\r\n\r\n---\r\n\r\n## 📂 Estrutura\r\n\r\n```text\r\nHtmlWebsiteProject/\r\n├── Parallax/\r\n├── ProjetoAnaBella/\r\n├── ProjetoChaleHotel/\r\n├── ProjetoMuseuNacional/\r\n├── ProjetoNoticiasCidade/\r\n├── ProjetoTecBlog/\r\n├── ProjetoFinalHtml/\r\n└── projeto-bootstrap4/\r\n```\r\n\r\n---\r\n\r\n## 🚀 Como rodar\r\n\r\nAbra o `index.html` de cada subpasta no navegador.\r\n\r\n---\r\n\r\n## ▶️ Uso\r\n\r\nEstude um site por vez: compare layouts, tipografia e responsividade.\r\n\r\n---\r\n\r\n## 🌳 Tree of Knowledge\r\n\r\nEste projeto está mapeado na árvore interativa:\r\n\r\n<p>\r\n  <a href=\"https://canonengineer.github.io/TreeofKnowledge/index.html?tree=html-website\">\r\n    <img src=\"https://img.shields.io/badge/Abrir_na_Árvore-Tree_of_Knowledge-38bdf8?style=for-the-badge&labelColor=0c2344\" alt=\"Tree of Knowledge\"/>\r\n  </a>\r\n</p>\r\n\r\n---\r\n\r\n## 📈 Melhorias sugeridas\r\n\r\n1. Índice HTML na raiz com cards de cada projeto\r\n2. Migrar trechos para CSS moderno (flex/grid)\r\n3. Lighthouse scores e melhorias a11y\r\n\r\n---\r\n\r\n## 👨‍💻 Autor\r\n\r\n**Alessandro Canon (CanonEngineer)**  \r\nNetwork Analyst · Developer · Cybersecurity Enthusiast\r\n\r\n- GitHub: [https://github.com/CanonEngineer](https://github.com/CanonEngineer)\r\n- Portfolio: [https://canonengineer.github.io](https://canonengineer.github.io)\r\n- Tree of Knowledge: [https://canonengineer.github.io/TreeofKnowledge/](https://canonengineer.github.io/TreeofKnowledge/)\r\n\r\n---\r\n\r\n<div align=\"center\">\r\n\r\n⭐ Se este projeto te ajudou, deixe uma estrela!\r\n\r\n</div>\r\n",
         "implementation": [
@@ -41484,7 +41848,7 @@ const PROJECTS = [
         "parent": null,
         "layer": "root",
         "title": "AnkiUnivespProject",
-        "description": "App estilo Anki para estudos UNIVESP com accounts e core.",
+        "description": "Cobertura completa: 51 arquivos de código no repositório (64 nós na árvore incluindo pastas).",
         "file": "README.md",
         "code": "> **Mobile / UTF-8:** imagens com `width: 100%` (sem scroll horizontal). Arquivo gravado em UTF-8 para acentos corretos em qualquer dispositivo.\r\n\r\n<div align=\"center\">\r\n\r\n<p align=\"center\">\r\n  <img src=\"docs/images/banner.svg\" alt=\"Banner\" width=\"100%\" style=\"max-width:100%;height:auto;display:block;\" />\r\n</p># Anki UNIVESP Project\r\n\r\n### App estilo Anki para estudos UNIVESP — accounts, core e design\r\n\r\n<img src=\"https://img.shields.io/badge/Django-092E20?style=for-the-badge&logo=django&logoColor=white\" alt=\"Django\"/>\r\n<img src=\"https://img.shields.io/badge/Flashcards-Anki--like-818cf8?style=for-the-badge\" alt=\"Anki\"/>\r\n\r\n[Sobre](#-sobre) ·\r\n[Features](#-features) ·\r\n[Arquitetura](#-arquitetura--fluxo) ·\r\n[Stack](#-stack) ·\r\n[Estrutura](#-estrutura) ·\r\n[Setup](#-como-rodar) ·\r\n[Melhorias](#-melhorias-sugeridas) ·\r\n[Autor](#-autor)\r\n\r\n</div>\r\n\r\n---\r\n\r\n## 📌 Sobre\r\n\r\nSistema de estudos com flashcards inspirado no Anki: apps `accounts` e `core`, pasta `design` e projeto `ProjetoAnkiUnivesp`.\r\n\r\n<div align=\"center\">\r\n\r\n<p align=\"center\">\r\n  <img src=\"docs/images/flow.svg\" alt=\"Fluxo\" width=\"100%\" style=\"max-width:100%;height:auto;display:block;\" />\r\n</p></div>\r\n\r\n---\r\n\r\n## ✨ Features\r\n\r\n| # | Capacidade |\r\n|---|------------|\r\n| 1 | Autenticação de contas |\r\n| 2 | Domínio core de cards/revisão |\r\n| 3 | Assets de design |\r\n| 4 | requirements.txt |\r\n\r\n---\r\n\r\n## 🏗️ Arquitetura / Fluxo\r\n\r\n```mermaid\r\nflowchart LR\r\n    U[Estudante] --> A[accounts]\r\n    U --> C[core]\r\n    C --> R[Revisão espaçada]\r\n    C --> DB[(SQLite)]\r\n    A --> DB\r\n```\r\n\r\n---\r\n\r\n## 🛠️ Stack\r\n\r\n| Tecnologia | Papel |\r\n|------------|-------|\r\n| Django | Backend |\r\n| HTML/JS/CSS | UI |\r\n| SQLite | Dev DB |\r\n\r\n---\r\n\r\n## 📂 Estrutura\r\n\r\n```text\r\nAnkiUnivespProject/\r\n├── manage.py\r\n├── ProjetoAnkiUnivesp/\r\n├── accounts/\r\n├── core/\r\n├── design/\r\n└── requirements.txt\r\n```\r\n\r\n---\r\n\r\n## 🚀 Como rodar\r\n\r\n```bash\r\ngit clone https://github.com/CanonEngineer/AnkiUnivespProject.git\r\ncd AnkiUnivespProject\r\npython -m venv .venv && source .venv/bin/activate\r\npip install -r requirements.txt\r\npython manage.py migrate\r\npython manage.py runserver\r\n```\r\n\r\n---\r\n\r\n## ▶️ Uso\r\n\r\nCrie conta, monte baralhos e revise cards no fluxo de estudo.\r\n\r\n---\r\n\r\n## 🌳 Tree of Knowledge\r\n\r\nEste projeto está mapeado na árvore interativa:\r\n\r\n<p>\r\n  <a href=\"https://canonengineer.github.io/TreeofKnowledge/index.html?tree=anki-univesp\">\r\n    <img src=\"https://img.shields.io/badge/Abrir_na_Árvore-Tree_of_Knowledge-38bdf8?style=for-the-badge&labelColor=0c2344\" alt=\"Tree of Knowledge\"/>\r\n  </a>\r\n</p>\r\n\r\n---\r\n\r\n## 📈 Melhorias sugeridas\r\n\r\n1. Algoritmo SM-2 completo\r\n2. Estatísticas de retenção\r\n3. Import/export de decks\r\n4. Remover venv do Git\r\n\r\n---\r\n\r\n## 👨‍💻 Autor\r\n\r\n**Alessandro Canon (CanonEngineer)**  \r\nNetwork Analyst · Developer · Cybersecurity Enthusiast\r\n\r\n- GitHub: [https://github.com/CanonEngineer](https://github.com/CanonEngineer)\r\n- Portfolio: [https://canonengineer.github.io](https://canonengineer.github.io)\r\n- Tree of Knowledge: [https://canonengineer.github.io/TreeofKnowledge/](https://canonengineer.github.io/TreeofKnowledge/)\r\n\r\n---\r\n\r\n<div align=\"center\">\r\n\r\n⭐ Se este projeto te ajudou, deixe uma estrela!\r\n\r\n</div>\r\n",
         "implementation": [
@@ -42326,14 +42690,14 @@ const PROJECTS = [
     "color": "#94a3b8",
     "icon": "php",
     "stack": "HTML + CSS + JS + PHP",
-    "summary": "Cobertura completa: 203 arquivos de código no repositório (251 nós na árvore incluindo pastas).",
+    "summary": "Cobertura completa: 203 arquivos de código no repositório (255 nós na árvore incluindo pastas).",
     "nodes": [
       {
         "id": "hyperware-root",
         "parent": null,
         "layer": "root",
         "title": "HyperwareProject",
-        "description": "Site Hyperware com estrutura web e scripts PHP.",
+        "description": "Cobertura completa: 203 arquivos de código no repositório (251 nós na árvore incluindo pastas).",
         "file": "README.md",
         "code": "> **Mobile / UTF-8:** imagens com `width: 100%` (sem scroll horizontal). Arquivo gravado em UTF-8 para acentos corretos em qualquer dispositivo.\r\n\r\n<div align=\"center\">\r\n\r\n<p align=\"center\">\r\n  <img src=\"docs/images/banner.svg\" alt=\"Banner\" width=\"100%\" style=\"max-width:100%;height:auto;display:block;\" />\r\n</p># Hyperware Project\r\n\r\n### Site Hyperware com front rico e endpoints PHP para formulários\r\n\r\n<img src=\"https://img.shields.io/badge/HTML%2FCSS%2FJS-Front-94a3b8?style=for-the-badge\" alt=\"Front\"/>\r\n<img src=\"https://img.shields.io/badge/PHP-Backend-777BB4?style=for-the-badge&logo=php&logoColor=white\" alt=\"PHP\"/>\r\n\r\n[Sobre](#-sobre) ·\r\n[Features](#-features) ·\r\n[Arquitetura](#-arquitetura--fluxo) ·\r\n[Stack](#-stack) ·\r\n[Estrutura](#-estrutura) ·\r\n[Setup](#-como-rodar) ·\r\n[Melhorias](#-melhorias-sugeridas) ·\r\n[Autor](#-autor)\r\n\r\n</div>\r\n\r\n---\r\n\r\n## 📌 Sobre\r\n\r\nProjeto web corporativo/comercial **Hyperware**: conteúdo em `web/site-hyper`, scripts de e-mail/newsletter e área `web/stats`.\r\n\r\n<div align=\"center\">\r\n\r\n<p align=\"center\">\r\n  <img src=\"docs/images/flow.svg\" alt=\"Fluxo\" width=\"100%\" style=\"max-width:100%;height:auto;display:block;\" />\r\n</p></div>\r\n\r\n---\r\n\r\n## ✨ Features\r\n\r\n| # | Capacidade |\r\n|---|------------|\r\n| 1 | Landing `web/site-hyper/index.html` |\r\n| 2 | JS de animações/interação |\r\n| 3 | `sendemail.php` / newsletter |\r\n| 4 | Área de estatísticas |\r\n\r\n---\r\n\r\n## 🏗️ Arquitetura / Fluxo\r\n\r\n```mermaid\r\nflowchart TB\r\n    V[Visitante] --> S[site-hyper]\r\n    S --> F[Formulário]\r\n    F --> P[sendemail.php]\r\n    V --> ST[stats]\r\n```\r\n\r\n---\r\n\r\n## 🛠️ Stack\r\n\r\n| Tecnologia | Papel |\r\n|------------|-------|\r\n| HTML/CSS/JS | Front |\r\n| PHP | Forms |\r\n| Apache/CGI | Hosting clássico |\r\n\r\n---\r\n\r\n## 📂 Estrutura\r\n\r\n```text\r\nHyperwareProject/\r\n├── web/\r\n│   ├── index.html\r\n│   ├── site-hyper/\r\n│   ├── stats/\r\n│   └── unzipper.php\r\n├── log/\r\n└── cgi-bin/\r\n```\r\n\r\n---\r\n\r\n## 🚀 Como rodar\r\n\r\nPublique a pasta `web/` em um host com PHP (Apache/XAMPP) e configure permissões de envio de e-mail.\r\n\r\n---\r\n\r\n## ▶️ Uso\r\n\r\nNavegue pelo site, envie formulários e monitore a área de stats conforme o ambiente.\r\n\r\n---\r\n\r\n## 🌳 Tree of Knowledge\r\n\r\nEste projeto está mapeado na árvore interativa:\r\n\r\n<p>\r\n  <a href=\"https://canonengineer.github.io/TreeofKnowledge/index.html?tree=hyperware\">\r\n    <img src=\"https://img.shields.io/badge/Abrir_na_Árvore-Tree_of_Knowledge-38bdf8?style=for-the-badge&labelColor=0c2344\" alt=\"Tree of Knowledge\"/>\r\n  </a>\r\n</p>\r\n\r\n---\r\n\r\n## 📈 Melhorias sugeridas\r\n\r\n1. Sanitização forte dos forms PHP\r\n2. Remover plugins/vendor desnecessários do Git\r\n3. Build moderno (Vite) para assets\r\n4. HTTPS e headers de segurança\r\n\r\n---\r\n\r\n## 👨‍💻 Autor\r\n\r\n**Alessandro Canon (CanonEngineer)**  \r\nNetwork Analyst · Developer · Cybersecurity Enthusiast\r\n\r\n- GitHub: [https://github.com/CanonEngineer](https://github.com/CanonEngineer)\r\n- Portfolio: [https://canonengineer.github.io](https://canonengineer.github.io)\r\n- Tree of Knowledge: [https://canonengineer.github.io/TreeofKnowledge/](https://canonengineer.github.io/TreeofKnowledge/)\r\n\r\n---\r\n\r\n<div align=\"center\">\r\n\r\n⭐ Se este projeto te ajudou, deixe uma estrela!\r\n\r\n</div>\r\n",
         "implementation": [
@@ -42902,13 +43266,26 @@ const PROJECTS = [
         ]
       },
       {
-        "id": "hyperware-grp-web-site-hyper-files-b-1-12",
+        "id": "hyperware-grp-web-site-hyper-files-b",
         "parent": "hyperware-dir-web-site-hyper",
         "layer": "module",
-        "title": "Arquivos B (1–12)",
-        "description": "Grupo de arquivos em `web/site-hyper/` — Arquivos B (1–12)",
+        "title": "Arquivos B",
+        "description": "Grupo de arquivos em `web/site-hyper/` — Arquivos B",
+        "file": "web/site-hyper/[files-b]",
+        "code": "# Grupo: Arquivos B\n# Pasta: web/site-hyper/\n",
+        "implementation": [
+          "agrupamento para layout 2D/3D",
+          "pasta: web/site-hyper/"
+        ]
+      },
+      {
+        "id": "hyperware-grp-web-site-hyper-files-b-1-12",
+        "parent": "hyperware-grp-web-site-hyper-files-b",
+        "layer": "module",
+        "title": "1–12",
+        "description": "Grupo de arquivos em `web/site-hyper/` — 1–12",
         "file": "web/site-hyper/[files-b-1-12]",
-        "code": "# Grupo: Arquivos B (1–12)\n# Pasta: web/site-hyper/\n",
+        "code": "# Grupo: 1–12\n# Pasta: web/site-hyper/\n",
         "implementation": [
           "agrupamento para layout 2D/3D",
           "pasta: web/site-hyper/"
@@ -42916,12 +43293,12 @@ const PROJECTS = [
       },
       {
         "id": "hyperware-grp-web-site-hyper-files-b-13-16",
-        "parent": "hyperware-dir-web-site-hyper",
+        "parent": "hyperware-grp-web-site-hyper-files-b",
         "layer": "module",
-        "title": "Arquivos B (13–16)",
-        "description": "Grupo de arquivos em `web/site-hyper/` — Arquivos B (13–16)",
+        "title": "13–16",
+        "description": "Grupo de arquivos em `web/site-hyper/` — 13–16",
         "file": "web/site-hyper/[files-b-13-16]",
-        "code": "# Grupo: Arquivos B (13–16)\n# Pasta: web/site-hyper/\n",
+        "code": "# Grupo: 13–16\n# Pasta: web/site-hyper/\n",
         "implementation": [
           "agrupamento para layout 2D/3D",
           "pasta: web/site-hyper/"
@@ -42941,13 +43318,26 @@ const PROJECTS = [
         ]
       },
       {
-        "id": "hyperware-grp-web-site-hyper-files-p-1-12",
+        "id": "hyperware-grp-web-site-hyper-files-p",
         "parent": "hyperware-dir-web-site-hyper",
         "layer": "module",
-        "title": "Arquivos P (1–12)",
-        "description": "Grupo de arquivos em `web/site-hyper/` — Arquivos P (1–12)",
+        "title": "Arquivos P",
+        "description": "Grupo de arquivos em `web/site-hyper/` — Arquivos P",
+        "file": "web/site-hyper/[files-p]",
+        "code": "# Grupo: Arquivos P\n# Pasta: web/site-hyper/\n",
+        "implementation": [
+          "agrupamento para layout 2D/3D",
+          "pasta: web/site-hyper/"
+        ]
+      },
+      {
+        "id": "hyperware-grp-web-site-hyper-files-p-1-12",
+        "parent": "hyperware-grp-web-site-hyper-files-p",
+        "layer": "module",
+        "title": "1–12",
+        "description": "Grupo de arquivos em `web/site-hyper/` — 1–12",
         "file": "web/site-hyper/[files-p-1-12]",
-        "code": "# Grupo: Arquivos P (1–12)\n# Pasta: web/site-hyper/\n",
+        "code": "# Grupo: 1–12\n# Pasta: web/site-hyper/\n",
         "implementation": [
           "agrupamento para layout 2D/3D",
           "pasta: web/site-hyper/"
@@ -42955,12 +43345,12 @@ const PROJECTS = [
       },
       {
         "id": "hyperware-grp-web-site-hyper-files-p-13-13",
-        "parent": "hyperware-dir-web-site-hyper",
+        "parent": "hyperware-grp-web-site-hyper-files-p",
         "layer": "module",
-        "title": "Arquivos P (13–13)",
-        "description": "Grupo de arquivos em `web/site-hyper/` — Arquivos P (13–13)",
+        "title": "13–13",
+        "description": "Grupo de arquivos em `web/site-hyper/` — 13–13",
         "file": "web/site-hyper/[files-p-13-13]",
-        "code": "# Grupo: Arquivos P (13–13)\n# Pasta: web/site-hyper/\n",
+        "code": "# Grupo: 13–13\n# Pasta: web/site-hyper/\n",
         "implementation": [
           "agrupamento para layout 2D/3D",
           "pasta: web/site-hyper/"
@@ -44917,13 +45307,26 @@ const PROJECTS = [
         ]
       },
       {
-        "id": "hyperware-grp-web-stats-files-a-1-12",
+        "id": "hyperware-grp-web-stats-files-a",
         "parent": "hyperware-dir-web-stats",
         "layer": "module",
-        "title": "Arquivos A (1–12)",
-        "description": "Grupo de arquivos em `web/stats/` — Arquivos A (1–12)",
+        "title": "Arquivos A",
+        "description": "Grupo de arquivos em `web/stats/` — Arquivos A",
+        "file": "web/stats/[files-a]",
+        "code": "# Grupo: Arquivos A\n# Pasta: web/stats/\n",
+        "implementation": [
+          "agrupamento para layout 2D/3D",
+          "pasta: web/stats/"
+        ]
+      },
+      {
+        "id": "hyperware-grp-web-stats-files-a-1-12",
+        "parent": "hyperware-grp-web-stats-files-a",
+        "layer": "module",
+        "title": "1–12",
+        "description": "Grupo de arquivos em `web/stats/` — 1–12",
         "file": "web/stats/[files-a-1-12]",
-        "code": "# Grupo: Arquivos A (1–12)\n# Pasta: web/stats/\n",
+        "code": "# Grupo: 1–12\n# Pasta: web/stats/\n",
         "implementation": [
           "agrupamento para layout 2D/3D",
           "pasta: web/stats/"
@@ -44931,12 +45334,12 @@ const PROJECTS = [
       },
       {
         "id": "hyperware-grp-web-stats-files-a-13-23",
-        "parent": "hyperware-dir-web-stats",
+        "parent": "hyperware-grp-web-stats-files-a",
         "layer": "module",
-        "title": "Arquivos A (13–23)",
-        "description": "Grupo de arquivos em `web/stats/` — Arquivos A (13–23)",
+        "title": "13–23",
+        "description": "Grupo de arquivos em `web/stats/` — 13–23",
         "file": "web/stats/[files-a-13-23]",
-        "code": "# Grupo: Arquivos A (13–23)\n# Pasta: web/stats/\n",
+        "code": "# Grupo: 13–23\n# Pasta: web/stats/\n",
         "implementation": [
           "agrupamento para layout 2D/3D",
           "pasta: web/stats/"
@@ -45268,13 +45671,26 @@ const PROJECTS = [
         ]
       },
       {
-        "id": "hyperware-grp-web-stats-2020-6-files-a-1-12",
+        "id": "hyperware-grp-web-stats-2020-6-files-a",
         "parent": "hyperware-dir-web-stats-2020-6",
         "layer": "module",
-        "title": "Arquivos A (1–12)",
-        "description": "Grupo de arquivos em `web/stats/2020-6/` — Arquivos A (1–12)",
+        "title": "Arquivos A",
+        "description": "Grupo de arquivos em `web/stats/2020-6/` — Arquivos A",
+        "file": "web/stats/2020-6/[files-a]",
+        "code": "# Grupo: Arquivos A\n# Pasta: web/stats/2020-6/\n",
+        "implementation": [
+          "agrupamento para layout 2D/3D",
+          "pasta: web/stats/2020-6/"
+        ]
+      },
+      {
+        "id": "hyperware-grp-web-stats-2020-6-files-a-1-12",
+        "parent": "hyperware-grp-web-stats-2020-6-files-a",
+        "layer": "module",
+        "title": "1–12",
+        "description": "Grupo de arquivos em `web/stats/2020-6/` — 1–12",
         "file": "web/stats/2020-6/[files-a-1-12]",
-        "code": "# Grupo: Arquivos A (1–12)\n# Pasta: web/stats/2020-6/\n",
+        "code": "# Grupo: 1–12\n# Pasta: web/stats/2020-6/\n",
         "implementation": [
           "agrupamento para layout 2D/3D",
           "pasta: web/stats/2020-6/"
@@ -45282,12 +45698,12 @@ const PROJECTS = [
       },
       {
         "id": "hyperware-grp-web-stats-2020-6-files-a-13-23",
-        "parent": "hyperware-dir-web-stats-2020-6",
+        "parent": "hyperware-grp-web-stats-2020-6-files-a",
         "layer": "module",
-        "title": "Arquivos A (13–23)",
-        "description": "Grupo de arquivos em `web/stats/2020-6/` — Arquivos A (13–23)",
+        "title": "13–23",
+        "description": "Grupo de arquivos em `web/stats/2020-6/` — 13–23",
         "file": "web/stats/2020-6/[files-a-13-23]",
-        "code": "# Grupo: Arquivos A (13–23)\n# Pasta: web/stats/2020-6/\n",
+        "code": "# Grupo: 13–23\n# Pasta: web/stats/2020-6/\n",
         "implementation": [
           "agrupamento para layout 2D/3D",
           "pasta: web/stats/2020-6/"
@@ -45595,7 +46011,7 @@ const PROJECTS = [
     ],
     "meta": {
       "sourceFiles": 203,
-      "treeNodes": 251,
+      "treeNodes": 255,
       "complete": true
     }
   },
@@ -45613,7 +46029,7 @@ const PROJECTS = [
         "parent": null,
         "layer": "root",
         "title": "PHPDaoProject",
-        "description": "Padrão DAO em PHP com classes e config de conexão.",
+        "description": "Cobertura completa: 5 arquivos de código no repositório (6 nós na árvore incluindo pastas).",
         "file": "README.md",
         "code": "> **Mobile / UTF-8:** imagens com `width: 100%` (sem scroll horizontal). Arquivo gravado em UTF-8 para acentos corretos em qualquer dispositivo.\r\n\r\n<div align=\"center\">\r\n\r\n<p align=\"center\">\r\n  <img src=\"docs/images/banner.svg\" alt=\"Banner\" width=\"100%\" style=\"max-width:100%;height:auto;display:block;\" />\r\n</p># PHP DAO Project\r\n\r\n### Padrão DAO em PHP — separação entre acesso a dados e apresentação\r\n\r\n<img src=\"https://img.shields.io/badge/PHP-777BB4?style=for-the-badge&logo=php&logoColor=white\" alt=\"PHP\"/>\r\n<img src=\"https://img.shields.io/badge/Design%20Pattern-DAO-e879f9?style=for-the-badge\" alt=\"DAO\"/>\r\n\r\n[Sobre](#-sobre) ·\r\n[Features](#-features) ·\r\n[Arquitetura](#-arquitetura--fluxo) ·\r\n[Stack](#-stack) ·\r\n[Estrutura](#-estrutura) ·\r\n[Setup](#-como-rodar) ·\r\n[Melhorias](#-melhorias-sugeridas) ·\r\n[Autor](#-autor)\r\n\r\n</div>\r\n\r\n---\r\n\r\n## 📌 Sobre\r\n\r\nProjeto didático de **Data Access Object (DAO)** em PHP: `config.php`, classes em `class/` e `index.php` consumindo a camada de dados.\r\n\r\n<div align=\"center\">\r\n\r\n<p align=\"center\">\r\n  <img src=\"docs/images/flow.svg\" alt=\"Fluxo\" width=\"100%\" style=\"max-width:100%;height:auto;display:block;\" />\r\n</p></div>\r\n\r\n---\r\n\r\n## ✨ Features\r\n\r\n| # | Capacidade |\r\n|---|------------|\r\n| 1 | Configuração central de conexão |\r\n| 2 | Classes DAO / entidades |\r\n| 3 | Exemplo de uso no `index.php` |\r\n| 4 | Foco em organização OOP |\r\n\r\n---\r\n\r\n## 🏗️ Arquitetura / Fluxo\r\n\r\n```mermaid\r\nflowchart LR\r\n    I[index.php] --> D[DAO classes]\r\n    D --> C[config.php]\r\n    C --> DB[(Database)]\r\n    D --> E[Entities]\r\n```\r\n\r\n---\r\n\r\n## 🛠️ Stack\r\n\r\n| Tecnologia | Papel |\r\n|------------|-------|\r\n| PHP | Linguagem |\r\n| DAO pattern | Arquitetura |\r\n| MySQL/PDO | Persistência |\r\n\r\n---\r\n\r\n## 📂 Estrutura\r\n\r\n```text\r\nPHPDaoProject/\r\n├── index.php\r\n├── config.php\r\n└── class/\r\n    └── ... DAO / models\r\n```\r\n\r\n---\r\n\r\n## 🚀 Como rodar\r\n\r\n```bash\r\ngit clone https://github.com/CanonEngineer/PHPDaoProject.git\r\ncd PHPDaoProject\r\n# ajuste credenciais em config.php\r\nphp -S localhost:8080\r\n```\r\n\r\n---\r\n\r\n## ▶️ Uso\r\n\r\nExecute `index.php` e observe como a UI/entrada usa DAOs em vez de SQL espalhado.\r\n\r\n---\r\n\r\n## 🌳 Tree of Knowledge\r\n\r\nEste projeto está mapeado na árvore interativa:\r\n\r\n<p>\r\n  <a href=\"https://canonengineer.github.io/TreeofKnowledge/index.html?tree=php-dao\">\r\n    <img src=\"https://img.shields.io/badge/Abrir_na_Árvore-Tree_of_Knowledge-38bdf8?style=for-the-badge&labelColor=0c2344\" alt=\"Tree of Knowledge\"/>\r\n  </a>\r\n</p>\r\n\r\n---\r\n\r\n## 📈 Melhorias sugeridas\r\n\r\n1. PDO prepared statements em todas as queries\r\n2. Autoload PSR-4 / Composer\r\n3. Camada Service entre Controller e DAO\r\n4. Testes PHPUnit\r\n\r\n---\r\n\r\n## 👨‍💻 Autor\r\n\r\n**Alessandro Canon (CanonEngineer)**  \r\nNetwork Analyst · Developer · Cybersecurity Enthusiast\r\n\r\n- GitHub: [https://github.com/CanonEngineer](https://github.com/CanonEngineer)\r\n- Portfolio: [https://canonengineer.github.io](https://canonengineer.github.io)\r\n- Tree of Knowledge: [https://canonengineer.github.io/TreeofKnowledge/](https://canonengineer.github.io/TreeofKnowledge/)\r\n\r\n---\r\n\r\n<div align=\"center\">\r\n\r\n⭐ Se este projeto te ajudou, deixe uma estrela!\r\n\r\n</div>\r\n",
         "implementation": [
@@ -45708,7 +46124,7 @@ const PROJECTS = [
         "parent": null,
         "layer": "root",
         "title": "DangerZone",
-        "description": "Catálogo de pragas virtuais, labs não funcionais e prevenção empresarial para conferências de cibersegurança.",
+        "description": "Cobertura completa: 87 arquivos de código no repositório (118 nós na árvore incluindo pastas).",
         "file": "README.md",
         "code": "# DangerZone\r\n\r\n### Laboratório educacional de cibersegurança corporativa — CanonEngineer\r\n\r\n**Catálogo amplo de pragas virtuais + código ilustrativo não funcional + prevenção empresarial + labs defensivos.**\r\n\r\n> ⚠ Leia [DISCLAIMER.md](DISCLAIMER.md). **Não há malware funcional.** Tudo é VFS, print/telemetria ou pseudocódigo de risco.\r\n\r\n[Catálogo](#-catálogo-de-pragas) · [Labs](#-labs-0120) · [Prevenção](#-prevenção-empresarial) · [Árvore](#-tree-of-knowledge) · [Como rodar](#-como-rodar)\r\n\r\n---\r\n\r\n## O que há de novo nesta expansão\r\n\r\n| Entrega | Conteúdo |\r\n|---------|----------|\r\n| **28 famílias** em `catalog/` | Vírus, worm, trojan, ransomware, spyware, adware, scareware, rootkit, bootkit, botnet, cryptojacker, fileless, macro, logic bomb, backdoor, dropper, packer, wiper, browser hijack, mobile, IoT, APT, supply chain, phishing, infostealer, banking trojan, polimórfico, double extortion |\r\n| **Labs 10–20** | Novas sims + scorecard de hardening |\r\n| **Docs** | `malware_catalog.md`, `enterprise_prevention.md`, `risk_matrix.md` |\r\n| **Prevenção** | `prevention/print_controls.py` lista risco → controles |\r\n| **Árvore** | Dezenas de nós no Tree of Knowledge |\r\n\r\n---\r\n\r\n## Catálogo de pragas\r\n\r\n```mermaid\r\nmindmap\r\n  root((DangerZone))\r\n    Classicos\r\n      Virus Worm Trojan Macro LogicBomb\r\n    Monetizacao\r\n      Ransomware DoubleExtortion Cryptojacker\r\n      Adware Scareware Infostealer Banking\r\n    Persistencia\r\n      Rootkit Bootkit Backdoor Dropper Fileless\r\n    Campanhas\r\n      Botnet APT SupplyChain Phishing\r\n    Plataformas\r\n      Mobile IoT Browser\r\n```\r\n\r\nCada arquivo em `catalog/*.py` imprime:\r\n\r\n1. **Família**\r\n2. **Risco**\r\n3. **Controles empresariais**\r\n4. Função `ILLUSTRATIVE_*` que **só faz print**\r\n\r\n```bash\r\npython catalog/ransomware.py\r\npython prevention/print_controls.py\r\n```\r\n\r\nDetalhes: [docs/malware_catalog.md](docs/malware_catalog.md)\r\n\r\n---\r\n\r\n## Prevenção empresarial\r\n\r\n```mermaid\r\nflowchart LR\r\n    A[Identidade MFA] --> B[Endpoint EDR]\r\n    B --> C[Rede segmentada]\r\n    C --> D[Email DMARC+SEG]\r\n    D --> E[Backup 3-2-1]\r\n    E --> F[SOC / IR]\r\n```\r\n\r\n- Playbook: [docs/enterprise_prevention.md](docs/enterprise_prevention.md)\r\n- Matriz: [docs/risk_matrix.md](docs/risk_matrix.md)\r\n- Scorecard: `python labs/20_enterprise_hardening/checklist.py`\r\n\r\n---\r\n\r\n## Labs 01–20\r\n\r\n### Simulação ilustrativa\r\n\r\n| # | Tema |\r\n|---|------|\r\n| 01–05 | Vírus, worm, trojan, ransomware, spyware |\r\n| 10–19 | Rootkit, botnet, adware/scareware, cryptojacker, fileless, macro, logic bomb, backdoor/dropper, phishing, supply chain |\r\n\r\n### Defesa / empresa\r\n\r\n| # | Tema |\r\n|---|------|\r\n| 06 | Detector de IOCs |\r\n| 07 | Integridade SHA-256 |\r\n| 08 | Score comportamental |\r\n| 09 | Scanner estilo YARA |\r\n| 20 | Checklist de hardening |\r\n\r\n---\r\n\r\n## Arquitetura\r\n\r\n```mermaid\r\nflowchart TB\r\n    CAT[catalog/ 28 famílias] --> PREV[prevention/print_controls]\r\n    LABS[labs 01-19 sims] --> TEL[demos/telemetry_*.json]\r\n    TEL --> DEF[labs 06-09 defesa]\r\n    PREV --> CONF[conference/]\r\n    DEF --> CONF\r\n    HARD[lab 20 hardening] --> CONF\r\n```\r\n\r\n---\r\n\r\n## Como rodar\r\n\r\n```bash\r\ngit clone https://github.com/CanonEngineer/DangerZone.git\r\ncd DangerZone\r\npython demos/run_all_sims.py\r\npython prevention/print_controls.py\r\n```\r\n\r\nPython 3.10+, só biblioteca padrão.\r\n\r\n---\r\n\r\n## Conferência\r\n\r\n| Doc | Uso |\r\n|-----|-----|\r\n| [conference/outline.md](conference/outline.md) | Roteiro |\r\n| [conference/talking-points.md](conference/talking-points.md) | Frases |\r\n| [docs/taxonomy.md](docs/taxonomy.md) | Taxonomia base |\r\n| [docs/malware_catalog.md](docs/malware_catalog.md) | Catálogo completo |\r\n| [docs/enterprise_prevention.md](docs/enterprise_prevention.md) | Como proteger a empresa |\r\n\r\n---\r\n\r\n## Tree of Knowledge\r\n\r\nÁrvore interativa: [canonengineer.github.io/TreeofKnowledge](https://canonengineer.github.io/TreeofKnowledge/) → **DangerZone**\r\n\r\n---\r\n\r\n## Ética\r\n\r\nCódigo ilustrativo ensina **defesa**. Não adapte para atacar sistemas.\r\n\r\n**Alessandro Canon** — [CanonEngineer](https://github.com/CanonEngineer)\r\n",
         "implementation": [
@@ -47259,7 +47675,7 @@ const PROJECTS = [
         "parent": null,
         "layer": "root",
         "title": "SmartHomeIOT",
-        "description": "Plataforma IoT de doutorado: sync Arduino↔Raspberry, servos/portas, FastAPI, SQI e Research Lab visual.",
+        "description": "Cobertura completa: 40 arquivos de código no repositório (57 nós na árvore incluindo pastas).",
         "file": "README.md",
         "code": "# SmartHome IoT Platform\r\n\r\n[![License: Research](https://img.shields.io/badge/license-Research%20%2F%20Edu-0B1211?style=for-the-badge&labelColor=12201e&color=7dd3c0)](./LICENSE)\r\n[![Protocol](https://img.shields.io/badge/protocol-v1.0.0-e8b86d?style=for-the-badge&labelColor=12201e)](./docs/PROTOCOL.md)\r\n[![Stack](https://img.shields.io/badge/stack-Python%20%7C%20Arduino%20%7C%20Raspberry%20%7C%20Java-26a69a?style=for-the-badge&labelColor=12201e)](#arquitetura-de-engenharia-l1l5)\r\n[![SQI](https://img.shields.io/badge/métrica-Sync%20Quality%20Index-ec407a?style=for-the-badge&labelColor=12201e)](./docs/METHODOLOGY.md)\r\n\r\n<p align=\"center\">\r\n  <img src=\"docs/assets/hero-lab.png\" alt=\"Laboratório SmartHome IoT — visão isométrica Arduino, Raspberry, servos e sync\" width=\"100%\" />\r\n</p>\r\n\r\n<p align=\"center\">\r\n  <strong>Bancada experimental de IoT edge</strong> para sincronização Arduino ↔ Raspberry,<br/>\r\n  atuação eletromecânica e coleta quantitativa de evidências — pensada para <em>apresentação de doutorado</em>.\r\n</p>\r\n\r\n<p align=\"center\">\r\n  <a href=\"https://canonengineer.github.io/SmartHomeIOT/demo/standalone.html?v=2026-07-14b\">\r\n    <img src=\"https://img.shields.io/badge/%E2%96%B6%20Abrir%20Interface%20Gráfica%20AGORA-00bfa5?style=for-the-badge&logo=googlechrome&logoColor=white\" alt=\"Abrir Interface Gráfica\" />\r\n  </a>\r\n  &nbsp;\r\n  <a href=\"https://github.com/CanonEngineer/SmartHomeIOT/blob/main/docs/demo/standalone.html\">\r\n    <img src=\"https://img.shields.io/badge/Arquivo%20standalone-12201e?style=for-the-badge&logo=github&logoColor=7dd3c0\" alt=\"Arquivo standalone\" />\r\n  </a>\r\n  &nbsp;\r\n  <a href=\"./docs/ARCHITECTURE.md\">\r\n    <img src=\"https://img.shields.io/badge/Arquitetura%20L1–L5-1d3531?style=for-the-badge\" alt=\"Arquitetura\" />\r\n  </a>\r\n</p>\r\n\r\n> **▶ Abrir Interface Gráfica AGORA** abre o Demo Lab publicado em GitHub Pages (`/demo/standalone.html`).<br/>\r\n> Após um `push` em `main`, o workflow atualiza o site em ~1–2 min — use Ctrl+F5 se o navegador cachear.<br/>\r\n> Laboratório completo local: `start.ps1` → `http://127.0.0.1:8000`.\r\n\r\n---\r\n\r\n## Sumário\r\n\r\n- [Por que este projeto](#por-que-este-projeto)\r\n- [Abrir a interface](#abrir-a-interface)\r\n- [Arquitetura de engenharia (L1–L5)](#arquitetura-de-engenharia-l1l5)\r\n- [Fluxogramas](#fluxogramas)\r\n- [Protocolo e tópicos MQTT](#protocolo-e-tópicos-mqtt)\r\n- [Research Lab & métricas](#research-lab--métricas)\r\n- [Estrutura do repositório](#estrutura-do-repositório)\r\n- [Quick start](#quick-start)\r\n- [Hardware](#hardware)\r\n- [API](#api)\r\n- [Documentação científica](#documentação-científica)\r\n- [Testes](#testes)\r\n- [Licença](#licença)\r\n\r\n---\r\n\r\n## Por que este projeto\r\n\r\nEste repositório não é apenas um “curso de IoT”. É uma **plataforma de experimentação** com:\r\n\r\n| Capacidade | Valor científico |\r\n|------------|------------------|\r\n| Sync Arduino ↔ Raspberry | Estudo de coordenação edge heterogênea |\r\n| Servos / portas / relés | Cadeia percepção → atuação eletromecânica |\r\n| SQI (Sync Quality Index) | Indicador composto (skew + jitter + confiabilidade) |\r\n| Fault injection | Observar degradação e recuperação |\r\n| Export CSV/JSON | Reprodutibilidade e tabelas para tese |\r\n| Simulador visual | Demonstração interativa em banca/defesa |\r\n\r\n<p align=\"center\">\r\n  <img src=\"docs/assets/pipeline.png\" alt=\"Pipeline de engenharia SmartHome IoT\" width=\"100%\" />\r\n</p>\r\n\r\n---\r\n\r\n## Abrir a interface\r\n\r\n### Opção A — Botão online (Demo Lab)\r\n\r\n<p align=\"center\">\r\n  <a href=\"https://canonengineer.github.io/SmartHomeIOT/demo/standalone.html?v=2026-07-14b\">\r\n    <img src=\"https://img.shields.io/badge/%E2%96%B6%20ABRIR%20SIMULADOR%20AGORA-7dd3c0?style=for-the-badge&labelColor=0b1211&color=7dd3c0\" alt=\"Abrir simulador\" height=\"48\" />\r\n  </a>\r\n</p>\r\n\r\n- **Demo Lab (sempre atual após deploy):** [Abrir standalone](https://canonengineer.github.io/SmartHomeIOT/demo/standalone.html?v=2026-07-14b)\r\n- **Mesma interface via pasta demo:** https://canonengineer.github.io/SmartHomeIOT/demo/\r\n\r\nPara ativar Pages no repositório (remove o X vermelho e publica o site):\r\n\r\n1. Abra [Settings → Pages](https://github.com/CanonEngineer/SmartHomeIOT/settings/pages)\r\n2. **Source** = **Deploy from a branch**\r\n3. Branch = `main` · Folder = `/docs` · **Save**\r\n4. Aguarde 1–2 minutos e teste: https://canonengineer.github.io/SmartHomeIOT/demo/\r\n\r\nGuia: [`docs/PAGES_SETUP.md`](./docs/PAGES_SETUP.md)\r\n\r\n### Opção B — Laboratório completo (local)\r\n\r\n```powershell\r\ngit clone https://github.com/CanonEngineer/SmartHomeIOT.git\r\ncd SmartHomeIOT\r\n.\\start.ps1\r\n```\r\n\r\nDepois abra: **http://127.0.0.1:8000**\r\n\r\nIsso ativa FastAPI, WebSocket, SQLite, telemetria real e exportação de experimentos.\r\n\r\n---\r\n\r\n## Arquitetura de engenharia (L1–L5)\r\n\r\n<p align=\"center\">\r\n  <img src=\"docs/assets/layers-architecture.png\" alt=\"Cinco camadas de arquitetura IoT\" width=\"100%\" />\r\n</p>\r\n\r\n| Camada | Nome | Componentes |\r\n|--------|------|-------------|\r\n| **L1** | Percepção / Atuação | Arduino/ESP32, DHT22, LDR, PIR, relés, servos, portas |\r\n| **L2** | Comunicação | Wi-Fi, MQTT (`house/*`), REST, WebSocket |\r\n| **L3** | Edge Coordination | Agente Raspberry Pi, heartbeat, espelhamento de estado |\r\n| **L4** | Serviço / Persistência | FastAPI, SQLite, telemetria, auditoria JWT/bcrypt |\r\n| **L5** | Experimentação | Simulador web, Research Lab, Java Dashboard, CSV/JSON |\r\n\r\nDetalhes: [`docs/ARCHITECTURE.md`](./docs/ARCHITECTURE.md)\r\n\r\n---\r\n\r\n## Fluxogramas\r\n\r\n### Pipeline ponta a ponta\r\n\r\n```mermaid\r\nflowchart LR\r\n  A[Arduino L1] -->|MQTT sensors| B[Broker L2]\r\n  R[Raspberry L3] -->|heartbeat sync| B\r\n  B --> S[FastAPI L4]\r\n  S --> DB[(SQLite)]\r\n  S --> T[Telemetry / SQI]\r\n  S -->|WebSocket| UI[Simulador L5]\r\n  UI -->|comandos| S\r\n  S -->|MQTT actuators| B\r\n  B --> A\r\n  B --> R\r\n```\r\n\r\n### Ciclo de comando (atuação)\r\n\r\n```mermaid\r\nsequenceDiagram\r\n  participant U as UI / Java / API\r\n  participant S as FastAPI HouseState\r\n  participant T as TelemetryEngine\r\n  participant M as MQTT (opcional)\r\n  participant D as Arduino / Raspberry\r\n\r\n  U->>S: POST /api/door|servo|led\r\n  S->>S: update actuators + state_version\r\n  S->>T: record_command(latency_ms)\r\n  S-->>U: WebSocket state snapshot\r\n  S->>M: publish house/*\r\n  M->>D: apply GPIO / servo\r\n  D-->>S: house/sync heartbeat\r\n  S->>T: record_heartbeat → SQI\r\n```\r\n\r\n### Experimento com falha (fault injection)\r\n\r\n```mermaid\r\nstateDiagram-v2\r\n  [*] --> Stable: SQI alto\r\n  Stable --> Fault: atraso artificial\r\n  Fault --> Recovery: heartbeats reencontrados\r\n  Recovery --> Stable: SQI recupera\r\n  Fault --> Degraded: skew persistente\r\n  Degraded --> Recovery: restabelecimento\r\n```\r\n\r\n---\r\n\r\n## Protocolo e tópicos MQTT\r\n\r\nProtocolo versionado: **`v1.0.0`** — [`docs/PROTOCOL.md`](./docs/PROTOCOL.md)\r\n\r\n| Tópico | Direção | Payload |\r\n|--------|---------|---------|\r\n| `house/temp` `humidity` `light` `motion` | device → edge | sensor value |\r\n| `house/led` `relay` `buzzer` `servo` `door` | edge → device | comando de atuação |\r\n| `house/sync` | bidirecional | heartbeat Arduino/Raspberry |\r\n\r\nEnvelope lógico inclui `protocol`, `message_id`, `source`, `timestamp_utc`, `qos`, `payload`.\r\n\r\n---\r\n\r\n## Research Lab & métricas\r\n\r\n### Sync Quality Index (SQI)\r\n\r\n\\[\r\nSQI = 0.45\\cdot S_{skew} + 0.30\\cdot S_{jitter} + 0.25\\cdot S_{reliability}\r\n\\]\r\n\r\nFaixa **0–100**. Usado como indicador composto na defesa/tese.\r\n\r\n### Experimentos prontos\r\n\r\n| ID | Objetivo |\r\n|----|----------|\r\n| `sync_latency` | Skew Arduino ↔ Raspberry |\r\n| `actuator_response` | Latência de atuação (p50/p95) |\r\n| `fault_injection` | Queda e recuperação do SQI |\r\n| `end_to_end` | Consistência welcome → garage → night |\r\n\r\nExports em `experiments/exports/*.csv` e `*.json`.\r\n\r\nEndpoints:\r\n\r\n- `GET /api/research/overview`\r\n- `GET /api/research/telemetry`\r\n- `POST /api/research/experiments/run`\r\n- `GET /api/research/thesis-brief.md`\r\n\r\nMetodologia: [`docs/METHODOLOGY.md`](./docs/METHODOLOGY.md)\r\n\r\n---\r\n\r\n## Estrutura do repositório\r\n\r\n```text\r\nSmartHomeIOT/\r\n├── arduino/SmartHomeNode/   # Firmware ESP32/Arduino + MQTT\r\n├── raspberry/               # Agente edge (GPIO ou espelho API)\r\n├── python_server/           # FastAPI + telemetria + experimentos\r\n├── java_client/             # Dashboard desktop Swing\r\n├── web/                     # UI acoplada ao backend local\r\n├── docs/\r\n│   ├── assets/              # Ilustrações e diagramas\r\n│   ├── demo/                # Interface gráfica (GitHub Pages)\r\n│   ├── ARCHITECTURE.md\r\n│   ├── PROTOCOL.md\r\n│   └── METHODOLOGY.md\r\n├── experiments/exports/     # Resultados CSV/JSON\r\n├── tests/                   # Testes de engenharia\r\n├── docker-compose.yml       # Mosquitto opcional\r\n└── start.ps1\r\n```\r\n\r\n---\r\n\r\n## Quick start\r\n\r\n### Windows\r\n\r\n```powershell\r\n.\\start.ps1\r\n```\r\n\r\n### Manual\r\n\r\n```powershell\r\ncd python_server\r\npython -m venv .venv\r\n.\\.venv\\Scripts\\Activate.ps1\r\npip install -r requirements.txt\r\npython app.py\r\n```\r\n\r\n### MQTT (opcional)\r\n\r\n```powershell\r\ndocker compose up -d\r\n# defina MQTT_ENABLED=true no ambiente do servidor\r\n```\r\n\r\n### Raspberry agent\r\n\r\n```powershell\r\ncd raspberry\r\npip install -r requirements.txt\r\n$env:USE_MQTT=\"0\"   # espelha via API se não houver broker\r\npython agent.py\r\n```\r\n\r\n---\r\n\r\n## Hardware\r\n\r\n### Arduino / ESP32\r\n- DHT22, LDR, PIR\r\n- Relé 4 canais, LED, buzzer\r\n- 2× servo (portas) + 1× servo braço  \r\nPinout: [`arduino/PINOUT.md`](./arduino/PINOUT.md)\r\n\r\n### Raspberry Pi\r\n- Coordenação edge + GPIO local (ou stub em PC)\r\n\r\n---\r\n\r\n## API\r\n\r\n| Método | Rota | Descrição |\r\n|--------|------|-----------|\r\n| GET | `/api/status` | Estado + telemetria |\r\n| POST | `/api/led` `/relay` `/servo` `/door` | Atuação |\r\n| POST | `/api/simulate` | Cenários |\r\n| WS | `/api/ws` | Tempo real |\r\n| * | `/api/research/*` | Bancada científica |\r\n| GET | `/docs` | OpenAPI interativa |\r\n\r\nLogin default: `admin` / `admin123`\r\n\r\n---\r\n\r\n## Documentação científica\r\n\r\n| Documento | Conteúdo |\r\n|-----------|----------|\r\n| [ARCHITECTURE](./docs/ARCHITECTURE.md) | Camadas, fonte de verdade, SQI |\r\n| [PROTOCOL](./docs/PROTOCOL.md) | Contratos MQTT / envelope |\r\n| [METHODOLOGY](./docs/METHODOLOGY.md) | Ensaios, hipóteses, ameaças à validade |\r\n\r\n---\r\n\r\n## Testes\r\n\r\n```powershell\r\ncd python_server\r\n.\\.venv\\Scripts\\python.exe ..\\tests\\test_engineering.py\r\n```\r\n\r\n---\r\n\r\n## Licença\r\n\r\nCódigo de autoria própria para fins **educacionais e de pesquisa**.  \r\nNão reproduz conteúdo proprietário de cursos comerciais.\r\n\r\n---\r\n\r\n<p align=\"center\">\r\n  <a href=\"https://canonengineer.github.io/SmartHomeIOT/demo/standalone.html?v=2026-07-14b\">\r\n    <img src=\"https://img.shields.io/badge/%E2%96%B6%20Abrir%20Interface%20Gráfica-00bfa5?style=for-the-badge&logo=googlechrome&logoColor=white\" alt=\"Abrir Interface\" />\r\n  </a>\r\n</p>\r\n\r\n<p align=\"center\">\r\n  <sub>CanonEngineer · SmartHomeIOT · Protocol v1.0.0</sub>\r\n</p>\r\n",
         "implementation": [
@@ -48019,7 +48435,7 @@ const PROJECTS = [
         "parent": null,
         "layer": "root",
         "title": "SmartFerrariIOT",
-        "description": "Gêmeo digital Ferrari + Arduino↔Raspberry, HIL/QoS, invariantes e Demo Lab no GitHub Pages — pós em Engenharia da Computação.",
+        "description": "Cobertura completa: 43 arquivos de código no repositório (56 nós na árvore incluindo pastas).",
         "file": "README.md",
         "code": "<div align=\"center\">\r\n\r\n# SmartFerrariIOT\r\n\r\n**Plataforma experimental de pós em Engenharia da Computação** · sincronização edge **Arduino ↔ Raspberry Pi** · gêmeo digital formal · HIL/QoS · Web Audio · Research Lab · Ferrari SF90 lab unit\r\n\r\n<br/>\r\n\r\n<a href=\"https://canonengineer.github.io/SmartFerrariIOT/demo/standalone.html?v=2026-07-14\">\r\n  <img src=\"docs/assets/lab-cta.png\" alt=\"Abrir Ferrari Lab — GitHub Pages Demo\" width=\"920\"/>\r\n</a>\r\n\r\n<br/>\r\n\r\n<a href=\"https://canonengineer.github.io/SmartFerrariIOT/demo/standalone.html?v=2026-07-14\">\r\n  <img src=\"https://img.shields.io/badge/%E2%96%B6%20Abrir%20Interface%20Gráfica%20AGORA-e10600?style=for-the-badge&logo=googlechrome&logoColor=white\" alt=\"Abrir Interface Gráfica\"/>\r\n</a>\r\n&nbsp;\r\n<a href=\"https://github.com/CanonEngineer/SmartFerrariIOT/blob/main/docs/demo/standalone.html\">\r\n  <img src=\"https://img.shields.io/badge/Arquivo%20standalone-1a0505?style=for-the-badge&logo=github&logoColor=e10600\" alt=\"Arquivo standalone\"/>\r\n</a>\r\n&nbsp;\r\n<img src=\"https://img.shields.io/badge/Stack-FastAPI%20%7C%20MQTT%20%7C%20WS-2a2e32?style=for-the-badge\" alt=\"Stack\"/>\r\n\r\n> **▶ Abrir Interface Gráfica AGORA** abre o Demo Lab publicado em GitHub Pages (`/demo/standalone.html`).<br/>\r\n> Após um `push` em `main`, o workflow atualiza o site em ~1–2 min — use Ctrl+F5 se o navegador cachear.<br/>\r\n> Laboratório completo local: `start.ps1` → `http://127.0.0.1:8001` · login `admin` / `ferrari123`.\r\n\r\n---\r\n\r\n## Interface do Laboratório (análise / defesa)\r\n\r\n### Opção A — Botão online (Demo Lab)\r\n\r\n**Clique no botão** para abrir a interface no celular ou em qualquer navegador (sem instalar nada).\r\n\r\n<p align=\"center\">\r\n  <a href=\"https://canonengineer.github.io/SmartFerrariIOT/demo/standalone.html?v=2026-07-14\">\r\n    <img src=\"https://img.shields.io/badge/%E2%96%B6%20ABRIR%20FERRARI%20LAB%20AGORA-e10600?style=for-the-badge&labelColor=1a0505\" alt=\"Abrir Ferrari Lab\" height=\"48\" />\r\n  </a>\r\n</p>\r\n\r\n- **Demo Lab:** [Abrir standalone](https://canonengineer.github.io/SmartFerrariIOT/demo/standalone.html?v=2026-07-14)\r\n- **Mesma interface via pasta demo:** https://canonengineer.github.io/SmartFerrariIOT/demo/\r\n\r\nPara ativar Pages no repositório (remove o X vermelho e publica o site):\r\n\r\n1. Abra [Settings → Pages](https://github.com/CanonEngineer/SmartFerrariIOT/settings/pages)\r\n2. **Source** = **Deploy from a branch**\r\n3. Branch = `gh-pages` · Folder = `/ (root)` · **Save**\r\n4. Aguarde 1–2 minutos e teste: https://canonengineer.github.io/SmartFerrariIOT/demo/\r\n\r\nGuia: [`docs/PAGES_SETUP.md`](./docs/PAGES_SETUP.md)\r\n\r\n### Opção B — Laboratório completo (local)\r\n\r\n| | |\r\n|:---:|:---:|\r\n| **URL** | **http://127.0.0.1:8001** |\r\n| **Login** | `admin` |\r\n| **Senha** | `ferrari123` |\r\n| **Porta** | `8001` (SmartHomeIOT = `8000`) |\r\n\r\n```powershell\r\ngit clone https://github.com/CanonEngineer/SmartFerrariIOT.git\r\ncd SmartFerrariIOT\r\n.\\start.ps1\r\n```\r\n\r\n| Recurso | URL |\r\n|:---:|:---:|\r\n| **UI Lab** | **http://127.0.0.1:8001** |\r\n| Health | http://127.0.0.1:8001/health |\r\n| OpenAPI | http://127.0.0.1:8001/docs |\r\n| Research overview | http://127.0.0.1:8001/api/research/overview |\r\n| Paper Pack LaTeX | http://127.0.0.1:8001/api/research/paper-pack.tex |\r\n\r\n<img src=\"docs/assets/ferrari-studio.png\" alt=\"Ferrari SF90 — referência visual do digital twin\" width=\"920\"/>\r\n\r\n<em>Referência SF90 · o Lab opera o gêmeo digital animável (portas, rodas, Sport, A/C, HIL, áudio).</em>\r\n\r\n---\r\n\r\n## Mapa mental do projeto\r\n\r\n<img src=\"docs/assets/mindmap.png\" alt=\"Mapa mental SmartFerrariIOT\" width=\"920\"/>\r\n\r\n</div>\r\n\r\n```mermaid\r\nmindmap\r\n  root((SmartFerrariIOT))\r\n    Edge\r\n      Arduino L1\r\n      Raspberry hub\r\n      MQTT ferrari/*\r\n    Twin\r\n      SECURE IDLE READY RUNNING SPORT\r\n      INV-01..06\r\n    Lab\r\n      Web Audio espectro\r\n      HIL delay/loss\r\n      SQI telemetria\r\n    Security\r\n      HMAC comandos\r\n      Audit hash-chain\r\n    Energy\r\n      P_motor farol som AC\r\n      bateria combustível\r\n    Vision\r\n      gesto partida\r\n      QR track\r\n```\r\n\r\n<div align=\"center\">\r\n\r\n---\r\n\r\n## Arquitetura em camadas (L1–L5)\r\n\r\n<img src=\"docs/assets/architecture-l1-l5.png\" alt=\"Arquitetura L1 a L5\" width=\"920\"/>\r\n\r\n</div>\r\n\r\n```mermaid\r\nflowchart TB\r\n  subgraph L5[\"L5 Experiência\"]\r\n    UI[Digital Twin UI]\r\n    AUD[Web Audio]\r\n    VIS[Visão / QR]\r\n    LAB[Research Lab]\r\n  end\r\n  subgraph L4[\"L4 Orquestração\"]\r\n    API[FastAPI :8001]\r\n    DB[(SQLite)]\r\n    TEL[SQI / Telemetry]\r\n    HIL[HIL Engine]\r\n    SEC[HMAC + Audit]\r\n  end\r\n  subgraph L3[\"L3 Hub\"]\r\n    PI[Raspberry agent]\r\n  end\r\n  subgraph L2[\"L2 Protocolo\"]\r\n    MQTT[MQTT ferrari/*]\r\n    WS[WebSocket /api/ws]\r\n  end\r\n  subgraph L1[\"L1 Campo\"]\r\n    ARD[Arduino atuadores]\r\n  end\r\n  UI --> WS\r\n  UI --> API\r\n  API --> HIL --> TEL\r\n  API --> SEC\r\n  API --> DB\r\n  API --> MQTT\r\n  PI --> MQTT\r\n  ARD --> MQTT\r\n  LAB --> API\r\n  AUD --> UI\r\n  VIS --> API\r\n```\r\n\r\n<div align=\"center\">\r\n\r\n**Documentação:** [ARCHITECTURE](docs/ARCHITECTURE.md) · [PROTOCOL](docs/PROTOCOL.md) · [METHODOLOGY](docs/METHODOLOGY.md)\r\n\r\n---\r\n\r\n## Gêmeo digital formal (UML / Statechart)\r\n\r\n<img src=\"docs/assets/twin-statechart.png\" alt=\"Statechart e invariantes\" width=\"920\"/>\r\n\r\n</div>\r\n\r\n```mermaid\r\nstateDiagram-v2\r\n  [*] --> SECURE\r\n  SECURE --> IDLE: disarm + unlock\r\n  IDLE --> READY: unlock path\r\n  READY --> RUNNING: engine ON\r\n  RUNNING --> SPORT: sport ON\r\n  SPORT --> RUNNING: sport OFF\r\n  RUNNING --> IDLE: engine OFF\r\n  READY --> SECURE: alarm ARM\r\n```\r\n\r\n<div align=\"center\">\r\n\r\n| ID | Regra |\r\n|:---:|:---:|\r\n| INV-01 | Não abrir porta se Sport ∧ velocidade > 0 |\r\n| INV-02 | Não ligar motor com alarme armado |\r\n| INV-03 | Sport requer motor ON |\r\n| INV-04 | Teto bloqueado se velocidade > 40 km/h |\r\n| INV-05 | Travar ⇒ fechar portas |\r\n| INV-06 | Não armar alarme com motor ligado |\r\n\r\nViolação → **HTTP 409** ou evento WS `invariant_violation`\r\n\r\n---\r\n\r\n## Fluxo de comando (HIL + Twin + Audit)\r\n\r\n<img src=\"docs/assets/sequence-command.png\" alt=\"Sequência de comando\" width=\"920\"/>\r\n\r\n</div>\r\n\r\n```mermaid\r\nsequenceDiagram\r\n  participant UI as Lab UI\r\n  participant API as FastAPI/WS\r\n  participant HIL as HIL Engine\r\n  participant Twin as Digital Twin\r\n  participant Aud as Audit Chain\r\n  UI->>API: action (engine/door/…)\r\n  API->>HIL: apply(delay, loss?)\r\n  alt dropped\r\n    HIL-->>UI: HIL drop\r\n  else delivered\r\n    HIL->>Twin: guard(INV)\r\n    alt invariant fail\r\n      Twin-->>UI: 409 / invariant_violation\r\n    else ok\r\n      Twin->>Aud: HMAC + hash tip\r\n      Aud-->>UI: state broadcast + QoS\r\n    end\r\n  end\r\n```\r\n\r\n<div align=\"center\">\r\n\r\n<img src=\"docs/assets/hil-qos.png\" alt=\"HIL QoS\" width=\"920\"/>\r\n\r\n---\r\n\r\n## Modelo energético (documentado)\r\n\r\n$$\r\nP_{total} = P_{motor}(rpm) + P_{farol} + P_{som} + P_{AC} + P_{track} + P_{spoiler}\r\n$$\r\n\r\n$$\r\nP_{motor} = P_0 + k_{rpm}\\cdot rpm \\quad (+35\\%\\ \\text{em Sport})\r\n$$\r\n\r\n$$\r\n\\Delta E_{bat}\\ (Wh) \\approx -P_{total}\\cdot \\Delta t_h, \\quad\r\n\\Delta fuel \\approx -\\alpha\\cdot P_{motor}\\cdot \\Delta t_h\r\n$$\r\n\r\nConstantes de bancada em `python_server/energy.py` · \\(C_{bat}\\approx 720\\,Wh\\)\r\n\r\n---\r\n\r\n## Research Lab — demonstração na banca\r\n\r\n1. **Áudio real** — motor (ronco + rodas), buzina, alarme + espectro  \r\n2. **Invariantes** — armar alarme → tentar motor → `INV-02`  \r\n3. **HIL** — delay 80 ms / loss 20% → gráfico QoS  \r\n4. **Portas** — Abrir Ambas · Travar/Destravar  \r\n5. **Paper Pack** — export LaTeX\r\n\r\n---\r\n\r\n## Árvore do repositório\r\n\r\n```text\r\nSmartFerrariIOT/\r\n├── start.ps1\r\n├── web/\r\n├── python_server/\r\n├── arduino/\r\n├── raspberry/\r\n├── docs/\r\n│   ├── index.html           # Launch lab (GitHub Pages)\r\n│   ├── demo/                # Interface gráfica (standalone)\r\n│   └── assets/\r\n├── .github/workflows/\r\n├── experiments/exports/\r\n└── tests/\r\n```\r\n\r\n---\r\n\r\n## API rápida\r\n\r\n| Método | Endpoint | Função |\r\n|:---:|:---:|:---:|\r\n| POST | `/api/auth/login` | Token |\r\n| GET | `/api/status` | Snapshot |\r\n| POST | `/api/door\\|engine\\|alarm\\|…` | Atuadores |\r\n| WS | `/api/ws` | Estado ao vivo |\r\n| POST | `/api/research/hil` | HIL |\r\n| POST | `/api/research/paper-pack` | LaTeX |\r\n| GET | `/api/research/audit` | Hash-chain |\r\n\r\n---\r\n\r\n<a href=\"https://canonengineer.github.io/SmartFerrariIOT/demo/standalone.html?v=2026-07-14\">\r\n  <img src=\"docs/assets/lab-cta.png\" alt=\"Ferrari Lab — Demo GitHub Pages\" width=\"720\"/>\r\n</a>\r\n\r\n### [▶ Abrir Ferrari Lab](https://canonengineer.github.io/SmartFerrariIOT/demo/standalone.html?v=2026-07-14)\r\n\r\n</div>\r\n",
         "implementation": [

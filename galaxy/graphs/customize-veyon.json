@@ -4,7 +4,7 @@
   "repoUrl": "https://github.com/CanonEngineer/CustomizeVeyonProject",
   "color": "#ef4444",
   "demoUrl": "",
-  "nodeCount": 1486,
+  "nodeCount": 1506,
   "categories": {
     "core": {
       "label": "Backend",
@@ -46,12 +46,12 @@
       "color": "#3b82f6",
       "size": 2.2,
       "file": "README.md",
-      "description": "Veyon CIMED/HCFMB — UI HiDPI, logs SHA-256 em UNC, anti-tampering, alerta versão incompatível (14/07/2026) e deploy portátil."
+      "description": "Cobertura completa: 1223 arquivos de código no repositório (1486 nós na árvore incluindo pastas)."
     },
     {
       "id": "customize-veyon-dir-ci",
       "label": ".ci/",
-      "parent": "customize-veyon-root",
+      "parent": "customize-veyon-grp-root-bucket-c-d-m-p",
       "layer": "module",
       "category": "core",
       "categoryLabel": "Backend",
@@ -63,7 +63,7 @@
     {
       "id": "customize-veyon-dir-github",
       "label": ".github/",
-      "parent": "customize-veyon-root",
+      "parent": "customize-veyon-grp-root-bucket-c-d-m-p",
       "layer": "module",
       "category": "core",
       "categoryLabel": "Backend",
@@ -75,7 +75,7 @@
     {
       "id": "customize-veyon-dir-3rdparty",
       "label": "3rdparty/",
-      "parent": "customize-veyon-root",
+      "parent": "customize-veyon-grp-root-bucket-c-d-m-p",
       "layer": "module",
       "category": "core",
       "categoryLabel": "Backend",
@@ -87,7 +87,7 @@
     {
       "id": "customize-veyon-dir-cli",
       "label": "cli/",
-      "parent": "customize-veyon-root",
+      "parent": "customize-veyon-grp-root-bucket-c-d-m-p",
       "layer": "module",
       "category": "core",
       "categoryLabel": "Backend",
@@ -99,7 +99,7 @@
     {
       "id": "customize-veyon-dir-configurator",
       "label": "configurator/",
-      "parent": "customize-veyon-root",
+      "parent": "customize-veyon-grp-root-bucket-c-d-m-p",
       "layer": "module",
       "category": "core",
       "categoryLabel": "Backend",
@@ -111,7 +111,7 @@
     {
       "id": "customize-veyon-dir-core",
       "label": "core/",
-      "parent": "customize-veyon-root",
+      "parent": "customize-veyon-grp-root-bucket-c-d-m-p",
       "layer": "module",
       "category": "core",
       "categoryLabel": "Backend",
@@ -123,7 +123,7 @@
     {
       "id": "customize-veyon-dir-master",
       "label": "master/",
-      "parent": "customize-veyon-root",
+      "parent": "customize-veyon-grp-root-bucket-c-d-m-p",
       "layer": "module",
       "category": "core",
       "categoryLabel": "Backend",
@@ -135,7 +135,7 @@
     {
       "id": "customize-veyon-dir-plugins",
       "label": "plugins/",
-      "parent": "customize-veyon-root",
+      "parent": "customize-veyon-grp-root-bucket-c-d-m-p",
       "layer": "module",
       "category": "core",
       "categoryLabel": "Backend",
@@ -147,7 +147,7 @@
     {
       "id": "customize-veyon-dir-server",
       "label": "server/",
-      "parent": "customize-veyon-root",
+      "parent": "customize-veyon-grp-root-bucket-s-t-w",
       "layer": "module",
       "category": "core",
       "categoryLabel": "Backend",
@@ -159,7 +159,7 @@
     {
       "id": "customize-veyon-dir-service",
       "label": "service/",
-      "parent": "customize-veyon-root",
+      "parent": "customize-veyon-grp-root-bucket-s-t-w",
       "layer": "module",
       "category": "core",
       "categoryLabel": "Backend",
@@ -171,7 +171,7 @@
     {
       "id": "customize-veyon-dir-tests",
       "label": "tests/",
-      "parent": "customize-veyon-root",
+      "parent": "customize-veyon-grp-root-bucket-s-t-w",
       "layer": "module",
       "category": "tests",
       "categoryLabel": "Testes",
@@ -183,7 +183,7 @@
     {
       "id": "customize-veyon-dir-worker",
       "label": "worker/",
-      "parent": "customize-veyon-root",
+      "parent": "customize-veyon-grp-root-bucket-s-t-w",
       "layer": "module",
       "category": "core",
       "categoryLabel": "Backend",
@@ -1947,7 +1947,7 @@
     {
       "id": "customize-veyon-file-gitignore",
       "label": ".gitignore",
-      "parent": "customize-veyon-root",
+      "parent": "customize-veyon-grp-root-bucket-c-d-m-p",
       "layer": "file",
       "category": "other",
       "categoryLabel": "Outros",
@@ -1959,7 +1959,7 @@
     {
       "id": "customize-veyon-file-code-of-conduct-md",
       "label": "CODE_OF_CONDUCT.md",
-      "parent": "customize-veyon-root",
+      "parent": "customize-veyon-grp-root-bucket-c-d-m-p",
       "layer": "file",
       "category": "other",
       "categoryLabel": "Outros",
@@ -1971,7 +1971,7 @@
     {
       "id": "customize-veyon-file-debug-tray-hover-icons-md",
       "label": "debug-tray-hover-icons.md",
-      "parent": "customize-veyon-root",
+      "parent": "customize-veyon-grp-root-bucket-c-d-m-p",
       "layer": "file",
       "category": "other",
       "categoryLabel": "Outros",
@@ -1983,7 +1983,7 @@
     {
       "id": "customize-veyon-file-debug-tray-icon-hover-issue-md",
       "label": "debug-tray-icon-hover-issue.md",
-      "parent": "customize-veyon-root",
+      "parent": "customize-veyon-grp-root-bucket-c-d-m-p",
       "layer": "file",
       "category": "other",
       "categoryLabel": "Outros",
@@ -1995,7 +1995,7 @@
     {
       "id": "customize-veyon-file-debug-tray-icon-state-md",
       "label": "debug-tray-icon-state.md",
-      "parent": "customize-veyon-root",
+      "parent": "customize-veyon-grp-root-bucket-c-d-m-p",
       "layer": "file",
       "category": "other",
       "categoryLabel": "Outros",
@@ -2007,7 +2007,7 @@
     {
       "id": "customize-veyon-file-project-yml",
       "label": "project.yml",
-      "parent": "customize-veyon-root",
+      "parent": "customize-veyon-grp-root-bucket-c-d-m-p",
       "layer": "file",
       "category": "other",
       "categoryLabel": "Outros",
@@ -2019,7 +2019,7 @@
     {
       "id": "customize-veyon-file-security-md",
       "label": "SECURITY.md",
-      "parent": "customize-veyon-root",
+      "parent": "customize-veyon-grp-root-bucket-s-t-w",
       "layer": "file",
       "category": "auth",
       "categoryLabel": "Segurança",
@@ -2737,28 +2737,40 @@
       "description": "Grupo de arquivos em `3rdparty/kldap-qt5/src/core/` — Arquivos B"
     },
     {
-      "id": "customize-veyon-grp-3rdparty-kldap-qt5-src-core-files-l-1-12",
-      "label": "Arquivos L (1–12)",
+      "id": "customize-veyon-grp-3rdparty-kldap-qt5-src-core-files-l",
+      "label": "Arquivos L",
       "parent": "customize-veyon-dir-3rdparty-kldap-qt5-src-core",
+      "layer": "module",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 1.35,
+      "file": "3rdparty/kldap-qt5/src/core/[files-l]",
+      "description": "Grupo de arquivos em `3rdparty/kldap-qt5/src/core/` — Arquivos L"
+    },
+    {
+      "id": "customize-veyon-grp-3rdparty-kldap-qt5-src-core-files-l-1-12",
+      "label": "1–12",
+      "parent": "customize-veyon-grp-3rdparty-kldap-qt5-src-core-files-l",
       "layer": "module",
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
       "size": 1.35,
       "file": "3rdparty/kldap-qt5/src/core/[files-l-1-12]",
-      "description": "Grupo de arquivos em `3rdparty/kldap-qt5/src/core/` — Arquivos L (1–12)"
+      "description": "Grupo de arquivos em `3rdparty/kldap-qt5/src/core/` — 1–12"
     },
     {
       "id": "customize-veyon-grp-3rdparty-kldap-qt5-src-core-files-l-13-19",
-      "label": "Arquivos L (13–19)",
-      "parent": "customize-veyon-dir-3rdparty-kldap-qt5-src-core",
+      "label": "13–19",
+      "parent": "customize-veyon-grp-3rdparty-kldap-qt5-src-core-files-l",
       "layer": "module",
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
       "size": 1.35,
       "file": "3rdparty/kldap-qt5/src/core/[files-l-13-19]",
-      "description": "Grupo de arquivos em `3rdparty/kldap-qt5/src/core/` — Arquivos L (13–19)"
+      "description": "Grupo de arquivos em `3rdparty/kldap-qt5/src/core/` — 13–19"
     },
     {
       "id": "customize-veyon-grp-3rdparty-kldap-qt5-src-core-files-w",
@@ -3073,28 +3085,40 @@
       "description": "Grupo de arquivos em `3rdparty/kldap-qt5/src/widgets/` — Arquivos A"
     },
     {
-      "id": "customize-veyon-grp-3rdparty-kldap-qt5-src-widgets-files-l-1-12",
-      "label": "Arquivos L (1–12)",
+      "id": "customize-veyon-grp-3rdparty-kldap-qt5-src-widgets-files-l",
+      "label": "Arquivos L",
       "parent": "customize-veyon-dir-3rdparty-kldap-qt5-src-widgets",
+      "layer": "module",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 1.35,
+      "file": "3rdparty/kldap-qt5/src/widgets/[files-l]",
+      "description": "Grupo de arquivos em `3rdparty/kldap-qt5/src/widgets/` — Arquivos L"
+    },
+    {
+      "id": "customize-veyon-grp-3rdparty-kldap-qt5-src-widgets-files-l-1-12",
+      "label": "1–12",
+      "parent": "customize-veyon-grp-3rdparty-kldap-qt5-src-widgets-files-l",
       "layer": "module",
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
       "size": 1.35,
       "file": "3rdparty/kldap-qt5/src/widgets/[files-l-1-12]",
-      "description": "Grupo de arquivos em `3rdparty/kldap-qt5/src/widgets/` — Arquivos L (1–12)"
+      "description": "Grupo de arquivos em `3rdparty/kldap-qt5/src/widgets/` — 1–12"
     },
     {
       "id": "customize-veyon-grp-3rdparty-kldap-qt5-src-widgets-files-l-13-20",
-      "label": "Arquivos L (13–20)",
-      "parent": "customize-veyon-dir-3rdparty-kldap-qt5-src-widgets",
+      "label": "13–20",
+      "parent": "customize-veyon-grp-3rdparty-kldap-qt5-src-widgets-files-l",
       "layer": "module",
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
       "size": 1.35,
       "file": "3rdparty/kldap-qt5/src/widgets/[files-l-13-20]",
-      "description": "Grupo de arquivos em `3rdparty/kldap-qt5/src/widgets/` — Arquivos L (13–20)"
+      "description": "Grupo de arquivos em `3rdparty/kldap-qt5/src/widgets/` — 13–20"
     },
     {
       "id": "customize-veyon-file-3rdparty-kldap-qt5-src-widgets-addhostdialog-cpp",
@@ -3433,52 +3457,64 @@
       "description": "Grupo de arquivos em `3rdparty/kldap/src/core/` — Arquivos B"
     },
     {
-      "id": "customize-veyon-grp-3rdparty-kldap-src-core-files-l-1-12",
-      "label": "Arquivos L (1–12)",
+      "id": "customize-veyon-grp-3rdparty-kldap-src-core-files-l",
+      "label": "Arquivos L",
       "parent": "customize-veyon-dir-3rdparty-kldap-src-core",
+      "layer": "module",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 1.35,
+      "file": "3rdparty/kldap/src/core/[files-l]",
+      "description": "Grupo de arquivos em `3rdparty/kldap/src/core/` — Arquivos L"
+    },
+    {
+      "id": "customize-veyon-grp-3rdparty-kldap-src-core-files-l-1-12",
+      "label": "1–12",
+      "parent": "customize-veyon-grp-3rdparty-kldap-src-core-files-l",
       "layer": "module",
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
       "size": 1.35,
       "file": "3rdparty/kldap/src/core/[files-l-1-12]",
-      "description": "Grupo de arquivos em `3rdparty/kldap/src/core/` — Arquivos L (1–12)"
+      "description": "Grupo de arquivos em `3rdparty/kldap/src/core/` — 1–12"
     },
     {
       "id": "customize-veyon-grp-3rdparty-kldap-src-core-files-l-13-24",
-      "label": "Arquivos L (13–24)",
-      "parent": "customize-veyon-dir-3rdparty-kldap-src-core",
+      "label": "13–24",
+      "parent": "customize-veyon-grp-3rdparty-kldap-src-core-files-l",
       "layer": "module",
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
       "size": 1.35,
       "file": "3rdparty/kldap/src/core/[files-l-13-24]",
-      "description": "Grupo de arquivos em `3rdparty/kldap/src/core/` — Arquivos L (13–24)"
+      "description": "Grupo de arquivos em `3rdparty/kldap/src/core/` — 13–24"
     },
     {
       "id": "customize-veyon-grp-3rdparty-kldap-src-core-files-l-25-36",
-      "label": "Arquivos L (25–36)",
-      "parent": "customize-veyon-dir-3rdparty-kldap-src-core",
+      "label": "25–36",
+      "parent": "customize-veyon-grp-3rdparty-kldap-src-core-files-l",
       "layer": "module",
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
       "size": 1.35,
       "file": "3rdparty/kldap/src/core/[files-l-25-36]",
-      "description": "Grupo de arquivos em `3rdparty/kldap/src/core/` — Arquivos L (25–36)"
+      "description": "Grupo de arquivos em `3rdparty/kldap/src/core/` — 25–36"
     },
     {
       "id": "customize-veyon-grp-3rdparty-kldap-src-core-files-l-37-37",
-      "label": "Arquivos L (37–37)",
-      "parent": "customize-veyon-dir-3rdparty-kldap-src-core",
+      "label": "37–37",
+      "parent": "customize-veyon-grp-3rdparty-kldap-src-core-files-l",
       "layer": "module",
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
       "size": 1.35,
       "file": "3rdparty/kldap/src/core/[files-l-37-37]",
-      "description": "Grupo de arquivos em `3rdparty/kldap/src/core/` — Arquivos L (37–37)"
+      "description": "Grupo de arquivos em `3rdparty/kldap/src/core/` — 37–37"
     },
     {
       "id": "customize-veyon-grp-3rdparty-kldap-src-core-files-w",
@@ -6049,40 +6085,52 @@
       "description": "Código-fonte: `3rdparty/qthttpserver/src/3rdparty/http-parser/fuzzers/fuzz_url.c`"
     },
     {
-      "id": "customize-veyon-grp-3rdparty-qthttpserver-src-httpserver-files-q-1-12",
-      "label": "Arquivos Q (1–12)",
+      "id": "customize-veyon-grp-3rdparty-qthttpserver-src-httpserver-files-q",
+      "label": "Arquivos Q",
       "parent": "customize-veyon-dir-3rdparty-qthttpserver-src-httpserver",
+      "layer": "module",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 1.35,
+      "file": "3rdparty/qthttpserver/src/httpserver/[files-q]",
+      "description": "Grupo de arquivos em `3rdparty/qthttpserver/src/httpserver/` — Arquivos Q"
+    },
+    {
+      "id": "customize-veyon-grp-3rdparty-qthttpserver-src-httpserver-files-q-1-12",
+      "label": "1–12",
+      "parent": "customize-veyon-grp-3rdparty-qthttpserver-src-httpserver-files-q",
       "layer": "module",
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
       "size": 1.35,
       "file": "3rdparty/qthttpserver/src/httpserver/[files-q-1-12]",
-      "description": "Grupo de arquivos em `3rdparty/qthttpserver/src/httpserver/` — Arquivos Q (1–12)"
+      "description": "Grupo de arquivos em `3rdparty/qthttpserver/src/httpserver/` — 1–12"
     },
     {
       "id": "customize-veyon-grp-3rdparty-qthttpserver-src-httpserver-files-q-13-24",
-      "label": "Arquivos Q (13–24)",
-      "parent": "customize-veyon-dir-3rdparty-qthttpserver-src-httpserver",
+      "label": "13–24",
+      "parent": "customize-veyon-grp-3rdparty-qthttpserver-src-httpserver-files-q",
       "layer": "module",
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
       "size": 1.35,
       "file": "3rdparty/qthttpserver/src/httpserver/[files-q-13-24]",
-      "description": "Grupo de arquivos em `3rdparty/qthttpserver/src/httpserver/` — Arquivos Q (13–24)"
+      "description": "Grupo de arquivos em `3rdparty/qthttpserver/src/httpserver/` — 13–24"
     },
     {
       "id": "customize-veyon-grp-3rdparty-qthttpserver-src-httpserver-files-q-25-29",
-      "label": "Arquivos Q (25–29)",
-      "parent": "customize-veyon-dir-3rdparty-qthttpserver-src-httpserver",
+      "label": "25–29",
+      "parent": "customize-veyon-grp-3rdparty-qthttpserver-src-httpserver-files-q",
       "layer": "module",
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
       "size": 1.35,
       "file": "3rdparty/qthttpserver/src/httpserver/[files-q-25-29]",
-      "description": "Grupo de arquivos em `3rdparty/qthttpserver/src/httpserver/` — Arquivos Q (25–29)"
+      "description": "Grupo de arquivos em `3rdparty/qthttpserver/src/httpserver/` — 25–29"
     },
     {
       "id": "customize-veyon-file-3rdparty-qthttpserver-src-httpserver-qabstracthttpserver-cpp",
@@ -7813,88 +7861,100 @@
       "description": "Grupo de arquivos em `3rdparty/ultravnc/winvnc/winvnc/` — Arquivos U"
     },
     {
-      "id": "customize-veyon-grp-3rdparty-ultravnc-winvnc-winvnc-files-v-1-12",
-      "label": "Arquivos V (1–12)",
+      "id": "customize-veyon-grp-3rdparty-ultravnc-winvnc-winvnc-files-v",
+      "label": "Arquivos V",
       "parent": "customize-veyon-dir-3rdparty-ultravnc-winvnc-winvnc",
+      "layer": "module",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 1.35,
+      "file": "3rdparty/ultravnc/winvnc/winvnc/[files-v]",
+      "description": "Grupo de arquivos em `3rdparty/ultravnc/winvnc/winvnc/` — Arquivos V"
+    },
+    {
+      "id": "customize-veyon-grp-3rdparty-ultravnc-winvnc-winvnc-files-v-1-12",
+      "label": "1–12",
+      "parent": "customize-veyon-grp-3rdparty-ultravnc-winvnc-winvnc-files-v",
       "layer": "module",
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
       "size": 1.35,
       "file": "3rdparty/ultravnc/winvnc/winvnc/[files-v-1-12]",
-      "description": "Grupo de arquivos em `3rdparty/ultravnc/winvnc/winvnc/` — Arquivos V (1–12)"
+      "description": "Grupo de arquivos em `3rdparty/ultravnc/winvnc/winvnc/` — 1–12"
     },
     {
       "id": "customize-veyon-grp-3rdparty-ultravnc-winvnc-winvnc-files-v-13-24",
-      "label": "Arquivos V (13–24)",
-      "parent": "customize-veyon-dir-3rdparty-ultravnc-winvnc-winvnc",
+      "label": "13–24",
+      "parent": "customize-veyon-grp-3rdparty-ultravnc-winvnc-winvnc-files-v",
       "layer": "module",
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
       "size": 1.35,
       "file": "3rdparty/ultravnc/winvnc/winvnc/[files-v-13-24]",
-      "description": "Grupo de arquivos em `3rdparty/ultravnc/winvnc/winvnc/` — Arquivos V (13–24)"
+      "description": "Grupo de arquivos em `3rdparty/ultravnc/winvnc/winvnc/` — 13–24"
     },
     {
       "id": "customize-veyon-grp-3rdparty-ultravnc-winvnc-winvnc-files-v-25-36",
-      "label": "Arquivos V (25–36)",
-      "parent": "customize-veyon-dir-3rdparty-ultravnc-winvnc-winvnc",
+      "label": "25–36",
+      "parent": "customize-veyon-grp-3rdparty-ultravnc-winvnc-winvnc-files-v",
       "layer": "module",
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
       "size": 1.35,
       "file": "3rdparty/ultravnc/winvnc/winvnc/[files-v-25-36]",
-      "description": "Grupo de arquivos em `3rdparty/ultravnc/winvnc/winvnc/` — Arquivos V (25–36)"
+      "description": "Grupo de arquivos em `3rdparty/ultravnc/winvnc/winvnc/` — 25–36"
     },
     {
       "id": "customize-veyon-grp-3rdparty-ultravnc-winvnc-winvnc-files-v-37-48",
-      "label": "Arquivos V (37–48)",
-      "parent": "customize-veyon-dir-3rdparty-ultravnc-winvnc-winvnc",
+      "label": "37–48",
+      "parent": "customize-veyon-grp-3rdparty-ultravnc-winvnc-winvnc-files-v",
       "layer": "module",
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
       "size": 1.35,
       "file": "3rdparty/ultravnc/winvnc/winvnc/[files-v-37-48]",
-      "description": "Grupo de arquivos em `3rdparty/ultravnc/winvnc/winvnc/` — Arquivos V (37–48)"
+      "description": "Grupo de arquivos em `3rdparty/ultravnc/winvnc/winvnc/` — 37–48"
     },
     {
       "id": "customize-veyon-grp-3rdparty-ultravnc-winvnc-winvnc-files-v-49-60",
-      "label": "Arquivos V (49–60)",
-      "parent": "customize-veyon-dir-3rdparty-ultravnc-winvnc-winvnc",
+      "label": "49–60",
+      "parent": "customize-veyon-grp-3rdparty-ultravnc-winvnc-winvnc-files-v",
       "layer": "module",
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
       "size": 1.35,
       "file": "3rdparty/ultravnc/winvnc/winvnc/[files-v-49-60]",
-      "description": "Grupo de arquivos em `3rdparty/ultravnc/winvnc/winvnc/` — Arquivos V (49–60)"
+      "description": "Grupo de arquivos em `3rdparty/ultravnc/winvnc/winvnc/` — 49–60"
     },
     {
       "id": "customize-veyon-grp-3rdparty-ultravnc-winvnc-winvnc-files-v-61-72",
-      "label": "Arquivos V (61–72)",
-      "parent": "customize-veyon-dir-3rdparty-ultravnc-winvnc-winvnc",
+      "label": "61–72",
+      "parent": "customize-veyon-grp-3rdparty-ultravnc-winvnc-winvnc-files-v",
       "layer": "module",
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
       "size": 1.35,
       "file": "3rdparty/ultravnc/winvnc/winvnc/[files-v-61-72]",
-      "description": "Grupo de arquivos em `3rdparty/ultravnc/winvnc/winvnc/` — Arquivos V (61–72)"
+      "description": "Grupo de arquivos em `3rdparty/ultravnc/winvnc/winvnc/` — 61–72"
     },
     {
       "id": "customize-veyon-grp-3rdparty-ultravnc-winvnc-winvnc-files-v-73-79",
-      "label": "Arquivos V (73–79)",
-      "parent": "customize-veyon-dir-3rdparty-ultravnc-winvnc-winvnc",
+      "label": "73–79",
+      "parent": "customize-veyon-grp-3rdparty-ultravnc-winvnc-winvnc-files-v",
       "layer": "module",
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
       "size": 1.35,
       "file": "3rdparty/ultravnc/winvnc/winvnc/[files-v-73-79]",
-      "description": "Grupo de arquivos em `3rdparty/ultravnc/winvnc/winvnc/` — Arquivos V (73–79)"
+      "description": "Grupo de arquivos em `3rdparty/ultravnc/winvnc/winvnc/` — 73–79"
     },
     {
       "id": "customize-veyon-grp-3rdparty-ultravnc-winvnc-winvnc-files-w",
@@ -9901,28 +9961,40 @@
       "description": "Grupo de arquivos em `3rdparty/x11vnc/src/` — Arquivos O–P–R"
     },
     {
-      "id": "customize-veyon-grp-3rdparty-x11vnc-src-files-s-1-12",
-      "label": "Arquivos S (1–12)",
+      "id": "customize-veyon-grp-3rdparty-x11vnc-src-files-s",
+      "label": "Arquivos S",
       "parent": "customize-veyon-dir-3rdparty-x11vnc-src",
+      "layer": "module",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 1.35,
+      "file": "3rdparty/x11vnc/src/[files-s]",
+      "description": "Grupo de arquivos em `3rdparty/x11vnc/src/` — Arquivos S"
+    },
+    {
+      "id": "customize-veyon-grp-3rdparty-x11vnc-src-files-s-1-12",
+      "label": "1–12",
+      "parent": "customize-veyon-grp-3rdparty-x11vnc-src-files-s",
       "layer": "module",
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
       "size": 1.35,
       "file": "3rdparty/x11vnc/src/[files-s-1-12]",
-      "description": "Grupo de arquivos em `3rdparty/x11vnc/src/` — Arquivos S (1–12)"
+      "description": "Grupo de arquivos em `3rdparty/x11vnc/src/` — 1–12"
     },
     {
       "id": "customize-veyon-grp-3rdparty-x11vnc-src-files-s-13-14",
-      "label": "Arquivos S (13–14)",
-      "parent": "customize-veyon-dir-3rdparty-x11vnc-src",
+      "label": "13–14",
+      "parent": "customize-veyon-grp-3rdparty-x11vnc-src-files-s",
       "layer": "module",
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
       "size": 1.35,
       "file": "3rdparty/x11vnc/src/[files-s-13-14]",
-      "description": "Grupo de arquivos em `3rdparty/x11vnc/src/` — Arquivos S (13–14)"
+      "description": "Grupo de arquivos em `3rdparty/x11vnc/src/` — 13–14"
     },
     {
       "id": "customize-veyon-grp-3rdparty-x11vnc-src-files-t-u",
@@ -9949,28 +10021,40 @@
       "description": "Grupo de arquivos em `3rdparty/x11vnc/src/` — Arquivos V–W"
     },
     {
-      "id": "customize-veyon-grp-3rdparty-x11vnc-src-files-x-1-12",
-      "label": "Arquivos X (1–12)",
+      "id": "customize-veyon-grp-3rdparty-x11vnc-src-files-x",
+      "label": "Arquivos X",
       "parent": "customize-veyon-dir-3rdparty-x11vnc-src",
+      "layer": "module",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 1.35,
+      "file": "3rdparty/x11vnc/src/[files-x]",
+      "description": "Grupo de arquivos em `3rdparty/x11vnc/src/` — Arquivos X"
+    },
+    {
+      "id": "customize-veyon-grp-3rdparty-x11vnc-src-files-x-1-12",
+      "label": "1–12",
+      "parent": "customize-veyon-grp-3rdparty-x11vnc-src-files-x",
       "layer": "module",
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
       "size": 1.35,
       "file": "3rdparty/x11vnc/src/[files-x-1-12]",
-      "description": "Grupo de arquivos em `3rdparty/x11vnc/src/` — Arquivos X (1–12)"
+      "description": "Grupo de arquivos em `3rdparty/x11vnc/src/` — 1–12"
     },
     {
       "id": "customize-veyon-grp-3rdparty-x11vnc-src-files-x-13-19",
-      "label": "Arquivos X (13–19)",
-      "parent": "customize-veyon-dir-3rdparty-x11vnc-src",
+      "label": "13–19",
+      "parent": "customize-veyon-grp-3rdparty-x11vnc-src-files-x",
       "layer": "module",
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
       "size": 1.35,
       "file": "3rdparty/x11vnc/src/[files-x-13-19]",
-      "description": "Grupo de arquivos em `3rdparty/x11vnc/src/` — Arquivos X (13–19)"
+      "description": "Grupo de arquivos em `3rdparty/x11vnc/src/` — 13–19"
     },
     {
       "id": "customize-veyon-file-3rdparty-x11vnc-src-8to24-c",
@@ -11509,28 +11593,40 @@
       "description": "Código-fonte: `configurator/src/ServiceConfigurationPage.h`"
     },
     {
-      "id": "customize-veyon-grp-core-src-files-a-1-12",
-      "label": "Arquivos A (1–12)",
+      "id": "customize-veyon-grp-core-src-files-a",
+      "label": "Arquivos A",
       "parent": "customize-veyon-dir-core-src",
+      "layer": "module",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 1.35,
+      "file": "core/src/[files-a]",
+      "description": "Grupo de arquivos em `core/src/` — Arquivos A"
+    },
+    {
+      "id": "customize-veyon-grp-core-src-files-a-1-12",
+      "label": "1–12",
+      "parent": "customize-veyon-grp-core-src-files-a",
       "layer": "module",
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
       "size": 1.35,
       "file": "core/src/[files-a-1-12]",
-      "description": "Grupo de arquivos em `core/src/` — Arquivos A (1–12)"
+      "description": "Grupo de arquivos em `core/src/` — 1–12"
     },
     {
       "id": "customize-veyon-grp-core-src-files-a-13-17",
-      "label": "Arquivos A (13–17)",
-      "parent": "customize-veyon-dir-core-src",
+      "label": "13–17",
+      "parent": "customize-veyon-grp-core-src-files-a",
       "layer": "module",
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
       "size": 1.35,
       "file": "core/src/[files-a-13-17]",
-      "description": "Grupo de arquivos em `core/src/` — Arquivos A (13–17)"
+      "description": "Grupo de arquivos em `core/src/` — 13–17"
     },
     {
       "id": "customize-veyon-grp-core-src-files-b",
@@ -11545,40 +11641,52 @@
       "description": "Grupo de arquivos em `core/src/` — Arquivos B"
     },
     {
-      "id": "customize-veyon-grp-core-src-files-c-1-12",
-      "label": "Arquivos C (1–12)",
+      "id": "customize-veyon-grp-core-src-files-c",
+      "label": "Arquivos C",
       "parent": "customize-veyon-dir-core-src",
+      "layer": "module",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 1.35,
+      "file": "core/src/[files-c]",
+      "description": "Grupo de arquivos em `core/src/` — Arquivos C"
+    },
+    {
+      "id": "customize-veyon-grp-core-src-files-c-1-12",
+      "label": "1–12",
+      "parent": "customize-veyon-grp-core-src-files-c",
       "layer": "module",
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
       "size": 1.35,
       "file": "core/src/[files-c-1-12]",
-      "description": "Grupo de arquivos em `core/src/` — Arquivos C (1–12)"
+      "description": "Grupo de arquivos em `core/src/` — 1–12"
     },
     {
       "id": "customize-veyon-grp-core-src-files-c-13-24",
-      "label": "Arquivos C (13–24)",
-      "parent": "customize-veyon-dir-core-src",
+      "label": "13–24",
+      "parent": "customize-veyon-grp-core-src-files-c",
       "layer": "module",
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
       "size": 1.35,
       "file": "core/src/[files-c-13-24]",
-      "description": "Grupo de arquivos em `core/src/` — Arquivos C (13–24)"
+      "description": "Grupo de arquivos em `core/src/` — 13–24"
     },
     {
       "id": "customize-veyon-grp-core-src-files-c-25-36",
-      "label": "Arquivos C (25–36)",
-      "parent": "customize-veyon-dir-core-src",
+      "label": "25–36",
+      "parent": "customize-veyon-grp-core-src-files-c",
       "layer": "module",
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
       "size": 1.35,
       "file": "core/src/[files-c-25-36]",
-      "description": "Grupo de arquivos em `core/src/` — Arquivos C (25–36)"
+      "description": "Grupo de arquivos em `core/src/` — 25–36"
     },
     {
       "id": "customize-veyon-grp-core-src-files-d-e",
@@ -11629,28 +11737,40 @@
       "description": "Grupo de arquivos em `core/src/` — Arquivos M–N–O"
     },
     {
-      "id": "customize-veyon-grp-core-src-files-p-1-12",
-      "label": "Arquivos P (1–12)",
+      "id": "customize-veyon-grp-core-src-files-p",
+      "label": "Arquivos P",
       "parent": "customize-veyon-dir-core-src",
+      "layer": "module",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 1.35,
+      "file": "core/src/[files-p]",
+      "description": "Grupo de arquivos em `core/src/` — Arquivos P"
+    },
+    {
+      "id": "customize-veyon-grp-core-src-files-p-1-12",
+      "label": "1–12",
+      "parent": "customize-veyon-grp-core-src-files-p",
       "layer": "module",
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
       "size": 1.35,
       "file": "core/src/[files-p-1-12]",
-      "description": "Grupo de arquivos em `core/src/` — Arquivos P (1–12)"
+      "description": "Grupo de arquivos em `core/src/` — 1–12"
     },
     {
       "id": "customize-veyon-grp-core-src-files-p-13-19",
-      "label": "Arquivos P (13–19)",
-      "parent": "customize-veyon-dir-core-src",
+      "label": "13–19",
+      "parent": "customize-veyon-grp-core-src-files-p",
       "layer": "module",
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
       "size": 1.35,
       "file": "core/src/[files-p-13-19]",
-      "description": "Grupo de arquivos em `core/src/` — Arquivos P (13–19)"
+      "description": "Grupo de arquivos em `core/src/` — 13–19"
     },
     {
       "id": "customize-veyon-grp-core-src-files-r-s",
@@ -11689,40 +11809,52 @@
       "description": "Grupo de arquivos em `core/src/` — Arquivos U"
     },
     {
-      "id": "customize-veyon-grp-core-src-files-v-1-12",
-      "label": "Arquivos V (1–12)",
+      "id": "customize-veyon-grp-core-src-files-v",
+      "label": "Arquivos V",
       "parent": "customize-veyon-dir-core-src",
+      "layer": "module",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 1.35,
+      "file": "core/src/[files-v]",
+      "description": "Grupo de arquivos em `core/src/` — Arquivos V"
+    },
+    {
+      "id": "customize-veyon-grp-core-src-files-v-1-12",
+      "label": "1–12",
+      "parent": "customize-veyon-grp-core-src-files-v",
       "layer": "module",
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
       "size": 1.35,
       "file": "core/src/[files-v-1-12]",
-      "description": "Grupo de arquivos em `core/src/` — Arquivos V (1–12)"
+      "description": "Grupo de arquivos em `core/src/` — 1–12"
     },
     {
       "id": "customize-veyon-grp-core-src-files-v-13-24",
-      "label": "Arquivos V (13–24)",
-      "parent": "customize-veyon-dir-core-src",
+      "label": "13–24",
+      "parent": "customize-veyon-grp-core-src-files-v",
       "layer": "module",
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
       "size": 1.35,
       "file": "core/src/[files-v-13-24]",
-      "description": "Grupo de arquivos em `core/src/` — Arquivos V (13–24)"
+      "description": "Grupo de arquivos em `core/src/` — 13–24"
     },
     {
       "id": "customize-veyon-grp-core-src-files-v-25-33",
-      "label": "Arquivos V (25–33)",
-      "parent": "customize-veyon-dir-core-src",
+      "label": "25–33",
+      "parent": "customize-veyon-grp-core-src-files-v",
       "layer": "module",
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
       "size": 1.35,
       "file": "core/src/[files-v-25-33]",
-      "description": "Grupo de arquivos em `core/src/` — Arquivos V (25–33)"
+      "description": "Grupo de arquivos em `core/src/` — 25–33"
     },
     {
       "id": "customize-veyon-file-core-src-aboutdialog-cpp",
@@ -13957,28 +14089,40 @@
       "description": "Código-fonte: `core/src/Configuration/UiMapping.h`"
     },
     {
-      "id": "customize-veyon-grp-master-src-files-c-1-12",
-      "label": "Arquivos C (1–12)",
+      "id": "customize-veyon-grp-master-src-files-c",
+      "label": "Arquivos C",
       "parent": "customize-veyon-dir-master-src",
+      "layer": "module",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 1.35,
+      "file": "master/src/[files-c]",
+      "description": "Grupo de arquivos em `master/src/` — Arquivos C"
+    },
+    {
+      "id": "customize-veyon-grp-master-src-files-c-1-12",
+      "label": "1–12",
+      "parent": "customize-veyon-grp-master-src-files-c",
       "layer": "module",
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
       "size": 1.35,
       "file": "master/src/[files-c-1-12]",
-      "description": "Grupo de arquivos em `master/src/` — Arquivos C (1–12)"
+      "description": "Grupo de arquivos em `master/src/` — 1–12"
     },
     {
       "id": "customize-veyon-grp-master-src-files-c-13-18",
-      "label": "Arquivos C (13–18)",
-      "parent": "customize-veyon-dir-master-src",
+      "label": "13–18",
+      "parent": "customize-veyon-grp-master-src-files-c",
       "layer": "module",
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
       "size": 1.35,
       "file": "master/src/[files-c-13-18]",
-      "description": "Grupo de arquivos em `master/src/` — Arquivos C (13–18)"
+      "description": "Grupo de arquivos em `master/src/` — 13–18"
     },
     {
       "id": "customize-veyon-grp-master-src-files-d-f-k-l",
@@ -14821,28 +14965,40 @@
       "description": "Código-fonte: `plugins/builtindirectory/BuiltinDirectoryPlugin.h`"
     },
     {
-      "id": "customize-veyon-grp-plugins-demo-files-d-1-12",
-      "label": "Arquivos D (1–12)",
+      "id": "customize-veyon-grp-plugins-demo-files-d",
+      "label": "Arquivos D",
       "parent": "customize-veyon-dir-plugins-demo",
+      "layer": "module",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 1.35,
+      "file": "plugins/demo/[files-d]",
+      "description": "Grupo de arquivos em `plugins/demo/` — Arquivos D"
+    },
+    {
+      "id": "customize-veyon-grp-plugins-demo-files-d-1-12",
+      "label": "1–12",
+      "parent": "customize-veyon-grp-plugins-demo-files-d",
       "layer": "module",
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
       "size": 1.35,
       "file": "plugins/demo/[files-d-1-12]",
-      "description": "Grupo de arquivos em `plugins/demo/` — Arquivos D (1–12)"
+      "description": "Grupo de arquivos em `plugins/demo/` — 1–12"
     },
     {
       "id": "customize-veyon-grp-plugins-demo-files-d-13-13",
-      "label": "Arquivos D (13–13)",
-      "parent": "customize-veyon-dir-plugins-demo",
+      "label": "13–13",
+      "parent": "customize-veyon-grp-plugins-demo-files-d",
       "layer": "module",
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
       "size": 1.35,
       "file": "plugins/demo/[files-d-13-13]",
-      "description": "Grupo de arquivos em `plugins/demo/` — Arquivos D (13–13)"
+      "description": "Grupo de arquivos em `plugins/demo/` — 13–13"
     },
     {
       "id": "customize-veyon-file-plugins-demo-democlient-cpp",
@@ -15133,28 +15289,40 @@
       "description": "Código-fonte: `plugins/desktopservices/StartAppDialog.h`"
     },
     {
-      "id": "customize-veyon-grp-plugins-filetransfer-files-f-1-12",
-      "label": "Arquivos F (1–12)",
+      "id": "customize-veyon-grp-plugins-filetransfer-files-f",
+      "label": "Arquivos F",
       "parent": "customize-veyon-dir-plugins-filetransfer",
+      "layer": "module",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 1.35,
+      "file": "plugins/filetransfer/[files-f]",
+      "description": "Grupo de arquivos em `plugins/filetransfer/` — Arquivos F"
+    },
+    {
+      "id": "customize-veyon-grp-plugins-filetransfer-files-f-1-12",
+      "label": "1–12",
+      "parent": "customize-veyon-grp-plugins-filetransfer-files-f",
       "layer": "module",
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
       "size": 1.35,
       "file": "plugins/filetransfer/[files-f-1-12]",
-      "description": "Grupo de arquivos em `plugins/filetransfer/` — Arquivos F (1–12)"
+      "description": "Grupo de arquivos em `plugins/filetransfer/` — 1–12"
     },
     {
       "id": "customize-veyon-grp-plugins-filetransfer-files-f-13-23",
-      "label": "Arquivos F (13–23)",
-      "parent": "customize-veyon-dir-plugins-filetransfer",
+      "label": "13–23",
+      "parent": "customize-veyon-grp-plugins-filetransfer-files-f",
       "layer": "module",
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
       "size": 1.35,
       "file": "plugins/filetransfer/[files-f-13-23]",
-      "description": "Grupo de arquivos em `plugins/filetransfer/` — Arquivos F (13–23)"
+      "description": "Grupo de arquivos em `plugins/filetransfer/` — 13–23"
     },
     {
       "id": "customize-veyon-grp-plugins-filetransfer-files-p",
@@ -15469,28 +15637,40 @@
       "description": "Código-fonte: `plugins/filetransfer/ProgressItemDelegate.h`"
     },
     {
-      "id": "customize-veyon-grp-plugins-ldap-files-l-1-12",
-      "label": "Arquivos L (1–12)",
+      "id": "customize-veyon-grp-plugins-ldap-files-l",
+      "label": "Arquivos L",
       "parent": "customize-veyon-dir-plugins-ldap",
+      "layer": "module",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 1.35,
+      "file": "plugins/ldap/[files-l]",
+      "description": "Grupo de arquivos em `plugins/ldap/` — Arquivos L"
+    },
+    {
+      "id": "customize-veyon-grp-plugins-ldap-files-l-1-12",
+      "label": "1–12",
+      "parent": "customize-veyon-grp-plugins-ldap-files-l",
       "layer": "module",
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
       "size": 1.35,
       "file": "plugins/ldap/[files-l-1-12]",
-      "description": "Grupo de arquivos em `plugins/ldap/` — Arquivos L (1–12)"
+      "description": "Grupo de arquivos em `plugins/ldap/` — 1–12"
     },
     {
       "id": "customize-veyon-grp-plugins-ldap-files-l-13-17",
-      "label": "Arquivos L (13–17)",
-      "parent": "customize-veyon-dir-plugins-ldap",
+      "label": "13–17",
+      "parent": "customize-veyon-grp-plugins-ldap-files-l",
       "layer": "module",
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
       "size": 1.35,
       "file": "plugins/ldap/[files-l-13-17]",
-      "description": "Grupo de arquivos em `plugins/ldap/` — Arquivos L (13–17)"
+      "description": "Grupo de arquivos em `plugins/ldap/` — 13–17"
     },
     {
       "id": "customize-veyon-file-plugins-ldap-ldapbrowsedialog-cpp",
@@ -15841,40 +16021,52 @@
       "description": "Código-fonte: `plugins/platform/common/ServiceDataManager.h`"
     },
     {
-      "id": "customize-veyon-grp-plugins-platform-linux-files-l-1-12",
-      "label": "Arquivos L (1–12)",
+      "id": "customize-veyon-grp-plugins-platform-linux-files-l",
+      "label": "Arquivos L",
       "parent": "customize-veyon-dir-plugins-platform-linux",
+      "layer": "module",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 1.35,
+      "file": "plugins/platform/linux/[files-l]",
+      "description": "Grupo de arquivos em `plugins/platform/linux/` — Arquivos L"
+    },
+    {
+      "id": "customize-veyon-grp-plugins-platform-linux-files-l-1-12",
+      "label": "1–12",
+      "parent": "customize-veyon-grp-plugins-platform-linux-files-l",
       "layer": "module",
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
       "size": 1.35,
       "file": "plugins/platform/linux/[files-l-1-12]",
-      "description": "Grupo de arquivos em `plugins/platform/linux/` — Arquivos L (1–12)"
+      "description": "Grupo de arquivos em `plugins/platform/linux/` — 1–12"
     },
     {
       "id": "customize-veyon-grp-plugins-platform-linux-files-l-13-24",
-      "label": "Arquivos L (13–24)",
-      "parent": "customize-veyon-dir-plugins-platform-linux",
+      "label": "13–24",
+      "parent": "customize-veyon-grp-plugins-platform-linux-files-l",
       "layer": "module",
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
       "size": 1.35,
       "file": "plugins/platform/linux/[files-l-13-24]",
-      "description": "Grupo de arquivos em `plugins/platform/linux/` — Arquivos L (13–24)"
+      "description": "Grupo de arquivos em `plugins/platform/linux/` — 13–24"
     },
     {
       "id": "customize-veyon-grp-plugins-platform-linux-files-l-25-27",
-      "label": "Arquivos L (25–27)",
-      "parent": "customize-veyon-dir-plugins-platform-linux",
+      "label": "25–27",
+      "parent": "customize-veyon-grp-plugins-platform-linux-files-l",
       "layer": "module",
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
       "size": 1.35,
       "file": "plugins/platform/linux/[files-l-25-27]",
-      "description": "Grupo de arquivos em `plugins/platform/linux/` — Arquivos L (25–27)"
+      "description": "Grupo de arquivos em `plugins/platform/linux/` — 25–27"
     },
     {
       "id": "customize-veyon-file-plugins-platform-linux-linuxcorefunctions-cpp",
@@ -16225,40 +16417,52 @@
       "description": "Grupo de arquivos em `plugins/platform/windows/` — Arquivos D–N–S"
     },
     {
-      "id": "customize-veyon-grp-plugins-platform-windows-files-w-1-12",
-      "label": "Arquivos W (1–12)",
+      "id": "customize-veyon-grp-plugins-platform-windows-files-w",
+      "label": "Arquivos W",
       "parent": "customize-veyon-dir-plugins-platform-windows",
+      "layer": "module",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 1.35,
+      "file": "plugins/platform/windows/[files-w]",
+      "description": "Grupo de arquivos em `plugins/platform/windows/` — Arquivos W"
+    },
+    {
+      "id": "customize-veyon-grp-plugins-platform-windows-files-w-1-12",
+      "label": "1–12",
+      "parent": "customize-veyon-grp-plugins-platform-windows-files-w",
       "layer": "module",
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
       "size": 1.35,
       "file": "plugins/platform/windows/[files-w-1-12]",
-      "description": "Grupo de arquivos em `plugins/platform/windows/` — Arquivos W (1–12)"
+      "description": "Grupo de arquivos em `plugins/platform/windows/` — 1–12"
     },
     {
       "id": "customize-veyon-grp-plugins-platform-windows-files-w-13-24",
-      "label": "Arquivos W (13–24)",
-      "parent": "customize-veyon-dir-plugins-platform-windows",
+      "label": "13–24",
+      "parent": "customize-veyon-grp-plugins-platform-windows-files-w",
       "layer": "module",
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
       "size": 1.35,
       "file": "plugins/platform/windows/[files-w-13-24]",
-      "description": "Grupo de arquivos em `plugins/platform/windows/` — Arquivos W (13–24)"
+      "description": "Grupo de arquivos em `plugins/platform/windows/` — 13–24"
     },
     {
       "id": "customize-veyon-grp-plugins-platform-windows-files-w-25-31",
-      "label": "Arquivos W (25–31)",
-      "parent": "customize-veyon-dir-plugins-platform-windows",
+      "label": "25–31",
+      "parent": "customize-veyon-grp-plugins-platform-windows-files-w",
       "layer": "module",
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
       "size": 1.35,
       "file": "plugins/platform/windows/[files-w-25-31]",
-      "description": "Grupo de arquivos em `plugins/platform/windows/` — Arquivos W (25–31)"
+      "description": "Grupo de arquivos em `plugins/platform/windows/` — 25–31"
     },
     {
       "id": "customize-veyon-grp-plugins-platform-windows-files-x",
@@ -17269,28 +17473,40 @@
       "description": "Código-fonte: `plugins/vncserver/x11vnc-builtin/X11VncConfigurationWidget.h`"
     },
     {
-      "id": "customize-veyon-grp-plugins-webapi-files-w-1-12",
-      "label": "Arquivos W (1–12)",
+      "id": "customize-veyon-grp-plugins-webapi-files-w",
+      "label": "Arquivos W",
       "parent": "customize-veyon-dir-plugins-webapi",
+      "layer": "module",
+      "category": "network",
+      "categoryLabel": "Rede / Scan",
+      "color": "#22d3ee",
+      "size": 1.35,
+      "file": "plugins/webapi/[files-w]",
+      "description": "Grupo de arquivos em `plugins/webapi/` — Arquivos W"
+    },
+    {
+      "id": "customize-veyon-grp-plugins-webapi-files-w-1-12",
+      "label": "1–12",
+      "parent": "customize-veyon-grp-plugins-webapi-files-w",
       "layer": "module",
       "category": "network",
       "categoryLabel": "Rede / Scan",
       "color": "#22d3ee",
       "size": 1.35,
       "file": "plugins/webapi/[files-w-1-12]",
-      "description": "Grupo de arquivos em `plugins/webapi/` — Arquivos W (1–12)"
+      "description": "Grupo de arquivos em `plugins/webapi/` — 1–12"
     },
     {
       "id": "customize-veyon-grp-plugins-webapi-files-w-13-13",
-      "label": "Arquivos W (13–13)",
-      "parent": "customize-veyon-dir-plugins-webapi",
+      "label": "13–13",
+      "parent": "customize-veyon-grp-plugins-webapi-files-w",
       "layer": "module",
       "category": "network",
       "categoryLabel": "Rede / Scan",
       "color": "#22d3ee",
       "size": 1.35,
       "file": "plugins/webapi/[files-w-13-13]",
-      "description": "Grupo de arquivos em `plugins/webapi/` — Arquivos W (13–13)"
+      "description": "Grupo de arquivos em `plugins/webapi/` — 13–13"
     },
     {
       "id": "customize-veyon-file-plugins-webapi-webapiauthenticationproxy-cpp",
@@ -17867,66 +18083,90 @@
       "size": 0.85,
       "file": "worker/src/VeyonWorker.h",
       "description": "Código-fonte: `worker/src/VeyonWorker.h`"
+    },
+    {
+      "id": "customize-veyon-grp-root-bucket-c-d-m-p",
+      "label": "Pastas #–C–D–M–P",
+      "parent": "customize-veyon-root",
+      "layer": "module",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 1.35,
+      "file": "[root-#–c–d–m–p]",
+      "description": "Agrupamento de pastas/módulos na raiz — #–C–D–M–P"
+    },
+    {
+      "id": "customize-veyon-grp-root-bucket-s-t-w",
+      "label": "Pastas S–T–W",
+      "parent": "customize-veyon-root",
+      "layer": "module",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 1.35,
+      "file": "[root-s–t–w]",
+      "description": "Agrupamento de pastas/módulos na raiz — S–T–W"
     }
   ],
   "links": [
     {
-      "source": "customize-veyon-root",
+      "source": "customize-veyon-grp-root-bucket-c-d-m-p",
       "target": "customize-veyon-dir-ci",
       "type": "dependency"
     },
     {
-      "source": "customize-veyon-root",
+      "source": "customize-veyon-grp-root-bucket-c-d-m-p",
       "target": "customize-veyon-dir-github",
       "type": "dependency"
     },
     {
-      "source": "customize-veyon-root",
+      "source": "customize-veyon-grp-root-bucket-c-d-m-p",
       "target": "customize-veyon-dir-3rdparty",
       "type": "dependency"
     },
     {
-      "source": "customize-veyon-root",
+      "source": "customize-veyon-grp-root-bucket-c-d-m-p",
       "target": "customize-veyon-dir-cli",
       "type": "dependency"
     },
     {
-      "source": "customize-veyon-root",
+      "source": "customize-veyon-grp-root-bucket-c-d-m-p",
       "target": "customize-veyon-dir-configurator",
       "type": "dependency"
     },
     {
-      "source": "customize-veyon-root",
+      "source": "customize-veyon-grp-root-bucket-c-d-m-p",
       "target": "customize-veyon-dir-core",
       "type": "dependency"
     },
     {
-      "source": "customize-veyon-root",
+      "source": "customize-veyon-grp-root-bucket-c-d-m-p",
       "target": "customize-veyon-dir-master",
       "type": "dependency"
     },
     {
-      "source": "customize-veyon-root",
+      "source": "customize-veyon-grp-root-bucket-c-d-m-p",
       "target": "customize-veyon-dir-plugins",
       "type": "dependency"
     },
     {
-      "source": "customize-veyon-root",
+      "source": "customize-veyon-grp-root-bucket-s-t-w",
       "target": "customize-veyon-dir-server",
       "type": "dependency"
     },
     {
-      "source": "customize-veyon-root",
+      "source": "customize-veyon-grp-root-bucket-s-t-w",
       "target": "customize-veyon-dir-service",
       "type": "dependency"
     },
     {
-      "source": "customize-veyon-root",
+      "source": "customize-veyon-grp-root-bucket-s-t-w",
       "target": "customize-veyon-dir-tests",
       "type": "dependency"
     },
     {
-      "source": "customize-veyon-root",
+      "source": "customize-veyon-grp-root-bucket-s-t-w",
       "target": "customize-veyon-dir-worker",
       "type": "dependency"
     },
@@ -18661,37 +18901,37 @@
       "type": "dependency"
     },
     {
-      "source": "customize-veyon-root",
+      "source": "customize-veyon-grp-root-bucket-c-d-m-p",
       "target": "customize-veyon-file-gitignore",
       "type": "dependency"
     },
     {
-      "source": "customize-veyon-root",
+      "source": "customize-veyon-grp-root-bucket-c-d-m-p",
       "target": "customize-veyon-file-code-of-conduct-md",
       "type": "dependency"
     },
     {
-      "source": "customize-veyon-root",
+      "source": "customize-veyon-grp-root-bucket-c-d-m-p",
       "target": "customize-veyon-file-debug-tray-hover-icons-md",
       "type": "dependency"
     },
     {
-      "source": "customize-veyon-root",
+      "source": "customize-veyon-grp-root-bucket-c-d-m-p",
       "target": "customize-veyon-file-debug-tray-icon-hover-issue-md",
       "type": "dependency"
     },
     {
-      "source": "customize-veyon-root",
+      "source": "customize-veyon-grp-root-bucket-c-d-m-p",
       "target": "customize-veyon-file-debug-tray-icon-state-md",
       "type": "dependency"
     },
     {
-      "source": "customize-veyon-root",
+      "source": "customize-veyon-grp-root-bucket-c-d-m-p",
       "target": "customize-veyon-file-project-yml",
       "type": "dependency"
     },
     {
-      "source": "customize-veyon-root",
+      "source": "customize-veyon-grp-root-bucket-s-t-w",
       "target": "customize-veyon-file-security-md",
       "type": "dependency"
     },
@@ -18992,11 +19232,16 @@
     },
     {
       "source": "customize-veyon-dir-3rdparty-kldap-qt5-src-core",
+      "target": "customize-veyon-grp-3rdparty-kldap-qt5-src-core-files-l",
+      "type": "dependency"
+    },
+    {
+      "source": "customize-veyon-grp-3rdparty-kldap-qt5-src-core-files-l",
       "target": "customize-veyon-grp-3rdparty-kldap-qt5-src-core-files-l-1-12",
       "type": "dependency"
     },
     {
-      "source": "customize-veyon-dir-3rdparty-kldap-qt5-src-core",
+      "source": "customize-veyon-grp-3rdparty-kldap-qt5-src-core-files-l",
       "target": "customize-veyon-grp-3rdparty-kldap-qt5-src-core-files-l-13-19",
       "type": "dependency"
     },
@@ -19132,11 +19377,16 @@
     },
     {
       "source": "customize-veyon-dir-3rdparty-kldap-qt5-src-widgets",
+      "target": "customize-veyon-grp-3rdparty-kldap-qt5-src-widgets-files-l",
+      "type": "dependency"
+    },
+    {
+      "source": "customize-veyon-grp-3rdparty-kldap-qt5-src-widgets-files-l",
       "target": "customize-veyon-grp-3rdparty-kldap-qt5-src-widgets-files-l-1-12",
       "type": "dependency"
     },
     {
-      "source": "customize-veyon-dir-3rdparty-kldap-qt5-src-widgets",
+      "source": "customize-veyon-grp-3rdparty-kldap-qt5-src-widgets-files-l",
       "target": "customize-veyon-grp-3rdparty-kldap-qt5-src-widgets-files-l-13-20",
       "type": "dependency"
     },
@@ -19282,21 +19532,26 @@
     },
     {
       "source": "customize-veyon-dir-3rdparty-kldap-src-core",
+      "target": "customize-veyon-grp-3rdparty-kldap-src-core-files-l",
+      "type": "dependency"
+    },
+    {
+      "source": "customize-veyon-grp-3rdparty-kldap-src-core-files-l",
       "target": "customize-veyon-grp-3rdparty-kldap-src-core-files-l-1-12",
       "type": "dependency"
     },
     {
-      "source": "customize-veyon-dir-3rdparty-kldap-src-core",
+      "source": "customize-veyon-grp-3rdparty-kldap-src-core-files-l",
       "target": "customize-veyon-grp-3rdparty-kldap-src-core-files-l-13-24",
       "type": "dependency"
     },
     {
-      "source": "customize-veyon-dir-3rdparty-kldap-src-core",
+      "source": "customize-veyon-grp-3rdparty-kldap-src-core-files-l",
       "target": "customize-veyon-grp-3rdparty-kldap-src-core-files-l-25-36",
       "type": "dependency"
     },
     {
-      "source": "customize-veyon-dir-3rdparty-kldap-src-core",
+      "source": "customize-veyon-grp-3rdparty-kldap-src-core-files-l",
       "target": "customize-veyon-grp-3rdparty-kldap-src-core-files-l-37-37",
       "type": "dependency"
     },
@@ -20372,16 +20627,21 @@
     },
     {
       "source": "customize-veyon-dir-3rdparty-qthttpserver-src-httpserver",
+      "target": "customize-veyon-grp-3rdparty-qthttpserver-src-httpserver-files-q",
+      "type": "dependency"
+    },
+    {
+      "source": "customize-veyon-grp-3rdparty-qthttpserver-src-httpserver-files-q",
       "target": "customize-veyon-grp-3rdparty-qthttpserver-src-httpserver-files-q-1-12",
       "type": "dependency"
     },
     {
-      "source": "customize-veyon-dir-3rdparty-qthttpserver-src-httpserver",
+      "source": "customize-veyon-grp-3rdparty-qthttpserver-src-httpserver-files-q",
       "target": "customize-veyon-grp-3rdparty-qthttpserver-src-httpserver-files-q-13-24",
       "type": "dependency"
     },
     {
-      "source": "customize-veyon-dir-3rdparty-qthttpserver-src-httpserver",
+      "source": "customize-veyon-grp-3rdparty-qthttpserver-src-httpserver-files-q",
       "target": "customize-veyon-grp-3rdparty-qthttpserver-src-httpserver-files-q-25-29",
       "type": "dependency"
     },
@@ -21107,36 +21367,41 @@
     },
     {
       "source": "customize-veyon-dir-3rdparty-ultravnc-winvnc-winvnc",
+      "target": "customize-veyon-grp-3rdparty-ultravnc-winvnc-winvnc-files-v",
+      "type": "dependency"
+    },
+    {
+      "source": "customize-veyon-grp-3rdparty-ultravnc-winvnc-winvnc-files-v",
       "target": "customize-veyon-grp-3rdparty-ultravnc-winvnc-winvnc-files-v-1-12",
       "type": "dependency"
     },
     {
-      "source": "customize-veyon-dir-3rdparty-ultravnc-winvnc-winvnc",
+      "source": "customize-veyon-grp-3rdparty-ultravnc-winvnc-winvnc-files-v",
       "target": "customize-veyon-grp-3rdparty-ultravnc-winvnc-winvnc-files-v-13-24",
       "type": "dependency"
     },
     {
-      "source": "customize-veyon-dir-3rdparty-ultravnc-winvnc-winvnc",
+      "source": "customize-veyon-grp-3rdparty-ultravnc-winvnc-winvnc-files-v",
       "target": "customize-veyon-grp-3rdparty-ultravnc-winvnc-winvnc-files-v-25-36",
       "type": "dependency"
     },
     {
-      "source": "customize-veyon-dir-3rdparty-ultravnc-winvnc-winvnc",
+      "source": "customize-veyon-grp-3rdparty-ultravnc-winvnc-winvnc-files-v",
       "target": "customize-veyon-grp-3rdparty-ultravnc-winvnc-winvnc-files-v-37-48",
       "type": "dependency"
     },
     {
-      "source": "customize-veyon-dir-3rdparty-ultravnc-winvnc-winvnc",
+      "source": "customize-veyon-grp-3rdparty-ultravnc-winvnc-winvnc-files-v",
       "target": "customize-veyon-grp-3rdparty-ultravnc-winvnc-winvnc-files-v-49-60",
       "type": "dependency"
     },
     {
-      "source": "customize-veyon-dir-3rdparty-ultravnc-winvnc-winvnc",
+      "source": "customize-veyon-grp-3rdparty-ultravnc-winvnc-winvnc-files-v",
       "target": "customize-veyon-grp-3rdparty-ultravnc-winvnc-winvnc-files-v-61-72",
       "type": "dependency"
     },
     {
-      "source": "customize-veyon-dir-3rdparty-ultravnc-winvnc-winvnc",
+      "source": "customize-veyon-grp-3rdparty-ultravnc-winvnc-winvnc-files-v",
       "target": "customize-veyon-grp-3rdparty-ultravnc-winvnc-winvnc-files-v-73-79",
       "type": "dependency"
     },
@@ -21977,11 +22242,16 @@
     },
     {
       "source": "customize-veyon-dir-3rdparty-x11vnc-src",
+      "target": "customize-veyon-grp-3rdparty-x11vnc-src-files-s",
+      "type": "dependency"
+    },
+    {
+      "source": "customize-veyon-grp-3rdparty-x11vnc-src-files-s",
       "target": "customize-veyon-grp-3rdparty-x11vnc-src-files-s-1-12",
       "type": "dependency"
     },
     {
-      "source": "customize-veyon-dir-3rdparty-x11vnc-src",
+      "source": "customize-veyon-grp-3rdparty-x11vnc-src-files-s",
       "target": "customize-veyon-grp-3rdparty-x11vnc-src-files-s-13-14",
       "type": "dependency"
     },
@@ -21997,11 +22267,16 @@
     },
     {
       "source": "customize-veyon-dir-3rdparty-x11vnc-src",
+      "target": "customize-veyon-grp-3rdparty-x11vnc-src-files-x",
+      "type": "dependency"
+    },
+    {
+      "source": "customize-veyon-grp-3rdparty-x11vnc-src-files-x",
       "target": "customize-veyon-grp-3rdparty-x11vnc-src-files-x-1-12",
       "type": "dependency"
     },
     {
-      "source": "customize-veyon-dir-3rdparty-x11vnc-src",
+      "source": "customize-veyon-grp-3rdparty-x11vnc-src-files-x",
       "target": "customize-veyon-grp-3rdparty-x11vnc-src-files-x-13-19",
       "type": "dependency"
     },
@@ -22647,11 +22922,16 @@
     },
     {
       "source": "customize-veyon-dir-core-src",
+      "target": "customize-veyon-grp-core-src-files-a",
+      "type": "dependency"
+    },
+    {
+      "source": "customize-veyon-grp-core-src-files-a",
       "target": "customize-veyon-grp-core-src-files-a-1-12",
       "type": "dependency"
     },
     {
-      "source": "customize-veyon-dir-core-src",
+      "source": "customize-veyon-grp-core-src-files-a",
       "target": "customize-veyon-grp-core-src-files-a-13-17",
       "type": "dependency"
     },
@@ -22662,16 +22942,21 @@
     },
     {
       "source": "customize-veyon-dir-core-src",
+      "target": "customize-veyon-grp-core-src-files-c",
+      "type": "dependency"
+    },
+    {
+      "source": "customize-veyon-grp-core-src-files-c",
       "target": "customize-veyon-grp-core-src-files-c-1-12",
       "type": "dependency"
     },
     {
-      "source": "customize-veyon-dir-core-src",
+      "source": "customize-veyon-grp-core-src-files-c",
       "target": "customize-veyon-grp-core-src-files-c-13-24",
       "type": "dependency"
     },
     {
-      "source": "customize-veyon-dir-core-src",
+      "source": "customize-veyon-grp-core-src-files-c",
       "target": "customize-veyon-grp-core-src-files-c-25-36",
       "type": "dependency"
     },
@@ -22697,11 +22982,16 @@
     },
     {
       "source": "customize-veyon-dir-core-src",
+      "target": "customize-veyon-grp-core-src-files-p",
+      "type": "dependency"
+    },
+    {
+      "source": "customize-veyon-grp-core-src-files-p",
       "target": "customize-veyon-grp-core-src-files-p-1-12",
       "type": "dependency"
     },
     {
-      "source": "customize-veyon-dir-core-src",
+      "source": "customize-veyon-grp-core-src-files-p",
       "target": "customize-veyon-grp-core-src-files-p-13-19",
       "type": "dependency"
     },
@@ -22722,16 +23012,21 @@
     },
     {
       "source": "customize-veyon-dir-core-src",
+      "target": "customize-veyon-grp-core-src-files-v",
+      "type": "dependency"
+    },
+    {
+      "source": "customize-veyon-grp-core-src-files-v",
       "target": "customize-veyon-grp-core-src-files-v-1-12",
       "type": "dependency"
     },
     {
-      "source": "customize-veyon-dir-core-src",
+      "source": "customize-veyon-grp-core-src-files-v",
       "target": "customize-veyon-grp-core-src-files-v-13-24",
       "type": "dependency"
     },
     {
-      "source": "customize-veyon-dir-core-src",
+      "source": "customize-veyon-grp-core-src-files-v",
       "target": "customize-veyon-grp-core-src-files-v-25-33",
       "type": "dependency"
     },
@@ -23667,11 +23962,16 @@
     },
     {
       "source": "customize-veyon-dir-master-src",
+      "target": "customize-veyon-grp-master-src-files-c",
+      "type": "dependency"
+    },
+    {
+      "source": "customize-veyon-grp-master-src-files-c",
       "target": "customize-veyon-grp-master-src-files-c-1-12",
       "type": "dependency"
     },
     {
-      "source": "customize-veyon-dir-master-src",
+      "source": "customize-veyon-grp-master-src-files-c",
       "target": "customize-veyon-grp-master-src-files-c-13-18",
       "type": "dependency"
     },
@@ -24027,11 +24327,16 @@
     },
     {
       "source": "customize-veyon-dir-plugins-demo",
+      "target": "customize-veyon-grp-plugins-demo-files-d",
+      "type": "dependency"
+    },
+    {
+      "source": "customize-veyon-grp-plugins-demo-files-d",
       "target": "customize-veyon-grp-plugins-demo-files-d-1-12",
       "type": "dependency"
     },
     {
-      "source": "customize-veyon-dir-plugins-demo",
+      "source": "customize-veyon-grp-plugins-demo-files-d",
       "target": "customize-veyon-grp-plugins-demo-files-d-13-13",
       "type": "dependency"
     },
@@ -24157,11 +24462,16 @@
     },
     {
       "source": "customize-veyon-dir-plugins-filetransfer",
+      "target": "customize-veyon-grp-plugins-filetransfer-files-f",
+      "type": "dependency"
+    },
+    {
+      "source": "customize-veyon-grp-plugins-filetransfer-files-f",
       "target": "customize-veyon-grp-plugins-filetransfer-files-f-1-12",
       "type": "dependency"
     },
     {
-      "source": "customize-veyon-dir-plugins-filetransfer",
+      "source": "customize-veyon-grp-plugins-filetransfer-files-f",
       "target": "customize-veyon-grp-plugins-filetransfer-files-f-13-23",
       "type": "dependency"
     },
@@ -24297,11 +24607,16 @@
     },
     {
       "source": "customize-veyon-dir-plugins-ldap",
+      "target": "customize-veyon-grp-plugins-ldap-files-l",
+      "type": "dependency"
+    },
+    {
+      "source": "customize-veyon-grp-plugins-ldap-files-l",
       "target": "customize-veyon-grp-plugins-ldap-files-l-1-12",
       "type": "dependency"
     },
     {
-      "source": "customize-veyon-dir-plugins-ldap",
+      "source": "customize-veyon-grp-plugins-ldap-files-l",
       "target": "customize-veyon-grp-plugins-ldap-files-l-13-17",
       "type": "dependency"
     },
@@ -24452,16 +24767,21 @@
     },
     {
       "source": "customize-veyon-dir-plugins-platform-linux",
+      "target": "customize-veyon-grp-plugins-platform-linux-files-l",
+      "type": "dependency"
+    },
+    {
+      "source": "customize-veyon-grp-plugins-platform-linux-files-l",
       "target": "customize-veyon-grp-plugins-platform-linux-files-l-1-12",
       "type": "dependency"
     },
     {
-      "source": "customize-veyon-dir-plugins-platform-linux",
+      "source": "customize-veyon-grp-plugins-platform-linux-files-l",
       "target": "customize-veyon-grp-plugins-platform-linux-files-l-13-24",
       "type": "dependency"
     },
     {
-      "source": "customize-veyon-dir-plugins-platform-linux",
+      "source": "customize-veyon-grp-plugins-platform-linux-files-l",
       "target": "customize-veyon-grp-plugins-platform-linux-files-l-25-27",
       "type": "dependency"
     },
@@ -24612,16 +24932,21 @@
     },
     {
       "source": "customize-veyon-dir-plugins-platform-windows",
+      "target": "customize-veyon-grp-plugins-platform-windows-files-w",
+      "type": "dependency"
+    },
+    {
+      "source": "customize-veyon-grp-plugins-platform-windows-files-w",
       "target": "customize-veyon-grp-plugins-platform-windows-files-w-1-12",
       "type": "dependency"
     },
     {
-      "source": "customize-veyon-dir-plugins-platform-windows",
+      "source": "customize-veyon-grp-plugins-platform-windows-files-w",
       "target": "customize-veyon-grp-plugins-platform-windows-files-w-13-24",
       "type": "dependency"
     },
     {
-      "source": "customize-veyon-dir-plugins-platform-windows",
+      "source": "customize-veyon-grp-plugins-platform-windows-files-w",
       "target": "customize-veyon-grp-plugins-platform-windows-files-w-25-31",
       "type": "dependency"
     },
@@ -25047,11 +25372,16 @@
     },
     {
       "source": "customize-veyon-dir-plugins-webapi",
+      "target": "customize-veyon-grp-plugins-webapi-files-w",
+      "type": "dependency"
+    },
+    {
+      "source": "customize-veyon-grp-plugins-webapi-files-w",
       "target": "customize-veyon-grp-plugins-webapi-files-w-1-12",
       "type": "dependency"
     },
     {
-      "source": "customize-veyon-dir-plugins-webapi",
+      "source": "customize-veyon-grp-plugins-webapi-files-w",
       "target": "customize-veyon-grp-plugins-webapi-files-w-13-13",
       "type": "dependency"
     },
@@ -25293,6 +25623,16 @@
     {
       "source": "customize-veyon-dir-worker-src",
       "target": "customize-veyon-file-worker-src-veyonworker-h",
+      "type": "dependency"
+    },
+    {
+      "source": "customize-veyon-root",
+      "target": "customize-veyon-grp-root-bucket-c-d-m-p",
+      "type": "dependency"
+    },
+    {
+      "source": "customize-veyon-root",
+      "target": "customize-veyon-grp-root-bucket-s-t-w",
       "type": "dependency"
     }
   ]

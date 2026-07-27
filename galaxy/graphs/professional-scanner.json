@@ -4,7 +4,7 @@
   "repoUrl": "https://github.com/CanonEngineer/Professional-Scanner",
   "color": "#06b6d4",
   "demoUrl": "https://github.com/CanonEngineer/Professional-Scanner/blob/main/docs/DOCUMENTATION.md",
-  "nodeCount": 122,
+  "nodeCount": 123,
   "categories": {
     "core": {
       "label": "Backend",
@@ -66,7 +66,7 @@
       "color": "#64748b",
       "size": 2.2,
       "file": "README.md",
-      "description": "NetScan Canon v2.5.0 — biblioteca permanente de dispositivos, Pastas/ACL fileserver, classificação endurecida (deviceTypeDetect), UI ociosos e sync por varredura."
+      "description": "Cobertura completa: 106 arquivos de código no repositório (122 nós na árvore incluindo pastas)."
     },
     {
       "id": "professional-scanner-dir-vscode",
@@ -165,28 +165,40 @@
       "description": "Grupo de arquivos em `./` — Arquivos #"
     },
     {
-      "id": "professional-scanner-grp-files-a-1-12",
-      "label": "Arquivos A (1–12)",
+      "id": "professional-scanner-grp-files-a",
+      "label": "Arquivos A",
       "parent": "professional-scanner-root",
+      "layer": "module",
+      "category": "other",
+      "categoryLabel": "Outros",
+      "color": "#64748b",
+      "size": 1.35,
+      "file": "[files-a]",
+      "description": "Grupo de arquivos em `./` — Arquivos A"
+    },
+    {
+      "id": "professional-scanner-grp-files-a-1-12",
+      "label": "1–12",
+      "parent": "professional-scanner-grp-files-a",
       "layer": "module",
       "category": "other",
       "categoryLabel": "Outros",
       "color": "#64748b",
       "size": 1.35,
       "file": "[files-a-1-12]",
-      "description": "Grupo de arquivos em `./` — Arquivos A (1–12)"
+      "description": "Grupo de arquivos em `./` — 1–12"
     },
     {
       "id": "professional-scanner-grp-files-a-13-13",
-      "label": "Arquivos A (13–13)",
-      "parent": "professional-scanner-root",
+      "label": "13–13",
+      "parent": "professional-scanner-grp-files-a",
       "layer": "module",
       "category": "other",
       "categoryLabel": "Outros",
       "color": "#64748b",
       "size": 1.35,
       "file": "[files-a-13-13]",
-      "description": "Grupo de arquivos em `./` — Arquivos A (13–13)"
+      "description": "Grupo de arquivos em `./` — 13–13"
     },
     {
       "id": "professional-scanner-grp-files-c-d-f-h",
@@ -1564,11 +1576,16 @@
     },
     {
       "source": "professional-scanner-root",
+      "target": "professional-scanner-grp-files-a",
+      "type": "dependency"
+    },
+    {
+      "source": "professional-scanner-grp-files-a",
       "target": "professional-scanner-grp-files-a-1-12",
       "type": "dependency"
     },
     {
-      "source": "professional-scanner-root",
+      "source": "professional-scanner-grp-files-a",
       "target": "professional-scanner-grp-files-a-13-13",
       "type": "dependency"
     },
