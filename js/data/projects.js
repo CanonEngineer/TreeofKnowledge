@@ -1,4 +1,4 @@
-/* Árvore do Conhecimento — 4124 nós */
+/* Árvore do Conhecimento — 4350 nós */
 const PROJECTS = [
   {
     "slug": "canon-python-ecommerce",
@@ -8208,19 +8208,19 @@ const PROJECTS = [
     "color": "#06b6d4",
     "icon": "scanner",
     "stack": "Node.js + WebSocket + SNMP + AutoTest + Platform + AD Remote Auth",
-    "summary": "Cobertura completa: 106 arquivos de código no repositório (123 nós na árvore incluindo pastas).",
+    "summary": "Cobertura completa: 108 arquivos de código no repositório (349 nós na árvore incluindo pastas, 197 funções/rotas, 2 stubs grandes).",
     "nodes": [
       {
         "id": "professional-scanner-root",
         "parent": null,
         "layer": "root",
         "title": "Professional-Scanner",
-        "description": "Cobertura completa: 106 arquivos de código no repositório (122 nós na árvore incluindo pastas).",
+        "description": "Cobertura completa: 106 arquivos de código no repositório (123 nós na árvore incluindo pastas).",
         "file": "README.md",
         "code": "<div align=\"center\">\r\n\r\n# NetScan Canon — Professional-Scanner\r\n\r\n<img src=\"https://img.shields.io/badge/Versão-2.5.0-blue\" />\r\n<img src=\"https://img.shields.io/badge/Node.js-20+-green\" />\r\n<img src=\"https://img.shields.io/badge/Plataforma-Windows-informational\" />\r\n<img src=\"https://img.shields.io/badge/License-MIT-yellow\" />\r\n\r\n**Plataforma profissional de descoberta de rede, diagnóstico, auditoria AD, AutoTest e monitoramento de infraestrutura hospitalar.**\r\n\r\n<br />\r\n\r\n<a href=\"https://github.com/CanonEngineer/Professional-Scanner/blob/main/docs/DOCUMENTATION.md\">\r\n  <img src=\"https://img.shields.io/badge/📖-Visualizar_Documentação-0ea5e9?style=for-the-badge&logo=readthedocs&logoColor=white&labelColor=0c4a6e\" alt=\"Visualizar documentação completa\" />\r\n</a>\r\n&nbsp;\r\n<a href=\"https://raw.githubusercontent.com/CanonEngineer/Professional-Scanner/main/docs/DOCUMENTATION.md\">\r\n  <img src=\"https://img.shields.io/badge/⬇️-Baixar_Documentação-6366f1?style=for-the-badge&logo=github&logoColor=white&labelColor=312e81\" alt=\"Baixar documentação (Markdown raw)\" />\r\n</a>\r\n\r\n<br /><br />\r\n\r\n[Repositório](https://github.com/CanonEngineer/Professional-Scanner) · [Documentação completa](docs/DOCUMENTATION.md) · [Tree of Knowledge — Professional-Scanner](https://canonengineer.github.io/TreeofKnowledge/index.html?tree=professional-scanner) · `http://localhost:3000`\r\n\r\n</div>\r\n\r\n---\r\n\r\n## Documentação\r\n\r\nA **documentação técnica completa** está em [`docs/DOCUMENTATION.md`](docs/DOCUMENTATION.md) e inclui arquitetura, diagramas Mermaid, módulos com explicação de código, API, instalação, exemplos e roadmap.\r\n\r\n| Ação | Link |\r\n|------|------|\r\n| 📖 Visualizar | [Documentação no GitHub](https://github.com/CanonEngineer/Professional-Scanner/blob/main/docs/DOCUMENTATION.md) |\r\n| ⬇️ Baixar | [Arquivo .md raw](https://raw.githubusercontent.com/CanonEngineer/Professional-Scanner/main/docs/DOCUMENTATION.md) |\r\n\r\n---\r\n\r\n## O que é?\r\n\r\nO **NetScan Canon** (Professional-Scanner) é um scanner de rede com interface web pensado para **equipes de TI em ambientes corporativos/hospitalares**. Ele combina:\r\n\r\n- Varredura multi-thread (ping, portas TCP/UDP, detecção de SO)\r\n- Mapa topológico interativo\r\n- Enriquecimento com **Active Directory**, SNMP, impressoras, VMs e VLANs\r\n- **AutoTest de rede** (L2/L3/L4) local ou remoto\r\n- Monitor **urgente de loop** SNMP em switches\r\n- Auditoria **AD** (usuários, computadores, departamentos, grupos, **Pastas/ACL em fileservers**)\r\n- Consulta **Oracle** via SQL\\*Plus\r\n- **Plataforma Canon** (drift, correlação de assets, NAC, CMDB, certificados TLS)\r\n- **Inventário Corporativo UNESP** — merge persistente scan + AD + histórico, com export Excel/PDF/CSV\r\n- **Biblioteca permanente de dispositivos** — categorias (Ativos/Inativos/tipos), busca e sync a cada varredura\r\n\r\nTudo roda em **Node.js + Express** na estação de operação (sala TI), com execução nativa **Windows/PowerShell** para comandos de rede e AD.\r\n\r\n---\r\n\r\n## Screenshots\r\n\r\n| Varredura + tabela | Mapa 3D (`/map`) | Modais Canon |\r\n|--------------------|------------------|--------------|\r\n| Interface principal em tempo real (WebSocket) | Topologia force-graph por subnet/VLAN | AD, Loop, AutoTest, Oracle, Inventário, Plataforma |\r\n\r\n### AutoTest de rede\r\n\r\nInterface do modal **AutoTest** — cards em 3 colunas, banner de engenharia e execução remota estilo Veyon.\r\n\r\n| Resultados L2/L3/L4 | Executando | Agente remoto | Histórico |\r\n|---------------------|------------|---------------|-----------|\r\n| ![AutoTest resultados](docs/images/autotest-results.png) | ![AutoTest executando](docs/images/autotest-running.png) | ![AutoTest remoto](docs/images/autotest-remote.png) | ![AutoTest histórico](docs/images/autotest-history.png) |\r\n\r\n**O que cada tela mostra:**\r\n\r\n| Imagem | Descrição |\r\n|--------|-----------|\r\n| **Resultados** | Grade de passos (OK / AVISO / FALHA), chips da NIC e banner com veredito, nota, métricas e causa provável |\r\n| **Executando** | Banner animado `EXECUTANDO` com spinner, camadas L2/L3/L4 e barra de progresso |\r\n| **Remoto** | Bloco de pareamento Veyon, código e comando PowerShell para instalar o agente na estação |\r\n| **Histórico** | Cards de execuções anteriores com PASS/AVISO/FALHA, nota e IP/gateway |\r\n\r\n> Regenerar imagens: `node scripts/generate-autotest-screenshot-html.mjs && node scripts/capture-autotest-screenshots-chrome.mjs`\r\n\r\n---\r\n\r\n## Início rápido\r\n\r\n### Pré-requisitos\r\n\r\n| Item | Detalhe |\r\n|------|---------|\r\n| **SO** | Windows 10/11 ou Windows Server |\r\n| **Node.js** | 20 ou superior |\r\n| **Rede** | Acesso às subnets que serão varridas |\r\n| **AD** (opcional) | PowerShell com módulo Active Directory |\r\n| **Oracle** (opcional) | SQL\\*Plus + Java (ponte JDBC) |\r\n| **SNMP** (opcional) | Switches com comunidade SNMP para Loop/AutoTest |\r\n\r\n### Instalação\r\n\r\n```powershell\r\ngit clone https://github.com/CanonEngineer/Professional-Scanner.git\r\ncd Professional-Scanner\r\nnpm install\r\nnpm start\r\n```\r\n\r\nAbra no navegador: **http://localhost:3000**\r\n\r\n> Após alterações no frontend, use **Ctrl+F5** para limpar o cache do browser.\r\n\r\n---\r\n\r\n## Módulos principais\r\n\r\n### 1. Varredura de rede\r\n\r\n- Alvo: IP único, intervalo ou CIDR\r\n- Ping sweep, scan TCP (presets ou portas customizadas), UDP opcional\r\n- Detecção de SO (TTL), hostname, MAC, fabricante (OUI)\r\n- Classificação: PC, impressora, câmera, PACS, OT, DMZ\r\n- Exportação **Excel** e **JSON**\r\n- Resultados em tempo real via **WebSocket**\r\n\r\n### 2. Mapa topológico\r\n\r\n- Visualização **3D** (force-graph) por subnet\r\n- Export PNG / SVG / XLSX\r\n- Rota: `/map`\r\n\r\n### 3. Hosts ociosos\r\n\r\n- Histórico persistente de IPs que “sumiram” da rede\r\n- Limiar configurável (minutos/horas/dias)\r\n- **Auditoria global** com chips interativos (ociosos, faixas, histórico, novos)\r\n- **Ativos de novo** — lista persistente de IPs que voltaram a responder; painel **Ver IPs**; saem da lista ao ficarem inativos de novo\r\n- Contagem corrigida `stillInactive` (não confundir com “novos na última varredura”)\r\n- Export Excel de ociosos\r\n- `DELETE /api/host-history` protegido + **backup automático** em `data/backups/` antes de limpar\r\n\r\n### 4. Auditoria Active Directory\r\n\r\nModal dedicado com abas:\r\n\r\n| Aba | Função |\r\n|-----|--------|\r\n| **Usuário** | Lookup por login — grupos, OU, último logon |\r\n| **Computador** | Objeto AD do hostname |\r\n| **Departamento** | Permissões comparadas entre colegas |\r\n| **Grupos** | Quem pertence a um grupo |\r\n| **Saídas** | Usuários desligados/arquivados |\r\n\r\nSincronização AD → índice IP/login para enriquecer hosts na varredura.\r\n\r\n### 5. Monitor de Loop (SNMP)\r\n\r\n- Cadastro de switches (Aruba, Cisco, Intelbras, D-Link, etc.)\r\n- Baseline de contadores + detecção de anomalias\r\n- Alertas em tempo real no dashboard\r\n- Modal de **urgência** com suspeitos e origem provável\r\n- Layout sticky padronizado (v2.3) — sem barra vertical na borda do modal; rolagem interna só na área de conteúdo\r\n\r\n### 6. AutoTest de rede\r\n\r\nTestes em camadas **L2 / L3 / L4** na estação local:\r\n\r\n| Passo | Exemplos |\r\n|-------|----------|\r\n| Interface | NIC, IP, gateway, DHCP, MAC, link speed |\r\n| L2 | VLAN 802.1Q, duplicidade IP |\r\n| L3 | Ping gateway/internet, traceroute, subnet |\r\n| L4 | DNS, TCP (portas), HTTP |\r\n\r\n**Perfis:** Escritório · Datacenter · Wi-Fi · Personalizado\r\n\r\n**Placa:** Automática · Primária · Secundária · Wi-Fi · Específica\r\n\r\n**Saídas:** cards por passo, banner de engenharia (veredito, nota, métricas), export **PDF** e **CSV**, histórico.\r\n\r\nVeja as capturas na seção [Screenshots → AutoTest](#autotest-de-rede).\r\n\r\n#### AutoTest remoto (estilo Veyon)\r\n\r\nExecute o teste **na estação de campo** a partir da sala TI:\r\n\r\n1. **Gerar código de pareamento** (requer login Canon)\r\n2. Na estação remota (PowerShell **como Administrador**, uma vez):\r\n\r\n```powershell\r\n.\\scripts\\install-autotest-agent-service.ps1 -ServerUrl \"http://IP-SERVIDOR:3000\" -PairingCode \"CODIGO\"\r\n```\r\n\r\n3. Na UI: **Atualizar agentes** → selecionar estação **online** → **Executar remoto**\r\n\r\nO agente instala em `C:\\ProgramData\\NetScan\\AutoTestAgent`, sobe com o Windows e usa **chaves + jobs assinados** (modo `veyon`).\r\n\r\n**Login AD remoto (v2.3):** pareamento, listagem de agentes e execução remota usam sessão **AD separada** (`HCFMB\\` / `UNESP\\`), independente do login Canon. A tela de login abre **acima** do modal AutoTest. **Executar remoto** solicita credenciais fresh a cada execução.\r\n\r\n**Segurança (v2.3):** rate limit em rotas sensíveis, snapshot de perfil assinado nos jobs, `stopOnFail` TCP/HTTP, timeouts pending/claimed, revogação de agente e sanitização de alvos de rede.\r\n\r\n### 7. Oracle — lookup de usuários\r\n\r\n- Connect String configurável (TNS ou `host:porta/serviço`; suporte Thick mode / SQL\\*Plus)\r\n- Busca por nome ou `cd_usuario` em `dbasgu.usuarios`\r\n- **Sugestões de login AD** (iniciais, `cd_usuario`, padrões corporativos)\r\n- **Cruzamento AD** opcional: badges **Livre no AD** / **Já existe no AD** por candidato de login\r\n- Modal dedicado na UI (aba Consulta + Configuração)\r\n\r\n### 8. Inventário Corporativo UNESP\r\n\r\nModal dedicado no dashboard — inventário **persistente** que acumula varreduras sem apagar registros automaticamente.\r\n\r\n| Recurso | Detalhe |\r\n|---------|---------|\r\n| **Merge incremental** | Scan + histórico + cache AD + agente Canon |\r\n| **Usuário AD** | Sessão ativa via `query user`, snapshot AD e `managedBy` |\r\n| **Rede** | Portas/serviços (scan + sonda), MAC via **ARP local + SNMP** (gateway/switches), fabricante OUI |\r\n| **Organização** | Domínio, OU, departamento, unidade, VLAN |\r\n| **1ª detecção** | Data/hora da primeira aparição no histórico |\r\n| **Sync** | Manual ou pós-varredura; modo AD-only após reinício; feedback MAC SNMP na barra de status |\r\n| **Status** | **Online** · **Offline** (confirmado inativo) · **Ausente** (não visto no scan, persistente) · **Inacessível** |\r\n| **Duplicidades** | Conflitos MAC/hostname **por sub-rede**; hostnames genéricos ignorados; badge **Nomes repetidos** vs **Conflitos** |\r\n| **UI** | Scroll horizontal da tabela; colunas compactas; **clique para expandir** portas/serviços truncados |\r\n| **Export** | Excel, PDF e CSV (stats incluem Ausente) |\r\n\r\n**MAC via SNMP:** na sincronização, consulta `ipNetToMedia` no **gateway padrão** (detectado via `route print`) e nos **switches** cadastrados no Loop Monitor ou `vlan-map.json`. Complementa o ARP local quando o host está em outra camada L2. Campos: `macSource`, `switchIp`.\r\n\r\n**API:** `/api/inventory/*` · **Core:** `inventory.js`, `switchMacLookup.js` · **UI:** `public/inventory.js`, `inventory.css`\r\n\r\nColunas principais: IP, hostname, usuário AD, nome completo, SO, MAC, fabricante, domínio, OU, departamento, portas abertas, serviços, 1ª detecção.\r\n\r\n### 9. Plataforma Canon\r\n\r\nPainel avançado de **governança e observabilidade de rede** — vai além da varredura de IPs. Abra pelo botão **Plataforma** no dashboard; o modal exibe abas em estilo pill (tema escuro Canon).\r\n\r\n> Não confundir com o scan principal nem com o AutoTest: aqui o foco é **baseline, correlação, segurança, CMDB e integrações** sobre os hosts já descobertos.\r\n\r\n#### Abas do modal\r\n\r\n| Aba | O que faz |\r\n|-----|-----------|\r\n| **Resumo** | Visão geral operacional da plataforma — status, métricas e atalhos |\r\n| **Drift** | Compara a rede **atual** com a **baseline** salva; detecta mudanças (hosts novos, sumidos, alterações) |\r\n| **Correlação** | Cruza **IP, MAC, porta de switch, AD** e demais fontes do host num único contexto |\r\n| **TLS** | Análise de **certificados TLS** (ex.: porta 443) — validade, emissor, alertas de expiração |\r\n| **NAC** | **Prontidão NAC** (Network Access Control) — score e gaps para onboarding 802.1X/NAC |\r\n| **CMDB** | **Ciclo de vida** dos assets (ativo, manutenção, aposentado…) — inventário operacional |\r\n| **Passivo** | **Descoberta passiva** — snapshot ARP/cache e sinais sem varredura ativa agressiva |\r\n| **Agente** | Relatórios do **agente Canon** instalado nas estações (telemetria complementar) |\r\n|\n\n/* … truncado na árvore (arquivo completo no GitHub) … */\n",
         "implementation": [
           "Repo: https://github.com/CanonEngineer/Professional-Scanner",
-          "Arquivos na árvore: 106",
+          "Arquivos na árvore: 108",
           "2D + Galaxy 3D — cobertura total do código-fonte"
         ]
       },
@@ -8719,6 +8719,62 @@ const PROJECTS = [
         ]
       },
       {
+        "id": "professional-scanner-fn-devicetypedetect-js-detectdevicetype",
+        "parent": "professional-scanner-file-devicetypedetect-js",
+        "layer": "function",
+        "title": "detectDeviceType()",
+        "description": "Função em `deviceTypeDetect.js`",
+        "file": "deviceTypeDetect.js",
+        "code": "function detectDeviceType(host) {\n  if (host.status === 'Inativo') return 'Inativo';\n\n  const text = textBlob(host);\n  const vendor = (host.vendor || '').toLowerCase();\n  const os = (host.os || '').toLowerCase();\n  const hostname = String(host.hostname || '').toLowerCase().trim();\n  const shortHost = hostname.split('.')[0] || hostname;\n  const ports = Array.isArray(host.ports) ? host.ports : [];\n  const openPorts = ports.filter((p) => !p.state || String(p.state).startsWith('open'));\n  const portSet = new Set(openPorts.map((p) => Number(p.port)));\n  const services = openPorts.map((p) => `${p.service || ''} ${p.version || ''}`.toLowerCase()).join(' ');\n\n  const hasWinShare = hasPort(portSet, [445, 139, 135]);\n  const hasRdp = hasPort(portSet, [3389]);\n  const hasAdPorts = hasPort(portSet, [88, 389, 636]);\n  const looksLikeDesktopOs = /windows\\s*(7|8|10|11)|macos|mac os/i.test(os);\n  const looksLikeServerOs = /windows server|ubuntu server|red hat|centos|debian.*server/i.test(os);\n  const looksLikeVmName = /(^|[^a-z0-9])(vmware\\d*|esxi\\d*|vcenter|hyper-?v|pve\\d*|proxmox|qemu|virtualbox|hostkvm|managerkvm)([^a-z0-9]|$)/i.test(hostname);\n  const looksLikeWorkstationName =\n    /^(cimed[-_]|endpoint-|pc-|nb-|ws-|note-|desk-|ts-)/i.test(shortHost) ||\n    /-(w7|w10|w11|pc)\\b/i.test(shortHost);\n  const looksLikeWindowsEndpoint =\n    (looksLikeDesktopOs || (hasWinShare && hasRdp && !looksLikeServerOs)) &&\n    !looksLikeServerOs;\n  const specialtyName =\n    /(cam|camera|nvr|dvr|cftv|ipcam|cctv|print|printer|imp|mfp|catrac|acesso|access|tv|smart-?tv|signage)/i.test(shortHost);\n  const blockSpecialty =\n    !specialtyName &&\n    (looksLikeVmName ||\n      looksLikeWorkstationName ||\n      looksLikeWindowsEndpoint);\n\n  // Print server = servidor, não impressora\n  if (/printserver|print[-_]?srv|srv[-_]?print/i.test(shortHost)) {\n    return looksLikeVmName ? 'Servidor (VM)' : 'Servidor';\n  }\n\n  // --- Switch / roteador por hostname (antes de especialidades) ---\n  if (/(^|-)(sw|switch)(-|$)/i.test(shortHost) || /\\bswitch\\b|catalyst|procurve|nexus/i.test(text)) {\n    return 'Switch';\n  }\n  if (/(^|-)(rtr|router|gw)(-|$)/i.test(shortHost) || /\\broteador\\b|\\brouter\\b|mikrotik/i.test(`${shortHost} ${vendor}`)) {\n    if (!/\\bswitch\\b/i.test(shortHost)) return 'Roteador';\n  }\n\n  // --- Firewall ---\n  if (/\\bfirewall\\b|fortigate|palo alto|\\basa\\b|checkpoint|sophos|(^|-)fw(-|$)/i.test(`${shortHost} ${text}`)) {\n    return 'Firewall';\n  }\n\n  // --- Storage / NAS ---\n  if (/truenas|synology|qnap|netapp|isilon|\\bnas\\b|\\bstorage\\b|\\bsan\\b/i.test(`${shortHost} ${text}`)) {\n    return 'Storage / NAS';\n  }\n\n  // --- Telefonia / PABX ---\n  if (\n    /pabx|voip|(^|-)(sip|ramal)(-|$)/i.test(shortHost) ||\n    hasAny(text, ['yealink', 'grandstream', 'polycom', 'cisco ip phone', 'softphone']) ||\n    (hasPort(portSet, [5060, 5061]) && !looksLikeServerOs)\n  ) {\n    return 'Telefone IP';\n  }\n\n  // --- Impressora (só evidência forte) ---\n  const printerFingerprint =\n    !!(host.deviceHints && host.deviceHints.printer) ||\n    (Array.isArray(host.printerEvidence) && host.printerEvidence.length > 0) ||\n    (Array.isArray(host.openPrintPorts) && host.openPrintPorts.length > 0);\n  const printerPorts = hasPort(portSet, [9100, 515, 631, 9101, 9102]);\n  const printerHost = /(^|-)(print|printer|imp|mfp|laser)(-|$)/i.test(shortHost);\n  const printerService = hasAny(services, ['jetdirect', 'ipp', 'lpd']);\n  const printerVendorStrong =\n    hasAny(vendor, ['xerox', 'lexmark', 'kyocera', 'ricoh', 'brother', 'epson']) ||\n    (/canon|hp|hewlett/i.test(vendor) && (printerPorts || printerHost || printerFingerprint));\n  if (!blockSpecialty && (printerFingerprint || printerPorts || printerService || printerHost || printerVendorStrong)) {\n    if (printerHost && /pulseira|wristband|etiqueta|zebra|argox|godex/i.test(text)) {\n      return 'Impressora de Pulseira / Etiqueta';\n    }\n    return 'Impressora';\n  }\n  if (!blockSpecialty && hasAny(text, ['pulseira', 'wristband', 'label printer', 'zebra printer', 'zc300', 'zt230', 'gc420', 'gk420'])) {\n    return 'Impressora de Pulseira / Etiqueta';\n  }\n\n  // --- Câmera / NVR (só evidência forte; nunca VM/estação Windows) ---\n  const cameraHost = /(^|-)(cam|camera|cftv|nvr|dvr|ipcam|cctv)(-|$)/i.test(shortHost);\n  const cameraVendor = hasAny(vendor, ['hikvision', 'dahua', 'axis', 'vivotek', 'hanwha']);\n  const cameraPortsStrong = hasPort(portSet, [554, 8554, 37777, 10554, 34567]);\n  const cameraService = hasAny(services, ['rtsp', 'onvif', 'dahu",
+        "implementation": [
+          "Arquivo: deviceTypeDetect.js",
+          "Símbolo: detectDeviceType()",
+          "GitHub: https://github.com/CanonEngineer/Professional-Scanner/blob/main/deviceTypeDetect.js"
+        ]
+      },
+      {
+        "id": "professional-scanner-fn-devicetypedetect-js-textblob",
+        "parent": "professional-scanner-file-devicetypedetect-js",
+        "layer": "function",
+        "title": "textBlob()",
+        "description": "Função em `deviceTypeDetect.js`",
+        "file": "deviceTypeDetect.js",
+        "code": "function textBlob(host) {\n  return [\n    host.hostname,\n    host.vendor,\n    host.os,\n    host.description,\n    host.adDn,\n    host.adLocation,\n    host.deviceType,\n    host.snmpSysDescr,\n    host.httpTitle,\n    host.httpServer,\n    host.tlsSubject,\n    Array.isArray(host.printerEvidence) ? host.printerEvidence.join(' ') : '',\n    Array.isArray(host.enrichmentNotes) ? host.enrichmentNotes.join(' ') : ''\n  ].filter(Boolean).join(' ').toLowerCase();\n}",
+        "implementation": [
+          "Arquivo: deviceTypeDetect.js",
+          "Símbolo: textBlob()",
+          "GitHub: https://github.com/CanonEngineer/Professional-Scanner/blob/main/deviceTypeDetect.js"
+        ]
+      },
+      {
+        "id": "professional-scanner-fn-devicetypedetect-js-hasany",
+        "parent": "professional-scanner-file-devicetypedetect-js",
+        "layer": "function",
+        "title": "hasAny()",
+        "description": "Função em `deviceTypeDetect.js`",
+        "file": "deviceTypeDetect.js",
+        "code": "function hasAny(text, keywords) {\n  return keywords.some(k => text.includes(k));\n}",
+        "implementation": [
+          "Arquivo: deviceTypeDetect.js",
+          "Símbolo: hasAny()",
+          "GitHub: https://github.com/CanonEngineer/Professional-Scanner/blob/main/deviceTypeDetect.js"
+        ]
+      },
+      {
+        "id": "professional-scanner-fn-devicetypedetect-js-hasport",
+        "parent": "professional-scanner-file-devicetypedetect-js",
+        "layer": "function",
+        "title": "hasPort()",
+        "description": "Função em `deviceTypeDetect.js`",
+        "file": "deviceTypeDetect.js",
+        "code": "function hasPort(portSet, ports) {\n  return ports.some(p => portSet.has(p));\n}",
+        "implementation": [
+          "Arquivo: deviceTypeDetect.js",
+          "Símbolo: hasPort()",
+          "GitHub: https://github.com/CanonEngineer/Professional-Scanner/blob/main/deviceTypeDetect.js"
+        ]
+      },
+      {
         "id": "professional-scanner-file-fileshareaudit-js",
         "parent": "professional-scanner-grp-files-c-d-f-h",
         "layer": "file",
@@ -8741,6 +8797,446 @@ const PROJECTS = [
         "code": "const dns = require('dns').promises;\r\nconst net = require('net');\r\nconst tls = require('tls');\r\nconst http = require('http');\r\nconst https = require('https');\r\nconst fs = require('fs');\r\nconst path = require('path');\r\nconst dgram = require('dgram');\r\nconst { execFile } = require('child_process');\r\nconst { promisify } = require('util');\r\nconst { detectVirtualization } = require('./vmVlanStrategy');\r\n\r\nconst execFileAsync = promisify(execFile);\r\n\r\nconst DATA_DIR = path.join(__dirname, 'data');\r\nconst AD_IP_INDEX_FILE = path.join(DATA_DIR, 'ad-ip-index.json');\r\nconst AD_COMPUTERS_CACHE_FILE = path.join(DATA_DIR, 'ad-computers-cache.json');\r\nconst AD_IP_INDEX_MAX_AGE_MS = 24 * 60 * 60 * 1000;\r\n\r\n/** Shared printer fingerprints (SNMP / HTTP / TLS / hostname). */\r\nconst PRINTER_PATTERN = /printer|impressora|impress\\w*|laserjet|deskjet|officejet|pagewide|designjet|imageclass|pixma|ecosys|workcentre|versamark|multifunc|mfp\\b|jetdirect|cups|ipp\\/|printer[-_ ]?server|print[-_ ]?server|bizhub|imagerunner|ir[- ]?adv|canon\\s*(i[rfp]|lbp|mf|gx)|hp\\s*eprint|kyocera|ricoh|lexmark|xerox|brother|epson|sharp\\s*(mx|bp|ar)|konica|minolta|pantum|\\boki\\b|dell\\s*laser|samsung\\s*laser|phoenix\\s*contact.*print|hw-?printer|prt[-_]|\\bprn\\b/i;\r\n\r\nconst PRINTER_VENDOR_PATTERN = /\\b(canon|epson|brother|lexmark|xerox|kyocera|ricoh|konica|minolta|sharp|pantum|oki|zebra|honeywell\\s*printer|hp\\s*(inc|printing|laser)|hewlett[- ]?packard)\\b/i;\r\n\r\nfunction looksLikePrinter(...parts) {\r\n  const text = parts.filter(Boolean).join(' ');\r\n  if (!text) return false;\r\n  return PRINTER_PATTERN.test(text) || PRINTER_VENDOR_PATTERN.test(text);\r\n}\r\n\r\nconst EMPTY = new Set(['', 'N/A', 'n/a', 'Desconhecido', 'null', 'undefined']);\r\n\r\nfunction isEmpty(value) {\r\n  if (value == null) return true;\r\n  const s = String(value).trim();\r\n  return !s || EMPTY.has(s);\r\n}\r\n\r\nfunction pick(...values) {\r\n  for (const v of values) {\r\n    if (!isEmpty(v)) return typeof v === 'string' ? v.trim() : v;\r\n  }\r\n  return 'N/A';\r\n}\r\n\r\nfunction shortName(hostname) {\r\n  if (isEmpty(hostname)) return null;\r\n  return String(hostname).split('.')[0].toUpperCase();\r\n}\r\n\r\nfunction runPowerShell(script, timeoutMs = 20000) {\r\n  const encoded = Buffer.from(script, 'utf16le').toString('base64');\r\n  return execFileAsync(\r\n    'powershell.exe',\r\n    ['-NoProfile', '-NonInteractive', '-ExecutionPolicy', 'Bypass', '-EncodedCommand', encoded],\r\n    {\r\n      timeout: timeoutMs,\r\n      windowsHide: true,\r\n      maxBuffer: 20 * 1024 * 1024,\r\n      encoding: 'utf8'\r\n    }\r\n  ).then(({ stdout, stderr }) => ({ stdout: stdout || '', stderr: stderr || '' }));\r\n}\r\n\r\nfunction filetimeToIso(filetime) {\r\n  const n = Number(filetime);\r\n  if (!Number.isFinite(n) || n <= 0) return null;\r\n  // Windows FILETIME (100ns since 1601) → JS Date\r\n  const ms = (n / 10000) - 11644473600000;\r\n  const d = new Date(ms);\r\n  return Number.isNaN(d.getTime()) ? null : d.toISOString();\r\n}\r\n\r\nfunction mapWindowsBuild(major, minor, build) {\r\n  if (major == null) return null;\r\n  const m = Number(major);\r\n  const n = Number(minor);\r\n  const b = Number(build) || 0;\r\n  if (m === 10 && n === 0) {\r\n    if (b >= 22000) return 'Windows 11 / Server 2022+';\r\n    if (b >= 20348) return 'Windows Server 2022';\r\n    if (b >= 19041) return 'Windows 10 / Server 2019+';\r\n    if (b >= 17763) return 'Windows 10 / Server 2019';\r\n    if (b >= 14393) return 'Windows 10 / Server 2016';\r\n    return 'Windows 10 / Server 2016+';\r\n  }\r\n  if (m === 6 && n === 3) return 'Windows 8.1 / Server 2012 R2';\r\n  if (m === 6 && n === 2) return 'Windows 8 / Server 2012';\r\n  if (m === 6 && n === 1) return 'Windows 7 / Server 2008 R2';\r\n  if (m === 6 && n === 0) return 'Windows Vista / Server 2008';\r\n  if (m === 5) return 'Windows XP / Server 2003';\r\n  return `Windows ${m}.${n}${b ? ` (build ${b})` : ''}`;\r\n}\r\n\r\n// ---------- AD / LDAP (catalog once per scan) ----------\r\n\r\nasync function loadAdCatalog(timeoutMs = 45000) {\r\n  const script = `\r\n$ErrorActionPreference = 'Stop'\r\ntry {\r\n  $rootDse = [ADSI]'LDAP://RootDSE'\r\n  $defaultNc = $rootDse.defaultNamingContext.ToString()\r\n  $dnsHost = $null\r\n  try { $dnsHost = $rootDse.dnsHostName.ToString() } catch {}\r\n  $domainDns = $null\r\n  try {\r\n    $domainDns = ([ADSI](\"LDAP://$defaultNc\")).dnsRoot\r\n    if ($domainDns -is [System.DirectoryServices.PropertyValueCollection]) {\r\n      $domainDns = $domainDns[0]\r\n    }\r\n  } catch {}\r\n  if (-not $domainDns) {\r\n    try { $domainDns = [System.DirectoryServices.ActiveDirectory.Domain]::GetCurrentDomain().Name } catch {}\r\n  }\r\n\r\n  $searcher = New-Object System.DirectoryServices.DirectorySearcher\r\n  $searcher.SearchRoot = [ADSI](\"LDAP://$defaultNc\")\r\n  $searcher.Filter = '(objectCategory=computer)'\r\n  $searcher.PageSize = 1000\r\n  $props = @(\r\n    'cn','name','sAMAccountName','dNSHostName','operatingSystem','operatingSystemVersion',\r\n    'operatingSystemServicePack','distinguishedName','description',\r\n    'whenCreated','lastLogonTimestamp','location','managedBy','userAccountControl'\r\n  )\r\n  foreach ($p in $props) { [void]$searcher.PropertiesToLoad.Add($p) }\r\n\r\n  $computers = @()\r\n  foreach ($r in $searcher.FindAll()) {\r\n    $get = {\r\n      param($key)\r\n      if ($r.Properties[$key] -and $r.Properties[$key].Count -gt 0) { return [string]$r.Properties[$key][0] }\r\n      return $null\r\n    }\r\n    $computers += [PSCustomObject]@{\r\n      cn = & $get 'cn'\r\n      name = & $get 'name'\r\n      sAMAccountName = & $get 'sAMAccountName'\r\n      dNSHostName = & $get 'dNSHostName'\r\n      operatingSystem = & $get 'operatingSystem'\r\n      operatingSystemVersion = & $get 'operatingSystemVersion'\r\n      operatingSystemServicePack = & $get 'operatingSystemServicePack'\r\n      distinguishedName = & $get 'distinguishedName'\r\n      description = & $get 'description'\r\n      whenCreated = & $get 'whenCreated'\r\n      lastLogonTimestamp = & $get 'lastLogonTimestamp'\r\n      location = & $get 'location'\r\n      managedBy = & $get 'managedBy'\r\n      userAccountControl = & $get 'userAccountControl'\r\n    }\r\n  }\r\n\r\n  $payload = [PSCustomObject]@{\r\n    ok = $true\r\n    defaultNamingContext = $defaultNc\r\n    domainDns = $domainDns\r\n    dnsHostName = $dnsHost\r\n    computerCount = $computers.Count\r\n    computers = $computers\r\n  }\r\n  $payload | ConvertTo-Json -Depth 6 -Compress\r\n} catch {\r\n  (@{ ok = $false; error = $_.Exception.Message }) | ConvertTo-Json -Compress\r\n}\r\n`;\r\n\r\n  try {\r\n    const { stdout } = await runPowerShell(script, timeoutMs);\r\n    const jsonStart = stdout.indexOf('{');\r\n    if (jsonStart < 0) {\r\n      return { ok: false, error: 'Resposta LDAP vazia', byDns: new Map(), byCn: new Map(), byIp: new Map() };\r\n    }\r\n    const parsed = JSON.parse(stdout.slice(jsonStart));\r\n    if (!parsed.ok) {\r\n      return { ok: false, error: parsed.error || 'Falha LDAP', byDns: new Map(), byCn: new Map(), byIp: new Map() };\r\n    }\r\n\r\n    const byDns = new Map();\r\n    const byCn = new Map();\r\n    const list = Array.isArray(parsed.computers) ? parsed.computers : [];\r\n\r\n    for (const c of list) {\n\n/* … truncado na árvore (arquivo completo no GitHub) … */\n",
         "implementation": [
           "path: hostEnrichment.js",
+          "GitHub: https://github.com/CanonEngineer/Professional-Scanner/blob/main/hostEnrichment.js"
+        ]
+      },
+      {
+        "id": "professional-scanner-grp-hostenrichment-js-functions",
+        "parent": "professional-scanner-file-hostenrichment-js",
+        "layer": "module",
+        "title": "Funções",
+        "description": "Funções em `hostEnrichment.js`",
+        "file": "hostEnrichment.js#functions",
+        "code": "# Funções em hostEnrichment.js\n",
+        "implementation": [
+          "agrupamento: functions"
+        ]
+      },
+      {
+        "id": "professional-scanner-grp-hostenrichment-js-functions-1-12",
+        "parent": "professional-scanner-grp-hostenrichment-js-functions",
+        "layer": "module",
+        "title": "Funções 1–12",
+        "description": "Fatia 1–12 de funções em `hostEnrichment.js`",
+        "file": "hostEnrichment.js#functions-1-12",
+        "code": "# Funções 1-12 em hostEnrichment.js\n",
+        "implementation": [
+          "agrupamento: functions"
+        ]
+      },
+      {
+        "id": "professional-scanner-grp-hostenrichment-js-functions-13-24",
+        "parent": "professional-scanner-grp-hostenrichment-js-functions",
+        "layer": "module",
+        "title": "Funções 13–24",
+        "description": "Fatia 13–24 de funções em `hostEnrichment.js`",
+        "file": "hostEnrichment.js#functions-13-24",
+        "code": "# Funções 13-24 em hostEnrichment.js\n",
+        "implementation": [
+          "agrupamento: functions"
+        ]
+      },
+      {
+        "id": "professional-scanner-grp-hostenrichment-js-functions-25-28",
+        "parent": "professional-scanner-grp-hostenrichment-js-functions",
+        "layer": "module",
+        "title": "Funções 25–28",
+        "description": "Fatia 25–28 de funções em `hostEnrichment.js`",
+        "file": "hostEnrichment.js#functions-25-28",
+        "code": "# Funções 25-28 em hostEnrichment.js\n",
+        "implementation": [
+          "agrupamento: functions"
+        ]
+      },
+      {
+        "id": "professional-scanner-fn-hostenrichment-js-enrichhost",
+        "parent": "professional-scanner-grp-hostenrichment-js-functions-1-12",
+        "layer": "function",
+        "title": "enrichHost()",
+        "description": "Função em `hostEnrichment.js`",
+        "file": "hostEnrichment.js",
+        "code": "async function enrichHost(ip, { ttl = null, context = null, getVendorFromMac = () => 'Desconhecido' }",
+        "implementation": [
+          "Arquivo: hostEnrichment.js",
+          "Símbolo: enrichHost()",
+          "GitHub: https://github.com/CanonEngineer/Professional-Scanner/blob/main/hostEnrichment.js"
+        ]
+      },
+      {
+        "id": "professional-scanner-fn-hostenrichment-js-getosfromttl",
+        "parent": "professional-scanner-grp-hostenrichment-js-functions-1-12",
+        "layer": "function",
+        "title": "getOSFromTTL()",
+        "description": "Função em `hostEnrichment.js`",
+        "file": "hostEnrichment.js",
+        "code": "function getOSFromTTL(ttl) {\n  if (!ttl) return 'Desconhecido';\n  if (ttl <= 64) return 'Linux / macOS / Android';\n  if (ttl <= 128) return 'Windows';\n  if (ttl <= 255) return 'Dispositivo de Rede (Cisco/Router/Embedded)';\n  return 'Desconhecido';\n}",
+        "implementation": [
+          "Arquivo: hostEnrichment.js",
+          "Símbolo: getOSFromTTL()",
+          "GitHub: https://github.com/CanonEngineer/Professional-Scanner/blob/main/hostEnrichment.js"
+        ]
+      },
+      {
+        "id": "professional-scanner-fn-hostenrichment-js-getmacfromarp",
+        "parent": "professional-scanner-grp-hostenrichment-js-functions-1-12",
+        "layer": "function",
+        "title": "getMacFromArp()",
+        "description": "Função em `hostEnrichment.js`",
+        "file": "hostEnrichment.js",
+        "code": "function getMacFromArp(ip) {\n  return execFileAsync('arp', ['-a', ip], {\n    timeout: 3000,\n    windowsHide: true,\n    encoding: 'utf8'\n  }).then(({ stdout }) => {\n    const lines = (stdout || '').split(/\\r?\\n/);\n    for (const line of lines) {\n      if (!line.includes(ip)) continue;\n      const macMatch = line.match(/([0-9a-fA-F]{2}[:-]){5}([0-9a-fA-F]{2})/);\n      if (macMatch) return macMatch[0].toUpperCase().replace(/:/g, '-');\n    }\n    return null;\n  }).catch(() => null);\n}",
+        "implementation": [
+          "Arquivo: hostEnrichment.js",
+          "Símbolo: getMacFromArp()",
+          "GitHub: https://github.com/CanonEngineer/Professional-Scanner/blob/main/hostEnrichment.js"
+        ]
+      },
+      {
+        "id": "professional-scanner-fn-hostenrichment-js-lookupad",
+        "parent": "professional-scanner-grp-hostenrichment-js-functions-1-12",
+        "layer": "function",
+        "title": "lookupAd()",
+        "description": "Função em `hostEnrichment.js`",
+        "file": "hostEnrichment.js",
+        "code": "function lookupAd(catalog, hostnameHints = []) {\n  if (!catalog || !catalog.ok) return null;\n\n  for (const hint of hostnameHints) {\n    if (isEmpty(hint)) continue;\n    const fqdn = String(hint).toLowerCase();\n    if (catalog.byDns.has(fqdn)) return { ...catalog.byDns.get(fqdn), matchedBy: 'dnsHostName' };\n\n    const cn = shortName(hint);\n    if (cn && catalog.byCn.has(cn)) return { ...catalog.byCn.get(cn), matchedBy: 'cn' };\n\n    // Try hint + domain\n    if (catalog.domainDns && !fqdn.includes('.')) {\n      const full = `${fqdn}.${String(catalog.domainDns).toLowerCase()}`;\n      if (catalog.byDns.has(full)) return { ...catalog.byDns.get(full), matchedBy: 'dnsHostName+domain' };\n    }\n  }\n  return null;\n}",
+        "implementation": [
+          "Arquivo: hostEnrichment.js",
+          "Símbolo: lookupAd()",
+          "GitHub: https://github.com/CanonEngineer/Professional-Scanner/blob/main/hostEnrichment.js"
+        ]
+      },
+      {
+        "id": "professional-scanner-fn-hostenrichment-js-lookupadbyip",
+        "parent": "professional-scanner-grp-hostenrichment-js-functions-1-12",
+        "layer": "function",
+        "title": "lookupAdByIp()",
+        "description": "Função em `hostEnrichment.js`",
+        "file": "hostEnrichment.js",
+        "code": "function lookupAdByIp(catalog, ip) {\n  if (!catalog || !catalog.ok || !catalog.byIp || !ip) return null;\n  const entry = catalog.byIp.get(String(ip).trim());\n  if (!entry) return null;\n  return { ...entry, matchedBy: 'ip' };\n}",
+        "implementation": [
+          "Arquivo: hostEnrichment.js",
+          "Símbolo: lookupAdByIp()",
+          "GitHub: https://github.com/CanonEngineer/Professional-Scanner/blob/main/hostEnrichment.js"
+        ]
+      },
+      {
+        "id": "professional-scanner-fn-hostenrichment-js-detectvm",
+        "parent": "professional-scanner-grp-hostenrichment-js-functions-1-12",
+        "layer": "function",
+        "title": "detectVM()",
+        "description": "Função em `hostEnrichment.js`",
+        "file": "hostEnrichment.js",
+        "code": "function detectVM(mac, vendor, os) {\n  return detectVirtualization({ mac, vendor, os }).vm;\n}",
+        "implementation": [
+          "Arquivo: hostEnrichment.js",
+          "Símbolo: detectVM()",
+          "GitHub: https://github.com/CanonEngineer/Professional-Scanner/blob/main/hostEnrichment.js"
+        ]
+      },
+      {
+        "id": "professional-scanner-fn-hostenrichment-js-lookslikeprinter",
+        "parent": "professional-scanner-grp-hostenrichment-js-functions-1-12",
+        "layer": "function",
+        "title": "looksLikePrinter()",
+        "description": "Função em `hostEnrichment.js`",
+        "file": "hostEnrichment.js",
+        "code": "function looksLikePrinter(...parts) {\n  const text = parts.filter(Boolean).join(' ');\n  if (!text) return false;\n  return PRINTER_PATTERN.test(text) || PRINTER_VENDOR_PATTERN.test(text);\n}",
+        "implementation": [
+          "Arquivo: hostEnrichment.js",
+          "Símbolo: looksLikePrinter()",
+          "GitHub: https://github.com/CanonEngineer/Professional-Scanner/blob/main/hostEnrichment.js"
+        ]
+      },
+      {
+        "id": "professional-scanner-fn-hostenrichment-js-isempty",
+        "parent": "professional-scanner-grp-hostenrichment-js-functions-1-12",
+        "layer": "function",
+        "title": "isEmpty()",
+        "description": "Função em `hostEnrichment.js`",
+        "file": "hostEnrichment.js",
+        "code": "function isEmpty(value) {\n  if (value == null) return true;\n  const s = String(value).trim();\n  return !s || EMPTY.has(s);\n}",
+        "implementation": [
+          "Arquivo: hostEnrichment.js",
+          "Símbolo: isEmpty()",
+          "GitHub: https://github.com/CanonEngineer/Professional-Scanner/blob/main/hostEnrichment.js"
+        ]
+      },
+      {
+        "id": "professional-scanner-fn-hostenrichment-js-pick",
+        "parent": "professional-scanner-grp-hostenrichment-js-functions-1-12",
+        "layer": "function",
+        "title": "pick()",
+        "description": "Função em `hostEnrichment.js`",
+        "file": "hostEnrichment.js",
+        "code": "function pick(...values) {\n  for (const v of values) {\n    if (!isEmpty(v)) return typeof v === 'string' ? v.trim() : v;\n  }\n  return 'N/A';\n}",
+        "implementation": [
+          "Arquivo: hostEnrichment.js",
+          "Símbolo: pick()",
+          "GitHub: https://github.com/CanonEngineer/Professional-Scanner/blob/main/hostEnrichment.js"
+        ]
+      },
+      {
+        "id": "professional-scanner-fn-hostenrichment-js-shortname",
+        "parent": "professional-scanner-grp-hostenrichment-js-functions-1-12",
+        "layer": "function",
+        "title": "shortName()",
+        "description": "Função em `hostEnrichment.js`",
+        "file": "hostEnrichment.js",
+        "code": "function shortName(hostname) {\n  if (isEmpty(hostname)) return null;\n  return String(hostname).split('.')[0].toUpperCase();\n}",
+        "implementation": [
+          "Arquivo: hostEnrichment.js",
+          "Símbolo: shortName()",
+          "GitHub: https://github.com/CanonEngineer/Professional-Scanner/blob/main/hostEnrichment.js"
+        ]
+      },
+      {
+        "id": "professional-scanner-fn-hostenrichment-js-runpowershell",
+        "parent": "professional-scanner-grp-hostenrichment-js-functions-1-12",
+        "layer": "function",
+        "title": "runPowerShell()",
+        "description": "Função em `hostEnrichment.js`",
+        "file": "hostEnrichment.js",
+        "code": "function runPowerShell(script, timeoutMs = 20000) {\n  const encoded = Buffer.from(script, 'utf16le').toString('base64');\n  return execFileAsync(\n    'powershell.exe',\n    ['-NoProfile', '-NonInteractive', '-ExecutionPolicy', 'Bypass', '-EncodedCommand', encoded],\n    {\n      timeout: timeoutMs,\n      windowsHide: true,\n      maxBuffer: 20 * 1024 * 1024,\n      encoding: 'utf8'\n    }\n  ).then(({ stdout, stderr }) => ({ stdout: stdout || '', stderr: stderr || '' }));\n}",
+        "implementation": [
+          "Arquivo: hostEnrichment.js",
+          "Símbolo: runPowerShell()",
+          "GitHub: https://github.com/CanonEngineer/Professional-Scanner/blob/main/hostEnrichment.js"
+        ]
+      },
+      {
+        "id": "professional-scanner-fn-hostenrichment-js-filetimetoiso",
+        "parent": "professional-scanner-grp-hostenrichment-js-functions-1-12",
+        "layer": "function",
+        "title": "filetimeToIso()",
+        "description": "Função em `hostEnrichment.js`",
+        "file": "hostEnrichment.js",
+        "code": "function filetimeToIso(filetime) {\n  const n = Number(filetime);\n  if (!Number.isFinite(n) || n <= 0) return null;\n  // Windows FILETIME (100ns since 1601) → JS Date\n  const ms = (n / 10000) - 11644473600000;\n  const d = new Date(ms);\n  return Number.isNaN(d.getTime()) ? null : d.toISOString();\n}",
+        "implementation": [
+          "Arquivo: hostEnrichment.js",
+          "Símbolo: filetimeToIso()",
+          "GitHub: https://github.com/CanonEngineer/Professional-Scanner/blob/main/hostEnrichment.js"
+        ]
+      },
+      {
+        "id": "professional-scanner-fn-hostenrichment-js-mapwindowsbuild",
+        "parent": "professional-scanner-grp-hostenrichment-js-functions-13-24",
+        "layer": "function",
+        "title": "mapWindowsBuild()",
+        "description": "Função em `hostEnrichment.js`",
+        "file": "hostEnrichment.js",
+        "code": "function mapWindowsBuild(major, minor, build) {\n  if (major == null) return null;\n  const m = Number(major);\n  const n = Number(minor);\n  const b = Number(build) || 0;\n  if (m === 10 && n === 0) {\n    if (b >= 22000) return 'Windows 11 / Server 2022+';\n    if (b >= 20348) return 'Windows Server 2022';\n    if (b >= 19041) return 'Windows 10 / Server 2019+';\n    if (b >= 17763) return 'Windows 10 / Server 2019';\n    if (b >= 14393) return 'Windows 10 / Server 2016';\n    return 'Windows 10 / Server 2016+';\n  }\n  if (m === 6 && n === 3) return 'Windows 8.1 / Server 2012 R2';\n  if (m === 6 && n === 2) return 'Windows 8 / Server 2012';\n  if (m === 6 && n === 1) return 'Windows 7 / Server 2008 R2';\n  if (m === 6 && n === 0) return 'Windows Vista / Server 2008';\n  if (m === 5) return 'Windows XP / Server 2003';\n  return `Windows ${m}.${n}${b ? ` (build ${b})` : ''}`;\n}",
+        "implementation": [
+          "Arquivo: hostEnrichment.js",
+          "Símbolo: mapWindowsBuild()",
+          "GitHub: https://github.com/CanonEngineer/Professional-Scanner/blob/main/hostEnrichment.js"
+        ]
+      },
+      {
+        "id": "professional-scanner-fn-hostenrichment-js-loadadcatalog",
+        "parent": "professional-scanner-grp-hostenrichment-js-functions-13-24",
+        "layer": "function",
+        "title": "loadAdCatalog()",
+        "description": "Função em `hostEnrichment.js`",
+        "file": "hostEnrichment.js",
+        "code": "// loadAdCatalog()\n// função em hostEnrichment.js\n",
+        "implementation": [
+          "Arquivo: hostEnrichment.js",
+          "Símbolo: loadAdCatalog()",
+          "GitHub: https://github.com/CanonEngineer/Professional-Scanner/blob/main/hostEnrichment.js"
+        ]
+      },
+      {
+        "id": "professional-scanner-fn-hostenrichment-js-saveadcomputerscache",
+        "parent": "professional-scanner-grp-hostenrichment-js-functions-13-24",
+        "layer": "function",
+        "title": "saveAdComputersCache()",
+        "description": "Função em `hostEnrichment.js`",
+        "file": "hostEnrichment.js",
+        "code": "function saveAdComputersCache(catalog) {\n  if (!catalog?.ok) return;\n  try {\n    if (!fs.existsSync(DATA_DIR)) fs.mkdirSync(DATA_DIR, { recursive: true });\n    const seen = new Set();\n    const computers = [];\n    for (const entry of catalog.byDns.values()) {\n      const key = entry.distinguishedName || entry.dNSHostName || entry.cn;\n      if (!key || seen.has(key)) continue;\n      seen.add(key);\n      computers.push({\n        cn: entry.cn || null,\n        name: entry.name || null,\n        sAMAccountName: entry.sAMAccountName || null,\n        dNSHostName: entry.dNSHostName || null,\n        distinguishedName: entry.distinguishedName || null,\n        description: entry.description || null,\n        location: entry.location || null,\n        managedBy: entry.managedBy || null,\n        operatingSystem: entry.operatingSystem || null,\n        adDomain: entry.adDomain || catalog.domainDns || null\n      });\n    }\n    const ipMap = {};\n    if (catalog.byIp instanceof Map) {\n      for (const [ip, entry] of catalog.byIp.entries()) {\n        ipMap[ip] = entry.dNSHostName || entry.cn || entry.name || null;\n      }\n    }\n    fs.writeFileSync(\n      AD_COMPUTERS_CACHE_FILE,\n      JSON.stringify({\n        cachedAt: Date.now(),\n        domainDns: catalog.domainDns || null,\n        computerCount: catalog.computerCount || computers.length,\n        computers,\n        ipMap\n      }),\n      'utf8'\n    );\n  } catch {\n    // ignore cache write errors\n  }\n}",
+        "implementation": [
+          "Arquivo: hostEnrichment.js",
+          "Símbolo: saveAdComputersCache()",
+          "GitHub: https://github.com/CanonEngineer/Professional-Scanner/blob/main/hostEnrichment.js"
+        ]
+      },
+      {
+        "id": "professional-scanner-fn-hostenrichment-js-loadadipindexcache",
+        "parent": "professional-scanner-grp-hostenrichment-js-functions-13-24",
+        "layer": "function",
+        "title": "loadAdIpIndexCache()",
+        "description": "Função em `hostEnrichment.js`",
+        "file": "hostEnrichment.js",
+        "code": "function loadAdIpIndexCache(domainDns, computerCount) {\n  try {\n    if (!fs.existsSync(AD_IP_INDEX_FILE)) return null;\n    const raw = JSON.parse(fs.readFileSync(AD_IP_INDEX_FILE, 'utf8'));\n    if (!raw || raw.domainDns !== domainDns || raw.computerCount !== computerCount) return null;\n    if (!raw.builtAt || Date.now() - raw.builtAt > AD_IP_INDEX_MAX_AGE_MS) return null;\n    if (!raw.map || typeof raw.map !== 'object') return null;\n    return raw.map;\n  } catch {\n    return null;\n  }\n}",
+        "implementation": [
+          "Arquivo: hostEnrichment.js",
+          "Símbolo: loadAdIpIndexCache()",
+          "GitHub: https://github.com/CanonEngineer/Professional-Scanner/blob/main/hostEnrichment.js"
+        ]
+      },
+      {
+        "id": "professional-scanner-fn-hostenrichment-js-saveadipindexcache",
+        "parent": "professional-scanner-grp-hostenrichment-js-functions-13-24",
+        "layer": "function",
+        "title": "saveAdIpIndexCache()",
+        "description": "Função em `hostEnrichment.js`",
+        "file": "hostEnrichment.js",
+        "code": "function saveAdIpIndexCache(domainDns, computerCount, mapObj) {\n  try {\n    if (!fs.existsSync(DATA_DIR)) fs.mkdirSync(DATA_DIR, { recursive: true });\n    fs.writeFileSync(\n      AD_IP_INDEX_FILE,\n      JSON.stringify({\n        builtAt: Date.now(),\n        domainDns,\n        computerCount,\n        map: mapObj\n      }),\n      'utf8'\n    );\n  } catch {\n    // ignore cache write errors\n  }\n}",
+        "implementation": [
+          "Arquivo: hostEnrichment.js",
+          "Símbolo: saveAdIpIndexCache()",
+          "GitHub: https://github.com/CanonEngineer/Professional-Scanner/blob/main/hostEnrichment.js"
+        ]
+      },
+      {
+        "id": "professional-scanner-fn-hostenrichment-js-buildadipindex",
+        "parent": "professional-scanner-grp-hostenrichment-js-functions-13-24",
+        "layer": "function",
+        "title": "buildAdIpIndex()",
+        "description": "Função em `hostEnrichment.js`",
+        "file": "hostEnrichment.js",
+        "code": "async function buildAdIpIndex(catalog, log = () => {}",
+        "implementation": [
+          "Arquivo: hostEnrichment.js",
+          "Símbolo: buildAdIpIndex()",
+          "GitHub: https://github.com/CanonEngineer/Professional-Scanner/blob/main/hostEnrichment.js"
+        ]
+      },
+      {
+        "id": "professional-scanner-fn-hostenrichment-js-worker",
+        "parent": "professional-scanner-grp-hostenrichment-js-functions-13-24",
+        "layer": "function",
+        "title": "worker()",
+        "description": "Função em `hostEnrichment.js`",
+        "file": "hostEnrichment.js",
+        "code": "async function worker() {\n    while (idx < names.length) {\n      const current = names[idx++];\n      try {\n        const addrs = await Promise.race([\n          dns.resolve4(current.fqdn),\n          new Promise((resolve) => setTimeout(() => resolve([]), 2500))\n        ]);\n        for (const ip of addrs || []) {\n          if (!catalog.byIp.has(ip)) {\n            catalog.byIp.set(ip, current.entry);\n            mapObj[ip] = current.fqdn;\n          }\n        }\n      } catch {\n        // skip\n      }\n      resolved++;\n      if (resolved % 500 === 0 || resolved === names.length) {\n        log(`[~] Índice AD→IP: ${resolved}/${names.length} (mapeados=${catalog.byIp.size})`);\n      }\n    }\n  }",
+        "implementation": [
+          "Arquivo: hostEnrichment.js",
+          "Símbolo: worker()",
+          "GitHub: https://github.com/CanonEngineer/Professional-Scanner/blob/main/hostEnrichment.js"
+        ]
+      },
+      {
+        "id": "professional-scanner-fn-hostenrichment-js-cleanhostnamecandidate",
+        "parent": "professional-scanner-grp-hostenrichment-js-functions-13-24",
+        "layer": "function",
+        "title": "cleanHostnameCandidate()",
+        "description": "Função em `hostEnrichment.js`",
+        "file": "hostEnrichment.js",
+        "code": "function cleanHostnameCandidate(name) {\n  if (isEmpty(name)) return null;\n  let s = String(name).trim().replace(/\\.$/, '');\n  // Strip trailing DNS suffixes noise from nslookup\n  if (/^(localhost|in-addr\\.arpa)$/i.test(s)) return null;\n  if (/^\\d+\\.\\d+\\.\\d+\\.\\d+$/.test(s)) return null;\n  // Reject IPv6 / link-local junk sometimes found in TLS certs\n  if (/^[0-9a-f:]+$/i.test(s) || /^fe80:/i.test(s) || s.includes(':')) return null;\n  if (/\\s/.test(s)) return null;\n  return s;\n}",
+        "implementation": [
+          "Arquivo: hostEnrichment.js",
+          "Símbolo: cleanHostnameCandidate()",
+          "GitHub: https://github.com/CanonEngineer/Professional-Scanner/blob/main/hostEnrichment.js"
+        ]
+      },
+      {
+        "id": "professional-scanner-fn-hostenrichment-js-hostnamefromloosecandidate",
+        "parent": "professional-scanner-grp-hostenrichment-js-functions-13-24",
+        "layer": "function",
+        "title": "hostnameFromLooseCandidate()",
+        "description": "Função em `hostEnrichment.js`",
+        "file": "hostEnrichment.js",
+        "code": "function hostnameFromLooseCandidate(raw) {\n  const strict = cleanHostnameCandidate(raw);\n  if (strict) return strict;\n  const s = String(raw || '').trim();\n  if (s.length < 3 || s.length > 48) return null;\n  if (/^(unknown|default|admin|printer|n\\/a|null)$/i.test(s)) return null;\n  if (/[<>{}|\\\\/]/.test(s)) return null;\n  const slug = s\n    .normalize('NFD')\n    .replace(/[\\u0300-\\u036f]/g, '')\n    .replace(/\\s+/g, '-')\n    .replace(/[^A-Za-z0-9._-]/g, '')\n    .replace(/^-+|-+$/g, '');\n  return slug.length >= 3 ? slug : null;\n}",
+        "implementation": [
+          "Arquivo: hostEnrichment.js",
+          "Símbolo: hostnameFromLooseCandidate()",
+          "GitHub: https://github.com/CanonEngineer/Professional-Scanner/blob/main/hostEnrichment.js"
+        ]
+      },
+      {
+        "id": "professional-scanner-fn-hostenrichment-js-derivefallbackhostname",
+        "parent": "professional-scanner-grp-hostenrichment-js-functions-13-24",
+        "layer": "function",
+        "title": "deriveFallbackHostname()",
+        "description": "Função em `hostEnrichment.js`",
+        "file": "hostEnrichment.js",
+        "code": "function deriveFallbackHostname(ip, meta = {}",
+        "implementation": [
+          "Arquivo: hostEnrichment.js",
+          "Símbolo: deriveFallbackHostname()",
+          "GitHub: https://github.com/CanonEngineer/Professional-Scanner/blob/main/hostEnrichment.js"
+        ]
+      },
+      {
+        "id": "professional-scanner-fn-hostenrichment-js-resolvehostnamefinal",
+        "parent": "professional-scanner-grp-hostenrichment-js-functions-13-24",
+        "layer": "function",
+        "title": "resolveHostnameFinal()",
+        "description": "Função em `hostEnrichment.js`",
+        "file": "hostEnrichment.js",
+        "code": "function resolveHostnameFinal(ip, hostname, meta = {}",
+        "implementation": [
+          "Arquivo: hostEnrichment.js",
+          "Símbolo: resolveHostnameFinal()",
+          "GitHub: https://github.com/CanonEngineer/Professional-Scanner/blob/main/hostEnrichment.js"
+        ]
+      },
+      {
+        "id": "professional-scanner-fn-hostenrichment-js-queryloggedonuserviaquser",
+        "parent": "professional-scanner-grp-hostenrichment-js-functions-13-24",
+        "layer": "function",
+        "title": "queryLoggedOnUserViaQUser()",
+        "description": "Função em `hostEnrichment.js`",
+        "file": "hostEnrichment.js",
+        "code": "async function queryLoggedOnUserViaQUser(ip, timeoutMs = 3500) {\n  const safeIp = String(ip || '').trim();\n  if (!safeIp || !/^\\d+\\.\\d+\\.\\d+\\.\\d+$/.test(safeIp)) return null;\n  const parseOutput = (text) => {\n    const lines = String(text || '').split(/\\r?\\n/).map((l) => l.trim()).filter(Boolean);\n    for (const line of lines) {\n      if (/^USERNAME/i.test(line) || /^>{0,1}$/.test(line)) continue;\n      const m = line.match(/^([^\\s>]+)/);\n      if (!m) continue;\n      const user = m[1].replace(/^>/, '').trim();\n      if (!user || /^USERNAME$/i.test(user) || /^(SERVIÇO|SERVICE)$/i.test(user)) continue;\n      return user;\n    }\n    return null;\n  };\n  try {\n    const { stdout } = await execFileAsync('query', ['user', `/server:${safeIp}`], {\n      timeout: timeoutMs,\n      windowsHide: true,\n      encoding: 'utf8'\n    });\n    return parseOutput(stdout);\n  } catch (err) {\n    return parseOutput(err?.stdout || '');\n  }\n}",
+        "implementation": [
+          "Arquivo: hostEnrichment.js",
+          "Símbolo: queryLoggedOnUserViaQUser()",
+          "GitHub: https://github.com/CanonEngineer/Professional-Scanner/blob/main/hostEnrichment.js"
+        ]
+      },
+      {
+        "id": "professional-scanner-fn-hostenrichment-js-queryloggedonuser",
+        "parent": "professional-scanner-grp-hostenrichment-js-functions-25-28",
+        "layer": "function",
+        "title": "queryLoggedOnUser()",
+        "description": "Função em `hostEnrichment.js`",
+        "file": "hostEnrichment.js",
+        "code": "async function queryLoggedOnUser(ip, timeoutMs = 3500) {\n  const safeIp = String(ip || '').trim();\n  if (!safeIp || !/^\\d+\\.\\d+\\.\\d+\\.\\d+$/.test(safeIp)) return null;\n\n  const quser = await queryLoggedOnUserViaQUser(safeIp, timeoutMs);\n  if (quser) return quser;\n\n  try {\n    const { stdout } = await execFileAsync(\n      'powershell',\n      [\n        '-NoProfile',\n        '-Command',\n        `$u = (Get-CimInstance -ClassName Win32_ComputerSystem -ComputerName '${safeIp}' -ErrorAction SilentlyContinue).UserName; if ($u) { Write-Output $u }`\n      ],\n      { timeout: timeoutMs, windowsHide: true }\n    );\n    const line = String(stdout || '').trim().split(/\\r?\\n/).pop()?.trim();\n    if (!line || /error|access denied|rpc|failed/i.test(line)) return null;\n    return line;\n  } catch {\n    return null;\n  }\n}",
+        "implementation": [
+          "Arquivo: hostEnrichment.js",
+          "Símbolo: queryLoggedOnUser()",
+          "GitHub: https://github.com/CanonEngineer/Professional-Scanner/blob/main/hostEnrichment.js"
+        ]
+      },
+      {
+        "id": "professional-scanner-fn-hostenrichment-js-resolvednsreversenode",
+        "parent": "professional-scanner-grp-hostenrichment-js-functions-25-28",
+        "layer": "function",
+        "title": "resolveDnsReverseNode()",
+        "description": "Função em `hostEnrichment.js`",
+        "file": "hostEnrichment.js",
+        "code": "async function resolveDnsReverseNode(ip) {\n  try {\n    const names = await dns.reverse(ip);\n    return cleanHostnameCandidate(names && names[0]);\n  } catch {\n    return null;\n  }\n}",
+        "implementation": [
+          "Arquivo: hostEnrichment.js",
+          "Símbolo: resolveDnsReverseNode()",
+          "GitHub: https://github.com/CanonEngineer/Professional-Scanner/blob/main/hostEnrichment.js"
+        ]
+      },
+      {
+        "id": "professional-scanner-fn-hostenrichment-js-resolvednsreversewindows",
+        "parent": "professional-scanner-grp-hostenrichment-js-functions-25-28",
+        "layer": "function",
+        "title": "resolveDnsReverseWindows()",
+        "description": "Função em `hostEnrichment.js`",
+        "file": "hostEnrichment.js",
+        "code": "async function resolveDnsReverseWindows(ip) {\n  // ping -a: \"Pinging HOST [ip]\" or \"Disparando HOST [ip]\"\n  try {\n    const { stdout } = await execFileAsync('ping', ['-a', '-n', '1', '-w', '400', ip], {\n      timeout: 2500,\n      windowsHide: true,\n      encoding: 'utf8'\n    });\n    const m =\n      (stdout || '').match(/Pinging\\s+([^\\s\\[\\]]+)\\s*\\[/i) ||\n      (stdout || '').match(/Disparando\\s+([^\\s\\[\\]]+)\\s*\\[/i) ||\n      (stdout || '').match(/Pingando\\s+([^\\s\\[\\]]+)\\s*\\[/i);\n    if (m) {\n      const host = cleanHostnameCandidate(m[1]);\n      if (host && host !== ip) return host;\n    }\n  } catch {\n    // continue\n  }\n\n  try {\n    const { stdout } = await execFileAsync('nslookup', [ip], {\n      timeout: 3000,\n      windowsHide: true,\n      encoding: 'utf8'\n    });\n    const text = stdout || '';\n    const m =\n      text.match(/Name:\\s*(\\S+)/i) ||\n      text.match(/Nome:\\s*(\\S+)/i) ||\n      text.match(/name\\s*=\\s*(\\S+)/i);\n    if (m) return cleanHostnameCandidate(m[1]);\n  } catch (err) {\n    // nslookup often exits non-zero but still prints Name:\n    const text = (err && err.stdout) || '';\n    const m =\n      text.match(/Name:\\s*(\\S+)/i) ||\n      text.match(/Nome:\\s*(\\S+)/i);\n    if (m) return cleanHostnameCandidate(m[1]);\n  }\n\n  return null;\n}",
+        "implementation": [
+          "Arquivo: hostEnrichment.js",
+          "Símbolo: resolveDnsReverseWindows()",
+          "GitHub: https://github.com/CanonEngineer/Professional-Scanner/blob/main/hostEnrichment.js"
+        ]
+      },
+      {
+        "id": "professional-scanner-fn-hostenrichment-js-resolvednsreverse",
+        "parent": "professional-scanner-grp-hostenrichment-js-functions-25-28",
+        "layer": "function",
+        "title": "resolveDnsReverse()",
+        "description": "Função em `hostEnrichment.js`",
+        "file": "hostEnrichment.js",
+        "code": "async function resolveDnsReverse(ip) {\n  const viaNode = await resolveDnsReverseNode(ip);\n  if (viaNode) return viaNode;\n  return resolveDnsReverseWindows(ip);\n}",
+        "implementation": [
+          "Arquivo: hostEnrichment.js",
+          "Símbolo: resolveDnsReverse()",
           "GitHub: https://github.com/CanonEngineer/Professional-Scanner/blob/main/hostEnrichment.js"
         ]
       },
@@ -8806,6 +9302,118 @@ const PROJECTS = [
         "code": "const express = require('express');\r\nconst {\r\n  getInventory,\r\n  getAllInventoryItems,\r\n  syncInventoryFromScanAsync,\r\n  resolveInventoryAdUsers,\r\n  computeStats,\r\n  loadStore,\r\n  saveStore,\r\n  buildInventoryContext,\r\n  enrichAllItems,\r\n  detectFlags\r\n} = require('./inventory');\r\nconst { generateInventoryXlsx } = require('./inventoryXlsx');\r\nconst { generateInventoryPdf } = require('./inventoryPdf');\r\nconst { generateInventoryCsv } = require('./inventoryCsv');\r\n\r\nfunction mountInventoryRoutes(app, ctx = {}) {\r\n  const router = express.Router();\r\n  const getResults = () => (typeof ctx.getLastScanSnapshot === 'function' ? ctx.getLastScanSnapshot() : []);\r\n\r\n  if (typeof ctx.requireModalsAuth === 'function') {\r\n    router.use(ctx.requireModalsAuth);\r\n  }\r\n\r\n  router.get('/', (req, res) => {\r\n    try {\r\n      res.json(getInventory(req.query));\r\n    } catch (err) {\r\n      res.status(500).json({ ok: false, error: err.message });\r\n    }\r\n  });\r\n\r\n  router.get('/stats', (req, res) => {\r\n    try {\r\n      const items = getAllInventoryItems();\r\n      res.json({ ok: true, stats: computeStats(items), lastScanAt: items[0]?.lastScanAt || null });\r\n    } catch (err) {\r\n      res.status(500).json({ ok: false, error: err.message });\r\n    }\r\n  });\r\n\r\n  router.post('/sync', async (req, res) => {\r\n    try {\r\n      const results = req.body?.results || getResults();\r\n      if (!results.length) {\r\n        const store = loadStore();\r\n        const ctx = buildInventoryContext();\r\n        const adResolve = await resolveInventoryAdUsers(store, ctx, req.body?.meta?.adResolveOptions || {});\r\n        const items = detectFlags(enrichAllItems(Object.values(store.items), ctx));\r\n        store.items = Object.fromEntries(items.map((i) => [i.ip, i]));\r\n        saveStore(store);\r\n        return res.json({\r\n          ok: true,\r\n          mode: 'ad-only',\r\n          added: 0,\r\n          updated: 0,\r\n          absent: 0,\r\n          removed: 0,\r\n          adUsersResolved: adResolve.resolved || 0,\r\n          adUsersScanned: adResolve.scanned || 0,\r\n          macEnriched: adResolve.macFilled || 0,\r\n          snmpMacFilled: adResolve.snmpMacFilled || 0,\r\n          snmpEntries: adResolve.snmpEntries || 0,\r\n          portsEnriched: adResolve.portsFilled || 0,\r\n          firstSeenBackfilled: adResolve.firstSeenFilled || 0,\r\n          adSnapshot: adResolve.snapshot || null,\r\n          total: items.length,\r\n          lastScanAt: store.lastScanAt,\r\n          lastScanTarget: store.lastScanTarget,\r\n          message: 'Sem varredura em memória; inventário persistido atualizado (AD, MAC, portas, datas).'\r\n        });\r\n      }\r\n      const data = await syncInventoryFromScanAsync(results, req.body?.meta || {});\r\n      res.json(data);\r\n    } catch (err) {\r\n      res.status(500).json({ ok: false, error: err.message });\r\n    }\r\n  });\r\n\r\n  router.post('/resolve-ad-users', async (req, res) => {\r\n    try {\r\n      const store = loadStore();\r\n      const ctx = buildInventoryContext();\r\n      const result = await resolveInventoryAdUsers(store, ctx, req.body?.options || {});\r\n      const items = detectFlags(enrichAllItems(Object.values(store.items), ctx));\r\n      store.items = Object.fromEntries(items.map((i) => [i.ip, i]));\r\n      saveStore(store);\r\n      res.json({ ok: true, ...result, total: items.length });\r\n    } catch (err) {\r\n      res.status(500).json({ ok: false, error: err.message });\r\n    }\r\n  });\r\n\r\n  router.post('/export-xlsx', async (req, res) => {\r\n    try {\r\n      const items = getAllInventoryItems();\r\n      if (!items.length) return res.status(400).json({ error: 'Inventário vazio. Execute uma varredura e sincronize.' });\r\n      const stats = computeStats(items);\r\n      const buffer = await generateInventoryXlsx(items, stats, { lastScanAt: items[0]?.lastScanAt });\r\n      const stamp = new Date().toISOString().slice(0, 19).replace(/[:T]/g, '-');\r\n      res.setHeader('Content-Type', 'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet');\r\n      res.setHeader('Content-Disposition', `attachment; filename=\"inventario-unesp-${stamp}.xlsx\"`);\r\n      res.send(buffer);\r\n    } catch (err) {\r\n      res.status(500).json({ error: err.message || 'Falha ao gerar Excel.' });\r\n    }\r\n  });\r\n\r\n  router.post('/export-pdf', async (req, res) => {\r\n    try {\r\n      const items = getAllInventoryItems();\r\n      if (!items.length) return res.status(400).json({ error: 'Inventário vazio.' });\r\n      const stats = computeStats(items);\r\n      const pdf = await generateInventoryPdf(items, stats, { lastScanAt: items[0]?.lastScanAt });\r\n      const stamp = new Date().toISOString().slice(0, 19).replace(/[:T]/g, '-');\r\n      res.setHeader('Content-Type', 'application/pdf');\r\n      res.setHeader('Content-Disposition', `attachment; filename=\"inventario-unesp-${stamp}.pdf\"`);\r\n      res.send(pdf);\r\n    } catch (err) {\r\n      res.status(500).json({ error: err.message || 'Falha ao gerar PDF.' });\r\n    }\r\n  });\r\n\r\n  router.post('/export-csv', (req, res) => {\r\n    try {\r\n      const items = getAllInventoryItems();\r\n      if (!items.length) return res.status(400).json({ error: 'Inventário vazio.' });\r\n      const stats = computeStats(items);\r\n      const csv = generateInventoryCsv(items, stats);\r\n      const stamp = new Date().toISOString().slice(0, 19).replace(/[:T]/g, '-');\r\n      res.setHeader('Content-Type', 'text/csv; charset=utf-16le');\r\n      res.setHeader('Content-Disposition', `attachment; filename=\"inventario-unesp-${stamp}.csv\"`);\r\n      res.send(csv);\r\n    } catch (err) {\r\n      res.status(500).json({ error: err.message || 'Falha ao gerar CSV.' });\r\n    }\r\n  });\r\n\r\n  app.use('/api/inventory', router);\r\n}\r\n\r\nmodule.exports = { mountInventoryRoutes };\r\n",
         "implementation": [
           "path: inventoryRoutes.js",
+          "GitHub: https://github.com/CanonEngineer/Professional-Scanner/blob/main/inventoryRoutes.js"
+        ]
+      },
+      {
+        "id": "professional-scanner-fn-inventoryroutes-js-get",
+        "parent": "professional-scanner-file-inventoryroutes-js",
+        "layer": "function",
+        "title": "GET /",
+        "description": "Rota em `inventoryRoutes.js`",
+        "file": "inventoryRoutes.js",
+        "code": "router.get('/', (req, res) => {\n    try {\n      res.json(getInventory(req.query));\n    } catch (err) {\n      res.status(500).json({ ok: false, error: err.message });\n    }\n  }",
+        "implementation": [
+          "Arquivo: inventoryRoutes.js",
+          "Símbolo: GET /",
+          "GitHub: https://github.com/CanonEngineer/Professional-Scanner/blob/main/inventoryRoutes.js"
+        ]
+      },
+      {
+        "id": "professional-scanner-fn-inventoryroutes-js-get-stats",
+        "parent": "professional-scanner-file-inventoryroutes-js",
+        "layer": "function",
+        "title": "GET /stats",
+        "description": "Rota em `inventoryRoutes.js`",
+        "file": "inventoryRoutes.js",
+        "code": "router.get('/stats', (req, res) => {\n    try {\n      const items = getAllInventoryItems();\n      res.json({ ok: true, stats: computeStats(items), lastScanAt: items[0]?.lastScanAt || null });\n    } catch (err) {\n      res.status(500).json({ ok: false, error: err.message });\n    }\n  }",
+        "implementation": [
+          "Arquivo: inventoryRoutes.js",
+          "Símbolo: GET /stats",
+          "GitHub: https://github.com/CanonEngineer/Professional-Scanner/blob/main/inventoryRoutes.js"
+        ]
+      },
+      {
+        "id": "professional-scanner-fn-inventoryroutes-js-post-sync",
+        "parent": "professional-scanner-file-inventoryroutes-js",
+        "layer": "function",
+        "title": "POST /sync",
+        "description": "Rota em `inventoryRoutes.js`",
+        "file": "inventoryRoutes.js",
+        "code": "router.post('/sync', async (req, res) => {\n    try {\n      const results = req.body?.results || getResults();\n      if (!results.length) {\n        const store = loadStore();\n        const ctx = buildInventoryContext();\n        const adResolve = await resolveInventoryAdUsers(store, ctx, req.body?.meta?.adResolveOptions || {});\n        const items = detectFlags(enrichAllItems(Object.values(store.items), ctx));\n        store.items = Object.fromEntries(items.map((i) => [i.ip, i]));\n        saveStore(store);\n        return res.json({\n          ok: true,\n          mode: 'ad-only',\n          added: 0,\n          updated: 0,\n          absent: 0,\n          removed: 0,\n          adUsersResolved: adResolve.resolved || 0,\n          adUsersScanned: adResolve.scanned || 0,\n          macEnriched: adResolve.macFilled || 0,\n          snmpMacFilled: adResolve.snmpMacFilled || 0,\n          snmpEntries: adResolve.snmpEntries || 0,\n          portsEnriched: adResolve.portsFilled || 0,\n          firstSeenBackfilled: adResolve.firstSeenFilled || 0,\n          adSnapshot: adResolve.snapshot || null,\n          total: items.length,\n          lastScanAt: store.lastScanAt,\n          lastScanTarget: store.lastScanTarget,\n          message: 'Sem varredura em memória; inventário persistido atualizado (AD, MAC, portas, datas).'\n        });\n      }\n      const data = await syncInventoryFromScanAsync(results, req.body?.meta || {});\n      res.json(data);\n    } catch (err) {\n      res.status(500).json({ ok: false, error: err.message });\n    }\n  }",
+        "implementation": [
+          "Arquivo: inventoryRoutes.js",
+          "Símbolo: POST /sync",
+          "GitHub: https://github.com/CanonEngineer/Professional-Scanner/blob/main/inventoryRoutes.js"
+        ]
+      },
+      {
+        "id": "professional-scanner-fn-inventoryroutes-js-post-resolve-ad-users",
+        "parent": "professional-scanner-file-inventoryroutes-js",
+        "layer": "function",
+        "title": "POST /resolve-ad-users",
+        "description": "Rota em `inventoryRoutes.js`",
+        "file": "inventoryRoutes.js",
+        "code": "router.post('/resolve-ad-users', async (req, res) => {\n    try {\n      const store = loadStore();\n      const ctx = buildInventoryContext();\n      const result = await resolveInventoryAdUsers(store, ctx, req.body?.options || {});\n      const items = detectFlags(enrichAllItems(Object.values(store.items), ctx));\n      store.items = Object.fromEntries(items.map((i) => [i.ip, i]));\n      saveStore(store);\n      res.json({ ok: true, ...result, total: items.length });\n    } catch (err) {\n      res.status(500).json({ ok: false, error: err.message });\n    }\n  }",
+        "implementation": [
+          "Arquivo: inventoryRoutes.js",
+          "Símbolo: POST /resolve-ad-users",
+          "GitHub: https://github.com/CanonEngineer/Professional-Scanner/blob/main/inventoryRoutes.js"
+        ]
+      },
+      {
+        "id": "professional-scanner-fn-inventoryroutes-js-post-export-xlsx",
+        "parent": "professional-scanner-file-inventoryroutes-js",
+        "layer": "function",
+        "title": "POST /export-xlsx",
+        "description": "Rota em `inventoryRoutes.js`",
+        "file": "inventoryRoutes.js",
+        "code": "router.post('/export-xlsx', async (req, res) => {\n    try {\n      const items = getAllInventoryItems();\n      if (!items.length) return res.status(400).json({ error: 'Inventário vazio. Execute uma varredura e sincronize.' });\n      const stats = computeStats(items);\n      const buffer = await generateInventoryXlsx(items, stats, { lastScanAt: items[0]?.lastScanAt });\n      const stamp = new Date().toISOString().slice(0, 19).replace(/[:T]/g, '-');\n      res.setHeader('Content-Type', 'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet');\n      res.setHeader('Content-Disposition', `attachment; filename=\"inventario-unesp-${stamp}.xlsx\"`);\n      res.send(buffer);\n    } catch (err) {\n      res.status(500).json({ error: err.message || 'Falha ao gerar Excel.' });\n    }\n  }",
+        "implementation": [
+          "Arquivo: inventoryRoutes.js",
+          "Símbolo: POST /export-xlsx",
+          "GitHub: https://github.com/CanonEngineer/Professional-Scanner/blob/main/inventoryRoutes.js"
+        ]
+      },
+      {
+        "id": "professional-scanner-fn-inventoryroutes-js-post-export-pdf",
+        "parent": "professional-scanner-file-inventoryroutes-js",
+        "layer": "function",
+        "title": "POST /export-pdf",
+        "description": "Rota em `inventoryRoutes.js`",
+        "file": "inventoryRoutes.js",
+        "code": "router.post('/export-pdf', async (req, res) => {\n    try {\n      const items = getAllInventoryItems();\n      if (!items.length) return res.status(400).json({ error: 'Inventário vazio.' });\n      const stats = computeStats(items);\n      const pdf = await generateInventoryPdf(items, stats, { lastScanAt: items[0]?.lastScanAt });\n      const stamp = new Date().toISOString().slice(0, 19).replace(/[:T]/g, '-');\n      res.setHeader('Content-Type', 'application/pdf');\n      res.setHeader('Content-Disposition', `attachment; filename=\"inventario-unesp-${stamp}.pdf\"`);\n      res.send(pdf);\n    } catch (err) {\n      res.status(500).json({ error: err.message || 'Falha ao gerar PDF.' });\n    }\n  }",
+        "implementation": [
+          "Arquivo: inventoryRoutes.js",
+          "Símbolo: POST /export-pdf",
+          "GitHub: https://github.com/CanonEngineer/Professional-Scanner/blob/main/inventoryRoutes.js"
+        ]
+      },
+      {
+        "id": "professional-scanner-fn-inventoryroutes-js-post-export-csv",
+        "parent": "professional-scanner-file-inventoryroutes-js",
+        "layer": "function",
+        "title": "POST /export-csv",
+        "description": "Rota em `inventoryRoutes.js`",
+        "file": "inventoryRoutes.js",
+        "code": "router.post('/export-csv', (req, res) => {\n    try {\n      const items = getAllInventoryItems();\n      if (!items.length) return res.status(400).json({ error: 'Inventário vazio.' });\n      const stats = computeStats(items);\n      const csv = generateInventoryCsv(items, stats);\n      const stamp = new Date().toISOString().slice(0, 19).replace(/[:T]/g, '-');\n      res.setHeader('Content-Type', 'text/csv; charset=utf-16le');\n      res.setHeader('Content-Disposition', `attachment; filename=\"inventario-unesp-${stamp}.csv\"`);\n      res.send(csv);\n    } catch (err) {\n      res.status(500).json({ error: err.message || 'Falha ao gerar CSV.' });\n    }\n  }",
+        "implementation": [
+          "Arquivo: inventoryRoutes.js",
+          "Símbolo: POST /export-csv",
+          "GitHub: https://github.com/CanonEngineer/Professional-Scanner/blob/main/inventoryRoutes.js"
+        ]
+      },
+      {
+        "id": "professional-scanner-fn-inventoryroutes-js-mountinventoryroutes",
+        "parent": "professional-scanner-file-inventoryroutes-js",
+        "layer": "function",
+        "title": "mountInventoryRoutes()",
+        "description": "Função em `inventoryRoutes.js`",
+        "file": "inventoryRoutes.js",
+        "code": "function mountInventoryRoutes(app, ctx = {}",
+        "implementation": [
+          "Arquivo: inventoryRoutes.js",
+          "Símbolo: mountInventoryRoutes()",
           "GitHub: https://github.com/CanonEngineer/Professional-Scanner/blob/main/inventoryRoutes.js"
         ]
       },
@@ -8979,6 +9587,362 @@ const PROJECTS = [
         ]
       },
       {
+        "id": "professional-scanner-grp-platformroutes-js-routes",
+        "parent": "professional-scanner-file-platformroutes-js",
+        "layer": "module",
+        "title": "Rotas API",
+        "description": "Rotas API em `platformRoutes.js`",
+        "file": "platformRoutes.js#routes",
+        "code": "# Rotas API em platformRoutes.js\n",
+        "implementation": [
+          "agrupamento: routes"
+        ]
+      },
+      {
+        "id": "professional-scanner-grp-platformroutes-js-routes-1-12",
+        "parent": "professional-scanner-grp-platformroutes-js-routes",
+        "layer": "module",
+        "title": "Rotas API 1–12",
+        "description": "Fatia 1–12 de rotas api em `platformRoutes.js`",
+        "file": "platformRoutes.js#routes-1-12",
+        "code": "# Rotas API 1-12 em platformRoutes.js\n",
+        "implementation": [
+          "agrupamento: routes"
+        ]
+      },
+      {
+        "id": "professional-scanner-grp-platformroutes-js-routes-13-21",
+        "parent": "professional-scanner-grp-platformroutes-js-routes",
+        "layer": "module",
+        "title": "Rotas API 13–21",
+        "description": "Fatia 13–21 de rotas api em `platformRoutes.js`",
+        "file": "platformRoutes.js#routes-13-21",
+        "code": "# Rotas API 13-21 em platformRoutes.js\n",
+        "implementation": [
+          "agrupamento: routes"
+        ]
+      },
+      {
+        "id": "professional-scanner-grp-platformroutes-js-functions",
+        "parent": "professional-scanner-file-platformroutes-js",
+        "layer": "module",
+        "title": "Funções",
+        "description": "Funções em `platformRoutes.js`",
+        "file": "platformRoutes.js#functions",
+        "code": "# Funções em platformRoutes.js\n",
+        "implementation": [
+          "agrupamento: functions"
+        ]
+      },
+      {
+        "id": "professional-scanner-fn-platformroutes-js-get-health",
+        "parent": "professional-scanner-grp-platformroutes-js-routes-1-12",
+        "layer": "function",
+        "title": "GET /health",
+        "description": "Rota em `platformRoutes.js`",
+        "file": "platformRoutes.js",
+        "code": "router.get('/health', (req, res) => {\n    res.json({ ok: true, service: 'NetScan Canon Platform', version: 1 });\n  }",
+        "implementation": [
+          "Arquivo: platformRoutes.js",
+          "Símbolo: GET /health",
+          "GitHub: https://github.com/CanonEngineer/Professional-Scanner/blob/main/platformRoutes.js"
+        ]
+      },
+      {
+        "id": "professional-scanner-fn-platformroutes-js-get-config",
+        "parent": "professional-scanner-grp-platformroutes-js-routes-1-12",
+        "layer": "function",
+        "title": "GET /config",
+        "description": "Rota em `platformRoutes.js`",
+        "file": "platformRoutes.js",
+        "code": "router.get('/config', requirePlatformAuth('platform.read'), (req, res) => {\n    res.json({ ok: true, config: loadPlatformConfig(), rbac: getPublicRbacInfo() });\n  }",
+        "implementation": [
+          "Arquivo: platformRoutes.js",
+          "Símbolo: GET /config",
+          "GitHub: https://github.com/CanonEngineer/Professional-Scanner/blob/main/platformRoutes.js"
+        ]
+      },
+      {
+        "id": "professional-scanner-fn-platformroutes-js-put-config",
+        "parent": "professional-scanner-grp-platformroutes-js-routes-1-12",
+        "layer": "function",
+        "title": "PUT /config",
+        "description": "Rota em `platformRoutes.js`",
+        "file": "platformRoutes.js",
+        "code": "router.put('/config', requirePlatformAuth('platform.admin'), (req, res) => {\n    try {\n      const saved = savePlatformConfig(req.body || {});\n      res.json({ ok: true, config: saved });\n    } catch (err) {\n      res.status(500).json({ ok: false, error: err.message });\n    }\n  }",
+        "implementation": [
+          "Arquivo: platformRoutes.js",
+          "Símbolo: PUT /config",
+          "GitHub: https://github.com/CanonEngineer/Professional-Scanner/blob/main/platformRoutes.js"
+        ]
+      },
+      {
+        "id": "professional-scanner-fn-platformroutes-js-get-sites",
+        "parent": "professional-scanner-grp-platformroutes-js-routes-1-12",
+        "layer": "function",
+        "title": "GET /sites",
+        "description": "Rota em `platformRoutes.js`",
+        "file": "platformRoutes.js",
+        "code": "router.get('/sites', requirePlatformAuth('platform.read'), (req, res) => {\n    const cfg = loadPlatformConfig();\n    res.json({ ok: true, activeSiteId: cfg.activeSiteId, sites: cfg.sites || [] });\n  }",
+        "implementation": [
+          "Arquivo: platformRoutes.js",
+          "Símbolo: GET /sites",
+          "GitHub: https://github.com/CanonEngineer/Professional-Scanner/blob/main/platformRoutes.js"
+        ]
+      },
+      {
+        "id": "professional-scanner-fn-platformroutes-js-put-sites-active",
+        "parent": "professional-scanner-grp-platformroutes-js-routes-1-12",
+        "layer": "function",
+        "title": "PUT /sites/active",
+        "description": "Rota em `platformRoutes.js`",
+        "file": "platformRoutes.js",
+        "code": "router.put('/sites/active', requirePlatformAuth('platform.admin'), (req, res) => {\n    const id = String(req.body?.siteId || '').trim();\n    const cfg = loadPlatformConfig();\n    if (!(cfg.sites || []).some((s) => s.id === id)) {\n      return res.status(400).json({ ok: false, error: 'Site não encontrado.' });\n    }\n    res.json({ ok: true, config: savePlatformConfig({ activeSiteId: id }) });\n  }",
+        "implementation": [
+          "Arquivo: platformRoutes.js",
+          "Símbolo: PUT /sites/active",
+          "GitHub: https://github.com/CanonEngineer/Professional-Scanner/blob/main/platformRoutes.js"
+        ]
+      },
+      {
+        "id": "professional-scanner-fn-platformroutes-js-get-v1-hosts",
+        "parent": "professional-scanner-grp-platformroutes-js-routes-1-12",
+        "layer": "function",
+        "title": "GET /v1/hosts",
+        "description": "Rota em `platformRoutes.js`",
+        "file": "platformRoutes.js",
+        "code": "router.get('/v1/hosts', requirePlatformAuth('platform.read'), (req, res) => {\n    const results = getResults();\n    res.json({ ok: true, updatedAt: Date.now(), count: results.length, hosts: results });\n  }",
+        "implementation": [
+          "Arquivo: platformRoutes.js",
+          "Símbolo: GET /v1/hosts",
+          "GitHub: https://github.com/CanonEngineer/Professional-Scanner/blob/main/platformRoutes.js"
+        ]
+      },
+      {
+        "id": "professional-scanner-fn-platformroutes-js-get-drift",
+        "parent": "professional-scanner-grp-platformroutes-js-routes-1-12",
+        "layer": "function",
+        "title": "GET /drift",
+        "description": "Rota em `platformRoutes.js`",
+        "file": "platformRoutes.js",
+        "code": "router.get('/drift', requirePlatformAuth('platform.drift'), (req, res) => {\n    if (!isFeatureEnabled('drift')) return res.status(404).json({ ok: false, error: 'Drift desabilitado.' });\n    res.json(getDriftReport());\n  }",
+        "implementation": [
+          "Arquivo: platformRoutes.js",
+          "Símbolo: GET /drift",
+          "GitHub: https://github.com/CanonEngineer/Professional-Scanner/blob/main/platformRoutes.js"
+        ]
+      },
+      {
+        "id": "professional-scanner-fn-platformroutes-js-get-correlation",
+        "parent": "professional-scanner-grp-platformroutes-js-routes-1-12",
+        "layer": "function",
+        "title": "GET /correlation",
+        "description": "Rota em `platformRoutes.js`",
+        "file": "platformRoutes.js",
+        "code": "router.get('/correlation', requirePlatformAuth('platform.correlation'), async (req, res) => {\n    if (!isFeatureEnabled('correlation')) return res.status(404).json({ ok: false, error: 'Correlação desabilitada.' });\n    try {\n      const ip = req.query.ip;\n      const results = getResults();\n      if (ip) {\n        const host = results.find((h) => h.ip === ip) || { ip };\n        return res.json(await correlateHost(host, {\n          switchIp: req.query.switchIp,\n          community: req.query.community\n        }));\n      }\n      const out = await correlateScanResults(results, {\n        maxHosts: Number(req.query.limit) || 25,\n        switchIp: req.query.switchIp,\n        community: req.query.community,\n        includeInactive: req.query.includeInactive === '1'\n      });\n      res.json(out);\n    } catch (err) {\n      res.status(500).json({ ok: false, error: err.message });\n    }\n  }",
+        "implementation": [
+          "Arquivo: platformRoutes.js",
+          "Símbolo: GET /correlation",
+          "GitHub: https://github.com/CanonEngineer/Professional-Scanner/blob/main/platformRoutes.js"
+        ]
+      },
+      {
+        "id": "professional-scanner-fn-platformroutes-js-post-tls-scan",
+        "parent": "professional-scanner-grp-platformroutes-js-routes-1-12",
+        "layer": "function",
+        "title": "POST /tls-scan",
+        "description": "Rota em `platformRoutes.js`",
+        "file": "platformRoutes.js",
+        "code": "router.post('/tls-scan', requirePlatformAuth('platform.read'), async (req, res) => {\n    if (!isFeatureEnabled('tlsScan')) return res.status(404).json({ ok: false, error: 'TLS scan desabilitado.' });\n    try {\n      const ips = req.body?.ips || req.body?.hosts;\n      const hosts = ips || getResults();\n      const out = await scanTlsForHosts(hosts, {\n        ports: req.body?.ports || [443],\n        maxHosts: Number(req.body?.maxHosts) || 32,\n        timeoutMs: Number(req.body?.timeoutMs) || 5000\n      });\n      res.json(out);\n    } catch (err) {\n      res.status(500).json({ ok: false, error: err.message });\n    }\n  }",
+        "implementation": [
+          "Arquivo: platformRoutes.js",
+          "Símbolo: POST /tls-scan",
+          "GitHub: https://github.com/CanonEngineer/Professional-Scanner/blob/main/platformRoutes.js"
+        ]
+      },
+      {
+        "id": "professional-scanner-fn-platformroutes-js-get-nac",
+        "parent": "professional-scanner-grp-platformroutes-js-routes-1-12",
+        "layer": "function",
+        "title": "GET /nac",
+        "description": "Rota em `platformRoutes.js`",
+        "file": "platformRoutes.js",
+        "code": "router.get('/nac', requirePlatformAuth('platform.read'), async (req, res) => {\n    if (!isFeatureEnabled('nacReadiness')) return res.status(404).json({ ok: false, error: 'NAC desabilitado.' });\n    try {\n      const ip = req.query.ip;\n      const results = getResults();\n      if (ip) {\n        const host = results.find((h) => h.ip === ip) || { ip };\n        return res.json(await assessNacReadiness(host));\n      }\n      res.json(await assessNacForScan(results, { maxHosts: Number(req.query.limit) || 40 }));\n    } catch (err) {\n      res.status(500).json({ ok: false, error: err.message });\n    }\n  }",
+        "implementation": [
+          "Arquivo: platformRoutes.js",
+          "Símbolo: GET /nac",
+          "GitHub: https://github.com/CanonEngineer/Professional-Scanner/blob/main/platformRoutes.js"
+        ]
+      },
+      {
+        "id": "professional-scanner-fn-platformroutes-js-get-fingerprint",
+        "parent": "professional-scanner-grp-platformroutes-js-routes-1-12",
+        "layer": "function",
+        "title": "GET /fingerprint",
+        "description": "Rota em `platformRoutes.js`",
+        "file": "platformRoutes.js",
+        "code": "router.get('/fingerprint', requirePlatformAuth('platform.read'), (req, res) => {\n    if (!isFeatureEnabled('deepFingerprint')) return res.status(404).json({ ok: false, error: 'Fingerprint desabilitado.' });\n    res.json(deepFingerprintScan(getResults(), Number(req.query.limit) || 100));\n  }",
+        "implementation": [
+          "Arquivo: platformRoutes.js",
+          "Símbolo: GET /fingerprint",
+          "GitHub: https://github.com/CanonEngineer/Professional-Scanner/blob/main/platformRoutes.js"
+        ]
+      },
+      {
+        "id": "professional-scanner-fn-platformroutes-js-get-passive",
+        "parent": "professional-scanner-grp-platformroutes-js-routes-1-12",
+        "layer": "function",
+        "title": "GET /passive",
+        "description": "Rota em `platformRoutes.js`",
+        "file": "platformRoutes.js",
+        "code": "router.get('/passive', requirePlatformAuth('platform.read'), async (req, res) => {\n    if (!isFeatureEnabled('passiveDiscovery')) return res.status(404).json({ ok: false, error: 'Passivo desabilitado.' });\n    try {\n      res.json(await passiveDiscoverySnapshot());\n    } catch (err) {\n      res.status(500).json({ ok: false, error: err.message });\n    }\n  }",
+        "implementation": [
+          "Arquivo: platformRoutes.js",
+          "Símbolo: GET /passive",
+          "GitHub: https://github.com/CanonEngineer/Professional-Scanner/blob/main/platformRoutes.js"
+        ]
+      },
+      {
+        "id": "professional-scanner-fn-platformroutes-js-get-lifecycle",
+        "parent": "professional-scanner-grp-platformroutes-js-routes-13-21",
+        "layer": "function",
+        "title": "GET /lifecycle",
+        "description": "Rota em `platformRoutes.js`",
+        "file": "platformRoutes.js",
+        "code": "router.get('/lifecycle', requirePlatformAuth('platform.lifecycle'), (req, res) => {\n    if (!isFeatureEnabled('assetLifecycle')) return res.status(404).json({ ok: false, error: 'Lifecycle desabilitado.' });\n    res.json(listAssets({ state: req.query.state }));\n  }",
+        "implementation": [
+          "Arquivo: platformRoutes.js",
+          "Símbolo: GET /lifecycle",
+          "GitHub: https://github.com/CanonEngineer/Professional-Scanner/blob/main/platformRoutes.js"
+        ]
+      },
+      {
+        "id": "professional-scanner-fn-platformroutes-js-put-lifecycle-ip",
+        "parent": "professional-scanner-grp-platformroutes-js-routes-13-21",
+        "layer": "function",
+        "title": "PUT /lifecycle/:ip",
+        "description": "Rota em `platformRoutes.js`",
+        "file": "platformRoutes.js",
+        "code": "router.put('/lifecycle/:ip', requirePlatformAuth('platform.lifecycle'), (req, res) => {\n    if (!isFeatureEnabled('assetLifecycle')) return res.status(404).json({ ok: false, error: 'Lifecycle desabilitado.' });\n    const result = setAssetState(req.params.ip, req.body?.state, {\n      note: req.body?.note,\n      operator: req.body?.operator,\n      hostname: req.body?.hostname\n    });\n    if (!result.ok) return res.status(400).json(result);\n    res.json(result);\n  }",
+        "implementation": [
+          "Arquivo: platformRoutes.js",
+          "Símbolo: PUT /lifecycle/:ip",
+          "GitHub: https://github.com/CanonEngineer/Professional-Scanner/blob/main/platformRoutes.js"
+        ]
+      },
+      {
+        "id": "professional-scanner-fn-platformroutes-js-get-lifecycle-states",
+        "parent": "professional-scanner-grp-platformroutes-js-routes-13-21",
+        "layer": "function",
+        "title": "GET /lifecycle/states",
+        "description": "Rota em `platformRoutes.js`",
+        "file": "platformRoutes.js",
+        "code": "router.get('/lifecycle/states', (req, res) => {\n    res.json({ ok: true, states: STATES });\n  }",
+        "implementation": [
+          "Arquivo: platformRoutes.js",
+          "Símbolo: GET /lifecycle/states",
+          "GitHub: https://github.com/CanonEngineer/Professional-Scanner/blob/main/platformRoutes.js"
+        ]
+      },
+      {
+        "id": "professional-scanner-fn-platformroutes-js-post-agent-report",
+        "parent": "professional-scanner-grp-platformroutes-js-routes-13-21",
+        "layer": "function",
+        "title": "POST /agent/report",
+        "description": "Rota em `platformRoutes.js`",
+        "file": "platformRoutes.js",
+        "code": "router.post('/agent/report', (req, res) => {\n    if (!isFeatureEnabled('canonAgent')) return res.status(404).json({ ok: false, error: 'Agent desabilitado.' });\n    const result = ingestAgentReport(req.body || {}, { agentVersion: req.headers['x-canon-agent-version'] });\n    if (!result.ok) return res.status(400).json(result);\n    dispatchWebhook('agent.report', { hostname: result.report.hostname, ip: result.report.ip }).catch(() => {});\n    res.json(result);\n  }",
+        "implementation": [
+          "Arquivo: platformRoutes.js",
+          "Símbolo: POST /agent/report",
+          "GitHub: https://github.com/CanonEngineer/Professional-Scanner/blob/main/platformRoutes.js"
+        ]
+      },
+      {
+        "id": "professional-scanner-fn-platformroutes-js-get-agent-reports",
+        "parent": "professional-scanner-grp-platformroutes-js-routes-13-21",
+        "layer": "function",
+        "title": "GET /agent/reports",
+        "description": "Rota em `platformRoutes.js`",
+        "file": "platformRoutes.js",
+        "code": "router.get('/agent/reports', requirePlatformAuth('platform.read'), (req, res) => {\n    res.json(listAgentReports(Number(req.query.limit) || 50));\n  }",
+        "implementation": [
+          "Arquivo: platformRoutes.js",
+          "Símbolo: GET /agent/reports",
+          "GitHub: https://github.com/CanonEngineer/Professional-Scanner/blob/main/platformRoutes.js"
+        ]
+      },
+      {
+        "id": "professional-scanner-fn-platformroutes-js-get-reports-daily",
+        "parent": "professional-scanner-grp-platformroutes-js-routes-13-21",
+        "layer": "function",
+        "title": "GET /reports/daily",
+        "description": "Rota em `platformRoutes.js`",
+        "file": "platformRoutes.js",
+        "code": "router.get('/reports/daily', requirePlatformAuth('platform.read'), (req, res) => {\n    res.json(buildDailyReport(getResults));\n  }",
+        "implementation": [
+          "Arquivo: platformRoutes.js",
+          "Símbolo: GET /reports/daily",
+          "GitHub: https://github.com/CanonEngineer/Professional-Scanner/blob/main/platformRoutes.js"
+        ]
+      },
+      {
+        "id": "professional-scanner-fn-platformroutes-js-post-reports-run",
+        "parent": "professional-scanner-grp-platformroutes-js-routes-13-21",
+        "layer": "function",
+        "title": "POST /reports/run",
+        "description": "Rota em `platformRoutes.js`",
+        "file": "platformRoutes.js",
+        "code": "router.post('/reports/run', requirePlatformAuth('platform.admin'), async (req, res) => {\n    try {\n      res.json(await runScheduledReport({ getLastScanSnapshot: getResults }));\n    } catch (err) {\n      res.status(500).json({ ok: false, error: err.message });\n    }\n  }",
+        "implementation": [
+          "Arquivo: platformRoutes.js",
+          "Símbolo: POST /reports/run",
+          "GitHub: https://github.com/CanonEngineer/Professional-Scanner/blob/main/platformRoutes.js"
+        ]
+      },
+      {
+        "id": "professional-scanner-fn-platformroutes-js-post-webhooks-test",
+        "parent": "professional-scanner-grp-platformroutes-js-routes-13-21",
+        "layer": "function",
+        "title": "POST /webhooks/test",
+        "description": "Rota em `platformRoutes.js`",
+        "file": "platformRoutes.js",
+        "code": "router.post('/webhooks/test', requirePlatformAuth('platform.admin'), async (req, res) => {\n    try {\n      res.json(await dispatchWebhook(req.body?.event || 'test.ping', { message: 'NetScan Canon webhook test' }));\n    } catch (err) {\n      res.status(500).json({ ok: false, error: err.message });\n    }\n  }",
+        "implementation": [
+          "Arquivo: platformRoutes.js",
+          "Símbolo: POST /webhooks/test",
+          "GitHub: https://github.com/CanonEngineer/Professional-Scanner/blob/main/platformRoutes.js"
+        ]
+      },
+      {
+        "id": "professional-scanner-fn-platformroutes-js-get-summary",
+        "parent": "professional-scanner-grp-platformroutes-js-routes-13-21",
+        "layer": "function",
+        "title": "GET /summary",
+        "description": "Rota em `platformRoutes.js`",
+        "file": "platformRoutes.js",
+        "code": "router.get('/summary', requirePlatformAuth('platform.read'), async (req, res) => {\n    const results = getResults();\n    const cfg = loadPlatformConfig();\n    const drift = isFeatureEnabled('drift') ? getDriftReport() : null;\n    const lifecycle = isFeatureEnabled('assetLifecycle') ? listAssets() : null;\n    let passive = null;\n    if (isFeatureEnabled('passiveDiscovery')) {\n      try { passive = await passiveDiscoverySnapshot(); } catch { /* ignore */ }\n    }\n    res.json({\n      ok: true,\n      site: getActiveSite(),\n      features: cfg.features,\n      scan: { total: results.length, active: results.filter((h) => h.status === 'Ativo').length },\n      drift: drift?.drift?.summary || null,\n      lifecycle: lifecycle ? { total: lifecycle.count } : null,\n      passive: passive ? { count: passive.count } : null\n    });\n  }",
+        "implementation": [
+          "Arquivo: platformRoutes.js",
+          "Símbolo: GET /summary",
+          "GitHub: https://github.com/CanonEngineer/Professional-Scanner/blob/main/platformRoutes.js"
+        ]
+      },
+      {
+        "id": "professional-scanner-fn-platformroutes-js-mountplatformroutes",
+        "parent": "professional-scanner-grp-platformroutes-js-functions",
+        "layer": "function",
+        "title": "mountPlatformRoutes()",
+        "description": "Função em `platformRoutes.js`",
+        "file": "platformRoutes.js",
+        "code": "function mountPlatformRoutes(app, ctx = {}",
+        "implementation": [
+          "Arquivo: platformRoutes.js",
+          "Símbolo: mountPlatformRoutes()",
+          "GitHub: https://github.com/CanonEngineer/Professional-Scanner/blob/main/platformRoutes.js"
+        ]
+      },
+      {
         "id": "professional-scanner-file-ratelimit-js",
         "parent": "professional-scanner-grp-files-p-r-s",
         "layer": "file",
@@ -9027,6 +9991,1164 @@ const PROJECTS = [
         "code": "const fs = require('fs');\r\nconst path = require('path');\r\nconst os = require('os');\r\nconst { exec, execSync } = require('child_process');\r\nconst http = require('http');\r\nconst WebSocket = require('ws');\r\nconst dns = require('dns').promises;\r\nconst net = require('net');\r\nconst dgram = require('dgram');\r\nconst express = require('express');\r\nconst { generateScanXlsx, generateIdleHostsXlsx, generateAlaMapXlsx } = require('./scanReportXlsx');\r\nconst { REPORT_VERSION } = require('./canonReportTheme');\r\nconst {\r\n  recordScanHosts,\r\n  getIdleHosts,\r\n  getHistoryStats,\r\n  clearHistory,\r\n  parseThresholdMs\r\n} = require('./hostHistory');\r\nconst { createEnrichmentContext, enrichHost, resolveHostnameFinal } = require('./hostEnrichment');\r\nconst { getVendorFromMac } = require('./macVendor');\nconst { detectDeviceType } = require('./deviceTypeDetect');\r\nconst { loadHistory } = require('./hostHistory');\r\nconst {\r\n  syncAdUserAudit,\r\n  listDepartedUsers,\r\n  clearDepartedUsers,\r\n  removeDepartedUser,\r\n  lookupAdUser,\r\n  lookupAdComputer,\r\n  listDepartments,\r\n  analyzeDepartmentPermissions,\r\n  listAdGroups,\r\n  searchGroupMembers,\r\n  importDisabledOuUsersToDeparted\r\n} = require('./adUserAudit');\r\nconst {\r\n  listConfiguredServers,\r\n  listShares,\r\n  listChildren,\r\n  getPathAcl,\r\n  listPathUsers\r\n} = require('./fileShareAudit');\r\nconst {\r\n  detectVirtualization,\r\n  applyVirtualizationToHost,\r\n  assignVlansToHosts,\r\n  ensureVlanMapFile\r\n} = require('./vmVlanStrategy');\r\nconst loopDetection = require('./loopDetection');\r\nconst autoTest = require('./autoTest');\r\nconst { generateAutoTestPdf } = require('./autoTestPdf');\r\nconst { generateAutoTestCsv } = require('./autoTestCsv');\r\nconst { generateAutoTestXlsx } = require('./autoTestXlsx');\r\nconst oracleUserLookup = require('./oracleUserLookup');\r\nconst canonAuth = require('./canonAuth');\r\nconst alaMapping = require('./alaMapping');\r\nconst deviceLibrary = require('./deviceLibrary');\r\nconst autoTestRemote = require('./autoTestRemote');\r\nconst autoTestRemoteAuth = require('./autoTestRemoteAuth');\r\nconst { checkRateLimit, clientIp } = require('./rateLimit');\r\nconst { mountPlatformRoutes } = require('./platformRoutes');\r\nconst { mountInventoryRoutes } = require('./inventoryRoutes');\r\nconst platformHooks = require('./platformHooks');\r\nconst { startScheduler } = require('./scheduledReports');\r\n\r\nfunction notifyPlatformScanComplete(snapshot, meta = {}) {\r\n  try {\r\n    platformHooks.onScanComplete(snapshot, meta);\r\n  } catch (err) {\r\n    console.warn('[PLATFORM] scan hook:', err.message);\r\n  }\r\n  try {\r\n    deviceLibrary.syncFromScan(snapshot);\r\n  } catch (err) {\r\n    console.warn('[DEVICE-LIBRARY] sync:', err.message);\r\n  }\r\n}\r\n\r\nconst app = express();\r\nconst server = http.createServer(app);\r\nconst wss = new WebSocket.Server({ server });\r\n\r\nensureVlanMapFile();\r\noracleUserLookup.getPublicConfig(); // cria data/oracle-config.json se não existir\r\n\r\nfunction broadcastLoopMsg(payload) {\r\n  const raw = JSON.stringify(payload);\r\n  wss.clients.forEach((client) => {\r\n    if (client.readyState === WebSocket.OPEN) {\r\n      try { client.send(raw); } catch { /* ignore */ }\r\n    }\r\n  });\r\n}\r\n\r\nloopDetection.setEventHandlers({\r\n  onAlert: (alert) => broadcastLoopMsg({ type: 'loop_alert', alert }),\r\n  onStatus: (payload) => broadcastLoopMsg(payload)\r\n});\r\n\r\nwss.on('error', (err) => {\r\n  if (err.code === 'EADDRINUSE') return;\r\n  console.error('[WS] WebSocket.Server error:', err);\r\n});\r\n\r\nserver.on('error', (err) => {\r\n  if (err.code === 'EADDRINUSE') return;\r\n  console.error('[HTTP] HTTP Server error:', err);\r\n});\r\n\r\nconst PORT = Number(process.env.PORT) || 3000;\r\n\r\n// Evita HTML cacheado omitir CSS/JS novos após deploy local\r\napp.use((req, res, next) => {\r\n  if (req.path === '/' || req.path === '/index.html' || req.path.endsWith('.html')) {\r\n    res.setHeader('Cache-Control', 'no-store, no-cache, must-revalidate, proxy-revalidate');\r\n    res.setHeader('Pragma', 'no-cache');\r\n    res.setHeader('Expires', '0');\r\n  }\r\n  next();\r\n});\r\n\r\n// Serve static files from public directory\r\napp.use(express.static(path.join(__dirname, 'public')));\r\napp.use(express.json({ limit: '5mb' }));\r\n\r\napp.post('/api/auth/login', (req, res) => {\r\n  try {\r\n    const username = String(req.body?.username || '').trim();\r\n    const password = String(req.body?.password || '');\r\n    const scope = String(req.body?.scope || 'dashboard').trim();\r\n    if (!username || !password) {\r\n      return res.status(400).json({ ok: false, error: 'Informe login e senha.' });\r\n    }\r\n    const result = canonAuth.login(username, password, scope);\r\n    if (!result.ok) return res.status(401).json(result);\r\n    res.json(result);\r\n  } catch (err) {\r\n    console.error('[AUTH] login error:', err);\r\n    res.status(500).json({ ok: false, error: 'Falha na autenticação.' });\r\n  }\r\n});\r\n\r\napp.get('/api/auth/session', (req, res) => {\r\n  const token = canonAuth.extractToken(req);\r\n  const scopeQuery = String(req.query.scope || '').trim();\r\n  const requiredScope = scopeQuery === 'dashboard' || scopeQuery === 'modals' ? scopeQuery : undefined;\r\n  const status = canonAuth.getSessionStatus(token, requiredScope);\r\n  res.json({\r\n    ok: true,\r\n    authenticated: !!status,\r\n    scope: status?.scope || null,\r\n    expiresInMs: status?.expiresInMs || 0\r\n  });\r\n});\r\n\r\napp.post('/api/auth/logout', (req, res) => {\r\n  const token = canonAuth.extractToken(req);\r\n  canonAuth.revokeSession(token);\r\n  res.json({ ok: true });\r\n});\r\n\r\nconst requireDashboardAuth = canonAuth.requireAuth(canonAuth.SCOPES.DASHBOARD);\r\nconst requireModalsAuth = canonAuth.requireAuth(canonAuth.SCOPES.MODALS);\r\n\r\napp.use('/api/ad', requireModalsAuth);\r\napp.use('/api/oracle', requireModalsAuth);\r\napp.use('/api/loop', requireModalsAuth);\r\n\r\nlet lastScanSnapshot = [];\r\n\r\napp.get('/api/scan-results', requireDashboardAuth, (req, res) => {\r\n  res.json({\r\n    updated: Date.now(),\r\n    results: lastScanSnapshot\r\n  });\r\n});\r\n\r\napp.get('/api/host-history/stats', requireDashboardAuth, (req, res) => {\r\n  try {\r\n    res.json(getHistoryStats());\r\n  } catch (err) {\r\n    console.error('[HISTORY] stats error:', err);\r\n    res.status(500).json({ error: 'Falha ao obter estatísticas do histórico.' });\r\n  }\r\n});\r\n\r\napp.get('/api/report-info', requireDashboardAuth, (_req, res) => {\r\n  res.json({\r\n    reportLayout: 'LinkWare',\r\n    version: REPORT_VERSION,\r\n    exports: ['autotest-pdf', 'autotest-xlsx', 'scan-xlsx', 'idle-xlsx', 'ala-xlsx', 'inventory-pdf', 'inventory-xlsx']\r\n  });\r\n});\r\n\r\napp.get('/api/idle-hosts', requireDashboardAuth, (req, res) => {\r\n  try {\r\n    const thresholdMs = parseThresholdMs({\r\n      days: req.query.days,\r\n      hours: req.query.hours,\r\n      minutes: req.query.minutes,\r\n      ms: req.query.ms\r\n    });\r\n\r\n    if (thresholdMs == null) {\r\n      return res.status(400).json({\r\n        error: 'Informe um limiar válido via days, hours, minutes ou ms.'\r\n      });\r\n    }\r\n\r\n    const result = getIdleHosts(thresholdMs);\r\n    res.json(result);\r\n  } catch (err) {\r\n    console.erro\n\n/* … truncado na árvore (arquivo completo no GitHub) … */\n",
         "implementation": [
           "path: server.js",
+          "GitHub: https://github.com/CanonEngineer/Professional-Scanner/blob/main/server.js"
+        ]
+      },
+      {
+        "id": "professional-scanner-grp-server-js-routes",
+        "parent": "professional-scanner-file-server-js",
+        "layer": "module",
+        "title": "Rotas API",
+        "description": "Rotas API em `server.js`",
+        "file": "server.js#routes",
+        "code": "# Rotas API em server.js\n",
+        "implementation": [
+          "agrupamento: routes"
+        ]
+      },
+      {
+        "id": "professional-scanner-grp-server-js-routes-1-12",
+        "parent": "professional-scanner-grp-server-js-routes",
+        "layer": "module",
+        "title": "Rotas API 1–12",
+        "description": "Fatia 1–12 de rotas api em `server.js`",
+        "file": "server.js#routes-1-12",
+        "code": "# Rotas API 1-12 em server.js\n",
+        "implementation": [
+          "agrupamento: routes"
+        ]
+      },
+      {
+        "id": "professional-scanner-grp-server-js-routes-13-24",
+        "parent": "professional-scanner-grp-server-js-routes",
+        "layer": "module",
+        "title": "Rotas API 13–24",
+        "description": "Fatia 13–24 de rotas api em `server.js`",
+        "file": "server.js#routes-13-24",
+        "code": "# Rotas API 13-24 em server.js\n",
+        "implementation": [
+          "agrupamento: routes"
+        ]
+      },
+      {
+        "id": "professional-scanner-grp-server-js-routes-25-36",
+        "parent": "professional-scanner-grp-server-js-routes",
+        "layer": "module",
+        "title": "Rotas API 25–36",
+        "description": "Fatia 25–36 de rotas api em `server.js`",
+        "file": "server.js#routes-25-36",
+        "code": "# Rotas API 25-36 em server.js\n",
+        "implementation": [
+          "agrupamento: routes"
+        ]
+      },
+      {
+        "id": "professional-scanner-grp-server-js-routes-37-48",
+        "parent": "professional-scanner-grp-server-js-routes",
+        "layer": "module",
+        "title": "Rotas API 37–48",
+        "description": "Fatia 37–48 de rotas api em `server.js`",
+        "file": "server.js#routes-37-48",
+        "code": "# Rotas API 37-48 em server.js\n",
+        "implementation": [
+          "agrupamento: routes"
+        ]
+      },
+      {
+        "id": "professional-scanner-grp-server-js-functions",
+        "parent": "professional-scanner-file-server-js",
+        "layer": "module",
+        "title": "Funções",
+        "description": "Funções em `server.js`",
+        "file": "server.js#functions",
+        "code": "# Funções em server.js\n",
+        "implementation": [
+          "agrupamento: functions"
+        ]
+      },
+      {
+        "id": "professional-scanner-grp-server-js-functions-1-12",
+        "parent": "professional-scanner-grp-server-js-functions",
+        "layer": "module",
+        "title": "Funções 1–12",
+        "description": "Fatia 1–12 de funções em `server.js`",
+        "file": "server.js#functions-1-12",
+        "code": "# Funções 1-12 em server.js\n",
+        "implementation": [
+          "agrupamento: functions"
+        ]
+      },
+      {
+        "id": "professional-scanner-grp-server-js-functions-13-24",
+        "parent": "professional-scanner-grp-server-js-functions",
+        "layer": "module",
+        "title": "Funções 13–24",
+        "description": "Fatia 13–24 de funções em `server.js`",
+        "file": "server.js#functions-13-24",
+        "code": "# Funções 13-24 em server.js\n",
+        "implementation": [
+          "agrupamento: functions"
+        ]
+      },
+      {
+        "id": "professional-scanner-grp-server-js-functions-25-27",
+        "parent": "professional-scanner-grp-server-js-functions",
+        "layer": "module",
+        "title": "Funções 25–27",
+        "description": "Fatia 25–27 de funções em `server.js`",
+        "file": "server.js#functions-25-27",
+        "code": "# Funções 25-27 em server.js\n",
+        "implementation": [
+          "agrupamento: functions"
+        ]
+      },
+      {
+        "id": "professional-scanner-fn-server-js-post-api-auth-login",
+        "parent": "professional-scanner-grp-server-js-routes-1-12",
+        "layer": "function",
+        "title": "POST /api/auth/login",
+        "description": "Rota em `server.js`",
+        "file": "server.js",
+        "code": "app.post('/api/auth/login', (req, res) => {\n  try {\n    const username = String(req.body?.username || '').trim();\n    const password = String(req.body?.password || '');\n    const scope = String(req.body?.scope || 'dashboard').trim();\n    if (!username || !password) {\n      return res.status(400).json({ ok: false, error: 'Informe login e senha.' });\n    }\n    const result = canonAuth.login(username, password, scope);\n    if (!result.ok) return res.status(401).json(result);\n    res.json(result);\n  } catch (err) {\n    console.error('[AUTH] login error:', err);\n    res.status(500).json({ ok: false, error: 'Falha na autenticação.' });\n  }\n}",
+        "implementation": [
+          "Arquivo: server.js",
+          "Símbolo: POST /api/auth/login",
+          "GitHub: https://github.com/CanonEngineer/Professional-Scanner/blob/main/server.js"
+        ]
+      },
+      {
+        "id": "professional-scanner-fn-server-js-get-api-auth-session",
+        "parent": "professional-scanner-grp-server-js-routes-1-12",
+        "layer": "function",
+        "title": "GET /api/auth/session",
+        "description": "Rota em `server.js`",
+        "file": "server.js",
+        "code": "app.get('/api/auth/session', (req, res) => {\n  const token = canonAuth.extractToken(req);\n  const scopeQuery = String(req.query.scope || '').trim();\n  const requiredScope = scopeQuery === 'dashboard' || scopeQuery === 'modals' ? scopeQuery : undefined;\n  const status = canonAuth.getSessionStatus(token, requiredScope);\n  res.json({\n    ok: true,\n    authenticated: !!status,\n    scope: status?.scope || null,\n    expiresInMs: status?.expiresInMs || 0\n  });\n}",
+        "implementation": [
+          "Arquivo: server.js",
+          "Símbolo: GET /api/auth/session",
+          "GitHub: https://github.com/CanonEngineer/Professional-Scanner/blob/main/server.js"
+        ]
+      },
+      {
+        "id": "professional-scanner-fn-server-js-post-api-auth-logout",
+        "parent": "professional-scanner-grp-server-js-routes-1-12",
+        "layer": "function",
+        "title": "POST /api/auth/logout",
+        "description": "Rota em `server.js`",
+        "file": "server.js",
+        "code": "app.post('/api/auth/logout', (req, res) => {\n  const token = canonAuth.extractToken(req);\n  canonAuth.revokeSession(token);\n  res.json({ ok: true });\n}",
+        "implementation": [
+          "Arquivo: server.js",
+          "Símbolo: POST /api/auth/logout",
+          "GitHub: https://github.com/CanonEngineer/Professional-Scanner/blob/main/server.js"
+        ]
+      },
+      {
+        "id": "professional-scanner-fn-server-js-get-api-scan-results",
+        "parent": "professional-scanner-grp-server-js-routes-1-12",
+        "layer": "function",
+        "title": "GET /api/scan-results",
+        "description": "Rota em `server.js`",
+        "file": "server.js",
+        "code": "app.get('/api/scan-results', requireDashboardAuth, (req, res) => {\n  res.json({\n    updated: Date.now(),\n    results: lastScanSnapshot\n  });\n}",
+        "implementation": [
+          "Arquivo: server.js",
+          "Símbolo: GET /api/scan-results",
+          "GitHub: https://github.com/CanonEngineer/Professional-Scanner/blob/main/server.js"
+        ]
+      },
+      {
+        "id": "professional-scanner-fn-server-js-get-api-host-history-stats",
+        "parent": "professional-scanner-grp-server-js-routes-1-12",
+        "layer": "function",
+        "title": "GET /api/host-history/stats",
+        "description": "Rota em `server.js`",
+        "file": "server.js",
+        "code": "app.get('/api/host-history/stats', requireDashboardAuth, (req, res) => {\n  try {\n    res.json(getHistoryStats());\n  } catch (err) {\n    console.error('[HISTORY] stats error:', err);\n    res.status(500).json({ error: 'Falha ao obter estatísticas do histórico.' });\n  }\n}",
+        "implementation": [
+          "Arquivo: server.js",
+          "Símbolo: GET /api/host-history/stats",
+          "GitHub: https://github.com/CanonEngineer/Professional-Scanner/blob/main/server.js"
+        ]
+      },
+      {
+        "id": "professional-scanner-fn-server-js-get-api-report-info",
+        "parent": "professional-scanner-grp-server-js-routes-1-12",
+        "layer": "function",
+        "title": "GET /api/report-info",
+        "description": "Rota em `server.js`",
+        "file": "server.js",
+        "code": "app.get('/api/report-info', requireDashboardAuth, (_req, res) => {\n  res.json({\n    reportLayout: 'LinkWare',\n    version: REPORT_VERSION,\n    exports: ['autotest-pdf', 'autotest-xlsx', 'scan-xlsx', 'idle-xlsx', 'ala-xlsx', 'inventory-pdf', 'inventory-xlsx']\n  });\n}",
+        "implementation": [
+          "Arquivo: server.js",
+          "Símbolo: GET /api/report-info",
+          "GitHub: https://github.com/CanonEngineer/Professional-Scanner/blob/main/server.js"
+        ]
+      },
+      {
+        "id": "professional-scanner-fn-server-js-get-api-idle-hosts",
+        "parent": "professional-scanner-grp-server-js-routes-1-12",
+        "layer": "function",
+        "title": "GET /api/idle-hosts",
+        "description": "Rota em `server.js`",
+        "file": "server.js",
+        "code": "app.get('/api/idle-hosts', requireDashboardAuth, (req, res) => {\n  try {\n    const thresholdMs = parseThresholdMs({\n      days: req.query.days,\n      hours: req.query.hours,\n      minutes: req.query.minutes,\n      ms: req.query.ms\n    });\n\n    if (thresholdMs == null) {\n      return res.status(400).json({\n        error: 'Informe um limiar válido via days, hours, minutes ou ms.'\n      });\n    }\n\n    const result = getIdleHosts(thresholdMs);\n    res.json(result);\n  } catch (err) {\n    console.error('[HISTORY] idle-hosts error:', err);\n    res.status(500).json({ error: 'Falha ao consultar IPs ociosos.' });\n  }\n}",
+        "implementation": [
+          "Arquivo: server.js",
+          "Símbolo: GET /api/idle-hosts",
+          "GitHub: https://github.com/CanonEngineer/Professional-Scanner/blob/main/server.js"
+        ]
+      },
+      {
+        "id": "professional-scanner-fn-server-js-post-api-idle-hosts-export-xlsx",
+        "parent": "professional-scanner-grp-server-js-routes-1-12",
+        "layer": "function",
+        "title": "POST /api/idle-hosts/export-xlsx",
+        "description": "Rota em `server.js`",
+        "file": "server.js",
+        "code": "app.post('/api/idle-hosts/export-xlsx', requireDashboardAuth, async (req, res) => {\n  try {\n    const payload = req.body && typeof req.body === 'object' ? req.body : {};\n    const hosts = Array.isArray(payload.hosts) ? payload.hosts : [];\n    if (!hosts.length) {\n      return res.status(400).json({ error: 'Nenhum IP ocioso para exportar.' });\n    }\n\n    const buffer = await generateIdleHostsXlsx(payload);\n    const now = new Date();\n    const dateStr = now.toISOString().slice(0, 10);\n    const timeStr = now.toTimeString().slice(0, 8).replace(/:/g, '-');\n    const fileName = `NetScan_Canon_ips_ociosos_${dateStr}_${timeStr}.xlsx`;\n\n    res.setHeader('Content-Type', 'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet');\n    res.setHeader('Content-Disposition', `attachment; filename=\"${fileName}\"`);\n    res.send(Buffer.from(buffer));\n  } catch (err) {\n    console.error('[HISTORY] idle-hosts export-xlsx error:', err);\n    res.status(500).json({ error: 'Falha ao gerar o arquivo Excel de IPs ociosos.' });\n  }\n}",
+        "implementation": [
+          "Arquivo: server.js",
+          "Símbolo: POST /api/idle-hosts/export-xlsx",
+          "GitHub: https://github.com/CanonEngineer/Professional-Scanner/blob/main/server.js"
+        ]
+      },
+      {
+        "id": "professional-scanner-fn-server-js-get-api-ala-map-config",
+        "parent": "professional-scanner-grp-server-js-routes-1-12",
+        "layer": "function",
+        "title": "GET /api/ala-map/config",
+        "description": "Rota em `server.js`",
+        "file": "server.js",
+        "code": "app.get('/api/ala-map/config', requireDashboardAuth, (req, res) => {\n  try {\n    res.json({ ok: true, config: alaMapping.loadAlaMap() });\n  } catch (err) {\n    console.error('[ALA-MAP] config read error:', err);\n    res.status(500).json({ error: 'Falha ao ler mapa de alas.' });\n  }\n}",
+        "implementation": [
+          "Arquivo: server.js",
+          "Símbolo: GET /api/ala-map/config",
+          "GitHub: https://github.com/CanonEngineer/Professional-Scanner/blob/main/server.js"
+        ]
+      },
+      {
+        "id": "professional-scanner-fn-server-js-put-api-ala-map-config",
+        "parent": "professional-scanner-grp-server-js-routes-1-12",
+        "layer": "function",
+        "title": "PUT /api/ala-map/config",
+        "description": "Rota em `server.js`",
+        "file": "server.js",
+        "code": "app.put('/api/ala-map/config', requireDashboardAuth, (req, res) => {\n  try {\n    const body = req.body || {};\n    const config = alaMapping.saveAlaMap(body.config || body);\n    res.json({ ok: true, config });\n  } catch (err) {\n    console.error('[ALA-MAP] config save error:', err);\n    res.status(500).json({ error: err.message || 'Falha ao salvar mapa de alas.' });\n  }\n}",
+        "implementation": [
+          "Arquivo: server.js",
+          "Símbolo: PUT /api/ala-map/config",
+          "GitHub: https://github.com/CanonEngineer/Professional-Scanner/blob/main/server.js"
+        ]
+      },
+      {
+        "id": "professional-scanner-fn-server-js-get-api-ala-map-report",
+        "parent": "professional-scanner-grp-server-js-routes-1-12",
+        "layer": "function",
+        "title": "GET /api/ala-map/report",
+        "description": "Rota em `server.js`",
+        "file": "server.js",
+        "code": "app.get('/api/ala-map/report', requireDashboardAuth, async (req, res) => {\n  try {\n    const includeInactive = req.query.includeInactive !== '0';\n    const pollSwitches = req.query.pollSwitches !== '0';\n    const report = await alaMapping.buildAlaMapReport(lastScanSnapshot, {\n      includeInactive,\n      pollSwitches\n    });\n    res.json(report);\n  } catch (err) {\n    console.error('[ALA-MAP] report error:', err);\n    res.status(500).json({ error: err.message || 'Falha ao gerar mapa por ala.' });\n  }\n}",
+        "implementation": [
+          "Arquivo: server.js",
+          "Símbolo: GET /api/ala-map/report",
+          "GitHub: https://github.com/CanonEngineer/Professional-Scanner/blob/main/server.js"
+        ]
+      },
+      {
+        "id": "professional-scanner-fn-server-js-get-api-device-library",
+        "parent": "professional-scanner-grp-server-js-routes-1-12",
+        "layer": "function",
+        "title": "GET /api/device-library",
+        "description": "Rota em `server.js`",
+        "file": "server.js",
+        "code": "app.get('/api/device-library', requireDashboardAuth, (req, res) => {\n  try {\n    const category = String(req.query.category || req.query.cat || 'all').trim();\n    const page = Number(req.query.page || 1);\n    const pageSize = Number(req.query.pageSize || 20);\n    const q = String(req.query.q || req.query.search || '').trim();\n    res.json(deviceLibrary.listLibrary({ category, page, pageSize, q }));\n  } catch (err) {\n    console.error('[DEVICE-LIBRARY] list error:', err);\n    res.status(500).json({ ok: false, error: 'Falha ao carregar a biblioteca de dispositivos.' });\n  }\n}",
+        "implementation": [
+          "Arquivo: server.js",
+          "Símbolo: GET /api/device-library",
+          "GitHub: https://github.com/CanonEngineer/Professional-Scanner/blob/main/server.js"
+        ]
+      },
+      {
+        "id": "professional-scanner-fn-server-js-post-api-ala-map-export-xlsx",
+        "parent": "professional-scanner-grp-server-js-routes-13-24",
+        "layer": "function",
+        "title": "POST /api/ala-map/export-xlsx",
+        "description": "Rota em `server.js`",
+        "file": "server.js",
+        "code": "app.post('/api/ala-map/export-xlsx', requireDashboardAuth, async (req, res) => {\n  try {\n    const payload = req.body && typeof req.body === 'object' ? req.body : {};\n    let report = payload.hosts?.length ? payload : null;\n    if (!report) {\n      report = await alaMapping.buildAlaMapReport(lastScanSnapshot, {\n        includeInactive: payload.includeInactive !== false,\n        pollSwitches: payload.pollSwitches !== false\n      });\n    }\n    const hosts = Array.isArray(report.hosts) ? report.hosts : [];\n    if (!hosts.length) {\n      return res.status(400).json({ error: 'Nenhum host para exportar. Gere o mapa primeiro.' });\n    }\n\n    const buffer = await generateAlaMapXlsx(report);\n    const now = new Date();\n    const dateStr = now.toISOString().slice(0, 10);\n    const timeStr = now.toTimeString().slice(0, 8).replace(/:/g, '-');\n    const fileName = `NetScan_Canon_mapa_alas_${dateStr}_${timeStr}.xlsx`;\n    res.setHeader('Content-Type', 'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet');\n    res.setHeader('Content-Disposition', `attachment; filename=\"${fileName}\"`);\n    res.send(Buffer.from(buffer));\n  } catch (err) {\n    console.error('[ALA-MAP] export-xlsx error:', err);\n    res.status(500).json({ error: err.message || 'Falha ao exportar Excel do mapa por ala.' });\n  }\n}",
+        "implementation": [
+          "Arquivo: server.js",
+          "Símbolo: POST /api/ala-map/export-xlsx",
+          "GitHub: https://github.com/CanonEngineer/Professional-Scanner/blob/main/server.js"
+        ]
+      },
+      {
+        "id": "professional-scanner-fn-server-js-delete-api-host-history",
+        "parent": "professional-scanner-grp-server-js-routes-13-24",
+        "layer": "function",
+        "title": "DELETE /api/host-history",
+        "description": "Rota em `server.js`",
+        "file": "server.js",
+        "code": "app.delete('/api/host-history', requireDashboardAuth, (req, res) => {\n  try {\n    res.json(clearHistory());\n  } catch (err) {\n    console.error('[HISTORY] clear error:', err);\n    res.status(500).json({ error: 'Falha ao limpar histórico.' });\n  }\n}",
+        "implementation": [
+          "Arquivo: server.js",
+          "Símbolo: DELETE /api/host-history",
+          "GitHub: https://github.com/CanonEngineer/Professional-Scanner/blob/main/server.js"
+        ]
+      },
+      {
+        "id": "professional-scanner-fn-server-js-get-api-ad-departed",
+        "parent": "professional-scanner-grp-server-js-routes-13-24",
+        "layer": "function",
+        "title": "GET /api/ad/departed",
+        "description": "Rota em `server.js`",
+        "file": "server.js",
+        "code": "app.get('/api/ad/departed', async (req, res) => {\n  try {\n    if (String(req.query.refreshDisabled || req.query.importDisabled || '0') === '1') {\n      await importDisabledOuUsersToDeparted();\n    }\n    res.json(listDepartedUsers());\n  } catch (err) {\n    console.error('[AD-AUDIT] list error:', err);\n    res.status(500).json({ error: 'Falha ao listar usuários AD saída.' });\n  }\n}",
+        "implementation": [
+          "Arquivo: server.js",
+          "Símbolo: GET /api/ad/departed",
+          "GitHub: https://github.com/CanonEngineer/Professional-Scanner/blob/main/server.js"
+        ]
+      },
+      {
+        "id": "professional-scanner-fn-server-js-delete-api-ad-departed",
+        "parent": "professional-scanner-grp-server-js-routes-13-24",
+        "layer": "function",
+        "title": "DELETE /api/ad/departed",
+        "description": "Rota em `server.js`",
+        "file": "server.js",
+        "code": "app.delete('/api/ad/departed', (req, res) => {\n  try {\n    res.json(clearDepartedUsers());\n  } catch (err) {\n    console.error('[AD-AUDIT] clear error:', err);\n    res.status(500).json({ error: 'Falha ao limpar auditoria AD.' });\n  }\n}",
+        "implementation": [
+          "Arquivo: server.js",
+          "Símbolo: DELETE /api/ad/departed",
+          "GitHub: https://github.com/CanonEngineer/Professional-Scanner/blob/main/server.js"
+        ]
+      },
+      {
+        "id": "professional-scanner-fn-server-js-delete-api-ad-departed-sam",
+        "parent": "professional-scanner-grp-server-js-routes-13-24",
+        "layer": "function",
+        "title": "DELETE /api/ad/departed/:sam",
+        "description": "Rota em `server.js`",
+        "file": "server.js",
+        "code": "app.delete('/api/ad/departed/:sam', (req, res) => {\n  try {\n    const result = removeDepartedUser(req.params.sam);\n    if (!result.ok) return res.status(404).json(result);\n    res.json(result);\n  } catch (err) {\n    console.error('[AD-AUDIT] remove error:', err);\n    res.status(500).json({ error: 'Falha ao remover usuário da auditoria.' });\n  }\n}",
+        "implementation": [
+          "Arquivo: server.js",
+          "Símbolo: DELETE /api/ad/departed/:sam",
+          "GitHub: https://github.com/CanonEngineer/Professional-Scanner/blob/main/server.js"
+        ]
+      },
+      {
+        "id": "professional-scanner-fn-server-js-get-api-loop-config",
+        "parent": "professional-scanner-grp-server-js-routes-13-24",
+        "layer": "function",
+        "title": "GET /api/loop/config",
+        "description": "Rota em `server.js`",
+        "file": "server.js",
+        "code": "app.get('/api/loop/config', (req, res) => {\n  try {\n    res.json(loopDetection.getConfig());\n  } catch (err) {\n    console.error('[LOOP] config error:', err);\n    res.status(500).json({ error: 'Falha ao ler configuração de loop.' });\n  }\n}",
+        "implementation": [
+          "Arquivo: server.js",
+          "Símbolo: GET /api/loop/config",
+          "GitHub: https://github.com/CanonEngineer/Professional-Scanner/blob/main/server.js"
+        ]
+      },
+      {
+        "id": "professional-scanner-fn-server-js-put-api-loop-config",
+        "parent": "professional-scanner-grp-server-js-routes-13-24",
+        "layer": "function",
+        "title": "PUT /api/loop/config",
+        "description": "Rota em `server.js`",
+        "file": "server.js",
+        "code": "app.put('/api/loop/config', (req, res) => {\n  try {\n    const body = req.body || {};\n    if (Array.isArray(body.switches)) {\n      res.json(loopDetection.saveConfig({\n        community: body.community,\n        pollIntervalSec: body.pollIntervalSec,\n        timeoutMs: body.timeoutMs,\n        quickGapSec: body.quickGapSec,\n        thresholds: body.thresholds,\n        switches: body.switches\n      }));\n      return;\n    }\n    res.json(loopDetection.updateSettings(body));\n  } catch (err) {\n    console.error('[LOOP] save config error:', err);\n    res.status(400).json({ error: err.message || 'Falha ao salvar configuração.' });\n  }\n}",
+        "implementation": [
+          "Arquivo: server.js",
+          "Símbolo: PUT /api/loop/config",
+          "GitHub: https://github.com/CanonEngineer/Professional-Scanner/blob/main/server.js"
+        ]
+      },
+      {
+        "id": "professional-scanner-fn-server-js-get-api-loop-switches",
+        "parent": "professional-scanner-grp-server-js-routes-13-24",
+        "layer": "function",
+        "title": "GET /api/loop/switches",
+        "description": "Rota em `server.js`",
+        "file": "server.js",
+        "code": "app.get('/api/loop/switches', (req, res) => {\n  try {\n    res.json({ switches: loopDetection.listSwitches() });\n  } catch (err) {\n    res.status(500).json({ error: 'Falha ao listar switches.' });\n  }\n}",
+        "implementation": [
+          "Arquivo: server.js",
+          "Símbolo: GET /api/loop/switches",
+          "GitHub: https://github.com/CanonEngineer/Professional-Scanner/blob/main/server.js"
+        ]
+      },
+      {
+        "id": "professional-scanner-fn-server-js-post-api-loop-switches",
+        "parent": "professional-scanner-grp-server-js-routes-13-24",
+        "layer": "function",
+        "title": "POST /api/loop/switches",
+        "description": "Rota em `server.js`",
+        "file": "server.js",
+        "code": "app.post('/api/loop/switches', (req, res) => {\n  try {\n    const sw = loopDetection.upsertSwitch(req.body || {});\n    res.json({ ok: true, switch: sw, switches: loopDetection.listSwitches() });\n  } catch (err) {\n    res.status(400).json({ error: err.message || 'Falha ao cadastrar switch.' });\n  }\n}",
+        "implementation": [
+          "Arquivo: server.js",
+          "Símbolo: POST /api/loop/switches",
+          "GitHub: https://github.com/CanonEngineer/Professional-Scanner/blob/main/server.js"
+        ]
+      },
+      {
+        "id": "professional-scanner-fn-server-js-delete-api-loop-switches-id",
+        "parent": "professional-scanner-grp-server-js-routes-13-24",
+        "layer": "function",
+        "title": "DELETE /api/loop/switches/:id",
+        "description": "Rota em `server.js`",
+        "file": "server.js",
+        "code": "app.delete('/api/loop/switches/:id', (req, res) => {\n  try {\n    res.json(loopDetection.removeSwitch(req.params.id));\n  } catch (err) {\n    res.status(500).json({ error: 'Falha ao remover switch.' });\n  }\n}",
+        "implementation": [
+          "Arquivo: server.js",
+          "Símbolo: DELETE /api/loop/switches/:id",
+          "GitHub: https://github.com/CanonEngineer/Professional-Scanner/blob/main/server.js"
+        ]
+      },
+      {
+        "id": "professional-scanner-fn-server-js-get-api-loop-status",
+        "parent": "professional-scanner-grp-server-js-routes-13-24",
+        "layer": "function",
+        "title": "GET /api/loop/status",
+        "description": "Rota em `server.js`",
+        "file": "server.js",
+        "code": "app.get('/api/loop/status', (req, res) => {\n  try {\n    res.json(loopDetection.getStatus());\n  } catch (err) {\n    res.status(500).json({ error: 'Falha ao obter status do monitor.' });\n  }\n}",
+        "implementation": [
+          "Arquivo: server.js",
+          "Símbolo: GET /api/loop/status",
+          "GitHub: https://github.com/CanonEngineer/Professional-Scanner/blob/main/server.js"
+        ]
+      },
+      {
+        "id": "professional-scanner-fn-server-js-post-api-loop-start",
+        "parent": "professional-scanner-grp-server-js-routes-13-24",
+        "layer": "function",
+        "title": "POST /api/loop/start",
+        "description": "Rota em `server.js`",
+        "file": "server.js",
+        "code": "app.post('/api/loop/start', (req, res) => {\n  try {\n    res.json(loopDetection.startMonitor());\n  } catch (err) {\n    console.error('[LOOP] start error:', err);\n    res.status(500).json({ error: err.message || 'Falha ao iniciar monitoramento.' });\n  }\n}",
+        "implementation": [
+          "Arquivo: server.js",
+          "Símbolo: POST /api/loop/start",
+          "GitHub: https://github.com/CanonEngineer/Professional-Scanner/blob/main/server.js"
+        ]
+      },
+      {
+        "id": "professional-scanner-fn-server-js-post-api-loop-stop",
+        "parent": "professional-scanner-grp-server-js-routes-25-36",
+        "layer": "function",
+        "title": "POST /api/loop/stop",
+        "description": "Rota em `server.js`",
+        "file": "server.js",
+        "code": "app.post('/api/loop/stop', (req, res) => {\n  try {\n    res.json(loopDetection.stopMonitor());\n  } catch (err) {\n    res.status(500).json({ error: 'Falha ao parar monitoramento.' });\n  }\n}",
+        "implementation": [
+          "Arquivo: server.js",
+          "Símbolo: POST /api/loop/stop",
+          "GitHub: https://github.com/CanonEngineer/Professional-Scanner/blob/main/server.js"
+        ]
+      },
+      {
+        "id": "professional-scanner-fn-server-js-post-api-loop-quick-check",
+        "parent": "professional-scanner-grp-server-js-routes-25-36",
+        "layer": "function",
+        "title": "POST /api/loop/quick-check",
+        "description": "Rota em `server.js`",
+        "file": "server.js",
+        "code": "app.post('/api/loop/quick-check', async (req, res) => {\n  try {\n    const summary = await loopDetection.quickCheck();\n    res.json(summary);\n  } catch (err) {\n    console.error('[LOOP] quick-check error:', err);\n    res.status(500).json({ error: err.message || 'Falha na checagem rápida.' });\n  }\n}",
+        "implementation": [
+          "Arquivo: server.js",
+          "Símbolo: POST /api/loop/quick-check",
+          "GitHub: https://github.com/CanonEngineer/Professional-Scanner/blob/main/server.js"
+        ]
+      },
+      {
+        "id": "professional-scanner-fn-server-js-get-api-loop-alerts",
+        "parent": "professional-scanner-grp-server-js-routes-25-36",
+        "layer": "function",
+        "title": "GET /api/loop/alerts",
+        "description": "Rota em `server.js`",
+        "file": "server.js",
+        "code": "app.get('/api/loop/alerts', (req, res) => {\n  try {\n    res.json(loopDetection.listAlerts(Number(req.query.limit) || 100));\n  } catch (err) {\n    res.status(500).json({ error: 'Falha ao listar alertas de loop.' });\n  }\n}",
+        "implementation": [
+          "Arquivo: server.js",
+          "Símbolo: GET /api/loop/alerts",
+          "GitHub: https://github.com/CanonEngineer/Professional-Scanner/blob/main/server.js"
+        ]
+      },
+      {
+        "id": "professional-scanner-fn-server-js-delete-api-loop-alerts",
+        "parent": "professional-scanner-grp-server-js-routes-25-36",
+        "layer": "function",
+        "title": "DELETE /api/loop/alerts",
+        "description": "Rota em `server.js`",
+        "file": "server.js",
+        "code": "app.delete('/api/loop/alerts', (req, res) => {\n  try {\n    res.json(loopDetection.clearAlerts());\n  } catch (err) {\n    res.status(500).json({ error: 'Falha ao limpar alertas.' });\n  }\n}",
+        "implementation": [
+          "Arquivo: server.js",
+          "Símbolo: DELETE /api/loop/alerts",
+          "GitHub: https://github.com/CanonEngineer/Professional-Scanner/blob/main/server.js"
+        ]
+      },
+      {
+        "id": "professional-scanner-fn-server-js-post-api-loop-reset-baseline",
+        "parent": "professional-scanner-grp-server-js-routes-25-36",
+        "layer": "function",
+        "title": "POST /api/loop/reset-baseline",
+        "description": "Rota em `server.js`",
+        "file": "server.js",
+        "code": "app.post('/api/loop/reset-baseline', (req, res) => {\n  try {\n    res.json(loopDetection.resetRuntimeBaseline());\n  } catch (err) {\n    res.status(500).json({ error: 'Falha ao resetar baseline.' });\n  }\n}",
+        "implementation": [
+          "Arquivo: server.js",
+          "Símbolo: POST /api/loop/reset-baseline",
+          "GitHub: https://github.com/CanonEngineer/Professional-Scanner/blob/main/server.js"
+        ]
+      },
+      {
+        "id": "professional-scanner-fn-server-js-get-api-autotest-config",
+        "parent": "professional-scanner-grp-server-js-routes-25-36",
+        "layer": "function",
+        "title": "GET /api/autotest/config",
+        "description": "Rota em `server.js`",
+        "file": "server.js",
+        "code": "app.get('/api/autotest/config', (req, res) => {\n  try {\n    const config = autoTest.loadConfig();\n    const activeProfile = autoTest.getProfile(config.activeProfileId);\n    res.json({\n      ok: true,\n      config,\n      activeProfileId: config.activeProfileId,\n      activeProfile,\n      profiles: autoTest.listProfiles().profiles\n    });\n  } catch (err) {\n    console.error('[AUTOTEST] config error:', err);\n    res.status(500).json({ error: 'Falha ao ler configuração AutoTest.' });\n  }\n}",
+        "implementation": [
+          "Arquivo: server.js",
+          "Símbolo: GET /api/autotest/config",
+          "GitHub: https://github.com/CanonEngineer/Professional-Scanner/blob/main/server.js"
+        ]
+      },
+      {
+        "id": "professional-scanner-fn-server-js-get-api-autotest-profiles",
+        "parent": "professional-scanner-grp-server-js-routes-25-36",
+        "layer": "function",
+        "title": "GET /api/autotest/profiles",
+        "description": "Rota em `server.js`",
+        "file": "server.js",
+        "code": "app.get('/api/autotest/profiles', (req, res) => {\n  try {\n    res.json({ ok: true, ...autoTest.listProfiles() });\n  } catch (err) {\n    res.status(500).json({ error: 'Falha ao listar perfis.' });\n  }\n}",
+        "implementation": [
+          "Arquivo: server.js",
+          "Símbolo: GET /api/autotest/profiles",
+          "GitHub: https://github.com/CanonEngineer/Professional-Scanner/blob/main/server.js"
+        ]
+      },
+      {
+        "id": "professional-scanner-fn-server-js-get-api-autotest-profile-id",
+        "parent": "professional-scanner-grp-server-js-routes-25-36",
+        "layer": "function",
+        "title": "GET /api/autotest/profile/:id",
+        "description": "Rota em `server.js`",
+        "file": "server.js",
+        "code": "app.get('/api/autotest/profile/:id', (req, res) => {\n  try {\n    const profile = autoTest.getProfile(req.params.id);\n    if (!profile) return res.status(404).json({ error: 'Perfil não encontrado.' });\n    res.json({ ok: true, profile });\n  } catch (err) {\n    res.status(500).json({ error: 'Falha ao ler perfil.' });\n  }\n}",
+        "implementation": [
+          "Arquivo: server.js",
+          "Símbolo: GET /api/autotest/profile/:id",
+          "GitHub: https://github.com/CanonEngineer/Professional-Scanner/blob/main/server.js"
+        ]
+      },
+      {
+        "id": "professional-scanner-fn-server-js-put-api-autotest-config",
+        "parent": "professional-scanner-grp-server-js-routes-25-36",
+        "layer": "function",
+        "title": "PUT /api/autotest/config",
+        "description": "Rota em `server.js`",
+        "file": "server.js",
+        "code": "app.put('/api/autotest/config', (req, res) => {\n  try {\n    const body = req.body || {};\n    const saved = autoTest.saveConfig(body);\n    const activeProfile = autoTest.getProfile(saved.activeProfileId);\n    res.json({\n      ok: true,\n      config: saved,\n      activeProfileId: saved.activeProfileId,\n      activeProfile,\n      profiles: autoTest.listProfiles().profiles\n    });\n  } catch (err) {\n    console.error('[AUTOTEST] save config error:', err);\n    res.status(400).json({ error: err.message || 'Falha ao salvar configuração.' });\n  }\n}",
+        "implementation": [
+          "Arquivo: server.js",
+          "Símbolo: PUT /api/autotest/config",
+          "GitHub: https://github.com/CanonEngineer/Professional-Scanner/blob/main/server.js"
+        ]
+      },
+      {
+        "id": "professional-scanner-fn-server-js-get-api-autotest-interfaces",
+        "parent": "professional-scanner-grp-server-js-routes-25-36",
+        "layer": "function",
+        "title": "GET /api/autotest/interfaces",
+        "description": "Rota em `server.js`",
+        "file": "server.js",
+        "code": "app.get('/api/autotest/interfaces', async (req, res) => {\n  try {\n    res.json(await autoTest.listNetworkInterfaces());\n  } catch (err) {\n    console.error('[AUTOTEST] interfaces error:', err);\n    res.status(500).json({ error: err.message || 'Falha ao listar interfaces.' });\n  }\n}",
+        "implementation": [
+          "Arquivo: server.js",
+          "Símbolo: GET /api/autotest/interfaces",
+          "GitHub: https://github.com/CanonEngineer/Professional-Scanner/blob/main/server.js"
+        ]
+      },
+      {
+        "id": "professional-scanner-fn-server-js-get-api-autotest-history",
+        "parent": "professional-scanner-grp-server-js-routes-25-36",
+        "layer": "function",
+        "title": "GET /api/autotest/history",
+        "description": "Rota em `server.js`",
+        "file": "server.js",
+        "code": "app.get('/api/autotest/history', (req, res) => {\n  try {\n    const limit = Math.min(Number(req.query.limit) || 30, 50);\n    res.json({ ok: true, ...autoTest.listHistory(limit) });\n  } catch (err) {\n    res.status(500).json({ error: 'Falha ao ler histórico.' });\n  }\n}",
+        "implementation": [
+          "Arquivo: server.js",
+          "Símbolo: GET /api/autotest/history",
+          "GitHub: https://github.com/CanonEngineer/Professional-Scanner/blob/main/server.js"
+        ]
+      },
+      {
+        "id": "professional-scanner-fn-server-js-delete-api-autotest-history",
+        "parent": "professional-scanner-grp-server-js-routes-25-36",
+        "layer": "function",
+        "title": "DELETE /api/autotest/history",
+        "description": "Rota em `server.js`",
+        "file": "server.js",
+        "code": "app.delete('/api/autotest/history', (req, res) => {\n  try {\n    res.json(autoTest.clearHistory());\n  } catch (err) {\n    res.status(500).json({ error: 'Falha ao limpar histórico.' });\n  }\n}",
+        "implementation": [
+          "Arquivo: server.js",
+          "Símbolo: DELETE /api/autotest/history",
+          "GitHub: https://github.com/CanonEngineer/Professional-Scanner/blob/main/server.js"
+        ]
+      },
+      {
+        "id": "professional-scanner-fn-server-js-get-api-autotest-loop-switches",
+        "parent": "professional-scanner-grp-server-js-routes-37-48",
+        "layer": "function",
+        "title": "GET /api/autotest/loop-switches",
+        "description": "Rota em `server.js`",
+        "file": "server.js",
+        "code": "app.get('/api/autotest/loop-switches', (req, res) => {\n  try {\n    res.json({ ok: true, switches: autoTest.listLoopSwitchesPublic() });\n  } catch (err) {\n    res.status(500).json({ error: 'Falha ao listar switches do Loop.' });\n  }\n}",
+        "implementation": [
+          "Arquivo: server.js",
+          "Símbolo: GET /api/autotest/loop-switches",
+          "GitHub: https://github.com/CanonEngineer/Professional-Scanner/blob/main/server.js"
+        ]
+      },
+      {
+        "id": "professional-scanner-fn-server-js-post-api-autotest-export-pdf",
+        "parent": "professional-scanner-grp-server-js-routes-37-48",
+        "layer": "function",
+        "title": "POST /api/autotest/export-pdf",
+        "description": "Rota em `server.js`",
+        "file": "server.js",
+        "code": "app.post('/api/autotest/export-pdf', async (req, res) => {\n  try {\n    const result = req.body?.result || req.body;\n    if (!result || !Array.isArray(result.steps)) {\n      return res.status(400).json({ error: 'Envie o resultado do AutoTest para exportar.' });\n    }\n    const pdf = await generateAutoTestPdf(result);\n    const stamp = (result.ranAt || new Date().toISOString()).slice(0, 19).replace(/[:T]/g, '-');\n    res.setHeader('Content-Type', 'application/pdf');\n    res.setHeader('Content-Disposition', `attachment; filename=\"autotest-${stamp}.pdf\"`);\n    res.send(pdf);\n  } catch (err) {\n    console.error('[AUTOTEST] pdf error:', err);\n    res.status(500).json({ error: err.message || 'Falha ao gerar PDF.' });\n  }\n}",
+        "implementation": [
+          "Arquivo: server.js",
+          "Símbolo: POST /api/autotest/export-pdf",
+          "GitHub: https://github.com/CanonEngineer/Professional-Scanner/blob/main/server.js"
+        ]
+      },
+      {
+        "id": "professional-scanner-fn-server-js-post-api-autotest-export-xlsx",
+        "parent": "professional-scanner-grp-server-js-routes-37-48",
+        "layer": "function",
+        "title": "POST /api/autotest/export-xlsx",
+        "description": "Rota em `server.js`",
+        "file": "server.js",
+        "code": "app.post('/api/autotest/export-xlsx', async (req, res) => {\n  try {\n    const result = req.body?.result || req.body;\n    if (!result || !Array.isArray(result.steps)) {\n      return res.status(400).json({ error: 'Envie o resultado do AutoTest para exportar.' });\n    }\n    const buffer = await generateAutoTestXlsx(result);\n    const stamp = (result.ranAt || new Date().toISOString()).slice(0, 19).replace(/[:T]/g, '-');\n    res.setHeader('Content-Type', 'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet');\n    res.setHeader('Content-Disposition', `attachment; filename=\"autotest-${stamp}.xlsx\"`);\n    res.send(buffer);\n  } catch (err) {\n    console.error('[AUTOTEST] xlsx error:', err);\n    res.status(500).json({ error: err.message || 'Falha ao gerar Excel.' });\n  }\n}",
+        "implementation": [
+          "Arquivo: server.js",
+          "Símbolo: POST /api/autotest/export-xlsx",
+          "GitHub: https://github.com/CanonEngineer/Professional-Scanner/blob/main/server.js"
+        ]
+      },
+      {
+        "id": "professional-scanner-fn-server-js-post-api-autotest-export-csv",
+        "parent": "professional-scanner-grp-server-js-routes-37-48",
+        "layer": "function",
+        "title": "POST /api/autotest/export-csv",
+        "description": "Rota em `server.js`",
+        "file": "server.js",
+        "code": "app.post('/api/autotest/export-csv', (req, res) => {\n  try {\n    const result = req.body?.result || req.body;\n    if (!result || !Array.isArray(result.steps)) {\n      return res.status(400).json({ error: 'Envie o resultado do AutoTest para exportar.' });\n    }\n    const csv = generateAutoTestCsv(result);\n    const stamp = (result.ranAt || new Date().toISOString()).slice(0, 19).replace(/[:T]/g, '-');\n    res.setHeader('Content-Type', 'text/csv; charset=utf-16le');\n    res.setHeader('Content-Disposition', `attachment; filename=\"autotest-${stamp}.csv\"`);\n    res.send(csv);\n  } catch (err) {\n    console.error('[AUTOTEST] csv error:', err);\n    res.status(500).json({ error: err.message || 'Falha ao gerar CSV.' });\n  }\n}",
+        "implementation": [
+          "Arquivo: server.js",
+          "Símbolo: POST /api/autotest/export-csv",
+          "GitHub: https://github.com/CanonEngineer/Professional-Scanner/blob/main/server.js"
+        ]
+      },
+      {
+        "id": "professional-scanner-fn-server-js-get-api-autotest-local",
+        "parent": "professional-scanner-grp-server-js-routes-37-48",
+        "layer": "function",
+        "title": "GET /api/autotest/local",
+        "description": "Rota em `server.js`",
+        "file": "server.js",
+        "code": "app.get('/api/autotest/local', async (req, res) => {\n  try {\n    let cfg = {};\n    if (req.query.profileId) {\n      cfg = autoTest.resolveRunConfig({ profileId: req.query.profileId });\n    }\n    if (req.query.testInterfaceMode) cfg.testInterfaceMode = req.query.testInterfaceMode;\n    if (req.query.testInterface !== undefined) cfg.testInterface = req.query.testInterface;\n    res.json(await autoTest.resolveLocalNetwork(cfg));\n  } catch (err) {\n    console.error('[AUTOTEST] local error:', err);\n    res.status(500).json({ error: err.message || 'Falha ao ler rede local.' });\n  }\n}",
+        "implementation": [
+          "Arquivo: server.js",
+          "Símbolo: GET /api/autotest/local",
+          "GitHub: https://github.com/CanonEngineer/Professional-Scanner/blob/main/server.js"
+        ]
+      },
+      {
+        "id": "professional-scanner-fn-server-js-post-api-autotest-run",
+        "parent": "professional-scanner-grp-server-js-routes-37-48",
+        "layer": "function",
+        "title": "POST /api/autotest/run",
+        "description": "Rota em `server.js`",
+        "file": "server.js",
+        "code": "app.post('/api/autotest/run', async (req, res) => {\n  try {\n    const result = await autoTest.runAutoTest(req.body || {});\n    res.json(result);\n  } catch (err) {\n    console.error('[AUTOTEST] run error:', err);\n    res.status(500).json({ error: err.message || 'Falha ao executar AutoTest.' });\n  }\n}",
+        "implementation": [
+          "Arquivo: server.js",
+          "Símbolo: POST /api/autotest/run",
+          "GitHub: https://github.com/CanonEngineer/Professional-Scanner/blob/main/server.js"
+        ]
+      },
+      {
+        "id": "professional-scanner-fn-server-js-get-api-autotest-remote-config",
+        "parent": "professional-scanner-grp-server-js-routes-37-48",
+        "layer": "function",
+        "title": "GET /api/autotest/remote/config",
+        "description": "Rota em `server.js`",
+        "file": "server.js",
+        "code": "app.get('/api/autotest/remote/config', (req, res) => {\n  try {\n    res.json(autoTestRemote.getPublicConfig());\n  } catch (err) {\n    res.status(500).json({ error: err.message || 'Falha ao ler config remota.' });\n  }\n}",
+        "implementation": [
+          "Arquivo: server.js",
+          "Símbolo: GET /api/autotest/remote/config",
+          "GitHub: https://github.com/CanonEngineer/Professional-Scanner/blob/main/server.js"
+        ]
+      },
+      {
+        "id": "professional-scanner-fn-server-js-post-api-autotest-remote-auth-login",
+        "parent": "professional-scanner-grp-server-js-routes-37-48",
+        "layer": "function",
+        "title": "POST /api/autotest/remote/auth/login",
+        "description": "Rota em `server.js`",
+        "file": "server.js",
+        "code": "app.post('/api/autotest/remote/auth/login', async (req, res) => {\n  try {\n    const username = String(req.body?.username || '').trim();\n    const password = String(req.body?.password || '');\n    if (!username || !password) {\n      return res.status(400).json({ ok: false, error: 'Informe login e senha.' });\n    }\n    const result = await autoTestRemoteAuth.login(username, password, clientIp(req));\n    if (!result.ok) return res.status(401).json(result);\n    res.json(result);\n  } catch (err) {\n    console.error('[AUTOTEST] remote AD login error:', err);\n    res.status(500).json({ ok: false, error: err.message || 'Falha na autenticação AD.' });\n  }\n}",
+        "implementation": [
+          "Arquivo: server.js",
+          "Símbolo: POST /api/autotest/remote/auth/login",
+          "GitHub: https://github.com/CanonEngineer/Professional-Scanner/blob/main/server.js"
+        ]
+      },
+      {
+        "id": "professional-scanner-fn-server-js-get-api-autotest-remote-auth-session",
+        "parent": "professional-scanner-grp-server-js-routes-37-48",
+        "layer": "function",
+        "title": "GET /api/autotest/remote/auth/session",
+        "description": "Rota em `server.js`",
+        "file": "server.js",
+        "code": "app.get('/api/autotest/remote/auth/session', (req, res) => {\n  const token = autoTestRemoteAuth.extractToken(req);\n  const session = autoTestRemoteAuth.getSession(token);\n  res.json({\n    ok: true,\n    authenticated: !!session,\n    user: session?.user || null,\n    expiresInMs: session ? Math.max(0, session.expiresAt - Date.now()) : 0\n  });\n}",
+        "implementation": [
+          "Arquivo: server.js",
+          "Símbolo: GET /api/autotest/remote/auth/session",
+          "GitHub: https://github.com/CanonEngineer/Professional-Scanner/blob/main/server.js"
+        ]
+      },
+      {
+        "id": "professional-scanner-fn-server-js-post-api-autotest-remote-auth-logout",
+        "parent": "professional-scanner-grp-server-js-routes-37-48",
+        "layer": "function",
+        "title": "POST /api/autotest/remote/auth/logout",
+        "description": "Rota em `server.js`",
+        "file": "server.js",
+        "code": "app.post('/api/autotest/remote/auth/logout', (req, res) => {\n  autoTestRemoteAuth.revokeSession(autoTestRemoteAuth.extractToken(req));\n  res.json({ ok: true });\n}",
+        "implementation": [
+          "Arquivo: server.js",
+          "Símbolo: POST /api/autotest/remote/auth/logout",
+          "GitHub: https://github.com/CanonEngineer/Professional-Scanner/blob/main/server.js"
+        ]
+      },
+      {
+        "id": "professional-scanner-fn-server-js-post-api-autotest-remote-pairing",
+        "parent": "professional-scanner-grp-server-js-routes-37-48",
+        "layer": "function",
+        "title": "POST /api/autotest/remote/pairing",
+        "description": "Rota em `server.js`",
+        "file": "server.js",
+        "code": "app.post('/api/autotest/remote/pairing', autoTestRemoteAuth.requireAuth, (req, res) => {\n  try {\n    const rl = checkRateLimit(`pairing:${clientIp(req)}`, 15, 60 * 1000);\n    if (!rl.allowed) {\n      return res.status(429).json({ ok: false, error: 'Muitas solicitações de pareamento. Aguarde um minuto.' });\n    }\n    res.json({ ok: true, ...autoTestRemote.createPairingCode() });\n  } catch (err) {\n    res.status(500).json({ error: err.message || 'Falha ao gerar código de pareamento.' });\n  }\n}",
+        "implementation": [
+          "Arquivo: server.js",
+          "Símbolo: POST /api/autotest/remote/pairing",
+          "GitHub: https://github.com/CanonEngineer/Professional-Scanner/blob/main/server.js"
+        ]
+      },
+      {
+        "id": "professional-scanner-fn-server-js-get-api-autotest-remote-agents",
+        "parent": "professional-scanner-grp-server-js-routes-37-48",
+        "layer": "function",
+        "title": "GET /api/autotest/remote/agents",
+        "description": "Rota em `server.js`",
+        "file": "server.js",
+        "code": "app.get('/api/autotest/remote/agents', autoTestRemoteAuth.requireAuth, (req, res) => {\n  try {\n    res.json(autoTestRemote.listAgents());\n  } catch (err) {\n    res.status(500).json({ error: err.message || 'Falha ao listar agentes.' });\n  }\n}",
+        "implementation": [
+          "Arquivo: server.js",
+          "Símbolo: GET /api/autotest/remote/agents",
+          "GitHub: https://github.com/CanonEngineer/Professional-Scanner/blob/main/server.js"
+        ]
+      },
+      {
+        "id": "professional-scanner-fn-server-js-parsetarget",
+        "parent": "professional-scanner-grp-server-js-functions-1-12",
+        "layer": "function",
+        "title": "parseTarget()",
+        "description": "Função em `server.js`",
+        "file": "server.js",
+        "code": "function parseTarget(target) {\n  target = target.trim();\n  const ips = [];\n\n  // 1. CIDR notation (e.g. 192.168.1.0/24)\n  if (target.includes('/')) {\n    const parts = target.split('/');\n    const baseIp = parts[0];\n    const mask = parseInt(parts[1], 10);\n    if (mask < 0 || mask > 32) return [];\n\n    const ipNum = ipToLong(baseIp);\n    const numHosts = Math.pow(2, 32 - mask);\n    const maskBuffer = mask === 0 ? 0 : (~0 << (32 - mask));\n    const startIpNum = (ipNum & maskBuffer) >>> 0;\n    \n    // For large networks, limit safety size to /24 (256 hosts) to avoid crashing local scanners\n    const limit = Math.min(numHosts, 1024); \n    for (let i = 0; i < limit; i++) {\n      ips.push(longToIp(startIpNum + i));\n    }\n  } \n  // 2. Dash range (e.g. 192.168.1.1-192.168.1.50 or 192.168.1.1-50)\n  else if (target.includes('-')) {\n    const parts = target.split('-');\n    const startIpStr = parts[0].trim();\n    let endIpStr = parts[1].trim();\n\n    if (!endIpStr.includes('.')) {\n      const startOctets = startIpStr.split('.');\n      startOctets[3] = endIpStr;\n      endIpStr = startOctets.join('.');\n    }\n\n    const startNum = ipToLong(startIpStr);\n    const endNum = ipToLong(endIpStr);\n\n    if (startNum <= endNum && (endNum - startNum) <= 1024) {\n      for (let i = startNum; i <= endNum; i++) {\n        ips.push(longToIp(i));\n      }\n    }\n  } \n  // 3. Single IP\n  else if (/^(?:[0-9]{1,3}\\.){3}[0-9]{1,3}$/.test(target)) {\n    ips.push(target);\n  }\n\n  return ips;\n}",
+        "implementation": [
+          "Arquivo: server.js",
+          "Símbolo: parseTarget()",
+          "GitHub: https://github.com/CanonEngineer/Professional-Scanner/blob/main/server.js"
+        ]
+      },
+      {
+        "id": "professional-scanner-fn-server-js-pinghost",
+        "parent": "professional-scanner-grp-server-js-functions-1-12",
+        "layer": "function",
+        "title": "pingHost()",
+        "description": "Função em `server.js`",
+        "file": "server.js",
+        "code": "function pingHost(ip, timeoutMs) {\n  return new Promise((resolve) => {\n    // Windows ping syntax: ping -n 1 -w timeout ip\n    exec(`ping -n 1 -w ${timeoutMs} ${ip}`, (error, stdout, stderr) => {\n      if (error) {\n        resolve({ ip, active: false, ttl: null });\n        return;\n      }\n      \n      // Matches TTL in English (TTL=128) or Portuguese (TTL=128)\n      const ttlMatch = stdout.match(/TTL=(\\d+)/i);\n      if (ttlMatch) {\n        const ttl = parseInt(ttlMatch[1], 10);\n        resolve({ ip, active: true, ttl });\n      } else {\n        // Double check if output reports success but no TTL (e.g. localhost)\n        if (stdout.includes('resposta de') || stdout.includes('reply from') || stdout.includes('0% de perda') || stdout.includes('0% loss')) {\n          resolve({ ip, active: true, ttl: 64 }); // Default fallback TTL\n        } else {\n          resolve({ ip, active: false, ttl: null });\n        }\n      }\n    });\n  });\n}",
+        "implementation": [
+          "Arquivo: server.js",
+          "Símbolo: pingHost()",
+          "GitHub: https://github.com/CanonEngineer/Professional-Scanner/blob/main/server.js"
+        ]
+      },
+      {
+        "id": "professional-scanner-fn-server-js-getosfromttl",
+        "parent": "professional-scanner-grp-server-js-functions-1-12",
+        "layer": "function",
+        "title": "getOSFromTTL()",
+        "description": "Função em `server.js`",
+        "file": "server.js",
+        "code": "function getOSFromTTL(ttl) {\n  if (!ttl) return 'Desconhecido';\n  if (ttl <= 64) return 'Linux / macOS / Android';\n  if (ttl <= 128) return 'Windows';\n  if (ttl <= 255) return 'Dispositivo de Rede (Cisco/Router/Embedded)';\n  return 'Desconhecido';\n}",
+        "implementation": [
+          "Arquivo: server.js",
+          "Símbolo: getOSFromTTL()",
+          "GitHub: https://github.com/CanonEngineer/Professional-Scanner/blob/main/server.js"
+        ]
+      },
+      {
+        "id": "professional-scanner-fn-server-js-resolvehostname",
+        "parent": "professional-scanner-grp-server-js-functions-1-12",
+        "layer": "function",
+        "title": "resolveHostname()",
+        "description": "Função em `server.js`",
+        "file": "server.js",
+        "code": "async function resolveHostname(ip) {\n  try {\n    const hostnames = await dns.reverse(ip);\n    return hostnames[0] || 'N/A';\n  } catch (err) {\n    return 'N/A';\n  }\n}",
+        "implementation": [
+          "Arquivo: server.js",
+          "Símbolo: resolveHostname()",
+          "GitHub: https://github.com/CanonEngineer/Professional-Scanner/blob/main/server.js"
+        ]
+      },
+      {
+        "id": "professional-scanner-fn-server-js-getmacaddress",
+        "parent": "professional-scanner-grp-server-js-functions-1-12",
+        "layer": "function",
+        "title": "getMacAddress()",
+        "description": "Função em `server.js`",
+        "file": "server.js",
+        "code": "function getMacAddress(ip) {\n  return new Promise((resolve) => {\n    // Windows arp command: arp -a ip\n    exec(`arp -a ${ip}`, (error, stdout, stderr) => {\n      if (error || !stdout) {\n        resolve('N/A');\n        return;\n      }\n\n      const lines = stdout.split('\\n');\n      for (const line of lines) {\n        if (line.includes(ip)) {\n          // Regex to match MAC address formats (e.g., 00-11-22-33-44-55 or 00:11:22:33:44:55)\n          const macMatch = line.match(/([0-9a-fA-F]{2}[:-]){5}([0-9a-fA-F]{2})/);\n          if (macMatch) {\n            resolve(macMatch[0].toUpperCase().replace(/:/g, '-'));\n            return;\n          }\n        }\n      }\n      resolve('N/A');\n    });\n  });\n}",
+        "implementation": [
+          "Arquivo: server.js",
+          "Símbolo: getMacAddress()",
+          "GitHub: https://github.com/CanonEngineer/Professional-Scanner/blob/main/server.js"
+        ]
+      },
+      {
+        "id": "professional-scanner-fn-server-js-scantcpport",
+        "parent": "professional-scanner-grp-server-js-functions-1-12",
+        "layer": "function",
+        "title": "scanTcpPort()",
+        "description": "Função em `server.js`",
+        "file": "server.js",
+        "code": "function scanTcpPort(ip, port, timeoutMs, scanCtrl = null) {\n  return new Promise((resolve) => {\n    const socket = new net.Socket();\n    let status = 'closed';\n    let version = 'N/A';\n    let settled = false;\n\n    const finish = (result) => {\n      if (settled) return;\n      settled = true;\n      if (scanCtrl && scanCtrl.sockets) scanCtrl.sockets.delete(socket);\n      try { socket.destroy(); } catch (_) {}\n      resolve(result);\n    };\n\n    if (scanCtrl && scanCtrl.sockets) scanCtrl.sockets.add(socket);\n\n    socket.setTimeout(timeoutMs);\n\n    socket.on('connect', () => {\n      if (scanCtrl && scanCtrl.cancelled) {\n        finish({ port, protocol: 'TCP', state: 'closed', service: 'cancelled', version: 'N/A' });\n        return;\n      }\n      status = 'open';\n      const serviceInfo = TCP_SERVICES[port];\n      if (serviceInfo && serviceInfo.probe) {\n        try { socket.write(serviceInfo.probe); } catch (_) {}\n      }\n      // Sem banner: fecha rápido para não segurar o pool\n      setTimeout(() => {\n        if (!settled && status === 'open') {\n          finish({\n            port,\n            protocol: 'TCP',\n            state: 'open',\n            service: TCP_SERVICES[port]?.name || guessServiceName(port),\n            version\n          });\n        }\n      }, Math.min(250, timeoutMs));\n    });\n\n    socket.on('data', (data) => {\n      const banner = data.toString('utf8', 0, 100).trim();\n      if (port === 80 || port === 8080 || port === 443 || port === 8000 || port === 8443) {\n        const serverHeader = banner.match(/Server:\\s*([^\\r\\n]+)/i);\n        version = serverHeader ? serverHeader[1] : 'HTTP Server';\n      } else {\n        version = banner.replace(/[\\r\\n]+/g, ' ').substring(0, 50);\n      }\n      finish({\n        port,\n        protocol: 'TCP',\n        state: 'open',\n        service: TCP_SERVICES[port]?.name || guessServiceName(port),\n        version\n      });\n    });\n\n    socket.on('timeout', () => {\n      if (status === 'open') {\n        finish({\n          port,\n          protocol: 'TCP',\n          state: 'open',\n          service: TCP_SERVICES[port]?.name || guessServiceName(port),\n          version\n        });\n      } else {\n        finish({\n          port,\n          protocol: 'TCP',\n          state: 'filtered',\n          service: TCP_SERVICES[port]?.name || guessServiceName(port),\n          version: 'N/A'\n        });\n      }\n    });\n\n    socket.on('error', (err) => {\n      if (status === 'open') {\n        finish({\n          port,\n          protocol: 'TCP',\n          state: 'open',\n          service: TCP_SERVICES[port]?.name || guessServiceName(port),\n          version\n        });\n        return;\n      }\n      finish({\n        port,\n        protocol: 'TCP',\n        state: err.code === 'ECONNREFUSED' ? 'closed' : 'filtered',\n        service: TCP_SERVICES[port]?.name || guessServiceName(port),\n        version: 'N/A'\n      });\n    });\n\n    socket.on('close', () => {\n      if (!settled) {\n        finish({\n          port,\n          protocol: 'TCP',\n          state: status,\n          service: TCP_SERVICES[port]?.name || guessServiceName(port),\n          version\n        });\n      }\n    });\n\n    if (scanCtrl && scanCtrl.cancelled) {\n      finish({ port, protocol: 'TCP', state: 'closed', service: 'cancelled', version: 'N/A' });\n      return;\n    }\n\n    socket.connect(port, ip);\n  });\n}",
+        "implementation": [
+          "Arquivo: server.js",
+          "Símbolo: scanTcpPort()",
+          "GitHub: https://github.com/CanonEngineer/Professional-Scanner/blob/main/server.js"
+        ]
+      },
+      {
+        "id": "professional-scanner-fn-server-js-runconcurrent",
+        "parent": "professional-scanner-grp-server-js-functions-1-12",
+        "layer": "function",
+        "title": "runConcurrent()",
+        "description": "Função em `server.js`",
+        "file": "server.js",
+        "code": "async function runConcurrent(tasks, limit, onTaskComplete, shouldCancel = null) {\n  const results = [];\n  const executing = new Set();\n\n  for (const taskFn of tasks) {\n    if (shouldCancel && shouldCancel()) {\n      results.push(Promise.resolve(null));\n      continue;\n    }\n\n    const p = Promise.resolve().then(() => {\n      if (shouldCancel && shouldCancel()) return null;\n      return taskFn();\n    });\n    results.push(p);\n    executing.add(p);\n\n    const clean = () => executing.delete(p);\n    p.then(clean, clean);\n\n    if (onTaskComplete) {\n      p.then((res) => {\n        if (res != null) onTaskComplete(res);\n      }).catch(() => {});\n    }\n\n    if (executing.size >= limit) {\n      await Promise.race(executing);\n    }\n  }\n\n  return Promise.all(results);\n}",
+        "implementation": [
+          "Arquivo: server.js",
+          "Símbolo: runConcurrent()",
+          "GitHub: https://github.com/CanonEngineer/Professional-Scanner/blob/main/server.js"
+        ]
+      },
+      {
+        "id": "professional-scanner-fn-server-js-detectdmz",
+        "parent": "professional-scanner-grp-server-js-functions-1-12",
+        "layer": "function",
+        "title": "detectDMZ()",
+        "description": "Função em `server.js`",
+        "file": "server.js",
+        "code": "function detectDMZ(host) {\n  const ports = host.ports || [];\n  const hasWeb = ports.some(p => p.port === 80 || p.port === 443 || p.port === 8080);\n  const vendor = (host.vendor || '').toLowerCase();\n  const hostname = (host.hostname || '').toLowerCase();\n\n  if (isPublicIp(host.ip)) return true;\n  if (hasWeb && (vendor.includes('cisco') || vendor.includes('fortinet') || vendor.includes('juniper') || hostname.includes('dmz') || hostname.includes('fw') || hostname.includes('firewall'))) return true;\n  return false;\n}",
+        "implementation": [
+          "Arquivo: server.js",
+          "Símbolo: detectDMZ()",
+          "GitHub: https://github.com/CanonEngineer/Professional-Scanner/blob/main/server.js"
+        ]
+      },
+      {
+        "id": "professional-scanner-fn-server-js-detectotics",
+        "parent": "professional-scanner-grp-server-js-functions-1-12",
+        "layer": "function",
+        "title": "detectOTICS()",
+        "description": "Função em `server.js`",
+        "file": "server.js",
+        "code": "function detectOTICS(host) {\n  const icsPorts = [502, 44818, 102, 20000];\n  const ports = host.ports || [];\n  const openPorts = ports.map(p => p.port);\n  const matches = icsPorts.filter(p => openPorts.includes(p));\n  if (matches.length > 0) return { isOT: true, reasons: [`Ports: ${matches.join(',')}`] };\n\n  const hostname = (host.hostname || '').toLowerCase();\n  if (hostname.includes('plc') || hostname.includes('scada') || hostname.includes('hmi') || hostname.includes('rtu')) {\n    return { isOT: true, reasons: ['Hostname indicates OT/ICS'] };\n  }\n\n  const vendor = (host.vendor || '').toLowerCase();\n  if (vendor.includes('siemens') || vendor.includes('schneider') || vendor.includes('rockwell') || vendor.includes('schweitzer')) {\n    return { isOT: true, reasons: ['Vendor suggests industrial device'] };\n  }\n\n  return { isOT: false, reasons: [] };\n}",
+        "implementation": [
+          "Arquivo: server.js",
+          "Símbolo: detectOTICS()",
+          "GitHub: https://github.com/CanonEngineer/Professional-Scanner/blob/main/server.js"
+        ]
+      },
+      {
+        "id": "professional-scanner-fn-server-js-detectvm",
+        "parent": "professional-scanner-grp-server-js-functions-1-12",
+        "layer": "function",
+        "title": "detectVM()",
+        "description": "Função em `server.js`",
+        "file": "server.js",
+        "code": "function detectVM(mac, vendor, os) {\n  return detectVirtualization(mac, vendor, os).vm;\n}",
+        "implementation": [
+          "Arquivo: server.js",
+          "Símbolo: detectVM()",
+          "GitHub: https://github.com/CanonEngineer/Professional-Scanner/blob/main/server.js"
+        ]
+      },
+      {
+        "id": "professional-scanner-fn-server-js-getaddomain",
+        "parent": "professional-scanner-grp-server-js-functions-1-12",
+        "layer": "function",
+        "title": "getADDomain()",
+        "description": "Função em `server.js`",
+        "file": "server.js",
+        "code": "function getADDomain() {\n  try {\n    // Primeiro tenta obter via WMIC\n    try {\n      const output = execSync('wmic computersystem get domain', { encoding: 'utf8', stdio: ['ignore', 'pipe', 'ignore'], timeout: 2000 });\n      const lines = output.split('\\n').filter(l => l.trim() !== '');\n      if (lines.length >= 2 && lines[1].trim()) {\n        return lines[1].trim();\n      }\n    } catch (wmic_err) {\n      console.warn('[WARN] WMIC failed:', wmic_err.message);\n    }\n    \n    // Fallback usando PowerShell (mais universal em Windows modernos)\n    try {\n      const psOutput = execSync('powershell -NoProfile -Command \"(Get-WmiObject -Class Win32_ComputerSystem).Domain\"', { encoding: 'utf8', timeout: 2000 });\n      const domain = psOutput.toString().trim();\n      return domain || 'N/A';\n    } catch (ps_err) {\n      console.warn('[WARN] PowerShell failed:', ps_err.message);\n    }\n    \n    return 'N/A';\n  } catch (e) {\n    console.warn('[WARN] getADDomain error:', e.message);\n    return 'N/A';\n  }\n}",
+        "implementation": [
+          "Arquivo: server.js",
+          "Símbolo: getADDomain()",
+          "GitHub: https://github.com/CanonEngineer/Professional-Scanner/blob/main/server.js"
+        ]
+      },
+      {
+        "id": "professional-scanner-fn-server-js-broadcastloopmsg",
+        "parent": "professional-scanner-grp-server-js-functions-1-12",
+        "layer": "function",
+        "title": "broadcastLoopMsg()",
+        "description": "Função em `server.js`",
+        "file": "server.js",
+        "code": "function broadcastLoopMsg(payload) {\n  const raw = JSON.stringify(payload);\n  wss.clients.forEach((client) => {\n    if (client.readyState === WebSocket.OPEN) {\n      try { client.send(raw); } catch { /* ignore */ }\n    }\n  });\n}",
+        "implementation": [
+          "Arquivo: server.js",
+          "Símbolo: broadcastLoopMsg()",
+          "GitHub: https://github.com/CanonEngineer/Professional-Scanner/blob/main/server.js"
+        ]
+      },
+      {
+        "id": "professional-scanner-fn-server-js-notifyplatformscancomplete",
+        "parent": "professional-scanner-grp-server-js-functions-13-24",
+        "layer": "function",
+        "title": "notifyPlatformScanComplete()",
+        "description": "Função em `server.js`",
+        "file": "server.js",
+        "code": "function notifyPlatformScanComplete(snapshot, meta = {}",
+        "implementation": [
+          "Arquivo: server.js",
+          "Símbolo: notifyPlatformScanComplete()",
+          "GitHub: https://github.com/CanonEngineer/Professional-Scanner/blob/main/server.js"
+        ]
+      },
+      {
+        "id": "professional-scanner-fn-server-js-abortscansockets",
+        "parent": "professional-scanner-grp-server-js-functions-13-24",
+        "layer": "function",
+        "title": "abortScanSockets()",
+        "description": "Função em `server.js`",
+        "file": "server.js",
+        "code": "function abortScanSockets(scanCtrl) {\n  if (!scanCtrl) return;\n  if (scanCtrl.sockets) {\n    for (const socket of scanCtrl.sockets) {\n      try { socket.destroy(); } catch (_) {}\n    }\n    scanCtrl.sockets.clear();\n  }\n  if (scanCtrl.udpSockets) {\n    for (const udp of scanCtrl.udpSockets) {\n      try { udp.close(); } catch (_) {}\n    }\n    scanCtrl.udpSockets.clear();\n  }\n}",
+        "implementation": [
+          "Arquivo: server.js",
+          "Símbolo: abortScanSockets()",
+          "GitHub: https://github.com/CanonEngineer/Professional-Scanner/blob/main/server.js"
+        ]
+      },
+      {
+        "id": "professional-scanner-fn-server-js-guessservicename",
+        "parent": "professional-scanner-grp-server-js-functions-13-24",
+        "layer": "function",
+        "title": "guessServiceName()",
+        "description": "Função em `server.js`",
+        "file": "server.js",
+        "code": "function guessServiceName(port) {\n  const known = {\n    88: 'Kerberos', 389: 'LDAP', 636: 'LDAPS', 3268: 'Global Catalog', 3269: 'Global Catalog SSL',\n    464: 'Kerberos Password', 902: 'VMware Auth', 903: 'VMware', 1433: 'MSSQL', 1434: 'MSSQL Browser',\n    1521: 'Oracle', 3306: 'MySQL', 5432: 'PostgreSQL', 5985: 'WinRM HTTP', 5986: 'WinRM HTTPS',\n    9389: 'AD Web Services', 2049: 'NFS', 2375: 'Docker', 2376: 'Docker TLS', 6443: 'Kubernetes API',\n    9200: 'Elasticsearch', 27017: 'MongoDB', 5672: 'RabbitMQ', 6379: 'Redis', 11211: 'Memcached',\n    5060: 'SIP', 5061: 'SIP-TLS', 1883: 'MQTT', 8883: 'MQTT-TLS', 47808: 'BACnet'\n  };\n  if (known[port]) return known[port];\n  if (TCP_SERVICES[port]?.name) return TCP_SERVICES[port].name;\n  return `TCP/${port}`;\n}",
+        "implementation": [
+          "Arquivo: server.js",
+          "Símbolo: guessServiceName()",
+          "GitHub: https://github.com/CanonEngineer/Professional-Scanner/blob/main/server.js"
+        ]
+      },
+      {
+        "id": "professional-scanner-fn-server-js-requireautotestagenttoken",
+        "parent": "professional-scanner-grp-server-js-functions-13-24",
+        "layer": "function",
+        "title": "requireAutoTestAgentToken()",
+        "description": "Função em `server.js`",
+        "file": "server.js",
+        "code": "function requireAutoTestAgentToken(req, res, next) {\n  const token = req.headers['x-autotest-agent-token'] || req.body?.token;\n  if (!autoTestRemote.verifyAgentToken(token)) {\n    return res.status(401).json({ error: 'Token de agente inválido.' });\n  }\n  next();\n}",
+        "implementation": [
+          "Arquivo: server.js",
+          "Símbolo: requireAutoTestAgentToken()",
+          "GitHub: https://github.com/CanonEngineer/Professional-Scanner/blob/main/server.js"
+        ]
+      },
+      {
+        "id": "professional-scanner-fn-server-js-requiresignedautotestagent",
+        "parent": "professional-scanner-grp-server-js-functions-13-24",
+        "layer": "function",
+        "title": "requireSignedAutoTestAgent()",
+        "description": "Função em `server.js`",
+        "file": "server.js",
+        "code": "function requireSignedAutoTestAgent(req, res, next) {\n  const agentId = req.headers['x-autotest-agent-id'];\n  const timestamp = req.headers['x-autotest-agent-ts'];\n  const signature = req.headers['x-autotest-agent-sign'];\n  if (agentId && timestamp && signature) {\n    const out = autoTestRemote.verifySignedAgentRequest(agentId, timestamp, req.body || {}, signature);\n    if (!out.ok) return res.status(401).json(out);\n    req.autotestAgent = out.agent;\n    return next();\n  }\n  return requireAutoTestAgentToken(req, res, next);\n}",
+        "implementation": [
+          "Arquivo: server.js",
+          "Símbolo: requireSignedAutoTestAgent()",
+          "GitHub: https://github.com/CanonEngineer/Professional-Scanner/blob/main/server.js"
+        ]
+      },
+      {
+        "id": "professional-scanner-fn-server-js-readsharecreds",
+        "parent": "professional-scanner-grp-server-js-functions-13-24",
+        "layer": "function",
+        "title": "readShareCreds()",
+        "description": "Função em `server.js`",
+        "file": "server.js",
+        "code": "function readShareCreds(req) {\n  const username = String(req.body?.username || req.query?.username || '').trim();\n  const password = String(req.body?.password || req.query?.password || '');\n  const domain = String(req.body?.domain || req.query?.domain || '').trim();\n  if (!username || !password) return {};\n  return { username, password, domain };\n}",
+        "implementation": [
+          "Arquivo: server.js",
+          "Símbolo: readShareCreds()",
+          "GitHub: https://github.com/CanonEngineer/Professional-Scanner/blob/main/server.js"
+        ]
+      },
+      {
+        "id": "professional-scanner-fn-server-js-iptolong",
+        "parent": "professional-scanner-grp-server-js-functions-13-24",
+        "layer": "function",
+        "title": "ipToLong()",
+        "description": "Função em `server.js`",
+        "file": "server.js",
+        "code": "function ipToLong(ip) {\n  return ip.split('.').reduce((ipInt, octet) => (ipInt << 8) + parseInt(octet, 10), 0) >>> 0;\n}",
+        "implementation": [
+          "Arquivo: server.js",
+          "Símbolo: ipToLong()",
+          "GitHub: https://github.com/CanonEngineer/Professional-Scanner/blob/main/server.js"
+        ]
+      },
+      {
+        "id": "professional-scanner-fn-server-js-longtoip",
+        "parent": "professional-scanner-grp-server-js-functions-13-24",
+        "layer": "function",
+        "title": "longToIp()",
+        "description": "Função em `server.js`",
+        "file": "server.js",
+        "code": "function longToIp(long) {\n  return [\n    (long >>> 24) & 0xFF,\n    (long >>> 16) & 0xFF,\n    (long >>> 8) & 0xFF,\n    long & 0xFF\n  ].join('.');\n}",
+        "implementation": [
+          "Arquivo: server.js",
+          "Símbolo: longToIp()",
+          "GitHub: https://github.com/CanonEngineer/Professional-Scanner/blob/main/server.js"
+        ]
+      },
+      {
+        "id": "professional-scanner-fn-server-js-scanudpport",
+        "parent": "professional-scanner-grp-server-js-functions-13-24",
+        "layer": "function",
+        "title": "scanUdpPort()",
+        "description": "Função em `server.js`",
+        "file": "server.js",
+        "code": "function scanUdpPort(ip, port, timeoutMs, scanCtrl = null) {\n  return new Promise((resolve) => {\n    const client = dgram.createSocket('udp4');\n    let state = 'open | filtered';\n    let serviceName = UDP_SERVICES[port] || 'Desconhecido';\n    let version = 'N/A';\n    let settled = false;\n\n    const finish = (result) => {\n      if (settled) return;\n      settled = true;\n      clearTimeout(timer);\n      if (scanCtrl && scanCtrl.udpSockets) scanCtrl.udpSockets.delete(client);\n      try { client.close(); } catch (_) {}\n      resolve(result);\n    };\n\n    if (scanCtrl && scanCtrl.udpSockets) scanCtrl.udpSockets.add(client);\n\n    const timer = setTimeout(() => {\n      finish({ port, protocol: 'UDP', state, service: serviceName, version });\n    }, timeoutMs);\n\n    client.on('message', (msg) => {\n      state = 'open';\n      version = msg.toString('utf8', 0, 50).trim().replace(/[\\r\\n]+/g, ' ');\n      finish({ port, protocol: 'UDP', state: 'open', service: serviceName, version });\n    });\n\n    client.on('error', () => {\n      finish({ port, protocol: 'UDP', state: 'closed', service: serviceName, version: 'N/A' });\n    });\n\n    if (scanCtrl && scanCtrl.cancelled) {\n      finish({ port, protocol: 'UDP', state: 'closed', service: 'cancelled', version: 'N/A' });\n      return;\n    }\n\n    try {\n      client.send(Buffer.from([0x00]), port, ip, (err) => {\n        if (err) {\n          finish({ port, protocol: 'UDP', state: 'closed', service: serviceName, version: 'N/A' });\n        }\n      });\n    } catch (err) {\n      finish({ port, protocol: 'UDP', state: 'closed', service: serviceName, version: 'N/A' });\n    }\n  });\n}",
+        "implementation": [
+          "Arquivo: server.js",
+          "Símbolo: scanUdpPort()",
+          "GitHub: https://github.com/CanonEngineer/Professional-Scanner/blob/main/server.js"
+        ]
+      },
+      {
+        "id": "professional-scanner-fn-server-js-getuserhome",
+        "parent": "professional-scanner-grp-server-js-functions-13-24",
+        "layer": "function",
+        "title": "getUserHome()",
+        "description": "Função em `server.js`",
+        "file": "server.js",
+        "code": "function getUserHome() {\n  return process.env.USERPROFILE || process.env.HOME || os.homedir();\n}",
+        "implementation": [
+          "Arquivo: server.js",
+          "Símbolo: getUserHome()",
+          "GitHub: https://github.com/CanonEngineer/Professional-Scanner/blob/main/server.js"
+        ]
+      },
+      {
+        "id": "professional-scanner-fn-server-js-getcsvtargetdir",
+        "parent": "professional-scanner-grp-server-js-functions-13-24",
+        "layer": "function",
+        "title": "getCsvTargetDir()",
+        "description": "Função em `server.js`",
+        "file": "server.js",
+        "code": "function getCsvTargetDir() {\n  return path.join(getUserHome(), 'Documents', 'python files', 'csv');\n}",
+        "implementation": [
+          "Arquivo: server.js",
+          "Símbolo: getCsvTargetDir()",
+          "GitHub: https://github.com/CanonEngineer/Professional-Scanner/blob/main/server.js"
+        ]
+      },
+      {
+        "id": "professional-scanner-fn-server-js-getsubnetcidr",
+        "parent": "professional-scanner-grp-server-js-functions-13-24",
+        "layer": "function",
+        "title": "getSubnetCidr()",
+        "description": "Função em `server.js`",
+        "file": "server.js",
+        "code": "function getSubnetCidr(ip) {\n  const parts = ip.split('.');\n  if (parts.length !== 4) return 'N/A';\n  return `${parts[0]}.${parts[1]}.${parts[2]}.0/24`;\n}",
+        "implementation": [
+          "Arquivo: server.js",
+          "Símbolo: getSubnetCidr()",
+          "GitHub: https://github.com/CanonEngineer/Professional-Scanner/blob/main/server.js"
+        ]
+      },
+      {
+        "id": "professional-scanner-fn-server-js-isprivateip",
+        "parent": "professional-scanner-grp-server-js-functions-25-27",
+        "layer": "function",
+        "title": "isPrivateIp()",
+        "description": "Função em `server.js`",
+        "file": "server.js",
+        "code": "function isPrivateIp(ip) {\n  const num = ipToLong(ip);\n  // 10.0.0.0/8\n  if (num >= ipToLong('10.0.0.0') && num <= ipToLong('10.255.255.255')) return true;\n  // 172.16.0.0/12\n  if (num >= ipToLong('172.16.0.0') && num <= ipToLong('172.31.255.255')) return true;\n  // 192.168.0.0/16\n  if (num >= ipToLong('192.168.0.0') && num <= ipToLong('192.168.255.255')) return true;\n  return false;\n}",
+        "implementation": [
+          "Arquivo: server.js",
+          "Símbolo: isPrivateIp()",
+          "GitHub: https://github.com/CanonEngineer/Professional-Scanner/blob/main/server.js"
+        ]
+      },
+      {
+        "id": "professional-scanner-fn-server-js-ispublicip",
+        "parent": "professional-scanner-grp-server-js-functions-25-27",
+        "layer": "function",
+        "title": "isPublicIp()",
+        "description": "Função em `server.js`",
+        "file": "server.js",
+        "code": "function isPublicIp(ip) {\n  return !isPrivateIp(ip);\n}",
+        "implementation": [
+          "Arquivo: server.js",
+          "Símbolo: isPublicIp()",
+          "GitHub: https://github.com/CanonEngineer/Professional-Scanner/blob/main/server.js"
+        ]
+      },
+      {
+        "id": "professional-scanner-fn-server-js-startserver",
+        "parent": "professional-scanner-grp-server-js-functions-25-27",
+        "layer": "function",
+        "title": "startServer()",
+        "description": "Função em `server.js`",
+        "file": "server.js",
+        "code": "function startServer(preferredPort, maxRetries = 5) {\n  let bound = false;\n\n  const bind = (port, retriesLeft) => {\n    server.removeAllListeners('error');\n    server.removeAllListeners('listening');\n\n    server.once('error', (err) => {\n      if (err.code === 'EADDRINUSE' && retriesLeft > 0) {\n        const nextPort = port + 1;\n        console.warn(`[HTTP] Porta ${port} em uso — tentando ${nextPort}...`);\n        if (port === preferredPort) {\n          console.warn('[HTTP] Dica: outra instância do NetScan (ou Node) já está rodando.');\n          console.warn('[HTTP] Para reiniciar limpo: Get-Process node -ErrorAction SilentlyContinue | Stop-Process -Force');\n        }\n        setImmediate(() => bind(nextPort, retriesLeft - 1));\n        return;\n      }\n      if (err.code === 'EADDRINUSE') {\n        console.error(`[HTTP] Nenhuma porta livre entre ${preferredPort} e ${port}.`);\n        console.error('[HTTP] Encerre processos Node antigos e rode npm start novamente.');\n      } else {\n        console.error('[HTTP] Erro ao iniciar servidor:', err);\n      }\n      process.exit(1);\n    });\n\n    server.listen(port, () => {\n      if (bound) return;\n      bound = true;\n      server.removeAllListeners('error');\n      const addr = server.address();\n      const boundPort = addr && addr.port ? addr.port : port;\n      if (boundPort !== preferredPort) {\n        console.warn(`[HTTP] Porta preferida ${preferredPort} ocupada — servindo em http://localhost:${boundPort}`);\n        console.warn('[HTTP] Use essa URL no navegador (não a porta anterior).');\n      }\n      console.log(`[HTTP] Servidor rodando em http://localhost:${boundPort}`);\n    });\n  };\n\n  bind(preferredPort, maxRetries);\n}",
+        "implementation": [
+          "Arquivo: server.js",
+          "Símbolo: startServer()",
           "GitHub: https://github.com/CanonEngineer/Professional-Scanner/blob/main/server.js"
         ]
       },
@@ -9096,6 +11218,294 @@ const PROJECTS = [
         ]
       },
       {
+        "id": "professional-scanner-grp-vmvlanstrategy-js-functions",
+        "parent": "professional-scanner-file-vmvlanstrategy-js",
+        "layer": "module",
+        "title": "Funções",
+        "description": "Funções em `vmVlanStrategy.js`",
+        "file": "vmVlanStrategy.js#functions",
+        "code": "# Funções em vmVlanStrategy.js\n",
+        "implementation": [
+          "agrupamento: functions"
+        ]
+      },
+      {
+        "id": "professional-scanner-grp-vmvlanstrategy-js-functions-1-12",
+        "parent": "professional-scanner-grp-vmvlanstrategy-js-functions",
+        "layer": "module",
+        "title": "Funções 1–12",
+        "description": "Fatia 1–12 de funções em `vmVlanStrategy.js`",
+        "file": "vmVlanStrategy.js#functions-1-12",
+        "code": "# Funções 1-12 em vmVlanStrategy.js\n",
+        "implementation": [
+          "agrupamento: functions"
+        ]
+      },
+      {
+        "id": "professional-scanner-grp-vmvlanstrategy-js-functions-13-18",
+        "parent": "professional-scanner-grp-vmvlanstrategy-js-functions",
+        "layer": "module",
+        "title": "Funções 13–18",
+        "description": "Fatia 13–18 de funções em `vmVlanStrategy.js`",
+        "file": "vmVlanStrategy.js#functions-13-18",
+        "code": "# Funções 13-18 em vmVlanStrategy.js\n",
+        "implementation": [
+          "agrupamento: functions"
+        ]
+      },
+      {
+        "id": "professional-scanner-fn-vmvlanstrategy-js-detectvirtualization",
+        "parent": "professional-scanner-grp-vmvlanstrategy-js-functions-1-12",
+        "layer": "function",
+        "title": "detectVirtualization()",
+        "description": "Função em `vmVlanStrategy.js`",
+        "file": "vmVlanStrategy.js",
+        "code": "function detectVirtualization(hostOrMac, vendorMaybe, osMaybe) {\n  // Support legacy signature detectVM(mac, vendor, os) and object form\n  let host;\n  if (typeof hostOrMac === 'object' && hostOrMac !== null) {\n    host = hostOrMac;\n  } else {\n    host = {\n      mac: hostOrMac,\n      vendor: vendorMaybe,\n      os: osMaybe\n    };\n  }\n\n  const mac = host.mac || '';\n  const vendor = String(host.vendor || '');\n  const os = String(host.os || '');\n  const hostname = String(host.hostname || '');\n  const description = String(host.description || '');\n  const text = `${hostname} ${vendor} ${os} ${description} ${host.adDn || ''}`.toLowerCase();\n\n  const evidence = [];\n  let vmType = null;\n  let score = 0;\n\n  const ouiType = matchVmOui(mac);\n  if (ouiType) {\n    vmType = ouiType;\n    score += 70;\n    evidence.push(`MAC OUI=${ouiType}`);\n  }\n\n  for (const hint of VM_VENDOR_HINTS) {\n    if (vendor.toLowerCase().includes(hint)) {\n      score += 40;\n      evidence.push(`Vendor=${hint}`);\n      if (!vmType) {\n        if (hint.includes('vmware')) vmType = 'VMware';\n        else if (hint.includes('hyper')) vmType = 'Hyper-V';\n        else if (hint.includes('virtualbox')) vmType = 'VirtualBox';\n        else if (hint.includes('qemu') || hint.includes('kvm')) vmType = 'QEMU/KVM';\n        else if (hint.includes('xen')) vmType = 'Xen';\n        else if (hint.includes('parallels')) vmType = 'Parallels';\n        else if (hint.includes('nutanix')) vmType = 'Nutanix';\n        else vmType = hint;\n      }\n      break;\n    }\n  }\n\n  for (const hint of VM_HOSTNAME_HINTS) {\n    if (hostname.toLowerCase().includes(hint) || description.toLowerCase().includes(hint)) {\n      score += 25;\n      evidence.push(`Nome/desc contém \"${hint}\"`);\n      break;\n    }\n  }\n\n  // Nome forte (ex.: VMWARE-15, VM-001, ACESSOREMOTO04)\n  if (VM_STRONG_NAME_RE.test(hostname) || VM_STRONG_NAME_RE.test(description)) {\n    score += 45;\n    evidence.push('Nome indica VM / VDI / acesso remoto');\n    if (!vmType) {\n      if (VM_STRONG_VENDOR_NAME_RE.test(hostname) || VM_STRONG_VENDOR_NAME_RE.test(description)) {\n        vmType = 'VM (nome/hipervisor)';\n      } else {\n        vmType = 'VM (acesso remoto / RDS)';\n      }\n    }\n  }\n\n  // Nomes explícitos de plataformas de virtualização merecem peso alto mesmo sem MAC.\n  // Ex.: VMWARE-15 pode vir sem OUI porque está fora do domínio/ARP local.\n  if (VM_STRONG_VENDOR_NAME_RE.test(hostname) || VM_STRONG_VENDOR_NAME_RE.test(description)) {\n    score += 35;\n    evidence.push('Nome menciona plataforma de virtualização');\n    if (!vmType) {\n      if (/vmware/i.test(`${hostname} ${description}`)) vmType = 'VMware';\n      else if (/hyper[-_]?v/i.test(`${hostname} ${description}`)) vmType = 'Hyper-V';\n      else if (/virtualbox/i.test(`${hostname} ${description}`)) vmType = 'VirtualBox';\n      else if (/qemu|kvm/i.test(`${hostname} ${description}`)) vmType = 'QEMU/KVM';\n      else vmType = 'VM (nome/hipervisor)';\n    }\n  }\n\n  // OU / DN no Active Directory\n  const adBlob = `${host.adDn || ''} ${host.adLocation || ''}`.toLowerCase();\n  for (const hint of VM_AD_HINTS) {\n    if (adBlob.includes(hint)) {\n      score += 25;\n      evidence.push(`AD DN/local contém \"${hint}\"`);\n      if (!vmType && (hint === 'vnc' || hint === 'remoto' || hint === 'rds')) {\n        vmType = 'VM (AD/OU remoto)';\n      }\n      break;\n    }\n  }\n\n  for (const hint of VM_OS_HINTS) {\n    if (os.toLowerCase().includes(hint)) {\n      score += 30;\n      evidence.push(`OS menciona ${hint}`);\n      break;\n    }\n  }\n\n  // Locally administered MAC without strong physical NIC vendor → likely VM/cloud\n  if (isLocallyAdministeredMac(mac) && !ouiType) {\n    const physVendors = ['dell', 'hp', 'hewlett', 'lenovo', 'intel', 'realtek', 'broadcom', 'apple', 'cisco'];\n    const looksPhysical = physVendors.some(v => vendor.toLowerCase().includes(v));\n    if (!looksPhysical) {\n      score += 20;\n      evidence.push('MAC localmente administrado (bit U/L)');\n      if (!vmType) vmType = 'Virtual/Cloud (LAA MAC)';\n    }\n  }\n\n  // Hyper-V guest often shows Microsoft as vendor with 00-15-5D already covered\n  if (text.includes('hyper-v') || text.includes('virtual machine') || text.includes('máquina virtual')) {\n    score += 20;\n    evidence.push('Texto indica máquina virtual');\n  }\n\n  let vm = 'Não';\n  let vmConfidence = 'baixa';\n  if (score >= 55) {\n    // Limiar um pouco mais sensível para ambientes hospitalares (AD + nomes RDS)\n    vm = 'Sim';\n    vmConfidence = score >= 90 ? 'alta' : 'média';\n  }",
+        "implementation": [
+          "Arquivo: vmVlanStrategy.js",
+          "Símbolo: detectVirtualization()",
+          "GitHub: https://github.com/CanonEngineer/Professional-Scanner/blob/main/vmVlanStrategy.js"
+        ]
+      },
+      {
+        "id": "professional-scanner-fn-vmvlanstrategy-js-applyvirtualizationtohost",
+        "parent": "professional-scanner-grp-vmvlanstrategy-js-functions-1-12",
+        "layer": "function",
+        "title": "applyVirtualizationToHost()",
+        "description": "Função em `vmVlanStrategy.js`",
+        "file": "vmVlanStrategy.js",
+        "code": "function applyVirtualizationToHost(host) {\n  const result = detectVirtualization(host);\n  host.vm = result.vm;\n  host.vmType = result.vmType;\n  host.vmConfidence = result.vmConfidence;\n  host.vmEvidence = result.vmEvidence;\n  return result;\n}",
+        "implementation": [
+          "Arquivo: vmVlanStrategy.js",
+          "Símbolo: applyVirtualizationToHost()",
+          "GitHub: https://github.com/CanonEngineer/Professional-Scanner/blob/main/vmVlanStrategy.js"
+        ]
+      },
+      {
+        "id": "professional-scanner-fn-vmvlanstrategy-js-assignvlanstohosts",
+        "parent": "professional-scanner-grp-vmvlanstrategy-js-functions-1-12",
+        "layer": "function",
+        "title": "assignVlansToHosts()",
+        "description": "Função em `vmVlanStrategy.js`",
+        "file": "vmVlanStrategy.js",
+        "code": "async function assignVlansToHosts(hosts, options = {}",
+        "implementation": [
+          "Arquivo: vmVlanStrategy.js",
+          "Símbolo: assignVlansToHosts()",
+          "GitHub: https://github.com/CanonEngineer/Professional-Scanner/blob/main/vmVlanStrategy.js"
+        ]
+      },
+      {
+        "id": "professional-scanner-fn-vmvlanstrategy-js-resolvehostvlan",
+        "parent": "professional-scanner-grp-vmvlanstrategy-js-functions-1-12",
+        "layer": "function",
+        "title": "resolveHostVlan()",
+        "description": "Função em `vmVlanStrategy.js`",
+        "file": "vmVlanStrategy.js",
+        "code": "function resolveHostVlan(host, vlanMap, snmpByMac = new Map()) {\n  const map = vlanMap || loadVlanMap();\n\n  // 1) Explicit subnet map\n  let info = resolveVlanFromMap(host.ip, map);\n  if (info) {\n    return {\n      vlan: formatVlanLabel(info, map),\n      vlanId: info.id,\n      vlanName: info.name || 'N/A',\n      vlanSource: info.source,\n      vlanSite: info.site || 'N/A'\n    };\n  }\n\n  // 2) SNMP MAC→VLAN (if preloaded)\n  const macKey = normalizeMac(host.mac);\n  if (macKey && snmpByMac.has(macKey)) {\n    const id = snmpByMac.get(macKey);\n    info = { id, name: null, source: 'SNMP (switch Q-BRIDGE)' };\n    return {\n      vlan: formatVlanLabel(info, map),\n      vlanId: id,\n      vlanName: 'N/A',\n      vlanSource: info.source,\n      vlanSite: 'N/A'\n    };\n  }\n\n  // 3) Text hints in AD/hostname/description/location\n  info = parseVlanFromText(host.hostname, host.description, host.adLocation, host.adDn);\n  if (info) {\n    return {\n      vlan: formatVlanLabel(info, map),\n      vlanId: info.id,\n      vlanName: 'N/A',\n      vlanSource: info.source,\n      vlanSite: 'N/A'\n    };\n  }\n\n  // 4) Third-octet heuristic\n  info = resolveVlanFromThirdOctet(host.ip, map);\n  if (info) {\n    return {\n      vlan: formatVlanLabel(info, map),\n      vlanId: info.id,\n      vlanName: 'N/A',\n      vlanSource: info.source,\n      vlanSite: 'N/A'\n    };\n  }\n\n  // 5) Fallback: subnet label (not a real 802.1Q VLAN)\n  const subnet = host.subnet || getSubnetCidr24(host.ip);\n  return {\n    vlan: `Sub-rede ${subnet}`,\n    vlanId: null,\n    vlanName: 'N/A',\n    vlanSource: 'fallback (sem mapa VLAN)',\n    vlanSite: 'N/A'\n  };\n}",
+        "implementation": [
+          "Arquivo: vmVlanStrategy.js",
+          "Símbolo: resolveHostVlan()",
+          "GitHub: https://github.com/CanonEngineer/Professional-Scanner/blob/main/vmVlanStrategy.js"
+        ]
+      },
+      {
+        "id": "professional-scanner-fn-vmvlanstrategy-js-queryswitchesmacvlan",
+        "parent": "professional-scanner-grp-vmvlanstrategy-js-functions-1-12",
+        "layer": "function",
+        "title": "querySwitchesMacVlan()",
+        "description": "Função em `vmVlanStrategy.js`",
+        "file": "vmVlanStrategy.js",
+        "code": "async function querySwitchesMacVlan(snmpConfig) {\n  // Placeholder map: without a full SNMP library, we don't invent VLANs.\n  // Users should fill vlan-map.json. This returns empty unless future SNMP walk is added.\n  const map = new Map();\n  if (!snmpConfig || !snmpConfig.enabled) return map;\n  // Intentionally empty — subnet map + 3rd octet are the strong offline strategies.\n  // Log once via caller.\n  return map;\n}",
+        "implementation": [
+          "Arquivo: vmVlanStrategy.js",
+          "Símbolo: querySwitchesMacVlan()",
+          "GitHub: https://github.com/CanonEngineer/Professional-Scanner/blob/main/vmVlanStrategy.js"
+        ]
+      },
+      {
+        "id": "professional-scanner-fn-vmvlanstrategy-js-ensurevlanmapfile",
+        "parent": "professional-scanner-grp-vmvlanstrategy-js-functions-1-12",
+        "layer": "function",
+        "title": "ensureVlanMapFile()",
+        "description": "Função em `vmVlanStrategy.js`",
+        "file": "vmVlanStrategy.js",
+        "code": "function ensureVlanMapFile() {\n  if (!fs.existsSync(DATA_DIR)) fs.mkdirSync(DATA_DIR, { recursive: true });\n  if (!fs.existsSync(VLAN_MAP_FILE)) {\n    fs.writeFileSync(VLAN_MAP_FILE, JSON.stringify(DEFAULT_VLAN_MAP, null, 2), 'utf8');\n  }\n}",
+        "implementation": [
+          "Arquivo: vmVlanStrategy.js",
+          "Símbolo: ensureVlanMapFile()",
+          "GitHub: https://github.com/CanonEngineer/Professional-Scanner/blob/main/vmVlanStrategy.js"
+        ]
+      },
+      {
+        "id": "professional-scanner-fn-vmvlanstrategy-js-loadvlanmap",
+        "parent": "professional-scanner-grp-vmvlanstrategy-js-functions-1-12",
+        "layer": "function",
+        "title": "loadVlanMap()",
+        "description": "Função em `vmVlanStrategy.js`",
+        "file": "vmVlanStrategy.js",
+        "code": "function loadVlanMap() {\n  ensureVlanMapFile();\n  try {\n    const raw = JSON.parse(fs.readFileSync(VLAN_MAP_FILE, 'utf8'));\n    return {\n      ...DEFAULT_VLAN_MAP,\n      ...raw,\n      subnets: { ...DEFAULT_VLAN_MAP.subnets, ...(raw.subnets || {}) },\n      snmp: { ...DEFAULT_VLAN_MAP.snmp, ...(raw.snmp || {}) }\n    };\n  } catch (err) {\n    console.warn('[VLAN] Falha ao ler vlan-map.json:', err.message);\n    return { ...DEFAULT_VLAN_MAP };\n  }\n}",
+        "implementation": [
+          "Arquivo: vmVlanStrategy.js",
+          "Símbolo: loadVlanMap()",
+          "GitHub: https://github.com/CanonEngineer/Professional-Scanner/blob/main/vmVlanStrategy.js"
+        ]
+      },
+      {
+        "id": "professional-scanner-fn-vmvlanstrategy-js-normalizemac",
+        "parent": "professional-scanner-grp-vmvlanstrategy-js-functions-1-12",
+        "layer": "function",
+        "title": "normalizeMac()",
+        "description": "Função em `vmVlanStrategy.js`",
+        "file": "vmVlanStrategy.js",
+        "code": "function normalizeMac(mac) {\n  if (!mac || mac === 'N/A') return '';\n  return String(mac).toUpperCase().replace(/[^0-9A-F]/g, '');\n}",
+        "implementation": [
+          "Arquivo: vmVlanStrategy.js",
+          "Símbolo: normalizeMac()",
+          "GitHub: https://github.com/CanonEngineer/Professional-Scanner/blob/main/vmVlanStrategy.js"
+        ]
+      },
+      {
+        "id": "professional-scanner-fn-vmvlanstrategy-js-islocallyadministeredmac",
+        "parent": "professional-scanner-grp-vmvlanstrategy-js-functions-1-12",
+        "layer": "function",
+        "title": "isLocallyAdministeredMac()",
+        "description": "Função em `vmVlanStrategy.js`",
+        "file": "vmVlanStrategy.js",
+        "code": "function isLocallyAdministeredMac(mac) {\n  const hex = normalizeMac(mac);\n  if (hex.length < 2) return false;\n  const firstOctet = parseInt(hex.slice(0, 2), 16);\n  // U/L bit (bit1) set → locally administered (common in VMs/clouds)\n  return (firstOctet & 0x02) === 0x02;\n}",
+        "implementation": [
+          "Arquivo: vmVlanStrategy.js",
+          "Símbolo: isLocallyAdministeredMac()",
+          "GitHub: https://github.com/CanonEngineer/Professional-Scanner/blob/main/vmVlanStrategy.js"
+        ]
+      },
+      {
+        "id": "professional-scanner-fn-vmvlanstrategy-js-matchvmoui",
+        "parent": "professional-scanner-grp-vmvlanstrategy-js-functions-1-12",
+        "layer": "function",
+        "title": "matchVmOui()",
+        "description": "Função em `vmVlanStrategy.js`",
+        "file": "vmVlanStrategy.js",
+        "code": "function matchVmOui(mac) {\n  const hex = normalizeMac(mac);\n  if (hex.length < 6) return null;\n  const p6 = hex.slice(0, 6);\n  const p8 = hex.slice(0, 8);\n  if (VM_MAC_OUIS[p8]) return VM_MAC_OUIS[p8];\n  if (VM_MAC_OUIS[p6]) return VM_MAC_OUIS[p6];\n  // AWS/GCP sometimes use 02:xx locally administered without known OUI\n  return null;\n}",
+        "implementation": [
+          "Arquivo: vmVlanStrategy.js",
+          "Símbolo: matchVmOui()",
+          "GitHub: https://github.com/CanonEngineer/Professional-Scanner/blob/main/vmVlanStrategy.js"
+        ]
+      },
+      {
+        "id": "professional-scanner-fn-vmvlanstrategy-js-iptolong",
+        "parent": "professional-scanner-grp-vmvlanstrategy-js-functions-1-12",
+        "layer": "function",
+        "title": "ipToLong()",
+        "description": "Função em `vmVlanStrategy.js`",
+        "file": "vmVlanStrategy.js",
+        "code": "function ipToLong(ip) {\n  return ip.split('.').reduce((acc, o) => (acc << 8) + (parseInt(o, 10) || 0), 0) >>> 0;\n}",
+        "implementation": [
+          "Arquivo: vmVlanStrategy.js",
+          "Símbolo: ipToLong()",
+          "GitHub: https://github.com/CanonEngineer/Professional-Scanner/blob/main/vmVlanStrategy.js"
+        ]
+      },
+      {
+        "id": "professional-scanner-fn-vmvlanstrategy-js-cidrcontains",
+        "parent": "professional-scanner-grp-vmvlanstrategy-js-functions-1-12",
+        "layer": "function",
+        "title": "cidrContains()",
+        "description": "Função em `vmVlanStrategy.js`",
+        "file": "vmVlanStrategy.js",
+        "code": "function cidrContains(cidr, ip) {\n  const [base, bitsStr] = String(cidr).split('/');\n  const bits = parseInt(bitsStr, 10);\n  if (!base || Number.isNaN(bits)) return false;\n  const mask = bits === 0 ? 0 : (~0 << (32 - bits)) >>> 0;\n  return ((ipToLong(ip) & mask) >>> 0) === ((ipToLong(base) & mask) >>> 0);\n}",
+        "implementation": [
+          "Arquivo: vmVlanStrategy.js",
+          "Símbolo: cidrContains()",
+          "GitHub: https://github.com/CanonEngineer/Professional-Scanner/blob/main/vmVlanStrategy.js"
+        ]
+      },
+      {
+        "id": "professional-scanner-fn-vmvlanstrategy-js-getsubnetcidr24",
+        "parent": "professional-scanner-grp-vmvlanstrategy-js-functions-13-18",
+        "layer": "function",
+        "title": "getSubnetCidr24()",
+        "description": "Função em `vmVlanStrategy.js`",
+        "file": "vmVlanStrategy.js",
+        "code": "function getSubnetCidr24(ip) {\n  const p = String(ip || '').split('.');\n  if (p.length !== 4) return 'N/A';\n  return `${p[0]}.${p[1]}.${p[2]}.0/24`;\n}",
+        "implementation": [
+          "Arquivo: vmVlanStrategy.js",
+          "Símbolo: getSubnetCidr24()",
+          "GitHub: https://github.com/CanonEngineer/Professional-Scanner/blob/main/vmVlanStrategy.js"
+        ]
+      },
+      {
+        "id": "professional-scanner-fn-vmvlanstrategy-js-parsevlanfromtext",
+        "parent": "professional-scanner-grp-vmvlanstrategy-js-functions-13-18",
+        "layer": "function",
+        "title": "parseVlanFromText()",
+        "description": "Função em `vmVlanStrategy.js`",
+        "file": "vmVlanStrategy.js",
+        "code": "function parseVlanFromText(...parts) {\n  const text = parts.filter(Boolean).join(' ');\n  if (!text) return null;\n\n  const patterns = [\n    /\\bvlan[\\s:_-]*([0-9]{1,4})\\b/i,\n    /\\bv[\\s-]?([0-9]{1,4})\\b/i,\n    /\\bid[\\s:_-]*vlan[\\s:_-]*([0-9]{1,4})\\b/i\n  ];\n\n  for (const re of patterns) {\n    const m = text.match(re);\n    if (m) {\n      const id = parseInt(m[1], 10);\n      if (id >= 1 && id <= 4094) {\n        return { id, name: null, source: 'texto (hostname/AD/descrição)' };\n      }\n    }\n  }\n  return null;\n}",
+        "implementation": [
+          "Arquivo: vmVlanStrategy.js",
+          "Símbolo: parseVlanFromText()",
+          "GitHub: https://github.com/CanonEngineer/Professional-Scanner/blob/main/vmVlanStrategy.js"
+        ]
+      },
+      {
+        "id": "professional-scanner-fn-vmvlanstrategy-js-resolvevlanfrommap",
+        "parent": "professional-scanner-grp-vmvlanstrategy-js-functions-13-18",
+        "layer": "function",
+        "title": "resolveVlanFromMap()",
+        "description": "Função em `vmVlanStrategy.js`",
+        "file": "vmVlanStrategy.js",
+        "code": "function resolveVlanFromMap(ip, vlanMap) {\n  const subnets = vlanMap.subnets || {};\n  // Prefer longest prefix (most specific)\n  const entries = Object.entries(subnets)\n    .map(([cidr, meta]) => {\n      const bits = parseInt(String(cidr).split('/')[1], 10) || 0;\n      return { cidr, meta, bits };\n    })\n    .sort((a, b) => b.bits - a.bits);\n\n  for (const e of entries) {\n    if (cidrContains(e.cidr, ip)) {\n      const id = e.meta.id != null ? e.meta.id : e.meta.vlan;\n      return {\n        id,\n        name: e.meta.name || null,\n        site: e.meta.site || null,\n        source: `mapa (${e.cidr})`,\n        subnet: e.cidr\n      };\n    }\n  }\n  return null;\n}",
+        "implementation": [
+          "Arquivo: vmVlanStrategy.js",
+          "Símbolo: resolveVlanFromMap()",
+          "GitHub: https://github.com/CanonEngineer/Professional-Scanner/blob/main/vmVlanStrategy.js"
+        ]
+      },
+      {
+        "id": "professional-scanner-fn-vmvlanstrategy-js-resolvevlanfromthirdoctet",
+        "parent": "professional-scanner-grp-vmvlanstrategy-js-functions-13-18",
+        "layer": "function",
+        "title": "resolveVlanFromThirdOctet()",
+        "description": "Função em `vmVlanStrategy.js`",
+        "file": "vmVlanStrategy.js",
+        "code": "function resolveVlanFromThirdOctet(ip, vlanMap) {\n  if (!vlanMap.inferFromThirdOctet) return null;\n  const p = String(ip || '').split('.');\n  if (p.length !== 4) return null;\n  const third = parseInt(p[2], 10);\n  if (!Number.isFinite(third) || third < 1 || third > 4094) return null;\n  // Skip obvious non-VLAN patterns? Keep — enterprise often maps VLAN==3rd octet\n  return {\n    id: third,\n    name: null,\n    source: 'inferido (3º octeto = VLAN ID)',\n    subnet: getSubnetCidr24(ip)\n  };\n}",
+        "implementation": [
+          "Arquivo: vmVlanStrategy.js",
+          "Símbolo: resolveVlanFromThirdOctet()",
+          "GitHub: https://github.com/CanonEngineer/Professional-Scanner/blob/main/vmVlanStrategy.js"
+        ]
+      },
+      {
+        "id": "professional-scanner-fn-vmvlanstrategy-js-formatvlanlabel",
+        "parent": "professional-scanner-grp-vmvlanstrategy-js-functions-13-18",
+        "layer": "function",
+        "title": "formatVlanLabel()",
+        "description": "Função em `vmVlanStrategy.js`",
+        "file": "vmVlanStrategy.js",
+        "code": "function formatVlanLabel(info, vlanMap) {\n  if (!info || info.id == null) return 'N/A';\n  const prefix = vlanMap.labelPrefix || 'VLAN';\n  const namePart = info.name ? ` (${info.name})` : '';\n  return `${prefix} ${info.id}${namePart}`;\n}",
+        "implementation": [
+          "Arquivo: vmVlanStrategy.js",
+          "Símbolo: formatVlanLabel()",
+          "GitHub: https://github.com/CanonEngineer/Professional-Scanner/blob/main/vmVlanStrategy.js"
+        ]
+      },
+      {
+        "id": "professional-scanner-fn-vmvlanstrategy-js-snmpgetnext",
+        "parent": "professional-scanner-grp-vmvlanstrategy-js-functions-13-18",
+        "layer": "function",
+        "title": "snmpGetNext()",
+        "description": "Função em `vmVlanStrategy.js`",
+        "file": "vmVlanStrategy.js",
+        "code": "function snmpGetNext(ip, community, oidNums, timeoutMs) {\n  return new Promise((resolve) => {\n    // Very small SNMPv1 GET for a single OID — used as probe; walk not fully implemented\n    // For production VLAN map, prefer configuring data/vlan-map.json subnets.\n    resolve(null);\n  });\n}",
+        "implementation": [
+          "Arquivo: vmVlanStrategy.js",
+          "Símbolo: snmpGetNext()",
+          "GitHub: https://github.com/CanonEngineer/Professional-Scanner/blob/main/vmVlanStrategy.js"
+        ]
+      },
+      {
         "id": "professional-scanner-file-webhookdispatcher-js",
         "parent": "professional-scanner-grp-files-t-v-w",
         "layer": "file",
@@ -9135,26 +11545,26 @@ const PROJECTS = [
         ]
       },
       {
-        "id": "professional-scanner-grp-data-files-a-c-d-f",
+        "id": "professional-scanner-grp-data-files-a-c-d",
         "parent": "professional-scanner-dir-data",
         "layer": "module",
-        "title": "Arquivos A–C–D–F",
-        "description": "Grupo de arquivos em `data/` — Arquivos A–C–D–F",
-        "file": "data/[files-a–c–d–f]",
-        "code": "# Grupo: Arquivos A–C–D–F\n# Pasta: data/\n",
+        "title": "Arquivos A–C–D",
+        "description": "Grupo de arquivos em `data/` — Arquivos A–C–D",
+        "file": "data/[files-a–c–d]",
+        "code": "# Grupo: Arquivos A–C–D\n# Pasta: data/\n",
         "implementation": [
           "agrupamento para layout 2D/3D",
           "pasta: data/"
         ]
       },
       {
-        "id": "professional-scanner-grp-data-files-h-i-l-n-o-p-v",
+        "id": "professional-scanner-grp-data-files-f-h-i-l-n-o-p-v",
         "parent": "professional-scanner-dir-data",
         "layer": "module",
-        "title": "Arquivos H–I–L–N–O–P–V",
-        "description": "Grupo de arquivos em `data/` — Arquivos H–I–L–N–O–P–V",
-        "file": "data/[files-h–i–l–n–o–p–v]",
-        "code": "# Grupo: Arquivos H–I–L–N–O–P–V\n# Pasta: data/\n",
+        "title": "Arquivos F–H–I–L–N–O–P–V",
+        "description": "Grupo de arquivos em `data/` — Arquivos F–H–I–L–N–O–P–V",
+        "file": "data/[files-f–h–i–l–n–o–p–v]",
+        "code": "# Grupo: Arquivos F–H–I–L–N–O–P–V\n# Pasta: data/\n",
         "implementation": [
           "agrupamento para layout 2D/3D",
           "pasta: data/"
@@ -9162,7 +11572,7 @@ const PROJECTS = [
       },
       {
         "id": "professional-scanner-file-data-ad-computers-cache-json",
-        "parent": "professional-scanner-grp-data-files-a-c-d-f",
+        "parent": "professional-scanner-grp-data-files-a-c-d",
         "layer": "file",
         "title": "ad-computers-cache.json",
         "description": "Código-fonte: `data/ad-computers-cache.json`",
@@ -9175,7 +11585,7 @@ const PROJECTS = [
       },
       {
         "id": "professional-scanner-file-data-ad-departed-users-json",
-        "parent": "professional-scanner-grp-data-files-a-c-d-f",
+        "parent": "professional-scanner-grp-data-files-a-c-d",
         "layer": "file",
         "title": "ad-departed-users.json",
         "description": "Código-fonte: `data/ad-departed-users.json`",
@@ -9188,7 +11598,7 @@ const PROJECTS = [
       },
       {
         "id": "professional-scanner-file-data-ad-ip-index-json",
-        "parent": "professional-scanner-grp-data-files-a-c-d-f",
+        "parent": "professional-scanner-grp-data-files-a-c-d",
         "layer": "file",
         "title": "ad-ip-index.json",
         "description": "Código-fonte: `data/ad-ip-index.json`",
@@ -9200,8 +11610,22 @@ const PROJECTS = [
         ]
       },
       {
+        "id": "professional-scanner-file-data-ad-users-snapshot-json",
+        "parent": "professional-scanner-grp-data-files-a-c-d",
+        "layer": "file",
+        "title": "ad-users-snapshot.json",
+        "description": "Arquivo grande (stub): `data/ad-users-snapshot.json` — conteúdo completo no GitHub.",
+        "file": "data/ad-users-snapshot.json",
+        "code": "# Arquivo grande demais para embutir na árvore (4,848,216 bytes)\n# path: data/ad-users-snapshot.json\n# Abra no GitHub / clone local para o conteúdo completo.\n",
+        "implementation": [
+          "path: data/ad-users-snapshot.json",
+          "GitHub: https://github.com/CanonEngineer/Professional-Scanner/blob/main/data/ad-users-snapshot.json",
+          "stub: arquivo > 1.5MB"
+        ]
+      },
+      {
         "id": "professional-scanner-file-data-ala-map-json",
-        "parent": "professional-scanner-grp-data-files-a-c-d-f",
+        "parent": "professional-scanner-grp-data-files-a-c-d",
         "layer": "file",
         "title": "ala-map.json",
         "description": "Código-fonte: `data/ala-map.json`",
@@ -9214,7 +11638,7 @@ const PROJECTS = [
       },
       {
         "id": "professional-scanner-file-data-asset-lifecycle-json",
-        "parent": "professional-scanner-grp-data-files-a-c-d-f",
+        "parent": "professional-scanner-grp-data-files-a-c-d",
         "layer": "file",
         "title": "asset-lifecycle.json",
         "description": "Código-fonte: `data/asset-lifecycle.json`",
@@ -9227,7 +11651,7 @@ const PROJECTS = [
       },
       {
         "id": "professional-scanner-file-data-auto-test-config-json",
-        "parent": "professional-scanner-grp-data-files-a-c-d-f",
+        "parent": "professional-scanner-grp-data-files-a-c-d",
         "layer": "file",
         "title": "auto-test-config.json",
         "description": "Código-fonte: `data/auto-test-config.json`",
@@ -9240,7 +11664,7 @@ const PROJECTS = [
       },
       {
         "id": "professional-scanner-file-data-autotest-history-json",
-        "parent": "professional-scanner-grp-data-files-a-c-d-f",
+        "parent": "professional-scanner-grp-data-files-a-c-d",
         "layer": "file",
         "title": "autotest-history.json",
         "description": "Código-fonte: `data/autotest-history.json`",
@@ -9253,7 +11677,7 @@ const PROJECTS = [
       },
       {
         "id": "professional-scanner-file-data-autotest-remote-json",
-        "parent": "professional-scanner-grp-data-files-a-c-d-f",
+        "parent": "professional-scanner-grp-data-files-a-c-d",
         "layer": "file",
         "title": "autotest-remote.json",
         "description": "Código-fonte: `data/autotest-remote.json`",
@@ -9266,7 +11690,7 @@ const PROJECTS = [
       },
       {
         "id": "professional-scanner-file-data-canon-sessions-json",
-        "parent": "professional-scanner-grp-data-files-a-c-d-f",
+        "parent": "professional-scanner-grp-data-files-a-c-d",
         "layer": "file",
         "title": "canon-sessions.json",
         "description": "Código-fonte: `data/canon-sessions.json`",
@@ -9279,7 +11703,7 @@ const PROJECTS = [
       },
       {
         "id": "professional-scanner-file-data-device-library-json",
-        "parent": "professional-scanner-grp-data-files-a-c-d-f",
+        "parent": "professional-scanner-grp-data-files-a-c-d",
         "layer": "file",
         "title": "device-library.json",
         "description": "Código-fonte: `data/device-library.json`",
@@ -9292,7 +11716,7 @@ const PROJECTS = [
       },
       {
         "id": "professional-scanner-file-data-fileserver-shares-example-json",
-        "parent": "professional-scanner-grp-data-files-a-c-d-f",
+        "parent": "professional-scanner-grp-data-files-f-h-i-l-n-o-p-v",
         "layer": "file",
         "title": "fileserver-shares.example.json",
         "description": "Código-fonte: `data/fileserver-shares.example.json`",
@@ -9305,7 +11729,7 @@ const PROJECTS = [
       },
       {
         "id": "professional-scanner-file-data-fileserver-shares-json",
-        "parent": "professional-scanner-grp-data-files-a-c-d-f",
+        "parent": "professional-scanner-grp-data-files-f-h-i-l-n-o-p-v",
         "layer": "file",
         "title": "fileserver-shares.json",
         "description": "Código-fonte: `data/fileserver-shares.json`",
@@ -9318,7 +11742,7 @@ const PROJECTS = [
       },
       {
         "id": "professional-scanner-file-data-host-history-json",
-        "parent": "professional-scanner-grp-data-files-h-i-l-n-o-p-v",
+        "parent": "professional-scanner-grp-data-files-f-h-i-l-n-o-p-v",
         "layer": "file",
         "title": "host-history.json",
         "description": "Código-fonte: `data/host-history.json`",
@@ -9331,7 +11755,7 @@ const PROJECTS = [
       },
       {
         "id": "professional-scanner-file-data-idle-export-recovery-json",
-        "parent": "professional-scanner-grp-data-files-h-i-l-n-o-p-v",
+        "parent": "professional-scanner-grp-data-files-f-h-i-l-n-o-p-v",
         "layer": "file",
         "title": "idle-export-recovery.json",
         "description": "Código-fonte: `data/idle-export-recovery.json`",
@@ -9343,8 +11767,22 @@ const PROJECTS = [
         ]
       },
       {
+        "id": "professional-scanner-file-data-inventory-unesp-json",
+        "parent": "professional-scanner-grp-data-files-f-h-i-l-n-o-p-v",
+        "layer": "file",
+        "title": "inventory-unesp.json",
+        "description": "Arquivo grande (stub): `data/inventory-unesp.json` — conteúdo completo no GitHub.",
+        "file": "data/inventory-unesp.json",
+        "code": "# Arquivo grande demais para embutir na árvore (3,885,016 bytes)\n# path: data/inventory-unesp.json\n# Abra no GitHub / clone local para o conteúdo completo.\n",
+        "implementation": [
+          "path: data/inventory-unesp.json",
+          "GitHub: https://github.com/CanonEngineer/Professional-Scanner/blob/main/data/inventory-unesp.json",
+          "stub: arquivo > 1.5MB"
+        ]
+      },
+      {
         "id": "professional-scanner-file-data-last-scan-snapshot-json",
-        "parent": "professional-scanner-grp-data-files-h-i-l-n-o-p-v",
+        "parent": "professional-scanner-grp-data-files-f-h-i-l-n-o-p-v",
         "layer": "file",
         "title": "last-scan-snapshot.json",
         "description": "Código-fonte: `data/last-scan-snapshot.json`",
@@ -9357,7 +11795,7 @@ const PROJECTS = [
       },
       {
         "id": "professional-scanner-file-data-loop-monitor-json",
-        "parent": "professional-scanner-grp-data-files-h-i-l-n-o-p-v",
+        "parent": "professional-scanner-grp-data-files-f-h-i-l-n-o-p-v",
         "layer": "file",
         "title": "loop-monitor.json",
         "description": "Código-fonte: `data/loop-monitor.json`",
@@ -9370,7 +11808,7 @@ const PROJECTS = [
       },
       {
         "id": "professional-scanner-file-data-network-baselines-json",
-        "parent": "professional-scanner-grp-data-files-h-i-l-n-o-p-v",
+        "parent": "professional-scanner-grp-data-files-f-h-i-l-n-o-p-v",
         "layer": "file",
         "title": "network-baselines.json",
         "description": "Código-fonte: `data/network-baselines.json`",
@@ -9383,7 +11821,7 @@ const PROJECTS = [
       },
       {
         "id": "professional-scanner-file-data-oracle-config-json",
-        "parent": "professional-scanner-grp-data-files-h-i-l-n-o-p-v",
+        "parent": "professional-scanner-grp-data-files-f-h-i-l-n-o-p-v",
         "layer": "file",
         "title": "oracle-config.json",
         "description": "Código-fonte: `data/oracle-config.json`",
@@ -9396,7 +11834,7 @@ const PROJECTS = [
       },
       {
         "id": "professional-scanner-file-data-platform-config-json",
-        "parent": "professional-scanner-grp-data-files-h-i-l-n-o-p-v",
+        "parent": "professional-scanner-grp-data-files-f-h-i-l-n-o-p-v",
         "layer": "file",
         "title": "platform-config.json",
         "description": "Código-fonte: `data/platform-config.json`",
@@ -9409,7 +11847,7 @@ const PROJECTS = [
       },
       {
         "id": "professional-scanner-file-data-vlan-map-json",
-        "parent": "professional-scanner-grp-data-files-h-i-l-n-o-p-v",
+        "parent": "professional-scanner-grp-data-files-f-h-i-l-n-o-p-v",
         "layer": "file",
         "title": "vlan-map.json",
         "description": "Código-fonte: `data/vlan-map.json`",
@@ -9443,6 +11881,446 @@ const PROJECTS = [
         "code": "// Global state\r\nlet socket = null;\r\nlet wsAuthenticated = false;\r\nlet wsReconnectTimer = null;\r\nlet scanResults = [];\r\nlet scanTimerInterval = null;\r\nlet scanStartTime = null;\r\nlet totalIps = 0;\r\nlet scannedIps = 0;\r\n\r\n// Results table UI (Fase 1 — paginação e ordenação visual)\r\nlet resultsPage = 1;\r\nlet resultsPageSize = 50;\r\nlet resultsSortColumn = null;\r\nlet resultsSortAsc = true;\r\n\r\n// DOM Elements\r\nconst connectionBadge = document.getElementById('connection-badge');\r\nconst targetInput = document.getElementById('target-input');\r\nconst portsPreset = document.getElementById('ports-preset');\r\nconst customPortsGroup = document.getElementById('custom-ports-group');\r\nconst customPortsInput = document.getElementById('custom-ports-input');\r\nconst scanUdpCheckbox = document.getElementById('scan-udp-checkbox');\r\nconst concurrencyInput = document.getElementById('concurrency-input');\r\nconst timeoutInput = document.getElementById('timeout-input');\r\nconst startBtn = document.getElementById('start-btn');\r\nconst stopBtn = document.getElementById('stop-btn');\r\nconst exportBtn = document.getElementById('export-btn');\r\nconst clearBtn = document.getElementById('clear-btn');\r\nconst consoleOutput = document.getElementById('console-output');\r\nconst scanTimer = document.getElementById('scan-timer');\r\nconst searchInput = document.getElementById('search-input');\r\nconst resultsBody = document.getElementById('results-body');\r\nconst progressContainer = document.getElementById('progress-container');\r\nconst progressBar = document.getElementById('progress-bar');\r\nconst progressText = document.getElementById('progress-text');\r\nconst resultsTable = document.getElementById('results-table');\r\nconst resultsTableMeta = document.getElementById('results-table-meta');\r\nconst resultsPageSizeSelect = document.getElementById('results-page-size');\r\nconst resultsPagePrev = document.getElementById('results-page-prev');\r\nconst resultsPageNext = document.getElementById('results-page-next');\r\nconst resultsPageIndicator = document.getElementById('results-page-indicator');\r\n\r\n// Stats DOM Elements\r\nconst statTotal = document.getElementById('stat-total');\r\nconst statActive = document.getElementById('stat-active');\r\nconst statInactive = document.getElementById('stat-inactive');\r\nconst statTime = document.getElementById('stat-time');\r\n\r\n// Connect to WebSocket Server (Etapa 7 — auth handshake após login dashboard)\r\nfunction updateConnectionBadgeWaitingLogin() {\r\n  connectionBadge.textContent = 'Aguardando login';\r\n  connectionBadge.className = 'badge badge-disconnected';\r\n}\r\n\r\nfunction disconnectWebSocket() {\r\n  wsAuthenticated = false;\r\n  if (wsReconnectTimer) {\r\n    clearTimeout(wsReconnectTimer);\r\n    wsReconnectTimer = null;\r\n  }\r\n  if (socket) {\r\n    try {\r\n      socket.onclose = null;\r\n      socket.close();\r\n    } catch (_) {}\r\n    socket = null;\r\n  }\r\n  connectionBadge.textContent = 'Desconectado';\r\n  connectionBadge.className = 'badge badge-disconnected';\r\n}\r\n\r\nfunction connectWebSocket() {\r\n  if (!canonBootToken) {\r\n    updateConnectionBadgeWaitingLogin();\r\n    return;\r\n  }\r\n\r\n  if (socket && (socket.readyState === WebSocket.OPEN || socket.readyState === WebSocket.CONNECTING)) {\r\n    return;\r\n  }\r\n\r\n  if (wsReconnectTimer) {\r\n    clearTimeout(wsReconnectTimer);\r\n    wsReconnectTimer = null;\r\n  }\r\n\r\n  wsAuthenticated = false;\r\n  const wsProtocol = window.location.protocol === 'https:' ? 'wss:' : 'ws:';\r\n  const wsUrl = `${wsProtocol}//${window.location.host}`;\r\n\r\n  connectionBadge.textContent = 'Conectando...';\r\n  connectionBadge.className = 'badge badge-connecting';\r\n  socket = new WebSocket(wsUrl);\r\n\r\n  socket.onopen = () => {\r\n    try {\r\n      socket.send(JSON.stringify({ type: 'auth', token: canonBootToken }));\r\n    } catch (err) {\r\n      console.error('WebSocket auth send failed:', err);\r\n      connectionBadge.textContent = 'Erro de conexão';\r\n      connectionBadge.className = 'badge badge-disconnected';\r\n    }\r\n  };\r\n\r\n  socket.onclose = (event) => {\r\n    wsAuthenticated = false;\r\n    connectionBadge.textContent = 'Desconectado';\r\n    connectionBadge.className = 'badge badge-disconnected';\r\n    if (event.code === 4401) {\r\n      logToConsole('[!] Sessão WebSocket recusada — faça login novamente.', 'error-msg');\r\n      if (canonBootToken) {\r\n        setCanonBootToken('');\r\n        openCanonLoginModal({ target: 'boot' });\r\n      }\r\n      return;\r\n    }\r\n    if (!canonBootToken) return;\r\n    logToConsole(\r\n      `[!] Conexão perdida (code=${event.code}${event.reason ? `, reason=${event.reason}` : ''}). Tentando reconectar...`,\r\n      'error-msg'\r\n    );\r\n    wsReconnectTimer = setTimeout(connectWebSocket, 3000);\r\n  };\r\n\r\n  socket.onerror = (err) => {\r\n    console.error('WebSocket Error:', err);\r\n    if (!socket || socket.readyState !== WebSocket.OPEN) {\r\n      connectionBadge.textContent = 'Erro de conexão';\r\n      connectionBadge.className = 'badge badge-disconnected';\r\n      logToConsole(`[!] Erro no WebSocket: readyState=${socket?.readyState ?? 'n/a'}`, 'error-msg');\r\n    }\r\n  };\r\n\r\n  socket.onmessage = (event) => {\r\n    try {\r\n      const data = JSON.parse(event.data);\r\n      handleServerMessage(data);\r\n    } catch (e) {\r\n      console.error('Failed to parse WebSocket message:', e);\r\n    }\r\n  };\r\n}\r\n\r\n// Handle WebSocket messages\r\nfunction handleServerMessage(data) {\r\n  switch (data.type) {\r\n    case 'auth_ok':\r\n      wsAuthenticated = true;\r\n      connectionBadge.textContent = 'Conectado';\r\n      connectionBadge.className = 'badge badge-connected';\r\n      logToConsole('[i] Conexão autenticada com o servidor de varredura.', 'system-msg');\r\n      break;\r\n\r\n    case 'auth_fail':\r\n      wsAuthenticated = false;\r\n      connectionBadge.textContent = 'Auth recusada';\r\n      connectionBadge.className = 'badge badge-disconnected';\r\n      logToConsole(`[!] ${data.message || 'Autenticação WebSocket recusada.'}`, 'error-msg');\r\n      break;\r\n\r\n    case 'log':\r\n      const logClass = getLogClass(data.message);\r\n      logToConsole(data.message, logClass);\r\n      break;\r\n\r\n    case 'scan_started':\r\n      totalIps = data.total;\r\n      scannedIps = 0;\r\n      progressContainer.classList.remove('hidden');\r\n      updateProgressBar(0);\r\n      if (typeof window.setInventoryScanProgress === 'function') window.setInventoryScanProgress(1);\r\n      break;\r\n\r\n    case 'host_found':\r\n      scannedIps++;\r\n      if (totalIps > 0) {\r\n        updateProgressBar(Math.round((scannedIps / totalIps) * 100));\r\n      }\r\n      // Add or update active host\r\n      addOrUpdateHost(data.host);\r\n      if (data.log) logToConsole(data.log, 'success-msg');\r\n      updateStats();\r\n      break;\r\n\r\n    case 'host_inactive':\r\n      scannedIps++;\r\n      if (totalIps > 0) {\r\n        updateProgressBar(Math.round((scannedIps / totalIps) * 100));\r\n      }\r\n      // Add or update inactive host\r\n      addOrUpdateHost(data.host);\r\n      if (data.log) logToConsole(data.log, 'system-msg');\r\n      updateStats();\r\n      break;\r\n\r\n    case 'host_update':\r\n      addOrU\n\n/* … truncado na árvore (arquivo completo no GitHub) … */\n",
         "implementation": [
           "path: public/app.js",
+          "GitHub: https://github.com/CanonEngineer/Professional-Scanner/blob/main/public/app.js"
+        ]
+      },
+      {
+        "id": "professional-scanner-grp-public-app-js-functions",
+        "parent": "professional-scanner-file-public-app-js",
+        "layer": "module",
+        "title": "Funções",
+        "description": "Funções em `public/app.js`",
+        "file": "public/app.js#functions",
+        "code": "# Funções em public/app.js\n",
+        "implementation": [
+          "agrupamento: functions"
+        ]
+      },
+      {
+        "id": "professional-scanner-grp-public-app-js-functions-1-12",
+        "parent": "professional-scanner-grp-public-app-js-functions",
+        "layer": "module",
+        "title": "Funções 1–12",
+        "description": "Fatia 1–12 de funções em `public/app.js`",
+        "file": "public/app.js#functions-1-12",
+        "code": "# Funções 1-12 em public/app.js\n",
+        "implementation": [
+          "agrupamento: functions"
+        ]
+      },
+      {
+        "id": "professional-scanner-grp-public-app-js-functions-13-24",
+        "parent": "professional-scanner-grp-public-app-js-functions",
+        "layer": "module",
+        "title": "Funções 13–24",
+        "description": "Fatia 13–24 de funções em `public/app.js`",
+        "file": "public/app.js#functions-13-24",
+        "code": "# Funções 13-24 em public/app.js\n",
+        "implementation": [
+          "agrupamento: functions"
+        ]
+      },
+      {
+        "id": "professional-scanner-grp-public-app-js-functions-25-28",
+        "parent": "professional-scanner-grp-public-app-js-functions",
+        "layer": "module",
+        "title": "Funções 25–28",
+        "description": "Fatia 25–28 de funções em `public/app.js`",
+        "file": "public/app.js#functions-25-28",
+        "code": "# Funções 25-28 em public/app.js\n",
+        "implementation": [
+          "agrupamento: functions"
+        ]
+      },
+      {
+        "id": "professional-scanner-fn-public-app-js-bootcanonapp",
+        "parent": "professional-scanner-grp-public-app-js-functions-1-12",
+        "layer": "function",
+        "title": "bootCanonApp()",
+        "description": "Função em `public/app.js`",
+        "file": "public/app.js",
+        "code": "async function bootCanonApp() {\n  installCanonFetch();\n  setCanonBootToken('');\n  openCanonLoginModal({ target: 'boot' });\n  startDashboard({ loadIdle: false });\n}",
+        "implementation": [
+          "Arquivo: public/app.js",
+          "Símbolo: bootCanonApp()",
+          "GitHub: https://github.com/CanonEngineer/Professional-Scanner/blob/main/public/app.js"
+        ]
+      },
+      {
+        "id": "professional-scanner-fn-public-app-js-handleservermessage",
+        "parent": "professional-scanner-grp-public-app-js-functions-1-12",
+        "layer": "function",
+        "title": "handleServerMessage()",
+        "description": "Função em `public/app.js`",
+        "file": "public/app.js",
+        "code": "function handleServerMessage(data) {\n  switch (data.type) {\n    case 'auth_ok':\n      wsAuthenticated = true;\n      connectionBadge.textContent = 'Conectado';\n      connectionBadge.className = 'badge badge-connected';\n      logToConsole('[i] Conexão autenticada com o servidor de varredura.', 'system-msg');\n      break;\n\n    case 'auth_fail':\n      wsAuthenticated = false;\n      connectionBadge.textContent = 'Auth recusada';\n      connectionBadge.className = 'badge badge-disconnected';\n      logToConsole(`[!] ${data.message || 'Autenticação WebSocket recusada.'}`, 'error-msg');\n      break;\n\n    case 'log':\n      const logClass = getLogClass(data.message);\n      logToConsole(data.message, logClass);\n      break;\n\n    case 'scan_started':\n      totalIps = data.total;\n      scannedIps = 0;\n      progressContainer.classList.remove('hidden');\n      updateProgressBar(0);\n      if (typeof window.setInventoryScanProgress === 'function') window.setInventoryScanProgress(1);\n      break;\n\n    case 'host_found':\n      scannedIps++;\n      if (totalIps > 0) {\n        updateProgressBar(Math.round((scannedIps / totalIps) * 100));\n      }\n      // Add or update active host\n      addOrUpdateHost(data.host);\n      if (data.log) logToConsole(data.log, 'success-msg');\n      updateStats();\n      break;\n\n    case 'host_inactive':\n      scannedIps++;\n      if (totalIps > 0) {\n        updateProgressBar(Math.round((scannedIps / totalIps) * 100));\n      }\n      // Add or update inactive host\n      addOrUpdateHost(data.host);\n      if (data.log) logToConsole(data.log, 'system-msg');\n      updateStats();\n      break;\n\n    case 'host_update':\n      addOrUpdateHost(data.host);\n      if (data.log) logToConsole(data.log, 'accent-msg');\n      updateStats();\n      break;\n\n    case 'port_result':\n      {\n        const { ip, portResult } = data;\n        // Só portas realmente abertas entram na UI / contagem / verde\n        if (!portResult || portResult.state !== 'open') break;\n        const host = scanResults.find(h => h.ip === ip);\n        if (host) {\n          if (!Array.isArray(host.ports)) host.ports = [];\n          if (!host.ports.some(p => p.port === portResult.port && p.protocol === portResult.protocol)) {\n            host.ports.push(portResult);\n            host.ports.sort((a, b) => a.port - b.port);\n            updateHostRow(host);\n          }\n        }\n        if (data.log) logToConsole(data.log, 'success-msg');\n      }\n      break;\n\n    case 'ad_audit_sync':\n      if (data.audit) {\n        window.__lastAdAudit = data.audit;\n        if (data.audit.newlyDeparted > 0) {\n          const badge = document.getElementById('ad-audit-open-btn');\n          if (badge) badge.classList.add('pulse');\n        }\n      }\n      break;\n\n    case 'loop_alert':\n      if (data.alert) {\n        const btn = document.getElementById('loop-detect-open-btn');\n        if (btn) btn.classList.add('pulse');\n        logToConsole(\n          `[LOOP] ${data.alert.emoji || '⚠'} ${data.alert.switchName || data.alert.switchIp} ${data.alert.port}: ${data.alert.status} (score ${data.alert.score})`,\n          'error-msg'\n        );\n        if (window.__loopUiActive) {\n          prependLoopAlert(data.alert);\n          refreshLoopStatus().catch(() => {});\n        }\n      }\n      break;\n\n    case 'loop_status':\n      if (window.__loopUiActive || data.running) {\n        applyLoopStatusPayload(data);\n      }\n      break;\n\n    case 'progress':\n      if (typeof data.percent === 'number') {\n        updateProgressBar(data.percent);\n        if (typeof window.setInventoryScanProgress === 'function') window.setInventoryScanProgress(data.percent);\n      }\n      break;\n\n    case 'complete':\n      updateProgressBar(100);\n      if (typeof window.setInventoryScanProgress === 'function') window.setInventoryScanProgress(100);\n      setTimeout(() => {\n        progressContainer.classList.add('hidden');\n        if (typeof window.setInventoryScanProgress === 'function') window.setInventoryScanProgress(0);\n      }, 1500);\n      if (data.log) logToConsole(data.log, 'success-msg');\n      endScan(data.summary);\n      break;\n\n    case 'stopped':\n      updateProgressBar(100);\n      setTimeout(() => {\n        progressContainer.classList.add('hidden');\n      }, 1500);\n      if (data.log) logToConsole(data.log, 'system-msg');\n      endScan(data.summary);\n      break;\n\n    case 'error':\n      progressContainer.classList.add('hidden');\n      logToConsole(`[!] ERRO: ${data.message}`, 'error-msg');\n      endScan(null, t",
+        "implementation": [
+          "Arquivo: public/app.js",
+          "Símbolo: handleServerMessage()",
+          "GitHub: https://github.com/CanonEngineer/Professional-Scanner/blob/main/public/app.js"
+        ]
+      },
+      {
+        "id": "professional-scanner-fn-public-app-js-openloopmodal",
+        "parent": "professional-scanner-grp-public-app-js-functions-1-12",
+        "layer": "function",
+        "title": "openLoopModal()",
+        "description": "Função em `public/app.js`",
+        "file": "public/app.js",
+        "code": "function openLoopModal(tab = 'monitor') {\n  gateProtectedArea({ target: 'loop', tab });\n}",
+        "implementation": [
+          "Arquivo: public/app.js",
+          "Símbolo: openLoopModal()",
+          "GitHub: https://github.com/CanonEngineer/Professional-Scanner/blob/main/public/app.js"
+        ]
+      },
+      {
+        "id": "professional-scanner-fn-public-app-js-renderautotestengineeringbanner",
+        "parent": "professional-scanner-grp-public-app-js-functions-1-12",
+        "layer": "function",
+        "title": "renderAutoTestEngineeringBanner()",
+        "description": "Função em `public/app.js`",
+        "file": "public/app.js",
+        "code": "function renderAutoTestEngineeringBanner(result, options = {}",
+        "implementation": [
+          "Arquivo: public/app.js",
+          "Símbolo: renderAutoTestEngineeringBanner()",
+          "GitHub: https://github.com/CanonEngineer/Professional-Scanner/blob/main/public/app.js"
+        ]
+      },
+      {
+        "id": "professional-scanner-fn-public-app-js-buildtopologyfromresults",
+        "parent": "professional-scanner-grp-public-app-js-functions-1-12",
+        "layer": "function",
+        "title": "buildTopologyFromResults()",
+        "description": "Função em `public/app.js`",
+        "file": "public/app.js",
+        "code": "function buildTopologyFromResults(results) {\n  const nodes = [];\n  const edges = [];\n\n  // Map VLAN/subnet groups to colors\n  const vlanMap = {};\n  const vlanColors = ['#4facfe','#00f2fe','#10b981','#f59e0b','#ef4444','#8b5cf6','#fb7185'];\n  let vlanIdx = 0;\n\n  // Create subnet nodes\n  const subnets = {};\n  results.forEach(h => {\n    const subnet = h.subnet || 'unknown';\n    if (!subnets[subnet]) subnets[subnet] = { id: `subnet:${subnet}`, hosts: [] };\n    subnets[subnet].hosts.push(h);\n  });\n\n  Object.keys(subnets).forEach((subnet, idx) => {\n    nodes.push({ id: `subnet:${subnet}`, label: subnet, shape: 'box', color: '#222', font: { color: '#fff' }, data: { subnet } });\n  });\n\n  // Host nodes\n  results.forEach(host => {\n    const id = `host:${host.ip}`;\n    const label = `${host.ip}\\n${host.hostname !== 'N/A' ? host.hostname : ''}`;\n    const vlan = host.vlan || 'default';\n    if (!vlanMap[vlan]) vlanMap[vlan] = vlanColors[vlanIdx++ % vlanColors.length];\n\n    const color = host.environment === 'OT/ICS' ? '#ff8a65' : (host.isDMZ ? '#f59e0b' : vlanMap[vlan]);\n\n    nodes.push({ id, label, title: `${host.ip}\\n${host.vendor}\\n${host.os}`, group: vlan, color: { background: color }, data: { ip: host.ip, host } });\n\n    // Edge to subnet\n    const subnetId = `subnet:${host.subnet || 'unknown'}`;\n    edges.push({ from: id, to: subnetId });\n  });\n\n  return { nodes, edges };\n}",
+        "implementation": [
+          "Arquivo: public/app.js",
+          "Símbolo: buildTopologyFromResults()",
+          "GitHub: https://github.com/CanonEngineer/Professional-Scanner/blob/main/public/app.js"
+        ]
+      },
+      {
+        "id": "professional-scanner-fn-public-app-js-addorupdatehost",
+        "parent": "professional-scanner-grp-public-app-js-functions-1-12",
+        "layer": "function",
+        "title": "addOrUpdateHost()",
+        "description": "Função em `public/app.js`",
+        "file": "public/app.js",
+        "code": "function addOrUpdateHost(host) {\n  if (Array.isArray(host.ports)) {\n    host.ports = host.ports.filter(isTrulyOpenPort);\n  }\n  const index = scanResults.findIndex(h => h.ip === host.ip);\n  if (index !== -1) {\n    scanResults[index] = { ...scanResults[index], ...host };\n    if (Array.isArray(host.ports)) {\n      scanResults[index].ports = host.ports.filter(isTrulyOpenPort);\n    }\n  } else {\n    scanResults.push(host);\n  }\n  \n  // Sort IP range before rendering (ascending order)\n  scanResults.sort((a, b) => {\n    const aNum = a.ip.split('.').reduce((ipInt, octet) => (ipInt << 8) + parseInt(octet, 10), 0) >>> 0;\n    const bNum = b.ip.split('.').reduce((ipInt, octet) => (ipInt << 8) + parseInt(octet, 10), 0) >>> 0;\n    return aNum - bNum;\n  });\n\n  renderTable();\n}",
+        "implementation": [
+          "Arquivo: public/app.js",
+          "Símbolo: addOrUpdateHost()",
+          "GitHub: https://github.com/CanonEngineer/Professional-Scanner/blob/main/public/app.js"
+        ]
+      },
+      {
+        "id": "professional-scanner-fn-public-app-js-applyautotestresult",
+        "parent": "professional-scanner-grp-public-app-js-functions-1-12",
+        "layer": "function",
+        "title": "applyAutoTestResult()",
+        "description": "Função em `public/app.js`",
+        "file": "public/app.js",
+        "code": "function applyAutoTestResult(data) {\n  window.__autotestLastResult = data;\n  const pdfBtn = document.getElementById('autotest-export-pdf-btn');\n  const xlsxBtn = document.getElementById('autotest-export-xlsx-btn');\n  if (pdfBtn) pdfBtn.disabled = false;\n  if (xlsxBtn) xlsxBtn.disabled = false;\n  renderAutoTestLocal(data.local, data);\n  renderAutoTestOriginBanner(data);\n  renderAutoTestSteps(data);\n  setAutoTestEngineeringBanner(data);\n  requestAnimationFrame(() => {\n    const scroll = document.querySelector('#autotest-tab-run .autotest-run-scroll');\n    const results = scroll?.querySelector('.autotest-results-section');\n    if (scroll && results) {\n      scroll.scrollTop = Math.max(0, results.offsetTop - 4);\n      scroll.focus({ preventScroll: true });\n    }\n  });\n  logToConsole(`[AUTOTEST] ${data.summary}${data.remoteAgent?.hostname ? ` · ${data.remoteAgent.hostname}` : ''}`, data.ok ? 'success-msg' : 'error-msg');\n  const swStep = (data.steps || []).find((s) => s.id === 'switch');\n  if (swStep?.neighbors?.length) renderAutoTestNeighbors(swStep);\n}",
+        "implementation": [
+          "Arquivo: public/app.js",
+          "Símbolo: applyAutoTestResult()",
+          "GitHub: https://github.com/CanonEngineer/Professional-Scanner/blob/main/public/app.js"
+        ]
+      },
+      {
+        "id": "professional-scanner-fn-public-app-js-applycanonuitheme",
+        "parent": "professional-scanner-grp-public-app-js-functions-1-12",
+        "layer": "function",
+        "title": "applyCanonUiTheme()",
+        "description": "Função em `public/app.js`",
+        "file": "public/app.js",
+        "code": "function applyCanonUiTheme(theme) {\n  const next = theme === 'light' ? 'light' : 'dark';\n  document.documentElement.setAttribute('data-theme', next);\n  try {\n    localStorage.setItem(CANON_THEME_STORAGE_KEY, next);\n  } catch (_) {}\n  updateCanonThemeToggleUi(next);\n}",
+        "implementation": [
+          "Arquivo: public/app.js",
+          "Símbolo: applyCanonUiTheme()",
+          "GitHub: https://github.com/CanonEngineer/Professional-Scanner/blob/main/public/app.js"
+        ]
+      },
+      {
+        "id": "professional-scanner-fn-public-app-js-startscan",
+        "parent": "professional-scanner-grp-public-app-js-functions-1-12",
+        "layer": "function",
+        "title": "startScan()",
+        "description": "Função em `public/app.js`",
+        "file": "public/app.js",
+        "code": "function startScan() {\n  if (!canonBootToken) {\n    openCanonLoginModal({ target: 'boot' });\n    return;\n  }\n  if (!socket || socket.readyState !== WebSocket.OPEN || !wsAuthenticated) {\n    alert('Aguardando autenticação WebSocket. Faça login e aguarde o badge \"Conectado\".');\n    if (canonBootToken && (!socket || socket.readyState !== WebSocket.OPEN)) connectWebSocket();\n    return;\n  }\n\n  const target = targetInput.value.trim();\n  if (!target) {\n    alert('Por favor, insira um endereço IP, faixa ou CIDR.');\n    return;\n  }\n\n  // Parse TCP ports selection\n  let portsTCP = [];\n  const preset = portsPreset.value;\n  if (preset === 'integra') {\n    portsTCP = typeof buildIntegraPorts === 'function' ? buildIntegraPorts() : (PORT_PRESETS?.integra || []);\n  } else if (preset === 'wellknown') {\n    portsTCP = typeof buildWellKnownPorts === 'function' ? buildWellKnownPorts() : [];\n  } else if (preset === 'common') {\n    portsTCP = PORT_PRESETS?.common || [21, 22, 23, 25, 53, 80, 110, 135, 139, 143, 443, 445, 3389, 8080];\n  } else if (preset === 'web') {\n    portsTCP = PORT_PRESETS?.web || [80, 443, 8080];\n  } else if (preset === 'devices') {\n    portsTCP = PORT_PRESETS?.devices || [80, 443, 515, 554, 9100];\n  } else if (preset === 'custom') {\n    const rawPorts = customPortsInput.value.split(',');\n    for (let p of rawPorts) {\n      const portNum = parseInt(p.trim(), 10);\n      if (!isNaN(portNum) && portNum >= 1 && portNum <= 65535) {\n        portsTCP.push(portNum);\n      }\n    }\n    if (portsTCP.length === 0) {\n      alert('Por favor, insira portas TCP válidas (1-65535).');\n      return;\n    }\n  }\n\n  // Parse UDP ports selection\n  const scanUdp = scanUdpCheckbox.checked;\n  const portsUDP = scanUdp\n    ? (typeof UDP_INTEGRA !== 'undefined' ? UDP_INTEGRA : [53, 123, 137, 138, 161, 162, 1900, 5353])\n    : [];\n\n  if (preset !== 'none' && portsTCP.length === 0) {\n    alert('Não foi possível montar a lista de portas. Recarregue a página (Ctrl+F5).');\n    return;\n  }\n\n  logToConsole(\n    `[*] Portas TCP selecionadas: ${portsTCP.length || 0} | UDP: ${portsUDP.length || 0}`,\n    'accent-msg'\n  );\n\n  const timeout = parseInt(timeoutInput.value, 10);\n  const concurrency = parseInt(concurrencyInput.value, 10);\n\n  // UI Updates for starting scan\n  startBtn.disabled = true;\n  startBtn.classList.add('pulse');\n  startBtn.querySelector('.loader').classList.remove('hidden');\n  startBtn.querySelector('.btn-text').textContent = 'Escaneando...';\n  stopBtn.disabled = false;\n  exportBtn.disabled = true;\n\n  // Clear previous results\n  scanResults = [];\n  resultsPage = 1;\n  renderTable();\n  logToConsole('[*] Iniciando nova varredura de rede...', 'accent-msg');\n\n  // Timer Initialization\n  scanStartTime = Date.now();\n  scanTimer.textContent = '0.00s';\n  clearInterval(scanTimerInterval);\n  scanTimerInterval = setInterval(() => {\n    const elapsed = ((Date.now() - scanStartTime) / 1000).toFixed(2);\n    scanTimer.textContent = `${elapsed}s`;\n  }, 100);\n\n  // Send start payload to backend\n  socket.send(JSON.stringify({\n    type: 'start',\n    target,\n    portsTCP,\n    portsUDP,\n    timeout,\n    concurrency,\n    scanUdp\n  }));\n}",
+        "implementation": [
+          "Arquivo: public/app.js",
+          "Símbolo: startScan()",
+          "GitHub: https://github.com/CanonEngineer/Professional-Scanner/blob/main/public/app.js"
+        ]
+      },
+      {
+        "id": "professional-scanner-fn-public-app-js-stopscan",
+        "parent": "professional-scanner-grp-public-app-js-functions-1-12",
+        "layer": "function",
+        "title": "stopScan()",
+        "description": "Função em `public/app.js`",
+        "file": "public/app.js",
+        "code": "function stopScan() {\n  if (!socket || socket.readyState !== WebSocket.OPEN || !wsAuthenticated) {\n    alert('Erro: servidor desconectado ou não autenticado. Não é possível parar a varredura.');\n    return;\n  }\n  stopBtn.disabled = true;\n  stopBtn.textContent = 'Parando...';\n  logToConsole('[*] Solicitando parada imediata da varredura...', 'system-msg');\n  socket.send(JSON.stringify({ type: 'stop' }));\n}",
+        "implementation": [
+          "Arquivo: public/app.js",
+          "Símbolo: stopScan()",
+          "GitHub: https://github.com/CanonEngineer/Professional-Scanner/blob/main/public/app.js"
+        ]
+      },
+      {
+        "id": "professional-scanner-fn-public-app-js-updateconnectionbadgewaitinglogin",
+        "parent": "professional-scanner-grp-public-app-js-functions-1-12",
+        "layer": "function",
+        "title": "updateConnectionBadgeWaitingLogin()",
+        "description": "Função em `public/app.js`",
+        "file": "public/app.js",
+        "code": "function updateConnectionBadgeWaitingLogin() {\n  connectionBadge.textContent = 'Aguardando login';\n  connectionBadge.className = 'badge badge-disconnected';\n}",
+        "implementation": [
+          "Arquivo: public/app.js",
+          "Símbolo: updateConnectionBadgeWaitingLogin()",
+          "GitHub: https://github.com/CanonEngineer/Professional-Scanner/blob/main/public/app.js"
+        ]
+      },
+      {
+        "id": "professional-scanner-fn-public-app-js-disconnectwebsocket",
+        "parent": "professional-scanner-grp-public-app-js-functions-1-12",
+        "layer": "function",
+        "title": "disconnectWebSocket()",
+        "description": "Função em `public/app.js`",
+        "file": "public/app.js",
+        "code": "function disconnectWebSocket() {\n  wsAuthenticated = false;\n  if (wsReconnectTimer) {\n    clearTimeout(wsReconnectTimer);\n    wsReconnectTimer = null;\n  }\n  if (socket) {\n    try {\n      socket.onclose = null;\n      socket.close();\n    } catch (_) {}\n    socket = null;\n  }\n  connectionBadge.textContent = 'Desconectado';\n  connectionBadge.className = 'badge badge-disconnected';\n}",
+        "implementation": [
+          "Arquivo: public/app.js",
+          "Símbolo: disconnectWebSocket()",
+          "GitHub: https://github.com/CanonEngineer/Professional-Scanner/blob/main/public/app.js"
+        ]
+      },
+      {
+        "id": "professional-scanner-fn-public-app-js-connectwebsocket",
+        "parent": "professional-scanner-grp-public-app-js-functions-13-24",
+        "layer": "function",
+        "title": "connectWebSocket()",
+        "description": "Função em `public/app.js`",
+        "file": "public/app.js",
+        "code": "function connectWebSocket() {\n  if (!canonBootToken) {\n    updateConnectionBadgeWaitingLogin();\n    return;\n  }\n\n  if (socket && (socket.readyState === WebSocket.OPEN || socket.readyState === WebSocket.CONNECTING)) {\n    return;\n  }\n\n  if (wsReconnectTimer) {\n    clearTimeout(wsReconnectTimer);\n    wsReconnectTimer = null;\n  }\n\n  wsAuthenticated = false;\n  const wsProtocol = window.location.protocol === 'https:' ? 'wss:' : 'ws:';\n  const wsUrl = `${wsProtocol}//${window.location.host}`;\n\n  connectionBadge.textContent = 'Conectando...';\n  connectionBadge.className = 'badge badge-connecting';\n  socket = new WebSocket(wsUrl);\n\n  socket.onopen = () => {\n    try {\n      socket.send(JSON.stringify({ type: 'auth', token: canonBootToken }));\n    } catch (err) {\n      console.error('WebSocket auth send failed:', err);\n      connectionBadge.textContent = 'Erro de conexão';\n      connectionBadge.className = 'badge badge-disconnected';\n    }\n  };\n\n  socket.onclose = (event) => {\n    wsAuthenticated = false;\n    connectionBadge.textContent = 'Desconectado';\n    connectionBadge.className = 'badge badge-disconnected';\n    if (event.code === 4401) {\n      logToConsole('[!] Sessão WebSocket recusada — faça login novamente.', 'error-msg');\n      if (canonBootToken) {\n        setCanonBootToken('');\n        openCanonLoginModal({ target: 'boot' });\n      }\n      return;\n    }\n    if (!canonBootToken) return;\n    logToConsole(\n      `[!] Conexão perdida (code=${event.code}${event.reason ? `, reason=${event.reason}` : ''}). Tentando reconectar...`,\n      'error-msg'\n    );\n    wsReconnectTimer = setTimeout(connectWebSocket, 3000);\n  };\n\n  socket.onerror = (err) => {\n    console.error('WebSocket Error:', err);\n    if (!socket || socket.readyState !== WebSocket.OPEN) {\n      connectionBadge.textContent = 'Erro de conexão';\n      connectionBadge.className = 'badge badge-disconnected';\n      logToConsole(`[!] Erro no WebSocket: readyState=${socket?.readyState ?? 'n/a'}`, 'error-msg');\n    }\n  };\n\n  socket.onmessage = (event) => {\n    try {\n      const data = JSON.parse(event.data);\n      handleServerMessage(data);\n    } catch (e) {\n      console.error('Failed to parse WebSocket message:', e);\n    }\n  };\n}",
+        "implementation": [
+          "Arquivo: public/app.js",
+          "Símbolo: connectWebSocket()",
+          "GitHub: https://github.com/CanonEngineer/Professional-Scanner/blob/main/public/app.js"
+        ]
+      },
+      {
+        "id": "professional-scanner-fn-public-app-js-logtoconsole",
+        "parent": "professional-scanner-grp-public-app-js-functions-13-24",
+        "layer": "function",
+        "title": "logToConsole()",
+        "description": "Função em `public/app.js`",
+        "file": "public/app.js",
+        "code": "function logToConsole(message, className = '') {\n  const line = document.createElement('div');\n  line.className = `terminal-line ${className}`;\n  line.textContent = message;\n  consoleOutput.appendChild(line);\n  consoleOutput.scrollTop = consoleOutput.scrollHeight;\n}",
+        "implementation": [
+          "Arquivo: public/app.js",
+          "Símbolo: logToConsole()",
+          "GitHub: https://github.com/CanonEngineer/Professional-Scanner/blob/main/public/app.js"
+        ]
+      },
+      {
+        "id": "professional-scanner-fn-public-app-js-updateprogressbar",
+        "parent": "professional-scanner-grp-public-app-js-functions-13-24",
+        "layer": "function",
+        "title": "updateProgressBar()",
+        "description": "Função em `public/app.js`",
+        "file": "public/app.js",
+        "code": "function updateProgressBar(percent) {\n  percent = Math.min(100, Math.max(0, percent));\n  progressBar.style.width = `${percent}%`;\n  progressText.textContent = `${percent}%`;\n}",
+        "implementation": [
+          "Arquivo: public/app.js",
+          "Símbolo: updateProgressBar()",
+          "GitHub: https://github.com/CanonEngineer/Professional-Scanner/blob/main/public/app.js"
+        ]
+      },
+      {
+        "id": "professional-scanner-fn-public-app-js-getlogclass",
+        "parent": "professional-scanner-grp-public-app-js-functions-13-24",
+        "layer": "function",
+        "title": "getLogClass()",
+        "description": "Função em `public/app.js`",
+        "file": "public/app.js",
+        "code": "function getLogClass(msg) {\n  if (msg.startsWith('[+]')) return 'success-msg';\n  if (msg.startsWith('[-]')) return 'system-msg';\n  if (msg.startsWith('[*]')) return 'accent-msg';\n  if (msg.startsWith('[~]')) return 'accent-msg';\n  if (msg.startsWith('[!]')) return 'error-msg';\n  return '';\n}",
+        "implementation": [
+          "Arquivo: public/app.js",
+          "Símbolo: getLogClass()",
+          "GitHub: https://github.com/CanonEngineer/Professional-Scanner/blob/main/public/app.js"
+        ]
+      },
+      {
+        "id": "professional-scanner-fn-public-app-js-filltarget",
+        "parent": "professional-scanner-grp-public-app-js-functions-13-24",
+        "layer": "function",
+        "title": "fillTarget()",
+        "description": "Função em `public/app.js`",
+        "file": "public/app.js",
+        "code": "function fillTarget(val) {\n  targetInput.value = val;\n  targetInput.focus();\n}",
+        "implementation": [
+          "Arquivo: public/app.js",
+          "Símbolo: fillTarget()",
+          "GitHub: https://github.com/CanonEngineer/Professional-Scanner/blob/main/public/app.js"
+        ]
+      },
+      {
+        "id": "professional-scanner-fn-public-app-js-togglecustomports",
+        "parent": "professional-scanner-grp-public-app-js-functions-13-24",
+        "layer": "function",
+        "title": "toggleCustomPorts()",
+        "description": "Função em `public/app.js`",
+        "file": "public/app.js",
+        "code": "function toggleCustomPorts() {\n  if (portsPreset.value === 'custom') {\n    customPortsGroup.classList.remove('hidden');\n    customPortsInput.required = true;\n  } else {\n    customPortsGroup.classList.add('hidden');\n    customPortsInput.required = false;\n  }\n}",
+        "implementation": [
+          "Arquivo: public/app.js",
+          "Símbolo: toggleCustomPorts()",
+          "GitHub: https://github.com/CanonEngineer/Professional-Scanner/blob/main/public/app.js"
+        ]
+      },
+      {
+        "id": "professional-scanner-fn-public-app-js-endscan",
+        "parent": "professional-scanner-grp-public-app-js-functions-13-24",
+        "layer": "function",
+        "title": "endScan()",
+        "description": "Função em `public/app.js`",
+        "file": "public/app.js",
+        "code": "function endScan(summary, isError = false) {\n  clearInterval(scanTimerInterval);\n  \n  // UI Restore\n  startBtn.disabled = false;\n  startBtn.classList.remove('pulse');\n  startBtn.querySelector('.loader').classList.add('hidden');\n  startBtn.querySelector('.btn-text').textContent = 'Iniciar Varredura';\n\n  if (!isError && scanResults.length > 0) {\n    exportBtn.disabled = false;\n  }\n  stopBtn.disabled = true;\n  stopBtn.textContent = 'Parar Varredura';\n\n  if (summary) {\n    statTime.textContent = `${summary.time}s`;\n    scanTimer.textContent = `${summary.time}s`;\n  }\n  updateStats();\n\n  if (!isError) {\n    loadIdleHosts().catch(() => {});\n    if (typeof window.refreshInventoryIfOpen === 'function') window.refreshInventoryIfOpen();\n    if (typeof window.refreshDeviceLibrary === 'function') window.refreshDeviceLibrary();\n  }\n}",
+        "implementation": [
+          "Arquivo: public/app.js",
+          "Símbolo: endScan()",
+          "GitHub: https://github.com/CanonEngineer/Professional-Scanner/blob/main/public/app.js"
+        ]
+      },
+      {
+        "id": "professional-scanner-fn-public-app-js-istrulyopenport",
+        "parent": "professional-scanner-grp-public-app-js-functions-13-24",
+        "layer": "function",
+        "title": "isTrulyOpenPort()",
+        "description": "Função em `public/app.js`",
+        "file": "public/app.js",
+        "code": "function isTrulyOpenPort(p) {\n  return p && p.state === 'open';\n}",
+        "implementation": [
+          "Arquivo: public/app.js",
+          "Símbolo: isTrulyOpenPort()",
+          "GitHub: https://github.com/CanonEngineer/Professional-Scanner/blob/main/public/app.js"
+        ]
+      },
+      {
+        "id": "professional-scanner-fn-public-app-js-renderportshtml",
+        "parent": "professional-scanner-grp-public-app-js-functions-13-24",
+        "layer": "function",
+        "title": "renderPortsHtml()",
+        "description": "Função em `public/app.js`",
+        "file": "public/app.js",
+        "code": "function renderPortsHtml(host) {\n  const ports = Array.isArray(host.ports) ? host.ports.filter(isTrulyOpenPort) : [];\n  if (ports.length === 0) {\n    return host.status === 'Ativo'\n      ? '<span class=\"text-muted\">Nenhuma porta aberta encontrada</span>'\n      : '<span class=\"text-muted\">—</span>';\n  }\n\n  const ordered = [...ports].sort((a, b) => a.port - b.port);\n  const badges = ordered.map(p => {\n    const titleText = `${p.service || ''} ${p.version && p.version !== 'N/A' ? '(' + p.version + ')' : ''} [aberta]`;\n    return `<span class=\"port-badge open\" title=\"${escapeHtml(titleText)}\">${escapeHtml(String(p.port))}/${escapeHtml(p.protocol || 'TCP')}${p.service ? ' · ' + escapeHtml(p.service) : ''}</span>`;\n  }).join(' ');\n\n  return `<div class=\"ports-open-count\">${ordered.length} aberta(s)</div>${badges}`;\n}",
+        "implementation": [
+          "Arquivo: public/app.js",
+          "Símbolo: renderPortsHtml()",
+          "GitHub: https://github.com/CanonEngineer/Professional-Scanner/blob/main/public/app.js"
+        ]
+      },
+      {
+        "id": "professional-scanner-fn-public-app-js-getfilteredresults",
+        "parent": "professional-scanner-grp-public-app-js-functions-13-24",
+        "layer": "function",
+        "title": "getFilteredResults()",
+        "description": "Função em `public/app.js`",
+        "file": "public/app.js",
+        "code": "function getFilteredResults() {\n  const filterVal = searchInput.value.toLowerCase();\n  return scanResults.filter(host => {\n    return host.ip.toLowerCase().includes(filterVal) ||\n           host.status.toLowerCase().includes(filterVal) ||\n           host.hostname.toLowerCase().includes(filterVal) ||\n           host.os.toLowerCase().includes(filterVal) ||\n           (host.vm || '').toLowerCase().includes(filterVal) ||\n           (host.adDomain || '').toLowerCase().includes(filterVal) ||\n           (host.description || '').toLowerCase().includes(filterVal) ||\n           (host.vlan || '').toLowerCase().includes(filterVal) ||\n           (host.subnet || '').toLowerCase().includes(filterVal) ||\n           ((host.isDMZ ? 'dmz' : '')).toLowerCase().includes(filterVal) ||\n           (host.environment || '').toLowerCase().includes(filterVal) ||\n           (host.deviceType || '').toLowerCase().includes(filterVal);\n  });\n}",
+        "implementation": [
+          "Arquivo: public/app.js",
+          "Símbolo: getFilteredResults()",
+          "GitHub: https://github.com/CanonEngineer/Professional-Scanner/blob/main/public/app.js"
+        ]
+      },
+      {
+        "id": "professional-scanner-fn-public-app-js-comparescanhostsforsort",
+        "parent": "professional-scanner-grp-public-app-js-functions-13-24",
+        "layer": "function",
+        "title": "compareScanHostsForSort()",
+        "description": "Função em `public/app.js`",
+        "file": "public/app.js",
+        "code": "function compareScanHostsForSort(a, b, columnIndex, asc) {\n  let valA = '';\n  let valB = '';\n\n  switch (columnIndex) {\n    case 0:\n      valA = a.ip.split('.').reduce((ipInt, octet) => (ipInt << 8) + parseInt(octet, 10), 0) >>> 0;\n      valB = b.ip.split('.').reduce((ipInt, octet) => (ipInt << 8) + parseInt(octet, 10), 0) >>> 0;\n      return asc ? valA - valB : valB - valA;\n    case 1:\n      valA = a.status.toLowerCase();\n      valB = b.status.toLowerCase();\n      break;\n    case 2:\n      valA = a.hostname.toLowerCase();\n      valB = b.hostname.toLowerCase();\n      break;\n    case 3:\n      valA = a.os.toLowerCase();\n      valB = b.os.toLowerCase();\n      break;\n    case 4:\n      valA = (a.vm || '').toLowerCase();\n      valB = (b.vm || '').toLowerCase();\n      break;\n    case 5:\n      valA = (a.adDomain || '').toLowerCase();\n      valB = (b.adDomain || '').toLowerCase();\n      break;\n    case 6:\n      valA = (a.description || '').toLowerCase();\n      valB = (b.description || '').toLowerCase();\n      break;\n    case 7:\n      valA = (a.vlan || '').toLowerCase();\n      valB = (b.vlan || '').toLowerCase();\n      break;\n    case 8:\n      valA = (a.subnet || '').toLowerCase();\n      valB = (b.subnet || '').toLowerCase();\n      break;\n    case 9:\n      valA = a.isDMZ ? 'sim' : 'nao';\n      valB = b.isDMZ ? 'sim' : 'nao';\n      break;\n    case 10:\n      valA = (a.environment || '').toLowerCase();\n      valB = (b.environment || '').toLowerCase();\n      break;\n    case 11:\n      valA = (a.deviceType || '').toLowerCase();\n      valB = (b.deviceType || '').toLowerCase();\n      break;\n    default:\n      return 0;\n  }\n\n  if (valA < valB) return asc ? -1 : 1;\n  if (valA > valB) return asc ? 1 : -1;\n  return 0;\n}",
+        "implementation": [
+          "Arquivo: public/app.js",
+          "Símbolo: compareScanHostsForSort()",
+          "GitHub: https://github.com/CanonEngineer/Professional-Scanner/blob/main/public/app.js"
+        ]
+      },
+      {
+        "id": "professional-scanner-fn-public-app-js-updateresultstablemeta",
+        "parent": "professional-scanner-grp-public-app-js-functions-13-24",
+        "layer": "function",
+        "title": "updateResultsTableMeta()",
+        "description": "Função em `public/app.js`",
+        "file": "public/app.js",
+        "code": "function updateResultsTableMeta(totalFiltered, page, pageCount, rangeStart, rangeEnd) {\n  if (resultsTableMeta) {\n    if (totalFiltered === 0) {\n      resultsTableMeta.textContent = scanResults.length === 0 && !searchInput.value.trim()\n        ? 'Nenhum registro'\n        : 'Nenhum registro corresponde ao filtro';\n    } else {\n      const plural = totalFiltered !== 1 ? 's' : '';\n      resultsTableMeta.textContent = `Mostrando ${rangeStart}–${rangeEnd} de ${totalFiltered} registro${plural}`;\n    }\n  }\n  if (resultsPageIndicator) {\n    resultsPageIndicator.textContent = `${page} / ${Math.max(pageCount, 1)}`;\n  }\n  if (resultsPagePrev) resultsPagePrev.disabled = page <= 1;\n  if (resultsPageNext) resultsPageNext.disabled = page >= pageCount || totalFiltered === 0;\n}",
+        "implementation": [
+          "Arquivo: public/app.js",
+          "Símbolo: updateResultsTableMeta()",
+          "GitHub: https://github.com/CanonEngineer/Professional-Scanner/blob/main/public/app.js"
+        ]
+      },
+      {
+        "id": "professional-scanner-fn-public-app-js-updatesortheaders",
+        "parent": "professional-scanner-grp-public-app-js-functions-25-28",
+        "layer": "function",
+        "title": "updateSortHeaders()",
+        "description": "Função em `public/app.js`",
+        "file": "public/app.js",
+        "code": "function updateSortHeaders() {\n  if (!resultsTable) return;\n  const ths = resultsTable.querySelectorAll('thead th');\n  ths.forEach((th, idx) => {\n    th.classList.remove('canon-ds-sorted-asc', 'canon-ds-sorted-desc');\n    if (idx === resultsSortColumn) {\n      th.classList.add(resultsSortAsc ? 'canon-ds-sorted-asc' : 'canon-ds-sorted-desc');\n    }\n  });\n}",
+        "implementation": [
+          "Arquivo: public/app.js",
+          "Símbolo: updateSortHeaders()",
+          "GitHub: https://github.com/CanonEngineer/Professional-Scanner/blob/main/public/app.js"
+        ]
+      },
+      {
+        "id": "professional-scanner-fn-public-app-js-appendhostrow",
+        "parent": "professional-scanner-grp-public-app-js-functions-25-28",
+        "layer": "function",
+        "title": "appendHostRow()",
+        "description": "Função em `public/app.js`",
+        "file": "public/app.js",
+        "code": "function appendHostRow(host) {\n  const row = document.createElement('tr');\n  row.id = `row-${host.ip.replace(/\\./g, '_')}`;\n\n  const statusClass = host.status === 'Ativo' ? 'state-active' : 'state-inactive';\n  const portsHtml = renderPortsHtml(host);\n\n  const vmLabel = host.vm === 'Sim'\n    ? `Sim${host.vmType && host.vmType !== 'N/A' ? ' (' + host.vmType + ')' : ''}`\n    : (host.vm === 'Provável'\n      ? `Provável${host.vmType && host.vmType !== 'N/A' ? ' (' + host.vmType + ')' : ''}`\n      : 'Não');\n  const vmBadge = host.vm === 'Sim'\n    ? `<span class=\"state-badge\" style=\"background:rgba(255,165,0,0.2);color:#ffa500;\" title=\"${escapeHtml((host.vmEvidence || []).join('; '))}\">${escapeHtml(vmLabel)}</span>`\n    : (host.vm === 'Provável'\n      ? `<span class=\"state-badge\" style=\"background:rgba(245,158,11,0.15);color:#f59e0b;\" title=\"${escapeHtml((host.vmEvidence || []).join('; '))}\">${escapeHtml(vmLabel)}</span>`\n      : '<span class=\"text-muted\">Não</span>');\n  const sources = Array.isArray(host.enrichmentSources) ? host.enrichmentSources.join(', ') : '';\n  const detailTitle = [\n    host.adDn && host.adDn !== 'N/A' ? `DN: ${host.adDn}` : null,\n    host.lastLogon && host.lastLogon !== 'N/A' ? `LastLogon: ${host.lastLogon}` : null,\n    host.adLocation && host.adLocation !== 'N/A' ? `Local: ${host.adLocation}` : null,\n    sources ? `Fontes: ${sources}` : null\n  ].filter(Boolean).join(' | ');\n  const vlanTitle = [\n    host.vlanId != null ? `ID: ${host.vlanId}` : null,\n    host.vlanSource && host.vlanSource !== 'N/A' ? `Fonte: ${host.vlanSource}` : null,\n    host.vlanName && host.vlanName !== 'N/A' ? `Nome: ${host.vlanName}` : null\n  ].filter(Boolean).join(' | ');\n\n  const hostnameTitle = [\n    host.hostnameSource === 'fallback' ? 'Nome inferido — dispositivo não expõe DNS/SNMP/SMB' : null,\n    host.hostnameSource === 'history' ? 'Hostname do histórico de varreduras' : null,\n    detailTitle\n  ].filter(Boolean).join(' | ');\n\n  row.innerHTML = `\n    <td><strong>${escapeHtml(host.ip)}</strong></td>\n    <td><span class=\"state-badge ${statusClass}\">${escapeHtml(host.status)}</span></td>\n    <td title=\"${escapeHtml(hostnameTitle)}\">${escapeHtml(host.hostname)}</td>\n    <td title=\"${escapeHtml(host.osVersion && host.osVersion !== 'N/A' ? host.osVersion : '')}\">${escapeHtml(host.os)}</td>\n    <td>${vmBadge}</td>\n    <td>${escapeHtml(host.adDomain || 'N/A')}</td>\n    <td title=\"${escapeHtml(host.description || '')}\">${escapeHtml(host.description || 'N/A')}</td>\n    <td title=\"${escapeHtml(vlanTitle)}\">${escapeHtml(host.vlan || 'N/A')}</td>\n    <td class=\"cell-subnet\">${escapeHtml(host.subnet || 'N/A')}</td>\n    <td>${host.isDMZ ? '<span class=\"state-badge dmz\">Sim</span>' : '<span class=\"text-muted\">Não</span>'}</td>\n    <td>${escapeHtml(host.environment || 'IT')}</td>\n    <td>${escapeHtml(host.deviceType || 'Host Ativo')}</td>\n    <td><div class=\"ports-list\">${portsHtml}</div></td>\n  `;\n  resultsBody.appendChild(row);\n}",
+        "implementation": [
+          "Arquivo: public/app.js",
+          "Símbolo: appendHostRow()",
+          "GitHub: https://github.com/CanonEngineer/Professional-Scanner/blob/main/public/app.js"
+        ]
+      },
+      {
+        "id": "professional-scanner-fn-public-app-js-rendertable",
+        "parent": "professional-scanner-grp-public-app-js-functions-25-28",
+        "layer": "function",
+        "title": "renderTable()",
+        "description": "Função em `public/app.js`",
+        "file": "public/app.js",
+        "code": "function renderTable() {\n  resultsBody.innerHTML = '';\n\n  const filtered = getFilteredResults();\n  const totalFiltered = filtered.length;\n  const pageCount = totalFiltered === 0 ? 1 : Math.ceil(totalFiltered / resultsPageSize);\n\n  if (resultsPage > pageCount) resultsPage = pageCount;\n  if (resultsPage < 1) resultsPage = 1;\n\n  const start = (resultsPage - 1) * resultsPageSize;\n  const end = Math.min(start + resultsPageSize, totalFiltered);\n  const rangeStart = totalFiltered === 0 ? 0 : start + 1;\n  const rangeEnd = end;\n\n  updateResultsTableMeta(totalFiltered, resultsPage, pageCount, rangeStart, rangeEnd);\n  updateSortHeaders();\n\n  if (totalFiltered === 0) {\n    const emptyMsg = scanResults.length === 0 && !searchInput.value.trim()\n      ? 'Nenhum dado de varredura disponível. Configure o scanner acima para iniciar.'\n      : 'Nenhum host corresponde aos filtros ou à varredura atual.';\n    resultsBody.innerHTML = `\n      <tr class=\"empty-row\">\n        <td colspan=\"13\">${emptyMsg}</td>\n      </tr>\n    `;\n    return;\n  }\n\n  filtered.slice(start, end).forEach(appendHostRow);\n}",
+        "implementation": [
+          "Arquivo: public/app.js",
+          "Símbolo: renderTable()",
+          "GitHub: https://github.com/CanonEngineer/Professional-Scanner/blob/main/public/app.js"
+        ]
+      },
+      {
+        "id": "professional-scanner-fn-public-app-js-updatehostrow",
+        "parent": "professional-scanner-grp-public-app-js-functions-25-28",
+        "layer": "function",
+        "title": "updateHostRow()",
+        "description": "Função em `public/app.js`",
+        "file": "public/app.js",
+        "code": "function updateHostRow(host) {\n  const rowId = `row-${host.ip.replace(/\\./g, '_')}`;\n  const row = document.getElementById(rowId);\n  if (row) {\n    const portsCell = row.cells[12];\n    if (portsCell) {\n      portsCell.innerHTML = `<div class=\"ports-list\">${renderPortsHtml(host)}</div>`;\n    }\n  }\n}",
+        "implementation": [
+          "Arquivo: public/app.js",
+          "Símbolo: updateHostRow()",
           "GitHub: https://github.com/CanonEngineer/Professional-Scanner/blob/main/public/app.js"
         ]
       },
@@ -9534,6 +12412,238 @@ const PROJECTS = [
         "code": "const mapStatus = document.getElementById('map-status');\r\nconst mapRefreshBtn = document.getElementById('map-refresh-btn');\r\nconst mapExportPngButton = document.getElementById('map-export-png');\r\nconst mapExportSvgButton = document.getElementById('map-export-svg');\r\nconst mapExportXlsxButton = document.getElementById('map-export-xlsx');\r\nconst mapContainer = document.getElementById('map-page-canvas');\r\n\r\nlet Graph = null;\r\nlet latestResults = [];\r\nlet latestGraphData = { nodes: [], links: [] };\r\nlet exportInFlight = false;\r\n\r\nconst BRAND = 'NetScan Canon';\r\nconst COLORS = {\r\n  root: '#00f2fe',\r\n  subnet: '#4facfe',\r\n  host: '#38bdf8',\r\n  dmz: '#f59e0b',\r\n  ot: '#fb7185',\r\n  inactive: '#64748b',\r\n  link: 'rgba(148, 163, 184, 0.45)',\r\n  bg: '#08090d'\r\n};\r\n\r\nwindow.addEventListener('DOMContentLoaded', () => {\r\n  if (mapRefreshBtn) mapRefreshBtn.addEventListener('click', () => refreshTopology());\r\n  if (mapExportPngButton) mapExportPngButton.addEventListener('click', () => exportMapImage('png'));\r\n  if (mapExportSvgButton) mapExportSvgButton.addEventListener('click', () => exportMapImage('svg'));\r\n  if (mapExportXlsxButton) mapExportXlsxButton.addEventListener('click', () => exportMapExcel());\r\n  refreshTopology();\r\n});\r\n\r\nasync function refreshTopology() {\r\n  setStatus('Atualizando mapa...');\r\n  try {\r\n    const response = await fetch('/api/scan-results');\r\n    if (response.status === 401) {\r\n      setStatus('Login necessário — faça login na página principal (IPs ociosos) e volte ao mapa.');\r\n      return;\r\n    }\r\n    if (!response.ok) throw new Error(`Falha ao obter resultados: ${response.statusText}`);\r\n    const json = await response.json();\r\n    latestResults = Array.isArray(json.results) ? json.results : [];\r\n    render3DMap(latestResults);\r\n    setStatus(`${latestResults.length} hosts · ${new Date(json.updated || Date.now()).toLocaleString('pt-BR')}`);\r\n  } catch (err) {\r\n    setStatus(`Erro: ${err.message}`);\r\n    if (mapContainer) {\r\n      mapContainer.textContent = '';\r\n      const line = document.createElement('div');\r\n      line.className = 'terminal-line error-msg';\r\n      line.textContent = err.message;\r\n      mapContainer.appendChild(line);\r\n    }\r\n  }\r\n}\r\n\r\nfunction setStatus(text) {\r\n  if (mapStatus) mapStatus.textContent = text;\r\n}\r\n\r\nfunction hostColor(host) {\r\n  if (host.status === 'Inativo') return COLORS.inactive;\r\n  if (host.isDMZ) return COLORS.dmz;\r\n  if (host.environment === 'OT/ICS') return COLORS.ot;\r\n  return COLORS.host;\r\n}\r\n\r\nfunction shortLabel(host) {\r\n  const ip = host.ip || '';\r\n  const hn = host.hostname && host.hostname !== 'N/A' ? host.hostname.split('.')[0] : '';\r\n  return hn ? `${ip}\\n${hn}` : ip;\r\n}\r\n\r\n/**\r\n * Tree of Knowledge hierarchy in 3D:\r\n * Root (brand) → Subnet/VLAN branches → Host leaves\r\n * Positions are precomputed with wide spacing so labels don't collapse.\r\n */\r\nfunction buildTreeGraph(results) {\r\n  const active = results.filter(h => h && h.ip);\r\n  const nodes = [];\r\n  const links = [];\r\n\r\n  const rootId = 'root:netscan-canon';\r\n  nodes.push({\r\n    id: rootId,\r\n    name: BRAND,\r\n    label: BRAND,\r\n    level: 0,\r\n    kind: 'root',\r\n    color: COLORS.root,\r\n    val: 14\r\n  });\r\n\r\n  const groups = {};\r\n  active.forEach(host => {\r\n    const key = host.vlan && host.vlan !== 'N/A'\r\n      ? host.vlan\r\n      : (host.subnet || 'Sub-rede');\r\n    if (!groups[key]) groups[key] = [];\r\n    groups[key].push(host);\r\n  });\r\n\r\n  const groupKeys = Object.keys(groups).sort();\r\n  const branchCount = Math.max(groupKeys.length, 1);\r\n  const branchRadius = Math.max(260, 90 + branchCount * 55);\r\n\r\n  groupKeys.forEach((key, i) => {\r\n    const branchId = `branch:${key}`;\r\n    const angle = (2 * Math.PI * i) / branchCount - Math.PI / 2;\r\n    const bx = Math.cos(angle) * branchRadius;\r\n    const by = 20;\r\n    const bz = Math.sin(angle) * branchRadius;\r\n\r\n    nodes.push({\r\n      id: branchId,\r\n      name: key,\r\n      label: key,\r\n      level: 1,\r\n      kind: 'branch',\r\n      color: COLORS.subnet,\r\n      val: 9,\r\n      fx: bx,\r\n      fy: by,\r\n      fz: bz\r\n    });\r\n\r\n    links.push({\r\n      source: rootId,\r\n      target: branchId,\r\n      distance: branchRadius * 0.85,\r\n      kind: 'trunk'\r\n    });\r\n\r\n    const hosts = groups[key].slice().sort((a, b) => {\r\n      const an = a.ip.split('.').reduce((n, o) => (n << 8) + parseInt(o, 10), 0) >>> 0;\r\n      const bn = b.ip.split('.').reduce((n, o) => (n << 8) + parseInt(o, 10), 0) >>> 0;\r\n      return an - bn;\r\n    });\r\n\r\n    const leafCount = hosts.length;\r\n    const leafRadius = Math.max(140, 70 + leafCount * 18);\r\n    const ringLayers = Math.ceil(leafCount / 12) || 1;\r\n\r\n    hosts.forEach((host, j) => {\r\n      const layer = j % ringLayers;\r\n      const indexInLayer = Math.floor(j / ringLayers);\r\n      const inLayerCount = Math.ceil(leafCount / ringLayers);\r\n      const leafAngle = (2 * Math.PI * indexInLayer) / inLayerCount;\r\n      const r = leafRadius + layer * 70;\r\n      const ySpread = -40 - layer * 55 + (indexInLayer % 2) * 18;\r\n\r\n      const hx = bx + Math.cos(leafAngle) * r;\r\n      const hy = by + ySpread;\r\n      const hz = bz + Math.sin(leafAngle) * r;\r\n\r\n      nodes.push({\r\n        id: host.ip,\r\n        name: shortLabel(host),\r\n        label: shortLabel(host),\r\n        fullName: host.hostname || host.ip,\r\n        level: 2,\r\n        kind: 'host',\r\n        color: hostColor(host),\r\n        val: 4,\r\n        host,\r\n        fx: hx,\r\n        fy: hy,\r\n        fz: hz\r\n      });\r\n\r\n      links.push({\r\n        source: branchId,\r\n        target: host.ip,\r\n        distance: r * 0.9,\r\n        kind: 'leaf'\r\n      });\r\n    });\r\n  });\r\n\r\n  // Root fixed at origin\r\n  const root = nodes.find(n => n.id === rootId);\r\n  if (root) {\r\n    root.fx = 0;\r\n    root.fy = 120;\r\n    root.fz = 0;\r\n  }\r\n\r\n  return { nodes, links };\r\n}\r\n\r\nfunction render3DMap(results) {\r\n  if (!mapContainer) return;\r\n  mapContainer.innerHTML = '';\r\n\r\n  if (!results || results.length === 0) {\r\n    mapContainer.innerHTML = '<div class=\"terminal-line system-msg\">Nenhum resultado de varredura disponível para gerar o mapa.</div>';\r\n    Graph = null;\r\n    latestGraphData = { nodes: [], links: [] };\r\n    return;\r\n  }\r\n\r\n  latestGraphData = buildTreeGraph(results);\r\n  const { nodes, links } = latestGraphData;\r\n\r\n  // preserveDrawingBuffer is required for PNG/screenshot capture from WebGL\r\n  Graph = ForceGraph3D({\r\n    rendererConfig: { preserveDrawingBuffer: true, antialias: true }\r\n  })(mapContainer)\r\n    .graphData({ nodes, links })\r\n    .backgroundColor(COLORS.bg)\r\n    .showNavInfo(false)\r\n    .nodeRelSize(5)\r\n    .nodeOpacity(1)\r\n    .linkOpacity(0.55)\r\n    .linkWidth(link => (link.kind === 'trunk' ? 1.8 : 1.1))\r\n    .linkColor(() => COLORS.link)\r\n    .linkDirectionalParticles(0)\r\n    .cooldownTicks(80)\r\n    .d3VelocityDecay(0.35)\r\n    .nodeLabel(node => {\r\n      if (node.kind === 'host' && node.host) {\r\n        const h = node.host;\r\n        return [\r\n          h.ip,\r\n          h.hostname && h.hostname !== 'N/A' ? h.hostname : null,\r\n          h.devic\n\n/* … truncado na árvore (arquivo completo no GitHub) … */\n",
         "implementation": [
           "path: public/map.js",
+          "GitHub: https://github.com/CanonEngineer/Professional-Scanner/blob/main/public/map.js"
+        ]
+      },
+      {
+        "id": "professional-scanner-grp-public-map-js-functions",
+        "parent": "professional-scanner-file-public-map-js",
+        "layer": "module",
+        "title": "Funções",
+        "description": "Funções em `public/map.js`",
+        "file": "public/map.js#functions",
+        "code": "# Funções em public/map.js\n",
+        "implementation": [
+          "agrupamento: functions"
+        ]
+      },
+      {
+        "id": "professional-scanner-grp-public-map-js-functions-1-12",
+        "parent": "professional-scanner-grp-public-map-js-functions",
+        "layer": "module",
+        "title": "Funções 1–12",
+        "description": "Fatia 1–12 de funções em `public/map.js`",
+        "file": "public/map.js#functions-1-12",
+        "code": "# Funções 1-12 em public/map.js\n",
+        "implementation": [
+          "agrupamento: functions"
+        ]
+      },
+      {
+        "id": "professional-scanner-grp-public-map-js-functions-13-14",
+        "parent": "professional-scanner-grp-public-map-js-functions",
+        "layer": "module",
+        "title": "Funções 13–14",
+        "description": "Fatia 13–14 de funções em `public/map.js`",
+        "file": "public/map.js#functions-13-14",
+        "code": "# Funções 13-14 em public/map.js\n",
+        "implementation": [
+          "agrupamento: functions"
+        ]
+      },
+      {
+        "id": "professional-scanner-fn-public-map-js-render3dmap",
+        "parent": "professional-scanner-grp-public-map-js-functions-1-12",
+        "layer": "function",
+        "title": "render3DMap()",
+        "description": "Função em `public/map.js`",
+        "file": "public/map.js",
+        "code": "function render3DMap(results) {\n  if (!mapContainer) return;\n  mapContainer.innerHTML = '';\n\n  if (!results || results.length === 0) {\n    mapContainer.innerHTML = '<div class=\"terminal-line system-msg\">Nenhum resultado de varredura disponível para gerar o mapa.</div>';\n    Graph = null;\n    latestGraphData = { nodes: [], links: [] };\n    return;\n  }\n\n  latestGraphData = buildTreeGraph(results);\n  const { nodes, links } = latestGraphData;\n\n  // preserveDrawingBuffer is required for PNG/screenshot capture from WebGL\n  Graph = ForceGraph3D({\n    rendererConfig: { preserveDrawingBuffer: true, antialias: true }\n  })(mapContainer)\n    .graphData({ nodes, links })\n    .backgroundColor(COLORS.bg)\n    .showNavInfo(false)\n    .nodeRelSize(5)\n    .nodeOpacity(1)\n    .linkOpacity(0.55)\n    .linkWidth(link => (link.kind === 'trunk' ? 1.8 : 1.1))\n    .linkColor(() => COLORS.link)\n    .linkDirectionalParticles(0)\n    .cooldownTicks(80)\n    .d3VelocityDecay(0.35)\n    .nodeLabel(node => {\n      if (node.kind === 'host' && node.host) {\n        const h = node.host;\n        return [\n          h.ip,\n          h.hostname && h.hostname !== 'N/A' ? h.hostname : null,\n          h.deviceType || null,\n          h.vlan || h.subnet || null,\n          h.os && h.os !== 'N/A' ? h.os : null\n        ].filter(Boolean).join('\\n');\n      }\n      return node.label || node.name || node.id;\n    })\n    .onNodeClick(node => {\n      if (node && node.kind === 'host' && node.id && window.opener && !window.opener.closed) {\n        try {\n          const rowId = `row-${String(node.id).replace(/\\./g, '_')}`;\n          const row = window.opener.document.getElementById(rowId);\n          if (row) {\n            row.scrollIntoView({ behavior: 'smooth', block: 'center' });\n            row.classList.add('highlight-row');\n            setTimeout(() => row.classList.remove('highlight-row'), 2500);\n          }\n        } catch (e) {\n          console.warn('Unable to highlight opener row:', e.message);\n        }\n      }\n    });\n\n  // Stronger separation while keeping fixed tree scaffold\n  const charge = Graph.d3Force('charge');\n  if (charge) charge.strength(-180).distanceMax(500);\n  const linkForce = Graph.d3Force('link');\n  if (linkForce) {\n    linkForce.distance(l => l.distance || 120).strength(0.35);\n  }\n\n  Graph.nodeThreeObject(node => {\n    const isRoot = node.kind === 'root';\n    const isBranch = node.kind === 'branch';\n    const w = isRoot ? 72 : (isBranch ? 56 : 42);\n    const h = isRoot ? 28 : (isBranch ? 24 : 28);\n    const sprite = new THREE.Sprite(new THREE.SpriteMaterial({\n      map: new THREE.CanvasTexture(generateNodeCanvas(node.label || node.name || node.id, node.color || COLORS.host, {\n        widthHint: w,\n        heightHint: h,\n        fontSize: isRoot ? 13 : (isBranch ? 11 : 10),\n        multiline: node.kind === 'host'\n      })),\n      depthWrite: false,\n      transparent: true\n    }));\n    sprite.scale.set(w, h, 1);\n    return sprite;\n  });\n\n  setTimeout(() => {\n    try {\n      Graph.cameraPosition({ x: 0, y: 420, z: 720 }, { x: 0, y: 0, z: 0 }, 900);\n    } catch (e) {}\n  }, 200);\n}",
+        "implementation": [
+          "Arquivo: public/map.js",
+          "Símbolo: render3DMap()",
+          "GitHub: https://github.com/CanonEngineer/Professional-Scanner/blob/main/public/map.js"
+        ]
+      },
+      {
+        "id": "professional-scanner-fn-public-map-js-refreshtopology",
+        "parent": "professional-scanner-grp-public-map-js-functions-1-12",
+        "layer": "function",
+        "title": "refreshTopology()",
+        "description": "Função em `public/map.js`",
+        "file": "public/map.js",
+        "code": "async function refreshTopology() {\n  setStatus('Atualizando mapa...');\n  try {\n    const response = await fetch('/api/scan-results');\n    if (response.status === 401) {\n      setStatus('Login necessário — faça login na página principal (IPs ociosos) e volte ao mapa.');\n      return;\n    }\n    if (!response.ok) throw new Error(`Falha ao obter resultados: ${response.statusText}`);\n    const json = await response.json();\n    latestResults = Array.isArray(json.results) ? json.results : [];\n    render3DMap(latestResults);\n    setStatus(`${latestResults.length} hosts · ${new Date(json.updated || Date.now()).toLocaleString('pt-BR')}`);\n  } catch (err) {\n    setStatus(`Erro: ${err.message}`);\n    if (mapContainer) {\n      mapContainer.textContent = '';\n      const line = document.createElement('div');\n      line.className = 'terminal-line error-msg';\n      line.textContent = err.message;\n      mapContainer.appendChild(line);\n    }\n  }\n}",
+        "implementation": [
+          "Arquivo: public/map.js",
+          "Símbolo: refreshTopology()",
+          "GitHub: https://github.com/CanonEngineer/Professional-Scanner/blob/main/public/map.js"
+        ]
+      },
+      {
+        "id": "professional-scanner-fn-public-map-js-buildtreegraph",
+        "parent": "professional-scanner-grp-public-map-js-functions-1-12",
+        "layer": "function",
+        "title": "buildTreeGraph()",
+        "description": "Função em `public/map.js`",
+        "file": "public/map.js",
+        "code": "function buildTreeGraph(results) {\n  const active = results.filter(h => h && h.ip);\n  const nodes = [];\n  const links = [];\n\n  const rootId = 'root:netscan-canon';\n  nodes.push({\n    id: rootId,\n    name: BRAND,\n    label: BRAND,\n    level: 0,\n    kind: 'root',\n    color: COLORS.root,\n    val: 14\n  });\n\n  const groups = {};\n  active.forEach(host => {\n    const key = host.vlan && host.vlan !== 'N/A'\n      ? host.vlan\n      : (host.subnet || 'Sub-rede');\n    if (!groups[key]) groups[key] = [];\n    groups[key].push(host);\n  });\n\n  const groupKeys = Object.keys(groups).sort();\n  const branchCount = Math.max(groupKeys.length, 1);\n  const branchRadius = Math.max(260, 90 + branchCount * 55);\n\n  groupKeys.forEach((key, i) => {\n    const branchId = `branch:${key}`;\n    const angle = (2 * Math.PI * i) / branchCount - Math.PI / 2;\n    const bx = Math.cos(angle) * branchRadius;\n    const by = 20;\n    const bz = Math.sin(angle) * branchRadius;\n\n    nodes.push({\n      id: branchId,\n      name: key,\n      label: key,\n      level: 1,\n      kind: 'branch',\n      color: COLORS.subnet,\n      val: 9,\n      fx: bx,\n      fy: by,\n      fz: bz\n    });\n\n    links.push({\n      source: rootId,\n      target: branchId,\n      distance: branchRadius * 0.85,\n      kind: 'trunk'\n    });\n\n    const hosts = groups[key].slice().sort((a, b) => {\n      const an = a.ip.split('.').reduce((n, o) => (n << 8) + parseInt(o, 10), 0) >>> 0;\n      const bn = b.ip.split('.').reduce((n, o) => (n << 8) + parseInt(o, 10), 0) >>> 0;\n      return an - bn;\n    });\n\n    const leafCount = hosts.length;\n    const leafRadius = Math.max(140, 70 + leafCount * 18);\n    const ringLayers = Math.ceil(leafCount / 12) || 1;\n\n    hosts.forEach((host, j) => {\n      const layer = j % ringLayers;\n      const indexInLayer = Math.floor(j / ringLayers);\n      const inLayerCount = Math.ceil(leafCount / ringLayers);\n      const leafAngle = (2 * Math.PI * indexInLayer) / inLayerCount;\n      const r = leafRadius + layer * 70;\n      const ySpread = -40 - layer * 55 + (indexInLayer % 2) * 18;\n\n      const hx = bx + Math.cos(leafAngle) * r;\n      const hy = by + ySpread;\n      const hz = bz + Math.sin(leafAngle) * r;\n\n      nodes.push({\n        id: host.ip,\n        name: shortLabel(host),\n        label: shortLabel(host),\n        fullName: host.hostname || host.ip,\n        level: 2,\n        kind: 'host',\n        color: hostColor(host),\n        val: 4,\n        host,\n        fx: hx,\n        fy: hy,\n        fz: hz\n      });\n\n      links.push({\n        source: branchId,\n        target: host.ip,\n        distance: r * 0.9,\n        kind: 'leaf'\n      });\n    });\n  });\n\n  // Root fixed at origin\n  const root = nodes.find(n => n.id === rootId);\n  if (root) {\n    root.fx = 0;\n    root.fy = 120;\n    root.fz = 0;\n  }\n\n  return { nodes, links };\n}",
+        "implementation": [
+          "Arquivo: public/map.js",
+          "Símbolo: buildTreeGraph()",
+          "GitHub: https://github.com/CanonEngineer/Professional-Scanner/blob/main/public/map.js"
+        ]
+      },
+      {
+        "id": "professional-scanner-fn-public-map-js-exportmappng",
+        "parent": "professional-scanner-grp-public-map-js-functions-1-12",
+        "layer": "function",
+        "title": "exportMapPng()",
+        "description": "Função em `public/map.js`",
+        "file": "public/map.js",
+        "code": "function exportMapPng() {\n  const sceneCanvas = getSceneCanvas();\n  if (!sceneCanvas) {\n    setStatus('Canvas do mapa não encontrado.');\n    return;\n  }\n\n  // Force a fresh WebGL paint, then capture in the next frame\n  try {\n    const renderer = Graph.renderer();\n    renderer.render(Graph.scene(), Graph.camera());\n  } catch (e) {}\n\n  requestAnimationFrame(() => {\n    try {\n      const canvasNow = getSceneCanvas() || sceneCanvas;\n      const w = canvasNow.width || Math.max(1, Math.floor(canvasNow.clientWidth * (window.devicePixelRatio || 1)));\n      const h = canvasNow.height || Math.max(1, Math.floor(canvasNow.clientHeight * (window.devicePixelRatio || 1)));\n\n      if (w < 2 || h < 2) {\n        setStatus('Canvas do mapa sem dimensão para exportar. Atualize o mapa e tente de novo.');\n        return;\n      }\n\n      const headerH = 72;\n      const exportCanvas = document.createElement('canvas');\n      exportCanvas.width = w;\n      exportCanvas.height = h + headerH;\n      const ctx = exportCanvas.getContext('2d');\n\n      ctx.fillStyle = COLORS.bg;\n      ctx.fillRect(0, 0, exportCanvas.width, exportCanvas.height);\n\n      const grad = ctx.createLinearGradient(0, 0, w, 0);\n      grad.addColorStop(0, '#0b1220');\n      grad.addColorStop(1, '#102033');\n      ctx.fillStyle = grad;\n      ctx.fillRect(0, 0, w, headerH);\n      ctx.fillStyle = COLORS.root;\n      ctx.fillRect(0, headerH - 2, w, 2);\n\n      ctx.fillStyle = '#f8fafc';\n      ctx.font = '700 22px \"Plus Jakarta Sans\", Arial, sans-serif';\n      ctx.fillText(BRAND, 28, 32);\n      ctx.fillStyle = '#94a3b8';\n      ctx.font = '500 13px \"Plus Jakarta Sans\", Arial, sans-serif';\n      ctx.fillText('Topologia de Rede · Vista 3D (Tree of Knowledge)', 28, 54);\n\n      const when = new Date().toLocaleString('pt-BR');\n      ctx.textAlign = 'right';\n      ctx.fillText(when, w - 28, 42);\n      ctx.textAlign = 'left';\n\n      ctx.drawImage(canvasNow, 0, headerH, w, h);\n\n      const url = exportCanvas.toDataURL('image/png');\n      const link = document.createElement('a');\n      link.href = url;\n      link.download = stampFilename('NetScan_Canon_topologia', 'png');\n      document.body.appendChild(link);\n      link.click();\n      link.remove();\n      setStatus('PNG exportado com sucesso.');\n    } catch (err) {\n      setStatus(`Falha ao exportar PNG: ${err.message}`);\n    }\n  });\n}",
+        "implementation": [
+          "Arquivo: public/map.js",
+          "Símbolo: exportMapPng()",
+          "GitHub: https://github.com/CanonEngineer/Professional-Scanner/blob/main/public/map.js"
+        ]
+      },
+      {
+        "id": "professional-scanner-fn-public-map-js-exportmapsvg",
+        "parent": "professional-scanner-grp-public-map-js-functions-1-12",
+        "layer": "function",
+        "title": "exportMapSvg()",
+        "description": "Função em `public/map.js`",
+        "file": "public/map.js",
+        "code": "function exportMapSvg() {\n  const { nodes, links } = latestGraphData;\n  if (!nodes.length) return;\n\n  // Project 3D (x,z) → 2D with padding; keep tree readability\n  const positioned = nodes.filter(n => n.fx != null && n.fz != null);\n  const xs = positioned.map(n => n.fx);\n  const zs = positioned.map(n => n.fz);\n  const minX = Math.min(...xs);\n  const maxX = Math.max(...xs);\n  const minZ = Math.min(...zs);\n  const maxZ = Math.max(...zs);\n  const pad = 80;\n  const width = 1400;\n  const height = 900;\n  const spanX = Math.max(maxX - minX, 1);\n  const spanZ = Math.max(maxZ - minZ, 1);\n\n  const project = (n) => {\n    const x = pad + ((n.fx - minX) / spanX) * (width - pad * 2);\n    const y = pad + 60 + ((n.fz - minZ) / spanZ) * (height - pad * 2 - 60);\n    return { x, y };\n  };\n\n  const nodePos = {};\n  nodes.forEach(n => {\n    if (n.fx == null) return;\n    nodePos[n.id] = project(n);\n  });\n\n  const escapeXml = (s) => String(s || '')\n    .replace(/&/g, '&amp;')\n    .replace(/</g, '&lt;')\n    .replace(/>/g, '&gt;')\n    .replace(/\"/g, '&quot;');\n\n  let linksSvg = '';\n  links.forEach(l => {\n    const s = nodePos[typeof l.source === 'object' ? l.source.id : l.source];\n    const t = nodePos[typeof l.target === 'object' ? l.target.id : l.target];\n    if (!s || !t) return;\n    const sw = l.kind === 'trunk' ? 2.2 : 1.2;\n    linksSvg += `<line x1=\"${s.x.toFixed(1)}\" y1=\"${s.y.toFixed(1)}\" x2=\"${t.x.toFixed(1)}\" y2=\"${t.y.toFixed(1)}\" stroke=\"#94a3b8\" stroke-opacity=\"0.55\" stroke-width=\"${sw}\"/>`;\n  });\n\n  let nodesSvg = '';\n  nodes.forEach(n => {\n    const p = nodePos[n.id];\n    if (!p) return;\n    const label = escapeXml((n.label || n.name || '').split('\\n')[0]);\n    const r = n.kind === 'root' ? 10 : (n.kind === 'branch' ? 7 : 4.5);\n    const color = n.color || COLORS.host;\n    nodesSvg += `<g>\n      <circle cx=\"${p.x.toFixed(1)}\" cy=\"${p.y.toFixed(1)}\" r=\"${r}\" fill=\"${color}\" stroke=\"#0b1220\" stroke-width=\"1.5\"/>\n      <rect x=\"${(p.x + 8).toFixed(1)}\" y=\"${(p.y - 10).toFixed(1)}\" width=\"${Math.min(160, 8 + label.length * 6.2)}\" height=\"18\" rx=\"4\" fill=\"rgba(8,9,13,0.82)\" stroke=\"${color}\" stroke-width=\"1\"/>\n      <text x=\"${(p.x + 14).toFixed(1)}\" y=\"${(p.y + 3).toFixed(1)}\" fill=\"#f8fafc\" font-family=\"Segoe UI, Arial, sans-serif\" font-size=\"11\" font-weight=\"600\">${label}</text>\n    </g>`;\n  });\n\n  const when = escapeXml(new Date().toLocaleString('pt-BR'));\n  const svg = `<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"${width}\" height=\"${height}\" viewBox=\"0 0 ${width} ${height}\">\n  <defs>\n    <linearGradient id=\"hdr\" x1=\"0\" y1=\"0\" x2=\"1\" y2=\"0\">\n      <stop offset=\"0%\" stop-color=\"#0b1220\"/>\n      <stop offset=\"100%\" stop-color=\"#102033\"/>\n    </linearGradient>\n  </defs>\n  <rect width=\"100%\" height=\"100%\" fill=\"#08090d\"/>\n  <rect width=\"100%\" height=\"56\" fill=\"url(#hdr)\"/>\n  <rect y=\"56\" width=\"100%\" height=\"2\" fill=\"#00f2fe\"/>\n  <text x=\"28\" y=\"28\" fill=\"#f8fafc\" font-family=\"Segoe UI, Arial, sans-serif\" font-size=\"20\" font-weight=\"700\">${escapeXml(BRAND)}</text>\n  <text x=\"28\" y=\"46\" fill=\"#94a3b8\" font-family=\"Segoe UI, Arial, sans-serif\" font-size=\"12\">Topologia de Rede · Projeção Tree of Knowledge</text>\n  <text x=\"${width - 28}\" y=\"36\" fill=\"#94a3b8\" font-family=\"Segoe UI, Arial, sans-serif\" font-size=\"12\" text-anchor=\"end\">${when}</text>\n  ${linksSvg}\n  ${nodesSvg}\n</svg>`;\n\n  const blob = new Blob([svg], { type: 'image/svg+xml;charset=utf-8' });\n  const url = URL.createObjectURL(blob);\n  const link = document.createElement('a');\n  link.href = url;\n  link.download = stampFilename('NetScan_Canon_topologia', 'svg');\n  document.body.appendChild(link);\n  link.click();\n  link.remove();\n  URL.revokeObjectURL(url);\n  setStatus('SVG exportado com sucesso.');\n}",
+        "implementation": [
+          "Arquivo: public/map.js",
+          "Símbolo: exportMapSvg()",
+          "GitHub: https://github.com/CanonEngineer/Professional-Scanner/blob/main/public/map.js"
+        ]
+      },
+      {
+        "id": "professional-scanner-fn-public-map-js-exportmapexcel",
+        "parent": "professional-scanner-grp-public-map-js-functions-1-12",
+        "layer": "function",
+        "title": "exportMapExcel()",
+        "description": "Função em `public/map.js`",
+        "file": "public/map.js",
+        "code": "async function exportMapExcel() {\n  if (exportInFlight) return;\n  if (!latestResults.length) {\n    setStatus('Sem dados para exportar Excel.');\n    return;\n  }\n  exportInFlight = true;\n  try {\n    setStatus('Gerando Excel...');\n    const response = await fetch('/export-xlsx', {\n      method: 'POST',\n      headers: { 'Content-Type': 'application/json' },\n      body: JSON.stringify({ results: latestResults })\n    });\n    if (response.status === 401) {\n      setStatus('Login necessário — faça login na página principal (IPs ociosos) e volte ao mapa.');\n      return;\n    }\n    if (!response.ok) throw new Error(`HTTP ${response.status}`);\n    const blob = await response.blob();\n    const url = URL.createObjectURL(blob);\n    const link = document.createElement('a');\n    link.href = url;\n    link.download = stampFilename('NetScan_Canon_scan', 'xlsx');\n    document.body.appendChild(link);\n    link.click();\n    link.remove();\n    URL.revokeObjectURL(url);\n    setStatus('Excel exportado com sucesso.');\n  } catch (err) {\n    setStatus(`Falha no Excel: ${err.message}`);\n  } finally {\n    setTimeout(() => { exportInFlight = false; }, 800);\n  }\n}",
+        "implementation": [
+          "Arquivo: public/map.js",
+          "Símbolo: exportMapExcel()",
+          "GitHub: https://github.com/CanonEngineer/Professional-Scanner/blob/main/public/map.js"
+        ]
+      },
+      {
+        "id": "professional-scanner-fn-public-map-js-setstatus",
+        "parent": "professional-scanner-grp-public-map-js-functions-1-12",
+        "layer": "function",
+        "title": "setStatus()",
+        "description": "Função em `public/map.js`",
+        "file": "public/map.js",
+        "code": "function setStatus(text) {\n  if (mapStatus) mapStatus.textContent = text;\n}",
+        "implementation": [
+          "Arquivo: public/map.js",
+          "Símbolo: setStatus()",
+          "GitHub: https://github.com/CanonEngineer/Professional-Scanner/blob/main/public/map.js"
+        ]
+      },
+      {
+        "id": "professional-scanner-fn-public-map-js-hostcolor",
+        "parent": "professional-scanner-grp-public-map-js-functions-1-12",
+        "layer": "function",
+        "title": "hostColor()",
+        "description": "Função em `public/map.js`",
+        "file": "public/map.js",
+        "code": "function hostColor(host) {\n  if (host.status === 'Inativo') return COLORS.inactive;\n  if (host.isDMZ) return COLORS.dmz;\n  if (host.environment === 'OT/ICS') return COLORS.ot;\n  return COLORS.host;\n}",
+        "implementation": [
+          "Arquivo: public/map.js",
+          "Símbolo: hostColor()",
+          "GitHub: https://github.com/CanonEngineer/Professional-Scanner/blob/main/public/map.js"
+        ]
+      },
+      {
+        "id": "professional-scanner-fn-public-map-js-shortlabel",
+        "parent": "professional-scanner-grp-public-map-js-functions-1-12",
+        "layer": "function",
+        "title": "shortLabel()",
+        "description": "Função em `public/map.js`",
+        "file": "public/map.js",
+        "code": "function shortLabel(host) {\n  const ip = host.ip || '';\n  const hn = host.hostname && host.hostname !== 'N/A' ? host.hostname.split('.')[0] : '';\n  return hn ? `${ip}\\n${hn}` : ip;\n}",
+        "implementation": [
+          "Arquivo: public/map.js",
+          "Símbolo: shortLabel()",
+          "GitHub: https://github.com/CanonEngineer/Professional-Scanner/blob/main/public/map.js"
+        ]
+      },
+      {
+        "id": "professional-scanner-fn-public-map-js-generatenodecanvas",
+        "parent": "professional-scanner-grp-public-map-js-functions-1-12",
+        "layer": "function",
+        "title": "generateNodeCanvas()",
+        "description": "Função em `public/map.js`",
+        "file": "public/map.js",
+        "code": "function generateNodeCanvas(text, bgColor, opts = {}",
+        "implementation": [
+          "Arquivo: public/map.js",
+          "Símbolo: generateNodeCanvas()",
+          "GitHub: https://github.com/CanonEngineer/Professional-Scanner/blob/main/public/map.js"
+        ]
+      },
+      {
+        "id": "professional-scanner-fn-public-map-js-roundrect",
+        "parent": "professional-scanner-grp-public-map-js-functions-1-12",
+        "layer": "function",
+        "title": "roundRect()",
+        "description": "Função em `public/map.js`",
+        "file": "public/map.js",
+        "code": "function roundRect(ctx, x, y, w, h, r) {\n  const radius = Math.min(r, w / 2, h / 2);\n  ctx.beginPath();\n  ctx.moveTo(x + radius, y);\n  ctx.arcTo(x + w, y, x + w, y + h, radius);\n  ctx.arcTo(x + w, y + h, x, y + h, radius);\n  ctx.arcTo(x, y + h, x, y, radius);\n  ctx.arcTo(x, y, x + w, y, radius);\n  ctx.closePath();\n}",
+        "implementation": [
+          "Arquivo: public/map.js",
+          "Símbolo: roundRect()",
+          "GitHub: https://github.com/CanonEngineer/Professional-Scanner/blob/main/public/map.js"
+        ]
+      },
+      {
+        "id": "professional-scanner-fn-public-map-js-stampfilename",
+        "parent": "professional-scanner-grp-public-map-js-functions-1-12",
+        "layer": "function",
+        "title": "stampFilename()",
+        "description": "Função em `public/map.js`",
+        "file": "public/map.js",
+        "code": "function stampFilename(prefix, ext) {\n  const stamp = new Date().toISOString().slice(0, 19).replace(/[:T]/g, '-');\n  return `${prefix}_${stamp}.${ext}`;\n}",
+        "implementation": [
+          "Arquivo: public/map.js",
+          "Símbolo: stampFilename()",
+          "GitHub: https://github.com/CanonEngineer/Professional-Scanner/blob/main/public/map.js"
+        ]
+      },
+      {
+        "id": "professional-scanner-fn-public-map-js-exportmapimage",
+        "parent": "professional-scanner-grp-public-map-js-functions-13-14",
+        "layer": "function",
+        "title": "exportMapImage()",
+        "description": "Função em `public/map.js`",
+        "file": "public/map.js",
+        "code": "function exportMapImage(format) {\n  if (exportInFlight) return;\n  if (!Graph || !latestGraphData.nodes.length) {\n    setStatus('Mapa indisponível para exportação.');\n    return;\n  }\n\n  exportInFlight = true;\n  try {\n    if (format === 'png') {\n      exportMapPng();\n      return;\n    }\n    if (format === 'svg') {\n      exportMapSvg();\n      return;\n    }\n    setStatus('Formato de exportação não suportado.');\n  } finally {\n    setTimeout(() => { exportInFlight = false; }, 800);\n  }\n}",
+        "implementation": [
+          "Arquivo: public/map.js",
+          "Símbolo: exportMapImage()",
+          "GitHub: https://github.com/CanonEngineer/Professional-Scanner/blob/main/public/map.js"
+        ]
+      },
+      {
+        "id": "professional-scanner-fn-public-map-js-getscenecanvas",
+        "parent": "professional-scanner-grp-public-map-js-functions-13-14",
+        "layer": "function",
+        "title": "getSceneCanvas()",
+        "description": "Função em `public/map.js`",
+        "file": "public/map.js",
+        "code": "function getSceneCanvas() {\n  try {\n    const renderer = Graph && typeof Graph.renderer === 'function' ? Graph.renderer() : null;\n    if (renderer && renderer.domElement) return renderer.domElement;\n  } catch (e) {}\n  return mapContainer ? mapContainer.querySelector('canvas') : null;\n}",
+        "implementation": [
+          "Arquivo: public/map.js",
+          "Símbolo: getSceneCanvas()",
           "GitHub: https://github.com/CanonEngineer/Professional-Scanner/blob/main/public/map.js"
         ]
       },
@@ -9819,8 +12929,10 @@ const PROJECTS = [
       "docs/images/professional-scanner/autotest-history.png"
     ],
     "meta": {
-      "sourceFiles": 106,
-      "treeNodes": 123,
+      "sourceFiles": 108,
+      "treeNodes": 349,
+      "functionNodes": 197,
+      "stubFiles": 2,
       "complete": true
     }
   },

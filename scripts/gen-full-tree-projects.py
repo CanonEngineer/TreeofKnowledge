@@ -117,8 +117,75 @@ CODE_EXTS = {
 
 MAX_FILE_BYTES = 1_500_000
 CODE_LIMIT = 7000
+FUNC_CODE_LIMIT = 4500
 MAX_DIRECT_FILES = 12
 MAX_ROOT_CHILDREN = 16
+MAX_FUNCS_PER_FILE = 28
+MAX_ROUTES_PER_FILE = 48
+
+# Projetos que ganham nós function (rotas/funções) sob arquivos-chave
+FUNCTION_EXTRACT_SLUGS = {"professional-scanner"}
+
+# Funções prioritárias (espelha a árvore antiga / APIs críticas)
+PRIORITY_FUNCS = {
+    "server.js": [
+        "parseTarget",
+        "pingHost",
+        "getOSFromTTL",
+        "resolveHostname",
+        "getMacAddress",
+        "scanTcpPort",
+        "runConcurrent",
+        "detectDMZ",
+        "detectOTICS",
+        "detectVM",
+        "getADDomain",
+        "broadcastLoopMsg",
+        "notifyPlatformScanComplete",
+        "abortScanSockets",
+        "guessServiceName",
+    ],
+    "public/app.js": [
+        "bootCanonApp",
+        "gateCanonModalsArea",
+        "handleServerMessage",
+        "openLoopModal",
+        "renderAutoTestEngineeringBanner",
+        "buildTopologyFromResults",
+        "addOrUpdateHost",
+        "applyAutoTestResult",
+        "applyCanonUiTheme",
+        "refreshResultsTable",
+        "startScan",
+        "stopScan",
+        "exportResultsXlsx",
+    ],
+    "public/map.js": [
+        "render3DMap",
+        "refreshTopology",
+        "buildTreeGraph",
+        "exportMapPng",
+        "exportMapSvg",
+        "exportMapExcel",
+    ],
+    "hostEnrichment.js": [
+        "enrichHost",
+        "resolveHostname",
+        "getOSFromTTL",
+        "getMacFromArp",
+        "lookupAd",
+        "lookupAdByIp",
+        "detectVM",
+    ],
+    "deviceTypeDetect.js": ["detectDeviceType"],
+    "vmVlanStrategy.js": [
+        "detectVirtualization",
+        "applyVirtualizationToHost",
+        "assignVlansToHosts",
+        "resolveHostVlan",
+        "querySwitchesMacVlan",
+    ],
+}
 
 
 def slugify(text: str) -> str:
@@ -150,7 +217,13 @@ def find_repo(slug: str, repo_url: str) -> Path:
     raise FileNotFoundError(f"Clone não encontrado para {slug}: {repo_name}")
 
 
-def should_include(path: Path, repo: Path) -> bool:
+def file_suffix(path: Path) -> str:
+    if path.name.lower() == "dockerfile":
+        return ".dockerfile"
+    return path.suffix.lower()
+
+
+def is_code_candidate(path: Path, repo: Path) -> bool:
     rel_parts = path.relative_to(repo).parts
     if any(part in SKIP_DIRS for part in rel_parts):
         return False
@@ -160,27 +233,32 @@ def should_include(path: Path, repo: Path) -> bool:
         return False
     if path.name.startswith(".") and path.name not in ALLOW_DOTFILES:
         return False
-    suffix = path.suffix.lower()
-    if path.name.lower() == "dockerfile":
-        suffix = ".dockerfile"
+    suffix = file_suffix(path)
     if suffix not in CODE_EXTS and path.name not in ALLOW_DOTFILES and path.name != "www":
-        return False
-    try:
-        if path.stat().st_size > MAX_FILE_BYTES:
-            return False
-    except OSError:
         return False
     return True
 
 
-def collect_files(repo: Path) -> list[Path]:
+def collect_files(repo: Path) -> tuple[list[Path], list[Path]]:
+    """Retorna (arquivos normais, stubs grandes)."""
     files: list[Path] = []
+    stubs: list[Path] = []
     for path in repo.rglob("*"):
         if not path.is_file():
             continue
-        if should_include(path, repo):
+        if not is_code_candidate(path, repo):
+            continue
+        try:
+            size = path.stat().st_size
+        except OSError:
+            continue
+        if size > MAX_FILE_BYTES:
+            stubs.append(path)
+        else:
             files.append(path)
-    return sorted(files, key=lambda p: p.as_posix().lower())
+    files.sort(key=lambda p: p.as_posix().lower())
+    stubs.sort(key=lambda p: p.as_posix().lower())
+    return files, stubs
 
 
 def read_code(repo: Path, rel: str, limit: int = CODE_LIMIT) -> str:
@@ -198,6 +276,98 @@ def read_code(repo: Path, rel: str, limit: int = CODE_LIMIT) -> str:
     if len(text) > limit:
         text = text[:limit] + "\n\n/* … truncado na árvore (arquivo completo no GitHub) … */\n"
     return text
+
+
+def stub_code(repo: Path, rel: str) -> str:
+    path = repo / rel.replace("/", os.sep)
+    size = path.stat().st_size if path.is_file() else 0
+    return (
+        f"# Arquivo grande demais para embutir na árvore ({size:,} bytes)\n"
+        f"# path: {rel}\n"
+        f"# Abra no GitHub / clone local para o conteúdo completo.\n"
+    )
+
+
+def brace_block(source: str, start: int) -> str | None:
+    i = source.find("{", start)
+    if i < 0:
+        return None
+    depth = 0
+    for j in range(i, len(source)):
+        ch = source[j]
+        if ch == "{":
+            depth += 1
+        elif ch == "}":
+            depth -= 1
+            if depth == 0:
+                return source[start:j + 1].strip()
+    return None
+
+
+def extract_js_function(source: str, name: str) -> str | None:
+    patterns = [
+        rf"async\s+function\s+{re.escape(name)}\s*\(",
+        rf"function\s+{re.escape(name)}\s*\(",
+        rf"(?:const|let|var)\s+{re.escape(name)}\s*=\s*async\s*\(",
+        rf"(?:const|let|var)\s+{re.escape(name)}\s*=\s*\(",
+        rf"(?:const|let|var)\s+{re.escape(name)}\s*=\s*async\s+function\s*\(",
+        rf"(?:const|let|var)\s+{re.escape(name)}\s*=\s*function\s*\(",
+    ]
+    for pat in patterns:
+        m = re.search(pat, source)
+        if m:
+            block = brace_block(source, m.start())
+            if block and len(block) >= 40:
+                return block[:FUNC_CODE_LIMIT]
+    return None
+
+
+def extract_js_route(source: str, method: str, route: str) -> str | None:
+    esc = re.escape(route)
+    patterns = [
+        rf"(?:app|router)\.{method.lower()}\s*\(\s*['\"]{esc}['\"]",
+    ]
+    for pat in patterns:
+        m = re.search(pat, source)
+        if m:
+            block = brace_block(source, m.start())
+            if block:
+                return block[:FUNC_CODE_LIMIT]
+    return None
+
+
+def list_js_symbols(source: str) -> tuple[list[tuple[str, str]], list[str]]:
+    """Retorna (rotas [(METHOD, path)], funções)."""
+    routes = [
+        (m.upper(), path)
+        for m, path in re.findall(
+            r"(?:app|router)\.(get|post|put|delete|patch)\s*\(\s*['\"]([^'\"]+)['\"]",
+            source,
+            re.I,
+        )
+    ]
+    funcs = list(
+        dict.fromkeys(
+            re.findall(r"(?:async\s+)?function\s+([A-Za-z_][A-Za-z0-9_]*)\s*\(", source)
+        )
+    )
+    return routes, funcs
+
+
+def pick_functions(rel: str, funcs: list[str]) -> list[str]:
+    priority = PRIORITY_FUNCS.get(rel, [])
+    picked: list[str] = []
+    for name in priority:
+        if name in funcs and name not in picked:
+            picked.append(name)
+    for name in funcs:
+        if name.startswith("_"):
+            continue
+        if name not in picked:
+            picked.append(name)
+        if len(picked) >= MAX_FUNCS_PER_FILE:
+            break
+    return picked[:MAX_FUNCS_PER_FILE]
 
 
 def root_entry(repo: Path, files: list[Path], original_file: str | None) -> str:
@@ -226,15 +396,17 @@ def unique_id(candidate: str, seen: set[str]) -> str:
 def build_project(meta: dict) -> dict:
     slug = meta["slug"]
     repo = find_repo(slug, meta["repoUrl"])
-    files = collect_files(repo)
-    if not files:
+    files, stubs = collect_files(repo)
+    if not files and not stubs:
         raise RuntimeError(f"Nenhum arquivo elegível para {slug}")
 
     nodes: list[dict] = []
     seen_ids: set[str] = set()
     dir_ids: dict[str, str] = {"": f"{slugify(slug)}-root"}
+    extract_funcs = slug in FUNCTION_EXTRACT_SLUGS
+    source_file_count = len(files) + len(stubs)
 
-    entry = root_entry(repo, files, meta.get("file"))
+    entry = root_entry(repo, files or stubs, meta.get("file"))
     nodes.append(
         {
             "id": dir_ids[""],
@@ -246,15 +418,16 @@ def build_project(meta: dict) -> dict:
             "code": read_code(repo, entry, limit=12000),
             "implementation": [
                 f"Repo: {meta['repoUrl']}",
-                f"Arquivos na árvore: {len(files)}",
+                f"Arquivos na árvore: {source_file_count}",
                 "2D + Galaxy 3D — cobertura total do código-fonte",
             ],
         }
     )
     seen_ids.add(dir_ids[""])
 
+    all_for_dirs = files + stubs
     dirs_needed: set[str] = set()
-    for f in files:
+    for f in all_for_dirs:
         rel = f.relative_to(repo).as_posix()
         parent = str(Path(rel).parent).replace("\\", "/")
         if parent == ".":
@@ -285,7 +458,8 @@ def build_project(meta: dict) -> dict:
         )
 
     files_by_dir: dict[str, list[Path]] = defaultdict(list)
-    for f in files:
+    stub_set = {p.resolve() for p in stubs}
+    for f in all_for_dirs:
         rel = f.relative_to(repo).as_posix()
         if rel == entry:
             continue
@@ -310,6 +484,108 @@ def build_project(meta: dict) -> dict:
             }
         )
         return gid
+
+    def add_function_children(file_id: str, rel: str, source: str) -> int:
+        if not extract_funcs or not rel.endswith((".js", ".jsx", ".ts", ".tsx")):
+            return 0
+        routes, funcs = list_js_symbols(source)
+        if rel not in PRIORITY_FUNCS and not routes:
+            return 0
+
+        children_specs: list[tuple[str, str, str]] = []
+        for method, route in routes[:MAX_ROUTES_PER_FILE]:
+            title = f"{method} {route}"
+            code = extract_js_route(source, method, route) or f"// {title}\n// rota em {rel}\n"
+            children_specs.append((title, code, "route"))
+
+        for name in pick_functions(rel, funcs):
+            title = f"{name}()"
+            code = extract_js_function(source, name) or f"// {title}\n// função em {rel}\n"
+            children_specs.append((title, code, "function"))
+
+        if not children_specs:
+            return 0
+
+        parents: list[tuple[str, tuple[str, str, str]]] = []
+        if len(children_specs) <= MAX_DIRECT_FILES:
+            parents = [(file_id, s) for s in children_specs]
+        else:
+            route_specs = [s for s in children_specs if s[2] == "route"]
+            func_specs = [s for s in children_specs if s[2] == "function"]
+
+            def attach_chunks(specs: list[tuple[str, str, str]], group_title: str, slug_part: str) -> None:
+                if not specs:
+                    return
+                group_id = unique_id(
+                    path_id(slug, f"{rel}/{slug_part}", is_dir=True).replace("-dir-", "-grp-"),
+                    seen_ids,
+                )
+                nodes.append(
+                    {
+                        "id": group_id,
+                        "parent": file_id,
+                        "layer": "module",
+                        "title": group_title,
+                        "description": f"{group_title} em `{rel}`",
+                        "file": f"{rel}#{slug_part}",
+                        "code": f"# {group_title} em {rel}\n",
+                        "implementation": [f"agrupamento: {slug_part}"],
+                    }
+                )
+                if len(specs) <= MAX_DIRECT_FILES:
+                    parents.extend((group_id, s) for s in specs)
+                    return
+                for start in range(0, len(specs), MAX_DIRECT_FILES):
+                    chunk = specs[start:start + MAX_DIRECT_FILES]
+                    lo, hi = start + 1, start + len(chunk)
+                    gid = unique_id(
+                        path_id(slug, f"{rel}/{slug_part}/{lo}-{hi}", is_dir=True).replace("-dir-", "-grp-"),
+                        seen_ids,
+                    )
+                    nodes.append(
+                        {
+                            "id": gid,
+                            "parent": group_id,
+                            "layer": "module",
+                            "title": f"{group_title} {lo}–{hi}",
+                            "description": f"Fatia {lo}–{hi} de {group_title.lower()} em `{rel}`",
+                            "file": f"{rel}#{slug_part}-{lo}-{hi}",
+                            "code": f"# {group_title} {lo}-{hi} em {rel}\n",
+                            "implementation": [f"agrupamento: {slug_part}"],
+                        }
+                    )
+                    parents.extend((gid, s) for s in chunk)
+
+            attach_chunks(route_specs, "Rotas API", "routes")
+            attach_chunks(func_specs, "Funções", "functions")
+
+        added = 0
+        for parent_fn, (title, code, kind) in parents:
+            nid = unique_id(
+                path_id(slug, f"{rel}/{title}", is_dir=False).replace("-file-", "-fn-"),
+                seen_ids,
+            )
+            nodes.append(
+                {
+                    "id": nid,
+                    "parent": parent_fn,
+                    "layer": "function",
+                    "title": title,
+                    "description": f"{'Rota' if kind == 'route' else 'Função'} em `{rel}`",
+                    "file": rel,
+                    "code": code,
+                    "implementation": [
+                        f"Arquivo: {rel}",
+                        f"Símbolo: {title}",
+                        f"GitHub: {meta['repoUrl'].rstrip('/')}/blob/main/{rel}",
+                    ],
+                }
+            )
+            added += 1
+        return added
+
+    function_nodes = 0
+    stub_nodes = 0
 
     for parent_path, flist in sorted(files_by_dir.items(), key=lambda item: item[0].lower()):
         flist = sorted(flist, key=lambda p: p.name.lower())
@@ -363,21 +639,36 @@ def build_project(meta: dict) -> dict:
         for file_parent_id, f in targets:
             rel = f.relative_to(repo).as_posix()
             fid = unique_id(path_id(slug, rel, is_dir=False), seen_ids)
+            is_stub = f.resolve() in stub_set
+            if is_stub:
+                stub_nodes += 1
+                code = stub_code(repo, rel)
+                desc = f"Arquivo grande (stub): `{rel}` — conteúdo completo no GitHub."
+            else:
+                code = read_code(repo, rel)
+                desc = f"Código-fonte: `{rel}`"
             nodes.append(
                 {
                     "id": fid,
                     "parent": file_parent_id,
                     "layer": "file",
                     "title": Path(rel).name,
-                    "description": f"Código-fonte: `{rel}`",
+                    "description": desc,
                     "file": rel,
-                    "code": read_code(repo, rel),
+                    "code": code,
                     "implementation": [
                         f"path: {rel}",
                         f"GitHub: {meta['repoUrl'].rstrip('/')}/blob/main/{rel}",
+                        *(["stub: arquivo > 1.5MB"] if is_stub else []),
                     ],
                 }
             )
+            if not is_stub and extract_funcs:
+                try:
+                    source = (repo / rel).read_text(encoding="utf-8", errors="replace")
+                except OSError:
+                    source = ""
+                function_nodes += add_function_children(fid, rel, source)
 
     # Se a raiz ainda tiver muitos filhos (pastas + grupos), agrupa módulos
     root_id = dir_ids[""]
@@ -425,11 +716,19 @@ def build_project(meta: dict) -> dict:
                 child["parent"] = bucket_id
 
     out = dict(meta)
-    out["summary"] = f"Cobertura completa: {len(files)} arquivos de código no repositório ({len(nodes)} nós na árvore incluindo pastas)."
+    out["summary"] = (
+        f"Cobertura completa: {source_file_count} arquivos de código no repositório "
+        f"({len(nodes)} nós na árvore incluindo pastas"
+        + (f", {function_nodes} funções/rotas" if function_nodes else "")
+        + (f", {stub_nodes} stubs grandes" if stub_nodes else "")
+        + ")."
+    )
     out["nodes"] = nodes
     out["meta"] = {
-        "sourceFiles": len(files),
+        "sourceFiles": source_file_count,
         "treeNodes": len(nodes),
+        "functionNodes": function_nodes,
+        "stubFiles": stub_nodes,
         "complete": True,
     }
     return out
@@ -444,6 +743,13 @@ def save_json(path: Path, data) -> None:
 
 
 def main() -> None:
+    import sys
+
+    only = None
+    if "--only" in sys.argv:
+        i = sys.argv.index("--only")
+        only = sys.argv[i + 1] if i + 1 < len(sys.argv) else None
+
     total_projects = 0
     for name, single in SOURCE_FILES:
         path = ROOT / name
@@ -452,10 +758,18 @@ def main() -> None:
         updated = []
         print(f"\n{name}:")
         for project in projects:
+            if only and project.get("slug") != only:
+                updated.append(project)
+                continue
             full = build_project(project)
             updated.append(full)
             meta = full.get("meta", {})
-            print(f"  {full['slug']}: {meta.get('sourceFiles', '?')} arquivos -> {meta.get('treeNodes', '?')} nós")
+            print(
+                f"  {full['slug']}: {meta.get('sourceFiles', '?')} arquivos -> "
+                f"{meta.get('treeNodes', '?')} nós"
+                + (f" ({meta.get('functionNodes', 0)} funcs)" if meta.get("functionNodes") else "")
+                + (f" ({meta.get('stubFiles', 0)} stubs)" if meta.get("stubFiles") else "")
+            )
             total_projects += 1
         save_json(path, updated[0] if single else updated)
     print(f"\nProjetos regenerados: {total_projects}")

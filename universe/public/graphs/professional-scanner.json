@@ -4,7 +4,7 @@
   "repoUrl": "https://github.com/CanonEngineer/Professional-Scanner",
   "color": "#06b6d4",
   "demoUrl": "https://github.com/CanonEngineer/Professional-Scanner/blob/main/docs/DOCUMENTATION.md",
-  "nodeCount": 123,
+  "nodeCount": 349,
   "categories": {
     "core": {
       "label": "Backend",
@@ -66,7 +66,7 @@
       "color": "#64748b",
       "size": 2.2,
       "file": "README.md",
-      "description": "Cobertura completa: 106 arquivos de código no repositório (122 nós na árvore incluindo pastas)."
+      "description": "Cobertura completa: 106 arquivos de código no repositório (123 nós na árvore incluindo pastas)."
     },
     {
       "id": "professional-scanner-dir-vscode",
@@ -525,6 +525,54 @@
       "description": "Código-fonte: `deviceTypeDetect.js`"
     },
     {
+      "id": "professional-scanner-fn-devicetypedetect-js-detectdevicetype",
+      "label": "detectDeviceType()",
+      "parent": "professional-scanner-file-devicetypedetect-js",
+      "layer": "function",
+      "category": "other",
+      "categoryLabel": "Outros",
+      "color": "#64748b",
+      "size": 0.62,
+      "file": "deviceTypeDetect.js",
+      "description": "Função em `deviceTypeDetect.js`"
+    },
+    {
+      "id": "professional-scanner-fn-devicetypedetect-js-textblob",
+      "label": "textBlob()",
+      "parent": "professional-scanner-file-devicetypedetect-js",
+      "layer": "function",
+      "category": "other",
+      "categoryLabel": "Outros",
+      "color": "#64748b",
+      "size": 0.62,
+      "file": "deviceTypeDetect.js",
+      "description": "Função em `deviceTypeDetect.js`"
+    },
+    {
+      "id": "professional-scanner-fn-devicetypedetect-js-hasany",
+      "label": "hasAny()",
+      "parent": "professional-scanner-file-devicetypedetect-js",
+      "layer": "function",
+      "category": "other",
+      "categoryLabel": "Outros",
+      "color": "#64748b",
+      "size": 0.62,
+      "file": "deviceTypeDetect.js",
+      "description": "Função em `deviceTypeDetect.js`"
+    },
+    {
+      "id": "professional-scanner-fn-devicetypedetect-js-hasport",
+      "label": "hasPort()",
+      "parent": "professional-scanner-file-devicetypedetect-js",
+      "layer": "function",
+      "category": "other",
+      "categoryLabel": "Outros",
+      "color": "#64748b",
+      "size": 0.62,
+      "file": "deviceTypeDetect.js",
+      "description": "Função em `deviceTypeDetect.js`"
+    },
+    {
       "id": "professional-scanner-file-fileshareaudit-js",
       "label": "fileShareAudit.js",
       "parent": "professional-scanner-grp-files-c-d-f-h",
@@ -547,6 +595,390 @@
       "size": 0.85,
       "file": "hostEnrichment.js",
       "description": "Código-fonte: `hostEnrichment.js`"
+    },
+    {
+      "id": "professional-scanner-grp-hostenrichment-js-functions",
+      "label": "Funções",
+      "parent": "professional-scanner-file-hostenrichment-js",
+      "layer": "module",
+      "category": "other",
+      "categoryLabel": "Outros",
+      "color": "#64748b",
+      "size": 1.35,
+      "file": "hostEnrichment.js#functions",
+      "description": "Funções em `hostEnrichment.js`"
+    },
+    {
+      "id": "professional-scanner-grp-hostenrichment-js-functions-1-12",
+      "label": "Funções 1–12",
+      "parent": "professional-scanner-grp-hostenrichment-js-functions",
+      "layer": "module",
+      "category": "other",
+      "categoryLabel": "Outros",
+      "color": "#64748b",
+      "size": 1.35,
+      "file": "hostEnrichment.js#functions-1-12",
+      "description": "Fatia 1–12 de funções em `hostEnrichment.js`"
+    },
+    {
+      "id": "professional-scanner-grp-hostenrichment-js-functions-13-24",
+      "label": "Funções 13–24",
+      "parent": "professional-scanner-grp-hostenrichment-js-functions",
+      "layer": "module",
+      "category": "other",
+      "categoryLabel": "Outros",
+      "color": "#64748b",
+      "size": 1.35,
+      "file": "hostEnrichment.js#functions-13-24",
+      "description": "Fatia 13–24 de funções em `hostEnrichment.js`"
+    },
+    {
+      "id": "professional-scanner-grp-hostenrichment-js-functions-25-28",
+      "label": "Funções 25–28",
+      "parent": "professional-scanner-grp-hostenrichment-js-functions",
+      "layer": "module",
+      "category": "other",
+      "categoryLabel": "Outros",
+      "color": "#64748b",
+      "size": 1.35,
+      "file": "hostEnrichment.js#functions-25-28",
+      "description": "Fatia 25–28 de funções em `hostEnrichment.js`"
+    },
+    {
+      "id": "professional-scanner-fn-hostenrichment-js-enrichhost",
+      "label": "enrichHost()",
+      "parent": "professional-scanner-grp-hostenrichment-js-functions-1-12",
+      "layer": "function",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 0.62,
+      "file": "hostEnrichment.js",
+      "description": "Função em `hostEnrichment.js`"
+    },
+    {
+      "id": "professional-scanner-fn-hostenrichment-js-getosfromttl",
+      "label": "getOSFromTTL()",
+      "parent": "professional-scanner-grp-hostenrichment-js-functions-1-12",
+      "layer": "function",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 0.62,
+      "file": "hostEnrichment.js",
+      "description": "Função em `hostEnrichment.js`"
+    },
+    {
+      "id": "professional-scanner-fn-hostenrichment-js-getmacfromarp",
+      "label": "getMacFromArp()",
+      "parent": "professional-scanner-grp-hostenrichment-js-functions-1-12",
+      "layer": "function",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 0.62,
+      "file": "hostEnrichment.js",
+      "description": "Função em `hostEnrichment.js`"
+    },
+    {
+      "id": "professional-scanner-fn-hostenrichment-js-lookupad",
+      "label": "lookupAd()",
+      "parent": "professional-scanner-grp-hostenrichment-js-functions-1-12",
+      "layer": "function",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 0.62,
+      "file": "hostEnrichment.js",
+      "description": "Função em `hostEnrichment.js`"
+    },
+    {
+      "id": "professional-scanner-fn-hostenrichment-js-lookupadbyip",
+      "label": "lookupAdByIp()",
+      "parent": "professional-scanner-grp-hostenrichment-js-functions-1-12",
+      "layer": "function",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 0.62,
+      "file": "hostEnrichment.js",
+      "description": "Função em `hostEnrichment.js`"
+    },
+    {
+      "id": "professional-scanner-fn-hostenrichment-js-detectvm",
+      "label": "detectVM()",
+      "parent": "professional-scanner-grp-hostenrichment-js-functions-1-12",
+      "layer": "function",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 0.62,
+      "file": "hostEnrichment.js",
+      "description": "Função em `hostEnrichment.js`"
+    },
+    {
+      "id": "professional-scanner-fn-hostenrichment-js-lookslikeprinter",
+      "label": "looksLikePrinter()",
+      "parent": "professional-scanner-grp-hostenrichment-js-functions-1-12",
+      "layer": "function",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 0.62,
+      "file": "hostEnrichment.js",
+      "description": "Função em `hostEnrichment.js`"
+    },
+    {
+      "id": "professional-scanner-fn-hostenrichment-js-isempty",
+      "label": "isEmpty()",
+      "parent": "professional-scanner-grp-hostenrichment-js-functions-1-12",
+      "layer": "function",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 0.62,
+      "file": "hostEnrichment.js",
+      "description": "Função em `hostEnrichment.js`"
+    },
+    {
+      "id": "professional-scanner-fn-hostenrichment-js-pick",
+      "label": "pick()",
+      "parent": "professional-scanner-grp-hostenrichment-js-functions-1-12",
+      "layer": "function",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 0.62,
+      "file": "hostEnrichment.js",
+      "description": "Função em `hostEnrichment.js`"
+    },
+    {
+      "id": "professional-scanner-fn-hostenrichment-js-shortname",
+      "label": "shortName()",
+      "parent": "professional-scanner-grp-hostenrichment-js-functions-1-12",
+      "layer": "function",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 0.62,
+      "file": "hostEnrichment.js",
+      "description": "Função em `hostEnrichment.js`"
+    },
+    {
+      "id": "professional-scanner-fn-hostenrichment-js-runpowershell",
+      "label": "runPowerShell()",
+      "parent": "professional-scanner-grp-hostenrichment-js-functions-1-12",
+      "layer": "function",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 0.62,
+      "file": "hostEnrichment.js",
+      "description": "Função em `hostEnrichment.js`"
+    },
+    {
+      "id": "professional-scanner-fn-hostenrichment-js-filetimetoiso",
+      "label": "filetimeToIso()",
+      "parent": "professional-scanner-grp-hostenrichment-js-functions-1-12",
+      "layer": "function",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 0.62,
+      "file": "hostEnrichment.js",
+      "description": "Função em `hostEnrichment.js`"
+    },
+    {
+      "id": "professional-scanner-fn-hostenrichment-js-mapwindowsbuild",
+      "label": "mapWindowsBuild()",
+      "parent": "professional-scanner-grp-hostenrichment-js-functions-13-24",
+      "layer": "function",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 0.62,
+      "file": "hostEnrichment.js",
+      "description": "Função em `hostEnrichment.js`"
+    },
+    {
+      "id": "professional-scanner-fn-hostenrichment-js-loadadcatalog",
+      "label": "loadAdCatalog()",
+      "parent": "professional-scanner-grp-hostenrichment-js-functions-13-24",
+      "layer": "function",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 0.62,
+      "file": "hostEnrichment.js",
+      "description": "Função em `hostEnrichment.js`"
+    },
+    {
+      "id": "professional-scanner-fn-hostenrichment-js-saveadcomputerscache",
+      "label": "saveAdComputersCache()",
+      "parent": "professional-scanner-grp-hostenrichment-js-functions-13-24",
+      "layer": "function",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 0.62,
+      "file": "hostEnrichment.js",
+      "description": "Função em `hostEnrichment.js`"
+    },
+    {
+      "id": "professional-scanner-fn-hostenrichment-js-loadadipindexcache",
+      "label": "loadAdIpIndexCache()",
+      "parent": "professional-scanner-grp-hostenrichment-js-functions-13-24",
+      "layer": "function",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 0.62,
+      "file": "hostEnrichment.js",
+      "description": "Função em `hostEnrichment.js`"
+    },
+    {
+      "id": "professional-scanner-fn-hostenrichment-js-saveadipindexcache",
+      "label": "saveAdIpIndexCache()",
+      "parent": "professional-scanner-grp-hostenrichment-js-functions-13-24",
+      "layer": "function",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 0.62,
+      "file": "hostEnrichment.js",
+      "description": "Função em `hostEnrichment.js`"
+    },
+    {
+      "id": "professional-scanner-fn-hostenrichment-js-buildadipindex",
+      "label": "buildAdIpIndex()",
+      "parent": "professional-scanner-grp-hostenrichment-js-functions-13-24",
+      "layer": "function",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 0.62,
+      "file": "hostEnrichment.js",
+      "description": "Função em `hostEnrichment.js`"
+    },
+    {
+      "id": "professional-scanner-fn-hostenrichment-js-worker",
+      "label": "worker()",
+      "parent": "professional-scanner-grp-hostenrichment-js-functions-13-24",
+      "layer": "function",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 0.62,
+      "file": "hostEnrichment.js",
+      "description": "Função em `hostEnrichment.js`"
+    },
+    {
+      "id": "professional-scanner-fn-hostenrichment-js-cleanhostnamecandidate",
+      "label": "cleanHostnameCandidate()",
+      "parent": "professional-scanner-grp-hostenrichment-js-functions-13-24",
+      "layer": "function",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 0.62,
+      "file": "hostEnrichment.js",
+      "description": "Função em `hostEnrichment.js`"
+    },
+    {
+      "id": "professional-scanner-fn-hostenrichment-js-hostnamefromloosecandidate",
+      "label": "hostnameFromLooseCandidate()",
+      "parent": "professional-scanner-grp-hostenrichment-js-functions-13-24",
+      "layer": "function",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 0.62,
+      "file": "hostEnrichment.js",
+      "description": "Função em `hostEnrichment.js`"
+    },
+    {
+      "id": "professional-scanner-fn-hostenrichment-js-derivefallbackhostname",
+      "label": "deriveFallbackHostname()",
+      "parent": "professional-scanner-grp-hostenrichment-js-functions-13-24",
+      "layer": "function",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 0.62,
+      "file": "hostEnrichment.js",
+      "description": "Função em `hostEnrichment.js`"
+    },
+    {
+      "id": "professional-scanner-fn-hostenrichment-js-resolvehostnamefinal",
+      "label": "resolveHostnameFinal()",
+      "parent": "professional-scanner-grp-hostenrichment-js-functions-13-24",
+      "layer": "function",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 0.62,
+      "file": "hostEnrichment.js",
+      "description": "Função em `hostEnrichment.js`"
+    },
+    {
+      "id": "professional-scanner-fn-hostenrichment-js-queryloggedonuserviaquser",
+      "label": "queryLoggedOnUserViaQUser()",
+      "parent": "professional-scanner-grp-hostenrichment-js-functions-13-24",
+      "layer": "function",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 0.62,
+      "file": "hostEnrichment.js",
+      "description": "Função em `hostEnrichment.js`"
+    },
+    {
+      "id": "professional-scanner-fn-hostenrichment-js-queryloggedonuser",
+      "label": "queryLoggedOnUser()",
+      "parent": "professional-scanner-grp-hostenrichment-js-functions-25-28",
+      "layer": "function",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 0.62,
+      "file": "hostEnrichment.js",
+      "description": "Função em `hostEnrichment.js`"
+    },
+    {
+      "id": "professional-scanner-fn-hostenrichment-js-resolvednsreversenode",
+      "label": "resolveDnsReverseNode()",
+      "parent": "professional-scanner-grp-hostenrichment-js-functions-25-28",
+      "layer": "function",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 0.62,
+      "file": "hostEnrichment.js",
+      "description": "Função em `hostEnrichment.js`"
+    },
+    {
+      "id": "professional-scanner-fn-hostenrichment-js-resolvednsreversewindows",
+      "label": "resolveDnsReverseWindows()",
+      "parent": "professional-scanner-grp-hostenrichment-js-functions-25-28",
+      "layer": "function",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 0.62,
+      "file": "hostEnrichment.js",
+      "description": "Função em `hostEnrichment.js`"
+    },
+    {
+      "id": "professional-scanner-fn-hostenrichment-js-resolvednsreverse",
+      "label": "resolveDnsReverse()",
+      "parent": "professional-scanner-grp-hostenrichment-js-functions-25-28",
+      "layer": "function",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 0.62,
+      "file": "hostEnrichment.js",
+      "description": "Função em `hostEnrichment.js`"
     },
     {
       "id": "professional-scanner-file-hosthistory-js",
@@ -607,6 +1039,102 @@
       "size": 0.85,
       "file": "inventoryRoutes.js",
       "description": "Código-fonte: `inventoryRoutes.js`"
+    },
+    {
+      "id": "professional-scanner-fn-inventoryroutes-js-get",
+      "label": "GET /",
+      "parent": "professional-scanner-file-inventoryroutes-js",
+      "layer": "function",
+      "category": "inventory",
+      "categoryLabel": "Inventário UNESP",
+      "color": "#10b981",
+      "size": 0.62,
+      "file": "inventoryRoutes.js",
+      "description": "Rota em `inventoryRoutes.js`"
+    },
+    {
+      "id": "professional-scanner-fn-inventoryroutes-js-get-stats",
+      "label": "GET /stats",
+      "parent": "professional-scanner-file-inventoryroutes-js",
+      "layer": "function",
+      "category": "inventory",
+      "categoryLabel": "Inventário UNESP",
+      "color": "#10b981",
+      "size": 0.62,
+      "file": "inventoryRoutes.js",
+      "description": "Rota em `inventoryRoutes.js`"
+    },
+    {
+      "id": "professional-scanner-fn-inventoryroutes-js-post-sync",
+      "label": "POST /sync",
+      "parent": "professional-scanner-file-inventoryroutes-js",
+      "layer": "function",
+      "category": "inventory",
+      "categoryLabel": "Inventário UNESP",
+      "color": "#10b981",
+      "size": 0.62,
+      "file": "inventoryRoutes.js",
+      "description": "Rota em `inventoryRoutes.js`"
+    },
+    {
+      "id": "professional-scanner-fn-inventoryroutes-js-post-resolve-ad-users",
+      "label": "POST /resolve-ad-users",
+      "parent": "professional-scanner-file-inventoryroutes-js",
+      "layer": "function",
+      "category": "ad",
+      "categoryLabel": "Active Directory",
+      "color": "#a78bfa",
+      "size": 0.62,
+      "file": "inventoryRoutes.js",
+      "description": "Rota em `inventoryRoutes.js`"
+    },
+    {
+      "id": "professional-scanner-fn-inventoryroutes-js-post-export-xlsx",
+      "label": "POST /export-xlsx",
+      "parent": "professional-scanner-file-inventoryroutes-js",
+      "layer": "function",
+      "category": "inventory",
+      "categoryLabel": "Inventário UNESP",
+      "color": "#10b981",
+      "size": 0.62,
+      "file": "inventoryRoutes.js",
+      "description": "Rota em `inventoryRoutes.js`"
+    },
+    {
+      "id": "professional-scanner-fn-inventoryroutes-js-post-export-pdf",
+      "label": "POST /export-pdf",
+      "parent": "professional-scanner-file-inventoryroutes-js",
+      "layer": "function",
+      "category": "inventory",
+      "categoryLabel": "Inventário UNESP",
+      "color": "#10b981",
+      "size": 0.62,
+      "file": "inventoryRoutes.js",
+      "description": "Rota em `inventoryRoutes.js`"
+    },
+    {
+      "id": "professional-scanner-fn-inventoryroutes-js-post-export-csv",
+      "label": "POST /export-csv",
+      "parent": "professional-scanner-file-inventoryroutes-js",
+      "layer": "function",
+      "category": "inventory",
+      "categoryLabel": "Inventário UNESP",
+      "color": "#10b981",
+      "size": 0.62,
+      "file": "inventoryRoutes.js",
+      "description": "Rota em `inventoryRoutes.js`"
+    },
+    {
+      "id": "professional-scanner-fn-inventoryroutes-js-mountinventoryroutes",
+      "label": "mountInventoryRoutes()",
+      "parent": "professional-scanner-file-inventoryroutes-js",
+      "layer": "function",
+      "category": "inventory",
+      "categoryLabel": "Inventário UNESP",
+      "color": "#10b981",
+      "size": 0.62,
+      "file": "inventoryRoutes.js",
+      "description": "Função em `inventoryRoutes.js`"
     },
     {
       "id": "professional-scanner-file-inventoryxlsx-js",
@@ -765,6 +1293,318 @@
       "description": "Código-fonte: `platformRoutes.js`"
     },
     {
+      "id": "professional-scanner-grp-platformroutes-js-routes",
+      "label": "Rotas API",
+      "parent": "professional-scanner-file-platformroutes-js",
+      "layer": "module",
+      "category": "platform",
+      "categoryLabel": "Plataforma Canon",
+      "color": "#8b5cf6",
+      "size": 1.35,
+      "file": "platformRoutes.js#routes",
+      "description": "Rotas API em `platformRoutes.js`"
+    },
+    {
+      "id": "professional-scanner-grp-platformroutes-js-routes-1-12",
+      "label": "Rotas API 1–12",
+      "parent": "professional-scanner-grp-platformroutes-js-routes",
+      "layer": "module",
+      "category": "platform",
+      "categoryLabel": "Plataforma Canon",
+      "color": "#8b5cf6",
+      "size": 1.35,
+      "file": "platformRoutes.js#routes-1-12",
+      "description": "Fatia 1–12 de rotas api em `platformRoutes.js`"
+    },
+    {
+      "id": "professional-scanner-grp-platformroutes-js-routes-13-21",
+      "label": "Rotas API 13–21",
+      "parent": "professional-scanner-grp-platformroutes-js-routes",
+      "layer": "module",
+      "category": "platform",
+      "categoryLabel": "Plataforma Canon",
+      "color": "#8b5cf6",
+      "size": 1.35,
+      "file": "platformRoutes.js#routes-13-21",
+      "description": "Fatia 13–21 de rotas api em `platformRoutes.js`"
+    },
+    {
+      "id": "professional-scanner-grp-platformroutes-js-functions",
+      "label": "Funções",
+      "parent": "professional-scanner-file-platformroutes-js",
+      "layer": "module",
+      "category": "platform",
+      "categoryLabel": "Plataforma Canon",
+      "color": "#8b5cf6",
+      "size": 1.35,
+      "file": "platformRoutes.js#functions",
+      "description": "Funções em `platformRoutes.js`"
+    },
+    {
+      "id": "professional-scanner-fn-platformroutes-js-get-health",
+      "label": "GET /health",
+      "parent": "professional-scanner-grp-platformroutes-js-routes-1-12",
+      "layer": "function",
+      "category": "platform",
+      "categoryLabel": "Plataforma Canon",
+      "color": "#8b5cf6",
+      "size": 0.62,
+      "file": "platformRoutes.js",
+      "description": "Rota em `platformRoutes.js`"
+    },
+    {
+      "id": "professional-scanner-fn-platformroutes-js-get-config",
+      "label": "GET /config",
+      "parent": "professional-scanner-grp-platformroutes-js-routes-1-12",
+      "layer": "function",
+      "category": "platform",
+      "categoryLabel": "Plataforma Canon",
+      "color": "#8b5cf6",
+      "size": 0.62,
+      "file": "platformRoutes.js",
+      "description": "Rota em `platformRoutes.js`"
+    },
+    {
+      "id": "professional-scanner-fn-platformroutes-js-put-config",
+      "label": "PUT /config",
+      "parent": "professional-scanner-grp-platformroutes-js-routes-1-12",
+      "layer": "function",
+      "category": "platform",
+      "categoryLabel": "Plataforma Canon",
+      "color": "#8b5cf6",
+      "size": 0.62,
+      "file": "platformRoutes.js",
+      "description": "Rota em `platformRoutes.js`"
+    },
+    {
+      "id": "professional-scanner-fn-platformroutes-js-get-sites",
+      "label": "GET /sites",
+      "parent": "professional-scanner-grp-platformroutes-js-routes-1-12",
+      "layer": "function",
+      "category": "platform",
+      "categoryLabel": "Plataforma Canon",
+      "color": "#8b5cf6",
+      "size": 0.62,
+      "file": "platformRoutes.js",
+      "description": "Rota em `platformRoutes.js`"
+    },
+    {
+      "id": "professional-scanner-fn-platformroutes-js-put-sites-active",
+      "label": "PUT /sites/active",
+      "parent": "professional-scanner-grp-platformroutes-js-routes-1-12",
+      "layer": "function",
+      "category": "platform",
+      "categoryLabel": "Plataforma Canon",
+      "color": "#8b5cf6",
+      "size": 0.62,
+      "file": "platformRoutes.js",
+      "description": "Rota em `platformRoutes.js`"
+    },
+    {
+      "id": "professional-scanner-fn-platformroutes-js-get-v1-hosts",
+      "label": "GET /v1/hosts",
+      "parent": "professional-scanner-grp-platformroutes-js-routes-1-12",
+      "layer": "function",
+      "category": "platform",
+      "categoryLabel": "Plataforma Canon",
+      "color": "#8b5cf6",
+      "size": 0.62,
+      "file": "platformRoutes.js",
+      "description": "Rota em `platformRoutes.js`"
+    },
+    {
+      "id": "professional-scanner-fn-platformroutes-js-get-drift",
+      "label": "GET /drift",
+      "parent": "professional-scanner-grp-platformroutes-js-routes-1-12",
+      "layer": "function",
+      "category": "platform",
+      "categoryLabel": "Plataforma Canon",
+      "color": "#8b5cf6",
+      "size": 0.62,
+      "file": "platformRoutes.js",
+      "description": "Rota em `platformRoutes.js`"
+    },
+    {
+      "id": "professional-scanner-fn-platformroutes-js-get-correlation",
+      "label": "GET /correlation",
+      "parent": "professional-scanner-grp-platformroutes-js-routes-1-12",
+      "layer": "function",
+      "category": "platform",
+      "categoryLabel": "Plataforma Canon",
+      "color": "#8b5cf6",
+      "size": 0.62,
+      "file": "platformRoutes.js",
+      "description": "Rota em `platformRoutes.js`"
+    },
+    {
+      "id": "professional-scanner-fn-platformroutes-js-post-tls-scan",
+      "label": "POST /tls-scan",
+      "parent": "professional-scanner-grp-platformroutes-js-routes-1-12",
+      "layer": "function",
+      "category": "platform",
+      "categoryLabel": "Plataforma Canon",
+      "color": "#8b5cf6",
+      "size": 0.62,
+      "file": "platformRoutes.js",
+      "description": "Rota em `platformRoutes.js`"
+    },
+    {
+      "id": "professional-scanner-fn-platformroutes-js-get-nac",
+      "label": "GET /nac",
+      "parent": "professional-scanner-grp-platformroutes-js-routes-1-12",
+      "layer": "function",
+      "category": "platform",
+      "categoryLabel": "Plataforma Canon",
+      "color": "#8b5cf6",
+      "size": 0.62,
+      "file": "platformRoutes.js",
+      "description": "Rota em `platformRoutes.js`"
+    },
+    {
+      "id": "professional-scanner-fn-platformroutes-js-get-fingerprint",
+      "label": "GET /fingerprint",
+      "parent": "professional-scanner-grp-platformroutes-js-routes-1-12",
+      "layer": "function",
+      "category": "platform",
+      "categoryLabel": "Plataforma Canon",
+      "color": "#8b5cf6",
+      "size": 0.62,
+      "file": "platformRoutes.js",
+      "description": "Rota em `platformRoutes.js`"
+    },
+    {
+      "id": "professional-scanner-fn-platformroutes-js-get-passive",
+      "label": "GET /passive",
+      "parent": "professional-scanner-grp-platformroutes-js-routes-1-12",
+      "layer": "function",
+      "category": "platform",
+      "categoryLabel": "Plataforma Canon",
+      "color": "#8b5cf6",
+      "size": 0.62,
+      "file": "platformRoutes.js",
+      "description": "Rota em `platformRoutes.js`"
+    },
+    {
+      "id": "professional-scanner-fn-platformroutes-js-get-lifecycle",
+      "label": "GET /lifecycle",
+      "parent": "professional-scanner-grp-platformroutes-js-routes-13-21",
+      "layer": "function",
+      "category": "platform",
+      "categoryLabel": "Plataforma Canon",
+      "color": "#8b5cf6",
+      "size": 0.62,
+      "file": "platformRoutes.js",
+      "description": "Rota em `platformRoutes.js`"
+    },
+    {
+      "id": "professional-scanner-fn-platformroutes-js-put-lifecycle-ip",
+      "label": "PUT /lifecycle/:ip",
+      "parent": "professional-scanner-grp-platformroutes-js-routes-13-21",
+      "layer": "function",
+      "category": "platform",
+      "categoryLabel": "Plataforma Canon",
+      "color": "#8b5cf6",
+      "size": 0.62,
+      "file": "platformRoutes.js",
+      "description": "Rota em `platformRoutes.js`"
+    },
+    {
+      "id": "professional-scanner-fn-platformroutes-js-get-lifecycle-states",
+      "label": "GET /lifecycle/states",
+      "parent": "professional-scanner-grp-platformroutes-js-routes-13-21",
+      "layer": "function",
+      "category": "platform",
+      "categoryLabel": "Plataforma Canon",
+      "color": "#8b5cf6",
+      "size": 0.62,
+      "file": "platformRoutes.js",
+      "description": "Rota em `platformRoutes.js`"
+    },
+    {
+      "id": "professional-scanner-fn-platformroutes-js-post-agent-report",
+      "label": "POST /agent/report",
+      "parent": "professional-scanner-grp-platformroutes-js-routes-13-21",
+      "layer": "function",
+      "category": "platform",
+      "categoryLabel": "Plataforma Canon",
+      "color": "#8b5cf6",
+      "size": 0.62,
+      "file": "platformRoutes.js",
+      "description": "Rota em `platformRoutes.js`"
+    },
+    {
+      "id": "professional-scanner-fn-platformroutes-js-get-agent-reports",
+      "label": "GET /agent/reports",
+      "parent": "professional-scanner-grp-platformroutes-js-routes-13-21",
+      "layer": "function",
+      "category": "platform",
+      "categoryLabel": "Plataforma Canon",
+      "color": "#8b5cf6",
+      "size": 0.62,
+      "file": "platformRoutes.js",
+      "description": "Rota em `platformRoutes.js`"
+    },
+    {
+      "id": "professional-scanner-fn-platformroutes-js-get-reports-daily",
+      "label": "GET /reports/daily",
+      "parent": "professional-scanner-grp-platformroutes-js-routes-13-21",
+      "layer": "function",
+      "category": "platform",
+      "categoryLabel": "Plataforma Canon",
+      "color": "#8b5cf6",
+      "size": 0.62,
+      "file": "platformRoutes.js",
+      "description": "Rota em `platformRoutes.js`"
+    },
+    {
+      "id": "professional-scanner-fn-platformroutes-js-post-reports-run",
+      "label": "POST /reports/run",
+      "parent": "professional-scanner-grp-platformroutes-js-routes-13-21",
+      "layer": "function",
+      "category": "platform",
+      "categoryLabel": "Plataforma Canon",
+      "color": "#8b5cf6",
+      "size": 0.62,
+      "file": "platformRoutes.js",
+      "description": "Rota em `platformRoutes.js`"
+    },
+    {
+      "id": "professional-scanner-fn-platformroutes-js-post-webhooks-test",
+      "label": "POST /webhooks/test",
+      "parent": "professional-scanner-grp-platformroutes-js-routes-13-21",
+      "layer": "function",
+      "category": "platform",
+      "categoryLabel": "Plataforma Canon",
+      "color": "#8b5cf6",
+      "size": 0.62,
+      "file": "platformRoutes.js",
+      "description": "Rota em `platformRoutes.js`"
+    },
+    {
+      "id": "professional-scanner-fn-platformroutes-js-get-summary",
+      "label": "GET /summary",
+      "parent": "professional-scanner-grp-platformroutes-js-routes-13-21",
+      "layer": "function",
+      "category": "platform",
+      "categoryLabel": "Plataforma Canon",
+      "color": "#8b5cf6",
+      "size": 0.62,
+      "file": "platformRoutes.js",
+      "description": "Rota em `platformRoutes.js`"
+    },
+    {
+      "id": "professional-scanner-fn-platformroutes-js-mountplatformroutes",
+      "label": "mountPlatformRoutes()",
+      "parent": "professional-scanner-grp-platformroutes-js-functions",
+      "layer": "function",
+      "category": "platform",
+      "categoryLabel": "Plataforma Canon",
+      "color": "#8b5cf6",
+      "size": 0.62,
+      "file": "platformRoutes.js",
+      "description": "Função em `platformRoutes.js`"
+    },
+    {
       "id": "professional-scanner-file-ratelimit-js",
       "label": "rateLimit.js",
       "parent": "professional-scanner-grp-files-p-r-s",
@@ -811,6 +1651,1014 @@
       "size": 0.85,
       "file": "server.js",
       "description": "Código-fonte: `server.js`"
+    },
+    {
+      "id": "professional-scanner-grp-server-js-routes",
+      "label": "Rotas API",
+      "parent": "professional-scanner-file-server-js",
+      "layer": "module",
+      "category": "other",
+      "categoryLabel": "Outros",
+      "color": "#64748b",
+      "size": 1.35,
+      "file": "server.js#routes",
+      "description": "Rotas API em `server.js`"
+    },
+    {
+      "id": "professional-scanner-grp-server-js-routes-1-12",
+      "label": "Rotas API 1–12",
+      "parent": "professional-scanner-grp-server-js-routes",
+      "layer": "module",
+      "category": "other",
+      "categoryLabel": "Outros",
+      "color": "#64748b",
+      "size": 1.35,
+      "file": "server.js#routes-1-12",
+      "description": "Fatia 1–12 de rotas api em `server.js`"
+    },
+    {
+      "id": "professional-scanner-grp-server-js-routes-13-24",
+      "label": "Rotas API 13–24",
+      "parent": "professional-scanner-grp-server-js-routes",
+      "layer": "module",
+      "category": "other",
+      "categoryLabel": "Outros",
+      "color": "#64748b",
+      "size": 1.35,
+      "file": "server.js#routes-13-24",
+      "description": "Fatia 13–24 de rotas api em `server.js`"
+    },
+    {
+      "id": "professional-scanner-grp-server-js-routes-25-36",
+      "label": "Rotas API 25–36",
+      "parent": "professional-scanner-grp-server-js-routes",
+      "layer": "module",
+      "category": "other",
+      "categoryLabel": "Outros",
+      "color": "#64748b",
+      "size": 1.35,
+      "file": "server.js#routes-25-36",
+      "description": "Fatia 25–36 de rotas api em `server.js`"
+    },
+    {
+      "id": "professional-scanner-grp-server-js-routes-37-48",
+      "label": "Rotas API 37–48",
+      "parent": "professional-scanner-grp-server-js-routes",
+      "layer": "module",
+      "category": "other",
+      "categoryLabel": "Outros",
+      "color": "#64748b",
+      "size": 1.35,
+      "file": "server.js#routes-37-48",
+      "description": "Fatia 37–48 de rotas api em `server.js`"
+    },
+    {
+      "id": "professional-scanner-grp-server-js-functions",
+      "label": "Funções",
+      "parent": "professional-scanner-file-server-js",
+      "layer": "module",
+      "category": "other",
+      "categoryLabel": "Outros",
+      "color": "#64748b",
+      "size": 1.35,
+      "file": "server.js#functions",
+      "description": "Funções em `server.js`"
+    },
+    {
+      "id": "professional-scanner-grp-server-js-functions-1-12",
+      "label": "Funções 1–12",
+      "parent": "professional-scanner-grp-server-js-functions",
+      "layer": "module",
+      "category": "other",
+      "categoryLabel": "Outros",
+      "color": "#64748b",
+      "size": 1.35,
+      "file": "server.js#functions-1-12",
+      "description": "Fatia 1–12 de funções em `server.js`"
+    },
+    {
+      "id": "professional-scanner-grp-server-js-functions-13-24",
+      "label": "Funções 13–24",
+      "parent": "professional-scanner-grp-server-js-functions",
+      "layer": "module",
+      "category": "other",
+      "categoryLabel": "Outros",
+      "color": "#64748b",
+      "size": 1.35,
+      "file": "server.js#functions-13-24",
+      "description": "Fatia 13–24 de funções em `server.js`"
+    },
+    {
+      "id": "professional-scanner-grp-server-js-functions-25-27",
+      "label": "Funções 25–27",
+      "parent": "professional-scanner-grp-server-js-functions",
+      "layer": "module",
+      "category": "other",
+      "categoryLabel": "Outros",
+      "color": "#64748b",
+      "size": 1.35,
+      "file": "server.js#functions-25-27",
+      "description": "Fatia 25–27 de funções em `server.js`"
+    },
+    {
+      "id": "professional-scanner-fn-server-js-post-api-auth-login",
+      "label": "POST /api/auth/login",
+      "parent": "professional-scanner-grp-server-js-routes-1-12",
+      "layer": "function",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 0.62,
+      "file": "server.js",
+      "description": "Rota em `server.js`"
+    },
+    {
+      "id": "professional-scanner-fn-server-js-get-api-auth-session",
+      "label": "GET /api/auth/session",
+      "parent": "professional-scanner-grp-server-js-routes-1-12",
+      "layer": "function",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 0.62,
+      "file": "server.js",
+      "description": "Rota em `server.js`"
+    },
+    {
+      "id": "professional-scanner-fn-server-js-post-api-auth-logout",
+      "label": "POST /api/auth/logout",
+      "parent": "professional-scanner-grp-server-js-routes-1-12",
+      "layer": "function",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 0.62,
+      "file": "server.js",
+      "description": "Rota em `server.js`"
+    },
+    {
+      "id": "professional-scanner-fn-server-js-get-api-scan-results",
+      "label": "GET /api/scan-results",
+      "parent": "professional-scanner-grp-server-js-routes-1-12",
+      "layer": "function",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 0.62,
+      "file": "server.js",
+      "description": "Rota em `server.js`"
+    },
+    {
+      "id": "professional-scanner-fn-server-js-get-api-host-history-stats",
+      "label": "GET /api/host-history/stats",
+      "parent": "professional-scanner-grp-server-js-routes-1-12",
+      "layer": "function",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 0.62,
+      "file": "server.js",
+      "description": "Rota em `server.js`"
+    },
+    {
+      "id": "professional-scanner-fn-server-js-get-api-report-info",
+      "label": "GET /api/report-info",
+      "parent": "professional-scanner-grp-server-js-routes-1-12",
+      "layer": "function",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 0.62,
+      "file": "server.js",
+      "description": "Rota em `server.js`"
+    },
+    {
+      "id": "professional-scanner-fn-server-js-get-api-idle-hosts",
+      "label": "GET /api/idle-hosts",
+      "parent": "professional-scanner-grp-server-js-routes-1-12",
+      "layer": "function",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 0.62,
+      "file": "server.js",
+      "description": "Rota em `server.js`"
+    },
+    {
+      "id": "professional-scanner-fn-server-js-post-api-idle-hosts-export-xlsx",
+      "label": "POST /api/idle-hosts/export-xlsx",
+      "parent": "professional-scanner-grp-server-js-routes-1-12",
+      "layer": "function",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 0.62,
+      "file": "server.js",
+      "description": "Rota em `server.js`"
+    },
+    {
+      "id": "professional-scanner-fn-server-js-get-api-ala-map-config",
+      "label": "GET /api/ala-map/config",
+      "parent": "professional-scanner-grp-server-js-routes-1-12",
+      "layer": "function",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 0.62,
+      "file": "server.js",
+      "description": "Rota em `server.js`"
+    },
+    {
+      "id": "professional-scanner-fn-server-js-put-api-ala-map-config",
+      "label": "PUT /api/ala-map/config",
+      "parent": "professional-scanner-grp-server-js-routes-1-12",
+      "layer": "function",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 0.62,
+      "file": "server.js",
+      "description": "Rota em `server.js`"
+    },
+    {
+      "id": "professional-scanner-fn-server-js-get-api-ala-map-report",
+      "label": "GET /api/ala-map/report",
+      "parent": "professional-scanner-grp-server-js-routes-1-12",
+      "layer": "function",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 0.62,
+      "file": "server.js",
+      "description": "Rota em `server.js`"
+    },
+    {
+      "id": "professional-scanner-fn-server-js-get-api-device-library",
+      "label": "GET /api/device-library",
+      "parent": "professional-scanner-grp-server-js-routes-1-12",
+      "layer": "function",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 0.62,
+      "file": "server.js",
+      "description": "Rota em `server.js`"
+    },
+    {
+      "id": "professional-scanner-fn-server-js-post-api-ala-map-export-xlsx",
+      "label": "POST /api/ala-map/export-xlsx",
+      "parent": "professional-scanner-grp-server-js-routes-13-24",
+      "layer": "function",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 0.62,
+      "file": "server.js",
+      "description": "Rota em `server.js`"
+    },
+    {
+      "id": "professional-scanner-fn-server-js-delete-api-host-history",
+      "label": "DELETE /api/host-history",
+      "parent": "professional-scanner-grp-server-js-routes-13-24",
+      "layer": "function",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 0.62,
+      "file": "server.js",
+      "description": "Rota em `server.js`"
+    },
+    {
+      "id": "professional-scanner-fn-server-js-get-api-ad-departed",
+      "label": "GET /api/ad/departed",
+      "parent": "professional-scanner-grp-server-js-routes-13-24",
+      "layer": "function",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 0.62,
+      "file": "server.js",
+      "description": "Rota em `server.js`"
+    },
+    {
+      "id": "professional-scanner-fn-server-js-delete-api-ad-departed",
+      "label": "DELETE /api/ad/departed",
+      "parent": "professional-scanner-grp-server-js-routes-13-24",
+      "layer": "function",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 0.62,
+      "file": "server.js",
+      "description": "Rota em `server.js`"
+    },
+    {
+      "id": "professional-scanner-fn-server-js-delete-api-ad-departed-sam",
+      "label": "DELETE /api/ad/departed/:sam",
+      "parent": "professional-scanner-grp-server-js-routes-13-24",
+      "layer": "function",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 0.62,
+      "file": "server.js",
+      "description": "Rota em `server.js`"
+    },
+    {
+      "id": "professional-scanner-fn-server-js-get-api-loop-config",
+      "label": "GET /api/loop/config",
+      "parent": "professional-scanner-grp-server-js-routes-13-24",
+      "layer": "function",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 0.62,
+      "file": "server.js",
+      "description": "Rota em `server.js`"
+    },
+    {
+      "id": "professional-scanner-fn-server-js-put-api-loop-config",
+      "label": "PUT /api/loop/config",
+      "parent": "professional-scanner-grp-server-js-routes-13-24",
+      "layer": "function",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 0.62,
+      "file": "server.js",
+      "description": "Rota em `server.js`"
+    },
+    {
+      "id": "professional-scanner-fn-server-js-get-api-loop-switches",
+      "label": "GET /api/loop/switches",
+      "parent": "professional-scanner-grp-server-js-routes-13-24",
+      "layer": "function",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 0.62,
+      "file": "server.js",
+      "description": "Rota em `server.js`"
+    },
+    {
+      "id": "professional-scanner-fn-server-js-post-api-loop-switches",
+      "label": "POST /api/loop/switches",
+      "parent": "professional-scanner-grp-server-js-routes-13-24",
+      "layer": "function",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 0.62,
+      "file": "server.js",
+      "description": "Rota em `server.js`"
+    },
+    {
+      "id": "professional-scanner-fn-server-js-delete-api-loop-switches-id",
+      "label": "DELETE /api/loop/switches/:id",
+      "parent": "professional-scanner-grp-server-js-routes-13-24",
+      "layer": "function",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 0.62,
+      "file": "server.js",
+      "description": "Rota em `server.js`"
+    },
+    {
+      "id": "professional-scanner-fn-server-js-get-api-loop-status",
+      "label": "GET /api/loop/status",
+      "parent": "professional-scanner-grp-server-js-routes-13-24",
+      "layer": "function",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 0.62,
+      "file": "server.js",
+      "description": "Rota em `server.js`"
+    },
+    {
+      "id": "professional-scanner-fn-server-js-post-api-loop-start",
+      "label": "POST /api/loop/start",
+      "parent": "professional-scanner-grp-server-js-routes-13-24",
+      "layer": "function",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 0.62,
+      "file": "server.js",
+      "description": "Rota em `server.js`"
+    },
+    {
+      "id": "professional-scanner-fn-server-js-post-api-loop-stop",
+      "label": "POST /api/loop/stop",
+      "parent": "professional-scanner-grp-server-js-routes-25-36",
+      "layer": "function",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 0.62,
+      "file": "server.js",
+      "description": "Rota em `server.js`"
+    },
+    {
+      "id": "professional-scanner-fn-server-js-post-api-loop-quick-check",
+      "label": "POST /api/loop/quick-check",
+      "parent": "professional-scanner-grp-server-js-routes-25-36",
+      "layer": "function",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 0.62,
+      "file": "server.js",
+      "description": "Rota em `server.js`"
+    },
+    {
+      "id": "professional-scanner-fn-server-js-get-api-loop-alerts",
+      "label": "GET /api/loop/alerts",
+      "parent": "professional-scanner-grp-server-js-routes-25-36",
+      "layer": "function",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 0.62,
+      "file": "server.js",
+      "description": "Rota em `server.js`"
+    },
+    {
+      "id": "professional-scanner-fn-server-js-delete-api-loop-alerts",
+      "label": "DELETE /api/loop/alerts",
+      "parent": "professional-scanner-grp-server-js-routes-25-36",
+      "layer": "function",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 0.62,
+      "file": "server.js",
+      "description": "Rota em `server.js`"
+    },
+    {
+      "id": "professional-scanner-fn-server-js-post-api-loop-reset-baseline",
+      "label": "POST /api/loop/reset-baseline",
+      "parent": "professional-scanner-grp-server-js-routes-25-36",
+      "layer": "function",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 0.62,
+      "file": "server.js",
+      "description": "Rota em `server.js`"
+    },
+    {
+      "id": "professional-scanner-fn-server-js-get-api-autotest-config",
+      "label": "GET /api/autotest/config",
+      "parent": "professional-scanner-grp-server-js-routes-25-36",
+      "layer": "function",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 0.62,
+      "file": "server.js",
+      "description": "Rota em `server.js`"
+    },
+    {
+      "id": "professional-scanner-fn-server-js-get-api-autotest-profiles",
+      "label": "GET /api/autotest/profiles",
+      "parent": "professional-scanner-grp-server-js-routes-25-36",
+      "layer": "function",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 0.62,
+      "file": "server.js",
+      "description": "Rota em `server.js`"
+    },
+    {
+      "id": "professional-scanner-fn-server-js-get-api-autotest-profile-id",
+      "label": "GET /api/autotest/profile/:id",
+      "parent": "professional-scanner-grp-server-js-routes-25-36",
+      "layer": "function",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 0.62,
+      "file": "server.js",
+      "description": "Rota em `server.js`"
+    },
+    {
+      "id": "professional-scanner-fn-server-js-put-api-autotest-config",
+      "label": "PUT /api/autotest/config",
+      "parent": "professional-scanner-grp-server-js-routes-25-36",
+      "layer": "function",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 0.62,
+      "file": "server.js",
+      "description": "Rota em `server.js`"
+    },
+    {
+      "id": "professional-scanner-fn-server-js-get-api-autotest-interfaces",
+      "label": "GET /api/autotest/interfaces",
+      "parent": "professional-scanner-grp-server-js-routes-25-36",
+      "layer": "function",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 0.62,
+      "file": "server.js",
+      "description": "Rota em `server.js`"
+    },
+    {
+      "id": "professional-scanner-fn-server-js-get-api-autotest-history",
+      "label": "GET /api/autotest/history",
+      "parent": "professional-scanner-grp-server-js-routes-25-36",
+      "layer": "function",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 0.62,
+      "file": "server.js",
+      "description": "Rota em `server.js`"
+    },
+    {
+      "id": "professional-scanner-fn-server-js-delete-api-autotest-history",
+      "label": "DELETE /api/autotest/history",
+      "parent": "professional-scanner-grp-server-js-routes-25-36",
+      "layer": "function",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 0.62,
+      "file": "server.js",
+      "description": "Rota em `server.js`"
+    },
+    {
+      "id": "professional-scanner-fn-server-js-get-api-autotest-loop-switches",
+      "label": "GET /api/autotest/loop-switches",
+      "parent": "professional-scanner-grp-server-js-routes-37-48",
+      "layer": "function",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 0.62,
+      "file": "server.js",
+      "description": "Rota em `server.js`"
+    },
+    {
+      "id": "professional-scanner-fn-server-js-post-api-autotest-export-pdf",
+      "label": "POST /api/autotest/export-pdf",
+      "parent": "professional-scanner-grp-server-js-routes-37-48",
+      "layer": "function",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 0.62,
+      "file": "server.js",
+      "description": "Rota em `server.js`"
+    },
+    {
+      "id": "professional-scanner-fn-server-js-post-api-autotest-export-xlsx",
+      "label": "POST /api/autotest/export-xlsx",
+      "parent": "professional-scanner-grp-server-js-routes-37-48",
+      "layer": "function",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 0.62,
+      "file": "server.js",
+      "description": "Rota em `server.js`"
+    },
+    {
+      "id": "professional-scanner-fn-server-js-post-api-autotest-export-csv",
+      "label": "POST /api/autotest/export-csv",
+      "parent": "professional-scanner-grp-server-js-routes-37-48",
+      "layer": "function",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 0.62,
+      "file": "server.js",
+      "description": "Rota em `server.js`"
+    },
+    {
+      "id": "professional-scanner-fn-server-js-get-api-autotest-local",
+      "label": "GET /api/autotest/local",
+      "parent": "professional-scanner-grp-server-js-routes-37-48",
+      "layer": "function",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 0.62,
+      "file": "server.js",
+      "description": "Rota em `server.js`"
+    },
+    {
+      "id": "professional-scanner-fn-server-js-post-api-autotest-run",
+      "label": "POST /api/autotest/run",
+      "parent": "professional-scanner-grp-server-js-routes-37-48",
+      "layer": "function",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 0.62,
+      "file": "server.js",
+      "description": "Rota em `server.js`"
+    },
+    {
+      "id": "professional-scanner-fn-server-js-get-api-autotest-remote-config",
+      "label": "GET /api/autotest/remote/config",
+      "parent": "professional-scanner-grp-server-js-routes-37-48",
+      "layer": "function",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 0.62,
+      "file": "server.js",
+      "description": "Rota em `server.js`"
+    },
+    {
+      "id": "professional-scanner-fn-server-js-post-api-autotest-remote-auth-login",
+      "label": "POST /api/autotest/remote/auth/login",
+      "parent": "professional-scanner-grp-server-js-routes-37-48",
+      "layer": "function",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 0.62,
+      "file": "server.js",
+      "description": "Rota em `server.js`"
+    },
+    {
+      "id": "professional-scanner-fn-server-js-get-api-autotest-remote-auth-session",
+      "label": "GET /api/autotest/remote/auth/session",
+      "parent": "professional-scanner-grp-server-js-routes-37-48",
+      "layer": "function",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 0.62,
+      "file": "server.js",
+      "description": "Rota em `server.js`"
+    },
+    {
+      "id": "professional-scanner-fn-server-js-post-api-autotest-remote-auth-logout",
+      "label": "POST /api/autotest/remote/auth/logout",
+      "parent": "professional-scanner-grp-server-js-routes-37-48",
+      "layer": "function",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 0.62,
+      "file": "server.js",
+      "description": "Rota em `server.js`"
+    },
+    {
+      "id": "professional-scanner-fn-server-js-post-api-autotest-remote-pairing",
+      "label": "POST /api/autotest/remote/pairing",
+      "parent": "professional-scanner-grp-server-js-routes-37-48",
+      "layer": "function",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 0.62,
+      "file": "server.js",
+      "description": "Rota em `server.js`"
+    },
+    {
+      "id": "professional-scanner-fn-server-js-get-api-autotest-remote-agents",
+      "label": "GET /api/autotest/remote/agents",
+      "parent": "professional-scanner-grp-server-js-routes-37-48",
+      "layer": "function",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 0.62,
+      "file": "server.js",
+      "description": "Rota em `server.js`"
+    },
+    {
+      "id": "professional-scanner-fn-server-js-parsetarget",
+      "label": "parseTarget()",
+      "parent": "professional-scanner-grp-server-js-functions-1-12",
+      "layer": "function",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 0.62,
+      "file": "server.js",
+      "description": "Função em `server.js`"
+    },
+    {
+      "id": "professional-scanner-fn-server-js-pinghost",
+      "label": "pingHost()",
+      "parent": "professional-scanner-grp-server-js-functions-1-12",
+      "layer": "function",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 0.62,
+      "file": "server.js",
+      "description": "Função em `server.js`"
+    },
+    {
+      "id": "professional-scanner-fn-server-js-getosfromttl",
+      "label": "getOSFromTTL()",
+      "parent": "professional-scanner-grp-server-js-functions-1-12",
+      "layer": "function",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 0.62,
+      "file": "server.js",
+      "description": "Função em `server.js`"
+    },
+    {
+      "id": "professional-scanner-fn-server-js-resolvehostname",
+      "label": "resolveHostname()",
+      "parent": "professional-scanner-grp-server-js-functions-1-12",
+      "layer": "function",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 0.62,
+      "file": "server.js",
+      "description": "Função em `server.js`"
+    },
+    {
+      "id": "professional-scanner-fn-server-js-getmacaddress",
+      "label": "getMacAddress()",
+      "parent": "professional-scanner-grp-server-js-functions-1-12",
+      "layer": "function",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 0.62,
+      "file": "server.js",
+      "description": "Função em `server.js`"
+    },
+    {
+      "id": "professional-scanner-fn-server-js-scantcpport",
+      "label": "scanTcpPort()",
+      "parent": "professional-scanner-grp-server-js-functions-1-12",
+      "layer": "function",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 0.62,
+      "file": "server.js",
+      "description": "Função em `server.js`"
+    },
+    {
+      "id": "professional-scanner-fn-server-js-runconcurrent",
+      "label": "runConcurrent()",
+      "parent": "professional-scanner-grp-server-js-functions-1-12",
+      "layer": "function",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 0.62,
+      "file": "server.js",
+      "description": "Função em `server.js`"
+    },
+    {
+      "id": "professional-scanner-fn-server-js-detectdmz",
+      "label": "detectDMZ()",
+      "parent": "professional-scanner-grp-server-js-functions-1-12",
+      "layer": "function",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 0.62,
+      "file": "server.js",
+      "description": "Função em `server.js`"
+    },
+    {
+      "id": "professional-scanner-fn-server-js-detectotics",
+      "label": "detectOTICS()",
+      "parent": "professional-scanner-grp-server-js-functions-1-12",
+      "layer": "function",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 0.62,
+      "file": "server.js",
+      "description": "Função em `server.js`"
+    },
+    {
+      "id": "professional-scanner-fn-server-js-detectvm",
+      "label": "detectVM()",
+      "parent": "professional-scanner-grp-server-js-functions-1-12",
+      "layer": "function",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 0.62,
+      "file": "server.js",
+      "description": "Função em `server.js`"
+    },
+    {
+      "id": "professional-scanner-fn-server-js-getaddomain",
+      "label": "getADDomain()",
+      "parent": "professional-scanner-grp-server-js-functions-1-12",
+      "layer": "function",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 0.62,
+      "file": "server.js",
+      "description": "Função em `server.js`"
+    },
+    {
+      "id": "professional-scanner-fn-server-js-broadcastloopmsg",
+      "label": "broadcastLoopMsg()",
+      "parent": "professional-scanner-grp-server-js-functions-1-12",
+      "layer": "function",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 0.62,
+      "file": "server.js",
+      "description": "Função em `server.js`"
+    },
+    {
+      "id": "professional-scanner-fn-server-js-notifyplatformscancomplete",
+      "label": "notifyPlatformScanComplete()",
+      "parent": "professional-scanner-grp-server-js-functions-13-24",
+      "layer": "function",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 0.62,
+      "file": "server.js",
+      "description": "Função em `server.js`"
+    },
+    {
+      "id": "professional-scanner-fn-server-js-abortscansockets",
+      "label": "abortScanSockets()",
+      "parent": "professional-scanner-grp-server-js-functions-13-24",
+      "layer": "function",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 0.62,
+      "file": "server.js",
+      "description": "Função em `server.js`"
+    },
+    {
+      "id": "professional-scanner-fn-server-js-guessservicename",
+      "label": "guessServiceName()",
+      "parent": "professional-scanner-grp-server-js-functions-13-24",
+      "layer": "function",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 0.62,
+      "file": "server.js",
+      "description": "Função em `server.js`"
+    },
+    {
+      "id": "professional-scanner-fn-server-js-requireautotestagenttoken",
+      "label": "requireAutoTestAgentToken()",
+      "parent": "professional-scanner-grp-server-js-functions-13-24",
+      "layer": "function",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 0.62,
+      "file": "server.js",
+      "description": "Função em `server.js`"
+    },
+    {
+      "id": "professional-scanner-fn-server-js-requiresignedautotestagent",
+      "label": "requireSignedAutoTestAgent()",
+      "parent": "professional-scanner-grp-server-js-functions-13-24",
+      "layer": "function",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 0.62,
+      "file": "server.js",
+      "description": "Função em `server.js`"
+    },
+    {
+      "id": "professional-scanner-fn-server-js-readsharecreds",
+      "label": "readShareCreds()",
+      "parent": "professional-scanner-grp-server-js-functions-13-24",
+      "layer": "function",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 0.62,
+      "file": "server.js",
+      "description": "Função em `server.js`"
+    },
+    {
+      "id": "professional-scanner-fn-server-js-iptolong",
+      "label": "ipToLong()",
+      "parent": "professional-scanner-grp-server-js-functions-13-24",
+      "layer": "function",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 0.62,
+      "file": "server.js",
+      "description": "Função em `server.js`"
+    },
+    {
+      "id": "professional-scanner-fn-server-js-longtoip",
+      "label": "longToIp()",
+      "parent": "professional-scanner-grp-server-js-functions-13-24",
+      "layer": "function",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 0.62,
+      "file": "server.js",
+      "description": "Função em `server.js`"
+    },
+    {
+      "id": "professional-scanner-fn-server-js-scanudpport",
+      "label": "scanUdpPort()",
+      "parent": "professional-scanner-grp-server-js-functions-13-24",
+      "layer": "function",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 0.62,
+      "file": "server.js",
+      "description": "Função em `server.js`"
+    },
+    {
+      "id": "professional-scanner-fn-server-js-getuserhome",
+      "label": "getUserHome()",
+      "parent": "professional-scanner-grp-server-js-functions-13-24",
+      "layer": "function",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 0.62,
+      "file": "server.js",
+      "description": "Função em `server.js`"
+    },
+    {
+      "id": "professional-scanner-fn-server-js-getcsvtargetdir",
+      "label": "getCsvTargetDir()",
+      "parent": "professional-scanner-grp-server-js-functions-13-24",
+      "layer": "function",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 0.62,
+      "file": "server.js",
+      "description": "Função em `server.js`"
+    },
+    {
+      "id": "professional-scanner-fn-server-js-getsubnetcidr",
+      "label": "getSubnetCidr()",
+      "parent": "professional-scanner-grp-server-js-functions-13-24",
+      "layer": "function",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 0.62,
+      "file": "server.js",
+      "description": "Função em `server.js`"
+    },
+    {
+      "id": "professional-scanner-fn-server-js-isprivateip",
+      "label": "isPrivateIp()",
+      "parent": "professional-scanner-grp-server-js-functions-25-27",
+      "layer": "function",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 0.62,
+      "file": "server.js",
+      "description": "Função em `server.js`"
+    },
+    {
+      "id": "professional-scanner-fn-server-js-ispublicip",
+      "label": "isPublicIp()",
+      "parent": "professional-scanner-grp-server-js-functions-25-27",
+      "layer": "function",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 0.62,
+      "file": "server.js",
+      "description": "Função em `server.js`"
+    },
+    {
+      "id": "professional-scanner-fn-server-js-startserver",
+      "label": "startServer()",
+      "parent": "professional-scanner-grp-server-js-functions-25-27",
+      "layer": "function",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 0.62,
+      "file": "server.js",
+      "description": "Função em `server.js`"
     },
     {
       "id": "professional-scanner-file-switchmaclookup-js",
@@ -873,6 +2721,258 @@
       "description": "Código-fonte: `vmVlanStrategy.js`"
     },
     {
+      "id": "professional-scanner-grp-vmvlanstrategy-js-functions",
+      "label": "Funções",
+      "parent": "professional-scanner-file-vmvlanstrategy-js",
+      "layer": "module",
+      "category": "other",
+      "categoryLabel": "Outros",
+      "color": "#64748b",
+      "size": 1.35,
+      "file": "vmVlanStrategy.js#functions",
+      "description": "Funções em `vmVlanStrategy.js`"
+    },
+    {
+      "id": "professional-scanner-grp-vmvlanstrategy-js-functions-1-12",
+      "label": "Funções 1–12",
+      "parent": "professional-scanner-grp-vmvlanstrategy-js-functions",
+      "layer": "module",
+      "category": "other",
+      "categoryLabel": "Outros",
+      "color": "#64748b",
+      "size": 1.35,
+      "file": "vmVlanStrategy.js#functions-1-12",
+      "description": "Fatia 1–12 de funções em `vmVlanStrategy.js`"
+    },
+    {
+      "id": "professional-scanner-grp-vmvlanstrategy-js-functions-13-18",
+      "label": "Funções 13–18",
+      "parent": "professional-scanner-grp-vmvlanstrategy-js-functions",
+      "layer": "module",
+      "category": "other",
+      "categoryLabel": "Outros",
+      "color": "#64748b",
+      "size": 1.35,
+      "file": "vmVlanStrategy.js#functions-13-18",
+      "description": "Fatia 13–18 de funções em `vmVlanStrategy.js`"
+    },
+    {
+      "id": "professional-scanner-fn-vmvlanstrategy-js-detectvirtualization",
+      "label": "detectVirtualization()",
+      "parent": "professional-scanner-grp-vmvlanstrategy-js-functions-1-12",
+      "layer": "function",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 0.62,
+      "file": "vmVlanStrategy.js",
+      "description": "Função em `vmVlanStrategy.js`"
+    },
+    {
+      "id": "professional-scanner-fn-vmvlanstrategy-js-applyvirtualizationtohost",
+      "label": "applyVirtualizationToHost()",
+      "parent": "professional-scanner-grp-vmvlanstrategy-js-functions-1-12",
+      "layer": "function",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 0.62,
+      "file": "vmVlanStrategy.js",
+      "description": "Função em `vmVlanStrategy.js`"
+    },
+    {
+      "id": "professional-scanner-fn-vmvlanstrategy-js-assignvlanstohosts",
+      "label": "assignVlansToHosts()",
+      "parent": "professional-scanner-grp-vmvlanstrategy-js-functions-1-12",
+      "layer": "function",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 0.62,
+      "file": "vmVlanStrategy.js",
+      "description": "Função em `vmVlanStrategy.js`"
+    },
+    {
+      "id": "professional-scanner-fn-vmvlanstrategy-js-resolvehostvlan",
+      "label": "resolveHostVlan()",
+      "parent": "professional-scanner-grp-vmvlanstrategy-js-functions-1-12",
+      "layer": "function",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 0.62,
+      "file": "vmVlanStrategy.js",
+      "description": "Função em `vmVlanStrategy.js`"
+    },
+    {
+      "id": "professional-scanner-fn-vmvlanstrategy-js-queryswitchesmacvlan",
+      "label": "querySwitchesMacVlan()",
+      "parent": "professional-scanner-grp-vmvlanstrategy-js-functions-1-12",
+      "layer": "function",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 0.62,
+      "file": "vmVlanStrategy.js",
+      "description": "Função em `vmVlanStrategy.js`"
+    },
+    {
+      "id": "professional-scanner-fn-vmvlanstrategy-js-ensurevlanmapfile",
+      "label": "ensureVlanMapFile()",
+      "parent": "professional-scanner-grp-vmvlanstrategy-js-functions-1-12",
+      "layer": "function",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 0.62,
+      "file": "vmVlanStrategy.js",
+      "description": "Função em `vmVlanStrategy.js`"
+    },
+    {
+      "id": "professional-scanner-fn-vmvlanstrategy-js-loadvlanmap",
+      "label": "loadVlanMap()",
+      "parent": "professional-scanner-grp-vmvlanstrategy-js-functions-1-12",
+      "layer": "function",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 0.62,
+      "file": "vmVlanStrategy.js",
+      "description": "Função em `vmVlanStrategy.js`"
+    },
+    {
+      "id": "professional-scanner-fn-vmvlanstrategy-js-normalizemac",
+      "label": "normalizeMac()",
+      "parent": "professional-scanner-grp-vmvlanstrategy-js-functions-1-12",
+      "layer": "function",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 0.62,
+      "file": "vmVlanStrategy.js",
+      "description": "Função em `vmVlanStrategy.js`"
+    },
+    {
+      "id": "professional-scanner-fn-vmvlanstrategy-js-islocallyadministeredmac",
+      "label": "isLocallyAdministeredMac()",
+      "parent": "professional-scanner-grp-vmvlanstrategy-js-functions-1-12",
+      "layer": "function",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 0.62,
+      "file": "vmVlanStrategy.js",
+      "description": "Função em `vmVlanStrategy.js`"
+    },
+    {
+      "id": "professional-scanner-fn-vmvlanstrategy-js-matchvmoui",
+      "label": "matchVmOui()",
+      "parent": "professional-scanner-grp-vmvlanstrategy-js-functions-1-12",
+      "layer": "function",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 0.62,
+      "file": "vmVlanStrategy.js",
+      "description": "Função em `vmVlanStrategy.js`"
+    },
+    {
+      "id": "professional-scanner-fn-vmvlanstrategy-js-iptolong",
+      "label": "ipToLong()",
+      "parent": "professional-scanner-grp-vmvlanstrategy-js-functions-1-12",
+      "layer": "function",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 0.62,
+      "file": "vmVlanStrategy.js",
+      "description": "Função em `vmVlanStrategy.js`"
+    },
+    {
+      "id": "professional-scanner-fn-vmvlanstrategy-js-cidrcontains",
+      "label": "cidrContains()",
+      "parent": "professional-scanner-grp-vmvlanstrategy-js-functions-1-12",
+      "layer": "function",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 0.62,
+      "file": "vmVlanStrategy.js",
+      "description": "Função em `vmVlanStrategy.js`"
+    },
+    {
+      "id": "professional-scanner-fn-vmvlanstrategy-js-getsubnetcidr24",
+      "label": "getSubnetCidr24()",
+      "parent": "professional-scanner-grp-vmvlanstrategy-js-functions-13-18",
+      "layer": "function",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 0.62,
+      "file": "vmVlanStrategy.js",
+      "description": "Função em `vmVlanStrategy.js`"
+    },
+    {
+      "id": "professional-scanner-fn-vmvlanstrategy-js-parsevlanfromtext",
+      "label": "parseVlanFromText()",
+      "parent": "professional-scanner-grp-vmvlanstrategy-js-functions-13-18",
+      "layer": "function",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 0.62,
+      "file": "vmVlanStrategy.js",
+      "description": "Função em `vmVlanStrategy.js`"
+    },
+    {
+      "id": "professional-scanner-fn-vmvlanstrategy-js-resolvevlanfrommap",
+      "label": "resolveVlanFromMap()",
+      "parent": "professional-scanner-grp-vmvlanstrategy-js-functions-13-18",
+      "layer": "function",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 0.62,
+      "file": "vmVlanStrategy.js",
+      "description": "Função em `vmVlanStrategy.js`"
+    },
+    {
+      "id": "professional-scanner-fn-vmvlanstrategy-js-resolvevlanfromthirdoctet",
+      "label": "resolveVlanFromThirdOctet()",
+      "parent": "professional-scanner-grp-vmvlanstrategy-js-functions-13-18",
+      "layer": "function",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 0.62,
+      "file": "vmVlanStrategy.js",
+      "description": "Função em `vmVlanStrategy.js`"
+    },
+    {
+      "id": "professional-scanner-fn-vmvlanstrategy-js-formatvlanlabel",
+      "label": "formatVlanLabel()",
+      "parent": "professional-scanner-grp-vmvlanstrategy-js-functions-13-18",
+      "layer": "function",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 0.62,
+      "file": "vmVlanStrategy.js",
+      "description": "Função em `vmVlanStrategy.js`"
+    },
+    {
+      "id": "professional-scanner-fn-vmvlanstrategy-js-snmpgetnext",
+      "label": "snmpGetNext()",
+      "parent": "professional-scanner-grp-vmvlanstrategy-js-functions-13-18",
+      "layer": "function",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 0.62,
+      "file": "vmVlanStrategy.js",
+      "description": "Função em `vmVlanStrategy.js`"
+    },
+    {
       "id": "professional-scanner-file-webhookdispatcher-js",
       "label": "webhookDispatcher.js",
       "parent": "professional-scanner-grp-files-t-v-w",
@@ -909,33 +3009,33 @@
       "description": "Código-fonte: `.vscode/settings.json`"
     },
     {
-      "id": "professional-scanner-grp-data-files-a-c-d-f",
-      "label": "Arquivos A–C–D–F",
+      "id": "professional-scanner-grp-data-files-a-c-d",
+      "label": "Arquivos A–C–D",
       "parent": "professional-scanner-dir-data",
       "layer": "module",
       "category": "other",
       "categoryLabel": "Outros",
       "color": "#64748b",
       "size": 1.35,
-      "file": "data/[files-a–c–d–f]",
-      "description": "Grupo de arquivos em `data/` — Arquivos A–C–D–F"
+      "file": "data/[files-a–c–d]",
+      "description": "Grupo de arquivos em `data/` — Arquivos A–C–D"
     },
     {
-      "id": "professional-scanner-grp-data-files-h-i-l-n-o-p-v",
-      "label": "Arquivos H–I–L–N–O–P–V",
+      "id": "professional-scanner-grp-data-files-f-h-i-l-n-o-p-v",
+      "label": "Arquivos F–H–I–L–N–O–P–V",
       "parent": "professional-scanner-dir-data",
       "layer": "module",
       "category": "other",
       "categoryLabel": "Outros",
       "color": "#64748b",
       "size": 1.35,
-      "file": "data/[files-h–i–l–n–o–p–v]",
-      "description": "Grupo de arquivos em `data/` — Arquivos H–I–L–N–O–P–V"
+      "file": "data/[files-f–h–i–l–n–o–p–v]",
+      "description": "Grupo de arquivos em `data/` — Arquivos F–H–I–L–N–O–P–V"
     },
     {
       "id": "professional-scanner-file-data-ad-computers-cache-json",
       "label": "ad-computers-cache.json",
-      "parent": "professional-scanner-grp-data-files-a-c-d-f",
+      "parent": "professional-scanner-grp-data-files-a-c-d",
       "layer": "file",
       "category": "ad",
       "categoryLabel": "Active Directory",
@@ -947,7 +3047,7 @@
     {
       "id": "professional-scanner-file-data-ad-departed-users-json",
       "label": "ad-departed-users.json",
-      "parent": "professional-scanner-grp-data-files-a-c-d-f",
+      "parent": "professional-scanner-grp-data-files-a-c-d",
       "layer": "file",
       "category": "ad",
       "categoryLabel": "Active Directory",
@@ -959,7 +3059,7 @@
     {
       "id": "professional-scanner-file-data-ad-ip-index-json",
       "label": "ad-ip-index.json",
-      "parent": "professional-scanner-grp-data-files-a-c-d-f",
+      "parent": "professional-scanner-grp-data-files-a-c-d",
       "layer": "file",
       "category": "ad",
       "categoryLabel": "Active Directory",
@@ -969,9 +3069,21 @@
       "description": "Código-fonte: `data/ad-ip-index.json`"
     },
     {
+      "id": "professional-scanner-file-data-ad-users-snapshot-json",
+      "label": "ad-users-snapshot.json",
+      "parent": "professional-scanner-grp-data-files-a-c-d",
+      "layer": "file",
+      "category": "ad",
+      "categoryLabel": "Active Directory",
+      "color": "#a78bfa",
+      "size": 0.85,
+      "file": "data/ad-users-snapshot.json",
+      "description": "Arquivo grande (stub): `data/ad-users-snapshot.json` — conteúdo completo no GitHub."
+    },
+    {
       "id": "professional-scanner-file-data-ala-map-json",
       "label": "ala-map.json",
-      "parent": "professional-scanner-grp-data-files-a-c-d-f",
+      "parent": "professional-scanner-grp-data-files-a-c-d",
       "layer": "file",
       "category": "other",
       "categoryLabel": "Outros",
@@ -983,7 +3095,7 @@
     {
       "id": "professional-scanner-file-data-asset-lifecycle-json",
       "label": "asset-lifecycle.json",
-      "parent": "professional-scanner-grp-data-files-a-c-d-f",
+      "parent": "professional-scanner-grp-data-files-a-c-d",
       "layer": "file",
       "category": "other",
       "categoryLabel": "Outros",
@@ -995,7 +3107,7 @@
     {
       "id": "professional-scanner-file-data-auto-test-config-json",
       "label": "auto-test-config.json",
-      "parent": "professional-scanner-grp-data-files-a-c-d-f",
+      "parent": "professional-scanner-grp-data-files-a-c-d",
       "layer": "file",
       "category": "autotest",
       "categoryLabel": "AutoTest",
@@ -1007,7 +3119,7 @@
     {
       "id": "professional-scanner-file-data-autotest-history-json",
       "label": "autotest-history.json",
-      "parent": "professional-scanner-grp-data-files-a-c-d-f",
+      "parent": "professional-scanner-grp-data-files-a-c-d",
       "layer": "file",
       "category": "autotest",
       "categoryLabel": "AutoTest",
@@ -1019,7 +3131,7 @@
     {
       "id": "professional-scanner-file-data-autotest-remote-json",
       "label": "autotest-remote.json",
-      "parent": "professional-scanner-grp-data-files-a-c-d-f",
+      "parent": "professional-scanner-grp-data-files-a-c-d",
       "layer": "file",
       "category": "autotest",
       "categoryLabel": "AutoTest",
@@ -1031,7 +3143,7 @@
     {
       "id": "professional-scanner-file-data-canon-sessions-json",
       "label": "canon-sessions.json",
-      "parent": "professional-scanner-grp-data-files-a-c-d-f",
+      "parent": "professional-scanner-grp-data-files-a-c-d",
       "layer": "file",
       "category": "other",
       "categoryLabel": "Outros",
@@ -1043,7 +3155,7 @@
     {
       "id": "professional-scanner-file-data-device-library-json",
       "label": "device-library.json",
-      "parent": "professional-scanner-grp-data-files-a-c-d-f",
+      "parent": "professional-scanner-grp-data-files-a-c-d",
       "layer": "file",
       "category": "other",
       "categoryLabel": "Outros",
@@ -1055,7 +3167,7 @@
     {
       "id": "professional-scanner-file-data-fileserver-shares-example-json",
       "label": "fileserver-shares.example.json",
-      "parent": "professional-scanner-grp-data-files-a-c-d-f",
+      "parent": "professional-scanner-grp-data-files-f-h-i-l-n-o-p-v",
       "layer": "file",
       "category": "other",
       "categoryLabel": "Outros",
@@ -1067,7 +3179,7 @@
     {
       "id": "professional-scanner-file-data-fileserver-shares-json",
       "label": "fileserver-shares.json",
-      "parent": "professional-scanner-grp-data-files-a-c-d-f",
+      "parent": "professional-scanner-grp-data-files-f-h-i-l-n-o-p-v",
       "layer": "file",
       "category": "other",
       "categoryLabel": "Outros",
@@ -1079,7 +3191,7 @@
     {
       "id": "professional-scanner-file-data-host-history-json",
       "label": "host-history.json",
-      "parent": "professional-scanner-grp-data-files-h-i-l-n-o-p-v",
+      "parent": "professional-scanner-grp-data-files-f-h-i-l-n-o-p-v",
       "layer": "file",
       "category": "other",
       "categoryLabel": "Outros",
@@ -1091,7 +3203,7 @@
     {
       "id": "professional-scanner-file-data-idle-export-recovery-json",
       "label": "idle-export-recovery.json",
-      "parent": "professional-scanner-grp-data-files-h-i-l-n-o-p-v",
+      "parent": "professional-scanner-grp-data-files-f-h-i-l-n-o-p-v",
       "layer": "file",
       "category": "other",
       "categoryLabel": "Outros",
@@ -1101,9 +3213,21 @@
       "description": "Código-fonte: `data/idle-export-recovery.json`"
     },
     {
+      "id": "professional-scanner-file-data-inventory-unesp-json",
+      "label": "inventory-unesp.json",
+      "parent": "professional-scanner-grp-data-files-f-h-i-l-n-o-p-v",
+      "layer": "file",
+      "category": "inventory",
+      "categoryLabel": "Inventário UNESP",
+      "color": "#10b981",
+      "size": 0.85,
+      "file": "data/inventory-unesp.json",
+      "description": "Arquivo grande (stub): `data/inventory-unesp.json` — conteúdo completo no GitHub."
+    },
+    {
       "id": "professional-scanner-file-data-last-scan-snapshot-json",
       "label": "last-scan-snapshot.json",
-      "parent": "professional-scanner-grp-data-files-h-i-l-n-o-p-v",
+      "parent": "professional-scanner-grp-data-files-f-h-i-l-n-o-p-v",
       "layer": "file",
       "category": "other",
       "categoryLabel": "Outros",
@@ -1115,7 +3239,7 @@
     {
       "id": "professional-scanner-file-data-loop-monitor-json",
       "label": "loop-monitor.json",
-      "parent": "professional-scanner-grp-data-files-h-i-l-n-o-p-v",
+      "parent": "professional-scanner-grp-data-files-f-h-i-l-n-o-p-v",
       "layer": "file",
       "category": "loop",
       "categoryLabel": "Loop SNMP",
@@ -1127,7 +3251,7 @@
     {
       "id": "professional-scanner-file-data-network-baselines-json",
       "label": "network-baselines.json",
-      "parent": "professional-scanner-grp-data-files-h-i-l-n-o-p-v",
+      "parent": "professional-scanner-grp-data-files-f-h-i-l-n-o-p-v",
       "layer": "file",
       "category": "other",
       "categoryLabel": "Outros",
@@ -1139,7 +3263,7 @@
     {
       "id": "professional-scanner-file-data-oracle-config-json",
       "label": "oracle-config.json",
-      "parent": "professional-scanner-grp-data-files-h-i-l-n-o-p-v",
+      "parent": "professional-scanner-grp-data-files-f-h-i-l-n-o-p-v",
       "layer": "file",
       "category": "oracle",
       "categoryLabel": "Oracle / DB",
@@ -1151,7 +3275,7 @@
     {
       "id": "professional-scanner-file-data-platform-config-json",
       "label": "platform-config.json",
-      "parent": "professional-scanner-grp-data-files-h-i-l-n-o-p-v",
+      "parent": "professional-scanner-grp-data-files-f-h-i-l-n-o-p-v",
       "layer": "file",
       "category": "platform",
       "categoryLabel": "Plataforma Canon",
@@ -1163,7 +3287,7 @@
     {
       "id": "professional-scanner-file-data-vlan-map-json",
       "label": "vlan-map.json",
-      "parent": "professional-scanner-grp-data-files-h-i-l-n-o-p-v",
+      "parent": "professional-scanner-grp-data-files-f-h-i-l-n-o-p-v",
       "layer": "file",
       "category": "other",
       "categoryLabel": "Outros",
@@ -1195,6 +3319,390 @@
       "size": 0.85,
       "file": "public/app.js",
       "description": "Código-fonte: `public/app.js`"
+    },
+    {
+      "id": "professional-scanner-grp-public-app-js-functions",
+      "label": "Funções",
+      "parent": "professional-scanner-file-public-app-js",
+      "layer": "module",
+      "category": "frontend",
+      "categoryLabel": "Frontend",
+      "color": "#eab308",
+      "size": 1.35,
+      "file": "public/app.js#functions",
+      "description": "Funções em `public/app.js`"
+    },
+    {
+      "id": "professional-scanner-grp-public-app-js-functions-1-12",
+      "label": "Funções 1–12",
+      "parent": "professional-scanner-grp-public-app-js-functions",
+      "layer": "module",
+      "category": "frontend",
+      "categoryLabel": "Frontend",
+      "color": "#eab308",
+      "size": 1.35,
+      "file": "public/app.js#functions-1-12",
+      "description": "Fatia 1–12 de funções em `public/app.js`"
+    },
+    {
+      "id": "professional-scanner-grp-public-app-js-functions-13-24",
+      "label": "Funções 13–24",
+      "parent": "professional-scanner-grp-public-app-js-functions",
+      "layer": "module",
+      "category": "frontend",
+      "categoryLabel": "Frontend",
+      "color": "#eab308",
+      "size": 1.35,
+      "file": "public/app.js#functions-13-24",
+      "description": "Fatia 13–24 de funções em `public/app.js`"
+    },
+    {
+      "id": "professional-scanner-grp-public-app-js-functions-25-28",
+      "label": "Funções 25–28",
+      "parent": "professional-scanner-grp-public-app-js-functions",
+      "layer": "module",
+      "category": "frontend",
+      "categoryLabel": "Frontend",
+      "color": "#eab308",
+      "size": 1.35,
+      "file": "public/app.js#functions-25-28",
+      "description": "Fatia 25–28 de funções em `public/app.js`"
+    },
+    {
+      "id": "professional-scanner-fn-public-app-js-bootcanonapp",
+      "label": "bootCanonApp()",
+      "parent": "professional-scanner-grp-public-app-js-functions-1-12",
+      "layer": "function",
+      "category": "frontend",
+      "categoryLabel": "Frontend",
+      "color": "#eab308",
+      "size": 0.62,
+      "file": "public/app.js",
+      "description": "Função em `public/app.js`"
+    },
+    {
+      "id": "professional-scanner-fn-public-app-js-handleservermessage",
+      "label": "handleServerMessage()",
+      "parent": "professional-scanner-grp-public-app-js-functions-1-12",
+      "layer": "function",
+      "category": "frontend",
+      "categoryLabel": "Frontend",
+      "color": "#eab308",
+      "size": 0.62,
+      "file": "public/app.js",
+      "description": "Função em `public/app.js`"
+    },
+    {
+      "id": "professional-scanner-fn-public-app-js-openloopmodal",
+      "label": "openLoopModal()",
+      "parent": "professional-scanner-grp-public-app-js-functions-1-12",
+      "layer": "function",
+      "category": "loop",
+      "categoryLabel": "Loop SNMP",
+      "color": "#f97316",
+      "size": 0.62,
+      "file": "public/app.js",
+      "description": "Função em `public/app.js`"
+    },
+    {
+      "id": "professional-scanner-fn-public-app-js-renderautotestengineeringbanner",
+      "label": "renderAutoTestEngineeringBanner()",
+      "parent": "professional-scanner-grp-public-app-js-functions-1-12",
+      "layer": "function",
+      "category": "autotest",
+      "categoryLabel": "AutoTest",
+      "color": "#06b6d4",
+      "size": 0.62,
+      "file": "public/app.js",
+      "description": "Função em `public/app.js`"
+    },
+    {
+      "id": "professional-scanner-fn-public-app-js-buildtopologyfromresults",
+      "label": "buildTopologyFromResults()",
+      "parent": "professional-scanner-grp-public-app-js-functions-1-12",
+      "layer": "function",
+      "category": "frontend",
+      "categoryLabel": "Frontend",
+      "color": "#eab308",
+      "size": 0.62,
+      "file": "public/app.js",
+      "description": "Função em `public/app.js`"
+    },
+    {
+      "id": "professional-scanner-fn-public-app-js-addorupdatehost",
+      "label": "addOrUpdateHost()",
+      "parent": "professional-scanner-grp-public-app-js-functions-1-12",
+      "layer": "function",
+      "category": "ad",
+      "categoryLabel": "Active Directory",
+      "color": "#a78bfa",
+      "size": 0.62,
+      "file": "public/app.js",
+      "description": "Função em `public/app.js`"
+    },
+    {
+      "id": "professional-scanner-fn-public-app-js-applyautotestresult",
+      "label": "applyAutoTestResult()",
+      "parent": "professional-scanner-grp-public-app-js-functions-1-12",
+      "layer": "function",
+      "category": "autotest",
+      "categoryLabel": "AutoTest",
+      "color": "#06b6d4",
+      "size": 0.62,
+      "file": "public/app.js",
+      "description": "Função em `public/app.js`"
+    },
+    {
+      "id": "professional-scanner-fn-public-app-js-applycanonuitheme",
+      "label": "applyCanonUiTheme()",
+      "parent": "professional-scanner-grp-public-app-js-functions-1-12",
+      "layer": "function",
+      "category": "frontend",
+      "categoryLabel": "Frontend",
+      "color": "#eab308",
+      "size": 0.62,
+      "file": "public/app.js",
+      "description": "Função em `public/app.js`"
+    },
+    {
+      "id": "professional-scanner-fn-public-app-js-startscan",
+      "label": "startScan()",
+      "parent": "professional-scanner-grp-public-app-js-functions-1-12",
+      "layer": "function",
+      "category": "frontend",
+      "categoryLabel": "Frontend",
+      "color": "#eab308",
+      "size": 0.62,
+      "file": "public/app.js",
+      "description": "Função em `public/app.js`"
+    },
+    {
+      "id": "professional-scanner-fn-public-app-js-stopscan",
+      "label": "stopScan()",
+      "parent": "professional-scanner-grp-public-app-js-functions-1-12",
+      "layer": "function",
+      "category": "frontend",
+      "categoryLabel": "Frontend",
+      "color": "#eab308",
+      "size": 0.62,
+      "file": "public/app.js",
+      "description": "Função em `public/app.js`"
+    },
+    {
+      "id": "professional-scanner-fn-public-app-js-updateconnectionbadgewaitinglogin",
+      "label": "updateConnectionBadgeWaitingLogin()",
+      "parent": "professional-scanner-grp-public-app-js-functions-1-12",
+      "layer": "function",
+      "category": "ad",
+      "categoryLabel": "Active Directory",
+      "color": "#a78bfa",
+      "size": 0.62,
+      "file": "public/app.js",
+      "description": "Função em `public/app.js`"
+    },
+    {
+      "id": "professional-scanner-fn-public-app-js-disconnectwebsocket",
+      "label": "disconnectWebSocket()",
+      "parent": "professional-scanner-grp-public-app-js-functions-1-12",
+      "layer": "function",
+      "category": "frontend",
+      "categoryLabel": "Frontend",
+      "color": "#eab308",
+      "size": 0.62,
+      "file": "public/app.js",
+      "description": "Função em `public/app.js`"
+    },
+    {
+      "id": "professional-scanner-fn-public-app-js-connectwebsocket",
+      "label": "connectWebSocket()",
+      "parent": "professional-scanner-grp-public-app-js-functions-13-24",
+      "layer": "function",
+      "category": "frontend",
+      "categoryLabel": "Frontend",
+      "color": "#eab308",
+      "size": 0.62,
+      "file": "public/app.js",
+      "description": "Função em `public/app.js`"
+    },
+    {
+      "id": "professional-scanner-fn-public-app-js-logtoconsole",
+      "label": "logToConsole()",
+      "parent": "professional-scanner-grp-public-app-js-functions-13-24",
+      "layer": "function",
+      "category": "frontend",
+      "categoryLabel": "Frontend",
+      "color": "#eab308",
+      "size": 0.62,
+      "file": "public/app.js",
+      "description": "Função em `public/app.js`"
+    },
+    {
+      "id": "professional-scanner-fn-public-app-js-updateprogressbar",
+      "label": "updateProgressBar()",
+      "parent": "professional-scanner-grp-public-app-js-functions-13-24",
+      "layer": "function",
+      "category": "frontend",
+      "categoryLabel": "Frontend",
+      "color": "#eab308",
+      "size": 0.62,
+      "file": "public/app.js",
+      "description": "Função em `public/app.js`"
+    },
+    {
+      "id": "professional-scanner-fn-public-app-js-getlogclass",
+      "label": "getLogClass()",
+      "parent": "professional-scanner-grp-public-app-js-functions-13-24",
+      "layer": "function",
+      "category": "frontend",
+      "categoryLabel": "Frontend",
+      "color": "#eab308",
+      "size": 0.62,
+      "file": "public/app.js",
+      "description": "Função em `public/app.js`"
+    },
+    {
+      "id": "professional-scanner-fn-public-app-js-filltarget",
+      "label": "fillTarget()",
+      "parent": "professional-scanner-grp-public-app-js-functions-13-24",
+      "layer": "function",
+      "category": "frontend",
+      "categoryLabel": "Frontend",
+      "color": "#eab308",
+      "size": 0.62,
+      "file": "public/app.js",
+      "description": "Função em `public/app.js`"
+    },
+    {
+      "id": "professional-scanner-fn-public-app-js-togglecustomports",
+      "label": "toggleCustomPorts()",
+      "parent": "professional-scanner-grp-public-app-js-functions-13-24",
+      "layer": "function",
+      "category": "frontend",
+      "categoryLabel": "Frontend",
+      "color": "#eab308",
+      "size": 0.62,
+      "file": "public/app.js",
+      "description": "Função em `public/app.js`"
+    },
+    {
+      "id": "professional-scanner-fn-public-app-js-endscan",
+      "label": "endScan()",
+      "parent": "professional-scanner-grp-public-app-js-functions-13-24",
+      "layer": "function",
+      "category": "frontend",
+      "categoryLabel": "Frontend",
+      "color": "#eab308",
+      "size": 0.62,
+      "file": "public/app.js",
+      "description": "Função em `public/app.js`"
+    },
+    {
+      "id": "professional-scanner-fn-public-app-js-istrulyopenport",
+      "label": "isTrulyOpenPort()",
+      "parent": "professional-scanner-grp-public-app-js-functions-13-24",
+      "layer": "function",
+      "category": "frontend",
+      "categoryLabel": "Frontend",
+      "color": "#eab308",
+      "size": 0.62,
+      "file": "public/app.js",
+      "description": "Função em `public/app.js`"
+    },
+    {
+      "id": "professional-scanner-fn-public-app-js-renderportshtml",
+      "label": "renderPortsHtml()",
+      "parent": "professional-scanner-grp-public-app-js-functions-13-24",
+      "layer": "function",
+      "category": "frontend",
+      "categoryLabel": "Frontend",
+      "color": "#eab308",
+      "size": 0.62,
+      "file": "public/app.js",
+      "description": "Função em `public/app.js`"
+    },
+    {
+      "id": "professional-scanner-fn-public-app-js-getfilteredresults",
+      "label": "getFilteredResults()",
+      "parent": "professional-scanner-grp-public-app-js-functions-13-24",
+      "layer": "function",
+      "category": "frontend",
+      "categoryLabel": "Frontend",
+      "color": "#eab308",
+      "size": 0.62,
+      "file": "public/app.js",
+      "description": "Função em `public/app.js`"
+    },
+    {
+      "id": "professional-scanner-fn-public-app-js-comparescanhostsforsort",
+      "label": "compareScanHostsForSort()",
+      "parent": "professional-scanner-grp-public-app-js-functions-13-24",
+      "layer": "function",
+      "category": "frontend",
+      "categoryLabel": "Frontend",
+      "color": "#eab308",
+      "size": 0.62,
+      "file": "public/app.js",
+      "description": "Função em `public/app.js`"
+    },
+    {
+      "id": "professional-scanner-fn-public-app-js-updateresultstablemeta",
+      "label": "updateResultsTableMeta()",
+      "parent": "professional-scanner-grp-public-app-js-functions-13-24",
+      "layer": "function",
+      "category": "frontend",
+      "categoryLabel": "Frontend",
+      "color": "#eab308",
+      "size": 0.62,
+      "file": "public/app.js",
+      "description": "Função em `public/app.js`"
+    },
+    {
+      "id": "professional-scanner-fn-public-app-js-updatesortheaders",
+      "label": "updateSortHeaders()",
+      "parent": "professional-scanner-grp-public-app-js-functions-25-28",
+      "layer": "function",
+      "category": "ad",
+      "categoryLabel": "Active Directory",
+      "color": "#a78bfa",
+      "size": 0.62,
+      "file": "public/app.js",
+      "description": "Função em `public/app.js`"
+    },
+    {
+      "id": "professional-scanner-fn-public-app-js-appendhostrow",
+      "label": "appendHostRow()",
+      "parent": "professional-scanner-grp-public-app-js-functions-25-28",
+      "layer": "function",
+      "category": "frontend",
+      "categoryLabel": "Frontend",
+      "color": "#eab308",
+      "size": 0.62,
+      "file": "public/app.js",
+      "description": "Função em `public/app.js`"
+    },
+    {
+      "id": "professional-scanner-fn-public-app-js-rendertable",
+      "label": "renderTable()",
+      "parent": "professional-scanner-grp-public-app-js-functions-25-28",
+      "layer": "function",
+      "category": "frontend",
+      "categoryLabel": "Frontend",
+      "color": "#eab308",
+      "size": 0.62,
+      "file": "public/app.js",
+      "description": "Função em `public/app.js`"
+    },
+    {
+      "id": "professional-scanner-fn-public-app-js-updatehostrow",
+      "label": "updateHostRow()",
+      "parent": "professional-scanner-grp-public-app-js-functions-25-28",
+      "layer": "function",
+      "category": "frontend",
+      "categoryLabel": "Frontend",
+      "color": "#eab308",
+      "size": 0.62,
+      "file": "public/app.js",
+      "description": "Função em `public/app.js`"
     },
     {
       "id": "professional-scanner-file-public-canon-design-system-css",
@@ -1279,6 +3787,210 @@
       "size": 0.85,
       "file": "public/map.js",
       "description": "Código-fonte: `public/map.js`"
+    },
+    {
+      "id": "professional-scanner-grp-public-map-js-functions",
+      "label": "Funções",
+      "parent": "professional-scanner-file-public-map-js",
+      "layer": "module",
+      "category": "frontend",
+      "categoryLabel": "Frontend",
+      "color": "#eab308",
+      "size": 1.35,
+      "file": "public/map.js#functions",
+      "description": "Funções em `public/map.js`"
+    },
+    {
+      "id": "professional-scanner-grp-public-map-js-functions-1-12",
+      "label": "Funções 1–12",
+      "parent": "professional-scanner-grp-public-map-js-functions",
+      "layer": "module",
+      "category": "frontend",
+      "categoryLabel": "Frontend",
+      "color": "#eab308",
+      "size": 1.35,
+      "file": "public/map.js#functions-1-12",
+      "description": "Fatia 1–12 de funções em `public/map.js`"
+    },
+    {
+      "id": "professional-scanner-grp-public-map-js-functions-13-14",
+      "label": "Funções 13–14",
+      "parent": "professional-scanner-grp-public-map-js-functions",
+      "layer": "module",
+      "category": "frontend",
+      "categoryLabel": "Frontend",
+      "color": "#eab308",
+      "size": 1.35,
+      "file": "public/map.js#functions-13-14",
+      "description": "Fatia 13–14 de funções em `public/map.js`"
+    },
+    {
+      "id": "professional-scanner-fn-public-map-js-render3dmap",
+      "label": "render3DMap()",
+      "parent": "professional-scanner-grp-public-map-js-functions-1-12",
+      "layer": "function",
+      "category": "frontend",
+      "categoryLabel": "Frontend",
+      "color": "#eab308",
+      "size": 0.62,
+      "file": "public/map.js",
+      "description": "Função em `public/map.js`"
+    },
+    {
+      "id": "professional-scanner-fn-public-map-js-refreshtopology",
+      "label": "refreshTopology()",
+      "parent": "professional-scanner-grp-public-map-js-functions-1-12",
+      "layer": "function",
+      "category": "frontend",
+      "categoryLabel": "Frontend",
+      "color": "#eab308",
+      "size": 0.62,
+      "file": "public/map.js",
+      "description": "Função em `public/map.js`"
+    },
+    {
+      "id": "professional-scanner-fn-public-map-js-buildtreegraph",
+      "label": "buildTreeGraph()",
+      "parent": "professional-scanner-grp-public-map-js-functions-1-12",
+      "layer": "function",
+      "category": "frontend",
+      "categoryLabel": "Frontend",
+      "color": "#eab308",
+      "size": 0.62,
+      "file": "public/map.js",
+      "description": "Função em `public/map.js`"
+    },
+    {
+      "id": "professional-scanner-fn-public-map-js-exportmappng",
+      "label": "exportMapPng()",
+      "parent": "professional-scanner-grp-public-map-js-functions-1-12",
+      "layer": "function",
+      "category": "frontend",
+      "categoryLabel": "Frontend",
+      "color": "#eab308",
+      "size": 0.62,
+      "file": "public/map.js",
+      "description": "Função em `public/map.js`"
+    },
+    {
+      "id": "professional-scanner-fn-public-map-js-exportmapsvg",
+      "label": "exportMapSvg()",
+      "parent": "professional-scanner-grp-public-map-js-functions-1-12",
+      "layer": "function",
+      "category": "frontend",
+      "categoryLabel": "Frontend",
+      "color": "#eab308",
+      "size": 0.62,
+      "file": "public/map.js",
+      "description": "Função em `public/map.js`"
+    },
+    {
+      "id": "professional-scanner-fn-public-map-js-exportmapexcel",
+      "label": "exportMapExcel()",
+      "parent": "professional-scanner-grp-public-map-js-functions-1-12",
+      "layer": "function",
+      "category": "frontend",
+      "categoryLabel": "Frontend",
+      "color": "#eab308",
+      "size": 0.62,
+      "file": "public/map.js",
+      "description": "Função em `public/map.js`"
+    },
+    {
+      "id": "professional-scanner-fn-public-map-js-setstatus",
+      "label": "setStatus()",
+      "parent": "professional-scanner-grp-public-map-js-functions-1-12",
+      "layer": "function",
+      "category": "frontend",
+      "categoryLabel": "Frontend",
+      "color": "#eab308",
+      "size": 0.62,
+      "file": "public/map.js",
+      "description": "Função em `public/map.js`"
+    },
+    {
+      "id": "professional-scanner-fn-public-map-js-hostcolor",
+      "label": "hostColor()",
+      "parent": "professional-scanner-grp-public-map-js-functions-1-12",
+      "layer": "function",
+      "category": "frontend",
+      "categoryLabel": "Frontend",
+      "color": "#eab308",
+      "size": 0.62,
+      "file": "public/map.js",
+      "description": "Função em `public/map.js`"
+    },
+    {
+      "id": "professional-scanner-fn-public-map-js-shortlabel",
+      "label": "shortLabel()",
+      "parent": "professional-scanner-grp-public-map-js-functions-1-12",
+      "layer": "function",
+      "category": "frontend",
+      "categoryLabel": "Frontend",
+      "color": "#eab308",
+      "size": 0.62,
+      "file": "public/map.js",
+      "description": "Função em `public/map.js`"
+    },
+    {
+      "id": "professional-scanner-fn-public-map-js-generatenodecanvas",
+      "label": "generateNodeCanvas()",
+      "parent": "professional-scanner-grp-public-map-js-functions-1-12",
+      "layer": "function",
+      "category": "frontend",
+      "categoryLabel": "Frontend",
+      "color": "#eab308",
+      "size": 0.62,
+      "file": "public/map.js",
+      "description": "Função em `public/map.js`"
+    },
+    {
+      "id": "professional-scanner-fn-public-map-js-roundrect",
+      "label": "roundRect()",
+      "parent": "professional-scanner-grp-public-map-js-functions-1-12",
+      "layer": "function",
+      "category": "frontend",
+      "categoryLabel": "Frontend",
+      "color": "#eab308",
+      "size": 0.62,
+      "file": "public/map.js",
+      "description": "Função em `public/map.js`"
+    },
+    {
+      "id": "professional-scanner-fn-public-map-js-stampfilename",
+      "label": "stampFilename()",
+      "parent": "professional-scanner-grp-public-map-js-functions-1-12",
+      "layer": "function",
+      "category": "frontend",
+      "categoryLabel": "Frontend",
+      "color": "#eab308",
+      "size": 0.62,
+      "file": "public/map.js",
+      "description": "Função em `public/map.js`"
+    },
+    {
+      "id": "professional-scanner-fn-public-map-js-exportmapimage",
+      "label": "exportMapImage()",
+      "parent": "professional-scanner-grp-public-map-js-functions-13-14",
+      "layer": "function",
+      "category": "frontend",
+      "categoryLabel": "Frontend",
+      "color": "#eab308",
+      "size": 0.62,
+      "file": "public/map.js",
+      "description": "Função em `public/map.js`"
+    },
+    {
+      "id": "professional-scanner-fn-public-map-js-getscenecanvas",
+      "label": "getSceneCanvas()",
+      "parent": "professional-scanner-grp-public-map-js-functions-13-14",
+      "layer": "function",
+      "category": "frontend",
+      "categoryLabel": "Frontend",
+      "color": "#eab308",
+      "size": 0.62,
+      "file": "public/map.js",
+      "description": "Função em `public/map.js`"
     },
     {
       "id": "professional-scanner-file-public-platform-css",
@@ -1725,6 +4437,26 @@
       "type": "dependency"
     },
     {
+      "source": "professional-scanner-file-devicetypedetect-js",
+      "target": "professional-scanner-fn-devicetypedetect-js-detectdevicetype",
+      "type": "dependency"
+    },
+    {
+      "source": "professional-scanner-file-devicetypedetect-js",
+      "target": "professional-scanner-fn-devicetypedetect-js-textblob",
+      "type": "dependency"
+    },
+    {
+      "source": "professional-scanner-file-devicetypedetect-js",
+      "target": "professional-scanner-fn-devicetypedetect-js-hasany",
+      "type": "dependency"
+    },
+    {
+      "source": "professional-scanner-file-devicetypedetect-js",
+      "target": "professional-scanner-fn-devicetypedetect-js-hasport",
+      "type": "dependency"
+    },
+    {
       "source": "professional-scanner-grp-files-c-d-f-h",
       "target": "professional-scanner-file-fileshareaudit-js",
       "type": "dependency"
@@ -1732,6 +4464,166 @@
     {
       "source": "professional-scanner-grp-files-c-d-f-h",
       "target": "professional-scanner-file-hostenrichment-js",
+      "type": "dependency"
+    },
+    {
+      "source": "professional-scanner-file-hostenrichment-js",
+      "target": "professional-scanner-grp-hostenrichment-js-functions",
+      "type": "dependency"
+    },
+    {
+      "source": "professional-scanner-grp-hostenrichment-js-functions",
+      "target": "professional-scanner-grp-hostenrichment-js-functions-1-12",
+      "type": "dependency"
+    },
+    {
+      "source": "professional-scanner-grp-hostenrichment-js-functions",
+      "target": "professional-scanner-grp-hostenrichment-js-functions-13-24",
+      "type": "dependency"
+    },
+    {
+      "source": "professional-scanner-grp-hostenrichment-js-functions",
+      "target": "professional-scanner-grp-hostenrichment-js-functions-25-28",
+      "type": "dependency"
+    },
+    {
+      "source": "professional-scanner-grp-hostenrichment-js-functions-1-12",
+      "target": "professional-scanner-fn-hostenrichment-js-enrichhost",
+      "type": "dependency"
+    },
+    {
+      "source": "professional-scanner-grp-hostenrichment-js-functions-1-12",
+      "target": "professional-scanner-fn-hostenrichment-js-getosfromttl",
+      "type": "dependency"
+    },
+    {
+      "source": "professional-scanner-grp-hostenrichment-js-functions-1-12",
+      "target": "professional-scanner-fn-hostenrichment-js-getmacfromarp",
+      "type": "dependency"
+    },
+    {
+      "source": "professional-scanner-grp-hostenrichment-js-functions-1-12",
+      "target": "professional-scanner-fn-hostenrichment-js-lookupad",
+      "type": "dependency"
+    },
+    {
+      "source": "professional-scanner-grp-hostenrichment-js-functions-1-12",
+      "target": "professional-scanner-fn-hostenrichment-js-lookupadbyip",
+      "type": "dependency"
+    },
+    {
+      "source": "professional-scanner-grp-hostenrichment-js-functions-1-12",
+      "target": "professional-scanner-fn-hostenrichment-js-detectvm",
+      "type": "dependency"
+    },
+    {
+      "source": "professional-scanner-grp-hostenrichment-js-functions-1-12",
+      "target": "professional-scanner-fn-hostenrichment-js-lookslikeprinter",
+      "type": "dependency"
+    },
+    {
+      "source": "professional-scanner-grp-hostenrichment-js-functions-1-12",
+      "target": "professional-scanner-fn-hostenrichment-js-isempty",
+      "type": "dependency"
+    },
+    {
+      "source": "professional-scanner-grp-hostenrichment-js-functions-1-12",
+      "target": "professional-scanner-fn-hostenrichment-js-pick",
+      "type": "dependency"
+    },
+    {
+      "source": "professional-scanner-grp-hostenrichment-js-functions-1-12",
+      "target": "professional-scanner-fn-hostenrichment-js-shortname",
+      "type": "dependency"
+    },
+    {
+      "source": "professional-scanner-grp-hostenrichment-js-functions-1-12",
+      "target": "professional-scanner-fn-hostenrichment-js-runpowershell",
+      "type": "dependency"
+    },
+    {
+      "source": "professional-scanner-grp-hostenrichment-js-functions-1-12",
+      "target": "professional-scanner-fn-hostenrichment-js-filetimetoiso",
+      "type": "dependency"
+    },
+    {
+      "source": "professional-scanner-grp-hostenrichment-js-functions-13-24",
+      "target": "professional-scanner-fn-hostenrichment-js-mapwindowsbuild",
+      "type": "dependency"
+    },
+    {
+      "source": "professional-scanner-grp-hostenrichment-js-functions-13-24",
+      "target": "professional-scanner-fn-hostenrichment-js-loadadcatalog",
+      "type": "dependency"
+    },
+    {
+      "source": "professional-scanner-grp-hostenrichment-js-functions-13-24",
+      "target": "professional-scanner-fn-hostenrichment-js-saveadcomputerscache",
+      "type": "dependency"
+    },
+    {
+      "source": "professional-scanner-grp-hostenrichment-js-functions-13-24",
+      "target": "professional-scanner-fn-hostenrichment-js-loadadipindexcache",
+      "type": "dependency"
+    },
+    {
+      "source": "professional-scanner-grp-hostenrichment-js-functions-13-24",
+      "target": "professional-scanner-fn-hostenrichment-js-saveadipindexcache",
+      "type": "dependency"
+    },
+    {
+      "source": "professional-scanner-grp-hostenrichment-js-functions-13-24",
+      "target": "professional-scanner-fn-hostenrichment-js-buildadipindex",
+      "type": "dependency"
+    },
+    {
+      "source": "professional-scanner-grp-hostenrichment-js-functions-13-24",
+      "target": "professional-scanner-fn-hostenrichment-js-worker",
+      "type": "dependency"
+    },
+    {
+      "source": "professional-scanner-grp-hostenrichment-js-functions-13-24",
+      "target": "professional-scanner-fn-hostenrichment-js-cleanhostnamecandidate",
+      "type": "dependency"
+    },
+    {
+      "source": "professional-scanner-grp-hostenrichment-js-functions-13-24",
+      "target": "professional-scanner-fn-hostenrichment-js-hostnamefromloosecandidate",
+      "type": "dependency"
+    },
+    {
+      "source": "professional-scanner-grp-hostenrichment-js-functions-13-24",
+      "target": "professional-scanner-fn-hostenrichment-js-derivefallbackhostname",
+      "type": "dependency"
+    },
+    {
+      "source": "professional-scanner-grp-hostenrichment-js-functions-13-24",
+      "target": "professional-scanner-fn-hostenrichment-js-resolvehostnamefinal",
+      "type": "dependency"
+    },
+    {
+      "source": "professional-scanner-grp-hostenrichment-js-functions-13-24",
+      "target": "professional-scanner-fn-hostenrichment-js-queryloggedonuserviaquser",
+      "type": "dependency"
+    },
+    {
+      "source": "professional-scanner-grp-hostenrichment-js-functions-25-28",
+      "target": "professional-scanner-fn-hostenrichment-js-queryloggedonuser",
+      "type": "dependency"
+    },
+    {
+      "source": "professional-scanner-grp-hostenrichment-js-functions-25-28",
+      "target": "professional-scanner-fn-hostenrichment-js-resolvednsreversenode",
+      "type": "dependency"
+    },
+    {
+      "source": "professional-scanner-grp-hostenrichment-js-functions-25-28",
+      "target": "professional-scanner-fn-hostenrichment-js-resolvednsreversewindows",
+      "type": "dependency"
+    },
+    {
+      "source": "professional-scanner-grp-hostenrichment-js-functions-25-28",
+      "target": "professional-scanner-fn-hostenrichment-js-resolvednsreverse",
       "type": "dependency"
     },
     {
@@ -1757,6 +4649,46 @@
     {
       "source": "professional-scanner-grp-files-i-l-m-n-o",
       "target": "professional-scanner-file-inventoryroutes-js",
+      "type": "dependency"
+    },
+    {
+      "source": "professional-scanner-file-inventoryroutes-js",
+      "target": "professional-scanner-fn-inventoryroutes-js-get",
+      "type": "dependency"
+    },
+    {
+      "source": "professional-scanner-file-inventoryroutes-js",
+      "target": "professional-scanner-fn-inventoryroutes-js-get-stats",
+      "type": "dependency"
+    },
+    {
+      "source": "professional-scanner-file-inventoryroutes-js",
+      "target": "professional-scanner-fn-inventoryroutes-js-post-sync",
+      "type": "dependency"
+    },
+    {
+      "source": "professional-scanner-file-inventoryroutes-js",
+      "target": "professional-scanner-fn-inventoryroutes-js-post-resolve-ad-users",
+      "type": "dependency"
+    },
+    {
+      "source": "professional-scanner-file-inventoryroutes-js",
+      "target": "professional-scanner-fn-inventoryroutes-js-post-export-xlsx",
+      "type": "dependency"
+    },
+    {
+      "source": "professional-scanner-file-inventoryroutes-js",
+      "target": "professional-scanner-fn-inventoryroutes-js-post-export-pdf",
+      "type": "dependency"
+    },
+    {
+      "source": "professional-scanner-file-inventoryroutes-js",
+      "target": "professional-scanner-fn-inventoryroutes-js-post-export-csv",
+      "type": "dependency"
+    },
+    {
+      "source": "professional-scanner-file-inventoryroutes-js",
+      "target": "professional-scanner-fn-inventoryroutes-js-mountinventoryroutes",
       "type": "dependency"
     },
     {
@@ -1825,6 +4757,136 @@
       "type": "dependency"
     },
     {
+      "source": "professional-scanner-file-platformroutes-js",
+      "target": "professional-scanner-grp-platformroutes-js-routes",
+      "type": "dependency"
+    },
+    {
+      "source": "professional-scanner-grp-platformroutes-js-routes",
+      "target": "professional-scanner-grp-platformroutes-js-routes-1-12",
+      "type": "dependency"
+    },
+    {
+      "source": "professional-scanner-grp-platformroutes-js-routes",
+      "target": "professional-scanner-grp-platformroutes-js-routes-13-21",
+      "type": "dependency"
+    },
+    {
+      "source": "professional-scanner-file-platformroutes-js",
+      "target": "professional-scanner-grp-platformroutes-js-functions",
+      "type": "dependency"
+    },
+    {
+      "source": "professional-scanner-grp-platformroutes-js-routes-1-12",
+      "target": "professional-scanner-fn-platformroutes-js-get-health",
+      "type": "dependency"
+    },
+    {
+      "source": "professional-scanner-grp-platformroutes-js-routes-1-12",
+      "target": "professional-scanner-fn-platformroutes-js-get-config",
+      "type": "dependency"
+    },
+    {
+      "source": "professional-scanner-grp-platformroutes-js-routes-1-12",
+      "target": "professional-scanner-fn-platformroutes-js-put-config",
+      "type": "dependency"
+    },
+    {
+      "source": "professional-scanner-grp-platformroutes-js-routes-1-12",
+      "target": "professional-scanner-fn-platformroutes-js-get-sites",
+      "type": "dependency"
+    },
+    {
+      "source": "professional-scanner-grp-platformroutes-js-routes-1-12",
+      "target": "professional-scanner-fn-platformroutes-js-put-sites-active",
+      "type": "dependency"
+    },
+    {
+      "source": "professional-scanner-grp-platformroutes-js-routes-1-12",
+      "target": "professional-scanner-fn-platformroutes-js-get-v1-hosts",
+      "type": "dependency"
+    },
+    {
+      "source": "professional-scanner-grp-platformroutes-js-routes-1-12",
+      "target": "professional-scanner-fn-platformroutes-js-get-drift",
+      "type": "dependency"
+    },
+    {
+      "source": "professional-scanner-grp-platformroutes-js-routes-1-12",
+      "target": "professional-scanner-fn-platformroutes-js-get-correlation",
+      "type": "dependency"
+    },
+    {
+      "source": "professional-scanner-grp-platformroutes-js-routes-1-12",
+      "target": "professional-scanner-fn-platformroutes-js-post-tls-scan",
+      "type": "dependency"
+    },
+    {
+      "source": "professional-scanner-grp-platformroutes-js-routes-1-12",
+      "target": "professional-scanner-fn-platformroutes-js-get-nac",
+      "type": "dependency"
+    },
+    {
+      "source": "professional-scanner-grp-platformroutes-js-routes-1-12",
+      "target": "professional-scanner-fn-platformroutes-js-get-fingerprint",
+      "type": "dependency"
+    },
+    {
+      "source": "professional-scanner-grp-platformroutes-js-routes-1-12",
+      "target": "professional-scanner-fn-platformroutes-js-get-passive",
+      "type": "dependency"
+    },
+    {
+      "source": "professional-scanner-grp-platformroutes-js-routes-13-21",
+      "target": "professional-scanner-fn-platformroutes-js-get-lifecycle",
+      "type": "dependency"
+    },
+    {
+      "source": "professional-scanner-grp-platformroutes-js-routes-13-21",
+      "target": "professional-scanner-fn-platformroutes-js-put-lifecycle-ip",
+      "type": "dependency"
+    },
+    {
+      "source": "professional-scanner-grp-platformroutes-js-routes-13-21",
+      "target": "professional-scanner-fn-platformroutes-js-get-lifecycle-states",
+      "type": "dependency"
+    },
+    {
+      "source": "professional-scanner-grp-platformroutes-js-routes-13-21",
+      "target": "professional-scanner-fn-platformroutes-js-post-agent-report",
+      "type": "dependency"
+    },
+    {
+      "source": "professional-scanner-grp-platformroutes-js-routes-13-21",
+      "target": "professional-scanner-fn-platformroutes-js-get-agent-reports",
+      "type": "dependency"
+    },
+    {
+      "source": "professional-scanner-grp-platformroutes-js-routes-13-21",
+      "target": "professional-scanner-fn-platformroutes-js-get-reports-daily",
+      "type": "dependency"
+    },
+    {
+      "source": "professional-scanner-grp-platformroutes-js-routes-13-21",
+      "target": "professional-scanner-fn-platformroutes-js-post-reports-run",
+      "type": "dependency"
+    },
+    {
+      "source": "professional-scanner-grp-platformroutes-js-routes-13-21",
+      "target": "professional-scanner-fn-platformroutes-js-post-webhooks-test",
+      "type": "dependency"
+    },
+    {
+      "source": "professional-scanner-grp-platformroutes-js-routes-13-21",
+      "target": "professional-scanner-fn-platformroutes-js-get-summary",
+      "type": "dependency"
+    },
+    {
+      "source": "professional-scanner-grp-platformroutes-js-functions",
+      "target": "professional-scanner-fn-platformroutes-js-mountplatformroutes",
+      "type": "dependency"
+    },
+    {
       "source": "professional-scanner-grp-files-p-r-s",
       "target": "professional-scanner-file-ratelimit-js",
       "type": "dependency"
@@ -1842,6 +4904,426 @@
     {
       "source": "professional-scanner-grp-files-p-r-s",
       "target": "professional-scanner-file-server-js",
+      "type": "dependency"
+    },
+    {
+      "source": "professional-scanner-file-server-js",
+      "target": "professional-scanner-grp-server-js-routes",
+      "type": "dependency"
+    },
+    {
+      "source": "professional-scanner-grp-server-js-routes",
+      "target": "professional-scanner-grp-server-js-routes-1-12",
+      "type": "dependency"
+    },
+    {
+      "source": "professional-scanner-grp-server-js-routes",
+      "target": "professional-scanner-grp-server-js-routes-13-24",
+      "type": "dependency"
+    },
+    {
+      "source": "professional-scanner-grp-server-js-routes",
+      "target": "professional-scanner-grp-server-js-routes-25-36",
+      "type": "dependency"
+    },
+    {
+      "source": "professional-scanner-grp-server-js-routes",
+      "target": "professional-scanner-grp-server-js-routes-37-48",
+      "type": "dependency"
+    },
+    {
+      "source": "professional-scanner-file-server-js",
+      "target": "professional-scanner-grp-server-js-functions",
+      "type": "dependency"
+    },
+    {
+      "source": "professional-scanner-grp-server-js-functions",
+      "target": "professional-scanner-grp-server-js-functions-1-12",
+      "type": "dependency"
+    },
+    {
+      "source": "professional-scanner-grp-server-js-functions",
+      "target": "professional-scanner-grp-server-js-functions-13-24",
+      "type": "dependency"
+    },
+    {
+      "source": "professional-scanner-grp-server-js-functions",
+      "target": "professional-scanner-grp-server-js-functions-25-27",
+      "type": "dependency"
+    },
+    {
+      "source": "professional-scanner-grp-server-js-routes-1-12",
+      "target": "professional-scanner-fn-server-js-post-api-auth-login",
+      "type": "dependency"
+    },
+    {
+      "source": "professional-scanner-grp-server-js-routes-1-12",
+      "target": "professional-scanner-fn-server-js-get-api-auth-session",
+      "type": "dependency"
+    },
+    {
+      "source": "professional-scanner-grp-server-js-routes-1-12",
+      "target": "professional-scanner-fn-server-js-post-api-auth-logout",
+      "type": "dependency"
+    },
+    {
+      "source": "professional-scanner-grp-server-js-routes-1-12",
+      "target": "professional-scanner-fn-server-js-get-api-scan-results",
+      "type": "dependency"
+    },
+    {
+      "source": "professional-scanner-grp-server-js-routes-1-12",
+      "target": "professional-scanner-fn-server-js-get-api-host-history-stats",
+      "type": "dependency"
+    },
+    {
+      "source": "professional-scanner-grp-server-js-routes-1-12",
+      "target": "professional-scanner-fn-server-js-get-api-report-info",
+      "type": "dependency"
+    },
+    {
+      "source": "professional-scanner-grp-server-js-routes-1-12",
+      "target": "professional-scanner-fn-server-js-get-api-idle-hosts",
+      "type": "dependency"
+    },
+    {
+      "source": "professional-scanner-grp-server-js-routes-1-12",
+      "target": "professional-scanner-fn-server-js-post-api-idle-hosts-export-xlsx",
+      "type": "dependency"
+    },
+    {
+      "source": "professional-scanner-grp-server-js-routes-1-12",
+      "target": "professional-scanner-fn-server-js-get-api-ala-map-config",
+      "type": "dependency"
+    },
+    {
+      "source": "professional-scanner-grp-server-js-routes-1-12",
+      "target": "professional-scanner-fn-server-js-put-api-ala-map-config",
+      "type": "dependency"
+    },
+    {
+      "source": "professional-scanner-grp-server-js-routes-1-12",
+      "target": "professional-scanner-fn-server-js-get-api-ala-map-report",
+      "type": "dependency"
+    },
+    {
+      "source": "professional-scanner-grp-server-js-routes-1-12",
+      "target": "professional-scanner-fn-server-js-get-api-device-library",
+      "type": "dependency"
+    },
+    {
+      "source": "professional-scanner-grp-server-js-routes-13-24",
+      "target": "professional-scanner-fn-server-js-post-api-ala-map-export-xlsx",
+      "type": "dependency"
+    },
+    {
+      "source": "professional-scanner-grp-server-js-routes-13-24",
+      "target": "professional-scanner-fn-server-js-delete-api-host-history",
+      "type": "dependency"
+    },
+    {
+      "source": "professional-scanner-grp-server-js-routes-13-24",
+      "target": "professional-scanner-fn-server-js-get-api-ad-departed",
+      "type": "dependency"
+    },
+    {
+      "source": "professional-scanner-grp-server-js-routes-13-24",
+      "target": "professional-scanner-fn-server-js-delete-api-ad-departed",
+      "type": "dependency"
+    },
+    {
+      "source": "professional-scanner-grp-server-js-routes-13-24",
+      "target": "professional-scanner-fn-server-js-delete-api-ad-departed-sam",
+      "type": "dependency"
+    },
+    {
+      "source": "professional-scanner-grp-server-js-routes-13-24",
+      "target": "professional-scanner-fn-server-js-get-api-loop-config",
+      "type": "dependency"
+    },
+    {
+      "source": "professional-scanner-grp-server-js-routes-13-24",
+      "target": "professional-scanner-fn-server-js-put-api-loop-config",
+      "type": "dependency"
+    },
+    {
+      "source": "professional-scanner-grp-server-js-routes-13-24",
+      "target": "professional-scanner-fn-server-js-get-api-loop-switches",
+      "type": "dependency"
+    },
+    {
+      "source": "professional-scanner-grp-server-js-routes-13-24",
+      "target": "professional-scanner-fn-server-js-post-api-loop-switches",
+      "type": "dependency"
+    },
+    {
+      "source": "professional-scanner-grp-server-js-routes-13-24",
+      "target": "professional-scanner-fn-server-js-delete-api-loop-switches-id",
+      "type": "dependency"
+    },
+    {
+      "source": "professional-scanner-grp-server-js-routes-13-24",
+      "target": "professional-scanner-fn-server-js-get-api-loop-status",
+      "type": "dependency"
+    },
+    {
+      "source": "professional-scanner-grp-server-js-routes-13-24",
+      "target": "professional-scanner-fn-server-js-post-api-loop-start",
+      "type": "dependency"
+    },
+    {
+      "source": "professional-scanner-grp-server-js-routes-25-36",
+      "target": "professional-scanner-fn-server-js-post-api-loop-stop",
+      "type": "dependency"
+    },
+    {
+      "source": "professional-scanner-grp-server-js-routes-25-36",
+      "target": "professional-scanner-fn-server-js-post-api-loop-quick-check",
+      "type": "dependency"
+    },
+    {
+      "source": "professional-scanner-grp-server-js-routes-25-36",
+      "target": "professional-scanner-fn-server-js-get-api-loop-alerts",
+      "type": "dependency"
+    },
+    {
+      "source": "professional-scanner-grp-server-js-routes-25-36",
+      "target": "professional-scanner-fn-server-js-delete-api-loop-alerts",
+      "type": "dependency"
+    },
+    {
+      "source": "professional-scanner-grp-server-js-routes-25-36",
+      "target": "professional-scanner-fn-server-js-post-api-loop-reset-baseline",
+      "type": "dependency"
+    },
+    {
+      "source": "professional-scanner-grp-server-js-routes-25-36",
+      "target": "professional-scanner-fn-server-js-get-api-autotest-config",
+      "type": "dependency"
+    },
+    {
+      "source": "professional-scanner-grp-server-js-routes-25-36",
+      "target": "professional-scanner-fn-server-js-get-api-autotest-profiles",
+      "type": "dependency"
+    },
+    {
+      "source": "professional-scanner-grp-server-js-routes-25-36",
+      "target": "professional-scanner-fn-server-js-get-api-autotest-profile-id",
+      "type": "dependency"
+    },
+    {
+      "source": "professional-scanner-grp-server-js-routes-25-36",
+      "target": "professional-scanner-fn-server-js-put-api-autotest-config",
+      "type": "dependency"
+    },
+    {
+      "source": "professional-scanner-grp-server-js-routes-25-36",
+      "target": "professional-scanner-fn-server-js-get-api-autotest-interfaces",
+      "type": "dependency"
+    },
+    {
+      "source": "professional-scanner-grp-server-js-routes-25-36",
+      "target": "professional-scanner-fn-server-js-get-api-autotest-history",
+      "type": "dependency"
+    },
+    {
+      "source": "professional-scanner-grp-server-js-routes-25-36",
+      "target": "professional-scanner-fn-server-js-delete-api-autotest-history",
+      "type": "dependency"
+    },
+    {
+      "source": "professional-scanner-grp-server-js-routes-37-48",
+      "target": "professional-scanner-fn-server-js-get-api-autotest-loop-switches",
+      "type": "dependency"
+    },
+    {
+      "source": "professional-scanner-grp-server-js-routes-37-48",
+      "target": "professional-scanner-fn-server-js-post-api-autotest-export-pdf",
+      "type": "dependency"
+    },
+    {
+      "source": "professional-scanner-grp-server-js-routes-37-48",
+      "target": "professional-scanner-fn-server-js-post-api-autotest-export-xlsx",
+      "type": "dependency"
+    },
+    {
+      "source": "professional-scanner-grp-server-js-routes-37-48",
+      "target": "professional-scanner-fn-server-js-post-api-autotest-export-csv",
+      "type": "dependency"
+    },
+    {
+      "source": "professional-scanner-grp-server-js-routes-37-48",
+      "target": "professional-scanner-fn-server-js-get-api-autotest-local",
+      "type": "dependency"
+    },
+    {
+      "source": "professional-scanner-grp-server-js-routes-37-48",
+      "target": "professional-scanner-fn-server-js-post-api-autotest-run",
+      "type": "dependency"
+    },
+    {
+      "source": "professional-scanner-grp-server-js-routes-37-48",
+      "target": "professional-scanner-fn-server-js-get-api-autotest-remote-config",
+      "type": "dependency"
+    },
+    {
+      "source": "professional-scanner-grp-server-js-routes-37-48",
+      "target": "professional-scanner-fn-server-js-post-api-autotest-remote-auth-login",
+      "type": "dependency"
+    },
+    {
+      "source": "professional-scanner-grp-server-js-routes-37-48",
+      "target": "professional-scanner-fn-server-js-get-api-autotest-remote-auth-session",
+      "type": "dependency"
+    },
+    {
+      "source": "professional-scanner-grp-server-js-routes-37-48",
+      "target": "professional-scanner-fn-server-js-post-api-autotest-remote-auth-logout",
+      "type": "dependency"
+    },
+    {
+      "source": "professional-scanner-grp-server-js-routes-37-48",
+      "target": "professional-scanner-fn-server-js-post-api-autotest-remote-pairing",
+      "type": "dependency"
+    },
+    {
+      "source": "professional-scanner-grp-server-js-routes-37-48",
+      "target": "professional-scanner-fn-server-js-get-api-autotest-remote-agents",
+      "type": "dependency"
+    },
+    {
+      "source": "professional-scanner-grp-server-js-functions-1-12",
+      "target": "professional-scanner-fn-server-js-parsetarget",
+      "type": "dependency"
+    },
+    {
+      "source": "professional-scanner-grp-server-js-functions-1-12",
+      "target": "professional-scanner-fn-server-js-pinghost",
+      "type": "dependency"
+    },
+    {
+      "source": "professional-scanner-grp-server-js-functions-1-12",
+      "target": "professional-scanner-fn-server-js-getosfromttl",
+      "type": "dependency"
+    },
+    {
+      "source": "professional-scanner-grp-server-js-functions-1-12",
+      "target": "professional-scanner-fn-server-js-resolvehostname",
+      "type": "dependency"
+    },
+    {
+      "source": "professional-scanner-grp-server-js-functions-1-12",
+      "target": "professional-scanner-fn-server-js-getmacaddress",
+      "type": "dependency"
+    },
+    {
+      "source": "professional-scanner-grp-server-js-functions-1-12",
+      "target": "professional-scanner-fn-server-js-scantcpport",
+      "type": "dependency"
+    },
+    {
+      "source": "professional-scanner-grp-server-js-functions-1-12",
+      "target": "professional-scanner-fn-server-js-runconcurrent",
+      "type": "dependency"
+    },
+    {
+      "source": "professional-scanner-grp-server-js-functions-1-12",
+      "target": "professional-scanner-fn-server-js-detectdmz",
+      "type": "dependency"
+    },
+    {
+      "source": "professional-scanner-grp-server-js-functions-1-12",
+      "target": "professional-scanner-fn-server-js-detectotics",
+      "type": "dependency"
+    },
+    {
+      "source": "professional-scanner-grp-server-js-functions-1-12",
+      "target": "professional-scanner-fn-server-js-detectvm",
+      "type": "dependency"
+    },
+    {
+      "source": "professional-scanner-grp-server-js-functions-1-12",
+      "target": "professional-scanner-fn-server-js-getaddomain",
+      "type": "dependency"
+    },
+    {
+      "source": "professional-scanner-grp-server-js-functions-1-12",
+      "target": "professional-scanner-fn-server-js-broadcastloopmsg",
+      "type": "dependency"
+    },
+    {
+      "source": "professional-scanner-grp-server-js-functions-13-24",
+      "target": "professional-scanner-fn-server-js-notifyplatformscancomplete",
+      "type": "dependency"
+    },
+    {
+      "source": "professional-scanner-grp-server-js-functions-13-24",
+      "target": "professional-scanner-fn-server-js-abortscansockets",
+      "type": "dependency"
+    },
+    {
+      "source": "professional-scanner-grp-server-js-functions-13-24",
+      "target": "professional-scanner-fn-server-js-guessservicename",
+      "type": "dependency"
+    },
+    {
+      "source": "professional-scanner-grp-server-js-functions-13-24",
+      "target": "professional-scanner-fn-server-js-requireautotestagenttoken",
+      "type": "dependency"
+    },
+    {
+      "source": "professional-scanner-grp-server-js-functions-13-24",
+      "target": "professional-scanner-fn-server-js-requiresignedautotestagent",
+      "type": "dependency"
+    },
+    {
+      "source": "professional-scanner-grp-server-js-functions-13-24",
+      "target": "professional-scanner-fn-server-js-readsharecreds",
+      "type": "dependency"
+    },
+    {
+      "source": "professional-scanner-grp-server-js-functions-13-24",
+      "target": "professional-scanner-fn-server-js-iptolong",
+      "type": "dependency"
+    },
+    {
+      "source": "professional-scanner-grp-server-js-functions-13-24",
+      "target": "professional-scanner-fn-server-js-longtoip",
+      "type": "dependency"
+    },
+    {
+      "source": "professional-scanner-grp-server-js-functions-13-24",
+      "target": "professional-scanner-fn-server-js-scanudpport",
+      "type": "dependency"
+    },
+    {
+      "source": "professional-scanner-grp-server-js-functions-13-24",
+      "target": "professional-scanner-fn-server-js-getuserhome",
+      "type": "dependency"
+    },
+    {
+      "source": "professional-scanner-grp-server-js-functions-13-24",
+      "target": "professional-scanner-fn-server-js-getcsvtargetdir",
+      "type": "dependency"
+    },
+    {
+      "source": "professional-scanner-grp-server-js-functions-13-24",
+      "target": "professional-scanner-fn-server-js-getsubnetcidr",
+      "type": "dependency"
+    },
+    {
+      "source": "professional-scanner-grp-server-js-functions-25-27",
+      "target": "professional-scanner-fn-server-js-isprivateip",
+      "type": "dependency"
+    },
+    {
+      "source": "professional-scanner-grp-server-js-functions-25-27",
+      "target": "professional-scanner-fn-server-js-ispublicip",
+      "type": "dependency"
+    },
+    {
+      "source": "professional-scanner-grp-server-js-functions-25-27",
+      "target": "professional-scanner-fn-server-js-startserver",
       "type": "dependency"
     },
     {
@@ -1870,6 +5352,111 @@
       "type": "dependency"
     },
     {
+      "source": "professional-scanner-file-vmvlanstrategy-js",
+      "target": "professional-scanner-grp-vmvlanstrategy-js-functions",
+      "type": "dependency"
+    },
+    {
+      "source": "professional-scanner-grp-vmvlanstrategy-js-functions",
+      "target": "professional-scanner-grp-vmvlanstrategy-js-functions-1-12",
+      "type": "dependency"
+    },
+    {
+      "source": "professional-scanner-grp-vmvlanstrategy-js-functions",
+      "target": "professional-scanner-grp-vmvlanstrategy-js-functions-13-18",
+      "type": "dependency"
+    },
+    {
+      "source": "professional-scanner-grp-vmvlanstrategy-js-functions-1-12",
+      "target": "professional-scanner-fn-vmvlanstrategy-js-detectvirtualization",
+      "type": "dependency"
+    },
+    {
+      "source": "professional-scanner-grp-vmvlanstrategy-js-functions-1-12",
+      "target": "professional-scanner-fn-vmvlanstrategy-js-applyvirtualizationtohost",
+      "type": "dependency"
+    },
+    {
+      "source": "professional-scanner-grp-vmvlanstrategy-js-functions-1-12",
+      "target": "professional-scanner-fn-vmvlanstrategy-js-assignvlanstohosts",
+      "type": "dependency"
+    },
+    {
+      "source": "professional-scanner-grp-vmvlanstrategy-js-functions-1-12",
+      "target": "professional-scanner-fn-vmvlanstrategy-js-resolvehostvlan",
+      "type": "dependency"
+    },
+    {
+      "source": "professional-scanner-grp-vmvlanstrategy-js-functions-1-12",
+      "target": "professional-scanner-fn-vmvlanstrategy-js-queryswitchesmacvlan",
+      "type": "dependency"
+    },
+    {
+      "source": "professional-scanner-grp-vmvlanstrategy-js-functions-1-12",
+      "target": "professional-scanner-fn-vmvlanstrategy-js-ensurevlanmapfile",
+      "type": "dependency"
+    },
+    {
+      "source": "professional-scanner-grp-vmvlanstrategy-js-functions-1-12",
+      "target": "professional-scanner-fn-vmvlanstrategy-js-loadvlanmap",
+      "type": "dependency"
+    },
+    {
+      "source": "professional-scanner-grp-vmvlanstrategy-js-functions-1-12",
+      "target": "professional-scanner-fn-vmvlanstrategy-js-normalizemac",
+      "type": "dependency"
+    },
+    {
+      "source": "professional-scanner-grp-vmvlanstrategy-js-functions-1-12",
+      "target": "professional-scanner-fn-vmvlanstrategy-js-islocallyadministeredmac",
+      "type": "dependency"
+    },
+    {
+      "source": "professional-scanner-grp-vmvlanstrategy-js-functions-1-12",
+      "target": "professional-scanner-fn-vmvlanstrategy-js-matchvmoui",
+      "type": "dependency"
+    },
+    {
+      "source": "professional-scanner-grp-vmvlanstrategy-js-functions-1-12",
+      "target": "professional-scanner-fn-vmvlanstrategy-js-iptolong",
+      "type": "dependency"
+    },
+    {
+      "source": "professional-scanner-grp-vmvlanstrategy-js-functions-1-12",
+      "target": "professional-scanner-fn-vmvlanstrategy-js-cidrcontains",
+      "type": "dependency"
+    },
+    {
+      "source": "professional-scanner-grp-vmvlanstrategy-js-functions-13-18",
+      "target": "professional-scanner-fn-vmvlanstrategy-js-getsubnetcidr24",
+      "type": "dependency"
+    },
+    {
+      "source": "professional-scanner-grp-vmvlanstrategy-js-functions-13-18",
+      "target": "professional-scanner-fn-vmvlanstrategy-js-parsevlanfromtext",
+      "type": "dependency"
+    },
+    {
+      "source": "professional-scanner-grp-vmvlanstrategy-js-functions-13-18",
+      "target": "professional-scanner-fn-vmvlanstrategy-js-resolvevlanfrommap",
+      "type": "dependency"
+    },
+    {
+      "source": "professional-scanner-grp-vmvlanstrategy-js-functions-13-18",
+      "target": "professional-scanner-fn-vmvlanstrategy-js-resolvevlanfromthirdoctet",
+      "type": "dependency"
+    },
+    {
+      "source": "professional-scanner-grp-vmvlanstrategy-js-functions-13-18",
+      "target": "professional-scanner-fn-vmvlanstrategy-js-formatvlanlabel",
+      "type": "dependency"
+    },
+    {
+      "source": "professional-scanner-grp-vmvlanstrategy-js-functions-13-18",
+      "target": "professional-scanner-fn-vmvlanstrategy-js-snmpgetnext",
+      "type": "dependency"
+    },
+    {
       "source": "professional-scanner-grp-files-t-v-w",
       "target": "professional-scanner-file-webhookdispatcher-js",
       "type": "dependency"
@@ -1886,111 +5473,121 @@
     },
     {
       "source": "professional-scanner-dir-data",
-      "target": "professional-scanner-grp-data-files-a-c-d-f",
+      "target": "professional-scanner-grp-data-files-a-c-d",
       "type": "dependency"
     },
     {
       "source": "professional-scanner-dir-data",
-      "target": "professional-scanner-grp-data-files-h-i-l-n-o-p-v",
+      "target": "professional-scanner-grp-data-files-f-h-i-l-n-o-p-v",
       "type": "dependency"
     },
     {
-      "source": "professional-scanner-grp-data-files-a-c-d-f",
+      "source": "professional-scanner-grp-data-files-a-c-d",
       "target": "professional-scanner-file-data-ad-computers-cache-json",
       "type": "dependency"
     },
     {
-      "source": "professional-scanner-grp-data-files-a-c-d-f",
+      "source": "professional-scanner-grp-data-files-a-c-d",
       "target": "professional-scanner-file-data-ad-departed-users-json",
       "type": "dependency"
     },
     {
-      "source": "professional-scanner-grp-data-files-a-c-d-f",
+      "source": "professional-scanner-grp-data-files-a-c-d",
       "target": "professional-scanner-file-data-ad-ip-index-json",
       "type": "dependency"
     },
     {
-      "source": "professional-scanner-grp-data-files-a-c-d-f",
+      "source": "professional-scanner-grp-data-files-a-c-d",
+      "target": "professional-scanner-file-data-ad-users-snapshot-json",
+      "type": "dependency"
+    },
+    {
+      "source": "professional-scanner-grp-data-files-a-c-d",
       "target": "professional-scanner-file-data-ala-map-json",
       "type": "dependency"
     },
     {
-      "source": "professional-scanner-grp-data-files-a-c-d-f",
+      "source": "professional-scanner-grp-data-files-a-c-d",
       "target": "professional-scanner-file-data-asset-lifecycle-json",
       "type": "dependency"
     },
     {
-      "source": "professional-scanner-grp-data-files-a-c-d-f",
+      "source": "professional-scanner-grp-data-files-a-c-d",
       "target": "professional-scanner-file-data-auto-test-config-json",
       "type": "dependency"
     },
     {
-      "source": "professional-scanner-grp-data-files-a-c-d-f",
+      "source": "professional-scanner-grp-data-files-a-c-d",
       "target": "professional-scanner-file-data-autotest-history-json",
       "type": "dependency"
     },
     {
-      "source": "professional-scanner-grp-data-files-a-c-d-f",
+      "source": "professional-scanner-grp-data-files-a-c-d",
       "target": "professional-scanner-file-data-autotest-remote-json",
       "type": "dependency"
     },
     {
-      "source": "professional-scanner-grp-data-files-a-c-d-f",
+      "source": "professional-scanner-grp-data-files-a-c-d",
       "target": "professional-scanner-file-data-canon-sessions-json",
       "type": "dependency"
     },
     {
-      "source": "professional-scanner-grp-data-files-a-c-d-f",
+      "source": "professional-scanner-grp-data-files-a-c-d",
       "target": "professional-scanner-file-data-device-library-json",
       "type": "dependency"
     },
     {
-      "source": "professional-scanner-grp-data-files-a-c-d-f",
+      "source": "professional-scanner-grp-data-files-f-h-i-l-n-o-p-v",
       "target": "professional-scanner-file-data-fileserver-shares-example-json",
       "type": "dependency"
     },
     {
-      "source": "professional-scanner-grp-data-files-a-c-d-f",
+      "source": "professional-scanner-grp-data-files-f-h-i-l-n-o-p-v",
       "target": "professional-scanner-file-data-fileserver-shares-json",
       "type": "dependency"
     },
     {
-      "source": "professional-scanner-grp-data-files-h-i-l-n-o-p-v",
+      "source": "professional-scanner-grp-data-files-f-h-i-l-n-o-p-v",
       "target": "professional-scanner-file-data-host-history-json",
       "type": "dependency"
     },
     {
-      "source": "professional-scanner-grp-data-files-h-i-l-n-o-p-v",
+      "source": "professional-scanner-grp-data-files-f-h-i-l-n-o-p-v",
       "target": "professional-scanner-file-data-idle-export-recovery-json",
       "type": "dependency"
     },
     {
-      "source": "professional-scanner-grp-data-files-h-i-l-n-o-p-v",
+      "source": "professional-scanner-grp-data-files-f-h-i-l-n-o-p-v",
+      "target": "professional-scanner-file-data-inventory-unesp-json",
+      "type": "dependency"
+    },
+    {
+      "source": "professional-scanner-grp-data-files-f-h-i-l-n-o-p-v",
       "target": "professional-scanner-file-data-last-scan-snapshot-json",
       "type": "dependency"
     },
     {
-      "source": "professional-scanner-grp-data-files-h-i-l-n-o-p-v",
+      "source": "professional-scanner-grp-data-files-f-h-i-l-n-o-p-v",
       "target": "professional-scanner-file-data-loop-monitor-json",
       "type": "dependency"
     },
     {
-      "source": "professional-scanner-grp-data-files-h-i-l-n-o-p-v",
+      "source": "professional-scanner-grp-data-files-f-h-i-l-n-o-p-v",
       "target": "professional-scanner-file-data-network-baselines-json",
       "type": "dependency"
     },
     {
-      "source": "professional-scanner-grp-data-files-h-i-l-n-o-p-v",
+      "source": "professional-scanner-grp-data-files-f-h-i-l-n-o-p-v",
       "target": "professional-scanner-file-data-oracle-config-json",
       "type": "dependency"
     },
     {
-      "source": "professional-scanner-grp-data-files-h-i-l-n-o-p-v",
+      "source": "professional-scanner-grp-data-files-f-h-i-l-n-o-p-v",
       "target": "professional-scanner-file-data-platform-config-json",
       "type": "dependency"
     },
     {
-      "source": "professional-scanner-grp-data-files-h-i-l-n-o-p-v",
+      "source": "professional-scanner-grp-data-files-f-h-i-l-n-o-p-v",
       "target": "professional-scanner-file-data-vlan-map-json",
       "type": "dependency"
     },
@@ -2002,6 +5599,166 @@
     {
       "source": "professional-scanner-dir-public",
       "target": "professional-scanner-file-public-app-js",
+      "type": "dependency"
+    },
+    {
+      "source": "professional-scanner-file-public-app-js",
+      "target": "professional-scanner-grp-public-app-js-functions",
+      "type": "dependency"
+    },
+    {
+      "source": "professional-scanner-grp-public-app-js-functions",
+      "target": "professional-scanner-grp-public-app-js-functions-1-12",
+      "type": "dependency"
+    },
+    {
+      "source": "professional-scanner-grp-public-app-js-functions",
+      "target": "professional-scanner-grp-public-app-js-functions-13-24",
+      "type": "dependency"
+    },
+    {
+      "source": "professional-scanner-grp-public-app-js-functions",
+      "target": "professional-scanner-grp-public-app-js-functions-25-28",
+      "type": "dependency"
+    },
+    {
+      "source": "professional-scanner-grp-public-app-js-functions-1-12",
+      "target": "professional-scanner-fn-public-app-js-bootcanonapp",
+      "type": "dependency"
+    },
+    {
+      "source": "professional-scanner-grp-public-app-js-functions-1-12",
+      "target": "professional-scanner-fn-public-app-js-handleservermessage",
+      "type": "dependency"
+    },
+    {
+      "source": "professional-scanner-grp-public-app-js-functions-1-12",
+      "target": "professional-scanner-fn-public-app-js-openloopmodal",
+      "type": "dependency"
+    },
+    {
+      "source": "professional-scanner-grp-public-app-js-functions-1-12",
+      "target": "professional-scanner-fn-public-app-js-renderautotestengineeringbanner",
+      "type": "dependency"
+    },
+    {
+      "source": "professional-scanner-grp-public-app-js-functions-1-12",
+      "target": "professional-scanner-fn-public-app-js-buildtopologyfromresults",
+      "type": "dependency"
+    },
+    {
+      "source": "professional-scanner-grp-public-app-js-functions-1-12",
+      "target": "professional-scanner-fn-public-app-js-addorupdatehost",
+      "type": "dependency"
+    },
+    {
+      "source": "professional-scanner-grp-public-app-js-functions-1-12",
+      "target": "professional-scanner-fn-public-app-js-applyautotestresult",
+      "type": "dependency"
+    },
+    {
+      "source": "professional-scanner-grp-public-app-js-functions-1-12",
+      "target": "professional-scanner-fn-public-app-js-applycanonuitheme",
+      "type": "dependency"
+    },
+    {
+      "source": "professional-scanner-grp-public-app-js-functions-1-12",
+      "target": "professional-scanner-fn-public-app-js-startscan",
+      "type": "dependency"
+    },
+    {
+      "source": "professional-scanner-grp-public-app-js-functions-1-12",
+      "target": "professional-scanner-fn-public-app-js-stopscan",
+      "type": "dependency"
+    },
+    {
+      "source": "professional-scanner-grp-public-app-js-functions-1-12",
+      "target": "professional-scanner-fn-public-app-js-updateconnectionbadgewaitinglogin",
+      "type": "dependency"
+    },
+    {
+      "source": "professional-scanner-grp-public-app-js-functions-1-12",
+      "target": "professional-scanner-fn-public-app-js-disconnectwebsocket",
+      "type": "dependency"
+    },
+    {
+      "source": "professional-scanner-grp-public-app-js-functions-13-24",
+      "target": "professional-scanner-fn-public-app-js-connectwebsocket",
+      "type": "dependency"
+    },
+    {
+      "source": "professional-scanner-grp-public-app-js-functions-13-24",
+      "target": "professional-scanner-fn-public-app-js-logtoconsole",
+      "type": "dependency"
+    },
+    {
+      "source": "professional-scanner-grp-public-app-js-functions-13-24",
+      "target": "professional-scanner-fn-public-app-js-updateprogressbar",
+      "type": "dependency"
+    },
+    {
+      "source": "professional-scanner-grp-public-app-js-functions-13-24",
+      "target": "professional-scanner-fn-public-app-js-getlogclass",
+      "type": "dependency"
+    },
+    {
+      "source": "professional-scanner-grp-public-app-js-functions-13-24",
+      "target": "professional-scanner-fn-public-app-js-filltarget",
+      "type": "dependency"
+    },
+    {
+      "source": "professional-scanner-grp-public-app-js-functions-13-24",
+      "target": "professional-scanner-fn-public-app-js-togglecustomports",
+      "type": "dependency"
+    },
+    {
+      "source": "professional-scanner-grp-public-app-js-functions-13-24",
+      "target": "professional-scanner-fn-public-app-js-endscan",
+      "type": "dependency"
+    },
+    {
+      "source": "professional-scanner-grp-public-app-js-functions-13-24",
+      "target": "professional-scanner-fn-public-app-js-istrulyopenport",
+      "type": "dependency"
+    },
+    {
+      "source": "professional-scanner-grp-public-app-js-functions-13-24",
+      "target": "professional-scanner-fn-public-app-js-renderportshtml",
+      "type": "dependency"
+    },
+    {
+      "source": "professional-scanner-grp-public-app-js-functions-13-24",
+      "target": "professional-scanner-fn-public-app-js-getfilteredresults",
+      "type": "dependency"
+    },
+    {
+      "source": "professional-scanner-grp-public-app-js-functions-13-24",
+      "target": "professional-scanner-fn-public-app-js-comparescanhostsforsort",
+      "type": "dependency"
+    },
+    {
+      "source": "professional-scanner-grp-public-app-js-functions-13-24",
+      "target": "professional-scanner-fn-public-app-js-updateresultstablemeta",
+      "type": "dependency"
+    },
+    {
+      "source": "professional-scanner-grp-public-app-js-functions-25-28",
+      "target": "professional-scanner-fn-public-app-js-updatesortheaders",
+      "type": "dependency"
+    },
+    {
+      "source": "professional-scanner-grp-public-app-js-functions-25-28",
+      "target": "professional-scanner-fn-public-app-js-appendhostrow",
+      "type": "dependency"
+    },
+    {
+      "source": "professional-scanner-grp-public-app-js-functions-25-28",
+      "target": "professional-scanner-fn-public-app-js-rendertable",
+      "type": "dependency"
+    },
+    {
+      "source": "professional-scanner-grp-public-app-js-functions-25-28",
+      "target": "professional-scanner-fn-public-app-js-updatehostrow",
       "type": "dependency"
     },
     {
@@ -2037,6 +5794,91 @@
     {
       "source": "professional-scanner-dir-public",
       "target": "professional-scanner-file-public-map-js",
+      "type": "dependency"
+    },
+    {
+      "source": "professional-scanner-file-public-map-js",
+      "target": "professional-scanner-grp-public-map-js-functions",
+      "type": "dependency"
+    },
+    {
+      "source": "professional-scanner-grp-public-map-js-functions",
+      "target": "professional-scanner-grp-public-map-js-functions-1-12",
+      "type": "dependency"
+    },
+    {
+      "source": "professional-scanner-grp-public-map-js-functions",
+      "target": "professional-scanner-grp-public-map-js-functions-13-14",
+      "type": "dependency"
+    },
+    {
+      "source": "professional-scanner-grp-public-map-js-functions-1-12",
+      "target": "professional-scanner-fn-public-map-js-render3dmap",
+      "type": "dependency"
+    },
+    {
+      "source": "professional-scanner-grp-public-map-js-functions-1-12",
+      "target": "professional-scanner-fn-public-map-js-refreshtopology",
+      "type": "dependency"
+    },
+    {
+      "source": "professional-scanner-grp-public-map-js-functions-1-12",
+      "target": "professional-scanner-fn-public-map-js-buildtreegraph",
+      "type": "dependency"
+    },
+    {
+      "source": "professional-scanner-grp-public-map-js-functions-1-12",
+      "target": "professional-scanner-fn-public-map-js-exportmappng",
+      "type": "dependency"
+    },
+    {
+      "source": "professional-scanner-grp-public-map-js-functions-1-12",
+      "target": "professional-scanner-fn-public-map-js-exportmapsvg",
+      "type": "dependency"
+    },
+    {
+      "source": "professional-scanner-grp-public-map-js-functions-1-12",
+      "target": "professional-scanner-fn-public-map-js-exportmapexcel",
+      "type": "dependency"
+    },
+    {
+      "source": "professional-scanner-grp-public-map-js-functions-1-12",
+      "target": "professional-scanner-fn-public-map-js-setstatus",
+      "type": "dependency"
+    },
+    {
+      "source": "professional-scanner-grp-public-map-js-functions-1-12",
+      "target": "professional-scanner-fn-public-map-js-hostcolor",
+      "type": "dependency"
+    },
+    {
+      "source": "professional-scanner-grp-public-map-js-functions-1-12",
+      "target": "professional-scanner-fn-public-map-js-shortlabel",
+      "type": "dependency"
+    },
+    {
+      "source": "professional-scanner-grp-public-map-js-functions-1-12",
+      "target": "professional-scanner-fn-public-map-js-generatenodecanvas",
+      "type": "dependency"
+    },
+    {
+      "source": "professional-scanner-grp-public-map-js-functions-1-12",
+      "target": "professional-scanner-fn-public-map-js-roundrect",
+      "type": "dependency"
+    },
+    {
+      "source": "professional-scanner-grp-public-map-js-functions-1-12",
+      "target": "professional-scanner-fn-public-map-js-stampfilename",
+      "type": "dependency"
+    },
+    {
+      "source": "professional-scanner-grp-public-map-js-functions-13-14",
+      "target": "professional-scanner-fn-public-map-js-exportmapimage",
+      "type": "dependency"
+    },
+    {
+      "source": "professional-scanner-grp-public-map-js-functions-13-14",
+      "target": "professional-scanner-fn-public-map-js-getscenecanvas",
       "type": "dependency"
     },
     {
