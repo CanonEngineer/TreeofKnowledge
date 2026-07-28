@@ -1,0 +1,777 @@
+{
+  "slug": "eagle-offensive-platform",
+  "name": "EagleOffensivePlatform",
+  "repoUrl": "https://github.com/CanonEngineer/EagleOffensivePlatform",
+  "color": "#c45c26",
+  "demoUrl": "http://127.0.0.1:8787",
+  "nodeCount": 44,
+  "categories": {
+    "core": {
+      "label": "Backend",
+      "color": "#3b82f6"
+    },
+    "network": {
+      "label": "Rede / Scan",
+      "color": "#22d3ee"
+    },
+    "frontend": {
+      "label": "Frontend",
+      "color": "#eab308"
+    },
+    "scripts": {
+      "label": "Scripts",
+      "color": "#64748b"
+    },
+    "other": {
+      "label": "Outros",
+      "color": "#64748b"
+    }
+  },
+  "nodes": [
+    {
+      "id": "eop-root",
+      "label": "EagleOffensivePlatform",
+      "parent": null,
+      "layer": "root",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 2.2,
+      "file": "README.md",
+      "description": "Árvore completa do repositório — 33 arquivos de código mapeados (agent, console, docs, landing, config)."
+    },
+    {
+      "id": "eop-dir-agent",
+      "label": "agent/",
+      "parent": "eop-root",
+      "layer": "module",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 1.35,
+      "file": "agent/",
+      "description": "Pacote/pasta `agent/` do EagleOffensivePlatform."
+    },
+    {
+      "id": "eop-dir-docs",
+      "label": "docs/",
+      "parent": "eop-root",
+      "layer": "module",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 1.35,
+      "file": "docs/",
+      "description": "Pacote/pasta `docs/` do EagleOffensivePlatform."
+    },
+    {
+      "id": "eop-dir-landing",
+      "label": "landing/",
+      "parent": "eop-root",
+      "layer": "module",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 1.35,
+      "file": "landing/",
+      "description": "Pacote/pasta `landing/` do EagleOffensivePlatform."
+    },
+    {
+      "id": "eop-dir-agent-config",
+      "label": "config/",
+      "parent": "eop-dir-agent",
+      "layer": "module",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 1.35,
+      "file": "agent/config/",
+      "description": "Pacote/pasta `agent/config/` do EagleOffensivePlatform."
+    },
+    {
+      "id": "eop-dir-agent-console",
+      "label": "console/",
+      "parent": "eop-dir-agent",
+      "layer": "module",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 1.35,
+      "file": "agent/console/",
+      "description": "Pacote/pasta `agent/console/` do EagleOffensivePlatform."
+    },
+    {
+      "id": "eop-dir-agent-eagle",
+      "label": "eagle/",
+      "parent": "eop-dir-agent",
+      "layer": "module",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 1.35,
+      "file": "agent/eagle/",
+      "description": "Pacote/pasta `agent/eagle/` do EagleOffensivePlatform."
+    },
+    {
+      "id": "eop-dir-agent-scripts",
+      "label": "scripts/",
+      "parent": "eop-dir-agent",
+      "layer": "module",
+      "category": "scripts",
+      "categoryLabel": "Scripts",
+      "color": "#64748b",
+      "size": 1.35,
+      "file": "agent/scripts/",
+      "description": "Pacote/pasta `agent/scripts/` do EagleOffensivePlatform."
+    },
+    {
+      "id": "eop-dir-docs-images",
+      "label": "images/",
+      "parent": "eop-dir-docs",
+      "layer": "module",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 1.35,
+      "file": "docs/images/",
+      "description": "Pacote/pasta `docs/images/` do EagleOffensivePlatform."
+    },
+    {
+      "id": "eop-dir-agent-console-static",
+      "label": "static/",
+      "parent": "eop-dir-agent-console",
+      "layer": "module",
+      "category": "frontend",
+      "categoryLabel": "Frontend",
+      "color": "#eab308",
+      "size": 1.35,
+      "file": "agent/console/static/",
+      "description": "Pacote/pasta `agent/console/static/` do EagleOffensivePlatform."
+    },
+    {
+      "id": "eop-file-gitignore",
+      "label": ".gitignore",
+      "parent": "eop-root",
+      "layer": "file",
+      "category": "other",
+      "categoryLabel": "Outros",
+      "color": "#64748b",
+      "size": 0.85,
+      "file": ".gitignore",
+      "description": "Código-fonte: `.gitignore`"
+    },
+    {
+      "id": "eop-file-agent-readme-md",
+      "label": "README.md",
+      "parent": "eop-dir-agent",
+      "layer": "file",
+      "category": "other",
+      "categoryLabel": "Outros",
+      "color": "#64748b",
+      "size": 0.85,
+      "file": "agent/README.md",
+      "description": "Código-fonte: `agent/README.md`"
+    },
+    {
+      "id": "eop-file-agent-config-coverage-yaml",
+      "label": "coverage.yaml",
+      "parent": "eop-dir-agent-config",
+      "layer": "file",
+      "category": "other",
+      "categoryLabel": "Outros",
+      "color": "#64748b",
+      "size": 0.85,
+      "file": "agent/config/coverage.yaml",
+      "description": "Código-fonte: `agent/config/coverage.yaml`"
+    },
+    {
+      "id": "eop-file-agent-config-rules-yaml",
+      "label": "rules.yaml",
+      "parent": "eop-dir-agent-config",
+      "layer": "file",
+      "category": "other",
+      "categoryLabel": "Outros",
+      "color": "#64748b",
+      "size": 0.85,
+      "file": "agent/config/rules.yaml",
+      "description": "Código-fonte: `agent/config/rules.yaml`"
+    },
+    {
+      "id": "eop-file-agent-console-static-app-js",
+      "label": "app.js",
+      "parent": "eop-dir-agent-console-static",
+      "layer": "file",
+      "category": "frontend",
+      "categoryLabel": "Frontend",
+      "color": "#eab308",
+      "size": 0.85,
+      "file": "agent/console/static/app.js",
+      "description": "Código-fonte: `agent/console/static/app.js`"
+    },
+    {
+      "id": "eop-file-agent-console-static-index-html",
+      "label": "index.html",
+      "parent": "eop-dir-agent-console-static",
+      "layer": "file",
+      "category": "frontend",
+      "categoryLabel": "Frontend",
+      "color": "#eab308",
+      "size": 0.85,
+      "file": "agent/console/static/index.html",
+      "description": "Código-fonte: `agent/console/static/index.html`"
+    },
+    {
+      "id": "eop-file-agent-console-static-styles-css",
+      "label": "styles.css",
+      "parent": "eop-dir-agent-console-static",
+      "layer": "file",
+      "category": "frontend",
+      "categoryLabel": "Frontend",
+      "color": "#eab308",
+      "size": 0.85,
+      "file": "agent/console/static/styles.css",
+      "description": "Código-fonte: `agent/console/static/styles.css`"
+    },
+    {
+      "id": "eop-grp-agent-eagle-files-c-e-m-r",
+      "label": "Arquivos #–C–E–M–R",
+      "parent": "eop-dir-agent-eagle",
+      "layer": "module",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 1.35,
+      "file": "agent/eagle/[files-#–c–e–m–r]",
+      "description": "Grupo de arquivos em `agent/eagle/` — Arquivos #–C–E–M–R"
+    },
+    {
+      "id": "eop-grp-agent-eagle-files-s",
+      "label": "Arquivos S",
+      "parent": "eop-dir-agent-eagle",
+      "layer": "module",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 1.35,
+      "file": "agent/eagle/[files-s]",
+      "description": "Grupo de arquivos em `agent/eagle/` — Arquivos S"
+    },
+    {
+      "id": "eop-file-agent-eagle-init-py",
+      "label": "__init__.py",
+      "parent": "eop-grp-agent-eagle-files-c-e-m-r",
+      "layer": "file",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 0.85,
+      "file": "agent/eagle/__init__.py",
+      "description": "Código-fonte: `agent/eagle/__init__.py`"
+    },
+    {
+      "id": "eop-file-agent-eagle-main-py",
+      "label": "__main__.py",
+      "parent": "eop-grp-agent-eagle-files-c-e-m-r",
+      "layer": "file",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 0.85,
+      "file": "agent/eagle/__main__.py",
+      "description": "Código-fonte: `agent/eagle/__main__.py`"
+    },
+    {
+      "id": "eop-file-agent-eagle-cli-py",
+      "label": "cli.py",
+      "parent": "eop-grp-agent-eagle-files-c-e-m-r",
+      "layer": "file",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 0.85,
+      "file": "agent/eagle/cli.py",
+      "description": "Código-fonte: `agent/eagle/cli.py`"
+    },
+    {
+      "id": "eop-file-agent-eagle-console-server-py",
+      "label": "console_server.py",
+      "parent": "eop-grp-agent-eagle-files-c-e-m-r",
+      "layer": "file",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 0.85,
+      "file": "agent/eagle/console_server.py",
+      "description": "Código-fonte: `agent/eagle/console_server.py`"
+    },
+    {
+      "id": "eop-file-agent-eagle-correlator-py",
+      "label": "correlator.py",
+      "parent": "eop-grp-agent-eagle-files-c-e-m-r",
+      "layer": "file",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 0.85,
+      "file": "agent/eagle/correlator.py",
+      "description": "Código-fonte: `agent/eagle/correlator.py`"
+    },
+    {
+      "id": "eop-file-agent-eagle-coverage-py",
+      "label": "coverage.py",
+      "parent": "eop-grp-agent-eagle-files-c-e-m-r",
+      "layer": "file",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 0.85,
+      "file": "agent/eagle/coverage.py",
+      "description": "Código-fonte: `agent/eagle/coverage.py`"
+    },
+    {
+      "id": "eop-file-agent-eagle-engine-py",
+      "label": "engine.py",
+      "parent": "eop-grp-agent-eagle-files-c-e-m-r",
+      "layer": "file",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 0.85,
+      "file": "agent/eagle/engine.py",
+      "description": "Código-fonte: `agent/eagle/engine.py`"
+    },
+    {
+      "id": "eop-file-agent-eagle-memory-scan-py",
+      "label": "memory_scan.py",
+      "parent": "eop-grp-agent-eagle-files-c-e-m-r",
+      "layer": "file",
+      "category": "network",
+      "categoryLabel": "Rede / Scan",
+      "color": "#22d3ee",
+      "size": 0.85,
+      "file": "agent/eagle/memory_scan.py",
+      "description": "Código-fonte: `agent/eagle/memory_scan.py`"
+    },
+    {
+      "id": "eop-file-agent-eagle-models-py",
+      "label": "models.py",
+      "parent": "eop-grp-agent-eagle-files-c-e-m-r",
+      "layer": "file",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 0.85,
+      "file": "agent/eagle/models.py",
+      "description": "Código-fonte: `agent/eagle/models.py`"
+    },
+    {
+      "id": "eop-file-agent-eagle-response-py",
+      "label": "response.py",
+      "parent": "eop-grp-agent-eagle-files-c-e-m-r",
+      "layer": "file",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 0.85,
+      "file": "agent/eagle/response.py",
+      "description": "Código-fonte: `agent/eagle/response.py`"
+    },
+    {
+      "id": "eop-file-agent-eagle-runner-py",
+      "label": "runner.py",
+      "parent": "eop-grp-agent-eagle-files-c-e-m-r",
+      "layer": "file",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 0.85,
+      "file": "agent/eagle/runner.py",
+      "description": "Código-fonte: `agent/eagle/runner.py`"
+    },
+    {
+      "id": "eop-file-agent-eagle-sensor-py",
+      "label": "sensor.py",
+      "parent": "eop-grp-agent-eagle-files-s",
+      "layer": "file",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 0.85,
+      "file": "agent/eagle/sensor.py",
+      "description": "Código-fonte: `agent/eagle/sensor.py`"
+    },
+    {
+      "id": "eop-file-agent-eagle-service-py",
+      "label": "service.py",
+      "parent": "eop-grp-agent-eagle-files-s",
+      "layer": "file",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 0.85,
+      "file": "agent/eagle/service.py",
+      "description": "Código-fonte: `agent/eagle/service.py`"
+    },
+    {
+      "id": "eop-file-agent-scripts-install-service-ps1",
+      "label": "install_service.ps1",
+      "parent": "eop-dir-agent-scripts",
+      "layer": "file",
+      "category": "scripts",
+      "categoryLabel": "Scripts",
+      "color": "#64748b",
+      "size": 0.85,
+      "file": "agent/scripts/install_service.ps1",
+      "description": "Código-fonte: `agent/scripts/install_service.ps1`"
+    },
+    {
+      "id": "eop-file-agent-scripts-uninstall-service-ps1",
+      "label": "uninstall_service.ps1",
+      "parent": "eop-dir-agent-scripts",
+      "layer": "file",
+      "category": "scripts",
+      "categoryLabel": "Scripts",
+      "color": "#64748b",
+      "size": 0.85,
+      "file": "agent/scripts/uninstall_service.ps1",
+      "description": "Código-fonte: `agent/scripts/uninstall_service.ps1`"
+    },
+    {
+      "id": "eop-file-docs-architecture-md",
+      "label": "ARCHITECTURE.md",
+      "parent": "eop-dir-docs",
+      "layer": "file",
+      "category": "other",
+      "categoryLabel": "Outros",
+      "color": "#64748b",
+      "size": 0.85,
+      "file": "docs/ARCHITECTURE.md",
+      "description": "Código-fonte: `docs/ARCHITECTURE.md`"
+    },
+    {
+      "id": "eop-file-docs-monitoring-scope-md",
+      "label": "MONITORING_SCOPE.md",
+      "parent": "eop-dir-docs",
+      "layer": "file",
+      "category": "other",
+      "categoryLabel": "Outros",
+      "color": "#64748b",
+      "size": 0.85,
+      "file": "docs/MONITORING_SCOPE.md",
+      "description": "Código-fonte: `docs/MONITORING_SCOPE.md`"
+    },
+    {
+      "id": "eop-file-docs-roadmap-md",
+      "label": "ROADMAP.md",
+      "parent": "eop-dir-docs",
+      "layer": "file",
+      "category": "other",
+      "categoryLabel": "Outros",
+      "color": "#64748b",
+      "size": 0.85,
+      "file": "docs/ROADMAP.md",
+      "description": "Código-fonte: `docs/ROADMAP.md`"
+    },
+    {
+      "id": "eop-file-docs-images-architecture-svg",
+      "label": "architecture.svg",
+      "parent": "eop-dir-docs-images",
+      "layer": "file",
+      "category": "other",
+      "categoryLabel": "Outros",
+      "color": "#64748b",
+      "size": 0.85,
+      "file": "docs/images/architecture.svg",
+      "description": "Código-fonte: `docs/images/architecture.svg`"
+    },
+    {
+      "id": "eop-file-docs-images-console-flow-svg",
+      "label": "console-flow.svg",
+      "parent": "eop-dir-docs-images",
+      "layer": "file",
+      "category": "other",
+      "categoryLabel": "Outros",
+      "color": "#64748b",
+      "size": 0.85,
+      "file": "docs/images/console-flow.svg",
+      "description": "Código-fonte: `docs/images/console-flow.svg`"
+    },
+    {
+      "id": "eop-file-docs-images-detection-pipeline-svg",
+      "label": "detection-pipeline.svg",
+      "parent": "eop-dir-docs-images",
+      "layer": "file",
+      "category": "other",
+      "categoryLabel": "Outros",
+      "color": "#64748b",
+      "size": 0.85,
+      "file": "docs/images/detection-pipeline.svg",
+      "description": "Código-fonte: `docs/images/detection-pipeline.svg`"
+    },
+    {
+      "id": "eop-file-docs-images-eagle-hero-svg",
+      "label": "eagle-hero.svg",
+      "parent": "eop-dir-docs-images",
+      "layer": "file",
+      "category": "other",
+      "categoryLabel": "Outros",
+      "color": "#64748b",
+      "size": 0.85,
+      "file": "docs/images/eagle-hero.svg",
+      "description": "Código-fonte: `docs/images/eagle-hero.svg`"
+    },
+    {
+      "id": "eop-file-landing-index-html",
+      "label": "index.html",
+      "parent": "eop-dir-landing",
+      "layer": "file",
+      "category": "frontend",
+      "categoryLabel": "Frontend",
+      "color": "#eab308",
+      "size": 0.85,
+      "file": "landing/index.html",
+      "description": "Código-fonte: `landing/index.html`"
+    },
+    {
+      "id": "eop-file-landing-main-js",
+      "label": "main.js",
+      "parent": "eop-dir-landing",
+      "layer": "file",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 0.85,
+      "file": "landing/main.js",
+      "description": "Código-fonte: `landing/main.js`"
+    },
+    {
+      "id": "eop-file-landing-styles-css",
+      "label": "styles.css",
+      "parent": "eop-dir-landing",
+      "layer": "file",
+      "category": "frontend",
+      "categoryLabel": "Frontend",
+      "color": "#eab308",
+      "size": 0.85,
+      "file": "landing/styles.css",
+      "description": "Código-fonte: `landing/styles.css`"
+    }
+  ],
+  "links": [
+    {
+      "source": "eop-root",
+      "target": "eop-dir-agent",
+      "type": "dependency"
+    },
+    {
+      "source": "eop-root",
+      "target": "eop-dir-docs",
+      "type": "dependency"
+    },
+    {
+      "source": "eop-root",
+      "target": "eop-dir-landing",
+      "type": "dependency"
+    },
+    {
+      "source": "eop-dir-agent",
+      "target": "eop-dir-agent-config",
+      "type": "dependency"
+    },
+    {
+      "source": "eop-dir-agent",
+      "target": "eop-dir-agent-console",
+      "type": "dependency"
+    },
+    {
+      "source": "eop-dir-agent",
+      "target": "eop-dir-agent-eagle",
+      "type": "dependency"
+    },
+    {
+      "source": "eop-dir-agent",
+      "target": "eop-dir-agent-scripts",
+      "type": "dependency"
+    },
+    {
+      "source": "eop-dir-docs",
+      "target": "eop-dir-docs-images",
+      "type": "dependency"
+    },
+    {
+      "source": "eop-dir-agent-console",
+      "target": "eop-dir-agent-console-static",
+      "type": "dependency"
+    },
+    {
+      "source": "eop-root",
+      "target": "eop-file-gitignore",
+      "type": "dependency"
+    },
+    {
+      "source": "eop-dir-agent",
+      "target": "eop-file-agent-readme-md",
+      "type": "dependency"
+    },
+    {
+      "source": "eop-dir-agent-config",
+      "target": "eop-file-agent-config-coverage-yaml",
+      "type": "dependency"
+    },
+    {
+      "source": "eop-dir-agent-config",
+      "target": "eop-file-agent-config-rules-yaml",
+      "type": "dependency"
+    },
+    {
+      "source": "eop-dir-agent-console-static",
+      "target": "eop-file-agent-console-static-app-js",
+      "type": "dependency"
+    },
+    {
+      "source": "eop-dir-agent-console-static",
+      "target": "eop-file-agent-console-static-index-html",
+      "type": "dependency"
+    },
+    {
+      "source": "eop-dir-agent-console-static",
+      "target": "eop-file-agent-console-static-styles-css",
+      "type": "dependency"
+    },
+    {
+      "source": "eop-dir-agent-eagle",
+      "target": "eop-grp-agent-eagle-files-c-e-m-r",
+      "type": "dependency"
+    },
+    {
+      "source": "eop-dir-agent-eagle",
+      "target": "eop-grp-agent-eagle-files-s",
+      "type": "dependency"
+    },
+    {
+      "source": "eop-grp-agent-eagle-files-c-e-m-r",
+      "target": "eop-file-agent-eagle-init-py",
+      "type": "dependency"
+    },
+    {
+      "source": "eop-grp-agent-eagle-files-c-e-m-r",
+      "target": "eop-file-agent-eagle-main-py",
+      "type": "dependency"
+    },
+    {
+      "source": "eop-grp-agent-eagle-files-c-e-m-r",
+      "target": "eop-file-agent-eagle-cli-py",
+      "type": "dependency"
+    },
+    {
+      "source": "eop-grp-agent-eagle-files-c-e-m-r",
+      "target": "eop-file-agent-eagle-console-server-py",
+      "type": "dependency"
+    },
+    {
+      "source": "eop-grp-agent-eagle-files-c-e-m-r",
+      "target": "eop-file-agent-eagle-correlator-py",
+      "type": "dependency"
+    },
+    {
+      "source": "eop-grp-agent-eagle-files-c-e-m-r",
+      "target": "eop-file-agent-eagle-coverage-py",
+      "type": "dependency"
+    },
+    {
+      "source": "eop-grp-agent-eagle-files-c-e-m-r",
+      "target": "eop-file-agent-eagle-engine-py",
+      "type": "dependency"
+    },
+    {
+      "source": "eop-grp-agent-eagle-files-c-e-m-r",
+      "target": "eop-file-agent-eagle-memory-scan-py",
+      "type": "dependency"
+    },
+    {
+      "source": "eop-grp-agent-eagle-files-c-e-m-r",
+      "target": "eop-file-agent-eagle-models-py",
+      "type": "dependency"
+    },
+    {
+      "source": "eop-grp-agent-eagle-files-c-e-m-r",
+      "target": "eop-file-agent-eagle-response-py",
+      "type": "dependency"
+    },
+    {
+      "source": "eop-grp-agent-eagle-files-c-e-m-r",
+      "target": "eop-file-agent-eagle-runner-py",
+      "type": "dependency"
+    },
+    {
+      "source": "eop-grp-agent-eagle-files-s",
+      "target": "eop-file-agent-eagle-sensor-py",
+      "type": "dependency"
+    },
+    {
+      "source": "eop-grp-agent-eagle-files-s",
+      "target": "eop-file-agent-eagle-service-py",
+      "type": "dependency"
+    },
+    {
+      "source": "eop-dir-agent-scripts",
+      "target": "eop-file-agent-scripts-install-service-ps1",
+      "type": "dependency"
+    },
+    {
+      "source": "eop-dir-agent-scripts",
+      "target": "eop-file-agent-scripts-uninstall-service-ps1",
+      "type": "dependency"
+    },
+    {
+      "source": "eop-dir-docs",
+      "target": "eop-file-docs-architecture-md",
+      "type": "dependency"
+    },
+    {
+      "source": "eop-dir-docs",
+      "target": "eop-file-docs-monitoring-scope-md",
+      "type": "dependency"
+    },
+    {
+      "source": "eop-dir-docs",
+      "target": "eop-file-docs-roadmap-md",
+      "type": "dependency"
+    },
+    {
+      "source": "eop-dir-docs-images",
+      "target": "eop-file-docs-images-architecture-svg",
+      "type": "dependency"
+    },
+    {
+      "source": "eop-dir-docs-images",
+      "target": "eop-file-docs-images-console-flow-svg",
+      "type": "dependency"
+    },
+    {
+      "source": "eop-dir-docs-images",
+      "target": "eop-file-docs-images-detection-pipeline-svg",
+      "type": "dependency"
+    },
+    {
+      "source": "eop-dir-docs-images",
+      "target": "eop-file-docs-images-eagle-hero-svg",
+      "type": "dependency"
+    },
+    {
+      "source": "eop-dir-landing",
+      "target": "eop-file-landing-index-html",
+      "type": "dependency"
+    },
+    {
+      "source": "eop-dir-landing",
+      "target": "eop-file-landing-main-js",
+      "type": "dependency"
+    },
+    {
+      "source": "eop-dir-landing",
+      "target": "eop-file-landing-styles-css",
+      "type": "dependency"
+    }
+  ]
+}

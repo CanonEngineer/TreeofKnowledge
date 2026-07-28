@@ -133,6 +133,7 @@ A **Árvore do Conhecimento** é o hub central de todos os projetos do **CanonEn
 | 24 | **PHPDaoProject** | PHP DAO | 6 | [PHPDaoProject](https://github.com/CanonEngineer/PHPDaoProject) |
 | 25 | **DangerZone** | Python · Cybersecurity Labs | 133 | [DangerZone](https://github.com/CanonEngineer/DangerZone) |
 | 26 | **SentinelAI** | FastAPI + React + Nmap + SNMP | 25 | [SentinelAI](https://github.com/CanonEngineer/SentinelAI) |
+| 27 | **EagleOffensivePlatform** | Python + psutil + YAML + HTTP Console | 44 | [EagleOffensivePlatform](https://github.com/CanonEngineer/EagleOffensivePlatform) |
 
 ---
 

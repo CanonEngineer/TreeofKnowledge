@@ -18,6 +18,7 @@ DANGERZONE_FILE = os.path.join(ROOT, "scripts", "dangerzone-project.json")
 SMARTHOME_FILE = os.path.join(ROOT, "scripts", "smarthome-project.json")
 SMARTFERRARI_FILE = os.path.join(ROOT, "scripts", "smartferrari-project.json")
 SENTINELAI_FILE = os.path.join(ROOT, "scripts", "sentinelai-project.json")
+EAGLE_FILE = os.path.join(ROOT, "scripts", "eagle-project.json")
 FILL_SCRIPT = os.path.join(ROOT, "scripts", "fill-full-code.py")
 
 
@@ -57,7 +58,11 @@ def main():
   if os.path.isfile(SENTINELAI_FILE):
     with open(SENTINELAI_FILE, encoding="utf-8") as f:
       sentinelai = [json.load(f)]
-  projects = [cpe] + others[:1] + [dropbox, restaurant] + others[1:] + [veyon] + extras + dangerzone + smarthome + smartferrari + [canonsync] + sentinelai
+  eagle = []
+  if os.path.isfile(EAGLE_FILE):
+    with open(EAGLE_FILE, encoding="utf-8") as f:
+      eagle = [json.load(f)]
+  projects = [cpe] + others[:1] + [dropbox, restaurant] + others[1:] + [veyon] + extras + dangerzone + smarthome + smartferrari + [canonsync] + sentinelai + eagle
   js = "/* Árvore do Conhecimento — " + str(sum(len(p["nodes"]) for p in projects)) + " nós */\nconst PROJECTS = "
   js += json.dumps(projects, ensure_ascii=False, indent=2) + ";\n"
   with open(OUT, "w", encoding="utf-8") as f:
