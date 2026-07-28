@@ -4,7 +4,7 @@
   "repoUrl": "https://github.com/CanonEngineer/SentinelAI",
   "color": "#38bdf8",
   "demoUrl": "http://localhost:5173",
-  "nodeCount": 387,
+  "nodeCount": 389,
   "categories": {
     "core": {
       "label": "Backend",
@@ -46,7 +46,7 @@
       "color": "#3b82f6",
       "size": 2.2,
       "file": "README.md",
-      "description": "Árvore completa do repositório — 306 arquivos de código mapeados (backend, frontend, mobile, docs, scripts, deploy)."
+      "description": "Árvore completa do repositório — 307 arquivos de código mapeados (backend, frontend, mobile, docs, scripts, deploy)."
     },
     {
       "id": "sai-dir-github",
@@ -3529,6 +3529,18 @@
       "description": "Grupo de arquivos em `docs/` — Arquivos P (13–14)"
     },
     {
+      "id": "sai-grp-docs-files-z",
+      "label": "Arquivos Z",
+      "parent": "sai-dir-docs",
+      "layer": "module",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 1.35,
+      "file": "docs/[files-z]",
+      "description": "Grupo de arquivos em `docs/` — Arquivos Z"
+    },
+    {
       "id": "sai-file-docs-cronograma-estabilizacao-md",
       "label": "CRONOGRAMA-ESTABILIZACAO.md",
       "parent": "sai-grp-docs-files-c-f-m",
@@ -3731,6 +3743,18 @@
       "size": 0.85,
       "file": "docs/PHASE-9-ROADMAP.md",
       "description": "Código-fonte: `docs/PHASE-9-ROADMAP.md`"
+    },
+    {
+      "id": "sai-file-docs-zion-5-passos-md",
+      "label": "ZION-5-PASSOS.md",
+      "parent": "sai-grp-docs-files-z",
+      "layer": "file",
+      "category": "other",
+      "categoryLabel": "Outros",
+      "color": "#64748b",
+      "size": 0.85,
+      "file": "docs/ZION-5-PASSOS.md",
+      "description": "Código-fonte: `docs/ZION-5-PASSOS.md`"
     },
     {
       "id": "sai-file-frontend-dockerfile",
@@ -6133,6 +6157,11 @@
       "type": "dependency"
     },
     {
+      "source": "sai-dir-docs",
+      "target": "sai-grp-docs-files-z",
+      "type": "dependency"
+    },
+    {
       "source": "sai-grp-docs-files-c-f-m",
       "target": "sai-file-docs-cronograma-estabilizacao-md",
       "type": "dependency"
@@ -6215,6 +6244,11 @@
     {
       "source": "sai-grp-docs-files-p-13-14",
       "target": "sai-file-docs-phase-9-roadmap-md",
+      "type": "dependency"
+    },
+    {
+      "source": "sai-grp-docs-files-z",
+      "target": "sai-file-docs-zion-5-passos-md",
       "type": "dependency"
     },
     {
