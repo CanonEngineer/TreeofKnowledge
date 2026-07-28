@@ -159,7 +159,8 @@ def build(repo: Path) -> dict:
             "title": "SentinelAI",
             "description": (
                 f"Árvore completa do repositório — {len(files)} arquivos de código mapeados "
-                "(backend, frontend, mobile, docs, scripts, deploy)."
+                "(backend, frontend, mobile, docs, scripts, deploy). "
+                "Estabilização Fases 1–8 + 9b (credenciais, wallboard, agent lab, CMDB, SLA, NetFlow UI)."
             ),
             "file": "README.md",
             "code": readme_code,
@@ -167,6 +168,7 @@ def build(repo: Path) -> dict:
                 "Repo: https://github.com/CanonEngineer/SentinelAI",
                 f"Arquivos na árvore: {len(files)}",
                 "2D + Galaxy 3D — cobertura total do código-fonte",
+                "CHANGELOG v2.2 · docs/UPGRADE-v2.2.md",
                 "docker compose up → http://localhost:5173",
             ],
         }
@@ -328,7 +330,8 @@ def build(repo: Path) -> dict:
         "stack": "FastAPI + React + Celery + Nmap + SNMP + WMI",
         "summary": (
             f"Cobertura completa: {len(files)} arquivos de código no repositório "
-            f"({len(nodes)} nós na árvore incluindo pastas)."
+            f"({len(nodes)} nós na árvore incluindo pastas). "
+            "NMS estabilizado v2.2 — Zion, wallboard, agent lab, SLA site, playbooks visuais."
         ),
         "nodes": nodes,
         "meta": {
