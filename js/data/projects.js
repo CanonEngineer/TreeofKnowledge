@@ -1,4 +1,4 @@
-/* Árvore do Conhecimento — 4359 nós */
+/* Árvore do Conhecimento — 4387 nós */
 const PROJECTS = [
   {
     "slug": "canon-python-ecommerce",
@@ -52275,6 +52275,389 @@ const PROJECTS = [
     "meta": {
       "sourceFiles": 43,
       "treeNodes": 56,
+      "complete": true
+    }
+  },
+  {
+    "slug": "canon-sync-engine",
+    "name": "CanonSyncEngine",
+    "repoUrl": "https://github.com/CanonEngineer/CanonSyncEngine",
+    "color": "#0ea5e9",
+    "icon": "scanner",
+    "stack": ".NET 8 + WPF + Windows Service",
+    "summary": "Cobertura completa: 22 arquivos de código no repositório (28 nós na árvore incluindo pastas).",
+    "nodes": [
+      {
+        "id": "canon-sync-engine-root",
+        "parent": null,
+        "layer": "root",
+        "title": "CanonSyncEngine",
+        "description": "Cobertura completa: 101 arquivos de código no repositório (150 nós na árvore incluindo pastas).",
+        "file": "README.md",
+        "code": "# CanonCopy\r\n\r\nBackup **append-only** de arquivos de log. Copia apenas bytes novos para um histórico permanente. Nunca apaga o backup — mesmo se a origem for truncada ou recriada.\r\n\r\n## Solução\r\n\r\n| Projeto | Função |\r\n|---------|--------|\r\n| `CanonCopy.Core` | Motor de tail + offset + status |\r\n| `CanonCopy.Service` | Windows Service (sem usuário logado) |\r\n| `CanonCopy.UI` | Interface de configuração e telemetria |\r\n\r\nConfiguração e estado ficam em `%ProgramData%\\CanonCopy\\`:\r\n\r\n- `config.json` — origem, backup, intervalo\r\n- `offset.dat` — última posição lida\r\n- `status.json` — telemetria ao vivo\r\n- `activity.jsonl` — feed de eventos\r\n\r\n## Build\r\n\r\n```powershell\r\ndotnet build CanonCopy.sln -c Release\r\n```\r\n\r\n## Uso rápido (teste)\r\n\r\n```powershell\r\ndotnet run --project src/CanonCopy.UI\r\n```\r\n\r\n1. Informe origem e backup  \r\n2. **Salvar configuração**  \r\n3. **Iniciar monitor local**  \r\n4. Acompanhe a atividade e a telemetria  \r\n\r\n## Serviço Windows\r\n\r\nCompile o Service e, pela UI (como administrador quando pedido):\r\n\r\n1. **Instalar serviço**  \r\n2. **Iniciar serviço**  \r\n\r\nOu manualmente:\r\n\r\n```powershell\r\nsc create CanonCopyLogGuard binPath= \"C:\\caminho\\CanonCopy.Service.exe\" start= auto DisplayName= \"CanonCopy Log Guard\"\r\nsc start CanonCopyLogGuard\r\n```\r\n\r\n## Comportamento\r\n\r\n- Arquivo cresce → copia só o delta  \r\n- Arquivo truncado/recriado → offset sincroniza com o tamanho atual; backup **não** é alterado  \r\n- Polling (recomendado também para UNC `\\\\servidor\\...`)  \r\n\r\n## Rede vs local\r\n\r\n| Origem | Intervalo sugerido |\r\n|--------|-------------------|\r\n| Disco local | 500–2000 ms |\r\n| Compartilhamento UNC | 2000–5000 ms |\r\n",
+        "implementation": [
+          "Repo: https://github.com/CanonEngineer/CanonSyncEngine",
+          "Arquivos na árvore: 22",
+          "2D + Galaxy 3D — cobertura total do código-fonte"
+        ]
+      },
+      {
+        "id": "canon-sync-engine-dir-src",
+        "parent": "canon-sync-engine-root",
+        "layer": "module",
+        "title": "src/",
+        "description": "Pacote/pasta `src/` do projeto.",
+        "file": "src/",
+        "code": "# Diretório: src/\n# Contém arquivos e subpastas do projeto.\n",
+        "implementation": [
+          "path: src/",
+          "nó de agrupamento na árvore"
+        ]
+      },
+      {
+        "id": "canon-sync-engine-dir-src-canoncopy-core",
+        "parent": "canon-sync-engine-dir-src",
+        "layer": "module",
+        "title": "CanonCopy.Core/",
+        "description": "Pacote/pasta `src/CanonCopy.Core/` do projeto.",
+        "file": "src/CanonCopy.Core/",
+        "code": "# Diretório: src/CanonCopy.Core/\n# Contém arquivos e subpastas do projeto.\n",
+        "implementation": [
+          "path: src/CanonCopy.Core/",
+          "nó de agrupamento na árvore"
+        ]
+      },
+      {
+        "id": "canon-sync-engine-dir-src-canoncopy-service",
+        "parent": "canon-sync-engine-dir-src",
+        "layer": "module",
+        "title": "CanonCopy.Service/",
+        "description": "Pacote/pasta `src/CanonCopy.Service/` do projeto.",
+        "file": "src/CanonCopy.Service/",
+        "code": "# Diretório: src/CanonCopy.Service/\n# Contém arquivos e subpastas do projeto.\n",
+        "implementation": [
+          "path: src/CanonCopy.Service/",
+          "nó de agrupamento na árvore"
+        ]
+      },
+      {
+        "id": "canon-sync-engine-dir-src-canoncopy-ui",
+        "parent": "canon-sync-engine-dir-src",
+        "layer": "module",
+        "title": "CanonCopy.UI/",
+        "description": "Pacote/pasta `src/CanonCopy.UI/` do projeto.",
+        "file": "src/CanonCopy.UI/",
+        "code": "# Diretório: src/CanonCopy.UI/\n# Contém arquivos e subpastas do projeto.\n",
+        "implementation": [
+          "path: src/CanonCopy.UI/",
+          "nó de agrupamento na árvore"
+        ]
+      },
+      {
+        "id": "canon-sync-engine-dir-src-canoncopy-service-properties",
+        "parent": "canon-sync-engine-dir-src-canoncopy-service",
+        "layer": "module",
+        "title": "Properties/",
+        "description": "Pacote/pasta `src/CanonCopy.Service/Properties/` do projeto.",
+        "file": "src/CanonCopy.Service/Properties/",
+        "code": "# Diretório: src/CanonCopy.Service/Properties/\n# Contém arquivos e subpastas do projeto.\n",
+        "implementation": [
+          "path: src/CanonCopy.Service/Properties/",
+          "nó de agrupamento na árvore"
+        ]
+      },
+      {
+        "id": "canon-sync-engine-dir-src-canoncopy-ui-controls",
+        "parent": "canon-sync-engine-dir-src-canoncopy-ui",
+        "layer": "module",
+        "title": "Controls/",
+        "description": "Pacote/pasta `src/CanonCopy.UI/Controls/` do projeto.",
+        "file": "src/CanonCopy.UI/Controls/",
+        "code": "# Diretório: src/CanonCopy.UI/Controls/\n# Contém arquivos e subpastas do projeto.\n",
+        "implementation": [
+          "path: src/CanonCopy.UI/Controls/",
+          "nó de agrupamento na árvore"
+        ]
+      },
+      {
+        "id": "canon-sync-engine-file-gitignore",
+        "parent": "canon-sync-engine-root",
+        "layer": "file",
+        "title": ".gitignore",
+        "description": "Código-fonte: `.gitignore`",
+        "file": ".gitignore",
+        "code": "bin/\r\nobj/\r\n.vs/\r\n*.user\r\n*.suo\r\n*.dll\r\n*.exe\r\n*.pdb\r\nappsettings.Development.json\r\n!src/**/appsettings.Development.json\r\n",
+        "implementation": [
+          "path: .gitignore",
+          "GitHub: https://github.com/CanonEngineer/CanonSyncEngine/blob/main/.gitignore"
+        ]
+      },
+      {
+        "id": "canon-sync-engine-file-src-canoncopy-core-apppaths-cs",
+        "parent": "canon-sync-engine-dir-src-canoncopy-core",
+        "layer": "file",
+        "title": "AppPaths.cs",
+        "description": "Código-fonte: `src/CanonCopy.Core/AppPaths.cs`",
+        "file": "src/CanonCopy.Core/AppPaths.cs",
+        "code": "namespace CanonCopy.Core;\r\n\r\npublic static class AppPaths\r\n{\r\n    public static string Root =>\r\n        Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.CommonApplicationData), \"CanonCopy\");\r\n\r\n    public static string ConfigFile => Path.Combine(Root, \"config.json\");\r\n    public static string StatusFile => Path.Combine(Root, \"status.json\");\r\n    public static string OffsetFile => Path.Combine(Root, \"offset.dat\");\r\n    public static string ActivityFile => Path.Combine(Root, \"activity.jsonl\");\r\n\r\n    public static void EnsureRoot()\r\n    {\r\n        Directory.CreateDirectory(Root);\r\n    }\r\n}\r\n",
+        "implementation": [
+          "path: src/CanonCopy.Core/AppPaths.cs",
+          "GitHub: https://github.com/CanonEngineer/CanonSyncEngine/blob/main/src/CanonCopy.Core/AppPaths.cs"
+        ]
+      },
+      {
+        "id": "canon-sync-engine-file-src-canoncopy-core-configstore-cs",
+        "parent": "canon-sync-engine-dir-src-canoncopy-core",
+        "layer": "file",
+        "title": "ConfigStore.cs",
+        "description": "Código-fonte: `src/CanonCopy.Core/ConfigStore.cs`",
+        "file": "src/CanonCopy.Core/ConfigStore.cs",
+        "code": "using System.Text.Json;\r\n\r\nnamespace CanonCopy.Core;\r\n\r\npublic static class ConfigStore\r\n{\r\n    private static readonly JsonSerializerOptions JsonOptions = new()\r\n    {\r\n        WriteIndented = true,\r\n        PropertyNamingPolicy = JsonNamingPolicy.CamelCase\r\n    };\r\n\r\n    public static MonitorOptions Load()\r\n    {\r\n        AppPaths.EnsureRoot();\r\n        if (!File.Exists(AppPaths.ConfigFile))\r\n        {\r\n            var defaults = MonitorOptions.CreateDefault();\r\n            Save(defaults);\r\n            return defaults;\r\n        }\r\n\r\n        var json = File.ReadAllText(AppPaths.ConfigFile);\r\n        return JsonSerializer.Deserialize<MonitorOptions>(json, JsonOptions) ?? MonitorOptions.CreateDefault();\r\n    }\r\n\r\n    public static void Save(MonitorOptions options)\r\n    {\r\n        AppPaths.EnsureRoot();\r\n        var json = JsonSerializer.Serialize(options, JsonOptions);\r\n        File.WriteAllText(AppPaths.ConfigFile, json);\r\n    }\r\n}\r\n",
+        "implementation": [
+          "path: src/CanonCopy.Core/ConfigStore.cs",
+          "GitHub: https://github.com/CanonEngineer/CanonSyncEngine/blob/main/src/CanonCopy.Core/ConfigStore.cs"
+        ]
+      },
+      {
+        "id": "canon-sync-engine-file-src-canoncopy-core-logtailmonitor-cs",
+        "parent": "canon-sync-engine-dir-src-canoncopy-core",
+        "layer": "file",
+        "title": "LogTailMonitor.cs",
+        "description": "Código-fonte: `src/CanonCopy.Core/LogTailMonitor.cs`",
+        "file": "src/CanonCopy.Core/LogTailMonitor.cs",
+        "code": "namespace CanonCopy.Core;\r\n\r\n/// <summary>\r\n/// Append-only log tail: copies only new bytes to a permanent backup.\r\n/// Never shrinks or deletes the backup. Handles truncate/recreate by syncing offset without re-copying.\r\n/// </summary>\r\npublic sealed class LogTailMonitor\r\n{\r\n    private readonly OffsetStore _offsetStore;\r\n    private readonly object _sync = new();\r\n    private CancellationTokenSource? _cts;\r\n    private Task? _loop;\r\n    private bool _firstSeen = true;\r\n\r\n    public MonitorOptions Options { get; private set; }\r\n    public MonitorStatus Status { get; } = new();\r\n\r\n    public event Action<MonitorStatus>? StatusChanged;\r\n    public event Action<ActivityEntry>? Activity;\r\n\r\n    public LogTailMonitor(MonitorOptions options, OffsetStore? offsetStore = null)\r\n    {\r\n        Options = options;\r\n        _offsetStore = offsetStore ?? new OffsetStore();\r\n        Status.OffsetBytes = _offsetStore.Load();\r\n        Status.SourcePath = options.SourcePath;\r\n        Status.BackupPath = options.BackupPath;\r\n    }\r\n\r\n    public void UpdateOptions(MonitorOptions options)\r\n    {\r\n        lock (_sync)\r\n        {\r\n            Options = options;\r\n            Status.SourcePath = options.SourcePath;\r\n            Status.BackupPath = options.BackupPath;\r\n        }\r\n    }\r\n\r\n    public void Start()\r\n    {\r\n        lock (_sync)\r\n        {\r\n            if (_loop is { IsCompleted: false })\r\n                return;\r\n\r\n            _cts = new CancellationTokenSource();\r\n            Status.IsRunning = true;\r\n            Status.State = \"Watching\";\r\n            Status.LastError = null;\r\n            Publish(\"Info\", \"Monitor iniciado.\");\r\n            _loop = Task.Run(() => RunAsync(_cts.Token));\r\n        }\r\n    }\r\n\r\n    public async Task StopAsync()\r\n    {\r\n        CancellationTokenSource? cts;\r\n        Task? loop;\r\n        lock (_sync)\r\n        {\r\n            cts = _cts;\r\n            loop = _loop;\r\n            _cts = null;\r\n            _loop = null;\r\n        }\r\n\r\n        if (cts is null)\r\n            return;\r\n\r\n        cts.Cancel();\r\n        try\r\n        {\r\n            if (loop is not null)\r\n                await loop.ConfigureAwait(false);\r\n        }\r\n        catch (OperationCanceledException)\r\n        {\r\n            // expected\r\n        }\r\n        finally\r\n        {\r\n            cts.Dispose();\r\n            Status.IsRunning = false;\r\n            Status.State = \"Stopped\";\r\n            Publish(\"Info\", \"Monitor parado.\");\r\n            FlushStatus();\r\n        }\r\n    }\r\n\r\n    private async Task RunAsync(CancellationToken token)\r\n    {\r\n        while (!token.IsCancellationRequested)\r\n        {\r\n            try\r\n            {\r\n                Tick();\r\n            }\r\n            catch (Exception ex)\r\n            {\r\n                Status.State = \"Error\";\r\n                Status.LastError = ex.Message;\r\n                Publish(\"Error\", ex.Message);\r\n                FlushStatus();\r\n            }\r\n\r\n            try\r\n            {\r\n                await Task.Delay(Math.Max(250, Options.PollIntervalMs), token).ConfigureAwait(false);\r\n            }\r\n            catch (OperationCanceledException)\r\n            {\r\n                break;\r\n            }\r\n        }\r\n    }\r\n\r\n    private void Tick()\r\n    {\r\n        MonitorOptions options;\r\n        lock (_sync)\r\n            options = Options;\r\n\r\n        Status.LastPollUtc = DateTimeOffset.UtcNow;\r\n        Status.SourcePath = options.SourcePath;\r\n        Status.BackupPath = options.BackupPath;\r\n\r\n        if (string.IsNullOrWhiteSpace(options.SourcePath) || string.IsNullOrWhiteSpace(options.BackupPath))\r\n        {\r\n            Status.State = \"Config\";\r\n            Status.LastMessage = \"Defina origem e backup.\";\r\n            FlushStatus();\r\n            return;\r\n        }\r\n\r\n        if (!File.Exists(options.SourcePath))\r\n        {\r\n            Status.State = \"Waiting\";\r\n            Status.SourceSizeBytes = 0;\r\n            Status.LastMessage = \"Aguardando arquivo de origem...\";\r\n            FlushStatus();\r\n            return;\r\n        }\r\n\r\n        var sourceInfo = new FileInfo(options.SourcePath);\r\n        var sourceLength = sourceInfo.Length;\r\n        Status.SourceSizeBytes = sourceLength;\r\n\r\n        if (File.Exists(options.BackupPath))\r\n            Status.BackupSizeBytes = new FileInfo(options.BackupPath).Length;\r\n        else\r\n            Status.BackupSizeBytes = 0;\r\n\r\n        var offset = Status.OffsetBytes;\r\n\r\n        // First run: optionally start from end (do not backfill historical content).\r\n        if (_firstSeen && options.StartFromEndOnFirstRun && offset == 0 && sourceLength > 0)\r\n        {\r\n            offset = sourceLength;\r\n            Status.OffsetBytes = offset;\r\n            _offsetStore.Save(offset);\r\n            _firstSeen = false;\r\n            Publish(\"Info\", $\"Primeira execução: offset definido no fim ({FormatBytes(offset)}).\");\r\n            Status.State = \"Watching\";\r\n            FlushStatus();\r\n            return;\r\n        }\r\n\r\n        _firstSeen = false;\r\n\r\n        // Truncate / recreate: sync offset to current source size — never re-append existing bytes to backup.\r\n        if (sourceLength < offset)\r\n        {\r\n            Status.TruncateEvents++;\r\n            Publish(\"Warn\", $\"Arquivo truncado/recriado ({FormatBytes(sourceLength)} < offset {FormatBytes(offset)}). Backup preservado; offset sincronizado.\");\r\n            offset = sourceLength;\r\n            Status.OffsetBytes = offset;\r\n            _offsetStore.Save(offset);\r\n        }\r\n\r\n        if (sourceLength == offset)\r\n        {\r\n            Status.State = \"Watching\";\r\n            Status.LastMessage = \"Sem alterações.\";\r\n            FlushStatus();\r\n            return;\r\n        }\r\n\r\n        var bytesToCopy = sourceLength - offset;\r\n        CopyRange(options.SourcePath, options.BackupPath, offset, bytesToCopy, options.BufferSizeBytes);\r\n\r\n        offset = sourceLength;\r\n        Status.OffsetBytes = offset;\r\n        _offsetStore.Save(offset);\r\n\r\n        Status.BytesCopiedSession += bytesToCopy;\r\n        Status.BytesCopiedTotal += bytesToCopy;\r\n        Status.AppendEvents++;\r\n        Status.LastCopyUtc = DateTimeOffset.UtcNow;\r\n        Status.State = \"Watching\";\r\n        Status.LastMessage = $\"Copiados {FormatBytes(bytesToCopy)}.\";\r\n        Status.LastError = null;\r\n\r\n        if (File.Exists(options.BackupPath))\r\n            Status.BackupSizeBytes = new FileInfo(options.BackupPath).Length;\r\n\r\n        Publish(\"Copy\", $\"+{FormatBytes(bytesToCopy)} → backup\", bytesToCopy);\r\n        FlushStatus();\r\n    }\r\n\r\n    private static void CopyRange(string source, string backup, long offset, long count, int bufferSize)\r\n    {\r\n        var dir = Path.GetDirectoryName(backup);\r\n        if (!string.IsNullOrEmpty(dir))\r\n            Directory.CreateDirectory(dir);\r\n\r\n        using var input = new FileStream(\r\n            source,\r\n            FileMode.Open,\r\n            FileAccess.Read,\r\n            FileShare.ReadWrite | FileShare.Delete);\r\n\r\n        input.Seek(offset, SeekOrigin.Begin);\r\n\r\n        using var\n\n/* … truncado na árvore (arquivo completo no GitHub) … */\n",
+        "implementation": [
+          "path: src/CanonCopy.Core/LogTailMonitor.cs",
+          "GitHub: https://github.com/CanonEngineer/CanonSyncEngine/blob/main/src/CanonCopy.Core/LogTailMonitor.cs"
+        ]
+      },
+      {
+        "id": "canon-sync-engine-file-src-canoncopy-core-monitoroptions-cs",
+        "parent": "canon-sync-engine-dir-src-canoncopy-core",
+        "layer": "file",
+        "title": "MonitorOptions.cs",
+        "description": "Código-fonte: `src/CanonCopy.Core/MonitorOptions.cs`",
+        "file": "src/CanonCopy.Core/MonitorOptions.cs",
+        "code": "using System.Text.Json.Serialization;\r\n\r\nnamespace CanonCopy.Core;\r\n\r\npublic sealed class MonitorOptions\r\n{\r\n    public string SourcePath { get; set; } = @\"C:\\Logs\\log.txt\";\r\n    public string BackupPath { get; set; } = @\"C:\\Logs\\log_backup.txt\";\r\n    public int PollIntervalMs { get; set; } = 2000;\r\n    public int BufferSizeBytes { get; set; } = 1024 * 64;\r\n    public bool StartFromEndOnFirstRun { get; set; } = false;\r\n\r\n    public static MonitorOptions CreateDefault() => new();\r\n}\r\n\r\npublic sealed class MonitorStatus\r\n{\r\n    public bool IsRunning { get; set; }\r\n    public string State { get; set; } = \"Idle\";\r\n    public string? SourcePath { get; set; }\r\n    public string? BackupPath { get; set; }\r\n    public long SourceSizeBytes { get; set; }\r\n    public long BackupSizeBytes { get; set; }\r\n    public long OffsetBytes { get; set; }\r\n    public long BytesCopiedSession { get; set; }\r\n    public long BytesCopiedTotal { get; set; }\r\n    public long AppendEvents { get; set; }\r\n    public long TruncateEvents { get; set; }\r\n    public DateTimeOffset? LastPollUtc { get; set; }\r\n    public DateTimeOffset? LastCopyUtc { get; set; }\r\n    public DateTimeOffset? UpdatedUtc { get; set; }\r\n    public string? LastMessage { get; set; }\r\n    public string? LastError { get; set; }\r\n}\r\n\r\npublic sealed class ActivityEntry\r\n{\r\n    public DateTimeOffset TimestampUtc { get; set; } = DateTimeOffset.UtcNow;\r\n    public string Level { get; set; } = \"Info\";\r\n    public string Message { get; set; } = string.Empty;\r\n    public long? Bytes { get; set; }\r\n\r\n    [JsonIgnore]\r\n    public string TimeLocal => TimestampUtc.ToLocalTime().ToString(\"HH:mm:ss\");\r\n}\r\n",
+        "implementation": [
+          "path: src/CanonCopy.Core/MonitorOptions.cs",
+          "GitHub: https://github.com/CanonEngineer/CanonSyncEngine/blob/main/src/CanonCopy.Core/MonitorOptions.cs"
+        ]
+      },
+      {
+        "id": "canon-sync-engine-file-src-canoncopy-core-offsetstore-cs",
+        "parent": "canon-sync-engine-dir-src-canoncopy-core",
+        "layer": "file",
+        "title": "OffsetStore.cs",
+        "description": "Código-fonte: `src/CanonCopy.Core/OffsetStore.cs`",
+        "file": "src/CanonCopy.Core/OffsetStore.cs",
+        "code": "namespace CanonCopy.Core;\r\n\r\npublic sealed class OffsetStore\r\n{\r\n    private readonly string _path;\r\n\r\n    public OffsetStore(string? path = null)\r\n    {\r\n        _path = path ?? AppPaths.OffsetFile;\r\n    }\r\n\r\n    public long Load()\r\n    {\r\n        AppPaths.EnsureRoot();\r\n        if (!File.Exists(_path))\r\n            return 0;\r\n\r\n        var text = File.ReadAllText(_path).Trim();\r\n        return long.TryParse(text, out var value) && value >= 0 ? value : 0;\r\n    }\r\n\r\n    public void Save(long offset)\r\n    {\r\n        AppPaths.EnsureRoot();\r\n        var temp = _path + \".tmp\";\r\n        File.WriteAllText(temp, offset.ToString());\r\n        File.Copy(temp, _path, overwrite: true);\r\n        File.Delete(temp);\r\n    }\r\n}\r\n",
+        "implementation": [
+          "path: src/CanonCopy.Core/OffsetStore.cs",
+          "GitHub: https://github.com/CanonEngineer/CanonSyncEngine/blob/main/src/CanonCopy.Core/OffsetStore.cs"
+        ]
+      },
+      {
+        "id": "canon-sync-engine-file-src-canoncopy-core-statusstore-cs",
+        "parent": "canon-sync-engine-dir-src-canoncopy-core",
+        "layer": "file",
+        "title": "StatusStore.cs",
+        "description": "Código-fonte: `src/CanonCopy.Core/StatusStore.cs`",
+        "file": "src/CanonCopy.Core/StatusStore.cs",
+        "code": "using System.Text.Json;\r\n\r\nnamespace CanonCopy.Core;\r\n\r\npublic static class StatusStore\r\n{\r\n    private static readonly JsonSerializerOptions JsonOptions = new()\r\n    {\r\n        WriteIndented = true,\r\n        PropertyNamingPolicy = JsonNamingPolicy.CamelCase\r\n    };\r\n\r\n    private static readonly object Gate = new();\r\n\r\n    public static MonitorStatus Load()\r\n    {\r\n        AppPaths.EnsureRoot();\r\n        if (!File.Exists(AppPaths.StatusFile))\r\n            return new MonitorStatus();\r\n\r\n        try\r\n        {\r\n            var json = File.ReadAllText(AppPaths.StatusFile);\r\n            return JsonSerializer.Deserialize<MonitorStatus>(json, JsonOptions) ?? new MonitorStatus();\r\n        }\r\n        catch\r\n        {\r\n            return new MonitorStatus();\r\n        }\r\n    }\r\n\r\n    public static void Save(MonitorStatus status)\r\n    {\r\n        AppPaths.EnsureRoot();\r\n        status.UpdatedUtc = DateTimeOffset.UtcNow;\r\n        var json = JsonSerializer.Serialize(status, JsonOptions);\r\n        var temp = AppPaths.StatusFile + \".tmp\";\r\n        lock (Gate)\r\n        {\r\n            File.WriteAllText(temp, json);\r\n            File.Copy(temp, AppPaths.StatusFile, overwrite: true);\r\n            File.Delete(temp);\r\n        }\r\n    }\r\n\r\n    public static void AppendActivity(ActivityEntry entry, int keepLast = 200)\r\n    {\r\n        AppPaths.EnsureRoot();\r\n        var line = JsonSerializer.Serialize(entry, JsonOptions);\r\n        lock (Gate)\r\n        {\r\n            File.AppendAllText(AppPaths.ActivityFile, line + Environment.NewLine);\r\n\r\n            if (!File.Exists(AppPaths.ActivityFile))\r\n                return;\r\n\r\n            var lines = File.ReadAllLines(AppPaths.ActivityFile);\r\n            if (lines.Length <= keepLast)\r\n                return;\r\n\r\n            File.WriteAllLines(AppPaths.ActivityFile, lines.TakeLast(keepLast));\r\n        }\r\n    }\r\n\r\n    public static IReadOnlyList<ActivityEntry> LoadActivity(int max = 80)\r\n    {\r\n        AppPaths.EnsureRoot();\r\n        if (!File.Exists(AppPaths.ActivityFile))\r\n            return Array.Empty<ActivityEntry>();\r\n\r\n        try\r\n        {\r\n            var lines = File.ReadAllLines(AppPaths.ActivityFile);\r\n            return lines\r\n                .Reverse()\r\n                .Take(max)\r\n                .Select(l =>\r\n                {\r\n                    try { return JsonSerializer.Deserialize<ActivityEntry>(l, JsonOptions); }\r\n                    catch { return null; }\r\n                })\r\n                .Where(e => e is not null)\r\n                .Cast<ActivityEntry>()\r\n                .ToList();\r\n        }\r\n        catch\r\n        {\r\n            return Array.Empty<ActivityEntry>();\r\n        }\r\n    }\r\n}\r\n",
+        "implementation": [
+          "path: src/CanonCopy.Core/StatusStore.cs",
+          "GitHub: https://github.com/CanonEngineer/CanonSyncEngine/blob/main/src/CanonCopy.Core/StatusStore.cs"
+        ]
+      },
+      {
+        "id": "canon-sync-engine-file-src-canoncopy-service-appsettings-development-json",
+        "parent": "canon-sync-engine-dir-src-canoncopy-service",
+        "layer": "file",
+        "title": "appsettings.Development.json",
+        "description": "Código-fonte: `src/CanonCopy.Service/appsettings.Development.json`",
+        "file": "src/CanonCopy.Service/appsettings.Development.json",
+        "code": "{\r\n  \"Logging\": {\r\n    \"LogLevel\": {\r\n      \"Default\": \"Information\",\r\n      \"Microsoft.Hosting.Lifetime\": \"Information\"\r\n    }\r\n  }\r\n}\r\n",
+        "implementation": [
+          "path: src/CanonCopy.Service/appsettings.Development.json",
+          "GitHub: https://github.com/CanonEngineer/CanonSyncEngine/blob/main/src/CanonCopy.Service/appsettings.Development.json"
+        ]
+      },
+      {
+        "id": "canon-sync-engine-file-src-canoncopy-service-appsettings-json",
+        "parent": "canon-sync-engine-dir-src-canoncopy-service",
+        "layer": "file",
+        "title": "appsettings.json",
+        "description": "Código-fonte: `src/CanonCopy.Service/appsettings.json`",
+        "file": "src/CanonCopy.Service/appsettings.json",
+        "code": "{\r\n  \"Logging\": {\r\n    \"LogLevel\": {\r\n      \"Default\": \"Information\",\r\n      \"Microsoft.Hosting.Lifetime\": \"Information\"\r\n    }\r\n  },\r\n  \"CanonCopy\": {\r\n    \"Note\": \"A configuração operacional fica em %ProgramData%\\\\CanonCopy\\\\config.json (editável pela UI).\"\r\n  }\r\n}\r\n",
+        "implementation": [
+          "path: src/CanonCopy.Service/appsettings.json",
+          "GitHub: https://github.com/CanonEngineer/CanonSyncEngine/blob/main/src/CanonCopy.Service/appsettings.json"
+        ]
+      },
+      {
+        "id": "canon-sync-engine-file-src-canoncopy-service-program-cs",
+        "parent": "canon-sync-engine-dir-src-canoncopy-service",
+        "layer": "file",
+        "title": "Program.cs",
+        "description": "Código-fonte: `src/CanonCopy.Service/Program.cs`",
+        "file": "src/CanonCopy.Service/Program.cs",
+        "code": "using CanonCopy.Core;\r\nusing CanonCopy.Service;\r\n\r\nvar builder = Host.CreateApplicationBuilder(args);\r\n\r\nbuilder.Services.AddWindowsService(options =>\r\n{\r\n    options.ServiceName = \"CanonCopyLogGuard\";\r\n});\r\n\r\nbuilder.Services.AddHostedService<LogGuardWorker>();\r\n\r\nvar host = builder.Build();\r\nhost.Run();\r\n",
+        "implementation": [
+          "path: src/CanonCopy.Service/Program.cs",
+          "GitHub: https://github.com/CanonEngineer/CanonSyncEngine/blob/main/src/CanonCopy.Service/Program.cs"
+        ]
+      },
+      {
+        "id": "canon-sync-engine-file-src-canoncopy-service-worker-cs",
+        "parent": "canon-sync-engine-dir-src-canoncopy-service",
+        "layer": "file",
+        "title": "Worker.cs",
+        "description": "Código-fonte: `src/CanonCopy.Service/Worker.cs`",
+        "file": "src/CanonCopy.Service/Worker.cs",
+        "code": "using CanonCopy.Core;\r\n\r\nnamespace CanonCopy.Service;\r\n\r\npublic sealed class LogGuardWorker : BackgroundService\r\n{\r\n    private readonly ILogger<LogGuardWorker> _logger;\r\n    private LogTailMonitor? _monitor;\r\n    private DateTime _lastConfigCheck = DateTime.MinValue;\r\n    private string _configStamp = string.Empty;\r\n\r\n    public LogGuardWorker(ILogger<LogGuardWorker> logger)\r\n    {\r\n        _logger = logger;\r\n    }\r\n\r\n    protected override async Task ExecuteAsync(CancellationToken stoppingToken)\r\n    {\r\n        AppPaths.EnsureRoot();\r\n        _logger.LogInformation(\"CanonCopy Log Guard iniciando...\");\r\n\r\n        var options = ConfigStore.Load();\r\n        _monitor = new LogTailMonitor(options);\r\n        _monitor.Start();\r\n\r\n        try\r\n        {\r\n            while (!stoppingToken.IsCancellationRequested)\r\n            {\r\n                ReloadConfigIfChanged();\r\n                await Task.Delay(TimeSpan.FromSeconds(2), stoppingToken).ConfigureAwait(false);\r\n            }\r\n        }\r\n        catch (OperationCanceledException)\r\n        {\r\n            // shutdown\r\n        }\r\n        finally\r\n        {\r\n            if (_monitor is not null)\r\n                await _monitor.StopAsync().ConfigureAwait(false);\r\n\r\n            _logger.LogInformation(\"CanonCopy Log Guard encerrado.\");\r\n        }\r\n    }\r\n\r\n    private void ReloadConfigIfChanged()\r\n    {\r\n        try\r\n        {\r\n            if (!File.Exists(AppPaths.ConfigFile))\r\n                return;\r\n\r\n            var info = new FileInfo(AppPaths.ConfigFile);\r\n            var stamp = $\"{info.Length}:{info.LastWriteTimeUtc.Ticks}\";\r\n            if (stamp == _configStamp && (DateTime.UtcNow - _lastConfigCheck) < TimeSpan.FromSeconds(5))\r\n                return;\r\n\r\n            _lastConfigCheck = DateTime.UtcNow;\r\n            if (stamp == _configStamp)\r\n                return;\r\n\r\n            _configStamp = stamp;\r\n            var options = ConfigStore.Load();\r\n            _monitor?.UpdateOptions(options);\r\n            _logger.LogInformation(\"Configuração recarregada: {Source} → {Backup}\", options.SourcePath, options.BackupPath);\r\n        }\r\n        catch (Exception ex)\r\n        {\r\n            _logger.LogWarning(ex, \"Falha ao recarregar configuração\");\r\n        }\r\n    }\r\n}\r\n",
+        "implementation": [
+          "path: src/CanonCopy.Service/Worker.cs",
+          "GitHub: https://github.com/CanonEngineer/CanonSyncEngine/blob/main/src/CanonCopy.Service/Worker.cs"
+        ]
+      },
+      {
+        "id": "canon-sync-engine-file-src-canoncopy-service-properties-launchsettings-json",
+        "parent": "canon-sync-engine-dir-src-canoncopy-service-properties",
+        "layer": "file",
+        "title": "launchSettings.json",
+        "description": "Código-fonte: `src/CanonCopy.Service/Properties/launchSettings.json`",
+        "file": "src/CanonCopy.Service/Properties/launchSettings.json",
+        "code": "﻿{\r\n  \"$schema\": \"http://json.schemastore.org/launchsettings.json\",\r\n  \"profiles\": {\r\n    \"CanonCopy.Service\": {\r\n      \"commandName\": \"Project\",\r\n      \"dotnetRunMessages\": true,\r\n      \"environmentVariables\": {\r\n        \"DOTNET_ENVIRONMENT\": \"Development\"\r\n      }\r\n    }\r\n  }\r\n}\r\n",
+        "implementation": [
+          "path: src/CanonCopy.Service/Properties/launchSettings.json",
+          "GitHub: https://github.com/CanonEngineer/CanonSyncEngine/blob/main/src/CanonCopy.Service/Properties/launchSettings.json"
+        ]
+      },
+      {
+        "id": "canon-sync-engine-file-src-canoncopy-ui-app-xaml-cs",
+        "parent": "canon-sync-engine-dir-src-canoncopy-ui",
+        "layer": "file",
+        "title": "App.xaml.cs",
+        "description": "Código-fonte: `src/CanonCopy.UI/App.xaml.cs`",
+        "file": "src/CanonCopy.UI/App.xaml.cs",
+        "code": "﻿using System.Windows;\r\n\r\nnamespace CanonCopy.UI;\r\n\r\npublic partial class App : Application\r\n{\r\n}\r\n",
+        "implementation": [
+          "path: src/CanonCopy.UI/App.xaml.cs",
+          "GitHub: https://github.com/CanonEngineer/CanonSyncEngine/blob/main/src/CanonCopy.UI/App.xaml.cs"
+        ]
+      },
+      {
+        "id": "canon-sync-engine-file-src-canoncopy-ui-assemblyinfo-cs",
+        "parent": "canon-sync-engine-dir-src-canoncopy-ui",
+        "layer": "file",
+        "title": "AssemblyInfo.cs",
+        "description": "Código-fonte: `src/CanonCopy.UI/AssemblyInfo.cs`",
+        "file": "src/CanonCopy.UI/AssemblyInfo.cs",
+        "code": "using System.Windows;\r\n\r\n[assembly:ThemeInfo(\r\n    ResourceDictionaryLocation.None,            //where theme specific resource dictionaries are located\r\n                                                //(used if a resource is not found in the page,\r\n                                                // or application resource dictionaries)\r\n    ResourceDictionaryLocation.SourceAssembly   //where the generic resource dictionary is located\r\n                                                //(used if a resource is not found in the page,\r\n                                                // app, or any theme specific resource dictionaries)\r\n)]\r\n",
+        "implementation": [
+          "path: src/CanonCopy.UI/AssemblyInfo.cs",
+          "GitHub: https://github.com/CanonEngineer/CanonSyncEngine/blob/main/src/CanonCopy.UI/AssemblyInfo.cs"
+        ]
+      },
+      {
+        "id": "canon-sync-engine-file-src-canoncopy-ui-converters-cs",
+        "parent": "canon-sync-engine-dir-src-canoncopy-ui",
+        "layer": "file",
+        "title": "Converters.cs",
+        "description": "Código-fonte: `src/CanonCopy.UI/Converters.cs`",
+        "file": "src/CanonCopy.UI/Converters.cs",
+        "code": "using System.Globalization;\r\nusing System.Windows;\r\nusing System.Windows.Data;\r\nusing System.Windows.Media;\r\n\r\nnamespace CanonCopy.UI;\r\n\r\npublic sealed class LevelToBrushConverter : IValueConverter\r\n{\r\n    public object Convert(object value, Type targetType, object parameter, CultureInfo culture)\r\n    {\r\n        var level = value?.ToString() ?? \"Info\";\r\n        return level switch\r\n        {\r\n            \"Copy\" => new SolidColorBrush(Color.FromRgb(0x2E, 0xC4, 0xB6)),\r\n            \"Warn\" => new SolidColorBrush(Color.FromRgb(0xF4, 0xA2, 0x61)),\r\n            \"Error\" => new SolidColorBrush(Color.FromRgb(0xE4, 0x57, 0x2E)),\r\n            _ => new SolidColorBrush(Color.FromRgb(0x8F, 0xA3, 0xB5))\r\n        };\r\n    }\r\n\r\n    public object ConvertBack(object value, Type targetType, object parameter, CultureInfo culture)\r\n        => throw new NotSupportedException();\r\n}\r\n\r\npublic sealed class LevelToBackgroundConverter : IValueConverter\r\n{\r\n    public object Convert(object value, Type targetType, object parameter, CultureInfo culture)\r\n    {\r\n        var level = value?.ToString() ?? \"Info\";\r\n        return level switch\r\n        {\r\n            \"Copy\" => new SolidColorBrush(Color.FromArgb(0x22, 0x2E, 0xC4, 0xB6)),\r\n            \"Warn\" => new SolidColorBrush(Color.FromArgb(0x22, 0xF4, 0xA2, 0x61)),\r\n            \"Error\" => new SolidColorBrush(Color.FromArgb(0x22, 0xE4, 0x57, 0x2E)),\r\n            _ => new SolidColorBrush(Color.FromArgb(0x18, 0x8F, 0xA3, 0xB5))\r\n        };\r\n    }\r\n\r\n    public object ConvertBack(object value, Type targetType, object parameter, CultureInfo culture)\r\n        => throw new NotSupportedException();\r\n}\r\n\r\npublic sealed class LevelToIconConverter : IValueConverter\r\n{\r\n    public object Convert(object value, Type targetType, object parameter, CultureInfo culture)\r\n    {\r\n        var level = value?.ToString() ?? \"Info\";\r\n        return level switch\r\n        {\r\n            \"Copy\" => \"\\uE8C8\",\r\n            \"Warn\" => \"\\uE7BA\",\r\n            \"Error\" => \"\\uE783\",\r\n            _ => \"\\uE946\"\r\n        };\r\n    }\r\n\r\n    public object ConvertBack(object value, Type targetType, object parameter, CultureInfo culture)\r\n        => throw new NotSupportedException();\r\n}\r\n\r\npublic sealed class LevelToBadgeLabelConverter : IValueConverter\r\n{\r\n    public object Convert(object value, Type targetType, object parameter, CultureInfo culture)\r\n    {\r\n        var level = value?.ToString() ?? \"Info\";\r\n        return level switch\r\n        {\r\n            \"Copy\" => \"Copy\",\r\n            \"Warn\" => \"Warning\",\r\n            \"Error\" => \"Error\",\r\n            _ => \"Info\"\r\n        };\r\n    }\r\n\r\n    public object ConvertBack(object value, Type targetType, object parameter, CultureInfo culture)\r\n        => throw new NotSupportedException();\r\n}\r\n\r\npublic sealed class BoolToFilterBackgroundConverter : IValueConverter\r\n{\r\n    public object Convert(object value, Type targetType, object parameter, CultureInfo culture)\r\n    {\r\n        var active = value is true;\r\n        return active\r\n            ? new SolidColorBrush(Color.FromArgb(0x33, 0xF0, 0xA2, 0x02))\r\n            : new SolidColorBrush(Color.FromArgb(0x00, 0x00, 0x00, 0x00));\r\n    }\r\n\r\n    public object ConvertBack(object value, Type targetType, object parameter, CultureInfo culture)\r\n        => throw new NotSupportedException();\r\n}\r\n\r\npublic sealed class BoolToFilterBorderConverter : IValueConverter\r\n{\r\n    public object Convert(object value, Type targetType, object parameter, CultureInfo culture)\r\n    {\r\n        var active = value is true;\r\n        return active\r\n            ? new SolidColorBrush(Color.FromRgb(0xF0, 0xA2, 0x02))\r\n            : new SolidColorBrush(Color.FromRgb(0x2A, 0x3A, 0x4A));\r\n    }\r\n\r\n    public object ConvertBack(object value, Type targetType, object parameter, CultureInfo culture)\r\n        => throw new NotSupportedException();\r\n}\r\n\r\npublic sealed class StateToStatusBrushConverter : IValueConverter\r\n{\r\n    public object Convert(object value, Type targetType, object parameter, CultureInfo culture)\r\n    {\r\n        var state = value?.ToString() ?? \"Idle\";\r\n        return state switch\r\n        {\r\n            \"Watching\" => new SolidColorBrush(Color.FromRgb(0x2E, 0xC4, 0xB6)),\r\n            \"Waiting\" => new SolidColorBrush(Color.FromRgb(0xF4, 0xA2, 0x61)),\r\n            \"Error\" => new SolidColorBrush(Color.FromRgb(0xE4, 0x57, 0x2E)),\r\n            \"Stopped\" => new SolidColorBrush(Color.FromRgb(0x8F, 0xA3, 0xB5)),\r\n            _ => new SolidColorBrush(Color.FromRgb(0xF0, 0xA2, 0x02))\r\n        };\r\n    }\r\n\r\n    public object ConvertBack(object value, Type targetType, object parameter, CultureInfo culture)\r\n        => throw new NotSupportedException();\r\n}\r\n",
+        "implementation": [
+          "path: src/CanonCopy.UI/Converters.cs",
+          "GitHub: https://github.com/CanonEngineer/CanonSyncEngine/blob/main/src/CanonCopy.UI/Converters.cs"
+        ]
+      },
+      {
+        "id": "canon-sync-engine-file-src-canoncopy-ui-mainviewmodel-cs",
+        "parent": "canon-sync-engine-dir-src-canoncopy-ui",
+        "layer": "file",
+        "title": "MainViewModel.cs",
+        "description": "Código-fonte: `src/CanonCopy.UI/MainViewModel.cs`",
+        "file": "src/CanonCopy.UI/MainViewModel.cs",
+        "code": "using System.Collections.ObjectModel;\r\n\r\nusing System.ComponentModel;\r\n\r\nusing System.IO;\r\n\r\nusing System.Reflection;\r\n\r\nusing System.Windows;\r\n\r\nusing System.Windows.Data;\r\n\r\nusing System.Windows.Threading;\r\n\r\nusing CanonCopy.Core;\r\n\r\nusing CommunityToolkit.Mvvm.ComponentModel;\r\n\r\nusing CommunityToolkit.Mvvm.Input;\r\n\r\nusing Microsoft.Win32;\r\n\r\n\r\n\r\nnamespace CanonCopy.UI;\r\n\r\n\r\n\r\npublic partial class MainViewModel : ObservableObject\r\n\r\n{\r\n\r\n    private readonly DispatcherTimer _timer;\r\n\r\n    private readonly SystemMetrics _metrics = new();\r\n\r\n    private LogTailMonitor? _localMonitor;\r\n\r\n    private long _lastSessionBytes;\r\n\r\n    private DateTime _lastCopySampleUtc = DateTime.UtcNow;\r\n\r\n    private DateTime? _watchStartUtc;\r\n\r\n\r\n\r\n    public ObservableCollection<ActivityEntry> Activities { get; } = new();\r\n\r\n    public ICollectionView FilteredActivities { get; }\r\n\r\n\r\n\r\n    public SparklineSeries CpuSeries { get; } = new();\r\n\r\n    public SparklineSeries RamSeries { get; } = new();\r\n\r\n    public SparklineSeries CopyRateSeries { get; } = new();\r\n\r\n    public SparklineSeries EventsSeries { get; } = new();\r\n\r\n\r\n\r\n    [ObservableProperty] private string _sourcePath = string.Empty;\r\n\r\n    [ObservableProperty] private string _backupPath = string.Empty;\r\n\r\n    [ObservableProperty] private int _pollIntervalMs = 2000;\r\n\r\n    [ObservableProperty] private bool _startFromEndOnFirstRun;\r\n\r\n    [ObservableProperty] private bool _isLocalRunning;\r\n\r\n    [ObservableProperty] private bool _isWatching;\r\n\r\n    [ObservableProperty] private string _stateLabel = \"Idle\";\r\n\r\n    [ObservableProperty] private string _serviceStatus = \"—\";\r\n\r\n    [ObservableProperty] private string _lastMessage = \"Pronto.\";\r\n\r\n    [ObservableProperty] private string _lastError = string.Empty;\r\n\r\n    [ObservableProperty] private string _sourceSizeText = \"0 B\";\r\n\r\n    [ObservableProperty] private string _backupSizeText = \"0 B\";\r\n\r\n    [ObservableProperty] private string _offsetText = \"0 B\";\r\n\r\n    [ObservableProperty] private string _sessionBytesText = \"0 B\";\r\n\r\n    [ObservableProperty] private string _appendEventsText = \"0\";\r\n\r\n    [ObservableProperty] private string _truncateEventsText = \"0\";\r\n\r\n    [ObservableProperty] private string _lastCopyText = \"—\";\r\n\r\n    [ObservableProperty] private string _toast = string.Empty;\r\n\r\n    [ObservableProperty] private string _cpuText = \"0%\";\r\n\r\n    [ObservableProperty] private string _ramText = \"0 MB\";\r\n\r\n    [ObservableProperty] private string _copyRateText = \"0 B/s\";\r\n\r\n    [ObservableProperty] private string _uptimeText = \"—\";\r\n\r\n    [ObservableProperty] private string _versionText = \"v1.0.0\";\r\n\r\n    [ObservableProperty] private bool _filterInfo = true;\r\n\r\n    [ObservableProperty] private bool _filterCopy = true;\r\n\r\n    [ObservableProperty] private bool _filterWarn = true;\r\n\r\n    [ObservableProperty] private bool _filterError = true;\r\n\r\n    [ObservableProperty] private int _currentPage = 1;\r\n    [ObservableProperty] private int _totalPages = 1;\r\n\r\n    public IEnumerable<ActivityEntry> PagedActivities => \r\n        FilteredActivities.Cast<ActivityEntry>().Skip((CurrentPage - 1) * 10).Take(10);\r\n\r\n    partial void OnCurrentPageChanged(int value) => OnPropertyChanged(nameof(PagedActivities));\r\n\r\n    private void UpdatePagination()\r\n    {\r\n        var count = FilteredActivities.Cast<object>().Count();\r\n        TotalPages = Math.Max(1, (int)Math.Ceiling(count / 10.0));\r\n        if (CurrentPage > TotalPages) CurrentPage = TotalPages;\r\n        OnPropertyChanged(nameof(PagedActivities));\r\n    }\r\n\r\n    [RelayCommand]\r\n    private void NextPage()\r\n    {\r\n        if (CurrentPage < TotalPages) CurrentPage++;\r\n    }\r\n\r\n    [RelayCommand]\r\n    private void PrevPage()\r\n    {\r\n        if (CurrentPage > 1) CurrentPage--;\r\n    }\r\n\r\n\r\n\r\n    public MainViewModel()\r\n\r\n    {\r\n\r\n        var version = Assembly.GetExecutingAssembly().GetName().Version;\r\n\r\n        VersionText = version is null ? \"v1.0.0\" : $\"v{version.Major}.{version.Minor}.{version.Build}\";\r\n\r\n\r\n\r\n        var cfg = ConfigStore.Load();\r\n\r\n        SourcePath = cfg.SourcePath;\r\n\r\n        BackupPath = cfg.BackupPath;\r\n\r\n        PollIntervalMs = cfg.PollIntervalMs;\r\n\r\n        StartFromEndOnFirstRun = cfg.StartFromEndOnFirstRun;\r\n\r\n\r\n\r\n        FilteredActivities = CollectionViewSource.GetDefaultView(Activities);\r\n\r\n        FilteredActivities.Filter = ActivityFilter;\r\n\r\n\r\n\r\n        RefreshFromDisk();\r\n\r\n\r\n\r\n        _timer = new DispatcherTimer { Interval = TimeSpan.FromMilliseconds(800) };\r\n\r\n        _timer.Tick += (_, _) => RefreshFromDisk();\r\n\r\n        _timer.Start();\r\n\r\n    }\r\n\r\n\r\n\r\n    partial void OnFilterInfoChanged(bool value) { FilteredActivities.Refresh(); UpdatePagination(); }\r\n\r\n    partial void OnFilterCopyChanged(bool value) { FilteredActivities.Refresh(); UpdatePagination(); }\r\n\r\n    partial void OnFilterWarnChanged(bool value) { FilteredActivities.Refresh(); UpdatePagination(); }\r\n\r\n    partial void OnFilterErrorChanged(bool value) { FilteredActivities.Refresh(); UpdatePagination(); }\r\n\r\n\r\n\r\n    private bool ActivityFilter(object item)\r\n\r\n    {\r\n\r\n        if (item is not ActivityEntry entry)\r\n\r\n            return false;\r\n\r\n\r\n\r\n        return entry.Level switch\r\n\r\n        {\r\n\r\n            \"Copy\" => FilterCopy,\r\n\r\n            \"Warn\" => FilterWarn,\r\n\r\n            \"Error\" => FilterError,\r\n\r\n            _ => FilterInfo\r\n\r\n        };\r\n\r\n    }\r\n\r\n\r\n\r\n    [RelayCommand]\r\n\r\n    private void BrowseSource()\r\n\r\n    {\r\n\r\n        var dlg = new OpenFileDialog\r\n\r\n        {\r\n\r\n            Title = \"Selecionar log de origem\",\r\n\r\n            Filter = \"Logs (*.log;*.txt)|*.log;*.txt|Todos (*.*)|*.*\",\r\n\r\n            CheckFileExists = false\r\n\r\n        };\r\n\r\n        if (dlg.ShowDialog() == true)\r\n\r\n            SourcePath = dlg.FileName;\r\n\r\n    }\r\n\r\n\r\n\r\n    [RelayCommand]\r\n\r\n    private void BrowseBackup()\r\n\r\n    {\r\n\r\n        var dlg = new SaveFileDialog\r\n\r\n        {\r\n\r\n            Title = \"Selecionar arquivo de backup\",\r\n\r\n            Filter = \"Logs (*.log;*.txt)|*.log;*.txt|Todos (*.*)|*.*\",\r\n\r\n            FileName = string.IsNullOrWhiteSpace(BackupPath) ? \"log_backup.txt\" : Path.GetFileName(BackupPath),\r\n\r\n            OverwritePrompt = false\r\n\r\n        };\r\n\r\n        if (dlg.ShowDialog() == true)\r\n\r\n            BackupPath = dlg.FileName;\r\n\r\n    }\r\n\r\n\r\n\r\n    [RelayCommand]\r\n\r\n    private void SaveConfig()\r\n\r\n    {\r\n\r\n        if (string.IsNullOrWhiteSpace(SourcePath) || string.IsNullOrWhiteSpace(BackupPath))\r\n\r\n        {\r\n\r\n            ShowToast(\"Informe origem e backup.\");\r\n\r\n            return;\r\n\r\n        }\r\n\r\n\r\n\r\n        var options = new MonitorOptions\r\n\r\n        {\r\n\r\n            SourcePath = SourcePath.Trim(),\r\n\r\n            BackupPath = BackupPath.Trim(),\r\n\r\n            PollIntervalMs = Math.Clamp(PollIntervalMs, 250, 60_000),\r\n\r\n            StartFromEndOnFirstRun = StartFromEndOnFirstRun\r\n\r\n        };\r\n\r\n\r\n\r\n        ConfigStore.Save(options);\r\n\r\n        _localMonitor?.UpdateOptions(options);\r\n\r\n        ShowToast(\"Configuração salva em ProgramDa\n\n/* … truncado na árvore (arquivo completo no GitHub) … */\n",
+        "implementation": [
+          "path: src/CanonCopy.UI/MainViewModel.cs",
+          "GitHub: https://github.com/CanonEngineer/CanonSyncEngine/blob/main/src/CanonCopy.UI/MainViewModel.cs"
+        ]
+      },
+      {
+        "id": "canon-sync-engine-file-src-canoncopy-ui-mainwindow-xaml-cs",
+        "parent": "canon-sync-engine-dir-src-canoncopy-ui",
+        "layer": "file",
+        "title": "MainWindow.xaml.cs",
+        "description": "Código-fonte: `src/CanonCopy.UI/MainWindow.xaml.cs`",
+        "file": "src/CanonCopy.UI/MainWindow.xaml.cs",
+        "code": "﻿using System.Windows;\r\n\r\nusing System.Windows.Controls;\r\n\r\nusing System.Windows.Data;\r\n\r\nusing System.Globalization;\r\n\r\nusing System.Windows.Media;\r\n\r\nusing System.Windows.Media.Animation;\r\n\r\n\r\n\r\nnamespace CanonCopy.UI;\r\n\r\n\r\n\r\npublic partial class MainWindow : Window\r\n\r\n{\r\n\r\n    private readonly MainViewModel _vm;\r\n\r\n    private const double NarrowBreakpoint = 1024;\r\n\r\n\r\n\r\n    public MainWindow()\r\n\r\n    {\r\n\r\n        InitializeComponent();\r\n\r\n        _vm = new MainViewModel();\r\n\r\n        DataContext = _vm;\r\n\r\n        Loaded += OnLoaded;\r\n\r\n        SizeChanged += OnSizeChanged;\r\n\r\n        _vm.PropertyChanged += (_, e) =>\r\n\r\n        {\r\n\r\n            if (e.PropertyName is nameof(MainViewModel.IsWatching) or nameof(MainViewModel.IsLocalRunning))\r\n\r\n                UpdatePulse();\r\n\r\n        };\r\n\r\n    }\r\n\r\n\r\n\r\n    private void OnLoaded(object sender, RoutedEventArgs e)\r\n\r\n    {\r\n\r\n        UpdatePulse();\r\n\r\n        ApplyResponsiveLayout(ActualWidth);\r\n\r\n    }\r\n\r\n\r\n\r\n    private void OnSizeChanged(object sender, SizeChangedEventArgs e) =>\r\n\r\n        ApplyResponsiveLayout(e.NewSize.Width);\r\n\r\n\r\n\r\n    private void ApplyResponsiveLayout(double width)\r\n\r\n    {\r\n\r\n        if (PanelsGrid is null || LeftCol is null || MidCol is null || RightCol is null)\r\n\r\n            return;\r\n\r\n\r\n\r\n        if (width < NarrowBreakpoint)\r\n\r\n        {\r\n\r\n            PanelsGrid.ColumnDefinitions[0].Width = new GridLength(1, GridUnitType.Star);\r\n\r\n            PanelsGrid.ColumnDefinitions[1].Width = new GridLength(0);\r\n\r\n            PanelsGrid.ColumnDefinitions[2].Width = new GridLength(1, GridUnitType.Star);\r\n\r\n\r\n\r\n            Grid.SetColumn(PanelsGrid.Children[0], 0);\r\n\r\n            Grid.SetRow(PanelsGrid.Children[0], 0);\r\n\r\n            Grid.SetColumn(PanelsGrid.Children[1], 0);\r\n\r\n            Grid.SetRow(PanelsGrid.Children[1], 2);\r\n\r\n\r\n\r\n            if (PanelsGrid.RowDefinitions.Count == 0)\r\n\r\n            {\r\n\r\n                PanelsGrid.RowDefinitions.Add(new RowDefinition { Height = GridLength.Auto });\r\n\r\n                PanelsGrid.RowDefinitions.Add(new RowDefinition { Height = new GridLength(16) });\r\n\r\n                PanelsGrid.RowDefinitions.Add(new RowDefinition { Height = GridLength.Auto });\r\n\r\n            }\r\n\r\n        }\r\n\r\n        else\r\n\r\n        {\r\n\r\n            PanelsGrid.ColumnDefinitions[0].Width = new GridLength(1.1, GridUnitType.Star);\r\n\r\n            PanelsGrid.ColumnDefinitions[1].Width = new GridLength(16);\r\n\r\n            PanelsGrid.ColumnDefinitions[2].Width = new GridLength(0.9, GridUnitType.Star);\r\n\r\n\r\n\r\n            Grid.SetColumn(PanelsGrid.Children[0], 0);\r\n\r\n            Grid.SetRow(PanelsGrid.Children[0], 0);\r\n\r\n            Grid.SetColumn(PanelsGrid.Children[1], 2);\r\n\r\n            Grid.SetRow(PanelsGrid.Children[1], 0);\r\n\r\n        }\r\n\r\n    }\r\n\r\n\r\n\r\n    private void UpdatePulse()\r\n\r\n    {\r\n\r\n        PulseRing.BeginAnimation(OpacityProperty, null);\r\n\r\n        var scale = PulseRing.RenderTransform as ScaleTransform;\r\n\r\n        scale?.BeginAnimation(ScaleTransform.ScaleXProperty, null);\r\n\r\n        scale?.BeginAnimation(ScaleTransform.ScaleYProperty, null);\r\n\r\n\r\n\r\n        if (!_vm.IsWatching && !_vm.IsLocalRunning)\r\n\r\n        {\r\n\r\n            PulseRing.Opacity = 0.25;\r\n\r\n            return;\r\n\r\n        }\r\n\r\n\r\n\r\n        var opacityAnim = new DoubleAnimation(0.9, 0.2, new Duration(TimeSpan.FromMilliseconds(1300)))\r\n\r\n        {\r\n\r\n            AutoReverse = true,\r\n\r\n            RepeatBehavior = RepeatBehavior.Forever,\r\n\r\n            EasingFunction = new QuadraticEase { EasingMode = EasingMode.EaseInOut }\r\n\r\n        };\r\n\r\n        var scaleAnim = new DoubleAnimation(1, 1.5, new Duration(TimeSpan.FromMilliseconds(1300)))\r\n\r\n        {\r\n\r\n            AutoReverse = true,\r\n\r\n            RepeatBehavior = RepeatBehavior.Forever,\r\n\r\n            EasingFunction = new QuadraticEase { EasingMode = EasingMode.EaseInOut }\r\n\r\n        };\r\n\r\n\r\n\r\n        PulseRing.BeginAnimation(OpacityProperty, opacityAnim);\r\n\r\n        scale?.BeginAnimation(ScaleTransform.ScaleXProperty, scaleAnim);\r\n\r\n        scale?.BeginAnimation(ScaleTransform.ScaleYProperty, scaleAnim);\r\n\r\n    }\r\n\r\n}\r\n\r\n\r\n\r\npublic sealed class StringNotEmptyToVisibilityConverter : IValueConverter\r\n\r\n{\r\n\r\n    public object Convert(object value, Type targetType, object parameter, CultureInfo culture)\r\n\r\n        => value is string s && !string.IsNullOrWhiteSpace(s) ? Visibility.Visible : Visibility.Collapsed;\r\n\r\n\r\n\r\n    public object ConvertBack(object value, Type targetType, object parameter, CultureInfo culture)\r\n\r\n        => throw new NotSupportedException();\r\n\r\n}\r\n\r\n",
+        "implementation": [
+          "path: src/CanonCopy.UI/MainWindow.xaml.cs",
+          "GitHub: https://github.com/CanonEngineer/CanonSyncEngine/blob/main/src/CanonCopy.UI/MainWindow.xaml.cs"
+        ]
+      },
+      {
+        "id": "canon-sync-engine-file-src-canoncopy-ui-servicehelper-cs",
+        "parent": "canon-sync-engine-dir-src-canoncopy-ui",
+        "layer": "file",
+        "title": "ServiceHelper.cs",
+        "description": "Código-fonte: `src/CanonCopy.UI/ServiceHelper.cs`",
+        "file": "src/CanonCopy.UI/ServiceHelper.cs",
+        "code": "using System.Diagnostics;\r\nusing System.IO;\r\nusing System.ServiceProcess;\r\n\r\nnamespace CanonCopy.UI;\r\n\r\npublic static class ServiceHelper\r\n{\r\n    public const string ServiceName = \"CanonCopyLogGuard\";\r\n    public const string DisplayName = \"CanonCopy Log Guard\";\r\n\r\n    public static string? FindServiceExe()\r\n    {\r\n        var baseDir = AppContext.BaseDirectory;\r\n        var candidates = new[]\r\n        {\r\n            Path.GetFullPath(Path.Combine(baseDir, \"..\", \"..\", \"..\", \"..\", \"CanonCopy.Service\", \"bin\", \"Debug\", \"net8.0-windows\", \"CanonCopy.Service.exe\")),\r\n            Path.GetFullPath(Path.Combine(baseDir, \"..\", \"..\", \"..\", \"..\", \"CanonCopy.Service\", \"bin\", \"Release\", \"net8.0-windows\", \"CanonCopy.Service.exe\")),\r\n            Path.Combine(baseDir, \"CanonCopy.Service.exe\"),\r\n            Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.ProgramFiles), \"CanonCopy\", \"CanonCopy.Service.exe\")\r\n        };\r\n\r\n        return candidates.FirstOrDefault(File.Exists);\r\n    }\r\n\r\n    public static bool IsInstalled()\r\n    {\r\n        try\r\n        {\r\n            using var sc = new ServiceController(ServiceName);\r\n            _ = sc.Status;\r\n            return true;\r\n        }\r\n        catch\r\n        {\r\n            return false;\r\n        }\r\n    }\r\n\r\n    public static string GetStatusText()\r\n    {\r\n        try\r\n        {\r\n            using var sc = new ServiceController(ServiceName);\r\n            return sc.Status.ToString();\r\n        }\r\n        catch\r\n        {\r\n            return \"NotInstalled\";\r\n        }\r\n    }\r\n\r\n    public static async Task<(bool Ok, string Message)> InstallAsync()\r\n    {\r\n        var exe = FindServiceExe();\r\n        if (exe is null)\r\n            return (false, \"CanonCopy.Service.exe não encontrado. Compile o projeto Service primeiro.\");\r\n\r\n        if (IsInstalled())\r\n            return (true, \"Serviço já instalado.\");\r\n\r\n        var psi = new ProcessStartInfo\r\n        {\r\n            FileName = \"sc.exe\",\r\n            Arguments = $\"create \\\"{ServiceName}\\\" binPath= \\\"\\\\\\\"{exe}\\\\\\\"\\\" start= auto DisplayName= \\\"{DisplayName}\\\"\",\r\n            UseShellExecute = true,\r\n            Verb = \"runas\",\r\n            CreateNoWindow = true\r\n        };\r\n\r\n        try\r\n        {\r\n            using var p = Process.Start(psi);\r\n            if (p is null)\r\n                return (false, \"Não foi possível elevar privilégios.\");\r\n            await p.WaitForExitAsync().ConfigureAwait(false);\r\n            if (p.ExitCode != 0)\r\n                return (false, $\"sc create falhou (código {p.ExitCode}).\");\r\n\r\n            // Description\r\n            var desc = new ProcessStartInfo\r\n            {\r\n                FileName = \"sc.exe\",\r\n                Arguments = $\"description \\\"{ServiceName}\\\" \\\"Monitor append-only de logs CanonCopy. Nunca apaga o backup.\\\"\",\r\n                UseShellExecute = true,\r\n                Verb = \"runas\",\r\n                CreateNoWindow = true\r\n            };\r\n            using var d = Process.Start(desc);\r\n            if (d is not null)\r\n                await d.WaitForExitAsync().ConfigureAwait(false);\r\n\r\n            return (true, \"Serviço instalado. Pode iniciar.\");\r\n        }\r\n        catch (Exception ex)\r\n        {\r\n            return (false, ex.Message);\r\n        }\r\n    }\r\n\r\n    public static async Task<(bool Ok, string Message)> StartAsync()\r\n    {\r\n        return await RunScAsync($\"start \\\"{ServiceName}\\\"\", \"Serviço iniciado.\");\r\n    }\r\n\r\n    public static async Task<(bool Ok, string Message)> StopAsync()\r\n    {\r\n        return await RunScAsync($\"stop \\\"{ServiceName}\\\"\", \"Serviço parado.\");\r\n    }\r\n\r\n    public static async Task<(bool Ok, string Message)> UninstallAsync()\r\n    {\r\n        if (IsInstalled())\r\n        {\r\n            try { await StopAsync().ConfigureAwait(false); } catch { /* ignore */ }\r\n        }\r\n\r\n        return await RunScAsync($\"delete \\\"{ServiceName}\\\"\", \"Serviço removido.\");\r\n    }\r\n\r\n    private static async Task<(bool Ok, string Message)> RunScAsync(string args, string okMessage)\r\n    {\r\n        try\r\n        {\r\n            var psi = new ProcessStartInfo\r\n            {\r\n                FileName = \"sc.exe\",\r\n                Arguments = args,\r\n                UseShellExecute = true,\r\n                Verb = \"runas\",\r\n                CreateNoWindow = true\r\n            };\r\n            using var p = Process.Start(psi);\r\n            if (p is null)\r\n                return (false, \"Não foi possível elevar privilégios.\");\r\n            await p.WaitForExitAsync().ConfigureAwait(false);\r\n            return p.ExitCode == 0\r\n                ? (true, okMessage)\r\n                : (false, $\"Comando falhou (código {p.ExitCode}).\");\r\n        }\r\n        catch (Exception ex)\r\n        {\r\n            return (false, ex.Message);\r\n        }\r\n    }\r\n}\r\n",
+        "implementation": [
+          "path: src/CanonCopy.UI/ServiceHelper.cs",
+          "GitHub: https://github.com/CanonEngineer/CanonSyncEngine/blob/main/src/CanonCopy.UI/ServiceHelper.cs"
+        ]
+      },
+      {
+        "id": "canon-sync-engine-file-src-canoncopy-ui-sparklineseries-cs",
+        "parent": "canon-sync-engine-dir-src-canoncopy-ui",
+        "layer": "file",
+        "title": "SparklineSeries.cs",
+        "description": "Código-fonte: `src/CanonCopy.UI/SparklineSeries.cs`",
+        "file": "src/CanonCopy.UI/SparklineSeries.cs",
+        "code": "using System.Collections.ObjectModel;\r\nusing CommunityToolkit.Mvvm.ComponentModel;\r\n\r\nnamespace CanonCopy.UI;\r\n\r\npublic sealed partial class SparklineSeries : ObservableObject\r\n{\r\n    public ObservableCollection<double> Points { get; } = new();\r\n\r\n    [ObservableProperty] private double _latest;\r\n\r\n    public void Push(double value, int maxPoints = 48)\r\n    {\r\n        Latest = value;\r\n        Points.Add(value);\r\n        while (Points.Count > maxPoints)\r\n            Points.RemoveAt(0);\r\n        OnPropertyChanged(nameof(Points));\r\n    }\r\n}\r\n",
+        "implementation": [
+          "path: src/CanonCopy.UI/SparklineSeries.cs",
+          "GitHub: https://github.com/CanonEngineer/CanonSyncEngine/blob/main/src/CanonCopy.UI/SparklineSeries.cs"
+        ]
+      },
+      {
+        "id": "canon-sync-engine-file-src-canoncopy-ui-systemmetrics-cs",
+        "parent": "canon-sync-engine-dir-src-canoncopy-ui",
+        "layer": "file",
+        "title": "SystemMetrics.cs",
+        "description": "Código-fonte: `src/CanonCopy.UI/SystemMetrics.cs`",
+        "file": "src/CanonCopy.UI/SystemMetrics.cs",
+        "code": "using System.Diagnostics;\r\n\r\nnamespace CanonCopy.UI;\r\n\r\npublic sealed class SystemMetrics\r\n{\r\n    private readonly Process _process = Process.GetCurrentProcess();\r\n    private TimeSpan _lastCpuTime;\r\n    private DateTime _lastSampleUtc = DateTime.UtcNow;\r\n    private bool _initialized;\r\n\r\n    public double SampleCpuPercent()\r\n    {\r\n        _process.Refresh();\r\n        var now = DateTime.UtcNow;\r\n        var cpuTime = _process.TotalProcessorTime;\r\n\r\n        if (!_initialized)\r\n        {\r\n            _initialized = true;\r\n            _lastCpuTime = cpuTime;\r\n            _lastSampleUtc = now;\r\n            return 0;\r\n        }\r\n\r\n        var elapsedMs = (now - _lastSampleUtc).TotalMilliseconds;\r\n        if (elapsedMs < 100)\r\n            return 0;\r\n\r\n        var cpuDeltaMs = (cpuTime - _lastCpuTime).TotalMilliseconds;\r\n        var percent = cpuDeltaMs / (Environment.ProcessorCount * elapsedMs) * 100.0;\r\n\r\n        _lastCpuTime = cpuTime;\r\n        _lastSampleUtc = now;\r\n\r\n        return Math.Clamp(percent, 0, 100);\r\n    }\r\n\r\n    public long SampleRamBytes()\r\n    {\r\n        _process.Refresh();\r\n        return _process.WorkingSet64;\r\n    }\r\n}\r\n",
+        "implementation": [
+          "path: src/CanonCopy.UI/SystemMetrics.cs",
+          "GitHub: https://github.com/CanonEngineer/CanonSyncEngine/blob/main/src/CanonCopy.UI/SystemMetrics.cs"
+        ]
+      },
+      {
+        "id": "canon-sync-engine-file-src-canoncopy-ui-controls-sparklinecontrol-xaml-cs",
+        "parent": "canon-sync-engine-dir-src-canoncopy-ui-controls",
+        "layer": "file",
+        "title": "SparklineControl.xaml.cs",
+        "description": "Código-fonte: `src/CanonCopy.UI/Controls/SparklineControl.xaml.cs`",
+        "file": "src/CanonCopy.UI/Controls/SparklineControl.xaml.cs",
+        "code": "using System.Collections.Specialized;\r\nusing System.Windows;\r\nusing System.Windows.Controls;\r\nusing System.Windows.Media;\r\nusing System.Windows.Shapes;\r\n\r\nnamespace CanonCopy.UI.Controls;\r\n\r\npublic partial class SparklineControl : UserControl\r\n{\r\n    public static readonly DependencyProperty PointsProperty =\r\n        DependencyProperty.Register(nameof(Points), typeof(IEnumerable<double>), typeof(SparklineControl),\r\n            new PropertyMetadata(null, OnPointsChanged));\r\n\r\n    public static readonly DependencyProperty StrokeBrushProperty =\r\n        DependencyProperty.Register(nameof(StrokeBrush), typeof(Brush), typeof(SparklineControl),\r\n            new PropertyMetadata(new SolidColorBrush(Color.FromRgb(0x2E, 0xC4, 0xB6)), OnVisualChanged));\r\n\r\n    public static readonly DependencyProperty FillBrushProperty =\r\n        DependencyProperty.Register(nameof(FillBrush), typeof(Brush), typeof(SparklineControl),\r\n            new PropertyMetadata(new SolidColorBrush(Color.FromArgb(0x33, 0x2E, 0xC4, 0xB6)), OnVisualChanged));\r\n\r\n    public static readonly DependencyProperty ShowFillProperty =\r\n        DependencyProperty.Register(nameof(ShowFill), typeof(bool), typeof(SparklineControl),\r\n            new PropertyMetadata(false, OnVisualChanged));\r\n\r\n    private INotifyCollectionChanged? _subscribed;\r\n\r\n    public IEnumerable<double>? Points\r\n    {\r\n        get => (IEnumerable<double>?)GetValue(PointsProperty);\r\n        set => SetValue(PointsProperty, value);\r\n    }\r\n\r\n    public Brush StrokeBrush\r\n    {\r\n        get => (Brush)GetValue(StrokeBrushProperty);\r\n        set => SetValue(StrokeBrushProperty, value);\r\n    }\r\n\r\n    public Brush FillBrush\r\n    {\r\n        get => (Brush)GetValue(FillBrushProperty);\r\n        set => SetValue(FillBrushProperty, value);\r\n    }\r\n\r\n    public bool ShowFill\r\n    {\r\n        get => (bool)GetValue(ShowFillProperty);\r\n        set => SetValue(ShowFillProperty, value);\r\n    }\r\n\r\n    public SparklineControl()\r\n    {\r\n        InitializeComponent();\r\n        Loaded += (_, _) => Redraw();\r\n        SizeChanged += (_, _) => Redraw();\r\n    }\r\n\r\n    private static void OnPointsChanged(DependencyObject d, DependencyPropertyChangedEventArgs e)\r\n    {\r\n        if (d is not SparklineControl ctrl)\r\n            return;\r\n\r\n        if (ctrl._subscribed is not null)\r\n            ctrl._subscribed.CollectionChanged -= ctrl.OnCollectionChanged;\r\n\r\n        ctrl._subscribed = e.NewValue as INotifyCollectionChanged;\r\n        if (ctrl._subscribed is not null)\r\n            ctrl._subscribed.CollectionChanged += ctrl.OnCollectionChanged;\r\n\r\n        ctrl.Redraw();\r\n    }\r\n\r\n    private static void OnVisualChanged(DependencyObject d, DependencyPropertyChangedEventArgs e)\r\n    {\r\n        if (d is SparklineControl ctrl)\r\n            ctrl.Redraw();\r\n    }\r\n\r\n    private void OnCollectionChanged(object? sender, NotifyCollectionChangedEventArgs e) => Redraw();\r\n\r\n    private void Redraw()\r\n    {\r\n        if (ActualWidth <= 0 || ActualHeight <= 0)\r\n            return;\r\n\r\n        var data = Points?.ToArray() ?? Array.Empty<double>();\r\n        if (data.Length == 0)\r\n        {\r\n            SparkPath.Data = null;\r\n            SparkLine.Points.Clear();\r\n            return;\r\n        }\r\n\r\n        var width = ActualWidth;\r\n        var height = ActualHeight;\r\n        var max = data.Max();\r\n        var min = data.Min();\r\n        var range = max - min;\r\n        if (range < 0.001)\r\n            range = max > 0 ? max : 1;\r\n\r\n        var stepX = data.Length == 1 ? 0 : width / (data.Length - 1);\r\n        var points = new PointCollection(data.Length);\r\n\r\n        for (var i = 0; i < data.Length; i++)\r\n        {\r\n            var normalized = (data[i] - min) / range;\r\n            var x = i * stepX;\r\n            var y = height - (normalized * (height - 4)) - 2;\r\n            points.Add(new Point(x, y));\r\n        }\r\n\r\n        if (ShowFill && points.Count > 1)\r\n        {\r\n            var figure = new PathFigure { StartPoint = points[0], IsClosed = true, IsFilled = true };\r\n            for (var i = 1; i < points.Count; i++)\r\n                figure.Segments.Add(new LineSegment(points[i], true));\r\n            figure.Segments.Add(new LineSegment(new Point(points[^1].X, height), true));\r\n            figure.Segments.Add(new LineSegment(new Point(points[0].X, height), true));\r\n\r\n            SparkPath.Data = new PathGeometry(new[] { figure });\r\n            SparkLine.Visibility = Visibility.Collapsed;\r\n        }\r\n        else\r\n        {\r\n            SparkPath.Data = null;\r\n            SparkLine.Points = points;\r\n            SparkLine.Visibility = Visibility.Visible;\r\n        }\r\n    }\r\n}\r\n",
+        "implementation": [
+          "path: src/CanonCopy.UI/Controls/SparklineControl.xaml.cs",
+          "GitHub: https://github.com/CanonEngineer/CanonSyncEngine/blob/main/src/CanonCopy.UI/Controls/SparklineControl.xaml.cs"
+        ]
+      }
+    ],
+    "meta": {
+      "sourceFiles": 22,
+      "treeNodes": 28,
+      "functionNodes": 0,
+      "stubFiles": 0,
       "complete": true
     }
   },

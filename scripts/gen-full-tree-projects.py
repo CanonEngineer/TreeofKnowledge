@@ -21,6 +21,7 @@ SOURCE_FILES: list[tuple[str, bool]] = [
     ("dropbox-project.json", True),
     ("restaurant-project.json", True),
     ("veyon-project.json", True),
+    ("canonsyncengine-project.json", True),
     ("extra-projects.json", False),
     ("dangerzone-project.json", True),
     ("smarthome-project.json", True),
@@ -28,6 +29,9 @@ SOURCE_FILES: list[tuple[str, bool]] = [
 ]
 
 REPO_CANDIDATES = {
+    "canon-sync-engine": [
+        DESKTOP / "CanonCopy",
+    ],
     "customize-veyon": [
         DESKTOP / "CustomizeVeyonProject",
         DESKTOP / "Projeto Veyon" / "veyon-4.10.4-src (1)" / "veyon-4.10.4",
@@ -41,6 +45,8 @@ REPO_CANDIDATES = {
 
 SKIP_DIRS = {
     ".git",
+    "bin",
+    "obj",
     "node_modules",
     "bower_components",
     "vendor",

@@ -12,6 +12,7 @@ CPE_FILE = os.path.join(ROOT, "scripts", "cpe-project.json")
 VEYON_FILE = os.path.join(ROOT, "scripts", "veyon-project.json")
 DROPBOX_FILE = os.path.join(ROOT, "scripts", "dropbox-project.json")
 RESTAURANT_FILE = os.path.join(ROOT, "scripts", "restaurant-project.json")
+CANONSYNC_FILE = os.path.join(ROOT, "scripts", "canonsyncengine-project.json")
 EXTRA_FILE = os.path.join(ROOT, "scripts", "extra-projects.json")
 DANGERZONE_FILE = os.path.join(ROOT, "scripts", "dangerzone-project.json")
 SMARTHOME_FILE = os.path.join(ROOT, "scripts", "smarthome-project.json")
@@ -34,6 +35,8 @@ def main():
     dropbox = json.load(f)
   with open(RESTAURANT_FILE, encoding="utf-8") as f:
     restaurant = json.load(f)
+  with open(CANONSYNC_FILE, encoding="utf-8") as f:
+    canonsync = json.load(f)
   extras = []
   if os.path.isfile(EXTRA_FILE):
     with open(EXTRA_FILE, encoding="utf-8") as f:
@@ -54,7 +57,7 @@ def main():
   if os.path.isfile(SENTINELAI_FILE):
     with open(SENTINELAI_FILE, encoding="utf-8") as f:
       sentinelai = [json.load(f)]
-  projects = [cpe] + others[:1] + [dropbox, restaurant] + others[1:] + [veyon] + extras + dangerzone + smarthome + smartferrari + sentinelai
+  projects = [cpe] + others[:1] + [dropbox, restaurant] + others[1:] + [veyon] + extras + dangerzone + smarthome + smartferrari + [canonsync] + sentinelai
   js = "/* Árvore do Conhecimento — " + str(sum(len(p["nodes"]) for p in projects)) + " nós */\nconst PROJECTS = "
   js += json.dumps(projects, ensure_ascii=False, indent=2) + ";\n"
   with open(OUT, "w", encoding="utf-8") as f:

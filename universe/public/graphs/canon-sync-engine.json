@@ -1,0 +1,497 @@
+{
+  "slug": "canon-sync-engine",
+  "name": "CanonSyncEngine",
+  "repoUrl": "https://github.com/CanonEngineer/CanonSyncEngine",
+  "color": "#0ea5e9",
+  "demoUrl": "",
+  "nodeCount": 28,
+  "categories": {
+    "core": {
+      "label": "Backend",
+      "color": "#3b82f6"
+    },
+    "frontend": {
+      "label": "Frontend",
+      "color": "#eab308"
+    },
+    "other": {
+      "label": "Outros",
+      "color": "#64748b"
+    }
+  },
+  "nodes": [
+    {
+      "id": "canon-sync-engine-root",
+      "label": "CanonSyncEngine",
+      "parent": null,
+      "layer": "root",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 2.2,
+      "file": "README.md",
+      "description": "Cobertura completa: 101 arquivos de código no repositório (150 nós na árvore incluindo pastas)."
+    },
+    {
+      "id": "canon-sync-engine-dir-src",
+      "label": "src/",
+      "parent": "canon-sync-engine-root",
+      "layer": "module",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 1.35,
+      "file": "src/",
+      "description": "Pacote/pasta `src/` do projeto."
+    },
+    {
+      "id": "canon-sync-engine-dir-src-canoncopy-core",
+      "label": "CanonCopy.Core/",
+      "parent": "canon-sync-engine-dir-src",
+      "layer": "module",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 1.35,
+      "file": "src/CanonCopy.Core/",
+      "description": "Pacote/pasta `src/CanonCopy.Core/` do projeto."
+    },
+    {
+      "id": "canon-sync-engine-dir-src-canoncopy-service",
+      "label": "CanonCopy.Service/",
+      "parent": "canon-sync-engine-dir-src",
+      "layer": "module",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 1.35,
+      "file": "src/CanonCopy.Service/",
+      "description": "Pacote/pasta `src/CanonCopy.Service/` do projeto."
+    },
+    {
+      "id": "canon-sync-engine-dir-src-canoncopy-ui",
+      "label": "CanonCopy.UI/",
+      "parent": "canon-sync-engine-dir-src",
+      "layer": "module",
+      "category": "frontend",
+      "categoryLabel": "Frontend",
+      "color": "#eab308",
+      "size": 1.35,
+      "file": "src/CanonCopy.UI/",
+      "description": "Pacote/pasta `src/CanonCopy.UI/` do projeto."
+    },
+    {
+      "id": "canon-sync-engine-dir-src-canoncopy-service-properties",
+      "label": "Properties/",
+      "parent": "canon-sync-engine-dir-src-canoncopy-service",
+      "layer": "module",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 1.35,
+      "file": "src/CanonCopy.Service/Properties/",
+      "description": "Pacote/pasta `src/CanonCopy.Service/Properties/` do projeto."
+    },
+    {
+      "id": "canon-sync-engine-dir-src-canoncopy-ui-controls",
+      "label": "Controls/",
+      "parent": "canon-sync-engine-dir-src-canoncopy-ui",
+      "layer": "module",
+      "category": "frontend",
+      "categoryLabel": "Frontend",
+      "color": "#eab308",
+      "size": 1.35,
+      "file": "src/CanonCopy.UI/Controls/",
+      "description": "Pacote/pasta `src/CanonCopy.UI/Controls/` do projeto."
+    },
+    {
+      "id": "canon-sync-engine-file-gitignore",
+      "label": ".gitignore",
+      "parent": "canon-sync-engine-root",
+      "layer": "file",
+      "category": "other",
+      "categoryLabel": "Outros",
+      "color": "#64748b",
+      "size": 0.85,
+      "file": ".gitignore",
+      "description": "Código-fonte: `.gitignore`"
+    },
+    {
+      "id": "canon-sync-engine-file-src-canoncopy-core-apppaths-cs",
+      "label": "AppPaths.cs",
+      "parent": "canon-sync-engine-dir-src-canoncopy-core",
+      "layer": "file",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 0.85,
+      "file": "src/CanonCopy.Core/AppPaths.cs",
+      "description": "Código-fonte: `src/CanonCopy.Core/AppPaths.cs`"
+    },
+    {
+      "id": "canon-sync-engine-file-src-canoncopy-core-configstore-cs",
+      "label": "ConfigStore.cs",
+      "parent": "canon-sync-engine-dir-src-canoncopy-core",
+      "layer": "file",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 0.85,
+      "file": "src/CanonCopy.Core/ConfigStore.cs",
+      "description": "Código-fonte: `src/CanonCopy.Core/ConfigStore.cs`"
+    },
+    {
+      "id": "canon-sync-engine-file-src-canoncopy-core-logtailmonitor-cs",
+      "label": "LogTailMonitor.cs",
+      "parent": "canon-sync-engine-dir-src-canoncopy-core",
+      "layer": "file",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 0.85,
+      "file": "src/CanonCopy.Core/LogTailMonitor.cs",
+      "description": "Código-fonte: `src/CanonCopy.Core/LogTailMonitor.cs`"
+    },
+    {
+      "id": "canon-sync-engine-file-src-canoncopy-core-monitoroptions-cs",
+      "label": "MonitorOptions.cs",
+      "parent": "canon-sync-engine-dir-src-canoncopy-core",
+      "layer": "file",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 0.85,
+      "file": "src/CanonCopy.Core/MonitorOptions.cs",
+      "description": "Código-fonte: `src/CanonCopy.Core/MonitorOptions.cs`"
+    },
+    {
+      "id": "canon-sync-engine-file-src-canoncopy-core-offsetstore-cs",
+      "label": "OffsetStore.cs",
+      "parent": "canon-sync-engine-dir-src-canoncopy-core",
+      "layer": "file",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 0.85,
+      "file": "src/CanonCopy.Core/OffsetStore.cs",
+      "description": "Código-fonte: `src/CanonCopy.Core/OffsetStore.cs`"
+    },
+    {
+      "id": "canon-sync-engine-file-src-canoncopy-core-statusstore-cs",
+      "label": "StatusStore.cs",
+      "parent": "canon-sync-engine-dir-src-canoncopy-core",
+      "layer": "file",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 0.85,
+      "file": "src/CanonCopy.Core/StatusStore.cs",
+      "description": "Código-fonte: `src/CanonCopy.Core/StatusStore.cs`"
+    },
+    {
+      "id": "canon-sync-engine-file-src-canoncopy-service-appsettings-development-json",
+      "label": "appsettings.Development.json",
+      "parent": "canon-sync-engine-dir-src-canoncopy-service",
+      "layer": "file",
+      "category": "other",
+      "categoryLabel": "Outros",
+      "color": "#64748b",
+      "size": 0.85,
+      "file": "src/CanonCopy.Service/appsettings.Development.json",
+      "description": "Código-fonte: `src/CanonCopy.Service/appsettings.Development.json`"
+    },
+    {
+      "id": "canon-sync-engine-file-src-canoncopy-service-appsettings-json",
+      "label": "appsettings.json",
+      "parent": "canon-sync-engine-dir-src-canoncopy-service",
+      "layer": "file",
+      "category": "other",
+      "categoryLabel": "Outros",
+      "color": "#64748b",
+      "size": 0.85,
+      "file": "src/CanonCopy.Service/appsettings.json",
+      "description": "Código-fonte: `src/CanonCopy.Service/appsettings.json`"
+    },
+    {
+      "id": "canon-sync-engine-file-src-canoncopy-service-program-cs",
+      "label": "Program.cs",
+      "parent": "canon-sync-engine-dir-src-canoncopy-service",
+      "layer": "file",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 0.85,
+      "file": "src/CanonCopy.Service/Program.cs",
+      "description": "Código-fonte: `src/CanonCopy.Service/Program.cs`"
+    },
+    {
+      "id": "canon-sync-engine-file-src-canoncopy-service-worker-cs",
+      "label": "Worker.cs",
+      "parent": "canon-sync-engine-dir-src-canoncopy-service",
+      "layer": "file",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 0.85,
+      "file": "src/CanonCopy.Service/Worker.cs",
+      "description": "Código-fonte: `src/CanonCopy.Service/Worker.cs`"
+    },
+    {
+      "id": "canon-sync-engine-file-src-canoncopy-service-properties-launchsettings-json",
+      "label": "launchSettings.json",
+      "parent": "canon-sync-engine-dir-src-canoncopy-service-properties",
+      "layer": "file",
+      "category": "other",
+      "categoryLabel": "Outros",
+      "color": "#64748b",
+      "size": 0.85,
+      "file": "src/CanonCopy.Service/Properties/launchSettings.json",
+      "description": "Código-fonte: `src/CanonCopy.Service/Properties/launchSettings.json`"
+    },
+    {
+      "id": "canon-sync-engine-file-src-canoncopy-ui-app-xaml-cs",
+      "label": "App.xaml.cs",
+      "parent": "canon-sync-engine-dir-src-canoncopy-ui",
+      "layer": "file",
+      "category": "frontend",
+      "categoryLabel": "Frontend",
+      "color": "#eab308",
+      "size": 0.85,
+      "file": "src/CanonCopy.UI/App.xaml.cs",
+      "description": "Código-fonte: `src/CanonCopy.UI/App.xaml.cs`"
+    },
+    {
+      "id": "canon-sync-engine-file-src-canoncopy-ui-assemblyinfo-cs",
+      "label": "AssemblyInfo.cs",
+      "parent": "canon-sync-engine-dir-src-canoncopy-ui",
+      "layer": "file",
+      "category": "frontend",
+      "categoryLabel": "Frontend",
+      "color": "#eab308",
+      "size": 0.85,
+      "file": "src/CanonCopy.UI/AssemblyInfo.cs",
+      "description": "Código-fonte: `src/CanonCopy.UI/AssemblyInfo.cs`"
+    },
+    {
+      "id": "canon-sync-engine-file-src-canoncopy-ui-converters-cs",
+      "label": "Converters.cs",
+      "parent": "canon-sync-engine-dir-src-canoncopy-ui",
+      "layer": "file",
+      "category": "frontend",
+      "categoryLabel": "Frontend",
+      "color": "#eab308",
+      "size": 0.85,
+      "file": "src/CanonCopy.UI/Converters.cs",
+      "description": "Código-fonte: `src/CanonCopy.UI/Converters.cs`"
+    },
+    {
+      "id": "canon-sync-engine-file-src-canoncopy-ui-mainviewmodel-cs",
+      "label": "MainViewModel.cs",
+      "parent": "canon-sync-engine-dir-src-canoncopy-ui",
+      "layer": "file",
+      "category": "frontend",
+      "categoryLabel": "Frontend",
+      "color": "#eab308",
+      "size": 0.85,
+      "file": "src/CanonCopy.UI/MainViewModel.cs",
+      "description": "Código-fonte: `src/CanonCopy.UI/MainViewModel.cs`"
+    },
+    {
+      "id": "canon-sync-engine-file-src-canoncopy-ui-mainwindow-xaml-cs",
+      "label": "MainWindow.xaml.cs",
+      "parent": "canon-sync-engine-dir-src-canoncopy-ui",
+      "layer": "file",
+      "category": "frontend",
+      "categoryLabel": "Frontend",
+      "color": "#eab308",
+      "size": 0.85,
+      "file": "src/CanonCopy.UI/MainWindow.xaml.cs",
+      "description": "Código-fonte: `src/CanonCopy.UI/MainWindow.xaml.cs`"
+    },
+    {
+      "id": "canon-sync-engine-file-src-canoncopy-ui-servicehelper-cs",
+      "label": "ServiceHelper.cs",
+      "parent": "canon-sync-engine-dir-src-canoncopy-ui",
+      "layer": "file",
+      "category": "frontend",
+      "categoryLabel": "Frontend",
+      "color": "#eab308",
+      "size": 0.85,
+      "file": "src/CanonCopy.UI/ServiceHelper.cs",
+      "description": "Código-fonte: `src/CanonCopy.UI/ServiceHelper.cs`"
+    },
+    {
+      "id": "canon-sync-engine-file-src-canoncopy-ui-sparklineseries-cs",
+      "label": "SparklineSeries.cs",
+      "parent": "canon-sync-engine-dir-src-canoncopy-ui",
+      "layer": "file",
+      "category": "frontend",
+      "categoryLabel": "Frontend",
+      "color": "#eab308",
+      "size": 0.85,
+      "file": "src/CanonCopy.UI/SparklineSeries.cs",
+      "description": "Código-fonte: `src/CanonCopy.UI/SparklineSeries.cs`"
+    },
+    {
+      "id": "canon-sync-engine-file-src-canoncopy-ui-systemmetrics-cs",
+      "label": "SystemMetrics.cs",
+      "parent": "canon-sync-engine-dir-src-canoncopy-ui",
+      "layer": "file",
+      "category": "frontend",
+      "categoryLabel": "Frontend",
+      "color": "#eab308",
+      "size": 0.85,
+      "file": "src/CanonCopy.UI/SystemMetrics.cs",
+      "description": "Código-fonte: `src/CanonCopy.UI/SystemMetrics.cs`"
+    },
+    {
+      "id": "canon-sync-engine-file-src-canoncopy-ui-controls-sparklinecontrol-xaml-cs",
+      "label": "SparklineControl.xaml.cs",
+      "parent": "canon-sync-engine-dir-src-canoncopy-ui-controls",
+      "layer": "file",
+      "category": "frontend",
+      "categoryLabel": "Frontend",
+      "color": "#eab308",
+      "size": 0.85,
+      "file": "src/CanonCopy.UI/Controls/SparklineControl.xaml.cs",
+      "description": "Código-fonte: `src/CanonCopy.UI/Controls/SparklineControl.xaml.cs`"
+    }
+  ],
+  "links": [
+    {
+      "source": "canon-sync-engine-root",
+      "target": "canon-sync-engine-dir-src",
+      "type": "dependency"
+    },
+    {
+      "source": "canon-sync-engine-dir-src",
+      "target": "canon-sync-engine-dir-src-canoncopy-core",
+      "type": "dependency"
+    },
+    {
+      "source": "canon-sync-engine-dir-src",
+      "target": "canon-sync-engine-dir-src-canoncopy-service",
+      "type": "dependency"
+    },
+    {
+      "source": "canon-sync-engine-dir-src",
+      "target": "canon-sync-engine-dir-src-canoncopy-ui",
+      "type": "dependency"
+    },
+    {
+      "source": "canon-sync-engine-dir-src-canoncopy-service",
+      "target": "canon-sync-engine-dir-src-canoncopy-service-properties",
+      "type": "dependency"
+    },
+    {
+      "source": "canon-sync-engine-dir-src-canoncopy-ui",
+      "target": "canon-sync-engine-dir-src-canoncopy-ui-controls",
+      "type": "dependency"
+    },
+    {
+      "source": "canon-sync-engine-root",
+      "target": "canon-sync-engine-file-gitignore",
+      "type": "dependency"
+    },
+    {
+      "source": "canon-sync-engine-dir-src-canoncopy-core",
+      "target": "canon-sync-engine-file-src-canoncopy-core-apppaths-cs",
+      "type": "dependency"
+    },
+    {
+      "source": "canon-sync-engine-dir-src-canoncopy-core",
+      "target": "canon-sync-engine-file-src-canoncopy-core-configstore-cs",
+      "type": "dependency"
+    },
+    {
+      "source": "canon-sync-engine-dir-src-canoncopy-core",
+      "target": "canon-sync-engine-file-src-canoncopy-core-logtailmonitor-cs",
+      "type": "dependency"
+    },
+    {
+      "source": "canon-sync-engine-dir-src-canoncopy-core",
+      "target": "canon-sync-engine-file-src-canoncopy-core-monitoroptions-cs",
+      "type": "dependency"
+    },
+    {
+      "source": "canon-sync-engine-dir-src-canoncopy-core",
+      "target": "canon-sync-engine-file-src-canoncopy-core-offsetstore-cs",
+      "type": "dependency"
+    },
+    {
+      "source": "canon-sync-engine-dir-src-canoncopy-core",
+      "target": "canon-sync-engine-file-src-canoncopy-core-statusstore-cs",
+      "type": "dependency"
+    },
+    {
+      "source": "canon-sync-engine-dir-src-canoncopy-service",
+      "target": "canon-sync-engine-file-src-canoncopy-service-appsettings-development-json",
+      "type": "dependency"
+    },
+    {
+      "source": "canon-sync-engine-dir-src-canoncopy-service",
+      "target": "canon-sync-engine-file-src-canoncopy-service-appsettings-json",
+      "type": "dependency"
+    },
+    {
+      "source": "canon-sync-engine-dir-src-canoncopy-service",
+      "target": "canon-sync-engine-file-src-canoncopy-service-program-cs",
+      "type": "dependency"
+    },
+    {
+      "source": "canon-sync-engine-dir-src-canoncopy-service",
+      "target": "canon-sync-engine-file-src-canoncopy-service-worker-cs",
+      "type": "dependency"
+    },
+    {
+      "source": "canon-sync-engine-dir-src-canoncopy-service-properties",
+      "target": "canon-sync-engine-file-src-canoncopy-service-properties-launchsettings-json",
+      "type": "dependency"
+    },
+    {
+      "source": "canon-sync-engine-dir-src-canoncopy-ui",
+      "target": "canon-sync-engine-file-src-canoncopy-ui-app-xaml-cs",
+      "type": "dependency"
+    },
+    {
+      "source": "canon-sync-engine-dir-src-canoncopy-ui",
+      "target": "canon-sync-engine-file-src-canoncopy-ui-assemblyinfo-cs",
+      "type": "dependency"
+    },
+    {
+      "source": "canon-sync-engine-dir-src-canoncopy-ui",
+      "target": "canon-sync-engine-file-src-canoncopy-ui-converters-cs",
+      "type": "dependency"
+    },
+    {
+      "source": "canon-sync-engine-dir-src-canoncopy-ui",
+      "target": "canon-sync-engine-file-src-canoncopy-ui-mainviewmodel-cs",
+      "type": "dependency"
+    },
+    {
+      "source": "canon-sync-engine-dir-src-canoncopy-ui",
+      "target": "canon-sync-engine-file-src-canoncopy-ui-mainwindow-xaml-cs",
+      "type": "dependency"
+    },
+    {
+      "source": "canon-sync-engine-dir-src-canoncopy-ui",
+      "target": "canon-sync-engine-file-src-canoncopy-ui-servicehelper-cs",
+      "type": "dependency"
+    },
+    {
+      "source": "canon-sync-engine-dir-src-canoncopy-ui",
+      "target": "canon-sync-engine-file-src-canoncopy-ui-sparklineseries-cs",
+      "type": "dependency"
+    },
+    {
+      "source": "canon-sync-engine-dir-src-canoncopy-ui",
+      "target": "canon-sync-engine-file-src-canoncopy-ui-systemmetrics-cs",
+      "type": "dependency"
+    },
+    {
+      "source": "canon-sync-engine-dir-src-canoncopy-ui-controls",
+      "target": "canon-sync-engine-file-src-canoncopy-ui-controls-sparklinecontrol-xaml-cs",
+      "type": "dependency"
+    }
+  ]
+}
