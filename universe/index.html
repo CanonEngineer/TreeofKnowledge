@@ -9,6 +9,24 @@
   </head>
   <body>
     <div id="root"></div>
+    <script>
+      (function () {
+        const nativeFetch = window.fetch.bind(window);
+        window.fetch = function (input, init) {
+          if (typeof input === 'string') {
+            const match = input.match(/^\.\/graphs\/(.+)\.json$/);
+            if (match) {
+              const slug = match[1];
+              return nativeFetch(input, init).then(function (response) {
+                if (response.ok) return response;
+                return nativeFetch('../universe/public/graphs/' + slug + '.json', init);
+              });
+            }
+          }
+          return nativeFetch(input, init);
+        };
+      })();
+    </script>
     <script type="module" src="/src/main.jsx"></script>
   </body>
 </html>
