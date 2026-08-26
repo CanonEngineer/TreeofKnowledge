@@ -20,30 +20,16 @@ export default function App() {
   const slug = getProjectSlug();
 
   useEffect(() => {
-    const graphUrls = [
-      `./graphs/${slug}.json`,
-      `../universe/public/graphs/${slug}.json`,
-    ];
-
-    (async () => {
-      let lastError = null;
-      for (const url of graphUrls) {
-        try {
-          const response = await fetch(url);
-          if (!response.ok) {
-            lastError = new Error(`Grafo não encontrado: ${slug}`);
-            continue;
-          }
-          const data = await response.json();
-          setGraph(data);
-          setActiveCategories(new Set(Object.keys(data.categories || {})));
-          return;
-        } catch (err) {
-          lastError = err instanceof Error ? err : new Error(String(err));
-        }
-      }
-      setError(lastError?.message || `Grafo não encontrado: ${slug}`);
-    })();
+    fetch(`./graphs/${slug}.json`)
+      .then((r) => {
+        if (!r.ok) throw new Error(`Grafo não encontrado: ${slug}`);
+        return r.json();
+      })
+      .then((data) => {
+        setGraph(data);
+        setActiveCategories(new Set(Object.keys(data.categories || {})));
+      })
+      .catch((e) => setError(e.message));
   }, [slug]);
 
   const selectedNode = useMemo(
