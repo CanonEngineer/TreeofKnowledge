@@ -1,0 +1,365 @@
+{
+  "slug": "admin-user-management",
+  "name": "AdminUserManagement",
+  "repoUrl": "https://github.com/CanonEngineer/AdminUserManagement",
+  "color": "#7c3aed",
+  "demoUrl": "",
+  "nodeCount": 20,
+  "categories": {
+    "core": {
+      "label": "Backend",
+      "color": "#3b82f6"
+    },
+    "frontend": {
+      "label": "Frontend",
+      "color": "#eab308"
+    },
+    "scripts": {
+      "label": "Scripts",
+      "color": "#64748b"
+    },
+    "other": {
+      "label": "Outros",
+      "color": "#64748b"
+    }
+  },
+  "nodes": [
+    {
+      "id": "admin-user-management-root",
+      "label": "AdminUserManagement",
+      "parent": null,
+      "layer": "root",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 2.2,
+      "file": "README.md",
+      "description": "Gestão segura de admin local via GPO: DPAPI + PowerShell + AD."
+    },
+    {
+      "id": "admin-user-management-dir-setadmuser",
+      "label": "SetAdmUser/",
+      "parent": "admin-user-management-root",
+      "layer": "module",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 1.35,
+      "file": "SetAdmUser/",
+      "description": "Módulo `SetAdmUser/` — config fixa."
+    },
+    {
+      "id": "admin-user-management-dir-setadmuser-env",
+      "label": "SetAdmUser-Env/",
+      "parent": "admin-user-management-root",
+      "layer": "module",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 1.35,
+      "file": "SetAdmUser-Env/",
+      "description": "Módulo `SetAdmUser-Env/` — variáveis de ambiente GPO."
+    },
+    {
+      "id": "admin-user-management-file-setadmuser-set-adm-user-bat",
+      "label": "set_adm_user.bat",
+      "parent": "admin-user-management-dir-setadmuser",
+      "layer": "file",
+      "category": "other",
+      "categoryLabel": "Outros",
+      "color": "#64748b",
+      "size": 0.85,
+      "file": "SetAdmUser/set_adm_user.bat",
+      "description": "Código-fonte: `SetAdmUser/set_adm_user.bat`"
+    },
+    {
+      "id": "admin-user-management-file-setadmuser-set-admuser-ps1",
+      "label": "Set-AdmUser.ps1",
+      "parent": "admin-user-management-dir-setadmuser",
+      "layer": "file",
+      "category": "scripts",
+      "categoryLabel": "Scripts",
+      "color": "#64748b",
+      "size": 0.85,
+      "file": "SetAdmUser/Set-AdmUser.ps1",
+      "description": "Código-fonte: `SetAdmUser/Set-AdmUser.ps1`"
+    },
+    {
+      "id": "admin-user-management-file-setadmuser-install-setadmuser-ps1",
+      "label": "Install-SetAdmUser.ps1",
+      "parent": "admin-user-management-dir-setadmuser",
+      "layer": "file",
+      "category": "scripts",
+      "categoryLabel": "Scripts",
+      "color": "#64748b",
+      "size": 0.85,
+      "file": "SetAdmUser/Install-SetAdmUser.ps1",
+      "description": "Código-fonte: `SetAdmUser/Install-SetAdmUser.ps1`"
+    },
+    {
+      "id": "admin-user-management-file-setadmuser-gpo-startup-setadmuser-ps1",
+      "label": "GPO-Startup-SetAdmUser.ps1",
+      "parent": "admin-user-management-dir-setadmuser",
+      "layer": "file",
+      "category": "scripts",
+      "categoryLabel": "Scripts",
+      "color": "#64748b",
+      "size": 0.85,
+      "file": "SetAdmUser/GPO-Startup-SetAdmUser.ps1",
+      "description": "Código-fonte: `SetAdmUser/GPO-Startup-SetAdmUser.ps1`"
+    },
+    {
+      "id": "admin-user-management-file-setadmuser-gpo-startup-setadmuser-bat",
+      "label": "GPO-Startup-SetAdmUser.bat",
+      "parent": "admin-user-management-dir-setadmuser",
+      "layer": "file",
+      "category": "other",
+      "categoryLabel": "Outros",
+      "color": "#64748b",
+      "size": 0.85,
+      "file": "SetAdmUser/GPO-Startup-SetAdmUser.bat",
+      "description": "Código-fonte: `SetAdmUser/GPO-Startup-SetAdmUser.bat`"
+    },
+    {
+      "id": "admin-user-management-file-setadmuser-env-get-setadmuserconfig-ps1",
+      "label": "Get-SetAdmUserConfig.ps1",
+      "parent": "admin-user-management-dir-setadmuser-env",
+      "layer": "file",
+      "category": "scripts",
+      "categoryLabel": "Scripts",
+      "color": "#64748b",
+      "size": 0.85,
+      "file": "SetAdmUser-Env/Get-SetAdmUserConfig.ps1",
+      "description": "Código-fonte: `SetAdmUser-Env/Get-SetAdmUserConfig.ps1`"
+    },
+    {
+      "id": "admin-user-management-file-setadmuser-env-set-admuser-ps1",
+      "label": "Set-AdmUser.ps1",
+      "parent": "admin-user-management-dir-setadmuser-env",
+      "layer": "file",
+      "category": "scripts",
+      "categoryLabel": "Scripts",
+      "color": "#64748b",
+      "size": 0.85,
+      "file": "SetAdmUser-Env/Set-AdmUser.ps1",
+      "description": "Código-fonte: `SetAdmUser-Env/Set-AdmUser.ps1`"
+    },
+    {
+      "id": "admin-user-management-file-setadmuser-env-install-setadmuser-ps1",
+      "label": "Install-SetAdmUser.ps1",
+      "parent": "admin-user-management-dir-setadmuser-env",
+      "layer": "file",
+      "category": "scripts",
+      "categoryLabel": "Scripts",
+      "color": "#64748b",
+      "size": 0.85,
+      "file": "SetAdmUser-Env/Install-SetAdmUser.ps1",
+      "description": "Código-fonte: `SetAdmUser-Env/Install-SetAdmUser.ps1`"
+    },
+    {
+      "id": "admin-user-management-file-setadmuser-env-gpo-startup-setadmuser-ps1",
+      "label": "GPO-Startup-SetAdmUser.ps1",
+      "parent": "admin-user-management-dir-setadmuser-env",
+      "layer": "file",
+      "category": "scripts",
+      "categoryLabel": "Scripts",
+      "color": "#64748b",
+      "size": 0.85,
+      "file": "SetAdmUser-Env/GPO-Startup-SetAdmUser.ps1",
+      "description": "Código-fonte: `SetAdmUser-Env/GPO-Startup-SetAdmUser.ps1`"
+    },
+    {
+      "id": "admin-user-management-file-setadmuser-env-set-setadmuserenv-ps1",
+      "label": "Set-SetAdmUserEnv.ps1",
+      "parent": "admin-user-management-dir-setadmuser-env",
+      "layer": "file",
+      "category": "scripts",
+      "categoryLabel": "Scripts",
+      "color": "#64748b",
+      "size": 0.85,
+      "file": "SetAdmUser-Env/Set-SetAdmUserEnv.ps1",
+      "description": "Código-fonte: `SetAdmUser-Env/Set-SetAdmUserEnv.ps1`"
+    },
+    {
+      "id": "admin-user-management-file-setadmuser-env-set-adm-user-bat",
+      "label": "set_adm_user.bat",
+      "parent": "admin-user-management-dir-setadmuser-env",
+      "layer": "file",
+      "category": "other",
+      "categoryLabel": "Outros",
+      "color": "#64748b",
+      "size": 0.85,
+      "file": "SetAdmUser-Env/set_adm_user.bat",
+      "description": "Código-fonte: `SetAdmUser-Env/set_adm_user.bat`"
+    },
+    {
+      "id": "admin-user-management-fn-get-protectedpassword",
+      "label": "Get-ProtectedPassword()",
+      "parent": "admin-user-management-file-setadmuser-set-admuser-ps1",
+      "layer": "function",
+      "category": "scripts",
+      "categoryLabel": "Scripts",
+      "color": "#64748b",
+      "size": 0.62,
+      "file": "SetAdmUser/Set-AdmUser.ps1",
+      "description": "Função `Get-ProtectedPassword` em `SetAdmUser/Set-AdmUser.ps1`"
+    },
+    {
+      "id": "admin-user-management-fn-set-localadminuser",
+      "label": "Set-LocalAdminUser()",
+      "parent": "admin-user-management-file-setadmuser-set-admuser-ps1",
+      "layer": "function",
+      "category": "scripts",
+      "categoryLabel": "Scripts",
+      "color": "#64748b",
+      "size": 0.62,
+      "file": "SetAdmUser/Set-AdmUser.ps1",
+      "description": "Função `Set-LocalAdminUser` em `SetAdmUser/Set-AdmUser.ps1`"
+    },
+    {
+      "id": "admin-user-management-fn-disable-builtinadministrator",
+      "label": "Disable-BuiltInAdministrator()",
+      "parent": "admin-user-management-file-setadmuser-set-admuser-ps1",
+      "layer": "function",
+      "category": "frontend",
+      "categoryLabel": "Frontend",
+      "color": "#eab308",
+      "size": 0.62,
+      "file": "SetAdmUser/Set-AdmUser.ps1",
+      "description": "Função `Disable-BuiltInAdministrator` em `SetAdmUser/Set-AdmUser.ps1`"
+    },
+    {
+      "id": "admin-user-management-fn-save-protectedpassword",
+      "label": "Save-ProtectedPassword()",
+      "parent": "admin-user-management-file-setadmuser-install-setadmuser-ps1",
+      "layer": "function",
+      "category": "scripts",
+      "categoryLabel": "Scripts",
+      "color": "#64748b",
+      "size": 0.62,
+      "file": "SetAdmUser/Install-SetAdmUser.ps1",
+      "description": "Função `Save-ProtectedPassword` em `SetAdmUser/Install-SetAdmUser.ps1`"
+    },
+    {
+      "id": "admin-user-management-fn-get-setadmuserconfig",
+      "label": "Get-SetAdmUserConfig()",
+      "parent": "admin-user-management-file-setadmuser-env-get-setadmuserconfig-ps1",
+      "layer": "function",
+      "category": "scripts",
+      "categoryLabel": "Scripts",
+      "color": "#64748b",
+      "size": 0.62,
+      "file": "SetAdmUser-Env/Get-SetAdmUserConfig.ps1",
+      "description": "Função `Get-SetAdmUserConfig` em `SetAdmUser-Env/Get-SetAdmUserConfig.ps1`"
+    },
+    {
+      "id": "admin-user-management-fn-get-setadmuserpasswordfromenv",
+      "label": "Get-SetAdmUserPasswordFromEnv()",
+      "parent": "admin-user-management-file-setadmuser-env-get-setadmuserconfig-ps1",
+      "layer": "function",
+      "category": "scripts",
+      "categoryLabel": "Scripts",
+      "color": "#64748b",
+      "size": 0.62,
+      "file": "SetAdmUser-Env/Get-SetAdmUserConfig.ps1",
+      "description": "Função `Get-SetAdmUserPasswordFromEnv` em `SetAdmUser-Env/Get-SetAdmUserConfig.ps1`"
+    }
+  ],
+  "links": [
+    {
+      "source": "admin-user-management-root",
+      "target": "admin-user-management-dir-setadmuser",
+      "type": "dependency"
+    },
+    {
+      "source": "admin-user-management-root",
+      "target": "admin-user-management-dir-setadmuser-env",
+      "type": "dependency"
+    },
+    {
+      "source": "admin-user-management-dir-setadmuser",
+      "target": "admin-user-management-file-setadmuser-set-adm-user-bat",
+      "type": "dependency"
+    },
+    {
+      "source": "admin-user-management-dir-setadmuser",
+      "target": "admin-user-management-file-setadmuser-set-admuser-ps1",
+      "type": "dependency"
+    },
+    {
+      "source": "admin-user-management-dir-setadmuser",
+      "target": "admin-user-management-file-setadmuser-install-setadmuser-ps1",
+      "type": "dependency"
+    },
+    {
+      "source": "admin-user-management-dir-setadmuser",
+      "target": "admin-user-management-file-setadmuser-gpo-startup-setadmuser-ps1",
+      "type": "dependency"
+    },
+    {
+      "source": "admin-user-management-dir-setadmuser",
+      "target": "admin-user-management-file-setadmuser-gpo-startup-setadmuser-bat",
+      "type": "dependency"
+    },
+    {
+      "source": "admin-user-management-dir-setadmuser-env",
+      "target": "admin-user-management-file-setadmuser-env-get-setadmuserconfig-ps1",
+      "type": "dependency"
+    },
+    {
+      "source": "admin-user-management-dir-setadmuser-env",
+      "target": "admin-user-management-file-setadmuser-env-set-admuser-ps1",
+      "type": "dependency"
+    },
+    {
+      "source": "admin-user-management-dir-setadmuser-env",
+      "target": "admin-user-management-file-setadmuser-env-install-setadmuser-ps1",
+      "type": "dependency"
+    },
+    {
+      "source": "admin-user-management-dir-setadmuser-env",
+      "target": "admin-user-management-file-setadmuser-env-gpo-startup-setadmuser-ps1",
+      "type": "dependency"
+    },
+    {
+      "source": "admin-user-management-dir-setadmuser-env",
+      "target": "admin-user-management-file-setadmuser-env-set-setadmuserenv-ps1",
+      "type": "dependency"
+    },
+    {
+      "source": "admin-user-management-dir-setadmuser-env",
+      "target": "admin-user-management-file-setadmuser-env-set-adm-user-bat",
+      "type": "dependency"
+    },
+    {
+      "source": "admin-user-management-file-setadmuser-set-admuser-ps1",
+      "target": "admin-user-management-fn-get-protectedpassword",
+      "type": "dependency"
+    },
+    {
+      "source": "admin-user-management-file-setadmuser-set-admuser-ps1",
+      "target": "admin-user-management-fn-set-localadminuser",
+      "type": "dependency"
+    },
+    {
+      "source": "admin-user-management-file-setadmuser-set-admuser-ps1",
+      "target": "admin-user-management-fn-disable-builtinadministrator",
+      "type": "dependency"
+    },
+    {
+      "source": "admin-user-management-file-setadmuser-install-setadmuser-ps1",
+      "target": "admin-user-management-fn-save-protectedpassword",
+      "type": "dependency"
+    },
+    {
+      "source": "admin-user-management-file-setadmuser-env-get-setadmuserconfig-ps1",
+      "target": "admin-user-management-fn-get-setadmuserconfig",
+      "type": "dependency"
+    },
+    {
+      "source": "admin-user-management-file-setadmuser-env-get-setadmuserconfig-ps1",
+      "target": "admin-user-management-fn-get-setadmuserpasswordfromenv",
+      "type": "dependency"
+    }
+  ]
+}

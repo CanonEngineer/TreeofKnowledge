@@ -19,6 +19,7 @@ SENTINELAI_FILE = os.path.join(ROOT, "scripts", "sentinelai-project.json")
 EAGLE_FILE = os.path.join(ROOT, "scripts", "eagle-project.json")
 ADMIN_USER_MGMT_FILE = os.path.join(ROOT, "scripts", "adminusermanagement-project.json")
 OUT_DIR = os.path.join(ROOT, "universe", "public", "graphs")
+GALAXY_GRAPH_DIR = os.path.join(ROOT, "galaxy", "graphs")
 
 CATEGORIES = {
     "core": ("Backend", "#3b82f6"),
@@ -197,6 +198,7 @@ def export_project(project):
 def main():
     projects = load_all_projects()
     os.makedirs(OUT_DIR, exist_ok=True)
+    os.makedirs(GALAXY_GRAPH_DIR, exist_ok=True)
 
     exported = 0
     for project in projects:
@@ -206,13 +208,15 @@ def main():
         if not out:
             print(f"  SKIP {project.get('slug', '?')}: sem nós", file=sys.stderr)
             continue
-        path = os.path.join(OUT_DIR, f"{out['slug']}.json")
-        with open(path, "w", encoding="utf-8") as f:
-            json.dump(out, f, ensure_ascii=False, indent=2)
+        payload = json.dumps(out, ensure_ascii=False, indent=2)
+        for out_dir in (OUT_DIR, GALAXY_GRAPH_DIR):
+            path = os.path.join(out_dir, f"{out['slug']}.json")
+            with open(path, "w", encoding="utf-8") as f:
+                f.write(payload)
         print(f"  {out['slug']}: {out['nodeCount']} nós, {len(out['links'])} links")
         exported += 1
 
-    print(f"Total exportado: {exported} projetos -> {OUT_DIR}")
+    print(f"Total exportado: {exported} projetos -> {OUT_DIR} e {GALAXY_GRAPH_DIR}")
 
 
 if __name__ == "__main__":
