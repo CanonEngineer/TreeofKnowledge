@@ -1,0 +1,272 @@
+{
+  "slug": "admin-user-management",
+  "name": "AdminUserManagement",
+  "repoUrl": "https://github.com/CanonEngineer/AdminUserManagement",
+  "color": "#7c3aed",
+  "icon": "shield",
+  "stack": "PowerShell 5.1 + GPO + DPAPI + AD",
+  "summary": "Cobertura: 11 arquivos principais (20 nós na árvore).",
+  "nodes": [
+    {
+      "id": "admin-user-management-root",
+      "parent": null,
+      "layer": "root",
+      "title": "AdminUserManagement",
+      "description": "Gestão segura de admin local via GPO: DPAPI + PowerShell + AD.",
+      "file": "README.md",
+      "code": "<p align=\"center\">\n  <img src=\"docs/images/fluxo-simplificado.svg\" alt=\"AdminUserManagement fluxo\" width=\"720\"/>\n</p>\n\n<h1 align=\"center\">AdminUserManagement</h1>\n\n<p align=\"center\">\n  <strong>Gestão segura de usuário administrador local via GPO / Active Directory</strong><br/>\n  PowerShell · DPAPI · Startup silencioso · CIMED\n</p>\n\n<p align=\"center\">\n  <a href=\"https://github.com/CanonEngineer/AdminUserManagement\">Repositório</a> ·\n  <a href=\"https://canonengineer.github.io/TreeofKnowledge/index.html?tree=admin-user-management\">Árvore 2D/3D</a> ·\n  <a href=\"#instalação\">Instalação</a>\n</p>\n\n<p align=\"center\">\n  <img src=\"https://img.shields.io/badge/Stack-PowerShell%205.1%2B-5391FE?style=flat-square\"/>\n  <img src=\"https://img.shields.io/badge/Deploy-GPO%20%2F%20AD-0078D4?style=flat-square\"/>\n  <img src=\"https://img.shields.io/badge/Segurança-DPAPI%20LocalMachine-16a34a?style=flat-square\"/>\n  <img src=\"https://img.shields.io/badge/Versões-2%20arquiteturas-blueviolet?style=flat-square\"/>\n</p>\n\n---\n\n## 📌 Sobre\n\nSolução enterprise para **padronizar máquinas Windows** em ambiente de domínio:\n\n| Ação | Resultado |\n|------|-----------|\n| Desativa `Administrador` / `Administrator` | Conta built-in desligada |\n| Cria/atualiza usuário `suporte` | Admin local padronizado |\n| Senha protegida | **DPAPI** (`suporte.pwd`) — não fica no `.bat` |\n| Boot automático | GPO Startup roda como **SYSTEM** |\n| Log de compliance | Grava em share UNC de rede |\n\n> Evolução do script legado `.bat` com senha em texto claro — substituído por arquitetura com **PowerShell + criptografia + GPO**.\n\n---\n\n## 🗂️ Estrutura do repositório\n\n```\nAdminUserManagement/\n├── SetAdmUser/              # Versão 1 — config nos scripts + DPAPI\n├── SetAdmUser-Env/          # Versão 2 — config via variáveis de ambiente GPO\n├── docs/\n│   └── images/              # Fluxogramas SVG ilustrativos\n├── legacy/                  # Referência da versão antiga (sem senhas)\n└── README.md\n```\n\n---\n\n## 🏗️ Arquitetura\n\n<p align=\"center\">\n  <img src=\"docs/images/arquitetura-duas-versoes.svg\" alt=\"Duas arquiteturas\" width=\"820\"/>\n</p>\n\n| Versão | Pasta | Quando usar |\n|--------|-------|-------------|\n| **SetAdmUser** | `SetAdmUser/` | Deploy rápido; config fixa no script GPO |\n| **SetAdmUser-Env** | `SetAdmUser-Env/` | Rede grande; paths/senha via **variáveis GPO** |\n\nAmbas compartilham:\n\n- Launcher `.bat` **sem credenciais**\n- `Set-AdmUser.ps1` idempotente (reaplica a cada boot)\n- `suporte.pwd` criptografado por máquina (DPAPI LocalMachine)\n- Instalação silenciosa no 1º boot\n\n---\n\n## 🔀 Fluxograma completo (GPO)\n\n<p align=\"center\">\n  <img src=\"docs/images/fluxo-completo-gpo.svg\" alt=\"Fluxo GPO completo\" width=\"860\"/>\n</p>\n\n```mermaid\nflowchart TD\n    A([Implantação AD]) --> B[Copiar para SYSVOL]\n    B --> C[GPO Startup Script]\n    C --> D[Máquina reinicia]\n    D --> E{suporte.pwd existe?}\n    E -->|Não| F[Install-SetAdmUser.ps1 -Silent]\n    F --> G[Gera suporte.pwd DPAPI]\n    E -->|Sim| H[Set-AdmUser.ps1]\n    G --> H\n    H --> I[Desativa Administrador]\n    I --> J[Garante suporte admin]\n    J --> K[Log UNC]\n```\n\n---\n\n## 🔐 Segurança\n\n| Item | Legado `.bat` | AdminUserManagement |\n|------|---------------|---------------------|\n| Senha no arquivo | ❌ Texto claro | ✅ DPAPI (`suporte.pwd`) |\n| Usuário clica | ❌ Manual | ✅ Automático no boot |\n| Reaplica após AD | ❌ Manual | ✅ A cada boot |\n| Senha no GitHub | ❌ Nunca commitar | ✅ Placeholders / GPO |\n\n**Boas práticas:**\n\n- Nunca versione `suporte.pwd` nem senhas reais\n- Restrinja edição da GPO a admins de domínio\n- `suporte.pwd` é **por máquina** — não copie entre PCs\n\n---\n\n## 📦 SetAdmUser (Versão 1)\n\n### Arquivos principais\n\n| Arquivo | Função |\n|---------|--------|\n| `set_adm_user.bat` | Launcher → PowerShell |\n| `Set-AdmUser.ps1` | Lógica principal |\n| `Install-SetAdmUser.ps1` | Instalação local ou 1ª execução |\n| `GPO-Startup-SetAdmUser.ps1` | Startup GPO silencioso |\n| `GPO-Startup-SetAdmUser.bat` | Apontar na GPO |\n\n### Deploy SYSVOL\n\n```\n\\\\SEU",
+      "implementation": [
+        "Repo: https://github.com/CanonEngineer/AdminUserManagement",
+        "Versões: SetAdmUser + SetAdmUser-Env",
+        "2D + Galaxy 3D na Tree of Knowledge"
+      ]
+    },
+    {
+      "id": "admin-user-management-dir-setadmuser",
+      "parent": "admin-user-management-root",
+      "layer": "module",
+      "title": "SetAdmUser/",
+      "description": "Módulo `SetAdmUser/` — config fixa.",
+      "file": "SetAdmUser/",
+      "code": "# Diretório: SetAdmUser/\n",
+      "implementation": [
+        "path: SetAdmUser/",
+        "nó de agrupamento"
+      ]
+    },
+    {
+      "id": "admin-user-management-dir-setadmuser-env",
+      "parent": "admin-user-management-root",
+      "layer": "module",
+      "title": "SetAdmUser-Env/",
+      "description": "Módulo `SetAdmUser-Env/` — variáveis de ambiente GPO.",
+      "file": "SetAdmUser-Env/",
+      "code": "# Diretório: SetAdmUser-Env/\n",
+      "implementation": [
+        "path: SetAdmUser-Env/",
+        "nó de agrupamento"
+      ]
+    },
+    {
+      "id": "admin-user-management-file-setadmuser-set-adm-user-bat",
+      "parent": "admin-user-management-dir-setadmuser",
+      "layer": "file",
+      "title": "set_adm_user.bat",
+      "description": "Código-fonte: `SetAdmUser/set_adm_user.bat`",
+      "file": "SetAdmUser/set_adm_user.bat",
+      "code": "@echo off\n:: Launcher — sem credenciais. Executa o script PowerShell protegido por DPAPI.\npowershell.exe -NoProfile -ExecutionPolicy Bypass -WindowStyle Hidden -File \"%~dp0Set-AdmUser.ps1\"\nexit /b %ERRORLEVEL%\n",
+      "implementation": [
+        "path: SetAdmUser/set_adm_user.bat",
+        "GitHub: https://github.com/CanonEngineer/AdminUserManagement/blob/main/SetAdmUser/set_adm_user.bat"
+      ]
+    },
+    {
+      "id": "admin-user-management-file-setadmuser-set-admuser-ps1",
+      "parent": "admin-user-management-dir-setadmuser",
+      "layer": "file",
+      "title": "Set-AdmUser.ps1",
+      "description": "Código-fonte: `SetAdmUser/Set-AdmUser.ps1`",
+      "file": "SetAdmUser/Set-AdmUser.ps1",
+      "code": "#Requires -Version 5.1\n\n$ErrorActionPreference = 'Stop'\n\n$Script:Config = @{\n    LocalUserName   = 'suporte'\n    PasswordFile    = Join-Path $PSScriptRoot 'suporte.pwd'\n    LogPath         = '\\\\172.20.100.2\\Rede\\1-CompartProducao\\CIMED\\LogsSetAdmLocal\\LogSetAdmLocal.txt'\n    AdminAccounts   = @('Administrador', 'Administrator')\n    AdminGroups     = @('Administradores', 'Administrators')\n}\n\nfunction Test-IsElevated {\n    $identity = [Security.Principal.WindowsIdentity]::GetCurrent()\n    $principal = New-Object Security.Principal.WindowsPrincipal($identity)\n    return $principal.IsInRole([Security.Principal.WindowsBuiltInRole]::Administrator)\n}\n\nfunction Get-ProtectedPassword {\n    param([Parameter(Mandatory)][string]$Path)\n\n    if (-not (Test-Path -LiteralPath $Path)) {\n        throw \"Arquivo de credencial nao encontrado: $Path. Execute Install-SetAdmUser.ps1 primeiro.\"\n    }\n\n    $encoded = (Get-Content -LiteralPath $Path -Raw).Trim()\n    if ([string]::IsNullOrWhiteSpace($encoded)) {\n        throw \"Arquivo de credencial vazio: $Path\"\n    }\n\n    $protectedBytes = [Convert]::FromBase64String($encoded)\n    $entropy = [byte[]]::new(0)\n\n    $plainBytes = [Security.Cryptography.ProtectedData]::Unprotect(\n        $protectedBytes,\n        $entropy,\n        [Security.Cryptography.DataProtectionScope]::LocalMachine\n    )\n\n    return [Text.Encoding]::UTF8.GetString($plainBytes)\n}\n\nfunction Invoke-NetCommand {\n    param(\n        [Parameter(Mandatory)][string[]]$Arguments\n    )\n\n    $output = & net.exe @Arguments 2>&1\n    $exitCode = $LASTEXITCODE\n\n    if ($exitCode -ne 0) {\n        $message = ($output | Out-String).Trim()\n        throw \"Comando falhou (exit $exitCode): net $($Arguments -join ' ') :: $message\"\n    }\n\n    return $output\n}\n\nfunction Test-LocalUserExists {\n    param([Parameter(Mandatory)][string]$UserName)\n\n    $null = & net.exe user $UserName 2>$null\n    return $LASTEXITCODE -eq 0\n}\n\nfunction Set-LocalAdminUser {\n    param(\n        [Parameter(Mandatory)][string]$UserName,\n        [Parameter(Mandatory)][string]$Password\n    )\n\n    $userExists = Test-LocalUserExists -UserName $UserName\n\n    if (-not $userExists) {\n        Invoke-NetCommand -Arguments @('user', $UserName, $Password, '/add') | Out-Null\n    }\n    else {\n        Invoke-NetCommand -Arguments @('user', $UserName, $Password) | Out-Null\n    }\n\n    Invoke-NetCommand -Arguments @('user', $UserName, '/expires:never') | Out-Null\n\n    foreach ($group in $Script:Config.AdminGroups) {\n        $groupCheck = & net.exe localgroup $group 2>&1\n        if ($LASTEXITCODE -ne 0) {\n            continue\n        }\n\n        $memberList = ($groupCheck | Out-String)\n        if ($memberList -notmatch \"(^|\\s)$([regex]::Escape($UserName))(\\s|$)\") {\n            Invoke-NetCommand -Arguments @('localgroup', $group, $UserName, '/add') | Out-Null\n        }\n    }\n}\n\nfunction Disable-BuiltInAdministrator {\n    foreach ($account in $Script:Config.AdminAccounts) {\n        $null = & net.exe user $account 2>$null\n        if ($LASTEXITCODE -eq 0) {\n            Invoke-NetCommand -Arguments @('user', $account, '/active:no') | Out-Null\n        }\n    }\n}\n\nfunction Write-ExecutionLog {\n    $timestamp = Get-Date -Format 'dd/MM/yyyy'\n    $time = Get-Date -Format 'HH:mm:ss'\n    $line = \"$timestamp;$time;$env:COMPUTERNAME;$env:USERNAME\"\n\n    try {\n        Add-Content -LiteralPath $Script:Config.LogPath -Value $line -Encoding ASCII -ErrorAction Stop\n    }\n    catch {\n        Write-Warning \"Nao foi possivel gravar log em $($Script:Config.LogPath): $($_.Exception.Message)\"\n    }\n}\n\nif (-not (Test-IsElevated)) {\n    Write-Error 'Este script precisa ser executado como Administrador ou SYSTEM.'\n    exit 1\n}\n\ntry {\n    $password = Get-ProtectedPassword -Path $Script:Config.PasswordFile\n\n    Disable-BuiltInAdministrator\n    Set-LocalAdminUser -UserName $Script:Config.LocalUserName -Password $password\n    Write-ExecutionLog\n\n    exit 0\n}\ncatch {\n    Write-Error $_.Exception.Message\n    exit 1\n}\n",
+      "implementation": [
+        "path: SetAdmUser/Set-AdmUser.ps1",
+        "GitHub: https://github.com/CanonEngineer/AdminUserManagement/blob/main/SetAdmUser/Set-AdmUser.ps1"
+      ]
+    },
+    {
+      "id": "admin-user-management-file-setadmuser-install-setadmuser-ps1",
+      "parent": "admin-user-management-dir-setadmuser",
+      "layer": "file",
+      "title": "Install-SetAdmUser.ps1",
+      "description": "Código-fonte: `SetAdmUser/Install-SetAdmUser.ps1`",
+      "file": "SetAdmUser/Install-SetAdmUser.ps1",
+      "code": "#Requires -Version 5.1\n#Requires -RunAsAdministrator\n\n[CmdletBinding()]\nparam(\n    [Parameter(Mandatory)]\n    [string]$Password,\n\n    [string]$InstallPath = 'C:\\ProgramData\\CIMED\\SetAdmUser',\n\n    [string]$TaskName = 'CIMED_SetAdmUser',\n\n    [switch]$SkipScheduledTask,\n\n    [switch]$Silent\n)\n\n$ErrorActionPreference = 'Stop'\n\nfunction Write-InstallLog {\n    param([Parameter(Mandatory)][string]$Message)\n\n    if (-not $Silent) {\n        Write-Host $Message\n    }\n}\n\nfunction Save-ProtectedPassword {\n    param(\n        [Parameter(Mandatory)][string]$PlainPassword,\n        [Parameter(Mandatory)][string]$Path\n    )\n\n    $plainBytes = [Text.Encoding]::UTF8.GetBytes($PlainPassword)\n    $entropy = [byte[]]::new(0)\n\n    $protectedBytes = [Security.Cryptography.ProtectedData]::Protect(\n        $plainBytes,\n        $entropy,\n        [Security.Cryptography.DataProtectionScope]::LocalMachine\n    )\n\n    $encoded = [Convert]::ToBase64String($protectedBytes)\n    Set-Content -LiteralPath $Path -Value $encoded -Encoding ASCII -NoNewline\n}\n\nfunction Set-InstallFolderPermissions {\n    param([Parameter(Mandatory)][string]$Path)\n\n    & icacls.exe $Path /inheritance:r | Out-Null\n    & icacls.exe $Path /grant 'SYSTEM:(OI)(CI)F' | Out-Null\n    & icacls.exe $Path /grant 'Administradores:(OI)(CI)RX' | Out-Null\n    & icacls.exe $Path /grant 'Administrators:(OI)(CI)RX' | Out-Null\n}\n\nfunction Register-StartupTask {\n    param(\n        [Parameter(Mandatory)][string]$TaskName,\n        [Parameter(Mandatory)][string]$ScriptPath\n    )\n\n    $action = New-ScheduledTaskAction `\n        -Execute 'powershell.exe' `\n        -Argument \"-NoProfile -ExecutionPolicy Bypass -WindowStyle Hidden -File `\"$ScriptPath`\"\"\n\n    $trigger = New-ScheduledTaskTrigger -AtStartup\n    $delay = New-TimeSpan -Seconds 30\n    $trigger.Delay = $delay\n\n    $settings = New-ScheduledTaskSettingsSet `\n        -AllowStartIfOnBatteries `\n        -DontStopIfGoingOnBatteries `\n        -StartWhenAvailable `\n        -MultipleInstances IgnoreNew\n\n    $principal = New-ScheduledTaskPrincipal `\n        -UserId 'SYSTEM' `\n        -LogonType ServiceAccount `\n        -RunLevel Highest\n\n    Register-ScheduledTask `\n        -TaskName $TaskName `\n        -Action $action `\n        -Trigger $trigger `\n        -Settings $settings `\n        -Principal $principal `\n        -Force | Out-Null\n}\n\n$sourcePath = $PSScriptRoot\n$filesToCopy = @(\n    'set_adm_user.bat',\n    'Set-AdmUser.ps1'\n)\n\nWrite-InstallLog \"Instalando em: $InstallPath\"\n\nif (-not (Test-Path -LiteralPath $InstallPath)) {\n    New-Item -ItemType Directory -Path $InstallPath -Force | Out-Null\n}\n\nforeach ($file in $filesToCopy) {\n    $source = Join-Path $sourcePath $file\n    if (-not (Test-Path -LiteralPath $source)) {\n        throw \"Arquivo de origem nao encontrado: $source\"\n    }\n\n    Copy-Item -LiteralPath $source -Destination (Join-Path $InstallPath $file) -Force\n}\n\n$passwordFile = Join-Path $InstallPath 'suporte.pwd'\nSave-ProtectedPassword -PlainPassword $Password -Path $passwordFile\n\nSet-InstallFolderPermissions -Path $InstallPath\n\nif (-not $SkipScheduledTask) {\n    $mainScript = Join-Path $InstallPath 'Set-AdmUser.ps1'\n    Register-StartupTask -TaskName $TaskName -ScriptPath $mainScript\n    Write-InstallLog \"Tarefa agendada criada: $TaskName (executa no boot como SYSTEM)\"\n}\nelse {\n    Write-InstallLog 'Tarefa agendada nao criada (-SkipScheduledTask).'\n}\n\nWrite-InstallLog 'Instalacao concluida.'\nWrite-InstallLog \"Credencial salva em: $passwordFile (DPAPI LocalMachine)\"\nWrite-InstallLog \"Execucao manual: $(Join-Path $InstallPath 'set_adm_user.bat')\"\n\nif (-not $Silent) {\n    Write-Host ''\n    Write-Host 'Testando execucao...'\n\n    & (Join-Path $InstallPath 'set_adm_user.bat')\n    if ($LASTEXITCODE -ne 0) {\n        throw \"Teste de execucao falhou com codigo $LASTEXITCODE\"\n    }\n\n    Write-Host 'Teste concluido com sucesso.'\n}\n",
+      "implementation": [
+        "path: SetAdmUser/Install-SetAdmUser.ps1",
+        "GitHub: https://github.com/CanonEngineer/AdminUserManagement/blob/main/SetAdmUser/Install-SetAdmUser.ps1"
+      ]
+    },
+    {
+      "id": "admin-user-management-file-setadmuser-gpo-startup-setadmuser-ps1",
+      "parent": "admin-user-management-dir-setadmuser",
+      "layer": "file",
+      "title": "GPO-Startup-SetAdmUser.ps1",
+      "description": "Código-fonte: `SetAdmUser/GPO-Startup-SetAdmUser.ps1`",
+      "file": "SetAdmUser/GPO-Startup-SetAdmUser.ps1",
+      "code": "#Requires -Version 5.1\n<#\n.SYNOPSIS\n    Script de inicializacao (GPO) para instalar e reaplicar SetAdmUser em silencio.\n\n.DEPLOY\n    Copie esta pasta inteira para o SYSVOL:\n    \\\\SEU_DOMINIO.local\\SYSVOL\\SEU_DOMINIO.local\\scripts\\SetAdmUser\\\n\n    Arquivos necessarios no SYSVOL:\n      - GPO-Startup-SetAdmUser.ps1\n      - GPO-Startup-SetAdmUser.bat\n      - Install-SetAdmUser.ps1\n      - Set-AdmUser.ps1\n      - set_adm_user.bat\n\n    GPO > Configuracao do Computador > Politicas > Windows Settings > Scripts > Startup\n    Adicione: GPO-Startup-SetAdmUser.bat\n#>\n\n$ErrorActionPreference = 'Stop'\n\n$Config = @{\n    InstallPath      = 'C:\\ProgramData\\CIMED\\SetAdmUser'\n    Password         = 'SUA_SENHA_AQUI'   # ALTERE: mesma senha em toda a rede (ou use SetAdmUser-Env + GPO env)\n    SysvolSource     = $PSScriptRoot\n    LogFile          = 'C:\\ProgramData\\CIMED\\SetAdmUser\\gpo-startup.log'\n    TaskName         = 'CIMED_SetAdmUser'\n    SkipScheduledTask = $true       # GPO ja roda a cada boot; tarefa e opcional\n}\n\nfunction Write-Log {\n    param(\n        [Parameter(Mandatory)][string]$Message,\n        [ValidateSet('INFO', 'WARN', 'ERROR')]\n        [string]$Level = 'INFO'\n    )\n\n    $line = '{0};{1};{2};{3}' -f (Get-Date -Format 'yyyy-MM-dd HH:mm:ss'), $Level, $env:COMPUTERNAME, $Message\n    $logDir = Split-Path -Parent $Config.LogFile\n\n    if (-not (Test-Path -LiteralPath $logDir)) {\n        New-Item -ItemType Directory -Path $logDir -Force | Out-Null\n    }\n\n    Add-Content -LiteralPath $Config.LogFile -Value $line -Encoding ASCII -ErrorAction SilentlyContinue\n}\n\nfunction Invoke-SetAdmUserApply {\n    $mainScript = Join-Path $Config.InstallPath 'Set-AdmUser.ps1'\n\n    if (-not (Test-Path -LiteralPath $mainScript)) {\n        throw \"Script principal nao encontrado: $mainScript\"\n    }\n\n    & powershell.exe -NoProfile -ExecutionPolicy Bypass -WindowStyle Hidden -File $mainScript\n    $exitCode = $LASTEXITCODE\n\n    if ($exitCode -ne 0) {\n        throw \"Set-AdmUser.ps1 falhou com codigo $exitCode\"\n    }\n}\n\ntry {\n    Write-Log 'Inicio do startup GPO SetAdmUser'\n\n    $passwordFile = Join-Path $Config.InstallPath 'suporte.pwd'\n\n    if (-not (Test-Path -LiteralPath $passwordFile)) {\n        Write-Log 'Primeira execucao neste PC: iniciando instalacao silenciosa'\n\n        $installScript = Join-Path $Config.SysvolSource 'Install-SetAdmUser.ps1'\n        if (-not (Test-Path -LiteralPath $installScript)) {\n            throw \"Install-SetAdmUser.ps1 nao encontrado em $($Config.SysvolSource)\"\n        }\n\n        $installArgs = @{\n            Password    = $Config.Password\n            InstallPath = $Config.InstallPath\n            TaskName    = $Config.TaskName\n            Silent      = $true\n        }\n\n        if ($Config.SkipScheduledTask) {\n            $installArgs.SkipScheduledTask = $true\n        }\n\n        & powershell.exe -NoProfile -ExecutionPolicy Bypass -WindowStyle Hidden -File $installScript @installArgs\n\n        if ($LASTEXITCODE -ne 0) {\n            throw \"Install-SetAdmUser.ps1 falhou com codigo $LASTEXITCODE\"\n        }\n\n        Write-Log 'Instalacao silenciosa concluida'\n    }\n    else {\n        Write-Log 'Instalacao ja existente; reaplicando configuracao'\n    }\n\n    Invoke-SetAdmUserApply\n    Write-Log 'Configuracao reaplicada com sucesso'\n    exit 0\n}\ncatch {\n    Write-Log $_.Exception.Message 'ERROR'\n    exit 1\n}\n",
+      "implementation": [
+        "path: SetAdmUser/GPO-Startup-SetAdmUser.ps1",
+        "GitHub: https://github.com/CanonEngineer/AdminUserManagement/blob/main/SetAdmUser/GPO-Startup-SetAdmUser.ps1"
+      ]
+    },
+    {
+      "id": "admin-user-management-file-setadmuser-gpo-startup-setadmuser-bat",
+      "parent": "admin-user-management-dir-setadmuser",
+      "layer": "file",
+      "title": "GPO-Startup-SetAdmUser.bat",
+      "description": "Código-fonte: `SetAdmUser/GPO-Startup-SetAdmUser.bat`",
+      "file": "SetAdmUser/GPO-Startup-SetAdmUser.bat",
+      "code": "@echo off\n:: Startup GPO — executa em silencio como SYSTEM no boot\npowershell.exe -NoProfile -ExecutionPolicy Bypass -WindowStyle Hidden -File \"%~dp0GPO-Startup-SetAdmUser.ps1\"\nexit /b %ERRORLEVEL%\n",
+      "implementation": [
+        "path: SetAdmUser/GPO-Startup-SetAdmUser.bat",
+        "GitHub: https://github.com/CanonEngineer/AdminUserManagement/blob/main/SetAdmUser/GPO-Startup-SetAdmUser.bat"
+      ]
+    },
+    {
+      "id": "admin-user-management-file-setadmuser-env-get-setadmuserconfig-ps1",
+      "parent": "admin-user-management-dir-setadmuser-env",
+      "layer": "file",
+      "title": "Get-SetAdmUserConfig.ps1",
+      "description": "Código-fonte: `SetAdmUser-Env/Get-SetAdmUserConfig.ps1`",
+      "file": "SetAdmUser-Env/Get-SetAdmUserConfig.ps1",
+      "code": "#Requires -Version 5.1\n\nfunction Get-EnvOrDefault {\n    param(\n        [Parameter(Mandatory)][string]$Name,\n        [Parameter(Mandatory)][string]$Default\n    )\n\n    $value = [Environment]::GetEnvironmentVariable($Name, 'Machine')\n    if ([string]::IsNullOrWhiteSpace($value)) {\n        $value = [Environment]::GetEnvironmentVariable($Name, 'Process')\n    }\n    if ([string]::IsNullOrWhiteSpace($value)) {\n        return $Default\n    }\n\n    return $value\n}\n\nfunction Get-EnvListOrDefault {\n    param(\n        [Parameter(Mandatory)][string]$Name,\n        [Parameter(Mandatory)][string[]]$Default\n    )\n\n    $value = Get-EnvOrDefault -Name $Name -Default ''\n    if ([string]::IsNullOrWhiteSpace($value)) {\n        return $Default\n    }\n\n    return @($value.Split(',') | ForEach-Object { $_.Trim() } | Where-Object { $_ })\n}\n\nfunction Get-SetAdmUserConfig {\n    param(\n        [string]$ScriptRoot = $PSScriptRoot\n    )\n\n    $installPath = Get-EnvOrDefault -Name 'CIMED_SETADM_INSTALL_PATH' -Default 'C:\\ProgramData\\CIMED\\SetAdmUser'\n    $passwordFileName = Get-EnvOrDefault -Name 'CIMED_SETADM_PASSWORD_FILE' -Default 'suporte.pwd'\n\n    if ([System.IO.Path]::IsPathRooted($passwordFileName)) {\n        $passwordFile = $passwordFileName\n    }\n    else {\n        $passwordFile = Join-Path $installPath $passwordFileName\n    }\n\n    $gpoLogFile = Get-EnvOrDefault -Name 'CIMED_SETADM_GPO_LOG_FILE' -Default (Join-Path $installPath 'gpo-startup.log')\n\n    return [ordered]@{\n        InstallPath       = $installPath\n        LocalUserName     = Get-EnvOrDefault -Name 'CIMED_SETADM_LOCAL_USER' -Default 'suporte'\n        PasswordFile      = $passwordFile\n        LogPath           = Get-EnvOrDefault -Name 'CIMED_SETADM_LOG_PATH' -Default '\\\\172.20.100.2\\Rede\\1-CompartProducao\\CIMED\\LogsSetAdmLocal\\LogSetAdmLocal.txt'\n        AdminAccounts     = Get-EnvListOrDefault -Name 'CIMED_SETADM_ADMIN_ACCOUNTS' -Default @('Administrador', 'Administrator')\n        AdminGroups       = Get-EnvListOrDefault -Name 'CIMED_SETADM_ADMIN_GROUPS' -Default @('Administradores', 'Administrators')\n        TaskName          = Get-EnvOrDefault -Name 'CIMED_SETADM_TASK_NAME' -Default 'CIMED_SetAdmUser'\n        SysvolSource      = Get-EnvOrDefault -Name 'CIMED_SETADM_SYSVOL_SOURCE' -Default $ScriptRoot\n        GpoLogFile        = $gpoLogFile\n        SkipScheduledTask = (Get-EnvOrDefault -Name 'CIMED_SETADM_SKIP_SCHEDULED_TASK' -Default 'true').ToLowerInvariant() -in @('1', 'true', 'yes', 'sim')\n        ScriptRoot        = $ScriptRoot\n    }\n}\n\nfunction Get-SetAdmUserPasswordFromEnv {\n    $password = [Environment]::GetEnvironmentVariable('CIMED_SETADM_PASSWORD', 'Machine')\n    if ([string]::IsNullOrWhiteSpace($password)) {\n        $password = [Environment]::GetEnvironmentVariable('CIMED_SETADM_PASSWORD', 'Process')\n    }\n\n    if ([string]::IsNullOrWhiteSpace($password)) {\n        throw 'Variavel de ambiente CIMED_SETADM_PASSWORD nao definida. Configure via GPO ou passe -Password no install.'\n    }\n\n    return $password\n}\n",
+      "implementation": [
+        "path: SetAdmUser-Env/Get-SetAdmUserConfig.ps1",
+        "GitHub: https://github.com/CanonEngineer/AdminUserManagement/blob/main/SetAdmUser-Env/Get-SetAdmUserConfig.ps1"
+      ]
+    },
+    {
+      "id": "admin-user-management-file-setadmuser-env-set-admuser-ps1",
+      "parent": "admin-user-management-dir-setadmuser-env",
+      "layer": "file",
+      "title": "Set-AdmUser.ps1",
+      "description": "Código-fonte: `SetAdmUser-Env/Set-AdmUser.ps1`",
+      "file": "SetAdmUser-Env/Set-AdmUser.ps1",
+      "code": "#Requires -Version 5.1\n\n$ErrorActionPreference = 'Stop'\n\n. (Join-Path $PSScriptRoot 'Get-SetAdmUserConfig.ps1')\n\n$Script:Config = Get-SetAdmUserConfig -ScriptRoot $PSScriptRoot\n\nfunction Test-IsElevated {\n    $identity = [Security.Principal.WindowsIdentity]::GetCurrent()\n    $principal = New-Object Security.Principal.WindowsPrincipal($identity)\n    return $principal.IsInRole([Security.Principal.WindowsBuiltInRole]::Administrator)\n}\n\nfunction Get-ProtectedPassword {\n    param([Parameter(Mandatory)][string]$Path)\n\n    if (-not (Test-Path -LiteralPath $Path)) {\n        throw \"Arquivo de credencial nao encontrado: $Path. Execute Install-SetAdmUser.ps1 primeiro.\"\n    }\n\n    $encoded = (Get-Content -LiteralPath $Path -Raw).Trim()\n    if ([string]::IsNullOrWhiteSpace($encoded)) {\n        throw \"Arquivo de credencial vazio: $Path\"\n    }\n\n    $protectedBytes = [Convert]::FromBase64String($encoded)\n    $entropy = [byte[]]::new(0)\n\n    $plainBytes = [Security.Cryptography.ProtectedData]::Unprotect(\n        $protectedBytes,\n        $entropy,\n        [Security.Cryptography.DataProtectionScope]::LocalMachine\n    )\n\n    return [Text.Encoding]::UTF8.GetString($plainBytes)\n}\n\nfunction Invoke-NetCommand {\n    param(\n        [Parameter(Mandatory)][string[]]$Arguments\n    )\n\n    $output = & net.exe @Arguments 2>&1\n    $exitCode = $LASTEXITCODE\n\n    if ($exitCode -ne 0) {\n        $message = ($output | Out-String).Trim()\n        throw \"Comando falhou (exit $exitCode): net $($Arguments -join ' ') :: $message\"\n    }\n\n    return $output\n}\n\nfunction Test-LocalUserExists {\n    param([Parameter(Mandatory)][string]$UserName)\n\n    $null = & net.exe user $UserName 2>$null\n    return $LASTEXITCODE -eq 0\n}\n\nfunction Set-LocalAdminUser {\n    param(\n        [Parameter(Mandatory)][string]$UserName,\n        [Parameter(Mandatory)][string]$Password\n    )\n\n    $userExists = Test-LocalUserExists -UserName $UserName\n\n    if (-not $userExists) {\n        Invoke-NetCommand -Arguments @('user', $UserName, $Password, '/add') | Out-Null\n    }\n    else {\n        Invoke-NetCommand -Arguments @('user', $UserName, $Password) | Out-Null\n    }\n\n    Invoke-NetCommand -Arguments @('user', $UserName, '/expires:never') | Out-Null\n\n    foreach ($group in $Script:Config.AdminGroups) {\n        $groupCheck = & net.exe localgroup $group 2>&1\n        if ($LASTEXITCODE -ne 0) {\n            continue\n        }\n\n        $memberList = ($groupCheck | Out-String)\n        if ($memberList -notmatch \"(^|\\s)$([regex]::Escape($UserName))(\\s|$)\") {\n            Invoke-NetCommand -Arguments @('localgroup', $group, $UserName, '/add') | Out-Null\n        }\n    }\n}\n\nfunction Disable-BuiltInAdministrator {\n    foreach ($account in $Script:Config.AdminAccounts) {\n        $null = & net.exe user $account 2>$null\n        if ($LASTEXITCODE -eq 0) {\n            Invoke-NetCommand -Arguments @('user', $account, '/active:no') | Out-Null\n        }\n    }\n}\n\nfunction Write-ExecutionLog {\n    $timestamp = Get-Date -Format 'dd/MM/yyyy'\n    $time = Get-Date -Format 'HH:mm:ss'\n    $line = \"$timestamp;$time;$env:COMPUTERNAME;$env:USERNAME\"\n\n    try {\n        Add-Content -LiteralPath $Script:Config.LogPath -Value $line -Encoding ASCII -ErrorAction Stop\n    }\n    catch {\n        Write-Warning \"Nao foi possivel gravar log em $($Script:Config.LogPath): $($_.Exception.Message)\"\n    }\n}\n\nif (-not (Test-IsElevated)) {\n    Write-Error 'Este script precisa ser executado como Administrador ou SYSTEM.'\n    exit 1\n}\n\ntry {\n    $password = Get-ProtectedPassword -Path $Script:Config.PasswordFile\n\n    Disable-BuiltInAdministrator\n    Set-LocalAdminUser -UserName $Script:Config.LocalUserName -Password $password\n    Write-ExecutionLog\n\n    exit 0\n}\ncatch {\n    Write-Error $_.Exception.Message\n    exit 1\n}\n",
+      "implementation": [
+        "path: SetAdmUser-Env/Set-AdmUser.ps1",
+        "GitHub: https://github.com/CanonEngineer/AdminUserManagement/blob/main/SetAdmUser-Env/Set-AdmUser.ps1"
+      ]
+    },
+    {
+      "id": "admin-user-management-file-setadmuser-env-install-setadmuser-ps1",
+      "parent": "admin-user-management-dir-setadmuser-env",
+      "layer": "file",
+      "title": "Install-SetAdmUser.ps1",
+      "description": "Código-fonte: `SetAdmUser-Env/Install-SetAdmUser.ps1`",
+      "file": "SetAdmUser-Env/Install-SetAdmUser.ps1",
+      "code": "#Requires -Version 5.1\n#Requires -RunAsAdministrator\n\n[CmdletBinding()]\nparam(\n    [string]$Password,\n\n    [string]$InstallPath,\n\n    [string]$TaskName,\n\n    [switch]$SkipScheduledTask,\n\n    [switch]$Silent\n)\n\n$ErrorActionPreference = 'Stop'\n\n. (Join-Path $PSScriptRoot 'Get-SetAdmUserConfig.ps1')\n\n$Config = Get-SetAdmUserConfig -ScriptRoot $PSScriptRoot\n\nif (-not $InstallPath) { $InstallPath = $Config.InstallPath }\nif (-not $TaskName) { $TaskName = $Config.TaskName }\nif (-not $PSBoundParameters.ContainsKey('SkipScheduledTask')) {\n    $SkipScheduledTask = $Config.SkipScheduledTask\n}\n\nfunction Write-InstallLog {\n    param([Parameter(Mandatory)][string]$Message)\n\n    if (-not $Silent) {\n        Write-Host $Message\n    }\n}\n\nfunction Save-ProtectedPassword {\n    param(\n        [Parameter(Mandatory)][string]$PlainPassword,\n        [Parameter(Mandatory)][string]$Path\n    )\n\n    $plainBytes = [Text.Encoding]::UTF8.GetBytes($PlainPassword)\n    $entropy = [byte[]]::new(0)\n\n    $protectedBytes = [Security.Cryptography.ProtectedData]::Protect(\n        $plainBytes,\n        $entropy,\n        [Security.Cryptography.DataProtectionScope]::LocalMachine\n    )\n\n    $encoded = [Convert]::ToBase64String($protectedBytes)\n    Set-Content -LiteralPath $Path -Value $encoded -Encoding ASCII -NoNewline\n}\n\nfunction Set-InstallFolderPermissions {\n    param([Parameter(Mandatory)][string]$Path)\n\n    & icacls.exe $Path /inheritance:r | Out-Null\n    & icacls.exe $Path /grant 'SYSTEM:(OI)(CI)F' | Out-Null\n    & icacls.exe $Path /grant 'Administradores:(OI)(CI)RX' | Out-Null\n    & icacls.exe $Path /grant 'Administrators:(OI)(CI)RX' | Out-Null\n}\n\nfunction Register-StartupTask {\n    param(\n        [Parameter(Mandatory)][string]$TaskName,\n        [Parameter(Mandatory)][string]$ScriptPath\n    )\n\n    $action = New-ScheduledTaskAction `\n        -Execute 'powershell.exe' `\n        -Argument \"-NoProfile -ExecutionPolicy Bypass -WindowStyle Hidden -File `\"$ScriptPath`\"\"\n\n    $trigger = New-ScheduledTaskTrigger -AtStartup\n    $trigger.Delay = (New-TimeSpan -Seconds 30)\n\n    $settings = New-ScheduledTaskSettingsSet `\n        -AllowStartIfOnBatteries `\n        -DontStopIfGoingOnBatteries `\n        -StartWhenAvailable `\n        -MultipleInstances IgnoreNew\n\n    $principal = New-ScheduledTaskPrincipal `\n        -UserId 'SYSTEM' `\n        -LogonType ServiceAccount `\n        -RunLevel Highest\n\n    Register-ScheduledTask `\n        -TaskName $TaskName `\n        -Action $action `\n        -Trigger $trigger `\n        -Settings $settings `\n        -Principal $principal `\n        -Force | Out-Null\n}\n\nif (-not $Password) {\n    $Password = Get-SetAdmUserPasswordFromEnv\n}\n\n$sourcePath = $PSScriptRoot\n$filesToCopy = @(\n    'set_adm_user.bat',\n    'Set-AdmUser.ps1',\n    'Get-SetAdmUserConfig.ps1'\n)\n\nWrite-InstallLog \"Instalando em: $InstallPath\"\n\nif (-not (Test-Path -LiteralPath $InstallPath)) {\n    New-Item -ItemType Directory -Path $InstallPath -Force | Out-Null\n}\n\nforeach ($file in $filesToCopy) {\n    $source = Join-Path $sourcePath $file\n    if (-not (Test-Path -LiteralPath $source)) {\n        throw \"Arquivo de origem nao encontrado: $source\"\n    }\n\n    Copy-Item -LiteralPath $source -Destination (Join-Path $InstallPath $file) -Force\n}\n\n$passwordFileName = Get-EnvOrDefault -Name 'CIMED_SETADM_PASSWORD_FILE' -Default 'suporte.pwd'\nif ([System.IO.Path]::IsPathRooted($passwordFileName)) {\n    $passwordFile = $passwordFileName\n}\nelse {\n    $passwordFile = Join-Path $InstallPath $passwordFileName\n}\n\nSave-ProtectedPassword -PlainPassword $Password -Path $passwordFile\nSet-InstallFolderPermissions -Path $InstallPath\n\nif (-not $SkipScheduledTask) {\n    $mainScript = Join-Path $InstallPath 'Set-AdmUser.ps1'\n    Register-StartupTask -TaskName $TaskName -ScriptPath $mainScript\n    Write-InstallLog \"Tarefa agendada criada: $TaskName (executa no boot como SYSTEM)\"\n}\nelse {\n    Write-InstallLog 'Tarefa agendada nao criada (-SkipScheduledTask).'\n}\n\nWrite-InstallLog 'Instalacao concluida.'\nWrite-InstallLog \"Credencial salva em: $passwordFile (DPAPI LocalMachine)\"\nWrite-InstallLog \"Execucao manual: $(Join-Path $InstallPath 'set_adm_user.bat')\"\n\nif (-not $Silent) {\n    Write-Host ''\n    Write-Host 'Testando execucao...'\n\n    & (Join-Path $InstallPath 'set_adm_user.bat')\n    if ($LASTEXITCODE -ne 0) {\n        throw \"Teste de execucao falhou com codigo $LASTEXITCODE\"\n    }\n\n    Write-Host 'Teste concluido com sucesso.'\n}\n",
+      "implementation": [
+        "path: SetAdmUser-Env/Install-SetAdmUser.ps1",
+        "GitHub: https://github.com/CanonEngineer/AdminUserManagement/blob/main/SetAdmUser-Env/Install-SetAdmUser.ps1"
+      ]
+    },
+    {
+      "id": "admin-user-management-file-setadmuser-env-gpo-startup-setadmuser-ps1",
+      "parent": "admin-user-management-dir-setadmuser-env",
+      "layer": "file",
+      "title": "GPO-Startup-SetAdmUser.ps1",
+      "description": "Código-fonte: `SetAdmUser-Env/GPO-Startup-SetAdmUser.ps1`",
+      "file": "SetAdmUser-Env/GPO-Startup-SetAdmUser.ps1",
+      "code": "#Requires -Version 5.1\n<#\n.SYNOPSIS\n    Startup GPO (versao variaveis de ambiente) para SetAdmUser.\n\n.DEPLOY\n    1. Defina variaveis de ambiente via GPO (ver GPO-Environment-Variables.txt)\n    2. Copie esta pasta para SYSVOL\\...\\scripts\\SetAdmUser-Env\\\n    3. GPO Startup: GPO-Startup-SetAdmUser.bat\n#>\n\n$ErrorActionPreference = 'Stop'\n\n. (Join-Path $PSScriptRoot 'Get-SetAdmUserConfig.ps1')\n\n$Config = Get-SetAdmUserConfig -ScriptRoot $PSScriptRoot\n\nfunction Write-Log {\n    param(\n        [Parameter(Mandatory)][string]$Message,\n        [ValidateSet('INFO', 'WARN', 'ERROR')]\n        [string]$Level = 'INFO'\n    )\n\n    $line = '{0};{1};{2};{3}' -f (Get-Date -Format 'yyyy-MM-dd HH:mm:ss'), $Level, $env:COMPUTERNAME, $Message\n    $logDir = Split-Path -Parent $Config.GpoLogFile\n\n    if (-not (Test-Path -LiteralPath $logDir)) {\n        New-Item -ItemType Directory -Path $logDir -Force | Out-Null\n    }\n\n    Add-Content -LiteralPath $Config.GpoLogFile -Value $line -Encoding ASCII -ErrorAction SilentlyContinue\n}\n\nfunction Invoke-SetAdmUserApply {\n    $mainScript = Join-Path $Config.InstallPath 'Set-AdmUser.ps1'\n\n    if (-not (Test-Path -LiteralPath $mainScript)) {\n        throw \"Script principal nao encontrado: $mainScript\"\n    }\n\n    & powershell.exe -NoProfile -ExecutionPolicy Bypass -WindowStyle Hidden -File $mainScript\n    if ($LASTEXITCODE -ne 0) {\n        throw \"Set-AdmUser.ps1 falhou com codigo $LASTEXITCODE\"\n    }\n}\n\ntry {\n    Write-Log 'Inicio do startup GPO SetAdmUser-Env'\n\n    if (-not (Test-Path -LiteralPath $Config.PasswordFile)) {\n        Write-Log 'Primeira execucao neste PC: iniciando instalacao silenciosa'\n\n        $installScript = Join-Path $Config.SysvolSource 'Install-SetAdmUser.ps1'\n        if (-not (Test-Path -LiteralPath $installScript)) {\n            throw \"Install-SetAdmUser.ps1 nao encontrado em $($Config.SysvolSource)\"\n        }\n\n        $installArgs = @{\n            InstallPath = $Config.InstallPath\n            TaskName    = $Config.TaskName\n            Silent      = $true\n        }\n\n        if ($Config.SkipScheduledTask) {\n            $installArgs.SkipScheduledTask = $true\n        }\n\n        & powershell.exe -NoProfile -ExecutionPolicy Bypass -WindowStyle Hidden -File $installScript @installArgs\n\n        if ($LASTEXITCODE -ne 0) {\n            throw \"Install-SetAdmUser.ps1 falhou com codigo $LASTEXITCODE\"\n        }\n\n        Write-Log 'Instalacao silenciosa concluida'\n    }\n    else {\n        Write-Log 'Instalacao ja existente; reaplicando configuracao'\n    }\n\n    Invoke-SetAdmUserApply\n    Write-Log 'Configuracao reaplicada com sucesso'\n    exit 0\n}\ncatch {\n    Write-Log $_.Exception.Message 'ERROR'\n    exit 1\n}\n",
+      "implementation": [
+        "path: SetAdmUser-Env/GPO-Startup-SetAdmUser.ps1",
+        "GitHub: https://github.com/CanonEngineer/AdminUserManagement/blob/main/SetAdmUser-Env/GPO-Startup-SetAdmUser.ps1"
+      ]
+    },
+    {
+      "id": "admin-user-management-file-setadmuser-env-set-setadmuserenv-ps1",
+      "parent": "admin-user-management-dir-setadmuser-env",
+      "layer": "file",
+      "title": "Set-SetAdmUserEnv.ps1",
+      "description": "Código-fonte: `SetAdmUser-Env/Set-SetAdmUserEnv.ps1`",
+      "file": "SetAdmUser-Env/Set-SetAdmUserEnv.ps1",
+      "code": "#Requires -Version 5.1\n#Requires -RunAsAdministrator\n<#\n.SYNOPSIS\n    Define variaveis de ambiente de maquina para SetAdmUser-Env (teste ou deploy manual).\n\n.EXAMPLE\n    .\\Set-SetAdmUserEnv.ps1 -Password 'US_w1@..'\n#>\n\n[CmdletBinding()]\nparam(\n    [Parameter(Mandatory)]\n    [string]$Password,\n\n    [string]$InstallPath = 'C:\\ProgramData\\CIMED\\SetAdmUser',\n\n    [string]$LocalUser = 'suporte',\n\n    [string]$LogPath = '\\\\172.20.100.2\\Rede\\1-CompartProducao\\CIMED\\LogsSetAdmLocal\\LogSetAdmLocal.txt',\n\n    [string]$TaskName = 'CIMED_SetAdmUser',\n\n    [string]$SysvolSource = $PSScriptRoot\n)\n\n$variables = [ordered]@{\n    CIMED_SETADM_INSTALL_PATH        = $InstallPath\n    CIMED_SETADM_LOCAL_USER          = $LocalUser\n    CIMED_SETADM_LOG_PATH            = $LogPath\n    CIMED_SETADM_PASSWORD_FILE       = 'suporte.pwd'\n    CIMED_SETADM_TASK_NAME           = $TaskName\n    CIMED_SETADM_SYSVOL_SOURCE       = $SysvolSource\n    CIMED_SETADM_GPO_LOG_FILE        = Join-Path $InstallPath 'gpo-startup.log'\n    CIMED_SETADM_SKIP_SCHEDULED_TASK = 'true'\n    CIMED_SETADM_ADMIN_ACCOUNTS      = 'Administrador,Administrator'\n    CIMED_SETADM_ADMIN_GROUPS        = 'Administradores,Administrators'\n    CIMED_SETADM_PASSWORD            = $Password\n}\n\nforeach ($entry in $variables.GetEnumerator()) {\n    [Environment]::SetEnvironmentVariable($entry.Key, [string]$entry.Value, 'Machine')\n    Write-Host \"OK: $($entry.Key)\"\n}\n\nWrite-Host ''\nWrite-Host 'Variaveis de ambiente de maquina definidas. Reinicie o PC ou abra novo PowerShell elevado para aplicar em processos existentes.'\n",
+      "implementation": [
+        "path: SetAdmUser-Env/Set-SetAdmUserEnv.ps1",
+        "GitHub: https://github.com/CanonEngineer/AdminUserManagement/blob/main/SetAdmUser-Env/Set-SetAdmUserEnv.ps1"
+      ]
+    },
+    {
+      "id": "admin-user-management-file-setadmuser-env-set-adm-user-bat",
+      "parent": "admin-user-management-dir-setadmuser-env",
+      "layer": "file",
+      "title": "set_adm_user.bat",
+      "description": "Código-fonte: `SetAdmUser-Env/set_adm_user.bat`",
+      "file": "SetAdmUser-Env/set_adm_user.bat",
+      "code": "@echo off\n:: Launcher — usa variavel CIMED_SETADM_INSTALL_PATH (fallback padrao)\nsetlocal\nif not defined CIMED_SETADM_INSTALL_PATH set \"CIMED_SETADM_INSTALL_PATH=C:\\ProgramData\\CIMED\\SetAdmUser\"\npowershell.exe -NoProfile -ExecutionPolicy Bypass -WindowStyle Hidden -File \"%CIMED_SETADM_INSTALL_PATH%\\Set-AdmUser.ps1\"\nexit /b %ERRORLEVEL%\n",
+      "implementation": [
+        "path: SetAdmUser-Env/set_adm_user.bat",
+        "GitHub: https://github.com/CanonEngineer/AdminUserManagement/blob/main/SetAdmUser-Env/set_adm_user.bat"
+      ]
+    },
+    {
+      "id": "admin-user-management-fn-get-protectedpassword",
+      "parent": "admin-user-management-file-setadmuser-set-admuser-ps1",
+      "layer": "function",
+      "title": "Get-ProtectedPassword()",
+      "description": "Função `Get-ProtectedPassword` em `SetAdmUser/Set-AdmUser.ps1`",
+      "file": "SetAdmUser/Set-AdmUser.ps1",
+      "code": "function Get-ProtectedPassword {\n    param([Parameter(Mandatory)][string]$Path)\n\n    if (-not (Test-Path -LiteralPath $Path)) {\n        throw \"Arquivo de credencial nao encontrado: $Path. Execute Install-SetAdmUser.ps1 primeiro.\"\n    }\n\n    $encoded = (Get-Content -LiteralPath $Path -Raw).Trim()\n    if ([string]::IsNullOrWhiteSpace($encoded)) {\n        throw \"Arquivo de credencial vazio: $Path\"\n    }\n\n    $protectedBytes = [Convert]::FromBase64String($encoded)\n    $entropy = [byte[]]::new(0)\n\n    $plainBytes = [Security.Cryptography.ProtectedData]::Unprotect(\n        $protectedBytes,\n        $entropy,\n        [Security.Cryptography.DataProtectionScope]::LocalMachine\n    )\n\n    return [Text.Encoding]::UTF8.GetString($plainBytes)\n}",
+      "implementation": [
+        "Arquivo: SetAdmUser/Set-AdmUser.ps1",
+        "Função: Get-ProtectedPassword"
+      ]
+    },
+    {
+      "id": "admin-user-management-fn-set-localadminuser",
+      "parent": "admin-user-management-file-setadmuser-set-admuser-ps1",
+      "layer": "function",
+      "title": "Set-LocalAdminUser()",
+      "description": "Função `Set-LocalAdminUser` em `SetAdmUser/Set-AdmUser.ps1`",
+      "file": "SetAdmUser/Set-AdmUser.ps1",
+      "code": "function Set-LocalAdminUser {\n    param(\n        [Parameter(Mandatory)][string]$UserName,\n        [Parameter(Mandatory)][string]$Password\n    )\n\n    $userExists = Test-LocalUserExists -UserName $UserName\n\n    if (-not $userExists) {\n        Invoke-NetCommand -Arguments @('user', $UserName, $Password, '/add') | Out-Null\n    }\n    else {\n        Invoke-NetCommand -Arguments @('user', $UserName, $Password) | Out-Null\n    }\n\n    Invoke-NetCommand -Arguments @('user', $UserName, '/expires:never') | Out-Null\n\n    foreach ($group in $Script:Config.AdminGroups) {\n        $groupCheck = & net.exe localgroup $group 2>&1\n        if ($LASTEXITCODE -ne 0) {\n            continue\n        }\n\n        $memberList = ($groupCheck | Out-String)\n        if ($memberList -notmatch \"(^|\\s)$([regex]::Escape($UserName))(\\s|$)\") {\n            Invoke-NetCommand -Arguments @('localgroup', $group, $UserName, '/add') | Out-Null\n        }\n    }\n}",
+      "implementation": [
+        "Arquivo: SetAdmUser/Set-AdmUser.ps1",
+        "Função: Set-LocalAdminUser"
+      ]
+    },
+    {
+      "id": "admin-user-management-fn-disable-builtinadministrator",
+      "parent": "admin-user-management-file-setadmuser-set-admuser-ps1",
+      "layer": "function",
+      "title": "Disable-BuiltInAdministrator()",
+      "description": "Função `Disable-BuiltInAdministrator` em `SetAdmUser/Set-AdmUser.ps1`",
+      "file": "SetAdmUser/Set-AdmUser.ps1",
+      "code": "function Disable-BuiltInAdministrator {\n    foreach ($account in $Script:Config.AdminAccounts) {\n        $null = & net.exe user $account 2>$null\n        if ($LASTEXITCODE -eq 0) {\n            Invoke-NetCommand -Arguments @('user', $account, '/active:no') | Out-Null\n        }\n    }\n}",
+      "implementation": [
+        "Arquivo: SetAdmUser/Set-AdmUser.ps1",
+        "Função: Disable-BuiltInAdministrator"
+      ]
+    },
+    {
+      "id": "admin-user-management-fn-save-protectedpassword",
+      "parent": "admin-user-management-file-setadmuser-install-setadmuser-ps1",
+      "layer": "function",
+      "title": "Save-ProtectedPassword()",
+      "description": "Função `Save-ProtectedPassword` em `SetAdmUser/Install-SetAdmUser.ps1`",
+      "file": "SetAdmUser/Install-SetAdmUser.ps1",
+      "code": "function Save-ProtectedPassword {\n    param(\n        [Parameter(Mandatory)][string]$PlainPassword,\n        [Parameter(Mandatory)][string]$Path\n    )\n\n    $plainBytes = [Text.Encoding]::UTF8.GetBytes($PlainPassword)\n    $entropy = [byte[]]::new(0)\n\n    $protectedBytes = [Security.Cryptography.ProtectedData]::Protect(\n        $plainBytes,\n        $entropy,\n        [Security.Cryptography.DataProtectionScope]::LocalMachine\n    )\n\n    $encoded = [Convert]::ToBase64String($protectedBytes)\n    Set-Content -LiteralPath $Path -Value $encoded -Encoding ASCII -NoNewline\n}",
+      "implementation": [
+        "Arquivo: SetAdmUser/Install-SetAdmUser.ps1",
+        "Função: Save-ProtectedPassword"
+      ]
+    },
+    {
+      "id": "admin-user-management-fn-get-setadmuserconfig",
+      "parent": "admin-user-management-file-setadmuser-env-get-setadmuserconfig-ps1",
+      "layer": "function",
+      "title": "Get-SetAdmUserConfig()",
+      "description": "Função `Get-SetAdmUserConfig` em `SetAdmUser-Env/Get-SetAdmUserConfig.ps1`",
+      "file": "SetAdmUser-Env/Get-SetAdmUserConfig.ps1",
+      "code": "function Get-SetAdmUserConfig {\n    param(\n        [string]$ScriptRoot = $PSScriptRoot\n    )\n\n    $installPath = Get-EnvOrDefault -Name 'CIMED_SETADM_INSTALL_PATH' -Default 'C:\\ProgramData\\CIMED\\SetAdmUser'\n    $passwordFileName = Get-EnvOrDefault -Name 'CIMED_SETADM_PASSWORD_FILE' -Default 'suporte.pwd'\n\n    if ([System.IO.Path]::IsPathRooted($passwordFileName)) {\n        $passwordFile = $passwordFileName\n    }\n    else {\n        $passwordFile = Join-Path $installPath $passwordFileName\n    }\n\n    $gpoLogFile = Get-EnvOrDefault -Name 'CIMED_SETADM_GPO_LOG_FILE' -Default (Join-Path $installPath 'gpo-startup.log')\n\n    return [ordered]@{\n        InstallPath       = $installPath\n        LocalUserName     = Get-EnvOrDefault -Name 'CIMED_SETADM_LOCAL_USER' -Default 'suporte'\n        PasswordFile      = $passwordFile\n        LogPath           = Get-EnvOrDefault -Name 'CIMED_SETADM_LOG_PATH' -Default '\\\\172.20.100.2\\Rede\\1-CompartProducao\\CIMED\\LogsSetAdmLocal\\LogSetAdmLocal.txt'\n        AdminAccounts     = Get-EnvListOrDefault -Name 'CIMED_SETADM_ADMIN_ACCOUNTS' -Default @('Administrador', 'Administrator')\n        AdminGroups       = Get-EnvListOrDefault -Name 'CIMED_SETADM_ADMIN_GROUPS' -Default @('Administradores', 'Administrators')\n        TaskName          = Get-EnvOrDefault -Name 'CIMED_SETADM_TASK_NAME' -Default 'CIMED_SetAdmUser'\n        SysvolSource      = Get-EnvOrDefault -Name 'CIMED_SETADM_SYSVOL_SOURCE' -Default $ScriptRoot\n        GpoLogFile        = $gpoLogFile\n        SkipScheduledTask = (Get-EnvOrDefault -Name 'CIMED_SETADM_SKIP_SCHEDULED_TASK' -Default 'true').ToLowerInvariant() -in @('1', 'true', 'yes', 'sim')\n        ScriptRoot        = $ScriptRoot\n    }\n}",
+      "implementation": [
+        "Arquivo: SetAdmUser-Env/Get-SetAdmUserConfig.ps1",
+        "Função: Get-SetAdmUserConfig"
+      ]
+    },
+    {
+      "id": "admin-user-management-fn-get-setadmuserpasswordfromenv",
+      "parent": "admin-user-management-file-setadmuser-env-get-setadmuserconfig-ps1",
+      "layer": "function",
+      "title": "Get-SetAdmUserPasswordFromEnv()",
+      "description": "Função `Get-SetAdmUserPasswordFromEnv` em `SetAdmUser-Env/Get-SetAdmUserConfig.ps1`",
+      "file": "SetAdmUser-Env/Get-SetAdmUserConfig.ps1",
+      "code": "function Get-SetAdmUserPasswordFromEnv {\n    $password = [Environment]::GetEnvironmentVariable('CIMED_SETADM_PASSWORD', 'Machine')\n    if ([string]::IsNullOrWhiteSpace($password)) {\n        $password = [Environment]::GetEnvironmentVariable('CIMED_SETADM_PASSWORD', 'Process')\n    }\n\n    if ([string]::IsNullOrWhiteSpace($password)) {\n        throw 'Variavel de ambiente CIMED_SETADM_PASSWORD nao definida. Configure via GPO ou passe -Password no install.'\n    }\n\n    return $password\n}",
+      "implementation": [
+        "Arquivo: SetAdmUser-Env/Get-SetAdmUserConfig.ps1",
+        "Função: Get-SetAdmUserPasswordFromEnv"
+      ]
+    }
+  ]
+}
