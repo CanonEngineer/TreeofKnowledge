@@ -2955,8 +2955,8 @@
     "repoUrl": "https://github.com/CanonEngineer/Professional-Scanner",
     "color": "#06b6d4",
     "icon": "scanner",
-    "stack": "Node.js + WebSocket + SNMP + AutoTest + Platform + AD Remote Auth",
-    "summary": "Cobertura completa: 108 arquivos de código no repositório (349 nós na árvore incluindo pastas, 197 funções/rotas, 2 stubs grandes).",
+    "stack": "Node.js + WebSocket + SNMP + AutoTest + Domain Creds + Platform",
+    "summary": "NetScan Canon: varredura, AD, AutoTest L2/L3/L4 com login de domínio na execução, UI corporativa (scroll perfil+NIC+resultados), inventário, Oracle e loop SNMP.",
     "nodes": [
       {
         "id": "professional-scanner-root",
