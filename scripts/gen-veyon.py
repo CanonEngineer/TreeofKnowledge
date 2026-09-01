@@ -332,6 +332,42 @@ n("cv-restore-20260708", "cv-version-alert", "file", "RESTORE-POINT-20260708.md"
   "git checkout restore-versao-incompativel-funcional-20260708",
   ["Commit 5cabc10 na main.", "Pacote em Veyon_Custom/_deploy/restore-versao-incompativel-funcional-20260708/.", "Validado em CIMED-ALESSAN (.86)."]),
 
+n("cv-shared-conn", "cv-root", "module", "Shared-connection hovers (Fase 5)",
+  "Piloto frota: pilha até 10 hovers espelhados via UDP 11777 + multicast 239.255.77.77 — IPC local 0x56545934 intacto.",
+  "core/src/SharedConnectionNetworkBroker.cpp",
+  "SharedConnectionNetworkBroker::onLocalUpserted → broadcast/multicast/unicast PEERS\nComputerControlServer::maybeStartSharedConnectionMirrorBridge()",
+  ["Env VEYON_SHARED_CONNECTION_STATE=1 no instalador 1.1.", "Server mirror direto em m_outboundTraySessions.", "Master HoverSubscriber para hosts com Master aberto."]),
+
+n("cv-shared-broker", "cv-shared-conn", "file", "SharedConnectionNetworkBroker.cpp",
+  "Broker UDP: heartbeat 10s, TTL 45s, localIpv4 prefere PEERS, skip own-origin/echo.",
+  "core/src/SharedConnectionNetworkBroker.cpp",
+  "bool isLocalInterfaceIp( const QHostAddress& addr );\nvoid publishHeartbeat();",
+  ["Fix multi-NIC 26/08: evita Hyper-V como localIp.", "Multicast 239.255.77.77 para Master+Server no mesmo host.", "Não altera IPC Fechar / AccessLogWriter."]),
+
+n("cv-hover-stack", "cv-shared-conn", "file", "SystemTrayIcon.cpp",
+  "Pilha outbound HiDPI: até 10 sessões, layout 1 ou 2 colunas, escala compacta.",
+  "core/src/SystemTrayIcon.cpp",
+  "void applyOutboundHoverSessionChange( OutboundHoverOperation op, ... );\n// IPC magic 0x56545934",
+  ["Worker ignora Idle/Error enquanto outbound ativo.", "Popup hover por sessão na bandeja.", "Logs [DEBUG][tray-hover-stack]."]),
+
+n("cv-ra-stop-close", "cv-shared-conn", "file", "RemoteAccessFeaturePlugin.cpp",
+  "sessionClosing: finalizeOutbound + publish ended + stop() VNC — Ocioso sem fechar Master.",
+  "plugins/remoteaccess/RemoteAccessFeaturePlugin.cpp",
+  "finalizeOutboundIfNeeded( uncheckedViaMaster );\ncomputerControlInterface->stop();",
+  ["Fix 27/08: VncView::~VncView não chama stop().", "stop() idempotente se uncheck já parou.", "Deploy remoteaccess.dll .86 + .119."]),
+
+n("cv-distribute-guard", "cv-root", "module", "DistributeFiles permanente",
+  "UID {4a70bd5a-fab2-4a4b-a92a-a1e81d2b75ed} fora de DisabledFeatures — guard GPO + worker stale 8s.",
+  "scripts/ensure_distributefiles_enabled.ps1",
+  "$DistUid = \"{4a70bd5a-fab2-4a4b-a92a-a1e81d2b75ed}\"\nRestart-Service VeyonService # só quando corrige registry",
+  ["Tarefa Veyon CIMED Ensure DistributeFiles (SYSTEM, 30 min).", "clearStaleUnmanagedWorker em FeatureWorkerManager.", "FT .86↔.119 validado."]),
+
+n("cv-installer-11", "cv-deploy", "file", "Instaladores 1.1 lab + posto",
+  "NSIS dual: Veyon-CIMED-1.1-win64-setup.exe (Master ON) e -posto-setup.exe (Master OFF).",
+  "installer/veyon-cimed.nsi",
+  "WriteRegStr HKLM ... VEYON_SHARED_CONNECTION_STATE 1\nnetsh advfirewall ... UDP 11777",
+  ["DisplayName UI 1.1; sentinela token VERSÃO 1.0.", "install_distributefiles_guard.ps1 embutido.", "GPO: setup.exe /S"]),
+
 n("cv-release-github", "cv-deploy", "file", "GitHub Release 1.0 win64",
   "Instaladores lab + posto (14/07/2026): sentinelas + DisplayName versão correto.",
   "docs/RELEASE-veyon-cimed-1.0-win64-20260626.md",
@@ -358,7 +394,7 @@ PROJECT = {
     "color": "#ef4444",
     "icon": "cpp",
     "stack": "Qt/C++ Veyon 4.10.4",
-    "summary": "Veyon CIMED/HCFMB — UI HiDPI, logs SHA-256 em UNC, anti-tampering, alerta versão incompatível (14/07/2026) e deploy portátil.",
+    "summary": "Veyon CIMED/HCFMB — UI 1.1, shared-connection hovers, DistributeFiles guard, logs SHA-256 UNC, alerta versão 1.0 e deploy portátil.",
     "nodes": NODES,
 }
 
