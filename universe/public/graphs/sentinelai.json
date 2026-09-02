@@ -4,7 +4,7 @@
   "repoUrl": "https://github.com/CanonEngineer/SentinelAI",
   "color": "#38bdf8",
   "demoUrl": "http://localhost:5173",
-  "nodeCount": 480,
+  "nodeCount": 653,
   "categories": {
     "core": {
       "label": "Backend",
@@ -50,7 +50,7 @@
       "color": "#3b82f6",
       "size": 2.2,
       "file": "README.md",
-      "description": "Árvore completa do repositório — 385 arquivos de código mapeados (backend, frontend, mobile, docs, scripts, deploy). Estabilização Fases 1–8 + 9b (credenciais, wallboard, agent lab, CMDB, SLA, NetFlow UI)."
+      "description": "Árvore completa do repositório — 532 arquivos de código mapeados (backend, frontend, mobile, docs, scripts, deploy). Estabilização Fases 1–8 + 9b (credenciais, wallboard, agent lab, CMDB, SLA, NetFlow UI)."
     },
     {
       "id": "sai-dir-github",
@@ -63,6 +63,18 @@
       "size": 1.35,
       "file": ".github/",
       "description": "Pacote/pasta `.github/` do SentinelAI."
+    },
+    {
+      "id": "sai-dir-work",
+      "label": ".work/",
+      "parent": "sai-root",
+      "layer": "module",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 1.35,
+      "file": ".work/",
+      "description": "Pacote/pasta `.work/` do SentinelAI."
     },
     {
       "id": "sai-dir-agent",
@@ -171,6 +183,18 @@
       "size": 1.35,
       "file": ".github/workflows/",
       "description": "Pacote/pasta `.github/workflows/` do SentinelAI."
+    },
+    {
+      "id": "sai-dir-work-treeofknowledge",
+      "label": "TreeofKnowledge/",
+      "parent": "sai-dir-work",
+      "layer": "module",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 1.35,
+      "file": ".work/TreeofKnowledge/",
+      "description": "Pacote/pasta `.work/TreeofKnowledge/` do SentinelAI."
     },
     {
       "id": "sai-dir-backend-ruff-cache",
@@ -327,6 +351,66 @@
       "size": 1.35,
       "file": "frontend/src/",
       "description": "Pacote/pasta `frontend/src/` do SentinelAI."
+    },
+    {
+      "id": "sai-dir-work-treeofknowledge-css",
+      "label": "css/",
+      "parent": "sai-dir-work-treeofknowledge",
+      "layer": "module",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 1.35,
+      "file": ".work/TreeofKnowledge/css/",
+      "description": "Pacote/pasta `.work/TreeofKnowledge/css/` do SentinelAI."
+    },
+    {
+      "id": "sai-dir-work-treeofknowledge-galaxy",
+      "label": "galaxy/",
+      "parent": "sai-dir-work-treeofknowledge",
+      "layer": "module",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 1.35,
+      "file": ".work/TreeofKnowledge/galaxy/",
+      "description": "Pacote/pasta `.work/TreeofKnowledge/galaxy/` do SentinelAI."
+    },
+    {
+      "id": "sai-dir-work-treeofknowledge-js",
+      "label": "js/",
+      "parent": "sai-dir-work-treeofknowledge",
+      "layer": "module",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 1.35,
+      "file": ".work/TreeofKnowledge/js/",
+      "description": "Pacote/pasta `.work/TreeofKnowledge/js/` do SentinelAI."
+    },
+    {
+      "id": "sai-dir-work-treeofknowledge-scripts",
+      "label": "scripts/",
+      "parent": "sai-dir-work-treeofknowledge",
+      "layer": "module",
+      "category": "scripts",
+      "categoryLabel": "Scripts",
+      "color": "#64748b",
+      "size": 1.35,
+      "file": ".work/TreeofKnowledge/scripts/",
+      "description": "Pacote/pasta `.work/TreeofKnowledge/scripts/` do SentinelAI."
+    },
+    {
+      "id": "sai-dir-work-treeofknowledge-universe",
+      "label": "universe/",
+      "parent": "sai-dir-work-treeofknowledge",
+      "layer": "module",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 1.35,
+      "file": ".work/TreeofKnowledge/universe/",
+      "description": "Pacote/pasta `.work/TreeofKnowledge/universe/` do SentinelAI."
     },
     {
       "id": "sai-dir-backend-alembic-versions",
@@ -593,6 +677,54 @@
       "description": "Pacote/pasta `frontend/src/utils/` do SentinelAI."
     },
     {
+      "id": "sai-dir-work-treeofknowledge-galaxy-assets",
+      "label": "assets/",
+      "parent": "sai-dir-work-treeofknowledge-galaxy",
+      "layer": "module",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 1.35,
+      "file": ".work/TreeofKnowledge/galaxy/assets/",
+      "description": "Pacote/pasta `.work/TreeofKnowledge/galaxy/assets/` do SentinelAI."
+    },
+    {
+      "id": "sai-dir-work-treeofknowledge-galaxy-graphs",
+      "label": "graphs/",
+      "parent": "sai-dir-work-treeofknowledge-galaxy",
+      "layer": "module",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 1.35,
+      "file": ".work/TreeofKnowledge/galaxy/graphs/",
+      "description": "Pacote/pasta `.work/TreeofKnowledge/galaxy/graphs/` do SentinelAI."
+    },
+    {
+      "id": "sai-dir-work-treeofknowledge-universe-public",
+      "label": "public/",
+      "parent": "sai-dir-work-treeofknowledge-universe",
+      "layer": "module",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 1.35,
+      "file": ".work/TreeofKnowledge/universe/public/",
+      "description": "Pacote/pasta `.work/TreeofKnowledge/universe/public/` do SentinelAI."
+    },
+    {
+      "id": "sai-dir-work-treeofknowledge-universe-src",
+      "label": "src/",
+      "parent": "sai-dir-work-treeofknowledge-universe",
+      "layer": "module",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 1.35,
+      "file": ".work/TreeofKnowledge/universe/src/",
+      "description": "Pacote/pasta `.work/TreeofKnowledge/universe/src/` do SentinelAI."
+    },
+    {
       "id": "sai-dir-backend-app-api-routes",
       "label": "routes/",
       "parent": "sai-dir-backend-app-api",
@@ -639,6 +771,18 @@
       "size": 1.35,
       "file": "backend/app/engines/alerts/",
       "description": "Pacote/pasta `backend/app/engines/alerts/` do SentinelAI."
+    },
+    {
+      "id": "sai-dir-backend-app-engines-backup",
+      "label": "backup/",
+      "parent": "sai-dir-backend-app-engines",
+      "layer": "module",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 1.35,
+      "file": "backend/app/engines/backup/",
+      "description": "Pacote/pasta `backend/app/engines/backup/` do SentinelAI."
     },
     {
       "id": "sai-dir-backend-app-engines-config",
@@ -855,6 +999,42 @@
       "size": 1.35,
       "file": "frontend/src/components/ui/",
       "description": "Pacote/pasta `frontend/src/components/ui/` do SentinelAI."
+    },
+    {
+      "id": "sai-dir-work-treeofknowledge-universe-public-graphs",
+      "label": "graphs/",
+      "parent": "sai-dir-work-treeofknowledge-universe-public",
+      "layer": "module",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 1.35,
+      "file": ".work/TreeofKnowledge/universe/public/graphs/",
+      "description": "Pacote/pasta `.work/TreeofKnowledge/universe/public/graphs/` do SentinelAI."
+    },
+    {
+      "id": "sai-dir-work-treeofknowledge-universe-src-components",
+      "label": "components/",
+      "parent": "sai-dir-work-treeofknowledge-universe-src",
+      "layer": "module",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 1.35,
+      "file": ".work/TreeofKnowledge/universe/src/components/",
+      "description": "Pacote/pasta `.work/TreeofKnowledge/universe/src/components/` do SentinelAI."
+    },
+    {
+      "id": "sai-dir-work-treeofknowledge-universe-src-utils",
+      "label": "utils/",
+      "parent": "sai-dir-work-treeofknowledge-universe-src",
+      "layer": "module",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 1.35,
+      "file": ".work/TreeofKnowledge/universe/src/utils/",
+      "description": "Pacote/pasta `.work/TreeofKnowledge/universe/src/utils/` do SentinelAI."
     },
     {
       "id": "sai-dir-backend-app-engines-remediation-playbooks",
@@ -1085,6 +1265,1506 @@
       "description": "Código-fonte: `.github/workflows/ci.yml`"
     },
     {
+      "id": "sai-file-work-treeofknowledge-index-html",
+      "label": "index.html",
+      "parent": "sai-dir-work-treeofknowledge",
+      "layer": "file",
+      "category": "frontend",
+      "categoryLabel": "Frontend",
+      "color": "#eab308",
+      "size": 0.85,
+      "file": ".work/TreeofKnowledge/index.html",
+      "description": "Código-fonte: `.work/TreeofKnowledge/index.html`"
+    },
+    {
+      "id": "sai-file-work-treeofknowledge-node-html",
+      "label": "node.html",
+      "parent": "sai-dir-work-treeofknowledge",
+      "layer": "file",
+      "category": "frontend",
+      "categoryLabel": "Frontend",
+      "color": "#eab308",
+      "size": 0.85,
+      "file": ".work/TreeofKnowledge/node.html",
+      "description": "Código-fonte: `.work/TreeofKnowledge/node.html`"
+    },
+    {
+      "id": "sai-file-work-treeofknowledge-readme-md",
+      "label": "README.md",
+      "parent": "sai-dir-work-treeofknowledge",
+      "layer": "file",
+      "category": "other",
+      "categoryLabel": "Outros",
+      "color": "#64748b",
+      "size": 0.85,
+      "file": ".work/TreeofKnowledge/README.md",
+      "description": "Código-fonte: `.work/TreeofKnowledge/README.md`"
+    },
+    {
+      "id": "sai-file-work-treeofknowledge-css-style-css",
+      "label": "style.css",
+      "parent": "sai-dir-work-treeofknowledge-css",
+      "layer": "file",
+      "category": "frontend",
+      "categoryLabel": "Frontend",
+      "color": "#eab308",
+      "size": 0.85,
+      "file": ".work/TreeofKnowledge/css/style.css",
+      "description": "Código-fonte: `.work/TreeofKnowledge/css/style.css`"
+    },
+    {
+      "id": "sai-file-work-treeofknowledge-galaxy-index-html",
+      "label": "index.html",
+      "parent": "sai-dir-work-treeofknowledge-galaxy",
+      "layer": "file",
+      "category": "frontend",
+      "categoryLabel": "Frontend",
+      "color": "#eab308",
+      "size": 0.85,
+      "file": ".work/TreeofKnowledge/galaxy/index.html",
+      "description": "Código-fonte: `.work/TreeofKnowledge/galaxy/index.html`"
+    },
+    {
+      "id": "sai-file-work-treeofknowledge-galaxy-assets-index-brk-c7ur-js",
+      "label": "index-BrK_c7UR.js",
+      "parent": "sai-dir-work-treeofknowledge-galaxy-assets",
+      "layer": "file",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 0.85,
+      "file": ".work/TreeofKnowledge/galaxy/assets/index-BrK_c7UR.js",
+      "description": "Código-fonte: `.work/TreeofKnowledge/galaxy/assets/index-BrK_c7UR.js`"
+    },
+    {
+      "id": "sai-file-work-treeofknowledge-galaxy-assets-index-cnozn3tg-css",
+      "label": "index-CnoZN3tG.css",
+      "parent": "sai-dir-work-treeofknowledge-galaxy-assets",
+      "layer": "file",
+      "category": "frontend",
+      "categoryLabel": "Frontend",
+      "color": "#eab308",
+      "size": 0.85,
+      "file": ".work/TreeofKnowledge/galaxy/assets/index-CnoZN3tG.css",
+      "description": "Código-fonte: `.work/TreeofKnowledge/galaxy/assets/index-CnoZN3tG.css`"
+    },
+    {
+      "id": "sai-grp-work-treeofknowledge-galaxy-graphs-files-a-c-d-e-f",
+      "label": "Arquivos A–C–D–E–F",
+      "parent": "sai-dir-work-treeofknowledge-galaxy-graphs",
+      "layer": "module",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 1.35,
+      "file": ".work/TreeofKnowledge/galaxy/graphs/[files-a–c–d–e–f]",
+      "description": "Grupo de arquivos em `.work/TreeofKnowledge/galaxy/graphs/` — Arquivos A–C–D–E–F"
+    },
+    {
+      "id": "sai-grp-work-treeofknowledge-galaxy-graphs-files-h-j-n",
+      "label": "Arquivos H–J–N",
+      "parent": "sai-dir-work-treeofknowledge-galaxy-graphs",
+      "layer": "module",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 1.35,
+      "file": ".work/TreeofKnowledge/galaxy/graphs/[files-h–j–n]",
+      "description": "Grupo de arquivos em `.work/TreeofKnowledge/galaxy/graphs/` — Arquivos H–J–N"
+    },
+    {
+      "id": "sai-grp-work-treeofknowledge-galaxy-graphs-files-p-s-t-u",
+      "label": "Arquivos P–S–T–U",
+      "parent": "sai-dir-work-treeofknowledge-galaxy-graphs",
+      "layer": "module",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 1.35,
+      "file": ".work/TreeofKnowledge/galaxy/graphs/[files-p–s–t–u]",
+      "description": "Grupo de arquivos em `.work/TreeofKnowledge/galaxy/graphs/` — Arquivos P–S–T–U"
+    },
+    {
+      "id": "sai-file-work-treeofknowledge-galaxy-graphs-admin-user-management-json",
+      "label": "admin-user-management.json",
+      "parent": "sai-grp-work-treeofknowledge-galaxy-graphs-files-a-c-d-e-f",
+      "layer": "file",
+      "category": "other",
+      "categoryLabel": "Outros",
+      "color": "#64748b",
+      "size": 0.85,
+      "file": ".work/TreeofKnowledge/galaxy/graphs/admin-user-management.json",
+      "description": "Código-fonte: `.work/TreeofKnowledge/galaxy/graphs/admin-user-management.json`"
+    },
+    {
+      "id": "sai-file-work-treeofknowledge-galaxy-graphs-anki-univesp-json",
+      "label": "anki-univesp.json",
+      "parent": "sai-grp-work-treeofknowledge-galaxy-graphs-files-a-c-d-e-f",
+      "layer": "file",
+      "category": "other",
+      "categoryLabel": "Outros",
+      "color": "#64748b",
+      "size": 0.85,
+      "file": ".work/TreeofKnowledge/galaxy/graphs/anki-univesp.json",
+      "description": "Código-fonte: `.work/TreeofKnowledge/galaxy/graphs/anki-univesp.json`"
+    },
+    {
+      "id": "sai-file-work-treeofknowledge-galaxy-graphs-app-mosquito-json",
+      "label": "app-mosquito.json",
+      "parent": "sai-grp-work-treeofknowledge-galaxy-graphs-files-a-c-d-e-f",
+      "layer": "file",
+      "category": "frontend",
+      "categoryLabel": "Frontend",
+      "color": "#eab308",
+      "size": 0.85,
+      "file": ".work/TreeofKnowledge/galaxy/graphs/app-mosquito.json",
+      "description": "Código-fonte: `.work/TreeofKnowledge/galaxy/graphs/app-mosquito.json`"
+    },
+    {
+      "id": "sai-file-work-treeofknowledge-galaxy-graphs-canon-engineer-github-io-json",
+      "label": "canon-engineer-github-io.json",
+      "parent": "sai-grp-work-treeofknowledge-galaxy-graphs-files-a-c-d-e-f",
+      "layer": "file",
+      "category": "other",
+      "categoryLabel": "Outros",
+      "color": "#64748b",
+      "size": 0.85,
+      "file": ".work/TreeofKnowledge/galaxy/graphs/canon-engineer-github-io.json",
+      "description": "Código-fonte: `.work/TreeofKnowledge/galaxy/graphs/canon-engineer-github-io.json`"
+    },
+    {
+      "id": "sai-file-work-treeofknowledge-galaxy-graphs-canon-python-ecommerce-json",
+      "label": "canon-python-ecommerce.json",
+      "parent": "sai-grp-work-treeofknowledge-galaxy-graphs-files-a-c-d-e-f",
+      "layer": "file",
+      "category": "other",
+      "categoryLabel": "Outros",
+      "color": "#64748b",
+      "size": 0.85,
+      "file": ".work/TreeofKnowledge/galaxy/graphs/canon-python-ecommerce.json",
+      "description": "Código-fonte: `.work/TreeofKnowledge/galaxy/graphs/canon-python-ecommerce.json`"
+    },
+    {
+      "id": "sai-file-work-treeofknowledge-galaxy-graphs-canon-sync-engine-json",
+      "label": "canon-sync-engine.json",
+      "parent": "sai-grp-work-treeofknowledge-galaxy-graphs-files-a-c-d-e-f",
+      "layer": "file",
+      "category": "other",
+      "categoryLabel": "Outros",
+      "color": "#64748b",
+      "size": 0.85,
+      "file": ".work/TreeofKnowledge/galaxy/graphs/canon-sync-engine.json",
+      "description": "Código-fonte: `.work/TreeofKnowledge/galaxy/graphs/canon-sync-engine.json`"
+    },
+    {
+      "id": "sai-file-work-treeofknowledge-galaxy-graphs-course-python-2023-json",
+      "label": "course-python-2023.json",
+      "parent": "sai-grp-work-treeofknowledge-galaxy-graphs-files-a-c-d-e-f",
+      "layer": "file",
+      "category": "other",
+      "categoryLabel": "Outros",
+      "color": "#64748b",
+      "size": 0.85,
+      "file": ".work/TreeofKnowledge/galaxy/graphs/course-python-2023.json",
+      "description": "Código-fonte: `.work/TreeofKnowledge/galaxy/graphs/course-python-2023.json`"
+    },
+    {
+      "id": "sai-file-work-treeofknowledge-galaxy-graphs-customize-veyon-json",
+      "label": "customize-veyon.json",
+      "parent": "sai-grp-work-treeofknowledge-galaxy-graphs-files-a-c-d-e-f",
+      "layer": "file",
+      "category": "other",
+      "categoryLabel": "Outros",
+      "color": "#64748b",
+      "size": 0.85,
+      "file": ".work/TreeofKnowledge/galaxy/graphs/customize-veyon.json",
+      "description": "Código-fonte: `.work/TreeofKnowledge/galaxy/graphs/customize-veyon.json`"
+    },
+    {
+      "id": "sai-file-work-treeofknowledge-galaxy-graphs-danger-zone-json",
+      "label": "danger-zone.json",
+      "parent": "sai-grp-work-treeofknowledge-galaxy-graphs-files-a-c-d-e-f",
+      "layer": "file",
+      "category": "other",
+      "categoryLabel": "Outros",
+      "color": "#64748b",
+      "size": 0.85,
+      "file": ".work/TreeofKnowledge/galaxy/graphs/danger-zone.json",
+      "description": "Código-fonte: `.work/TreeofKnowledge/galaxy/graphs/danger-zone.json`"
+    },
+    {
+      "id": "sai-file-work-treeofknowledge-galaxy-graphs-eagle-offensive-platform-json",
+      "label": "eagle-offensive-platform.json",
+      "parent": "sai-grp-work-treeofknowledge-galaxy-graphs-files-a-c-d-e-f",
+      "layer": "file",
+      "category": "other",
+      "categoryLabel": "Outros",
+      "color": "#64748b",
+      "size": 0.85,
+      "file": ".work/TreeofKnowledge/galaxy/graphs/eagle-offensive-platform.json",
+      "description": "Código-fonte: `.work/TreeofKnowledge/galaxy/graphs/eagle-offensive-platform.json`"
+    },
+    {
+      "id": "sai-file-work-treeofknowledge-galaxy-graphs-food-online-django-json",
+      "label": "food-online-django.json",
+      "parent": "sai-grp-work-treeofknowledge-galaxy-graphs-files-a-c-d-e-f",
+      "layer": "file",
+      "category": "other",
+      "categoryLabel": "Outros",
+      "color": "#64748b",
+      "size": 0.85,
+      "file": ".work/TreeofKnowledge/galaxy/graphs/food-online-django.json",
+      "description": "Código-fonte: `.work/TreeofKnowledge/galaxy/graphs/food-online-django.json`"
+    },
+    {
+      "id": "sai-file-work-treeofknowledge-galaxy-graphs-html-website-json",
+      "label": "html-website.json",
+      "parent": "sai-grp-work-treeofknowledge-galaxy-graphs-files-h-j-n",
+      "layer": "file",
+      "category": "other",
+      "categoryLabel": "Outros",
+      "color": "#64748b",
+      "size": 0.85,
+      "file": ".work/TreeofKnowledge/galaxy/graphs/html-website.json",
+      "description": "Código-fonte: `.work/TreeofKnowledge/galaxy/graphs/html-website.json`"
+    },
+    {
+      "id": "sai-file-work-treeofknowledge-galaxy-graphs-hyperware-json",
+      "label": "hyperware.json",
+      "parent": "sai-grp-work-treeofknowledge-galaxy-graphs-files-h-j-n",
+      "layer": "file",
+      "category": "other",
+      "categoryLabel": "Outros",
+      "color": "#64748b",
+      "size": 0.85,
+      "file": ".work/TreeofKnowledge/galaxy/graphs/hyperware.json",
+      "description": "Código-fonte: `.work/TreeofKnowledge/galaxy/graphs/hyperware.json`"
+    },
+    {
+      "id": "sai-file-work-treeofknowledge-galaxy-graphs-javascript-calculator-json",
+      "label": "javascript-calculator.json",
+      "parent": "sai-grp-work-treeofknowledge-galaxy-graphs-files-h-j-n",
+      "layer": "file",
+      "category": "scripts",
+      "categoryLabel": "Scripts",
+      "color": "#64748b",
+      "size": 0.85,
+      "file": ".work/TreeofKnowledge/galaxy/graphs/javascript-calculator.json",
+      "description": "Código-fonte: `.work/TreeofKnowledge/galaxy/graphs/javascript-calculator.json`"
+    },
+    {
+      "id": "sai-file-work-treeofknowledge-galaxy-graphs-javascript-dropbox-json",
+      "label": "javascript-dropbox.json",
+      "parent": "sai-grp-work-treeofknowledge-galaxy-graphs-files-h-j-n",
+      "layer": "file",
+      "category": "scripts",
+      "categoryLabel": "Scripts",
+      "color": "#64748b",
+      "size": 0.85,
+      "file": ".work/TreeofKnowledge/galaxy/graphs/javascript-dropbox.json",
+      "description": "Código-fonte: `.work/TreeofKnowledge/galaxy/graphs/javascript-dropbox.json`"
+    },
+    {
+      "id": "sai-file-work-treeofknowledge-galaxy-graphs-javascript-restaurant-json",
+      "label": "javascript-restaurant.json",
+      "parent": "sai-grp-work-treeofknowledge-galaxy-graphs-files-h-j-n",
+      "layer": "file",
+      "category": "scripts",
+      "categoryLabel": "Scripts",
+      "color": "#64748b",
+      "size": 0.85,
+      "file": ".work/TreeofKnowledge/galaxy/graphs/javascript-restaurant.json",
+      "description": "Código-fonte: `.work/TreeofKnowledge/galaxy/graphs/javascript-restaurant.json`"
+    },
+    {
+      "id": "sai-file-work-treeofknowledge-galaxy-graphs-javascript-restful-api-json",
+      "label": "javascript-restful-api.json",
+      "parent": "sai-grp-work-treeofknowledge-galaxy-graphs-files-h-j-n",
+      "layer": "file",
+      "category": "scripts",
+      "categoryLabel": "Scripts",
+      "color": "#64748b",
+      "size": 0.85,
+      "file": ".work/TreeofKnowledge/galaxy/graphs/javascript-restful-api.json",
+      "description": "Código-fonte: `.work/TreeofKnowledge/galaxy/graphs/javascript-restful-api.json`"
+    },
+    {
+      "id": "sai-file-work-treeofknowledge-galaxy-graphs-javascript-users-json",
+      "label": "javascript-users.json",
+      "parent": "sai-grp-work-treeofknowledge-galaxy-graphs-files-h-j-n",
+      "layer": "file",
+      "category": "scripts",
+      "categoryLabel": "Scripts",
+      "color": "#64748b",
+      "size": 0.85,
+      "file": ".work/TreeofKnowledge/galaxy/graphs/javascript-users.json",
+      "description": "Código-fonte: `.work/TreeofKnowledge/galaxy/graphs/javascript-users.json`"
+    },
+    {
+      "id": "sai-file-work-treeofknowledge-galaxy-graphs-javascript-whatsapp-json",
+      "label": "javascript-whatsapp.json",
+      "parent": "sai-grp-work-treeofknowledge-galaxy-graphs-files-h-j-n",
+      "layer": "file",
+      "category": "scripts",
+      "categoryLabel": "Scripts",
+      "color": "#64748b",
+      "size": 0.85,
+      "file": ".work/TreeofKnowledge/galaxy/graphs/javascript-whatsapp.json",
+      "description": "Código-fonte: `.work/TreeofKnowledge/galaxy/graphs/javascript-whatsapp.json`"
+    },
+    {
+      "id": "sai-file-work-treeofknowledge-galaxy-graphs-neighborhood-boys-json",
+      "label": "neighborhood-boys.json",
+      "parent": "sai-grp-work-treeofknowledge-galaxy-graphs-files-h-j-n",
+      "layer": "file",
+      "category": "other",
+      "categoryLabel": "Outros",
+      "color": "#64748b",
+      "size": 0.85,
+      "file": ".work/TreeofKnowledge/galaxy/graphs/neighborhood-boys.json",
+      "description": "Código-fonte: `.work/TreeofKnowledge/galaxy/graphs/neighborhood-boys.json`"
+    },
+    {
+      "id": "sai-file-work-treeofknowledge-galaxy-graphs-php-dao-json",
+      "label": "php-dao.json",
+      "parent": "sai-grp-work-treeofknowledge-galaxy-graphs-files-p-s-t-u",
+      "layer": "file",
+      "category": "other",
+      "categoryLabel": "Outros",
+      "color": "#64748b",
+      "size": 0.85,
+      "file": ".work/TreeofKnowledge/galaxy/graphs/php-dao.json",
+      "description": "Código-fonte: `.work/TreeofKnowledge/galaxy/graphs/php-dao.json`"
+    },
+    {
+      "id": "sai-file-work-treeofknowledge-galaxy-graphs-professional-scanner-json",
+      "label": "professional-scanner.json",
+      "parent": "sai-grp-work-treeofknowledge-galaxy-graphs-files-p-s-t-u",
+      "layer": "file",
+      "category": "network",
+      "categoryLabel": "Rede / Scan",
+      "color": "#22d3ee",
+      "size": 0.85,
+      "file": ".work/TreeofKnowledge/galaxy/graphs/professional-scanner.json",
+      "description": "Código-fonte: `.work/TreeofKnowledge/galaxy/graphs/professional-scanner.json`"
+    },
+    {
+      "id": "sai-file-work-treeofknowledge-galaxy-graphs-project-helpdesk-json",
+      "label": "project-helpdesk.json",
+      "parent": "sai-grp-work-treeofknowledge-galaxy-graphs-files-p-s-t-u",
+      "layer": "file",
+      "category": "other",
+      "categoryLabel": "Outros",
+      "color": "#64748b",
+      "size": 0.85,
+      "file": ".work/TreeofKnowledge/galaxy/graphs/project-helpdesk.json",
+      "description": "Código-fonte: `.work/TreeofKnowledge/galaxy/graphs/project-helpdesk.json`"
+    },
+    {
+      "id": "sai-file-work-treeofknowledge-galaxy-graphs-python-employee-list-json",
+      "label": "python-employee-list.json",
+      "parent": "sai-grp-work-treeofknowledge-galaxy-graphs-files-p-s-t-u",
+      "layer": "file",
+      "category": "other",
+      "categoryLabel": "Outros",
+      "color": "#64748b",
+      "size": 0.85,
+      "file": ".work/TreeofKnowledge/galaxy/graphs/python-employee-list.json",
+      "description": "Código-fonte: `.work/TreeofKnowledge/galaxy/graphs/python-employee-list.json`"
+    },
+    {
+      "id": "sai-file-work-treeofknowledge-galaxy-graphs-python-ii-ecommerce-json",
+      "label": "python-ii-ecommerce.json",
+      "parent": "sai-grp-work-treeofknowledge-galaxy-graphs-files-p-s-t-u",
+      "layer": "file",
+      "category": "other",
+      "categoryLabel": "Outros",
+      "color": "#64748b",
+      "size": 0.85,
+      "file": ".work/TreeofKnowledge/galaxy/graphs/python-ii-ecommerce.json",
+      "description": "Código-fonte: `.work/TreeofKnowledge/galaxy/graphs/python-ii-ecommerce.json`"
+    },
+    {
+      "id": "sai-file-work-treeofknowledge-galaxy-graphs-search-univesp-json",
+      "label": "search-univesp.json",
+      "parent": "sai-grp-work-treeofknowledge-galaxy-graphs-files-p-s-t-u",
+      "layer": "file",
+      "category": "other",
+      "categoryLabel": "Outros",
+      "color": "#64748b",
+      "size": 0.85,
+      "file": ".work/TreeofKnowledge/galaxy/graphs/search-univesp.json",
+      "description": "Código-fonte: `.work/TreeofKnowledge/galaxy/graphs/search-univesp.json`"
+    },
+    {
+      "id": "sai-file-work-treeofknowledge-galaxy-graphs-sentinelai-json",
+      "label": "sentinelai.json",
+      "parent": "sai-grp-work-treeofknowledge-galaxy-graphs-files-p-s-t-u",
+      "layer": "file",
+      "category": "other",
+      "categoryLabel": "Outros",
+      "color": "#64748b",
+      "size": 0.85,
+      "file": ".work/TreeofKnowledge/galaxy/graphs/sentinelai.json",
+      "description": "Código-fonte: `.work/TreeofKnowledge/galaxy/graphs/sentinelai.json`"
+    },
+    {
+      "id": "sai-file-work-treeofknowledge-galaxy-graphs-smartferrari-iot-json",
+      "label": "smartferrari-iot.json",
+      "parent": "sai-grp-work-treeofknowledge-galaxy-graphs-files-p-s-t-u",
+      "layer": "file",
+      "category": "other",
+      "categoryLabel": "Outros",
+      "color": "#64748b",
+      "size": 0.85,
+      "file": ".work/TreeofKnowledge/galaxy/graphs/smartferrari-iot.json",
+      "description": "Código-fonte: `.work/TreeofKnowledge/galaxy/graphs/smartferrari-iot.json`"
+    },
+    {
+      "id": "sai-file-work-treeofknowledge-galaxy-graphs-smarthome-iot-json",
+      "label": "smarthome-iot.json",
+      "parent": "sai-grp-work-treeofknowledge-galaxy-graphs-files-p-s-t-u",
+      "layer": "file",
+      "category": "other",
+      "categoryLabel": "Outros",
+      "color": "#64748b",
+      "size": 0.85,
+      "file": ".work/TreeofKnowledge/galaxy/graphs/smarthome-iot.json",
+      "description": "Código-fonte: `.work/TreeofKnowledge/galaxy/graphs/smarthome-iot.json`"
+    },
+    {
+      "id": "sai-file-work-treeofknowledge-galaxy-graphs-todo-app-json",
+      "label": "todo-app.json",
+      "parent": "sai-grp-work-treeofknowledge-galaxy-graphs-files-p-s-t-u",
+      "layer": "file",
+      "category": "other",
+      "categoryLabel": "Outros",
+      "color": "#64748b",
+      "size": 0.85,
+      "file": ".work/TreeofKnowledge/galaxy/graphs/todo-app.json",
+      "description": "Código-fonte: `.work/TreeofKnowledge/galaxy/graphs/todo-app.json`"
+    },
+    {
+      "id": "sai-file-work-treeofknowledge-galaxy-graphs-user-management-json",
+      "label": "user-management.json",
+      "parent": "sai-grp-work-treeofknowledge-galaxy-graphs-files-p-s-t-u",
+      "layer": "file",
+      "category": "other",
+      "categoryLabel": "Outros",
+      "color": "#64748b",
+      "size": 0.85,
+      "file": ".work/TreeofKnowledge/galaxy/graphs/user-management.json",
+      "description": "Código-fonte: `.work/TreeofKnowledge/galaxy/graphs/user-management.json`"
+    },
+    {
+      "id": "sai-file-work-treeofknowledge-js-app-js",
+      "label": "app.js",
+      "parent": "sai-dir-work-treeofknowledge-js",
+      "layer": "file",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 0.85,
+      "file": ".work/TreeofKnowledge/js/app.js",
+      "description": "Código-fonte: `.work/TreeofKnowledge/js/app.js`"
+    },
+    {
+      "id": "sai-file-work-treeofknowledge-js-cimed-code-highlight-js",
+      "label": "cimed-code-highlight.js",
+      "parent": "sai-dir-work-treeofknowledge-js",
+      "layer": "file",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 0.85,
+      "file": ".work/TreeofKnowledge/js/cimed-code-highlight.js",
+      "description": "Código-fonte: `.work/TreeofKnowledge/js/cimed-code-highlight.js`"
+    },
+    {
+      "id": "sai-file-work-treeofknowledge-js-config-js",
+      "label": "config.js",
+      "parent": "sai-dir-work-treeofknowledge-js",
+      "layer": "file",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 0.85,
+      "file": ".work/TreeofKnowledge/js/config.js",
+      "description": "Código-fonte: `.work/TreeofKnowledge/js/config.js`"
+    },
+    {
+      "id": "sai-file-work-treeofknowledge-js-header-js",
+      "label": "header.js",
+      "parent": "sai-dir-work-treeofknowledge-js",
+      "layer": "file",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 0.85,
+      "file": ".work/TreeofKnowledge/js/header.js",
+      "description": "Código-fonte: `.work/TreeofKnowledge/js/header.js`"
+    },
+    {
+      "id": "sai-file-work-treeofknowledge-js-node-page-js",
+      "label": "node-page.js",
+      "parent": "sai-dir-work-treeofknowledge-js",
+      "layer": "file",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 0.85,
+      "file": ".work/TreeofKnowledge/js/node-page.js",
+      "description": "Código-fonte: `.work/TreeofKnowledge/js/node-page.js`"
+    },
+    {
+      "id": "sai-file-work-treeofknowledge-js-search-js",
+      "label": "search.js",
+      "parent": "sai-dir-work-treeofknowledge-js",
+      "layer": "file",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 0.85,
+      "file": ".work/TreeofKnowledge/js/search.js",
+      "description": "Código-fonte: `.work/TreeofKnowledge/js/search.js`"
+    },
+    {
+      "id": "sai-file-work-treeofknowledge-js-tree-renderer-js",
+      "label": "tree-renderer.js",
+      "parent": "sai-dir-work-treeofknowledge-js",
+      "layer": "file",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 0.85,
+      "file": ".work/TreeofKnowledge/js/tree-renderer.js",
+      "description": "Código-fonte: `.work/TreeofKnowledge/js/tree-renderer.js`"
+    },
+    {
+      "id": "sai-grp-work-treeofknowledge-scripts-files-a-b-c-d-e-f",
+      "label": "Arquivos A–B–C–D–E–F",
+      "parent": "sai-dir-work-treeofknowledge-scripts",
+      "layer": "module",
+      "category": "scripts",
+      "categoryLabel": "Scripts",
+      "color": "#64748b",
+      "size": 1.35,
+      "file": ".work/TreeofKnowledge/scripts/[files-a–b–c–d–e–f]",
+      "description": "Grupo de arquivos em `.work/TreeofKnowledge/scripts/` — Arquivos A–B–C–D–E–F"
+    },
+    {
+      "id": "sai-grp-work-treeofknowledge-scripts-files-g",
+      "label": "Arquivos G",
+      "parent": "sai-dir-work-treeofknowledge-scripts",
+      "layer": "module",
+      "category": "scripts",
+      "categoryLabel": "Scripts",
+      "color": "#64748b",
+      "size": 1.35,
+      "file": ".work/TreeofKnowledge/scripts/[files-g]",
+      "description": "Grupo de arquivos em `.work/TreeofKnowledge/scripts/` — Arquivos G"
+    },
+    {
+      "id": "sai-grp-work-treeofknowledge-scripts-files-r-s-u",
+      "label": "Arquivos R–S–U",
+      "parent": "sai-dir-work-treeofknowledge-scripts",
+      "layer": "module",
+      "category": "scripts",
+      "categoryLabel": "Scripts",
+      "color": "#64748b",
+      "size": 1.35,
+      "file": ".work/TreeofKnowledge/scripts/[files-r–s–u]",
+      "description": "Grupo de arquivos em `.work/TreeofKnowledge/scripts/` — Arquivos R–S–U"
+    },
+    {
+      "id": "sai-file-work-treeofknowledge-scripts-adminusermanagement-project-json",
+      "label": "adminusermanagement-project.json",
+      "parent": "sai-grp-work-treeofknowledge-scripts-files-a-b-c-d-e-f",
+      "layer": "file",
+      "category": "scripts",
+      "categoryLabel": "Scripts",
+      "color": "#64748b",
+      "size": 0.85,
+      "file": ".work/TreeofKnowledge/scripts/adminusermanagement-project.json",
+      "description": "Código-fonte: `.work/TreeofKnowledge/scripts/adminusermanagement-project.json`"
+    },
+    {
+      "id": "sai-file-work-treeofknowledge-scripts-build-galaxy-ps1",
+      "label": "build-galaxy.ps1",
+      "parent": "sai-grp-work-treeofknowledge-scripts-files-a-b-c-d-e-f",
+      "layer": "file",
+      "category": "frontend",
+      "categoryLabel": "Frontend",
+      "color": "#eab308",
+      "size": 0.85,
+      "file": ".work/TreeofKnowledge/scripts/build-galaxy.ps1",
+      "description": "Código-fonte: `.work/TreeofKnowledge/scripts/build-galaxy.ps1`"
+    },
+    {
+      "id": "sai-file-work-treeofknowledge-scripts-build-projects-py",
+      "label": "build-projects.py",
+      "parent": "sai-grp-work-treeofknowledge-scripts-files-a-b-c-d-e-f",
+      "layer": "file",
+      "category": "frontend",
+      "categoryLabel": "Frontend",
+      "color": "#eab308",
+      "size": 0.85,
+      "file": ".work/TreeofKnowledge/scripts/build-projects.py",
+      "description": "Código-fonte: `.work/TreeofKnowledge/scripts/build-projects.py`"
+    },
+    {
+      "id": "sai-file-work-treeofknowledge-scripts-canonsyncengine-project-json",
+      "label": "canonsyncengine-project.json",
+      "parent": "sai-grp-work-treeofknowledge-scripts-files-a-b-c-d-e-f",
+      "layer": "file",
+      "category": "scripts",
+      "categoryLabel": "Scripts",
+      "color": "#64748b",
+      "size": 0.85,
+      "file": ".work/TreeofKnowledge/scripts/canonsyncengine-project.json",
+      "description": "Código-fonte: `.work/TreeofKnowledge/scripts/canonsyncengine-project.json`"
+    },
+    {
+      "id": "sai-file-work-treeofknowledge-scripts-check-overlaps-py",
+      "label": "check-overlaps.py",
+      "parent": "sai-grp-work-treeofknowledge-scripts-files-a-b-c-d-e-f",
+      "layer": "file",
+      "category": "scripts",
+      "categoryLabel": "Scripts",
+      "color": "#64748b",
+      "size": 0.85,
+      "file": ".work/TreeofKnowledge/scripts/check-overlaps.py",
+      "description": "Código-fonte: `.work/TreeofKnowledge/scripts/check-overlaps.py`"
+    },
+    {
+      "id": "sai-file-work-treeofknowledge-scripts-cpe-project-json",
+      "label": "cpe-project.json",
+      "parent": "sai-grp-work-treeofknowledge-scripts-files-a-b-c-d-e-f",
+      "layer": "file",
+      "category": "scripts",
+      "categoryLabel": "Scripts",
+      "color": "#64748b",
+      "size": 0.85,
+      "file": ".work/TreeofKnowledge/scripts/cpe-project.json",
+      "description": "Código-fonte: `.work/TreeofKnowledge/scripts/cpe-project.json`"
+    },
+    {
+      "id": "sai-file-work-treeofknowledge-scripts-dangerzone-project-json",
+      "label": "dangerzone-project.json",
+      "parent": "sai-grp-work-treeofknowledge-scripts-files-a-b-c-d-e-f",
+      "layer": "file",
+      "category": "scripts",
+      "categoryLabel": "Scripts",
+      "color": "#64748b",
+      "size": 0.85,
+      "file": ".work/TreeofKnowledge/scripts/dangerzone-project.json",
+      "description": "Código-fonte: `.work/TreeofKnowledge/scripts/dangerzone-project.json`"
+    },
+    {
+      "id": "sai-file-work-treeofknowledge-scripts-dropbox-project-json",
+      "label": "dropbox-project.json",
+      "parent": "sai-grp-work-treeofknowledge-scripts-files-a-b-c-d-e-f",
+      "layer": "file",
+      "category": "scripts",
+      "categoryLabel": "Scripts",
+      "color": "#64748b",
+      "size": 0.85,
+      "file": ".work/TreeofKnowledge/scripts/dropbox-project.json",
+      "description": "Código-fonte: `.work/TreeofKnowledge/scripts/dropbox-project.json`"
+    },
+    {
+      "id": "sai-file-work-treeofknowledge-scripts-eagle-project-json",
+      "label": "eagle-project.json",
+      "parent": "sai-grp-work-treeofknowledge-scripts-files-a-b-c-d-e-f",
+      "layer": "file",
+      "category": "scripts",
+      "categoryLabel": "Scripts",
+      "color": "#64748b",
+      "size": 0.85,
+      "file": ".work/TreeofKnowledge/scripts/eagle-project.json",
+      "description": "Código-fonte: `.work/TreeofKnowledge/scripts/eagle-project.json`"
+    },
+    {
+      "id": "sai-file-work-treeofknowledge-scripts-export-universe-graph-py",
+      "label": "export-universe-graph.py",
+      "parent": "sai-grp-work-treeofknowledge-scripts-files-a-b-c-d-e-f",
+      "layer": "file",
+      "category": "scripts",
+      "categoryLabel": "Scripts",
+      "color": "#64748b",
+      "size": 0.85,
+      "file": ".work/TreeofKnowledge/scripts/export-universe-graph.py",
+      "description": "Código-fonte: `.work/TreeofKnowledge/scripts/export-universe-graph.py`"
+    },
+    {
+      "id": "sai-file-work-treeofknowledge-scripts-fill-full-code-py",
+      "label": "fill-full-code.py",
+      "parent": "sai-grp-work-treeofknowledge-scripts-files-a-b-c-d-e-f",
+      "layer": "file",
+      "category": "scripts",
+      "categoryLabel": "Scripts",
+      "color": "#64748b",
+      "size": 0.85,
+      "file": ".work/TreeofKnowledge/scripts/fill-full-code.py",
+      "description": "Código-fonte: `.work/TreeofKnowledge/scripts/fill-full-code.py`"
+    },
+    {
+      "id": "sai-file-work-treeofknowledge-scripts-gen-adminusermanagement-py",
+      "label": "gen-adminusermanagement.py",
+      "parent": "sai-grp-work-treeofknowledge-scripts-files-g",
+      "layer": "file",
+      "category": "scripts",
+      "categoryLabel": "Scripts",
+      "color": "#64748b",
+      "size": 0.85,
+      "file": ".work/TreeofKnowledge/scripts/gen-adminusermanagement.py",
+      "description": "Código-fonte: `.work/TreeofKnowledge/scripts/gen-adminusermanagement.py`"
+    },
+    {
+      "id": "sai-file-work-treeofknowledge-scripts-gen-dangerzone-py",
+      "label": "gen-dangerzone.py",
+      "parent": "sai-grp-work-treeofknowledge-scripts-files-g",
+      "layer": "file",
+      "category": "scripts",
+      "categoryLabel": "Scripts",
+      "color": "#64748b",
+      "size": 0.85,
+      "file": ".work/TreeofKnowledge/scripts/gen-dangerzone.py",
+      "description": "Código-fonte: `.work/TreeofKnowledge/scripts/gen-dangerzone.py`"
+    },
+    {
+      "id": "sai-file-work-treeofknowledge-scripts-gen-dropbox-py",
+      "label": "gen-dropbox.py",
+      "parent": "sai-grp-work-treeofknowledge-scripts-files-g",
+      "layer": "file",
+      "category": "scripts",
+      "categoryLabel": "Scripts",
+      "color": "#64748b",
+      "size": 0.85,
+      "file": ".work/TreeofKnowledge/scripts/gen-dropbox.py",
+      "description": "Código-fonte: `.work/TreeofKnowledge/scripts/gen-dropbox.py`"
+    },
+    {
+      "id": "sai-file-work-treeofknowledge-scripts-gen-eagle-py",
+      "label": "gen-eagle.py",
+      "parent": "sai-grp-work-treeofknowledge-scripts-files-g",
+      "layer": "file",
+      "category": "scripts",
+      "categoryLabel": "Scripts",
+      "color": "#64748b",
+      "size": 0.85,
+      "file": ".work/TreeofKnowledge/scripts/gen-eagle.py",
+      "description": "Código-fonte: `.work/TreeofKnowledge/scripts/gen-eagle.py`"
+    },
+    {
+      "id": "sai-file-work-treeofknowledge-scripts-gen-extra-projects-py",
+      "label": "gen-extra-projects.py",
+      "parent": "sai-grp-work-treeofknowledge-scripts-files-g",
+      "layer": "file",
+      "category": "scripts",
+      "categoryLabel": "Scripts",
+      "color": "#64748b",
+      "size": 0.85,
+      "file": ".work/TreeofKnowledge/scripts/gen-extra-projects.py",
+      "description": "Código-fonte: `.work/TreeofKnowledge/scripts/gen-extra-projects.py`"
+    },
+    {
+      "id": "sai-file-work-treeofknowledge-scripts-gen-full-tree-projects-py",
+      "label": "gen-full-tree-projects.py",
+      "parent": "sai-grp-work-treeofknowledge-scripts-files-g",
+      "layer": "file",
+      "category": "scripts",
+      "categoryLabel": "Scripts",
+      "color": "#64748b",
+      "size": 0.85,
+      "file": ".work/TreeofKnowledge/scripts/gen-full-tree-projects.py",
+      "description": "Código-fonte: `.work/TreeofKnowledge/scripts/gen-full-tree-projects.py`"
+    },
+    {
+      "id": "sai-file-work-treeofknowledge-scripts-gen-restaurant-py",
+      "label": "gen-restaurant.py",
+      "parent": "sai-grp-work-treeofknowledge-scripts-files-g",
+      "layer": "file",
+      "category": "scripts",
+      "categoryLabel": "Scripts",
+      "color": "#64748b",
+      "size": 0.85,
+      "file": ".work/TreeofKnowledge/scripts/gen-restaurant.py",
+      "description": "Código-fonte: `.work/TreeofKnowledge/scripts/gen-restaurant.py`"
+    },
+    {
+      "id": "sai-file-work-treeofknowledge-scripts-gen-sentinelai-py",
+      "label": "gen-sentinelai.py",
+      "parent": "sai-grp-work-treeofknowledge-scripts-files-g",
+      "layer": "file",
+      "category": "scripts",
+      "categoryLabel": "Scripts",
+      "color": "#64748b",
+      "size": 0.85,
+      "file": ".work/TreeofKnowledge/scripts/gen-sentinelai.py",
+      "description": "Código-fonte: `.work/TreeofKnowledge/scripts/gen-sentinelai.py`"
+    },
+    {
+      "id": "sai-file-work-treeofknowledge-scripts-gen-smartferrari-py",
+      "label": "gen-smartferrari.py",
+      "parent": "sai-grp-work-treeofknowledge-scripts-files-g",
+      "layer": "file",
+      "category": "scripts",
+      "categoryLabel": "Scripts",
+      "color": "#64748b",
+      "size": 0.85,
+      "file": ".work/TreeofKnowledge/scripts/gen-smartferrari.py",
+      "description": "Código-fonte: `.work/TreeofKnowledge/scripts/gen-smartferrari.py`"
+    },
+    {
+      "id": "sai-file-work-treeofknowledge-scripts-gen-smarthome-py",
+      "label": "gen-smarthome.py",
+      "parent": "sai-grp-work-treeofknowledge-scripts-files-g",
+      "layer": "file",
+      "category": "scripts",
+      "categoryLabel": "Scripts",
+      "color": "#64748b",
+      "size": 0.85,
+      "file": ".work/TreeofKnowledge/scripts/gen-smarthome.py",
+      "description": "Código-fonte: `.work/TreeofKnowledge/scripts/gen-smarthome.py`"
+    },
+    {
+      "id": "sai-file-work-treeofknowledge-scripts-gen-veyon-py",
+      "label": "gen-veyon.py",
+      "parent": "sai-grp-work-treeofknowledge-scripts-files-g",
+      "layer": "file",
+      "category": "scripts",
+      "categoryLabel": "Scripts",
+      "color": "#64748b",
+      "size": 0.85,
+      "file": ".work/TreeofKnowledge/scripts/gen-veyon.py",
+      "description": "Código-fonte: `.work/TreeofKnowledge/scripts/gen-veyon.py`"
+    },
+    {
+      "id": "sai-file-work-treeofknowledge-scripts-rebuild-professional-scanner-tree-py",
+      "label": "rebuild-professional-scanner-tree.py",
+      "parent": "sai-grp-work-treeofknowledge-scripts-files-r-s-u",
+      "layer": "file",
+      "category": "frontend",
+      "categoryLabel": "Frontend",
+      "color": "#eab308",
+      "size": 0.85,
+      "file": ".work/TreeofKnowledge/scripts/rebuild-professional-scanner-tree.py",
+      "description": "Código-fonte: `.work/TreeofKnowledge/scripts/rebuild-professional-scanner-tree.py`"
+    },
+    {
+      "id": "sai-file-work-treeofknowledge-scripts-restaurant-project-json",
+      "label": "restaurant-project.json",
+      "parent": "sai-grp-work-treeofknowledge-scripts-files-r-s-u",
+      "layer": "file",
+      "category": "scripts",
+      "categoryLabel": "Scripts",
+      "color": "#64748b",
+      "size": 0.85,
+      "file": ".work/TreeofKnowledge/scripts/restaurant-project.json",
+      "description": "Código-fonte: `.work/TreeofKnowledge/scripts/restaurant-project.json`"
+    },
+    {
+      "id": "sai-file-work-treeofknowledge-scripts-sentinelai-project-json",
+      "label": "sentinelai-project.json",
+      "parent": "sai-grp-work-treeofknowledge-scripts-files-r-s-u",
+      "layer": "file",
+      "category": "scripts",
+      "categoryLabel": "Scripts",
+      "color": "#64748b",
+      "size": 0.85,
+      "file": ".work/TreeofKnowledge/scripts/sentinelai-project.json",
+      "description": "Código-fonte: `.work/TreeofKnowledge/scripts/sentinelai-project.json`"
+    },
+    {
+      "id": "sai-file-work-treeofknowledge-scripts-smartferrari-project-json",
+      "label": "smartferrari-project.json",
+      "parent": "sai-grp-work-treeofknowledge-scripts-files-r-s-u",
+      "layer": "file",
+      "category": "scripts",
+      "categoryLabel": "Scripts",
+      "color": "#64748b",
+      "size": 0.85,
+      "file": ".work/TreeofKnowledge/scripts/smartferrari-project.json",
+      "description": "Código-fonte: `.work/TreeofKnowledge/scripts/smartferrari-project.json`"
+    },
+    {
+      "id": "sai-file-work-treeofknowledge-scripts-smarthome-project-json",
+      "label": "smarthome-project.json",
+      "parent": "sai-grp-work-treeofknowledge-scripts-files-r-s-u",
+      "layer": "file",
+      "category": "scripts",
+      "categoryLabel": "Scripts",
+      "color": "#64748b",
+      "size": 0.85,
+      "file": ".work/TreeofKnowledge/scripts/smarthome-project.json",
+      "description": "Código-fonte: `.work/TreeofKnowledge/scripts/smarthome-project.json`"
+    },
+    {
+      "id": "sai-file-work-treeofknowledge-scripts-update-professional-scanner-py",
+      "label": "update-professional-scanner.py",
+      "parent": "sai-grp-work-treeofknowledge-scripts-files-r-s-u",
+      "layer": "file",
+      "category": "scripts",
+      "categoryLabel": "Scripts",
+      "color": "#64748b",
+      "size": 0.85,
+      "file": ".work/TreeofKnowledge/scripts/update-professional-scanner.py",
+      "description": "Código-fonte: `.work/TreeofKnowledge/scripts/update-professional-scanner.py`"
+    },
+    {
+      "id": "sai-file-work-treeofknowledge-universe-gitignore",
+      "label": ".gitignore",
+      "parent": "sai-dir-work-treeofknowledge-universe",
+      "layer": "file",
+      "category": "other",
+      "categoryLabel": "Outros",
+      "color": "#64748b",
+      "size": 0.85,
+      "file": ".work/TreeofKnowledge/universe/.gitignore",
+      "description": "Código-fonte: `.work/TreeofKnowledge/universe/.gitignore`"
+    },
+    {
+      "id": "sai-file-work-treeofknowledge-universe-index-html",
+      "label": "index.html",
+      "parent": "sai-dir-work-treeofknowledge-universe",
+      "layer": "file",
+      "category": "frontend",
+      "categoryLabel": "Frontend",
+      "color": "#eab308",
+      "size": 0.85,
+      "file": ".work/TreeofKnowledge/universe/index.html",
+      "description": "Código-fonte: `.work/TreeofKnowledge/universe/index.html`"
+    },
+    {
+      "id": "sai-file-work-treeofknowledge-universe-package-json",
+      "label": "package.json",
+      "parent": "sai-dir-work-treeofknowledge-universe",
+      "layer": "file",
+      "category": "other",
+      "categoryLabel": "Outros",
+      "color": "#64748b",
+      "size": 0.85,
+      "file": ".work/TreeofKnowledge/universe/package.json",
+      "description": "Código-fonte: `.work/TreeofKnowledge/universe/package.json`"
+    },
+    {
+      "id": "sai-file-work-treeofknowledge-universe-vite-config-js",
+      "label": "vite.config.js",
+      "parent": "sai-dir-work-treeofknowledge-universe",
+      "layer": "file",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 0.85,
+      "file": ".work/TreeofKnowledge/universe/vite.config.js",
+      "description": "Código-fonte: `.work/TreeofKnowledge/universe/vite.config.js`"
+    },
+    {
+      "id": "sai-grp-work-treeofknowledge-universe-public-graphs-files-a-c-d-e-f",
+      "label": "Arquivos A–C–D–E–F",
+      "parent": "sai-dir-work-treeofknowledge-universe-public-graphs",
+      "layer": "module",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 1.35,
+      "file": ".work/TreeofKnowledge/universe/public/graphs/[files-a–c–d–e–f]",
+      "description": "Grupo de arquivos em `.work/TreeofKnowledge/universe/public/graphs/` — Arquivos A–C–D–E–F"
+    },
+    {
+      "id": "sai-grp-work-treeofknowledge-universe-public-graphs-files-h-j-n",
+      "label": "Arquivos H–J–N",
+      "parent": "sai-dir-work-treeofknowledge-universe-public-graphs",
+      "layer": "module",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 1.35,
+      "file": ".work/TreeofKnowledge/universe/public/graphs/[files-h–j–n]",
+      "description": "Grupo de arquivos em `.work/TreeofKnowledge/universe/public/graphs/` — Arquivos H–J–N"
+    },
+    {
+      "id": "sai-grp-work-treeofknowledge-universe-public-graphs-files-p-s-t-u",
+      "label": "Arquivos P–S–T–U",
+      "parent": "sai-dir-work-treeofknowledge-universe-public-graphs",
+      "layer": "module",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 1.35,
+      "file": ".work/TreeofKnowledge/universe/public/graphs/[files-p–s–t–u]",
+      "description": "Grupo de arquivos em `.work/TreeofKnowledge/universe/public/graphs/` — Arquivos P–S–T–U"
+    },
+    {
+      "id": "sai-file-work-treeofknowledge-universe-public-graphs-admin-user-management-json",
+      "label": "admin-user-management.json",
+      "parent": "sai-grp-work-treeofknowledge-universe-public-graphs-files-a-c-d-e-f",
+      "layer": "file",
+      "category": "other",
+      "categoryLabel": "Outros",
+      "color": "#64748b",
+      "size": 0.85,
+      "file": ".work/TreeofKnowledge/universe/public/graphs/admin-user-management.json",
+      "description": "Código-fonte: `.work/TreeofKnowledge/universe/public/graphs/admin-user-management.json`"
+    },
+    {
+      "id": "sai-file-work-treeofknowledge-universe-public-graphs-anki-univesp-json",
+      "label": "anki-univesp.json",
+      "parent": "sai-grp-work-treeofknowledge-universe-public-graphs-files-a-c-d-e-f",
+      "layer": "file",
+      "category": "other",
+      "categoryLabel": "Outros",
+      "color": "#64748b",
+      "size": 0.85,
+      "file": ".work/TreeofKnowledge/universe/public/graphs/anki-univesp.json",
+      "description": "Código-fonte: `.work/TreeofKnowledge/universe/public/graphs/anki-univesp.json`"
+    },
+    {
+      "id": "sai-file-work-treeofknowledge-universe-public-graphs-app-mosquito-json",
+      "label": "app-mosquito.json",
+      "parent": "sai-grp-work-treeofknowledge-universe-public-graphs-files-a-c-d-e-f",
+      "layer": "file",
+      "category": "frontend",
+      "categoryLabel": "Frontend",
+      "color": "#eab308",
+      "size": 0.85,
+      "file": ".work/TreeofKnowledge/universe/public/graphs/app-mosquito.json",
+      "description": "Código-fonte: `.work/TreeofKnowledge/universe/public/graphs/app-mosquito.json`"
+    },
+    {
+      "id": "sai-file-work-treeofknowledge-universe-public-graphs-canon-engineer-github-io-json",
+      "label": "canon-engineer-github-io.json",
+      "parent": "sai-grp-work-treeofknowledge-universe-public-graphs-files-a-c-d-e-f",
+      "layer": "file",
+      "category": "other",
+      "categoryLabel": "Outros",
+      "color": "#64748b",
+      "size": 0.85,
+      "file": ".work/TreeofKnowledge/universe/public/graphs/canon-engineer-github-io.json",
+      "description": "Código-fonte: `.work/TreeofKnowledge/universe/public/graphs/canon-engineer-github-io.json`"
+    },
+    {
+      "id": "sai-file-work-treeofknowledge-universe-public-graphs-canon-python-ecommerce-json",
+      "label": "canon-python-ecommerce.json",
+      "parent": "sai-grp-work-treeofknowledge-universe-public-graphs-files-a-c-d-e-f",
+      "layer": "file",
+      "category": "other",
+      "categoryLabel": "Outros",
+      "color": "#64748b",
+      "size": 0.85,
+      "file": ".work/TreeofKnowledge/universe/public/graphs/canon-python-ecommerce.json",
+      "description": "Código-fonte: `.work/TreeofKnowledge/universe/public/graphs/canon-python-ecommerce.json`"
+    },
+    {
+      "id": "sai-file-work-treeofknowledge-universe-public-graphs-canon-sync-engine-json",
+      "label": "canon-sync-engine.json",
+      "parent": "sai-grp-work-treeofknowledge-universe-public-graphs-files-a-c-d-e-f",
+      "layer": "file",
+      "category": "other",
+      "categoryLabel": "Outros",
+      "color": "#64748b",
+      "size": 0.85,
+      "file": ".work/TreeofKnowledge/universe/public/graphs/canon-sync-engine.json",
+      "description": "Código-fonte: `.work/TreeofKnowledge/universe/public/graphs/canon-sync-engine.json`"
+    },
+    {
+      "id": "sai-file-work-treeofknowledge-universe-public-graphs-course-python-2023-json",
+      "label": "course-python-2023.json",
+      "parent": "sai-grp-work-treeofknowledge-universe-public-graphs-files-a-c-d-e-f",
+      "layer": "file",
+      "category": "other",
+      "categoryLabel": "Outros",
+      "color": "#64748b",
+      "size": 0.85,
+      "file": ".work/TreeofKnowledge/universe/public/graphs/course-python-2023.json",
+      "description": "Código-fonte: `.work/TreeofKnowledge/universe/public/graphs/course-python-2023.json`"
+    },
+    {
+      "id": "sai-file-work-treeofknowledge-universe-public-graphs-customize-veyon-json",
+      "label": "customize-veyon.json",
+      "parent": "sai-grp-work-treeofknowledge-universe-public-graphs-files-a-c-d-e-f",
+      "layer": "file",
+      "category": "other",
+      "categoryLabel": "Outros",
+      "color": "#64748b",
+      "size": 0.85,
+      "file": ".work/TreeofKnowledge/universe/public/graphs/customize-veyon.json",
+      "description": "Código-fonte: `.work/TreeofKnowledge/universe/public/graphs/customize-veyon.json`"
+    },
+    {
+      "id": "sai-file-work-treeofknowledge-universe-public-graphs-danger-zone-json",
+      "label": "danger-zone.json",
+      "parent": "sai-grp-work-treeofknowledge-universe-public-graphs-files-a-c-d-e-f",
+      "layer": "file",
+      "category": "other",
+      "categoryLabel": "Outros",
+      "color": "#64748b",
+      "size": 0.85,
+      "file": ".work/TreeofKnowledge/universe/public/graphs/danger-zone.json",
+      "description": "Código-fonte: `.work/TreeofKnowledge/universe/public/graphs/danger-zone.json`"
+    },
+    {
+      "id": "sai-file-work-treeofknowledge-universe-public-graphs-eagle-offensive-platform-json",
+      "label": "eagle-offensive-platform.json",
+      "parent": "sai-grp-work-treeofknowledge-universe-public-graphs-files-a-c-d-e-f",
+      "layer": "file",
+      "category": "other",
+      "categoryLabel": "Outros",
+      "color": "#64748b",
+      "size": 0.85,
+      "file": ".work/TreeofKnowledge/universe/public/graphs/eagle-offensive-platform.json",
+      "description": "Código-fonte: `.work/TreeofKnowledge/universe/public/graphs/eagle-offensive-platform.json`"
+    },
+    {
+      "id": "sai-file-work-treeofknowledge-universe-public-graphs-food-online-django-json",
+      "label": "food-online-django.json",
+      "parent": "sai-grp-work-treeofknowledge-universe-public-graphs-files-a-c-d-e-f",
+      "layer": "file",
+      "category": "other",
+      "categoryLabel": "Outros",
+      "color": "#64748b",
+      "size": 0.85,
+      "file": ".work/TreeofKnowledge/universe/public/graphs/food-online-django.json",
+      "description": "Código-fonte: `.work/TreeofKnowledge/universe/public/graphs/food-online-django.json`"
+    },
+    {
+      "id": "sai-file-work-treeofknowledge-universe-public-graphs-html-website-json",
+      "label": "html-website.json",
+      "parent": "sai-grp-work-treeofknowledge-universe-public-graphs-files-h-j-n",
+      "layer": "file",
+      "category": "other",
+      "categoryLabel": "Outros",
+      "color": "#64748b",
+      "size": 0.85,
+      "file": ".work/TreeofKnowledge/universe/public/graphs/html-website.json",
+      "description": "Código-fonte: `.work/TreeofKnowledge/universe/public/graphs/html-website.json`"
+    },
+    {
+      "id": "sai-file-work-treeofknowledge-universe-public-graphs-hyperware-json",
+      "label": "hyperware.json",
+      "parent": "sai-grp-work-treeofknowledge-universe-public-graphs-files-h-j-n",
+      "layer": "file",
+      "category": "other",
+      "categoryLabel": "Outros",
+      "color": "#64748b",
+      "size": 0.85,
+      "file": ".work/TreeofKnowledge/universe/public/graphs/hyperware.json",
+      "description": "Código-fonte: `.work/TreeofKnowledge/universe/public/graphs/hyperware.json`"
+    },
+    {
+      "id": "sai-file-work-treeofknowledge-universe-public-graphs-javascript-calculator-json",
+      "label": "javascript-calculator.json",
+      "parent": "sai-grp-work-treeofknowledge-universe-public-graphs-files-h-j-n",
+      "layer": "file",
+      "category": "scripts",
+      "categoryLabel": "Scripts",
+      "color": "#64748b",
+      "size": 0.85,
+      "file": ".work/TreeofKnowledge/universe/public/graphs/javascript-calculator.json",
+      "description": "Código-fonte: `.work/TreeofKnowledge/universe/public/graphs/javascript-calculator.json`"
+    },
+    {
+      "id": "sai-file-work-treeofknowledge-universe-public-graphs-javascript-dropbox-json",
+      "label": "javascript-dropbox.json",
+      "parent": "sai-grp-work-treeofknowledge-universe-public-graphs-files-h-j-n",
+      "layer": "file",
+      "category": "scripts",
+      "categoryLabel": "Scripts",
+      "color": "#64748b",
+      "size": 0.85,
+      "file": ".work/TreeofKnowledge/universe/public/graphs/javascript-dropbox.json",
+      "description": "Código-fonte: `.work/TreeofKnowledge/universe/public/graphs/javascript-dropbox.json`"
+    },
+    {
+      "id": "sai-file-work-treeofknowledge-universe-public-graphs-javascript-restaurant-json",
+      "label": "javascript-restaurant.json",
+      "parent": "sai-grp-work-treeofknowledge-universe-public-graphs-files-h-j-n",
+      "layer": "file",
+      "category": "scripts",
+      "categoryLabel": "Scripts",
+      "color": "#64748b",
+      "size": 0.85,
+      "file": ".work/TreeofKnowledge/universe/public/graphs/javascript-restaurant.json",
+      "description": "Código-fonte: `.work/TreeofKnowledge/universe/public/graphs/javascript-restaurant.json`"
+    },
+    {
+      "id": "sai-file-work-treeofknowledge-universe-public-graphs-javascript-restful-api-json",
+      "label": "javascript-restful-api.json",
+      "parent": "sai-grp-work-treeofknowledge-universe-public-graphs-files-h-j-n",
+      "layer": "file",
+      "category": "scripts",
+      "categoryLabel": "Scripts",
+      "color": "#64748b",
+      "size": 0.85,
+      "file": ".work/TreeofKnowledge/universe/public/graphs/javascript-restful-api.json",
+      "description": "Código-fonte: `.work/TreeofKnowledge/universe/public/graphs/javascript-restful-api.json`"
+    },
+    {
+      "id": "sai-file-work-treeofknowledge-universe-public-graphs-javascript-users-json",
+      "label": "javascript-users.json",
+      "parent": "sai-grp-work-treeofknowledge-universe-public-graphs-files-h-j-n",
+      "layer": "file",
+      "category": "scripts",
+      "categoryLabel": "Scripts",
+      "color": "#64748b",
+      "size": 0.85,
+      "file": ".work/TreeofKnowledge/universe/public/graphs/javascript-users.json",
+      "description": "Código-fonte: `.work/TreeofKnowledge/universe/public/graphs/javascript-users.json`"
+    },
+    {
+      "id": "sai-file-work-treeofknowledge-universe-public-graphs-javascript-whatsapp-json",
+      "label": "javascript-whatsapp.json",
+      "parent": "sai-grp-work-treeofknowledge-universe-public-graphs-files-h-j-n",
+      "layer": "file",
+      "category": "scripts",
+      "categoryLabel": "Scripts",
+      "color": "#64748b",
+      "size": 0.85,
+      "file": ".work/TreeofKnowledge/universe/public/graphs/javascript-whatsapp.json",
+      "description": "Código-fonte: `.work/TreeofKnowledge/universe/public/graphs/javascript-whatsapp.json`"
+    },
+    {
+      "id": "sai-file-work-treeofknowledge-universe-public-graphs-neighborhood-boys-json",
+      "label": "neighborhood-boys.json",
+      "parent": "sai-grp-work-treeofknowledge-universe-public-graphs-files-h-j-n",
+      "layer": "file",
+      "category": "other",
+      "categoryLabel": "Outros",
+      "color": "#64748b",
+      "size": 0.85,
+      "file": ".work/TreeofKnowledge/universe/public/graphs/neighborhood-boys.json",
+      "description": "Código-fonte: `.work/TreeofKnowledge/universe/public/graphs/neighborhood-boys.json`"
+    },
+    {
+      "id": "sai-file-work-treeofknowledge-universe-public-graphs-php-dao-json",
+      "label": "php-dao.json",
+      "parent": "sai-grp-work-treeofknowledge-universe-public-graphs-files-p-s-t-u",
+      "layer": "file",
+      "category": "other",
+      "categoryLabel": "Outros",
+      "color": "#64748b",
+      "size": 0.85,
+      "file": ".work/TreeofKnowledge/universe/public/graphs/php-dao.json",
+      "description": "Código-fonte: `.work/TreeofKnowledge/universe/public/graphs/php-dao.json`"
+    },
+    {
+      "id": "sai-file-work-treeofknowledge-universe-public-graphs-professional-scanner-json",
+      "label": "professional-scanner.json",
+      "parent": "sai-grp-work-treeofknowledge-universe-public-graphs-files-p-s-t-u",
+      "layer": "file",
+      "category": "network",
+      "categoryLabel": "Rede / Scan",
+      "color": "#22d3ee",
+      "size": 0.85,
+      "file": ".work/TreeofKnowledge/universe/public/graphs/professional-scanner.json",
+      "description": "Código-fonte: `.work/TreeofKnowledge/universe/public/graphs/professional-scanner.json`"
+    },
+    {
+      "id": "sai-file-work-treeofknowledge-universe-public-graphs-project-helpdesk-json",
+      "label": "project-helpdesk.json",
+      "parent": "sai-grp-work-treeofknowledge-universe-public-graphs-files-p-s-t-u",
+      "layer": "file",
+      "category": "other",
+      "categoryLabel": "Outros",
+      "color": "#64748b",
+      "size": 0.85,
+      "file": ".work/TreeofKnowledge/universe/public/graphs/project-helpdesk.json",
+      "description": "Código-fonte: `.work/TreeofKnowledge/universe/public/graphs/project-helpdesk.json`"
+    },
+    {
+      "id": "sai-file-work-treeofknowledge-universe-public-graphs-python-employee-list-json",
+      "label": "python-employee-list.json",
+      "parent": "sai-grp-work-treeofknowledge-universe-public-graphs-files-p-s-t-u",
+      "layer": "file",
+      "category": "other",
+      "categoryLabel": "Outros",
+      "color": "#64748b",
+      "size": 0.85,
+      "file": ".work/TreeofKnowledge/universe/public/graphs/python-employee-list.json",
+      "description": "Código-fonte: `.work/TreeofKnowledge/universe/public/graphs/python-employee-list.json`"
+    },
+    {
+      "id": "sai-file-work-treeofknowledge-universe-public-graphs-python-ii-ecommerce-json",
+      "label": "python-ii-ecommerce.json",
+      "parent": "sai-grp-work-treeofknowledge-universe-public-graphs-files-p-s-t-u",
+      "layer": "file",
+      "category": "other",
+      "categoryLabel": "Outros",
+      "color": "#64748b",
+      "size": 0.85,
+      "file": ".work/TreeofKnowledge/universe/public/graphs/python-ii-ecommerce.json",
+      "description": "Código-fonte: `.work/TreeofKnowledge/universe/public/graphs/python-ii-ecommerce.json`"
+    },
+    {
+      "id": "sai-file-work-treeofknowledge-universe-public-graphs-search-univesp-json",
+      "label": "search-univesp.json",
+      "parent": "sai-grp-work-treeofknowledge-universe-public-graphs-files-p-s-t-u",
+      "layer": "file",
+      "category": "other",
+      "categoryLabel": "Outros",
+      "color": "#64748b",
+      "size": 0.85,
+      "file": ".work/TreeofKnowledge/universe/public/graphs/search-univesp.json",
+      "description": "Código-fonte: `.work/TreeofKnowledge/universe/public/graphs/search-univesp.json`"
+    },
+    {
+      "id": "sai-file-work-treeofknowledge-universe-public-graphs-sentinelai-json",
+      "label": "sentinelai.json",
+      "parent": "sai-grp-work-treeofknowledge-universe-public-graphs-files-p-s-t-u",
+      "layer": "file",
+      "category": "other",
+      "categoryLabel": "Outros",
+      "color": "#64748b",
+      "size": 0.85,
+      "file": ".work/TreeofKnowledge/universe/public/graphs/sentinelai.json",
+      "description": "Código-fonte: `.work/TreeofKnowledge/universe/public/graphs/sentinelai.json`"
+    },
+    {
+      "id": "sai-file-work-treeofknowledge-universe-public-graphs-smartferrari-iot-json",
+      "label": "smartferrari-iot.json",
+      "parent": "sai-grp-work-treeofknowledge-universe-public-graphs-files-p-s-t-u",
+      "layer": "file",
+      "category": "other",
+      "categoryLabel": "Outros",
+      "color": "#64748b",
+      "size": 0.85,
+      "file": ".work/TreeofKnowledge/universe/public/graphs/smartferrari-iot.json",
+      "description": "Código-fonte: `.work/TreeofKnowledge/universe/public/graphs/smartferrari-iot.json`"
+    },
+    {
+      "id": "sai-file-work-treeofknowledge-universe-public-graphs-smarthome-iot-json",
+      "label": "smarthome-iot.json",
+      "parent": "sai-grp-work-treeofknowledge-universe-public-graphs-files-p-s-t-u",
+      "layer": "file",
+      "category": "other",
+      "categoryLabel": "Outros",
+      "color": "#64748b",
+      "size": 0.85,
+      "file": ".work/TreeofKnowledge/universe/public/graphs/smarthome-iot.json",
+      "description": "Código-fonte: `.work/TreeofKnowledge/universe/public/graphs/smarthome-iot.json`"
+    },
+    {
+      "id": "sai-file-work-treeofknowledge-universe-public-graphs-todo-app-json",
+      "label": "todo-app.json",
+      "parent": "sai-grp-work-treeofknowledge-universe-public-graphs-files-p-s-t-u",
+      "layer": "file",
+      "category": "other",
+      "categoryLabel": "Outros",
+      "color": "#64748b",
+      "size": 0.85,
+      "file": ".work/TreeofKnowledge/universe/public/graphs/todo-app.json",
+      "description": "Código-fonte: `.work/TreeofKnowledge/universe/public/graphs/todo-app.json`"
+    },
+    {
+      "id": "sai-file-work-treeofknowledge-universe-public-graphs-user-management-json",
+      "label": "user-management.json",
+      "parent": "sai-grp-work-treeofknowledge-universe-public-graphs-files-p-s-t-u",
+      "layer": "file",
+      "category": "other",
+      "categoryLabel": "Outros",
+      "color": "#64748b",
+      "size": 0.85,
+      "file": ".work/TreeofKnowledge/universe/public/graphs/user-management.json",
+      "description": "Código-fonte: `.work/TreeofKnowledge/universe/public/graphs/user-management.json`"
+    },
+    {
+      "id": "sai-file-work-treeofknowledge-universe-src-app-jsx",
+      "label": "App.jsx",
+      "parent": "sai-dir-work-treeofknowledge-universe-src",
+      "layer": "file",
+      "category": "frontend",
+      "categoryLabel": "Frontend",
+      "color": "#eab308",
+      "size": 0.85,
+      "file": ".work/TreeofKnowledge/universe/src/App.jsx",
+      "description": "Código-fonte: `.work/TreeofKnowledge/universe/src/App.jsx`"
+    },
+    {
+      "id": "sai-file-work-treeofknowledge-universe-src-main-jsx",
+      "label": "main.jsx",
+      "parent": "sai-dir-work-treeofknowledge-universe-src",
+      "layer": "file",
+      "category": "frontend",
+      "categoryLabel": "Frontend",
+      "color": "#eab308",
+      "size": 0.85,
+      "file": ".work/TreeofKnowledge/universe/src/main.jsx",
+      "description": "Código-fonte: `.work/TreeofKnowledge/universe/src/main.jsx`"
+    },
+    {
+      "id": "sai-file-work-treeofknowledge-universe-src-styles-css",
+      "label": "styles.css",
+      "parent": "sai-dir-work-treeofknowledge-universe-src",
+      "layer": "file",
+      "category": "frontend",
+      "categoryLabel": "Frontend",
+      "color": "#eab308",
+      "size": 0.85,
+      "file": ".work/TreeofKnowledge/universe/src/styles.css",
+      "description": "Código-fonte: `.work/TreeofKnowledge/universe/src/styles.css`"
+    },
+    {
+      "id": "sai-file-work-treeofknowledge-universe-src-components-camerafocus-jsx",
+      "label": "CameraFocus.jsx",
+      "parent": "sai-dir-work-treeofknowledge-universe-src-components",
+      "layer": "file",
+      "category": "frontend",
+      "categoryLabel": "Frontend",
+      "color": "#eab308",
+      "size": 0.85,
+      "file": ".work/TreeofKnowledge/universe/src/components/CameraFocus.jsx",
+      "description": "Código-fonte: `.work/TreeofKnowledge/universe/src/components/CameraFocus.jsx`"
+    },
+    {
+      "id": "sai-file-work-treeofknowledge-universe-src-components-galaxygraph-jsx",
+      "label": "GalaxyGraph.jsx",
+      "parent": "sai-dir-work-treeofknowledge-universe-src-components",
+      "layer": "file",
+      "category": "frontend",
+      "categoryLabel": "Frontend",
+      "color": "#eab308",
+      "size": 0.85,
+      "file": ".work/TreeofKnowledge/universe/src/components/GalaxyGraph.jsx",
+      "description": "Código-fonte: `.work/TreeofKnowledge/universe/src/components/GalaxyGraph.jsx`"
+    },
+    {
+      "id": "sai-file-work-treeofknowledge-universe-src-components-sceneobjects-jsx",
+      "label": "SceneObjects.jsx",
+      "parent": "sai-dir-work-treeofknowledge-universe-src-components",
+      "layer": "file",
+      "category": "frontend",
+      "categoryLabel": "Frontend",
+      "color": "#eab308",
+      "size": 0.85,
+      "file": ".work/TreeofKnowledge/universe/src/components/SceneObjects.jsx",
+      "description": "Código-fonte: `.work/TreeofKnowledge/universe/src/components/SceneObjects.jsx`"
+    },
+    {
+      "id": "sai-file-work-treeofknowledge-universe-src-components-sidepanel-jsx",
+      "label": "SidePanel.jsx",
+      "parent": "sai-dir-work-treeofknowledge-universe-src-components",
+      "layer": "file",
+      "category": "frontend",
+      "categoryLabel": "Frontend",
+      "color": "#eab308",
+      "size": 0.85,
+      "file": ".work/TreeofKnowledge/universe/src/components/SidePanel.jsx",
+      "description": "Código-fonte: `.work/TreeofKnowledge/universe/src/components/SidePanel.jsx`"
+    },
+    {
+      "id": "sai-file-work-treeofknowledge-universe-src-utils-layout-js",
+      "label": "layout.js",
+      "parent": "sai-dir-work-treeofknowledge-universe-src-utils",
+      "layer": "file",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 0.85,
+      "file": ".work/TreeofKnowledge/universe/src/utils/layout.js",
+      "description": "Código-fonte: `.work/TreeofKnowledge/universe/src/utils/layout.js`"
+    },
+    {
       "id": "sai-file-agent-install-windows-ps1",
       "label": "install-windows.ps1",
       "parent": "sai-dir-agent",
@@ -1239,6 +2919,18 @@
       "size": 0.85,
       "file": "backend/alembic/versions/20260825_phase24.py",
       "description": "Código-fonte: `backend/alembic/versions/20260825_phase24.py`"
+    },
+    {
+      "id": "sai-file-backend-alembic-versions-20260826-phase28-py",
+      "label": "20260826_phase28.py",
+      "parent": "sai-dir-backend-alembic-versions",
+      "layer": "file",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 0.85,
+      "file": "backend/alembic/versions/20260826_phase28.py",
+      "description": "Código-fonte: `backend/alembic/versions/20260826_phase28.py`"
     },
     {
       "id": "sai-file-backend-app-init-py",
@@ -1733,6 +3425,18 @@
       "description": "Código-fonte: `backend/app/api/routes/platform.py`"
     },
     {
+      "id": "sai-file-backend-app-api-routes-platform-backup-py",
+      "label": "platform_backup.py",
+      "parent": "sai-grp-backend-app-api-routes-files-f-i-m-o-p",
+      "layer": "file",
+      "category": "network",
+      "categoryLabel": "Rede / Scan",
+      "color": "#22d3ee",
+      "size": 0.85,
+      "file": "backend/app/api/routes/platform_backup.py",
+      "description": "Código-fonte: `backend/app/api/routes/platform_backup.py`"
+    },
+    {
       "id": "sai-file-backend-app-api-routes-plugins-py",
       "label": "plugins.py",
       "parent": "sai-grp-backend-app-api-routes-files-f-i-m-o-p",
@@ -1985,9 +3689,33 @@
       "description": "Código-fonte: `backend/app/engines/__init__.py`"
     },
     {
+      "id": "sai-grp-backend-app-engines-ai-files-a-c-l-m-n-p-r-s-t",
+      "label": "Arquivos #–A–C–L–M–N–P–R–S–T",
+      "parent": "sai-dir-backend-app-engines-ai",
+      "layer": "module",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 1.35,
+      "file": "backend/app/engines/ai/[files-#–a–c–l–m–n–p–r–s–t]",
+      "description": "Grupo de arquivos em `backend/app/engines/ai/` — Arquivos #–A–C–L–M–N–P–R–S–T"
+    },
+    {
+      "id": "sai-grp-backend-app-engines-ai-files-v",
+      "label": "Arquivos V",
+      "parent": "sai-dir-backend-app-engines-ai",
+      "layer": "module",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 1.35,
+      "file": "backend/app/engines/ai/[files-v]",
+      "description": "Grupo de arquivos em `backend/app/engines/ai/` — Arquivos V"
+    },
+    {
       "id": "sai-file-backend-app-engines-ai-init-py",
       "label": "__init__.py",
-      "parent": "sai-dir-backend-app-engines-ai",
+      "parent": "sai-grp-backend-app-engines-ai-files-a-c-l-m-n-p-r-s-t",
       "layer": "file",
       "category": "core",
       "categoryLabel": "Backend",
@@ -1999,7 +3727,7 @@
     {
       "id": "sai-file-backend-app-engines-ai-anomaly-detector-py",
       "label": "anomaly_detector.py",
-      "parent": "sai-dir-backend-app-engines-ai",
+      "parent": "sai-grp-backend-app-engines-ai-files-a-c-l-m-n-p-r-s-t",
       "layer": "file",
       "category": "core",
       "categoryLabel": "Backend",
@@ -2009,9 +3737,21 @@
       "description": "Código-fonte: `backend/app/engines/ai/anomaly_detector.py`"
     },
     {
+      "id": "sai-file-backend-app-engines-ai-attack-response-py",
+      "label": "attack_response.py",
+      "parent": "sai-grp-backend-app-engines-ai-files-a-c-l-m-n-p-r-s-t",
+      "layer": "file",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 0.85,
+      "file": "backend/app/engines/ai/attack_response.py",
+      "description": "Código-fonte: `backend/app/engines/ai/attack_response.py`"
+    },
+    {
       "id": "sai-file-backend-app-engines-ai-chatbot-service-py",
       "label": "chatbot_service.py",
-      "parent": "sai-dir-backend-app-engines-ai",
+      "parent": "sai-grp-backend-app-engines-ai-files-a-c-l-m-n-p-r-s-t",
       "layer": "file",
       "category": "core",
       "categoryLabel": "Backend",
@@ -2023,7 +3763,7 @@
     {
       "id": "sai-file-backend-app-engines-ai-llm-client-py",
       "label": "llm_client.py",
-      "parent": "sai-dir-backend-app-engines-ai",
+      "parent": "sai-grp-backend-app-engines-ai-files-a-c-l-m-n-p-r-s-t",
       "layer": "file",
       "category": "core",
       "categoryLabel": "Backend",
@@ -2033,9 +3773,21 @@
       "description": "Código-fonte: `backend/app/engines/ai/llm_client.py`"
     },
     {
+      "id": "sai-file-backend-app-engines-ai-map-vision-report-py",
+      "label": "map_vision_report.py",
+      "parent": "sai-grp-backend-app-engines-ai-files-a-c-l-m-n-p-r-s-t",
+      "layer": "file",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 0.85,
+      "file": "backend/app/engines/ai/map_vision_report.py",
+      "description": "Código-fonte: `backend/app/engines/ai/map_vision_report.py`"
+    },
+    {
       "id": "sai-file-backend-app-engines-ai-noc-copilot-py",
       "label": "noc_copilot.py",
-      "parent": "sai-dir-backend-app-engines-ai",
+      "parent": "sai-grp-backend-app-engines-ai-files-a-c-l-m-n-p-r-s-t",
       "layer": "file",
       "category": "core",
       "categoryLabel": "Backend",
@@ -2047,7 +3799,7 @@
     {
       "id": "sai-file-backend-app-engines-ai-noc-rag-py",
       "label": "noc_rag.py",
-      "parent": "sai-dir-backend-app-engines-ai",
+      "parent": "sai-grp-backend-app-engines-ai-files-a-c-l-m-n-p-r-s-t",
       "layer": "file",
       "category": "core",
       "categoryLabel": "Backend",
@@ -2059,7 +3811,7 @@
     {
       "id": "sai-file-backend-app-engines-ai-product-knowledge-py",
       "label": "product_knowledge.py",
-      "parent": "sai-dir-backend-app-engines-ai",
+      "parent": "sai-grp-backend-app-engines-ai-files-a-c-l-m-n-p-r-s-t",
       "layer": "file",
       "category": "core",
       "categoryLabel": "Backend",
@@ -2071,7 +3823,7 @@
     {
       "id": "sai-file-backend-app-engines-ai-report-generator-py",
       "label": "report_generator.py",
-      "parent": "sai-dir-backend-app-engines-ai",
+      "parent": "sai-grp-backend-app-engines-ai-files-a-c-l-m-n-p-r-s-t",
       "layer": "file",
       "category": "core",
       "categoryLabel": "Backend",
@@ -2081,9 +3833,33 @@
       "description": "Código-fonte: `backend/app/engines/ai/report_generator.py`"
     },
     {
+      "id": "sai-file-backend-app-engines-ai-safety-policy-py",
+      "label": "safety_policy.py",
+      "parent": "sai-grp-backend-app-engines-ai-files-a-c-l-m-n-p-r-s-t",
+      "layer": "file",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 0.85,
+      "file": "backend/app/engines/ai/safety_policy.py",
+      "description": "Código-fonte: `backend/app/engines/ai/safety_policy.py`"
+    },
+    {
+      "id": "sai-file-backend-app-engines-ai-threat-guardian-py",
+      "label": "threat_guardian.py",
+      "parent": "sai-grp-backend-app-engines-ai-files-a-c-l-m-n-p-r-s-t",
+      "layer": "file",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 0.85,
+      "file": "backend/app/engines/ai/threat_guardian.py",
+      "description": "Código-fonte: `backend/app/engines/ai/threat_guardian.py`"
+    },
+    {
       "id": "sai-file-backend-app-engines-ai-vision-client-py",
       "label": "vision_client.py",
-      "parent": "sai-dir-backend-app-engines-ai",
+      "parent": "sai-grp-backend-app-engines-ai-files-v",
       "layer": "file",
       "category": "core",
       "categoryLabel": "Backend",
@@ -2163,6 +3939,30 @@
       "size": 0.85,
       "file": "backend/app/engines/alerts/sms.py",
       "description": "Código-fonte: `backend/app/engines/alerts/sms.py`"
+    },
+    {
+      "id": "sai-file-backend-app-engines-backup-init-py",
+      "label": "__init__.py",
+      "parent": "sai-dir-backend-app-engines-backup",
+      "layer": "file",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 0.85,
+      "file": "backend/app/engines/backup/__init__.py",
+      "description": "Código-fonte: `backend/app/engines/backup/__init__.py`"
+    },
+    {
+      "id": "sai-file-backend-app-engines-backup-platform-backup-py",
+      "label": "platform_backup.py",
+      "parent": "sai-dir-backend-app-engines-backup",
+      "layer": "file",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 0.85,
+      "file": "backend/app/engines/backup/platform_backup.py",
+      "description": "Código-fonte: `backend/app/engines/backup/platform_backup.py`"
     },
     {
       "id": "sai-file-backend-app-engines-config-ssh-backup-py",
@@ -2501,6 +4301,18 @@
       "description": "Código-fonte: `backend/app/engines/remediation/playbooks/stale-alert-ack.yaml`"
     },
     {
+      "id": "sai-file-backend-app-engines-remediation-playbooks-suspected-attack-observe-yaml",
+      "label": "suspected-attack-observe.yaml",
+      "parent": "sai-dir-backend-app-engines-remediation-playbooks",
+      "layer": "file",
+      "category": "other",
+      "categoryLabel": "Outros",
+      "color": "#64748b",
+      "size": 0.85,
+      "file": "backend/app/engines/remediation/playbooks/suspected-attack-observe.yaml",
+      "description": "Código-fonte: `backend/app/engines/remediation/playbooks/suspected-attack-observe.yaml`"
+    },
+    {
       "id": "sai-file-backend-app-engines-remediation-playbooks-topology-gap-scan-yaml",
       "label": "topology-gap-scan.yaml",
       "parent": "sai-dir-backend-app-engines-remediation-playbooks",
@@ -2571,6 +4383,30 @@
       "size": 0.85,
       "file": "backend/app/engines/reporting/soc2_type2_report.py",
       "description": "Código-fonte: `backend/app/engines/reporting/soc2_type2_report.py`"
+    },
+    {
+      "id": "sai-file-backend-app-engines-reporting-topology-canvas-export-py",
+      "label": "topology_canvas_export.py",
+      "parent": "sai-dir-backend-app-engines-reporting",
+      "layer": "file",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 0.85,
+      "file": "backend/app/engines/reporting/topology_canvas_export.py",
+      "description": "Código-fonte: `backend/app/engines/reporting/topology_canvas_export.py`"
+    },
+    {
+      "id": "sai-file-backend-app-engines-reporting-topology-export-layout-py",
+      "label": "topology_export_layout.py",
+      "parent": "sai-dir-backend-app-engines-reporting",
+      "layer": "file",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 0.85,
+      "file": "backend/app/engines/reporting/topology_export_layout.py",
+      "description": "Código-fonte: `backend/app/engines/reporting/topology_export_layout.py`"
     },
     {
       "id": "sai-file-backend-app-engines-reporting-topology-pdf-py",
@@ -3593,6 +5429,18 @@
       "description": "Código-fonte: `backend/app/workers/ai_tasks.py`"
     },
     {
+      "id": "sai-file-backend-app-workers-backup-tasks-py",
+      "label": "backup_tasks.py",
+      "parent": "sai-dir-backend-app-workers",
+      "layer": "file",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 0.85,
+      "file": "backend/app/workers/backup_tasks.py",
+      "description": "Código-fonte: `backend/app/workers/backup_tasks.py`"
+    },
+    {
       "id": "sai-file-backend-app-workers-celery-app-py",
       "label": "celery_app.py",
       "parent": "sai-dir-backend-app-workers",
@@ -3797,6 +5645,30 @@
       "description": "Código-fonte: `backend/scripts/test_map_flow.py`"
     },
     {
+      "id": "sai-file-backend-scripts-test-topology-export-py",
+      "label": "test_topology_export.py",
+      "parent": "sai-dir-backend-scripts",
+      "layer": "file",
+      "category": "scripts",
+      "categoryLabel": "Scripts",
+      "color": "#64748b",
+      "size": 0.85,
+      "file": "backend/scripts/test_topology_export.py",
+      "description": "Código-fonte: `backend/scripts/test_topology_export.py`"
+    },
+    {
+      "id": "sai-file-backend-scripts-test-vision-report-py",
+      "label": "test_vision_report.py",
+      "parent": "sai-dir-backend-scripts",
+      "layer": "file",
+      "category": "scripts",
+      "categoryLabel": "Scripts",
+      "color": "#64748b",
+      "size": 0.85,
+      "file": "backend/scripts/test_vision_report.py",
+      "description": "Código-fonte: `backend/scripts/test_vision_report.py`"
+    },
+    {
       "id": "sai-grp-backend-tests-files-c",
       "label": "Arquivos #–C",
       "parent": "sai-dir-backend-tests",
@@ -3821,16 +5693,16 @@
       "description": "Grupo de arquivos em `backend/tests/` — Arquivos T (1–12)"
     },
     {
-      "id": "sai-grp-backend-tests-files-t-13-20",
-      "label": "Arquivos T (13–20)",
+      "id": "sai-grp-backend-tests-files-t-13-21",
+      "label": "Arquivos T (13–21)",
       "parent": "sai-dir-backend-tests",
       "layer": "module",
       "category": "tests",
       "categoryLabel": "Testes",
       "color": "#94a3b8",
       "size": 1.35,
-      "file": "backend/tests/[files-t-13-20]",
-      "description": "Grupo de arquivos em `backend/tests/` — Arquivos T (13–20)"
+      "file": "backend/tests/[files-t-13-21]",
+      "description": "Grupo de arquivos em `backend/tests/` — Arquivos T (13–21)"
     },
     {
       "id": "sai-file-backend-tests-init-py",
@@ -3929,6 +5801,18 @@
       "description": "Código-fonte: `backend/tests/test_feature_inventory_sync.py`"
     },
     {
+      "id": "sai-file-backend-tests-test-guardian-safety-py",
+      "label": "test_guardian_safety.py",
+      "parent": "sai-grp-backend-tests-files-t-1-12",
+      "layer": "file",
+      "category": "tests",
+      "categoryLabel": "Testes",
+      "color": "#94a3b8",
+      "size": 0.85,
+      "file": "backend/tests/test_guardian_safety.py",
+      "description": "Código-fonte: `backend/tests/test_guardian_safety.py`"
+    },
+    {
       "id": "sai-file-backend-tests-test-health-py",
       "label": "test_health.py",
       "parent": "sai-grp-backend-tests-files-t-1-12",
@@ -3991,7 +5875,7 @@
     {
       "id": "sai-file-backend-tests-test-phase9b-enterprise-py",
       "label": "test_phase9b_enterprise.py",
-      "parent": "sai-grp-backend-tests-files-t-1-12",
+      "parent": "sai-grp-backend-tests-files-t-13-21",
       "layer": "file",
       "category": "tests",
       "categoryLabel": "Testes",
@@ -4003,7 +5887,7 @@
     {
       "id": "sai-file-backend-tests-test-rate-limit-p16-py",
       "label": "test_rate_limit_p16.py",
-      "parent": "sai-grp-backend-tests-files-t-13-20",
+      "parent": "sai-grp-backend-tests-files-t-13-21",
       "layer": "file",
       "category": "tests",
       "categoryLabel": "Testes",
@@ -4015,7 +5899,7 @@
     {
       "id": "sai-file-backend-tests-test-remediation-yaml-py",
       "label": "test_remediation_yaml.py",
-      "parent": "sai-grp-backend-tests-files-t-13-20",
+      "parent": "sai-grp-backend-tests-files-t-13-21",
       "layer": "file",
       "category": "tests",
       "categoryLabel": "Testes",
@@ -4027,7 +5911,7 @@
     {
       "id": "sai-file-backend-tests-test-resolve-unknown-status-py",
       "label": "test_resolve_unknown_status.py",
-      "parent": "sai-grp-backend-tests-files-t-13-20",
+      "parent": "sai-grp-backend-tests-files-t-13-21",
       "layer": "file",
       "category": "tests",
       "categoryLabel": "Testes",
@@ -4039,7 +5923,7 @@
     {
       "id": "sai-file-backend-tests-test-ssh-config-restore-py",
       "label": "test_ssh_config_restore.py",
-      "parent": "sai-grp-backend-tests-files-t-13-20",
+      "parent": "sai-grp-backend-tests-files-t-13-21",
       "layer": "file",
       "category": "tests",
       "categoryLabel": "Testes",
@@ -4051,7 +5935,7 @@
     {
       "id": "sai-file-backend-tests-test-stream-py",
       "label": "test_stream.py",
-      "parent": "sai-grp-backend-tests-files-t-13-20",
+      "parent": "sai-grp-backend-tests-files-t-13-21",
       "layer": "file",
       "category": "tests",
       "categoryLabel": "Testes",
@@ -4063,7 +5947,7 @@
     {
       "id": "sai-file-backend-tests-test-traffic-honest-py",
       "label": "test_traffic_honest.py",
-      "parent": "sai-grp-backend-tests-files-t-13-20",
+      "parent": "sai-grp-backend-tests-files-t-13-21",
       "layer": "file",
       "category": "tests",
       "categoryLabel": "Testes",
@@ -4075,7 +5959,7 @@
     {
       "id": "sai-file-backend-tests-test-wallboard-py",
       "label": "test_wallboard.py",
-      "parent": "sai-grp-backend-tests-files-t-13-20",
+      "parent": "sai-grp-backend-tests-files-t-13-21",
       "layer": "file",
       "category": "tests",
       "categoryLabel": "Testes",
@@ -4087,7 +5971,7 @@
     {
       "id": "sai-file-backend-tests-test-zion-panels-py",
       "label": "test_zion_panels.py",
-      "parent": "sai-grp-backend-tests-files-t-13-20",
+      "parent": "sai-grp-backend-tests-files-t-13-21",
       "layer": "file",
       "category": "tests",
       "categoryLabel": "Testes",
@@ -4325,16 +6209,16 @@
       "description": "Grupo de arquivos em `docs/` — Arquivos P (1–12)"
     },
     {
-      "id": "sai-grp-docs-files-p-13-17",
-      "label": "Arquivos P (13–17)",
+      "id": "sai-grp-docs-files-p-13-21",
+      "label": "Arquivos P (13–21)",
       "parent": "sai-dir-docs",
       "layer": "module",
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
       "size": 1.35,
-      "file": "docs/[files-p-13-17]",
-      "description": "Grupo de arquivos em `docs/` — Arquivos P (13–17)"
+      "file": "docs/[files-p-13-21]",
+      "description": "Grupo de arquivos em `docs/` — Arquivos P (13–21)"
     },
     {
       "id": "sai-grp-docs-files-s-u-z",
@@ -4395,6 +6279,18 @@
       "size": 0.85,
       "file": "docs/feature-inventory.json",
       "description": "Código-fonte: `docs/feature-inventory.json`"
+    },
+    {
+      "id": "sai-file-docs-lan-mirror-md",
+      "label": "LAN-MIRROR.md",
+      "parent": "sai-grp-docs-files-a-b-c-f-l-m",
+      "layer": "file",
+      "category": "other",
+      "categoryLabel": "Outros",
+      "color": "#64748b",
+      "size": 0.85,
+      "file": "docs/LAN-MIRROR.md",
+      "description": "Código-fonte: `docs/LAN-MIRROR.md`"
     },
     {
       "id": "sai-file-docs-llm-deepseek-ollama-md",
@@ -4567,7 +6463,7 @@
     {
       "id": "sai-file-docs-phase-21-roadmap-md",
       "label": "PHASE-21-ROADMAP.md",
-      "parent": "sai-grp-docs-files-p-13-17",
+      "parent": "sai-grp-docs-files-p-13-21",
       "layer": "file",
       "category": "other",
       "categoryLabel": "Outros",
@@ -4579,7 +6475,7 @@
     {
       "id": "sai-file-docs-phase-22-roadmap-md",
       "label": "PHASE-22-ROADMAP.md",
-      "parent": "sai-grp-docs-files-p-13-17",
+      "parent": "sai-grp-docs-files-p-13-21",
       "layer": "file",
       "category": "other",
       "categoryLabel": "Outros",
@@ -4591,7 +6487,7 @@
     {
       "id": "sai-file-docs-phase-23-roadmap-md",
       "label": "PHASE-23-ROADMAP.md",
-      "parent": "sai-grp-docs-files-p-13-17",
+      "parent": "sai-grp-docs-files-p-13-21",
       "layer": "file",
       "category": "other",
       "categoryLabel": "Outros",
@@ -4603,7 +6499,7 @@
     {
       "id": "sai-file-docs-phase-24-roadmap-md",
       "label": "PHASE-24-ROADMAP.md",
-      "parent": "sai-grp-docs-files-p-13-17",
+      "parent": "sai-grp-docs-files-p-13-21",
       "layer": "file",
       "category": "other",
       "categoryLabel": "Outros",
@@ -4613,9 +6509,57 @@
       "description": "Código-fonte: `docs/PHASE-24-ROADMAP.md`"
     },
     {
+      "id": "sai-file-docs-phase-25-roadmap-md",
+      "label": "PHASE-25-ROADMAP.md",
+      "parent": "sai-grp-docs-files-p-13-21",
+      "layer": "file",
+      "category": "other",
+      "categoryLabel": "Outros",
+      "color": "#64748b",
+      "size": 0.85,
+      "file": "docs/PHASE-25-ROADMAP.md",
+      "description": "Código-fonte: `docs/PHASE-25-ROADMAP.md`"
+    },
+    {
+      "id": "sai-file-docs-phase-26-roadmap-md",
+      "label": "PHASE-26-ROADMAP.md",
+      "parent": "sai-grp-docs-files-p-13-21",
+      "layer": "file",
+      "category": "other",
+      "categoryLabel": "Outros",
+      "color": "#64748b",
+      "size": 0.85,
+      "file": "docs/PHASE-26-ROADMAP.md",
+      "description": "Código-fonte: `docs/PHASE-26-ROADMAP.md`"
+    },
+    {
+      "id": "sai-file-docs-phase-27-roadmap-md",
+      "label": "PHASE-27-ROADMAP.md",
+      "parent": "sai-grp-docs-files-p-13-21",
+      "layer": "file",
+      "category": "other",
+      "categoryLabel": "Outros",
+      "color": "#64748b",
+      "size": 0.85,
+      "file": "docs/PHASE-27-ROADMAP.md",
+      "description": "Código-fonte: `docs/PHASE-27-ROADMAP.md`"
+    },
+    {
+      "id": "sai-file-docs-phase-28-backup-md",
+      "label": "PHASE-28-BACKUP.md",
+      "parent": "sai-grp-docs-files-p-13-21",
+      "layer": "file",
+      "category": "other",
+      "categoryLabel": "Outros",
+      "color": "#64748b",
+      "size": 0.85,
+      "file": "docs/PHASE-28-BACKUP.md",
+      "description": "Código-fonte: `docs/PHASE-28-BACKUP.md`"
+    },
+    {
       "id": "sai-file-docs-phase-9-roadmap-md",
       "label": "PHASE-9-ROADMAP.md",
-      "parent": "sai-grp-docs-files-p-13-17",
+      "parent": "sai-grp-docs-files-p-13-21",
       "layer": "file",
       "category": "other",
       "categoryLabel": "Outros",
@@ -4673,6 +6617,42 @@
       "description": "Código-fonte: `docs/UPGRADE-v2.2.md`"
     },
     {
+      "id": "sai-file-docs-upgrade-v2-6-md",
+      "label": "UPGRADE-v2.6.md",
+      "parent": "sai-grp-docs-files-s-u-z",
+      "layer": "file",
+      "category": "other",
+      "categoryLabel": "Outros",
+      "color": "#64748b",
+      "size": 0.85,
+      "file": "docs/UPGRADE-v2.6.md",
+      "description": "Código-fonte: `docs/UPGRADE-v2.6.md`"
+    },
+    {
+      "id": "sai-file-docs-upgrade-v2-7-md",
+      "label": "UPGRADE-v2.7.md",
+      "parent": "sai-grp-docs-files-s-u-z",
+      "layer": "file",
+      "category": "other",
+      "categoryLabel": "Outros",
+      "color": "#64748b",
+      "size": 0.85,
+      "file": "docs/UPGRADE-v2.7.md",
+      "description": "Código-fonte: `docs/UPGRADE-v2.7.md`"
+    },
+    {
+      "id": "sai-file-docs-upgrade-v2-8-md",
+      "label": "UPGRADE-v2.8.md",
+      "parent": "sai-grp-docs-files-s-u-z",
+      "layer": "file",
+      "category": "other",
+      "categoryLabel": "Outros",
+      "color": "#64748b",
+      "size": 0.85,
+      "file": "docs/UPGRADE-v2.8.md",
+      "description": "Código-fonte: `docs/UPGRADE-v2.8.md`"
+    },
+    {
       "id": "sai-file-docs-zion-5-passos-md",
       "label": "ZION-5-PASSOS.md",
       "parent": "sai-grp-docs-files-s-u-z",
@@ -4683,6 +6663,18 @@
       "size": 0.85,
       "file": "docs/ZION-5-PASSOS.md",
       "description": "Código-fonte: `docs/ZION-5-PASSOS.md`"
+    },
+    {
+      "id": "sai-file-docs-zionvm-roadmap-md",
+      "label": "ZIONVM-ROADMAP.md",
+      "parent": "sai-grp-docs-files-s-u-z",
+      "layer": "file",
+      "category": "other",
+      "categoryLabel": "Outros",
+      "color": "#64748b",
+      "size": 0.85,
+      "file": "docs/ZIONVM-ROADMAP.md",
+      "description": "Código-fonte: `docs/ZIONVM-ROADMAP.md`"
     },
     {
       "id": "sai-file-frontend-dockerfile",
@@ -5007,6 +6999,18 @@
       "size": 0.85,
       "file": "frontend/src/components/ErrorBoundary.tsx",
       "description": "Código-fonte: `frontend/src/components/ErrorBoundary.tsx`"
+    },
+    {
+      "id": "sai-file-frontend-src-components-fleetsparkline-tsx",
+      "label": "FleetSparkline.tsx",
+      "parent": "sai-grp-frontend-src-components-files-e-f-m-o-p-v-w-z",
+      "layer": "file",
+      "category": "frontend",
+      "categoryLabel": "Frontend",
+      "color": "#eab308",
+      "size": 0.85,
+      "file": "frontend/src/components/FleetSparkline.tsx",
+      "description": "Código-fonte: `frontend/src/components/FleetSparkline.tsx`"
     },
     {
       "id": "sai-file-frontend-src-components-flowcontrols-tsx",
@@ -5381,33 +7385,33 @@
       "description": "Código-fonte: `frontend/src/hooks/useMonitoringStream.ts`"
     },
     {
-      "id": "sai-grp-frontend-src-pages-files-a-c-d-i-l-n-p-r-s-t",
-      "label": "Arquivos A–C–D–I–L–N–P–R–S–T",
+      "id": "sai-grp-frontend-src-pages-files-a-b-c-d-i-l-n-p-r-s",
+      "label": "Arquivos A–B–C–D–I–L–N–P–R–S",
       "parent": "sai-dir-frontend-src-pages",
       "layer": "module",
       "category": "frontend",
       "categoryLabel": "Frontend",
       "color": "#eab308",
       "size": 1.35,
-      "file": "frontend/src/pages/[files-a–c–d–i–l–n–p–r–s–t]",
-      "description": "Grupo de arquivos em `frontend/src/pages/` — Arquivos A–C–D–I–L–N–P–R–S–T"
+      "file": "frontend/src/pages/[files-a–b–c–d–i–l–n–p–r–s]",
+      "description": "Grupo de arquivos em `frontend/src/pages/` — Arquivos A–B–C–D–I–L–N–P–R–S"
     },
     {
-      "id": "sai-grp-frontend-src-pages-files-u-w-z",
-      "label": "Arquivos U–W–Z",
+      "id": "sai-grp-frontend-src-pages-files-t-u-w-z",
+      "label": "Arquivos T–U–W–Z",
       "parent": "sai-dir-frontend-src-pages",
       "layer": "module",
       "category": "frontend",
       "categoryLabel": "Frontend",
       "color": "#eab308",
       "size": 1.35,
-      "file": "frontend/src/pages/[files-u–w–z]",
-      "description": "Grupo de arquivos em `frontend/src/pages/` — Arquivos U–W–Z"
+      "file": "frontend/src/pages/[files-t–u–w–z]",
+      "description": "Grupo de arquivos em `frontend/src/pages/` — Arquivos T–U–W–Z"
     },
     {
       "id": "sai-file-frontend-src-pages-alertspage-tsx",
       "label": "AlertsPage.tsx",
-      "parent": "sai-grp-frontend-src-pages-files-a-c-d-i-l-n-p-r-s-t",
+      "parent": "sai-grp-frontend-src-pages-files-a-b-c-d-i-l-n-p-r-s",
       "layer": "file",
       "category": "frontend",
       "categoryLabel": "Frontend",
@@ -5417,9 +7421,21 @@
       "description": "Código-fonte: `frontend/src/pages/AlertsPage.tsx`"
     },
     {
+      "id": "sai-file-frontend-src-pages-backuppage-tsx",
+      "label": "BackupPage.tsx",
+      "parent": "sai-grp-frontend-src-pages-files-a-b-c-d-i-l-n-p-r-s",
+      "layer": "file",
+      "category": "frontend",
+      "categoryLabel": "Frontend",
+      "color": "#eab308",
+      "size": 0.85,
+      "file": "frontend/src/pages/BackupPage.tsx",
+      "description": "Código-fonte: `frontend/src/pages/BackupPage.tsx`"
+    },
+    {
       "id": "sai-file-frontend-src-pages-changepasswordpage-tsx",
       "label": "ChangePasswordPage.tsx",
-      "parent": "sai-grp-frontend-src-pages-files-a-c-d-i-l-n-p-r-s-t",
+      "parent": "sai-grp-frontend-src-pages-files-a-b-c-d-i-l-n-p-r-s",
       "layer": "file",
       "category": "frontend",
       "categoryLabel": "Frontend",
@@ -5431,7 +7447,7 @@
     {
       "id": "sai-file-frontend-src-pages-chatbotpage-tsx",
       "label": "ChatbotPage.tsx",
-      "parent": "sai-grp-frontend-src-pages-files-a-c-d-i-l-n-p-r-s-t",
+      "parent": "sai-grp-frontend-src-pages-files-a-b-c-d-i-l-n-p-r-s",
       "layer": "file",
       "category": "frontend",
       "categoryLabel": "Frontend",
@@ -5443,7 +7459,7 @@
     {
       "id": "sai-file-frontend-src-pages-dashboard-tsx",
       "label": "Dashboard.tsx",
-      "parent": "sai-grp-frontend-src-pages-files-a-c-d-i-l-n-p-r-s-t",
+      "parent": "sai-grp-frontend-src-pages-files-a-b-c-d-i-l-n-p-r-s",
       "layer": "file",
       "category": "frontend",
       "categoryLabel": "Frontend",
@@ -5455,7 +7471,7 @@
     {
       "id": "sai-file-frontend-src-pages-infrastructurepage-tsx",
       "label": "InfrastructurePage.tsx",
-      "parent": "sai-grp-frontend-src-pages-files-a-c-d-i-l-n-p-r-s-t",
+      "parent": "sai-grp-frontend-src-pages-files-a-b-c-d-i-l-n-p-r-s",
       "layer": "file",
       "category": "frontend",
       "categoryLabel": "Frontend",
@@ -5467,7 +7483,7 @@
     {
       "id": "sai-file-frontend-src-pages-loginpage-tsx",
       "label": "LoginPage.tsx",
-      "parent": "sai-grp-frontend-src-pages-files-a-c-d-i-l-n-p-r-s-t",
+      "parent": "sai-grp-frontend-src-pages-files-a-b-c-d-i-l-n-p-r-s",
       "layer": "file",
       "category": "frontend",
       "categoryLabel": "Frontend",
@@ -5479,7 +7495,7 @@
     {
       "id": "sai-file-frontend-src-pages-noccopilotpage-tsx",
       "label": "NocCopilotPage.tsx",
-      "parent": "sai-grp-frontend-src-pages-files-a-c-d-i-l-n-p-r-s-t",
+      "parent": "sai-grp-frontend-src-pages-files-a-b-c-d-i-l-n-p-r-s",
       "layer": "file",
       "category": "frontend",
       "categoryLabel": "Frontend",
@@ -5491,7 +7507,7 @@
     {
       "id": "sai-file-frontend-src-pages-platformpage-tsx",
       "label": "PlatformPage.tsx",
-      "parent": "sai-grp-frontend-src-pages-files-a-c-d-i-l-n-p-r-s-t",
+      "parent": "sai-grp-frontend-src-pages-files-a-b-c-d-i-l-n-p-r-s",
       "layer": "file",
       "category": "frontend",
       "categoryLabel": "Frontend",
@@ -5503,7 +7519,7 @@
     {
       "id": "sai-file-frontend-src-pages-publicwallboardpage-tsx",
       "label": "PublicWallboardPage.tsx",
-      "parent": "sai-grp-frontend-src-pages-files-a-c-d-i-l-n-p-r-s-t",
+      "parent": "sai-grp-frontend-src-pages-files-a-b-c-d-i-l-n-p-r-s",
       "layer": "file",
       "category": "frontend",
       "categoryLabel": "Frontend",
@@ -5515,7 +7531,7 @@
     {
       "id": "sai-file-frontend-src-pages-reportspage-tsx",
       "label": "ReportsPage.tsx",
-      "parent": "sai-grp-frontend-src-pages-files-a-c-d-i-l-n-p-r-s-t",
+      "parent": "sai-grp-frontend-src-pages-files-a-b-c-d-i-l-n-p-r-s",
       "layer": "file",
       "category": "frontend",
       "categoryLabel": "Frontend",
@@ -5527,7 +7543,7 @@
     {
       "id": "sai-file-frontend-src-pages-scannerpage-tsx",
       "label": "ScannerPage.tsx",
-      "parent": "sai-grp-frontend-src-pages-files-a-c-d-i-l-n-p-r-s-t",
+      "parent": "sai-grp-frontend-src-pages-files-a-b-c-d-i-l-n-p-r-s",
       "layer": "file",
       "category": "frontend",
       "categoryLabel": "Frontend",
@@ -5539,7 +7555,7 @@
     {
       "id": "sai-file-frontend-src-pages-topologymap-tsx",
       "label": "TopologyMap.tsx",
-      "parent": "sai-grp-frontend-src-pages-files-a-c-d-i-l-n-p-r-s-t",
+      "parent": "sai-grp-frontend-src-pages-files-t-u-w-z",
       "layer": "file",
       "category": "frontend",
       "categoryLabel": "Frontend",
@@ -5551,7 +7567,7 @@
     {
       "id": "sai-file-frontend-src-pages-userspage-tsx",
       "label": "UsersPage.tsx",
-      "parent": "sai-grp-frontend-src-pages-files-u-w-z",
+      "parent": "sai-grp-frontend-src-pages-files-t-u-w-z",
       "layer": "file",
       "category": "frontend",
       "categoryLabel": "Frontend",
@@ -5563,7 +7579,7 @@
     {
       "id": "sai-file-frontend-src-pages-wallboardpage-tsx",
       "label": "WallboardPage.tsx",
-      "parent": "sai-grp-frontend-src-pages-files-u-w-z",
+      "parent": "sai-grp-frontend-src-pages-files-t-u-w-z",
       "layer": "file",
       "category": "frontend",
       "categoryLabel": "Frontend",
@@ -5575,7 +7591,7 @@
     {
       "id": "sai-file-frontend-src-pages-zionpage-tsx",
       "label": "ZionPage.tsx",
-      "parent": "sai-grp-frontend-src-pages-files-u-w-z",
+      "parent": "sai-grp-frontend-src-pages-files-t-u-w-z",
       "layer": "file",
       "category": "frontend",
       "categoryLabel": "Frontend",
@@ -5583,6 +7599,54 @@
       "size": 0.85,
       "file": "frontend/src/pages/ZionPage.tsx",
       "description": "Código-fonte: `frontend/src/pages/ZionPage.tsx`"
+    },
+    {
+      "id": "sai-file-frontend-src-pages-zionvmpage-tsx",
+      "label": "ZionVMPage.tsx",
+      "parent": "sai-grp-frontend-src-pages-files-t-u-w-z",
+      "layer": "file",
+      "category": "frontend",
+      "categoryLabel": "Frontend",
+      "color": "#eab308",
+      "size": 0.85,
+      "file": "frontend/src/pages/ZionVMPage.tsx",
+      "description": "Código-fonte: `frontend/src/pages/ZionVMPage.tsx`"
+    },
+    {
+      "id": "sai-file-frontend-src-styles-backup-page-css",
+      "label": "backup-page.css",
+      "parent": "sai-dir-frontend-src-styles",
+      "layer": "file",
+      "category": "frontend",
+      "categoryLabel": "Frontend",
+      "color": "#eab308",
+      "size": 0.85,
+      "file": "frontend/src/styles/backup-page.css",
+      "description": "Código-fonte: `frontend/src/styles/backup-page.css`"
+    },
+    {
+      "id": "sai-file-frontend-src-styles-corp-platform-css",
+      "label": "corp-platform.css",
+      "parent": "sai-dir-frontend-src-styles",
+      "layer": "file",
+      "category": "frontend",
+      "categoryLabel": "Frontend",
+      "color": "#eab308",
+      "size": 0.85,
+      "file": "frontend/src/styles/corp-platform.css",
+      "description": "Código-fonte: `frontend/src/styles/corp-platform.css`"
+    },
+    {
+      "id": "sai-file-frontend-src-styles-dash-customize-css",
+      "label": "dash-customize.css",
+      "parent": "sai-dir-frontend-src-styles",
+      "layer": "file",
+      "category": "frontend",
+      "categoryLabel": "Frontend",
+      "color": "#eab308",
+      "size": 0.85,
+      "file": "frontend/src/styles/dash-customize.css",
+      "description": "Código-fonte: `frontend/src/styles/dash-customize.css`"
     },
     {
       "id": "sai-file-frontend-src-styles-design-system-css",
@@ -5765,6 +7829,18 @@
       "description": "Código-fonte: `scripts/feature-inventory.py`"
     },
     {
+      "id": "sai-file-scripts-open-lan-access-ps1",
+      "label": "open-lan-access.ps1",
+      "parent": "sai-dir-scripts",
+      "layer": "file",
+      "category": "scripts",
+      "categoryLabel": "Scripts",
+      "color": "#64748b",
+      "size": 0.85,
+      "file": "scripts/open-lan-access.ps1",
+      "description": "Código-fonte: `scripts/open-lan-access.ps1`"
+    },
+    {
       "id": "sai-file-scripts-schedule-backup-ps1",
       "label": "schedule-backup.ps1",
       "parent": "sai-dir-scripts",
@@ -5805,6 +7881,11 @@
     {
       "source": "sai-root",
       "target": "sai-dir-github",
+      "type": "dependency"
+    },
+    {
+      "source": "sai-root",
+      "target": "sai-dir-work",
       "type": "dependency"
     },
     {
@@ -5850,6 +7931,11 @@
     {
       "source": "sai-dir-github",
       "target": "sai-dir-github-workflows",
+      "type": "dependency"
+    },
+    {
+      "source": "sai-dir-work",
+      "target": "sai-dir-work-treeofknowledge",
       "type": "dependency"
     },
     {
@@ -5915,6 +8001,31 @@
     {
       "source": "sai-dir-frontend",
       "target": "sai-dir-frontend-src",
+      "type": "dependency"
+    },
+    {
+      "source": "sai-dir-work-treeofknowledge",
+      "target": "sai-dir-work-treeofknowledge-css",
+      "type": "dependency"
+    },
+    {
+      "source": "sai-dir-work-treeofknowledge",
+      "target": "sai-dir-work-treeofknowledge-galaxy",
+      "type": "dependency"
+    },
+    {
+      "source": "sai-dir-work-treeofknowledge",
+      "target": "sai-dir-work-treeofknowledge-js",
+      "type": "dependency"
+    },
+    {
+      "source": "sai-dir-work-treeofknowledge",
+      "target": "sai-dir-work-treeofknowledge-scripts",
+      "type": "dependency"
+    },
+    {
+      "source": "sai-dir-work-treeofknowledge",
+      "target": "sai-dir-work-treeofknowledge-universe",
       "type": "dependency"
     },
     {
@@ -6028,6 +8139,26 @@
       "type": "dependency"
     },
     {
+      "source": "sai-dir-work-treeofknowledge-galaxy",
+      "target": "sai-dir-work-treeofknowledge-galaxy-assets",
+      "type": "dependency"
+    },
+    {
+      "source": "sai-dir-work-treeofknowledge-galaxy",
+      "target": "sai-dir-work-treeofknowledge-galaxy-graphs",
+      "type": "dependency"
+    },
+    {
+      "source": "sai-dir-work-treeofknowledge-universe",
+      "target": "sai-dir-work-treeofknowledge-universe-public",
+      "type": "dependency"
+    },
+    {
+      "source": "sai-dir-work-treeofknowledge-universe",
+      "target": "sai-dir-work-treeofknowledge-universe-src",
+      "type": "dependency"
+    },
+    {
       "source": "sai-dir-backend-app-api",
       "target": "sai-dir-backend-app-api-routes",
       "type": "dependency"
@@ -6045,6 +8176,11 @@
     {
       "source": "sai-dir-backend-app-engines",
       "target": "sai-dir-backend-app-engines-alerts",
+      "type": "dependency"
+    },
+    {
+      "source": "sai-dir-backend-app-engines",
+      "target": "sai-dir-backend-app-engines-backup",
       "type": "dependency"
     },
     {
@@ -6135,6 +8271,21 @@
     {
       "source": "sai-dir-frontend-src-components",
       "target": "sai-dir-frontend-src-components-ui",
+      "type": "dependency"
+    },
+    {
+      "source": "sai-dir-work-treeofknowledge-universe-public",
+      "target": "sai-dir-work-treeofknowledge-universe-public-graphs",
+      "type": "dependency"
+    },
+    {
+      "source": "sai-dir-work-treeofknowledge-universe-src",
+      "target": "sai-dir-work-treeofknowledge-universe-src-components",
+      "type": "dependency"
+    },
+    {
+      "source": "sai-dir-work-treeofknowledge-universe-src",
+      "target": "sai-dir-work-treeofknowledge-universe-src-utils",
       "type": "dependency"
     },
     {
@@ -6233,6 +8384,631 @@
       "type": "dependency"
     },
     {
+      "source": "sai-dir-work-treeofknowledge",
+      "target": "sai-file-work-treeofknowledge-index-html",
+      "type": "dependency"
+    },
+    {
+      "source": "sai-dir-work-treeofknowledge",
+      "target": "sai-file-work-treeofknowledge-node-html",
+      "type": "dependency"
+    },
+    {
+      "source": "sai-dir-work-treeofknowledge",
+      "target": "sai-file-work-treeofknowledge-readme-md",
+      "type": "dependency"
+    },
+    {
+      "source": "sai-dir-work-treeofknowledge-css",
+      "target": "sai-file-work-treeofknowledge-css-style-css",
+      "type": "dependency"
+    },
+    {
+      "source": "sai-dir-work-treeofknowledge-galaxy",
+      "target": "sai-file-work-treeofknowledge-galaxy-index-html",
+      "type": "dependency"
+    },
+    {
+      "source": "sai-dir-work-treeofknowledge-galaxy-assets",
+      "target": "sai-file-work-treeofknowledge-galaxy-assets-index-brk-c7ur-js",
+      "type": "dependency"
+    },
+    {
+      "source": "sai-dir-work-treeofknowledge-galaxy-assets",
+      "target": "sai-file-work-treeofknowledge-galaxy-assets-index-cnozn3tg-css",
+      "type": "dependency"
+    },
+    {
+      "source": "sai-dir-work-treeofknowledge-galaxy-graphs",
+      "target": "sai-grp-work-treeofknowledge-galaxy-graphs-files-a-c-d-e-f",
+      "type": "dependency"
+    },
+    {
+      "source": "sai-dir-work-treeofknowledge-galaxy-graphs",
+      "target": "sai-grp-work-treeofknowledge-galaxy-graphs-files-h-j-n",
+      "type": "dependency"
+    },
+    {
+      "source": "sai-dir-work-treeofknowledge-galaxy-graphs",
+      "target": "sai-grp-work-treeofknowledge-galaxy-graphs-files-p-s-t-u",
+      "type": "dependency"
+    },
+    {
+      "source": "sai-grp-work-treeofknowledge-galaxy-graphs-files-a-c-d-e-f",
+      "target": "sai-file-work-treeofknowledge-galaxy-graphs-admin-user-management-json",
+      "type": "dependency"
+    },
+    {
+      "source": "sai-grp-work-treeofknowledge-galaxy-graphs-files-a-c-d-e-f",
+      "target": "sai-file-work-treeofknowledge-galaxy-graphs-anki-univesp-json",
+      "type": "dependency"
+    },
+    {
+      "source": "sai-grp-work-treeofknowledge-galaxy-graphs-files-a-c-d-e-f",
+      "target": "sai-file-work-treeofknowledge-galaxy-graphs-app-mosquito-json",
+      "type": "dependency"
+    },
+    {
+      "source": "sai-grp-work-treeofknowledge-galaxy-graphs-files-a-c-d-e-f",
+      "target": "sai-file-work-treeofknowledge-galaxy-graphs-canon-engineer-github-io-json",
+      "type": "dependency"
+    },
+    {
+      "source": "sai-grp-work-treeofknowledge-galaxy-graphs-files-a-c-d-e-f",
+      "target": "sai-file-work-treeofknowledge-galaxy-graphs-canon-python-ecommerce-json",
+      "type": "dependency"
+    },
+    {
+      "source": "sai-grp-work-treeofknowledge-galaxy-graphs-files-a-c-d-e-f",
+      "target": "sai-file-work-treeofknowledge-galaxy-graphs-canon-sync-engine-json",
+      "type": "dependency"
+    },
+    {
+      "source": "sai-grp-work-treeofknowledge-galaxy-graphs-files-a-c-d-e-f",
+      "target": "sai-file-work-treeofknowledge-galaxy-graphs-course-python-2023-json",
+      "type": "dependency"
+    },
+    {
+      "source": "sai-grp-work-treeofknowledge-galaxy-graphs-files-a-c-d-e-f",
+      "target": "sai-file-work-treeofknowledge-galaxy-graphs-customize-veyon-json",
+      "type": "dependency"
+    },
+    {
+      "source": "sai-grp-work-treeofknowledge-galaxy-graphs-files-a-c-d-e-f",
+      "target": "sai-file-work-treeofknowledge-galaxy-graphs-danger-zone-json",
+      "type": "dependency"
+    },
+    {
+      "source": "sai-grp-work-treeofknowledge-galaxy-graphs-files-a-c-d-e-f",
+      "target": "sai-file-work-treeofknowledge-galaxy-graphs-eagle-offensive-platform-json",
+      "type": "dependency"
+    },
+    {
+      "source": "sai-grp-work-treeofknowledge-galaxy-graphs-files-a-c-d-e-f",
+      "target": "sai-file-work-treeofknowledge-galaxy-graphs-food-online-django-json",
+      "type": "dependency"
+    },
+    {
+      "source": "sai-grp-work-treeofknowledge-galaxy-graphs-files-h-j-n",
+      "target": "sai-file-work-treeofknowledge-galaxy-graphs-html-website-json",
+      "type": "dependency"
+    },
+    {
+      "source": "sai-grp-work-treeofknowledge-galaxy-graphs-files-h-j-n",
+      "target": "sai-file-work-treeofknowledge-galaxy-graphs-hyperware-json",
+      "type": "dependency"
+    },
+    {
+      "source": "sai-grp-work-treeofknowledge-galaxy-graphs-files-h-j-n",
+      "target": "sai-file-work-treeofknowledge-galaxy-graphs-javascript-calculator-json",
+      "type": "dependency"
+    },
+    {
+      "source": "sai-grp-work-treeofknowledge-galaxy-graphs-files-h-j-n",
+      "target": "sai-file-work-treeofknowledge-galaxy-graphs-javascript-dropbox-json",
+      "type": "dependency"
+    },
+    {
+      "source": "sai-grp-work-treeofknowledge-galaxy-graphs-files-h-j-n",
+      "target": "sai-file-work-treeofknowledge-galaxy-graphs-javascript-restaurant-json",
+      "type": "dependency"
+    },
+    {
+      "source": "sai-grp-work-treeofknowledge-galaxy-graphs-files-h-j-n",
+      "target": "sai-file-work-treeofknowledge-galaxy-graphs-javascript-restful-api-json",
+      "type": "dependency"
+    },
+    {
+      "source": "sai-grp-work-treeofknowledge-galaxy-graphs-files-h-j-n",
+      "target": "sai-file-work-treeofknowledge-galaxy-graphs-javascript-users-json",
+      "type": "dependency"
+    },
+    {
+      "source": "sai-grp-work-treeofknowledge-galaxy-graphs-files-h-j-n",
+      "target": "sai-file-work-treeofknowledge-galaxy-graphs-javascript-whatsapp-json",
+      "type": "dependency"
+    },
+    {
+      "source": "sai-grp-work-treeofknowledge-galaxy-graphs-files-h-j-n",
+      "target": "sai-file-work-treeofknowledge-galaxy-graphs-neighborhood-boys-json",
+      "type": "dependency"
+    },
+    {
+      "source": "sai-grp-work-treeofknowledge-galaxy-graphs-files-p-s-t-u",
+      "target": "sai-file-work-treeofknowledge-galaxy-graphs-php-dao-json",
+      "type": "dependency"
+    },
+    {
+      "source": "sai-grp-work-treeofknowledge-galaxy-graphs-files-p-s-t-u",
+      "target": "sai-file-work-treeofknowledge-galaxy-graphs-professional-scanner-json",
+      "type": "dependency"
+    },
+    {
+      "source": "sai-grp-work-treeofknowledge-galaxy-graphs-files-p-s-t-u",
+      "target": "sai-file-work-treeofknowledge-galaxy-graphs-project-helpdesk-json",
+      "type": "dependency"
+    },
+    {
+      "source": "sai-grp-work-treeofknowledge-galaxy-graphs-files-p-s-t-u",
+      "target": "sai-file-work-treeofknowledge-galaxy-graphs-python-employee-list-json",
+      "type": "dependency"
+    },
+    {
+      "source": "sai-grp-work-treeofknowledge-galaxy-graphs-files-p-s-t-u",
+      "target": "sai-file-work-treeofknowledge-galaxy-graphs-python-ii-ecommerce-json",
+      "type": "dependency"
+    },
+    {
+      "source": "sai-grp-work-treeofknowledge-galaxy-graphs-files-p-s-t-u",
+      "target": "sai-file-work-treeofknowledge-galaxy-graphs-search-univesp-json",
+      "type": "dependency"
+    },
+    {
+      "source": "sai-grp-work-treeofknowledge-galaxy-graphs-files-p-s-t-u",
+      "target": "sai-file-work-treeofknowledge-galaxy-graphs-sentinelai-json",
+      "type": "dependency"
+    },
+    {
+      "source": "sai-grp-work-treeofknowledge-galaxy-graphs-files-p-s-t-u",
+      "target": "sai-file-work-treeofknowledge-galaxy-graphs-smartferrari-iot-json",
+      "type": "dependency"
+    },
+    {
+      "source": "sai-grp-work-treeofknowledge-galaxy-graphs-files-p-s-t-u",
+      "target": "sai-file-work-treeofknowledge-galaxy-graphs-smarthome-iot-json",
+      "type": "dependency"
+    },
+    {
+      "source": "sai-grp-work-treeofknowledge-galaxy-graphs-files-p-s-t-u",
+      "target": "sai-file-work-treeofknowledge-galaxy-graphs-todo-app-json",
+      "type": "dependency"
+    },
+    {
+      "source": "sai-grp-work-treeofknowledge-galaxy-graphs-files-p-s-t-u",
+      "target": "sai-file-work-treeofknowledge-galaxy-graphs-user-management-json",
+      "type": "dependency"
+    },
+    {
+      "source": "sai-dir-work-treeofknowledge-js",
+      "target": "sai-file-work-treeofknowledge-js-app-js",
+      "type": "dependency"
+    },
+    {
+      "source": "sai-dir-work-treeofknowledge-js",
+      "target": "sai-file-work-treeofknowledge-js-cimed-code-highlight-js",
+      "type": "dependency"
+    },
+    {
+      "source": "sai-dir-work-treeofknowledge-js",
+      "target": "sai-file-work-treeofknowledge-js-config-js",
+      "type": "dependency"
+    },
+    {
+      "source": "sai-dir-work-treeofknowledge-js",
+      "target": "sai-file-work-treeofknowledge-js-header-js",
+      "type": "dependency"
+    },
+    {
+      "source": "sai-dir-work-treeofknowledge-js",
+      "target": "sai-file-work-treeofknowledge-js-node-page-js",
+      "type": "dependency"
+    },
+    {
+      "source": "sai-dir-work-treeofknowledge-js",
+      "target": "sai-file-work-treeofknowledge-js-search-js",
+      "type": "dependency"
+    },
+    {
+      "source": "sai-dir-work-treeofknowledge-js",
+      "target": "sai-file-work-treeofknowledge-js-tree-renderer-js",
+      "type": "dependency"
+    },
+    {
+      "source": "sai-dir-work-treeofknowledge-scripts",
+      "target": "sai-grp-work-treeofknowledge-scripts-files-a-b-c-d-e-f",
+      "type": "dependency"
+    },
+    {
+      "source": "sai-dir-work-treeofknowledge-scripts",
+      "target": "sai-grp-work-treeofknowledge-scripts-files-g",
+      "type": "dependency"
+    },
+    {
+      "source": "sai-dir-work-treeofknowledge-scripts",
+      "target": "sai-grp-work-treeofknowledge-scripts-files-r-s-u",
+      "type": "dependency"
+    },
+    {
+      "source": "sai-grp-work-treeofknowledge-scripts-files-a-b-c-d-e-f",
+      "target": "sai-file-work-treeofknowledge-scripts-adminusermanagement-project-json",
+      "type": "dependency"
+    },
+    {
+      "source": "sai-grp-work-treeofknowledge-scripts-files-a-b-c-d-e-f",
+      "target": "sai-file-work-treeofknowledge-scripts-build-galaxy-ps1",
+      "type": "dependency"
+    },
+    {
+      "source": "sai-grp-work-treeofknowledge-scripts-files-a-b-c-d-e-f",
+      "target": "sai-file-work-treeofknowledge-scripts-build-projects-py",
+      "type": "dependency"
+    },
+    {
+      "source": "sai-grp-work-treeofknowledge-scripts-files-a-b-c-d-e-f",
+      "target": "sai-file-work-treeofknowledge-scripts-canonsyncengine-project-json",
+      "type": "dependency"
+    },
+    {
+      "source": "sai-grp-work-treeofknowledge-scripts-files-a-b-c-d-e-f",
+      "target": "sai-file-work-treeofknowledge-scripts-check-overlaps-py",
+      "type": "dependency"
+    },
+    {
+      "source": "sai-grp-work-treeofknowledge-scripts-files-a-b-c-d-e-f",
+      "target": "sai-file-work-treeofknowledge-scripts-cpe-project-json",
+      "type": "dependency"
+    },
+    {
+      "source": "sai-grp-work-treeofknowledge-scripts-files-a-b-c-d-e-f",
+      "target": "sai-file-work-treeofknowledge-scripts-dangerzone-project-json",
+      "type": "dependency"
+    },
+    {
+      "source": "sai-grp-work-treeofknowledge-scripts-files-a-b-c-d-e-f",
+      "target": "sai-file-work-treeofknowledge-scripts-dropbox-project-json",
+      "type": "dependency"
+    },
+    {
+      "source": "sai-grp-work-treeofknowledge-scripts-files-a-b-c-d-e-f",
+      "target": "sai-file-work-treeofknowledge-scripts-eagle-project-json",
+      "type": "dependency"
+    },
+    {
+      "source": "sai-grp-work-treeofknowledge-scripts-files-a-b-c-d-e-f",
+      "target": "sai-file-work-treeofknowledge-scripts-export-universe-graph-py",
+      "type": "dependency"
+    },
+    {
+      "source": "sai-grp-work-treeofknowledge-scripts-files-a-b-c-d-e-f",
+      "target": "sai-file-work-treeofknowledge-scripts-fill-full-code-py",
+      "type": "dependency"
+    },
+    {
+      "source": "sai-grp-work-treeofknowledge-scripts-files-g",
+      "target": "sai-file-work-treeofknowledge-scripts-gen-adminusermanagement-py",
+      "type": "dependency"
+    },
+    {
+      "source": "sai-grp-work-treeofknowledge-scripts-files-g",
+      "target": "sai-file-work-treeofknowledge-scripts-gen-dangerzone-py",
+      "type": "dependency"
+    },
+    {
+      "source": "sai-grp-work-treeofknowledge-scripts-files-g",
+      "target": "sai-file-work-treeofknowledge-scripts-gen-dropbox-py",
+      "type": "dependency"
+    },
+    {
+      "source": "sai-grp-work-treeofknowledge-scripts-files-g",
+      "target": "sai-file-work-treeofknowledge-scripts-gen-eagle-py",
+      "type": "dependency"
+    },
+    {
+      "source": "sai-grp-work-treeofknowledge-scripts-files-g",
+      "target": "sai-file-work-treeofknowledge-scripts-gen-extra-projects-py",
+      "type": "dependency"
+    },
+    {
+      "source": "sai-grp-work-treeofknowledge-scripts-files-g",
+      "target": "sai-file-work-treeofknowledge-scripts-gen-full-tree-projects-py",
+      "type": "dependency"
+    },
+    {
+      "source": "sai-grp-work-treeofknowledge-scripts-files-g",
+      "target": "sai-file-work-treeofknowledge-scripts-gen-restaurant-py",
+      "type": "dependency"
+    },
+    {
+      "source": "sai-grp-work-treeofknowledge-scripts-files-g",
+      "target": "sai-file-work-treeofknowledge-scripts-gen-sentinelai-py",
+      "type": "dependency"
+    },
+    {
+      "source": "sai-grp-work-treeofknowledge-scripts-files-g",
+      "target": "sai-file-work-treeofknowledge-scripts-gen-smartferrari-py",
+      "type": "dependency"
+    },
+    {
+      "source": "sai-grp-work-treeofknowledge-scripts-files-g",
+      "target": "sai-file-work-treeofknowledge-scripts-gen-smarthome-py",
+      "type": "dependency"
+    },
+    {
+      "source": "sai-grp-work-treeofknowledge-scripts-files-g",
+      "target": "sai-file-work-treeofknowledge-scripts-gen-veyon-py",
+      "type": "dependency"
+    },
+    {
+      "source": "sai-grp-work-treeofknowledge-scripts-files-r-s-u",
+      "target": "sai-file-work-treeofknowledge-scripts-rebuild-professional-scanner-tree-py",
+      "type": "dependency"
+    },
+    {
+      "source": "sai-grp-work-treeofknowledge-scripts-files-r-s-u",
+      "target": "sai-file-work-treeofknowledge-scripts-restaurant-project-json",
+      "type": "dependency"
+    },
+    {
+      "source": "sai-grp-work-treeofknowledge-scripts-files-r-s-u",
+      "target": "sai-file-work-treeofknowledge-scripts-sentinelai-project-json",
+      "type": "dependency"
+    },
+    {
+      "source": "sai-grp-work-treeofknowledge-scripts-files-r-s-u",
+      "target": "sai-file-work-treeofknowledge-scripts-smartferrari-project-json",
+      "type": "dependency"
+    },
+    {
+      "source": "sai-grp-work-treeofknowledge-scripts-files-r-s-u",
+      "target": "sai-file-work-treeofknowledge-scripts-smarthome-project-json",
+      "type": "dependency"
+    },
+    {
+      "source": "sai-grp-work-treeofknowledge-scripts-files-r-s-u",
+      "target": "sai-file-work-treeofknowledge-scripts-update-professional-scanner-py",
+      "type": "dependency"
+    },
+    {
+      "source": "sai-dir-work-treeofknowledge-universe",
+      "target": "sai-file-work-treeofknowledge-universe-gitignore",
+      "type": "dependency"
+    },
+    {
+      "source": "sai-dir-work-treeofknowledge-universe",
+      "target": "sai-file-work-treeofknowledge-universe-index-html",
+      "type": "dependency"
+    },
+    {
+      "source": "sai-dir-work-treeofknowledge-universe",
+      "target": "sai-file-work-treeofknowledge-universe-package-json",
+      "type": "dependency"
+    },
+    {
+      "source": "sai-dir-work-treeofknowledge-universe",
+      "target": "sai-file-work-treeofknowledge-universe-vite-config-js",
+      "type": "dependency"
+    },
+    {
+      "source": "sai-dir-work-treeofknowledge-universe-public-graphs",
+      "target": "sai-grp-work-treeofknowledge-universe-public-graphs-files-a-c-d-e-f",
+      "type": "dependency"
+    },
+    {
+      "source": "sai-dir-work-treeofknowledge-universe-public-graphs",
+      "target": "sai-grp-work-treeofknowledge-universe-public-graphs-files-h-j-n",
+      "type": "dependency"
+    },
+    {
+      "source": "sai-dir-work-treeofknowledge-universe-public-graphs",
+      "target": "sai-grp-work-treeofknowledge-universe-public-graphs-files-p-s-t-u",
+      "type": "dependency"
+    },
+    {
+      "source": "sai-grp-work-treeofknowledge-universe-public-graphs-files-a-c-d-e-f",
+      "target": "sai-file-work-treeofknowledge-universe-public-graphs-admin-user-management-json",
+      "type": "dependency"
+    },
+    {
+      "source": "sai-grp-work-treeofknowledge-universe-public-graphs-files-a-c-d-e-f",
+      "target": "sai-file-work-treeofknowledge-universe-public-graphs-anki-univesp-json",
+      "type": "dependency"
+    },
+    {
+      "source": "sai-grp-work-treeofknowledge-universe-public-graphs-files-a-c-d-e-f",
+      "target": "sai-file-work-treeofknowledge-universe-public-graphs-app-mosquito-json",
+      "type": "dependency"
+    },
+    {
+      "source": "sai-grp-work-treeofknowledge-universe-public-graphs-files-a-c-d-e-f",
+      "target": "sai-file-work-treeofknowledge-universe-public-graphs-canon-engineer-github-io-json",
+      "type": "dependency"
+    },
+    {
+      "source": "sai-grp-work-treeofknowledge-universe-public-graphs-files-a-c-d-e-f",
+      "target": "sai-file-work-treeofknowledge-universe-public-graphs-canon-python-ecommerce-json",
+      "type": "dependency"
+    },
+    {
+      "source": "sai-grp-work-treeofknowledge-universe-public-graphs-files-a-c-d-e-f",
+      "target": "sai-file-work-treeofknowledge-universe-public-graphs-canon-sync-engine-json",
+      "type": "dependency"
+    },
+    {
+      "source": "sai-grp-work-treeofknowledge-universe-public-graphs-files-a-c-d-e-f",
+      "target": "sai-file-work-treeofknowledge-universe-public-graphs-course-python-2023-json",
+      "type": "dependency"
+    },
+    {
+      "source": "sai-grp-work-treeofknowledge-universe-public-graphs-files-a-c-d-e-f",
+      "target": "sai-file-work-treeofknowledge-universe-public-graphs-customize-veyon-json",
+      "type": "dependency"
+    },
+    {
+      "source": "sai-grp-work-treeofknowledge-universe-public-graphs-files-a-c-d-e-f",
+      "target": "sai-file-work-treeofknowledge-universe-public-graphs-danger-zone-json",
+      "type": "dependency"
+    },
+    {
+      "source": "sai-grp-work-treeofknowledge-universe-public-graphs-files-a-c-d-e-f",
+      "target": "sai-file-work-treeofknowledge-universe-public-graphs-eagle-offensive-platform-json",
+      "type": "dependency"
+    },
+    {
+      "source": "sai-grp-work-treeofknowledge-universe-public-graphs-files-a-c-d-e-f",
+      "target": "sai-file-work-treeofknowledge-universe-public-graphs-food-online-django-json",
+      "type": "dependency"
+    },
+    {
+      "source": "sai-grp-work-treeofknowledge-universe-public-graphs-files-h-j-n",
+      "target": "sai-file-work-treeofknowledge-universe-public-graphs-html-website-json",
+      "type": "dependency"
+    },
+    {
+      "source": "sai-grp-work-treeofknowledge-universe-public-graphs-files-h-j-n",
+      "target": "sai-file-work-treeofknowledge-universe-public-graphs-hyperware-json",
+      "type": "dependency"
+    },
+    {
+      "source": "sai-grp-work-treeofknowledge-universe-public-graphs-files-h-j-n",
+      "target": "sai-file-work-treeofknowledge-universe-public-graphs-javascript-calculator-json",
+      "type": "dependency"
+    },
+    {
+      "source": "sai-grp-work-treeofknowledge-universe-public-graphs-files-h-j-n",
+      "target": "sai-file-work-treeofknowledge-universe-public-graphs-javascript-dropbox-json",
+      "type": "dependency"
+    },
+    {
+      "source": "sai-grp-work-treeofknowledge-universe-public-graphs-files-h-j-n",
+      "target": "sai-file-work-treeofknowledge-universe-public-graphs-javascript-restaurant-json",
+      "type": "dependency"
+    },
+    {
+      "source": "sai-grp-work-treeofknowledge-universe-public-graphs-files-h-j-n",
+      "target": "sai-file-work-treeofknowledge-universe-public-graphs-javascript-restful-api-json",
+      "type": "dependency"
+    },
+    {
+      "source": "sai-grp-work-treeofknowledge-universe-public-graphs-files-h-j-n",
+      "target": "sai-file-work-treeofknowledge-universe-public-graphs-javascript-users-json",
+      "type": "dependency"
+    },
+    {
+      "source": "sai-grp-work-treeofknowledge-universe-public-graphs-files-h-j-n",
+      "target": "sai-file-work-treeofknowledge-universe-public-graphs-javascript-whatsapp-json",
+      "type": "dependency"
+    },
+    {
+      "source": "sai-grp-work-treeofknowledge-universe-public-graphs-files-h-j-n",
+      "target": "sai-file-work-treeofknowledge-universe-public-graphs-neighborhood-boys-json",
+      "type": "dependency"
+    },
+    {
+      "source": "sai-grp-work-treeofknowledge-universe-public-graphs-files-p-s-t-u",
+      "target": "sai-file-work-treeofknowledge-universe-public-graphs-php-dao-json",
+      "type": "dependency"
+    },
+    {
+      "source": "sai-grp-work-treeofknowledge-universe-public-graphs-files-p-s-t-u",
+      "target": "sai-file-work-treeofknowledge-universe-public-graphs-professional-scanner-json",
+      "type": "dependency"
+    },
+    {
+      "source": "sai-grp-work-treeofknowledge-universe-public-graphs-files-p-s-t-u",
+      "target": "sai-file-work-treeofknowledge-universe-public-graphs-project-helpdesk-json",
+      "type": "dependency"
+    },
+    {
+      "source": "sai-grp-work-treeofknowledge-universe-public-graphs-files-p-s-t-u",
+      "target": "sai-file-work-treeofknowledge-universe-public-graphs-python-employee-list-json",
+      "type": "dependency"
+    },
+    {
+      "source": "sai-grp-work-treeofknowledge-universe-public-graphs-files-p-s-t-u",
+      "target": "sai-file-work-treeofknowledge-universe-public-graphs-python-ii-ecommerce-json",
+      "type": "dependency"
+    },
+    {
+      "source": "sai-grp-work-treeofknowledge-universe-public-graphs-files-p-s-t-u",
+      "target": "sai-file-work-treeofknowledge-universe-public-graphs-search-univesp-json",
+      "type": "dependency"
+    },
+    {
+      "source": "sai-grp-work-treeofknowledge-universe-public-graphs-files-p-s-t-u",
+      "target": "sai-file-work-treeofknowledge-universe-public-graphs-sentinelai-json",
+      "type": "dependency"
+    },
+    {
+      "source": "sai-grp-work-treeofknowledge-universe-public-graphs-files-p-s-t-u",
+      "target": "sai-file-work-treeofknowledge-universe-public-graphs-smartferrari-iot-json",
+      "type": "dependency"
+    },
+    {
+      "source": "sai-grp-work-treeofknowledge-universe-public-graphs-files-p-s-t-u",
+      "target": "sai-file-work-treeofknowledge-universe-public-graphs-smarthome-iot-json",
+      "type": "dependency"
+    },
+    {
+      "source": "sai-grp-work-treeofknowledge-universe-public-graphs-files-p-s-t-u",
+      "target": "sai-file-work-treeofknowledge-universe-public-graphs-todo-app-json",
+      "type": "dependency"
+    },
+    {
+      "source": "sai-grp-work-treeofknowledge-universe-public-graphs-files-p-s-t-u",
+      "target": "sai-file-work-treeofknowledge-universe-public-graphs-user-management-json",
+      "type": "dependency"
+    },
+    {
+      "source": "sai-dir-work-treeofknowledge-universe-src",
+      "target": "sai-file-work-treeofknowledge-universe-src-app-jsx",
+      "type": "dependency"
+    },
+    {
+      "source": "sai-dir-work-treeofknowledge-universe-src",
+      "target": "sai-file-work-treeofknowledge-universe-src-main-jsx",
+      "type": "dependency"
+    },
+    {
+      "source": "sai-dir-work-treeofknowledge-universe-src",
+      "target": "sai-file-work-treeofknowledge-universe-src-styles-css",
+      "type": "dependency"
+    },
+    {
+      "source": "sai-dir-work-treeofknowledge-universe-src-components",
+      "target": "sai-file-work-treeofknowledge-universe-src-components-camerafocus-jsx",
+      "type": "dependency"
+    },
+    {
+      "source": "sai-dir-work-treeofknowledge-universe-src-components",
+      "target": "sai-file-work-treeofknowledge-universe-src-components-galaxygraph-jsx",
+      "type": "dependency"
+    },
+    {
+      "source": "sai-dir-work-treeofknowledge-universe-src-components",
+      "target": "sai-file-work-treeofknowledge-universe-src-components-sceneobjects-jsx",
+      "type": "dependency"
+    },
+    {
+      "source": "sai-dir-work-treeofknowledge-universe-src-components",
+      "target": "sai-file-work-treeofknowledge-universe-src-components-sidepanel-jsx",
+      "type": "dependency"
+    },
+    {
+      "source": "sai-dir-work-treeofknowledge-universe-src-utils",
+      "target": "sai-file-work-treeofknowledge-universe-src-utils-layout-js",
+      "type": "dependency"
+    },
+    {
       "source": "sai-dir-agent",
       "target": "sai-file-agent-install-windows-ps1",
       "type": "dependency"
@@ -6295,6 +9071,11 @@
     {
       "source": "sai-dir-backend-alembic-versions",
       "target": "sai-file-backend-alembic-versions-20260825-phase24-py",
+      "type": "dependency"
+    },
+    {
+      "source": "sai-dir-backend-alembic-versions",
+      "target": "sai-file-backend-alembic-versions-20260826-phase28-py",
       "type": "dependency"
     },
     {
@@ -6504,6 +9285,11 @@
     },
     {
       "source": "sai-grp-backend-app-api-routes-files-f-i-m-o-p",
+      "target": "sai-file-backend-app-api-routes-platform-backup-py",
+      "type": "dependency"
+    },
+    {
+      "source": "sai-grp-backend-app-api-routes-files-f-i-m-o-p",
       "target": "sai-file-backend-app-api-routes-plugins-py",
       "type": "dependency"
     },
@@ -6609,46 +9395,76 @@
     },
     {
       "source": "sai-dir-backend-app-engines-ai",
+      "target": "sai-grp-backend-app-engines-ai-files-a-c-l-m-n-p-r-s-t",
+      "type": "dependency"
+    },
+    {
+      "source": "sai-dir-backend-app-engines-ai",
+      "target": "sai-grp-backend-app-engines-ai-files-v",
+      "type": "dependency"
+    },
+    {
+      "source": "sai-grp-backend-app-engines-ai-files-a-c-l-m-n-p-r-s-t",
       "target": "sai-file-backend-app-engines-ai-init-py",
       "type": "dependency"
     },
     {
-      "source": "sai-dir-backend-app-engines-ai",
+      "source": "sai-grp-backend-app-engines-ai-files-a-c-l-m-n-p-r-s-t",
       "target": "sai-file-backend-app-engines-ai-anomaly-detector-py",
       "type": "dependency"
     },
     {
-      "source": "sai-dir-backend-app-engines-ai",
+      "source": "sai-grp-backend-app-engines-ai-files-a-c-l-m-n-p-r-s-t",
+      "target": "sai-file-backend-app-engines-ai-attack-response-py",
+      "type": "dependency"
+    },
+    {
+      "source": "sai-grp-backend-app-engines-ai-files-a-c-l-m-n-p-r-s-t",
       "target": "sai-file-backend-app-engines-ai-chatbot-service-py",
       "type": "dependency"
     },
     {
-      "source": "sai-dir-backend-app-engines-ai",
+      "source": "sai-grp-backend-app-engines-ai-files-a-c-l-m-n-p-r-s-t",
       "target": "sai-file-backend-app-engines-ai-llm-client-py",
       "type": "dependency"
     },
     {
-      "source": "sai-dir-backend-app-engines-ai",
+      "source": "sai-grp-backend-app-engines-ai-files-a-c-l-m-n-p-r-s-t",
+      "target": "sai-file-backend-app-engines-ai-map-vision-report-py",
+      "type": "dependency"
+    },
+    {
+      "source": "sai-grp-backend-app-engines-ai-files-a-c-l-m-n-p-r-s-t",
       "target": "sai-file-backend-app-engines-ai-noc-copilot-py",
       "type": "dependency"
     },
     {
-      "source": "sai-dir-backend-app-engines-ai",
+      "source": "sai-grp-backend-app-engines-ai-files-a-c-l-m-n-p-r-s-t",
       "target": "sai-file-backend-app-engines-ai-noc-rag-py",
       "type": "dependency"
     },
     {
-      "source": "sai-dir-backend-app-engines-ai",
+      "source": "sai-grp-backend-app-engines-ai-files-a-c-l-m-n-p-r-s-t",
       "target": "sai-file-backend-app-engines-ai-product-knowledge-py",
       "type": "dependency"
     },
     {
-      "source": "sai-dir-backend-app-engines-ai",
+      "source": "sai-grp-backend-app-engines-ai-files-a-c-l-m-n-p-r-s-t",
       "target": "sai-file-backend-app-engines-ai-report-generator-py",
       "type": "dependency"
     },
     {
-      "source": "sai-dir-backend-app-engines-ai",
+      "source": "sai-grp-backend-app-engines-ai-files-a-c-l-m-n-p-r-s-t",
+      "target": "sai-file-backend-app-engines-ai-safety-policy-py",
+      "type": "dependency"
+    },
+    {
+      "source": "sai-grp-backend-app-engines-ai-files-a-c-l-m-n-p-r-s-t",
+      "target": "sai-file-backend-app-engines-ai-threat-guardian-py",
+      "type": "dependency"
+    },
+    {
+      "source": "sai-grp-backend-app-engines-ai-files-v",
       "target": "sai-file-backend-app-engines-ai-vision-client-py",
       "type": "dependency"
     },
@@ -6680,6 +9496,16 @@
     {
       "source": "sai-dir-backend-app-engines-alerts",
       "target": "sai-file-backend-app-engines-alerts-sms-py",
+      "type": "dependency"
+    },
+    {
+      "source": "sai-dir-backend-app-engines-backup",
+      "target": "sai-file-backend-app-engines-backup-init-py",
+      "type": "dependency"
+    },
+    {
+      "source": "sai-dir-backend-app-engines-backup",
+      "target": "sai-file-backend-app-engines-backup-platform-backup-py",
       "type": "dependency"
     },
     {
@@ -6824,6 +9650,11 @@
     },
     {
       "source": "sai-dir-backend-app-engines-remediation-playbooks",
+      "target": "sai-file-backend-app-engines-remediation-playbooks-suspected-attack-observe-yaml",
+      "type": "dependency"
+    },
+    {
+      "source": "sai-dir-backend-app-engines-remediation-playbooks",
       "target": "sai-file-backend-app-engines-remediation-playbooks-topology-gap-scan-yaml",
       "type": "dependency"
     },
@@ -6850,6 +9681,16 @@
     {
       "source": "sai-dir-backend-app-engines-reporting",
       "target": "sai-file-backend-app-engines-reporting-soc2-type2-report-py",
+      "type": "dependency"
+    },
+    {
+      "source": "sai-dir-backend-app-engines-reporting",
+      "target": "sai-file-backend-app-engines-reporting-topology-canvas-export-py",
+      "type": "dependency"
+    },
+    {
+      "source": "sai-dir-backend-app-engines-reporting",
+      "target": "sai-file-backend-app-engines-reporting-topology-export-layout-py",
       "type": "dependency"
     },
     {
@@ -7279,6 +10120,11 @@
     },
     {
       "source": "sai-dir-backend-app-workers",
+      "target": "sai-file-backend-app-workers-backup-tasks-py",
+      "type": "dependency"
+    },
+    {
+      "source": "sai-dir-backend-app-workers",
       "target": "sai-file-backend-app-workers-celery-app-py",
       "type": "dependency"
     },
@@ -7363,6 +10209,16 @@
       "type": "dependency"
     },
     {
+      "source": "sai-dir-backend-scripts",
+      "target": "sai-file-backend-scripts-test-topology-export-py",
+      "type": "dependency"
+    },
+    {
+      "source": "sai-dir-backend-scripts",
+      "target": "sai-file-backend-scripts-test-vision-report-py",
+      "type": "dependency"
+    },
+    {
       "source": "sai-dir-backend-tests",
       "target": "sai-grp-backend-tests-files-c",
       "type": "dependency"
@@ -7374,7 +10230,7 @@
     },
     {
       "source": "sai-dir-backend-tests",
-      "target": "sai-grp-backend-tests-files-t-13-20",
+      "target": "sai-grp-backend-tests-files-t-13-21",
       "type": "dependency"
     },
     {
@@ -7419,6 +10275,11 @@
     },
     {
       "source": "sai-grp-backend-tests-files-t-1-12",
+      "target": "sai-file-backend-tests-test-guardian-safety-py",
+      "type": "dependency"
+    },
+    {
+      "source": "sai-grp-backend-tests-files-t-1-12",
       "target": "sai-file-backend-tests-test-health-py",
       "type": "dependency"
     },
@@ -7443,47 +10304,47 @@
       "type": "dependency"
     },
     {
-      "source": "sai-grp-backend-tests-files-t-1-12",
+      "source": "sai-grp-backend-tests-files-t-13-21",
       "target": "sai-file-backend-tests-test-phase9b-enterprise-py",
       "type": "dependency"
     },
     {
-      "source": "sai-grp-backend-tests-files-t-13-20",
+      "source": "sai-grp-backend-tests-files-t-13-21",
       "target": "sai-file-backend-tests-test-rate-limit-p16-py",
       "type": "dependency"
     },
     {
-      "source": "sai-grp-backend-tests-files-t-13-20",
+      "source": "sai-grp-backend-tests-files-t-13-21",
       "target": "sai-file-backend-tests-test-remediation-yaml-py",
       "type": "dependency"
     },
     {
-      "source": "sai-grp-backend-tests-files-t-13-20",
+      "source": "sai-grp-backend-tests-files-t-13-21",
       "target": "sai-file-backend-tests-test-resolve-unknown-status-py",
       "type": "dependency"
     },
     {
-      "source": "sai-grp-backend-tests-files-t-13-20",
+      "source": "sai-grp-backend-tests-files-t-13-21",
       "target": "sai-file-backend-tests-test-ssh-config-restore-py",
       "type": "dependency"
     },
     {
-      "source": "sai-grp-backend-tests-files-t-13-20",
+      "source": "sai-grp-backend-tests-files-t-13-21",
       "target": "sai-file-backend-tests-test-stream-py",
       "type": "dependency"
     },
     {
-      "source": "sai-grp-backend-tests-files-t-13-20",
+      "source": "sai-grp-backend-tests-files-t-13-21",
       "target": "sai-file-backend-tests-test-traffic-honest-py",
       "type": "dependency"
     },
     {
-      "source": "sai-grp-backend-tests-files-t-13-20",
+      "source": "sai-grp-backend-tests-files-t-13-21",
       "target": "sai-file-backend-tests-test-wallboard-py",
       "type": "dependency"
     },
     {
-      "source": "sai-grp-backend-tests-files-t-13-20",
+      "source": "sai-grp-backend-tests-files-t-13-21",
       "target": "sai-file-backend-tests-test-zion-panels-py",
       "type": "dependency"
     },
@@ -7584,7 +10445,7 @@
     },
     {
       "source": "sai-dir-docs",
-      "target": "sai-grp-docs-files-p-13-17",
+      "target": "sai-grp-docs-files-p-13-21",
       "type": "dependency"
     },
     {
@@ -7610,6 +10471,11 @@
     {
       "source": "sai-grp-docs-files-a-b-c-f-l-m",
       "target": "sai-file-docs-feature-inventory-json",
+      "type": "dependency"
+    },
+    {
+      "source": "sai-grp-docs-files-a-b-c-f-l-m",
+      "target": "sai-file-docs-lan-mirror-md",
       "type": "dependency"
     },
     {
@@ -7683,27 +10549,47 @@
       "type": "dependency"
     },
     {
-      "source": "sai-grp-docs-files-p-13-17",
+      "source": "sai-grp-docs-files-p-13-21",
       "target": "sai-file-docs-phase-21-roadmap-md",
       "type": "dependency"
     },
     {
-      "source": "sai-grp-docs-files-p-13-17",
+      "source": "sai-grp-docs-files-p-13-21",
       "target": "sai-file-docs-phase-22-roadmap-md",
       "type": "dependency"
     },
     {
-      "source": "sai-grp-docs-files-p-13-17",
+      "source": "sai-grp-docs-files-p-13-21",
       "target": "sai-file-docs-phase-23-roadmap-md",
       "type": "dependency"
     },
     {
-      "source": "sai-grp-docs-files-p-13-17",
+      "source": "sai-grp-docs-files-p-13-21",
       "target": "sai-file-docs-phase-24-roadmap-md",
       "type": "dependency"
     },
     {
-      "source": "sai-grp-docs-files-p-13-17",
+      "source": "sai-grp-docs-files-p-13-21",
+      "target": "sai-file-docs-phase-25-roadmap-md",
+      "type": "dependency"
+    },
+    {
+      "source": "sai-grp-docs-files-p-13-21",
+      "target": "sai-file-docs-phase-26-roadmap-md",
+      "type": "dependency"
+    },
+    {
+      "source": "sai-grp-docs-files-p-13-21",
+      "target": "sai-file-docs-phase-27-roadmap-md",
+      "type": "dependency"
+    },
+    {
+      "source": "sai-grp-docs-files-p-13-21",
+      "target": "sai-file-docs-phase-28-backup-md",
+      "type": "dependency"
+    },
+    {
+      "source": "sai-grp-docs-files-p-13-21",
       "target": "sai-file-docs-phase-9-roadmap-md",
       "type": "dependency"
     },
@@ -7729,7 +10615,27 @@
     },
     {
       "source": "sai-grp-docs-files-s-u-z",
+      "target": "sai-file-docs-upgrade-v2-6-md",
+      "type": "dependency"
+    },
+    {
+      "source": "sai-grp-docs-files-s-u-z",
+      "target": "sai-file-docs-upgrade-v2-7-md",
+      "type": "dependency"
+    },
+    {
+      "source": "sai-grp-docs-files-s-u-z",
+      "target": "sai-file-docs-upgrade-v2-8-md",
+      "type": "dependency"
+    },
+    {
+      "source": "sai-grp-docs-files-s-u-z",
       "target": "sai-file-docs-zion-5-passos-md",
+      "type": "dependency"
+    },
+    {
+      "source": "sai-grp-docs-files-s-u-z",
+      "target": "sai-file-docs-zionvm-roadmap-md",
       "type": "dependency"
     },
     {
@@ -7865,6 +10771,11 @@
     {
       "source": "sai-grp-frontend-src-components-files-e-f-m-o-p-v-w-z",
       "target": "sai-file-frontend-src-components-errorboundary-tsx",
+      "type": "dependency"
+    },
+    {
+      "source": "sai-grp-frontend-src-components-files-e-f-m-o-p-v-w-z",
+      "target": "sai-file-frontend-src-components-fleetsparkline-tsx",
       "type": "dependency"
     },
     {
@@ -8024,87 +10935,112 @@
     },
     {
       "source": "sai-dir-frontend-src-pages",
-      "target": "sai-grp-frontend-src-pages-files-a-c-d-i-l-n-p-r-s-t",
+      "target": "sai-grp-frontend-src-pages-files-a-b-c-d-i-l-n-p-r-s",
       "type": "dependency"
     },
     {
       "source": "sai-dir-frontend-src-pages",
-      "target": "sai-grp-frontend-src-pages-files-u-w-z",
+      "target": "sai-grp-frontend-src-pages-files-t-u-w-z",
       "type": "dependency"
     },
     {
-      "source": "sai-grp-frontend-src-pages-files-a-c-d-i-l-n-p-r-s-t",
+      "source": "sai-grp-frontend-src-pages-files-a-b-c-d-i-l-n-p-r-s",
       "target": "sai-file-frontend-src-pages-alertspage-tsx",
       "type": "dependency"
     },
     {
-      "source": "sai-grp-frontend-src-pages-files-a-c-d-i-l-n-p-r-s-t",
+      "source": "sai-grp-frontend-src-pages-files-a-b-c-d-i-l-n-p-r-s",
+      "target": "sai-file-frontend-src-pages-backuppage-tsx",
+      "type": "dependency"
+    },
+    {
+      "source": "sai-grp-frontend-src-pages-files-a-b-c-d-i-l-n-p-r-s",
       "target": "sai-file-frontend-src-pages-changepasswordpage-tsx",
       "type": "dependency"
     },
     {
-      "source": "sai-grp-frontend-src-pages-files-a-c-d-i-l-n-p-r-s-t",
+      "source": "sai-grp-frontend-src-pages-files-a-b-c-d-i-l-n-p-r-s",
       "target": "sai-file-frontend-src-pages-chatbotpage-tsx",
       "type": "dependency"
     },
     {
-      "source": "sai-grp-frontend-src-pages-files-a-c-d-i-l-n-p-r-s-t",
+      "source": "sai-grp-frontend-src-pages-files-a-b-c-d-i-l-n-p-r-s",
       "target": "sai-file-frontend-src-pages-dashboard-tsx",
       "type": "dependency"
     },
     {
-      "source": "sai-grp-frontend-src-pages-files-a-c-d-i-l-n-p-r-s-t",
+      "source": "sai-grp-frontend-src-pages-files-a-b-c-d-i-l-n-p-r-s",
       "target": "sai-file-frontend-src-pages-infrastructurepage-tsx",
       "type": "dependency"
     },
     {
-      "source": "sai-grp-frontend-src-pages-files-a-c-d-i-l-n-p-r-s-t",
+      "source": "sai-grp-frontend-src-pages-files-a-b-c-d-i-l-n-p-r-s",
       "target": "sai-file-frontend-src-pages-loginpage-tsx",
       "type": "dependency"
     },
     {
-      "source": "sai-grp-frontend-src-pages-files-a-c-d-i-l-n-p-r-s-t",
+      "source": "sai-grp-frontend-src-pages-files-a-b-c-d-i-l-n-p-r-s",
       "target": "sai-file-frontend-src-pages-noccopilotpage-tsx",
       "type": "dependency"
     },
     {
-      "source": "sai-grp-frontend-src-pages-files-a-c-d-i-l-n-p-r-s-t",
+      "source": "sai-grp-frontend-src-pages-files-a-b-c-d-i-l-n-p-r-s",
       "target": "sai-file-frontend-src-pages-platformpage-tsx",
       "type": "dependency"
     },
     {
-      "source": "sai-grp-frontend-src-pages-files-a-c-d-i-l-n-p-r-s-t",
+      "source": "sai-grp-frontend-src-pages-files-a-b-c-d-i-l-n-p-r-s",
       "target": "sai-file-frontend-src-pages-publicwallboardpage-tsx",
       "type": "dependency"
     },
     {
-      "source": "sai-grp-frontend-src-pages-files-a-c-d-i-l-n-p-r-s-t",
+      "source": "sai-grp-frontend-src-pages-files-a-b-c-d-i-l-n-p-r-s",
       "target": "sai-file-frontend-src-pages-reportspage-tsx",
       "type": "dependency"
     },
     {
-      "source": "sai-grp-frontend-src-pages-files-a-c-d-i-l-n-p-r-s-t",
+      "source": "sai-grp-frontend-src-pages-files-a-b-c-d-i-l-n-p-r-s",
       "target": "sai-file-frontend-src-pages-scannerpage-tsx",
       "type": "dependency"
     },
     {
-      "source": "sai-grp-frontend-src-pages-files-a-c-d-i-l-n-p-r-s-t",
+      "source": "sai-grp-frontend-src-pages-files-t-u-w-z",
       "target": "sai-file-frontend-src-pages-topologymap-tsx",
       "type": "dependency"
     },
     {
-      "source": "sai-grp-frontend-src-pages-files-u-w-z",
+      "source": "sai-grp-frontend-src-pages-files-t-u-w-z",
       "target": "sai-file-frontend-src-pages-userspage-tsx",
       "type": "dependency"
     },
     {
-      "source": "sai-grp-frontend-src-pages-files-u-w-z",
+      "source": "sai-grp-frontend-src-pages-files-t-u-w-z",
       "target": "sai-file-frontend-src-pages-wallboardpage-tsx",
       "type": "dependency"
     },
     {
-      "source": "sai-grp-frontend-src-pages-files-u-w-z",
+      "source": "sai-grp-frontend-src-pages-files-t-u-w-z",
       "target": "sai-file-frontend-src-pages-zionpage-tsx",
+      "type": "dependency"
+    },
+    {
+      "source": "sai-grp-frontend-src-pages-files-t-u-w-z",
+      "target": "sai-file-frontend-src-pages-zionvmpage-tsx",
+      "type": "dependency"
+    },
+    {
+      "source": "sai-dir-frontend-src-styles",
+      "target": "sai-file-frontend-src-styles-backup-page-css",
+      "type": "dependency"
+    },
+    {
+      "source": "sai-dir-frontend-src-styles",
+      "target": "sai-file-frontend-src-styles-corp-platform-css",
+      "type": "dependency"
+    },
+    {
+      "source": "sai-dir-frontend-src-styles",
+      "target": "sai-file-frontend-src-styles-dash-customize-css",
       "type": "dependency"
     },
     {
@@ -8180,6 +11116,11 @@
     {
       "source": "sai-dir-scripts",
       "target": "sai-file-scripts-feature-inventory-py",
+      "type": "dependency"
+    },
+    {
+      "source": "sai-dir-scripts",
+      "target": "sai-file-scripts-open-lan-access-ps1",
       "type": "dependency"
     },
     {
