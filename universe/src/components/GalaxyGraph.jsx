@@ -27,6 +27,18 @@ function Scene({
     [laidOut]
   );
   const links = graph.links || [];
+  const visibleIds = useMemo(() => {
+    const ids = new Set();
+    laidOut.forEach((node) => {
+      if (activeCategories.has(node.category)) ids.add(node.id);
+    });
+    return ids;
+  }, [laidOut, activeCategories]);
+
+  const visibleLinks = useMemo(
+    () => links.filter((link) => visibleIds.has(link.source) && visibleIds.has(link.target)),
+    [links, visibleIds]
+  );
 
   const focusNode = useMemo(() => {
     if (!selectedId) return null;
@@ -35,8 +47,8 @@ function Scene({
   }, [selectedId, laidOut]);
 
   const neighborSet = useMemo(
-    () => (selectedId || hoveredId ? getNeighbors(selectedId || hoveredId, links) : null),
-    [selectedId, hoveredId, links]
+    () => (selectedId || hoveredId ? getNeighbors(selectedId || hoveredId, visibleLinks) : null),
+    [selectedId, hoveredId, visibleLinks]
   );
 
   const hasFocus = Boolean(selectedId || hoveredId);
@@ -54,7 +66,7 @@ function Scene({
       <CameraFocus target={focusNode} offset={[0, 4, 20]} />
 
       {showLinks &&
-        links.map((link, i) => {
+        visibleLinks.map((link, i) => {
           const connected = neighborSet?.has(link.source) && neighborSet.has(link.target);
           const active = Boolean(showParticles && connected);
           const dimmed = hasFocus && !connected;

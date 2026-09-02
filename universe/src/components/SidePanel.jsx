@@ -25,102 +25,109 @@ export function TopBar({ graph }) {
   );
 }
 
-export function SidePanel({ node, graph, onClose, onViewCode, onReset }) {
-  if (!node) {
-    return (
-      <aside className="side-panel">
-        <div className="panel-section">
-          <h3 className="panel-title">Nó Selecionado</h3>
-          <p className="panel-empty-text">
-            Clique em uma esfera iluminada para explorar módulos, arquivos e funções do projeto.
-          </p>
-        </div>
-        <div className="panel-section">
-          <h4>Ações</h4>
-          <button type="button" className="action-btn" onClick={onReset}>Reiniciar Vista</button>
-        </div>
-        <div className="panel-hints">
-          <p>Clique · selecionar nó</p>
-          <p>Duplo clique · abrir código</p>
-          <p>Scroll · zoom · arraste · rotacionar</p>
-        </div>
-      </aside>
-    );
-  }
-
-  const connections = countConnections(node.id, graph.links);
-  const dependencies = countDependencies(node.id, graph.links);
-  const childCount = graph.links.filter((l) => l.source === node.id).length;
-
-  return (
-    <aside className="side-panel active">
-      <button type="button" className="panel-close" onClick={onClose} aria-label="Fechar">×</button>
-
+export function SidePanel({ open, onClosePanel, node, graph, onClose, onViewCode, onReset }) {
+  const content = !node ? (
+    <>
       <div className="panel-section">
         <h3 className="panel-title">Nó Selecionado</h3>
-        <div className="panel-node-header">
-          <span className="status-dot" style={{ background: node.color, boxShadow: `0 0 10px ${node.color}` }} />
-          <div>
-            <h2>{node.label}</h2>
-            <span className="panel-type">{LAYER_LABEL[node.layer] || node.layer}</span>
-          </div>
-        </div>
+        <p className="panel-empty-text">
+          Clique em uma esfera iluminada para explorar módulos, arquivos e funções do projeto.
+        </p>
       </div>
-
-      <div className="panel-section">
-        <h4>Descrição</h4>
-        <p className="panel-desc">{node.description || 'Componente do grafo de dependências do projeto.'}</p>
-      </div>
-
-      <div className="panel-section">
-        <h4>Informações</h4>
-        <div className="info-grid">
-          <div className="info-item">
-            <span>Status</span>
-            <strong className="status-active">● Ativo</strong>
-          </div>
-          <div className="info-item">
-            <span>Conexões</span>
-            <strong>{connections}</strong>
-          </div>
-          <div className="info-item">
-            <span>Dependências</span>
-            <strong>{dependencies}</strong>
-          </div>
-          <div className="info-item">
-            <span>Filhos</span>
-            <strong>{childCount}</strong>
-          </div>
-          <div className="info-item">
-            <span>Categoria</span>
-            <strong style={{ color: node.color }}>{node.categoryLabel}</strong>
-          </div>
-          {node.file && (
-            <div className="info-item full">
-              <span>Arquivo</span>
-              <code>{node.file}</code>
-            </div>
-          )}
-        </div>
-      </div>
-
       <div className="panel-section">
         <h4>Ações</h4>
-        <button type="button" className="action-btn primary" onClick={() => onViewCode(node)}>
-          Ver Código
-        </button>
         <button type="button" className="action-btn" onClick={onReset}>Reiniciar Vista</button>
-        {graph.repoUrl && (
-          <a href={graph.repoUrl} target="_blank" rel="noreferrer" className="action-btn ghost">
-            Ver Repositório
-          </a>
-        )}
-        {graph.demoUrl && (
-          <a href={graph.demoUrl} target="_blank" rel="noreferrer" className="action-btn ghost">
-            Abrir Demo
-          </a>
-        )}
       </div>
+      <div className="panel-hints">
+        <p>Clique · selecionar nó</p>
+        <p>Duplo clique · abrir código</p>
+        <p>Scroll · zoom · arraste · rotacionar</p>
+      </div>
+    </>
+  ) : (() => {
+    const connections = countConnections(node.id, graph.links);
+    const dependencies = countDependencies(node.id, graph.links);
+    const childCount = graph.links.filter((l) => l.source === node.id).length;
+
+    return (
+      <>
+        <button type="button" className="panel-close" onClick={onClose} aria-label="Fechar seleção">×</button>
+
+        <div className="panel-section">
+          <h3 className="panel-title">Nó Selecionado</h3>
+          <div className="panel-node-header">
+            <span className="status-dot" style={{ background: node.color, boxShadow: `0 0 10px ${node.color}` }} />
+            <div>
+              <h2>{node.label}</h2>
+              <span className="panel-type">{LAYER_LABEL[node.layer] || node.layer}</span>
+            </div>
+          </div>
+        </div>
+
+        <div className="panel-section">
+          <h4>Descrição</h4>
+          <p className="panel-desc">{node.description || 'Componente do grafo de dependências do projeto.'}</p>
+        </div>
+
+        <div className="panel-section">
+          <h4>Informações</h4>
+          <div className="info-grid">
+            <div className="info-item">
+              <span>Status</span>
+              <strong className="status-active">● Ativo</strong>
+            </div>
+            <div className="info-item">
+              <span>Conexões</span>
+              <strong>{connections}</strong>
+            </div>
+            <div className="info-item">
+              <span>Dependências</span>
+              <strong>{dependencies}</strong>
+            </div>
+            <div className="info-item">
+              <span>Filhos</span>
+              <strong>{childCount}</strong>
+            </div>
+            <div className="info-item">
+              <span>Categoria</span>
+              <strong style={{ color: node.color }}>{node.categoryLabel}</strong>
+            </div>
+            {node.file && (
+              <div className="info-item full">
+                <span>Arquivo</span>
+                <code>{node.file}</code>
+              </div>
+            )}
+          </div>
+        </div>
+
+        <div className="panel-section">
+          <h4>Ações</h4>
+          <button type="button" className="action-btn primary" onClick={() => onViewCode(node)}>
+            Ver Código
+          </button>
+          <button type="button" className="action-btn" onClick={onReset}>Reiniciar Vista</button>
+          {graph.repoUrl && (
+            <a href={graph.repoUrl} target="_blank" rel="noreferrer" className="action-btn ghost">
+              Ver Repositório
+            </a>
+          )}
+          {graph.demoUrl && (
+            <a href={graph.demoUrl} target="_blank" rel="noreferrer" className="action-btn ghost">
+              Abrir Demo
+            </a>
+          )}
+        </div>
+      </>
+    );
+  })();
+
+  return (
+    <aside className={`side-panel ${open ? 'open' : ''} ${node ? 'active' : ''}`}>
+      <button type="button" className="panel-collapse" onClick={onClosePanel} aria-label="Recolher painel">
+        ›
+      </button>
+      {content}
     </aside>
   );
 }
@@ -143,6 +150,8 @@ function Toggle({ checked, onChange, label }) {
 }
 
 export function LeftSidebar({
+  open,
+  onClose,
   graph,
   activeCategories,
   onToggleCategory,
@@ -164,7 +173,10 @@ export function LeftSidebar({
   const cats = graph.categories || {};
 
   return (
-    <aside className="left-sidebar">
+    <aside className={`left-sidebar ${open ? 'open' : ''}`}>
+      <button type="button" className="panel-collapse panel-collapse-left" onClick={onClose} aria-label="Recolher configurações">
+        ‹
+      </button>
       <header className="sidebar-header">
         <a href="../index.html" className="back-link">← Árvore 2D</a>
         <p className="sidebar-kicker">Tree of Knowledge</p>

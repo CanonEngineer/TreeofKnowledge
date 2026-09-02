@@ -1080,7 +1080,7 @@
       "category": "other",
       "categoryLabel": "Outros",
       "color": "#64748b",
-      "size": 0.85,
+      "size": 0.95,
       "file": ".cursorignore",
       "description": "Código-fonte: `.cursorignore`"
     },
@@ -1092,7 +1092,7 @@
       "category": "other",
       "categoryLabel": "Outros",
       "color": "#64748b",
-      "size": 0.85,
+      "size": 0.95,
       "file": ".env.example",
       "description": "Código-fonte: `.env.example`"
     },
@@ -1104,7 +1104,7 @@
       "category": "other",
       "categoryLabel": "Outros",
       "color": "#64748b",
-      "size": 0.85,
+      "size": 0.95,
       "file": ".gitignore",
       "description": "Código-fonte: `.gitignore`"
     },
@@ -1116,7 +1116,7 @@
       "category": "other",
       "categoryLabel": "Outros",
       "color": "#64748b",
-      "size": 0.85,
+      "size": 0.95,
       "file": "CHANGELOG.md",
       "description": "Código-fonte: `CHANGELOG.md`"
     },
@@ -1128,7 +1128,7 @@
       "category": "other",
       "categoryLabel": "Outros",
       "color": "#64748b",
-      "size": 0.85,
+      "size": 0.95,
       "file": "docker-compose.dev.yml",
       "description": "Código-fonte: `docker-compose.dev.yml`"
     },
@@ -1140,7 +1140,7 @@
       "category": "other",
       "categoryLabel": "Outros",
       "color": "#64748b",
-      "size": 0.85,
+      "size": 0.95,
       "file": "docker-compose.enterprise.yml",
       "description": "Código-fonte: `docker-compose.enterprise.yml`"
     },
@@ -1152,7 +1152,7 @@
       "category": "other",
       "categoryLabel": "Outros",
       "color": "#64748b",
-      "size": 0.85,
+      "size": 0.95,
       "file": "docker-compose.ha.yml",
       "description": "Código-fonte: `docker-compose.ha.yml`"
     },
@@ -1164,7 +1164,7 @@
       "category": "other",
       "categoryLabel": "Outros",
       "color": "#64748b",
-      "size": 0.85,
+      "size": 0.95,
       "file": "docker-compose.multiregion.yml",
       "description": "Código-fonte: `docker-compose.multiregion.yml`"
     },
@@ -1176,7 +1176,7 @@
       "category": "other",
       "categoryLabel": "Outros",
       "color": "#64748b",
-      "size": 0.85,
+      "size": 0.95,
       "file": "docker-compose.observability.yml",
       "description": "Código-fonte: `docker-compose.observability.yml`"
     },
@@ -1188,7 +1188,7 @@
       "category": "other",
       "categoryLabel": "Outros",
       "color": "#64748b",
-      "size": 0.85,
+      "size": 0.95,
       "file": "docker-compose.payments.yml",
       "description": "Código-fonte: `docker-compose.payments.yml`"
     },
@@ -1200,7 +1200,7 @@
       "category": "other",
       "categoryLabel": "Outros",
       "color": "#64748b",
-      "size": 0.85,
+      "size": 0.95,
       "file": "docker-compose.port8800.yml",
       "description": "Código-fonte: `docker-compose.port8800.yml`"
     },
@@ -1212,7 +1212,7 @@
       "category": "other",
       "categoryLabel": "Outros",
       "color": "#64748b",
-      "size": 0.85,
+      "size": 0.95,
       "file": "docker-compose.replica.yml",
       "description": "Código-fonte: `docker-compose.replica.yml`"
     },
@@ -1224,7 +1224,7 @@
       "category": "other",
       "categoryLabel": "Outros",
       "color": "#64748b",
-      "size": 0.85,
+      "size": 0.95,
       "file": "docker-compose.tracing.yml",
       "description": "Código-fonte: `docker-compose.tracing.yml`"
     },
@@ -1236,7 +1236,7 @@
       "category": "other",
       "categoryLabel": "Outros",
       "color": "#64748b",
-      "size": 0.85,
+      "size": 0.95,
       "file": "docker-compose.yml",
       "description": "Código-fonte: `docker-compose.yml`"
     },
@@ -1248,7 +1248,7 @@
       "category": "other",
       "categoryLabel": "Outros",
       "color": "#64748b",
-      "size": 0.85,
+      "size": 0.95,
       "file": "docker-compose.zerotrust.yml",
       "description": "Código-fonte: `docker-compose.zerotrust.yml`"
     },
@@ -1260,7 +1260,7 @@
       "category": "other",
       "categoryLabel": "Outros",
       "color": "#64748b",
-      "size": 0.85,
+      "size": 0.95,
       "file": ".github/workflows/ci.yml",
       "description": "Código-fonte: `.github/workflows/ci.yml`"
     },
@@ -1272,7 +1272,7 @@
       "category": "frontend",
       "categoryLabel": "Frontend",
       "color": "#eab308",
-      "size": 0.85,
+      "size": 0.95,
       "file": ".work/TreeofKnowledge/index.html",
       "description": "Código-fonte: `.work/TreeofKnowledge/index.html`"
     },
@@ -1284,7 +1284,7 @@
       "category": "frontend",
       "categoryLabel": "Frontend",
       "color": "#eab308",
-      "size": 0.85,
+      "size": 0.95,
       "file": ".work/TreeofKnowledge/node.html",
       "description": "Código-fonte: `.work/TreeofKnowledge/node.html`"
     },
@@ -1296,7 +1296,7 @@
       "category": "other",
       "categoryLabel": "Outros",
       "color": "#64748b",
-      "size": 0.85,
+      "size": 0.95,
       "file": ".work/TreeofKnowledge/README.md",
       "description": "Código-fonte: `.work/TreeofKnowledge/README.md`"
     },
@@ -1308,7 +1308,7 @@
       "category": "frontend",
       "categoryLabel": "Frontend",
       "color": "#eab308",
-      "size": 0.85,
+      "size": 0.95,
       "file": ".work/TreeofKnowledge/css/style.css",
       "description": "Código-fonte: `.work/TreeofKnowledge/css/style.css`"
     },
@@ -1320,7 +1320,7 @@
       "category": "frontend",
       "categoryLabel": "Frontend",
       "color": "#eab308",
-      "size": 0.85,
+      "size": 0.95,
       "file": ".work/TreeofKnowledge/galaxy/index.html",
       "description": "Código-fonte: `.work/TreeofKnowledge/galaxy/index.html`"
     },
@@ -1332,7 +1332,7 @@
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
-      "size": 0.85,
+      "size": 0.95,
       "file": ".work/TreeofKnowledge/galaxy/assets/index-BrK_c7UR.js",
       "description": "Código-fonte: `.work/TreeofKnowledge/galaxy/assets/index-BrK_c7UR.js`"
     },
@@ -1344,7 +1344,7 @@
       "category": "frontend",
       "categoryLabel": "Frontend",
       "color": "#eab308",
-      "size": 0.85,
+      "size": 0.95,
       "file": ".work/TreeofKnowledge/galaxy/assets/index-CnoZN3tG.css",
       "description": "Código-fonte: `.work/TreeofKnowledge/galaxy/assets/index-CnoZN3tG.css`"
     },
@@ -1392,7 +1392,7 @@
       "category": "other",
       "categoryLabel": "Outros",
       "color": "#64748b",
-      "size": 0.85,
+      "size": 0.95,
       "file": ".work/TreeofKnowledge/galaxy/graphs/admin-user-management.json",
       "description": "Código-fonte: `.work/TreeofKnowledge/galaxy/graphs/admin-user-management.json`"
     },
@@ -1404,7 +1404,7 @@
       "category": "other",
       "categoryLabel": "Outros",
       "color": "#64748b",
-      "size": 0.85,
+      "size": 0.95,
       "file": ".work/TreeofKnowledge/galaxy/graphs/anki-univesp.json",
       "description": "Código-fonte: `.work/TreeofKnowledge/galaxy/graphs/anki-univesp.json`"
     },
@@ -1416,7 +1416,7 @@
       "category": "frontend",
       "categoryLabel": "Frontend",
       "color": "#eab308",
-      "size": 0.85,
+      "size": 0.95,
       "file": ".work/TreeofKnowledge/galaxy/graphs/app-mosquito.json",
       "description": "Código-fonte: `.work/TreeofKnowledge/galaxy/graphs/app-mosquito.json`"
     },
@@ -1428,7 +1428,7 @@
       "category": "other",
       "categoryLabel": "Outros",
       "color": "#64748b",
-      "size": 0.85,
+      "size": 0.95,
       "file": ".work/TreeofKnowledge/galaxy/graphs/canon-engineer-github-io.json",
       "description": "Código-fonte: `.work/TreeofKnowledge/galaxy/graphs/canon-engineer-github-io.json`"
     },
@@ -1440,7 +1440,7 @@
       "category": "other",
       "categoryLabel": "Outros",
       "color": "#64748b",
-      "size": 0.85,
+      "size": 0.95,
       "file": ".work/TreeofKnowledge/galaxy/graphs/canon-python-ecommerce.json",
       "description": "Código-fonte: `.work/TreeofKnowledge/galaxy/graphs/canon-python-ecommerce.json`"
     },
@@ -1452,7 +1452,7 @@
       "category": "other",
       "categoryLabel": "Outros",
       "color": "#64748b",
-      "size": 0.85,
+      "size": 0.95,
       "file": ".work/TreeofKnowledge/galaxy/graphs/canon-sync-engine.json",
       "description": "Código-fonte: `.work/TreeofKnowledge/galaxy/graphs/canon-sync-engine.json`"
     },
@@ -1464,7 +1464,7 @@
       "category": "other",
       "categoryLabel": "Outros",
       "color": "#64748b",
-      "size": 0.85,
+      "size": 0.95,
       "file": ".work/TreeofKnowledge/galaxy/graphs/course-python-2023.json",
       "description": "Código-fonte: `.work/TreeofKnowledge/galaxy/graphs/course-python-2023.json`"
     },
@@ -1476,7 +1476,7 @@
       "category": "other",
       "categoryLabel": "Outros",
       "color": "#64748b",
-      "size": 0.85,
+      "size": 0.95,
       "file": ".work/TreeofKnowledge/galaxy/graphs/customize-veyon.json",
       "description": "Código-fonte: `.work/TreeofKnowledge/galaxy/graphs/customize-veyon.json`"
     },
@@ -1488,7 +1488,7 @@
       "category": "other",
       "categoryLabel": "Outros",
       "color": "#64748b",
-      "size": 0.85,
+      "size": 0.95,
       "file": ".work/TreeofKnowledge/galaxy/graphs/danger-zone.json",
       "description": "Código-fonte: `.work/TreeofKnowledge/galaxy/graphs/danger-zone.json`"
     },
@@ -1500,7 +1500,7 @@
       "category": "other",
       "categoryLabel": "Outros",
       "color": "#64748b",
-      "size": 0.85,
+      "size": 0.95,
       "file": ".work/TreeofKnowledge/galaxy/graphs/eagle-offensive-platform.json",
       "description": "Código-fonte: `.work/TreeofKnowledge/galaxy/graphs/eagle-offensive-platform.json`"
     },
@@ -1512,7 +1512,7 @@
       "category": "other",
       "categoryLabel": "Outros",
       "color": "#64748b",
-      "size": 0.85,
+      "size": 0.95,
       "file": ".work/TreeofKnowledge/galaxy/graphs/food-online-django.json",
       "description": "Código-fonte: `.work/TreeofKnowledge/galaxy/graphs/food-online-django.json`"
     },
@@ -1524,7 +1524,7 @@
       "category": "other",
       "categoryLabel": "Outros",
       "color": "#64748b",
-      "size": 0.85,
+      "size": 0.95,
       "file": ".work/TreeofKnowledge/galaxy/graphs/html-website.json",
       "description": "Código-fonte: `.work/TreeofKnowledge/galaxy/graphs/html-website.json`"
     },
@@ -1536,7 +1536,7 @@
       "category": "other",
       "categoryLabel": "Outros",
       "color": "#64748b",
-      "size": 0.85,
+      "size": 0.95,
       "file": ".work/TreeofKnowledge/galaxy/graphs/hyperware.json",
       "description": "Código-fonte: `.work/TreeofKnowledge/galaxy/graphs/hyperware.json`"
     },
@@ -1548,7 +1548,7 @@
       "category": "scripts",
       "categoryLabel": "Scripts",
       "color": "#64748b",
-      "size": 0.85,
+      "size": 0.95,
       "file": ".work/TreeofKnowledge/galaxy/graphs/javascript-calculator.json",
       "description": "Código-fonte: `.work/TreeofKnowledge/galaxy/graphs/javascript-calculator.json`"
     },
@@ -1560,7 +1560,7 @@
       "category": "scripts",
       "categoryLabel": "Scripts",
       "color": "#64748b",
-      "size": 0.85,
+      "size": 0.95,
       "file": ".work/TreeofKnowledge/galaxy/graphs/javascript-dropbox.json",
       "description": "Código-fonte: `.work/TreeofKnowledge/galaxy/graphs/javascript-dropbox.json`"
     },
@@ -1572,7 +1572,7 @@
       "category": "scripts",
       "categoryLabel": "Scripts",
       "color": "#64748b",
-      "size": 0.85,
+      "size": 0.95,
       "file": ".work/TreeofKnowledge/galaxy/graphs/javascript-restaurant.json",
       "description": "Código-fonte: `.work/TreeofKnowledge/galaxy/graphs/javascript-restaurant.json`"
     },
@@ -1584,7 +1584,7 @@
       "category": "scripts",
       "categoryLabel": "Scripts",
       "color": "#64748b",
-      "size": 0.85,
+      "size": 0.95,
       "file": ".work/TreeofKnowledge/galaxy/graphs/javascript-restful-api.json",
       "description": "Código-fonte: `.work/TreeofKnowledge/galaxy/graphs/javascript-restful-api.json`"
     },
@@ -1596,7 +1596,7 @@
       "category": "scripts",
       "categoryLabel": "Scripts",
       "color": "#64748b",
-      "size": 0.85,
+      "size": 0.95,
       "file": ".work/TreeofKnowledge/galaxy/graphs/javascript-users.json",
       "description": "Código-fonte: `.work/TreeofKnowledge/galaxy/graphs/javascript-users.json`"
     },
@@ -1608,7 +1608,7 @@
       "category": "scripts",
       "categoryLabel": "Scripts",
       "color": "#64748b",
-      "size": 0.85,
+      "size": 0.95,
       "file": ".work/TreeofKnowledge/galaxy/graphs/javascript-whatsapp.json",
       "description": "Código-fonte: `.work/TreeofKnowledge/galaxy/graphs/javascript-whatsapp.json`"
     },
@@ -1620,7 +1620,7 @@
       "category": "other",
       "categoryLabel": "Outros",
       "color": "#64748b",
-      "size": 0.85,
+      "size": 0.95,
       "file": ".work/TreeofKnowledge/galaxy/graphs/neighborhood-boys.json",
       "description": "Código-fonte: `.work/TreeofKnowledge/galaxy/graphs/neighborhood-boys.json`"
     },
@@ -1632,7 +1632,7 @@
       "category": "other",
       "categoryLabel": "Outros",
       "color": "#64748b",
-      "size": 0.85,
+      "size": 0.95,
       "file": ".work/TreeofKnowledge/galaxy/graphs/php-dao.json",
       "description": "Código-fonte: `.work/TreeofKnowledge/galaxy/graphs/php-dao.json`"
     },
@@ -1644,7 +1644,7 @@
       "category": "network",
       "categoryLabel": "Rede / Scan",
       "color": "#22d3ee",
-      "size": 0.85,
+      "size": 0.95,
       "file": ".work/TreeofKnowledge/galaxy/graphs/professional-scanner.json",
       "description": "Código-fonte: `.work/TreeofKnowledge/galaxy/graphs/professional-scanner.json`"
     },
@@ -1656,7 +1656,7 @@
       "category": "other",
       "categoryLabel": "Outros",
       "color": "#64748b",
-      "size": 0.85,
+      "size": 0.95,
       "file": ".work/TreeofKnowledge/galaxy/graphs/project-helpdesk.json",
       "description": "Código-fonte: `.work/TreeofKnowledge/galaxy/graphs/project-helpdesk.json`"
     },
@@ -1668,7 +1668,7 @@
       "category": "other",
       "categoryLabel": "Outros",
       "color": "#64748b",
-      "size": 0.85,
+      "size": 0.95,
       "file": ".work/TreeofKnowledge/galaxy/graphs/python-employee-list.json",
       "description": "Código-fonte: `.work/TreeofKnowledge/galaxy/graphs/python-employee-list.json`"
     },
@@ -1680,7 +1680,7 @@
       "category": "other",
       "categoryLabel": "Outros",
       "color": "#64748b",
-      "size": 0.85,
+      "size": 0.95,
       "file": ".work/TreeofKnowledge/galaxy/graphs/python-ii-ecommerce.json",
       "description": "Código-fonte: `.work/TreeofKnowledge/galaxy/graphs/python-ii-ecommerce.json`"
     },
@@ -1692,7 +1692,7 @@
       "category": "other",
       "categoryLabel": "Outros",
       "color": "#64748b",
-      "size": 0.85,
+      "size": 0.95,
       "file": ".work/TreeofKnowledge/galaxy/graphs/search-univesp.json",
       "description": "Código-fonte: `.work/TreeofKnowledge/galaxy/graphs/search-univesp.json`"
     },
@@ -1704,7 +1704,7 @@
       "category": "other",
       "categoryLabel": "Outros",
       "color": "#64748b",
-      "size": 0.85,
+      "size": 0.95,
       "file": ".work/TreeofKnowledge/galaxy/graphs/sentinelai.json",
       "description": "Código-fonte: `.work/TreeofKnowledge/galaxy/graphs/sentinelai.json`"
     },
@@ -1716,7 +1716,7 @@
       "category": "other",
       "categoryLabel": "Outros",
       "color": "#64748b",
-      "size": 0.85,
+      "size": 0.95,
       "file": ".work/TreeofKnowledge/galaxy/graphs/smartferrari-iot.json",
       "description": "Código-fonte: `.work/TreeofKnowledge/galaxy/graphs/smartferrari-iot.json`"
     },
@@ -1728,7 +1728,7 @@
       "category": "other",
       "categoryLabel": "Outros",
       "color": "#64748b",
-      "size": 0.85,
+      "size": 0.95,
       "file": ".work/TreeofKnowledge/galaxy/graphs/smarthome-iot.json",
       "description": "Código-fonte: `.work/TreeofKnowledge/galaxy/graphs/smarthome-iot.json`"
     },
@@ -1740,7 +1740,7 @@
       "category": "other",
       "categoryLabel": "Outros",
       "color": "#64748b",
-      "size": 0.85,
+      "size": 0.95,
       "file": ".work/TreeofKnowledge/galaxy/graphs/todo-app.json",
       "description": "Código-fonte: `.work/TreeofKnowledge/galaxy/graphs/todo-app.json`"
     },
@@ -1752,7 +1752,7 @@
       "category": "other",
       "categoryLabel": "Outros",
       "color": "#64748b",
-      "size": 0.85,
+      "size": 0.95,
       "file": ".work/TreeofKnowledge/galaxy/graphs/user-management.json",
       "description": "Código-fonte: `.work/TreeofKnowledge/galaxy/graphs/user-management.json`"
     },
@@ -1764,7 +1764,7 @@
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
-      "size": 0.85,
+      "size": 0.95,
       "file": ".work/TreeofKnowledge/js/app.js",
       "description": "Código-fonte: `.work/TreeofKnowledge/js/app.js`"
     },
@@ -1776,7 +1776,7 @@
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
-      "size": 0.85,
+      "size": 0.95,
       "file": ".work/TreeofKnowledge/js/cimed-code-highlight.js",
       "description": "Código-fonte: `.work/TreeofKnowledge/js/cimed-code-highlight.js`"
     },
@@ -1788,7 +1788,7 @@
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
-      "size": 0.85,
+      "size": 0.95,
       "file": ".work/TreeofKnowledge/js/config.js",
       "description": "Código-fonte: `.work/TreeofKnowledge/js/config.js`"
     },
@@ -1800,7 +1800,7 @@
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
-      "size": 0.85,
+      "size": 0.95,
       "file": ".work/TreeofKnowledge/js/header.js",
       "description": "Código-fonte: `.work/TreeofKnowledge/js/header.js`"
     },
@@ -1812,7 +1812,7 @@
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
-      "size": 0.85,
+      "size": 0.95,
       "file": ".work/TreeofKnowledge/js/node-page.js",
       "description": "Código-fonte: `.work/TreeofKnowledge/js/node-page.js`"
     },
@@ -1824,7 +1824,7 @@
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
-      "size": 0.85,
+      "size": 0.95,
       "file": ".work/TreeofKnowledge/js/search.js",
       "description": "Código-fonte: `.work/TreeofKnowledge/js/search.js`"
     },
@@ -1836,7 +1836,7 @@
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
-      "size": 0.85,
+      "size": 0.95,
       "file": ".work/TreeofKnowledge/js/tree-renderer.js",
       "description": "Código-fonte: `.work/TreeofKnowledge/js/tree-renderer.js`"
     },
@@ -1884,7 +1884,7 @@
       "category": "scripts",
       "categoryLabel": "Scripts",
       "color": "#64748b",
-      "size": 0.85,
+      "size": 0.95,
       "file": ".work/TreeofKnowledge/scripts/adminusermanagement-project.json",
       "description": "Código-fonte: `.work/TreeofKnowledge/scripts/adminusermanagement-project.json`"
     },
@@ -1896,7 +1896,7 @@
       "category": "frontend",
       "categoryLabel": "Frontend",
       "color": "#eab308",
-      "size": 0.85,
+      "size": 0.95,
       "file": ".work/TreeofKnowledge/scripts/build-galaxy.ps1",
       "description": "Código-fonte: `.work/TreeofKnowledge/scripts/build-galaxy.ps1`"
     },
@@ -1908,7 +1908,7 @@
       "category": "frontend",
       "categoryLabel": "Frontend",
       "color": "#eab308",
-      "size": 0.85,
+      "size": 0.95,
       "file": ".work/TreeofKnowledge/scripts/build-projects.py",
       "description": "Código-fonte: `.work/TreeofKnowledge/scripts/build-projects.py`"
     },
@@ -1920,7 +1920,7 @@
       "category": "scripts",
       "categoryLabel": "Scripts",
       "color": "#64748b",
-      "size": 0.85,
+      "size": 0.95,
       "file": ".work/TreeofKnowledge/scripts/canonsyncengine-project.json",
       "description": "Código-fonte: `.work/TreeofKnowledge/scripts/canonsyncengine-project.json`"
     },
@@ -1932,7 +1932,7 @@
       "category": "scripts",
       "categoryLabel": "Scripts",
       "color": "#64748b",
-      "size": 0.85,
+      "size": 0.95,
       "file": ".work/TreeofKnowledge/scripts/check-overlaps.py",
       "description": "Código-fonte: `.work/TreeofKnowledge/scripts/check-overlaps.py`"
     },
@@ -1944,7 +1944,7 @@
       "category": "scripts",
       "categoryLabel": "Scripts",
       "color": "#64748b",
-      "size": 0.85,
+      "size": 0.95,
       "file": ".work/TreeofKnowledge/scripts/cpe-project.json",
       "description": "Código-fonte: `.work/TreeofKnowledge/scripts/cpe-project.json`"
     },
@@ -1956,7 +1956,7 @@
       "category": "scripts",
       "categoryLabel": "Scripts",
       "color": "#64748b",
-      "size": 0.85,
+      "size": 0.95,
       "file": ".work/TreeofKnowledge/scripts/dangerzone-project.json",
       "description": "Código-fonte: `.work/TreeofKnowledge/scripts/dangerzone-project.json`"
     },
@@ -1968,7 +1968,7 @@
       "category": "scripts",
       "categoryLabel": "Scripts",
       "color": "#64748b",
-      "size": 0.85,
+      "size": 0.95,
       "file": ".work/TreeofKnowledge/scripts/dropbox-project.json",
       "description": "Código-fonte: `.work/TreeofKnowledge/scripts/dropbox-project.json`"
     },
@@ -1980,7 +1980,7 @@
       "category": "scripts",
       "categoryLabel": "Scripts",
       "color": "#64748b",
-      "size": 0.85,
+      "size": 0.95,
       "file": ".work/TreeofKnowledge/scripts/eagle-project.json",
       "description": "Código-fonte: `.work/TreeofKnowledge/scripts/eagle-project.json`"
     },
@@ -1992,7 +1992,7 @@
       "category": "scripts",
       "categoryLabel": "Scripts",
       "color": "#64748b",
-      "size": 0.85,
+      "size": 0.95,
       "file": ".work/TreeofKnowledge/scripts/export-universe-graph.py",
       "description": "Código-fonte: `.work/TreeofKnowledge/scripts/export-universe-graph.py`"
     },
@@ -2004,7 +2004,7 @@
       "category": "scripts",
       "categoryLabel": "Scripts",
       "color": "#64748b",
-      "size": 0.85,
+      "size": 0.95,
       "file": ".work/TreeofKnowledge/scripts/fill-full-code.py",
       "description": "Código-fonte: `.work/TreeofKnowledge/scripts/fill-full-code.py`"
     },
@@ -2016,7 +2016,7 @@
       "category": "scripts",
       "categoryLabel": "Scripts",
       "color": "#64748b",
-      "size": 0.85,
+      "size": 0.95,
       "file": ".work/TreeofKnowledge/scripts/gen-adminusermanagement.py",
       "description": "Código-fonte: `.work/TreeofKnowledge/scripts/gen-adminusermanagement.py`"
     },
@@ -2028,7 +2028,7 @@
       "category": "scripts",
       "categoryLabel": "Scripts",
       "color": "#64748b",
-      "size": 0.85,
+      "size": 0.95,
       "file": ".work/TreeofKnowledge/scripts/gen-dangerzone.py",
       "description": "Código-fonte: `.work/TreeofKnowledge/scripts/gen-dangerzone.py`"
     },
@@ -2040,7 +2040,7 @@
       "category": "scripts",
       "categoryLabel": "Scripts",
       "color": "#64748b",
-      "size": 0.85,
+      "size": 0.95,
       "file": ".work/TreeofKnowledge/scripts/gen-dropbox.py",
       "description": "Código-fonte: `.work/TreeofKnowledge/scripts/gen-dropbox.py`"
     },
@@ -2052,7 +2052,7 @@
       "category": "scripts",
       "categoryLabel": "Scripts",
       "color": "#64748b",
-      "size": 0.85,
+      "size": 0.95,
       "file": ".work/TreeofKnowledge/scripts/gen-eagle.py",
       "description": "Código-fonte: `.work/TreeofKnowledge/scripts/gen-eagle.py`"
     },
@@ -2064,7 +2064,7 @@
       "category": "scripts",
       "categoryLabel": "Scripts",
       "color": "#64748b",
-      "size": 0.85,
+      "size": 0.95,
       "file": ".work/TreeofKnowledge/scripts/gen-extra-projects.py",
       "description": "Código-fonte: `.work/TreeofKnowledge/scripts/gen-extra-projects.py`"
     },
@@ -2076,7 +2076,7 @@
       "category": "scripts",
       "categoryLabel": "Scripts",
       "color": "#64748b",
-      "size": 0.85,
+      "size": 0.95,
       "file": ".work/TreeofKnowledge/scripts/gen-full-tree-projects.py",
       "description": "Código-fonte: `.work/TreeofKnowledge/scripts/gen-full-tree-projects.py`"
     },
@@ -2088,7 +2088,7 @@
       "category": "scripts",
       "categoryLabel": "Scripts",
       "color": "#64748b",
-      "size": 0.85,
+      "size": 0.95,
       "file": ".work/TreeofKnowledge/scripts/gen-restaurant.py",
       "description": "Código-fonte: `.work/TreeofKnowledge/scripts/gen-restaurant.py`"
     },
@@ -2100,7 +2100,7 @@
       "category": "scripts",
       "categoryLabel": "Scripts",
       "color": "#64748b",
-      "size": 0.85,
+      "size": 0.95,
       "file": ".work/TreeofKnowledge/scripts/gen-sentinelai.py",
       "description": "Código-fonte: `.work/TreeofKnowledge/scripts/gen-sentinelai.py`"
     },
@@ -2112,7 +2112,7 @@
       "category": "scripts",
       "categoryLabel": "Scripts",
       "color": "#64748b",
-      "size": 0.85,
+      "size": 0.95,
       "file": ".work/TreeofKnowledge/scripts/gen-smartferrari.py",
       "description": "Código-fonte: `.work/TreeofKnowledge/scripts/gen-smartferrari.py`"
     },
@@ -2124,7 +2124,7 @@
       "category": "scripts",
       "categoryLabel": "Scripts",
       "color": "#64748b",
-      "size": 0.85,
+      "size": 0.95,
       "file": ".work/TreeofKnowledge/scripts/gen-smarthome.py",
       "description": "Código-fonte: `.work/TreeofKnowledge/scripts/gen-smarthome.py`"
     },
@@ -2136,7 +2136,7 @@
       "category": "scripts",
       "categoryLabel": "Scripts",
       "color": "#64748b",
-      "size": 0.85,
+      "size": 0.95,
       "file": ".work/TreeofKnowledge/scripts/gen-veyon.py",
       "description": "Código-fonte: `.work/TreeofKnowledge/scripts/gen-veyon.py`"
     },
@@ -2148,7 +2148,7 @@
       "category": "frontend",
       "categoryLabel": "Frontend",
       "color": "#eab308",
-      "size": 0.85,
+      "size": 0.95,
       "file": ".work/TreeofKnowledge/scripts/rebuild-professional-scanner-tree.py",
       "description": "Código-fonte: `.work/TreeofKnowledge/scripts/rebuild-professional-scanner-tree.py`"
     },
@@ -2160,7 +2160,7 @@
       "category": "scripts",
       "categoryLabel": "Scripts",
       "color": "#64748b",
-      "size": 0.85,
+      "size": 0.95,
       "file": ".work/TreeofKnowledge/scripts/restaurant-project.json",
       "description": "Código-fonte: `.work/TreeofKnowledge/scripts/restaurant-project.json`"
     },
@@ -2172,7 +2172,7 @@
       "category": "scripts",
       "categoryLabel": "Scripts",
       "color": "#64748b",
-      "size": 0.85,
+      "size": 0.95,
       "file": ".work/TreeofKnowledge/scripts/sentinelai-project.json",
       "description": "Código-fonte: `.work/TreeofKnowledge/scripts/sentinelai-project.json`"
     },
@@ -2184,7 +2184,7 @@
       "category": "scripts",
       "categoryLabel": "Scripts",
       "color": "#64748b",
-      "size": 0.85,
+      "size": 0.95,
       "file": ".work/TreeofKnowledge/scripts/smartferrari-project.json",
       "description": "Código-fonte: `.work/TreeofKnowledge/scripts/smartferrari-project.json`"
     },
@@ -2196,7 +2196,7 @@
       "category": "scripts",
       "categoryLabel": "Scripts",
       "color": "#64748b",
-      "size": 0.85,
+      "size": 0.95,
       "file": ".work/TreeofKnowledge/scripts/smarthome-project.json",
       "description": "Código-fonte: `.work/TreeofKnowledge/scripts/smarthome-project.json`"
     },
@@ -2208,7 +2208,7 @@
       "category": "scripts",
       "categoryLabel": "Scripts",
       "color": "#64748b",
-      "size": 0.85,
+      "size": 0.95,
       "file": ".work/TreeofKnowledge/scripts/update-professional-scanner.py",
       "description": "Código-fonte: `.work/TreeofKnowledge/scripts/update-professional-scanner.py`"
     },
@@ -2220,7 +2220,7 @@
       "category": "other",
       "categoryLabel": "Outros",
       "color": "#64748b",
-      "size": 0.85,
+      "size": 0.95,
       "file": ".work/TreeofKnowledge/universe/.gitignore",
       "description": "Código-fonte: `.work/TreeofKnowledge/universe/.gitignore`"
     },
@@ -2232,7 +2232,7 @@
       "category": "frontend",
       "categoryLabel": "Frontend",
       "color": "#eab308",
-      "size": 0.85,
+      "size": 0.95,
       "file": ".work/TreeofKnowledge/universe/index.html",
       "description": "Código-fonte: `.work/TreeofKnowledge/universe/index.html`"
     },
@@ -2244,7 +2244,7 @@
       "category": "other",
       "categoryLabel": "Outros",
       "color": "#64748b",
-      "size": 0.85,
+      "size": 0.95,
       "file": ".work/TreeofKnowledge/universe/package.json",
       "description": "Código-fonte: `.work/TreeofKnowledge/universe/package.json`"
     },
@@ -2256,7 +2256,7 @@
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
-      "size": 0.85,
+      "size": 0.95,
       "file": ".work/TreeofKnowledge/universe/vite.config.js",
       "description": "Código-fonte: `.work/TreeofKnowledge/universe/vite.config.js`"
     },
@@ -2304,7 +2304,7 @@
       "category": "other",
       "categoryLabel": "Outros",
       "color": "#64748b",
-      "size": 0.85,
+      "size": 0.95,
       "file": ".work/TreeofKnowledge/universe/public/graphs/admin-user-management.json",
       "description": "Código-fonte: `.work/TreeofKnowledge/universe/public/graphs/admin-user-management.json`"
     },
@@ -2316,7 +2316,7 @@
       "category": "other",
       "categoryLabel": "Outros",
       "color": "#64748b",
-      "size": 0.85,
+      "size": 0.95,
       "file": ".work/TreeofKnowledge/universe/public/graphs/anki-univesp.json",
       "description": "Código-fonte: `.work/TreeofKnowledge/universe/public/graphs/anki-univesp.json`"
     },
@@ -2328,7 +2328,7 @@
       "category": "frontend",
       "categoryLabel": "Frontend",
       "color": "#eab308",
-      "size": 0.85,
+      "size": 0.95,
       "file": ".work/TreeofKnowledge/universe/public/graphs/app-mosquito.json",
       "description": "Código-fonte: `.work/TreeofKnowledge/universe/public/graphs/app-mosquito.json`"
     },
@@ -2340,7 +2340,7 @@
       "category": "other",
       "categoryLabel": "Outros",
       "color": "#64748b",
-      "size": 0.85,
+      "size": 0.95,
       "file": ".work/TreeofKnowledge/universe/public/graphs/canon-engineer-github-io.json",
       "description": "Código-fonte: `.work/TreeofKnowledge/universe/public/graphs/canon-engineer-github-io.json`"
     },
@@ -2352,7 +2352,7 @@
       "category": "other",
       "categoryLabel": "Outros",
       "color": "#64748b",
-      "size": 0.85,
+      "size": 0.95,
       "file": ".work/TreeofKnowledge/universe/public/graphs/canon-python-ecommerce.json",
       "description": "Código-fonte: `.work/TreeofKnowledge/universe/public/graphs/canon-python-ecommerce.json`"
     },
@@ -2364,7 +2364,7 @@
       "category": "other",
       "categoryLabel": "Outros",
       "color": "#64748b",
-      "size": 0.85,
+      "size": 0.95,
       "file": ".work/TreeofKnowledge/universe/public/graphs/canon-sync-engine.json",
       "description": "Código-fonte: `.work/TreeofKnowledge/universe/public/graphs/canon-sync-engine.json`"
     },
@@ -2376,7 +2376,7 @@
       "category": "other",
       "categoryLabel": "Outros",
       "color": "#64748b",
-      "size": 0.85,
+      "size": 0.95,
       "file": ".work/TreeofKnowledge/universe/public/graphs/course-python-2023.json",
       "description": "Código-fonte: `.work/TreeofKnowledge/universe/public/graphs/course-python-2023.json`"
     },
@@ -2388,7 +2388,7 @@
       "category": "other",
       "categoryLabel": "Outros",
       "color": "#64748b",
-      "size": 0.85,
+      "size": 0.95,
       "file": ".work/TreeofKnowledge/universe/public/graphs/customize-veyon.json",
       "description": "Código-fonte: `.work/TreeofKnowledge/universe/public/graphs/customize-veyon.json`"
     },
@@ -2400,7 +2400,7 @@
       "category": "other",
       "categoryLabel": "Outros",
       "color": "#64748b",
-      "size": 0.85,
+      "size": 0.95,
       "file": ".work/TreeofKnowledge/universe/public/graphs/danger-zone.json",
       "description": "Código-fonte: `.work/TreeofKnowledge/universe/public/graphs/danger-zone.json`"
     },
@@ -2412,7 +2412,7 @@
       "category": "other",
       "categoryLabel": "Outros",
       "color": "#64748b",
-      "size": 0.85,
+      "size": 0.95,
       "file": ".work/TreeofKnowledge/universe/public/graphs/eagle-offensive-platform.json",
       "description": "Código-fonte: `.work/TreeofKnowledge/universe/public/graphs/eagle-offensive-platform.json`"
     },
@@ -2424,7 +2424,7 @@
       "category": "other",
       "categoryLabel": "Outros",
       "color": "#64748b",
-      "size": 0.85,
+      "size": 0.95,
       "file": ".work/TreeofKnowledge/universe/public/graphs/food-online-django.json",
       "description": "Código-fonte: `.work/TreeofKnowledge/universe/public/graphs/food-online-django.json`"
     },
@@ -2436,7 +2436,7 @@
       "category": "other",
       "categoryLabel": "Outros",
       "color": "#64748b",
-      "size": 0.85,
+      "size": 0.95,
       "file": ".work/TreeofKnowledge/universe/public/graphs/html-website.json",
       "description": "Código-fonte: `.work/TreeofKnowledge/universe/public/graphs/html-website.json`"
     },
@@ -2448,7 +2448,7 @@
       "category": "other",
       "categoryLabel": "Outros",
       "color": "#64748b",
-      "size": 0.85,
+      "size": 0.95,
       "file": ".work/TreeofKnowledge/universe/public/graphs/hyperware.json",
       "description": "Código-fonte: `.work/TreeofKnowledge/universe/public/graphs/hyperware.json`"
     },
@@ -2460,7 +2460,7 @@
       "category": "scripts",
       "categoryLabel": "Scripts",
       "color": "#64748b",
-      "size": 0.85,
+      "size": 0.95,
       "file": ".work/TreeofKnowledge/universe/public/graphs/javascript-calculator.json",
       "description": "Código-fonte: `.work/TreeofKnowledge/universe/public/graphs/javascript-calculator.json`"
     },
@@ -2472,7 +2472,7 @@
       "category": "scripts",
       "categoryLabel": "Scripts",
       "color": "#64748b",
-      "size": 0.85,
+      "size": 0.95,
       "file": ".work/TreeofKnowledge/universe/public/graphs/javascript-dropbox.json",
       "description": "Código-fonte: `.work/TreeofKnowledge/universe/public/graphs/javascript-dropbox.json`"
     },
@@ -2484,7 +2484,7 @@
       "category": "scripts",
       "categoryLabel": "Scripts",
       "color": "#64748b",
-      "size": 0.85,
+      "size": 0.95,
       "file": ".work/TreeofKnowledge/universe/public/graphs/javascript-restaurant.json",
       "description": "Código-fonte: `.work/TreeofKnowledge/universe/public/graphs/javascript-restaurant.json`"
     },
@@ -2496,7 +2496,7 @@
       "category": "scripts",
       "categoryLabel": "Scripts",
       "color": "#64748b",
-      "size": 0.85,
+      "size": 0.95,
       "file": ".work/TreeofKnowledge/universe/public/graphs/javascript-restful-api.json",
       "description": "Código-fonte: `.work/TreeofKnowledge/universe/public/graphs/javascript-restful-api.json`"
     },
@@ -2508,7 +2508,7 @@
       "category": "scripts",
       "categoryLabel": "Scripts",
       "color": "#64748b",
-      "size": 0.85,
+      "size": 0.95,
       "file": ".work/TreeofKnowledge/universe/public/graphs/javascript-users.json",
       "description": "Código-fonte: `.work/TreeofKnowledge/universe/public/graphs/javascript-users.json`"
     },
@@ -2520,7 +2520,7 @@
       "category": "scripts",
       "categoryLabel": "Scripts",
       "color": "#64748b",
-      "size": 0.85,
+      "size": 0.95,
       "file": ".work/TreeofKnowledge/universe/public/graphs/javascript-whatsapp.json",
       "description": "Código-fonte: `.work/TreeofKnowledge/universe/public/graphs/javascript-whatsapp.json`"
     },
@@ -2532,7 +2532,7 @@
       "category": "other",
       "categoryLabel": "Outros",
       "color": "#64748b",
-      "size": 0.85,
+      "size": 0.95,
       "file": ".work/TreeofKnowledge/universe/public/graphs/neighborhood-boys.json",
       "description": "Código-fonte: `.work/TreeofKnowledge/universe/public/graphs/neighborhood-boys.json`"
     },
@@ -2544,7 +2544,7 @@
       "category": "other",
       "categoryLabel": "Outros",
       "color": "#64748b",
-      "size": 0.85,
+      "size": 0.95,
       "file": ".work/TreeofKnowledge/universe/public/graphs/php-dao.json",
       "description": "Código-fonte: `.work/TreeofKnowledge/universe/public/graphs/php-dao.json`"
     },
@@ -2556,7 +2556,7 @@
       "category": "network",
       "categoryLabel": "Rede / Scan",
       "color": "#22d3ee",
-      "size": 0.85,
+      "size": 0.95,
       "file": ".work/TreeofKnowledge/universe/public/graphs/professional-scanner.json",
       "description": "Código-fonte: `.work/TreeofKnowledge/universe/public/graphs/professional-scanner.json`"
     },
@@ -2568,7 +2568,7 @@
       "category": "other",
       "categoryLabel": "Outros",
       "color": "#64748b",
-      "size": 0.85,
+      "size": 0.95,
       "file": ".work/TreeofKnowledge/universe/public/graphs/project-helpdesk.json",
       "description": "Código-fonte: `.work/TreeofKnowledge/universe/public/graphs/project-helpdesk.json`"
     },
@@ -2580,7 +2580,7 @@
       "category": "other",
       "categoryLabel": "Outros",
       "color": "#64748b",
-      "size": 0.85,
+      "size": 0.95,
       "file": ".work/TreeofKnowledge/universe/public/graphs/python-employee-list.json",
       "description": "Código-fonte: `.work/TreeofKnowledge/universe/public/graphs/python-employee-list.json`"
     },
@@ -2592,7 +2592,7 @@
       "category": "other",
       "categoryLabel": "Outros",
       "color": "#64748b",
-      "size": 0.85,
+      "size": 0.95,
       "file": ".work/TreeofKnowledge/universe/public/graphs/python-ii-ecommerce.json",
       "description": "Código-fonte: `.work/TreeofKnowledge/universe/public/graphs/python-ii-ecommerce.json`"
     },
@@ -2604,7 +2604,7 @@
       "category": "other",
       "categoryLabel": "Outros",
       "color": "#64748b",
-      "size": 0.85,
+      "size": 0.95,
       "file": ".work/TreeofKnowledge/universe/public/graphs/search-univesp.json",
       "description": "Código-fonte: `.work/TreeofKnowledge/universe/public/graphs/search-univesp.json`"
     },
@@ -2616,7 +2616,7 @@
       "category": "other",
       "categoryLabel": "Outros",
       "color": "#64748b",
-      "size": 0.85,
+      "size": 0.95,
       "file": ".work/TreeofKnowledge/universe/public/graphs/sentinelai.json",
       "description": "Código-fonte: `.work/TreeofKnowledge/universe/public/graphs/sentinelai.json`"
     },
@@ -2628,7 +2628,7 @@
       "category": "other",
       "categoryLabel": "Outros",
       "color": "#64748b",
-      "size": 0.85,
+      "size": 0.95,
       "file": ".work/TreeofKnowledge/universe/public/graphs/smartferrari-iot.json",
       "description": "Código-fonte: `.work/TreeofKnowledge/universe/public/graphs/smartferrari-iot.json`"
     },
@@ -2640,7 +2640,7 @@
       "category": "other",
       "categoryLabel": "Outros",
       "color": "#64748b",
-      "size": 0.85,
+      "size": 0.95,
       "file": ".work/TreeofKnowledge/universe/public/graphs/smarthome-iot.json",
       "description": "Código-fonte: `.work/TreeofKnowledge/universe/public/graphs/smarthome-iot.json`"
     },
@@ -2652,7 +2652,7 @@
       "category": "other",
       "categoryLabel": "Outros",
       "color": "#64748b",
-      "size": 0.85,
+      "size": 0.95,
       "file": ".work/TreeofKnowledge/universe/public/graphs/todo-app.json",
       "description": "Código-fonte: `.work/TreeofKnowledge/universe/public/graphs/todo-app.json`"
     },
@@ -2664,7 +2664,7 @@
       "category": "other",
       "categoryLabel": "Outros",
       "color": "#64748b",
-      "size": 0.85,
+      "size": 0.95,
       "file": ".work/TreeofKnowledge/universe/public/graphs/user-management.json",
       "description": "Código-fonte: `.work/TreeofKnowledge/universe/public/graphs/user-management.json`"
     },
@@ -2676,7 +2676,7 @@
       "category": "frontend",
       "categoryLabel": "Frontend",
       "color": "#eab308",
-      "size": 0.85,
+      "size": 0.95,
       "file": ".work/TreeofKnowledge/universe/src/App.jsx",
       "description": "Código-fonte: `.work/TreeofKnowledge/universe/src/App.jsx`"
     },
@@ -2688,7 +2688,7 @@
       "category": "frontend",
       "categoryLabel": "Frontend",
       "color": "#eab308",
-      "size": 0.85,
+      "size": 0.95,
       "file": ".work/TreeofKnowledge/universe/src/main.jsx",
       "description": "Código-fonte: `.work/TreeofKnowledge/universe/src/main.jsx`"
     },
@@ -2700,7 +2700,7 @@
       "category": "frontend",
       "categoryLabel": "Frontend",
       "color": "#eab308",
-      "size": 0.85,
+      "size": 0.95,
       "file": ".work/TreeofKnowledge/universe/src/styles.css",
       "description": "Código-fonte: `.work/TreeofKnowledge/universe/src/styles.css`"
     },
@@ -2712,7 +2712,7 @@
       "category": "frontend",
       "categoryLabel": "Frontend",
       "color": "#eab308",
-      "size": 0.85,
+      "size": 0.95,
       "file": ".work/TreeofKnowledge/universe/src/components/CameraFocus.jsx",
       "description": "Código-fonte: `.work/TreeofKnowledge/universe/src/components/CameraFocus.jsx`"
     },
@@ -2724,7 +2724,7 @@
       "category": "frontend",
       "categoryLabel": "Frontend",
       "color": "#eab308",
-      "size": 0.85,
+      "size": 0.95,
       "file": ".work/TreeofKnowledge/universe/src/components/GalaxyGraph.jsx",
       "description": "Código-fonte: `.work/TreeofKnowledge/universe/src/components/GalaxyGraph.jsx`"
     },
@@ -2736,7 +2736,7 @@
       "category": "frontend",
       "categoryLabel": "Frontend",
       "color": "#eab308",
-      "size": 0.85,
+      "size": 0.95,
       "file": ".work/TreeofKnowledge/universe/src/components/SceneObjects.jsx",
       "description": "Código-fonte: `.work/TreeofKnowledge/universe/src/components/SceneObjects.jsx`"
     },
@@ -2748,7 +2748,7 @@
       "category": "frontend",
       "categoryLabel": "Frontend",
       "color": "#eab308",
-      "size": 0.85,
+      "size": 0.95,
       "file": ".work/TreeofKnowledge/universe/src/components/SidePanel.jsx",
       "description": "Código-fonte: `.work/TreeofKnowledge/universe/src/components/SidePanel.jsx`"
     },
@@ -2760,7 +2760,7 @@
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
-      "size": 0.85,
+      "size": 0.95,
       "file": ".work/TreeofKnowledge/universe/src/utils/layout.js",
       "description": "Código-fonte: `.work/TreeofKnowledge/universe/src/utils/layout.js`"
     },
@@ -2772,7 +2772,7 @@
       "category": "scripts",
       "categoryLabel": "Scripts",
       "color": "#64748b",
-      "size": 0.85,
+      "size": 0.95,
       "file": "agent/install-windows.ps1",
       "description": "Código-fonte: `agent/install-windows.ps1`"
     },
@@ -2784,7 +2784,7 @@
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
-      "size": 0.85,
+      "size": 0.95,
       "file": "agent/sentinel_lab_agent.py",
       "description": "Código-fonte: `agent/sentinel_lab_agent.py`"
     },
@@ -2796,7 +2796,7 @@
       "category": "scripts",
       "categoryLabel": "Scripts",
       "color": "#64748b",
-      "size": 0.85,
+      "size": 0.95,
       "file": "agent/uninstall-windows.ps1",
       "description": "Código-fonte: `agent/uninstall-windows.ps1`"
     },
@@ -2808,7 +2808,7 @@
       "category": "other",
       "categoryLabel": "Outros",
       "color": "#64748b",
-      "size": 0.85,
+      "size": 0.95,
       "file": "backend/alembic.ini",
       "description": "Código-fonte: `backend/alembic.ini`"
     },
@@ -2820,7 +2820,7 @@
       "category": "other",
       "categoryLabel": "Outros",
       "color": "#64748b",
-      "size": 0.85,
+      "size": 0.95,
       "file": "backend/Dockerfile",
       "description": "Código-fonte: `backend/Dockerfile`"
     },
@@ -2832,7 +2832,7 @@
       "category": "tests",
       "categoryLabel": "Testes",
       "color": "#94a3b8",
-      "size": 0.85,
+      "size": 0.95,
       "file": "backend/pytest.ini",
       "description": "Código-fonte: `backend/pytest.ini`"
     },
@@ -2844,7 +2844,7 @@
       "category": "other",
       "categoryLabel": "Outros",
       "color": "#64748b",
-      "size": 0.85,
+      "size": 0.95,
       "file": "backend/.ruff_cache/.gitignore",
       "description": "Código-fonte: `backend/.ruff_cache/.gitignore`"
     },
@@ -2856,7 +2856,7 @@
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
-      "size": 0.85,
+      "size": 0.95,
       "file": "backend/alembic/env.py",
       "description": "Código-fonte: `backend/alembic/env.py`"
     },
@@ -2868,7 +2868,7 @@
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
-      "size": 0.85,
+      "size": 0.95,
       "file": "backend/alembic/versions/20260728_baseline.py",
       "description": "Código-fonte: `backend/alembic/versions/20260728_baseline.py`"
     },
@@ -2880,7 +2880,7 @@
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
-      "size": 0.85,
+      "size": 0.95,
       "file": "backend/alembic/versions/20260728_phase6.py",
       "description": "Código-fonte: `backend/alembic/versions/20260728_phase6.py`"
     },
@@ -2892,7 +2892,7 @@
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
-      "size": 0.85,
+      "size": 0.95,
       "file": "backend/alembic/versions/20260728_phase7.py",
       "description": "Código-fonte: `backend/alembic/versions/20260728_phase7.py`"
     },
@@ -2904,7 +2904,7 @@
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
-      "size": 0.85,
+      "size": 0.95,
       "file": "backend/alembic/versions/20260728_phase8.py",
       "description": "Código-fonte: `backend/alembic/versions/20260728_phase8.py`"
     },
@@ -2916,7 +2916,7 @@
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
-      "size": 0.85,
+      "size": 0.95,
       "file": "backend/alembic/versions/20260825_phase24.py",
       "description": "Código-fonte: `backend/alembic/versions/20260825_phase24.py`"
     },
@@ -2928,7 +2928,7 @@
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
-      "size": 0.85,
+      "size": 0.95,
       "file": "backend/alembic/versions/20260826_phase28.py",
       "description": "Código-fonte: `backend/alembic/versions/20260826_phase28.py`"
     },
@@ -2940,7 +2940,7 @@
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
-      "size": 0.85,
+      "size": 0.95,
       "file": "backend/app/__init__.py",
       "description": "Código-fonte: `backend/app/__init__.py`"
     },
@@ -2952,7 +2952,7 @@
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
-      "size": 0.85,
+      "size": 0.95,
       "file": "backend/app/config.py",
       "description": "Código-fonte: `backend/app/config.py`"
     },
@@ -2964,7 +2964,7 @@
       "category": "oracle",
       "categoryLabel": "Oracle / DB",
       "color": "#c084fc",
-      "size": 0.85,
+      "size": 0.95,
       "file": "backend/app/database.py",
       "description": "Código-fonte: `backend/app/database.py`"
     },
@@ -2976,7 +2976,7 @@
       "category": "oracle",
       "categoryLabel": "Oracle / DB",
       "color": "#c084fc",
-      "size": 0.85,
+      "size": 0.95,
       "file": "backend/app/db_sync.py",
       "description": "Código-fonte: `backend/app/db_sync.py`"
     },
@@ -2988,7 +2988,7 @@
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
-      "size": 0.85,
+      "size": 0.95,
       "file": "backend/app/dependencies.py",
       "description": "Código-fonte: `backend/app/dependencies.py`"
     },
@@ -3000,7 +3000,7 @@
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
-      "size": 0.85,
+      "size": 0.95,
       "file": "backend/app/main.py",
       "description": "Código-fonte: `backend/app/main.py`"
     },
@@ -3012,7 +3012,7 @@
       "category": "network",
       "categoryLabel": "Rede / Scan",
       "color": "#22d3ee",
-      "size": 0.85,
+      "size": 0.95,
       "file": "backend/app/api/__init__.py",
       "description": "Código-fonte: `backend/app/api/__init__.py`"
     },
@@ -3084,7 +3084,7 @@
       "category": "network",
       "categoryLabel": "Rede / Scan",
       "color": "#22d3ee",
-      "size": 0.85,
+      "size": 0.95,
       "file": "backend/app/api/routes/__init__.py",
       "description": "Código-fonte: `backend/app/api/routes/__init__.py`"
     },
@@ -3096,7 +3096,7 @@
       "category": "network",
       "categoryLabel": "Rede / Scan",
       "color": "#22d3ee",
-      "size": 0.85,
+      "size": 0.95,
       "file": "backend/app/api/routes/agents.py",
       "description": "Código-fonte: `backend/app/api/routes/agents.py`"
     },
@@ -3108,7 +3108,7 @@
       "category": "network",
       "categoryLabel": "Rede / Scan",
       "color": "#22d3ee",
-      "size": 0.85,
+      "size": 0.95,
       "file": "backend/app/api/routes/alert_rules.py",
       "description": "Código-fonte: `backend/app/api/routes/alert_rules.py`"
     },
@@ -3120,7 +3120,7 @@
       "category": "network",
       "categoryLabel": "Rede / Scan",
       "color": "#22d3ee",
-      "size": 0.85,
+      "size": 0.95,
       "file": "backend/app/api/routes/alerts.py",
       "description": "Código-fonte: `backend/app/api/routes/alerts.py`"
     },
@@ -3132,7 +3132,7 @@
       "category": "network",
       "categoryLabel": "Rede / Scan",
       "color": "#22d3ee",
-      "size": 0.85,
+      "size": 0.95,
       "file": "backend/app/api/routes/audit.py",
       "description": "Código-fonte: `backend/app/api/routes/audit.py`"
     },
@@ -3144,7 +3144,7 @@
       "category": "network",
       "categoryLabel": "Rede / Scan",
       "color": "#22d3ee",
-      "size": 0.85,
+      "size": 0.95,
       "file": "backend/app/api/routes/auditor.py",
       "description": "Código-fonte: `backend/app/api/routes/auditor.py`"
     },
@@ -3156,7 +3156,7 @@
       "category": "auth",
       "categoryLabel": "Segurança",
       "color": "#ef4444",
-      "size": 0.85,
+      "size": 0.95,
       "file": "backend/app/api/routes/auth.py",
       "description": "Código-fonte: `backend/app/api/routes/auth.py`"
     },
@@ -3168,7 +3168,7 @@
       "category": "network",
       "categoryLabel": "Rede / Scan",
       "color": "#22d3ee",
-      "size": 0.85,
+      "size": 0.95,
       "file": "backend/app/api/routes/billing.py",
       "description": "Código-fonte: `backend/app/api/routes/billing.py`"
     },
@@ -3180,7 +3180,7 @@
       "category": "network",
       "categoryLabel": "Rede / Scan",
       "color": "#22d3ee",
-      "size": 0.85,
+      "size": 0.95,
       "file": "backend/app/api/routes/cdn.py",
       "description": "Código-fonte: `backend/app/api/routes/cdn.py`"
     },
@@ -3192,7 +3192,7 @@
       "category": "network",
       "categoryLabel": "Rede / Scan",
       "color": "#22d3ee",
-      "size": 0.85,
+      "size": 0.95,
       "file": "backend/app/api/routes/chatbot.py",
       "description": "Código-fonte: `backend/app/api/routes/chatbot.py`"
     },
@@ -3204,7 +3204,7 @@
       "category": "oracle",
       "categoryLabel": "Oracle / DB",
       "color": "#c084fc",
-      "size": 0.85,
+      "size": 0.95,
       "file": "backend/app/api/routes/cmdb.py",
       "description": "Código-fonte: `backend/app/api/routes/cmdb.py`"
     },
@@ -3216,7 +3216,7 @@
       "category": "auth",
       "categoryLabel": "Segurança",
       "color": "#ef4444",
-      "size": 0.85,
+      "size": 0.95,
       "file": "backend/app/api/routes/collect_auth.py",
       "description": "Código-fonte: `backend/app/api/routes/collect_auth.py`"
     },
@@ -3228,7 +3228,7 @@
       "category": "network",
       "categoryLabel": "Rede / Scan",
       "color": "#22d3ee",
-      "size": 0.85,
+      "size": 0.95,
       "file": "backend/app/api/routes/compliance.py",
       "description": "Código-fonte: `backend/app/api/routes/compliance.py`"
     },
@@ -3240,7 +3240,7 @@
       "category": "network",
       "categoryLabel": "Rede / Scan",
       "color": "#22d3ee",
-      "size": 0.85,
+      "size": 0.95,
       "file": "backend/app/api/routes/config_backup.py",
       "description": "Código-fonte: `backend/app/api/routes/config_backup.py`"
     },
@@ -3252,7 +3252,7 @@
       "category": "network",
       "categoryLabel": "Rede / Scan",
       "color": "#22d3ee",
-      "size": 0.85,
+      "size": 0.95,
       "file": "backend/app/api/routes/copilot.py",
       "description": "Código-fonte: `backend/app/api/routes/copilot.py`"
     },
@@ -3264,7 +3264,7 @@
       "category": "network",
       "categoryLabel": "Rede / Scan",
       "color": "#22d3ee",
-      "size": 0.85,
+      "size": 0.95,
       "file": "backend/app/api/routes/devices.py",
       "description": "Código-fonte: `backend/app/api/routes/devices.py`"
     },
@@ -3276,7 +3276,7 @@
       "category": "network",
       "categoryLabel": "Rede / Scan",
       "color": "#22d3ee",
-      "size": 0.85,
+      "size": 0.95,
       "file": "backend/app/api/routes/discovery.py",
       "description": "Código-fonte: `backend/app/api/routes/discovery.py`"
     },
@@ -3288,7 +3288,7 @@
       "category": "network",
       "categoryLabel": "Rede / Scan",
       "color": "#22d3ee",
-      "size": 0.85,
+      "size": 0.95,
       "file": "backend/app/api/routes/edge.py",
       "description": "Código-fonte: `backend/app/api/routes/edge.py`"
     },
@@ -3300,7 +3300,7 @@
       "category": "network",
       "categoryLabel": "Rede / Scan",
       "color": "#22d3ee",
-      "size": 0.85,
+      "size": 0.95,
       "file": "backend/app/api/routes/events.py",
       "description": "Código-fonte: `backend/app/api/routes/events.py`"
     },
@@ -3312,7 +3312,7 @@
       "category": "network",
       "categoryLabel": "Rede / Scan",
       "color": "#22d3ee",
-      "size": 0.85,
+      "size": 0.95,
       "file": "backend/app/api/routes/federation.py",
       "description": "Código-fonte: `backend/app/api/routes/federation.py`"
     },
@@ -3324,7 +3324,7 @@
       "category": "network",
       "categoryLabel": "Rede / Scan",
       "color": "#22d3ee",
-      "size": 0.85,
+      "size": 0.95,
       "file": "backend/app/api/routes/flows.py",
       "description": "Código-fonte: `backend/app/api/routes/flows.py`"
     },
@@ -3336,7 +3336,7 @@
       "category": "network",
       "categoryLabel": "Rede / Scan",
       "color": "#22d3ee",
-      "size": 0.85,
+      "size": 0.95,
       "file": "backend/app/api/routes/integrations.py",
       "description": "Código-fonte: `backend/app/api/routes/integrations.py`"
     },
@@ -3348,7 +3348,7 @@
       "category": "network",
       "categoryLabel": "Rede / Scan",
       "color": "#22d3ee",
-      "size": 0.85,
+      "size": 0.95,
       "file": "backend/app/api/routes/marketplace.py",
       "description": "Código-fonte: `backend/app/api/routes/marketplace.py`"
     },
@@ -3360,7 +3360,7 @@
       "category": "network",
       "categoryLabel": "Rede / Scan",
       "color": "#22d3ee",
-      "size": 0.85,
+      "size": 0.95,
       "file": "backend/app/api/routes/mobile.py",
       "description": "Código-fonte: `backend/app/api/routes/mobile.py`"
     },
@@ -3372,7 +3372,7 @@
       "category": "network",
       "categoryLabel": "Rede / Scan",
       "color": "#22d3ee",
-      "size": 0.85,
+      "size": 0.95,
       "file": "backend/app/api/routes/monitors.py",
       "description": "Código-fonte: `backend/app/api/routes/monitors.py`"
     },
@@ -3384,7 +3384,7 @@
       "category": "network",
       "categoryLabel": "Rede / Scan",
       "color": "#22d3ee",
-      "size": 0.85,
+      "size": 0.95,
       "file": "backend/app/api/routes/observability.py",
       "description": "Código-fonte: `backend/app/api/routes/observability.py`"
     },
@@ -3396,7 +3396,7 @@
       "category": "network",
       "categoryLabel": "Rede / Scan",
       "color": "#22d3ee",
-      "size": 0.85,
+      "size": 0.95,
       "file": "backend/app/api/routes/organizations.py",
       "description": "Código-fonte: `backend/app/api/routes/organizations.py`"
     },
@@ -3408,7 +3408,7 @@
       "category": "network",
       "categoryLabel": "Rede / Scan",
       "color": "#22d3ee",
-      "size": 0.85,
+      "size": 0.95,
       "file": "backend/app/api/routes/payments.py",
       "description": "Código-fonte: `backend/app/api/routes/payments.py`"
     },
@@ -3420,7 +3420,7 @@
       "category": "network",
       "categoryLabel": "Rede / Scan",
       "color": "#22d3ee",
-      "size": 0.85,
+      "size": 0.95,
       "file": "backend/app/api/routes/platform.py",
       "description": "Código-fonte: `backend/app/api/routes/platform.py`"
     },
@@ -3432,7 +3432,7 @@
       "category": "network",
       "categoryLabel": "Rede / Scan",
       "color": "#22d3ee",
-      "size": 0.85,
+      "size": 0.95,
       "file": "backend/app/api/routes/platform_backup.py",
       "description": "Código-fonte: `backend/app/api/routes/platform_backup.py`"
     },
@@ -3444,7 +3444,7 @@
       "category": "network",
       "categoryLabel": "Rede / Scan",
       "color": "#22d3ee",
-      "size": 0.85,
+      "size": 0.95,
       "file": "backend/app/api/routes/plugins.py",
       "description": "Código-fonte: `backend/app/api/routes/plugins.py`"
     },
@@ -3456,7 +3456,7 @@
       "category": "network",
       "categoryLabel": "Rede / Scan",
       "color": "#22d3ee",
-      "size": 0.85,
+      "size": 0.95,
       "file": "backend/app/api/routes/remediation.py",
       "description": "Código-fonte: `backend/app/api/routes/remediation.py`"
     },
@@ -3468,7 +3468,7 @@
       "category": "network",
       "categoryLabel": "Rede / Scan",
       "color": "#22d3ee",
-      "size": 0.85,
+      "size": 0.95,
       "file": "backend/app/api/routes/reports.py",
       "description": "Código-fonte: `backend/app/api/routes/reports.py`"
     },
@@ -3480,7 +3480,7 @@
       "category": "network",
       "categoryLabel": "Rede / Scan",
       "color": "#22d3ee",
-      "size": 0.85,
+      "size": 0.95,
       "file": "backend/app/api/routes/scale.py",
       "description": "Código-fonte: `backend/app/api/routes/scale.py`"
     },
@@ -3492,7 +3492,7 @@
       "category": "network",
       "categoryLabel": "Rede / Scan",
       "color": "#22d3ee",
-      "size": 0.85,
+      "size": 0.95,
       "file": "backend/app/api/routes/scanner.py",
       "description": "Código-fonte: `backend/app/api/routes/scanner.py`"
     },
@@ -3504,7 +3504,7 @@
       "category": "network",
       "categoryLabel": "Rede / Scan",
       "color": "#22d3ee",
-      "size": 0.85,
+      "size": 0.95,
       "file": "backend/app/api/routes/sites.py",
       "description": "Código-fonte: `backend/app/api/routes/sites.py`"
     },
@@ -3516,7 +3516,7 @@
       "category": "network",
       "categoryLabel": "Rede / Scan",
       "color": "#22d3ee",
-      "size": 0.85,
+      "size": 0.95,
       "file": "backend/app/api/routes/stream.py",
       "description": "Código-fonte: `backend/app/api/routes/stream.py`"
     },
@@ -3528,7 +3528,7 @@
       "category": "network",
       "categoryLabel": "Rede / Scan",
       "color": "#22d3ee",
-      "size": 0.85,
+      "size": 0.95,
       "file": "backend/app/api/routes/system.py",
       "description": "Código-fonte: `backend/app/api/routes/system.py`"
     },
@@ -3540,7 +3540,7 @@
       "category": "network",
       "categoryLabel": "Rede / Scan",
       "color": "#22d3ee",
-      "size": 0.85,
+      "size": 0.95,
       "file": "backend/app/api/routes/topology.py",
       "description": "Código-fonte: `backend/app/api/routes/topology.py`"
     },
@@ -3552,7 +3552,7 @@
       "category": "network",
       "categoryLabel": "Rede / Scan",
       "color": "#22d3ee",
-      "size": 0.85,
+      "size": 0.95,
       "file": "backend/app/api/routes/users.py",
       "description": "Código-fonte: `backend/app/api/routes/users.py`"
     },
@@ -3564,7 +3564,7 @@
       "category": "network",
       "categoryLabel": "Rede / Scan",
       "color": "#22d3ee",
-      "size": 0.85,
+      "size": 0.95,
       "file": "backend/app/api/routes/vision.py",
       "description": "Código-fonte: `backend/app/api/routes/vision.py`"
     },
@@ -3576,7 +3576,7 @@
       "category": "network",
       "categoryLabel": "Rede / Scan",
       "color": "#22d3ee",
-      "size": 0.85,
+      "size": 0.95,
       "file": "backend/app/api/routes/wallboard.py",
       "description": "Código-fonte: `backend/app/api/routes/wallboard.py`"
     },
@@ -3588,7 +3588,7 @@
       "category": "network",
       "categoryLabel": "Rede / Scan",
       "color": "#22d3ee",
-      "size": 0.85,
+      "size": 0.95,
       "file": "backend/app/api/routes/ws.py",
       "description": "Código-fonte: `backend/app/api/routes/ws.py`"
     },
@@ -3600,7 +3600,7 @@
       "category": "network",
       "categoryLabel": "Rede / Scan",
       "color": "#22d3ee",
-      "size": 0.85,
+      "size": 0.95,
       "file": "backend/app/api/routes/zion.py",
       "description": "Código-fonte: `backend/app/api/routes/zion.py`"
     },
@@ -3612,7 +3612,7 @@
       "category": "other",
       "categoryLabel": "Outros",
       "color": "#64748b",
-      "size": 0.85,
+      "size": 0.95,
       "file": "backend/app/data/feature-inventory.json",
       "description": "Código-fonte: `backend/app/data/feature-inventory.json`"
     },
@@ -3624,7 +3624,7 @@
       "category": "other",
       "categoryLabel": "Outros",
       "color": "#64748b",
-      "size": 0.85,
+      "size": 0.95,
       "file": "backend/app/data/marketplace-registry.json",
       "description": "Código-fonte: `backend/app/data/marketplace-registry.json`"
     },
@@ -3636,7 +3636,7 @@
       "category": "other",
       "categoryLabel": "Outros",
       "color": "#64748b",
-      "size": 0.85,
+      "size": 0.95,
       "file": "backend/app/data/marketplace-registry.signed.json",
       "description": "Código-fonte: `backend/app/data/marketplace-registry.signed.json`"
     },
@@ -3648,7 +3648,7 @@
       "category": "scripts",
       "categoryLabel": "Scripts",
       "color": "#64748b",
-      "size": 0.85,
+      "size": 0.95,
       "file": "backend/app/data/agent/install-windows.ps1",
       "description": "Código-fonte: `backend/app/data/agent/install-windows.ps1`"
     },
@@ -3660,7 +3660,7 @@
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
-      "size": 0.85,
+      "size": 0.95,
       "file": "backend/app/data/agent/sentinel_lab_agent.py",
       "description": "Código-fonte: `backend/app/data/agent/sentinel_lab_agent.py`"
     },
@@ -3672,7 +3672,7 @@
       "category": "scripts",
       "categoryLabel": "Scripts",
       "color": "#64748b",
-      "size": 0.85,
+      "size": 0.95,
       "file": "backend/app/data/agent/uninstall-windows.ps1",
       "description": "Código-fonte: `backend/app/data/agent/uninstall-windows.ps1`"
     },
@@ -3684,7 +3684,7 @@
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
-      "size": 0.85,
+      "size": 0.95,
       "file": "backend/app/engines/__init__.py",
       "description": "Código-fonte: `backend/app/engines/__init__.py`"
     },
@@ -3720,7 +3720,7 @@
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
-      "size": 0.85,
+      "size": 0.95,
       "file": "backend/app/engines/ai/__init__.py",
       "description": "Código-fonte: `backend/app/engines/ai/__init__.py`"
     },
@@ -3732,7 +3732,7 @@
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
-      "size": 0.85,
+      "size": 0.95,
       "file": "backend/app/engines/ai/anomaly_detector.py",
       "description": "Código-fonte: `backend/app/engines/ai/anomaly_detector.py`"
     },
@@ -3744,7 +3744,7 @@
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
-      "size": 0.85,
+      "size": 0.95,
       "file": "backend/app/engines/ai/attack_response.py",
       "description": "Código-fonte: `backend/app/engines/ai/attack_response.py`"
     },
@@ -3756,7 +3756,7 @@
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
-      "size": 0.85,
+      "size": 0.95,
       "file": "backend/app/engines/ai/chatbot_service.py",
       "description": "Código-fonte: `backend/app/engines/ai/chatbot_service.py`"
     },
@@ -3768,7 +3768,7 @@
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
-      "size": 0.85,
+      "size": 0.95,
       "file": "backend/app/engines/ai/llm_client.py",
       "description": "Código-fonte: `backend/app/engines/ai/llm_client.py`"
     },
@@ -3780,7 +3780,7 @@
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
-      "size": 0.85,
+      "size": 0.95,
       "file": "backend/app/engines/ai/map_vision_report.py",
       "description": "Código-fonte: `backend/app/engines/ai/map_vision_report.py`"
     },
@@ -3792,7 +3792,7 @@
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
-      "size": 0.85,
+      "size": 0.95,
       "file": "backend/app/engines/ai/noc_copilot.py",
       "description": "Código-fonte: `backend/app/engines/ai/noc_copilot.py`"
     },
@@ -3804,7 +3804,7 @@
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
-      "size": 0.85,
+      "size": 0.95,
       "file": "backend/app/engines/ai/noc_rag.py",
       "description": "Código-fonte: `backend/app/engines/ai/noc_rag.py`"
     },
@@ -3816,7 +3816,7 @@
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
-      "size": 0.85,
+      "size": 0.95,
       "file": "backend/app/engines/ai/product_knowledge.py",
       "description": "Código-fonte: `backend/app/engines/ai/product_knowledge.py`"
     },
@@ -3828,7 +3828,7 @@
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
-      "size": 0.85,
+      "size": 0.95,
       "file": "backend/app/engines/ai/report_generator.py",
       "description": "Código-fonte: `backend/app/engines/ai/report_generator.py`"
     },
@@ -3840,7 +3840,7 @@
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
-      "size": 0.85,
+      "size": 0.95,
       "file": "backend/app/engines/ai/safety_policy.py",
       "description": "Código-fonte: `backend/app/engines/ai/safety_policy.py`"
     },
@@ -3852,7 +3852,7 @@
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
-      "size": 0.85,
+      "size": 0.95,
       "file": "backend/app/engines/ai/threat_guardian.py",
       "description": "Código-fonte: `backend/app/engines/ai/threat_guardian.py`"
     },
@@ -3864,7 +3864,7 @@
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
-      "size": 0.85,
+      "size": 0.95,
       "file": "backend/app/engines/ai/vision_client.py",
       "description": "Código-fonte: `backend/app/engines/ai/vision_client.py`"
     },
@@ -3876,7 +3876,7 @@
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
-      "size": 0.85,
+      "size": 0.95,
       "file": "backend/app/engines/alerts/__init__.py",
       "description": "Código-fonte: `backend/app/engines/alerts/__init__.py`"
     },
@@ -3888,7 +3888,7 @@
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
-      "size": 0.85,
+      "size": 0.95,
       "file": "backend/app/engines/alerts/channels.py",
       "description": "Código-fonte: `backend/app/engines/alerts/channels.py`"
     },
@@ -3900,7 +3900,7 @@
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
-      "size": 0.85,
+      "size": 0.95,
       "file": "backend/app/engines/alerts/email.py",
       "description": "Código-fonte: `backend/app/engines/alerts/email.py`"
     },
@@ -3912,7 +3912,7 @@
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
-      "size": 0.85,
+      "size": 0.95,
       "file": "backend/app/engines/alerts/push.py",
       "description": "Código-fonte: `backend/app/engines/alerts/push.py`"
     },
@@ -3924,7 +3924,7 @@
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
-      "size": 0.85,
+      "size": 0.95,
       "file": "backend/app/engines/alerts/rule_engine.py",
       "description": "Código-fonte: `backend/app/engines/alerts/rule_engine.py`"
     },
@@ -3936,7 +3936,7 @@
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
-      "size": 0.85,
+      "size": 0.95,
       "file": "backend/app/engines/alerts/sms.py",
       "description": "Código-fonte: `backend/app/engines/alerts/sms.py`"
     },
@@ -3948,7 +3948,7 @@
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
-      "size": 0.85,
+      "size": 0.95,
       "file": "backend/app/engines/backup/__init__.py",
       "description": "Código-fonte: `backend/app/engines/backup/__init__.py`"
     },
@@ -3960,7 +3960,7 @@
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
-      "size": 0.85,
+      "size": 0.95,
       "file": "backend/app/engines/backup/platform_backup.py",
       "description": "Código-fonte: `backend/app/engines/backup/platform_backup.py`"
     },
@@ -3972,7 +3972,7 @@
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
-      "size": 0.85,
+      "size": 0.95,
       "file": "backend/app/engines/config/ssh_backup.py",
       "description": "Código-fonte: `backend/app/engines/config/ssh_backup.py`"
     },
@@ -3984,7 +3984,7 @@
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
-      "size": 0.85,
+      "size": 0.95,
       "file": "backend/app/engines/discovery/__init__.py",
       "description": "Código-fonte: `backend/app/engines/discovery/__init__.py`"
     },
@@ -3996,7 +3996,7 @@
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
-      "size": 0.85,
+      "size": 0.95,
       "file": "backend/app/engines/discovery/discovery_progress.py",
       "description": "Código-fonte: `backend/app/engines/discovery/discovery_progress.py`"
     },
@@ -4008,7 +4008,7 @@
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
-      "size": 0.85,
+      "size": 0.95,
       "file": "backend/app/engines/discovery/dns_resolver.py",
       "description": "Código-fonte: `backend/app/engines/discovery/dns_resolver.py`"
     },
@@ -4020,7 +4020,7 @@
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
-      "size": 0.85,
+      "size": 0.95,
       "file": "backend/app/engines/discovery/ip_intel.py",
       "description": "Código-fonte: `backend/app/engines/discovery/ip_intel.py`"
     },
@@ -4032,7 +4032,7 @@
       "category": "network",
       "categoryLabel": "Rede / Scan",
       "color": "#22d3ee",
-      "size": 0.85,
+      "size": 0.95,
       "file": "backend/app/engines/discovery/nmap_scanner.py",
       "description": "Código-fonte: `backend/app/engines/discovery/nmap_scanner.py`"
     },
@@ -4044,7 +4044,7 @@
       "category": "frontend",
       "categoryLabel": "Frontend",
       "color": "#eab308",
-      "size": 0.85,
+      "size": 0.95,
       "file": "backend/app/engines/discovery/oui.py",
       "description": "Código-fonte: `backend/app/engines/discovery/oui.py`"
     },
@@ -4056,7 +4056,7 @@
       "category": "network",
       "categoryLabel": "Rede / Scan",
       "color": "#22d3ee",
-      "size": 0.85,
+      "size": 0.95,
       "file": "backend/app/engines/discovery/scan_options.py",
       "description": "Código-fonte: `backend/app/engines/discovery/scan_options.py`"
     },
@@ -4068,7 +4068,7 @@
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
-      "size": 0.85,
+      "size": 0.95,
       "file": "backend/app/engines/discovery/snmp_collector.py",
       "description": "Código-fonte: `backend/app/engines/discovery/snmp_collector.py`"
     },
@@ -4080,7 +4080,7 @@
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
-      "size": 0.85,
+      "size": 0.95,
       "file": "backend/app/engines/discovery/software_collector.py",
       "description": "Código-fonte: `backend/app/engines/discovery/software_collector.py`"
     },
@@ -4092,7 +4092,7 @@
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
-      "size": 0.85,
+      "size": 0.95,
       "file": "backend/app/engines/discovery/ssh_collector.py",
       "description": "Código-fonte: `backend/app/engines/discovery/ssh_collector.py`"
     },
@@ -4104,7 +4104,7 @@
       "category": "network",
       "categoryLabel": "Rede / Scan",
       "color": "#22d3ee",
-      "size": 0.85,
+      "size": 0.95,
       "file": "backend/app/engines/discovery/subnet_scanner.py",
       "description": "Código-fonte: `backend/app/engines/discovery/subnet_scanner.py`"
     },
@@ -4116,7 +4116,7 @@
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
-      "size": 0.85,
+      "size": 0.95,
       "file": "backend/app/engines/discovery/wmi_collector.py",
       "description": "Código-fonte: `backend/app/engines/discovery/wmi_collector.py`"
     },
@@ -4128,7 +4128,7 @@
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
-      "size": 0.85,
+      "size": 0.95,
       "file": "backend/app/engines/monitor/__init__.py",
       "description": "Código-fonte: `backend/app/engines/monitor/__init__.py`"
     },
@@ -4140,7 +4140,7 @@
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
-      "size": 0.85,
+      "size": 0.95,
       "file": "backend/app/engines/monitor/http_check.py",
       "description": "Código-fonte: `backend/app/engines/monitor/http_check.py`"
     },
@@ -4152,7 +4152,7 @@
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
-      "size": 0.85,
+      "size": 0.95,
       "file": "backend/app/engines/monitor/ping.py",
       "description": "Código-fonte: `backend/app/engines/monitor/ping.py`"
     },
@@ -4164,7 +4164,7 @@
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
-      "size": 0.85,
+      "size": 0.95,
       "file": "backend/app/engines/monitor/protocol_probes.py",
       "description": "Código-fonte: `backend/app/engines/monitor/protocol_probes.py`"
     },
@@ -4176,7 +4176,7 @@
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
-      "size": 0.85,
+      "size": 0.95,
       "file": "backend/app/engines/monitor/tcp_check.py",
       "description": "Código-fonte: `backend/app/engines/monitor/tcp_check.py`"
     },
@@ -4188,7 +4188,7 @@
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
-      "size": 0.85,
+      "size": 0.95,
       "file": "backend/app/engines/netflow/collector.py",
       "description": "Código-fonte: `backend/app/engines/netflow/collector.py`"
     },
@@ -4200,7 +4200,7 @@
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
-      "size": 0.85,
+      "size": 0.95,
       "file": "backend/app/engines/observability/metrics.py",
       "description": "Código-fonte: `backend/app/engines/observability/metrics.py`"
     },
@@ -4212,7 +4212,7 @@
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
-      "size": 0.85,
+      "size": 0.95,
       "file": "backend/app/engines/observability/tracing.py",
       "description": "Código-fonte: `backend/app/engines/observability/tracing.py`"
     },
@@ -4224,7 +4224,7 @@
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
-      "size": 0.85,
+      "size": 0.95,
       "file": "backend/app/engines/plugins/base.py",
       "description": "Código-fonte: `backend/app/engines/plugins/base.py`"
     },
@@ -4236,7 +4236,7 @@
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
-      "size": 0.85,
+      "size": 0.95,
       "file": "backend/app/engines/plugins/registry.py",
       "description": "Código-fonte: `backend/app/engines/plugins/registry.py`"
     },
@@ -4248,7 +4248,7 @@
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
-      "size": 0.85,
+      "size": 0.95,
       "file": "backend/app/engines/remediation/__init__.py",
       "description": "Código-fonte: `backend/app/engines/remediation/__init__.py`"
     },
@@ -4260,7 +4260,7 @@
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
-      "size": 0.85,
+      "size": 0.95,
       "file": "backend/app/engines/remediation/engine.py",
       "description": "Código-fonte: `backend/app/engines/remediation/engine.py`"
     },
@@ -4272,7 +4272,7 @@
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
-      "size": 0.85,
+      "size": 0.95,
       "file": "backend/app/engines/remediation/loader.py",
       "description": "Código-fonte: `backend/app/engines/remediation/loader.py`"
     },
@@ -4284,7 +4284,7 @@
       "category": "other",
       "categoryLabel": "Outros",
       "color": "#64748b",
-      "size": 0.85,
+      "size": 0.95,
       "file": "backend/app/engines/remediation/playbooks/device-down-restart-monitor.yaml",
       "description": "Código-fonte: `backend/app/engines/remediation/playbooks/device-down-restart-monitor.yaml`"
     },
@@ -4296,7 +4296,7 @@
       "category": "other",
       "categoryLabel": "Outros",
       "color": "#64748b",
-      "size": 0.85,
+      "size": 0.95,
       "file": "backend/app/engines/remediation/playbooks/stale-alert-ack.yaml",
       "description": "Código-fonte: `backend/app/engines/remediation/playbooks/stale-alert-ack.yaml`"
     },
@@ -4308,7 +4308,7 @@
       "category": "other",
       "categoryLabel": "Outros",
       "color": "#64748b",
-      "size": 0.85,
+      "size": 0.95,
       "file": "backend/app/engines/remediation/playbooks/suspected-attack-observe.yaml",
       "description": "Código-fonte: `backend/app/engines/remediation/playbooks/suspected-attack-observe.yaml`"
     },
@@ -4320,7 +4320,7 @@
       "category": "network",
       "categoryLabel": "Rede / Scan",
       "color": "#22d3ee",
-      "size": 0.85,
+      "size": 0.95,
       "file": "backend/app/engines/remediation/playbooks/topology-gap-scan.yaml",
       "description": "Código-fonte: `backend/app/engines/remediation/playbooks/topology-gap-scan.yaml`"
     },
@@ -4332,7 +4332,7 @@
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
-      "size": 0.85,
+      "size": 0.95,
       "file": "backend/app/engines/reporting/__init__.py",
       "description": "Código-fonte: `backend/app/engines/reporting/__init__.py`"
     },
@@ -4344,7 +4344,7 @@
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
-      "size": 0.85,
+      "size": 0.95,
       "file": "backend/app/engines/reporting/compliance_report.py",
       "description": "Código-fonte: `backend/app/engines/reporting/compliance_report.py`"
     },
@@ -4356,7 +4356,7 @@
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
-      "size": 0.85,
+      "size": 0.95,
       "file": "backend/app/engines/reporting/exporters.py",
       "description": "Código-fonte: `backend/app/engines/reporting/exporters.py`"
     },
@@ -4368,7 +4368,7 @@
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
-      "size": 0.85,
+      "size": 0.95,
       "file": "backend/app/engines/reporting/invoice_pdf.py",
       "description": "Código-fonte: `backend/app/engines/reporting/invoice_pdf.py`"
     },
@@ -4380,7 +4380,7 @@
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
-      "size": 0.85,
+      "size": 0.95,
       "file": "backend/app/engines/reporting/soc2_type2_report.py",
       "description": "Código-fonte: `backend/app/engines/reporting/soc2_type2_report.py`"
     },
@@ -4392,7 +4392,7 @@
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
-      "size": 0.85,
+      "size": 0.95,
       "file": "backend/app/engines/reporting/topology_canvas_export.py",
       "description": "Código-fonte: `backend/app/engines/reporting/topology_canvas_export.py`"
     },
@@ -4404,7 +4404,7 @@
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
-      "size": 0.85,
+      "size": 0.95,
       "file": "backend/app/engines/reporting/topology_export_layout.py",
       "description": "Código-fonte: `backend/app/engines/reporting/topology_export_layout.py`"
     },
@@ -4416,7 +4416,7 @@
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
-      "size": 0.85,
+      "size": 0.95,
       "file": "backend/app/engines/reporting/topology_pdf.py",
       "description": "Código-fonte: `backend/app/engines/reporting/topology_pdf.py`"
     },
@@ -4428,7 +4428,7 @@
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
-      "size": 0.85,
+      "size": 0.95,
       "file": "backend/app/engines/reporting/topology_vsdx.py",
       "description": "Código-fonte: `backend/app/engines/reporting/topology_vsdx.py`"
     },
@@ -4440,7 +4440,7 @@
       "category": "network",
       "categoryLabel": "Rede / Scan",
       "color": "#22d3ee",
-      "size": 0.85,
+      "size": 0.95,
       "file": "backend/app/engines/scanner/__init__.py",
       "description": "Código-fonte: `backend/app/engines/scanner/__init__.py`"
     },
@@ -4452,7 +4452,7 @@
       "category": "network",
       "categoryLabel": "Rede / Scan",
       "color": "#22d3ee",
-      "size": 0.85,
+      "size": 0.95,
       "file": "backend/app/engines/scanner/port_scanner.py",
       "description": "Código-fonte: `backend/app/engines/scanner/port_scanner.py`"
     },
@@ -4464,7 +4464,7 @@
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
-      "size": 0.85,
+      "size": 0.95,
       "file": "backend/app/engines/secrets/vault_client.py",
       "description": "Código-fonte: `backend/app/engines/secrets/vault_client.py`"
     },
@@ -4476,7 +4476,7 @@
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
-      "size": 0.85,
+      "size": 0.95,
       "file": "backend/app/engines/snmp/trap_collector.py",
       "description": "Código-fonte: `backend/app/engines/snmp/trap_collector.py`"
     },
@@ -4488,7 +4488,7 @@
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
-      "size": 0.85,
+      "size": 0.95,
       "file": "backend/app/engines/topology/__init__.py",
       "description": "Código-fonte: `backend/app/engines/topology/__init__.py`"
     },
@@ -4500,7 +4500,7 @@
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
-      "size": 0.85,
+      "size": 0.95,
       "file": "backend/app/engines/topology/neighbor_collector.py",
       "description": "Código-fonte: `backend/app/engines/topology/neighbor_collector.py`"
     },
@@ -4512,7 +4512,7 @@
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
-      "size": 0.85,
+      "size": 0.95,
       "file": "backend/app/models/__init__.py",
       "description": "Código-fonte: `backend/app/models/__init__.py`"
     },
@@ -4572,7 +4572,7 @@
       "category": "auth",
       "categoryLabel": "Segurança",
       "color": "#ef4444",
-      "size": 0.85,
+      "size": 0.95,
       "file": "backend/app/schemas/auth.py",
       "description": "Código-fonte: `backend/app/schemas/auth.py`"
     },
@@ -4584,7 +4584,7 @@
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
-      "size": 0.85,
+      "size": 0.95,
       "file": "backend/app/schemas/chatbot.py",
       "description": "Código-fonte: `backend/app/schemas/chatbot.py`"
     },
@@ -4596,7 +4596,7 @@
       "category": "oracle",
       "categoryLabel": "Oracle / DB",
       "color": "#c084fc",
-      "size": 0.85,
+      "size": 0.95,
       "file": "backend/app/schemas/cmdb.py",
       "description": "Código-fonte: `backend/app/schemas/cmdb.py`"
     },
@@ -4608,7 +4608,7 @@
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
-      "size": 0.85,
+      "size": 0.95,
       "file": "backend/app/schemas/credentials.py",
       "description": "Código-fonte: `backend/app/schemas/credentials.py`"
     },
@@ -4620,7 +4620,7 @@
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
-      "size": 0.85,
+      "size": 0.95,
       "file": "backend/app/schemas/device.py",
       "description": "Código-fonte: `backend/app/schemas/device.py`"
     },
@@ -4632,7 +4632,7 @@
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
-      "size": 0.85,
+      "size": 0.95,
       "file": "backend/app/schemas/discovery.py",
       "description": "Código-fonte: `backend/app/schemas/discovery.py`"
     },
@@ -4644,7 +4644,7 @@
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
-      "size": 0.85,
+      "size": 0.95,
       "file": "backend/app/schemas/enterprise.py",
       "description": "Código-fonte: `backend/app/schemas/enterprise.py`"
     },
@@ -4656,7 +4656,7 @@
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
-      "size": 0.85,
+      "size": 0.95,
       "file": "backend/app/schemas/history.py",
       "description": "Código-fonte: `backend/app/schemas/history.py`"
     },
@@ -4668,7 +4668,7 @@
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
-      "size": 0.85,
+      "size": 0.95,
       "file": "backend/app/schemas/mobile.py",
       "description": "Código-fonte: `backend/app/schemas/mobile.py`"
     },
@@ -4680,7 +4680,7 @@
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
-      "size": 0.85,
+      "size": 0.95,
       "file": "backend/app/schemas/monitor.py",
       "description": "Código-fonte: `backend/app/schemas/monitor.py`"
     },
@@ -4692,7 +4692,7 @@
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
-      "size": 0.85,
+      "size": 0.95,
       "file": "backend/app/schemas/phase10.py",
       "description": "Código-fonte: `backend/app/schemas/phase10.py`"
     },
@@ -4704,7 +4704,7 @@
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
-      "size": 0.85,
+      "size": 0.95,
       "file": "backend/app/schemas/phase11.py",
       "description": "Código-fonte: `backend/app/schemas/phase11.py`"
     },
@@ -4716,7 +4716,7 @@
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
-      "size": 0.85,
+      "size": 0.95,
       "file": "backend/app/schemas/phase12.py",
       "description": "Código-fonte: `backend/app/schemas/phase12.py`"
     },
@@ -4728,7 +4728,7 @@
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
-      "size": 0.85,
+      "size": 0.95,
       "file": "backend/app/schemas/phase13.py",
       "description": "Código-fonte: `backend/app/schemas/phase13.py`"
     },
@@ -4740,7 +4740,7 @@
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
-      "size": 0.85,
+      "size": 0.95,
       "file": "backend/app/schemas/phase14.py",
       "description": "Código-fonte: `backend/app/schemas/phase14.py`"
     },
@@ -4752,7 +4752,7 @@
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
-      "size": 0.85,
+      "size": 0.95,
       "file": "backend/app/schemas/phase15.py",
       "description": "Código-fonte: `backend/app/schemas/phase15.py`"
     },
@@ -4764,7 +4764,7 @@
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
-      "size": 0.85,
+      "size": 0.95,
       "file": "backend/app/schemas/phase16.py",
       "description": "Código-fonte: `backend/app/schemas/phase16.py`"
     },
@@ -4776,7 +4776,7 @@
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
-      "size": 0.85,
+      "size": 0.95,
       "file": "backend/app/schemas/phase17.py",
       "description": "Código-fonte: `backend/app/schemas/phase17.py`"
     },
@@ -4788,7 +4788,7 @@
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
-      "size": 0.85,
+      "size": 0.95,
       "file": "backend/app/schemas/phase18.py",
       "description": "Código-fonte: `backend/app/schemas/phase18.py`"
     },
@@ -4800,7 +4800,7 @@
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
-      "size": 0.85,
+      "size": 0.95,
       "file": "backend/app/schemas/phase19.py",
       "description": "Código-fonte: `backend/app/schemas/phase19.py`"
     },
@@ -4812,7 +4812,7 @@
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
-      "size": 0.85,
+      "size": 0.95,
       "file": "backend/app/schemas/phase20.py",
       "description": "Código-fonte: `backend/app/schemas/phase20.py`"
     },
@@ -4824,7 +4824,7 @@
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
-      "size": 0.85,
+      "size": 0.95,
       "file": "backend/app/schemas/phase21.py",
       "description": "Código-fonte: `backend/app/schemas/phase21.py`"
     },
@@ -4836,7 +4836,7 @@
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
-      "size": 0.85,
+      "size": 0.95,
       "file": "backend/app/schemas/phase4.py",
       "description": "Código-fonte: `backend/app/schemas/phase4.py`"
     },
@@ -4848,7 +4848,7 @@
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
-      "size": 0.85,
+      "size": 0.95,
       "file": "backend/app/schemas/topology.py",
       "description": "Código-fonte: `backend/app/schemas/topology.py`"
     },
@@ -4860,7 +4860,7 @@
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
-      "size": 0.85,
+      "size": 0.95,
       "file": "backend/app/schemas/wallboard.py",
       "description": "Código-fonte: `backend/app/schemas/wallboard.py`"
     },
@@ -4872,7 +4872,7 @@
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
-      "size": 0.85,
+      "size": 0.95,
       "file": "backend/app/schemas/zion.py",
       "description": "Código-fonte: `backend/app/schemas/zion.py`"
     },
@@ -4944,7 +4944,7 @@
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
-      "size": 0.85,
+      "size": 0.95,
       "file": "backend/app/services/__init__.py",
       "description": "Código-fonte: `backend/app/services/__init__.py`"
     },
@@ -4956,7 +4956,7 @@
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
-      "size": 0.85,
+      "size": 0.95,
       "file": "backend/app/services/ad_identity_service.py",
       "description": "Código-fonte: `backend/app/services/ad_identity_service.py`"
     },
@@ -4968,7 +4968,7 @@
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
-      "size": 0.85,
+      "size": 0.95,
       "file": "backend/app/services/alert_channel_service.py",
       "description": "Código-fonte: `backend/app/services/alert_channel_service.py`"
     },
@@ -4980,7 +4980,7 @@
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
-      "size": 0.85,
+      "size": 0.95,
       "file": "backend/app/services/alert_service.py",
       "description": "Código-fonte: `backend/app/services/alert_service.py`"
     },
@@ -4992,7 +4992,7 @@
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
-      "size": 0.85,
+      "size": 0.95,
       "file": "backend/app/services/audit_service.py",
       "description": "Código-fonte: `backend/app/services/audit_service.py`"
     },
@@ -5004,7 +5004,7 @@
       "category": "oracle",
       "categoryLabel": "Oracle / DB",
       "color": "#c084fc",
-      "size": 0.85,
+      "size": 0.95,
       "file": "backend/app/services/cmdb_service.py",
       "description": "Código-fonte: `backend/app/services/cmdb_service.py`"
     },
@@ -5016,7 +5016,7 @@
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
-      "size": 0.85,
+      "size": 0.95,
       "file": "backend/app/services/credential_service.py",
       "description": "Código-fonte: `backend/app/services/credential_service.py`"
     },
@@ -5028,7 +5028,7 @@
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
-      "size": 0.85,
+      "size": 0.95,
       "file": "backend/app/services/device_service.py",
       "description": "Código-fonte: `backend/app/services/device_service.py`"
     },
@@ -5040,7 +5040,7 @@
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
-      "size": 0.85,
+      "size": 0.95,
       "file": "backend/app/services/discovery_service.py",
       "description": "Código-fonte: `backend/app/services/discovery_service.py`"
     },
@@ -5052,7 +5052,7 @@
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
-      "size": 0.85,
+      "size": 0.95,
       "file": "backend/app/services/enterprise_service.py",
       "description": "Código-fonte: `backend/app/services/enterprise_service.py`"
     },
@@ -5064,7 +5064,7 @@
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
-      "size": 0.85,
+      "size": 0.95,
       "file": "backend/app/services/hardware_service.py",
       "description": "Código-fonte: `backend/app/services/hardware_service.py`"
     },
@@ -5076,7 +5076,7 @@
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
-      "size": 0.85,
+      "size": 0.95,
       "file": "backend/app/services/inventory_service.py",
       "description": "Código-fonte: `backend/app/services/inventory_service.py`"
     },
@@ -5088,7 +5088,7 @@
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
-      "size": 0.85,
+      "size": 0.95,
       "file": "backend/app/services/ldap_service.py",
       "description": "Código-fonte: `backend/app/services/ldap_service.py`"
     },
@@ -5100,7 +5100,7 @@
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
-      "size": 0.85,
+      "size": 0.95,
       "file": "backend/app/services/mfa_service.py",
       "description": "Código-fonte: `backend/app/services/mfa_service.py`"
     },
@@ -5112,7 +5112,7 @@
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
-      "size": 0.85,
+      "size": 0.95,
       "file": "backend/app/services/monitor_service.py",
       "description": "Código-fonte: `backend/app/services/monitor_service.py`"
     },
@@ -5124,7 +5124,7 @@
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
-      "size": 0.85,
+      "size": 0.95,
       "file": "backend/app/services/oidc_service.py",
       "description": "Código-fonte: `backend/app/services/oidc_service.py`"
     },
@@ -5136,7 +5136,7 @@
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
-      "size": 0.85,
+      "size": 0.95,
       "file": "backend/app/services/phase10_service.py",
       "description": "Código-fonte: `backend/app/services/phase10_service.py`"
     },
@@ -5148,7 +5148,7 @@
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
-      "size": 0.85,
+      "size": 0.95,
       "file": "backend/app/services/phase11_service.py",
       "description": "Código-fonte: `backend/app/services/phase11_service.py`"
     },
@@ -5160,7 +5160,7 @@
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
-      "size": 0.85,
+      "size": 0.95,
       "file": "backend/app/services/phase12_service.py",
       "description": "Código-fonte: `backend/app/services/phase12_service.py`"
     },
@@ -5172,7 +5172,7 @@
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
-      "size": 0.85,
+      "size": 0.95,
       "file": "backend/app/services/phase13_service.py",
       "description": "Código-fonte: `backend/app/services/phase13_service.py`"
     },
@@ -5184,7 +5184,7 @@
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
-      "size": 0.85,
+      "size": 0.95,
       "file": "backend/app/services/phase14_service.py",
       "description": "Código-fonte: `backend/app/services/phase14_service.py`"
     },
@@ -5196,7 +5196,7 @@
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
-      "size": 0.85,
+      "size": 0.95,
       "file": "backend/app/services/phase15_service.py",
       "description": "Código-fonte: `backend/app/services/phase15_service.py`"
     },
@@ -5208,7 +5208,7 @@
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
-      "size": 0.85,
+      "size": 0.95,
       "file": "backend/app/services/phase16_service.py",
       "description": "Código-fonte: `backend/app/services/phase16_service.py`"
     },
@@ -5220,7 +5220,7 @@
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
-      "size": 0.85,
+      "size": 0.95,
       "file": "backend/app/services/phase17_service.py",
       "description": "Código-fonte: `backend/app/services/phase17_service.py`"
     },
@@ -5232,7 +5232,7 @@
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
-      "size": 0.85,
+      "size": 0.95,
       "file": "backend/app/services/phase18_service.py",
       "description": "Código-fonte: `backend/app/services/phase18_service.py`"
     },
@@ -5244,7 +5244,7 @@
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
-      "size": 0.85,
+      "size": 0.95,
       "file": "backend/app/services/phase19_service.py",
       "description": "Código-fonte: `backend/app/services/phase19_service.py`"
     },
@@ -5256,7 +5256,7 @@
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
-      "size": 0.85,
+      "size": 0.95,
       "file": "backend/app/services/phase20_service.py",
       "description": "Código-fonte: `backend/app/services/phase20_service.py`"
     },
@@ -5268,7 +5268,7 @@
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
-      "size": 0.85,
+      "size": 0.95,
       "file": "backend/app/services/phase21_service.py",
       "description": "Código-fonte: `backend/app/services/phase21_service.py`"
     },
@@ -5280,7 +5280,7 @@
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
-      "size": 0.85,
+      "size": 0.95,
       "file": "backend/app/services/plugin_sync_service.py",
       "description": "Código-fonte: `backend/app/services/plugin_sync_service.py`"
     },
@@ -5292,7 +5292,7 @@
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
-      "size": 0.85,
+      "size": 0.95,
       "file": "backend/app/services/rate_limit.py",
       "description": "Código-fonte: `backend/app/services/rate_limit.py`"
     },
@@ -5304,7 +5304,7 @@
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
-      "size": 0.85,
+      "size": 0.95,
       "file": "backend/app/services/realtime_events.py",
       "description": "Código-fonte: `backend/app/services/realtime_events.py`"
     },
@@ -5316,7 +5316,7 @@
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
-      "size": 0.85,
+      "size": 0.95,
       "file": "backend/app/services/secret_crypto.py",
       "description": "Código-fonte: `backend/app/services/secret_crypto.py`"
     },
@@ -5328,7 +5328,7 @@
       "category": "auth",
       "categoryLabel": "Segurança",
       "color": "#ef4444",
-      "size": 0.85,
+      "size": 0.95,
       "file": "backend/app/services/security_policy.py",
       "description": "Código-fonte: `backend/app/services/security_policy.py`"
     },
@@ -5340,7 +5340,7 @@
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
-      "size": 0.85,
+      "size": 0.95,
       "file": "backend/app/services/sla_service.py",
       "description": "Código-fonte: `backend/app/services/sla_service.py`"
     },
@@ -5352,7 +5352,7 @@
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
-      "size": 0.85,
+      "size": 0.95,
       "file": "backend/app/services/topology_service.py",
       "description": "Código-fonte: `backend/app/services/topology_service.py`"
     },
@@ -5364,7 +5364,7 @@
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
-      "size": 0.85,
+      "size": 0.95,
       "file": "backend/app/services/traffic_service.py",
       "description": "Código-fonte: `backend/app/services/traffic_service.py`"
     },
@@ -5376,7 +5376,7 @@
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
-      "size": 0.85,
+      "size": 0.95,
       "file": "backend/app/services/wallboard_service.py",
       "description": "Código-fonte: `backend/app/services/wallboard_service.py`"
     },
@@ -5388,7 +5388,7 @@
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
-      "size": 0.85,
+      "size": 0.95,
       "file": "backend/app/services/zion_panels.py",
       "description": "Código-fonte: `backend/app/services/zion_panels.py`"
     },
@@ -5400,7 +5400,7 @@
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
-      "size": 0.85,
+      "size": 0.95,
       "file": "backend/app/services/zion_service.py",
       "description": "Código-fonte: `backend/app/services/zion_service.py`"
     },
@@ -5412,7 +5412,7 @@
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
-      "size": 0.85,
+      "size": 0.95,
       "file": "backend/app/workers/__init__.py",
       "description": "Código-fonte: `backend/app/workers/__init__.py`"
     },
@@ -5424,7 +5424,7 @@
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
-      "size": 0.85,
+      "size": 0.95,
       "file": "backend/app/workers/ai_tasks.py",
       "description": "Código-fonte: `backend/app/workers/ai_tasks.py`"
     },
@@ -5436,7 +5436,7 @@
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
-      "size": 0.85,
+      "size": 0.95,
       "file": "backend/app/workers/backup_tasks.py",
       "description": "Código-fonte: `backend/app/workers/backup_tasks.py`"
     },
@@ -5448,7 +5448,7 @@
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
-      "size": 0.85,
+      "size": 0.95,
       "file": "backend/app/workers/celery_app.py",
       "description": "Código-fonte: `backend/app/workers/celery_app.py`"
     },
@@ -5460,7 +5460,7 @@
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
-      "size": 0.85,
+      "size": 0.95,
       "file": "backend/app/workers/discovery_tasks.py",
       "description": "Código-fonte: `backend/app/workers/discovery_tasks.py`"
     },
@@ -5472,7 +5472,7 @@
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
-      "size": 0.85,
+      "size": 0.95,
       "file": "backend/app/workers/enterprise_tasks.py",
       "description": "Código-fonte: `backend/app/workers/enterprise_tasks.py`"
     },
@@ -5484,7 +5484,7 @@
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
-      "size": 0.85,
+      "size": 0.95,
       "file": "backend/app/workers/phase10_tasks.py",
       "description": "Código-fonte: `backend/app/workers/phase10_tasks.py`"
     },
@@ -5496,7 +5496,7 @@
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
-      "size": 0.85,
+      "size": 0.95,
       "file": "backend/app/workers/phase11_tasks.py",
       "description": "Código-fonte: `backend/app/workers/phase11_tasks.py`"
     },
@@ -5508,7 +5508,7 @@
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
-      "size": 0.85,
+      "size": 0.95,
       "file": "backend/app/workers/phase17_tasks.py",
       "description": "Código-fonte: `backend/app/workers/phase17_tasks.py`"
     },
@@ -5520,7 +5520,7 @@
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
-      "size": 0.85,
+      "size": 0.95,
       "file": "backend/app/workers/report_tasks.py",
       "description": "Código-fonte: `backend/app/workers/report_tasks.py`"
     },
@@ -5532,7 +5532,7 @@
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
-      "size": 0.85,
+      "size": 0.95,
       "file": "backend/app/workers/tasks.py",
       "description": "Código-fonte: `backend/app/workers/tasks.py`"
     },
@@ -5544,7 +5544,7 @@
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
-      "size": 0.85,
+      "size": 0.95,
       "file": "backend/app/workers/topology_tasks.py",
       "description": "Código-fonte: `backend/app/workers/topology_tasks.py`"
     },
@@ -5556,7 +5556,7 @@
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
-      "size": 0.85,
+      "size": 0.95,
       "file": "backend/app/ws/map_collab.py",
       "description": "Código-fonte: `backend/app/ws/map_collab.py`"
     },
@@ -5568,7 +5568,7 @@
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
-      "size": 0.85,
+      "size": 0.95,
       "file": "backend/app/ws/vision_stream.py",
       "description": "Código-fonte: `backend/app/ws/vision_stream.py`"
     },
@@ -5580,7 +5580,7 @@
       "category": "scripts",
       "categoryLabel": "Scripts",
       "color": "#64748b",
-      "size": 0.85,
+      "size": 0.95,
       "file": "backend/scripts/smoke_inventory_gaps.py",
       "description": "Código-fonte: `backend/scripts/smoke_inventory_gaps.py`"
     },
@@ -5592,7 +5592,7 @@
       "category": "scripts",
       "categoryLabel": "Scripts",
       "color": "#64748b",
-      "size": 0.85,
+      "size": 0.95,
       "file": "backend/scripts/smoke_partial_gaps.py",
       "description": "Código-fonte: `backend/scripts/smoke_partial_gaps.py`"
     },
@@ -5604,7 +5604,7 @@
       "category": "scripts",
       "categoryLabel": "Scripts",
       "color": "#64748b",
-      "size": 0.85,
+      "size": 0.95,
       "file": "backend/scripts/smoke_phase20.py",
       "description": "Código-fonte: `backend/scripts/smoke_phase20.py`"
     },
@@ -5616,7 +5616,7 @@
       "category": "scripts",
       "categoryLabel": "Scripts",
       "color": "#64748b",
-      "size": 0.85,
+      "size": 0.95,
       "file": "backend/scripts/smoke_phase21.py",
       "description": "Código-fonte: `backend/scripts/smoke_phase21.py`"
     },
@@ -5628,7 +5628,7 @@
       "category": "scripts",
       "categoryLabel": "Scripts",
       "color": "#64748b",
-      "size": 0.85,
+      "size": 0.95,
       "file": "backend/scripts/test_map_e2e.py",
       "description": "Código-fonte: `backend/scripts/test_map_e2e.py`"
     },
@@ -5640,7 +5640,7 @@
       "category": "scripts",
       "categoryLabel": "Scripts",
       "color": "#64748b",
-      "size": 0.85,
+      "size": 0.95,
       "file": "backend/scripts/test_map_flow.py",
       "description": "Código-fonte: `backend/scripts/test_map_flow.py`"
     },
@@ -5652,7 +5652,7 @@
       "category": "scripts",
       "categoryLabel": "Scripts",
       "color": "#64748b",
-      "size": 0.85,
+      "size": 0.95,
       "file": "backend/scripts/test_topology_export.py",
       "description": "Código-fonte: `backend/scripts/test_topology_export.py`"
     },
@@ -5664,7 +5664,7 @@
       "category": "scripts",
       "categoryLabel": "Scripts",
       "color": "#64748b",
-      "size": 0.85,
+      "size": 0.95,
       "file": "backend/scripts/test_vision_report.py",
       "description": "Código-fonte: `backend/scripts/test_vision_report.py`"
     },
@@ -5712,7 +5712,7 @@
       "category": "tests",
       "categoryLabel": "Testes",
       "color": "#94a3b8",
-      "size": 0.85,
+      "size": 0.95,
       "file": "backend/tests/__init__.py",
       "description": "Código-fonte: `backend/tests/__init__.py`"
     },
@@ -5724,7 +5724,7 @@
       "category": "tests",
       "categoryLabel": "Testes",
       "color": "#94a3b8",
-      "size": 0.85,
+      "size": 0.95,
       "file": "backend/tests/conftest.py",
       "description": "Código-fonte: `backend/tests/conftest.py`"
     },
@@ -5736,7 +5736,7 @@
       "category": "tests",
       "categoryLabel": "Testes",
       "color": "#94a3b8",
-      "size": 0.85,
+      "size": 0.95,
       "file": "backend/tests/test_agent_package.py",
       "description": "Código-fonte: `backend/tests/test_agent_package.py`"
     },
@@ -5748,7 +5748,7 @@
       "category": "tests",
       "categoryLabel": "Testes",
       "color": "#94a3b8",
-      "size": 0.85,
+      "size": 0.95,
       "file": "backend/tests/test_alerts_config.py",
       "description": "Código-fonte: `backend/tests/test_alerts_config.py`"
     },
@@ -5760,7 +5760,7 @@
       "category": "tests",
       "categoryLabel": "Testes",
       "color": "#94a3b8",
-      "size": 0.85,
+      "size": 0.95,
       "file": "backend/tests/test_alerts_silence_dedupe.py",
       "description": "Código-fonte: `backend/tests/test_alerts_silence_dedupe.py`"
     },
@@ -5772,7 +5772,7 @@
       "category": "auth",
       "categoryLabel": "Segurança",
       "color": "#ef4444",
-      "size": 0.85,
+      "size": 0.95,
       "file": "backend/tests/test_auth.py",
       "description": "Código-fonte: `backend/tests/test_auth.py`"
     },
@@ -5784,7 +5784,7 @@
       "category": "tests",
       "categoryLabel": "Testes",
       "color": "#94a3b8",
-      "size": 0.85,
+      "size": 0.95,
       "file": "backend/tests/test_chatbot_no_password.py",
       "description": "Código-fonte: `backend/tests/test_chatbot_no_password.py`"
     },
@@ -5796,7 +5796,7 @@
       "category": "tests",
       "categoryLabel": "Testes",
       "color": "#94a3b8",
-      "size": 0.85,
+      "size": 0.95,
       "file": "backend/tests/test_feature_inventory_sync.py",
       "description": "Código-fonte: `backend/tests/test_feature_inventory_sync.py`"
     },
@@ -5808,7 +5808,7 @@
       "category": "tests",
       "categoryLabel": "Testes",
       "color": "#94a3b8",
-      "size": 0.85,
+      "size": 0.95,
       "file": "backend/tests/test_guardian_safety.py",
       "description": "Código-fonte: `backend/tests/test_guardian_safety.py`"
     },
@@ -5820,7 +5820,7 @@
       "category": "tests",
       "categoryLabel": "Testes",
       "color": "#94a3b8",
-      "size": 0.85,
+      "size": 0.95,
       "file": "backend/tests/test_health.py",
       "description": "Código-fonte: `backend/tests/test_health.py`"
     },
@@ -5832,7 +5832,7 @@
       "category": "tests",
       "categoryLabel": "Testes",
       "color": "#94a3b8",
-      "size": 0.85,
+      "size": 0.95,
       "file": "backend/tests/test_metrics_retention_p13.py",
       "description": "Código-fonte: `backend/tests/test_metrics_retention_p13.py`"
     },
@@ -5844,7 +5844,7 @@
       "category": "tests",
       "categoryLabel": "Testes",
       "color": "#94a3b8",
-      "size": 0.85,
+      "size": 0.95,
       "file": "backend/tests/test_mfa.py",
       "description": "Código-fonte: `backend/tests/test_mfa.py`"
     },
@@ -5856,7 +5856,7 @@
       "category": "tests",
       "categoryLabel": "Testes",
       "color": "#94a3b8",
-      "size": 0.85,
+      "size": 0.95,
       "file": "backend/tests/test_noc_rag.py",
       "description": "Código-fonte: `backend/tests/test_noc_rag.py`"
     },
@@ -5868,7 +5868,7 @@
       "category": "tests",
       "categoryLabel": "Testes",
       "color": "#94a3b8",
-      "size": 0.85,
+      "size": 0.95,
       "file": "backend/tests/test_oidc.py",
       "description": "Código-fonte: `backend/tests/test_oidc.py`"
     },
@@ -5880,7 +5880,7 @@
       "category": "tests",
       "categoryLabel": "Testes",
       "color": "#94a3b8",
-      "size": 0.85,
+      "size": 0.95,
       "file": "backend/tests/test_phase9b_enterprise.py",
       "description": "Código-fonte: `backend/tests/test_phase9b_enterprise.py`"
     },
@@ -5892,7 +5892,7 @@
       "category": "tests",
       "categoryLabel": "Testes",
       "color": "#94a3b8",
-      "size": 0.85,
+      "size": 0.95,
       "file": "backend/tests/test_rate_limit_p16.py",
       "description": "Código-fonte: `backend/tests/test_rate_limit_p16.py`"
     },
@@ -5904,7 +5904,7 @@
       "category": "tests",
       "categoryLabel": "Testes",
       "color": "#94a3b8",
-      "size": 0.85,
+      "size": 0.95,
       "file": "backend/tests/test_remediation_yaml.py",
       "description": "Código-fonte: `backend/tests/test_remediation_yaml.py`"
     },
@@ -5916,7 +5916,7 @@
       "category": "tests",
       "categoryLabel": "Testes",
       "color": "#94a3b8",
-      "size": 0.85,
+      "size": 0.95,
       "file": "backend/tests/test_resolve_unknown_status.py",
       "description": "Código-fonte: `backend/tests/test_resolve_unknown_status.py`"
     },
@@ -5928,7 +5928,7 @@
       "category": "tests",
       "categoryLabel": "Testes",
       "color": "#94a3b8",
-      "size": 0.85,
+      "size": 0.95,
       "file": "backend/tests/test_ssh_config_restore.py",
       "description": "Código-fonte: `backend/tests/test_ssh_config_restore.py`"
     },
@@ -5940,7 +5940,7 @@
       "category": "tests",
       "categoryLabel": "Testes",
       "color": "#94a3b8",
-      "size": 0.85,
+      "size": 0.95,
       "file": "backend/tests/test_stream.py",
       "description": "Código-fonte: `backend/tests/test_stream.py`"
     },
@@ -5952,7 +5952,7 @@
       "category": "tests",
       "categoryLabel": "Testes",
       "color": "#94a3b8",
-      "size": 0.85,
+      "size": 0.95,
       "file": "backend/tests/test_traffic_honest.py",
       "description": "Código-fonte: `backend/tests/test_traffic_honest.py`"
     },
@@ -5964,7 +5964,7 @@
       "category": "tests",
       "categoryLabel": "Testes",
       "color": "#94a3b8",
-      "size": 0.85,
+      "size": 0.95,
       "file": "backend/tests/test_wallboard.py",
       "description": "Código-fonte: `backend/tests/test_wallboard.py`"
     },
@@ -5976,7 +5976,7 @@
       "category": "tests",
       "categoryLabel": "Testes",
       "color": "#94a3b8",
-      "size": 0.85,
+      "size": 0.95,
       "file": "backend/tests/test_zion_panels.py",
       "description": "Código-fonte: `backend/tests/test_zion_panels.py`"
     },
@@ -5988,7 +5988,7 @@
       "category": "other",
       "categoryLabel": "Outros",
       "color": "#64748b",
-      "size": 0.85,
+      "size": 0.95,
       "file": "deploy/argocd/application.yaml",
       "description": "Código-fonte: `deploy/argocd/application.yaml`"
     },
@@ -6000,7 +6000,7 @@
       "category": "frontend",
       "categoryLabel": "Frontend",
       "color": "#eab308",
-      "size": 0.85,
+      "size": 0.95,
       "file": "deploy/grafana/dashboards/sentinelai-overview.json",
       "description": "Código-fonte: `deploy/grafana/dashboards/sentinelai-overview.json`"
     },
@@ -6012,7 +6012,7 @@
       "category": "other",
       "categoryLabel": "Outros",
       "color": "#64748b",
-      "size": 0.85,
+      "size": 0.95,
       "file": "deploy/grafana/provisioning/dashboards/dashboards.yml",
       "description": "Código-fonte: `deploy/grafana/provisioning/dashboards/dashboards.yml`"
     },
@@ -6024,7 +6024,7 @@
       "category": "other",
       "categoryLabel": "Outros",
       "color": "#64748b",
-      "size": 0.85,
+      "size": 0.95,
       "file": "deploy/grafana/provisioning/datasources/prometheus.yml",
       "description": "Código-fonte: `deploy/grafana/provisioning/datasources/prometheus.yml`"
     },
@@ -6036,7 +6036,7 @@
       "category": "other",
       "categoryLabel": "Outros",
       "color": "#64748b",
-      "size": 0.85,
+      "size": 0.95,
       "file": "deploy/helm/sentinelai/Chart.yaml",
       "description": "Código-fonte: `deploy/helm/sentinelai/Chart.yaml`"
     },
@@ -6048,7 +6048,7 @@
       "category": "other",
       "categoryLabel": "Outros",
       "color": "#64748b",
-      "size": 0.85,
+      "size": 0.95,
       "file": "deploy/helm/sentinelai/README.md",
       "description": "Código-fonte: `deploy/helm/sentinelai/README.md`"
     },
@@ -6060,7 +6060,7 @@
       "category": "other",
       "categoryLabel": "Outros",
       "color": "#64748b",
-      "size": 0.85,
+      "size": 0.95,
       "file": "deploy/helm/sentinelai/values.yaml",
       "description": "Código-fonte: `deploy/helm/sentinelai/values.yaml`"
     },
@@ -6072,7 +6072,7 @@
       "category": "frontend",
       "categoryLabel": "Frontend",
       "color": "#eab308",
-      "size": 0.85,
+      "size": 0.95,
       "file": "deploy/helm/sentinelai/templates/api-deployment.yaml",
       "description": "Código-fonte: `deploy/helm/sentinelai/templates/api-deployment.yaml`"
     },
@@ -6084,7 +6084,7 @@
       "category": "frontend",
       "categoryLabel": "Frontend",
       "color": "#eab308",
-      "size": 0.85,
+      "size": 0.95,
       "file": "deploy/helm/sentinelai/templates/frontend-deployment.yaml",
       "description": "Código-fonte: `deploy/helm/sentinelai/templates/frontend-deployment.yaml`"
     },
@@ -6096,7 +6096,7 @@
       "category": "frontend",
       "categoryLabel": "Frontend",
       "color": "#eab308",
-      "size": 0.85,
+      "size": 0.95,
       "file": "deploy/helm/sentinelai/templates/ingress.yaml",
       "description": "Código-fonte: `deploy/helm/sentinelai/templates/ingress.yaml`"
     },
@@ -6108,7 +6108,7 @@
       "category": "other",
       "categoryLabel": "Outros",
       "color": "#64748b",
-      "size": 0.85,
+      "size": 0.95,
       "file": "deploy/mesh/envoy.yaml",
       "description": "Código-fonte: `deploy/mesh/envoy.yaml`"
     },
@@ -6120,7 +6120,7 @@
       "category": "oracle",
       "categoryLabel": "Oracle / DB",
       "color": "#c084fc",
-      "size": 0.85,
+      "size": 0.95,
       "file": "deploy/postgres/primary/init-replication.sh",
       "description": "Código-fonte: `deploy/postgres/primary/init-replication.sh`"
     },
@@ -6132,7 +6132,7 @@
       "category": "oracle",
       "categoryLabel": "Oracle / DB",
       "color": "#c084fc",
-      "size": 0.85,
+      "size": 0.95,
       "file": "deploy/postgres/replica/entrypoint.sh",
       "description": "Código-fonte: `deploy/postgres/replica/entrypoint.sh`"
     },
@@ -6144,7 +6144,7 @@
       "category": "other",
       "categoryLabel": "Outros",
       "color": "#64748b",
-      "size": 0.85,
+      "size": 0.95,
       "file": "deploy/prometheus/prometheus.yml",
       "description": "Código-fonte: `deploy/prometheus/prometheus.yml`"
     },
@@ -6156,7 +6156,7 @@
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
-      "size": 0.85,
+      "size": 0.95,
       "file": "desktop/main.js",
       "description": "Código-fonte: `desktop/main.js`"
     },
@@ -6168,7 +6168,7 @@
       "category": "other",
       "categoryLabel": "Outros",
       "color": "#64748b",
-      "size": 0.85,
+      "size": 0.95,
       "file": "desktop/package.json",
       "description": "Código-fonte: `desktop/package.json`"
     },
@@ -6180,7 +6180,7 @@
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
-      "size": 0.85,
+      "size": 0.95,
       "file": "desktop/preload.js",
       "description": "Código-fonte: `desktop/preload.js`"
     },
@@ -6240,7 +6240,7 @@
       "category": "other",
       "categoryLabel": "Outros",
       "color": "#64748b",
-      "size": 0.85,
+      "size": 0.95,
       "file": "docs/AGENT-LAB.md",
       "description": "Código-fonte: `docs/AGENT-LAB.md`"
     },
@@ -6252,7 +6252,7 @@
       "category": "other",
       "categoryLabel": "Outros",
       "color": "#64748b",
-      "size": 0.85,
+      "size": 0.95,
       "file": "docs/BACKUP-SCHEDULE.md",
       "description": "Código-fonte: `docs/BACKUP-SCHEDULE.md`"
     },
@@ -6264,7 +6264,7 @@
       "category": "other",
       "categoryLabel": "Outros",
       "color": "#64748b",
-      "size": 0.85,
+      "size": 0.95,
       "file": "docs/CRONOGRAMA-ESTABILIZACAO.md",
       "description": "Código-fonte: `docs/CRONOGRAMA-ESTABILIZACAO.md`"
     },
@@ -6276,7 +6276,7 @@
       "category": "other",
       "categoryLabel": "Outros",
       "color": "#64748b",
-      "size": 0.85,
+      "size": 0.95,
       "file": "docs/feature-inventory.json",
       "description": "Código-fonte: `docs/feature-inventory.json`"
     },
@@ -6288,7 +6288,7 @@
       "category": "other",
       "categoryLabel": "Outros",
       "color": "#64748b",
-      "size": 0.85,
+      "size": 0.95,
       "file": "docs/LAN-MIRROR.md",
       "description": "Código-fonte: `docs/LAN-MIRROR.md`"
     },
@@ -6300,7 +6300,7 @@
       "category": "other",
       "categoryLabel": "Outros",
       "color": "#64748b",
-      "size": 0.85,
+      "size": 0.95,
       "file": "docs/LLM-DEEPSEEK-OLLAMA.md",
       "description": "Código-fonte: `docs/LLM-DEEPSEEK-OLLAMA.md`"
     },
@@ -6312,7 +6312,7 @@
       "category": "other",
       "categoryLabel": "Outros",
       "color": "#64748b",
-      "size": 0.85,
+      "size": 0.95,
       "file": "docs/MAP-EDITOR-ROADMAP.md",
       "description": "Código-fonte: `docs/MAP-EDITOR-ROADMAP.md`"
     },
@@ -6324,7 +6324,7 @@
       "category": "other",
       "categoryLabel": "Outros",
       "color": "#64748b",
-      "size": 0.85,
+      "size": 0.95,
       "file": "docs/PHASE-0-BASELINE.md",
       "description": "Código-fonte: `docs/PHASE-0-BASELINE.md`"
     },
@@ -6336,7 +6336,7 @@
       "category": "other",
       "categoryLabel": "Outros",
       "color": "#64748b",
-      "size": 0.85,
+      "size": 0.95,
       "file": "docs/PHASE-10-ROADMAP.md",
       "description": "Código-fonte: `docs/PHASE-10-ROADMAP.md`"
     },
@@ -6348,7 +6348,7 @@
       "category": "other",
       "categoryLabel": "Outros",
       "color": "#64748b",
-      "size": 0.85,
+      "size": 0.95,
       "file": "docs/PHASE-11-ROADMAP.md",
       "description": "Código-fonte: `docs/PHASE-11-ROADMAP.md`"
     },
@@ -6360,7 +6360,7 @@
       "category": "other",
       "categoryLabel": "Outros",
       "color": "#64748b",
-      "size": 0.85,
+      "size": 0.95,
       "file": "docs/PHASE-12-ROADMAP.md",
       "description": "Código-fonte: `docs/PHASE-12-ROADMAP.md`"
     },
@@ -6372,7 +6372,7 @@
       "category": "other",
       "categoryLabel": "Outros",
       "color": "#64748b",
-      "size": 0.85,
+      "size": 0.95,
       "file": "docs/PHASE-13-ROADMAP.md",
       "description": "Código-fonte: `docs/PHASE-13-ROADMAP.md`"
     },
@@ -6384,7 +6384,7 @@
       "category": "other",
       "categoryLabel": "Outros",
       "color": "#64748b",
-      "size": 0.85,
+      "size": 0.95,
       "file": "docs/PHASE-14-ROADMAP.md",
       "description": "Código-fonte: `docs/PHASE-14-ROADMAP.md`"
     },
@@ -6396,7 +6396,7 @@
       "category": "other",
       "categoryLabel": "Outros",
       "color": "#64748b",
-      "size": 0.85,
+      "size": 0.95,
       "file": "docs/PHASE-15-ROADMAP.md",
       "description": "Código-fonte: `docs/PHASE-15-ROADMAP.md`"
     },
@@ -6408,7 +6408,7 @@
       "category": "other",
       "categoryLabel": "Outros",
       "color": "#64748b",
-      "size": 0.85,
+      "size": 0.95,
       "file": "docs/PHASE-16-ROADMAP.md",
       "description": "Código-fonte: `docs/PHASE-16-ROADMAP.md`"
     },
@@ -6420,7 +6420,7 @@
       "category": "other",
       "categoryLabel": "Outros",
       "color": "#64748b",
-      "size": 0.85,
+      "size": 0.95,
       "file": "docs/PHASE-17-ROADMAP.md",
       "description": "Código-fonte: `docs/PHASE-17-ROADMAP.md`"
     },
@@ -6432,7 +6432,7 @@
       "category": "other",
       "categoryLabel": "Outros",
       "color": "#64748b",
-      "size": 0.85,
+      "size": 0.95,
       "file": "docs/PHASE-18-ROADMAP.md",
       "description": "Código-fonte: `docs/PHASE-18-ROADMAP.md`"
     },
@@ -6444,7 +6444,7 @@
       "category": "other",
       "categoryLabel": "Outros",
       "color": "#64748b",
-      "size": 0.85,
+      "size": 0.95,
       "file": "docs/PHASE-19-ROADMAP.md",
       "description": "Código-fonte: `docs/PHASE-19-ROADMAP.md`"
     },
@@ -6456,7 +6456,7 @@
       "category": "other",
       "categoryLabel": "Outros",
       "color": "#64748b",
-      "size": 0.85,
+      "size": 0.95,
       "file": "docs/PHASE-20-ROADMAP.md",
       "description": "Código-fonte: `docs/PHASE-20-ROADMAP.md`"
     },
@@ -6468,7 +6468,7 @@
       "category": "other",
       "categoryLabel": "Outros",
       "color": "#64748b",
-      "size": 0.85,
+      "size": 0.95,
       "file": "docs/PHASE-21-ROADMAP.md",
       "description": "Código-fonte: `docs/PHASE-21-ROADMAP.md`"
     },
@@ -6480,7 +6480,7 @@
       "category": "other",
       "categoryLabel": "Outros",
       "color": "#64748b",
-      "size": 0.85,
+      "size": 0.95,
       "file": "docs/PHASE-22-ROADMAP.md",
       "description": "Código-fonte: `docs/PHASE-22-ROADMAP.md`"
     },
@@ -6492,7 +6492,7 @@
       "category": "other",
       "categoryLabel": "Outros",
       "color": "#64748b",
-      "size": 0.85,
+      "size": 0.95,
       "file": "docs/PHASE-23-ROADMAP.md",
       "description": "Código-fonte: `docs/PHASE-23-ROADMAP.md`"
     },
@@ -6504,7 +6504,7 @@
       "category": "other",
       "categoryLabel": "Outros",
       "color": "#64748b",
-      "size": 0.85,
+      "size": 0.95,
       "file": "docs/PHASE-24-ROADMAP.md",
       "description": "Código-fonte: `docs/PHASE-24-ROADMAP.md`"
     },
@@ -6516,7 +6516,7 @@
       "category": "other",
       "categoryLabel": "Outros",
       "color": "#64748b",
-      "size": 0.85,
+      "size": 0.95,
       "file": "docs/PHASE-25-ROADMAP.md",
       "description": "Código-fonte: `docs/PHASE-25-ROADMAP.md`"
     },
@@ -6528,7 +6528,7 @@
       "category": "other",
       "categoryLabel": "Outros",
       "color": "#64748b",
-      "size": 0.85,
+      "size": 0.95,
       "file": "docs/PHASE-26-ROADMAP.md",
       "description": "Código-fonte: `docs/PHASE-26-ROADMAP.md`"
     },
@@ -6540,7 +6540,7 @@
       "category": "other",
       "categoryLabel": "Outros",
       "color": "#64748b",
-      "size": 0.85,
+      "size": 0.95,
       "file": "docs/PHASE-27-ROADMAP.md",
       "description": "Código-fonte: `docs/PHASE-27-ROADMAP.md`"
     },
@@ -6552,7 +6552,7 @@
       "category": "other",
       "categoryLabel": "Outros",
       "color": "#64748b",
-      "size": 0.85,
+      "size": 0.95,
       "file": "docs/PHASE-28-BACKUP.md",
       "description": "Código-fonte: `docs/PHASE-28-BACKUP.md`"
     },
@@ -6564,7 +6564,7 @@
       "category": "other",
       "categoryLabel": "Outros",
       "color": "#64748b",
-      "size": 0.85,
+      "size": 0.95,
       "file": "docs/PHASE-9-ROADMAP.md",
       "description": "Código-fonte: `docs/PHASE-9-ROADMAP.md`"
     },
@@ -6576,7 +6576,7 @@
       "category": "frontend",
       "categoryLabel": "Frontend",
       "color": "#eab308",
-      "size": 0.85,
+      "size": 0.95,
       "file": "docs/SECURITY-REVIEW-v2.2.md",
       "description": "Código-fonte: `docs/SECURITY-REVIEW-v2.2.md`"
     },
@@ -6588,7 +6588,7 @@
       "category": "other",
       "categoryLabel": "Outros",
       "color": "#64748b",
-      "size": 0.85,
+      "size": 0.95,
       "file": "docs/SPRINT-TRUST-P0.md",
       "description": "Código-fonte: `docs/SPRINT-TRUST-P0.md`"
     },
@@ -6600,7 +6600,7 @@
       "category": "other",
       "categoryLabel": "Outros",
       "color": "#64748b",
-      "size": 0.85,
+      "size": 0.95,
       "file": "docs/SSO-OIDC.md",
       "description": "Código-fonte: `docs/SSO-OIDC.md`"
     },
@@ -6612,7 +6612,7 @@
       "category": "other",
       "categoryLabel": "Outros",
       "color": "#64748b",
-      "size": 0.85,
+      "size": 0.95,
       "file": "docs/UPGRADE-v2.2.md",
       "description": "Código-fonte: `docs/UPGRADE-v2.2.md`"
     },
@@ -6624,7 +6624,7 @@
       "category": "other",
       "categoryLabel": "Outros",
       "color": "#64748b",
-      "size": 0.85,
+      "size": 0.95,
       "file": "docs/UPGRADE-v2.6.md",
       "description": "Código-fonte: `docs/UPGRADE-v2.6.md`"
     },
@@ -6636,7 +6636,7 @@
       "category": "other",
       "categoryLabel": "Outros",
       "color": "#64748b",
-      "size": 0.85,
+      "size": 0.95,
       "file": "docs/UPGRADE-v2.7.md",
       "description": "Código-fonte: `docs/UPGRADE-v2.7.md`"
     },
@@ -6648,7 +6648,7 @@
       "category": "other",
       "categoryLabel": "Outros",
       "color": "#64748b",
-      "size": 0.85,
+      "size": 0.95,
       "file": "docs/UPGRADE-v2.8.md",
       "description": "Código-fonte: `docs/UPGRADE-v2.8.md`"
     },
@@ -6660,7 +6660,7 @@
       "category": "other",
       "categoryLabel": "Outros",
       "color": "#64748b",
-      "size": 0.85,
+      "size": 0.95,
       "file": "docs/ZION-5-PASSOS.md",
       "description": "Código-fonte: `docs/ZION-5-PASSOS.md`"
     },
@@ -6672,7 +6672,7 @@
       "category": "other",
       "categoryLabel": "Outros",
       "color": "#64748b",
-      "size": 0.85,
+      "size": 0.95,
       "file": "docs/ZIONVM-ROADMAP.md",
       "description": "Código-fonte: `docs/ZIONVM-ROADMAP.md`"
     },
@@ -6684,7 +6684,7 @@
       "category": "frontend",
       "categoryLabel": "Frontend",
       "color": "#eab308",
-      "size": 0.85,
+      "size": 0.95,
       "file": "frontend/Dockerfile",
       "description": "Código-fonte: `frontend/Dockerfile`"
     },
@@ -6696,7 +6696,7 @@
       "category": "frontend",
       "categoryLabel": "Frontend",
       "color": "#eab308",
-      "size": 0.85,
+      "size": 0.95,
       "file": "frontend/index.html",
       "description": "Código-fonte: `frontend/index.html`"
     },
@@ -6708,7 +6708,7 @@
       "category": "frontend",
       "categoryLabel": "Frontend",
       "color": "#eab308",
-      "size": 0.85,
+      "size": 0.95,
       "file": "frontend/package.json",
       "description": "Código-fonte: `frontend/package.json`"
     },
@@ -6720,7 +6720,7 @@
       "category": "frontend",
       "categoryLabel": "Frontend",
       "color": "#eab308",
-      "size": 0.85,
+      "size": 0.95,
       "file": "frontend/tsconfig.json",
       "description": "Código-fonte: `frontend/tsconfig.json`"
     },
@@ -6732,7 +6732,7 @@
       "category": "frontend",
       "categoryLabel": "Frontend",
       "color": "#eab308",
-      "size": 0.85,
+      "size": 0.95,
       "file": "frontend/vite.config.ts",
       "description": "Código-fonte: `frontend/vite.config.ts`"
     },
@@ -6744,7 +6744,7 @@
       "category": "frontend",
       "categoryLabel": "Frontend",
       "color": "#eab308",
-      "size": 0.85,
+      "size": 0.95,
       "file": "frontend/public/manifest.json",
       "description": "Código-fonte: `frontend/public/manifest.json`"
     },
@@ -6756,7 +6756,7 @@
       "category": "frontend",
       "categoryLabel": "Frontend",
       "color": "#eab308",
-      "size": 0.85,
+      "size": 0.95,
       "file": "frontend/public/sw.js",
       "description": "Código-fonte: `frontend/public/sw.js`"
     },
@@ -6768,7 +6768,7 @@
       "category": "frontend",
       "categoryLabel": "Frontend",
       "color": "#eab308",
-      "size": 0.85,
+      "size": 0.95,
       "file": "frontend/src/App.tsx",
       "description": "Código-fonte: `frontend/src/App.tsx`"
     },
@@ -6780,7 +6780,7 @@
       "category": "frontend",
       "categoryLabel": "Frontend",
       "color": "#eab308",
-      "size": 0.85,
+      "size": 0.95,
       "file": "frontend/src/main.tsx",
       "description": "Código-fonte: `frontend/src/main.tsx`"
     },
@@ -6792,7 +6792,7 @@
       "category": "frontend",
       "categoryLabel": "Frontend",
       "color": "#eab308",
-      "size": 0.85,
+      "size": 0.95,
       "file": "frontend/src/vite-env.d.ts",
       "description": "Código-fonte: `frontend/src/vite-env.d.ts`"
     },
@@ -6804,7 +6804,7 @@
       "category": "frontend",
       "categoryLabel": "Frontend",
       "color": "#eab308",
-      "size": 0.85,
+      "size": 0.95,
       "file": "frontend/src/api/baseUrl.ts",
       "description": "Código-fonte: `frontend/src/api/baseUrl.ts`"
     },
@@ -6816,7 +6816,7 @@
       "category": "frontend",
       "categoryLabel": "Frontend",
       "color": "#eab308",
-      "size": 0.85,
+      "size": 0.95,
       "file": "frontend/src/api/client.ts",
       "description": "Código-fonte: `frontend/src/api/client.ts`"
     },
@@ -6852,7 +6852,7 @@
       "category": "frontend",
       "categoryLabel": "Frontend",
       "color": "#eab308",
-      "size": 0.85,
+      "size": 0.95,
       "file": "frontend/src/components/AiEngineerAvatar.tsx",
       "description": "Código-fonte: `frontend/src/components/AiEngineerAvatar.tsx`"
     },
@@ -6864,7 +6864,7 @@
       "category": "frontend",
       "categoryLabel": "Frontend",
       "color": "#eab308",
-      "size": 0.85,
+      "size": 0.95,
       "file": "frontend/src/components/ChatbotWidget.tsx",
       "description": "Código-fonte: `frontend/src/components/ChatbotWidget.tsx`"
     },
@@ -6876,7 +6876,7 @@
       "category": "frontend",
       "categoryLabel": "Frontend",
       "color": "#eab308",
-      "size": 0.85,
+      "size": 0.95,
       "file": "frontend/src/components/DeviceCollectAuthTab.tsx",
       "description": "Código-fonte: `frontend/src/components/DeviceCollectAuthTab.tsx`"
     },
@@ -6888,7 +6888,7 @@
       "category": "frontend",
       "categoryLabel": "Frontend",
       "color": "#eab308",
-      "size": 0.85,
+      "size": 0.95,
       "file": "frontend/src/components/DeviceConfigTab.tsx",
       "description": "Código-fonte: `frontend/src/components/DeviceConfigTab.tsx`"
     },
@@ -6900,7 +6900,7 @@
       "category": "frontend",
       "categoryLabel": "Frontend",
       "color": "#eab308",
-      "size": 0.85,
+      "size": 0.95,
       "file": "frontend/src/components/DeviceList.tsx",
       "description": "Código-fonte: `frontend/src/components/DeviceList.tsx`"
     },
@@ -6912,7 +6912,7 @@
       "category": "frontend",
       "categoryLabel": "Frontend",
       "color": "#eab308",
-      "size": 0.85,
+      "size": 0.95,
       "file": "frontend/src/components/DeviceMetricsTab.tsx",
       "description": "Código-fonte: `frontend/src/components/DeviceMetricsTab.tsx`"
     },
@@ -6924,7 +6924,7 @@
       "category": "frontend",
       "categoryLabel": "Frontend",
       "color": "#eab308",
-      "size": 0.85,
+      "size": 0.95,
       "file": "frontend/src/components/DeviceMonitorsTab.tsx",
       "description": "Código-fonte: `frontend/src/components/DeviceMonitorsTab.tsx`"
     },
@@ -6936,7 +6936,7 @@
       "category": "frontend",
       "categoryLabel": "Frontend",
       "color": "#eab308",
-      "size": 0.85,
+      "size": 0.95,
       "file": "frontend/src/components/DeviceNode.tsx",
       "description": "Código-fonte: `frontend/src/components/DeviceNode.tsx`"
     },
@@ -6948,7 +6948,7 @@
       "category": "frontend",
       "categoryLabel": "Frontend",
       "color": "#eab308",
-      "size": 0.85,
+      "size": 0.95,
       "file": "frontend/src/components/DeviceStatusChart.tsx",
       "description": "Código-fonte: `frontend/src/components/DeviceStatusChart.tsx`"
     },
@@ -6960,7 +6960,7 @@
       "category": "frontend",
       "categoryLabel": "Frontend",
       "color": "#eab308",
-      "size": 0.85,
+      "size": 0.95,
       "file": "frontend/src/components/DeviceTypeBreakdown.tsx",
       "description": "Código-fonte: `frontend/src/components/DeviceTypeBreakdown.tsx`"
     },
@@ -6972,7 +6972,7 @@
       "category": "frontend",
       "categoryLabel": "Frontend",
       "color": "#eab308",
-      "size": 0.85,
+      "size": 0.95,
       "file": "frontend/src/components/DiscoveryJobProgress.tsx",
       "description": "Código-fonte: `frontend/src/components/DiscoveryJobProgress.tsx`"
     },
@@ -6984,7 +6984,7 @@
       "category": "frontend",
       "categoryLabel": "Frontend",
       "color": "#eab308",
-      "size": 0.85,
+      "size": 0.95,
       "file": "frontend/src/components/DiscoveryScanOptions.tsx",
       "description": "Código-fonte: `frontend/src/components/DiscoveryScanOptions.tsx`"
     },
@@ -6996,7 +6996,7 @@
       "category": "frontend",
       "categoryLabel": "Frontend",
       "color": "#eab308",
-      "size": 0.85,
+      "size": 0.95,
       "file": "frontend/src/components/ErrorBoundary.tsx",
       "description": "Código-fonte: `frontend/src/components/ErrorBoundary.tsx`"
     },
@@ -7008,7 +7008,7 @@
       "category": "frontend",
       "categoryLabel": "Frontend",
       "color": "#eab308",
-      "size": 0.85,
+      "size": 0.95,
       "file": "frontend/src/components/FleetSparkline.tsx",
       "description": "Código-fonte: `frontend/src/components/FleetSparkline.tsx`"
     },
@@ -7020,7 +7020,7 @@
       "category": "frontend",
       "categoryLabel": "Frontend",
       "color": "#eab308",
-      "size": 0.85,
+      "size": 0.95,
       "file": "frontend/src/components/FlowControls.tsx",
       "description": "Código-fonte: `frontend/src/components/FlowControls.tsx`"
     },
@@ -7032,7 +7032,7 @@
       "category": "frontend",
       "categoryLabel": "Frontend",
       "color": "#eab308",
-      "size": 0.85,
+      "size": 0.95,
       "file": "frontend/src/components/MfaSettingsPanel.tsx",
       "description": "Código-fonte: `frontend/src/components/MfaSettingsPanel.tsx`"
     },
@@ -7044,7 +7044,7 @@
       "category": "frontend",
       "categoryLabel": "Frontend",
       "color": "#eab308",
-      "size": 0.85,
+      "size": 0.95,
       "file": "frontend/src/components/OpsBanner.tsx",
       "description": "Código-fonte: `frontend/src/components/OpsBanner.tsx`"
     },
@@ -7056,7 +7056,7 @@
       "category": "frontend",
       "categoryLabel": "Frontend",
       "color": "#eab308",
-      "size": 0.85,
+      "size": 0.95,
       "file": "frontend/src/components/PlatformPane.tsx",
       "description": "Código-fonte: `frontend/src/components/PlatformPane.tsx`"
     },
@@ -7068,7 +7068,7 @@
       "category": "frontend",
       "categoryLabel": "Frontend",
       "color": "#eab308",
-      "size": 0.85,
+      "size": 0.95,
       "file": "frontend/src/components/VisualPlaybooksPanel.tsx",
       "description": "Código-fonte: `frontend/src/components/VisualPlaybooksPanel.tsx`"
     },
@@ -7080,7 +7080,7 @@
       "category": "frontend",
       "categoryLabel": "Frontend",
       "color": "#eab308",
-      "size": 0.85,
+      "size": 0.95,
       "file": "frontend/src/components/WallboardScreen.tsx",
       "description": "Código-fonte: `frontend/src/components/WallboardScreen.tsx`"
     },
@@ -7092,7 +7092,7 @@
       "category": "frontend",
       "categoryLabel": "Frontend",
       "color": "#eab308",
-      "size": 0.85,
+      "size": 0.95,
       "file": "frontend/src/components/ZionPane.tsx",
       "description": "Código-fonte: `frontend/src/components/ZionPane.tsx`"
     },
@@ -7104,7 +7104,7 @@
       "category": "frontend",
       "categoryLabel": "Frontend",
       "color": "#eab308",
-      "size": 0.85,
+      "size": 0.95,
       "file": "frontend/src/components/layout/AppShell.tsx",
       "description": "Código-fonte: `frontend/src/components/layout/AppShell.tsx`"
     },
@@ -7116,7 +7116,7 @@
       "category": "frontend",
       "categoryLabel": "Frontend",
       "color": "#eab308",
-      "size": 0.85,
+      "size": 0.95,
       "file": "frontend/src/components/map/AlignmentGuides.tsx",
       "description": "Código-fonte: `frontend/src/components/map/AlignmentGuides.tsx`"
     },
@@ -7128,7 +7128,7 @@
       "category": "frontend",
       "categoryLabel": "Frontend",
       "color": "#eab308",
-      "size": 0.85,
+      "size": 0.95,
       "file": "frontend/src/components/map/CollabCursors.tsx",
       "description": "Código-fonte: `frontend/src/components/map/CollabCursors.tsx`"
     },
@@ -7140,7 +7140,7 @@
       "category": "frontend",
       "categoryLabel": "Frontend",
       "color": "#eab308",
-      "size": 0.85,
+      "size": 0.95,
       "file": "frontend/src/components/map/DepartmentListPanel.tsx",
       "description": "Código-fonte: `frontend/src/components/map/DepartmentListPanel.tsx`"
     },
@@ -7152,7 +7152,7 @@
       "category": "frontend",
       "categoryLabel": "Frontend",
       "color": "#eab308",
-      "size": 0.85,
+      "size": 0.95,
       "file": "frontend/src/components/map/DepartmentNode.tsx",
       "description": "Código-fonte: `frontend/src/components/map/DepartmentNode.tsx`"
     },
@@ -7164,7 +7164,7 @@
       "category": "frontend",
       "categoryLabel": "Frontend",
       "color": "#eab308",
-      "size": 0.85,
+      "size": 0.95,
       "file": "frontend/src/components/map/DeviceLibrary.tsx",
       "description": "Código-fonte: `frontend/src/components/map/DeviceLibrary.tsx`"
     },
@@ -7176,7 +7176,7 @@
       "category": "frontend",
       "categoryLabel": "Frontend",
       "color": "#eab308",
-      "size": 0.85,
+      "size": 0.95,
       "file": "frontend/src/components/map/GroupNode.tsx",
       "description": "Código-fonte: `frontend/src/components/map/GroupNode.tsx`"
     },
@@ -7188,7 +7188,7 @@
       "category": "frontend",
       "categoryLabel": "Frontend",
       "color": "#eab308",
-      "size": 0.85,
+      "size": 0.95,
       "file": "frontend/src/components/map/Map3DView.tsx",
       "description": "Código-fonte: `frontend/src/components/map/Map3DView.tsx`"
     },
@@ -7200,7 +7200,7 @@
       "category": "frontend",
       "categoryLabel": "Frontend",
       "color": "#eab308",
-      "size": 0.85,
+      "size": 0.95,
       "file": "frontend/src/components/map/MapCanvasDialog.tsx",
       "description": "Código-fonte: `frontend/src/components/map/MapCanvasDialog.tsx`"
     },
@@ -7212,7 +7212,7 @@
       "category": "frontend",
       "categoryLabel": "Frontend",
       "color": "#eab308",
-      "size": 0.85,
+      "size": 0.95,
       "file": "frontend/src/components/map/MapNodeHandles.tsx",
       "description": "Código-fonte: `frontend/src/components/map/MapNodeHandles.tsx`"
     },
@@ -7224,7 +7224,7 @@
       "category": "frontend",
       "categoryLabel": "Frontend",
       "color": "#eab308",
-      "size": 0.85,
+      "size": 0.95,
       "file": "frontend/src/components/map/MapToolbar.tsx",
       "description": "Código-fonte: `frontend/src/components/map/MapToolbar.tsx`"
     },
@@ -7236,7 +7236,7 @@
       "category": "frontend",
       "categoryLabel": "Frontend",
       "color": "#eab308",
-      "size": 0.85,
+      "size": 0.95,
       "file": "frontend/src/components/map/TrafficEdge.tsx",
       "description": "Código-fonte: `frontend/src/components/map/TrafficEdge.tsx`"
     },
@@ -7248,7 +7248,7 @@
       "category": "frontend",
       "categoryLabel": "Frontend",
       "color": "#eab308",
-      "size": 0.85,
+      "size": 0.95,
       "file": "frontend/src/components/ui/DataTable.tsx",
       "description": "Código-fonte: `frontend/src/components/ui/DataTable.tsx`"
     },
@@ -7260,7 +7260,7 @@
       "category": "frontend",
       "categoryLabel": "Frontend",
       "color": "#eab308",
-      "size": 0.85,
+      "size": 0.95,
       "file": "frontend/src/components/ui/StatCard.tsx",
       "description": "Código-fonte: `frontend/src/components/ui/StatCard.tsx`"
     },
@@ -7272,7 +7272,7 @@
       "category": "frontend",
       "categoryLabel": "Frontend",
       "color": "#eab308",
-      "size": 0.85,
+      "size": 0.95,
       "file": "frontend/src/components/ui/StatusBadge.tsx",
       "description": "Código-fonte: `frontend/src/components/ui/StatusBadge.tsx`"
     },
@@ -7284,7 +7284,7 @@
       "category": "frontend",
       "categoryLabel": "Frontend",
       "color": "#eab308",
-      "size": 0.85,
+      "size": 0.95,
       "file": "frontend/src/constants/deviceTypes.ts",
       "description": "Código-fonte: `frontend/src/constants/deviceTypes.ts`"
     },
@@ -7296,7 +7296,7 @@
       "category": "frontend",
       "categoryLabel": "Frontend",
       "color": "#eab308",
-      "size": 0.85,
+      "size": 0.95,
       "file": "frontend/src/constants/mapNodeSize.ts",
       "description": "Código-fonte: `frontend/src/constants/mapNodeSize.ts`"
     },
@@ -7308,7 +7308,7 @@
       "category": "frontend",
       "categoryLabel": "Frontend",
       "color": "#eab308",
-      "size": 0.85,
+      "size": 0.95,
       "file": "frontend/src/context/AuthContext.tsx",
       "description": "Código-fonte: `frontend/src/context/AuthContext.tsx`"
     },
@@ -7320,7 +7320,7 @@
       "category": "frontend",
       "categoryLabel": "Frontend",
       "color": "#eab308",
-      "size": 0.85,
+      "size": 0.95,
       "file": "frontend/src/context/MapActionsContext.tsx",
       "description": "Código-fonte: `frontend/src/context/MapActionsContext.tsx`"
     },
@@ -7332,7 +7332,7 @@
       "category": "frontend",
       "categoryLabel": "Frontend",
       "color": "#eab308",
-      "size": 0.85,
+      "size": 0.95,
       "file": "frontend/src/context/ThemeProvider.tsx",
       "description": "Código-fonte: `frontend/src/context/ThemeProvider.tsx`"
     },
@@ -7344,7 +7344,7 @@
       "category": "frontend",
       "categoryLabel": "Frontend",
       "color": "#eab308",
-      "size": 0.85,
+      "size": 0.95,
       "file": "frontend/src/hooks/useDashboardLayout.ts",
       "description": "Código-fonte: `frontend/src/hooks/useDashboardLayout.ts`"
     },
@@ -7356,7 +7356,7 @@
       "category": "frontend",
       "categoryLabel": "Frontend",
       "color": "#eab308",
-      "size": 0.85,
+      "size": 0.95,
       "file": "frontend/src/hooks/useMapCollaboration.ts",
       "description": "Código-fonte: `frontend/src/hooks/useMapCollaboration.ts`"
     },
@@ -7368,7 +7368,7 @@
       "category": "frontend",
       "categoryLabel": "Frontend",
       "color": "#eab308",
-      "size": 0.85,
+      "size": 0.95,
       "file": "frontend/src/hooks/useMapHistory.ts",
       "description": "Código-fonte: `frontend/src/hooks/useMapHistory.ts`"
     },
@@ -7380,7 +7380,7 @@
       "category": "frontend",
       "categoryLabel": "Frontend",
       "color": "#eab308",
-      "size": 0.85,
+      "size": 0.95,
       "file": "frontend/src/hooks/useMonitoringStream.ts",
       "description": "Código-fonte: `frontend/src/hooks/useMonitoringStream.ts`"
     },
@@ -7416,7 +7416,7 @@
       "category": "frontend",
       "categoryLabel": "Frontend",
       "color": "#eab308",
-      "size": 0.85,
+      "size": 0.95,
       "file": "frontend/src/pages/AlertsPage.tsx",
       "description": "Código-fonte: `frontend/src/pages/AlertsPage.tsx`"
     },
@@ -7428,7 +7428,7 @@
       "category": "frontend",
       "categoryLabel": "Frontend",
       "color": "#eab308",
-      "size": 0.85,
+      "size": 0.95,
       "file": "frontend/src/pages/BackupPage.tsx",
       "description": "Código-fonte: `frontend/src/pages/BackupPage.tsx`"
     },
@@ -7440,7 +7440,7 @@
       "category": "frontend",
       "categoryLabel": "Frontend",
       "color": "#eab308",
-      "size": 0.85,
+      "size": 0.95,
       "file": "frontend/src/pages/ChangePasswordPage.tsx",
       "description": "Código-fonte: `frontend/src/pages/ChangePasswordPage.tsx`"
     },
@@ -7452,7 +7452,7 @@
       "category": "frontend",
       "categoryLabel": "Frontend",
       "color": "#eab308",
-      "size": 0.85,
+      "size": 0.95,
       "file": "frontend/src/pages/ChatbotPage.tsx",
       "description": "Código-fonte: `frontend/src/pages/ChatbotPage.tsx`"
     },
@@ -7464,7 +7464,7 @@
       "category": "frontend",
       "categoryLabel": "Frontend",
       "color": "#eab308",
-      "size": 0.85,
+      "size": 0.95,
       "file": "frontend/src/pages/Dashboard.tsx",
       "description": "Código-fonte: `frontend/src/pages/Dashboard.tsx`"
     },
@@ -7476,7 +7476,7 @@
       "category": "frontend",
       "categoryLabel": "Frontend",
       "color": "#eab308",
-      "size": 0.85,
+      "size": 0.95,
       "file": "frontend/src/pages/InfrastructurePage.tsx",
       "description": "Código-fonte: `frontend/src/pages/InfrastructurePage.tsx`"
     },
@@ -7488,7 +7488,7 @@
       "category": "frontend",
       "categoryLabel": "Frontend",
       "color": "#eab308",
-      "size": 0.85,
+      "size": 0.95,
       "file": "frontend/src/pages/LoginPage.tsx",
       "description": "Código-fonte: `frontend/src/pages/LoginPage.tsx`"
     },
@@ -7500,7 +7500,7 @@
       "category": "frontend",
       "categoryLabel": "Frontend",
       "color": "#eab308",
-      "size": 0.85,
+      "size": 0.95,
       "file": "frontend/src/pages/NocCopilotPage.tsx",
       "description": "Código-fonte: `frontend/src/pages/NocCopilotPage.tsx`"
     },
@@ -7512,7 +7512,7 @@
       "category": "frontend",
       "categoryLabel": "Frontend",
       "color": "#eab308",
-      "size": 0.85,
+      "size": 0.95,
       "file": "frontend/src/pages/PlatformPage.tsx",
       "description": "Código-fonte: `frontend/src/pages/PlatformPage.tsx`"
     },
@@ -7524,7 +7524,7 @@
       "category": "frontend",
       "categoryLabel": "Frontend",
       "color": "#eab308",
-      "size": 0.85,
+      "size": 0.95,
       "file": "frontend/src/pages/PublicWallboardPage.tsx",
       "description": "Código-fonte: `frontend/src/pages/PublicWallboardPage.tsx`"
     },
@@ -7536,7 +7536,7 @@
       "category": "frontend",
       "categoryLabel": "Frontend",
       "color": "#eab308",
-      "size": 0.85,
+      "size": 0.95,
       "file": "frontend/src/pages/ReportsPage.tsx",
       "description": "Código-fonte: `frontend/src/pages/ReportsPage.tsx`"
     },
@@ -7548,7 +7548,7 @@
       "category": "frontend",
       "categoryLabel": "Frontend",
       "color": "#eab308",
-      "size": 0.85,
+      "size": 0.95,
       "file": "frontend/src/pages/ScannerPage.tsx",
       "description": "Código-fonte: `frontend/src/pages/ScannerPage.tsx`"
     },
@@ -7560,7 +7560,7 @@
       "category": "frontend",
       "categoryLabel": "Frontend",
       "color": "#eab308",
-      "size": 0.85,
+      "size": 0.95,
       "file": "frontend/src/pages/TopologyMap.tsx",
       "description": "Código-fonte: `frontend/src/pages/TopologyMap.tsx`"
     },
@@ -7572,7 +7572,7 @@
       "category": "frontend",
       "categoryLabel": "Frontend",
       "color": "#eab308",
-      "size": 0.85,
+      "size": 0.95,
       "file": "frontend/src/pages/UsersPage.tsx",
       "description": "Código-fonte: `frontend/src/pages/UsersPage.tsx`"
     },
@@ -7584,7 +7584,7 @@
       "category": "frontend",
       "categoryLabel": "Frontend",
       "color": "#eab308",
-      "size": 0.85,
+      "size": 0.95,
       "file": "frontend/src/pages/WallboardPage.tsx",
       "description": "Código-fonte: `frontend/src/pages/WallboardPage.tsx`"
     },
@@ -7596,7 +7596,7 @@
       "category": "frontend",
       "categoryLabel": "Frontend",
       "color": "#eab308",
-      "size": 0.85,
+      "size": 0.95,
       "file": "frontend/src/pages/ZionPage.tsx",
       "description": "Código-fonte: `frontend/src/pages/ZionPage.tsx`"
     },
@@ -7608,7 +7608,7 @@
       "category": "frontend",
       "categoryLabel": "Frontend",
       "color": "#eab308",
-      "size": 0.85,
+      "size": 0.95,
       "file": "frontend/src/pages/ZionVMPage.tsx",
       "description": "Código-fonte: `frontend/src/pages/ZionVMPage.tsx`"
     },
@@ -7620,7 +7620,7 @@
       "category": "frontend",
       "categoryLabel": "Frontend",
       "color": "#eab308",
-      "size": 0.85,
+      "size": 0.95,
       "file": "frontend/src/styles/backup-page.css",
       "description": "Código-fonte: `frontend/src/styles/backup-page.css`"
     },
@@ -7632,7 +7632,7 @@
       "category": "frontend",
       "categoryLabel": "Frontend",
       "color": "#eab308",
-      "size": 0.85,
+      "size": 0.95,
       "file": "frontend/src/styles/corp-platform.css",
       "description": "Código-fonte: `frontend/src/styles/corp-platform.css`"
     },
@@ -7644,7 +7644,7 @@
       "category": "frontend",
       "categoryLabel": "Frontend",
       "color": "#eab308",
-      "size": 0.85,
+      "size": 0.95,
       "file": "frontend/src/styles/dash-customize.css",
       "description": "Código-fonte: `frontend/src/styles/dash-customize.css`"
     },
@@ -7656,7 +7656,7 @@
       "category": "frontend",
       "categoryLabel": "Frontend",
       "color": "#eab308",
-      "size": 0.85,
+      "size": 0.95,
       "file": "frontend/src/styles/design-system.css",
       "description": "Código-fonte: `frontend/src/styles/design-system.css`"
     },
@@ -7668,7 +7668,7 @@
       "category": "frontend",
       "categoryLabel": "Frontend",
       "color": "#eab308",
-      "size": 0.85,
+      "size": 0.95,
       "file": "frontend/src/styles/topology-flow.css",
       "description": "Código-fonte: `frontend/src/styles/topology-flow.css`"
     },
@@ -7680,7 +7680,7 @@
       "category": "frontend",
       "categoryLabel": "Frontend",
       "color": "#eab308",
-      "size": 0.85,
+      "size": 0.95,
       "file": "frontend/src/utils/elkLayout.ts",
       "description": "Código-fonte: `frontend/src/utils/elkLayout.ts`"
     },
@@ -7692,7 +7692,7 @@
       "category": "frontend",
       "categoryLabel": "Frontend",
       "color": "#eab308",
-      "size": 0.85,
+      "size": 0.95,
       "file": "frontend/src/utils/sentinelWelcomeAudio.ts",
       "description": "Código-fonte: `frontend/src/utils/sentinelWelcomeAudio.ts`"
     },
@@ -7704,7 +7704,7 @@
       "category": "other",
       "categoryLabel": "Outros",
       "color": "#64748b",
-      "size": 0.85,
+      "size": 0.95,
       "file": "mobile/app.json",
       "description": "Código-fonte: `mobile/app.json`"
     },
@@ -7716,7 +7716,7 @@
       "category": "frontend",
       "categoryLabel": "Frontend",
       "color": "#eab308",
-      "size": 0.85,
+      "size": 0.95,
       "file": "mobile/App.tsx",
       "description": "Código-fonte: `mobile/App.tsx`"
     },
@@ -7728,7 +7728,7 @@
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
-      "size": 0.85,
+      "size": 0.95,
       "file": "mobile/babel.config.js",
       "description": "Código-fonte: `mobile/babel.config.js`"
     },
@@ -7740,7 +7740,7 @@
       "category": "other",
       "categoryLabel": "Outros",
       "color": "#64748b",
-      "size": 0.85,
+      "size": 0.95,
       "file": "mobile/eas.json",
       "description": "Código-fonte: `mobile/eas.json`"
     },
@@ -7752,7 +7752,7 @@
       "category": "other",
       "categoryLabel": "Outros",
       "color": "#64748b",
-      "size": 0.85,
+      "size": 0.95,
       "file": "mobile/package.json",
       "description": "Código-fonte: `mobile/package.json`"
     },
@@ -7764,7 +7764,7 @@
       "category": "other",
       "categoryLabel": "Outros",
       "color": "#64748b",
-      "size": 0.85,
+      "size": 0.95,
       "file": "mobile/README.md",
       "description": "Código-fonte: `mobile/README.md`"
     },
@@ -7776,7 +7776,7 @@
       "category": "other",
       "categoryLabel": "Outros",
       "color": "#64748b",
-      "size": 0.85,
+      "size": 0.95,
       "file": "mobile/tsconfig.json",
       "description": "Código-fonte: `mobile/tsconfig.json`"
     },
@@ -7788,7 +7788,7 @@
       "category": "scripts",
       "categoryLabel": "Scripts",
       "color": "#64748b",
-      "size": 0.85,
+      "size": 0.95,
       "file": "scripts/backup-sentinel.ps1",
       "description": "Código-fonte: `scripts/backup-sentinel.ps1`"
     },
@@ -7800,7 +7800,7 @@
       "category": "scripts",
       "categoryLabel": "Scripts",
       "color": "#64748b",
-      "size": 0.85,
+      "size": 0.95,
       "file": "scripts/feature-inventory.bat",
       "description": "Código-fonte: `scripts/feature-inventory.bat`"
     },
@@ -7812,7 +7812,7 @@
       "category": "scripts",
       "categoryLabel": "Scripts",
       "color": "#64748b",
-      "size": 0.85,
+      "size": 0.95,
       "file": "scripts/feature-inventory.ps1",
       "description": "Código-fonte: `scripts/feature-inventory.ps1`"
     },
@@ -7824,7 +7824,7 @@
       "category": "scripts",
       "categoryLabel": "Scripts",
       "color": "#64748b",
-      "size": 0.85,
+      "size": 0.95,
       "file": "scripts/feature-inventory.py",
       "description": "Código-fonte: `scripts/feature-inventory.py`"
     },
@@ -7836,7 +7836,7 @@
       "category": "scripts",
       "categoryLabel": "Scripts",
       "color": "#64748b",
-      "size": 0.85,
+      "size": 0.95,
       "file": "scripts/open-lan-access.ps1",
       "description": "Código-fonte: `scripts/open-lan-access.ps1`"
     },
@@ -7848,7 +7848,7 @@
       "category": "scripts",
       "categoryLabel": "Scripts",
       "color": "#64748b",
-      "size": 0.85,
+      "size": 0.95,
       "file": "scripts/schedule-backup.ps1",
       "description": "Código-fonte: `scripts/schedule-backup.ps1`"
     },
@@ -7860,7 +7860,7 @@
       "category": "scripts",
       "categoryLabel": "Scripts",
       "color": "#64748b",
-      "size": 0.85,
+      "size": 0.95,
       "file": "scripts/set-wmi-credentials.ps1",
       "description": "Código-fonte: `scripts/set-wmi-credentials.ps1`"
     },
@@ -7872,7 +7872,7 @@
       "category": "scripts",
       "categoryLabel": "Scripts",
       "color": "#64748b",
-      "size": 0.85,
+      "size": 0.95,
       "file": "scripts/sign_registry.py",
       "description": "Código-fonte: `scripts/sign_registry.py`"
     }

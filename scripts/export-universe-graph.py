@@ -149,7 +149,7 @@ def category_for(node, slug=""):
 
 
 def layer_size(layer):
-    return {"root": 2.2, "module": 1.35, "file": 0.85, "function": 0.62}.get(layer, 0.6)
+    return {"root": 2.2, "module": 1.35, "file": 0.95, "function": 0.88}.get(layer, 0.72)
 
 
 def export_project(project):

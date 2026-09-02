@@ -692,7 +692,7 @@
       "category": "other",
       "categoryLabel": "Outros",
       "color": "#64748b",
-      "size": 0.85,
+      "size": 0.95,
       "file": ".gitignore",
       "description": "Código-fonte: `.gitignore`"
     },
@@ -704,7 +704,7 @@
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
-      "size": 0.85,
+      "size": 0.95,
       "file": "aula1.py",
       "description": "Código-fonte: `aula1.py`"
     },
@@ -716,7 +716,7 @@
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
-      "size": 0.85,
+      "size": 0.95,
       "file": "aula10.py",
       "description": "Código-fonte: `aula10.py`"
     },
@@ -728,7 +728,7 @@
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
-      "size": 0.85,
+      "size": 0.95,
       "file": "aula100.py",
       "description": "Código-fonte: `aula100.py`"
     },
@@ -740,7 +740,7 @@
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
-      "size": 0.85,
+      "size": 0.95,
       "file": "aula101.py",
       "description": "Código-fonte: `aula101.py`"
     },
@@ -752,7 +752,7 @@
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
-      "size": 0.85,
+      "size": 0.95,
       "file": "aula102.py",
       "description": "Código-fonte: `aula102.py`"
     },
@@ -764,7 +764,7 @@
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
-      "size": 0.85,
+      "size": 0.95,
       "file": "aula103.py",
       "description": "Código-fonte: `aula103.py`"
     },
@@ -776,7 +776,7 @@
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
-      "size": 0.85,
+      "size": 0.95,
       "file": "aula104.py",
       "description": "Código-fonte: `aula104.py`"
     },
@@ -788,7 +788,7 @@
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
-      "size": 0.85,
+      "size": 0.95,
       "file": "aula105.py",
       "description": "Código-fonte: `aula105.py`"
     },
@@ -800,7 +800,7 @@
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
-      "size": 0.85,
+      "size": 0.95,
       "file": "aula106.py",
       "description": "Código-fonte: `aula106.py`"
     },
@@ -812,7 +812,7 @@
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
-      "size": 0.85,
+      "size": 0.95,
       "file": "aula107.py",
       "description": "Código-fonte: `aula107.py`"
     },
@@ -824,7 +824,7 @@
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
-      "size": 0.85,
+      "size": 0.95,
       "file": "aula108.py",
       "description": "Código-fonte: `aula108.py`"
     },
@@ -836,7 +836,7 @@
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
-      "size": 0.85,
+      "size": 0.95,
       "file": "aula109.py",
       "description": "Código-fonte: `aula109.py`"
     },
@@ -848,7 +848,7 @@
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
-      "size": 0.85,
+      "size": 0.95,
       "file": "aula11.py",
       "description": "Código-fonte: `aula11.py`"
     },
@@ -860,7 +860,7 @@
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
-      "size": 0.85,
+      "size": 0.95,
       "file": "aula110.py",
       "description": "Código-fonte: `aula110.py`"
     },
@@ -872,7 +872,7 @@
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
-      "size": 0.85,
+      "size": 0.95,
       "file": "aula111.py",
       "description": "Código-fonte: `aula111.py`"
     },
@@ -884,7 +884,7 @@
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
-      "size": 0.85,
+      "size": 0.95,
       "file": "aula112.py",
       "description": "Código-fonte: `aula112.py`"
     },
@@ -896,7 +896,7 @@
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
-      "size": 0.85,
+      "size": 0.95,
       "file": "aula113.py",
       "description": "Código-fonte: `aula113.py`"
     },
@@ -908,7 +908,7 @@
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
-      "size": 0.85,
+      "size": 0.95,
       "file": "aula114.py",
       "description": "Código-fonte: `aula114.py`"
     },
@@ -920,7 +920,7 @@
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
-      "size": 0.85,
+      "size": 0.95,
       "file": "aula115.py",
       "description": "Código-fonte: `aula115.py`"
     },
@@ -932,7 +932,7 @@
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
-      "size": 0.85,
+      "size": 0.95,
       "file": "aula116.py",
       "description": "Código-fonte: `aula116.py`"
     },
@@ -944,7 +944,7 @@
       "category": "other",
       "categoryLabel": "Outros",
       "color": "#64748b",
-      "size": 0.85,
+      "size": 0.95,
       "file": "aula117.json",
       "description": "Código-fonte: `aula117.json`"
     },
@@ -956,7 +956,7 @@
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
-      "size": 0.85,
+      "size": 0.95,
       "file": "aula117.py",
       "description": "Código-fonte: `aula117.py`"
     },
@@ -968,7 +968,7 @@
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
-      "size": 0.85,
+      "size": 0.95,
       "file": "aula118.py",
       "description": "Código-fonte: `aula118.py`"
     },
@@ -980,7 +980,7 @@
       "category": "other",
       "categoryLabel": "Outros",
       "color": "#64748b",
-      "size": 0.85,
+      "size": 0.95,
       "file": "aula119.json",
       "description": "Código-fonte: `aula119.json`"
     },
@@ -992,7 +992,7 @@
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
-      "size": 0.85,
+      "size": 0.95,
       "file": "aula119.py",
       "description": "Código-fonte: `aula119.py`"
     },
@@ -1004,7 +1004,7 @@
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
-      "size": 0.85,
+      "size": 0.95,
       "file": "aula12.py",
       "description": "Código-fonte: `aula12.py`"
     },
@@ -1016,7 +1016,7 @@
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
-      "size": 0.85,
+      "size": 0.95,
       "file": "aula120.py",
       "description": "Código-fonte: `aula120.py`"
     },
@@ -1028,7 +1028,7 @@
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
-      "size": 0.85,
+      "size": 0.95,
       "file": "aula121.py",
       "description": "Código-fonte: `aula121.py`"
     },
@@ -1040,7 +1040,7 @@
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
-      "size": 0.85,
+      "size": 0.95,
       "file": "aula122.py",
       "description": "Código-fonte: `aula122.py`"
     },
@@ -1052,7 +1052,7 @@
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
-      "size": 0.85,
+      "size": 0.95,
       "file": "aula123.py",
       "description": "Código-fonte: `aula123.py`"
     },
@@ -1064,7 +1064,7 @@
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
-      "size": 0.85,
+      "size": 0.95,
       "file": "aula124.py",
       "description": "Código-fonte: `aula124.py`"
     },
@@ -1076,7 +1076,7 @@
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
-      "size": 0.85,
+      "size": 0.95,
       "file": "aula125.py",
       "description": "Código-fonte: `aula125.py`"
     },
@@ -1088,7 +1088,7 @@
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
-      "size": 0.85,
+      "size": 0.95,
       "file": "aula126.py",
       "description": "Código-fonte: `aula126.py`"
     },
@@ -1100,7 +1100,7 @@
       "category": "other",
       "categoryLabel": "Outros",
       "color": "#64748b",
-      "size": 0.85,
+      "size": 0.95,
       "file": "aula127.json",
       "description": "Código-fonte: `aula127.json`"
     },
@@ -1112,7 +1112,7 @@
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
-      "size": 0.85,
+      "size": 0.95,
       "file": "aula127_a.py",
       "description": "Código-fonte: `aula127_a.py`"
     },
@@ -1124,7 +1124,7 @@
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
-      "size": 0.85,
+      "size": 0.95,
       "file": "aula127_b.py",
       "description": "Código-fonte: `aula127_b.py`"
     },
@@ -1136,7 +1136,7 @@
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
-      "size": 0.85,
+      "size": 0.95,
       "file": "aula128.py",
       "description": "Código-fonte: `aula128.py`"
     },
@@ -1148,7 +1148,7 @@
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
-      "size": 0.85,
+      "size": 0.95,
       "file": "aula129.py",
       "description": "Código-fonte: `aula129.py`"
     },
@@ -1160,7 +1160,7 @@
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
-      "size": 0.85,
+      "size": 0.95,
       "file": "aula13.py",
       "description": "Código-fonte: `aula13.py`"
     },
@@ -1172,7 +1172,7 @@
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
-      "size": 0.85,
+      "size": 0.95,
       "file": "aula130.py",
       "description": "Código-fonte: `aula130.py`"
     },
@@ -1184,7 +1184,7 @@
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
-      "size": 0.85,
+      "size": 0.95,
       "file": "aula131.py",
       "description": "Código-fonte: `aula131.py`"
     },
@@ -1196,7 +1196,7 @@
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
-      "size": 0.85,
+      "size": 0.95,
       "file": "aula132.py",
       "description": "Código-fonte: `aula132.py`"
     },
@@ -1208,7 +1208,7 @@
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
-      "size": 0.85,
+      "size": 0.95,
       "file": "aula133.py",
       "description": "Código-fonte: `aula133.py`"
     },
@@ -1220,7 +1220,7 @@
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
-      "size": 0.85,
+      "size": 0.95,
       "file": "aula134.py",
       "description": "Código-fonte: `aula134.py`"
     },
@@ -1232,7 +1232,7 @@
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
-      "size": 0.85,
+      "size": 0.95,
       "file": "aula135.py",
       "description": "Código-fonte: `aula135.py`"
     },
@@ -1244,7 +1244,7 @@
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
-      "size": 0.85,
+      "size": 0.95,
       "file": "aula136.py",
       "description": "Código-fonte: `aula136.py`"
     },
@@ -1256,7 +1256,7 @@
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
-      "size": 0.85,
+      "size": 0.95,
       "file": "aula137.py",
       "description": "Código-fonte: `aula137.py`"
     },
@@ -1268,7 +1268,7 @@
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
-      "size": 0.85,
+      "size": 0.95,
       "file": "aula138.py",
       "description": "Código-fonte: `aula138.py`"
     },
@@ -1280,7 +1280,7 @@
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
-      "size": 0.85,
+      "size": 0.95,
       "file": "aula139.py",
       "description": "Código-fonte: `aula139.py`"
     },
@@ -1292,7 +1292,7 @@
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
-      "size": 0.85,
+      "size": 0.95,
       "file": "aula14.py",
       "description": "Código-fonte: `aula14.py`"
     },
@@ -1304,7 +1304,7 @@
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
-      "size": 0.85,
+      "size": 0.95,
       "file": "aula140.py",
       "description": "Código-fonte: `aula140.py`"
     },
@@ -1316,7 +1316,7 @@
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
-      "size": 0.85,
+      "size": 0.95,
       "file": "aula142.py",
       "description": "Código-fonte: `aula142.py`"
     },
@@ -1328,7 +1328,7 @@
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
-      "size": 0.85,
+      "size": 0.95,
       "file": "aula143.py",
       "description": "Código-fonte: `aula143.py`"
     },
@@ -1340,7 +1340,7 @@
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
-      "size": 0.85,
+      "size": 0.95,
       "file": "aula144.py",
       "description": "Código-fonte: `aula144.py`"
     },
@@ -1352,7 +1352,7 @@
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
-      "size": 0.85,
+      "size": 0.95,
       "file": "aula145.py",
       "description": "Código-fonte: `aula145.py`"
     },
@@ -1364,7 +1364,7 @@
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
-      "size": 0.85,
+      "size": 0.95,
       "file": "aula146.py",
       "description": "Código-fonte: `aula146.py`"
     },
@@ -1376,7 +1376,7 @@
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
-      "size": 0.85,
+      "size": 0.95,
       "file": "aula147.py",
       "description": "Código-fonte: `aula147.py`"
     },
@@ -1388,7 +1388,7 @@
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
-      "size": 0.85,
+      "size": 0.95,
       "file": "aula148.py",
       "description": "Código-fonte: `aula148.py`"
     },
@@ -1400,7 +1400,7 @@
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
-      "size": 0.85,
+      "size": 0.95,
       "file": "aula149.py",
       "description": "Código-fonte: `aula149.py`"
     },
@@ -1412,7 +1412,7 @@
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
-      "size": 0.85,
+      "size": 0.95,
       "file": "aula15.py",
       "description": "Código-fonte: `aula15.py`"
     },
@@ -1424,7 +1424,7 @@
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
-      "size": 0.85,
+      "size": 0.95,
       "file": "aula150.py",
       "description": "Código-fonte: `aula150.py`"
     },
@@ -1436,7 +1436,7 @@
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
-      "size": 0.85,
+      "size": 0.95,
       "file": "aula151.py",
       "description": "Código-fonte: `aula151.py`"
     },
@@ -1448,7 +1448,7 @@
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
-      "size": 0.85,
+      "size": 0.95,
       "file": "aula152.py",
       "description": "Código-fonte: `aula152.py`"
     },
@@ -1460,7 +1460,7 @@
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
-      "size": 0.85,
+      "size": 0.95,
       "file": "aula153.py",
       "description": "Código-fonte: `aula153.py`"
     },
@@ -1472,7 +1472,7 @@
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
-      "size": 0.85,
+      "size": 0.95,
       "file": "aula154.py",
       "description": "Código-fonte: `aula154.py`"
     },
@@ -1484,7 +1484,7 @@
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
-      "size": 0.85,
+      "size": 0.95,
       "file": "aula155.py",
       "description": "Código-fonte: `aula155.py`"
     },
@@ -1496,7 +1496,7 @@
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
-      "size": 0.85,
+      "size": 0.95,
       "file": "aula157.py",
       "description": "Código-fonte: `aula157.py`"
     },
@@ -1508,7 +1508,7 @@
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
-      "size": 0.85,
+      "size": 0.95,
       "file": "aula159.py",
       "description": "Código-fonte: `aula159.py`"
     },
@@ -1520,7 +1520,7 @@
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
-      "size": 0.85,
+      "size": 0.95,
       "file": "aula16.py",
       "description": "Código-fonte: `aula16.py`"
     },
@@ -1532,7 +1532,7 @@
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
-      "size": 0.85,
+      "size": 0.95,
       "file": "aula160.py",
       "description": "Código-fonte: `aula160.py`"
     },
@@ -1544,7 +1544,7 @@
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
-      "size": 0.85,
+      "size": 0.95,
       "file": "aula161.py",
       "description": "Código-fonte: `aula161.py`"
     },
@@ -1556,7 +1556,7 @@
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
-      "size": 0.85,
+      "size": 0.95,
       "file": "aula162.py",
       "description": "Código-fonte: `aula162.py`"
     },
@@ -1568,7 +1568,7 @@
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
-      "size": 0.85,
+      "size": 0.95,
       "file": "aula163.py",
       "description": "Código-fonte: `aula163.py`"
     },
@@ -1580,7 +1580,7 @@
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
-      "size": 0.85,
+      "size": 0.95,
       "file": "aula164.py",
       "description": "Código-fonte: `aula164.py`"
     },
@@ -1592,7 +1592,7 @@
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
-      "size": 0.85,
+      "size": 0.95,
       "file": "aula165.py",
       "description": "Código-fonte: `aula165.py`"
     },
@@ -1604,7 +1604,7 @@
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
-      "size": 0.85,
+      "size": 0.95,
       "file": "aula166.py",
       "description": "Código-fonte: `aula166.py`"
     },
@@ -1616,7 +1616,7 @@
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
-      "size": 0.85,
+      "size": 0.95,
       "file": "aula167.py",
       "description": "Código-fonte: `aula167.py`"
     },
@@ -1628,7 +1628,7 @@
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
-      "size": 0.85,
+      "size": 0.95,
       "file": "aula168.py",
       "description": "Código-fonte: `aula168.py`"
     },
@@ -1640,7 +1640,7 @@
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
-      "size": 0.85,
+      "size": 0.95,
       "file": "aula169.py",
       "description": "Código-fonte: `aula169.py`"
     },
@@ -1652,7 +1652,7 @@
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
-      "size": 0.85,
+      "size": 0.95,
       "file": "aula17.py",
       "description": "Código-fonte: `aula17.py`"
     },
@@ -1664,7 +1664,7 @@
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
-      "size": 0.85,
+      "size": 0.95,
       "file": "aula170.py",
       "description": "Código-fonte: `aula170.py`"
     },
@@ -1676,7 +1676,7 @@
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
-      "size": 0.85,
+      "size": 0.95,
       "file": "aula171.py",
       "description": "Código-fonte: `aula171.py`"
     },
@@ -1688,7 +1688,7 @@
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
-      "size": 0.85,
+      "size": 0.95,
       "file": "aula172.py",
       "description": "Código-fonte: `aula172.py`"
     },
@@ -1700,7 +1700,7 @@
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
-      "size": 0.85,
+      "size": 0.95,
       "file": "aula173.py",
       "description": "Código-fonte: `aula173.py`"
     },
@@ -1712,7 +1712,7 @@
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
-      "size": 0.85,
+      "size": 0.95,
       "file": "aula174.py",
       "description": "Código-fonte: `aula174.py`"
     },
@@ -1724,7 +1724,7 @@
       "category": "other",
       "categoryLabel": "Outros",
       "color": "#64748b",
-      "size": 0.85,
+      "size": 0.95,
       "file": "aula175.json",
       "description": "Código-fonte: `aula175.json`"
     },
@@ -1736,7 +1736,7 @@
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
-      "size": 0.85,
+      "size": 0.95,
       "file": "aula175.py",
       "description": "Código-fonte: `aula175.py`"
     },
@@ -1748,7 +1748,7 @@
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
-      "size": 0.85,
+      "size": 0.95,
       "file": "aula176.py",
       "description": "Código-fonte: `aula176.py`"
     },
@@ -1760,7 +1760,7 @@
       "category": "other",
       "categoryLabel": "Outros",
       "color": "#64748b",
-      "size": 0.85,
+      "size": 0.95,
       "file": "aula177.json",
       "description": "Código-fonte: `aula177.json`"
     },
@@ -1772,7 +1772,7 @@
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
-      "size": 0.85,
+      "size": 0.95,
       "file": "aula177.py",
       "description": "Código-fonte: `aula177.py`"
     },
@@ -1784,7 +1784,7 @@
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
-      "size": 0.85,
+      "size": 0.95,
       "file": "aula178.py",
       "description": "Código-fonte: `aula178.py`"
     },
@@ -1796,7 +1796,7 @@
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
-      "size": 0.85,
+      "size": 0.95,
       "file": "aula179.py",
       "description": "Código-fonte: `aula179.py`"
     },
@@ -1808,7 +1808,7 @@
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
-      "size": 0.85,
+      "size": 0.95,
       "file": "aula18.py",
       "description": "Código-fonte: `aula18.py`"
     },
@@ -1820,7 +1820,7 @@
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
-      "size": 0.85,
+      "size": 0.95,
       "file": "aula180.py",
       "description": "Código-fonte: `aula180.py`"
     },
@@ -1832,7 +1832,7 @@
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
-      "size": 0.85,
+      "size": 0.95,
       "file": "aula181.py",
       "description": "Código-fonte: `aula181.py`"
     },
@@ -1844,7 +1844,7 @@
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
-      "size": 0.85,
+      "size": 0.95,
       "file": "aula182.py",
       "description": "Código-fonte: `aula182.py`"
     },
@@ -1856,7 +1856,7 @@
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
-      "size": 0.85,
+      "size": 0.95,
       "file": "aula183.py",
       "description": "Código-fonte: `aula183.py`"
     },
@@ -1868,7 +1868,7 @@
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
-      "size": 0.85,
+      "size": 0.95,
       "file": "aula184.py",
       "description": "Código-fonte: `aula184.py`"
     },
@@ -1880,7 +1880,7 @@
       "category": "frontend",
       "categoryLabel": "Frontend",
       "color": "#eab308",
-      "size": 0.85,
+      "size": 0.95,
       "file": "aula185.html",
       "description": "Código-fonte: `aula185.html`"
     },
@@ -1892,7 +1892,7 @@
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
-      "size": 0.85,
+      "size": 0.95,
       "file": "aula185.py",
       "description": "Código-fonte: `aula185.py`"
     },
@@ -1904,7 +1904,7 @@
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
-      "size": 0.85,
+      "size": 0.95,
       "file": "aula186.py",
       "description": "Código-fonte: `aula186.py`"
     },
@@ -1916,7 +1916,7 @@
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
-      "size": 0.85,
+      "size": 0.95,
       "file": "aula187.py",
       "description": "Código-fonte: `aula187.py`"
     },
@@ -1928,7 +1928,7 @@
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
-      "size": 0.85,
+      "size": 0.95,
       "file": "aula188.py",
       "description": "Código-fonte: `aula188.py`"
     },
@@ -1940,7 +1940,7 @@
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
-      "size": 0.85,
+      "size": 0.95,
       "file": "aula189.py",
       "description": "Código-fonte: `aula189.py`"
     },
@@ -1952,7 +1952,7 @@
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
-      "size": 0.85,
+      "size": 0.95,
       "file": "aula19.py",
       "description": "Código-fonte: `aula19.py`"
     },
@@ -1964,7 +1964,7 @@
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
-      "size": 0.85,
+      "size": 0.95,
       "file": "aula191.py",
       "description": "Código-fonte: `aula191.py`"
     },
@@ -1976,7 +1976,7 @@
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
-      "size": 0.85,
+      "size": 0.95,
       "file": "aula192.py",
       "description": "Código-fonte: `aula192.py`"
     },
@@ -1988,7 +1988,7 @@
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
-      "size": 0.85,
+      "size": 0.95,
       "file": "aula194.py",
       "description": "Código-fonte: `aula194.py`"
     },
@@ -2000,7 +2000,7 @@
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
-      "size": 0.85,
+      "size": 0.95,
       "file": "aula195.py",
       "description": "Código-fonte: `aula195.py`"
     },
@@ -2012,7 +2012,7 @@
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
-      "size": 0.85,
+      "size": 0.95,
       "file": "aula196.py",
       "description": "Código-fonte: `aula196.py`"
     },
@@ -2024,7 +2024,7 @@
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
-      "size": 0.85,
+      "size": 0.95,
       "file": "aula198.py",
       "description": "Código-fonte: `aula198.py`"
     },
@@ -2036,7 +2036,7 @@
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
-      "size": 0.85,
+      "size": 0.95,
       "file": "aula2.py",
       "description": "Código-fonte: `aula2.py`"
     },
@@ -2048,7 +2048,7 @@
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
-      "size": 0.85,
+      "size": 0.95,
       "file": "aula20.py",
       "description": "Código-fonte: `aula20.py`"
     },
@@ -2060,7 +2060,7 @@
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
-      "size": 0.85,
+      "size": 0.95,
       "file": "aula21.py",
       "description": "Código-fonte: `aula21.py`"
     },
@@ -2072,7 +2072,7 @@
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
-      "size": 0.85,
+      "size": 0.95,
       "file": "aula22.py",
       "description": "Código-fonte: `aula22.py`"
     },
@@ -2084,7 +2084,7 @@
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
-      "size": 0.85,
+      "size": 0.95,
       "file": "aula23.py",
       "description": "Código-fonte: `aula23.py`"
     },
@@ -2096,7 +2096,7 @@
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
-      "size": 0.85,
+      "size": 0.95,
       "file": "aula24.py",
       "description": "Código-fonte: `aula24.py`"
     },
@@ -2108,7 +2108,7 @@
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
-      "size": 0.85,
+      "size": 0.95,
       "file": "aula25.py",
       "description": "Código-fonte: `aula25.py`"
     },
@@ -2120,7 +2120,7 @@
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
-      "size": 0.85,
+      "size": 0.95,
       "file": "aula26.py",
       "description": "Código-fonte: `aula26.py`"
     },
@@ -2132,7 +2132,7 @@
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
-      "size": 0.85,
+      "size": 0.95,
       "file": "aula27.py",
       "description": "Código-fonte: `aula27.py`"
     },
@@ -2144,7 +2144,7 @@
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
-      "size": 0.85,
+      "size": 0.95,
       "file": "aula28.py",
       "description": "Código-fonte: `aula28.py`"
     },
@@ -2156,7 +2156,7 @@
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
-      "size": 0.85,
+      "size": 0.95,
       "file": "aula29.py",
       "description": "Código-fonte: `aula29.py`"
     },
@@ -2168,7 +2168,7 @@
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
-      "size": 0.85,
+      "size": 0.95,
       "file": "aula3.py",
       "description": "Código-fonte: `aula3.py`"
     },
@@ -2180,7 +2180,7 @@
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
-      "size": 0.85,
+      "size": 0.95,
       "file": "aula30.py",
       "description": "Código-fonte: `aula30.py`"
     },
@@ -2192,7 +2192,7 @@
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
-      "size": 0.85,
+      "size": 0.95,
       "file": "aula31.py",
       "description": "Código-fonte: `aula31.py`"
     },
@@ -2204,7 +2204,7 @@
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
-      "size": 0.85,
+      "size": 0.95,
       "file": "aula32.py",
       "description": "Código-fonte: `aula32.py`"
     },
@@ -2216,7 +2216,7 @@
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
-      "size": 0.85,
+      "size": 0.95,
       "file": "aula33.py",
       "description": "Código-fonte: `aula33.py`"
     },
@@ -2228,7 +2228,7 @@
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
-      "size": 0.85,
+      "size": 0.95,
       "file": "aula34.py",
       "description": "Código-fonte: `aula34.py`"
     },
@@ -2240,7 +2240,7 @@
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
-      "size": 0.85,
+      "size": 0.95,
       "file": "aula35.py",
       "description": "Código-fonte: `aula35.py`"
     },
@@ -2252,7 +2252,7 @@
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
-      "size": 0.85,
+      "size": 0.95,
       "file": "aula36.py",
       "description": "Código-fonte: `aula36.py`"
     },
@@ -2264,7 +2264,7 @@
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
-      "size": 0.85,
+      "size": 0.95,
       "file": "aula37.py",
       "description": "Código-fonte: `aula37.py`"
     },
@@ -2276,7 +2276,7 @@
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
-      "size": 0.85,
+      "size": 0.95,
       "file": "aula38.py",
       "description": "Código-fonte: `aula38.py`"
     },
@@ -2288,7 +2288,7 @@
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
-      "size": 0.85,
+      "size": 0.95,
       "file": "aula39.py",
       "description": "Código-fonte: `aula39.py`"
     },
@@ -2300,7 +2300,7 @@
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
-      "size": 0.85,
+      "size": 0.95,
       "file": "aula4.py",
       "description": "Código-fonte: `aula4.py`"
     },
@@ -2312,7 +2312,7 @@
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
-      "size": 0.85,
+      "size": 0.95,
       "file": "aula40.py",
       "description": "Código-fonte: `aula40.py`"
     },
@@ -2324,7 +2324,7 @@
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
-      "size": 0.85,
+      "size": 0.95,
       "file": "aula41.py",
       "description": "Código-fonte: `aula41.py`"
     },
@@ -2336,7 +2336,7 @@
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
-      "size": 0.85,
+      "size": 0.95,
       "file": "aula42.py",
       "description": "Código-fonte: `aula42.py`"
     },
@@ -2348,7 +2348,7 @@
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
-      "size": 0.85,
+      "size": 0.95,
       "file": "aula43.py",
       "description": "Código-fonte: `aula43.py`"
     },
@@ -2360,7 +2360,7 @@
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
-      "size": 0.85,
+      "size": 0.95,
       "file": "aula44.py",
       "description": "Código-fonte: `aula44.py`"
     },
@@ -2372,7 +2372,7 @@
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
-      "size": 0.85,
+      "size": 0.95,
       "file": "aula45.py",
       "description": "Código-fonte: `aula45.py`"
     },
@@ -2384,7 +2384,7 @@
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
-      "size": 0.85,
+      "size": 0.95,
       "file": "aula46.py",
       "description": "Código-fonte: `aula46.py`"
     },
@@ -2396,7 +2396,7 @@
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
-      "size": 0.85,
+      "size": 0.95,
       "file": "aula47.py",
       "description": "Código-fonte: `aula47.py`"
     },
@@ -2408,7 +2408,7 @@
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
-      "size": 0.85,
+      "size": 0.95,
       "file": "aula48.py",
       "description": "Código-fonte: `aula48.py`"
     },
@@ -2420,7 +2420,7 @@
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
-      "size": 0.85,
+      "size": 0.95,
       "file": "aula49.py",
       "description": "Código-fonte: `aula49.py`"
     },
@@ -2432,7 +2432,7 @@
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
-      "size": 0.85,
+      "size": 0.95,
       "file": "aula5.py",
       "description": "Código-fonte: `aula5.py`"
     },
@@ -2444,7 +2444,7 @@
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
-      "size": 0.85,
+      "size": 0.95,
       "file": "aula50.py",
       "description": "Código-fonte: `aula50.py`"
     },
@@ -2456,7 +2456,7 @@
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
-      "size": 0.85,
+      "size": 0.95,
       "file": "aula51.py",
       "description": "Código-fonte: `aula51.py`"
     },
@@ -2468,7 +2468,7 @@
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
-      "size": 0.85,
+      "size": 0.95,
       "file": "aula52.py",
       "description": "Código-fonte: `aula52.py`"
     },
@@ -2480,7 +2480,7 @@
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
-      "size": 0.85,
+      "size": 0.95,
       "file": "aula53.py",
       "description": "Código-fonte: `aula53.py`"
     },
@@ -2492,7 +2492,7 @@
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
-      "size": 0.85,
+      "size": 0.95,
       "file": "aula54.py",
       "description": "Código-fonte: `aula54.py`"
     },
@@ -2504,7 +2504,7 @@
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
-      "size": 0.85,
+      "size": 0.95,
       "file": "aula55.py",
       "description": "Código-fonte: `aula55.py`"
     },
@@ -2516,7 +2516,7 @@
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
-      "size": 0.85,
+      "size": 0.95,
       "file": "aula56.py",
       "description": "Código-fonte: `aula56.py`"
     },
@@ -2528,7 +2528,7 @@
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
-      "size": 0.85,
+      "size": 0.95,
       "file": "aula57.py",
       "description": "Código-fonte: `aula57.py`"
     },
@@ -2540,7 +2540,7 @@
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
-      "size": 0.85,
+      "size": 0.95,
       "file": "aula58.py",
       "description": "Código-fonte: `aula58.py`"
     },
@@ -2552,7 +2552,7 @@
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
-      "size": 0.85,
+      "size": 0.95,
       "file": "aula59.py",
       "description": "Código-fonte: `aula59.py`"
     },
@@ -2564,7 +2564,7 @@
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
-      "size": 0.85,
+      "size": 0.95,
       "file": "aula6.py",
       "description": "Código-fonte: `aula6.py`"
     },
@@ -2576,7 +2576,7 @@
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
-      "size": 0.85,
+      "size": 0.95,
       "file": "aula60.py",
       "description": "Código-fonte: `aula60.py`"
     },
@@ -2588,7 +2588,7 @@
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
-      "size": 0.85,
+      "size": 0.95,
       "file": "aula61.py",
       "description": "Código-fonte: `aula61.py`"
     },
@@ -2600,7 +2600,7 @@
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
-      "size": 0.85,
+      "size": 0.95,
       "file": "aula62.py",
       "description": "Código-fonte: `aula62.py`"
     },
@@ -2612,7 +2612,7 @@
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
-      "size": 0.85,
+      "size": 0.95,
       "file": "aula63.py",
       "description": "Código-fonte: `aula63.py`"
     },
@@ -2624,7 +2624,7 @@
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
-      "size": 0.85,
+      "size": 0.95,
       "file": "aula64.py",
       "description": "Código-fonte: `aula64.py`"
     },
@@ -2636,7 +2636,7 @@
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
-      "size": 0.85,
+      "size": 0.95,
       "file": "aula65.py",
       "description": "Código-fonte: `aula65.py`"
     },
@@ -2648,7 +2648,7 @@
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
-      "size": 0.85,
+      "size": 0.95,
       "file": "aula66.py",
       "description": "Código-fonte: `aula66.py`"
     },
@@ -2660,7 +2660,7 @@
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
-      "size": 0.85,
+      "size": 0.95,
       "file": "aula67.py",
       "description": "Código-fonte: `aula67.py`"
     },
@@ -2672,7 +2672,7 @@
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
-      "size": 0.85,
+      "size": 0.95,
       "file": "aula68.py",
       "description": "Código-fonte: `aula68.py`"
     },
@@ -2684,7 +2684,7 @@
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
-      "size": 0.85,
+      "size": 0.95,
       "file": "aula69.py",
       "description": "Código-fonte: `aula69.py`"
     },
@@ -2696,7 +2696,7 @@
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
-      "size": 0.85,
+      "size": 0.95,
       "file": "aula7.py",
       "description": "Código-fonte: `aula7.py`"
     },
@@ -2708,7 +2708,7 @@
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
-      "size": 0.85,
+      "size": 0.95,
       "file": "aula70.py",
       "description": "Código-fonte: `aula70.py`"
     },
@@ -2720,7 +2720,7 @@
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
-      "size": 0.85,
+      "size": 0.95,
       "file": "aula71.py",
       "description": "Código-fonte: `aula71.py`"
     },
@@ -2732,7 +2732,7 @@
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
-      "size": 0.85,
+      "size": 0.95,
       "file": "aula72.py",
       "description": "Código-fonte: `aula72.py`"
     },
@@ -2744,7 +2744,7 @@
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
-      "size": 0.85,
+      "size": 0.95,
       "file": "aula73.py",
       "description": "Código-fonte: `aula73.py`"
     },
@@ -2756,7 +2756,7 @@
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
-      "size": 0.85,
+      "size": 0.95,
       "file": "aula74.py",
       "description": "Código-fonte: `aula74.py`"
     },
@@ -2768,7 +2768,7 @@
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
-      "size": 0.85,
+      "size": 0.95,
       "file": "aula75.py",
       "description": "Código-fonte: `aula75.py`"
     },
@@ -2780,7 +2780,7 @@
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
-      "size": 0.85,
+      "size": 0.95,
       "file": "aula76.py",
       "description": "Código-fonte: `aula76.py`"
     },
@@ -2792,7 +2792,7 @@
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
-      "size": 0.85,
+      "size": 0.95,
       "file": "aula77.py",
       "description": "Código-fonte: `aula77.py`"
     },
@@ -2804,7 +2804,7 @@
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
-      "size": 0.85,
+      "size": 0.95,
       "file": "aula78.py",
       "description": "Código-fonte: `aula78.py`"
     },
@@ -2816,7 +2816,7 @@
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
-      "size": 0.85,
+      "size": 0.95,
       "file": "aula79.py",
       "description": "Código-fonte: `aula79.py`"
     },
@@ -2828,7 +2828,7 @@
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
-      "size": 0.85,
+      "size": 0.95,
       "file": "aula8.py",
       "description": "Código-fonte: `aula8.py`"
     },
@@ -2840,7 +2840,7 @@
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
-      "size": 0.85,
+      "size": 0.95,
       "file": "aula80.py",
       "description": "Código-fonte: `aula80.py`"
     },
@@ -2852,7 +2852,7 @@
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
-      "size": 0.85,
+      "size": 0.95,
       "file": "aula81.py",
       "description": "Código-fonte: `aula81.py`"
     },
@@ -2864,7 +2864,7 @@
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
-      "size": 0.85,
+      "size": 0.95,
       "file": "aula82.py",
       "description": "Código-fonte: `aula82.py`"
     },
@@ -2876,7 +2876,7 @@
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
-      "size": 0.85,
+      "size": 0.95,
       "file": "aula83.py",
       "description": "Código-fonte: `aula83.py`"
     },
@@ -2888,7 +2888,7 @@
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
-      "size": 0.85,
+      "size": 0.95,
       "file": "aula84.py",
       "description": "Código-fonte: `aula84.py`"
     },
@@ -2900,7 +2900,7 @@
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
-      "size": 0.85,
+      "size": 0.95,
       "file": "aula85.py",
       "description": "Código-fonte: `aula85.py`"
     },
@@ -2912,7 +2912,7 @@
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
-      "size": 0.85,
+      "size": 0.95,
       "file": "aula86.py",
       "description": "Código-fonte: `aula86.py`"
     },
@@ -2924,7 +2924,7 @@
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
-      "size": 0.85,
+      "size": 0.95,
       "file": "aula87.py",
       "description": "Código-fonte: `aula87.py`"
     },
@@ -2936,7 +2936,7 @@
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
-      "size": 0.85,
+      "size": 0.95,
       "file": "aula88.py",
       "description": "Código-fonte: `aula88.py`"
     },
@@ -2948,7 +2948,7 @@
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
-      "size": 0.85,
+      "size": 0.95,
       "file": "aula89.py",
       "description": "Código-fonte: `aula89.py`"
     },
@@ -2960,7 +2960,7 @@
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
-      "size": 0.85,
+      "size": 0.95,
       "file": "aula9.py",
       "description": "Código-fonte: `aula9.py`"
     },
@@ -2972,7 +2972,7 @@
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
-      "size": 0.85,
+      "size": 0.95,
       "file": "aula90.py",
       "description": "Código-fonte: `aula90.py`"
     },
@@ -2984,7 +2984,7 @@
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
-      "size": 0.85,
+      "size": 0.95,
       "file": "aula91.py",
       "description": "Código-fonte: `aula91.py`"
     },
@@ -2996,7 +2996,7 @@
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
-      "size": 0.85,
+      "size": 0.95,
       "file": "aula92.py",
       "description": "Código-fonte: `aula92.py`"
     },
@@ -3008,7 +3008,7 @@
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
-      "size": 0.85,
+      "size": 0.95,
       "file": "aula93.py",
       "description": "Código-fonte: `aula93.py`"
     },
@@ -3020,7 +3020,7 @@
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
-      "size": 0.85,
+      "size": 0.95,
       "file": "aula94.py",
       "description": "Código-fonte: `aula94.py`"
     },
@@ -3032,7 +3032,7 @@
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
-      "size": 0.85,
+      "size": 0.95,
       "file": "aula95.py",
       "description": "Código-fonte: `aula95.py`"
     },
@@ -3044,7 +3044,7 @@
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
-      "size": 0.85,
+      "size": 0.95,
       "file": "aula96.py",
       "description": "Código-fonte: `aula96.py`"
     },
@@ -3056,7 +3056,7 @@
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
-      "size": 0.85,
+      "size": 0.95,
       "file": "aula97.py",
       "description": "Código-fonte: `aula97.py`"
     },
@@ -3068,7 +3068,7 @@
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
-      "size": 0.85,
+      "size": 0.95,
       "file": "aula97_m.py",
       "description": "Código-fonte: `aula97_m.py`"
     },
@@ -3080,7 +3080,7 @@
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
-      "size": 0.85,
+      "size": 0.95,
       "file": "aula98.py",
       "description": "Código-fonte: `aula98.py`"
     },
@@ -3092,7 +3092,7 @@
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
-      "size": 0.85,
+      "size": 0.95,
       "file": "aula98_m.py",
       "description": "Código-fonte: `aula98_m.py`"
     },
@@ -3104,7 +3104,7 @@
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
-      "size": 0.85,
+      "size": 0.95,
       "file": "aula99.py",
       "description": "Código-fonte: `aula99.py`"
     },
@@ -3116,7 +3116,7 @@
       "category": "other",
       "categoryLabel": "Outros",
       "color": "#64748b",
-      "size": 0.85,
+      "size": 0.95,
       "file": ".vscode/keybindings.json",
       "description": "Código-fonte: `.vscode/keybindings.json`"
     },
@@ -3128,7 +3128,7 @@
       "category": "other",
       "categoryLabel": "Outros",
       "color": "#64748b",
-      "size": 0.85,
+      "size": 0.95,
       "file": ".vscode/launch.json",
       "description": "Código-fonte: `.vscode/launch.json`"
     },
@@ -3140,7 +3140,7 @@
       "category": "other",
       "categoryLabel": "Outros",
       "color": "#64748b",
-      "size": 0.85,
+      "size": 0.95,
       "file": ".vscode/settings.json",
       "description": "Código-fonte: `.vscode/settings.json`"
     },
@@ -3152,7 +3152,7 @@
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
-      "size": 0.85,
+      "size": 0.95,
       "file": "aula141/eletronico.py",
       "description": "Código-fonte: `aula141/eletronico.py`"
     },
@@ -3164,7 +3164,7 @@
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
-      "size": 0.85,
+      "size": 0.95,
       "file": "aula141/log.py",
       "description": "Código-fonte: `aula141/log.py`"
     },
@@ -3176,7 +3176,7 @@
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
-      "size": 0.85,
+      "size": 0.95,
       "file": "aula141/main.py",
       "description": "Código-fonte: `aula141/main.py`"
     },
@@ -3188,7 +3188,7 @@
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
-      "size": 0.85,
+      "size": 0.95,
       "file": "aula156/documentando_class.py",
       "description": "Código-fonte: `aula156/documentando_class.py`"
     },
@@ -3200,7 +3200,7 @@
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
-      "size": 0.85,
+      "size": 0.95,
       "file": "aula156/documentando_funcoes.py",
       "description": "Código-fonte: `aula156/documentando_funcoes.py`"
     },
@@ -3212,7 +3212,7 @@
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
-      "size": 0.85,
+      "size": 0.95,
       "file": "aula156/main.py",
       "description": "Código-fonte: `aula156/main.py`"
     },
@@ -3224,7 +3224,7 @@
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
-      "size": 0.85,
+      "size": 0.95,
       "file": "aula156/uma_linha.py",
       "description": "Código-fonte: `aula156/uma_linha.py`"
     },
@@ -3236,7 +3236,7 @@
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
-      "size": 0.85,
+      "size": 0.95,
       "file": "aula156/varias_linhas.py",
       "description": "Código-fonte: `aula156/varias_linhas.py`"
     },
@@ -3248,7 +3248,7 @@
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
-      "size": 0.85,
+      "size": 0.95,
       "file": "aula158/banco.py",
       "description": "Código-fonte: `aula158/banco.py`"
     },
@@ -3260,7 +3260,7 @@
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
-      "size": 0.85,
+      "size": 0.95,
       "file": "aula158/contas.py",
       "description": "Código-fonte: `aula158/contas.py`"
     },
@@ -3272,7 +3272,7 @@
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
-      "size": 0.85,
+      "size": 0.95,
       "file": "aula158/main.py",
       "description": "Código-fonte: `aula158/main.py`"
     },
@@ -3284,7 +3284,7 @@
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
-      "size": 0.85,
+      "size": 0.95,
       "file": "aula158/pessoas.py",
       "description": "Código-fonte: `aula158/pessoas.py`"
     },
@@ -3296,7 +3296,7 @@
       "category": "frontend",
       "categoryLabel": "Frontend",
       "color": "#eab308",
-      "size": 0.85,
+      "size": 0.95,
       "file": "aula190_site/index.html",
       "description": "Código-fonte: `aula190_site/index.html`"
     },
@@ -3308,7 +3308,7 @@
       "category": "frontend",
       "categoryLabel": "Frontend",
       "color": "#eab308",
-      "size": 0.85,
+      "size": 0.95,
       "file": "aula190_site/style.css",
       "description": "Código-fonte: `aula190_site/style.css`"
     },
@@ -3320,7 +3320,7 @@
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
-      "size": 0.85,
+      "size": 0.95,
       "file": "aula193/main.py",
       "description": "Código-fonte: `aula193/main.py`"
     },
@@ -3332,7 +3332,7 @@
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
-      "size": 0.85,
+      "size": 0.95,
       "file": "aula197/main.py",
       "description": "Código-fonte: `aula197/main.py`"
     },
@@ -3344,7 +3344,7 @@
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
-      "size": 0.85,
+      "size": 0.95,
       "file": "aula199/creating.py",
       "description": "Código-fonte: `aula199/creating.py`"
     },
@@ -3356,7 +3356,7 @@
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
-      "size": 0.85,
+      "size": 0.95,
       "file": "aula199/reading.py",
       "description": "Código-fonte: `aula199/reading.py`"
     },
@@ -3368,7 +3368,7 @@
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
-      "size": 0.85,
+      "size": 0.95,
       "file": "aula200/main.py",
       "description": "Código-fonte: `aula200/main.py`"
     },
@@ -3380,7 +3380,7 @@
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
-      "size": 0.85,
+      "size": 0.95,
       "file": "aula201/aula0001.py",
       "description": "Código-fonte: `aula201/aula0001.py`"
     },
@@ -3392,7 +3392,7 @@
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
-      "size": 0.85,
+      "size": 0.95,
       "file": "aula201/aula0002.py",
       "description": "Código-fonte: `aula201/aula0002.py`"
     },
@@ -3404,7 +3404,7 @@
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
-      "size": 0.85,
+      "size": 0.95,
       "file": "aula201/aula0003.py",
       "description": "Código-fonte: `aula201/aula0003.py`"
     },
@@ -3416,7 +3416,7 @@
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
-      "size": 0.85,
+      "size": 0.95,
       "file": "aula201/aula0004.py",
       "description": "Código-fonte: `aula201/aula0004.py`"
     },
@@ -3428,7 +3428,7 @@
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
-      "size": 0.85,
+      "size": 0.95,
       "file": "aula201/aula0005.py",
       "description": "Código-fonte: `aula201/aula0005.py`"
     },
@@ -3440,7 +3440,7 @@
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
-      "size": 0.85,
+      "size": 0.95,
       "file": "aula201/aula0006.py",
       "description": "Código-fonte: `aula201/aula0006.py`"
     },
@@ -3452,7 +3452,7 @@
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
-      "size": 0.85,
+      "size": 0.95,
       "file": "aula202-calculadora/buttons.py",
       "description": "Código-fonte: `aula202-calculadora/buttons.py`"
     },
@@ -3464,7 +3464,7 @@
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
-      "size": 0.85,
+      "size": 0.95,
       "file": "aula202-calculadora/display.py",
       "description": "Código-fonte: `aula202-calculadora/display.py`"
     },
@@ -3476,7 +3476,7 @@
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
-      "size": 0.85,
+      "size": 0.95,
       "file": "aula202-calculadora/info.py",
       "description": "Código-fonte: `aula202-calculadora/info.py`"
     },
@@ -3488,7 +3488,7 @@
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
-      "size": 0.85,
+      "size": 0.95,
       "file": "aula202-calculadora/main.py",
       "description": "Código-fonte: `aula202-calculadora/main.py`"
     },
@@ -3500,7 +3500,7 @@
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
-      "size": 0.85,
+      "size": 0.95,
       "file": "aula202-calculadora/main_window.py",
       "description": "Código-fonte: `aula202-calculadora/main_window.py`"
     },
@@ -3512,7 +3512,7 @@
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
-      "size": 0.85,
+      "size": 0.95,
       "file": "aula202-calculadora/styles.py",
       "description": "Código-fonte: `aula202-calculadora/styles.py`"
     },
@@ -3524,7 +3524,7 @@
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
-      "size": 0.85,
+      "size": 0.95,
       "file": "aula202-calculadora/utils.py",
       "description": "Código-fonte: `aula202-calculadora/utils.py`"
     },
@@ -3536,7 +3536,7 @@
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
-      "size": 0.85,
+      "size": 0.95,
       "file": "aula202-calculadora/variables.py",
       "description": "Código-fonte: `aula202-calculadora/variables.py`"
     },
@@ -3548,7 +3548,7 @@
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
-      "size": 0.85,
+      "size": 0.95,
       "file": "aula203-qtdesigner/src/main_window.py",
       "description": "Código-fonte: `aula203-qtdesigner/src/main_window.py`"
     },
@@ -3560,7 +3560,7 @@
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
-      "size": 0.85,
+      "size": 0.95,
       "file": "aula203-qtdesigner/src/window.py",
       "description": "Código-fonte: `aula203-qtdesigner/src/window.py`"
     },
@@ -3572,7 +3572,7 @@
       "category": "frontend",
       "categoryLabel": "Frontend",
       "color": "#eab308",
-      "size": 0.85,
+      "size": 0.95,
       "file": "aula203-qtdesigner/ui/ui_window.py",
       "description": "Código-fonte: `aula203-qtdesigner/ui/ui_window.py`"
     },
@@ -3584,7 +3584,7 @@
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
-      "size": 0.85,
+      "size": 0.95,
       "file": "aula204/main.py",
       "description": "Código-fonte: `aula204/main.py`"
     },
@@ -3596,7 +3596,7 @@
       "category": "frontend",
       "categoryLabel": "Frontend",
       "color": "#eab308",
-      "size": 0.85,
+      "size": 0.95,
       "file": "aula204/ui_workerui.py",
       "description": "Código-fonte: `aula204/ui_workerui.py`"
     },
@@ -3608,7 +3608,7 @@
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
-      "size": 0.85,
+      "size": 0.95,
       "file": "aula205/main.py",
       "description": "Código-fonte: `aula205/main.py`"
     },
@@ -3620,7 +3620,7 @@
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
-      "size": 0.85,
+      "size": 0.95,
       "file": "aula205/select.py",
       "description": "Código-fonte: `aula205/select.py`"
     },
@@ -3632,7 +3632,7 @@
       "category": "other",
       "categoryLabel": "Outros",
       "color": "#64748b",
-      "size": 0.85,
+      "size": 0.95,
       "file": "aula206/docker-compose.yml",
       "description": "Código-fonte: `aula206/docker-compose.yml`"
     },
@@ -3644,7 +3644,7 @@
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
-      "size": 0.85,
+      "size": 0.95,
       "file": "aula206/main.py",
       "description": "Código-fonte: `aula206/main.py`"
     },
@@ -3656,7 +3656,7 @@
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
-      "size": 0.85,
+      "size": 0.95,
       "file": "aula207_ola_django/manage.py",
       "description": "Código-fonte: `aula207_ola_django/manage.py`"
     },
@@ -3668,7 +3668,7 @@
       "category": "frontend",
       "categoryLabel": "Frontend",
       "color": "#eab308",
-      "size": 0.85,
+      "size": 0.95,
       "file": "aula207_ola_django/base/global/base.html",
       "description": "Código-fonte: `aula207_ola_django/base/global/base.html`"
     },
@@ -3680,7 +3680,7 @@
       "category": "frontend",
       "categoryLabel": "Frontend",
       "color": "#eab308",
-      "size": 0.85,
+      "size": 0.95,
       "file": "aula207_ola_django/base/global/partials/head.html",
       "description": "Código-fonte: `aula207_ola_django/base/global/partials/head.html`"
     },
@@ -3692,7 +3692,7 @@
       "category": "frontend",
       "categoryLabel": "Frontend",
       "color": "#eab308",
-      "size": 0.85,
+      "size": 0.95,
       "file": "aula207_ola_django/base/global/partials/menu.html",
       "description": "Código-fonte: `aula207_ola_django/base/global/partials/menu.html`"
     },
@@ -3704,7 +3704,7 @@
       "category": "frontend",
       "categoryLabel": "Frontend",
       "color": "#eab308",
-      "size": 0.85,
+      "size": 0.95,
       "file": "aula207_ola_django/base/global/partials/postblock.html",
       "description": "Código-fonte: `aula207_ola_django/base/global/partials/postblock.html`"
     },
@@ -3716,7 +3716,7 @@
       "category": "frontend",
       "categoryLabel": "Frontend",
       "color": "#eab308",
-      "size": 0.85,
+      "size": 0.95,
       "file": "aula207_ola_django/base/static/global/css/style.css",
       "description": "Código-fonte: `aula207_ola_django/base/static/global/css/style.css`"
     },
@@ -3728,7 +3728,7 @@
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
-      "size": 0.85,
+      "size": 0.95,
       "file": "aula207_ola_django/blog/__init__.py",
       "description": "Código-fonte: `aula207_ola_django/blog/__init__.py`"
     },
@@ -3740,7 +3740,7 @@
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
-      "size": 0.85,
+      "size": 0.95,
       "file": "aula207_ola_django/blog/admin.py",
       "description": "Código-fonte: `aula207_ola_django/blog/admin.py`"
     },
@@ -3752,7 +3752,7 @@
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
-      "size": 0.85,
+      "size": 0.95,
       "file": "aula207_ola_django/blog/apps.py",
       "description": "Código-fonte: `aula207_ola_django/blog/apps.py`"
     },
@@ -3764,7 +3764,7 @@
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
-      "size": 0.85,
+      "size": 0.95,
       "file": "aula207_ola_django/blog/data.py",
       "description": "Código-fonte: `aula207_ola_django/blog/data.py`"
     },
@@ -3776,7 +3776,7 @@
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
-      "size": 0.85,
+      "size": 0.95,
       "file": "aula207_ola_django/blog/models.py",
       "description": "Código-fonte: `aula207_ola_django/blog/models.py`"
     },
@@ -3788,7 +3788,7 @@
       "category": "tests",
       "categoryLabel": "Testes",
       "color": "#94a3b8",
-      "size": 0.85,
+      "size": 0.95,
       "file": "aula207_ola_django/blog/tests.py",
       "description": "Código-fonte: `aula207_ola_django/blog/tests.py`"
     },
@@ -3800,7 +3800,7 @@
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
-      "size": 0.85,
+      "size": 0.95,
       "file": "aula207_ola_django/blog/urls.py",
       "description": "Código-fonte: `aula207_ola_django/blog/urls.py`"
     },
@@ -3812,7 +3812,7 @@
       "category": "frontend",
       "categoryLabel": "Frontend",
       "color": "#eab308",
-      "size": 0.85,
+      "size": 0.95,
       "file": "aula207_ola_django/blog/views.py",
       "description": "Código-fonte: `aula207_ola_django/blog/views.py`"
     },
@@ -3824,7 +3824,7 @@
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
-      "size": 0.85,
+      "size": 0.95,
       "file": "aula207_ola_django/blog/migrations/__init__.py",
       "description": "Código-fonte: `aula207_ola_django/blog/migrations/__init__.py`"
     },
@@ -3836,7 +3836,7 @@
       "category": "frontend",
       "categoryLabel": "Frontend",
       "color": "#eab308",
-      "size": 0.85,
+      "size": 0.95,
       "file": "aula207_ola_django/blog/templates/blog/exemplo.html",
       "description": "Código-fonte: `aula207_ola_django/blog/templates/blog/exemplo.html`"
     },
@@ -3848,7 +3848,7 @@
       "category": "frontend",
       "categoryLabel": "Frontend",
       "color": "#eab308",
-      "size": 0.85,
+      "size": 0.95,
       "file": "aula207_ola_django/blog/templates/blog/index.html",
       "description": "Código-fonte: `aula207_ola_django/blog/templates/blog/index.html`"
     },
@@ -3860,7 +3860,7 @@
       "category": "frontend",
       "categoryLabel": "Frontend",
       "color": "#eab308",
-      "size": 0.85,
+      "size": 0.95,
       "file": "aula207_ola_django/blog/templates/blog/post.html",
       "description": "Código-fonte: `aula207_ola_django/blog/templates/blog/post.html`"
     },
@@ -3872,7 +3872,7 @@
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
-      "size": 0.85,
+      "size": 0.95,
       "file": "aula207_ola_django/home/__init__.py",
       "description": "Código-fonte: `aula207_ola_django/home/__init__.py`"
     },
@@ -3884,7 +3884,7 @@
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
-      "size": 0.85,
+      "size": 0.95,
       "file": "aula207_ola_django/home/admin.py",
       "description": "Código-fonte: `aula207_ola_django/home/admin.py`"
     },
@@ -3896,7 +3896,7 @@
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
-      "size": 0.85,
+      "size": 0.95,
       "file": "aula207_ola_django/home/apps.py",
       "description": "Código-fonte: `aula207_ola_django/home/apps.py`"
     },
@@ -3908,7 +3908,7 @@
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
-      "size": 0.85,
+      "size": 0.95,
       "file": "aula207_ola_django/home/models.py",
       "description": "Código-fonte: `aula207_ola_django/home/models.py`"
     },
@@ -3920,7 +3920,7 @@
       "category": "tests",
       "categoryLabel": "Testes",
       "color": "#94a3b8",
-      "size": 0.85,
+      "size": 0.95,
       "file": "aula207_ola_django/home/tests.py",
       "description": "Código-fonte: `aula207_ola_django/home/tests.py`"
     },
@@ -3932,7 +3932,7 @@
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
-      "size": 0.85,
+      "size": 0.95,
       "file": "aula207_ola_django/home/urls.py",
       "description": "Código-fonte: `aula207_ola_django/home/urls.py`"
     },
@@ -3944,7 +3944,7 @@
       "category": "frontend",
       "categoryLabel": "Frontend",
       "color": "#eab308",
-      "size": 0.85,
+      "size": 0.95,
       "file": "aula207_ola_django/home/views.py",
       "description": "Código-fonte: `aula207_ola_django/home/views.py`"
     },
@@ -3956,7 +3956,7 @@
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
-      "size": 0.85,
+      "size": 0.95,
       "file": "aula207_ola_django/home/migrations/__init__.py",
       "description": "Código-fonte: `aula207_ola_django/home/migrations/__init__.py`"
     },
@@ -3968,7 +3968,7 @@
       "category": "frontend",
       "categoryLabel": "Frontend",
       "color": "#eab308",
-      "size": 0.85,
+      "size": 0.95,
       "file": "aula207_ola_django/home/templates/home/index.html",
       "description": "Código-fonte: `aula207_ola_django/home/templates/home/index.html`"
     },
@@ -3980,7 +3980,7 @@
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
-      "size": 0.85,
+      "size": 0.95,
       "file": "aula207_ola_django/project/__init__.py",
       "description": "Código-fonte: `aula207_ola_django/project/__init__.py`"
     },
@@ -3992,7 +3992,7 @@
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
-      "size": 0.85,
+      "size": 0.95,
       "file": "aula207_ola_django/project/asgi.py",
       "description": "Código-fonte: `aula207_ola_django/project/asgi.py`"
     },
@@ -4004,7 +4004,7 @@
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
-      "size": 0.85,
+      "size": 0.95,
       "file": "aula207_ola_django/project/settings.py",
       "description": "Código-fonte: `aula207_ola_django/project/settings.py`"
     },
@@ -4016,7 +4016,7 @@
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
-      "size": 0.85,
+      "size": 0.95,
       "file": "aula207_ola_django/project/urls.py",
       "description": "Código-fonte: `aula207_ola_django/project/urls.py`"
     },
@@ -4028,7 +4028,7 @@
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
-      "size": 0.85,
+      "size": 0.95,
       "file": "aula207_ola_django/project/wsgi.py",
       "description": "Código-fonte: `aula207_ola_django/project/wsgi.py`"
     },
@@ -4040,7 +4040,7 @@
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
-      "size": 0.85,
+      "size": 0.95,
       "file": "aula99_package/__init__.py",
       "description": "Código-fonte: `aula99_package/__init__.py`"
     },
@@ -4052,7 +4052,7 @@
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
-      "size": 0.85,
+      "size": 0.95,
       "file": "aula99_package/modulo.py",
       "description": "Código-fonte: `aula99_package/modulo.py`"
     },
@@ -4064,7 +4064,7 @@
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
-      "size": 0.85,
+      "size": 0.95,
       "file": "aula99_package/modulo_b.py",
       "description": "Código-fonte: `aula99_package/modulo_b.py`"
     },
@@ -4076,7 +4076,7 @@
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
-      "size": 0.85,
+      "size": 0.95,
       "file": "dados/__init__.py",
       "description": "Código-fonte: `dados/__init__.py`"
     },
@@ -4088,7 +4088,7 @@
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
-      "size": 0.85,
+      "size": 0.95,
       "file": "dados/produtos_modulo.py",
       "description": "Código-fonte: `dados/produtos_modulo.py`"
     },

@@ -104,7 +104,7 @@
       "category": "scripts",
       "categoryLabel": "Scripts",
       "color": "#64748b",
-      "size": 0.85,
+      "size": 0.95,
       "file": ".gitignore",
       "description": "Código-fonte: `.gitignore`"
     },
@@ -116,7 +116,7 @@
       "category": "frontend",
       "categoryLabel": "Frontend",
       "color": "#eab308",
-      "size": 0.85,
+      "size": 0.95,
       "file": "index.html",
       "description": "Código-fonte: `index.html`"
     },
@@ -128,7 +128,7 @@
       "category": "scripts",
       "categoryLabel": "Scripts",
       "color": "#64748b",
-      "size": 0.85,
+      "size": 0.95,
       "file": "package.json",
       "description": "Código-fonte: `package.json`"
     },
@@ -140,7 +140,7 @@
       "category": "scripts",
       "categoryLabel": "Scripts",
       "color": "#64748b",
-      "size": 0.85,
+      "size": 0.95,
       "file": "webpack.config.js",
       "description": "Código-fonte: `webpack.config.js`"
     },
@@ -152,7 +152,7 @@
       "category": "frontend",
       "categoryLabel": "Frontend",
       "color": "#eab308",
-      "size": 0.85,
+      "size": 0.95,
       "file": "css/style.css",
       "description": "Código-fonte: `css/style.css`"
     },
@@ -164,7 +164,7 @@
       "category": "scripts",
       "categoryLabel": "Scripts",
       "color": "#64748b",
-      "size": 0.85,
+      "size": 0.95,
       "file": "src/app.js",
       "description": "Código-fonte: `src/app.js`"
     },
@@ -176,7 +176,7 @@
       "category": "scripts",
       "categoryLabel": "Scripts",
       "color": "#64748b",
-      "size": 0.85,
+      "size": 0.95,
       "file": "src/controller/CameraController.js",
       "description": "Código-fonte: `src/controller/CameraController.js`"
     },
@@ -188,7 +188,7 @@
       "category": "frontend",
       "categoryLabel": "Frontend",
       "color": "#eab308",
-      "size": 0.85,
+      "size": 0.95,
       "file": "src/controller/DocumentPreviewController.js",
       "description": "Código-fonte: `src/controller/DocumentPreviewController.js`"
     },
@@ -200,7 +200,7 @@
       "category": "scripts",
       "categoryLabel": "Scripts",
       "color": "#64748b",
-      "size": 0.85,
+      "size": 0.95,
       "file": "src/controller/MicrophoneController.js",
       "description": "Código-fonte: `src/controller/MicrophoneController.js`"
     },
@@ -212,7 +212,7 @@
       "category": "scripts",
       "categoryLabel": "Scripts",
       "color": "#64748b",
-      "size": 0.85,
+      "size": 0.95,
       "file": "src/controller/WhatsAppController.js",
       "description": "Código-fonte: `src/controller/WhatsAppController.js`"
     },
@@ -224,7 +224,7 @@
       "category": "scripts",
       "categoryLabel": "Scripts",
       "color": "#64748b",
-      "size": 0.85,
+      "size": 0.95,
       "file": "src/model/Message.js",
       "description": "Código-fonte: `src/model/Message.js`"
     },
@@ -236,7 +236,7 @@
       "category": "scripts",
       "categoryLabel": "Scripts",
       "color": "#64748b",
-      "size": 0.85,
+      "size": 0.95,
       "file": "src/model/Model.js",
       "description": "Código-fonte: `src/model/Model.js`"
     },
@@ -248,7 +248,7 @@
       "category": "scripts",
       "categoryLabel": "Scripts",
       "color": "#64748b",
-      "size": 0.85,
+      "size": 0.95,
       "file": "src/model/User.js",
       "description": "Código-fonte: `src/model/User.js`"
     },
@@ -260,7 +260,7 @@
       "category": "scripts",
       "categoryLabel": "Scripts",
       "color": "#64748b",
-      "size": 0.85,
+      "size": 0.95,
       "file": "src/util/ClassEvent.js",
       "description": "Código-fonte: `src/util/ClassEvent.js`"
     },
@@ -272,7 +272,7 @@
       "category": "scripts",
       "categoryLabel": "Scripts",
       "color": "#64748b",
-      "size": 0.85,
+      "size": 0.95,
       "file": "src/util/Firebase.js",
       "description": "Código-fonte: `src/util/Firebase.js`"
     },
@@ -284,7 +284,7 @@
       "category": "scripts",
       "categoryLabel": "Scripts",
       "color": "#64748b",
-      "size": 0.85,
+      "size": 0.95,
       "file": "src/util/Format.js",
       "description": "Código-fonte: `src/util/Format.js`"
     }

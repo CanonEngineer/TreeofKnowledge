@@ -16,6 +16,8 @@ export default function App() {
   const [resetCam, setResetCam] = useState(0);
   const [activeCategories, setActiveCategories] = useState(new Set());
   const [fullscreen, setFullscreen] = useState(false);
+  const [leftPanelOpen, setLeftPanelOpen] = useState(false);
+  const [rightPanelOpen, setRightPanelOpen] = useState(false);
 
   const slug = getProjectSlug();
 
@@ -106,8 +108,23 @@ export default function App() {
   }
 
   return (
-    <div className={`app ${fullscreen ? 'fullscreen' : ''}`}>
+    <div
+      className={`app ${fullscreen ? 'fullscreen' : ''} ${leftPanelOpen ? 'left-open' : ''} ${rightPanelOpen ? 'right-open' : ''}`}
+    >
+      <button
+        type="button"
+        className={`panel-dock panel-dock-left ${leftPanelOpen ? 'open' : ''}`}
+        onClick={() => setLeftPanelOpen((v) => !v)}
+        aria-expanded={leftPanelOpen}
+        aria-label={leftPanelOpen ? 'Ocultar configurações' : 'Abrir configurações'}
+        title={leftPanelOpen ? 'Ocultar configurações' : 'Configurações'}
+      >
+        {leftPanelOpen ? '‹' : '›'}
+      </button>
+
       <LeftSidebar
+        open={leftPanelOpen}
+        onClose={() => setLeftPanelOpen(false)}
         graph={filteredGraph}
         activeCategories={activeCategories}
         onToggleCategory={toggleCategory}
@@ -153,7 +170,20 @@ export default function App() {
         />
       </main>
 
+      <button
+        type="button"
+        className={`panel-dock panel-dock-right ${rightPanelOpen ? 'open' : ''}`}
+        onClick={() => setRightPanelOpen((v) => !v)}
+        aria-expanded={rightPanelOpen}
+        aria-label={rightPanelOpen ? 'Ocultar detalhes' : 'Abrir detalhes do nó'}
+        title={rightPanelOpen ? 'Ocultar detalhes' : 'Detalhes do nó'}
+      >
+        {rightPanelOpen ? '›' : '‹'}
+      </button>
+
       <SidePanel
+        open={rightPanelOpen}
+        onClosePanel={() => setRightPanelOpen(false)}
         node={selectedNode}
         graph={filteredGraph}
         onClose={() => setSelectedId(null)}

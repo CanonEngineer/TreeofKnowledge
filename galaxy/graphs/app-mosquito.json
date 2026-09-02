@@ -40,7 +40,7 @@
       "category": "frontend",
       "categoryLabel": "Frontend",
       "color": "#eab308",
-      "size": 0.85,
+      "size": 0.95,
       "file": "app.html",
       "description": "Código-fonte: `app.html`"
     },
@@ -52,7 +52,7 @@
       "category": "frontend",
       "categoryLabel": "Frontend",
       "color": "#eab308",
-      "size": 0.85,
+      "size": 0.95,
       "file": "estilo.css",
       "description": "Código-fonte: `estilo.css`"
     },
@@ -64,7 +64,7 @@
       "category": "frontend",
       "categoryLabel": "Frontend",
       "color": "#eab308",
-      "size": 0.85,
+      "size": 0.95,
       "file": "fim_de_jogo.html",
       "description": "Código-fonte: `fim_de_jogo.html`"
     },
@@ -76,7 +76,7 @@
       "category": "frontend",
       "categoryLabel": "Frontend",
       "color": "#eab308",
-      "size": 0.85,
+      "size": 0.95,
       "file": "index.html",
       "description": "Código-fonte: `index.html`"
     },
@@ -88,7 +88,7 @@
       "category": "frontend",
       "categoryLabel": "Frontend",
       "color": "#eab308",
-      "size": 0.85,
+      "size": 0.95,
       "file": "jogo.js",
       "description": "Código-fonte: `jogo.js`"
     },
@@ -100,7 +100,7 @@
       "category": "frontend",
       "categoryLabel": "Frontend",
       "color": "#eab308",
-      "size": 0.85,
+      "size": 0.95,
       "file": "vitoria.html",
       "description": "Código-fonte: `vitoria.html`"
     }

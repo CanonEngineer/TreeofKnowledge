@@ -380,7 +380,7 @@
       "category": "other",
       "categoryLabel": "Outros",
       "color": "#64748b",
-      "size": 0.85,
+      "size": 0.95,
       "file": ".env-sample",
       "description": "Código-fonte: `.env-sample`"
     },
@@ -392,7 +392,7 @@
       "category": "other",
       "categoryLabel": "Outros",
       "color": "#64748b",
-      "size": 0.85,
+      "size": 0.95,
       "file": ".gitignore",
       "description": "Código-fonte: `.gitignore`"
     },
@@ -404,7 +404,7 @@
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
-      "size": 0.85,
+      "size": 0.95,
       "file": "manage.py",
       "description": "Código-fonte: `manage.py`"
     },
@@ -416,7 +416,7 @@
       "category": "tests",
       "categoryLabel": "Testes",
       "color": "#94a3b8",
-      "size": 0.85,
+      "size": 0.95,
       "file": "test.py",
       "description": "Código-fonte: `test.py`"
     },
@@ -428,7 +428,7 @@
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
-      "size": 0.85,
+      "size": 0.95,
       "file": "accounts/__init__.py",
       "description": "Código-fonte: `accounts/__init__.py`"
     },
@@ -440,7 +440,7 @@
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
-      "size": 0.85,
+      "size": 0.95,
       "file": "accounts/admin.py",
       "description": "Código-fonte: `accounts/admin.py`"
     },
@@ -452,7 +452,7 @@
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
-      "size": 0.85,
+      "size": 0.95,
       "file": "accounts/apps.py",
       "description": "Código-fonte: `accounts/apps.py`"
     },
@@ -464,7 +464,7 @@
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
-      "size": 0.85,
+      "size": 0.95,
       "file": "accounts/context_processors.py",
       "description": "Código-fonte: `accounts/context_processors.py`"
     },
@@ -476,7 +476,7 @@
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
-      "size": 0.85,
+      "size": 0.95,
       "file": "accounts/forms.py",
       "description": "Código-fonte: `accounts/forms.py`"
     },
@@ -488,7 +488,7 @@
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
-      "size": 0.85,
+      "size": 0.95,
       "file": "accounts/models.py",
       "description": "Código-fonte: `accounts/models.py`"
     },
@@ -500,7 +500,7 @@
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
-      "size": 0.85,
+      "size": 0.95,
       "file": "accounts/signals.py",
       "description": "Código-fonte: `accounts/signals.py`"
     },
@@ -512,7 +512,7 @@
       "category": "tests",
       "categoryLabel": "Testes",
       "color": "#94a3b8",
-      "size": 0.85,
+      "size": 0.95,
       "file": "accounts/tests.py",
       "description": "Código-fonte: `accounts/tests.py`"
     },
@@ -524,7 +524,7 @@
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
-      "size": 0.85,
+      "size": 0.95,
       "file": "accounts/urls.py",
       "description": "Código-fonte: `accounts/urls.py`"
     },
@@ -536,7 +536,7 @@
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
-      "size": 0.85,
+      "size": 0.95,
       "file": "accounts/utils.py",
       "description": "Código-fonte: `accounts/utils.py`"
     },
@@ -548,7 +548,7 @@
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
-      "size": 0.85,
+      "size": 0.95,
       "file": "accounts/validators.py",
       "description": "Código-fonte: `accounts/validators.py`"
     },
@@ -560,7 +560,7 @@
       "category": "frontend",
       "categoryLabel": "Frontend",
       "color": "#eab308",
-      "size": 0.85,
+      "size": 0.95,
       "file": "accounts/views.py",
       "description": "Código-fonte: `accounts/views.py`"
     },
@@ -572,7 +572,7 @@
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
-      "size": 0.85,
+      "size": 0.95,
       "file": "accounts/migrations/0001_initial.py",
       "description": "Código-fonte: `accounts/migrations/0001_initial.py`"
     },
@@ -584,7 +584,7 @@
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
-      "size": 0.85,
+      "size": 0.95,
       "file": "accounts/migrations/0002_userprofile.py",
       "description": "Código-fonte: `accounts/migrations/0002_userprofile.py`"
     },
@@ -596,7 +596,7 @@
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
-      "size": 0.85,
+      "size": 0.95,
       "file": "accounts/migrations/0003_alter_user_role.py",
       "description": "Código-fonte: `accounts/migrations/0003_alter_user_role.py`"
     },
@@ -608,7 +608,7 @@
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
-      "size": 0.85,
+      "size": 0.95,
       "file": "accounts/migrations/0004_rename_latidude_userprofile_latitude.py",
       "description": "Código-fonte: `accounts/migrations/0004_rename_latidude_userprofile_latitude.py`"
     },
@@ -620,7 +620,7 @@
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
-      "size": 0.85,
+      "size": 0.95,
       "file": "accounts/migrations/0005_remove_userprofile_address_line_1_and_more.py",
       "description": "Código-fonte: `accounts/migrations/0005_remove_userprofile_address_line_1_and_more.py`"
     },
@@ -632,7 +632,7 @@
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
-      "size": 0.85,
+      "size": 0.95,
       "file": "accounts/migrations/0006_userprofile_location.py",
       "description": "Código-fonte: `accounts/migrations/0006_userprofile_location.py`"
     },
@@ -644,7 +644,7 @@
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
-      "size": 0.85,
+      "size": 0.95,
       "file": "accounts/migrations/__init__.py",
       "description": "Código-fonte: `accounts/migrations/__init__.py`"
     },
@@ -656,7 +656,7 @@
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
-      "size": 0.85,
+      "size": 0.95,
       "file": "customers/__init__.py",
       "description": "Código-fonte: `customers/__init__.py`"
     },
@@ -668,7 +668,7 @@
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
-      "size": 0.85,
+      "size": 0.95,
       "file": "customers/admin.py",
       "description": "Código-fonte: `customers/admin.py`"
     },
@@ -680,7 +680,7 @@
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
-      "size": 0.85,
+      "size": 0.95,
       "file": "customers/apps.py",
       "description": "Código-fonte: `customers/apps.py`"
     },
@@ -692,7 +692,7 @@
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
-      "size": 0.85,
+      "size": 0.95,
       "file": "customers/models.py",
       "description": "Código-fonte: `customers/models.py`"
     },
@@ -704,7 +704,7 @@
       "category": "tests",
       "categoryLabel": "Testes",
       "color": "#94a3b8",
-      "size": 0.85,
+      "size": 0.95,
       "file": "customers/tests.py",
       "description": "Código-fonte: `customers/tests.py`"
     },
@@ -716,7 +716,7 @@
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
-      "size": 0.85,
+      "size": 0.95,
       "file": "customers/urls.py",
       "description": "Código-fonte: `customers/urls.py`"
     },
@@ -728,7 +728,7 @@
       "category": "frontend",
       "categoryLabel": "Frontend",
       "color": "#eab308",
-      "size": 0.85,
+      "size": 0.95,
       "file": "customers/views.py",
       "description": "Código-fonte: `customers/views.py`"
     },
@@ -740,7 +740,7 @@
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
-      "size": 0.85,
+      "size": 0.95,
       "file": "customers/migrations/__init__.py",
       "description": "Código-fonte: `customers/migrations/__init__.py`"
     },
@@ -752,7 +752,7 @@
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
-      "size": 0.85,
+      "size": 0.95,
       "file": "foodOnline/__init__.py",
       "description": "Código-fonte: `foodOnline/__init__.py`"
     },
@@ -764,7 +764,7 @@
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
-      "size": 0.85,
+      "size": 0.95,
       "file": "foodOnline/asgi.py",
       "description": "Código-fonte: `foodOnline/asgi.py`"
     },
@@ -776,7 +776,7 @@
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
-      "size": 0.85,
+      "size": 0.95,
       "file": "foodOnline/settings.py",
       "description": "Código-fonte: `foodOnline/settings.py`"
     },
@@ -788,7 +788,7 @@
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
-      "size": 0.85,
+      "size": 0.95,
       "file": "foodOnline/urls.py",
       "description": "Código-fonte: `foodOnline/urls.py`"
     },
@@ -800,7 +800,7 @@
       "category": "frontend",
       "categoryLabel": "Frontend",
       "color": "#eab308",
-      "size": 0.85,
+      "size": 0.95,
       "file": "foodOnline/views.py",
       "description": "Código-fonte: `foodOnline/views.py`"
     },
@@ -812,7 +812,7 @@
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
-      "size": 0.85,
+      "size": 0.95,
       "file": "foodOnline/wsgi.py",
       "description": "Código-fonte: `foodOnline/wsgi.py`"
     },
@@ -824,7 +824,7 @@
       "category": "frontend",
       "categoryLabel": "Frontend",
       "color": "#eab308",
-      "size": 0.85,
+      "size": 0.95,
       "file": "foodOnline/static/css/bootstrap-datepicker.css",
       "description": "Código-fonte: `foodOnline/static/css/bootstrap-datepicker.css`"
     },
@@ -836,7 +836,7 @@
       "category": "frontend",
       "categoryLabel": "Frontend",
       "color": "#eab308",
-      "size": 0.85,
+      "size": 0.95,
       "file": "foodOnline/static/css/bootstrap-slider.css",
       "description": "Código-fonte: `foodOnline/static/css/bootstrap-slider.css`"
     },
@@ -848,7 +848,7 @@
       "category": "frontend",
       "categoryLabel": "Frontend",
       "color": "#eab308",
-      "size": 0.85,
+      "size": 0.95,
       "file": "foodOnline/static/css/bootstrap-theme.css",
       "description": "Código-fonte: `foodOnline/static/css/bootstrap-theme.css`"
     },
@@ -860,7 +860,7 @@
       "category": "frontend",
       "categoryLabel": "Frontend",
       "color": "#eab308",
-      "size": 0.85,
+      "size": 0.95,
       "file": "foodOnline/static/css/bootstrap.css",
       "description": "Código-fonte: `foodOnline/static/css/bootstrap.css`"
     },
@@ -872,7 +872,7 @@
       "category": "frontend",
       "categoryLabel": "Frontend",
       "color": "#eab308",
-      "size": 0.85,
+      "size": 0.95,
       "file": "foodOnline/static/css/cs-foodbakery-plugin.css",
       "description": "Código-fonte: `foodOnline/static/css/cs-foodbakery-plugin.css`"
     },
@@ -884,7 +884,7 @@
       "category": "frontend",
       "categoryLabel": "Frontend",
       "color": "#eab308",
-      "size": 0.85,
+      "size": 0.95,
       "file": "foodOnline/static/css/custom.css",
       "description": "Código-fonte: `foodOnline/static/css/custom.css`"
     },
@@ -896,7 +896,7 @@
       "category": "frontend",
       "categoryLabel": "Frontend",
       "color": "#eab308",
-      "size": 0.85,
+      "size": 0.95,
       "file": "foodOnline/static/css/iconmoon.css",
       "description": "Código-fonte: `foodOnline/static/css/iconmoon.css`"
     },
@@ -908,7 +908,7 @@
       "category": "frontend",
       "categoryLabel": "Frontend",
       "color": "#eab308",
-      "size": 0.85,
+      "size": 0.95,
       "file": "foodOnline/static/css/style.css",
       "description": "Código-fonte: `foodOnline/static/css/style.css`"
     },
@@ -920,7 +920,7 @@
       "category": "frontend",
       "categoryLabel": "Frontend",
       "color": "#eab308",
-      "size": 0.85,
+      "size": 0.95,
       "file": "foodOnline/static/js/bootstrap.js",
       "description": "Código-fonte: `foodOnline/static/js/bootstrap.js`"
     },
@@ -932,7 +932,7 @@
       "category": "frontend",
       "categoryLabel": "Frontend",
       "color": "#eab308",
-      "size": 0.85,
+      "size": 0.95,
       "file": "foodOnline/static/js/custom.js",
       "description": "Código-fonte: `foodOnline/static/js/custom.js`"
     },
@@ -944,7 +944,7 @@
       "category": "frontend",
       "categoryLabel": "Frontend",
       "color": "#eab308",
-      "size": 0.85,
+      "size": 0.95,
       "file": "foodOnline/static/js/daterangepicker.js",
       "description": "Código-fonte: `foodOnline/static/js/daterangepicker.js`"
     },
@@ -956,7 +956,7 @@
       "category": "frontend",
       "categoryLabel": "Frontend",
       "color": "#eab308",
-      "size": 0.85,
+      "size": 0.95,
       "file": "foodOnline/static/js/functions.js",
       "description": "Código-fonte: `foodOnline/static/js/functions.js`"
     },
@@ -968,7 +968,7 @@
       "category": "frontend",
       "categoryLabel": "Frontend",
       "color": "#eab308",
-      "size": 0.85,
+      "size": 0.95,
       "file": "foodOnline/static/js/jquery-te-1.4.0.min.js",
       "description": "Código-fonte: `foodOnline/static/js/jquery-te-1.4.0.min.js`"
     },
@@ -980,7 +980,7 @@
       "category": "frontend",
       "categoryLabel": "Frontend",
       "color": "#eab308",
-      "size": 0.85,
+      "size": 0.95,
       "file": "foodOnline/static/js/jquery-ui.js",
       "description": "Código-fonte: `foodOnline/static/js/jquery-ui.js`"
     },
@@ -992,7 +992,7 @@
       "category": "frontend",
       "categoryLabel": "Frontend",
       "color": "#eab308",
-      "size": 0.85,
+      "size": 0.95,
       "file": "foodOnline/static/js/jquery.js",
       "description": "Código-fonte: `foodOnline/static/js/jquery.js`"
     },
@@ -1004,7 +1004,7 @@
       "category": "frontend",
       "categoryLabel": "Frontend",
       "color": "#eab308",
-      "size": 0.85,
+      "size": 0.95,
       "file": "foodOnline/static/js/jquery.mCustomScrollbar.concat.min.js",
       "description": "Código-fonte: `foodOnline/static/js/jquery.mCustomScrollbar.concat.min.js`"
     },
@@ -1016,7 +1016,7 @@
       "category": "frontend",
       "categoryLabel": "Frontend",
       "color": "#eab308",
-      "size": 0.85,
+      "size": 0.95,
       "file": "foodOnline/static/js/modernizr.js",
       "description": "Código-fonte: `foodOnline/static/js/modernizr.js`"
     },
@@ -1028,7 +1028,7 @@
       "category": "frontend",
       "categoryLabel": "Frontend",
       "color": "#eab308",
-      "size": 0.85,
+      "size": 0.95,
       "file": "foodOnline/static/js/scripts.js",
       "description": "Código-fonte: `foodOnline/static/js/scripts.js`"
     },
@@ -1040,7 +1040,7 @@
       "category": "frontend",
       "categoryLabel": "Frontend",
       "color": "#eab308",
-      "size": 0.85,
+      "size": 0.95,
       "file": "foodOnline/static/js/tag-it.js",
       "description": "Código-fonte: `foodOnline/static/js/tag-it.js`"
     },
@@ -1052,7 +1052,7 @@
       "category": "frontend",
       "categoryLabel": "Frontend",
       "color": "#eab308",
-      "size": 0.85,
+      "size": 0.95,
       "file": "foodOnline/static/js/theia-sticky-sidebar.js",
       "description": "Código-fonte: `foodOnline/static/js/theia-sticky-sidebar.js`"
     },
@@ -1064,7 +1064,7 @@
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
-      "size": 0.85,
+      "size": 0.95,
       "file": "marketplace/__init__.py",
       "description": "Código-fonte: `marketplace/__init__.py`"
     },
@@ -1076,7 +1076,7 @@
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
-      "size": 0.85,
+      "size": 0.95,
       "file": "marketplace/admin.py",
       "description": "Código-fonte: `marketplace/admin.py`"
     },
@@ -1088,7 +1088,7 @@
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
-      "size": 0.85,
+      "size": 0.95,
       "file": "marketplace/apps.py",
       "description": "Código-fonte: `marketplace/apps.py`"
     },
@@ -1100,7 +1100,7 @@
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
-      "size": 0.85,
+      "size": 0.95,
       "file": "marketplace/context_processors.py",
       "description": "Código-fonte: `marketplace/context_processors.py`"
     },
@@ -1112,7 +1112,7 @@
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
-      "size": 0.85,
+      "size": 0.95,
       "file": "marketplace/models.py",
       "description": "Código-fonte: `marketplace/models.py`"
     },
@@ -1124,7 +1124,7 @@
       "category": "tests",
       "categoryLabel": "Testes",
       "color": "#94a3b8",
-      "size": 0.85,
+      "size": 0.95,
       "file": "marketplace/tests.py",
       "description": "Código-fonte: `marketplace/tests.py`"
     },
@@ -1136,7 +1136,7 @@
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
-      "size": 0.85,
+      "size": 0.95,
       "file": "marketplace/urls.py",
       "description": "Código-fonte: `marketplace/urls.py`"
     },
@@ -1148,7 +1148,7 @@
       "category": "frontend",
       "categoryLabel": "Frontend",
       "color": "#eab308",
-      "size": 0.85,
+      "size": 0.95,
       "file": "marketplace/views.py",
       "description": "Código-fonte: `marketplace/views.py`"
     },
@@ -1160,7 +1160,7 @@
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
-      "size": 0.85,
+      "size": 0.95,
       "file": "marketplace/migrations/0001_initial.py",
       "description": "Código-fonte: `marketplace/migrations/0001_initial.py`"
     },
@@ -1172,7 +1172,7 @@
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
-      "size": 0.85,
+      "size": 0.95,
       "file": "marketplace/migrations/0002_tax.py",
       "description": "Código-fonte: `marketplace/migrations/0002_tax.py`"
     },
@@ -1184,7 +1184,7 @@
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
-      "size": 0.85,
+      "size": 0.95,
       "file": "marketplace/migrations/__init__.py",
       "description": "Código-fonte: `marketplace/migrations/__init__.py`"
     },
@@ -1196,7 +1196,7 @@
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
-      "size": 0.85,
+      "size": 0.95,
       "file": "menu/__init__.py",
       "description": "Código-fonte: `menu/__init__.py`"
     },
@@ -1208,7 +1208,7 @@
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
-      "size": 0.85,
+      "size": 0.95,
       "file": "menu/admin.py",
       "description": "Código-fonte: `menu/admin.py`"
     },
@@ -1220,7 +1220,7 @@
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
-      "size": 0.85,
+      "size": 0.95,
       "file": "menu/apps.py",
       "description": "Código-fonte: `menu/apps.py`"
     },
@@ -1232,7 +1232,7 @@
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
-      "size": 0.85,
+      "size": 0.95,
       "file": "menu/forms.py",
       "description": "Código-fonte: `menu/forms.py`"
     },
@@ -1244,7 +1244,7 @@
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
-      "size": 0.85,
+      "size": 0.95,
       "file": "menu/models.py",
       "description": "Código-fonte: `menu/models.py`"
     },
@@ -1256,7 +1256,7 @@
       "category": "tests",
       "categoryLabel": "Testes",
       "color": "#94a3b8",
-      "size": 0.85,
+      "size": 0.95,
       "file": "menu/tests.py",
       "description": "Código-fonte: `menu/tests.py`"
     },
@@ -1268,7 +1268,7 @@
       "category": "frontend",
       "categoryLabel": "Frontend",
       "color": "#eab308",
-      "size": 0.85,
+      "size": 0.95,
       "file": "menu/views.py",
       "description": "Código-fonte: `menu/views.py`"
     },
@@ -1280,7 +1280,7 @@
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
-      "size": 0.85,
+      "size": 0.95,
       "file": "menu/migrations/0001_initial.py",
       "description": "Código-fonte: `menu/migrations/0001_initial.py`"
     },
@@ -1292,7 +1292,7 @@
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
-      "size": 0.85,
+      "size": 0.95,
       "file": "menu/migrations/0002_alter_category_options_alter_fooditem_options.py",
       "description": "Código-fonte: `menu/migrations/0002_alter_category_options_alter_fooditem_options.py`"
     },
@@ -1304,7 +1304,7 @@
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
-      "size": 0.85,
+      "size": 0.95,
       "file": "menu/migrations/0003_alter_fooditem_category.py",
       "description": "Código-fonte: `menu/migrations/0003_alter_fooditem_category.py`"
     },
@@ -1316,7 +1316,7 @@
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
-      "size": 0.85,
+      "size": 0.95,
       "file": "menu/migrations/0004_alter_category_category_name.py",
       "description": "Código-fonte: `menu/migrations/0004_alter_category_category_name.py`"
     },
@@ -1328,7 +1328,7 @@
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
-      "size": 0.85,
+      "size": 0.95,
       "file": "menu/migrations/__init__.py",
       "description": "Código-fonte: `menu/migrations/__init__.py`"
     },
@@ -1340,7 +1340,7 @@
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
-      "size": 0.85,
+      "size": 0.95,
       "file": "orders/__init__.py",
       "description": "Código-fonte: `orders/__init__.py`"
     },
@@ -1352,7 +1352,7 @@
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
-      "size": 0.85,
+      "size": 0.95,
       "file": "orders/admin.py",
       "description": "Código-fonte: `orders/admin.py`"
     },
@@ -1364,7 +1364,7 @@
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
-      "size": 0.85,
+      "size": 0.95,
       "file": "orders/apps.py",
       "description": "Código-fonte: `orders/apps.py`"
     },
@@ -1376,7 +1376,7 @@
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
-      "size": 0.85,
+      "size": 0.95,
       "file": "orders/forms.py",
       "description": "Código-fonte: `orders/forms.py`"
     },
@@ -1388,7 +1388,7 @@
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
-      "size": 0.85,
+      "size": 0.95,
       "file": "orders/models.py",
       "description": "Código-fonte: `orders/models.py`"
     },
@@ -1400,7 +1400,7 @@
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
-      "size": 0.85,
+      "size": 0.95,
       "file": "orders/request_object.py",
       "description": "Código-fonte: `orders/request_object.py`"
     },
@@ -1412,7 +1412,7 @@
       "category": "tests",
       "categoryLabel": "Testes",
       "color": "#94a3b8",
-      "size": 0.85,
+      "size": 0.95,
       "file": "orders/tests.py",
       "description": "Código-fonte: `orders/tests.py`"
     },
@@ -1424,7 +1424,7 @@
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
-      "size": 0.85,
+      "size": 0.95,
       "file": "orders/urls.py",
       "description": "Código-fonte: `orders/urls.py`"
     },
@@ -1436,7 +1436,7 @@
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
-      "size": 0.85,
+      "size": 0.95,
       "file": "orders/utils.py",
       "description": "Código-fonte: `orders/utils.py`"
     },
@@ -1448,7 +1448,7 @@
       "category": "frontend",
       "categoryLabel": "Frontend",
       "color": "#eab308",
-      "size": 0.85,
+      "size": 0.95,
       "file": "orders/views.py",
       "description": "Código-fonte: `orders/views.py`"
     },
@@ -1460,7 +1460,7 @@
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
-      "size": 0.85,
+      "size": 0.95,
       "file": "orders/migrations/0001_initial.py",
       "description": "Código-fonte: `orders/migrations/0001_initial.py`"
     },
@@ -1472,7 +1472,7 @@
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
-      "size": 0.85,
+      "size": 0.95,
       "file": "orders/migrations/0002_order_total_data_order_vendors.py",
       "description": "Código-fonte: `orders/migrations/0002_order_total_data_order_vendors.py`"
     },
@@ -1484,7 +1484,7 @@
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
-      "size": 0.85,
+      "size": 0.95,
       "file": "orders/migrations/0003_alter_order_tax_data.py",
       "description": "Código-fonte: `orders/migrations/0003_alter_order_tax_data.py`"
     },
@@ -1496,7 +1496,7 @@
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
-      "size": 0.85,
+      "size": 0.95,
       "file": "orders/migrations/__init__.py",
       "description": "Código-fonte: `orders/migrations/__init__.py`"
     },
@@ -1508,7 +1508,7 @@
       "category": "frontend",
       "categoryLabel": "Frontend",
       "color": "#eab308",
-      "size": 0.85,
+      "size": 0.95,
       "file": "static/admin/css/autocomplete.css",
       "description": "Código-fonte: `static/admin/css/autocomplete.css`"
     },
@@ -1520,7 +1520,7 @@
       "category": "frontend",
       "categoryLabel": "Frontend",
       "color": "#eab308",
-      "size": 0.85,
+      "size": 0.95,
       "file": "static/admin/css/base.css",
       "description": "Código-fonte: `static/admin/css/base.css`"
     },
@@ -1532,7 +1532,7 @@
       "category": "frontend",
       "categoryLabel": "Frontend",
       "color": "#eab308",
-      "size": 0.85,
+      "size": 0.95,
       "file": "static/admin/css/changelists.css",
       "description": "Código-fonte: `static/admin/css/changelists.css`"
     },
@@ -1544,7 +1544,7 @@
       "category": "frontend",
       "categoryLabel": "Frontend",
       "color": "#eab308",
-      "size": 0.85,
+      "size": 0.95,
       "file": "static/admin/css/dark_mode.css",
       "description": "Código-fonte: `static/admin/css/dark_mode.css`"
     },
@@ -1556,7 +1556,7 @@
       "category": "frontend",
       "categoryLabel": "Frontend",
       "color": "#eab308",
-      "size": 0.85,
+      "size": 0.95,
       "file": "static/admin/css/dashboard.css",
       "description": "Código-fonte: `static/admin/css/dashboard.css`"
     },
@@ -1568,7 +1568,7 @@
       "category": "frontend",
       "categoryLabel": "Frontend",
       "color": "#eab308",
-      "size": 0.85,
+      "size": 0.95,
       "file": "static/admin/css/forms.css",
       "description": "Código-fonte: `static/admin/css/forms.css`"
     },
@@ -1580,7 +1580,7 @@
       "category": "frontend",
       "categoryLabel": "Frontend",
       "color": "#eab308",
-      "size": 0.85,
+      "size": 0.95,
       "file": "static/admin/css/login.css",
       "description": "Código-fonte: `static/admin/css/login.css`"
     },
@@ -1592,7 +1592,7 @@
       "category": "frontend",
       "categoryLabel": "Frontend",
       "color": "#eab308",
-      "size": 0.85,
+      "size": 0.95,
       "file": "static/admin/css/nav_sidebar.css",
       "description": "Código-fonte: `static/admin/css/nav_sidebar.css`"
     },
@@ -1604,7 +1604,7 @@
       "category": "frontend",
       "categoryLabel": "Frontend",
       "color": "#eab308",
-      "size": 0.85,
+      "size": 0.95,
       "file": "static/admin/css/responsive.css",
       "description": "Código-fonte: `static/admin/css/responsive.css`"
     },
@@ -1616,7 +1616,7 @@
       "category": "frontend",
       "categoryLabel": "Frontend",
       "color": "#eab308",
-      "size": 0.85,
+      "size": 0.95,
       "file": "static/admin/css/responsive_rtl.css",
       "description": "Código-fonte: `static/admin/css/responsive_rtl.css`"
     },
@@ -1628,7 +1628,7 @@
       "category": "frontend",
       "categoryLabel": "Frontend",
       "color": "#eab308",
-      "size": 0.85,
+      "size": 0.95,
       "file": "static/admin/css/rtl.css",
       "description": "Código-fonte: `static/admin/css/rtl.css`"
     },
@@ -1640,7 +1640,7 @@
       "category": "frontend",
       "categoryLabel": "Frontend",
       "color": "#eab308",
-      "size": 0.85,
+      "size": 0.95,
       "file": "static/admin/css/widgets.css",
       "description": "Código-fonte: `static/admin/css/widgets.css`"
     },
@@ -1676,7 +1676,7 @@
       "category": "frontend",
       "categoryLabel": "Frontend",
       "color": "#eab308",
-      "size": 0.85,
+      "size": 0.95,
       "file": "static/admin/js/actions.js",
       "description": "Código-fonte: `static/admin/js/actions.js`"
     },
@@ -1688,7 +1688,7 @@
       "category": "frontend",
       "categoryLabel": "Frontend",
       "color": "#eab308",
-      "size": 0.85,
+      "size": 0.95,
       "file": "static/admin/js/autocomplete.js",
       "description": "Código-fonte: `static/admin/js/autocomplete.js`"
     },
@@ -1700,7 +1700,7 @@
       "category": "frontend",
       "categoryLabel": "Frontend",
       "color": "#eab308",
-      "size": 0.85,
+      "size": 0.95,
       "file": "static/admin/js/calendar.js",
       "description": "Código-fonte: `static/admin/js/calendar.js`"
     },
@@ -1712,7 +1712,7 @@
       "category": "frontend",
       "categoryLabel": "Frontend",
       "color": "#eab308",
-      "size": 0.85,
+      "size": 0.95,
       "file": "static/admin/js/cancel.js",
       "description": "Código-fonte: `static/admin/js/cancel.js`"
     },
@@ -1724,7 +1724,7 @@
       "category": "frontend",
       "categoryLabel": "Frontend",
       "color": "#eab308",
-      "size": 0.85,
+      "size": 0.95,
       "file": "static/admin/js/change_form.js",
       "description": "Código-fonte: `static/admin/js/change_form.js`"
     },
@@ -1736,7 +1736,7 @@
       "category": "frontend",
       "categoryLabel": "Frontend",
       "color": "#eab308",
-      "size": 0.85,
+      "size": 0.95,
       "file": "static/admin/js/collapse.js",
       "description": "Código-fonte: `static/admin/js/collapse.js`"
     },
@@ -1748,7 +1748,7 @@
       "category": "frontend",
       "categoryLabel": "Frontend",
       "color": "#eab308",
-      "size": 0.85,
+      "size": 0.95,
       "file": "static/admin/js/core.js",
       "description": "Código-fonte: `static/admin/js/core.js`"
     },
@@ -1760,7 +1760,7 @@
       "category": "frontend",
       "categoryLabel": "Frontend",
       "color": "#eab308",
-      "size": 0.85,
+      "size": 0.95,
       "file": "static/admin/js/filters.js",
       "description": "Código-fonte: `static/admin/js/filters.js`"
     },
@@ -1772,7 +1772,7 @@
       "category": "frontend",
       "categoryLabel": "Frontend",
       "color": "#eab308",
-      "size": 0.85,
+      "size": 0.95,
       "file": "static/admin/js/inlines.js",
       "description": "Código-fonte: `static/admin/js/inlines.js`"
     },
@@ -1784,7 +1784,7 @@
       "category": "frontend",
       "categoryLabel": "Frontend",
       "color": "#eab308",
-      "size": 0.85,
+      "size": 0.95,
       "file": "static/admin/js/jquery.init.js",
       "description": "Código-fonte: `static/admin/js/jquery.init.js`"
     },
@@ -1796,7 +1796,7 @@
       "category": "frontend",
       "categoryLabel": "Frontend",
       "color": "#eab308",
-      "size": 0.85,
+      "size": 0.95,
       "file": "static/admin/js/nav_sidebar.js",
       "description": "Código-fonte: `static/admin/js/nav_sidebar.js`"
     },
@@ -1808,7 +1808,7 @@
       "category": "frontend",
       "categoryLabel": "Frontend",
       "color": "#eab308",
-      "size": 0.85,
+      "size": 0.95,
       "file": "static/admin/js/popup_response.js",
       "description": "Código-fonte: `static/admin/js/popup_response.js`"
     },
@@ -1820,7 +1820,7 @@
       "category": "frontend",
       "categoryLabel": "Frontend",
       "color": "#eab308",
-      "size": 0.85,
+      "size": 0.95,
       "file": "static/admin/js/prepopulate.js",
       "description": "Código-fonte: `static/admin/js/prepopulate.js`"
     },
@@ -1832,7 +1832,7 @@
       "category": "frontend",
       "categoryLabel": "Frontend",
       "color": "#eab308",
-      "size": 0.85,
+      "size": 0.95,
       "file": "static/admin/js/prepopulate_init.js",
       "description": "Código-fonte: `static/admin/js/prepopulate_init.js`"
     },
@@ -1844,7 +1844,7 @@
       "category": "frontend",
       "categoryLabel": "Frontend",
       "color": "#eab308",
-      "size": 0.85,
+      "size": 0.95,
       "file": "static/admin/js/SelectBox.js",
       "description": "Código-fonte: `static/admin/js/SelectBox.js`"
     },
@@ -1856,7 +1856,7 @@
       "category": "frontend",
       "categoryLabel": "Frontend",
       "color": "#eab308",
-      "size": 0.85,
+      "size": 0.95,
       "file": "static/admin/js/SelectFilter2.js",
       "description": "Código-fonte: `static/admin/js/SelectFilter2.js`"
     },
@@ -1868,7 +1868,7 @@
       "category": "frontend",
       "categoryLabel": "Frontend",
       "color": "#eab308",
-      "size": 0.85,
+      "size": 0.95,
       "file": "static/admin/js/theme.js",
       "description": "Código-fonte: `static/admin/js/theme.js`"
     },
@@ -1880,7 +1880,7 @@
       "category": "frontend",
       "categoryLabel": "Frontend",
       "color": "#eab308",
-      "size": 0.85,
+      "size": 0.95,
       "file": "static/admin/js/urlify.js",
       "description": "Código-fonte: `static/admin/js/urlify.js`"
     },
@@ -1892,7 +1892,7 @@
       "category": "frontend",
       "categoryLabel": "Frontend",
       "color": "#eab308",
-      "size": 0.85,
+      "size": 0.95,
       "file": "static/admin/js/admin/DateTimeShortcuts.js",
       "description": "Código-fonte: `static/admin/js/admin/DateTimeShortcuts.js`"
     },
@@ -1904,7 +1904,7 @@
       "category": "frontend",
       "categoryLabel": "Frontend",
       "color": "#eab308",
-      "size": 0.85,
+      "size": 0.95,
       "file": "static/admin/js/admin/RelatedObjectLookups.js",
       "description": "Código-fonte: `static/admin/js/admin/RelatedObjectLookups.js`"
     },
@@ -1916,7 +1916,7 @@
       "category": "frontend",
       "categoryLabel": "Frontend",
       "color": "#eab308",
-      "size": 0.85,
+      "size": 0.95,
       "file": "static/css/bootstrap-datepicker.css",
       "description": "Código-fonte: `static/css/bootstrap-datepicker.css`"
     },
@@ -1928,7 +1928,7 @@
       "category": "frontend",
       "categoryLabel": "Frontend",
       "color": "#eab308",
-      "size": 0.85,
+      "size": 0.95,
       "file": "static/css/bootstrap-slider.css",
       "description": "Código-fonte: `static/css/bootstrap-slider.css`"
     },
@@ -1940,7 +1940,7 @@
       "category": "frontend",
       "categoryLabel": "Frontend",
       "color": "#eab308",
-      "size": 0.85,
+      "size": 0.95,
       "file": "static/css/bootstrap-theme.css",
       "description": "Código-fonte: `static/css/bootstrap-theme.css`"
     },
@@ -1952,7 +1952,7 @@
       "category": "frontend",
       "categoryLabel": "Frontend",
       "color": "#eab308",
-      "size": 0.85,
+      "size": 0.95,
       "file": "static/css/bootstrap.css",
       "description": "Código-fonte: `static/css/bootstrap.css`"
     },
@@ -1964,7 +1964,7 @@
       "category": "frontend",
       "categoryLabel": "Frontend",
       "color": "#eab308",
-      "size": 0.85,
+      "size": 0.95,
       "file": "static/css/cs-foodbakery-plugin.css",
       "description": "Código-fonte: `static/css/cs-foodbakery-plugin.css`"
     },
@@ -1976,7 +1976,7 @@
       "category": "frontend",
       "categoryLabel": "Frontend",
       "color": "#eab308",
-      "size": 0.85,
+      "size": 0.95,
       "file": "static/css/iconmoon.css",
       "description": "Código-fonte: `static/css/iconmoon.css`"
     },
@@ -1988,7 +1988,7 @@
       "category": "frontend",
       "categoryLabel": "Frontend",
       "color": "#eab308",
-      "size": 0.85,
+      "size": 0.95,
       "file": "static/css/style.css",
       "description": "Código-fonte: `static/css/style.css`"
     },
@@ -2000,7 +2000,7 @@
       "category": "frontend",
       "categoryLabel": "Frontend",
       "color": "#eab308",
-      "size": 0.85,
+      "size": 0.95,
       "file": "static/js/bootstrap.js",
       "description": "Código-fonte: `static/js/bootstrap.js`"
     },
@@ -2012,7 +2012,7 @@
       "category": "frontend",
       "categoryLabel": "Frontend",
       "color": "#eab308",
-      "size": 0.85,
+      "size": 0.95,
       "file": "static/js/daterangepicker.js",
       "description": "Código-fonte: `static/js/daterangepicker.js`"
     },
@@ -2024,7 +2024,7 @@
       "category": "frontend",
       "categoryLabel": "Frontend",
       "color": "#eab308",
-      "size": 0.85,
+      "size": 0.95,
       "file": "static/js/functions.js",
       "description": "Código-fonte: `static/js/functions.js`"
     },
@@ -2036,7 +2036,7 @@
       "category": "frontend",
       "categoryLabel": "Frontend",
       "color": "#eab308",
-      "size": 0.85,
+      "size": 0.95,
       "file": "static/js/jquery-te-1.4.0.min.js",
       "description": "Código-fonte: `static/js/jquery-te-1.4.0.min.js`"
     },
@@ -2048,7 +2048,7 @@
       "category": "frontend",
       "categoryLabel": "Frontend",
       "color": "#eab308",
-      "size": 0.85,
+      "size": 0.95,
       "file": "static/js/jquery-ui.js",
       "description": "Código-fonte: `static/js/jquery-ui.js`"
     },
@@ -2060,7 +2060,7 @@
       "category": "frontend",
       "categoryLabel": "Frontend",
       "color": "#eab308",
-      "size": 0.85,
+      "size": 0.95,
       "file": "static/js/jquery.js",
       "description": "Código-fonte: `static/js/jquery.js`"
     },
@@ -2072,7 +2072,7 @@
       "category": "frontend",
       "categoryLabel": "Frontend",
       "color": "#eab308",
-      "size": 0.85,
+      "size": 0.95,
       "file": "static/js/jquery.mCustomScrollbar.concat.min.js",
       "description": "Código-fonte: `static/js/jquery.mCustomScrollbar.concat.min.js`"
     },
@@ -2084,7 +2084,7 @@
       "category": "frontend",
       "categoryLabel": "Frontend",
       "color": "#eab308",
-      "size": 0.85,
+      "size": 0.95,
       "file": "static/js/modernizr.js",
       "description": "Código-fonte: `static/js/modernizr.js`"
     },
@@ -2096,7 +2096,7 @@
       "category": "frontend",
       "categoryLabel": "Frontend",
       "color": "#eab308",
-      "size": 0.85,
+      "size": 0.95,
       "file": "static/js/scripts.js",
       "description": "Código-fonte: `static/js/scripts.js`"
     },
@@ -2108,7 +2108,7 @@
       "category": "frontend",
       "categoryLabel": "Frontend",
       "color": "#eab308",
-      "size": 0.85,
+      "size": 0.95,
       "file": "static/js/tag-it.js",
       "description": "Código-fonte: `static/js/tag-it.js`"
     },
@@ -2120,7 +2120,7 @@
       "category": "frontend",
       "categoryLabel": "Frontend",
       "color": "#eab308",
-      "size": 0.85,
+      "size": 0.95,
       "file": "static/js/theia-sticky-sidebar.js",
       "description": "Código-fonte: `static/js/theia-sticky-sidebar.js`"
     },
@@ -2132,7 +2132,7 @@
       "category": "frontend",
       "categoryLabel": "Frontend",
       "color": "#eab308",
-      "size": 0.85,
+      "size": 0.95,
       "file": "templates/403.html",
       "description": "Código-fonte: `templates/403.html`"
     },
@@ -2144,7 +2144,7 @@
       "category": "frontend",
       "categoryLabel": "Frontend",
       "color": "#eab308",
-      "size": 0.85,
+      "size": 0.95,
       "file": "templates/base.html",
       "description": "Código-fonte: `templates/base.html`"
     },
@@ -2156,7 +2156,7 @@
       "category": "frontend",
       "categoryLabel": "Frontend",
       "color": "#eab308",
-      "size": 0.85,
+      "size": 0.95,
       "file": "templates/home.html",
       "description": "Código-fonte: `templates/home.html`"
     },
@@ -2168,7 +2168,7 @@
       "category": "frontend",
       "categoryLabel": "Frontend",
       "color": "#eab308",
-      "size": 0.85,
+      "size": 0.95,
       "file": "templates/accounts/custDashboard.html",
       "description": "Código-fonte: `templates/accounts/custDashboard.html`"
     },
@@ -2180,7 +2180,7 @@
       "category": "frontend",
       "categoryLabel": "Frontend",
       "color": "#eab308",
-      "size": 0.85,
+      "size": 0.95,
       "file": "templates/accounts/forgot_password.html",
       "description": "Código-fonte: `templates/accounts/forgot_password.html`"
     },
@@ -2192,7 +2192,7 @@
       "category": "frontend",
       "categoryLabel": "Frontend",
       "color": "#eab308",
-      "size": 0.85,
+      "size": 0.95,
       "file": "templates/accounts/login.html",
       "description": "Código-fonte: `templates/accounts/login.html`"
     },
@@ -2204,7 +2204,7 @@
       "category": "frontend",
       "categoryLabel": "Frontend",
       "color": "#eab308",
-      "size": 0.85,
+      "size": 0.95,
       "file": "templates/accounts/registerUser.html",
       "description": "Código-fonte: `templates/accounts/registerUser.html`"
     },
@@ -2216,7 +2216,7 @@
       "category": "frontend",
       "categoryLabel": "Frontend",
       "color": "#eab308",
-      "size": 0.85,
+      "size": 0.95,
       "file": "templates/accounts/registerVendor.html",
       "description": "Código-fonte: `templates/accounts/registerVendor.html`"
     },
@@ -2228,7 +2228,7 @@
       "category": "frontend",
       "categoryLabel": "Frontend",
       "color": "#eab308",
-      "size": 0.85,
+      "size": 0.95,
       "file": "templates/accounts/reset_password.html",
       "description": "Código-fonte: `templates/accounts/reset_password.html`"
     },
@@ -2240,7 +2240,7 @@
       "category": "frontend",
       "categoryLabel": "Frontend",
       "color": "#eab308",
-      "size": 0.85,
+      "size": 0.95,
       "file": "templates/accounts/vendorDashboard.html",
       "description": "Código-fonte: `templates/accounts/vendorDashboard.html`"
     },
@@ -2252,7 +2252,7 @@
       "category": "frontend",
       "categoryLabel": "Frontend",
       "color": "#eab308",
-      "size": 0.85,
+      "size": 0.95,
       "file": "templates/accounts/emails/account_verification_email.html",
       "description": "Código-fonte: `templates/accounts/emails/account_verification_email.html`"
     },
@@ -2264,7 +2264,7 @@
       "category": "frontend",
       "categoryLabel": "Frontend",
       "color": "#eab308",
-      "size": 0.85,
+      "size": 0.95,
       "file": "templates/accounts/emails/admin_approval_email.html",
       "description": "Código-fonte: `templates/accounts/emails/admin_approval_email.html`"
     },
@@ -2276,7 +2276,7 @@
       "category": "frontend",
       "categoryLabel": "Frontend",
       "color": "#eab308",
-      "size": 0.85,
+      "size": 0.95,
       "file": "templates/accounts/emails/reset_password_email.html",
       "description": "Código-fonte: `templates/accounts/emails/reset_password_email.html`"
     },
@@ -2288,7 +2288,7 @@
       "category": "frontend",
       "categoryLabel": "Frontend",
       "color": "#eab308",
-      "size": 0.85,
+      "size": 0.95,
       "file": "templates/customers/cover.html",
       "description": "Código-fonte: `templates/customers/cover.html`"
     },
@@ -2300,7 +2300,7 @@
       "category": "frontend",
       "categoryLabel": "Frontend",
       "color": "#eab308",
-      "size": 0.85,
+      "size": 0.95,
       "file": "templates/customers/cprofile.html",
       "description": "Código-fonte: `templates/customers/cprofile.html`"
     },
@@ -2312,7 +2312,7 @@
       "category": "frontend",
       "categoryLabel": "Frontend",
       "color": "#eab308",
-      "size": 0.85,
+      "size": 0.95,
       "file": "templates/customers/my_orders.html",
       "description": "Código-fonte: `templates/customers/my_orders.html`"
     },
@@ -2324,7 +2324,7 @@
       "category": "frontend",
       "categoryLabel": "Frontend",
       "color": "#eab308",
-      "size": 0.85,
+      "size": 0.95,
       "file": "templates/customers/order_details.html",
       "description": "Código-fonte: `templates/customers/order_details.html`"
     },
@@ -2336,7 +2336,7 @@
       "category": "frontend",
       "categoryLabel": "Frontend",
       "color": "#eab308",
-      "size": 0.85,
+      "size": 0.95,
       "file": "templates/includes/alerts.html",
       "description": "Código-fonte: `templates/includes/alerts.html`"
     },
@@ -2348,7 +2348,7 @@
       "category": "frontend",
       "categoryLabel": "Frontend",
       "color": "#eab308",
-      "size": 0.85,
+      "size": 0.95,
       "file": "templates/includes/c_sidebar.html",
       "description": "Código-fonte: `templates/includes/c_sidebar.html`"
     },
@@ -2360,7 +2360,7 @@
       "category": "frontend",
       "categoryLabel": "Frontend",
       "color": "#eab308",
-      "size": 0.85,
+      "size": 0.95,
       "file": "templates/includes/cover.html",
       "description": "Código-fonte: `templates/includes/cover.html`"
     },
@@ -2372,7 +2372,7 @@
       "category": "frontend",
       "categoryLabel": "Frontend",
       "color": "#eab308",
-      "size": 0.85,
+      "size": 0.95,
       "file": "templates/includes/footer.html",
       "description": "Código-fonte: `templates/includes/footer.html`"
     },
@@ -2384,7 +2384,7 @@
       "category": "frontend",
       "categoryLabel": "Frontend",
       "color": "#eab308",
-      "size": 0.85,
+      "size": 0.95,
       "file": "templates/includes/navbar.html",
       "description": "Código-fonte: `templates/includes/navbar.html`"
     },
@@ -2396,7 +2396,7 @@
       "category": "frontend",
       "categoryLabel": "Frontend",
       "color": "#eab308",
-      "size": 0.85,
+      "size": 0.95,
       "file": "templates/includes/v_sidebar.html",
       "description": "Código-fonte: `templates/includes/v_sidebar.html`"
     },
@@ -2408,7 +2408,7 @@
       "category": "frontend",
       "categoryLabel": "Frontend",
       "color": "#eab308",
-      "size": 0.85,
+      "size": 0.95,
       "file": "templates/marketplace/cart.html",
       "description": "Código-fonte: `templates/marketplace/cart.html`"
     },
@@ -2420,7 +2420,7 @@
       "category": "frontend",
       "categoryLabel": "Frontend",
       "color": "#eab308",
-      "size": 0.85,
+      "size": 0.95,
       "file": "templates/marketplace/checkout.html",
       "description": "Código-fonte: `templates/marketplace/checkout.html`"
     },
@@ -2432,7 +2432,7 @@
       "category": "frontend",
       "categoryLabel": "Frontend",
       "color": "#eab308",
-      "size": 0.85,
+      "size": 0.95,
       "file": "templates/marketplace/listings.html",
       "description": "Código-fonte: `templates/marketplace/listings.html`"
     },
@@ -2444,7 +2444,7 @@
       "category": "frontend",
       "categoryLabel": "Frontend",
       "color": "#eab308",
-      "size": 0.85,
+      "size": 0.95,
       "file": "templates/marketplace/vendor_detail.html",
       "description": "Código-fonte: `templates/marketplace/vendor_detail.html`"
     },
@@ -2456,7 +2456,7 @@
       "category": "frontend",
       "categoryLabel": "Frontend",
       "color": "#eab308",
-      "size": 0.85,
+      "size": 0.95,
       "file": "templates/orders/new_order_received.html",
       "description": "Código-fonte: `templates/orders/new_order_received.html`"
     },
@@ -2468,7 +2468,7 @@
       "category": "frontend",
       "categoryLabel": "Frontend",
       "color": "#eab308",
-      "size": 0.85,
+      "size": 0.95,
       "file": "templates/orders/order_complete.html",
       "description": "Código-fonte: `templates/orders/order_complete.html`"
     },
@@ -2480,7 +2480,7 @@
       "category": "frontend",
       "categoryLabel": "Frontend",
       "color": "#eab308",
-      "size": 0.85,
+      "size": 0.95,
       "file": "templates/orders/order_confirmation_email.html",
       "description": "Código-fonte: `templates/orders/order_confirmation_email.html`"
     },
@@ -2492,7 +2492,7 @@
       "category": "frontend",
       "categoryLabel": "Frontend",
       "color": "#eab308",
-      "size": 0.85,
+      "size": 0.95,
       "file": "templates/orders/place_order.html",
       "description": "Código-fonte: `templates/orders/place_order.html`"
     }

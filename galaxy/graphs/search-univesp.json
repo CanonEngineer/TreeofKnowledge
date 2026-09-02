@@ -196,7 +196,7 @@
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
-      "size": 0.85,
+      "size": 0.95,
       "file": "app.js",
       "description": "Código-fonte: `app.js`"
     },
@@ -208,7 +208,7 @@
       "category": "frontend",
       "categoryLabel": "Frontend",
       "color": "#eab308",
-      "size": 0.85,
+      "size": 0.95,
       "file": "contato.html",
       "description": "Código-fonte: `contato.html`"
     },
@@ -220,7 +220,7 @@
       "category": "frontend",
       "categoryLabel": "Frontend",
       "color": "#eab308",
-      "size": 0.85,
+      "size": 0.95,
       "file": "index.html",
       "description": "Código-fonte: `index.html`"
     },
@@ -232,7 +232,7 @@
       "category": "other",
       "categoryLabel": "Outros",
       "color": "#64748b",
-      "size": 0.85,
+      "size": 0.95,
       "file": "package.json",
       "description": "Código-fonte: `package.json`"
     },
@@ -244,7 +244,7 @@
       "category": "frontend",
       "categoryLabel": "Frontend",
       "color": "#eab308",
-      "size": 0.85,
+      "size": 0.95,
       "file": "pesquisa.html",
       "description": "Código-fonte: `pesquisa.html`"
     },
@@ -256,7 +256,7 @@
       "category": "frontend",
       "categoryLabel": "Frontend",
       "color": "#eab308",
-      "size": 0.85,
+      "size": 0.95,
       "file": "resultado.html",
       "description": "Código-fonte: `resultado.html`"
     },
@@ -268,7 +268,7 @@
       "category": "frontend",
       "categoryLabel": "Frontend",
       "color": "#eab308",
-      "size": 0.85,
+      "size": 0.95,
       "file": "saude.html",
       "description": "Código-fonte: `saude.html`"
     },
@@ -280,7 +280,7 @@
       "category": "frontend",
       "categoryLabel": "Frontend",
       "color": "#eab308",
-      "size": 0.85,
+      "size": 0.95,
       "file": "assests/css/_variaveis.css",
       "description": "Código-fonte: `assests/css/_variaveis.css`"
     },
@@ -292,7 +292,7 @@
       "category": "frontend",
       "categoryLabel": "Frontend",
       "color": "#eab308",
-      "size": 0.85,
+      "size": 0.95,
       "file": "assests/css/pesquisa.css",
       "description": "Código-fonte: `assests/css/pesquisa.css`"
     },
@@ -304,7 +304,7 @@
       "category": "frontend",
       "categoryLabel": "Frontend",
       "color": "#eab308",
-      "size": 0.85,
+      "size": 0.95,
       "file": "assests/css/reset.css",
       "description": "Código-fonte: `assests/css/reset.css`"
     },
@@ -316,7 +316,7 @@
       "category": "frontend",
       "categoryLabel": "Frontend",
       "color": "#eab308",
-      "size": 0.85,
+      "size": 0.95,
       "file": "assests/css/style.css",
       "description": "Código-fonte: `assests/css/style.css`"
     },
@@ -328,7 +328,7 @@
       "category": "scripts",
       "categoryLabel": "Scripts",
       "color": "#64748b",
-      "size": 0.85,
+      "size": 0.95,
       "file": "assests/script/busca-cep.js",
       "description": "Código-fonte: `assests/script/busca-cep.js`"
     },
@@ -340,7 +340,7 @@
       "category": "scripts",
       "categoryLabel": "Scripts",
       "color": "#64748b",
-      "size": 0.85,
+      "size": 0.95,
       "file": "assests/script/mobile-navbar.js",
       "description": "Código-fonte: `assests/script/mobile-navbar.js`"
     },
@@ -352,7 +352,7 @@
       "category": "other",
       "categoryLabel": "Outros",
       "color": "#64748b",
-      "size": 0.85,
+      "size": 0.95,
       "file": "bin/www",
       "description": "Código-fonte: `bin/www`"
     },
@@ -364,7 +364,7 @@
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
-      "size": 0.85,
+      "size": 0.95,
       "file": "inc/contact.js",
       "description": "Código-fonte: `inc/contact.js`"
     },
@@ -376,7 +376,7 @@
       "category": "oracle",
       "categoryLabel": "Oracle / DB",
       "color": "#c084fc",
-      "size": 0.85,
+      "size": 0.95,
       "file": "inc/db.js",
       "description": "Código-fonte: `inc/db.js`"
     },
@@ -388,7 +388,7 @@
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
-      "size": 0.85,
+      "size": 0.95,
       "file": "inc/search.js",
       "description": "Código-fonte: `inc/search.js`"
     },
@@ -400,7 +400,7 @@
       "category": "frontend",
       "categoryLabel": "Frontend",
       "color": "#eab308",
-      "size": 0.85,
+      "size": 0.95,
       "file": "public/assests/css/_variaveis.css",
       "description": "Código-fonte: `public/assests/css/_variaveis.css`"
     },
@@ -412,7 +412,7 @@
       "category": "frontend",
       "categoryLabel": "Frontend",
       "color": "#eab308",
-      "size": 0.85,
+      "size": 0.95,
       "file": "public/assests/css/form.css",
       "description": "Código-fonte: `public/assests/css/form.css`"
     },
@@ -424,7 +424,7 @@
       "category": "frontend",
       "categoryLabel": "Frontend",
       "color": "#eab308",
-      "size": 0.85,
+      "size": 0.95,
       "file": "public/assests/css/pesquisa.css",
       "description": "Código-fonte: `public/assests/css/pesquisa.css`"
     },
@@ -436,7 +436,7 @@
       "category": "frontend",
       "categoryLabel": "Frontend",
       "color": "#eab308",
-      "size": 0.85,
+      "size": 0.95,
       "file": "public/assests/css/reset.css",
       "description": "Código-fonte: `public/assests/css/reset.css`"
     },
@@ -448,7 +448,7 @@
       "category": "frontend",
       "categoryLabel": "Frontend",
       "color": "#eab308",
-      "size": 0.85,
+      "size": 0.95,
       "file": "public/assests/css/style.css",
       "description": "Código-fonte: `public/assests/css/style.css`"
     },
@@ -460,7 +460,7 @@
       "category": "scripts",
       "categoryLabel": "Scripts",
       "color": "#64748b",
-      "size": 0.85,
+      "size": 0.95,
       "file": "public/assests/script/busca-cep.js",
       "description": "Código-fonte: `public/assests/script/busca-cep.js`"
     },
@@ -472,7 +472,7 @@
       "category": "scripts",
       "categoryLabel": "Scripts",
       "color": "#64748b",
-      "size": 0.85,
+      "size": 0.95,
       "file": "public/assests/script/mobile-navbar.js",
       "description": "Código-fonte: `public/assests/script/mobile-navbar.js`"
     },
@@ -484,7 +484,7 @@
       "category": "network",
       "categoryLabel": "Rede / Scan",
       "color": "#22d3ee",
-      "size": 0.85,
+      "size": 0.95,
       "file": "routes/index.js",
       "description": "Código-fonte: `routes/index.js`"
     },
@@ -496,7 +496,7 @@
       "category": "network",
       "categoryLabel": "Rede / Scan",
       "color": "#22d3ee",
-      "size": 0.85,
+      "size": 0.95,
       "file": "routes/users.js",
       "description": "Código-fonte: `routes/users.js`"
     },
@@ -508,7 +508,7 @@
       "category": "frontend",
       "categoryLabel": "Frontend",
       "color": "#eab308",
-      "size": 0.85,
+      "size": 0.95,
       "file": "views/contact.ejs",
       "description": "Código-fonte: `views/contact.ejs`"
     },
@@ -520,7 +520,7 @@
       "category": "frontend",
       "categoryLabel": "Frontend",
       "color": "#eab308",
-      "size": 0.85,
+      "size": 0.95,
       "file": "views/error.ejs",
       "description": "Código-fonte: `views/error.ejs`"
     },
@@ -532,7 +532,7 @@
       "category": "frontend",
       "categoryLabel": "Frontend",
       "color": "#eab308",
-      "size": 0.85,
+      "size": 0.95,
       "file": "views/index.ejs",
       "description": "Código-fonte: `views/index.ejs`"
     },
@@ -544,7 +544,7 @@
       "category": "frontend",
       "categoryLabel": "Frontend",
       "color": "#eab308",
-      "size": 0.85,
+      "size": 0.95,
       "file": "views/result.ejs",
       "description": "Código-fonte: `views/result.ejs`"
     },
@@ -556,7 +556,7 @@
       "category": "frontend",
       "categoryLabel": "Frontend",
       "color": "#eab308",
-      "size": 0.85,
+      "size": 0.95,
       "file": "views/search.ejs",
       "description": "Código-fonte: `views/search.ejs`"
     },
@@ -568,7 +568,7 @@
       "category": "frontend",
       "categoryLabel": "Frontend",
       "color": "#eab308",
-      "size": 0.85,
+      "size": 0.95,
       "file": "views/inc/alerts.ejs",
       "description": "Código-fonte: `views/inc/alerts.ejs`"
     },
@@ -580,7 +580,7 @@
       "category": "frontend",
       "categoryLabel": "Frontend",
       "color": "#eab308",
-      "size": 0.85,
+      "size": 0.95,
       "file": "views/inc/cep-scripts.ejs",
       "description": "Código-fonte: `views/inc/cep-scripts.ejs`"
     },
@@ -592,7 +592,7 @@
       "category": "frontend",
       "categoryLabel": "Frontend",
       "color": "#eab308",
-      "size": 0.85,
+      "size": 0.95,
       "file": "views/inc/footer-scripts-health.ejs",
       "description": "Código-fonte: `views/inc/footer-scripts-health.ejs`"
     },
@@ -604,7 +604,7 @@
       "category": "frontend",
       "categoryLabel": "Frontend",
       "color": "#eab308",
-      "size": 0.85,
+      "size": 0.95,
       "file": "views/inc/footer-scripts.ejs",
       "description": "Código-fonte: `views/inc/footer-scripts.ejs`"
     },
@@ -616,7 +616,7 @@
       "category": "frontend",
       "categoryLabel": "Frontend",
       "color": "#eab308",
-      "size": 0.85,
+      "size": 0.95,
       "file": "views/inc/footer.ejs",
       "description": "Código-fonte: `views/inc/footer.ejs`"
     },
@@ -628,7 +628,7 @@
       "category": "frontend",
       "categoryLabel": "Frontend",
       "color": "#eab308",
-      "size": 0.85,
+      "size": 0.95,
       "file": "views/inc/head-search.ejs",
       "description": "Código-fonte: `views/inc/head-search.ejs`"
     },
@@ -640,7 +640,7 @@
       "category": "frontend",
       "categoryLabel": "Frontend",
       "color": "#eab308",
-      "size": 0.85,
+      "size": 0.95,
       "file": "views/inc/head.ejs",
       "description": "Código-fonte: `views/inc/head.ejs`"
     },
@@ -652,7 +652,7 @@
       "category": "frontend",
       "categoryLabel": "Frontend",
       "color": "#eab308",
-      "size": 0.85,
+      "size": 0.95,
       "file": "views/inc/header-menu.ejs",
       "description": "Código-fonte: `views/inc/header-menu.ejs`"
     }

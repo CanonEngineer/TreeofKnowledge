@@ -128,7 +128,7 @@
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
-      "size": 0.85,
+      "size": 0.95,
       "file": "app.js",
       "description": "Código-fonte: `app.js`"
     },
@@ -140,7 +140,7 @@
       "category": "other",
       "categoryLabel": "Outros",
       "color": "#64748b",
-      "size": 0.85,
+      "size": 0.95,
       "file": "package.json",
       "description": "Código-fonte: `package.json`"
     },
@@ -152,7 +152,7 @@
       "category": "other",
       "categoryLabel": "Outros",
       "color": "#64748b",
-      "size": 0.85,
+      "size": 0.95,
       "file": "bin/www",
       "description": "Código-fonte: `bin/www`"
     },
@@ -164,7 +164,7 @@
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
-      "size": 0.85,
+      "size": 0.95,
       "file": "public/classes/Fetch.js",
       "description": "Código-fonte: `public/classes/Fetch.js`"
     },
@@ -176,7 +176,7 @@
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
-      "size": 0.85,
+      "size": 0.95,
       "file": "public/classes/HttpRequest.js",
       "description": "Código-fonte: `public/classes/HttpRequest.js`"
     },
@@ -188,7 +188,7 @@
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
-      "size": 0.85,
+      "size": 0.95,
       "file": "public/classes/Utils.js",
       "description": "Código-fonte: `public/classes/Utils.js`"
     },
@@ -200,7 +200,7 @@
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
-      "size": 0.85,
+      "size": 0.95,
       "file": "public/controllers/UserController.js",
       "description": "Código-fonte: `public/controllers/UserController.js`"
     },
@@ -212,7 +212,7 @@
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
-      "size": 0.85,
+      "size": 0.95,
       "file": "public/models/User.js",
       "description": "Código-fonte: `public/models/User.js`"
     },
@@ -224,7 +224,7 @@
       "category": "network",
       "categoryLabel": "Rede / Scan",
       "color": "#22d3ee",
-      "size": 0.85,
+      "size": 0.95,
       "file": "routes/index.js",
       "description": "Código-fonte: `routes/index.js`"
     },
@@ -236,7 +236,7 @@
       "category": "network",
       "categoryLabel": "Rede / Scan",
       "color": "#22d3ee",
-      "size": 0.85,
+      "size": 0.95,
       "file": "routes/users.js",
       "description": "Código-fonte: `routes/users.js`"
     },
@@ -248,7 +248,7 @@
       "category": "frontend",
       "categoryLabel": "Frontend",
       "color": "#eab308",
-      "size": 0.85,
+      "size": 0.95,
       "file": "views/error.ejs",
       "description": "Código-fonte: `views/error.ejs`"
     },
@@ -260,7 +260,7 @@
       "category": "frontend",
       "categoryLabel": "Frontend",
       "color": "#eab308",
-      "size": 0.85,
+      "size": 0.95,
       "file": "views/index.ejs",
       "description": "Código-fonte: `views/index.ejs`"
     }

@@ -108,7 +108,9 @@ export function NodeSphere({
   onPointerOut,
 }) {
   const groupRef = useRef();
-  const core = Math.max(0.28, (node.size || 0.85) * 0.32);
+  const layerScale = node.layer === 'root' ? 0.42 : node.layer === 'module' ? 0.38 : node.layer === 'file' ? 0.34 : 0.32;
+  const layerMin = node.layer === 'root' ? 0.55 : node.layer === 'module' ? 0.46 : node.layer === 'file' ? 0.38 : 0.34;
+  const core = Math.max(layerMin, (node.size || 0.85) * layerScale);
   const color = useMemo(() => new THREE.Color(node.color || '#38bdf8'), [node.color]);
   const opacity = dimmed ? 0.15 : 1;
 
@@ -205,9 +207,9 @@ export function ConnectionBeam({ link, posMap, sizeMap, active, dimmed }) {
     if (dist < 0.01) return { line: null };
     dir.multiplyScalar(1 / dist);
 
-    // Encosta no núcleo (esfera pequena), não “morde” o cartão
-    const rs = Math.max(0.22, (sizeMap?.get(link.source) || 0.85) * 0.32);
-    const re = Math.max(0.22, (sizeMap?.get(link.target) || 0.85) * 0.32);
+    // Encosta no núcleo visível (esfera), alinhado ao NodeSphere
+    const rs = Math.max(0.34, (sizeMap?.get(link.source) || 0.85) * 0.36);
+    const re = Math.max(0.34, (sizeMap?.get(link.target) || 0.85) * 0.36);
     const s = s0.clone().addScaledVector(dir, rs);
     const e = e0.clone().addScaledVector(dir, -re);
 

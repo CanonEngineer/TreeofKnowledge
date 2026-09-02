@@ -112,7 +112,7 @@
       "category": "other",
       "categoryLabel": "Outros",
       "color": "#64748b",
-      "size": 0.85,
+      "size": 0.95,
       "file": ".gitignore",
       "description": "Código-fonte: `.gitignore`"
     },
@@ -124,7 +124,7 @@
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
-      "size": 0.85,
+      "size": 0.95,
       "file": "src/CanonCopy.Core/AppPaths.cs",
       "description": "Código-fonte: `src/CanonCopy.Core/AppPaths.cs`"
     },
@@ -136,7 +136,7 @@
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
-      "size": 0.85,
+      "size": 0.95,
       "file": "src/CanonCopy.Core/ConfigStore.cs",
       "description": "Código-fonte: `src/CanonCopy.Core/ConfigStore.cs`"
     },
@@ -148,7 +148,7 @@
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
-      "size": 0.85,
+      "size": 0.95,
       "file": "src/CanonCopy.Core/LogTailMonitor.cs",
       "description": "Código-fonte: `src/CanonCopy.Core/LogTailMonitor.cs`"
     },
@@ -160,7 +160,7 @@
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
-      "size": 0.85,
+      "size": 0.95,
       "file": "src/CanonCopy.Core/MonitorOptions.cs",
       "description": "Código-fonte: `src/CanonCopy.Core/MonitorOptions.cs`"
     },
@@ -172,7 +172,7 @@
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
-      "size": 0.85,
+      "size": 0.95,
       "file": "src/CanonCopy.Core/OffsetStore.cs",
       "description": "Código-fonte: `src/CanonCopy.Core/OffsetStore.cs`"
     },
@@ -184,7 +184,7 @@
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
-      "size": 0.85,
+      "size": 0.95,
       "file": "src/CanonCopy.Core/StatusStore.cs",
       "description": "Código-fonte: `src/CanonCopy.Core/StatusStore.cs`"
     },
@@ -196,7 +196,7 @@
       "category": "other",
       "categoryLabel": "Outros",
       "color": "#64748b",
-      "size": 0.85,
+      "size": 0.95,
       "file": "src/CanonCopy.Service/appsettings.Development.json",
       "description": "Código-fonte: `src/CanonCopy.Service/appsettings.Development.json`"
     },
@@ -208,7 +208,7 @@
       "category": "other",
       "categoryLabel": "Outros",
       "color": "#64748b",
-      "size": 0.85,
+      "size": 0.95,
       "file": "src/CanonCopy.Service/appsettings.json",
       "description": "Código-fonte: `src/CanonCopy.Service/appsettings.json`"
     },
@@ -220,7 +220,7 @@
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
-      "size": 0.85,
+      "size": 0.95,
       "file": "src/CanonCopy.Service/Program.cs",
       "description": "Código-fonte: `src/CanonCopy.Service/Program.cs`"
     },
@@ -232,7 +232,7 @@
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
-      "size": 0.85,
+      "size": 0.95,
       "file": "src/CanonCopy.Service/Worker.cs",
       "description": "Código-fonte: `src/CanonCopy.Service/Worker.cs`"
     },
@@ -244,7 +244,7 @@
       "category": "other",
       "categoryLabel": "Outros",
       "color": "#64748b",
-      "size": 0.85,
+      "size": 0.95,
       "file": "src/CanonCopy.Service/Properties/launchSettings.json",
       "description": "Código-fonte: `src/CanonCopy.Service/Properties/launchSettings.json`"
     },
@@ -256,7 +256,7 @@
       "category": "frontend",
       "categoryLabel": "Frontend",
       "color": "#eab308",
-      "size": 0.85,
+      "size": 0.95,
       "file": "src/CanonCopy.UI/App.xaml.cs",
       "description": "Código-fonte: `src/CanonCopy.UI/App.xaml.cs`"
     },
@@ -268,7 +268,7 @@
       "category": "frontend",
       "categoryLabel": "Frontend",
       "color": "#eab308",
-      "size": 0.85,
+      "size": 0.95,
       "file": "src/CanonCopy.UI/AssemblyInfo.cs",
       "description": "Código-fonte: `src/CanonCopy.UI/AssemblyInfo.cs`"
     },
@@ -280,7 +280,7 @@
       "category": "frontend",
       "categoryLabel": "Frontend",
       "color": "#eab308",
-      "size": 0.85,
+      "size": 0.95,
       "file": "src/CanonCopy.UI/Converters.cs",
       "description": "Código-fonte: `src/CanonCopy.UI/Converters.cs`"
     },
@@ -292,7 +292,7 @@
       "category": "frontend",
       "categoryLabel": "Frontend",
       "color": "#eab308",
-      "size": 0.85,
+      "size": 0.95,
       "file": "src/CanonCopy.UI/MainViewModel.cs",
       "description": "Código-fonte: `src/CanonCopy.UI/MainViewModel.cs`"
     },
@@ -304,7 +304,7 @@
       "category": "frontend",
       "categoryLabel": "Frontend",
       "color": "#eab308",
-      "size": 0.85,
+      "size": 0.95,
       "file": "src/CanonCopy.UI/MainWindow.xaml.cs",
       "description": "Código-fonte: `src/CanonCopy.UI/MainWindow.xaml.cs`"
     },
@@ -316,7 +316,7 @@
       "category": "frontend",
       "categoryLabel": "Frontend",
       "color": "#eab308",
-      "size": 0.85,
+      "size": 0.95,
       "file": "src/CanonCopy.UI/ServiceHelper.cs",
       "description": "Código-fonte: `src/CanonCopy.UI/ServiceHelper.cs`"
     },
@@ -328,7 +328,7 @@
       "category": "frontend",
       "categoryLabel": "Frontend",
       "color": "#eab308",
-      "size": 0.85,
+      "size": 0.95,
       "file": "src/CanonCopy.UI/SparklineSeries.cs",
       "description": "Código-fonte: `src/CanonCopy.UI/SparklineSeries.cs`"
     },
@@ -340,7 +340,7 @@
       "category": "frontend",
       "categoryLabel": "Frontend",
       "color": "#eab308",
-      "size": 0.85,
+      "size": 0.95,
       "file": "src/CanonCopy.UI/SystemMetrics.cs",
       "description": "Código-fonte: `src/CanonCopy.UI/SystemMetrics.cs`"
     },
@@ -352,7 +352,7 @@
       "category": "frontend",
       "categoryLabel": "Frontend",
       "color": "#eab308",
-      "size": 0.85,
+      "size": 0.95,
       "file": "src/CanonCopy.UI/Controls/SparklineControl.xaml.cs",
       "description": "Código-fonte: `src/CanonCopy.UI/Controls/SparklineControl.xaml.cs`"
     }

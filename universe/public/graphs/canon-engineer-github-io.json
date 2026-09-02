@@ -104,7 +104,7 @@
       "category": "other",
       "categoryLabel": "Outros",
       "color": "#64748b",
-      "size": 0.85,
+      "size": 0.95,
       "file": ".nojekyll",
       "description": "Código-fonte: `.nojekyll`"
     },
@@ -116,7 +116,7 @@
       "category": "frontend",
       "categoryLabel": "Frontend",
       "color": "#eab308",
-      "size": 0.85,
+      "size": 0.95,
       "file": "index.html",
       "description": "Código-fonte: `index.html`"
     },
@@ -128,7 +128,7 @@
       "category": "frontend",
       "categoryLabel": "Frontend",
       "color": "#eab308",
-      "size": 0.85,
+      "size": 0.95,
       "file": "blog/devops-na-pratica.html",
       "description": "Código-fonte: `blog/devops-na-pratica.html`"
     },
@@ -140,7 +140,7 @@
       "category": "frontend",
       "categoryLabel": "Frontend",
       "color": "#eab308",
-      "size": 0.85,
+      "size": 0.95,
       "file": "blog/firewall.html",
       "description": "Código-fonte: `blog/firewall.html`"
     },
@@ -152,7 +152,7 @@
       "category": "frontend",
       "categoryLabel": "Frontend",
       "color": "#eab308",
-      "size": 0.85,
+      "size": 0.95,
       "file": "blog/inteligencia-artificial.html",
       "description": "Código-fonte: `blog/inteligencia-artificial.html`"
     },
@@ -164,7 +164,7 @@
       "category": "frontend",
       "categoryLabel": "Frontend",
       "color": "#eab308",
-      "size": 0.85,
+      "size": 0.95,
       "file": "blog/maquinas-virtuais-proxmox.html",
       "description": "Código-fonte: `blog/maquinas-virtuais-proxmox.html`"
     },
@@ -176,7 +176,7 @@
       "category": "frontend",
       "categoryLabel": "Frontend",
       "color": "#eab308",
-      "size": 0.85,
+      "size": 0.95,
       "file": "blog/python-no-backend.html",
       "description": "Código-fonte: `blog/python-no-backend.html`"
     },
@@ -188,7 +188,7 @@
       "category": "frontend",
       "categoryLabel": "Frontend",
       "color": "#eab308",
-      "size": 0.85,
+      "size": 0.95,
       "file": "blog/seguranca-em-redes.html",
       "description": "Código-fonte: `blog/seguranca-em-redes.html`"
     },
@@ -200,7 +200,7 @@
       "category": "scripts",
       "categoryLabel": "Scripts",
       "color": "#64748b",
-      "size": 0.85,
+      "size": 0.95,
       "file": "scripts/generate_cv.py",
       "description": "Código-fonte: `scripts/generate_cv.py`"
     },
@@ -212,7 +212,7 @@
       "category": "frontend",
       "categoryLabel": "Frontend",
       "color": "#eab308",
-      "size": 0.85,
+      "size": 0.95,
       "file": "wwwroot/css/blog.css",
       "description": "Código-fonte: `wwwroot/css/blog.css`"
     },
@@ -224,7 +224,7 @@
       "category": "frontend",
       "categoryLabel": "Frontend",
       "color": "#eab308",
-      "size": 0.85,
+      "size": 0.95,
       "file": "wwwroot/css/style.css",
       "description": "Código-fonte: `wwwroot/css/style.css`"
     },
@@ -236,7 +236,7 @@
       "category": "scripts",
       "categoryLabel": "Scripts",
       "color": "#64748b",
-      "size": 0.85,
+      "size": 0.95,
       "file": "wwwroot/js/script.js",
       "description": "Código-fonte: `wwwroot/js/script.js`"
     }

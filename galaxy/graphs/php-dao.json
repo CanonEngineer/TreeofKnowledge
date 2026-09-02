@@ -48,7 +48,7 @@
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
-      "size": 0.85,
+      "size": 0.95,
       "file": "config.php",
       "description": "Código-fonte: `config.php`"
     },
@@ -60,7 +60,7 @@
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
-      "size": 0.85,
+      "size": 0.95,
       "file": "index.php",
       "description": "Código-fonte: `index.php`"
     },
@@ -72,7 +72,7 @@
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
-      "size": 0.85,
+      "size": 0.95,
       "file": "class/Sql.php",
       "description": "Código-fonte: `class/Sql.php`"
     },
@@ -84,7 +84,7 @@
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
-      "size": 0.85,
+      "size": 0.95,
       "file": "class/Usuario.php",
       "description": "Código-fonte: `class/Usuario.php`"
     }

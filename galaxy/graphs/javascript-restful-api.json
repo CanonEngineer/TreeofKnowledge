@@ -64,7 +64,7 @@
       "category": "scripts",
       "categoryLabel": "Scripts",
       "color": "#64748b",
-      "size": 0.85,
+      "size": 0.95,
       "file": "index.js",
       "description": "Código-fonte: `index.js`"
     },
@@ -76,7 +76,7 @@
       "category": "scripts",
       "categoryLabel": "Scripts",
       "color": "#64748b",
-      "size": 0.85,
+      "size": 0.95,
       "file": "package.json",
       "description": "Código-fonte: `package.json`"
     },
@@ -88,7 +88,7 @@
       "category": "scripts",
       "categoryLabel": "Scripts",
       "color": "#64748b",
-      "size": 0.85,
+      "size": 0.95,
       "file": "routes/index.js",
       "description": "Código-fonte: `routes/index.js`"
     },
@@ -100,7 +100,7 @@
       "category": "scripts",
       "categoryLabel": "Scripts",
       "color": "#64748b",
-      "size": 0.85,
+      "size": 0.95,
       "file": "routes/users.js",
       "description": "Código-fonte: `routes/users.js`"
     },
@@ -112,7 +112,7 @@
       "category": "scripts",
       "categoryLabel": "Scripts",
       "color": "#64748b",
-      "size": 0.85,
+      "size": 0.95,
       "file": "utils/error.js",
       "description": "Código-fonte: `utils/error.js`"
     },
@@ -124,7 +124,7 @@
       "category": "scripts",
       "categoryLabel": "Scripts",
       "color": "#64748b",
-      "size": 0.85,
+      "size": 0.95,
       "file": "utils/validator.js",
       "description": "Código-fonte: `utils/validator.js`"
     }

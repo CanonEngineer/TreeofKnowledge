@@ -68,7 +68,7 @@
       "category": "frontend",
       "categoryLabel": "Frontend",
       "color": "#eab308",
-      "size": 0.85,
+      "size": 0.95,
       "file": "index.html",
       "description": "Código-fonte: `index.html`"
     },
@@ -80,7 +80,7 @@
       "category": "scripts",
       "categoryLabel": "Scripts",
       "color": "#64748b",
-      "size": 0.85,
+      "size": 0.95,
       "file": "scripts/calculator.js",
       "description": "Código-fonte: `scripts/calculator.js`"
     },
@@ -92,7 +92,7 @@
       "category": "scripts",
       "categoryLabel": "Scripts",
       "color": "#64748b",
-      "size": 0.85,
+      "size": 0.95,
       "file": "scripts/controller/CalcController.js",
       "description": "Código-fonte: `scripts/controller/CalcController.js`"
     }

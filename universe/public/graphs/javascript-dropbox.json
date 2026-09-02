@@ -140,7 +140,7 @@
       "category": "scripts",
       "categoryLabel": "Scripts",
       "color": "#64748b",
-      "size": 0.85,
+      "size": 0.95,
       "file": "app.js",
       "description": "Código-fonte: `app.js`"
     },
@@ -152,7 +152,7 @@
       "category": "scripts",
       "categoryLabel": "Scripts",
       "color": "#64748b",
-      "size": 0.85,
+      "size": 0.95,
       "file": "package.json",
       "description": "Código-fonte: `package.json`"
     },
@@ -164,7 +164,7 @@
       "category": "scripts",
       "categoryLabel": "Scripts",
       "color": "#64748b",
-      "size": 0.85,
+      "size": 0.95,
       "file": "bin/www",
       "description": "Código-fonte: `bin/www`"
     },
@@ -176,7 +176,7 @@
       "category": "scripts",
       "categoryLabel": "Scripts",
       "color": "#64748b",
-      "size": 0.85,
+      "size": 0.95,
       "file": "public/bower.json",
       "description": "Código-fonte: `public/bower.json`"
     },
@@ -188,7 +188,7 @@
       "category": "scripts",
       "categoryLabel": "Scripts",
       "color": "#64748b",
-      "size": 0.85,
+      "size": 0.95,
       "file": "public/package.json",
       "description": "Código-fonte: `public/package.json`"
     },
@@ -200,7 +200,7 @@
       "category": "scripts",
       "categoryLabel": "Scripts",
       "color": "#64748b",
-      "size": 0.85,
+      "size": 0.95,
       "file": "public/README.md",
       "description": "Código-fonte: `public/README.md`"
     },
@@ -212,7 +212,7 @@
       "category": "frontend",
       "categoryLabel": "Frontend",
       "color": "#eab308",
-      "size": 0.85,
+      "size": 0.95,
       "file": "public/assets/css/dropbox-clone.css",
       "description": "Código-fonte: `public/assets/css/dropbox-clone.css`"
     },
@@ -224,7 +224,7 @@
       "category": "scripts",
       "categoryLabel": "Scripts",
       "color": "#64748b",
-      "size": 0.85,
+      "size": 0.95,
       "file": "public/src/index.js",
       "description": "Código-fonte: `public/src/index.js`"
     },
@@ -236,7 +236,7 @@
       "category": "scripts",
       "categoryLabel": "Scripts",
       "color": "#64748b",
-      "size": 0.85,
+      "size": 0.95,
       "file": "public/src/controller/DropBoxController.js",
       "description": "Código-fonte: `public/src/controller/DropBoxController.js`"
     },
@@ -248,7 +248,7 @@
       "category": "scripts",
       "categoryLabel": "Scripts",
       "color": "#64748b",
-      "size": 0.85,
+      "size": 0.95,
       "file": "routes/index.js",
       "description": "Código-fonte: `routes/index.js`"
     },
@@ -260,7 +260,7 @@
       "category": "scripts",
       "categoryLabel": "Scripts",
       "color": "#64748b",
-      "size": 0.85,
+      "size": 0.95,
       "file": "routes/users.js",
       "description": "Código-fonte: `routes/users.js`"
     },
@@ -272,7 +272,7 @@
       "category": "frontend",
       "categoryLabel": "Frontend",
       "color": "#eab308",
-      "size": 0.85,
+      "size": 0.95,
       "file": "views/error.ejs",
       "description": "Código-fonte: `views/error.ejs`"
     },
@@ -284,7 +284,7 @@
       "category": "frontend",
       "categoryLabel": "Frontend",
       "color": "#eab308",
-      "size": 0.85,
+      "size": 0.95,
       "file": "views/index.ejs",
       "description": "Código-fonte: `views/index.ejs`"
     }

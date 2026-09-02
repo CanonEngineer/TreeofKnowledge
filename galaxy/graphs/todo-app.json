@@ -92,7 +92,7 @@
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
-      "size": 0.85,
+      "size": 0.95,
       "file": "manage.py",
       "description": "Código-fonte: `manage.py`"
     },
@@ -104,7 +104,7 @@
       "category": "frontend",
       "categoryLabel": "Frontend",
       "color": "#eab308",
-      "size": 0.85,
+      "size": 0.95,
       "file": "templates/edit_task.html",
       "description": "Código-fonte: `templates/edit_task.html`"
     },
@@ -116,7 +116,7 @@
       "category": "frontend",
       "categoryLabel": "Frontend",
       "color": "#eab308",
-      "size": 0.85,
+      "size": 0.95,
       "file": "templates/home.html",
       "description": "Código-fonte: `templates/home.html`"
     },
@@ -128,7 +128,7 @@
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
-      "size": 0.85,
+      "size": 0.95,
       "file": "todo/__init__.py",
       "description": "Código-fonte: `todo/__init__.py`"
     },
@@ -140,7 +140,7 @@
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
-      "size": 0.85,
+      "size": 0.95,
       "file": "todo/admin.py",
       "description": "Código-fonte: `todo/admin.py`"
     },
@@ -152,7 +152,7 @@
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
-      "size": 0.85,
+      "size": 0.95,
       "file": "todo/apps.py",
       "description": "Código-fonte: `todo/apps.py`"
     },
@@ -164,7 +164,7 @@
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
-      "size": 0.85,
+      "size": 0.95,
       "file": "todo/models.py",
       "description": "Código-fonte: `todo/models.py`"
     },
@@ -176,7 +176,7 @@
       "category": "tests",
       "categoryLabel": "Testes",
       "color": "#94a3b8",
-      "size": 0.85,
+      "size": 0.95,
       "file": "todo/tests.py",
       "description": "Código-fonte: `todo/tests.py`"
     },
@@ -188,7 +188,7 @@
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
-      "size": 0.85,
+      "size": 0.95,
       "file": "todo/urls.py",
       "description": "Código-fonte: `todo/urls.py`"
     },
@@ -200,7 +200,7 @@
       "category": "frontend",
       "categoryLabel": "Frontend",
       "color": "#eab308",
-      "size": 0.85,
+      "size": 0.95,
       "file": "todo/views.py",
       "description": "Código-fonte: `todo/views.py`"
     },
@@ -212,7 +212,7 @@
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
-      "size": 0.85,
+      "size": 0.95,
       "file": "todo/migrations/0001_initial.py",
       "description": "Código-fonte: `todo/migrations/0001_initial.py`"
     },
@@ -224,7 +224,7 @@
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
-      "size": 0.85,
+      "size": 0.95,
       "file": "todo/migrations/__init__.py",
       "description": "Código-fonte: `todo/migrations/__init__.py`"
     },
@@ -236,7 +236,7 @@
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
-      "size": 0.85,
+      "size": 0.95,
       "file": "todo_main/__init__.py",
       "description": "Código-fonte: `todo_main/__init__.py`"
     },
@@ -248,7 +248,7 @@
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
-      "size": 0.85,
+      "size": 0.95,
       "file": "todo_main/asgi.py",
       "description": "Código-fonte: `todo_main/asgi.py`"
     },
@@ -260,7 +260,7 @@
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
-      "size": 0.85,
+      "size": 0.95,
       "file": "todo_main/settings.py",
       "description": "Código-fonte: `todo_main/settings.py`"
     },
@@ -272,7 +272,7 @@
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
-      "size": 0.85,
+      "size": 0.95,
       "file": "todo_main/urls.py",
       "description": "Código-fonte: `todo_main/urls.py`"
     },
@@ -284,7 +284,7 @@
       "category": "frontend",
       "categoryLabel": "Frontend",
       "color": "#eab308",
-      "size": 0.85,
+      "size": 0.95,
       "file": "todo_main/views.py",
       "description": "Código-fonte: `todo_main/views.py`"
     },
@@ -296,7 +296,7 @@
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
-      "size": 0.85,
+      "size": 0.95,
       "file": "todo_main/wsgi.py",
       "description": "Código-fonte: `todo_main/wsgi.py`"
     }

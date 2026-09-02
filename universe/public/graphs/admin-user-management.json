@@ -68,7 +68,7 @@
       "category": "other",
       "categoryLabel": "Outros",
       "color": "#64748b",
-      "size": 0.85,
+      "size": 0.95,
       "file": "SetAdmUser/set_adm_user.bat",
       "description": "Código-fonte: `SetAdmUser/set_adm_user.bat`"
     },
@@ -80,7 +80,7 @@
       "category": "scripts",
       "categoryLabel": "Scripts",
       "color": "#64748b",
-      "size": 0.85,
+      "size": 0.95,
       "file": "SetAdmUser/Set-AdmUser.ps1",
       "description": "Código-fonte: `SetAdmUser/Set-AdmUser.ps1`"
     },
@@ -92,7 +92,7 @@
       "category": "scripts",
       "categoryLabel": "Scripts",
       "color": "#64748b",
-      "size": 0.85,
+      "size": 0.95,
       "file": "SetAdmUser/Install-SetAdmUser.ps1",
       "description": "Código-fonte: `SetAdmUser/Install-SetAdmUser.ps1`"
     },
@@ -104,7 +104,7 @@
       "category": "scripts",
       "categoryLabel": "Scripts",
       "color": "#64748b",
-      "size": 0.85,
+      "size": 0.95,
       "file": "SetAdmUser/GPO-Startup-SetAdmUser.ps1",
       "description": "Código-fonte: `SetAdmUser/GPO-Startup-SetAdmUser.ps1`"
     },
@@ -116,7 +116,7 @@
       "category": "other",
       "categoryLabel": "Outros",
       "color": "#64748b",
-      "size": 0.85,
+      "size": 0.95,
       "file": "SetAdmUser/GPO-Startup-SetAdmUser.bat",
       "description": "Código-fonte: `SetAdmUser/GPO-Startup-SetAdmUser.bat`"
     },
@@ -128,7 +128,7 @@
       "category": "scripts",
       "categoryLabel": "Scripts",
       "color": "#64748b",
-      "size": 0.85,
+      "size": 0.95,
       "file": "SetAdmUser-Env/Get-SetAdmUserConfig.ps1",
       "description": "Código-fonte: `SetAdmUser-Env/Get-SetAdmUserConfig.ps1`"
     },
@@ -140,7 +140,7 @@
       "category": "scripts",
       "categoryLabel": "Scripts",
       "color": "#64748b",
-      "size": 0.85,
+      "size": 0.95,
       "file": "SetAdmUser-Env/Set-AdmUser.ps1",
       "description": "Código-fonte: `SetAdmUser-Env/Set-AdmUser.ps1`"
     },
@@ -152,7 +152,7 @@
       "category": "scripts",
       "categoryLabel": "Scripts",
       "color": "#64748b",
-      "size": 0.85,
+      "size": 0.95,
       "file": "SetAdmUser-Env/Install-SetAdmUser.ps1",
       "description": "Código-fonte: `SetAdmUser-Env/Install-SetAdmUser.ps1`"
     },
@@ -164,7 +164,7 @@
       "category": "scripts",
       "categoryLabel": "Scripts",
       "color": "#64748b",
-      "size": 0.85,
+      "size": 0.95,
       "file": "SetAdmUser-Env/GPO-Startup-SetAdmUser.ps1",
       "description": "Código-fonte: `SetAdmUser-Env/GPO-Startup-SetAdmUser.ps1`"
     },
@@ -176,7 +176,7 @@
       "category": "scripts",
       "categoryLabel": "Scripts",
       "color": "#64748b",
-      "size": 0.85,
+      "size": 0.95,
       "file": "SetAdmUser-Env/Set-SetAdmUserEnv.ps1",
       "description": "Código-fonte: `SetAdmUser-Env/Set-SetAdmUserEnv.ps1`"
     },
@@ -188,7 +188,7 @@
       "category": "other",
       "categoryLabel": "Outros",
       "color": "#64748b",
-      "size": 0.85,
+      "size": 0.95,
       "file": "SetAdmUser-Env/set_adm_user.bat",
       "description": "Código-fonte: `SetAdmUser-Env/set_adm_user.bat`"
     },
@@ -200,7 +200,7 @@
       "category": "scripts",
       "categoryLabel": "Scripts",
       "color": "#64748b",
-      "size": 0.62,
+      "size": 0.88,
       "file": "SetAdmUser/Set-AdmUser.ps1",
       "description": "Função `Get-ProtectedPassword` em `SetAdmUser/Set-AdmUser.ps1`"
     },
@@ -212,7 +212,7 @@
       "category": "scripts",
       "categoryLabel": "Scripts",
       "color": "#64748b",
-      "size": 0.62,
+      "size": 0.88,
       "file": "SetAdmUser/Set-AdmUser.ps1",
       "description": "Função `Set-LocalAdminUser` em `SetAdmUser/Set-AdmUser.ps1`"
     },
@@ -224,7 +224,7 @@
       "category": "frontend",
       "categoryLabel": "Frontend",
       "color": "#eab308",
-      "size": 0.62,
+      "size": 0.88,
       "file": "SetAdmUser/Set-AdmUser.ps1",
       "description": "Função `Disable-BuiltInAdministrator` em `SetAdmUser/Set-AdmUser.ps1`"
     },
@@ -236,7 +236,7 @@
       "category": "scripts",
       "categoryLabel": "Scripts",
       "color": "#64748b",
-      "size": 0.62,
+      "size": 0.88,
       "file": "SetAdmUser/Install-SetAdmUser.ps1",
       "description": "Função `Save-ProtectedPassword` em `SetAdmUser/Install-SetAdmUser.ps1`"
     },
@@ -248,7 +248,7 @@
       "category": "scripts",
       "categoryLabel": "Scripts",
       "color": "#64748b",
-      "size": 0.62,
+      "size": 0.88,
       "file": "SetAdmUser-Env/Get-SetAdmUserConfig.ps1",
       "description": "Função `Get-SetAdmUserConfig` em `SetAdmUser-Env/Get-SetAdmUserConfig.ps1`"
     },
@@ -260,7 +260,7 @@
       "category": "scripts",
       "categoryLabel": "Scripts",
       "color": "#64748b",
-      "size": 0.62,
+      "size": 0.88,
       "file": "SetAdmUser-Env/Get-SetAdmUserConfig.ps1",
       "description": "Função `Get-SetAdmUserPasswordFromEnv` em `SetAdmUser-Env/Get-SetAdmUserConfig.ps1`"
     }

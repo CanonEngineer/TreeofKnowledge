@@ -444,7 +444,7 @@
       "category": "frontend",
       "categoryLabel": "Frontend",
       "color": "#eab308",
-      "size": 0.85,
+      "size": 0.95,
       "file": "web/index.html",
       "description": "Código-fonte: `web/index.html`"
     },
@@ -456,7 +456,7 @@
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
-      "size": 0.85,
+      "size": 0.95,
       "file": "web/unzipper.php",
       "description": "Código-fonte: `web/unzipper.php`"
     },
@@ -468,7 +468,7 @@
       "category": "frontend",
       "categoryLabel": "Frontend",
       "color": "#eab308",
-      "size": 0.85,
+      "size": 0.95,
       "file": "web/error/400.html",
       "description": "Código-fonte: `web/error/400.html`"
     },
@@ -480,7 +480,7 @@
       "category": "frontend",
       "categoryLabel": "Frontend",
       "color": "#eab308",
-      "size": 0.85,
+      "size": 0.95,
       "file": "web/error/401.html",
       "description": "Código-fonte: `web/error/401.html`"
     },
@@ -492,7 +492,7 @@
       "category": "frontend",
       "categoryLabel": "Frontend",
       "color": "#eab308",
-      "size": 0.85,
+      "size": 0.95,
       "file": "web/error/403.html",
       "description": "Código-fonte: `web/error/403.html`"
     },
@@ -504,7 +504,7 @@
       "category": "frontend",
       "categoryLabel": "Frontend",
       "color": "#eab308",
-      "size": 0.85,
+      "size": 0.95,
       "file": "web/error/404.html",
       "description": "Código-fonte: `web/error/404.html`"
     },
@@ -516,7 +516,7 @@
       "category": "frontend",
       "categoryLabel": "Frontend",
       "color": "#eab308",
-      "size": 0.85,
+      "size": 0.95,
       "file": "web/error/405.html",
       "description": "Código-fonte: `web/error/405.html`"
     },
@@ -528,7 +528,7 @@
       "category": "frontend",
       "categoryLabel": "Frontend",
       "color": "#eab308",
-      "size": 0.85,
+      "size": 0.95,
       "file": "web/error/500.html",
       "description": "Código-fonte: `web/error/500.html`"
     },
@@ -540,7 +540,7 @@
       "category": "frontend",
       "categoryLabel": "Frontend",
       "color": "#eab308",
-      "size": 0.85,
+      "size": 0.95,
       "file": "web/error/502.html",
       "description": "Código-fonte: `web/error/502.html`"
     },
@@ -552,7 +552,7 @@
       "category": "frontend",
       "categoryLabel": "Frontend",
       "color": "#eab308",
-      "size": 0.85,
+      "size": 0.95,
       "file": "web/error/503.html",
       "description": "Código-fonte: `web/error/503.html`"
     },
@@ -660,7 +660,7 @@
       "category": "frontend",
       "categoryLabel": "Frontend",
       "color": "#eab308",
-      "size": 0.85,
+      "size": 0.95,
       "file": "web/site-hyper/blog-checkerboard.html",
       "description": "Código-fonte: `web/site-hyper/blog-checkerboard.html`"
     },
@@ -672,7 +672,7 @@
       "category": "frontend",
       "categoryLabel": "Frontend",
       "color": "#eab308",
-      "size": 0.85,
+      "size": 0.95,
       "file": "web/site-hyper/blog-four-col-wide.html",
       "description": "Código-fonte: `web/site-hyper/blog-four-col-wide.html`"
     },
@@ -684,7 +684,7 @@
       "category": "frontend",
       "categoryLabel": "Frontend",
       "color": "#eab308",
-      "size": 0.85,
+      "size": 0.95,
       "file": "web/site-hyper/blog-large-images.html",
       "description": "Código-fonte: `web/site-hyper/blog-large-images.html`"
     },
@@ -696,7 +696,7 @@
       "category": "frontend",
       "categoryLabel": "Frontend",
       "color": "#eab308",
-      "size": 0.85,
+      "size": 0.95,
       "file": "web/site-hyper/blog-left-sidebar.html",
       "description": "Código-fonte: `web/site-hyper/blog-left-sidebar.html`"
     },
@@ -708,7 +708,7 @@
       "category": "frontend",
       "categoryLabel": "Frontend",
       "color": "#eab308",
-      "size": 0.85,
+      "size": 0.95,
       "file": "web/site-hyper/blog-masonry.html",
       "description": "Código-fonte: `web/site-hyper/blog-masonry.html`"
     },
@@ -720,7 +720,7 @@
       "category": "frontend",
       "categoryLabel": "Frontend",
       "color": "#eab308",
-      "size": 0.85,
+      "size": 0.95,
       "file": "web/site-hyper/blog-post-audio.html",
       "description": "Código-fonte: `web/site-hyper/blog-post-audio.html`"
     },
@@ -732,7 +732,7 @@
       "category": "frontend",
       "categoryLabel": "Frontend",
       "color": "#eab308",
-      "size": 0.85,
+      "size": 0.95,
       "file": "web/site-hyper/blog-post-gallery.html",
       "description": "Código-fonte: `web/site-hyper/blog-post-gallery.html`"
     },
@@ -744,7 +744,7 @@
       "category": "frontend",
       "categoryLabel": "Frontend",
       "color": "#eab308",
-      "size": 0.85,
+      "size": 0.95,
       "file": "web/site-hyper/blog-post-image.html",
       "description": "Código-fonte: `web/site-hyper/blog-post-image.html`"
     },
@@ -756,7 +756,7 @@
       "category": "frontend",
       "categoryLabel": "Frontend",
       "color": "#eab308",
-      "size": 0.85,
+      "size": 0.95,
       "file": "web/site-hyper/blog-post-link.html",
       "description": "Código-fonte: `web/site-hyper/blog-post-link.html`"
     },
@@ -768,7 +768,7 @@
       "category": "frontend",
       "categoryLabel": "Frontend",
       "color": "#eab308",
-      "size": 0.85,
+      "size": 0.95,
       "file": "web/site-hyper/blog-post-quote.html",
       "description": "Código-fonte: `web/site-hyper/blog-post-quote.html`"
     },
@@ -780,7 +780,7 @@
       "category": "frontend",
       "categoryLabel": "Frontend",
       "color": "#eab308",
-      "size": 0.85,
+      "size": 0.95,
       "file": "web/site-hyper/blog-post-video.html",
       "description": "Código-fonte: `web/site-hyper/blog-post-video.html`"
     },
@@ -792,7 +792,7 @@
       "category": "frontend",
       "categoryLabel": "Frontend",
       "color": "#eab308",
-      "size": 0.85,
+      "size": 0.95,
       "file": "web/site-hyper/blog-right-sidebar.html",
       "description": "Código-fonte: `web/site-hyper/blog-right-sidebar.html`"
     },
@@ -804,7 +804,7 @@
       "category": "frontend",
       "categoryLabel": "Frontend",
       "color": "#eab308",
-      "size": 0.85,
+      "size": 0.95,
       "file": "web/site-hyper/blog-small-images.html",
       "description": "Código-fonte: `web/site-hyper/blog-small-images.html`"
     },
@@ -816,7 +816,7 @@
       "category": "frontend",
       "categoryLabel": "Frontend",
       "color": "#eab308",
-      "size": 0.85,
+      "size": 0.95,
       "file": "web/site-hyper/blog-three-col-wide.html",
       "description": "Código-fonte: `web/site-hyper/blog-three-col-wide.html`"
     },
@@ -828,7 +828,7 @@
       "category": "frontend",
       "categoryLabel": "Frontend",
       "color": "#eab308",
-      "size": 0.85,
+      "size": 0.95,
       "file": "web/site-hyper/blog-three-col.html",
       "description": "Código-fonte: `web/site-hyper/blog-three-col.html`"
     },
@@ -840,7 +840,7 @@
       "category": "frontend",
       "categoryLabel": "Frontend",
       "color": "#eab308",
-      "size": 0.85,
+      "size": 0.95,
       "file": "web/site-hyper/blog-two-col.html",
       "description": "Código-fonte: `web/site-hyper/blog-two-col.html`"
     },
@@ -852,7 +852,7 @@
       "category": "frontend",
       "categoryLabel": "Frontend",
       "color": "#eab308",
-      "size": 0.85,
+      "size": 0.95,
       "file": "web/site-hyper/case-study.html",
       "description": "Código-fonte: `web/site-hyper/case-study.html`"
     },
@@ -864,7 +864,7 @@
       "category": "frontend",
       "categoryLabel": "Frontend",
       "color": "#eab308",
-      "size": 0.85,
+      "size": 0.95,
       "file": "web/site-hyper/checkout.html",
       "description": "Código-fonte: `web/site-hyper/checkout.html`"
     },
@@ -876,7 +876,7 @@
       "category": "frontend",
       "categoryLabel": "Frontend",
       "color": "#eab308",
-      "size": 0.85,
+      "size": 0.95,
       "file": "web/site-hyper/contact.html",
       "description": "Código-fonte: `web/site-hyper/contact.html`"
     },
@@ -888,7 +888,7 @@
       "category": "frontend",
       "categoryLabel": "Frontend",
       "color": "#eab308",
-      "size": 0.85,
+      "size": 0.95,
       "file": "web/site-hyper/elements.html",
       "description": "Código-fonte: `web/site-hyper/elements.html`"
     },
@@ -900,7 +900,7 @@
       "category": "frontend",
       "categoryLabel": "Frontend",
       "color": "#eab308",
-      "size": 0.85,
+      "size": 0.95,
       "file": "web/site-hyper/empresa.html",
       "description": "Código-fonte: `web/site-hyper/empresa.html`"
     },
@@ -912,7 +912,7 @@
       "category": "frontend",
       "categoryLabel": "Frontend",
       "color": "#eab308",
-      "size": 0.85,
+      "size": 0.95,
       "file": "web/site-hyper/index.html",
       "description": "Código-fonte: `web/site-hyper/index.html`"
     },
@@ -924,7 +924,7 @@
       "category": "frontend",
       "categoryLabel": "Frontend",
       "color": "#eab308",
-      "size": 0.85,
+      "size": 0.95,
       "file": "web/site-hyper/it-consultancy.html",
       "description": "Código-fonte: `web/site-hyper/it-consultancy.html`"
     },
@@ -936,7 +936,7 @@
       "category": "frontend",
       "categoryLabel": "Frontend",
       "color": "#eab308",
-      "size": 0.85,
+      "size": 0.95,
       "file": "web/site-hyper/managed-it.html",
       "description": "Código-fonte: `web/site-hyper/managed-it.html`"
     },
@@ -948,7 +948,7 @@
       "category": "frontend",
       "categoryLabel": "Frontend",
       "color": "#eab308",
-      "size": 0.85,
+      "size": 0.95,
       "file": "web/site-hyper/portfolio-asymetric.html",
       "description": "Código-fonte: `web/site-hyper/portfolio-asymetric.html`"
     },
@@ -960,7 +960,7 @@
       "category": "frontend",
       "categoryLabel": "Frontend",
       "color": "#eab308",
-      "size": 0.85,
+      "size": 0.95,
       "file": "web/site-hyper/portfolio-masonry.html",
       "description": "Código-fonte: `web/site-hyper/portfolio-masonry.html`"
     },
@@ -972,7 +972,7 @@
       "category": "frontend",
       "categoryLabel": "Frontend",
       "color": "#eab308",
-      "size": 0.85,
+      "size": 0.95,
       "file": "web/site-hyper/portfolio-motion-category.html",
       "description": "Código-fonte: `web/site-hyper/portfolio-motion-category.html`"
     },
@@ -984,7 +984,7 @@
       "category": "frontend",
       "categoryLabel": "Frontend",
       "color": "#eab308",
-      "size": 0.85,
+      "size": 0.95,
       "file": "web/site-hyper/portfolio-single-gallery.html",
       "description": "Código-fonte: `web/site-hyper/portfolio-single-gallery.html`"
     },
@@ -996,7 +996,7 @@
       "category": "frontend",
       "categoryLabel": "Frontend",
       "color": "#eab308",
-      "size": 0.85,
+      "size": 0.95,
       "file": "web/site-hyper/portfolio-single-large-masonry.html",
       "description": "Código-fonte: `web/site-hyper/portfolio-single-large-masonry.html`"
     },
@@ -1008,7 +1008,7 @@
       "category": "frontend",
       "categoryLabel": "Frontend",
       "color": "#eab308",
-      "size": 0.85,
+      "size": 0.95,
       "file": "web/site-hyper/portfolio-single-large-slider.html",
       "description": "Código-fonte: `web/site-hyper/portfolio-single-large-slider.html`"
     },
@@ -1020,7 +1020,7 @@
       "category": "frontend",
       "categoryLabel": "Frontend",
       "color": "#eab308",
-      "size": 0.85,
+      "size": 0.95,
       "file": "web/site-hyper/portfolio-single-small-images.html",
       "description": "Código-fonte: `web/site-hyper/portfolio-single-small-images.html`"
     },
@@ -1032,7 +1032,7 @@
       "category": "frontend",
       "categoryLabel": "Frontend",
       "color": "#eab308",
-      "size": 0.85,
+      "size": 0.95,
       "file": "web/site-hyper/portfolio-single-small-masonry.html",
       "description": "Código-fonte: `web/site-hyper/portfolio-single-small-masonry.html`"
     },
@@ -1044,7 +1044,7 @@
       "category": "frontend",
       "categoryLabel": "Frontend",
       "color": "#eab308",
-      "size": 0.85,
+      "size": 0.95,
       "file": "web/site-hyper/portfolio-single-small-slider.html",
       "description": "Código-fonte: `web/site-hyper/portfolio-single-small-slider.html`"
     },
@@ -1056,7 +1056,7 @@
       "category": "frontend",
       "categoryLabel": "Frontend",
       "color": "#eab308",
-      "size": 0.85,
+      "size": 0.95,
       "file": "web/site-hyper/portfolio-slide-left.html",
       "description": "Código-fonte: `web/site-hyper/portfolio-slide-left.html`"
     },
@@ -1068,7 +1068,7 @@
       "category": "frontend",
       "categoryLabel": "Frontend",
       "color": "#eab308",
-      "size": 0.85,
+      "size": 0.95,
       "file": "web/site-hyper/portfolio-slider.html",
       "description": "Código-fonte: `web/site-hyper/portfolio-slider.html`"
     },
@@ -1080,7 +1080,7 @@
       "category": "frontend",
       "categoryLabel": "Frontend",
       "color": "#eab308",
-      "size": 0.85,
+      "size": 0.95,
       "file": "web/site-hyper/portfolio-three-col.html",
       "description": "Código-fonte: `web/site-hyper/portfolio-three-col.html`"
     },
@@ -1092,7 +1092,7 @@
       "category": "frontend",
       "categoryLabel": "Frontend",
       "color": "#eab308",
-      "size": 0.85,
+      "size": 0.95,
       "file": "web/site-hyper/pricing-plans.html",
       "description": "Código-fonte: `web/site-hyper/pricing-plans.html`"
     },
@@ -1104,7 +1104,7 @@
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
-      "size": 0.85,
+      "size": 0.95,
       "file": "web/site-hyper/sendemail.php",
       "description": "Código-fonte: `web/site-hyper/sendemail.php`"
     },
@@ -1116,7 +1116,7 @@
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
-      "size": 0.85,
+      "size": 0.95,
       "file": "web/site-hyper/sendnewslatters.php",
       "description": "Código-fonte: `web/site-hyper/sendnewslatters.php`"
     },
@@ -1128,7 +1128,7 @@
       "category": "frontend",
       "categoryLabel": "Frontend",
       "color": "#eab308",
-      "size": 0.85,
+      "size": 0.95,
       "file": "web/site-hyper/shop-single.html",
       "description": "Código-fonte: `web/site-hyper/shop-single.html`"
     },
@@ -1140,7 +1140,7 @@
       "category": "frontend",
       "categoryLabel": "Frontend",
       "color": "#eab308",
-      "size": 0.85,
+      "size": 0.95,
       "file": "web/site-hyper/shop.html",
       "description": "Código-fonte: `web/site-hyper/shop.html`"
     },
@@ -1152,7 +1152,7 @@
       "category": "frontend",
       "categoryLabel": "Frontend",
       "color": "#eab308",
-      "size": 0.85,
+      "size": 0.95,
       "file": "web/site-hyper/shopping-cart.html",
       "description": "Código-fonte: `web/site-hyper/shopping-cart.html`"
     },
@@ -1164,7 +1164,7 @@
       "category": "frontend",
       "categoryLabel": "Frontend",
       "color": "#eab308",
-      "size": 0.85,
+      "size": 0.95,
       "file": "web/site-hyper/why-choose-us.html",
       "description": "Código-fonte: `web/site-hyper/why-choose-us.html`"
     },
@@ -1176,7 +1176,7 @@
       "category": "frontend",
       "categoryLabel": "Frontend",
       "color": "#eab308",
-      "size": 0.85,
+      "size": 0.95,
       "file": "web/site-hyper/css/animate.css",
       "description": "Código-fonte: `web/site-hyper/css/animate.css`"
     },
@@ -1188,7 +1188,7 @@
       "category": "frontend",
       "categoryLabel": "Frontend",
       "color": "#eab308",
-      "size": 0.85,
+      "size": 0.95,
       "file": "web/site-hyper/css/bootstrap.css",
       "description": "Código-fonte: `web/site-hyper/css/bootstrap.css`"
     },
@@ -1200,7 +1200,7 @@
       "category": "frontend",
       "categoryLabel": "Frontend",
       "color": "#eab308",
-      "size": 0.85,
+      "size": 0.95,
       "file": "web/site-hyper/css/flaticon.css",
       "description": "Código-fonte: `web/site-hyper/css/flaticon.css`"
     },
@@ -1212,7 +1212,7 @@
       "category": "frontend",
       "categoryLabel": "Frontend",
       "color": "#eab308",
-      "size": 0.85,
+      "size": 0.95,
       "file": "web/site-hyper/css/fontawesome-all.css",
       "description": "Código-fonte: `web/site-hyper/css/fontawesome-all.css`"
     },
@@ -1224,7 +1224,7 @@
       "category": "frontend",
       "categoryLabel": "Frontend",
       "color": "#eab308",
-      "size": 0.85,
+      "size": 0.95,
       "file": "web/site-hyper/css/jquery-ui.min.css",
       "description": "Código-fonte: `web/site-hyper/css/jquery-ui.min.css`"
     },
@@ -1236,7 +1236,7 @@
       "category": "frontend",
       "categoryLabel": "Frontend",
       "color": "#eab308",
-      "size": 0.85,
+      "size": 0.95,
       "file": "web/site-hyper/css/jquery.fancybox.min.css",
       "description": "Código-fonte: `web/site-hyper/css/jquery.fancybox.min.css`"
     },
@@ -1248,7 +1248,7 @@
       "category": "frontend",
       "categoryLabel": "Frontend",
       "color": "#eab308",
-      "size": 0.85,
+      "size": 0.95,
       "file": "web/site-hyper/css/owl.css",
       "description": "Código-fonte: `web/site-hyper/css/owl.css`"
     },
@@ -1260,7 +1260,7 @@
       "category": "frontend",
       "categoryLabel": "Frontend",
       "color": "#eab308",
-      "size": 0.85,
+      "size": 0.95,
       "file": "web/site-hyper/css/responsive.css",
       "description": "Código-fonte: `web/site-hyper/css/responsive.css`"
     },
@@ -1272,7 +1272,7 @@
       "category": "frontend",
       "categoryLabel": "Frontend",
       "color": "#eab308",
-      "size": 0.85,
+      "size": 0.95,
       "file": "web/site-hyper/css/style.css",
       "description": "Código-fonte: `web/site-hyper/css/style.css`"
     },
@@ -1284,7 +1284,7 @@
       "category": "frontend",
       "categoryLabel": "Frontend",
       "color": "#eab308",
-      "size": 0.85,
+      "size": 0.95,
       "file": "web/site-hyper/fonts/_flaticon.scss",
       "description": "Código-fonte: `web/site-hyper/fonts/_flaticon.scss`"
     },
@@ -1296,7 +1296,7 @@
       "category": "frontend",
       "categoryLabel": "Frontend",
       "color": "#eab308",
-      "size": 0.85,
+      "size": 0.95,
       "file": "web/site-hyper/fonts/demo.html",
       "description": "Código-fonte: `web/site-hyper/fonts/demo.html`"
     },
@@ -1332,7 +1332,7 @@
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
-      "size": 0.85,
+      "size": 0.95,
       "file": "web/site-hyper/js/appear.js",
       "description": "Código-fonte: `web/site-hyper/js/appear.js`"
     },
@@ -1344,7 +1344,7 @@
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
-      "size": 0.85,
+      "size": 0.95,
       "file": "web/site-hyper/js/bootstrap.min.js",
       "description": "Código-fonte: `web/site-hyper/js/bootstrap.min.js`"
     },
@@ -1356,7 +1356,7 @@
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
-      "size": 0.85,
+      "size": 0.95,
       "file": "web/site-hyper/js/horas.js",
       "description": "Código-fonte: `web/site-hyper/js/horas.js`"
     },
@@ -1368,7 +1368,7 @@
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
-      "size": 0.85,
+      "size": 0.95,
       "file": "web/site-hyper/js/imagesloaded.min.js",
       "description": "Código-fonte: `web/site-hyper/js/imagesloaded.min.js`"
     },
@@ -1380,7 +1380,7 @@
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
-      "size": 0.85,
+      "size": 0.95,
       "file": "web/site-hyper/js/isotope.js",
       "description": "Código-fonte: `web/site-hyper/js/isotope.js`"
     },
@@ -1392,7 +1392,7 @@
       "category": "frontend",
       "categoryLabel": "Frontend",
       "color": "#eab308",
-      "size": 0.85,
+      "size": 0.95,
       "file": "web/site-hyper/js/jquery-ui.min.js",
       "description": "Código-fonte: `web/site-hyper/js/jquery-ui.min.js`"
     },
@@ -1404,7 +1404,7 @@
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
-      "size": 0.85,
+      "size": 0.95,
       "file": "web/site-hyper/js/jquery.fancybox.js",
       "description": "Código-fonte: `web/site-hyper/js/jquery.fancybox.js`"
     },
@@ -1416,7 +1416,7 @@
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
-      "size": 0.85,
+      "size": 0.95,
       "file": "web/site-hyper/js/jquery.js",
       "description": "Código-fonte: `web/site-hyper/js/jquery.js`"
     },
@@ -1428,7 +1428,7 @@
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
-      "size": 0.85,
+      "size": 0.95,
       "file": "web/site-hyper/js/jquery.parallax-scroll.js",
       "description": "Código-fonte: `web/site-hyper/js/jquery.parallax-scroll.js`"
     },
@@ -1440,7 +1440,7 @@
       "category": "scripts",
       "categoryLabel": "Scripts",
       "color": "#64748b",
-      "size": 0.85,
+      "size": 0.95,
       "file": "web/site-hyper/js/main-slider-script.js",
       "description": "Código-fonte: `web/site-hyper/js/main-slider-script.js`"
     },
@@ -1452,7 +1452,7 @@
       "category": "scripts",
       "categoryLabel": "Scripts",
       "color": "#64748b",
-      "size": 0.85,
+      "size": 0.95,
       "file": "web/site-hyper/js/map-script.js",
       "description": "Código-fonte: `web/site-hyper/js/map-script.js`"
     },
@@ -1464,7 +1464,7 @@
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
-      "size": 0.85,
+      "size": 0.95,
       "file": "web/site-hyper/js/owl.js",
       "description": "Código-fonte: `web/site-hyper/js/owl.js`"
     },
@@ -1476,7 +1476,7 @@
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
-      "size": 0.85,
+      "size": 0.95,
       "file": "web/site-hyper/js/popper.min.js",
       "description": "Código-fonte: `web/site-hyper/js/popper.min.js`"
     },
@@ -1488,7 +1488,7 @@
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
-      "size": 0.85,
+      "size": 0.95,
       "file": "web/site-hyper/js/respond.js",
       "description": "Código-fonte: `web/site-hyper/js/respond.js`"
     },
@@ -1500,7 +1500,7 @@
       "category": "scripts",
       "categoryLabel": "Scripts",
       "color": "#64748b",
-      "size": 0.85,
+      "size": 0.95,
       "file": "web/site-hyper/js/script.js",
       "description": "Código-fonte: `web/site-hyper/js/script.js`"
     },
@@ -1512,7 +1512,7 @@
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
-      "size": 0.85,
+      "size": 0.95,
       "file": "web/site-hyper/js/sticky_sidebar.min.js",
       "description": "Código-fonte: `web/site-hyper/js/sticky_sidebar.min.js`"
     },
@@ -1524,7 +1524,7 @@
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
-      "size": 0.85,
+      "size": 0.95,
       "file": "web/site-hyper/js/validate.js",
       "description": "Código-fonte: `web/site-hyper/js/validate.js`"
     },
@@ -1536,7 +1536,7 @@
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
-      "size": 0.85,
+      "size": 0.95,
       "file": "web/site-hyper/js/wow.js",
       "description": "Código-fonte: `web/site-hyper/js/wow.js`"
     },
@@ -1548,7 +1548,7 @@
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
-      "size": 0.85,
+      "size": 0.95,
       "file": "web/site-hyper/plugins/revolution/index.php",
       "description": "Código-fonte: `web/site-hyper/plugins/revolution/index.php`"
     },
@@ -1560,7 +1560,7 @@
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
-      "size": 0.85,
+      "size": 0.95,
       "file": "web/site-hyper/plugins/revolution/assets/index.php",
       "description": "Código-fonte: `web/site-hyper/plugins/revolution/assets/index.php`"
     },
@@ -1572,7 +1572,7 @@
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
-      "size": 0.85,
+      "size": 0.95,
       "file": "web/site-hyper/plugins/revolution/assets/svg/index.php",
       "description": "Código-fonte: `web/site-hyper/plugins/revolution/assets/svg/index.php`"
     },
@@ -1584,7 +1584,7 @@
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
-      "size": 0.85,
+      "size": 0.95,
       "file": "web/site-hyper/plugins/revolution/css/index.php",
       "description": "Código-fonte: `web/site-hyper/plugins/revolution/css/index.php`"
     },
@@ -1596,7 +1596,7 @@
       "category": "frontend",
       "categoryLabel": "Frontend",
       "color": "#eab308",
-      "size": 0.85,
+      "size": 0.95,
       "file": "web/site-hyper/plugins/revolution/css/layers.css",
       "description": "Código-fonte: `web/site-hyper/plugins/revolution/css/layers.css`"
     },
@@ -1608,7 +1608,7 @@
       "category": "frontend",
       "categoryLabel": "Frontend",
       "color": "#eab308",
-      "size": 0.85,
+      "size": 0.95,
       "file": "web/site-hyper/plugins/revolution/css/navigation.css",
       "description": "Código-fonte: `web/site-hyper/plugins/revolution/css/navigation.css`"
     },
@@ -1620,7 +1620,7 @@
       "category": "frontend",
       "categoryLabel": "Frontend",
       "color": "#eab308",
-      "size": 0.85,
+      "size": 0.95,
       "file": "web/site-hyper/plugins/revolution/css/settings-source.css",
       "description": "Código-fonte: `web/site-hyper/plugins/revolution/css/settings-source.css`"
     },
@@ -1632,7 +1632,7 @@
       "category": "frontend",
       "categoryLabel": "Frontend",
       "color": "#eab308",
-      "size": 0.85,
+      "size": 0.95,
       "file": "web/site-hyper/plugins/revolution/css/settings.css",
       "description": "Código-fonte: `web/site-hyper/plugins/revolution/css/settings.css`"
     },
@@ -1644,7 +1644,7 @@
       "category": "frontend",
       "categoryLabel": "Frontend",
       "color": "#eab308",
-      "size": 0.85,
+      "size": 0.95,
       "file": "web/site-hyper/plugins/revolution/css/tp-color-picker.css",
       "description": "Código-fonte: `web/site-hyper/plugins/revolution/css/tp-color-picker.css`"
     },
@@ -1680,7 +1680,7 @@
       "category": "frontend",
       "categoryLabel": "Frontend",
       "color": "#eab308",
-      "size": 0.85,
+      "size": 0.95,
       "file": "web/site-hyper/plugins/revolution/css/navigation-skins/ares.css",
       "description": "Código-fonte: `web/site-hyper/plugins/revolution/css/navigation-skins/ares.css`"
     },
@@ -1692,7 +1692,7 @@
       "category": "frontend",
       "categoryLabel": "Frontend",
       "color": "#eab308",
-      "size": 0.85,
+      "size": 0.95,
       "file": "web/site-hyper/plugins/revolution/css/navigation-skins/custom.css",
       "description": "Código-fonte: `web/site-hyper/plugins/revolution/css/navigation-skins/custom.css`"
     },
@@ -1704,7 +1704,7 @@
       "category": "frontend",
       "categoryLabel": "Frontend",
       "color": "#eab308",
-      "size": 0.85,
+      "size": 0.95,
       "file": "web/site-hyper/plugins/revolution/css/navigation-skins/dione.css",
       "description": "Código-fonte: `web/site-hyper/plugins/revolution/css/navigation-skins/dione.css`"
     },
@@ -1716,7 +1716,7 @@
       "category": "frontend",
       "categoryLabel": "Frontend",
       "color": "#eab308",
-      "size": 0.85,
+      "size": 0.95,
       "file": "web/site-hyper/plugins/revolution/css/navigation-skins/erinyen.css",
       "description": "Código-fonte: `web/site-hyper/plugins/revolution/css/navigation-skins/erinyen.css`"
     },
@@ -1728,7 +1728,7 @@
       "category": "frontend",
       "categoryLabel": "Frontend",
       "color": "#eab308",
-      "size": 0.85,
+      "size": 0.95,
       "file": "web/site-hyper/plugins/revolution/css/navigation-skins/gyges.css",
       "description": "Código-fonte: `web/site-hyper/plugins/revolution/css/navigation-skins/gyges.css`"
     },
@@ -1740,7 +1740,7 @@
       "category": "frontend",
       "categoryLabel": "Frontend",
       "color": "#eab308",
-      "size": 0.85,
+      "size": 0.95,
       "file": "web/site-hyper/plugins/revolution/css/navigation-skins/hades.css",
       "description": "Código-fonte: `web/site-hyper/plugins/revolution/css/navigation-skins/hades.css`"
     },
@@ -1752,7 +1752,7 @@
       "category": "frontend",
       "categoryLabel": "Frontend",
       "color": "#eab308",
-      "size": 0.85,
+      "size": 0.95,
       "file": "web/site-hyper/plugins/revolution/css/navigation-skins/hebe.css",
       "description": "Código-fonte: `web/site-hyper/plugins/revolution/css/navigation-skins/hebe.css`"
     },
@@ -1764,7 +1764,7 @@
       "category": "frontend",
       "categoryLabel": "Frontend",
       "color": "#eab308",
-      "size": 0.85,
+      "size": 0.95,
       "file": "web/site-hyper/plugins/revolution/css/navigation-skins/hephaistos.css",
       "description": "Código-fonte: `web/site-hyper/plugins/revolution/css/navigation-skins/hephaistos.css`"
     },
@@ -1776,7 +1776,7 @@
       "category": "frontend",
       "categoryLabel": "Frontend",
       "color": "#eab308",
-      "size": 0.85,
+      "size": 0.95,
       "file": "web/site-hyper/plugins/revolution/css/navigation-skins/hermes.css",
       "description": "Código-fonte: `web/site-hyper/plugins/revolution/css/navigation-skins/hermes.css`"
     },
@@ -1788,7 +1788,7 @@
       "category": "frontend",
       "categoryLabel": "Frontend",
       "color": "#eab308",
-      "size": 0.85,
+      "size": 0.95,
       "file": "web/site-hyper/plugins/revolution/css/navigation-skins/hesperiden.css",
       "description": "Código-fonte: `web/site-hyper/plugins/revolution/css/navigation-skins/hesperiden.css`"
     },
@@ -1800,7 +1800,7 @@
       "category": "frontend",
       "categoryLabel": "Frontend",
       "color": "#eab308",
-      "size": 0.85,
+      "size": 0.95,
       "file": "web/site-hyper/plugins/revolution/css/navigation-skins/metis.css",
       "description": "Código-fonte: `web/site-hyper/plugins/revolution/css/navigation-skins/metis.css`"
     },
@@ -1812,7 +1812,7 @@
       "category": "frontend",
       "categoryLabel": "Frontend",
       "color": "#eab308",
-      "size": 0.85,
+      "size": 0.95,
       "file": "web/site-hyper/plugins/revolution/css/navigation-skins/persephone.css",
       "description": "Código-fonte: `web/site-hyper/plugins/revolution/css/navigation-skins/persephone.css`"
     },
@@ -1824,7 +1824,7 @@
       "category": "frontend",
       "categoryLabel": "Frontend",
       "color": "#eab308",
-      "size": 0.85,
+      "size": 0.95,
       "file": "web/site-hyper/plugins/revolution/css/navigation-skins/uranus.css",
       "description": "Código-fonte: `web/site-hyper/plugins/revolution/css/navigation-skins/uranus.css`"
     },
@@ -1836,7 +1836,7 @@
       "category": "frontend",
       "categoryLabel": "Frontend",
       "color": "#eab308",
-      "size": 0.85,
+      "size": 0.95,
       "file": "web/site-hyper/plugins/revolution/css/navigation-skins/zeus.css",
       "description": "Código-fonte: `web/site-hyper/plugins/revolution/css/navigation-skins/zeus.css`"
     },
@@ -1848,7 +1848,7 @@
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
-      "size": 0.85,
+      "size": 0.95,
       "file": "web/site-hyper/plugins/revolution/fonts/index.php",
       "description": "Código-fonte: `web/site-hyper/plugins/revolution/fonts/index.php`"
     },
@@ -1860,7 +1860,7 @@
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
-      "size": 0.85,
+      "size": 0.95,
       "file": "web/site-hyper/plugins/revolution/fonts/font-awesome/index.php",
       "description": "Código-fonte: `web/site-hyper/plugins/revolution/fonts/font-awesome/index.php`"
     },
@@ -1872,7 +1872,7 @@
       "category": "frontend",
       "categoryLabel": "Frontend",
       "color": "#eab308",
-      "size": 0.85,
+      "size": 0.95,
       "file": "web/site-hyper/plugins/revolution/fonts/font-awesome/css/font-awesome.css",
       "description": "Código-fonte: `web/site-hyper/plugins/revolution/fonts/font-awesome/css/font-awesome.css`"
     },
@@ -1884,7 +1884,7 @@
       "category": "frontend",
       "categoryLabel": "Frontend",
       "color": "#eab308",
-      "size": 0.85,
+      "size": 0.95,
       "file": "web/site-hyper/plugins/revolution/fonts/font-awesome/css/font-awesome.min.css",
       "description": "Código-fonte: `web/site-hyper/plugins/revolution/fonts/font-awesome/css/font-awesome.min.css`"
     },
@@ -1896,7 +1896,7 @@
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
-      "size": 0.85,
+      "size": 0.95,
       "file": "web/site-hyper/plugins/revolution/fonts/pe-icon-7-stroke/index.php",
       "description": "Código-fonte: `web/site-hyper/plugins/revolution/fonts/pe-icon-7-stroke/index.php`"
     },
@@ -1908,7 +1908,7 @@
       "category": "frontend",
       "categoryLabel": "Frontend",
       "color": "#eab308",
-      "size": 0.85,
+      "size": 0.95,
       "file": "web/site-hyper/plugins/revolution/fonts/pe-icon-7-stroke/css/helper.css",
       "description": "Código-fonte: `web/site-hyper/plugins/revolution/fonts/pe-icon-7-stroke/css/helper.css`"
     },
@@ -1920,7 +1920,7 @@
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
-      "size": 0.85,
+      "size": 0.95,
       "file": "web/site-hyper/plugins/revolution/fonts/pe-icon-7-stroke/css/index.php",
       "description": "Código-fonte: `web/site-hyper/plugins/revolution/fonts/pe-icon-7-stroke/css/index.php`"
     },
@@ -1932,7 +1932,7 @@
       "category": "frontend",
       "categoryLabel": "Frontend",
       "color": "#eab308",
-      "size": 0.85,
+      "size": 0.95,
       "file": "web/site-hyper/plugins/revolution/fonts/pe-icon-7-stroke/css/pe-icon-7-stroke.css",
       "description": "Código-fonte: `web/site-hyper/plugins/revolution/fonts/pe-icon-7-stroke/css/pe-icon-7-stroke.css`"
     },
@@ -1944,7 +1944,7 @@
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
-      "size": 0.85,
+      "size": 0.95,
       "file": "web/site-hyper/plugins/revolution/fonts/pe-icon-7-stroke/fonts/index.php",
       "description": "Código-fonte: `web/site-hyper/plugins/revolution/fonts/pe-icon-7-stroke/fonts/index.php`"
     },
@@ -1956,7 +1956,7 @@
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
-      "size": 0.85,
+      "size": 0.95,
       "file": "web/site-hyper/plugins/revolution/fonts/revicons/index.php",
       "description": "Código-fonte: `web/site-hyper/plugins/revolution/fonts/revicons/index.php`"
     },
@@ -1968,7 +1968,7 @@
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
-      "size": 0.85,
+      "size": 0.95,
       "file": "web/site-hyper/plugins/revolution/js/index.php",
       "description": "Código-fonte: `web/site-hyper/plugins/revolution/js/index.php`"
     },
@@ -1980,7 +1980,7 @@
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
-      "size": 0.85,
+      "size": 0.95,
       "file": "web/site-hyper/plugins/revolution/js/jquery.themepunch.enablelog.js",
       "description": "Código-fonte: `web/site-hyper/plugins/revolution/js/jquery.themepunch.enablelog.js`"
     },
@@ -1992,7 +1992,7 @@
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
-      "size": 0.85,
+      "size": 0.95,
       "file": "web/site-hyper/plugins/revolution/js/jquery.themepunch.revolution.min.js",
       "description": "Código-fonte: `web/site-hyper/plugins/revolution/js/jquery.themepunch.revolution.min.js`"
     },
@@ -2004,7 +2004,7 @@
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
-      "size": 0.85,
+      "size": 0.95,
       "file": "web/site-hyper/plugins/revolution/js/jquery.themepunch.tools.min.js",
       "description": "Código-fonte: `web/site-hyper/plugins/revolution/js/jquery.themepunch.tools.min.js`"
     },
@@ -2016,7 +2016,7 @@
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
-      "size": 0.85,
+      "size": 0.95,
       "file": "web/site-hyper/plugins/revolution/js/tp-color-picker.min.js",
       "description": "Código-fonte: `web/site-hyper/plugins/revolution/js/tp-color-picker.min.js`"
     },
@@ -2028,7 +2028,7 @@
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
-      "size": 0.85,
+      "size": 0.95,
       "file": "web/site-hyper/plugins/revolution/js/extensions/index.php",
       "description": "Código-fonte: `web/site-hyper/plugins/revolution/js/extensions/index.php`"
     },
@@ -2040,7 +2040,7 @@
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
-      "size": 0.85,
+      "size": 0.95,
       "file": "web/site-hyper/plugins/revolution/js/extensions/revolution.extension.actions.min.js",
       "description": "Código-fonte: `web/site-hyper/plugins/revolution/js/extensions/revolution.extension.actions.min.js`"
     },
@@ -2052,7 +2052,7 @@
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
-      "size": 0.85,
+      "size": 0.95,
       "file": "web/site-hyper/plugins/revolution/js/extensions/revolution.extension.carousel.min.js",
       "description": "Código-fonte: `web/site-hyper/plugins/revolution/js/extensions/revolution.extension.carousel.min.js`"
     },
@@ -2064,7 +2064,7 @@
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
-      "size": 0.85,
+      "size": 0.95,
       "file": "web/site-hyper/plugins/revolution/js/extensions/revolution.extension.kenburn.min.js",
       "description": "Código-fonte: `web/site-hyper/plugins/revolution/js/extensions/revolution.extension.kenburn.min.js`"
     },
@@ -2076,7 +2076,7 @@
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
-      "size": 0.85,
+      "size": 0.95,
       "file": "web/site-hyper/plugins/revolution/js/extensions/revolution.extension.layeranimation.min.js",
       "description": "Código-fonte: `web/site-hyper/plugins/revolution/js/extensions/revolution.extension.layeranimation.min.js`"
     },
@@ -2088,7 +2088,7 @@
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
-      "size": 0.85,
+      "size": 0.95,
       "file": "web/site-hyper/plugins/revolution/js/extensions/revolution.extension.migration.min.js",
       "description": "Código-fonte: `web/site-hyper/plugins/revolution/js/extensions/revolution.extension.migration.min.js`"
     },
@@ -2100,7 +2100,7 @@
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
-      "size": 0.85,
+      "size": 0.95,
       "file": "web/site-hyper/plugins/revolution/js/extensions/revolution.extension.navigation.min.js",
       "description": "Código-fonte: `web/site-hyper/plugins/revolution/js/extensions/revolution.extension.navigation.min.js`"
     },
@@ -2112,7 +2112,7 @@
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
-      "size": 0.85,
+      "size": 0.95,
       "file": "web/site-hyper/plugins/revolution/js/extensions/revolution.extension.parallax.min.js",
       "description": "Código-fonte: `web/site-hyper/plugins/revolution/js/extensions/revolution.extension.parallax.min.js`"
     },
@@ -2124,7 +2124,7 @@
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
-      "size": 0.85,
+      "size": 0.95,
       "file": "web/site-hyper/plugins/revolution/js/extensions/revolution.extension.slideanims.min.js",
       "description": "Código-fonte: `web/site-hyper/plugins/revolution/js/extensions/revolution.extension.slideanims.min.js`"
     },
@@ -2136,7 +2136,7 @@
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
-      "size": 0.85,
+      "size": 0.95,
       "file": "web/site-hyper/plugins/revolution/js/extensions/revolution.extension.video.min.js",
       "description": "Código-fonte: `web/site-hyper/plugins/revolution/js/extensions/revolution.extension.video.min.js`"
     },
@@ -2148,7 +2148,7 @@
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
-      "size": 0.85,
+      "size": 0.95,
       "file": "web/site-hyper/plugins/revolution/js/extensions/source/index.php",
       "description": "Código-fonte: `web/site-hyper/plugins/revolution/js/extensions/source/index.php`"
     },
@@ -2160,7 +2160,7 @@
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
-      "size": 0.85,
+      "size": 0.95,
       "file": "web/site-hyper/plugins/revolution/js/extensions/source/revolution.extension.actions.js",
       "description": "Código-fonte: `web/site-hyper/plugins/revolution/js/extensions/source/revolution.extension.actions.js`"
     },
@@ -2172,7 +2172,7 @@
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
-      "size": 0.85,
+      "size": 0.95,
       "file": "web/site-hyper/plugins/revolution/js/extensions/source/revolution.extension.carousel.js",
       "description": "Código-fonte: `web/site-hyper/plugins/revolution/js/extensions/source/revolution.extension.carousel.js`"
     },
@@ -2184,7 +2184,7 @@
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
-      "size": 0.85,
+      "size": 0.95,
       "file": "web/site-hyper/plugins/revolution/js/extensions/source/revolution.extension.kenburn.js",
       "description": "Código-fonte: `web/site-hyper/plugins/revolution/js/extensions/source/revolution.extension.kenburn.js`"
     },
@@ -2196,7 +2196,7 @@
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
-      "size": 0.85,
+      "size": 0.95,
       "file": "web/site-hyper/plugins/revolution/js/extensions/source/revolution.extension.layeranimation.js",
       "description": "Código-fonte: `web/site-hyper/plugins/revolution/js/extensions/source/revolution.extension.layeranimation.js`"
     },
@@ -2208,7 +2208,7 @@
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
-      "size": 0.85,
+      "size": 0.95,
       "file": "web/site-hyper/plugins/revolution/js/extensions/source/revolution.extension.migration.js",
       "description": "Código-fonte: `web/site-hyper/plugins/revolution/js/extensions/source/revolution.extension.migration.js`"
     },
@@ -2220,7 +2220,7 @@
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
-      "size": 0.85,
+      "size": 0.95,
       "file": "web/site-hyper/plugins/revolution/js/extensions/source/revolution.extension.navigation.js",
       "description": "Código-fonte: `web/site-hyper/plugins/revolution/js/extensions/source/revolution.extension.navigation.js`"
     },
@@ -2232,7 +2232,7 @@
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
-      "size": 0.85,
+      "size": 0.95,
       "file": "web/site-hyper/plugins/revolution/js/extensions/source/revolution.extension.parallax.js",
       "description": "Código-fonte: `web/site-hyper/plugins/revolution/js/extensions/source/revolution.extension.parallax.js`"
     },
@@ -2244,7 +2244,7 @@
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
-      "size": 0.85,
+      "size": 0.95,
       "file": "web/site-hyper/plugins/revolution/js/extensions/source/revolution.extension.slideanims.js",
       "description": "Código-fonte: `web/site-hyper/plugins/revolution/js/extensions/source/revolution.extension.slideanims.js`"
     },
@@ -2256,7 +2256,7 @@
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
-      "size": 0.85,
+      "size": 0.95,
       "file": "web/site-hyper/plugins/revolution/js/extensions/source/revolution.extension.video.js",
       "description": "Código-fonte: `web/site-hyper/plugins/revolution/js/extensions/source/revolution.extension.video.js`"
     },
@@ -2268,7 +2268,7 @@
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
-      "size": 0.85,
+      "size": 0.95,
       "file": "web/site-hyper/plugins/revolution/js/source/index.php",
       "description": "Código-fonte: `web/site-hyper/plugins/revolution/js/source/index.php`"
     },
@@ -2280,7 +2280,7 @@
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
-      "size": 0.85,
+      "size": 0.95,
       "file": "web/site-hyper/plugins/revolution/js/source/jquery.themepunch.enablelog.js",
       "description": "Código-fonte: `web/site-hyper/plugins/revolution/js/source/jquery.themepunch.enablelog.js`"
     },
@@ -2292,7 +2292,7 @@
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
-      "size": 0.85,
+      "size": 0.95,
       "file": "web/site-hyper/plugins/revolution/js/source/jquery.themepunch.revolution.js",
       "description": "Código-fonte: `web/site-hyper/plugins/revolution/js/source/jquery.themepunch.revolution.js`"
     },
@@ -2304,7 +2304,7 @@
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
-      "size": 0.85,
+      "size": 0.95,
       "file": "web/site-hyper/plugins/revolution/js/source/jquery.themepunch.tools.min.js",
       "description": "Código-fonte: `web/site-hyper/plugins/revolution/js/source/jquery.themepunch.tools.min.js`"
     },
@@ -2316,7 +2316,7 @@
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
-      "size": 0.85,
+      "size": 0.95,
       "file": "web/site-hyper/plugins/revolution/js/source/tp-color-picker.js",
       "description": "Código-fonte: `web/site-hyper/plugins/revolution/js/source/tp-color-picker.js`"
     },
@@ -2328,7 +2328,7 @@
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
-      "size": 0.85,
+      "size": 0.95,
       "file": "web/site-hyper/plugins/revolution/php/facebook/class-facebook.php",
       "description": "Código-fonte: `web/site-hyper/plugins/revolution/php/facebook/class-facebook.php`"
     },
@@ -2340,7 +2340,7 @@
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
-      "size": 0.85,
+      "size": 0.95,
       "file": "web/site-hyper/plugins/revolution/php/flickr/class-flickr.php",
       "description": "Código-fonte: `web/site-hyper/plugins/revolution/php/flickr/class-flickr.php`"
     },
@@ -2352,7 +2352,7 @@
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
-      "size": 0.85,
+      "size": 0.95,
       "file": "web/site-hyper/plugins/revolution/php/instagram/class-instagram.php",
       "description": "Código-fonte: `web/site-hyper/plugins/revolution/php/instagram/class-instagram.php`"
     },
@@ -2364,7 +2364,7 @@
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
-      "size": 0.85,
+      "size": 0.95,
       "file": "web/site-hyper/plugins/revolution/php/twitter/class-twitter.php",
       "description": "Código-fonte: `web/site-hyper/plugins/revolution/php/twitter/class-twitter.php`"
     },
@@ -2376,7 +2376,7 @@
       "category": "network",
       "categoryLabel": "Rede / Scan",
       "color": "#22d3ee",
-      "size": 0.85,
+      "size": 0.95,
       "file": "web/site-hyper/plugins/revolution/php/twitter/RestApi.php",
       "description": "Código-fonte: `web/site-hyper/plugins/revolution/php/twitter/RestApi.php`"
     },
@@ -2388,7 +2388,7 @@
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
-      "size": 0.85,
+      "size": 0.95,
       "file": "web/site-hyper/plugins/revolution/php/twitter/connection/Application.php",
       "description": "Código-fonte: `web/site-hyper/plugins/revolution/php/twitter/connection/Application.php`"
     },
@@ -2400,7 +2400,7 @@
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
-      "size": 0.85,
+      "size": 0.95,
       "file": "web/site-hyper/plugins/revolution/php/twitter/connection/ConnectionAbstract.php",
       "description": "Código-fonte: `web/site-hyper/plugins/revolution/php/twitter/connection/ConnectionAbstract.php`"
     },
@@ -2412,7 +2412,7 @@
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
-      "size": 0.85,
+      "size": 0.95,
       "file": "web/site-hyper/plugins/revolution/php/twitter/connection/User.php",
       "description": "Código-fonte: `web/site-hyper/plugins/revolution/php/twitter/connection/User.php`"
     },
@@ -2424,7 +2424,7 @@
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
-      "size": 0.85,
+      "size": 0.95,
       "file": "web/site-hyper/plugins/revolution/php/vimeo/class-vimeo.php",
       "description": "Código-fonte: `web/site-hyper/plugins/revolution/php/vimeo/class-vimeo.php`"
     },
@@ -2436,7 +2436,7 @@
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
-      "size": 0.85,
+      "size": 0.95,
       "file": "web/site-hyper/plugins/revolution/php/youtube/class-youtube.php",
       "description": "Código-fonte: `web/site-hyper/plugins/revolution/php/youtube/class-youtube.php`"
     },
@@ -2496,7 +2496,7 @@
       "category": "frontend",
       "categoryLabel": "Frontend",
       "color": "#eab308",
-      "size": 0.85,
+      "size": 0.95,
       "file": "web/stats/awsindex.html",
       "description": "Código-fonte: `web/stats/awsindex.html`"
     },
@@ -2508,7 +2508,7 @@
       "category": "frontend",
       "categoryLabel": "Frontend",
       "color": "#eab308",
-      "size": 0.85,
+      "size": 0.95,
       "file": "web/stats/awstats.hyperware.com.br.alldomains.html",
       "description": "Código-fonte: `web/stats/awstats.hyperware.com.br.alldomains.html`"
     },
@@ -2520,7 +2520,7 @@
       "category": "frontend",
       "categoryLabel": "Frontend",
       "color": "#eab308",
-      "size": 0.85,
+      "size": 0.95,
       "file": "web/stats/awstats.hyperware.com.br.allhosts.html",
       "description": "Código-fonte: `web/stats/awstats.hyperware.com.br.allhosts.html`"
     },
@@ -2532,7 +2532,7 @@
       "category": "frontend",
       "categoryLabel": "Frontend",
       "color": "#eab308",
-      "size": 0.85,
+      "size": 0.95,
       "file": "web/stats/awstats.hyperware.com.br.allrobots.html",
       "description": "Código-fonte: `web/stats/awstats.hyperware.com.br.allrobots.html`"
     },
@@ -2544,7 +2544,7 @@
       "category": "frontend",
       "categoryLabel": "Frontend",
       "color": "#eab308",
-      "size": 0.85,
+      "size": 0.95,
       "file": "web/stats/awstats.hyperware.com.br.browserdetail.html",
       "description": "Código-fonte: `web/stats/awstats.hyperware.com.br.browserdetail.html`"
     },
@@ -2556,7 +2556,7 @@
       "category": "frontend",
       "categoryLabel": "Frontend",
       "color": "#eab308",
-      "size": 0.85,
+      "size": 0.95,
       "file": "web/stats/awstats.hyperware.com.br.downloads.html",
       "description": "Código-fonte: `web/stats/awstats.hyperware.com.br.downloads.html`"
     },
@@ -2568,7 +2568,7 @@
       "category": "frontend",
       "categoryLabel": "Frontend",
       "color": "#eab308",
-      "size": 0.85,
+      "size": 0.95,
       "file": "web/stats/awstats.hyperware.com.br.errors400.html",
       "description": "Código-fonte: `web/stats/awstats.hyperware.com.br.errors400.html`"
     },
@@ -2580,7 +2580,7 @@
       "category": "frontend",
       "categoryLabel": "Frontend",
       "color": "#eab308",
-      "size": 0.85,
+      "size": 0.95,
       "file": "web/stats/awstats.hyperware.com.br.errors403.html",
       "description": "Código-fonte: `web/stats/awstats.hyperware.com.br.errors403.html`"
     },
@@ -2592,7 +2592,7 @@
       "category": "frontend",
       "categoryLabel": "Frontend",
       "color": "#eab308",
-      "size": 0.85,
+      "size": 0.95,
       "file": "web/stats/awstats.hyperware.com.br.errors404.html",
       "description": "Código-fonte: `web/stats/awstats.hyperware.com.br.errors404.html`"
     },
@@ -2604,7 +2604,7 @@
       "category": "frontend",
       "categoryLabel": "Frontend",
       "color": "#eab308",
-      "size": 0.85,
+      "size": 0.95,
       "file": "web/stats/awstats.hyperware.com.br.keyphrases.html",
       "description": "Código-fonte: `web/stats/awstats.hyperware.com.br.keyphrases.html`"
     },
@@ -2616,7 +2616,7 @@
       "category": "frontend",
       "categoryLabel": "Frontend",
       "color": "#eab308",
-      "size": 0.85,
+      "size": 0.95,
       "file": "web/stats/awstats.hyperware.com.br.keywords.html",
       "description": "Código-fonte: `web/stats/awstats.hyperware.com.br.keywords.html`"
     },
@@ -2628,7 +2628,7 @@
       "category": "frontend",
       "categoryLabel": "Frontend",
       "color": "#eab308",
-      "size": 0.85,
+      "size": 0.95,
       "file": "web/stats/awstats.hyperware.com.br.lasthosts.html",
       "description": "Código-fonte: `web/stats/awstats.hyperware.com.br.lasthosts.html`"
     },
@@ -2640,7 +2640,7 @@
       "category": "frontend",
       "categoryLabel": "Frontend",
       "color": "#eab308",
-      "size": 0.85,
+      "size": 0.95,
       "file": "web/stats/awstats.hyperware.com.br.lastrobots.html",
       "description": "Código-fonte: `web/stats/awstats.hyperware.com.br.lastrobots.html`"
     },
@@ -2652,7 +2652,7 @@
       "category": "frontend",
       "categoryLabel": "Frontend",
       "color": "#eab308",
-      "size": 0.85,
+      "size": 0.95,
       "file": "web/stats/awstats.hyperware.com.br.osdetail.html",
       "description": "Código-fonte: `web/stats/awstats.hyperware.com.br.osdetail.html`"
     },
@@ -2664,7 +2664,7 @@
       "category": "frontend",
       "categoryLabel": "Frontend",
       "color": "#eab308",
-      "size": 0.85,
+      "size": 0.95,
       "file": "web/stats/awstats.hyperware.com.br.refererpages.html",
       "description": "Código-fonte: `web/stats/awstats.hyperware.com.br.refererpages.html`"
     },
@@ -2676,7 +2676,7 @@
       "category": "frontend",
       "categoryLabel": "Frontend",
       "color": "#eab308",
-      "size": 0.85,
+      "size": 0.95,
       "file": "web/stats/awstats.hyperware.com.br.refererse.html",
       "description": "Código-fonte: `web/stats/awstats.hyperware.com.br.refererse.html`"
     },
@@ -2688,7 +2688,7 @@
       "category": "frontend",
       "categoryLabel": "Frontend",
       "color": "#eab308",
-      "size": 0.85,
+      "size": 0.95,
       "file": "web/stats/awstats.hyperware.com.br.session.html",
       "description": "Código-fonte: `web/stats/awstats.hyperware.com.br.session.html`"
     },
@@ -2700,7 +2700,7 @@
       "category": "frontend",
       "categoryLabel": "Frontend",
       "color": "#eab308",
-      "size": 0.85,
+      "size": 0.95,
       "file": "web/stats/awstats.hyperware.com.br.unknownbrowser.html",
       "description": "Código-fonte: `web/stats/awstats.hyperware.com.br.unknownbrowser.html`"
     },
@@ -2712,7 +2712,7 @@
       "category": "frontend",
       "categoryLabel": "Frontend",
       "color": "#eab308",
-      "size": 0.85,
+      "size": 0.95,
       "file": "web/stats/awstats.hyperware.com.br.unknownip.html",
       "description": "Código-fonte: `web/stats/awstats.hyperware.com.br.unknownip.html`"
     },
@@ -2724,7 +2724,7 @@
       "category": "frontend",
       "categoryLabel": "Frontend",
       "color": "#eab308",
-      "size": 0.85,
+      "size": 0.95,
       "file": "web/stats/awstats.hyperware.com.br.unknownos.html",
       "description": "Código-fonte: `web/stats/awstats.hyperware.com.br.unknownos.html`"
     },
@@ -2736,7 +2736,7 @@
       "category": "frontend",
       "categoryLabel": "Frontend",
       "color": "#eab308",
-      "size": 0.85,
+      "size": 0.95,
       "file": "web/stats/awstats.hyperware.com.br.urldetail.html",
       "description": "Código-fonte: `web/stats/awstats.hyperware.com.br.urldetail.html`"
     },
@@ -2748,7 +2748,7 @@
       "category": "frontend",
       "categoryLabel": "Frontend",
       "color": "#eab308",
-      "size": 0.85,
+      "size": 0.95,
       "file": "web/stats/awstats.hyperware.com.br.urlentry.html",
       "description": "Código-fonte: `web/stats/awstats.hyperware.com.br.urlentry.html`"
     },
@@ -2760,7 +2760,7 @@
       "category": "frontend",
       "categoryLabel": "Frontend",
       "color": "#eab308",
-      "size": 0.85,
+      "size": 0.95,
       "file": "web/stats/awstats.hyperware.com.br.urlexit.html",
       "description": "Código-fonte: `web/stats/awstats.hyperware.com.br.urlexit.html`"
     },
@@ -2772,7 +2772,7 @@
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
-      "size": 0.85,
+      "size": 0.95,
       "file": "web/stats/index.php",
       "description": "Código-fonte: `web/stats/index.php`"
     },
@@ -2820,7 +2820,7 @@
       "category": "frontend",
       "categoryLabel": "Frontend",
       "color": "#eab308",
-      "size": 0.85,
+      "size": 0.95,
       "file": "web/stats/2020-6/awsindex.html",
       "description": "Código-fonte: `web/stats/2020-6/awsindex.html`"
     },
@@ -2832,7 +2832,7 @@
       "category": "frontend",
       "categoryLabel": "Frontend",
       "color": "#eab308",
-      "size": 0.85,
+      "size": 0.95,
       "file": "web/stats/2020-6/awstats.hyperware.com.br.alldomains.html",
       "description": "Código-fonte: `web/stats/2020-6/awstats.hyperware.com.br.alldomains.html`"
     },
@@ -2844,7 +2844,7 @@
       "category": "frontend",
       "categoryLabel": "Frontend",
       "color": "#eab308",
-      "size": 0.85,
+      "size": 0.95,
       "file": "web/stats/2020-6/awstats.hyperware.com.br.allhosts.html",
       "description": "Código-fonte: `web/stats/2020-6/awstats.hyperware.com.br.allhosts.html`"
     },
@@ -2856,7 +2856,7 @@
       "category": "frontend",
       "categoryLabel": "Frontend",
       "color": "#eab308",
-      "size": 0.85,
+      "size": 0.95,
       "file": "web/stats/2020-6/awstats.hyperware.com.br.allrobots.html",
       "description": "Código-fonte: `web/stats/2020-6/awstats.hyperware.com.br.allrobots.html`"
     },
@@ -2868,7 +2868,7 @@
       "category": "frontend",
       "categoryLabel": "Frontend",
       "color": "#eab308",
-      "size": 0.85,
+      "size": 0.95,
       "file": "web/stats/2020-6/awstats.hyperware.com.br.browserdetail.html",
       "description": "Código-fonte: `web/stats/2020-6/awstats.hyperware.com.br.browserdetail.html`"
     },
@@ -2880,7 +2880,7 @@
       "category": "frontend",
       "categoryLabel": "Frontend",
       "color": "#eab308",
-      "size": 0.85,
+      "size": 0.95,
       "file": "web/stats/2020-6/awstats.hyperware.com.br.downloads.html",
       "description": "Código-fonte: `web/stats/2020-6/awstats.hyperware.com.br.downloads.html`"
     },
@@ -2892,7 +2892,7 @@
       "category": "frontend",
       "categoryLabel": "Frontend",
       "color": "#eab308",
-      "size": 0.85,
+      "size": 0.95,
       "file": "web/stats/2020-6/awstats.hyperware.com.br.errors400.html",
       "description": "Código-fonte: `web/stats/2020-6/awstats.hyperware.com.br.errors400.html`"
     },
@@ -2904,7 +2904,7 @@
       "category": "frontend",
       "categoryLabel": "Frontend",
       "color": "#eab308",
-      "size": 0.85,
+      "size": 0.95,
       "file": "web/stats/2020-6/awstats.hyperware.com.br.errors403.html",
       "description": "Código-fonte: `web/stats/2020-6/awstats.hyperware.com.br.errors403.html`"
     },
@@ -2916,7 +2916,7 @@
       "category": "frontend",
       "categoryLabel": "Frontend",
       "color": "#eab308",
-      "size": 0.85,
+      "size": 0.95,
       "file": "web/stats/2020-6/awstats.hyperware.com.br.errors404.html",
       "description": "Código-fonte: `web/stats/2020-6/awstats.hyperware.com.br.errors404.html`"
     },
@@ -2928,7 +2928,7 @@
       "category": "frontend",
       "categoryLabel": "Frontend",
       "color": "#eab308",
-      "size": 0.85,
+      "size": 0.95,
       "file": "web/stats/2020-6/awstats.hyperware.com.br.keyphrases.html",
       "description": "Código-fonte: `web/stats/2020-6/awstats.hyperware.com.br.keyphrases.html`"
     },
@@ -2940,7 +2940,7 @@
       "category": "frontend",
       "categoryLabel": "Frontend",
       "color": "#eab308",
-      "size": 0.85,
+      "size": 0.95,
       "file": "web/stats/2020-6/awstats.hyperware.com.br.keywords.html",
       "description": "Código-fonte: `web/stats/2020-6/awstats.hyperware.com.br.keywords.html`"
     },
@@ -2952,7 +2952,7 @@
       "category": "frontend",
       "categoryLabel": "Frontend",
       "color": "#eab308",
-      "size": 0.85,
+      "size": 0.95,
       "file": "web/stats/2020-6/awstats.hyperware.com.br.lasthosts.html",
       "description": "Código-fonte: `web/stats/2020-6/awstats.hyperware.com.br.lasthosts.html`"
     },
@@ -2964,7 +2964,7 @@
       "category": "frontend",
       "categoryLabel": "Frontend",
       "color": "#eab308",
-      "size": 0.85,
+      "size": 0.95,
       "file": "web/stats/2020-6/awstats.hyperware.com.br.lastrobots.html",
       "description": "Código-fonte: `web/stats/2020-6/awstats.hyperware.com.br.lastrobots.html`"
     },
@@ -2976,7 +2976,7 @@
       "category": "frontend",
       "categoryLabel": "Frontend",
       "color": "#eab308",
-      "size": 0.85,
+      "size": 0.95,
       "file": "web/stats/2020-6/awstats.hyperware.com.br.osdetail.html",
       "description": "Código-fonte: `web/stats/2020-6/awstats.hyperware.com.br.osdetail.html`"
     },
@@ -2988,7 +2988,7 @@
       "category": "frontend",
       "categoryLabel": "Frontend",
       "color": "#eab308",
-      "size": 0.85,
+      "size": 0.95,
       "file": "web/stats/2020-6/awstats.hyperware.com.br.refererpages.html",
       "description": "Código-fonte: `web/stats/2020-6/awstats.hyperware.com.br.refererpages.html`"
     },
@@ -3000,7 +3000,7 @@
       "category": "frontend",
       "categoryLabel": "Frontend",
       "color": "#eab308",
-      "size": 0.85,
+      "size": 0.95,
       "file": "web/stats/2020-6/awstats.hyperware.com.br.refererse.html",
       "description": "Código-fonte: `web/stats/2020-6/awstats.hyperware.com.br.refererse.html`"
     },
@@ -3012,7 +3012,7 @@
       "category": "frontend",
       "categoryLabel": "Frontend",
       "color": "#eab308",
-      "size": 0.85,
+      "size": 0.95,
       "file": "web/stats/2020-6/awstats.hyperware.com.br.session.html",
       "description": "Código-fonte: `web/stats/2020-6/awstats.hyperware.com.br.session.html`"
     },
@@ -3024,7 +3024,7 @@
       "category": "frontend",
       "categoryLabel": "Frontend",
       "color": "#eab308",
-      "size": 0.85,
+      "size": 0.95,
       "file": "web/stats/2020-6/awstats.hyperware.com.br.unknownbrowser.html",
       "description": "Código-fonte: `web/stats/2020-6/awstats.hyperware.com.br.unknownbrowser.html`"
     },
@@ -3036,7 +3036,7 @@
       "category": "frontend",
       "categoryLabel": "Frontend",
       "color": "#eab308",
-      "size": 0.85,
+      "size": 0.95,
       "file": "web/stats/2020-6/awstats.hyperware.com.br.unknownip.html",
       "description": "Código-fonte: `web/stats/2020-6/awstats.hyperware.com.br.unknownip.html`"
     },
@@ -3048,7 +3048,7 @@
       "category": "frontend",
       "categoryLabel": "Frontend",
       "color": "#eab308",
-      "size": 0.85,
+      "size": 0.95,
       "file": "web/stats/2020-6/awstats.hyperware.com.br.unknownos.html",
       "description": "Código-fonte: `web/stats/2020-6/awstats.hyperware.com.br.unknownos.html`"
     },
@@ -3060,7 +3060,7 @@
       "category": "frontend",
       "categoryLabel": "Frontend",
       "color": "#eab308",
-      "size": 0.85,
+      "size": 0.95,
       "file": "web/stats/2020-6/awstats.hyperware.com.br.urldetail.html",
       "description": "Código-fonte: `web/stats/2020-6/awstats.hyperware.com.br.urldetail.html`"
     },
@@ -3072,7 +3072,7 @@
       "category": "frontend",
       "categoryLabel": "Frontend",
       "color": "#eab308",
-      "size": 0.85,
+      "size": 0.95,
       "file": "web/stats/2020-6/awstats.hyperware.com.br.urlentry.html",
       "description": "Código-fonte: `web/stats/2020-6/awstats.hyperware.com.br.urlentry.html`"
     },
@@ -3084,7 +3084,7 @@
       "category": "frontend",
       "categoryLabel": "Frontend",
       "color": "#eab308",
-      "size": 0.85,
+      "size": 0.95,
       "file": "web/stats/2020-6/awstats.hyperware.com.br.urlexit.html",
       "description": "Código-fonte: `web/stats/2020-6/awstats.hyperware.com.br.urlexit.html`"
     }

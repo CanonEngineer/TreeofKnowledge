@@ -524,7 +524,7 @@
       "category": "other",
       "categoryLabel": "Outros",
       "color": "#64748b",
-      "size": 0.85,
+      "size": 0.95,
       "file": ".gitignore",
       "description": "Código-fonte: `.gitignore`"
     },
@@ -536,7 +536,7 @@
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
-      "size": 0.85,
+      "size": 0.95,
       "file": "manage.py",
       "description": "Código-fonte: `manage.py`"
     },
@@ -548,7 +548,7 @@
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
-      "size": 0.85,
+      "size": 0.95,
       "file": "loja/__init__.py",
       "description": "Código-fonte: `loja/__init__.py`"
     },
@@ -560,7 +560,7 @@
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
-      "size": 0.85,
+      "size": 0.95,
       "file": "loja/settings.py",
       "description": "Código-fonte: `loja/settings.py`"
     },
@@ -572,7 +572,7 @@
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
-      "size": 0.85,
+      "size": 0.95,
       "file": "loja/urls.py",
       "description": "Código-fonte: `loja/urls.py`"
     },
@@ -584,7 +584,7 @@
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
-      "size": 0.85,
+      "size": 0.95,
       "file": "loja/wsgi.py",
       "description": "Código-fonte: `loja/wsgi.py`"
     },
@@ -596,7 +596,7 @@
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
-      "size": 0.85,
+      "size": 0.95,
       "file": "pedido/__init__.py",
       "description": "Código-fonte: `pedido/__init__.py`"
     },
@@ -608,7 +608,7 @@
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
-      "size": 0.85,
+      "size": 0.95,
       "file": "pedido/admin.py",
       "description": "Código-fonte: `pedido/admin.py`"
     },
@@ -620,7 +620,7 @@
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
-      "size": 0.85,
+      "size": 0.95,
       "file": "pedido/apps.py",
       "description": "Código-fonte: `pedido/apps.py`"
     },
@@ -632,7 +632,7 @@
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
-      "size": 0.85,
+      "size": 0.95,
       "file": "pedido/models.py",
       "description": "Código-fonte: `pedido/models.py`"
     },
@@ -644,7 +644,7 @@
       "category": "tests",
       "categoryLabel": "Testes",
       "color": "#94a3b8",
-      "size": 0.85,
+      "size": 0.95,
       "file": "pedido/tests.py",
       "description": "Código-fonte: `pedido/tests.py`"
     },
@@ -656,7 +656,7 @@
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
-      "size": 0.85,
+      "size": 0.95,
       "file": "pedido/urls.py",
       "description": "Código-fonte: `pedido/urls.py`"
     },
@@ -668,7 +668,7 @@
       "category": "frontend",
       "categoryLabel": "Frontend",
       "color": "#eab308",
-      "size": 0.85,
+      "size": 0.95,
       "file": "pedido/views.py",
       "description": "Código-fonte: `pedido/views.py`"
     },
@@ -680,7 +680,7 @@
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
-      "size": 0.85,
+      "size": 0.95,
       "file": "pedido/migrations/0001_initial.py",
       "description": "Código-fonte: `pedido/migrations/0001_initial.py`"
     },
@@ -692,7 +692,7 @@
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
-      "size": 0.85,
+      "size": 0.95,
       "file": "pedido/migrations/0002_auto_20190814_2105.py",
       "description": "Código-fonte: `pedido/migrations/0002_auto_20190814_2105.py`"
     },
@@ -704,7 +704,7 @@
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
-      "size": 0.85,
+      "size": 0.95,
       "file": "pedido/migrations/0003_pedido_qtd_total.py",
       "description": "Código-fonte: `pedido/migrations/0003_pedido_qtd_total.py`"
     },
@@ -716,7 +716,7 @@
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
-      "size": 0.85,
+      "size": 0.95,
       "file": "pedido/migrations/__init__.py",
       "description": "Código-fonte: `pedido/migrations/__init__.py`"
     },
@@ -728,7 +728,7 @@
       "category": "frontend",
       "categoryLabel": "Frontend",
       "color": "#eab308",
-      "size": 0.85,
+      "size": 0.95,
       "file": "pedido/templates/pedido/detalhe.html",
       "description": "Código-fonte: `pedido/templates/pedido/detalhe.html`"
     },
@@ -740,7 +740,7 @@
       "category": "frontend",
       "categoryLabel": "Frontend",
       "color": "#eab308",
-      "size": 0.85,
+      "size": 0.95,
       "file": "pedido/templates/pedido/lista.html",
       "description": "Código-fonte: `pedido/templates/pedido/lista.html`"
     },
@@ -752,7 +752,7 @@
       "category": "frontend",
       "categoryLabel": "Frontend",
       "color": "#eab308",
-      "size": 0.85,
+      "size": 0.95,
       "file": "pedido/templates/pedido/pagar.html",
       "description": "Código-fonte: `pedido/templates/pedido/pagar.html`"
     },
@@ -764,7 +764,7 @@
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
-      "size": 0.85,
+      "size": 0.95,
       "file": "perfil/__init__.py",
       "description": "Código-fonte: `perfil/__init__.py`"
     },
@@ -776,7 +776,7 @@
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
-      "size": 0.85,
+      "size": 0.95,
       "file": "perfil/admin.py",
       "description": "Código-fonte: `perfil/admin.py`"
     },
@@ -788,7 +788,7 @@
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
-      "size": 0.85,
+      "size": 0.95,
       "file": "perfil/apps.py",
       "description": "Código-fonte: `perfil/apps.py`"
     },
@@ -800,7 +800,7 @@
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
-      "size": 0.85,
+      "size": 0.95,
       "file": "perfil/forms.py",
       "description": "Código-fonte: `perfil/forms.py`"
     },
@@ -812,7 +812,7 @@
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
-      "size": 0.85,
+      "size": 0.95,
       "file": "perfil/models.py",
       "description": "Código-fonte: `perfil/models.py`"
     },
@@ -824,7 +824,7 @@
       "category": "tests",
       "categoryLabel": "Testes",
       "color": "#94a3b8",
-      "size": 0.85,
+      "size": 0.95,
       "file": "perfil/tests.py",
       "description": "Código-fonte: `perfil/tests.py`"
     },
@@ -836,7 +836,7 @@
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
-      "size": 0.85,
+      "size": 0.95,
       "file": "perfil/urls.py",
       "description": "Código-fonte: `perfil/urls.py`"
     },
@@ -848,7 +848,7 @@
       "category": "frontend",
       "categoryLabel": "Frontend",
       "color": "#eab308",
-      "size": 0.85,
+      "size": 0.95,
       "file": "perfil/views.py",
       "description": "Código-fonte: `perfil/views.py`"
     },
@@ -860,7 +860,7 @@
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
-      "size": 0.85,
+      "size": 0.95,
       "file": "perfil/migrations/0001_initial.py",
       "description": "Código-fonte: `perfil/migrations/0001_initial.py`"
     },
@@ -872,7 +872,7 @@
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
-      "size": 0.85,
+      "size": 0.95,
       "file": "perfil/migrations/0002_auto_20190814_2352.py",
       "description": "Código-fonte: `perfil/migrations/0002_auto_20190814_2352.py`"
     },
@@ -884,7 +884,7 @@
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
-      "size": 0.85,
+      "size": 0.95,
       "file": "perfil/migrations/0002_auto_20190815_1039.py",
       "description": "Código-fonte: `perfil/migrations/0002_auto_20190815_1039.py`"
     },
@@ -896,7 +896,7 @@
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
-      "size": 0.85,
+      "size": 0.95,
       "file": "perfil/migrations/0003_merge_20190815_1128.py",
       "description": "Código-fonte: `perfil/migrations/0003_merge_20190815_1128.py`"
     },
@@ -908,7 +908,7 @@
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
-      "size": 0.85,
+      "size": 0.95,
       "file": "perfil/migrations/__init__.py",
       "description": "Código-fonte: `perfil/migrations/__init__.py`"
     },
@@ -920,7 +920,7 @@
       "category": "frontend",
       "categoryLabel": "Frontend",
       "color": "#eab308",
-      "size": 0.85,
+      "size": 0.95,
       "file": "perfil/templates/perfil/atualizar.html",
       "description": "Código-fonte: `perfil/templates/perfil/atualizar.html`"
     },
@@ -932,7 +932,7 @@
       "category": "frontend",
       "categoryLabel": "Frontend",
       "color": "#eab308",
-      "size": 0.85,
+      "size": 0.95,
       "file": "perfil/templates/perfil/criar.html",
       "description": "Código-fonte: `perfil/templates/perfil/criar.html`"
     },
@@ -944,7 +944,7 @@
       "category": "frontend",
       "categoryLabel": "Frontend",
       "color": "#eab308",
-      "size": 0.85,
+      "size": 0.95,
       "file": "perfil/templates/perfil/login.html",
       "description": "Código-fonte: `perfil/templates/perfil/login.html`"
     },
@@ -956,7 +956,7 @@
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
-      "size": 0.85,
+      "size": 0.95,
       "file": "produto/__init__.py",
       "description": "Código-fonte: `produto/__init__.py`"
     },
@@ -968,7 +968,7 @@
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
-      "size": 0.85,
+      "size": 0.95,
       "file": "produto/admin.py",
       "description": "Código-fonte: `produto/admin.py`"
     },
@@ -980,7 +980,7 @@
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
-      "size": 0.85,
+      "size": 0.95,
       "file": "produto/apps.py",
       "description": "Código-fonte: `produto/apps.py`"
     },
@@ -992,7 +992,7 @@
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
-      "size": 0.85,
+      "size": 0.95,
       "file": "produto/forms.py",
       "description": "Código-fonte: `produto/forms.py`"
     },
@@ -1004,7 +1004,7 @@
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
-      "size": 0.85,
+      "size": 0.95,
       "file": "produto/models.py",
       "description": "Código-fonte: `produto/models.py`"
     },
@@ -1016,7 +1016,7 @@
       "category": "tests",
       "categoryLabel": "Testes",
       "color": "#94a3b8",
-      "size": 0.85,
+      "size": 0.95,
       "file": "produto/tests.py",
       "description": "Código-fonte: `produto/tests.py`"
     },
@@ -1028,7 +1028,7 @@
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
-      "size": 0.85,
+      "size": 0.95,
       "file": "produto/urls.py",
       "description": "Código-fonte: `produto/urls.py`"
     },
@@ -1040,7 +1040,7 @@
       "category": "frontend",
       "categoryLabel": "Frontend",
       "color": "#eab308",
-      "size": 0.85,
+      "size": 0.95,
       "file": "produto/views.py",
       "description": "Código-fonte: `produto/views.py`"
     },
@@ -1088,7 +1088,7 @@
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
-      "size": 0.85,
+      "size": 0.95,
       "file": "produto/migrations/0001_initial.py",
       "description": "Código-fonte: `produto/migrations/0001_initial.py`"
     },
@@ -1100,7 +1100,7 @@
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
-      "size": 0.85,
+      "size": 0.95,
       "file": "produto/migrations/0002_variacao.py",
       "description": "Código-fonte: `produto/migrations/0002_variacao.py`"
     },
@@ -1112,7 +1112,7 @@
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
-      "size": 0.85,
+      "size": 0.95,
       "file": "produto/migrations/0003_auto_20190814_2044.py",
       "description": "Código-fonte: `produto/migrations/0003_auto_20190814_2044.py`"
     },
@@ -1124,7 +1124,7 @@
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
-      "size": 0.85,
+      "size": 0.95,
       "file": "produto/migrations/0003_variacao_nome.py",
       "description": "Código-fonte: `produto/migrations/0003_variacao_nome.py`"
     },
@@ -1136,7 +1136,7 @@
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
-      "size": 0.85,
+      "size": 0.95,
       "file": "produto/migrations/0004_auto_20190814_0700.py",
       "description": "Código-fonte: `produto/migrations/0004_auto_20190814_0700.py`"
     },
@@ -1148,7 +1148,7 @@
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
-      "size": 0.85,
+      "size": 0.95,
       "file": "produto/migrations/0004_auto_20190815_1039.py",
       "description": "Código-fonte: `produto/migrations/0004_auto_20190815_1039.py`"
     },
@@ -1160,7 +1160,7 @@
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
-      "size": 0.85,
+      "size": 0.95,
       "file": "produto/migrations/0005_auto_20190814_2316.py",
       "description": "Código-fonte: `produto/migrations/0005_auto_20190814_2316.py`"
     },
@@ -1172,7 +1172,7 @@
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
-      "size": 0.85,
+      "size": 0.95,
       "file": "produto/migrations/0005_auto_20190815_1042.py",
       "description": "Código-fonte: `produto/migrations/0005_auto_20190815_1042.py`"
     },
@@ -1184,7 +1184,7 @@
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
-      "size": 0.85,
+      "size": 0.95,
       "file": "produto/migrations/0006_auto_20190815_0956.py",
       "description": "Código-fonte: `produto/migrations/0006_auto_20190815_0956.py`"
     },
@@ -1196,7 +1196,7 @@
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
-      "size": 0.85,
+      "size": 0.95,
       "file": "produto/migrations/0007_auto_20190815_1026.py",
       "description": "Código-fonte: `produto/migrations/0007_auto_20190815_1026.py`"
     },
@@ -1208,7 +1208,7 @@
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
-      "size": 0.85,
+      "size": 0.95,
       "file": "produto/migrations/0008_merge_20190815_1128.py",
       "description": "Código-fonte: `produto/migrations/0008_merge_20190815_1128.py`"
     },
@@ -1220,7 +1220,7 @@
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
-      "size": 0.85,
+      "size": 0.95,
       "file": "produto/migrations/0009_auto_20190815_1147.py",
       "description": "Código-fonte: `produto/migrations/0009_auto_20190815_1147.py`"
     },
@@ -1232,7 +1232,7 @@
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
-      "size": 0.85,
+      "size": 0.95,
       "file": "produto/migrations/__init__.py",
       "description": "Código-fonte: `produto/migrations/__init__.py`"
     },
@@ -1244,7 +1244,7 @@
       "category": "frontend",
       "categoryLabel": "Frontend",
       "color": "#eab308",
-      "size": 0.85,
+      "size": 0.95,
       "file": "produto/templates/produto/carrinho.html",
       "description": "Código-fonte: `produto/templates/produto/carrinho.html`"
     },
@@ -1256,7 +1256,7 @@
       "category": "frontend",
       "categoryLabel": "Frontend",
       "color": "#eab308",
-      "size": 0.85,
+      "size": 0.95,
       "file": "produto/templates/produto/detalhe.html",
       "description": "Código-fonte: `produto/templates/produto/detalhe.html`"
     },
@@ -1268,7 +1268,7 @@
       "category": "frontend",
       "categoryLabel": "Frontend",
       "color": "#eab308",
-      "size": 0.85,
+      "size": 0.95,
       "file": "produto/templates/produto/lista.html",
       "description": "Código-fonte: `produto/templates/produto/lista.html`"
     },
@@ -1280,7 +1280,7 @@
       "category": "frontend",
       "categoryLabel": "Frontend",
       "color": "#eab308",
-      "size": 0.85,
+      "size": 0.95,
       "file": "produto/templates/produto/resumodacompra.html",
       "description": "Código-fonte: `produto/templates/produto/resumodacompra.html`"
     },
@@ -1292,7 +1292,7 @@
       "category": "frontend",
       "categoryLabel": "Frontend",
       "color": "#eab308",
-      "size": 0.85,
+      "size": 0.95,
       "file": "produto/templatetags/__init__.py",
       "description": "Código-fonte: `produto/templatetags/__init__.py`"
     },
@@ -1304,7 +1304,7 @@
       "category": "frontend",
       "categoryLabel": "Frontend",
       "color": "#eab308",
-      "size": 0.85,
+      "size": 0.95,
       "file": "produto/templatetags/omfilters.py",
       "description": "Código-fonte: `produto/templatetags/omfilters.py`"
     },
@@ -1316,7 +1316,7 @@
       "category": "frontend",
       "categoryLabel": "Frontend",
       "color": "#eab308",
-      "size": 0.85,
+      "size": 0.95,
       "file": "templates/404.html",
       "description": "Código-fonte: `templates/404.html`"
     },
@@ -1328,7 +1328,7 @@
       "category": "frontend",
       "categoryLabel": "Frontend",
       "color": "#eab308",
-      "size": 0.85,
+      "size": 0.95,
       "file": "templates/base.html",
       "description": "Código-fonte: `templates/base.html`"
     },
@@ -1340,7 +1340,7 @@
       "category": "frontend",
       "categoryLabel": "Frontend",
       "color": "#eab308",
-      "size": 0.85,
+      "size": 0.95,
       "file": "templates/parciais/_bodylogin.html",
       "description": "Código-fonte: `templates/parciais/_bodylogin.html`"
     },
@@ -1352,7 +1352,7 @@
       "category": "frontend",
       "categoryLabel": "Frontend",
       "color": "#eab308",
-      "size": 0.85,
+      "size": 0.95,
       "file": "templates/parciais/_carrinho.html",
       "description": "Código-fonte: `templates/parciais/_carrinho.html`"
     },
@@ -1364,7 +1364,7 @@
       "category": "frontend",
       "categoryLabel": "Frontend",
       "color": "#eab308",
-      "size": 0.85,
+      "size": 0.95,
       "file": "templates/parciais/_footer.html",
       "description": "Código-fonte: `templates/parciais/_footer.html`"
     },
@@ -1376,7 +1376,7 @@
       "category": "frontend",
       "categoryLabel": "Frontend",
       "color": "#eab308",
-      "size": 0.85,
+      "size": 0.95,
       "file": "templates/parciais/_head.html",
       "description": "Código-fonte: `templates/parciais/_head.html`"
     },
@@ -1388,7 +1388,7 @@
       "category": "frontend",
       "categoryLabel": "Frontend",
       "color": "#eab308",
-      "size": 0.85,
+      "size": 0.95,
       "file": "templates/parciais/_headlogin.html",
       "description": "Código-fonte: `templates/parciais/_headlogin.html`"
     },
@@ -1400,7 +1400,7 @@
       "category": "frontend",
       "categoryLabel": "Frontend",
       "color": "#eab308",
-      "size": 0.85,
+      "size": 0.95,
       "file": "templates/parciais/_messages.html",
       "description": "Código-fonte: `templates/parciais/_messages.html`"
     },
@@ -1412,7 +1412,7 @@
       "category": "frontend",
       "categoryLabel": "Frontend",
       "color": "#eab308",
-      "size": 0.85,
+      "size": 0.95,
       "file": "templates/parciais/_nav.html",
       "description": "Código-fonte: `templates/parciais/_nav.html`"
     },
@@ -1424,7 +1424,7 @@
       "category": "frontend",
       "categoryLabel": "Frontend",
       "color": "#eab308",
-      "size": 0.85,
+      "size": 0.95,
       "file": "templates/parciais/_pagination.html",
       "description": "Código-fonte: `templates/parciais/_pagination.html`"
     },
@@ -1436,7 +1436,7 @@
       "category": "frontend",
       "categoryLabel": "Frontend",
       "color": "#eab308",
-      "size": 0.85,
+      "size": 0.95,
       "file": "templates/parciais/_pedido.html",
       "description": "Código-fonte: `templates/parciais/_pedido.html`"
     },
@@ -1448,7 +1448,7 @@
       "category": "frontend",
       "categoryLabel": "Frontend",
       "color": "#eab308",
-      "size": 0.85,
+      "size": 0.95,
       "file": "templates/static/assets/bootstrap/css/bootstrap.css",
       "description": "Código-fonte: `templates/static/assets/bootstrap/css/bootstrap.css`"
     },
@@ -1460,7 +1460,7 @@
       "category": "frontend",
       "categoryLabel": "Frontend",
       "color": "#eab308",
-      "size": 0.85,
+      "size": 0.95,
       "file": "templates/static/assets/bootstrap/css/bootstrap.min.css",
       "description": "Código-fonte: `templates/static/assets/bootstrap/css/bootstrap.min.css`"
     },
@@ -1472,7 +1472,7 @@
       "category": "frontend",
       "categoryLabel": "Frontend",
       "color": "#eab308",
-      "size": 0.85,
+      "size": 0.95,
       "file": "templates/static/assets/bootstrap/js/bootstrap.min.js",
       "description": "Código-fonte: `templates/static/assets/bootstrap/js/bootstrap.min.js`"
     },
@@ -1484,7 +1484,7 @@
       "category": "frontend",
       "categoryLabel": "Frontend",
       "color": "#eab308",
-      "size": 0.85,
+      "size": 0.95,
       "file": "templates/static/assets/bootstrap/js/jquery-3.2.1.slim.min.js",
       "description": "Código-fonte: `templates/static/assets/bootstrap/js/jquery-3.2.1.slim.min.js`"
     },
@@ -1496,7 +1496,7 @@
       "category": "frontend",
       "categoryLabel": "Frontend",
       "color": "#eab308",
-      "size": 0.85,
+      "size": 0.95,
       "file": "templates/static/assets/bootstrap/js/popper.min.js",
       "description": "Código-fonte: `templates/static/assets/bootstrap/js/popper.min.js`"
     },
@@ -1508,7 +1508,7 @@
       "category": "frontend",
       "categoryLabel": "Frontend",
       "color": "#eab308",
-      "size": 0.85,
+      "size": 0.95,
       "file": "templates/static/assets/custom/css/style.css",
       "description": "Código-fonte: `templates/static/assets/custom/css/style.css`"
     },
@@ -1520,7 +1520,7 @@
       "category": "frontend",
       "categoryLabel": "Frontend",
       "color": "#eab308",
-      "size": 0.85,
+      "size": 0.95,
       "file": "templates/static/assets/custom/js/scripts.js",
       "description": "Código-fonte: `templates/static/assets/custom/js/scripts.js`"
     },
@@ -1556,7 +1556,7 @@
       "category": "frontend",
       "categoryLabel": "Frontend",
       "color": "#eab308",
-      "size": 0.85,
+      "size": 0.95,
       "file": "templates/static/assets/font-awesome/css/all.css",
       "description": "Código-fonte: `templates/static/assets/font-awesome/css/all.css`"
     },
@@ -1568,7 +1568,7 @@
       "category": "frontend",
       "categoryLabel": "Frontend",
       "color": "#eab308",
-      "size": 0.85,
+      "size": 0.95,
       "file": "templates/static/assets/font-awesome/css/all.min.css",
       "description": "Código-fonte: `templates/static/assets/font-awesome/css/all.min.css`"
     },
@@ -1580,7 +1580,7 @@
       "category": "frontend",
       "categoryLabel": "Frontend",
       "color": "#eab308",
-      "size": 0.85,
+      "size": 0.95,
       "file": "templates/static/assets/font-awesome/css/brands.css",
       "description": "Código-fonte: `templates/static/assets/font-awesome/css/brands.css`"
     },
@@ -1592,7 +1592,7 @@
       "category": "frontend",
       "categoryLabel": "Frontend",
       "color": "#eab308",
-      "size": 0.85,
+      "size": 0.95,
       "file": "templates/static/assets/font-awesome/css/brands.min.css",
       "description": "Código-fonte: `templates/static/assets/font-awesome/css/brands.min.css`"
     },
@@ -1604,7 +1604,7 @@
       "category": "frontend",
       "categoryLabel": "Frontend",
       "color": "#eab308",
-      "size": 0.85,
+      "size": 0.95,
       "file": "templates/static/assets/font-awesome/css/fontawesome.css",
       "description": "Código-fonte: `templates/static/assets/font-awesome/css/fontawesome.css`"
     },
@@ -1616,7 +1616,7 @@
       "category": "frontend",
       "categoryLabel": "Frontend",
       "color": "#eab308",
-      "size": 0.85,
+      "size": 0.95,
       "file": "templates/static/assets/font-awesome/css/fontawesome.min.css",
       "description": "Código-fonte: `templates/static/assets/font-awesome/css/fontawesome.min.css`"
     },
@@ -1628,7 +1628,7 @@
       "category": "frontend",
       "categoryLabel": "Frontend",
       "color": "#eab308",
-      "size": 0.85,
+      "size": 0.95,
       "file": "templates/static/assets/font-awesome/css/regular.css",
       "description": "Código-fonte: `templates/static/assets/font-awesome/css/regular.css`"
     },
@@ -1640,7 +1640,7 @@
       "category": "frontend",
       "categoryLabel": "Frontend",
       "color": "#eab308",
-      "size": 0.85,
+      "size": 0.95,
       "file": "templates/static/assets/font-awesome/css/regular.min.css",
       "description": "Código-fonte: `templates/static/assets/font-awesome/css/regular.min.css`"
     },
@@ -1652,7 +1652,7 @@
       "category": "frontend",
       "categoryLabel": "Frontend",
       "color": "#eab308",
-      "size": 0.85,
+      "size": 0.95,
       "file": "templates/static/assets/font-awesome/css/solid.css",
       "description": "Código-fonte: `templates/static/assets/font-awesome/css/solid.css`"
     },
@@ -1664,7 +1664,7 @@
       "category": "frontend",
       "categoryLabel": "Frontend",
       "color": "#eab308",
-      "size": 0.85,
+      "size": 0.95,
       "file": "templates/static/assets/font-awesome/css/solid.min.css",
       "description": "Código-fonte: `templates/static/assets/font-awesome/css/solid.min.css`"
     },
@@ -1676,7 +1676,7 @@
       "category": "frontend",
       "categoryLabel": "Frontend",
       "color": "#eab308",
-      "size": 0.85,
+      "size": 0.95,
       "file": "templates/static/assets/font-awesome/css/svg-with-js.css",
       "description": "Código-fonte: `templates/static/assets/font-awesome/css/svg-with-js.css`"
     },
@@ -1688,7 +1688,7 @@
       "category": "frontend",
       "categoryLabel": "Frontend",
       "color": "#eab308",
-      "size": 0.85,
+      "size": 0.95,
       "file": "templates/static/assets/font-awesome/css/svg-with-js.min.css",
       "description": "Código-fonte: `templates/static/assets/font-awesome/css/svg-with-js.min.css`"
     },
@@ -1700,7 +1700,7 @@
       "category": "frontend",
       "categoryLabel": "Frontend",
       "color": "#eab308",
-      "size": 0.85,
+      "size": 0.95,
       "file": "templates/static/assets/font-awesome/css/v4-shims.css",
       "description": "Código-fonte: `templates/static/assets/font-awesome/css/v4-shims.css`"
     },
@@ -1712,7 +1712,7 @@
       "category": "frontend",
       "categoryLabel": "Frontend",
       "color": "#eab308",
-      "size": 0.85,
+      "size": 0.95,
       "file": "templates/static/assets/font-awesome/css/v4-shims.min.css",
       "description": "Código-fonte: `templates/static/assets/font-awesome/css/v4-shims.min.css`"
     },
@@ -1748,7 +1748,7 @@
       "category": "frontend",
       "categoryLabel": "Frontend",
       "color": "#eab308",
-      "size": 0.85,
+      "size": 0.95,
       "file": "templates/static/assets/font-awesome/js/all.js",
       "description": "Código-fonte: `templates/static/assets/font-awesome/js/all.js`"
     },
@@ -1760,7 +1760,7 @@
       "category": "frontend",
       "categoryLabel": "Frontend",
       "color": "#eab308",
-      "size": 0.85,
+      "size": 0.95,
       "file": "templates/static/assets/font-awesome/js/all.min.js",
       "description": "Código-fonte: `templates/static/assets/font-awesome/js/all.min.js`"
     },
@@ -1772,7 +1772,7 @@
       "category": "frontend",
       "categoryLabel": "Frontend",
       "color": "#eab308",
-      "size": 0.85,
+      "size": 0.95,
       "file": "templates/static/assets/font-awesome/js/brands.js",
       "description": "Código-fonte: `templates/static/assets/font-awesome/js/brands.js`"
     },
@@ -1784,7 +1784,7 @@
       "category": "frontend",
       "categoryLabel": "Frontend",
       "color": "#eab308",
-      "size": 0.85,
+      "size": 0.95,
       "file": "templates/static/assets/font-awesome/js/brands.min.js",
       "description": "Código-fonte: `templates/static/assets/font-awesome/js/brands.min.js`"
     },
@@ -1796,7 +1796,7 @@
       "category": "frontend",
       "categoryLabel": "Frontend",
       "color": "#eab308",
-      "size": 0.85,
+      "size": 0.95,
       "file": "templates/static/assets/font-awesome/js/conflict-detection.js",
       "description": "Código-fonte: `templates/static/assets/font-awesome/js/conflict-detection.js`"
     },
@@ -1808,7 +1808,7 @@
       "category": "frontend",
       "categoryLabel": "Frontend",
       "color": "#eab308",
-      "size": 0.85,
+      "size": 0.95,
       "file": "templates/static/assets/font-awesome/js/conflict-detection.min.js",
       "description": "Código-fonte: `templates/static/assets/font-awesome/js/conflict-detection.min.js`"
     },
@@ -1820,7 +1820,7 @@
       "category": "frontend",
       "categoryLabel": "Frontend",
       "color": "#eab308",
-      "size": 0.85,
+      "size": 0.95,
       "file": "templates/static/assets/font-awesome/js/fontawesome.js",
       "description": "Código-fonte: `templates/static/assets/font-awesome/js/fontawesome.js`"
     },
@@ -1832,7 +1832,7 @@
       "category": "frontend",
       "categoryLabel": "Frontend",
       "color": "#eab308",
-      "size": 0.85,
+      "size": 0.95,
       "file": "templates/static/assets/font-awesome/js/fontawesome.min.js",
       "description": "Código-fonte: `templates/static/assets/font-awesome/js/fontawesome.min.js`"
     },
@@ -1844,7 +1844,7 @@
       "category": "frontend",
       "categoryLabel": "Frontend",
       "color": "#eab308",
-      "size": 0.85,
+      "size": 0.95,
       "file": "templates/static/assets/font-awesome/js/regular.js",
       "description": "Código-fonte: `templates/static/assets/font-awesome/js/regular.js`"
     },
@@ -1856,7 +1856,7 @@
       "category": "frontend",
       "categoryLabel": "Frontend",
       "color": "#eab308",
-      "size": 0.85,
+      "size": 0.95,
       "file": "templates/static/assets/font-awesome/js/regular.min.js",
       "description": "Código-fonte: `templates/static/assets/font-awesome/js/regular.min.js`"
     },
@@ -1868,7 +1868,7 @@
       "category": "frontend",
       "categoryLabel": "Frontend",
       "color": "#eab308",
-      "size": 0.85,
+      "size": 0.95,
       "file": "templates/static/assets/font-awesome/js/solid.js",
       "description": "Código-fonte: `templates/static/assets/font-awesome/js/solid.js`"
     },
@@ -1880,7 +1880,7 @@
       "category": "frontend",
       "categoryLabel": "Frontend",
       "color": "#eab308",
-      "size": 0.85,
+      "size": 0.95,
       "file": "templates/static/assets/font-awesome/js/solid.min.js",
       "description": "Código-fonte: `templates/static/assets/font-awesome/js/solid.min.js`"
     },
@@ -1892,7 +1892,7 @@
       "category": "frontend",
       "categoryLabel": "Frontend",
       "color": "#eab308",
-      "size": 0.85,
+      "size": 0.95,
       "file": "templates/static/assets/font-awesome/js/v4-shims.js",
       "description": "Código-fonte: `templates/static/assets/font-awesome/js/v4-shims.js`"
     },
@@ -1904,7 +1904,7 @@
       "category": "frontend",
       "categoryLabel": "Frontend",
       "color": "#eab308",
-      "size": 0.85,
+      "size": 0.95,
       "file": "templates/static/assets/font-awesome/js/v4-shims.min.js",
       "description": "Código-fonte: `templates/static/assets/font-awesome/js/v4-shims.min.js`"
     },
@@ -1916,7 +1916,7 @@
       "category": "frontend",
       "categoryLabel": "Frontend",
       "color": "#eab308",
-      "size": 0.85,
+      "size": 0.95,
       "file": "templates/static/assets/font-awesome/metadata/categories.yml",
       "description": "Código-fonte: `templates/static/assets/font-awesome/metadata/categories.yml`"
     },
@@ -1928,7 +1928,7 @@
       "category": "frontend",
       "categoryLabel": "Frontend",
       "color": "#eab308",
-      "size": 0.85,
+      "size": 0.95,
       "file": "templates/static/assets/font-awesome/metadata/icons.yml",
       "description": "Código-fonte: `templates/static/assets/font-awesome/metadata/icons.yml`"
     },
@@ -1940,7 +1940,7 @@
       "category": "frontend",
       "categoryLabel": "Frontend",
       "color": "#eab308",
-      "size": 0.85,
+      "size": 0.95,
       "file": "templates/static/assets/font-awesome/metadata/shims.json",
       "description": "Código-fonte: `templates/static/assets/font-awesome/metadata/shims.json`"
     },
@@ -1952,7 +1952,7 @@
       "category": "frontend",
       "categoryLabel": "Frontend",
       "color": "#eab308",
-      "size": 0.85,
+      "size": 0.95,
       "file": "templates/static/assets/font-awesome/metadata/shims.yml",
       "description": "Código-fonte: `templates/static/assets/font-awesome/metadata/shims.yml`"
     },
@@ -1964,7 +1964,7 @@
       "category": "frontend",
       "categoryLabel": "Frontend",
       "color": "#eab308",
-      "size": 0.85,
+      "size": 0.95,
       "file": "templates/static/assets/font-awesome/metadata/sponsors.yml",
       "description": "Código-fonte: `templates/static/assets/font-awesome/metadata/sponsors.yml`"
     },
@@ -2024,7 +2024,7 @@
       "category": "frontend",
       "categoryLabel": "Frontend",
       "color": "#eab308",
-      "size": 0.85,
+      "size": 0.95,
       "file": "templates/static/assets/font-awesome/scss/_animated.scss",
       "description": "Código-fonte: `templates/static/assets/font-awesome/scss/_animated.scss`"
     },
@@ -2036,7 +2036,7 @@
       "category": "frontend",
       "categoryLabel": "Frontend",
       "color": "#eab308",
-      "size": 0.85,
+      "size": 0.95,
       "file": "templates/static/assets/font-awesome/scss/_bordered-pulled.scss",
       "description": "Código-fonte: `templates/static/assets/font-awesome/scss/_bordered-pulled.scss`"
     },
@@ -2048,7 +2048,7 @@
       "category": "frontend",
       "categoryLabel": "Frontend",
       "color": "#eab308",
-      "size": 0.85,
+      "size": 0.95,
       "file": "templates/static/assets/font-awesome/scss/_core.scss",
       "description": "Código-fonte: `templates/static/assets/font-awesome/scss/_core.scss`"
     },
@@ -2060,7 +2060,7 @@
       "category": "frontend",
       "categoryLabel": "Frontend",
       "color": "#eab308",
-      "size": 0.85,
+      "size": 0.95,
       "file": "templates/static/assets/font-awesome/scss/_fixed-width.scss",
       "description": "Código-fonte: `templates/static/assets/font-awesome/scss/_fixed-width.scss`"
     },
@@ -2072,7 +2072,7 @@
       "category": "frontend",
       "categoryLabel": "Frontend",
       "color": "#eab308",
-      "size": 0.85,
+      "size": 0.95,
       "file": "templates/static/assets/font-awesome/scss/_icons.scss",
       "description": "Código-fonte: `templates/static/assets/font-awesome/scss/_icons.scss`"
     },
@@ -2084,7 +2084,7 @@
       "category": "frontend",
       "categoryLabel": "Frontend",
       "color": "#eab308",
-      "size": 0.85,
+      "size": 0.95,
       "file": "templates/static/assets/font-awesome/scss/_larger.scss",
       "description": "Código-fonte: `templates/static/assets/font-awesome/scss/_larger.scss`"
     },
@@ -2096,7 +2096,7 @@
       "category": "frontend",
       "categoryLabel": "Frontend",
       "color": "#eab308",
-      "size": 0.85,
+      "size": 0.95,
       "file": "templates/static/assets/font-awesome/scss/_list.scss",
       "description": "Código-fonte: `templates/static/assets/font-awesome/scss/_list.scss`"
     },
@@ -2108,7 +2108,7 @@
       "category": "frontend",
       "categoryLabel": "Frontend",
       "color": "#eab308",
-      "size": 0.85,
+      "size": 0.95,
       "file": "templates/static/assets/font-awesome/scss/_mixins.scss",
       "description": "Código-fonte: `templates/static/assets/font-awesome/scss/_mixins.scss`"
     },
@@ -2120,7 +2120,7 @@
       "category": "frontend",
       "categoryLabel": "Frontend",
       "color": "#eab308",
-      "size": 0.85,
+      "size": 0.95,
       "file": "templates/static/assets/font-awesome/scss/_rotated-flipped.scss",
       "description": "Código-fonte: `templates/static/assets/font-awesome/scss/_rotated-flipped.scss`"
     },
@@ -2132,7 +2132,7 @@
       "category": "frontend",
       "categoryLabel": "Frontend",
       "color": "#eab308",
-      "size": 0.85,
+      "size": 0.95,
       "file": "templates/static/assets/font-awesome/scss/_screen-reader.scss",
       "description": "Código-fonte: `templates/static/assets/font-awesome/scss/_screen-reader.scss`"
     },
@@ -2144,7 +2144,7 @@
       "category": "frontend",
       "categoryLabel": "Frontend",
       "color": "#eab308",
-      "size": 0.85,
+      "size": 0.95,
       "file": "templates/static/assets/font-awesome/scss/_shims.scss",
       "description": "Código-fonte: `templates/static/assets/font-awesome/scss/_shims.scss`"
     },
@@ -2156,7 +2156,7 @@
       "category": "frontend",
       "categoryLabel": "Frontend",
       "color": "#eab308",
-      "size": 0.85,
+      "size": 0.95,
       "file": "templates/static/assets/font-awesome/scss/_stacked.scss",
       "description": "Código-fonte: `templates/static/assets/font-awesome/scss/_stacked.scss`"
     },
@@ -2168,7 +2168,7 @@
       "category": "frontend",
       "categoryLabel": "Frontend",
       "color": "#eab308",
-      "size": 0.85,
+      "size": 0.95,
       "file": "templates/static/assets/font-awesome/scss/_variables.scss",
       "description": "Código-fonte: `templates/static/assets/font-awesome/scss/_variables.scss`"
     },
@@ -2180,7 +2180,7 @@
       "category": "frontend",
       "categoryLabel": "Frontend",
       "color": "#eab308",
-      "size": 0.85,
+      "size": 0.95,
       "file": "templates/static/assets/font-awesome/scss/brands.scss",
       "description": "Código-fonte: `templates/static/assets/font-awesome/scss/brands.scss`"
     },
@@ -2192,7 +2192,7 @@
       "category": "frontend",
       "categoryLabel": "Frontend",
       "color": "#eab308",
-      "size": 0.85,
+      "size": 0.95,
       "file": "templates/static/assets/font-awesome/scss/fontawesome.scss",
       "description": "Código-fonte: `templates/static/assets/font-awesome/scss/fontawesome.scss`"
     },
@@ -2204,7 +2204,7 @@
       "category": "frontend",
       "categoryLabel": "Frontend",
       "color": "#eab308",
-      "size": 0.85,
+      "size": 0.95,
       "file": "templates/static/assets/font-awesome/scss/regular.scss",
       "description": "Código-fonte: `templates/static/assets/font-awesome/scss/regular.scss`"
     },
@@ -2216,7 +2216,7 @@
       "category": "frontend",
       "categoryLabel": "Frontend",
       "color": "#eab308",
-      "size": 0.85,
+      "size": 0.95,
       "file": "templates/static/assets/font-awesome/scss/solid.scss",
       "description": "Código-fonte: `templates/static/assets/font-awesome/scss/solid.scss`"
     },
@@ -2228,7 +2228,7 @@
       "category": "frontend",
       "categoryLabel": "Frontend",
       "color": "#eab308",
-      "size": 0.85,
+      "size": 0.95,
       "file": "templates/static/assets/font-awesome/scss/v4-shims.scss",
       "description": "Código-fonte: `templates/static/assets/font-awesome/scss/v4-shims.scss`"
     },
@@ -2240,7 +2240,7 @@
       "category": "frontend",
       "categoryLabel": "Frontend",
       "color": "#eab308",
-      "size": 0.85,
+      "size": 0.95,
       "file": "templates/static/assets/login/css/bootstrap.min.css",
       "description": "Código-fonte: `templates/static/assets/login/css/bootstrap.min.css`"
     },
@@ -2252,7 +2252,7 @@
       "category": "frontend",
       "categoryLabel": "Frontend",
       "color": "#eab308",
-      "size": 0.85,
+      "size": 0.95,
       "file": "templates/static/assets/login/css/style.css",
       "description": "Código-fonte: `templates/static/assets/login/css/style.css`"
     },
@@ -2264,7 +2264,7 @@
       "category": "frontend",
       "categoryLabel": "Frontend",
       "color": "#eab308",
-      "size": 0.85,
+      "size": 0.95,
       "file": "templates/static/assets/login/css/bootstrap/_media.css",
       "description": "Código-fonte: `templates/static/assets/login/css/bootstrap/_media.css`"
     },
@@ -2276,7 +2276,7 @@
       "category": "frontend",
       "categoryLabel": "Frontend",
       "color": "#eab308",
-      "size": 0.85,
+      "size": 0.95,
       "file": "templates/static/assets/login/css/bootstrap/mixins/_border-radius.css",
       "description": "Código-fonte: `templates/static/assets/login/css/bootstrap/mixins/_border-radius.css`"
     },
@@ -2288,7 +2288,7 @@
       "category": "frontend",
       "categoryLabel": "Frontend",
       "color": "#eab308",
-      "size": 0.85,
+      "size": 0.95,
       "file": "templates/static/assets/login/css/bootstrap/mixins/_screen-reader.css",
       "description": "Código-fonte: `templates/static/assets/login/css/bootstrap/mixins/_screen-reader.css`"
     },
@@ -2300,7 +2300,7 @@
       "category": "frontend",
       "categoryLabel": "Frontend",
       "color": "#eab308",
-      "size": 0.85,
+      "size": 0.95,
       "file": "templates/static/assets/login/css/bootstrap/mixins/_visibility.css",
       "description": "Código-fonte: `templates/static/assets/login/css/bootstrap/mixins/_visibility.css`"
     },
@@ -2312,7 +2312,7 @@
       "category": "frontend",
       "categoryLabel": "Frontend",
       "color": "#eab308",
-      "size": 0.85,
+      "size": 0.95,
       "file": "templates/static/assets/login/css/bootstrap/utilities/_stretched-link.css",
       "description": "Código-fonte: `templates/static/assets/login/css/bootstrap/utilities/_stretched-link.css`"
     },
@@ -2324,7 +2324,7 @@
       "category": "frontend",
       "categoryLabel": "Frontend",
       "color": "#eab308",
-      "size": 0.85,
+      "size": 0.95,
       "file": "templates/static/assets/login/js/bootstrap.min.js",
       "description": "Código-fonte: `templates/static/assets/login/js/bootstrap.min.js`"
     },
@@ -2336,7 +2336,7 @@
       "category": "frontend",
       "categoryLabel": "Frontend",
       "color": "#eab308",
-      "size": 0.85,
+      "size": 0.95,
       "file": "templates/static/assets/login/js/jquery.min.js",
       "description": "Código-fonte: `templates/static/assets/login/js/jquery.min.js`"
     },
@@ -2348,7 +2348,7 @@
       "category": "frontend",
       "categoryLabel": "Frontend",
       "color": "#eab308",
-      "size": 0.85,
+      "size": 0.95,
       "file": "templates/static/assets/login/js/main.js",
       "description": "Código-fonte: `templates/static/assets/login/js/main.js`"
     },
@@ -2360,7 +2360,7 @@
       "category": "frontend",
       "categoryLabel": "Frontend",
       "color": "#eab308",
-      "size": 0.85,
+      "size": 0.95,
       "file": "templates/static/assets/login/js/popper.js",
       "description": "Código-fonte: `templates/static/assets/login/js/popper.js`"
     },
@@ -2372,7 +2372,7 @@
       "category": "frontend",
       "categoryLabel": "Frontend",
       "color": "#eab308",
-      "size": 0.85,
+      "size": 0.95,
       "file": "templates/static/assets/login/scss/style.scss",
       "description": "Código-fonte: `templates/static/assets/login/scss/style.scss`"
     },
@@ -2456,7 +2456,7 @@
       "category": "frontend",
       "categoryLabel": "Frontend",
       "color": "#eab308",
-      "size": 0.85,
+      "size": 0.95,
       "file": "templates/static/assets/login/scss/bootstrap/_alert.scss",
       "description": "Código-fonte: `templates/static/assets/login/scss/bootstrap/_alert.scss`"
     },
@@ -2468,7 +2468,7 @@
       "category": "frontend",
       "categoryLabel": "Frontend",
       "color": "#eab308",
-      "size": 0.85,
+      "size": 0.95,
       "file": "templates/static/assets/login/scss/bootstrap/_badge.scss",
       "description": "Código-fonte: `templates/static/assets/login/scss/bootstrap/_badge.scss`"
     },
@@ -2480,7 +2480,7 @@
       "category": "frontend",
       "categoryLabel": "Frontend",
       "color": "#eab308",
-      "size": 0.85,
+      "size": 0.95,
       "file": "templates/static/assets/login/scss/bootstrap/_breadcrumb.scss",
       "description": "Código-fonte: `templates/static/assets/login/scss/bootstrap/_breadcrumb.scss`"
     },
@@ -2492,7 +2492,7 @@
       "category": "frontend",
       "categoryLabel": "Frontend",
       "color": "#eab308",
-      "size": 0.85,
+      "size": 0.95,
       "file": "templates/static/assets/login/scss/bootstrap/_button-group.scss",
       "description": "Código-fonte: `templates/static/assets/login/scss/bootstrap/_button-group.scss`"
     },
@@ -2504,7 +2504,7 @@
       "category": "frontend",
       "categoryLabel": "Frontend",
       "color": "#eab308",
-      "size": 0.85,
+      "size": 0.95,
       "file": "templates/static/assets/login/scss/bootstrap/_buttons.scss",
       "description": "Código-fonte: `templates/static/assets/login/scss/bootstrap/_buttons.scss`"
     },
@@ -2516,7 +2516,7 @@
       "category": "frontend",
       "categoryLabel": "Frontend",
       "color": "#eab308",
-      "size": 0.85,
+      "size": 0.95,
       "file": "templates/static/assets/login/scss/bootstrap/_card.scss",
       "description": "Código-fonte: `templates/static/assets/login/scss/bootstrap/_card.scss`"
     },
@@ -2528,7 +2528,7 @@
       "category": "frontend",
       "categoryLabel": "Frontend",
       "color": "#eab308",
-      "size": 0.85,
+      "size": 0.95,
       "file": "templates/static/assets/login/scss/bootstrap/_carousel.scss",
       "description": "Código-fonte: `templates/static/assets/login/scss/bootstrap/_carousel.scss`"
     },
@@ -2540,7 +2540,7 @@
       "category": "frontend",
       "categoryLabel": "Frontend",
       "color": "#eab308",
-      "size": 0.85,
+      "size": 0.95,
       "file": "templates/static/assets/login/scss/bootstrap/_close.scss",
       "description": "Código-fonte: `templates/static/assets/login/scss/bootstrap/_close.scss`"
     },
@@ -2552,7 +2552,7 @@
       "category": "frontend",
       "categoryLabel": "Frontend",
       "color": "#eab308",
-      "size": 0.85,
+      "size": 0.95,
       "file": "templates/static/assets/login/scss/bootstrap/_code.scss",
       "description": "Código-fonte: `templates/static/assets/login/scss/bootstrap/_code.scss`"
     },
@@ -2564,7 +2564,7 @@
       "category": "frontend",
       "categoryLabel": "Frontend",
       "color": "#eab308",
-      "size": 0.85,
+      "size": 0.95,
       "file": "templates/static/assets/login/scss/bootstrap/_custom-forms.scss",
       "description": "Código-fonte: `templates/static/assets/login/scss/bootstrap/_custom-forms.scss`"
     },
@@ -2576,7 +2576,7 @@
       "category": "frontend",
       "categoryLabel": "Frontend",
       "color": "#eab308",
-      "size": 0.85,
+      "size": 0.95,
       "file": "templates/static/assets/login/scss/bootstrap/_dropdown.scss",
       "description": "Código-fonte: `templates/static/assets/login/scss/bootstrap/_dropdown.scss`"
     },
@@ -2588,7 +2588,7 @@
       "category": "frontend",
       "categoryLabel": "Frontend",
       "color": "#eab308",
-      "size": 0.85,
+      "size": 0.95,
       "file": "templates/static/assets/login/scss/bootstrap/_forms.scss",
       "description": "Código-fonte: `templates/static/assets/login/scss/bootstrap/_forms.scss`"
     },
@@ -2600,7 +2600,7 @@
       "category": "frontend",
       "categoryLabel": "Frontend",
       "color": "#eab308",
-      "size": 0.85,
+      "size": 0.95,
       "file": "templates/static/assets/login/scss/bootstrap/_functions.scss",
       "description": "Código-fonte: `templates/static/assets/login/scss/bootstrap/_functions.scss`"
     },
@@ -2612,7 +2612,7 @@
       "category": "frontend",
       "categoryLabel": "Frontend",
       "color": "#eab308",
-      "size": 0.85,
+      "size": 0.95,
       "file": "templates/static/assets/login/scss/bootstrap/_grid.scss",
       "description": "Código-fonte: `templates/static/assets/login/scss/bootstrap/_grid.scss`"
     },
@@ -2624,7 +2624,7 @@
       "category": "frontend",
       "categoryLabel": "Frontend",
       "color": "#eab308",
-      "size": 0.85,
+      "size": 0.95,
       "file": "templates/static/assets/login/scss/bootstrap/_images.scss",
       "description": "Código-fonte: `templates/static/assets/login/scss/bootstrap/_images.scss`"
     },
@@ -2636,7 +2636,7 @@
       "category": "frontend",
       "categoryLabel": "Frontend",
       "color": "#eab308",
-      "size": 0.85,
+      "size": 0.95,
       "file": "templates/static/assets/login/scss/bootstrap/_input-group.scss",
       "description": "Código-fonte: `templates/static/assets/login/scss/bootstrap/_input-group.scss`"
     },
@@ -2648,7 +2648,7 @@
       "category": "frontend",
       "categoryLabel": "Frontend",
       "color": "#eab308",
-      "size": 0.85,
+      "size": 0.95,
       "file": "templates/static/assets/login/scss/bootstrap/_jumbotron.scss",
       "description": "Código-fonte: `templates/static/assets/login/scss/bootstrap/_jumbotron.scss`"
     },
@@ -2660,7 +2660,7 @@
       "category": "frontend",
       "categoryLabel": "Frontend",
       "color": "#eab308",
-      "size": 0.85,
+      "size": 0.95,
       "file": "templates/static/assets/login/scss/bootstrap/_list-group.scss",
       "description": "Código-fonte: `templates/static/assets/login/scss/bootstrap/_list-group.scss`"
     },
@@ -2672,7 +2672,7 @@
       "category": "frontend",
       "categoryLabel": "Frontend",
       "color": "#eab308",
-      "size": 0.85,
+      "size": 0.95,
       "file": "templates/static/assets/login/scss/bootstrap/_media.scss",
       "description": "Código-fonte: `templates/static/assets/login/scss/bootstrap/_media.scss`"
     },
@@ -2684,7 +2684,7 @@
       "category": "frontend",
       "categoryLabel": "Frontend",
       "color": "#eab308",
-      "size": 0.85,
+      "size": 0.95,
       "file": "templates/static/assets/login/scss/bootstrap/_mixins.scss",
       "description": "Código-fonte: `templates/static/assets/login/scss/bootstrap/_mixins.scss`"
     },
@@ -2696,7 +2696,7 @@
       "category": "frontend",
       "categoryLabel": "Frontend",
       "color": "#eab308",
-      "size": 0.85,
+      "size": 0.95,
       "file": "templates/static/assets/login/scss/bootstrap/_modal.scss",
       "description": "Código-fonte: `templates/static/assets/login/scss/bootstrap/_modal.scss`"
     },
@@ -2708,7 +2708,7 @@
       "category": "frontend",
       "categoryLabel": "Frontend",
       "color": "#eab308",
-      "size": 0.85,
+      "size": 0.95,
       "file": "templates/static/assets/login/scss/bootstrap/_nav.scss",
       "description": "Código-fonte: `templates/static/assets/login/scss/bootstrap/_nav.scss`"
     },
@@ -2720,7 +2720,7 @@
       "category": "frontend",
       "categoryLabel": "Frontend",
       "color": "#eab308",
-      "size": 0.85,
+      "size": 0.95,
       "file": "templates/static/assets/login/scss/bootstrap/_navbar.scss",
       "description": "Código-fonte: `templates/static/assets/login/scss/bootstrap/_navbar.scss`"
     },
@@ -2732,7 +2732,7 @@
       "category": "frontend",
       "categoryLabel": "Frontend",
       "color": "#eab308",
-      "size": 0.85,
+      "size": 0.95,
       "file": "templates/static/assets/login/scss/bootstrap/_pagination.scss",
       "description": "Código-fonte: `templates/static/assets/login/scss/bootstrap/_pagination.scss`"
     },
@@ -2744,7 +2744,7 @@
       "category": "frontend",
       "categoryLabel": "Frontend",
       "color": "#eab308",
-      "size": 0.85,
+      "size": 0.95,
       "file": "templates/static/assets/login/scss/bootstrap/_popover.scss",
       "description": "Código-fonte: `templates/static/assets/login/scss/bootstrap/_popover.scss`"
     },
@@ -2756,7 +2756,7 @@
       "category": "frontend",
       "categoryLabel": "Frontend",
       "color": "#eab308",
-      "size": 0.85,
+      "size": 0.95,
       "file": "templates/static/assets/login/scss/bootstrap/_print.scss",
       "description": "Código-fonte: `templates/static/assets/login/scss/bootstrap/_print.scss`"
     },
@@ -2768,7 +2768,7 @@
       "category": "frontend",
       "categoryLabel": "Frontend",
       "color": "#eab308",
-      "size": 0.85,
+      "size": 0.95,
       "file": "templates/static/assets/login/scss/bootstrap/_progress.scss",
       "description": "Código-fonte: `templates/static/assets/login/scss/bootstrap/_progress.scss`"
     },
@@ -2780,7 +2780,7 @@
       "category": "frontend",
       "categoryLabel": "Frontend",
       "color": "#eab308",
-      "size": 0.85,
+      "size": 0.95,
       "file": "templates/static/assets/login/scss/bootstrap/_reboot.scss",
       "description": "Código-fonte: `templates/static/assets/login/scss/bootstrap/_reboot.scss`"
     },
@@ -2792,7 +2792,7 @@
       "category": "frontend",
       "categoryLabel": "Frontend",
       "color": "#eab308",
-      "size": 0.85,
+      "size": 0.95,
       "file": "templates/static/assets/login/scss/bootstrap/_root.scss",
       "description": "Código-fonte: `templates/static/assets/login/scss/bootstrap/_root.scss`"
     },
@@ -2804,7 +2804,7 @@
       "category": "frontend",
       "categoryLabel": "Frontend",
       "color": "#eab308",
-      "size": 0.85,
+      "size": 0.95,
       "file": "templates/static/assets/login/scss/bootstrap/_spinners.scss",
       "description": "Código-fonte: `templates/static/assets/login/scss/bootstrap/_spinners.scss`"
     },
@@ -2816,7 +2816,7 @@
       "category": "frontend",
       "categoryLabel": "Frontend",
       "color": "#eab308",
-      "size": 0.85,
+      "size": 0.95,
       "file": "templates/static/assets/login/scss/bootstrap/_tables.scss",
       "description": "Código-fonte: `templates/static/assets/login/scss/bootstrap/_tables.scss`"
     },
@@ -2828,7 +2828,7 @@
       "category": "frontend",
       "categoryLabel": "Frontend",
       "color": "#eab308",
-      "size": 0.85,
+      "size": 0.95,
       "file": "templates/static/assets/login/scss/bootstrap/_toasts.scss",
       "description": "Código-fonte: `templates/static/assets/login/scss/bootstrap/_toasts.scss`"
     },
@@ -2840,7 +2840,7 @@
       "category": "frontend",
       "categoryLabel": "Frontend",
       "color": "#eab308",
-      "size": 0.85,
+      "size": 0.95,
       "file": "templates/static/assets/login/scss/bootstrap/_tooltip.scss",
       "description": "Código-fonte: `templates/static/assets/login/scss/bootstrap/_tooltip.scss`"
     },
@@ -2852,7 +2852,7 @@
       "category": "frontend",
       "categoryLabel": "Frontend",
       "color": "#eab308",
-      "size": 0.85,
+      "size": 0.95,
       "file": "templates/static/assets/login/scss/bootstrap/_transitions.scss",
       "description": "Código-fonte: `templates/static/assets/login/scss/bootstrap/_transitions.scss`"
     },
@@ -2864,7 +2864,7 @@
       "category": "frontend",
       "categoryLabel": "Frontend",
       "color": "#eab308",
-      "size": 0.85,
+      "size": 0.95,
       "file": "templates/static/assets/login/scss/bootstrap/_type.scss",
       "description": "Código-fonte: `templates/static/assets/login/scss/bootstrap/_type.scss`"
     },
@@ -2876,7 +2876,7 @@
       "category": "frontend",
       "categoryLabel": "Frontend",
       "color": "#eab308",
-      "size": 0.85,
+      "size": 0.95,
       "file": "templates/static/assets/login/scss/bootstrap/_utilities.scss",
       "description": "Código-fonte: `templates/static/assets/login/scss/bootstrap/_utilities.scss`"
     },
@@ -2888,7 +2888,7 @@
       "category": "frontend",
       "categoryLabel": "Frontend",
       "color": "#eab308",
-      "size": 0.85,
+      "size": 0.95,
       "file": "templates/static/assets/login/scss/bootstrap/_variables.scss",
       "description": "Código-fonte: `templates/static/assets/login/scss/bootstrap/_variables.scss`"
     },
@@ -2900,7 +2900,7 @@
       "category": "frontend",
       "categoryLabel": "Frontend",
       "color": "#eab308",
-      "size": 0.85,
+      "size": 0.95,
       "file": "templates/static/assets/login/scss/bootstrap/bootstrap-grid.scss",
       "description": "Código-fonte: `templates/static/assets/login/scss/bootstrap/bootstrap-grid.scss`"
     },
@@ -2912,7 +2912,7 @@
       "category": "frontend",
       "categoryLabel": "Frontend",
       "color": "#eab308",
-      "size": 0.85,
+      "size": 0.95,
       "file": "templates/static/assets/login/scss/bootstrap/bootstrap-reboot.scss",
       "description": "Código-fonte: `templates/static/assets/login/scss/bootstrap/bootstrap-reboot.scss`"
     },
@@ -2924,7 +2924,7 @@
       "category": "frontend",
       "categoryLabel": "Frontend",
       "color": "#eab308",
-      "size": 0.85,
+      "size": 0.95,
       "file": "templates/static/assets/login/scss/bootstrap/bootstrap.scss",
       "description": "Código-fonte: `templates/static/assets/login/scss/bootstrap/bootstrap.scss`"
     },
@@ -2984,7 +2984,7 @@
       "category": "frontend",
       "categoryLabel": "Frontend",
       "color": "#eab308",
-      "size": 0.85,
+      "size": 0.95,
       "file": "templates/static/assets/login/scss/bootstrap/mixins/_alert.scss",
       "description": "Código-fonte: `templates/static/assets/login/scss/bootstrap/mixins/_alert.scss`"
     },
@@ -2996,7 +2996,7 @@
       "category": "frontend",
       "categoryLabel": "Frontend",
       "color": "#eab308",
-      "size": 0.85,
+      "size": 0.95,
       "file": "templates/static/assets/login/scss/bootstrap/mixins/_background-variant.scss",
       "description": "Código-fonte: `templates/static/assets/login/scss/bootstrap/mixins/_background-variant.scss`"
     },
@@ -3008,7 +3008,7 @@
       "category": "frontend",
       "categoryLabel": "Frontend",
       "color": "#eab308",
-      "size": 0.85,
+      "size": 0.95,
       "file": "templates/static/assets/login/scss/bootstrap/mixins/_badge.scss",
       "description": "Código-fonte: `templates/static/assets/login/scss/bootstrap/mixins/_badge.scss`"
     },
@@ -3020,7 +3020,7 @@
       "category": "frontend",
       "categoryLabel": "Frontend",
       "color": "#eab308",
-      "size": 0.85,
+      "size": 0.95,
       "file": "templates/static/assets/login/scss/bootstrap/mixins/_border-radius.scss",
       "description": "Código-fonte: `templates/static/assets/login/scss/bootstrap/mixins/_border-radius.scss`"
     },
@@ -3032,7 +3032,7 @@
       "category": "frontend",
       "categoryLabel": "Frontend",
       "color": "#eab308",
-      "size": 0.85,
+      "size": 0.95,
       "file": "templates/static/assets/login/scss/bootstrap/mixins/_box-shadow.scss",
       "description": "Código-fonte: `templates/static/assets/login/scss/bootstrap/mixins/_box-shadow.scss`"
     },
@@ -3044,7 +3044,7 @@
       "category": "frontend",
       "categoryLabel": "Frontend",
       "color": "#eab308",
-      "size": 0.85,
+      "size": 0.95,
       "file": "templates/static/assets/login/scss/bootstrap/mixins/_breakpoints.scss",
       "description": "Código-fonte: `templates/static/assets/login/scss/bootstrap/mixins/_breakpoints.scss`"
     },
@@ -3056,7 +3056,7 @@
       "category": "frontend",
       "categoryLabel": "Frontend",
       "color": "#eab308",
-      "size": 0.85,
+      "size": 0.95,
       "file": "templates/static/assets/login/scss/bootstrap/mixins/_buttons.scss",
       "description": "Código-fonte: `templates/static/assets/login/scss/bootstrap/mixins/_buttons.scss`"
     },
@@ -3068,7 +3068,7 @@
       "category": "frontend",
       "categoryLabel": "Frontend",
       "color": "#eab308",
-      "size": 0.85,
+      "size": 0.95,
       "file": "templates/static/assets/login/scss/bootstrap/mixins/_caret.scss",
       "description": "Código-fonte: `templates/static/assets/login/scss/bootstrap/mixins/_caret.scss`"
     },
@@ -3080,7 +3080,7 @@
       "category": "frontend",
       "categoryLabel": "Frontend",
       "color": "#eab308",
-      "size": 0.85,
+      "size": 0.95,
       "file": "templates/static/assets/login/scss/bootstrap/mixins/_clearfix.scss",
       "description": "Código-fonte: `templates/static/assets/login/scss/bootstrap/mixins/_clearfix.scss`"
     },
@@ -3092,7 +3092,7 @@
       "category": "frontend",
       "categoryLabel": "Frontend",
       "color": "#eab308",
-      "size": 0.85,
+      "size": 0.95,
       "file": "templates/static/assets/login/scss/bootstrap/mixins/_deprecate.scss",
       "description": "Código-fonte: `templates/static/assets/login/scss/bootstrap/mixins/_deprecate.scss`"
     },
@@ -3104,7 +3104,7 @@
       "category": "frontend",
       "categoryLabel": "Frontend",
       "color": "#eab308",
-      "size": 0.85,
+      "size": 0.95,
       "file": "templates/static/assets/login/scss/bootstrap/mixins/_float.scss",
       "description": "Código-fonte: `templates/static/assets/login/scss/bootstrap/mixins/_float.scss`"
     },
@@ -3116,7 +3116,7 @@
       "category": "frontend",
       "categoryLabel": "Frontend",
       "color": "#eab308",
-      "size": 0.85,
+      "size": 0.95,
       "file": "templates/static/assets/login/scss/bootstrap/mixins/_forms.scss",
       "description": "Código-fonte: `templates/static/assets/login/scss/bootstrap/mixins/_forms.scss`"
     },
@@ -3128,7 +3128,7 @@
       "category": "frontend",
       "categoryLabel": "Frontend",
       "color": "#eab308",
-      "size": 0.85,
+      "size": 0.95,
       "file": "templates/static/assets/login/scss/bootstrap/mixins/_gradients.scss",
       "description": "Código-fonte: `templates/static/assets/login/scss/bootstrap/mixins/_gradients.scss`"
     },
@@ -3140,7 +3140,7 @@
       "category": "frontend",
       "categoryLabel": "Frontend",
       "color": "#eab308",
-      "size": 0.85,
+      "size": 0.95,
       "file": "templates/static/assets/login/scss/bootstrap/mixins/_grid-framework.scss",
       "description": "Código-fonte: `templates/static/assets/login/scss/bootstrap/mixins/_grid-framework.scss`"
     },
@@ -3152,7 +3152,7 @@
       "category": "frontend",
       "categoryLabel": "Frontend",
       "color": "#eab308",
-      "size": 0.85,
+      "size": 0.95,
       "file": "templates/static/assets/login/scss/bootstrap/mixins/_grid.scss",
       "description": "Código-fonte: `templates/static/assets/login/scss/bootstrap/mixins/_grid.scss`"
     },
@@ -3164,7 +3164,7 @@
       "category": "frontend",
       "categoryLabel": "Frontend",
       "color": "#eab308",
-      "size": 0.85,
+      "size": 0.95,
       "file": "templates/static/assets/login/scss/bootstrap/mixins/_hover.scss",
       "description": "Código-fonte: `templates/static/assets/login/scss/bootstrap/mixins/_hover.scss`"
     },
@@ -3176,7 +3176,7 @@
       "category": "frontend",
       "categoryLabel": "Frontend",
       "color": "#eab308",
-      "size": 0.85,
+      "size": 0.95,
       "file": "templates/static/assets/login/scss/bootstrap/mixins/_image.scss",
       "description": "Código-fonte: `templates/static/assets/login/scss/bootstrap/mixins/_image.scss`"
     },
@@ -3188,7 +3188,7 @@
       "category": "frontend",
       "categoryLabel": "Frontend",
       "color": "#eab308",
-      "size": 0.85,
+      "size": 0.95,
       "file": "templates/static/assets/login/scss/bootstrap/mixins/_list-group.scss",
       "description": "Código-fonte: `templates/static/assets/login/scss/bootstrap/mixins/_list-group.scss`"
     },
@@ -3200,7 +3200,7 @@
       "category": "frontend",
       "categoryLabel": "Frontend",
       "color": "#eab308",
-      "size": 0.85,
+      "size": 0.95,
       "file": "templates/static/assets/login/scss/bootstrap/mixins/_lists.scss",
       "description": "Código-fonte: `templates/static/assets/login/scss/bootstrap/mixins/_lists.scss`"
     },
@@ -3212,7 +3212,7 @@
       "category": "frontend",
       "categoryLabel": "Frontend",
       "color": "#eab308",
-      "size": 0.85,
+      "size": 0.95,
       "file": "templates/static/assets/login/scss/bootstrap/mixins/_nav-divider.scss",
       "description": "Código-fonte: `templates/static/assets/login/scss/bootstrap/mixins/_nav-divider.scss`"
     },
@@ -3224,7 +3224,7 @@
       "category": "frontend",
       "categoryLabel": "Frontend",
       "color": "#eab308",
-      "size": 0.85,
+      "size": 0.95,
       "file": "templates/static/assets/login/scss/bootstrap/mixins/_pagination.scss",
       "description": "Código-fonte: `templates/static/assets/login/scss/bootstrap/mixins/_pagination.scss`"
     },
@@ -3236,7 +3236,7 @@
       "category": "frontend",
       "categoryLabel": "Frontend",
       "color": "#eab308",
-      "size": 0.85,
+      "size": 0.95,
       "file": "templates/static/assets/login/scss/bootstrap/mixins/_reset-text.scss",
       "description": "Código-fonte: `templates/static/assets/login/scss/bootstrap/mixins/_reset-text.scss`"
     },
@@ -3248,7 +3248,7 @@
       "category": "frontend",
       "categoryLabel": "Frontend",
       "color": "#eab308",
-      "size": 0.85,
+      "size": 0.95,
       "file": "templates/static/assets/login/scss/bootstrap/mixins/_resize.scss",
       "description": "Código-fonte: `templates/static/assets/login/scss/bootstrap/mixins/_resize.scss`"
     },
@@ -3260,7 +3260,7 @@
       "category": "frontend",
       "categoryLabel": "Frontend",
       "color": "#eab308",
-      "size": 0.85,
+      "size": 0.95,
       "file": "templates/static/assets/login/scss/bootstrap/mixins/_screen-reader.scss",
       "description": "Código-fonte: `templates/static/assets/login/scss/bootstrap/mixins/_screen-reader.scss`"
     },
@@ -3272,7 +3272,7 @@
       "category": "frontend",
       "categoryLabel": "Frontend",
       "color": "#eab308",
-      "size": 0.85,
+      "size": 0.95,
       "file": "templates/static/assets/login/scss/bootstrap/mixins/_size.scss",
       "description": "Código-fonte: `templates/static/assets/login/scss/bootstrap/mixins/_size.scss`"
     },
@@ -3284,7 +3284,7 @@
       "category": "frontend",
       "categoryLabel": "Frontend",
       "color": "#eab308",
-      "size": 0.85,
+      "size": 0.95,
       "file": "templates/static/assets/login/scss/bootstrap/mixins/_table-row.scss",
       "description": "Código-fonte: `templates/static/assets/login/scss/bootstrap/mixins/_table-row.scss`"
     },
@@ -3296,7 +3296,7 @@
       "category": "frontend",
       "categoryLabel": "Frontend",
       "color": "#eab308",
-      "size": 0.85,
+      "size": 0.95,
       "file": "templates/static/assets/login/scss/bootstrap/mixins/_text-emphasis.scss",
       "description": "Código-fonte: `templates/static/assets/login/scss/bootstrap/mixins/_text-emphasis.scss`"
     },
@@ -3308,7 +3308,7 @@
       "category": "frontend",
       "categoryLabel": "Frontend",
       "color": "#eab308",
-      "size": 0.85,
+      "size": 0.95,
       "file": "templates/static/assets/login/scss/bootstrap/mixins/_text-hide.scss",
       "description": "Código-fonte: `templates/static/assets/login/scss/bootstrap/mixins/_text-hide.scss`"
     },
@@ -3320,7 +3320,7 @@
       "category": "frontend",
       "categoryLabel": "Frontend",
       "color": "#eab308",
-      "size": 0.85,
+      "size": 0.95,
       "file": "templates/static/assets/login/scss/bootstrap/mixins/_text-truncate.scss",
       "description": "Código-fonte: `templates/static/assets/login/scss/bootstrap/mixins/_text-truncate.scss`"
     },
@@ -3332,7 +3332,7 @@
       "category": "frontend",
       "categoryLabel": "Frontend",
       "color": "#eab308",
-      "size": 0.85,
+      "size": 0.95,
       "file": "templates/static/assets/login/scss/bootstrap/mixins/_transition.scss",
       "description": "Código-fonte: `templates/static/assets/login/scss/bootstrap/mixins/_transition.scss`"
     },
@@ -3344,7 +3344,7 @@
       "category": "frontend",
       "categoryLabel": "Frontend",
       "color": "#eab308",
-      "size": 0.85,
+      "size": 0.95,
       "file": "templates/static/assets/login/scss/bootstrap/mixins/_visibility.scss",
       "description": "Código-fonte: `templates/static/assets/login/scss/bootstrap/mixins/_visibility.scss`"
     },
@@ -3392,7 +3392,7 @@
       "category": "frontend",
       "categoryLabel": "Frontend",
       "color": "#eab308",
-      "size": 0.85,
+      "size": 0.95,
       "file": "templates/static/assets/login/scss/bootstrap/utilities/_align.scss",
       "description": "Código-fonte: `templates/static/assets/login/scss/bootstrap/utilities/_align.scss`"
     },
@@ -3404,7 +3404,7 @@
       "category": "frontend",
       "categoryLabel": "Frontend",
       "color": "#eab308",
-      "size": 0.85,
+      "size": 0.95,
       "file": "templates/static/assets/login/scss/bootstrap/utilities/_background.scss",
       "description": "Código-fonte: `templates/static/assets/login/scss/bootstrap/utilities/_background.scss`"
     },
@@ -3416,7 +3416,7 @@
       "category": "frontend",
       "categoryLabel": "Frontend",
       "color": "#eab308",
-      "size": 0.85,
+      "size": 0.95,
       "file": "templates/static/assets/login/scss/bootstrap/utilities/_borders.scss",
       "description": "Código-fonte: `templates/static/assets/login/scss/bootstrap/utilities/_borders.scss`"
     },
@@ -3428,7 +3428,7 @@
       "category": "frontend",
       "categoryLabel": "Frontend",
       "color": "#eab308",
-      "size": 0.85,
+      "size": 0.95,
       "file": "templates/static/assets/login/scss/bootstrap/utilities/_clearfix.scss",
       "description": "Código-fonte: `templates/static/assets/login/scss/bootstrap/utilities/_clearfix.scss`"
     },
@@ -3440,7 +3440,7 @@
       "category": "frontend",
       "categoryLabel": "Frontend",
       "color": "#eab308",
-      "size": 0.85,
+      "size": 0.95,
       "file": "templates/static/assets/login/scss/bootstrap/utilities/_display.scss",
       "description": "Código-fonte: `templates/static/assets/login/scss/bootstrap/utilities/_display.scss`"
     },
@@ -3452,7 +3452,7 @@
       "category": "frontend",
       "categoryLabel": "Frontend",
       "color": "#eab308",
-      "size": 0.85,
+      "size": 0.95,
       "file": "templates/static/assets/login/scss/bootstrap/utilities/_embed.scss",
       "description": "Código-fonte: `templates/static/assets/login/scss/bootstrap/utilities/_embed.scss`"
     },
@@ -3464,7 +3464,7 @@
       "category": "frontend",
       "categoryLabel": "Frontend",
       "color": "#eab308",
-      "size": 0.85,
+      "size": 0.95,
       "file": "templates/static/assets/login/scss/bootstrap/utilities/_flex.scss",
       "description": "Código-fonte: `templates/static/assets/login/scss/bootstrap/utilities/_flex.scss`"
     },
@@ -3476,7 +3476,7 @@
       "category": "frontend",
       "categoryLabel": "Frontend",
       "color": "#eab308",
-      "size": 0.85,
+      "size": 0.95,
       "file": "templates/static/assets/login/scss/bootstrap/utilities/_float.scss",
       "description": "Código-fonte: `templates/static/assets/login/scss/bootstrap/utilities/_float.scss`"
     },
@@ -3488,7 +3488,7 @@
       "category": "frontend",
       "categoryLabel": "Frontend",
       "color": "#eab308",
-      "size": 0.85,
+      "size": 0.95,
       "file": "templates/static/assets/login/scss/bootstrap/utilities/_overflow.scss",
       "description": "Código-fonte: `templates/static/assets/login/scss/bootstrap/utilities/_overflow.scss`"
     },
@@ -3500,7 +3500,7 @@
       "category": "frontend",
       "categoryLabel": "Frontend",
       "color": "#eab308",
-      "size": 0.85,
+      "size": 0.95,
       "file": "templates/static/assets/login/scss/bootstrap/utilities/_position.scss",
       "description": "Código-fonte: `templates/static/assets/login/scss/bootstrap/utilities/_position.scss`"
     },
@@ -3512,7 +3512,7 @@
       "category": "frontend",
       "categoryLabel": "Frontend",
       "color": "#eab308",
-      "size": 0.85,
+      "size": 0.95,
       "file": "templates/static/assets/login/scss/bootstrap/utilities/_screenreaders.scss",
       "description": "Código-fonte: `templates/static/assets/login/scss/bootstrap/utilities/_screenreaders.scss`"
     },
@@ -3524,7 +3524,7 @@
       "category": "frontend",
       "categoryLabel": "Frontend",
       "color": "#eab308",
-      "size": 0.85,
+      "size": 0.95,
       "file": "templates/static/assets/login/scss/bootstrap/utilities/_shadows.scss",
       "description": "Código-fonte: `templates/static/assets/login/scss/bootstrap/utilities/_shadows.scss`"
     },
@@ -3536,7 +3536,7 @@
       "category": "frontend",
       "categoryLabel": "Frontend",
       "color": "#eab308",
-      "size": 0.85,
+      "size": 0.95,
       "file": "templates/static/assets/login/scss/bootstrap/utilities/_sizing.scss",
       "description": "Código-fonte: `templates/static/assets/login/scss/bootstrap/utilities/_sizing.scss`"
     },
@@ -3548,7 +3548,7 @@
       "category": "frontend",
       "categoryLabel": "Frontend",
       "color": "#eab308",
-      "size": 0.85,
+      "size": 0.95,
       "file": "templates/static/assets/login/scss/bootstrap/utilities/_spacing.scss",
       "description": "Código-fonte: `templates/static/assets/login/scss/bootstrap/utilities/_spacing.scss`"
     },
@@ -3560,7 +3560,7 @@
       "category": "frontend",
       "categoryLabel": "Frontend",
       "color": "#eab308",
-      "size": 0.85,
+      "size": 0.95,
       "file": "templates/static/assets/login/scss/bootstrap/utilities/_stretched-link.scss",
       "description": "Código-fonte: `templates/static/assets/login/scss/bootstrap/utilities/_stretched-link.scss`"
     },
@@ -3572,7 +3572,7 @@
       "category": "frontend",
       "categoryLabel": "Frontend",
       "color": "#eab308",
-      "size": 0.85,
+      "size": 0.95,
       "file": "templates/static/assets/login/scss/bootstrap/utilities/_text.scss",
       "description": "Código-fonte: `templates/static/assets/login/scss/bootstrap/utilities/_text.scss`"
     },
@@ -3584,7 +3584,7 @@
       "category": "frontend",
       "categoryLabel": "Frontend",
       "color": "#eab308",
-      "size": 0.85,
+      "size": 0.95,
       "file": "templates/static/assets/login/scss/bootstrap/utilities/_visibility.scss",
       "description": "Código-fonte: `templates/static/assets/login/scss/bootstrap/utilities/_visibility.scss`"
     },
@@ -3596,7 +3596,7 @@
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
-      "size": 0.85,
+      "size": 0.95,
       "file": "utils/__init__.py",
       "description": "Código-fonte: `utils/__init__.py`"
     },
@@ -3608,7 +3608,7 @@
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
-      "size": 0.85,
+      "size": 0.95,
       "file": "utils/utils.py",
       "description": "Código-fonte: `utils/utils.py`"
     },
@@ -3620,7 +3620,7 @@
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
-      "size": 0.85,
+      "size": 0.95,
       "file": "utils/validacpf.py",
       "description": "Código-fonte: `utils/validacpf.py`"
     }

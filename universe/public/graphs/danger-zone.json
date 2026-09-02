@@ -376,7 +376,7 @@
       "category": "other",
       "categoryLabel": "Outros",
       "color": "#64748b",
-      "size": 0.85,
+      "size": 0.95,
       "file": ".gitignore",
       "description": "Código-fonte: `.gitignore`"
     },
@@ -388,7 +388,7 @@
       "category": "other",
       "categoryLabel": "Outros",
       "color": "#64748b",
-      "size": 0.85,
+      "size": 0.95,
       "file": "DISCLAIMER.md",
       "description": "Código-fonte: `DISCLAIMER.md`"
     },
@@ -436,7 +436,7 @@
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
-      "size": 0.85,
+      "size": 0.95,
       "file": "catalog/adware.py",
       "description": "Código-fonte: `catalog/adware.py`"
     },
@@ -448,7 +448,7 @@
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
-      "size": 0.85,
+      "size": 0.95,
       "file": "catalog/apt_campaign.py",
       "description": "Código-fonte: `catalog/apt_campaign.py`"
     },
@@ -460,7 +460,7 @@
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
-      "size": 0.85,
+      "size": 0.95,
       "file": "catalog/backdoor.py",
       "description": "Código-fonte: `catalog/backdoor.py`"
     },
@@ -472,7 +472,7 @@
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
-      "size": 0.85,
+      "size": 0.95,
       "file": "catalog/banking_trojan.py",
       "description": "Código-fonte: `catalog/banking_trojan.py`"
     },
@@ -484,7 +484,7 @@
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
-      "size": 0.85,
+      "size": 0.95,
       "file": "catalog/bootkit.py",
       "description": "Código-fonte: `catalog/bootkit.py`"
     },
@@ -496,7 +496,7 @@
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
-      "size": 0.85,
+      "size": 0.95,
       "file": "catalog/botnet.py",
       "description": "Código-fonte: `catalog/botnet.py`"
     },
@@ -508,7 +508,7 @@
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
-      "size": 0.85,
+      "size": 0.95,
       "file": "catalog/browser_hijacker.py",
       "description": "Código-fonte: `catalog/browser_hijacker.py`"
     },
@@ -520,7 +520,7 @@
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
-      "size": 0.85,
+      "size": 0.95,
       "file": "catalog/cryptojacker.py",
       "description": "Código-fonte: `catalog/cryptojacker.py`"
     },
@@ -532,7 +532,7 @@
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
-      "size": 0.85,
+      "size": 0.95,
       "file": "catalog/double_extortion.py",
       "description": "Código-fonte: `catalog/double_extortion.py`"
     },
@@ -544,7 +544,7 @@
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
-      "size": 0.85,
+      "size": 0.95,
       "file": "catalog/dropper_loader.py",
       "description": "Código-fonte: `catalog/dropper_loader.py`"
     },
@@ -556,7 +556,7 @@
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
-      "size": 0.85,
+      "size": 0.95,
       "file": "catalog/fileless.py",
       "description": "Código-fonte: `catalog/fileless.py`"
     },
@@ -568,7 +568,7 @@
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
-      "size": 0.85,
+      "size": 0.95,
       "file": "catalog/infostealer.py",
       "description": "Código-fonte: `catalog/infostealer.py`"
     },
@@ -580,7 +580,7 @@
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
-      "size": 0.85,
+      "size": 0.95,
       "file": "catalog/iot_malware.py",
       "description": "Código-fonte: `catalog/iot_malware.py`"
     },
@@ -592,7 +592,7 @@
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
-      "size": 0.85,
+      "size": 0.95,
       "file": "catalog/logic_bomb.py",
       "description": "Código-fonte: `catalog/logic_bomb.py`"
     },
@@ -604,7 +604,7 @@
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
-      "size": 0.85,
+      "size": 0.95,
       "file": "catalog/macro_malware.py",
       "description": "Código-fonte: `catalog/macro_malware.py`"
     },
@@ -616,7 +616,7 @@
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
-      "size": 0.85,
+      "size": 0.95,
       "file": "catalog/mobile_malware.py",
       "description": "Código-fonte: `catalog/mobile_malware.py`"
     },
@@ -628,7 +628,7 @@
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
-      "size": 0.85,
+      "size": 0.95,
       "file": "catalog/packer_obfuscation.py",
       "description": "Código-fonte: `catalog/packer_obfuscation.py`"
     },
@@ -640,7 +640,7 @@
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
-      "size": 0.85,
+      "size": 0.95,
       "file": "catalog/phishing_lure.py",
       "description": "Código-fonte: `catalog/phishing_lure.py`"
     },
@@ -652,7 +652,7 @@
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
-      "size": 0.85,
+      "size": 0.95,
       "file": "catalog/polymorphic.py",
       "description": "Código-fonte: `catalog/polymorphic.py`"
     },
@@ -664,7 +664,7 @@
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
-      "size": 0.85,
+      "size": 0.95,
       "file": "catalog/ransomware.py",
       "description": "Código-fonte: `catalog/ransomware.py`"
     },
@@ -676,7 +676,7 @@
       "category": "other",
       "categoryLabel": "Outros",
       "color": "#64748b",
-      "size": 0.85,
+      "size": 0.95,
       "file": "catalog/README.md",
       "description": "Código-fonte: `catalog/README.md`"
     },
@@ -688,7 +688,7 @@
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
-      "size": 0.85,
+      "size": 0.95,
       "file": "catalog/rootkit.py",
       "description": "Código-fonte: `catalog/rootkit.py`"
     },
@@ -700,7 +700,7 @@
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
-      "size": 0.85,
+      "size": 0.95,
       "file": "catalog/scareware.py",
       "description": "Código-fonte: `catalog/scareware.py`"
     },
@@ -712,7 +712,7 @@
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
-      "size": 0.85,
+      "size": 0.95,
       "file": "catalog/spyware_keylogger.py",
       "description": "Código-fonte: `catalog/spyware_keylogger.py`"
     },
@@ -724,7 +724,7 @@
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
-      "size": 0.85,
+      "size": 0.95,
       "file": "catalog/supply_chain.py",
       "description": "Código-fonte: `catalog/supply_chain.py`"
     },
@@ -736,7 +736,7 @@
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
-      "size": 0.85,
+      "size": 0.95,
       "file": "catalog/trojan_rat.py",
       "description": "Código-fonte: `catalog/trojan_rat.py`"
     },
@@ -748,7 +748,7 @@
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
-      "size": 0.85,
+      "size": 0.95,
       "file": "catalog/virus_file_infector.py",
       "description": "Código-fonte: `catalog/virus_file_infector.py`"
     },
@@ -760,7 +760,7 @@
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
-      "size": 0.85,
+      "size": 0.95,
       "file": "catalog/wiper.py",
       "description": "Código-fonte: `catalog/wiper.py`"
     },
@@ -772,7 +772,7 @@
       "category": "network",
       "categoryLabel": "Rede / Scan",
       "color": "#22d3ee",
-      "size": 0.85,
+      "size": 0.95,
       "file": "catalog/worm_network.py",
       "description": "Código-fonte: `catalog/worm_network.py`"
     },
@@ -784,7 +784,7 @@
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
-      "size": 0.85,
+      "size": 0.95,
       "file": "common/__init__.py",
       "description": "Código-fonte: `common/__init__.py`"
     },
@@ -796,7 +796,7 @@
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
-      "size": 0.85,
+      "size": 0.95,
       "file": "common/banner.py",
       "description": "Código-fonte: `common/banner.py`"
     },
@@ -808,7 +808,7 @@
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
-      "size": 0.85,
+      "size": 0.95,
       "file": "common/telemetry.py",
       "description": "Código-fonte: `common/telemetry.py`"
     },
@@ -820,7 +820,7 @@
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
-      "size": 0.85,
+      "size": 0.95,
       "file": "common/virtual_fs.py",
       "description": "Código-fonte: `common/virtual_fs.py`"
     },
@@ -832,7 +832,7 @@
       "category": "other",
       "categoryLabel": "Outros",
       "color": "#64748b",
-      "size": 0.85,
+      "size": 0.95,
       "file": "conference/outline.md",
       "description": "Código-fonte: `conference/outline.md`"
     },
@@ -844,7 +844,7 @@
       "category": "other",
       "categoryLabel": "Outros",
       "color": "#64748b",
-      "size": 0.85,
+      "size": 0.95,
       "file": "conference/talking-points.md",
       "description": "Código-fonte: `conference/talking-points.md`"
     },
@@ -856,7 +856,7 @@
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
-      "size": 0.85,
+      "size": 0.95,
       "file": "demos/run_all_sims.py",
       "description": "Código-fonte: `demos/run_all_sims.py`"
     },
@@ -868,7 +868,7 @@
       "category": "other",
       "categoryLabel": "Outros",
       "color": "#64748b",
-      "size": 0.85,
+      "size": 0.95,
       "file": "docs/detection-playbook.md",
       "description": "Código-fonte: `docs/detection-playbook.md`"
     },
@@ -880,7 +880,7 @@
       "category": "other",
       "categoryLabel": "Outros",
       "color": "#64748b",
-      "size": 0.85,
+      "size": 0.95,
       "file": "docs/enterprise_prevention.md",
       "description": "Código-fonte: `docs/enterprise_prevention.md`"
     },
@@ -892,7 +892,7 @@
       "category": "other",
       "categoryLabel": "Outros",
       "color": "#64748b",
-      "size": 0.85,
+      "size": 0.95,
       "file": "docs/kill-chain.md",
       "description": "Código-fonte: `docs/kill-chain.md`"
     },
@@ -904,7 +904,7 @@
       "category": "other",
       "categoryLabel": "Outros",
       "color": "#64748b",
-      "size": 0.85,
+      "size": 0.95,
       "file": "docs/malware_catalog.md",
       "description": "Código-fonte: `docs/malware_catalog.md`"
     },
@@ -916,7 +916,7 @@
       "category": "other",
       "categoryLabel": "Outros",
       "color": "#64748b",
-      "size": 0.85,
+      "size": 0.95,
       "file": "docs/risk_matrix.md",
       "description": "Código-fonte: `docs/risk_matrix.md`"
     },
@@ -928,7 +928,7 @@
       "category": "other",
       "categoryLabel": "Outros",
       "color": "#64748b",
-      "size": 0.85,
+      "size": 0.95,
       "file": "docs/taxonomy.md",
       "description": "Código-fonte: `docs/taxonomy.md`"
     },
@@ -940,7 +940,7 @@
       "category": "other",
       "categoryLabel": "Outros",
       "color": "#64748b",
-      "size": 0.85,
+      "size": 0.95,
       "file": "labs/01_virus_lifecycle/README.md",
       "description": "Código-fonte: `labs/01_virus_lifecycle/README.md`"
     },
@@ -952,7 +952,7 @@
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
-      "size": 0.85,
+      "size": 0.95,
       "file": "labs/01_virus_lifecycle/simulate_virus.py",
       "description": "Código-fonte: `labs/01_virus_lifecycle/simulate_virus.py`"
     },
@@ -964,7 +964,7 @@
       "category": "other",
       "categoryLabel": "Outros",
       "color": "#64748b",
-      "size": 0.85,
+      "size": 0.95,
       "file": "labs/02_worm_propagation/README.md",
       "description": "Código-fonte: `labs/02_worm_propagation/README.md`"
     },
@@ -976,7 +976,7 @@
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
-      "size": 0.85,
+      "size": 0.95,
       "file": "labs/02_worm_propagation/simulate_worm.py",
       "description": "Código-fonte: `labs/02_worm_propagation/simulate_worm.py`"
     },
@@ -988,7 +988,7 @@
       "category": "other",
       "categoryLabel": "Outros",
       "color": "#64748b",
-      "size": 0.85,
+      "size": 0.95,
       "file": "labs/03_trojan_behavior/README.md",
       "description": "Código-fonte: `labs/03_trojan_behavior/README.md`"
     },
@@ -1000,7 +1000,7 @@
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
-      "size": 0.85,
+      "size": 0.95,
       "file": "labs/03_trojan_behavior/simulate_trojan.py",
       "description": "Código-fonte: `labs/03_trojan_behavior/simulate_trojan.py`"
     },
@@ -1012,7 +1012,7 @@
       "category": "other",
       "categoryLabel": "Outros",
       "color": "#64748b",
-      "size": 0.85,
+      "size": 0.95,
       "file": "labs/04_ransomware_concept/README.md",
       "description": "Código-fonte: `labs/04_ransomware_concept/README.md`"
     },
@@ -1024,7 +1024,7 @@
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
-      "size": 0.85,
+      "size": 0.95,
       "file": "labs/04_ransomware_concept/simulate_ransomware.py",
       "description": "Código-fonte: `labs/04_ransomware_concept/simulate_ransomware.py`"
     },
@@ -1036,7 +1036,7 @@
       "category": "other",
       "categoryLabel": "Outros",
       "color": "#64748b",
-      "size": 0.85,
+      "size": 0.95,
       "file": "labs/05_spyware_telemetry/README.md",
       "description": "Código-fonte: `labs/05_spyware_telemetry/README.md`"
     },
@@ -1048,7 +1048,7 @@
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
-      "size": 0.85,
+      "size": 0.95,
       "file": "labs/05_spyware_telemetry/simulate_spyware.py",
       "description": "Código-fonte: `labs/05_spyware_telemetry/simulate_spyware.py`"
     },
@@ -1060,7 +1060,7 @@
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
-      "size": 0.85,
+      "size": 0.95,
       "file": "labs/06_ioc_detector/detector.py",
       "description": "Código-fonte: `labs/06_ioc_detector/detector.py`"
     },
@@ -1072,7 +1072,7 @@
       "category": "other",
       "categoryLabel": "Outros",
       "color": "#64748b",
-      "size": 0.85,
+      "size": 0.95,
       "file": "labs/06_ioc_detector/README.md",
       "description": "Código-fonte: `labs/06_ioc_detector/README.md`"
     },
@@ -1084,7 +1084,7 @@
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
-      "size": 0.85,
+      "size": 0.95,
       "file": "labs/07_hash_integrity/integrity.py",
       "description": "Código-fonte: `labs/07_hash_integrity/integrity.py`"
     },
@@ -1096,7 +1096,7 @@
       "category": "other",
       "categoryLabel": "Outros",
       "color": "#64748b",
-      "size": 0.85,
+      "size": 0.95,
       "file": "labs/07_hash_integrity/README.md",
       "description": "Código-fonte: `labs/07_hash_integrity/README.md`"
     },
@@ -1108,7 +1108,7 @@
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
-      "size": 0.85,
+      "size": 0.95,
       "file": "labs/08_behavioral_analyzer/analyzer.py",
       "description": "Código-fonte: `labs/08_behavioral_analyzer/analyzer.py`"
     },
@@ -1120,7 +1120,7 @@
       "category": "other",
       "categoryLabel": "Outros",
       "color": "#64748b",
-      "size": 0.85,
+      "size": 0.95,
       "file": "labs/08_behavioral_analyzer/README.md",
       "description": "Código-fonte: `labs/08_behavioral_analyzer/README.md`"
     },
@@ -1132,7 +1132,7 @@
       "category": "network",
       "categoryLabel": "Rede / Scan",
       "color": "#22d3ee",
-      "size": 0.85,
+      "size": 0.95,
       "file": "labs/09_yara_like_scanner/pattern_scanner.py",
       "description": "Código-fonte: `labs/09_yara_like_scanner/pattern_scanner.py`"
     },
@@ -1144,7 +1144,7 @@
       "category": "network",
       "categoryLabel": "Rede / Scan",
       "color": "#22d3ee",
-      "size": 0.85,
+      "size": 0.95,
       "file": "labs/09_yara_like_scanner/README.md",
       "description": "Código-fonte: `labs/09_yara_like_scanner/README.md`"
     },
@@ -1156,7 +1156,7 @@
       "category": "other",
       "categoryLabel": "Outros",
       "color": "#64748b",
-      "size": 0.85,
+      "size": 0.95,
       "file": "labs/10_rootkit_concept/README.md",
       "description": "Código-fonte: `labs/10_rootkit_concept/README.md`"
     },
@@ -1168,7 +1168,7 @@
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
-      "size": 0.85,
+      "size": 0.95,
       "file": "labs/10_rootkit_concept/simulate_rootkit.py",
       "description": "Código-fonte: `labs/10_rootkit_concept/simulate_rootkit.py`"
     },
@@ -1180,7 +1180,7 @@
       "category": "other",
       "categoryLabel": "Outros",
       "color": "#64748b",
-      "size": 0.85,
+      "size": 0.95,
       "file": "labs/11_botnet_concept/README.md",
       "description": "Código-fonte: `labs/11_botnet_concept/README.md`"
     },
@@ -1192,7 +1192,7 @@
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
-      "size": 0.85,
+      "size": 0.95,
       "file": "labs/11_botnet_concept/simulate_botnet.py",
       "description": "Código-fonte: `labs/11_botnet_concept/simulate_botnet.py`"
     },
@@ -1204,7 +1204,7 @@
       "category": "other",
       "categoryLabel": "Outros",
       "color": "#64748b",
-      "size": 0.85,
+      "size": 0.95,
       "file": "labs/12_adware_scareware/README.md",
       "description": "Código-fonte: `labs/12_adware_scareware/README.md`"
     },
@@ -1216,7 +1216,7 @@
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
-      "size": 0.85,
+      "size": 0.95,
       "file": "labs/12_adware_scareware/simulate_adware.py",
       "description": "Código-fonte: `labs/12_adware_scareware/simulate_adware.py`"
     },
@@ -1228,7 +1228,7 @@
       "category": "other",
       "categoryLabel": "Outros",
       "color": "#64748b",
-      "size": 0.85,
+      "size": 0.95,
       "file": "labs/13_cryptojacker/README.md",
       "description": "Código-fonte: `labs/13_cryptojacker/README.md`"
     },
@@ -1240,7 +1240,7 @@
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
-      "size": 0.85,
+      "size": 0.95,
       "file": "labs/13_cryptojacker/simulate_cryptojacker.py",
       "description": "Código-fonte: `labs/13_cryptojacker/simulate_cryptojacker.py`"
     },
@@ -1252,7 +1252,7 @@
       "category": "other",
       "categoryLabel": "Outros",
       "color": "#64748b",
-      "size": 0.85,
+      "size": 0.95,
       "file": "labs/14_fileless_concept/README.md",
       "description": "Código-fonte: `labs/14_fileless_concept/README.md`"
     },
@@ -1264,7 +1264,7 @@
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
-      "size": 0.85,
+      "size": 0.95,
       "file": "labs/14_fileless_concept/simulate_fileless.py",
       "description": "Código-fonte: `labs/14_fileless_concept/simulate_fileless.py`"
     },
@@ -1276,7 +1276,7 @@
       "category": "other",
       "categoryLabel": "Outros",
       "color": "#64748b",
-      "size": 0.85,
+      "size": 0.95,
       "file": "labs/15_macro_malware/README.md",
       "description": "Código-fonte: `labs/15_macro_malware/README.md`"
     },
@@ -1288,7 +1288,7 @@
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
-      "size": 0.85,
+      "size": 0.95,
       "file": "labs/15_macro_malware/simulate_macro.py",
       "description": "Código-fonte: `labs/15_macro_malware/simulate_macro.py`"
     },
@@ -1300,7 +1300,7 @@
       "category": "other",
       "categoryLabel": "Outros",
       "color": "#64748b",
-      "size": 0.85,
+      "size": 0.95,
       "file": "labs/16_logic_bomb/README.md",
       "description": "Código-fonte: `labs/16_logic_bomb/README.md`"
     },
@@ -1312,7 +1312,7 @@
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
-      "size": 0.85,
+      "size": 0.95,
       "file": "labs/16_logic_bomb/simulate_logic_bomb.py",
       "description": "Código-fonte: `labs/16_logic_bomb/simulate_logic_bomb.py`"
     },
@@ -1324,7 +1324,7 @@
       "category": "other",
       "categoryLabel": "Outros",
       "color": "#64748b",
-      "size": 0.85,
+      "size": 0.95,
       "file": "labs/17_backdoor_dropper/README.md",
       "description": "Código-fonte: `labs/17_backdoor_dropper/README.md`"
     },
@@ -1336,7 +1336,7 @@
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
-      "size": 0.85,
+      "size": 0.95,
       "file": "labs/17_backdoor_dropper/simulate_backdoor.py",
       "description": "Código-fonte: `labs/17_backdoor_dropper/simulate_backdoor.py`"
     },
@@ -1348,7 +1348,7 @@
       "category": "other",
       "categoryLabel": "Outros",
       "color": "#64748b",
-      "size": 0.85,
+      "size": 0.95,
       "file": "labs/18_phishing_lure/README.md",
       "description": "Código-fonte: `labs/18_phishing_lure/README.md`"
     },
@@ -1360,7 +1360,7 @@
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
-      "size": 0.85,
+      "size": 0.95,
       "file": "labs/18_phishing_lure/simulate_phishing.py",
       "description": "Código-fonte: `labs/18_phishing_lure/simulate_phishing.py`"
     },
@@ -1372,7 +1372,7 @@
       "category": "other",
       "categoryLabel": "Outros",
       "color": "#64748b",
-      "size": 0.85,
+      "size": 0.95,
       "file": "labs/19_supply_chain/README.md",
       "description": "Código-fonte: `labs/19_supply_chain/README.md`"
     },
@@ -1384,7 +1384,7 @@
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
-      "size": 0.85,
+      "size": 0.95,
       "file": "labs/19_supply_chain/simulate_supply_chain.py",
       "description": "Código-fonte: `labs/19_supply_chain/simulate_supply_chain.py`"
     },
@@ -1396,7 +1396,7 @@
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
-      "size": 0.85,
+      "size": 0.95,
       "file": "labs/20_enterprise_hardening/checklist.py",
       "description": "Código-fonte: `labs/20_enterprise_hardening/checklist.py`"
     },
@@ -1408,7 +1408,7 @@
       "category": "other",
       "categoryLabel": "Outros",
       "color": "#64748b",
-      "size": 0.85,
+      "size": 0.95,
       "file": "labs/20_enterprise_hardening/README.md",
       "description": "Código-fonte: `labs/20_enterprise_hardening/README.md`"
     },
@@ -1420,7 +1420,7 @@
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
-      "size": 0.85,
+      "size": 0.95,
       "file": "prevention/print_controls.py",
       "description": "Código-fonte: `prevention/print_controls.py`"
     },
@@ -1432,7 +1432,7 @@
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
-      "size": 0.85,
+      "size": 0.95,
       "file": "tools/generate_catalog.py",
       "description": "Código-fonte: `tools/generate_catalog.py`"
     }

@@ -40,7 +40,7 @@
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
-      "size": 0.85,
+      "size": 0.95,
       "file": "abrir_chamado.php",
       "description": "Código-fonte: `abrir_chamado.php`"
     },
@@ -52,7 +52,7 @@
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
-      "size": 0.85,
+      "size": 0.95,
       "file": "consultar_chamado.php",
       "description": "Código-fonte: `consultar_chamado.php`"
     },
@@ -64,7 +64,7 @@
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
-      "size": 0.85,
+      "size": 0.95,
       "file": "home.php",
       "description": "Código-fonte: `home.php`"
     },
@@ -76,7 +76,7 @@
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
-      "size": 0.85,
+      "size": 0.95,
       "file": "index.php",
       "description": "Código-fonte: `index.php`"
     },
@@ -88,7 +88,7 @@
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
-      "size": 0.85,
+      "size": 0.95,
       "file": "logoff.php",
       "description": "Código-fonte: `logoff.php`"
     },
@@ -100,7 +100,7 @@
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
-      "size": 0.85,
+      "size": 0.95,
       "file": "registra_chamado.php",
       "description": "Código-fonte: `registra_chamado.php`"
     },
@@ -112,7 +112,7 @@
       "category": "auth",
       "categoryLabel": "Segurança",
       "color": "#ef4444",
-      "size": 0.85,
+      "size": 0.95,
       "file": "valida_login.php",
       "description": "Código-fonte: `valida_login.php`"
     },
@@ -124,7 +124,7 @@
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
-      "size": 0.85,
+      "size": 0.95,
       "file": "validador_acesso.php",
       "description": "Código-fonte: `validador_acesso.php`"
     }

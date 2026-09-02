@@ -396,7 +396,7 @@
       "category": "scripts",
       "categoryLabel": "Scripts",
       "color": "#64748b",
-      "size": 0.85,
+      "size": 0.95,
       "file": "app.js",
       "description": "Código-fonte: `app.js`"
     },
@@ -408,7 +408,7 @@
       "category": "scripts",
       "categoryLabel": "Scripts",
       "color": "#64748b",
-      "size": 0.85,
+      "size": 0.95,
       "file": "package.json",
       "description": "Código-fonte: `package.json`"
     },
@@ -420,7 +420,7 @@
       "category": "scripts",
       "categoryLabel": "Scripts",
       "color": "#64748b",
-      "size": 0.85,
+      "size": 0.95,
       "file": "bin/www",
       "description": "Código-fonte: `bin/www`"
     },
@@ -432,7 +432,7 @@
       "category": "scripts",
       "categoryLabel": "Scripts",
       "color": "#64748b",
-      "size": 0.85,
+      "size": 0.95,
       "file": "inc/admin.js",
       "description": "Código-fonte: `inc/admin.js`"
     },
@@ -444,7 +444,7 @@
       "category": "scripts",
       "categoryLabel": "Scripts",
       "color": "#64748b",
-      "size": 0.85,
+      "size": 0.95,
       "file": "inc/contacts.js",
       "description": "Código-fonte: `inc/contacts.js`"
     },
@@ -456,7 +456,7 @@
       "category": "oracle",
       "categoryLabel": "Oracle / DB",
       "color": "#c084fc",
-      "size": 0.85,
+      "size": 0.95,
       "file": "inc/db.js",
       "description": "Código-fonte: `inc/db.js`"
     },
@@ -468,7 +468,7 @@
       "category": "scripts",
       "categoryLabel": "Scripts",
       "color": "#64748b",
-      "size": 0.85,
+      "size": 0.95,
       "file": "inc/emails.js",
       "description": "Código-fonte: `inc/emails.js`"
     },
@@ -480,7 +480,7 @@
       "category": "scripts",
       "categoryLabel": "Scripts",
       "color": "#64748b",
-      "size": 0.85,
+      "size": 0.95,
       "file": "inc/menus.js",
       "description": "Código-fonte: `inc/menus.js`"
     },
@@ -492,7 +492,7 @@
       "category": "scripts",
       "categoryLabel": "Scripts",
       "color": "#64748b",
-      "size": 0.85,
+      "size": 0.95,
       "file": "inc/Pagination.js",
       "description": "Código-fonte: `inc/Pagination.js`"
     },
@@ -504,7 +504,7 @@
       "category": "scripts",
       "categoryLabel": "Scripts",
       "color": "#64748b",
-      "size": 0.85,
+      "size": 0.95,
       "file": "inc/reservations.js",
       "description": "Código-fonte: `inc/reservations.js`"
     },
@@ -516,7 +516,7 @@
       "category": "scripts",
       "categoryLabel": "Scripts",
       "color": "#64748b",
-      "size": 0.85,
+      "size": 0.95,
       "file": "inc/users.js",
       "description": "Código-fonte: `inc/users.js`"
     },
@@ -528,7 +528,7 @@
       "category": "scripts",
       "categoryLabel": "Scripts",
       "color": "#64748b",
-      "size": 0.85,
+      "size": 0.95,
       "file": "public/admin/bower.json",
       "description": "Código-fonte: `public/admin/bower.json`"
     },
@@ -540,7 +540,7 @@
       "category": "scripts",
       "categoryLabel": "Scripts",
       "color": "#64748b",
-      "size": 0.85,
+      "size": 0.95,
       "file": "public/admin/plugins/bootstrap-slider/bootstrap-slider.js",
       "description": "Código-fonte: `public/admin/plugins/bootstrap-slider/bootstrap-slider.js`"
     },
@@ -552,7 +552,7 @@
       "category": "frontend",
       "categoryLabel": "Frontend",
       "color": "#eab308",
-      "size": 0.85,
+      "size": 0.95,
       "file": "public/admin/plugins/bootstrap-slider/slider.css",
       "description": "Código-fonte: `public/admin/plugins/bootstrap-slider/slider.css`"
     },
@@ -564,7 +564,7 @@
       "category": "scripts",
       "categoryLabel": "Scripts",
       "color": "#64748b",
-      "size": 0.85,
+      "size": 0.95,
       "file": "public/admin/plugins/bootstrap-wysihtml5/bootstrap3-wysihtml5.all.js",
       "description": "Código-fonte: `public/admin/plugins/bootstrap-wysihtml5/bootstrap3-wysihtml5.all.js`"
     },
@@ -576,7 +576,7 @@
       "category": "scripts",
       "categoryLabel": "Scripts",
       "color": "#64748b",
-      "size": 0.85,
+      "size": 0.95,
       "file": "public/admin/plugins/bootstrap-wysihtml5/bootstrap3-wysihtml5.all.min.js",
       "description": "Código-fonte: `public/admin/plugins/bootstrap-wysihtml5/bootstrap3-wysihtml5.all.min.js`"
     },
@@ -588,7 +588,7 @@
       "category": "frontend",
       "categoryLabel": "Frontend",
       "color": "#eab308",
-      "size": 0.85,
+      "size": 0.95,
       "file": "public/admin/plugins/bootstrap-wysihtml5/bootstrap3-wysihtml5.css",
       "description": "Código-fonte: `public/admin/plugins/bootstrap-wysihtml5/bootstrap3-wysihtml5.css`"
     },
@@ -600,7 +600,7 @@
       "category": "frontend",
       "categoryLabel": "Frontend",
       "color": "#eab308",
-      "size": 0.85,
+      "size": 0.95,
       "file": "public/admin/plugins/bootstrap-wysihtml5/bootstrap3-wysihtml5.min.css",
       "description": "Código-fonte: `public/admin/plugins/bootstrap-wysihtml5/bootstrap3-wysihtml5.min.css`"
     },
@@ -612,7 +612,7 @@
       "category": "frontend",
       "categoryLabel": "Frontend",
       "color": "#eab308",
-      "size": 0.85,
+      "size": 0.95,
       "file": "public/admin/plugins/iCheck/all.css",
       "description": "Código-fonte: `public/admin/plugins/iCheck/all.css`"
     },
@@ -624,7 +624,7 @@
       "category": "scripts",
       "categoryLabel": "Scripts",
       "color": "#64748b",
-      "size": 0.85,
+      "size": 0.95,
       "file": "public/admin/plugins/iCheck/icheck.js",
       "description": "Código-fonte: `public/admin/plugins/iCheck/icheck.js`"
     },
@@ -636,7 +636,7 @@
       "category": "scripts",
       "categoryLabel": "Scripts",
       "color": "#64748b",
-      "size": 0.85,
+      "size": 0.95,
       "file": "public/admin/plugins/iCheck/icheck.min.js",
       "description": "Código-fonte: `public/admin/plugins/iCheck/icheck.min.js`"
     },
@@ -648,7 +648,7 @@
       "category": "frontend",
       "categoryLabel": "Frontend",
       "color": "#eab308",
-      "size": 0.85,
+      "size": 0.95,
       "file": "public/admin/plugins/iCheck/flat/_all.css",
       "description": "Código-fonte: `public/admin/plugins/iCheck/flat/_all.css`"
     },
@@ -660,7 +660,7 @@
       "category": "frontend",
       "categoryLabel": "Frontend",
       "color": "#eab308",
-      "size": 0.85,
+      "size": 0.95,
       "file": "public/admin/plugins/iCheck/flat/aero.css",
       "description": "Código-fonte: `public/admin/plugins/iCheck/flat/aero.css`"
     },
@@ -672,7 +672,7 @@
       "category": "frontend",
       "categoryLabel": "Frontend",
       "color": "#eab308",
-      "size": 0.85,
+      "size": 0.95,
       "file": "public/admin/plugins/iCheck/flat/blue.css",
       "description": "Código-fonte: `public/admin/plugins/iCheck/flat/blue.css`"
     },
@@ -684,7 +684,7 @@
       "category": "frontend",
       "categoryLabel": "Frontend",
       "color": "#eab308",
-      "size": 0.85,
+      "size": 0.95,
       "file": "public/admin/plugins/iCheck/flat/flat.css",
       "description": "Código-fonte: `public/admin/plugins/iCheck/flat/flat.css`"
     },
@@ -696,7 +696,7 @@
       "category": "frontend",
       "categoryLabel": "Frontend",
       "color": "#eab308",
-      "size": 0.85,
+      "size": 0.95,
       "file": "public/admin/plugins/iCheck/flat/green.css",
       "description": "Código-fonte: `public/admin/plugins/iCheck/flat/green.css`"
     },
@@ -708,7 +708,7 @@
       "category": "frontend",
       "categoryLabel": "Frontend",
       "color": "#eab308",
-      "size": 0.85,
+      "size": 0.95,
       "file": "public/admin/plugins/iCheck/flat/grey.css",
       "description": "Código-fonte: `public/admin/plugins/iCheck/flat/grey.css`"
     },
@@ -720,7 +720,7 @@
       "category": "frontend",
       "categoryLabel": "Frontend",
       "color": "#eab308",
-      "size": 0.85,
+      "size": 0.95,
       "file": "public/admin/plugins/iCheck/flat/orange.css",
       "description": "Código-fonte: `public/admin/plugins/iCheck/flat/orange.css`"
     },
@@ -732,7 +732,7 @@
       "category": "frontend",
       "categoryLabel": "Frontend",
       "color": "#eab308",
-      "size": 0.85,
+      "size": 0.95,
       "file": "public/admin/plugins/iCheck/flat/pink.css",
       "description": "Código-fonte: `public/admin/plugins/iCheck/flat/pink.css`"
     },
@@ -744,7 +744,7 @@
       "category": "frontend",
       "categoryLabel": "Frontend",
       "color": "#eab308",
-      "size": 0.85,
+      "size": 0.95,
       "file": "public/admin/plugins/iCheck/flat/purple.css",
       "description": "Código-fonte: `public/admin/plugins/iCheck/flat/purple.css`"
     },
@@ -756,7 +756,7 @@
       "category": "frontend",
       "categoryLabel": "Frontend",
       "color": "#eab308",
-      "size": 0.85,
+      "size": 0.95,
       "file": "public/admin/plugins/iCheck/flat/red.css",
       "description": "Código-fonte: `public/admin/plugins/iCheck/flat/red.css`"
     },
@@ -768,7 +768,7 @@
       "category": "frontend",
       "categoryLabel": "Frontend",
       "color": "#eab308",
-      "size": 0.85,
+      "size": 0.95,
       "file": "public/admin/plugins/iCheck/flat/yellow.css",
       "description": "Código-fonte: `public/admin/plugins/iCheck/flat/yellow.css`"
     },
@@ -780,7 +780,7 @@
       "category": "frontend",
       "categoryLabel": "Frontend",
       "color": "#eab308",
-      "size": 0.85,
+      "size": 0.95,
       "file": "public/admin/plugins/iCheck/futurico/futurico.css",
       "description": "Código-fonte: `public/admin/plugins/iCheck/futurico/futurico.css`"
     },
@@ -792,7 +792,7 @@
       "category": "frontend",
       "categoryLabel": "Frontend",
       "color": "#eab308",
-      "size": 0.85,
+      "size": 0.95,
       "file": "public/admin/plugins/iCheck/line/_all.css",
       "description": "Código-fonte: `public/admin/plugins/iCheck/line/_all.css`"
     },
@@ -804,7 +804,7 @@
       "category": "frontend",
       "categoryLabel": "Frontend",
       "color": "#eab308",
-      "size": 0.85,
+      "size": 0.95,
       "file": "public/admin/plugins/iCheck/line/aero.css",
       "description": "Código-fonte: `public/admin/plugins/iCheck/line/aero.css`"
     },
@@ -816,7 +816,7 @@
       "category": "frontend",
       "categoryLabel": "Frontend",
       "color": "#eab308",
-      "size": 0.85,
+      "size": 0.95,
       "file": "public/admin/plugins/iCheck/line/blue.css",
       "description": "Código-fonte: `public/admin/plugins/iCheck/line/blue.css`"
     },
@@ -828,7 +828,7 @@
       "category": "frontend",
       "categoryLabel": "Frontend",
       "color": "#eab308",
-      "size": 0.85,
+      "size": 0.95,
       "file": "public/admin/plugins/iCheck/line/green.css",
       "description": "Código-fonte: `public/admin/plugins/iCheck/line/green.css`"
     },
@@ -840,7 +840,7 @@
       "category": "frontend",
       "categoryLabel": "Frontend",
       "color": "#eab308",
-      "size": 0.85,
+      "size": 0.95,
       "file": "public/admin/plugins/iCheck/line/grey.css",
       "description": "Código-fonte: `public/admin/plugins/iCheck/line/grey.css`"
     },
@@ -852,7 +852,7 @@
       "category": "frontend",
       "categoryLabel": "Frontend",
       "color": "#eab308",
-      "size": 0.85,
+      "size": 0.95,
       "file": "public/admin/plugins/iCheck/line/line.css",
       "description": "Código-fonte: `public/admin/plugins/iCheck/line/line.css`"
     },
@@ -864,7 +864,7 @@
       "category": "frontend",
       "categoryLabel": "Frontend",
       "color": "#eab308",
-      "size": 0.85,
+      "size": 0.95,
       "file": "public/admin/plugins/iCheck/line/orange.css",
       "description": "Código-fonte: `public/admin/plugins/iCheck/line/orange.css`"
     },
@@ -876,7 +876,7 @@
       "category": "frontend",
       "categoryLabel": "Frontend",
       "color": "#eab308",
-      "size": 0.85,
+      "size": 0.95,
       "file": "public/admin/plugins/iCheck/line/pink.css",
       "description": "Código-fonte: `public/admin/plugins/iCheck/line/pink.css`"
     },
@@ -888,7 +888,7 @@
       "category": "frontend",
       "categoryLabel": "Frontend",
       "color": "#eab308",
-      "size": 0.85,
+      "size": 0.95,
       "file": "public/admin/plugins/iCheck/line/purple.css",
       "description": "Código-fonte: `public/admin/plugins/iCheck/line/purple.css`"
     },
@@ -900,7 +900,7 @@
       "category": "frontend",
       "categoryLabel": "Frontend",
       "color": "#eab308",
-      "size": 0.85,
+      "size": 0.95,
       "file": "public/admin/plugins/iCheck/line/red.css",
       "description": "Código-fonte: `public/admin/plugins/iCheck/line/red.css`"
     },
@@ -912,7 +912,7 @@
       "category": "frontend",
       "categoryLabel": "Frontend",
       "color": "#eab308",
-      "size": 0.85,
+      "size": 0.95,
       "file": "public/admin/plugins/iCheck/line/yellow.css",
       "description": "Código-fonte: `public/admin/plugins/iCheck/line/yellow.css`"
     },
@@ -924,7 +924,7 @@
       "category": "frontend",
       "categoryLabel": "Frontend",
       "color": "#eab308",
-      "size": 0.85,
+      "size": 0.95,
       "file": "public/admin/plugins/iCheck/minimal/_all.css",
       "description": "Código-fonte: `public/admin/plugins/iCheck/minimal/_all.css`"
     },
@@ -936,7 +936,7 @@
       "category": "frontend",
       "categoryLabel": "Frontend",
       "color": "#eab308",
-      "size": 0.85,
+      "size": 0.95,
       "file": "public/admin/plugins/iCheck/minimal/aero.css",
       "description": "Código-fonte: `public/admin/plugins/iCheck/minimal/aero.css`"
     },
@@ -948,7 +948,7 @@
       "category": "frontend",
       "categoryLabel": "Frontend",
       "color": "#eab308",
-      "size": 0.85,
+      "size": 0.95,
       "file": "public/admin/plugins/iCheck/minimal/blue.css",
       "description": "Código-fonte: `public/admin/plugins/iCheck/minimal/blue.css`"
     },
@@ -960,7 +960,7 @@
       "category": "frontend",
       "categoryLabel": "Frontend",
       "color": "#eab308",
-      "size": 0.85,
+      "size": 0.95,
       "file": "public/admin/plugins/iCheck/minimal/green.css",
       "description": "Código-fonte: `public/admin/plugins/iCheck/minimal/green.css`"
     },
@@ -972,7 +972,7 @@
       "category": "frontend",
       "categoryLabel": "Frontend",
       "color": "#eab308",
-      "size": 0.85,
+      "size": 0.95,
       "file": "public/admin/plugins/iCheck/minimal/grey.css",
       "description": "Código-fonte: `public/admin/plugins/iCheck/minimal/grey.css`"
     },
@@ -984,7 +984,7 @@
       "category": "frontend",
       "categoryLabel": "Frontend",
       "color": "#eab308",
-      "size": 0.85,
+      "size": 0.95,
       "file": "public/admin/plugins/iCheck/minimal/minimal.css",
       "description": "Código-fonte: `public/admin/plugins/iCheck/minimal/minimal.css`"
     },
@@ -996,7 +996,7 @@
       "category": "frontend",
       "categoryLabel": "Frontend",
       "color": "#eab308",
-      "size": 0.85,
+      "size": 0.95,
       "file": "public/admin/plugins/iCheck/minimal/orange.css",
       "description": "Código-fonte: `public/admin/plugins/iCheck/minimal/orange.css`"
     },
@@ -1008,7 +1008,7 @@
       "category": "frontend",
       "categoryLabel": "Frontend",
       "color": "#eab308",
-      "size": 0.85,
+      "size": 0.95,
       "file": "public/admin/plugins/iCheck/minimal/pink.css",
       "description": "Código-fonte: `public/admin/plugins/iCheck/minimal/pink.css`"
     },
@@ -1020,7 +1020,7 @@
       "category": "frontend",
       "categoryLabel": "Frontend",
       "color": "#eab308",
-      "size": 0.85,
+      "size": 0.95,
       "file": "public/admin/plugins/iCheck/minimal/purple.css",
       "description": "Código-fonte: `public/admin/plugins/iCheck/minimal/purple.css`"
     },
@@ -1032,7 +1032,7 @@
       "category": "frontend",
       "categoryLabel": "Frontend",
       "color": "#eab308",
-      "size": 0.85,
+      "size": 0.95,
       "file": "public/admin/plugins/iCheck/minimal/red.css",
       "description": "Código-fonte: `public/admin/plugins/iCheck/minimal/red.css`"
     },
@@ -1044,7 +1044,7 @@
       "category": "frontend",
       "categoryLabel": "Frontend",
       "color": "#eab308",
-      "size": 0.85,
+      "size": 0.95,
       "file": "public/admin/plugins/iCheck/minimal/yellow.css",
       "description": "Código-fonte: `public/admin/plugins/iCheck/minimal/yellow.css`"
     },
@@ -1056,7 +1056,7 @@
       "category": "frontend",
       "categoryLabel": "Frontend",
       "color": "#eab308",
-      "size": 0.85,
+      "size": 0.95,
       "file": "public/admin/plugins/iCheck/polaris/polaris.css",
       "description": "Código-fonte: `public/admin/plugins/iCheck/polaris/polaris.css`"
     },
@@ -1068,7 +1068,7 @@
       "category": "frontend",
       "categoryLabel": "Frontend",
       "color": "#eab308",
-      "size": 0.85,
+      "size": 0.95,
       "file": "public/admin/plugins/iCheck/square/_all.css",
       "description": "Código-fonte: `public/admin/plugins/iCheck/square/_all.css`"
     },
@@ -1080,7 +1080,7 @@
       "category": "frontend",
       "categoryLabel": "Frontend",
       "color": "#eab308",
-      "size": 0.85,
+      "size": 0.95,
       "file": "public/admin/plugins/iCheck/square/aero.css",
       "description": "Código-fonte: `public/admin/plugins/iCheck/square/aero.css`"
     },
@@ -1092,7 +1092,7 @@
       "category": "frontend",
       "categoryLabel": "Frontend",
       "color": "#eab308",
-      "size": 0.85,
+      "size": 0.95,
       "file": "public/admin/plugins/iCheck/square/blue.css",
       "description": "Código-fonte: `public/admin/plugins/iCheck/square/blue.css`"
     },
@@ -1104,7 +1104,7 @@
       "category": "frontend",
       "categoryLabel": "Frontend",
       "color": "#eab308",
-      "size": 0.85,
+      "size": 0.95,
       "file": "public/admin/plugins/iCheck/square/green.css",
       "description": "Código-fonte: `public/admin/plugins/iCheck/square/green.css`"
     },
@@ -1116,7 +1116,7 @@
       "category": "frontend",
       "categoryLabel": "Frontend",
       "color": "#eab308",
-      "size": 0.85,
+      "size": 0.95,
       "file": "public/admin/plugins/iCheck/square/grey.css",
       "description": "Código-fonte: `public/admin/plugins/iCheck/square/grey.css`"
     },
@@ -1128,7 +1128,7 @@
       "category": "frontend",
       "categoryLabel": "Frontend",
       "color": "#eab308",
-      "size": 0.85,
+      "size": 0.95,
       "file": "public/admin/plugins/iCheck/square/orange.css",
       "description": "Código-fonte: `public/admin/plugins/iCheck/square/orange.css`"
     },
@@ -1140,7 +1140,7 @@
       "category": "frontend",
       "categoryLabel": "Frontend",
       "color": "#eab308",
-      "size": 0.85,
+      "size": 0.95,
       "file": "public/admin/plugins/iCheck/square/pink.css",
       "description": "Código-fonte: `public/admin/plugins/iCheck/square/pink.css`"
     },
@@ -1152,7 +1152,7 @@
       "category": "frontend",
       "categoryLabel": "Frontend",
       "color": "#eab308",
-      "size": 0.85,
+      "size": 0.95,
       "file": "public/admin/plugins/iCheck/square/purple.css",
       "description": "Código-fonte: `public/admin/plugins/iCheck/square/purple.css`"
     },
@@ -1164,7 +1164,7 @@
       "category": "frontend",
       "categoryLabel": "Frontend",
       "color": "#eab308",
-      "size": 0.85,
+      "size": 0.95,
       "file": "public/admin/plugins/iCheck/square/red.css",
       "description": "Código-fonte: `public/admin/plugins/iCheck/square/red.css`"
     },
@@ -1176,7 +1176,7 @@
       "category": "frontend",
       "categoryLabel": "Frontend",
       "color": "#eab308",
-      "size": 0.85,
+      "size": 0.95,
       "file": "public/admin/plugins/iCheck/square/square.css",
       "description": "Código-fonte: `public/admin/plugins/iCheck/square/square.css`"
     },
@@ -1188,7 +1188,7 @@
       "category": "frontend",
       "categoryLabel": "Frontend",
       "color": "#eab308",
-      "size": 0.85,
+      "size": 0.95,
       "file": "public/admin/plugins/iCheck/square/yellow.css",
       "description": "Código-fonte: `public/admin/plugins/iCheck/square/yellow.css`"
     },
@@ -1200,7 +1200,7 @@
       "category": "scripts",
       "categoryLabel": "Scripts",
       "color": "#64748b",
-      "size": 0.85,
+      "size": 0.95,
       "file": "public/admin/plugins/input-mask/jquery.inputmask.date.extensions.js",
       "description": "Código-fonte: `public/admin/plugins/input-mask/jquery.inputmask.date.extensions.js`"
     },
@@ -1212,7 +1212,7 @@
       "category": "scripts",
       "categoryLabel": "Scripts",
       "color": "#64748b",
-      "size": 0.85,
+      "size": 0.95,
       "file": "public/admin/plugins/input-mask/jquery.inputmask.extensions.js",
       "description": "Código-fonte: `public/admin/plugins/input-mask/jquery.inputmask.extensions.js`"
     },
@@ -1224,7 +1224,7 @@
       "category": "scripts",
       "categoryLabel": "Scripts",
       "color": "#64748b",
-      "size": 0.85,
+      "size": 0.95,
       "file": "public/admin/plugins/input-mask/jquery.inputmask.js",
       "description": "Código-fonte: `public/admin/plugins/input-mask/jquery.inputmask.js`"
     },
@@ -1236,7 +1236,7 @@
       "category": "scripts",
       "categoryLabel": "Scripts",
       "color": "#64748b",
-      "size": 0.85,
+      "size": 0.95,
       "file": "public/admin/plugins/input-mask/jquery.inputmask.numeric.extensions.js",
       "description": "Código-fonte: `public/admin/plugins/input-mask/jquery.inputmask.numeric.extensions.js`"
     },
@@ -1248,7 +1248,7 @@
       "category": "scripts",
       "categoryLabel": "Scripts",
       "color": "#64748b",
-      "size": 0.85,
+      "size": 0.95,
       "file": "public/admin/plugins/input-mask/jquery.inputmask.phone.extensions.js",
       "description": "Código-fonte: `public/admin/plugins/input-mask/jquery.inputmask.phone.extensions.js`"
     },
@@ -1260,7 +1260,7 @@
       "category": "scripts",
       "categoryLabel": "Scripts",
       "color": "#64748b",
-      "size": 0.85,
+      "size": 0.95,
       "file": "public/admin/plugins/input-mask/jquery.inputmask.regex.extensions.js",
       "description": "Código-fonte: `public/admin/plugins/input-mask/jquery.inputmask.regex.extensions.js`"
     },
@@ -1272,7 +1272,7 @@
       "category": "scripts",
       "categoryLabel": "Scripts",
       "color": "#64748b",
-      "size": 0.85,
+      "size": 0.95,
       "file": "public/admin/plugins/input-mask/phone-codes/phone-be.json",
       "description": "Código-fonte: `public/admin/plugins/input-mask/phone-codes/phone-be.json`"
     },
@@ -1284,7 +1284,7 @@
       "category": "scripts",
       "categoryLabel": "Scripts",
       "color": "#64748b",
-      "size": 0.85,
+      "size": 0.95,
       "file": "public/admin/plugins/input-mask/phone-codes/phone-codes.json",
       "description": "Código-fonte: `public/admin/plugins/input-mask/phone-codes/phone-codes.json`"
     },
@@ -1296,7 +1296,7 @@
       "category": "frontend",
       "categoryLabel": "Frontend",
       "color": "#eab308",
-      "size": 0.85,
+      "size": 0.95,
       "file": "public/admin/plugins/jQueryUI/jquery-ui.js",
       "description": "Código-fonte: `public/admin/plugins/jQueryUI/jquery-ui.js`"
     },
@@ -1308,7 +1308,7 @@
       "category": "frontend",
       "categoryLabel": "Frontend",
       "color": "#eab308",
-      "size": 0.85,
+      "size": 0.95,
       "file": "public/admin/plugins/jQueryUI/jquery-ui.min.js",
       "description": "Código-fonte: `public/admin/plugins/jQueryUI/jquery-ui.min.js`"
     },
@@ -1320,7 +1320,7 @@
       "category": "frontend",
       "categoryLabel": "Frontend",
       "color": "#eab308",
-      "size": 0.85,
+      "size": 0.95,
       "file": "public/admin/plugins/jvectormap/jquery-jvectormap-1.2.2.css",
       "description": "Código-fonte: `public/admin/plugins/jvectormap/jquery-jvectormap-1.2.2.css`"
     },
@@ -1332,7 +1332,7 @@
       "category": "scripts",
       "categoryLabel": "Scripts",
       "color": "#64748b",
-      "size": 0.85,
+      "size": 0.95,
       "file": "public/admin/plugins/jvectormap/jquery-jvectormap-1.2.2.min.js",
       "description": "Código-fonte: `public/admin/plugins/jvectormap/jquery-jvectormap-1.2.2.min.js`"
     },
@@ -1344,7 +1344,7 @@
       "category": "scripts",
       "categoryLabel": "Scripts",
       "color": "#64748b",
-      "size": 0.85,
+      "size": 0.95,
       "file": "public/admin/plugins/jvectormap/jquery-jvectormap-usa-en.js",
       "description": "Código-fonte: `public/admin/plugins/jvectormap/jquery-jvectormap-usa-en.js`"
     },
@@ -1356,7 +1356,7 @@
       "category": "scripts",
       "categoryLabel": "Scripts",
       "color": "#64748b",
-      "size": 0.85,
+      "size": 0.95,
       "file": "public/admin/plugins/jvectormap/jquery-jvectormap-world-mill-en.js",
       "description": "Código-fonte: `public/admin/plugins/jvectormap/jquery-jvectormap-world-mill-en.js`"
     },
@@ -1368,7 +1368,7 @@
       "category": "frontend",
       "categoryLabel": "Frontend",
       "color": "#eab308",
-      "size": 0.85,
+      "size": 0.95,
       "file": "public/admin/plugins/pace/pace.css",
       "description": "Código-fonte: `public/admin/plugins/pace/pace.css`"
     },
@@ -1380,7 +1380,7 @@
       "category": "scripts",
       "categoryLabel": "Scripts",
       "color": "#64748b",
-      "size": 0.85,
+      "size": 0.95,
       "file": "public/admin/plugins/pace/pace.js",
       "description": "Código-fonte: `public/admin/plugins/pace/pace.js`"
     },
@@ -1392,7 +1392,7 @@
       "category": "frontend",
       "categoryLabel": "Frontend",
       "color": "#eab308",
-      "size": 0.85,
+      "size": 0.95,
       "file": "public/admin/plugins/pace/pace.min.css",
       "description": "Código-fonte: `public/admin/plugins/pace/pace.min.css`"
     },
@@ -1404,7 +1404,7 @@
       "category": "scripts",
       "categoryLabel": "Scripts",
       "color": "#64748b",
-      "size": 0.85,
+      "size": 0.95,
       "file": "public/admin/plugins/pace/pace.min.js",
       "description": "Código-fonte: `public/admin/plugins/pace/pace.min.js`"
     },
@@ -1416,7 +1416,7 @@
       "category": "frontend",
       "categoryLabel": "Frontend",
       "color": "#eab308",
-      "size": 0.85,
+      "size": 0.95,
       "file": "public/admin/plugins/timepicker/bootstrap-timepicker.css",
       "description": "Código-fonte: `public/admin/plugins/timepicker/bootstrap-timepicker.css`"
     },
@@ -1428,7 +1428,7 @@
       "category": "scripts",
       "categoryLabel": "Scripts",
       "color": "#64748b",
-      "size": 0.85,
+      "size": 0.95,
       "file": "public/admin/plugins/timepicker/bootstrap-timepicker.js",
       "description": "Código-fonte: `public/admin/plugins/timepicker/bootstrap-timepicker.js`"
     },
@@ -1440,7 +1440,7 @@
       "category": "frontend",
       "categoryLabel": "Frontend",
       "color": "#eab308",
-      "size": 0.85,
+      "size": 0.95,
       "file": "public/admin/plugins/timepicker/bootstrap-timepicker.min.css",
       "description": "Código-fonte: `public/admin/plugins/timepicker/bootstrap-timepicker.min.css`"
     },
@@ -1452,7 +1452,7 @@
       "category": "scripts",
       "categoryLabel": "Scripts",
       "color": "#64748b",
-      "size": 0.85,
+      "size": 0.95,
       "file": "public/admin/plugins/timepicker/bootstrap-timepicker.min.js",
       "description": "Código-fonte: `public/admin/plugins/timepicker/bootstrap-timepicker.min.js`"
     },
@@ -1464,7 +1464,7 @@
       "category": "frontend",
       "categoryLabel": "Frontend",
       "color": "#eab308",
-      "size": 0.85,
+      "size": 0.95,
       "file": "public/css/animate.css",
       "description": "Código-fonte: `public/css/animate.css`"
     },
@@ -1476,7 +1476,7 @@
       "category": "frontend",
       "categoryLabel": "Frontend",
       "color": "#eab308",
-      "size": 0.85,
+      "size": 0.95,
       "file": "public/css/bootstrap-datepicker.min.css",
       "description": "Código-fonte: `public/css/bootstrap-datepicker.min.css`"
     },
@@ -1488,7 +1488,7 @@
       "category": "frontend",
       "categoryLabel": "Frontend",
       "color": "#eab308",
-      "size": 0.85,
+      "size": 0.95,
       "file": "public/css/bootstrap-datetimepicker.min.css",
       "description": "Código-fonte: `public/css/bootstrap-datetimepicker.min.css`"
     },
@@ -1500,7 +1500,7 @@
       "category": "frontend",
       "categoryLabel": "Frontend",
       "color": "#eab308",
-      "size": 0.85,
+      "size": 0.95,
       "file": "public/css/bootstrap.css",
       "description": "Código-fonte: `public/css/bootstrap.css`"
     },
@@ -1512,7 +1512,7 @@
       "category": "frontend",
       "categoryLabel": "Frontend",
       "color": "#eab308",
-      "size": 0.85,
+      "size": 0.95,
       "file": "public/css/flexslider.css",
       "description": "Código-fonte: `public/css/flexslider.css`"
     },
@@ -1524,7 +1524,7 @@
       "category": "frontend",
       "categoryLabel": "Frontend",
       "color": "#eab308",
-      "size": 0.85,
+      "size": 0.95,
       "file": "public/css/icomoon.css",
       "description": "Código-fonte: `public/css/icomoon.css`"
     },
@@ -1536,7 +1536,7 @@
       "category": "frontend",
       "categoryLabel": "Frontend",
       "color": "#eab308",
-      "size": 0.85,
+      "size": 0.95,
       "file": "public/css/magnific-popup.css",
       "description": "Código-fonte: `public/css/magnific-popup.css`"
     },
@@ -1548,7 +1548,7 @@
       "category": "frontend",
       "categoryLabel": "Frontend",
       "color": "#eab308",
-      "size": 0.85,
+      "size": 0.95,
       "file": "public/css/owl.carousel.min.css",
       "description": "Código-fonte: `public/css/owl.carousel.min.css`"
     },
@@ -1560,7 +1560,7 @@
       "category": "frontend",
       "categoryLabel": "Frontend",
       "color": "#eab308",
-      "size": 0.85,
+      "size": 0.95,
       "file": "public/css/owl.theme.default.min.css",
       "description": "Código-fonte: `public/css/owl.theme.default.min.css`"
     },
@@ -1572,7 +1572,7 @@
       "category": "frontend",
       "categoryLabel": "Frontend",
       "color": "#eab308",
-      "size": 0.85,
+      "size": 0.95,
       "file": "public/css/style.css",
       "description": "Código-fonte: `public/css/style.css`"
     },
@@ -1584,7 +1584,7 @@
       "category": "frontend",
       "categoryLabel": "Frontend",
       "color": "#eab308",
-      "size": 0.85,
+      "size": 0.95,
       "file": "public/css/themify-icons.css",
       "description": "Código-fonte: `public/css/themify-icons.css`"
     },
@@ -1596,7 +1596,7 @@
       "category": "oracle",
       "categoryLabel": "Oracle / DB",
       "color": "#c084fc",
-      "size": 0.85,
+      "size": 0.95,
       "file": "public/db/mysql.sql",
       "description": "Código-fonte: `public/db/mysql.sql`"
     },
@@ -1632,7 +1632,7 @@
       "category": "scripts",
       "categoryLabel": "Scripts",
       "color": "#64748b",
-      "size": 0.85,
+      "size": 0.95,
       "file": "public/js/bootstrap-datepicker.min.js",
       "description": "Código-fonte: `public/js/bootstrap-datepicker.min.js`"
     },
@@ -1644,7 +1644,7 @@
       "category": "scripts",
       "categoryLabel": "Scripts",
       "color": "#64748b",
-      "size": 0.85,
+      "size": 0.95,
       "file": "public/js/bootstrap-datetimepicker.min.js",
       "description": "Código-fonte: `public/js/bootstrap-datetimepicker.min.js`"
     },
@@ -1656,7 +1656,7 @@
       "category": "scripts",
       "categoryLabel": "Scripts",
       "color": "#64748b",
-      "size": 0.85,
+      "size": 0.95,
       "file": "public/js/bootstrap.min.js",
       "description": "Código-fonte: `public/js/bootstrap.min.js`"
     },
@@ -1668,7 +1668,7 @@
       "category": "scripts",
       "categoryLabel": "Scripts",
       "color": "#64748b",
-      "size": 0.85,
+      "size": 0.95,
       "file": "public/js/google_map.js",
       "description": "Código-fonte: `public/js/google_map.js`"
     },
@@ -1680,7 +1680,7 @@
       "category": "scripts",
       "categoryLabel": "Scripts",
       "color": "#64748b",
-      "size": 0.85,
+      "size": 0.95,
       "file": "public/js/hcode-filereader.js",
       "description": "Código-fonte: `public/js/hcode-filereader.js`"
     },
@@ -1692,7 +1692,7 @@
       "category": "scripts",
       "categoryLabel": "Scripts",
       "color": "#64748b",
-      "size": 0.85,
+      "size": 0.95,
       "file": "public/js/hcode-formsave.js",
       "description": "Código-fonte: `public/js/hcode-formsave.js`"
     },
@@ -1704,7 +1704,7 @@
       "category": "scripts",
       "categoryLabel": "Scripts",
       "color": "#64748b",
-      "size": 0.85,
+      "size": 0.95,
       "file": "public/js/hcode-grid.js",
       "description": "Código-fonte: `public/js/hcode-grid.js`"
     },
@@ -1716,7 +1716,7 @@
       "category": "scripts",
       "categoryLabel": "Scripts",
       "color": "#64748b",
-      "size": 0.85,
+      "size": 0.95,
       "file": "public/js/jquery.countTo.js",
       "description": "Código-fonte: `public/js/jquery.countTo.js`"
     },
@@ -1728,7 +1728,7 @@
       "category": "scripts",
       "categoryLabel": "Scripts",
       "color": "#64748b",
-      "size": 0.85,
+      "size": 0.95,
       "file": "public/js/jquery.easing.1.3.js",
       "description": "Código-fonte: `public/js/jquery.easing.1.3.js`"
     },
@@ -1740,7 +1740,7 @@
       "category": "scripts",
       "categoryLabel": "Scripts",
       "color": "#64748b",
-      "size": 0.85,
+      "size": 0.95,
       "file": "public/js/jquery.magnific-popup.min.js",
       "description": "Código-fonte: `public/js/jquery.magnific-popup.min.js`"
     },
@@ -1752,7 +1752,7 @@
       "category": "scripts",
       "categoryLabel": "Scripts",
       "color": "#64748b",
-      "size": 0.85,
+      "size": 0.95,
       "file": "public/js/jquery.min.js",
       "description": "Código-fonte: `public/js/jquery.min.js`"
     },
@@ -1764,7 +1764,7 @@
       "category": "scripts",
       "categoryLabel": "Scripts",
       "color": "#64748b",
-      "size": 0.85,
+      "size": 0.95,
       "file": "public/js/jquery.stellar.min.js",
       "description": "Código-fonte: `public/js/jquery.stellar.min.js`"
     },
@@ -1776,7 +1776,7 @@
       "category": "scripts",
       "categoryLabel": "Scripts",
       "color": "#64748b",
-      "size": 0.85,
+      "size": 0.95,
       "file": "public/js/jquery.waypoints.min.js",
       "description": "Código-fonte: `public/js/jquery.waypoints.min.js`"
     },
@@ -1788,7 +1788,7 @@
       "category": "scripts",
       "categoryLabel": "Scripts",
       "color": "#64748b",
-      "size": 0.85,
+      "size": 0.95,
       "file": "public/js/magnific-popup-options.js",
       "description": "Código-fonte: `public/js/magnific-popup-options.js`"
     },
@@ -1800,7 +1800,7 @@
       "category": "scripts",
       "categoryLabel": "Scripts",
       "color": "#64748b",
-      "size": 0.85,
+      "size": 0.95,
       "file": "public/js/main.js",
       "description": "Código-fonte: `public/js/main.js`"
     },
@@ -1812,7 +1812,7 @@
       "category": "scripts",
       "categoryLabel": "Scripts",
       "color": "#64748b",
-      "size": 0.85,
+      "size": 0.95,
       "file": "public/js/modernizr-2.6.2.min.js",
       "description": "Código-fonte: `public/js/modernizr-2.6.2.min.js`"
     },
@@ -1824,7 +1824,7 @@
       "category": "scripts",
       "categoryLabel": "Scripts",
       "color": "#64748b",
-      "size": 0.85,
+      "size": 0.95,
       "file": "public/js/moment.min.js",
       "description": "Código-fonte: `public/js/moment.min.js`"
     },
@@ -1836,7 +1836,7 @@
       "category": "scripts",
       "categoryLabel": "Scripts",
       "color": "#64748b",
-      "size": 0.85,
+      "size": 0.95,
       "file": "public/js/owl.carousel.min.js",
       "description": "Código-fonte: `public/js/owl.carousel.min.js`"
     },
@@ -1848,7 +1848,7 @@
       "category": "scripts",
       "categoryLabel": "Scripts",
       "color": "#64748b",
-      "size": 0.85,
+      "size": 0.95,
       "file": "public/js/respond.min.js",
       "description": "Código-fonte: `public/js/respond.min.js`"
     },
@@ -1860,7 +1860,7 @@
       "category": "scripts",
       "categoryLabel": "Scripts",
       "color": "#64748b",
-      "size": 0.85,
+      "size": 0.95,
       "file": "routes/admin.js",
       "description": "Código-fonte: `routes/admin.js`"
     },
@@ -1872,7 +1872,7 @@
       "category": "scripts",
       "categoryLabel": "Scripts",
       "color": "#64748b",
-      "size": 0.85,
+      "size": 0.95,
       "file": "routes/index.js",
       "description": "Código-fonte: `routes/index.js`"
     },
@@ -1884,7 +1884,7 @@
       "category": "frontend",
       "categoryLabel": "Frontend",
       "color": "#eab308",
-      "size": 0.85,
+      "size": 0.95,
       "file": "views/contacts.ejs",
       "description": "Código-fonte: `views/contacts.ejs`"
     },
@@ -1896,7 +1896,7 @@
       "category": "frontend",
       "categoryLabel": "Frontend",
       "color": "#eab308",
-      "size": 0.85,
+      "size": 0.95,
       "file": "views/error.ejs",
       "description": "Código-fonte: `views/error.ejs`"
     },
@@ -1908,7 +1908,7 @@
       "category": "frontend",
       "categoryLabel": "Frontend",
       "color": "#eab308",
-      "size": 0.85,
+      "size": 0.95,
       "file": "views/index.ejs",
       "description": "Código-fonte: `views/index.ejs`"
     },
@@ -1920,7 +1920,7 @@
       "category": "frontend",
       "categoryLabel": "Frontend",
       "color": "#eab308",
-      "size": 0.85,
+      "size": 0.95,
       "file": "views/menus.ejs",
       "description": "Código-fonte: `views/menus.ejs`"
     },
@@ -1932,7 +1932,7 @@
       "category": "frontend",
       "categoryLabel": "Frontend",
       "color": "#eab308",
-      "size": 0.85,
+      "size": 0.95,
       "file": "views/reservations.ejs",
       "description": "Código-fonte: `views/reservations.ejs`"
     },
@@ -1944,7 +1944,7 @@
       "category": "frontend",
       "categoryLabel": "Frontend",
       "color": "#eab308",
-      "size": 0.85,
+      "size": 0.95,
       "file": "views/services.ejs",
       "description": "Código-fonte: `views/services.ejs`"
     },
@@ -1956,7 +1956,7 @@
       "category": "frontend",
       "categoryLabel": "Frontend",
       "color": "#eab308",
-      "size": 0.85,
+      "size": 0.95,
       "file": "views/admin/contacts.ejs",
       "description": "Código-fonte: `views/admin/contacts.ejs`"
     },
@@ -1968,7 +1968,7 @@
       "category": "frontend",
       "categoryLabel": "Frontend",
       "color": "#eab308",
-      "size": 0.85,
+      "size": 0.95,
       "file": "views/admin/emails.ejs",
       "description": "Código-fonte: `views/admin/emails.ejs`"
     },
@@ -1980,7 +1980,7 @@
       "category": "frontend",
       "categoryLabel": "Frontend",
       "color": "#eab308",
-      "size": 0.85,
+      "size": 0.95,
       "file": "views/admin/index.ejs",
       "description": "Código-fonte: `views/admin/index.ejs`"
     },
@@ -1992,7 +1992,7 @@
       "category": "frontend",
       "categoryLabel": "Frontend",
       "color": "#eab308",
-      "size": 0.85,
+      "size": 0.95,
       "file": "views/admin/login.ejs",
       "description": "Código-fonte: `views/admin/login.ejs`"
     },
@@ -2004,7 +2004,7 @@
       "category": "frontend",
       "categoryLabel": "Frontend",
       "color": "#eab308",
-      "size": 0.85,
+      "size": 0.95,
       "file": "views/admin/menus.ejs",
       "description": "Código-fonte: `views/admin/menus.ejs`"
     },
@@ -2016,7 +2016,7 @@
       "category": "frontend",
       "categoryLabel": "Frontend",
       "color": "#eab308",
-      "size": 0.85,
+      "size": 0.95,
       "file": "views/admin/reservations.ejs",
       "description": "Código-fonte: `views/admin/reservations.ejs`"
     },
@@ -2028,7 +2028,7 @@
       "category": "frontend",
       "categoryLabel": "Frontend",
       "color": "#eab308",
-      "size": 0.85,
+      "size": 0.95,
       "file": "views/admin/users.ejs",
       "description": "Código-fonte: `views/admin/users.ejs`"
     },
@@ -2040,7 +2040,7 @@
       "category": "frontend",
       "categoryLabel": "Frontend",
       "color": "#eab308",
-      "size": 0.85,
+      "size": 0.95,
       "file": "views/admin/inc/footer.ejs",
       "description": "Código-fonte: `views/admin/inc/footer.ejs`"
     },
@@ -2052,7 +2052,7 @@
       "category": "frontend",
       "categoryLabel": "Frontend",
       "color": "#eab308",
-      "size": 0.85,
+      "size": 0.95,
       "file": "views/admin/inc/header.ejs",
       "description": "Código-fonte: `views/admin/inc/header.ejs`"
     },
@@ -2064,7 +2064,7 @@
       "category": "frontend",
       "categoryLabel": "Frontend",
       "color": "#eab308",
-      "size": 0.85,
+      "size": 0.95,
       "file": "views/inc/footer-gototop.ejs",
       "description": "Código-fonte: `views/inc/footer-gototop.ejs`"
     },
@@ -2076,7 +2076,7 @@
       "category": "frontend",
       "categoryLabel": "Frontend",
       "color": "#eab308",
-      "size": 0.85,
+      "size": 0.95,
       "file": "views/inc/footer-scripts.ejs",
       "description": "Código-fonte: `views/inc/footer-scripts.ejs`"
     },
@@ -2088,7 +2088,7 @@
       "category": "frontend",
       "categoryLabel": "Frontend",
       "color": "#eab308",
-      "size": 0.85,
+      "size": 0.95,
       "file": "views/inc/footer.ejs",
       "description": "Código-fonte: `views/inc/footer.ejs`"
     },
@@ -2100,7 +2100,7 @@
       "category": "frontend",
       "categoryLabel": "Frontend",
       "color": "#eab308",
-      "size": 0.85,
+      "size": 0.95,
       "file": "views/inc/head.ejs",
       "description": "Código-fonte: `views/inc/head.ejs`"
     },
@@ -2112,7 +2112,7 @@
       "category": "frontend",
       "categoryLabel": "Frontend",
       "color": "#eab308",
-      "size": 0.85,
+      "size": 0.95,
       "file": "views/inc/header-index.ejs",
       "description": "Código-fonte: `views/inc/header-index.ejs`"
     },
@@ -2124,7 +2124,7 @@
       "category": "frontend",
       "categoryLabel": "Frontend",
       "color": "#eab308",
-      "size": 0.85,
+      "size": 0.95,
       "file": "views/inc/header-menu.ejs",
       "description": "Código-fonte: `views/inc/header-menu.ejs`"
     },
@@ -2136,7 +2136,7 @@
       "category": "frontend",
       "categoryLabel": "Frontend",
       "color": "#eab308",
-      "size": 0.85,
+      "size": 0.95,
       "file": "views/inc/header.ejs",
       "description": "Código-fonte: `views/inc/header.ejs`"
     },
@@ -2148,7 +2148,7 @@
       "category": "frontend",
       "categoryLabel": "Frontend",
       "color": "#eab308",
-      "size": 0.85,
+      "size": 0.95,
       "file": "views/inc/page-footer.ejs",
       "description": "Código-fonte: `views/inc/page-footer.ejs`"
     },
@@ -2160,7 +2160,7 @@
       "category": "frontend",
       "categoryLabel": "Frontend",
       "color": "#eab308",
-      "size": 0.85,
+      "size": 0.95,
       "file": "views/inc/page-header.ejs",
       "description": "Código-fonte: `views/inc/page-header.ejs`"
     },
@@ -2172,7 +2172,7 @@
       "category": "frontend",
       "categoryLabel": "Frontend",
       "color": "#eab308",
-      "size": 0.85,
+      "size": 0.95,
       "file": "views/inc/content/alerts.ejs",
       "description": "Código-fonte: `views/inc/content/alerts.ejs`"
     },
@@ -2184,7 +2184,7 @@
       "category": "frontend",
       "categoryLabel": "Frontend",
       "color": "#eab308",
-      "size": 0.85,
+      "size": 0.95,
       "file": "views/inc/content/contacts.ejs",
       "description": "Código-fonte: `views/inc/content/contacts.ejs`"
     },
@@ -2196,7 +2196,7 @@
       "category": "frontend",
       "categoryLabel": "Frontend",
       "color": "#eab308",
-      "size": 0.85,
+      "size": 0.95,
       "file": "views/inc/content/facts.ejs",
       "description": "Código-fonte: `views/inc/content/facts.ejs`"
     },
@@ -2208,7 +2208,7 @@
       "category": "frontend",
       "categoryLabel": "Frontend",
       "color": "#eab308",
-      "size": 0.85,
+      "size": 0.95,
       "file": "views/inc/content/menus.ejs",
       "description": "Código-fonte: `views/inc/content/menus.ejs`"
     },
@@ -2220,7 +2220,7 @@
       "category": "frontend",
       "categoryLabel": "Frontend",
       "color": "#eab308",
-      "size": 0.85,
+      "size": 0.95,
       "file": "views/inc/content/reservations.ejs",
       "description": "Código-fonte: `views/inc/content/reservations.ejs`"
     },
@@ -2232,7 +2232,7 @@
       "category": "frontend",
       "categoryLabel": "Frontend",
       "color": "#eab308",
-      "size": 0.85,
+      "size": 0.95,
       "file": "views/inc/content/services.ejs",
       "description": "Código-fonte: `views/inc/content/services.ejs`"
     },
@@ -2244,7 +2244,7 @@
       "category": "frontend",
       "categoryLabel": "Frontend",
       "color": "#eab308",
-      "size": 0.85,
+      "size": 0.95,
       "file": "views/inc/content/subscribes.ejs",
       "description": "Código-fonte: `views/inc/content/subscribes.ejs`"
     },
@@ -2256,7 +2256,7 @@
       "category": "frontend",
       "categoryLabel": "Frontend",
       "color": "#eab308",
-      "size": 0.85,
+      "size": 0.95,
       "file": "views/inc/content/text.ejs",
       "description": "Código-fonte: `views/inc/content/text.ejs`"
     }
