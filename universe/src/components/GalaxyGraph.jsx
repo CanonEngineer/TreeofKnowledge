@@ -1,9 +1,11 @@
-import { Suspense, useMemo, useState, useCallback } from 'react';
+import { Suspense, useMemo, useState, useCallback, useRef, useEffect } from 'react';
 import { Canvas } from '@react-three/fiber';
 import { OrbitControls } from '@react-three/drei';
 import { StarField, GridFloor, NodeSphere, ConnectionBeam } from './SceneObjects';
 import { CameraFocus, ResetCamera } from './CameraFocus';
 import { computeLayout, getNeighbors } from '../utils/layout';
+
+const HOVER_LEAVE_MS = 60;
 
 function Scene({
   graph,
@@ -12,6 +14,7 @@ function Scene({
   onSelect,
   onOpenCode,
   onHover,
+  onHoverLeave,
   showLabels,
   showLinks,
   showParticles,
@@ -115,7 +118,7 @@ function Scene({
               onOpenCode(n);
             }}
             onPointerOver={onHover}
-            onPointerOut={() => onHover(null)}
+            onPointerOut={onHoverLeave}
           />
         );
       })}
@@ -135,17 +138,45 @@ function Scene({
 
 export default function GalaxyGraph(props) {
   const [hoveredId, setHoveredId] = useState(null);
-  const handleHover = useCallback((node) => setHoveredId(node?.id ?? null), []);
+  const hoverRef = useRef(null);
+  const leaveTimer = useRef(null);
+
+  useEffect(() => () => {
+    if (leaveTimer.current) clearTimeout(leaveTimer.current);
+  }, []);
+
+  const handleHover = useCallback((node) => {
+    const nextId = node?.id ?? null;
+    if (nextId === hoverRef.current) return;
+    if (leaveTimer.current) {
+      clearTimeout(leaveTimer.current);
+      leaveTimer.current = null;
+    }
+    hoverRef.current = nextId;
+    setHoveredId(nextId);
+    if (nextId) document.body.style.cursor = 'pointer';
+  }, []);
+
+  const handleHoverLeave = useCallback((node) => {
+    if (node?.id && node.id !== hoverRef.current) return;
+    if (leaveTimer.current) clearTimeout(leaveTimer.current);
+    leaveTimer.current = setTimeout(() => {
+      hoverRef.current = null;
+      setHoveredId(null);
+      document.body.style.cursor = 'default';
+      leaveTimer.current = null;
+    }, HOVER_LEAVE_MS);
+  }, []);
 
   return (
     <Canvas
       camera={{ position: [0, 12, 48], fov: 50 }}
       gl={{ antialias: true, alpha: false, powerPreference: 'high-performance' }}
-      dpr={[1, 1.5]}
+      dpr={[1, 1.25]}
       frameloop={props.paused ? 'never' : 'always'}
     >
       <Suspense fallback={null}>
-        <Scene {...props} hoveredId={hoveredId} onHover={handleHover} />
+        <Scene {...props} hoveredId={hoveredId} onHover={handleHover} onHoverLeave={handleHoverLeave} />
       </Suspense>
     </Canvas>
   );
