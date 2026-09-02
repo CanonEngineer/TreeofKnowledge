@@ -56,10 +56,11 @@ export default function App() {
     return { ...graph, nodes, links };
   }, [graph, activeCategories, search]);
 
-  const laidOut = useMemo(
-    () => (filteredGraph ? computeLayout(filteredGraph) : []),
+  const layout = useMemo(
+    () => (filteredGraph ? computeLayout(filteredGraph) : { nodes: [], floorY: -14 }),
     [filteredGraph]
   );
+  const laidOut = layout.nodes;
 
   const toggleCategory = useCallback((key) => {
     setActiveCategories((prev) => {

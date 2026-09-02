@@ -1,4 +1,7 @@
 /** Layout hierárquico radial 3D — espelha a lógica da árvore 2D (raios alinhados aos nós). */
+const DEFAULT_FLOOR_Y = -14;
+const FLOOR_CLEARANCE = 2.6;
+
 export function computeLayout(graph) {
   const { nodes } = graph;
   const children = new Map();
@@ -107,10 +110,23 @@ export function computeLayout(graph) {
     }
   });
 
-  return nodes.map((n) => ({
+  let minY = Infinity;
+  positions.forEach((p) => {
+    minY = Math.min(minY, p.y);
+  });
+  if (!Number.isFinite(minY)) minY = 0;
+
+  // Plano desce quando a árvore cresce para baixo; senão mantém altura padrão.
+  const floorY = minY < DEFAULT_FLOOR_Y + FLOOR_CLEARANCE
+    ? minY - FLOOR_CLEARANCE
+    : DEFAULT_FLOOR_Y;
+
+  const nodesOut = nodes.map((n) => ({
     ...n,
     position: positions.get(n.id) || { x: 0, y: 0, z: 0 },
   }));
+
+  return { nodes: nodesOut, floorY };
 }
 
 function clusterFallback(node, nodes) {

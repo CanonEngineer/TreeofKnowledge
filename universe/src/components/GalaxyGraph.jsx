@@ -20,7 +20,9 @@ function Scene({
   resetCam,
   paused,
 }) {
-  const laidOut = useMemo(() => computeLayout(graph), [graph]);
+  const layout = useMemo(() => computeLayout(graph), [graph]);
+  const laidOut = layout.nodes;
+  const floorY = layout.floorY;
   const posMap = useMemo(() => new Map(laidOut.map((n) => [n.id, n.position])), [laidOut]);
   const sizeMap = useMemo(
     () => new Map(laidOut.map((n) => [n.id, Math.max(0.55, n.size * (n.layer === 'root' ? 1.1 : 1))])),
@@ -61,7 +63,7 @@ function Scene({
       <directionalLight position={[30, 40, 20]} intensity={0.6} color="#93c5fd" />
       <pointLight position={[-30, 15, -25]} intensity={0.55} color="#818cf8" />
       <StarField />
-      <GridFloor />
+      <GridFloor floorY={floorY} />
       <ResetCamera trigger={resetCam} />
       <CameraFocus target={focusNode} offset={[0, 4, 20]} />
 

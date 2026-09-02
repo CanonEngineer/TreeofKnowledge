@@ -32,9 +32,9 @@ export function StarField({ count = 5000 }) {
   );
 }
 
-export function GridFloor() {
+export function GridFloor({ floorY = -14 }) {
   return (
-    <group position={[0, -14, 0]}>
+    <group position={[0, floorY, 0]}>
       <gridHelper args={[160, 50, '#1d4ed8', '#0f172a']} />
       <mesh rotation={[-Math.PI / 2, 0, 0]} position={[0, -0.05, 0]}>
         <planeGeometry args={[160, 160]} />
