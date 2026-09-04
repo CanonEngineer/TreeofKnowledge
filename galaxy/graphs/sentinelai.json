@@ -1409,28 +1409,28 @@
       "description": "Código-fonte: `.work/TreeofKnowledge/galaxy/index.html`"
     },
     {
-      "id": "sai-file-work-treeofknowledge-galaxy-assets-index-brk-c7ur-js",
-      "label": "index-BrK_c7UR.js",
+      "id": "sai-file-work-treeofknowledge-galaxy-assets-index-b04s0byu-js",
+      "label": "index-B04s0BYU.js",
       "parent": "sai-dir-work-treeofknowledge-galaxy-assets",
       "layer": "file",
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
       "size": 0.95,
-      "file": ".work/TreeofKnowledge/galaxy/assets/index-BrK_c7UR.js",
-      "description": "Código-fonte: `.work/TreeofKnowledge/galaxy/assets/index-BrK_c7UR.js`"
+      "file": ".work/TreeofKnowledge/galaxy/assets/index-B04s0BYU.js",
+      "description": "Código-fonte: `.work/TreeofKnowledge/galaxy/assets/index-B04s0BYU.js`"
     },
     {
-      "id": "sai-file-work-treeofknowledge-galaxy-assets-index-cnozn3tg-css",
-      "label": "index-CnoZN3tG.css",
+      "id": "sai-file-work-treeofknowledge-galaxy-assets-index-j5lmatgy-css",
+      "label": "index-j5LMatgY.css",
       "parent": "sai-dir-work-treeofknowledge-galaxy-assets",
       "layer": "file",
       "category": "frontend",
       "categoryLabel": "Frontend",
       "color": "#eab308",
       "size": 0.95,
-      "file": ".work/TreeofKnowledge/galaxy/assets/index-CnoZN3tG.css",
-      "description": "Código-fonte: `.work/TreeofKnowledge/galaxy/assets/index-CnoZN3tG.css`"
+      "file": ".work/TreeofKnowledge/galaxy/assets/index-j5LMatgY.css",
+      "description": "Código-fonte: `.work/TreeofKnowledge/galaxy/assets/index-j5LMatgY.css`"
     },
     {
       "id": "sai-grp-work-treeofknowledge-galaxy-graphs-files-a-c-d-e-f",
@@ -8709,12 +8709,12 @@
     },
     {
       "source": "sai-dir-work-treeofknowledge-galaxy-assets",
-      "target": "sai-file-work-treeofknowledge-galaxy-assets-index-brk-c7ur-js",
+      "target": "sai-file-work-treeofknowledge-galaxy-assets-index-b04s0byu-js",
       "type": "dependency"
     },
     {
       "source": "sai-dir-work-treeofknowledge-galaxy-assets",
-      "target": "sai-file-work-treeofknowledge-galaxy-assets-index-cnozn3tg-css",
+      "target": "sai-file-work-treeofknowledge-galaxy-assets-index-j5lmatgy-css",
       "type": "dependency"
     },
     {
