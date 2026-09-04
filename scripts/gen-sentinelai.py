@@ -61,6 +61,8 @@ CODE_EXTS = {
     ".toml",
     ".ini",
     ".bat",
+    ".cmd",
+    ".iss",
     ".sh",
     ".sql",
     ".html",

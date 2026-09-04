@@ -4,7 +4,7 @@
   "repoUrl": "https://github.com/CanonEngineer/SentinelAI",
   "color": "#38bdf8",
   "demoUrl": "http://localhost:5173",
-  "nodeCount": 653,
+  "nodeCount": 675,
   "categories": {
     "core": {
       "label": "Backend",
@@ -50,7 +50,7 @@
       "color": "#3b82f6",
       "size": 2.2,
       "file": "README.md",
-      "description": "Árvore completa do repositório — 532 arquivos de código mapeados (backend, frontend, mobile, docs, scripts, deploy). Estabilização Fases 1–8 + 9b (credenciais, wallboard, agent lab, CMDB, SLA, NetFlow UI)."
+      "description": "Árvore completa do repositório — 548 arquivos de código mapeados (backend, frontend, mobile, docs, scripts, deploy). Estabilização Fases 1–8 + 9b (credenciais, wallboard, agent lab, CMDB, SLA, NetFlow UI)."
     },
     {
       "id": "sai-dir-github",
@@ -147,6 +147,18 @@
       "size": 1.35,
       "file": "frontend/",
       "description": "Pacote/pasta `frontend/` do SentinelAI."
+    },
+    {
+      "id": "sai-dir-installer",
+      "label": "installer/",
+      "parent": "sai-root",
+      "layer": "module",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 1.35,
+      "file": "installer/",
+      "description": "Pacote/pasta `installer/` do SentinelAI."
     },
     {
       "id": "sai-dir-mobile",
@@ -351,6 +363,42 @@
       "size": 1.35,
       "file": "frontend/src/",
       "description": "Pacote/pasta `frontend/src/` do SentinelAI."
+    },
+    {
+      "id": "sai-dir-installer-linux",
+      "label": "linux/",
+      "parent": "sai-dir-installer",
+      "layer": "module",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 1.35,
+      "file": "installer/linux/",
+      "description": "Pacote/pasta `installer/linux/` do SentinelAI."
+    },
+    {
+      "id": "sai-dir-installer-payload",
+      "label": "payload/",
+      "parent": "sai-dir-installer",
+      "layer": "module",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 1.35,
+      "file": "installer/payload/",
+      "description": "Pacote/pasta `installer/payload/` do SentinelAI."
+    },
+    {
+      "id": "sai-dir-installer-windows",
+      "label": "windows/",
+      "parent": "sai-dir-installer",
+      "layer": "module",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 1.35,
+      "file": "installer/windows/",
+      "description": "Pacote/pasta `installer/windows/` do SentinelAI."
     },
     {
       "id": "sai-dir-work-treeofknowledge-css",
@@ -675,6 +723,30 @@
       "size": 1.35,
       "file": "frontend/src/utils/",
       "description": "Pacote/pasta `frontend/src/utils/` do SentinelAI."
+    },
+    {
+      "id": "sai-dir-installer-payload-bin",
+      "label": "bin/",
+      "parent": "sai-dir-installer-payload",
+      "layer": "module",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 1.35,
+      "file": "installer/payload/bin/",
+      "description": "Pacote/pasta `installer/payload/bin/` do SentinelAI."
+    },
+    {
+      "id": "sai-dir-installer-windows-gui",
+      "label": "gui/",
+      "parent": "sai-dir-installer-windows",
+      "layer": "module",
+      "category": "frontend",
+      "categoryLabel": "Frontend",
+      "color": "#eab308",
+      "size": 1.35,
+      "file": "installer/windows/gui/",
+      "description": "Pacote/pasta `installer/windows/gui/` do SentinelAI."
     },
     {
       "id": "sai-dir-work-treeofknowledge-galaxy-assets",
@@ -1061,16 +1133,16 @@
       "description": "Grupo de arquivos em `./` — Arquivos #–C"
     },
     {
-      "id": "sai-grp-files-d",
-      "label": "Arquivos D",
+      "id": "sai-grp-files-d-p",
+      "label": "Arquivos D–P",
       "parent": "sai-root",
       "layer": "module",
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
       "size": 1.35,
-      "file": "[files-d]",
-      "description": "Grupo de arquivos em `./` — Arquivos D"
+      "file": "[files-d–p]",
+      "description": "Grupo de arquivos em `./` — Arquivos D–P"
     },
     {
       "id": "sai-file-cursorignore",
@@ -1123,7 +1195,7 @@
     {
       "id": "sai-file-docker-compose-dev-yml",
       "label": "docker-compose.dev.yml",
-      "parent": "sai-grp-files-d",
+      "parent": "sai-grp-files-d-p",
       "layer": "file",
       "category": "other",
       "categoryLabel": "Outros",
@@ -1135,7 +1207,7 @@
     {
       "id": "sai-file-docker-compose-enterprise-yml",
       "label": "docker-compose.enterprise.yml",
-      "parent": "sai-grp-files-d",
+      "parent": "sai-grp-files-d-p",
       "layer": "file",
       "category": "other",
       "categoryLabel": "Outros",
@@ -1147,7 +1219,7 @@
     {
       "id": "sai-file-docker-compose-ha-yml",
       "label": "docker-compose.ha.yml",
-      "parent": "sai-grp-files-d",
+      "parent": "sai-grp-files-d-p",
       "layer": "file",
       "category": "other",
       "categoryLabel": "Outros",
@@ -1159,7 +1231,7 @@
     {
       "id": "sai-file-docker-compose-multiregion-yml",
       "label": "docker-compose.multiregion.yml",
-      "parent": "sai-grp-files-d",
+      "parent": "sai-grp-files-d-p",
       "layer": "file",
       "category": "other",
       "categoryLabel": "Outros",
@@ -1171,7 +1243,7 @@
     {
       "id": "sai-file-docker-compose-observability-yml",
       "label": "docker-compose.observability.yml",
-      "parent": "sai-grp-files-d",
+      "parent": "sai-grp-files-d-p",
       "layer": "file",
       "category": "other",
       "categoryLabel": "Outros",
@@ -1183,7 +1255,7 @@
     {
       "id": "sai-file-docker-compose-payments-yml",
       "label": "docker-compose.payments.yml",
-      "parent": "sai-grp-files-d",
+      "parent": "sai-grp-files-d-p",
       "layer": "file",
       "category": "other",
       "categoryLabel": "Outros",
@@ -1195,7 +1267,7 @@
     {
       "id": "sai-file-docker-compose-port8800-yml",
       "label": "docker-compose.port8800.yml",
-      "parent": "sai-grp-files-d",
+      "parent": "sai-grp-files-d-p",
       "layer": "file",
       "category": "other",
       "categoryLabel": "Outros",
@@ -1207,7 +1279,7 @@
     {
       "id": "sai-file-docker-compose-replica-yml",
       "label": "docker-compose.replica.yml",
-      "parent": "sai-grp-files-d",
+      "parent": "sai-grp-files-d-p",
       "layer": "file",
       "category": "other",
       "categoryLabel": "Outros",
@@ -1219,7 +1291,7 @@
     {
       "id": "sai-file-docker-compose-tracing-yml",
       "label": "docker-compose.tracing.yml",
-      "parent": "sai-grp-files-d",
+      "parent": "sai-grp-files-d-p",
       "layer": "file",
       "category": "other",
       "categoryLabel": "Outros",
@@ -1231,7 +1303,7 @@
     {
       "id": "sai-file-docker-compose-yml",
       "label": "docker-compose.yml",
-      "parent": "sai-grp-files-d",
+      "parent": "sai-grp-files-d-p",
       "layer": "file",
       "category": "other",
       "categoryLabel": "Outros",
@@ -1243,7 +1315,7 @@
     {
       "id": "sai-file-docker-compose-zerotrust-yml",
       "label": "docker-compose.zerotrust.yml",
-      "parent": "sai-grp-files-d",
+      "parent": "sai-grp-files-d-p",
       "layer": "file",
       "category": "other",
       "categoryLabel": "Outros",
@@ -1251,6 +1323,18 @@
       "size": 0.95,
       "file": "docker-compose.zerotrust.yml",
       "description": "Código-fonte: `docker-compose.zerotrust.yml`"
+    },
+    {
+      "id": "sai-file-package-json",
+      "label": "package.json",
+      "parent": "sai-grp-files-d-p",
+      "layer": "file",
+      "category": "other",
+      "categoryLabel": "Outros",
+      "color": "#64748b",
+      "size": 0.95,
+      "file": "package.json",
+      "description": "Código-fonte: `package.json`"
     },
     {
       "id": "sai-file-github-workflows-ci-yml",
@@ -2163,18 +2247,6 @@
       "size": 0.95,
       "file": ".work/TreeofKnowledge/scripts/restaurant-project.json",
       "description": "Código-fonte: `.work/TreeofKnowledge/scripts/restaurant-project.json`"
-    },
-    {
-      "id": "sai-file-work-treeofknowledge-scripts-sentinelai-project-json",
-      "label": "sentinelai-project.json",
-      "parent": "sai-grp-work-treeofknowledge-scripts-files-r-s-u",
-      "layer": "file",
-      "category": "scripts",
-      "categoryLabel": "Scripts",
-      "color": "#64748b",
-      "size": 0.95,
-      "file": ".work/TreeofKnowledge/scripts/sentinelai-project.json",
-      "description": "Código-fonte: `.work/TreeofKnowledge/scripts/sentinelai-project.json`"
     },
     {
       "id": "sai-file-work-treeofknowledge-scripts-smartferrari-project-json",
@@ -7697,6 +7769,198 @@
       "description": "Código-fonte: `frontend/src/utils/sentinelWelcomeAudio.ts`"
     },
     {
+      "id": "sai-file-installer-gitignore",
+      "label": ".gitignore",
+      "parent": "sai-dir-installer",
+      "layer": "file",
+      "category": "other",
+      "categoryLabel": "Outros",
+      "color": "#64748b",
+      "size": 0.95,
+      "file": "installer/.gitignore",
+      "description": "Código-fonte: `installer/.gitignore`"
+    },
+    {
+      "id": "sai-file-installer-readme-md",
+      "label": "README.md",
+      "parent": "sai-dir-installer",
+      "layer": "file",
+      "category": "other",
+      "categoryLabel": "Outros",
+      "color": "#64748b",
+      "size": 0.95,
+      "file": "installer/README.md",
+      "description": "Código-fonte: `installer/README.md`"
+    },
+    {
+      "id": "sai-file-installer-linux-install-sentinelai-sh",
+      "label": "install-sentinelai.sh",
+      "parent": "sai-dir-installer-linux",
+      "layer": "file",
+      "category": "other",
+      "categoryLabel": "Outros",
+      "color": "#64748b",
+      "size": 0.95,
+      "file": "installer/linux/install-sentinelai.sh",
+      "description": "Código-fonte: `installer/linux/install-sentinelai.sh`"
+    },
+    {
+      "id": "sai-file-installer-linux-uninstall-sentinelai-sh",
+      "label": "uninstall-sentinelai.sh",
+      "parent": "sai-dir-installer-linux",
+      "layer": "file",
+      "category": "other",
+      "categoryLabel": "Outros",
+      "color": "#64748b",
+      "size": 0.95,
+      "file": "installer/linux/uninstall-sentinelai.sh",
+      "description": "Código-fonte: `installer/linux/uninstall-sentinelai.sh`"
+    },
+    {
+      "id": "sai-file-installer-payload-docker-compose-yml",
+      "label": "docker-compose.yml",
+      "parent": "sai-dir-installer-payload",
+      "layer": "file",
+      "category": "other",
+      "categoryLabel": "Outros",
+      "color": "#64748b",
+      "size": 0.95,
+      "file": "installer/payload/docker-compose.yml",
+      "description": "Código-fonte: `installer/payload/docker-compose.yml`"
+    },
+    {
+      "id": "sai-file-installer-payload-bin-start-ps1",
+      "label": "start.ps1",
+      "parent": "sai-dir-installer-payload-bin",
+      "layer": "file",
+      "category": "scripts",
+      "categoryLabel": "Scripts",
+      "color": "#64748b",
+      "size": 0.95,
+      "file": "installer/payload/bin/start.ps1",
+      "description": "Código-fonte: `installer/payload/bin/start.ps1`"
+    },
+    {
+      "id": "sai-file-installer-payload-bin-start-sh",
+      "label": "start.sh",
+      "parent": "sai-dir-installer-payload-bin",
+      "layer": "file",
+      "category": "other",
+      "categoryLabel": "Outros",
+      "color": "#64748b",
+      "size": 0.95,
+      "file": "installer/payload/bin/start.sh",
+      "description": "Código-fonte: `installer/payload/bin/start.sh`"
+    },
+    {
+      "id": "sai-file-installer-payload-bin-status-ps1",
+      "label": "status.ps1",
+      "parent": "sai-dir-installer-payload-bin",
+      "layer": "file",
+      "category": "scripts",
+      "categoryLabel": "Scripts",
+      "color": "#64748b",
+      "size": 0.95,
+      "file": "installer/payload/bin/status.ps1",
+      "description": "Código-fonte: `installer/payload/bin/status.ps1`"
+    },
+    {
+      "id": "sai-file-installer-payload-bin-status-sh",
+      "label": "status.sh",
+      "parent": "sai-dir-installer-payload-bin",
+      "layer": "file",
+      "category": "other",
+      "categoryLabel": "Outros",
+      "color": "#64748b",
+      "size": 0.95,
+      "file": "installer/payload/bin/status.sh",
+      "description": "Código-fonte: `installer/payload/bin/status.sh`"
+    },
+    {
+      "id": "sai-file-installer-payload-bin-stop-ps1",
+      "label": "stop.ps1",
+      "parent": "sai-dir-installer-payload-bin",
+      "layer": "file",
+      "category": "scripts",
+      "categoryLabel": "Scripts",
+      "color": "#64748b",
+      "size": 0.95,
+      "file": "installer/payload/bin/stop.ps1",
+      "description": "Código-fonte: `installer/payload/bin/stop.ps1`"
+    },
+    {
+      "id": "sai-file-installer-payload-bin-stop-sh",
+      "label": "stop.sh",
+      "parent": "sai-dir-installer-payload-bin",
+      "layer": "file",
+      "category": "other",
+      "categoryLabel": "Outros",
+      "color": "#64748b",
+      "size": 0.95,
+      "file": "installer/payload/bin/stop.sh",
+      "description": "Código-fonte: `installer/payload/bin/stop.sh`"
+    },
+    {
+      "id": "sai-file-installer-windows-install-sentinelai-ps1",
+      "label": "Install-SentinelAI.ps1",
+      "parent": "sai-dir-installer-windows",
+      "layer": "file",
+      "category": "scripts",
+      "categoryLabel": "Scripts",
+      "color": "#64748b",
+      "size": 0.95,
+      "file": "installer/windows/Install-SentinelAI.ps1",
+      "description": "Código-fonte: `installer/windows/Install-SentinelAI.ps1`"
+    },
+    {
+      "id": "sai-file-installer-windows-uninstall-sentinelai-ps1",
+      "label": "Uninstall-SentinelAI.ps1",
+      "parent": "sai-dir-installer-windows",
+      "layer": "file",
+      "category": "scripts",
+      "categoryLabel": "Scripts",
+      "color": "#64748b",
+      "size": 0.95,
+      "file": "installer/windows/Uninstall-SentinelAI.ps1",
+      "description": "Código-fonte: `installer/windows/Uninstall-SentinelAI.ps1`"
+    },
+    {
+      "id": "sai-file-installer-windows-gui-launch-setup-cmd",
+      "label": "Launch-Setup.cmd",
+      "parent": "sai-dir-installer-windows-gui",
+      "layer": "file",
+      "category": "frontend",
+      "categoryLabel": "Frontend",
+      "color": "#eab308",
+      "size": 0.95,
+      "file": "installer/windows/gui/Launch-Setup.cmd",
+      "description": "Código-fonte: `installer/windows/gui/Launch-Setup.cmd`"
+    },
+    {
+      "id": "sai-file-installer-windows-gui-sentinelai-setup-iss",
+      "label": "SentinelAI-Setup.iss",
+      "parent": "sai-dir-installer-windows-gui",
+      "layer": "file",
+      "category": "frontend",
+      "categoryLabel": "Frontend",
+      "color": "#eab308",
+      "size": 0.95,
+      "file": "installer/windows/gui/SentinelAI-Setup.iss",
+      "description": "Código-fonte: `installer/windows/gui/SentinelAI-Setup.iss`"
+    },
+    {
+      "id": "sai-file-installer-windows-gui-sentinelai-wizard-ps1",
+      "label": "SentinelAI-Wizard.ps1",
+      "parent": "sai-dir-installer-windows-gui",
+      "layer": "file",
+      "category": "frontend",
+      "categoryLabel": "Frontend",
+      "color": "#eab308",
+      "size": 0.95,
+      "file": "installer/windows/gui/SentinelAI-Wizard.ps1",
+      "description": "Código-fonte: `installer/windows/gui/SentinelAI-Wizard.ps1`"
+    },
+    {
       "id": "sai-file-mobile-app-json",
       "label": "app.json",
       "parent": "sai-dir-mobile",
@@ -7920,6 +8184,11 @@
     },
     {
       "source": "sai-root",
+      "target": "sai-dir-installer",
+      "type": "dependency"
+    },
+    {
+      "source": "sai-root",
       "target": "sai-dir-mobile",
       "type": "dependency"
     },
@@ -8001,6 +8270,21 @@
     {
       "source": "sai-dir-frontend",
       "target": "sai-dir-frontend-src",
+      "type": "dependency"
+    },
+    {
+      "source": "sai-dir-installer",
+      "target": "sai-dir-installer-linux",
+      "type": "dependency"
+    },
+    {
+      "source": "sai-dir-installer",
+      "target": "sai-dir-installer-payload",
+      "type": "dependency"
+    },
+    {
+      "source": "sai-dir-installer",
+      "target": "sai-dir-installer-windows",
       "type": "dependency"
     },
     {
@@ -8136,6 +8420,16 @@
     {
       "source": "sai-dir-frontend-src",
       "target": "sai-dir-frontend-src-utils",
+      "type": "dependency"
+    },
+    {
+      "source": "sai-dir-installer-payload",
+      "target": "sai-dir-installer-payload-bin",
+      "type": "dependency"
+    },
+    {
+      "source": "sai-dir-installer-windows",
+      "target": "sai-dir-installer-windows-gui",
       "type": "dependency"
     },
     {
@@ -8300,7 +8594,7 @@
     },
     {
       "source": "sai-root",
-      "target": "sai-grp-files-d",
+      "target": "sai-grp-files-d-p",
       "type": "dependency"
     },
     {
@@ -8324,58 +8618,63 @@
       "type": "dependency"
     },
     {
-      "source": "sai-grp-files-d",
+      "source": "sai-grp-files-d-p",
       "target": "sai-file-docker-compose-dev-yml",
       "type": "dependency"
     },
     {
-      "source": "sai-grp-files-d",
+      "source": "sai-grp-files-d-p",
       "target": "sai-file-docker-compose-enterprise-yml",
       "type": "dependency"
     },
     {
-      "source": "sai-grp-files-d",
+      "source": "sai-grp-files-d-p",
       "target": "sai-file-docker-compose-ha-yml",
       "type": "dependency"
     },
     {
-      "source": "sai-grp-files-d",
+      "source": "sai-grp-files-d-p",
       "target": "sai-file-docker-compose-multiregion-yml",
       "type": "dependency"
     },
     {
-      "source": "sai-grp-files-d",
+      "source": "sai-grp-files-d-p",
       "target": "sai-file-docker-compose-observability-yml",
       "type": "dependency"
     },
     {
-      "source": "sai-grp-files-d",
+      "source": "sai-grp-files-d-p",
       "target": "sai-file-docker-compose-payments-yml",
       "type": "dependency"
     },
     {
-      "source": "sai-grp-files-d",
+      "source": "sai-grp-files-d-p",
       "target": "sai-file-docker-compose-port8800-yml",
       "type": "dependency"
     },
     {
-      "source": "sai-grp-files-d",
+      "source": "sai-grp-files-d-p",
       "target": "sai-file-docker-compose-replica-yml",
       "type": "dependency"
     },
     {
-      "source": "sai-grp-files-d",
+      "source": "sai-grp-files-d-p",
       "target": "sai-file-docker-compose-tracing-yml",
       "type": "dependency"
     },
     {
-      "source": "sai-grp-files-d",
+      "source": "sai-grp-files-d-p",
       "target": "sai-file-docker-compose-yml",
       "type": "dependency"
     },
     {
-      "source": "sai-grp-files-d",
+      "source": "sai-grp-files-d-p",
       "target": "sai-file-docker-compose-zerotrust-yml",
+      "type": "dependency"
+    },
+    {
+      "source": "sai-grp-files-d-p",
+      "target": "sai-file-package-json",
       "type": "dependency"
     },
     {
@@ -8756,11 +9055,6 @@
     {
       "source": "sai-grp-work-treeofknowledge-scripts-files-r-s-u",
       "target": "sai-file-work-treeofknowledge-scripts-restaurant-project-json",
-      "type": "dependency"
-    },
-    {
-      "source": "sai-grp-work-treeofknowledge-scripts-files-r-s-u",
-      "target": "sai-file-work-treeofknowledge-scripts-sentinelai-project-json",
       "type": "dependency"
     },
     {
@@ -11061,6 +11355,86 @@
     {
       "source": "sai-dir-frontend-src-utils",
       "target": "sai-file-frontend-src-utils-sentinelwelcomeaudio-ts",
+      "type": "dependency"
+    },
+    {
+      "source": "sai-dir-installer",
+      "target": "sai-file-installer-gitignore",
+      "type": "dependency"
+    },
+    {
+      "source": "sai-dir-installer",
+      "target": "sai-file-installer-readme-md",
+      "type": "dependency"
+    },
+    {
+      "source": "sai-dir-installer-linux",
+      "target": "sai-file-installer-linux-install-sentinelai-sh",
+      "type": "dependency"
+    },
+    {
+      "source": "sai-dir-installer-linux",
+      "target": "sai-file-installer-linux-uninstall-sentinelai-sh",
+      "type": "dependency"
+    },
+    {
+      "source": "sai-dir-installer-payload",
+      "target": "sai-file-installer-payload-docker-compose-yml",
+      "type": "dependency"
+    },
+    {
+      "source": "sai-dir-installer-payload-bin",
+      "target": "sai-file-installer-payload-bin-start-ps1",
+      "type": "dependency"
+    },
+    {
+      "source": "sai-dir-installer-payload-bin",
+      "target": "sai-file-installer-payload-bin-start-sh",
+      "type": "dependency"
+    },
+    {
+      "source": "sai-dir-installer-payload-bin",
+      "target": "sai-file-installer-payload-bin-status-ps1",
+      "type": "dependency"
+    },
+    {
+      "source": "sai-dir-installer-payload-bin",
+      "target": "sai-file-installer-payload-bin-status-sh",
+      "type": "dependency"
+    },
+    {
+      "source": "sai-dir-installer-payload-bin",
+      "target": "sai-file-installer-payload-bin-stop-ps1",
+      "type": "dependency"
+    },
+    {
+      "source": "sai-dir-installer-payload-bin",
+      "target": "sai-file-installer-payload-bin-stop-sh",
+      "type": "dependency"
+    },
+    {
+      "source": "sai-dir-installer-windows",
+      "target": "sai-file-installer-windows-install-sentinelai-ps1",
+      "type": "dependency"
+    },
+    {
+      "source": "sai-dir-installer-windows",
+      "target": "sai-file-installer-windows-uninstall-sentinelai-ps1",
+      "type": "dependency"
+    },
+    {
+      "source": "sai-dir-installer-windows-gui",
+      "target": "sai-file-installer-windows-gui-launch-setup-cmd",
+      "type": "dependency"
+    },
+    {
+      "source": "sai-dir-installer-windows-gui",
+      "target": "sai-file-installer-windows-gui-sentinelai-setup-iss",
+      "type": "dependency"
+    },
+    {
+      "source": "sai-dir-installer-windows-gui",
+      "target": "sai-file-installer-windows-gui-sentinelai-wizard-ps1",
       "type": "dependency"
     },
     {
