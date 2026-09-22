@@ -21,6 +21,7 @@ CANDIDATES = [
 
 SKIP_DIRS = {
     ".git",
+    ".work",
     "node_modules",
     "__pycache__",
     ".venv",
@@ -35,6 +36,9 @@ SKIP_DIRS = {
     "htmlcov",
     ".eggs",
     "coverage",
+    "zionvm_stores",
+    "postgres_data",
+    "reports_data",
 }
 
 SKIP_FILES = {
@@ -329,11 +333,12 @@ def build(repo: Path) -> dict:
         "demoUrl": "http://localhost:5173",
         "color": "#38bdf8",
         "icon": "network",
-        "stack": "FastAPI + React + Celery + Nmap + SNMP + WMI",
+        "stack": "FastAPI + React + Celery + Nmap + SNMP + WMI + ZionVM + ZionXDR",
         "summary": (
             f"Cobertura completa: {len(files)} arquivos de código no repositório "
             f"({len(nodes)} nós na árvore incluindo pastas). "
-            "NMS estabilizado v2.2 — Zion, wallboard, agent lab, SLA site, playbooks visuais."
+            "Plataforma NMS v2.8+ — Zion hub, mapa 2D/3D, backup, ZionVM (hypervisor Proxmox-like), "
+            "ZionXDR (endpoints, telemetria, Eagle bridge), MFA TOTP e instalador on-prem."
         ),
         "nodes": nodes,
         "meta": {
