@@ -4,7 +4,7 @@
   "repoUrl": "https://github.com/CanonEngineer/SentinelAI",
   "color": "#38bdf8",
   "demoUrl": "http://localhost:5173",
-  "nodeCount": 773,
+  "nodeCount": 774,
   "categories": {
     "core": {
       "label": "Backend",
@@ -50,7 +50,7 @@
       "color": "#3b82f6",
       "size": 2.2,
       "file": "README.md",
-      "description": "Árvore completa do repositório — 627 arquivos de código mapeados (backend, frontend, mobile, docs, scripts, deploy). Estabilização Fases 1–8 + 9b (credenciais, wallboard, agent lab, CMDB, SLA, NetFlow UI)."
+      "description": "Árvore completa do repositório — 628 arquivos de código mapeados (backend, frontend, mobile, docs, scripts, deploy). Estabilização Fases 1–8 + 9b (credenciais, wallboard, agent lab, CMDB, SLA, NetFlow UI)."
     },
     {
       "id": "sai-dir-github",
@@ -7913,6 +7913,18 @@
       "description": "Código-fonte: `frontend/src/context/ThemeProvider.tsx`"
     },
     {
+      "id": "sai-file-frontend-src-hooks-usechatmessagescroll-ts",
+      "label": "useChatMessageScroll.ts",
+      "parent": "sai-dir-frontend-src-hooks",
+      "layer": "file",
+      "category": "frontend",
+      "categoryLabel": "Frontend",
+      "color": "#eab308",
+      "size": 0.95,
+      "file": "frontend/src/hooks/useChatMessageScroll.ts",
+      "description": "Código-fonte: `frontend/src/hooks/useChatMessageScroll.ts`"
+    },
+    {
       "id": "sai-file-frontend-src-hooks-usedashboardlayout-ts",
       "label": "useDashboardLayout.ts",
       "parent": "sai-dir-frontend-src-hooks",
@@ -12591,6 +12603,11 @@
     {
       "source": "sai-dir-frontend-src-context",
       "target": "sai-file-frontend-src-context-themeprovider-tsx",
+      "type": "dependency"
+    },
+    {
+      "source": "sai-dir-frontend-src-hooks",
+      "target": "sai-file-frontend-src-hooks-usechatmessagescroll-ts",
       "type": "dependency"
     },
     {
