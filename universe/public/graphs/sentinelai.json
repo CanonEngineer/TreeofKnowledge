@@ -4,7 +4,7 @@
   "repoUrl": "https://github.com/CanonEngineer/SentinelAI",
   "color": "#38bdf8",
   "demoUrl": "http://localhost:5173",
-  "nodeCount": 774,
+  "nodeCount": 857,
   "categories": {
     "core": {
       "label": "Backend",
@@ -50,7 +50,7 @@
       "color": "#3b82f6",
       "size": 2.2,
       "file": "README.md",
-      "description": "Árvore completa do repositório — 628 arquivos de código mapeados (backend, frontend, mobile, docs, scripts, deploy). Estabilização Fases 1–8 + 9b (credenciais, wallboard, agent lab, CMDB, SLA, NetFlow UI)."
+      "description": "Árvore completa do repositório — 701 arquivos de código mapeados (backend, frontend, mobile, docs, scripts, deploy). Estabilização Fases 1–8 + 9b (credenciais, wallboard, agent lab, CMDB, SLA, NetFlow UI)."
     },
     {
       "id": "sai-dir-github",
@@ -63,6 +63,18 @@
       "size": 1.35,
       "file": ".github/",
       "description": "Pacote/pasta `.github/` do SentinelAI."
+    },
+    {
+      "id": "sai-dir-recover-out",
+      "label": "_recover_out/",
+      "parent": "sai-root",
+      "layer": "module",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 1.35,
+      "file": "_recover_out/",
+      "description": "Pacote/pasta `_recover_out/` do SentinelAI."
     },
     {
       "id": "sai-dir-agent",
@@ -339,6 +351,30 @@
       "size": 1.35,
       "file": "deploy/zionvm/",
       "description": "Pacote/pasta `deploy/zionvm/` do SentinelAI."
+    },
+    {
+      "id": "sai-dir-docs-assets",
+      "label": "assets/",
+      "parent": "sai-dir-docs",
+      "layer": "module",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 1.35,
+      "file": "docs/assets/",
+      "description": "Pacote/pasta `docs/assets/` do SentinelAI."
+    },
+    {
+      "id": "sai-dir-docs-ops",
+      "label": "ops/",
+      "parent": "sai-dir-docs",
+      "layer": "module",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 1.35,
+      "file": "docs/ops/",
+      "description": "Pacote/pasta `docs/ops/` do SentinelAI."
     },
     {
       "id": "sai-dir-frontend-public",
@@ -1217,6 +1253,18 @@
       "description": "Pacote/pasta `frontend/public/zionxdr/eagle/landing/` do SentinelAI."
     },
     {
+      "id": "sai-dir-zionxdr-eagle-offensive-platform-agent-config-rules-d",
+      "label": "rules.d/",
+      "parent": "sai-dir-zionxdr-eagle-offensive-platform-agent-config",
+      "layer": "module",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 1.35,
+      "file": "zionxdr/eagle-offensive-platform/agent/config/rules.d/",
+      "description": "Pacote/pasta `zionxdr/eagle-offensive-platform/agent/config/rules.d/` do SentinelAI."
+    },
+    {
       "id": "sai-dir-zionxdr-eagle-offensive-platform-agent-console-static",
       "label": "static/",
       "parent": "sai-dir-zionxdr-eagle-offensive-platform-agent-console",
@@ -1227,6 +1275,18 @@
       "size": 1.35,
       "file": "zionxdr/eagle-offensive-platform/agent/console/static/",
       "description": "Pacote/pasta `zionxdr/eagle-offensive-platform/agent/console/static/` do SentinelAI."
+    },
+    {
+      "id": "sai-dir-backend-app-data-eagle-runtime-config-rules-d",
+      "label": "rules.d/",
+      "parent": "sai-dir-backend-app-data-eagle-runtime-config",
+      "layer": "module",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 1.35,
+      "file": "backend/app/data/eagle-runtime/config/rules.d/",
+      "description": "Pacote/pasta `backend/app/data/eagle-runtime/config/rules.d/` do SentinelAI."
     },
     {
       "id": "sai-grp-files-c",
@@ -1251,18 +1311,6 @@
       "size": 1.35,
       "file": "[files-d]",
       "description": "Grupo de arquivos em `./` — Arquivos D"
-    },
-    {
-      "id": "sai-grp-files-p",
-      "label": "Arquivos P",
-      "parent": "sai-root",
-      "layer": "module",
-      "category": "core",
-      "categoryLabel": "Backend",
-      "color": "#3b82f6",
-      "size": 1.35,
-      "file": "[files-p]",
-      "description": "Grupo de arquivos em `./` — Arquivos P"
     },
     {
       "id": "sai-file-cursorignore",
@@ -1457,18 +1505,6 @@
       "description": "Código-fonte: `docker-compose.zionvm-lab.yml`"
     },
     {
-      "id": "sai-file-package-json",
-      "label": "package.json",
-      "parent": "sai-grp-files-p",
-      "layer": "file",
-      "category": "other",
-      "categoryLabel": "Outros",
-      "color": "#64748b",
-      "size": 0.95,
-      "file": "package.json",
-      "description": "Código-fonte: `package.json`"
-    },
-    {
       "id": "sai-file-github-workflows-ci-yml",
       "label": "ci.yml",
       "parent": "sai-dir-github-workflows",
@@ -1479,6 +1515,630 @@
       "size": 0.95,
       "file": ".github/workflows/ci.yml",
       "description": "Código-fonte: `.github/workflows/ci.yml`"
+    },
+    {
+      "id": "sai-grp-recover-out-files-a-c-d",
+      "label": "Arquivos #–A–C–D",
+      "parent": "sai-dir-recover-out",
+      "layer": "module",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 1.35,
+      "file": "_recover_out/[files-#–a–c–d]",
+      "description": "Grupo de arquivos em `_recover_out/` — Arquivos #–A–C–D"
+    },
+    {
+      "id": "sai-grp-recover-out-files-e-f-h-o",
+      "label": "Arquivos E–F–H–O",
+      "parent": "sai-dir-recover-out",
+      "layer": "module",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 1.35,
+      "file": "_recover_out/[files-e–f–h–o]",
+      "description": "Grupo de arquivos em `_recover_out/` — Arquivos E–F–H–O"
+    },
+    {
+      "id": "sai-grp-recover-out-files-p-1-12",
+      "label": "Arquivos P (1–12)",
+      "parent": "sai-dir-recover-out",
+      "layer": "module",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 1.35,
+      "file": "_recover_out/[files-p-1-12]",
+      "description": "Grupo de arquivos em `_recover_out/` — Arquivos P (1–12)"
+    },
+    {
+      "id": "sai-grp-recover-out-files-p-13-18",
+      "label": "Arquivos P (13–18)",
+      "parent": "sai-dir-recover-out",
+      "layer": "module",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 1.35,
+      "file": "_recover_out/[files-p-13-18]",
+      "description": "Grupo de arquivos em `_recover_out/` — Arquivos P (13–18)"
+    },
+    {
+      "id": "sai-grp-recover-out-files-r-s-z",
+      "label": "Arquivos R–S–Z",
+      "parent": "sai-dir-recover-out",
+      "layer": "module",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 1.35,
+      "file": "_recover_out/[files-r–s–z]",
+      "description": "Grupo de arquivos em `_recover_out/` — Arquivos R–S–Z"
+    },
+    {
+      "id": "sai-file-recover-out-extract-backup-repl-py",
+      "label": "_extract_backup_repl.py",
+      "parent": "sai-grp-recover-out-files-a-c-d",
+      "layer": "file",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 0.95,
+      "file": "_recover_out/_extract_backup_repl.py",
+      "description": "Código-fonte: `_recover_out/_extract_backup_repl.py`"
+    },
+    {
+      "id": "sai-file-recover-out-scan-actions-py",
+      "label": "_scan_actions.py",
+      "parent": "sai-grp-recover-out-files-a-c-d",
+      "layer": "file",
+      "category": "network",
+      "categoryLabel": "Rede / Scan",
+      "color": "#22d3ee",
+      "size": 0.95,
+      "file": "_recover_out/_scan_actions.py",
+      "description": "Código-fonte: `_recover_out/_scan_actions.py`"
+    },
+    {
+      "id": "sai-file-recover-out-scan-peaks-py",
+      "label": "_scan_peaks.py",
+      "parent": "sai-grp-recover-out-files-a-c-d",
+      "layer": "file",
+      "category": "network",
+      "categoryLabel": "Rede / Scan",
+      "color": "#22d3ee",
+      "size": 0.95,
+      "file": "_recover_out/_scan_peaks.py",
+      "description": "Código-fonte: `_recover_out/_scan_peaks.py`"
+    },
+    {
+      "id": "sai-file-recover-out-analyze-replay-py",
+      "label": "analyze_replay.py",
+      "parent": "sai-grp-recover-out-files-a-c-d",
+      "layer": "file",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 0.95,
+      "file": "_recover_out/analyze_replay.py",
+      "description": "Código-fonte: `_recover_out/analyze_replay.py`"
+    },
+    {
+      "id": "sai-file-recover-out-client-l5084-sr-json",
+      "label": "client_L5084_sr.json",
+      "parent": "sai-grp-recover-out-files-a-c-d",
+      "layer": "file",
+      "category": "other",
+      "categoryLabel": "Outros",
+      "color": "#64748b",
+      "size": 0.95,
+      "file": "_recover_out/client_L5084_sr.json",
+      "description": "Código-fonte: `_recover_out/client_L5084_sr.json`"
+    },
+    {
+      "id": "sai-file-recover-out-como-era-2026-09-24-md",
+      "label": "COMO_ERA_2026-09-24.md",
+      "parent": "sai-grp-recover-out-files-a-c-d",
+      "layer": "file",
+      "category": "other",
+      "categoryLabel": "Outros",
+      "color": "#64748b",
+      "size": 0.95,
+      "file": "_recover_out/COMO_ERA_2026-09-24.md",
+      "description": "Código-fonte: `_recover_out/COMO_ERA_2026-09-24.md`"
+    },
+    {
+      "id": "sai-file-recover-out-diff-classname-py",
+      "label": "diff_classname.py",
+      "parent": "sai-grp-recover-out-files-a-c-d",
+      "layer": "file",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 0.95,
+      "file": "_recover_out/diff_classname.py",
+      "description": "Código-fonte: `_recover_out/diff_classname.py`"
+    },
+    {
+      "id": "sai-file-recover-out-diff-polish-py",
+      "label": "diff_polish.py",
+      "parent": "sai-grp-recover-out-files-a-c-d",
+      "layer": "file",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 0.95,
+      "file": "_recover_out/diff_polish.py",
+      "description": "Código-fonte: `_recover_out/diff_polish.py`"
+    },
+    {
+      "id": "sai-file-recover-out-diff-polish2-py",
+      "label": "diff_polish2.py",
+      "parent": "sai-grp-recover-out-files-a-c-d",
+      "layer": "file",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 0.95,
+      "file": "_recover_out/diff_polish2.py",
+      "description": "Código-fonte: `_recover_out/diff_polish2.py`"
+    },
+    {
+      "id": "sai-file-recover-out-diff-polish3-py",
+      "label": "diff_polish3.py",
+      "parent": "sai-grp-recover-out-files-a-c-d",
+      "layer": "file",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 0.95,
+      "file": "_recover_out/diff_polish3.py",
+      "description": "Código-fonte: `_recover_out/diff_polish3.py`"
+    },
+    {
+      "id": "sai-file-recover-out-disk-zionvmhapanel-pre-tsx",
+      "label": "disk_ZionvmHaPanel_pre.tsx",
+      "parent": "sai-grp-recover-out-files-a-c-d",
+      "layer": "file",
+      "category": "frontend",
+      "categoryLabel": "Frontend",
+      "color": "#eab308",
+      "size": 0.95,
+      "file": "_recover_out/disk_ZionvmHaPanel_pre.tsx",
+      "description": "Código-fonte: `_recover_out/disk_ZionvmHaPanel_pre.tsx`"
+    },
+    {
+      "id": "sai-file-recover-out-disk-zionvmstoragepanel-pre-tsx",
+      "label": "disk_ZionvmStoragePanel_pre.tsx",
+      "parent": "sai-grp-recover-out-files-a-c-d",
+      "layer": "file",
+      "category": "frontend",
+      "categoryLabel": "Frontend",
+      "color": "#eab308",
+      "size": 0.95,
+      "file": "_recover_out/disk_ZionvmStoragePanel_pre.tsx",
+      "description": "Código-fonte: `_recover_out/disk_ZionvmStoragePanel_pre.tsx`"
+    },
+    {
+      "id": "sai-file-recover-out-e549-l5083-zvmnumberfield-tsx",
+      "label": "e549_L5083_ZvmNumberField.tsx",
+      "parent": "sai-grp-recover-out-files-e-f-h-o",
+      "layer": "file",
+      "category": "frontend",
+      "categoryLabel": "Frontend",
+      "color": "#eab308",
+      "size": 0.95,
+      "file": "_recover_out/e549_L5083_ZvmNumberField.tsx",
+      "description": "Código-fonte: `_recover_out/e549_L5083_ZvmNumberField.tsx`"
+    },
+    {
+      "id": "sai-file-recover-out-e549-peak-zionvmbackuptab-tsx",
+      "label": "e549_peak_ZionvmBackupTab.tsx",
+      "parent": "sai-grp-recover-out-files-e-f-h-o",
+      "layer": "file",
+      "category": "frontend",
+      "categoryLabel": "Frontend",
+      "color": "#eab308",
+      "size": 0.95,
+      "file": "_recover_out/e549_peak_ZionvmBackupTab.tsx",
+      "description": "Código-fonte: `_recover_out/e549_peak_ZionvmBackupTab.tsx`"
+    },
+    {
+      "id": "sai-file-recover-out-extract-number-field-py",
+      "label": "extract_number_field.py",
+      "parent": "sai-grp-recover-out-files-e-f-h-o",
+      "layer": "file",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 0.95,
+      "file": "_recover_out/extract_number_field.py",
+      "description": "Código-fonte: `_recover_out/extract_number_field.py`"
+    },
+    {
+      "id": "sai-file-recover-out-final-backup-page-css",
+      "label": "final_backup-page.css",
+      "parent": "sai-grp-recover-out-files-e-f-h-o",
+      "layer": "file",
+      "category": "frontend",
+      "categoryLabel": "Frontend",
+      "color": "#eab308",
+      "size": 0.95,
+      "file": "_recover_out/final_backup-page.css",
+      "description": "Código-fonte: `_recover_out/final_backup-page.css`"
+    },
+    {
+      "id": "sai-file-recover-out-final-zionvmbackuptab-tsx",
+      "label": "final_ZionvmBackupTab.tsx",
+      "parent": "sai-grp-recover-out-files-e-f-h-o",
+      "layer": "file",
+      "category": "frontend",
+      "categoryLabel": "Frontend",
+      "color": "#eab308",
+      "size": 0.95,
+      "file": "_recover_out/final_ZionvmBackupTab.tsx",
+      "description": "Código-fonte: `_recover_out/final_ZionvmBackupTab.tsx`"
+    },
+    {
+      "id": "sai-file-recover-out-final-zionvmhapanel-tsx",
+      "label": "final_ZionvmHaPanel.tsx",
+      "parent": "sai-grp-recover-out-files-e-f-h-o",
+      "layer": "file",
+      "category": "frontend",
+      "categoryLabel": "Frontend",
+      "color": "#eab308",
+      "size": 0.95,
+      "file": "_recover_out/final_ZionvmHaPanel.tsx",
+      "description": "Código-fonte: `_recover_out/final_ZionvmHaPanel.tsx`"
+    },
+    {
+      "id": "sai-file-recover-out-final-zionvmnetworkpanel-tsx",
+      "label": "final_ZionvmNetworkPanel.tsx",
+      "parent": "sai-grp-recover-out-files-e-f-h-o",
+      "layer": "file",
+      "category": "frontend",
+      "categoryLabel": "Frontend",
+      "color": "#eab308",
+      "size": 0.95,
+      "file": "_recover_out/final_ZionvmNetworkPanel.tsx",
+      "description": "Código-fonte: `_recover_out/final_ZionvmNetworkPanel.tsx`"
+    },
+    {
+      "id": "sai-file-recover-out-final-zionvmstoragepanel-tsx",
+      "label": "final_ZionvmStoragePanel.tsx",
+      "parent": "sai-grp-recover-out-files-e-f-h-o",
+      "layer": "file",
+      "category": "frontend",
+      "categoryLabel": "Frontend",
+      "color": "#eab308",
+      "size": 0.95,
+      "file": "_recover_out/final_ZionvmStoragePanel.tsx",
+      "description": "Código-fonte: `_recover_out/final_ZionvmStoragePanel.tsx`"
+    },
+    {
+      "id": "sai-file-recover-out-head-zionvmpage-tsx",
+      "label": "HEAD_ZionVMPage.tsx",
+      "parent": "sai-grp-recover-out-files-e-f-h-o",
+      "layer": "file",
+      "category": "frontend",
+      "categoryLabel": "Frontend",
+      "color": "#eab308",
+      "size": 0.95,
+      "file": "_recover_out/HEAD_ZionVMPage.tsx",
+      "description": "Código-fonte: `_recover_out/HEAD_ZionVMPage.tsx`"
+    },
+    {
+      "id": "sai-file-recover-out-ops-repo-snippets-json",
+      "label": "ops_repo_snippets.json",
+      "parent": "sai-grp-recover-out-files-e-f-h-o",
+      "layer": "file",
+      "category": "other",
+      "categoryLabel": "Outros",
+      "color": "#64748b",
+      "size": 0.95,
+      "file": "_recover_out/ops_repo_snippets.json",
+      "description": "Código-fonte: `_recover_out/ops_repo_snippets.json`"
+    },
+    {
+      "id": "sai-file-recover-out-peak-backend-app-services-zionvm-agent-mtls-py",
+      "label": "peak_backend__app__services__zionvm_agent_mtls.py",
+      "parent": "sai-grp-recover-out-files-p-1-12",
+      "layer": "file",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 0.95,
+      "file": "_recover_out/peak_backend__app__services__zionvm_agent_mtls.py",
+      "description": "Código-fonte: `_recover_out/peak_backend__app__services__zionvm_agent_mtls.py`"
+    },
+    {
+      "id": "sai-file-recover-out-peak-backend-app-services-zionvm-hypervisor-py",
+      "label": "peak_backend__app__services__zionvm_hypervisor.py",
+      "parent": "sai-grp-recover-out-files-p-1-12",
+      "layer": "file",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 0.95,
+      "file": "_recover_out/peak_backend__app__services__zionvm_hypervisor.py",
+      "description": "Código-fonte: `_recover_out/peak_backend__app__services__zionvm_hypervisor.py`"
+    },
+    {
+      "id": "sai-file-recover-out-peak-backend-tests-test-zionvm-s19-25-py",
+      "label": "peak_backend__tests__test_zionvm_s19_25.py",
+      "parent": "sai-grp-recover-out-files-p-1-12",
+      "layer": "file",
+      "category": "tests",
+      "categoryLabel": "Testes",
+      "color": "#94a3b8",
+      "size": 0.95,
+      "file": "_recover_out/peak_backend__tests__test_zionvm_s19_25.py",
+      "description": "Código-fonte: `_recover_out/peak_backend__tests__test_zionvm_s19_25.py`"
+    },
+    {
+      "id": "sai-file-recover-out-peak-backup-page-css-css",
+      "label": "peak_backup-page_css.css",
+      "parent": "sai-grp-recover-out-files-p-1-12",
+      "layer": "file",
+      "category": "frontend",
+      "categoryLabel": "Frontend",
+      "color": "#eab308",
+      "size": 0.95,
+      "file": "_recover_out/peak_backup-page_css.css",
+      "description": "Código-fonte: `_recover_out/peak_backup-page_css.css`"
+    },
+    {
+      "id": "sai-file-recover-out-peak-backup-page-css-meta-json",
+      "label": "peak_backup-page_css_meta.json",
+      "parent": "sai-grp-recover-out-files-p-1-12",
+      "layer": "file",
+      "category": "other",
+      "categoryLabel": "Outros",
+      "color": "#64748b",
+      "size": 0.95,
+      "file": "_recover_out/peak_backup-page_css_meta.json",
+      "description": "Código-fonte: `_recover_out/peak_backup-page_css_meta.json`"
+    },
+    {
+      "id": "sai-file-recover-out-peak-backuptab-replicate-snippet-tsx",
+      "label": "peak_BackupTab_replicate_snippet.tsx",
+      "parent": "sai-grp-recover-out-files-p-1-12",
+      "layer": "file",
+      "category": "frontend",
+      "categoryLabel": "Frontend",
+      "color": "#eab308",
+      "size": 0.95,
+      "file": "_recover_out/peak_BackupTab_replicate_snippet.tsx",
+      "description": "Código-fonte: `_recover_out/peak_BackupTab_replicate_snippet.tsx`"
+    },
+    {
+      "id": "sai-file-recover-out-peak-frontend-src-pages-zionvmenterprises2630panel-tsx",
+      "label": "peak_frontend__src__pages__ZionvmEnterpriseS2630Panel.tsx",
+      "parent": "sai-grp-recover-out-files-p-1-12",
+      "layer": "file",
+      "category": "frontend",
+      "categoryLabel": "Frontend",
+      "color": "#eab308",
+      "size": 0.95,
+      "file": "_recover_out/peak_frontend__src__pages__ZionvmEnterpriseS2630Panel.tsx",
+      "description": "Código-fonte: `_recover_out/peak_frontend__src__pages__ZionvmEnterpriseS2630Panel.tsx`"
+    },
+    {
+      "id": "sai-file-recover-out-peak-scan-meta-json",
+      "label": "peak_scan_meta.json",
+      "parent": "sai-grp-recover-out-files-p-1-12",
+      "layer": "file",
+      "category": "network",
+      "categoryLabel": "Rede / Scan",
+      "color": "#22d3ee",
+      "size": 0.95,
+      "file": "_recover_out/peak_scan_meta.json",
+      "description": "Código-fonte: `_recover_out/peak_scan_meta.json`"
+    },
+    {
+      "id": "sai-file-recover-out-peak-zionvmbackuptab-tsx",
+      "label": "peak_ZionvmBackupTab.tsx",
+      "parent": "sai-grp-recover-out-files-p-1-12",
+      "layer": "file",
+      "category": "frontend",
+      "categoryLabel": "Frontend",
+      "color": "#eab308",
+      "size": 0.95,
+      "file": "_recover_out/peak_ZionvmBackupTab.tsx",
+      "description": "Código-fonte: `_recover_out/peak_ZionvmBackupTab.tsx`"
+    },
+    {
+      "id": "sai-file-recover-out-peak-zionvmbackuptab-meta-json",
+      "label": "peak_ZionvmBackupTab_meta.json",
+      "parent": "sai-grp-recover-out-files-p-1-12",
+      "layer": "file",
+      "category": "other",
+      "categoryLabel": "Outros",
+      "color": "#64748b",
+      "size": 0.95,
+      "file": "_recover_out/peak_ZionvmBackupTab_meta.json",
+      "description": "Código-fonte: `_recover_out/peak_ZionvmBackupTab_meta.json`"
+    },
+    {
+      "id": "sai-file-recover-out-peak-zionvmbackuptab-reconstructed-tsx",
+      "label": "peak_ZionvmBackupTab_reconstructed.tsx",
+      "parent": "sai-grp-recover-out-files-p-1-12",
+      "layer": "file",
+      "category": "frontend",
+      "categoryLabel": "Frontend",
+      "color": "#eab308",
+      "size": 0.95,
+      "file": "_recover_out/peak_ZionvmBackupTab_reconstructed.tsx",
+      "description": "Código-fonte: `_recover_out/peak_ZionvmBackupTab_reconstructed.tsx`"
+    },
+    {
+      "id": "sai-file-recover-out-peak-zionvmhapanel-tsx",
+      "label": "peak_ZionvmHaPanel.tsx",
+      "parent": "sai-grp-recover-out-files-p-1-12",
+      "layer": "file",
+      "category": "frontend",
+      "categoryLabel": "Frontend",
+      "color": "#eab308",
+      "size": 0.95,
+      "file": "_recover_out/peak_ZionvmHaPanel.tsx",
+      "description": "Código-fonte: `_recover_out/peak_ZionvmHaPanel.tsx`"
+    },
+    {
+      "id": "sai-file-recover-out-peak-zionvmhapanel-meta-json",
+      "label": "peak_ZionvmHaPanel_meta.json",
+      "parent": "sai-grp-recover-out-files-p-13-18",
+      "layer": "file",
+      "category": "other",
+      "categoryLabel": "Outros",
+      "color": "#64748b",
+      "size": 0.95,
+      "file": "_recover_out/peak_ZionvmHaPanel_meta.json",
+      "description": "Código-fonte: `_recover_out/peak_ZionvmHaPanel_meta.json`"
+    },
+    {
+      "id": "sai-file-recover-out-peak-zionvmnetworkpanel-tsx",
+      "label": "peak_ZionvmNetworkPanel.tsx",
+      "parent": "sai-grp-recover-out-files-p-13-18",
+      "layer": "file",
+      "category": "frontend",
+      "categoryLabel": "Frontend",
+      "color": "#eab308",
+      "size": 0.95,
+      "file": "_recover_out/peak_ZionvmNetworkPanel.tsx",
+      "description": "Código-fonte: `_recover_out/peak_ZionvmNetworkPanel.tsx`"
+    },
+    {
+      "id": "sai-file-recover-out-peak-zionvmnetworkpanel-disk-tsx",
+      "label": "peak_ZionvmNetworkPanel_disk.tsx",
+      "parent": "sai-grp-recover-out-files-p-13-18",
+      "layer": "file",
+      "category": "frontend",
+      "categoryLabel": "Frontend",
+      "color": "#eab308",
+      "size": 0.95,
+      "file": "_recover_out/peak_ZionvmNetworkPanel_disk.tsx",
+      "description": "Código-fonte: `_recover_out/peak_ZionvmNetworkPanel_disk.tsx`"
+    },
+    {
+      "id": "sai-file-recover-out-peak-zionvmnetworkpanel-meta-json",
+      "label": "peak_ZionvmNetworkPanel_meta.json",
+      "parent": "sai-grp-recover-out-files-p-13-18",
+      "layer": "file",
+      "category": "network",
+      "categoryLabel": "Rede / Scan",
+      "color": "#22d3ee",
+      "size": 0.95,
+      "file": "_recover_out/peak_ZionvmNetworkPanel_meta.json",
+      "description": "Código-fonte: `_recover_out/peak_ZionvmNetworkPanel_meta.json`"
+    },
+    {
+      "id": "sai-file-recover-out-peak-zionvmstoragepanel-tsx",
+      "label": "peak_ZionvmStoragePanel.tsx",
+      "parent": "sai-grp-recover-out-files-p-13-18",
+      "layer": "file",
+      "category": "frontend",
+      "categoryLabel": "Frontend",
+      "color": "#eab308",
+      "size": 0.95,
+      "file": "_recover_out/peak_ZionvmStoragePanel.tsx",
+      "description": "Código-fonte: `_recover_out/peak_ZionvmStoragePanel.tsx`"
+    },
+    {
+      "id": "sai-file-recover-out-peak-zionvmstoragepanel-meta-json",
+      "label": "peak_ZionvmStoragePanel_meta.json",
+      "parent": "sai-grp-recover-out-files-p-13-18",
+      "layer": "file",
+      "category": "other",
+      "categoryLabel": "Outros",
+      "color": "#64748b",
+      "size": 0.95,
+      "file": "_recover_out/peak_ZionvmStoragePanel_meta.json",
+      "description": "Código-fonte: `_recover_out/peak_ZionvmStoragePanel_meta.json`"
+    },
+    {
+      "id": "sai-file-recover-out-recovery-inventory-md",
+      "label": "RECOVERY_INVENTORY.md",
+      "parent": "sai-grp-recover-out-files-r-s-z",
+      "layer": "file",
+      "category": "other",
+      "categoryLabel": "Outros",
+      "color": "#64748b",
+      "size": 0.95,
+      "file": "_recover_out/RECOVERY_INVENTORY.md",
+      "description": "Código-fonte: `_recover_out/RECOVERY_INVENTORY.md`"
+    },
+    {
+      "id": "sai-file-recover-out-restore-peaks-py",
+      "label": "restore_peaks.py",
+      "parent": "sai-grp-recover-out-files-r-s-z",
+      "layer": "file",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 0.95,
+      "file": "_recover_out/restore_peaks.py",
+      "description": "Código-fonte: `_recover_out/restore_peaks.py`"
+    },
+    {
+      "id": "sai-file-recover-out-restore-report-json",
+      "label": "restore_report.json",
+      "parent": "sai-grp-recover-out-files-r-s-z",
+      "layer": "file",
+      "category": "other",
+      "categoryLabel": "Outros",
+      "color": "#64748b",
+      "size": 0.95,
+      "file": "_recover_out/restore_report.json",
+      "description": "Código-fonte: `_recover_out/restore_report.json`"
+    },
+    {
+      "id": "sai-file-recover-out-scan-client-ops-py",
+      "label": "scan_client_ops.py",
+      "parent": "sai-grp-recover-out-files-r-s-z",
+      "layer": "file",
+      "category": "network",
+      "categoryLabel": "Rede / Scan",
+      "color": "#22d3ee",
+      "size": 0.95,
+      "file": "_recover_out/scan_client_ops.py",
+      "description": "Código-fonte: `_recover_out/scan_client_ops.py`"
+    },
+    {
+      "id": "sai-file-recover-out-scan-peaks-py-2",
+      "label": "scan_peaks.py",
+      "parent": "sai-grp-recover-out-files-r-s-z",
+      "layer": "file",
+      "category": "network",
+      "categoryLabel": "Rede / Scan",
+      "color": "#22d3ee",
+      "size": 0.95,
+      "file": "_recover_out/scan_peaks.py",
+      "description": "Código-fonte: `_recover_out/scan_peaks.py`"
+    },
+    {
+      "id": "sai-file-recover-out-strreplace-meta-json",
+      "label": "strreplace_meta.json",
+      "parent": "sai-grp-recover-out-files-r-s-z",
+      "layer": "file",
+      "category": "other",
+      "categoryLabel": "Outros",
+      "color": "#64748b",
+      "size": 0.95,
+      "file": "_recover_out/strreplace_meta.json",
+      "description": "Código-fonte: `_recover_out/strreplace_meta.json`"
+    },
+    {
+      "id": "sai-file-recover-out-zionvm-polish-restore-summary-md",
+      "label": "ZIONVM_POLISH_RESTORE_SUMMARY.md",
+      "parent": "sai-grp-recover-out-files-r-s-z",
+      "layer": "file",
+      "category": "other",
+      "categoryLabel": "Outros",
+      "color": "#64748b",
+      "size": 0.95,
+      "file": "_recover_out/ZIONVM_POLISH_RESTORE_SUMMARY.md",
+      "description": "Código-fonte: `_recover_out/ZIONVM_POLISH_RESTORE_SUMMARY.md`"
     },
     {
       "id": "sai-file-agent-install-windows-ps1",
@@ -2801,6 +3461,18 @@
       "description": "Código-fonte: `backend/app/data/agent/zionxdr_windows_agent.py`"
     },
     {
+      "id": "sai-file-backend-app-data-eagle-runtime-config-correlation-yaml",
+      "label": "correlation.yaml",
+      "parent": "sai-dir-backend-app-data-eagle-runtime-config",
+      "layer": "file",
+      "category": "other",
+      "categoryLabel": "Outros",
+      "color": "#64748b",
+      "size": 0.95,
+      "file": "backend/app/data/eagle-runtime/config/correlation.yaml",
+      "description": "Código-fonte: `backend/app/data/eagle-runtime/config/correlation.yaml`"
+    },
+    {
       "id": "sai-file-backend-app-data-eagle-runtime-config-coverage-yaml",
       "label": "coverage.yaml",
       "parent": "sai-dir-backend-app-data-eagle-runtime-config",
@@ -2823,6 +3495,42 @@
       "size": 0.95,
       "file": "backend/app/data/eagle-runtime/config/rules.yaml",
       "description": "Código-fonte: `backend/app/data/eagle-runtime/config/rules.yaml`"
+    },
+    {
+      "id": "sai-file-backend-app-data-eagle-runtime-config-whitelist-yaml",
+      "label": "whitelist.yaml",
+      "parent": "sai-dir-backend-app-data-eagle-runtime-config",
+      "layer": "file",
+      "category": "other",
+      "categoryLabel": "Outros",
+      "color": "#64748b",
+      "size": 0.95,
+      "file": "backend/app/data/eagle-runtime/config/whitelist.yaml",
+      "description": "Código-fonte: `backend/app/data/eagle-runtime/config/whitelist.yaml`"
+    },
+    {
+      "id": "sai-file-backend-app-data-eagle-runtime-config-rules-d-extended-behavioral-yaml",
+      "label": "extended_behavioral.yaml",
+      "parent": "sai-dir-backend-app-data-eagle-runtime-config-rules-d",
+      "layer": "file",
+      "category": "other",
+      "categoryLabel": "Outros",
+      "color": "#64748b",
+      "size": 0.95,
+      "file": "backend/app/data/eagle-runtime/config/rules.d/extended_behavioral.yaml",
+      "description": "Código-fonte: `backend/app/data/eagle-runtime/config/rules.d/extended_behavioral.yaml`"
+    },
+    {
+      "id": "sai-file-backend-app-data-eagle-runtime-config-rules-d-gap-fill-requested-yaml",
+      "label": "gap_fill_requested.yaml",
+      "parent": "sai-dir-backend-app-data-eagle-runtime-config-rules-d",
+      "layer": "file",
+      "category": "other",
+      "categoryLabel": "Outros",
+      "color": "#64748b",
+      "size": 0.95,
+      "file": "backend/app/data/eagle-runtime/config/rules.d/gap_fill_requested.yaml",
+      "description": "Código-fonte: `backend/app/data/eagle-runtime/config/rules.d/gap_fill_requested.yaml`"
     },
     {
       "id": "sai-file-backend-app-engines-init-py",
@@ -6461,6 +7169,30 @@
       "description": "Código-fonte: `docs/SECURITY-REVIEW-v2.2.md`"
     },
     {
+      "id": "sai-file-docs-sentinelai-documentacao-completa-html",
+      "label": "SENTINELAI-DOCUMENTACAO-COMPLETA.html",
+      "parent": "sai-grp-docs-files-s-u",
+      "layer": "file",
+      "category": "frontend",
+      "categoryLabel": "Frontend",
+      "color": "#eab308",
+      "size": 0.95,
+      "file": "docs/SENTINELAI-DOCUMENTACAO-COMPLETA.html",
+      "description": "Código-fonte: `docs/SENTINELAI-DOCUMENTACAO-COMPLETA.html`"
+    },
+    {
+      "id": "sai-file-docs-sentinelai-documentacao-completa-md",
+      "label": "SENTINELAI-DOCUMENTACAO-COMPLETA.md",
+      "parent": "sai-grp-docs-files-s-u",
+      "layer": "file",
+      "category": "other",
+      "categoryLabel": "Outros",
+      "color": "#64748b",
+      "size": 0.95,
+      "file": "docs/SENTINELAI-DOCUMENTACAO-COMPLETA.md",
+      "description": "Código-fonte: `docs/SENTINELAI-DOCUMENTACAO-COMPLETA.md`"
+    },
+    {
       "id": "sai-file-docs-sprint-trust-p0-md",
       "label": "SPRINT-TRUST-P0.md",
       "parent": "sai-grp-docs-files-s-u",
@@ -6663,6 +7395,30 @@
       "size": 0.95,
       "file": "docs/ZIONXDR.md",
       "description": "Código-fonte: `docs/ZIONXDR.md`"
+    },
+    {
+      "id": "sai-file-docs-assets-sentinelai-structure-3d-viewer-html",
+      "label": "sentinelai-structure-3d-viewer.html",
+      "parent": "sai-dir-docs-assets",
+      "layer": "file",
+      "category": "frontend",
+      "categoryLabel": "Frontend",
+      "color": "#eab308",
+      "size": 0.95,
+      "file": "docs/assets/sentinelai-structure-3d-viewer.html",
+      "description": "Código-fonte: `docs/assets/sentinelai-structure-3d-viewer.html`"
+    },
+    {
+      "id": "sai-file-docs-ops-repo-layout-md",
+      "label": "REPO-LAYOUT.md",
+      "parent": "sai-dir-docs-ops",
+      "layer": "file",
+      "category": "other",
+      "categoryLabel": "Outros",
+      "color": "#64748b",
+      "size": 0.95,
+      "file": "docs/ops/REPO-LAYOUT.md",
+      "description": "Código-fonte: `docs/ops/REPO-LAYOUT.md`"
     },
     {
       "id": "sai-file-frontend-dockerfile",
@@ -7613,16 +8369,16 @@
       "description": "Código-fonte: `frontend/src/components/zionvm/ZvmVncConsole.tsx`"
     },
     {
-      "id": "sai-grp-frontend-src-components-zionxdr-files-u",
-      "label": "Arquivos U",
+      "id": "sai-grp-frontend-src-components-zionxdr-files-e-s-u",
+      "label": "Arquivos E–S–U",
       "parent": "sai-dir-frontend-src-components-zionxdr",
       "layer": "module",
       "category": "frontend",
       "categoryLabel": "Frontend",
       "color": "#eab308",
       "size": 1.35,
-      "file": "frontend/src/components/zionxdr/[files-u]",
-      "description": "Grupo de arquivos em `frontend/src/components/zionxdr/` — Arquivos U"
+      "file": "frontend/src/components/zionxdr/[files-e–s–u]",
+      "description": "Grupo de arquivos em `frontend/src/components/zionxdr/` — Arquivos E–S–U"
     },
     {
       "id": "sai-grp-frontend-src-components-zionxdr-files-z-1-12",
@@ -7649,9 +8405,81 @@
       "description": "Grupo de arquivos em `frontend/src/components/zionxdr/` — Arquivos Z (13–16)"
     },
     {
+      "id": "sai-file-frontend-src-components-zionxdr-eaglealertcard-tsx",
+      "label": "EagleAlertCard.tsx",
+      "parent": "sai-grp-frontend-src-components-zionxdr-files-e-s-u",
+      "layer": "file",
+      "category": "frontend",
+      "categoryLabel": "Frontend",
+      "color": "#eab308",
+      "size": 0.95,
+      "file": "frontend/src/components/zionxdr/EagleAlertCard.tsx",
+      "description": "Código-fonte: `frontend/src/components/zionxdr/EagleAlertCard.tsx`"
+    },
+    {
+      "id": "sai-file-frontend-src-components-zionxdr-eaglerulecard-tsx",
+      "label": "EagleRuleCard.tsx",
+      "parent": "sai-grp-frontend-src-components-zionxdr-files-e-s-u",
+      "layer": "file",
+      "category": "frontend",
+      "categoryLabel": "Frontend",
+      "color": "#eab308",
+      "size": 0.95,
+      "file": "frontend/src/components/zionxdr/EagleRuleCard.tsx",
+      "description": "Código-fonte: `frontend/src/components/zionxdr/EagleRuleCard.tsx`"
+    },
+    {
+      "id": "sai-file-frontend-src-components-zionxdr-eaglesocutils-ts",
+      "label": "eagleSocUtils.ts",
+      "parent": "sai-grp-frontend-src-components-zionxdr-files-e-s-u",
+      "layer": "file",
+      "category": "frontend",
+      "categoryLabel": "Frontend",
+      "color": "#eab308",
+      "size": 0.95,
+      "file": "frontend/src/components/zionxdr/eagleSocUtils.ts",
+      "description": "Código-fonte: `frontend/src/components/zionxdr/eagleSocUtils.ts`"
+    },
+    {
+      "id": "sai-file-frontend-src-components-zionxdr-secstatusbadge-tsx",
+      "label": "SecStatusBadge.tsx",
+      "parent": "sai-grp-frontend-src-components-zionxdr-files-e-s-u",
+      "layer": "file",
+      "category": "frontend",
+      "categoryLabel": "Frontend",
+      "color": "#eab308",
+      "size": 0.95,
+      "file": "frontend/src/components/zionxdr/SecStatusBadge.tsx",
+      "description": "Código-fonte: `frontend/src/components/zionxdr/SecStatusBadge.tsx`"
+    },
+    {
+      "id": "sai-file-frontend-src-components-zionxdr-securitycoveragecard-tsx",
+      "label": "SecurityCoverageCard.tsx",
+      "parent": "sai-grp-frontend-src-components-zionxdr-files-e-s-u",
+      "layer": "file",
+      "category": "frontend",
+      "categoryLabel": "Frontend",
+      "color": "#eab308",
+      "size": 0.95,
+      "file": "frontend/src/components/zionxdr/SecurityCoverageCard.tsx",
+      "description": "Código-fonte: `frontend/src/components/zionxdr/SecurityCoverageCard.tsx`"
+    },
+    {
+      "id": "sai-file-frontend-src-components-zionxdr-securitycoverageutils-ts",
+      "label": "securityCoverageUtils.ts",
+      "parent": "sai-grp-frontend-src-components-zionxdr-files-e-s-u",
+      "layer": "file",
+      "category": "frontend",
+      "categoryLabel": "Frontend",
+      "color": "#eab308",
+      "size": 0.95,
+      "file": "frontend/src/components/zionxdr/securityCoverageUtils.ts",
+      "description": "Código-fonte: `frontend/src/components/zionxdr/securityCoverageUtils.ts`"
+    },
+    {
       "id": "sai-file-frontend-src-components-zionxdr-usezionxdrscrollchrome-ts",
       "label": "useZionxdrScrollChrome.ts",
-      "parent": "sai-grp-frontend-src-components-zionxdr-files-u",
+      "parent": "sai-grp-frontend-src-components-zionxdr-files-e-s-u",
       "layer": "file",
       "category": "frontend",
       "categoryLabel": "Frontend",
@@ -7997,16 +8825,28 @@
       "description": "Grupo de arquivos em `frontend/src/pages/` — Arquivos T–U–W"
     },
     {
-      "id": "sai-grp-frontend-src-pages-files-z",
-      "label": "Arquivos Z",
+      "id": "sai-grp-frontend-src-pages-files-z-1-12",
+      "label": "Arquivos Z (1–12)",
       "parent": "sai-dir-frontend-src-pages",
       "layer": "module",
       "category": "frontend",
       "categoryLabel": "Frontend",
       "color": "#eab308",
       "size": 1.35,
-      "file": "frontend/src/pages/[files-z]",
-      "description": "Grupo de arquivos em `frontend/src/pages/` — Arquivos Z"
+      "file": "frontend/src/pages/[files-z-1-12]",
+      "description": "Grupo de arquivos em `frontend/src/pages/` — Arquivos Z (1–12)"
+    },
+    {
+      "id": "sai-grp-frontend-src-pages-files-z-13-16",
+      "label": "Arquivos Z (13–16)",
+      "parent": "sai-dir-frontend-src-pages",
+      "layer": "module",
+      "category": "frontend",
+      "categoryLabel": "Frontend",
+      "color": "#eab308",
+      "size": 1.35,
+      "file": "frontend/src/pages/[files-z-13-16]",
+      "description": "Grupo de arquivos em `frontend/src/pages/` — Arquivos Z (13–16)"
     },
     {
       "id": "sai-file-frontend-src-pages-alertspage-tsx",
@@ -8191,7 +9031,7 @@
     {
       "id": "sai-file-frontend-src-pages-zionpage-tsx",
       "label": "ZionPage.tsx",
-      "parent": "sai-grp-frontend-src-pages-files-z",
+      "parent": "sai-grp-frontend-src-pages-files-z-1-12",
       "layer": "file",
       "category": "frontend",
       "categoryLabel": "Frontend",
@@ -8203,7 +9043,7 @@
     {
       "id": "sai-file-frontend-src-pages-zionvmbackuptab-tsx",
       "label": "ZionvmBackupTab.tsx",
-      "parent": "sai-grp-frontend-src-pages-files-z",
+      "parent": "sai-grp-frontend-src-pages-files-z-1-12",
       "layer": "file",
       "category": "frontend",
       "categoryLabel": "Frontend",
@@ -8213,9 +9053,21 @@
       "description": "Código-fonte: `frontend/src/pages/ZionvmBackupTab.tsx`"
     },
     {
+      "id": "sai-file-frontend-src-pages-zionvmclusterpanel-tsx",
+      "label": "ZionvmClusterPanel.tsx",
+      "parent": "sai-grp-frontend-src-pages-files-z-1-12",
+      "layer": "file",
+      "category": "frontend",
+      "categoryLabel": "Frontend",
+      "color": "#eab308",
+      "size": 0.95,
+      "file": "frontend/src/pages/ZionvmClusterPanel.tsx",
+      "description": "Código-fonte: `frontend/src/pages/ZionvmClusterPanel.tsx`"
+    },
+    {
       "id": "sai-file-frontend-src-pages-zionvmcorpparitypanel-tsx",
       "label": "ZionvmCorpParityPanel.tsx",
-      "parent": "sai-grp-frontend-src-pages-files-z",
+      "parent": "sai-grp-frontend-src-pages-files-z-1-12",
       "layer": "file",
       "category": "frontend",
       "categoryLabel": "Frontend",
@@ -8227,7 +9079,7 @@
     {
       "id": "sai-file-frontend-src-pages-zionvmdashboardview-tsx",
       "label": "ZionvmDashboardView.tsx",
-      "parent": "sai-grp-frontend-src-pages-files-z",
+      "parent": "sai-grp-frontend-src-pages-files-z-1-12",
       "layer": "file",
       "category": "frontend",
       "categoryLabel": "Frontend",
@@ -8239,7 +9091,7 @@
     {
       "id": "sai-file-frontend-src-pages-zionvmenterprises2630panel-tsx",
       "label": "ZionvmEnterpriseS2630Panel.tsx",
-      "parent": "sai-grp-frontend-src-pages-files-z",
+      "parent": "sai-grp-frontend-src-pages-files-z-1-12",
       "layer": "file",
       "category": "frontend",
       "categoryLabel": "Frontend",
@@ -8249,9 +9101,21 @@
       "description": "Código-fonte: `frontend/src/pages/ZionvmEnterpriseS2630Panel.tsx`"
     },
     {
+      "id": "sai-file-frontend-src-pages-zionvmhapanel-tsx",
+      "label": "ZionvmHaPanel.tsx",
+      "parent": "sai-grp-frontend-src-pages-files-z-1-12",
+      "layer": "file",
+      "category": "frontend",
+      "categoryLabel": "Frontend",
+      "color": "#eab308",
+      "size": 0.95,
+      "file": "frontend/src/pages/ZionvmHaPanel.tsx",
+      "description": "Código-fonte: `frontend/src/pages/ZionvmHaPanel.tsx`"
+    },
+    {
       "id": "sai-file-frontend-src-pages-zionvmlxctab-tsx",
       "label": "ZionvmLxcTab.tsx",
-      "parent": "sai-grp-frontend-src-pages-files-z",
+      "parent": "sai-grp-frontend-src-pages-files-z-1-12",
       "layer": "file",
       "category": "frontend",
       "categoryLabel": "Frontend",
@@ -8263,7 +9127,7 @@
     {
       "id": "sai-file-frontend-src-pages-zionvmmanagerpanel-tsx",
       "label": "ZionvmManagerPanel.tsx",
-      "parent": "sai-grp-frontend-src-pages-files-z",
+      "parent": "sai-grp-frontend-src-pages-files-z-1-12",
       "layer": "file",
       "category": "frontend",
       "categoryLabel": "Frontend",
@@ -8273,9 +9137,21 @@
       "description": "Código-fonte: `frontend/src/pages/ZionvmManagerPanel.tsx`"
     },
     {
+      "id": "sai-file-frontend-src-pages-zionvmnetworkpanel-tsx",
+      "label": "ZionvmNetworkPanel.tsx",
+      "parent": "sai-grp-frontend-src-pages-files-z-1-12",
+      "layer": "file",
+      "category": "frontend",
+      "categoryLabel": "Frontend",
+      "color": "#eab308",
+      "size": 0.95,
+      "file": "frontend/src/pages/ZionvmNetworkPanel.tsx",
+      "description": "Código-fonte: `frontend/src/pages/ZionvmNetworkPanel.tsx`"
+    },
+    {
       "id": "sai-file-frontend-src-pages-zionvmnmsinventoryview-tsx",
       "label": "ZionvmNmsInventoryView.tsx",
-      "parent": "sai-grp-frontend-src-pages-files-z",
+      "parent": "sai-grp-frontend-src-pages-files-z-1-12",
       "layer": "file",
       "category": "frontend",
       "categoryLabel": "Frontend",
@@ -8287,7 +9163,7 @@
     {
       "id": "sai-file-frontend-src-pages-zionvmopspanel-tsx",
       "label": "ZionvmOpsPanel.tsx",
-      "parent": "sai-grp-frontend-src-pages-files-z",
+      "parent": "sai-grp-frontend-src-pages-files-z-1-12",
       "layer": "file",
       "category": "frontend",
       "categoryLabel": "Frontend",
@@ -8299,7 +9175,7 @@
     {
       "id": "sai-file-frontend-src-pages-zionvmpage-tsx",
       "label": "ZionVMPage.tsx",
-      "parent": "sai-grp-frontend-src-pages-files-z",
+      "parent": "sai-grp-frontend-src-pages-files-z-13-16",
       "layer": "file",
       "category": "frontend",
       "categoryLabel": "Frontend",
@@ -8311,7 +9187,7 @@
     {
       "id": "sai-file-frontend-src-pages-zionvmpermissionspanel-tsx",
       "label": "ZionvmPermissionsPanel.tsx",
-      "parent": "sai-grp-frontend-src-pages-files-z",
+      "parent": "sai-grp-frontend-src-pages-files-z-13-16",
       "layer": "file",
       "category": "frontend",
       "categoryLabel": "Frontend",
@@ -8321,9 +9197,21 @@
       "description": "Código-fonte: `frontend/src/pages/ZionvmPermissionsPanel.tsx`"
     },
     {
+      "id": "sai-file-frontend-src-pages-zionvmstoragepanel-tsx",
+      "label": "ZionvmStoragePanel.tsx",
+      "parent": "sai-grp-frontend-src-pages-files-z-13-16",
+      "layer": "file",
+      "category": "frontend",
+      "categoryLabel": "Frontend",
+      "color": "#eab308",
+      "size": 0.95,
+      "file": "frontend/src/pages/ZionvmStoragePanel.tsx",
+      "description": "Código-fonte: `frontend/src/pages/ZionvmStoragePanel.tsx`"
+    },
+    {
       "id": "sai-file-frontend-src-pages-zionxdrpage-tsx",
       "label": "ZionXDRPage.tsx",
-      "parent": "sai-grp-frontend-src-pages-files-z",
+      "parent": "sai-grp-frontend-src-pages-files-z-13-16",
       "layer": "file",
       "category": "frontend",
       "categoryLabel": "Frontend",
@@ -8825,6 +9713,18 @@
       "description": "Código-fonte: `scripts/feature-inventory.py`"
     },
     {
+      "id": "sai-file-scripts-gen-documentacao-completa-py",
+      "label": "gen-documentacao-completa.py",
+      "parent": "sai-dir-scripts",
+      "layer": "file",
+      "category": "scripts",
+      "categoryLabel": "Scripts",
+      "color": "#64748b",
+      "size": 0.95,
+      "file": "scripts/gen-documentacao-completa.py",
+      "description": "Código-fonte: `scripts/gen-documentacao-completa.py`"
+    },
+    {
       "id": "sai-file-scripts-open-lan-access-ps1",
       "label": "open-lan-access.ps1",
       "parent": "sai-dir-scripts",
@@ -8945,6 +9845,18 @@
       "description": "Código-fonte: `zionxdr/eagle-offensive-platform/agent/zionxdr_windows_agent.py`"
     },
     {
+      "id": "sai-file-zionxdr-eagle-offensive-platform-agent-config-correlation-yaml",
+      "label": "correlation.yaml",
+      "parent": "sai-dir-zionxdr-eagle-offensive-platform-agent-config",
+      "layer": "file",
+      "category": "other",
+      "categoryLabel": "Outros",
+      "color": "#64748b",
+      "size": 0.95,
+      "file": "zionxdr/eagle-offensive-platform/agent/config/correlation.yaml",
+      "description": "Código-fonte: `zionxdr/eagle-offensive-platform/agent/config/correlation.yaml`"
+    },
+    {
       "id": "sai-file-zionxdr-eagle-offensive-platform-agent-config-coverage-yaml",
       "label": "coverage.yaml",
       "parent": "sai-dir-zionxdr-eagle-offensive-platform-agent-config",
@@ -8967,6 +9879,42 @@
       "size": 0.95,
       "file": "zionxdr/eagle-offensive-platform/agent/config/rules.yaml",
       "description": "Código-fonte: `zionxdr/eagle-offensive-platform/agent/config/rules.yaml`"
+    },
+    {
+      "id": "sai-file-zionxdr-eagle-offensive-platform-agent-config-whitelist-yaml",
+      "label": "whitelist.yaml",
+      "parent": "sai-dir-zionxdr-eagle-offensive-platform-agent-config",
+      "layer": "file",
+      "category": "other",
+      "categoryLabel": "Outros",
+      "color": "#64748b",
+      "size": 0.95,
+      "file": "zionxdr/eagle-offensive-platform/agent/config/whitelist.yaml",
+      "description": "Código-fonte: `zionxdr/eagle-offensive-platform/agent/config/whitelist.yaml`"
+    },
+    {
+      "id": "sai-file-zionxdr-eagle-offensive-platform-agent-config-rules-d-extended-behavioral-yaml",
+      "label": "extended_behavioral.yaml",
+      "parent": "sai-dir-zionxdr-eagle-offensive-platform-agent-config-rules-d",
+      "layer": "file",
+      "category": "other",
+      "categoryLabel": "Outros",
+      "color": "#64748b",
+      "size": 0.95,
+      "file": "zionxdr/eagle-offensive-platform/agent/config/rules.d/extended_behavioral.yaml",
+      "description": "Código-fonte: `zionxdr/eagle-offensive-platform/agent/config/rules.d/extended_behavioral.yaml`"
+    },
+    {
+      "id": "sai-file-zionxdr-eagle-offensive-platform-agent-config-rules-d-gap-fill-requested-yaml",
+      "label": "gap_fill_requested.yaml",
+      "parent": "sai-dir-zionxdr-eagle-offensive-platform-agent-config-rules-d",
+      "layer": "file",
+      "category": "other",
+      "categoryLabel": "Outros",
+      "color": "#64748b",
+      "size": 0.95,
+      "file": "zionxdr/eagle-offensive-platform/agent/config/rules.d/gap_fill_requested.yaml",
+      "description": "Código-fonte: `zionxdr/eagle-offensive-platform/agent/config/rules.d/gap_fill_requested.yaml`"
     },
     {
       "id": "sai-file-zionxdr-eagle-offensive-platform-agent-console-static-app-js",
@@ -9005,33 +9953,33 @@
       "description": "Código-fonte: `zionxdr/eagle-offensive-platform/agent/console/static/styles.css`"
     },
     {
-      "id": "sai-grp-zionxdr-eagle-offensive-platform-agent-eagle-files-c-e-m",
-      "label": "Arquivos #–C–E–M",
+      "id": "sai-grp-zionxdr-eagle-offensive-platform-agent-eagle-files-c-e-i",
+      "label": "Arquivos #–C–E–I",
       "parent": "sai-dir-zionxdr-eagle-offensive-platform-agent-eagle",
       "layer": "module",
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
       "size": 1.35,
-      "file": "zionxdr/eagle-offensive-platform/agent/eagle/[files-#–c–e–m]",
-      "description": "Grupo de arquivos em `zionxdr/eagle-offensive-platform/agent/eagle/` — Arquivos #–C–E–M"
+      "file": "zionxdr/eagle-offensive-platform/agent/eagle/[files-#–c–e–i]",
+      "description": "Grupo de arquivos em `zionxdr/eagle-offensive-platform/agent/eagle/` — Arquivos #–C–E–I"
     },
     {
-      "id": "sai-grp-zionxdr-eagle-offensive-platform-agent-eagle-files-r-s-t-z",
-      "label": "Arquivos R–S–T–Z",
+      "id": "sai-grp-zionxdr-eagle-offensive-platform-agent-eagle-files-m-r-s-t-w-z",
+      "label": "Arquivos M–R–S–T–W–Z",
       "parent": "sai-dir-zionxdr-eagle-offensive-platform-agent-eagle",
       "layer": "module",
       "category": "core",
       "categoryLabel": "Backend",
       "color": "#3b82f6",
       "size": 1.35,
-      "file": "zionxdr/eagle-offensive-platform/agent/eagle/[files-r–s–t–z]",
-      "description": "Grupo de arquivos em `zionxdr/eagle-offensive-platform/agent/eagle/` — Arquivos R–S–T–Z"
+      "file": "zionxdr/eagle-offensive-platform/agent/eagle/[files-m–r–s–t–w–z]",
+      "description": "Grupo de arquivos em `zionxdr/eagle-offensive-platform/agent/eagle/` — Arquivos M–R–S–T–W–Z"
     },
     {
       "id": "sai-file-zionxdr-eagle-offensive-platform-agent-eagle-init-py",
       "label": "__init__.py",
-      "parent": "sai-grp-zionxdr-eagle-offensive-platform-agent-eagle-files-c-e-m",
+      "parent": "sai-grp-zionxdr-eagle-offensive-platform-agent-eagle-files-c-e-i",
       "layer": "file",
       "category": "core",
       "categoryLabel": "Backend",
@@ -9043,7 +9991,7 @@
     {
       "id": "sai-file-zionxdr-eagle-offensive-platform-agent-eagle-main-py",
       "label": "__main__.py",
-      "parent": "sai-grp-zionxdr-eagle-offensive-platform-agent-eagle-files-c-e-m",
+      "parent": "sai-grp-zionxdr-eagle-offensive-platform-agent-eagle-files-c-e-i",
       "layer": "file",
       "category": "core",
       "categoryLabel": "Backend",
@@ -9055,7 +10003,7 @@
     {
       "id": "sai-file-zionxdr-eagle-offensive-platform-agent-eagle-cli-py",
       "label": "cli.py",
-      "parent": "sai-grp-zionxdr-eagle-offensive-platform-agent-eagle-files-c-e-m",
+      "parent": "sai-grp-zionxdr-eagle-offensive-platform-agent-eagle-files-c-e-i",
       "layer": "file",
       "category": "core",
       "categoryLabel": "Backend",
@@ -9067,7 +10015,7 @@
     {
       "id": "sai-file-zionxdr-eagle-offensive-platform-agent-eagle-console-server-py",
       "label": "console_server.py",
-      "parent": "sai-grp-zionxdr-eagle-offensive-platform-agent-eagle-files-c-e-m",
+      "parent": "sai-grp-zionxdr-eagle-offensive-platform-agent-eagle-files-c-e-i",
       "layer": "file",
       "category": "core",
       "categoryLabel": "Backend",
@@ -9077,9 +10025,21 @@
       "description": "Código-fonte: `zionxdr/eagle-offensive-platform/agent/eagle/console_server.py`"
     },
     {
+      "id": "sai-file-zionxdr-eagle-offensive-platform-agent-eagle-correlation-engine-py",
+      "label": "correlation_engine.py",
+      "parent": "sai-grp-zionxdr-eagle-offensive-platform-agent-eagle-files-c-e-i",
+      "layer": "file",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 0.95,
+      "file": "zionxdr/eagle-offensive-platform/agent/eagle/correlation_engine.py",
+      "description": "Código-fonte: `zionxdr/eagle-offensive-platform/agent/eagle/correlation_engine.py`"
+    },
+    {
       "id": "sai-file-zionxdr-eagle-offensive-platform-agent-eagle-correlator-py",
       "label": "correlator.py",
-      "parent": "sai-grp-zionxdr-eagle-offensive-platform-agent-eagle-files-c-e-m",
+      "parent": "sai-grp-zionxdr-eagle-offensive-platform-agent-eagle-files-c-e-i",
       "layer": "file",
       "category": "core",
       "categoryLabel": "Backend",
@@ -9091,7 +10051,7 @@
     {
       "id": "sai-file-zionxdr-eagle-offensive-platform-agent-eagle-coverage-py",
       "label": "coverage.py",
-      "parent": "sai-grp-zionxdr-eagle-offensive-platform-agent-eagle-files-c-e-m",
+      "parent": "sai-grp-zionxdr-eagle-offensive-platform-agent-eagle-files-c-e-i",
       "layer": "file",
       "category": "core",
       "categoryLabel": "Backend",
@@ -9103,7 +10063,7 @@
     {
       "id": "sai-file-zionxdr-eagle-offensive-platform-agent-eagle-engine-py",
       "label": "engine.py",
-      "parent": "sai-grp-zionxdr-eagle-offensive-platform-agent-eagle-files-c-e-m",
+      "parent": "sai-grp-zionxdr-eagle-offensive-platform-agent-eagle-files-c-e-i",
       "layer": "file",
       "category": "core",
       "categoryLabel": "Backend",
@@ -9115,7 +10075,7 @@
     {
       "id": "sai-file-zionxdr-eagle-offensive-platform-agent-eagle-etw-sensor-py",
       "label": "etw_sensor.py",
-      "parent": "sai-grp-zionxdr-eagle-offensive-platform-agent-eagle-files-c-e-m",
+      "parent": "sai-grp-zionxdr-eagle-offensive-platform-agent-eagle-files-c-e-i",
       "layer": "file",
       "category": "core",
       "categoryLabel": "Backend",
@@ -9127,7 +10087,7 @@
     {
       "id": "sai-file-zionxdr-eagle-offensive-platform-agent-eagle-evidence-py",
       "label": "evidence.py",
-      "parent": "sai-grp-zionxdr-eagle-offensive-platform-agent-eagle-files-c-e-m",
+      "parent": "sai-grp-zionxdr-eagle-offensive-platform-agent-eagle-files-c-e-i",
       "layer": "file",
       "category": "core",
       "categoryLabel": "Backend",
@@ -9137,9 +10097,21 @@
       "description": "Código-fonte: `zionxdr/eagle-offensive-platform/agent/eagle/evidence.py`"
     },
     {
+      "id": "sai-file-zionxdr-eagle-offensive-platform-agent-eagle-incident-engine-py",
+      "label": "incident_engine.py",
+      "parent": "sai-grp-zionxdr-eagle-offensive-platform-agent-eagle-files-c-e-i",
+      "layer": "file",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 0.95,
+      "file": "zionxdr/eagle-offensive-platform/agent/eagle/incident_engine.py",
+      "description": "Código-fonte: `zionxdr/eagle-offensive-platform/agent/eagle/incident_engine.py`"
+    },
+    {
       "id": "sai-file-zionxdr-eagle-offensive-platform-agent-eagle-memory-scan-py",
       "label": "memory_scan.py",
-      "parent": "sai-grp-zionxdr-eagle-offensive-platform-agent-eagle-files-c-e-m",
+      "parent": "sai-grp-zionxdr-eagle-offensive-platform-agent-eagle-files-m-r-s-t-w-z",
       "layer": "file",
       "category": "network",
       "categoryLabel": "Rede / Scan",
@@ -9151,7 +10123,7 @@
     {
       "id": "sai-file-zionxdr-eagle-offensive-platform-agent-eagle-models-py",
       "label": "models.py",
-      "parent": "sai-grp-zionxdr-eagle-offensive-platform-agent-eagle-files-c-e-m",
+      "parent": "sai-grp-zionxdr-eagle-offensive-platform-agent-eagle-files-m-r-s-t-w-z",
       "layer": "file",
       "category": "core",
       "categoryLabel": "Backend",
@@ -9163,7 +10135,7 @@
     {
       "id": "sai-file-zionxdr-eagle-offensive-platform-agent-eagle-response-py",
       "label": "response.py",
-      "parent": "sai-grp-zionxdr-eagle-offensive-platform-agent-eagle-files-r-s-t-z",
+      "parent": "sai-grp-zionxdr-eagle-offensive-platform-agent-eagle-files-m-r-s-t-w-z",
       "layer": "file",
       "category": "core",
       "categoryLabel": "Backend",
@@ -9173,9 +10145,21 @@
       "description": "Código-fonte: `zionxdr/eagle-offensive-platform/agent/eagle/response.py`"
     },
     {
+      "id": "sai-file-zionxdr-eagle-offensive-platform-agent-eagle-risk-py",
+      "label": "risk.py",
+      "parent": "sai-grp-zionxdr-eagle-offensive-platform-agent-eagle-files-m-r-s-t-w-z",
+      "layer": "file",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 0.95,
+      "file": "zionxdr/eagle-offensive-platform/agent/eagle/risk.py",
+      "description": "Código-fonte: `zionxdr/eagle-offensive-platform/agent/eagle/risk.py`"
+    },
+    {
       "id": "sai-file-zionxdr-eagle-offensive-platform-agent-eagle-runner-py",
       "label": "runner.py",
-      "parent": "sai-grp-zionxdr-eagle-offensive-platform-agent-eagle-files-r-s-t-z",
+      "parent": "sai-grp-zionxdr-eagle-offensive-platform-agent-eagle-files-m-r-s-t-w-z",
       "layer": "file",
       "category": "core",
       "categoryLabel": "Backend",
@@ -9187,7 +10171,7 @@
     {
       "id": "sai-file-zionxdr-eagle-offensive-platform-agent-eagle-sensor-py",
       "label": "sensor.py",
-      "parent": "sai-grp-zionxdr-eagle-offensive-platform-agent-eagle-files-r-s-t-z",
+      "parent": "sai-grp-zionxdr-eagle-offensive-platform-agent-eagle-files-m-r-s-t-w-z",
       "layer": "file",
       "category": "core",
       "categoryLabel": "Backend",
@@ -9199,7 +10183,7 @@
     {
       "id": "sai-file-zionxdr-eagle-offensive-platform-agent-eagle-service-py",
       "label": "service.py",
-      "parent": "sai-grp-zionxdr-eagle-offensive-platform-agent-eagle-files-r-s-t-z",
+      "parent": "sai-grp-zionxdr-eagle-offensive-platform-agent-eagle-files-m-r-s-t-w-z",
       "layer": "file",
       "category": "core",
       "categoryLabel": "Backend",
@@ -9211,7 +10195,7 @@
     {
       "id": "sai-file-zionxdr-eagle-offensive-platform-agent-eagle-telemetry-ops-py",
       "label": "telemetry_ops.py",
-      "parent": "sai-grp-zionxdr-eagle-offensive-platform-agent-eagle-files-r-s-t-z",
+      "parent": "sai-grp-zionxdr-eagle-offensive-platform-agent-eagle-files-m-r-s-t-w-z",
       "layer": "file",
       "category": "core",
       "categoryLabel": "Backend",
@@ -9221,9 +10205,21 @@
       "description": "Código-fonte: `zionxdr/eagle-offensive-platform/agent/eagle/telemetry_ops.py`"
     },
     {
+      "id": "sai-file-zionxdr-eagle-offensive-platform-agent-eagle-whitelist-py",
+      "label": "whitelist.py",
+      "parent": "sai-grp-zionxdr-eagle-offensive-platform-agent-eagle-files-m-r-s-t-w-z",
+      "layer": "file",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 0.95,
+      "file": "zionxdr/eagle-offensive-platform/agent/eagle/whitelist.py",
+      "description": "Código-fonte: `zionxdr/eagle-offensive-platform/agent/eagle/whitelist.py`"
+    },
+    {
       "id": "sai-file-zionxdr-eagle-offensive-platform-agent-eagle-zionxdr-control-py",
       "label": "zionxdr_control.py",
-      "parent": "sai-grp-zionxdr-eagle-offensive-platform-agent-eagle-files-r-s-t-z",
+      "parent": "sai-grp-zionxdr-eagle-offensive-platform-agent-eagle-files-m-r-s-t-w-z",
       "layer": "file",
       "category": "core",
       "categoryLabel": "Backend",
@@ -9333,6 +10329,11 @@
     {
       "source": "sai-root",
       "target": "sai-dir-github",
+      "type": "dependency"
+    },
+    {
+      "source": "sai-root",
+      "target": "sai-dir-recover-out",
       "type": "dependency"
     },
     {
@@ -9448,6 +10449,16 @@
     {
       "source": "sai-dir-deploy",
       "target": "sai-dir-deploy-zionvm",
+      "type": "dependency"
+    },
+    {
+      "source": "sai-dir-docs",
+      "target": "sai-dir-docs-assets",
+      "type": "dependency"
+    },
+    {
+      "source": "sai-dir-docs",
+      "target": "sai-dir-docs-ops",
       "type": "dependency"
     },
     {
@@ -9816,8 +10827,18 @@
       "type": "dependency"
     },
     {
+      "source": "sai-dir-zionxdr-eagle-offensive-platform-agent-config",
+      "target": "sai-dir-zionxdr-eagle-offensive-platform-agent-config-rules-d",
+      "type": "dependency"
+    },
+    {
       "source": "sai-dir-zionxdr-eagle-offensive-platform-agent-console",
       "target": "sai-dir-zionxdr-eagle-offensive-platform-agent-console-static",
+      "type": "dependency"
+    },
+    {
+      "source": "sai-dir-backend-app-data-eagle-runtime-config",
+      "target": "sai-dir-backend-app-data-eagle-runtime-config-rules-d",
       "type": "dependency"
     },
     {
@@ -9828,11 +10849,6 @@
     {
       "source": "sai-root",
       "target": "sai-grp-files-d",
-      "type": "dependency"
-    },
-    {
-      "source": "sai-root",
-      "target": "sai-grp-files-p",
       "type": "dependency"
     },
     {
@@ -9916,13 +10932,268 @@
       "type": "dependency"
     },
     {
-      "source": "sai-grp-files-p",
-      "target": "sai-file-package-json",
+      "source": "sai-dir-github-workflows",
+      "target": "sai-file-github-workflows-ci-yml",
       "type": "dependency"
     },
     {
-      "source": "sai-dir-github-workflows",
-      "target": "sai-file-github-workflows-ci-yml",
+      "source": "sai-dir-recover-out",
+      "target": "sai-grp-recover-out-files-a-c-d",
+      "type": "dependency"
+    },
+    {
+      "source": "sai-dir-recover-out",
+      "target": "sai-grp-recover-out-files-e-f-h-o",
+      "type": "dependency"
+    },
+    {
+      "source": "sai-dir-recover-out",
+      "target": "sai-grp-recover-out-files-p-1-12",
+      "type": "dependency"
+    },
+    {
+      "source": "sai-dir-recover-out",
+      "target": "sai-grp-recover-out-files-p-13-18",
+      "type": "dependency"
+    },
+    {
+      "source": "sai-dir-recover-out",
+      "target": "sai-grp-recover-out-files-r-s-z",
+      "type": "dependency"
+    },
+    {
+      "source": "sai-grp-recover-out-files-a-c-d",
+      "target": "sai-file-recover-out-extract-backup-repl-py",
+      "type": "dependency"
+    },
+    {
+      "source": "sai-grp-recover-out-files-a-c-d",
+      "target": "sai-file-recover-out-scan-actions-py",
+      "type": "dependency"
+    },
+    {
+      "source": "sai-grp-recover-out-files-a-c-d",
+      "target": "sai-file-recover-out-scan-peaks-py",
+      "type": "dependency"
+    },
+    {
+      "source": "sai-grp-recover-out-files-a-c-d",
+      "target": "sai-file-recover-out-analyze-replay-py",
+      "type": "dependency"
+    },
+    {
+      "source": "sai-grp-recover-out-files-a-c-d",
+      "target": "sai-file-recover-out-client-l5084-sr-json",
+      "type": "dependency"
+    },
+    {
+      "source": "sai-grp-recover-out-files-a-c-d",
+      "target": "sai-file-recover-out-como-era-2026-09-24-md",
+      "type": "dependency"
+    },
+    {
+      "source": "sai-grp-recover-out-files-a-c-d",
+      "target": "sai-file-recover-out-diff-classname-py",
+      "type": "dependency"
+    },
+    {
+      "source": "sai-grp-recover-out-files-a-c-d",
+      "target": "sai-file-recover-out-diff-polish-py",
+      "type": "dependency"
+    },
+    {
+      "source": "sai-grp-recover-out-files-a-c-d",
+      "target": "sai-file-recover-out-diff-polish2-py",
+      "type": "dependency"
+    },
+    {
+      "source": "sai-grp-recover-out-files-a-c-d",
+      "target": "sai-file-recover-out-diff-polish3-py",
+      "type": "dependency"
+    },
+    {
+      "source": "sai-grp-recover-out-files-a-c-d",
+      "target": "sai-file-recover-out-disk-zionvmhapanel-pre-tsx",
+      "type": "dependency"
+    },
+    {
+      "source": "sai-grp-recover-out-files-a-c-d",
+      "target": "sai-file-recover-out-disk-zionvmstoragepanel-pre-tsx",
+      "type": "dependency"
+    },
+    {
+      "source": "sai-grp-recover-out-files-e-f-h-o",
+      "target": "sai-file-recover-out-e549-l5083-zvmnumberfield-tsx",
+      "type": "dependency"
+    },
+    {
+      "source": "sai-grp-recover-out-files-e-f-h-o",
+      "target": "sai-file-recover-out-e549-peak-zionvmbackuptab-tsx",
+      "type": "dependency"
+    },
+    {
+      "source": "sai-grp-recover-out-files-e-f-h-o",
+      "target": "sai-file-recover-out-extract-number-field-py",
+      "type": "dependency"
+    },
+    {
+      "source": "sai-grp-recover-out-files-e-f-h-o",
+      "target": "sai-file-recover-out-final-backup-page-css",
+      "type": "dependency"
+    },
+    {
+      "source": "sai-grp-recover-out-files-e-f-h-o",
+      "target": "sai-file-recover-out-final-zionvmbackuptab-tsx",
+      "type": "dependency"
+    },
+    {
+      "source": "sai-grp-recover-out-files-e-f-h-o",
+      "target": "sai-file-recover-out-final-zionvmhapanel-tsx",
+      "type": "dependency"
+    },
+    {
+      "source": "sai-grp-recover-out-files-e-f-h-o",
+      "target": "sai-file-recover-out-final-zionvmnetworkpanel-tsx",
+      "type": "dependency"
+    },
+    {
+      "source": "sai-grp-recover-out-files-e-f-h-o",
+      "target": "sai-file-recover-out-final-zionvmstoragepanel-tsx",
+      "type": "dependency"
+    },
+    {
+      "source": "sai-grp-recover-out-files-e-f-h-o",
+      "target": "sai-file-recover-out-head-zionvmpage-tsx",
+      "type": "dependency"
+    },
+    {
+      "source": "sai-grp-recover-out-files-e-f-h-o",
+      "target": "sai-file-recover-out-ops-repo-snippets-json",
+      "type": "dependency"
+    },
+    {
+      "source": "sai-grp-recover-out-files-p-1-12",
+      "target": "sai-file-recover-out-peak-backend-app-services-zionvm-agent-mtls-py",
+      "type": "dependency"
+    },
+    {
+      "source": "sai-grp-recover-out-files-p-1-12",
+      "target": "sai-file-recover-out-peak-backend-app-services-zionvm-hypervisor-py",
+      "type": "dependency"
+    },
+    {
+      "source": "sai-grp-recover-out-files-p-1-12",
+      "target": "sai-file-recover-out-peak-backend-tests-test-zionvm-s19-25-py",
+      "type": "dependency"
+    },
+    {
+      "source": "sai-grp-recover-out-files-p-1-12",
+      "target": "sai-file-recover-out-peak-backup-page-css-css",
+      "type": "dependency"
+    },
+    {
+      "source": "sai-grp-recover-out-files-p-1-12",
+      "target": "sai-file-recover-out-peak-backup-page-css-meta-json",
+      "type": "dependency"
+    },
+    {
+      "source": "sai-grp-recover-out-files-p-1-12",
+      "target": "sai-file-recover-out-peak-backuptab-replicate-snippet-tsx",
+      "type": "dependency"
+    },
+    {
+      "source": "sai-grp-recover-out-files-p-1-12",
+      "target": "sai-file-recover-out-peak-frontend-src-pages-zionvmenterprises2630panel-tsx",
+      "type": "dependency"
+    },
+    {
+      "source": "sai-grp-recover-out-files-p-1-12",
+      "target": "sai-file-recover-out-peak-scan-meta-json",
+      "type": "dependency"
+    },
+    {
+      "source": "sai-grp-recover-out-files-p-1-12",
+      "target": "sai-file-recover-out-peak-zionvmbackuptab-tsx",
+      "type": "dependency"
+    },
+    {
+      "source": "sai-grp-recover-out-files-p-1-12",
+      "target": "sai-file-recover-out-peak-zionvmbackuptab-meta-json",
+      "type": "dependency"
+    },
+    {
+      "source": "sai-grp-recover-out-files-p-1-12",
+      "target": "sai-file-recover-out-peak-zionvmbackuptab-reconstructed-tsx",
+      "type": "dependency"
+    },
+    {
+      "source": "sai-grp-recover-out-files-p-1-12",
+      "target": "sai-file-recover-out-peak-zionvmhapanel-tsx",
+      "type": "dependency"
+    },
+    {
+      "source": "sai-grp-recover-out-files-p-13-18",
+      "target": "sai-file-recover-out-peak-zionvmhapanel-meta-json",
+      "type": "dependency"
+    },
+    {
+      "source": "sai-grp-recover-out-files-p-13-18",
+      "target": "sai-file-recover-out-peak-zionvmnetworkpanel-tsx",
+      "type": "dependency"
+    },
+    {
+      "source": "sai-grp-recover-out-files-p-13-18",
+      "target": "sai-file-recover-out-peak-zionvmnetworkpanel-disk-tsx",
+      "type": "dependency"
+    },
+    {
+      "source": "sai-grp-recover-out-files-p-13-18",
+      "target": "sai-file-recover-out-peak-zionvmnetworkpanel-meta-json",
+      "type": "dependency"
+    },
+    {
+      "source": "sai-grp-recover-out-files-p-13-18",
+      "target": "sai-file-recover-out-peak-zionvmstoragepanel-tsx",
+      "type": "dependency"
+    },
+    {
+      "source": "sai-grp-recover-out-files-p-13-18",
+      "target": "sai-file-recover-out-peak-zionvmstoragepanel-meta-json",
+      "type": "dependency"
+    },
+    {
+      "source": "sai-grp-recover-out-files-r-s-z",
+      "target": "sai-file-recover-out-recovery-inventory-md",
+      "type": "dependency"
+    },
+    {
+      "source": "sai-grp-recover-out-files-r-s-z",
+      "target": "sai-file-recover-out-restore-peaks-py",
+      "type": "dependency"
+    },
+    {
+      "source": "sai-grp-recover-out-files-r-s-z",
+      "target": "sai-file-recover-out-restore-report-json",
+      "type": "dependency"
+    },
+    {
+      "source": "sai-grp-recover-out-files-r-s-z",
+      "target": "sai-file-recover-out-scan-client-ops-py",
+      "type": "dependency"
+    },
+    {
+      "source": "sai-grp-recover-out-files-r-s-z",
+      "target": "sai-file-recover-out-scan-peaks-py-2",
+      "type": "dependency"
+    },
+    {
+      "source": "sai-grp-recover-out-files-r-s-z",
+      "target": "sai-file-recover-out-strreplace-meta-json",
+      "type": "dependency"
+    },
+    {
+      "source": "sai-grp-recover-out-files-r-s-z",
+      "target": "sai-file-recover-out-zionvm-polish-restore-summary-md",
       "type": "dependency"
     },
     {
@@ -10477,12 +11748,32 @@
     },
     {
       "source": "sai-dir-backend-app-data-eagle-runtime-config",
+      "target": "sai-file-backend-app-data-eagle-runtime-config-correlation-yaml",
+      "type": "dependency"
+    },
+    {
+      "source": "sai-dir-backend-app-data-eagle-runtime-config",
       "target": "sai-file-backend-app-data-eagle-runtime-config-coverage-yaml",
       "type": "dependency"
     },
     {
       "source": "sai-dir-backend-app-data-eagle-runtime-config",
       "target": "sai-file-backend-app-data-eagle-runtime-config-rules-yaml",
+      "type": "dependency"
+    },
+    {
+      "source": "sai-dir-backend-app-data-eagle-runtime-config",
+      "target": "sai-file-backend-app-data-eagle-runtime-config-whitelist-yaml",
+      "type": "dependency"
+    },
+    {
+      "source": "sai-dir-backend-app-data-eagle-runtime-config-rules-d",
+      "target": "sai-file-backend-app-data-eagle-runtime-config-rules-d-extended-behavioral-yaml",
+      "type": "dependency"
+    },
+    {
+      "source": "sai-dir-backend-app-data-eagle-runtime-config-rules-d",
+      "target": "sai-file-backend-app-data-eagle-runtime-config-rules-d-gap-fill-requested-yaml",
       "type": "dependency"
     },
     {
@@ -12002,6 +13293,16 @@
     },
     {
       "source": "sai-grp-docs-files-s-u",
+      "target": "sai-file-docs-sentinelai-documentacao-completa-html",
+      "type": "dependency"
+    },
+    {
+      "source": "sai-grp-docs-files-s-u",
+      "target": "sai-file-docs-sentinelai-documentacao-completa-md",
+      "type": "dependency"
+    },
+    {
+      "source": "sai-grp-docs-files-s-u",
       "target": "sai-file-docs-sprint-trust-p0-md",
       "type": "dependency"
     },
@@ -12083,6 +13384,16 @@
     {
       "source": "sai-grp-docs-files-z",
       "target": "sai-file-docs-zionxdr-md",
+      "type": "dependency"
+    },
+    {
+      "source": "sai-dir-docs-assets",
+      "target": "sai-file-docs-assets-sentinelai-structure-3d-viewer-html",
+      "type": "dependency"
+    },
+    {
+      "source": "sai-dir-docs-ops",
+      "target": "sai-file-docs-ops-repo-layout-md",
       "type": "dependency"
     },
     {
@@ -12482,7 +13793,7 @@
     },
     {
       "source": "sai-dir-frontend-src-components-zionxdr",
-      "target": "sai-grp-frontend-src-components-zionxdr-files-u",
+      "target": "sai-grp-frontend-src-components-zionxdr-files-e-s-u",
       "type": "dependency"
     },
     {
@@ -12496,7 +13807,37 @@
       "type": "dependency"
     },
     {
-      "source": "sai-grp-frontend-src-components-zionxdr-files-u",
+      "source": "sai-grp-frontend-src-components-zionxdr-files-e-s-u",
+      "target": "sai-file-frontend-src-components-zionxdr-eaglealertcard-tsx",
+      "type": "dependency"
+    },
+    {
+      "source": "sai-grp-frontend-src-components-zionxdr-files-e-s-u",
+      "target": "sai-file-frontend-src-components-zionxdr-eaglerulecard-tsx",
+      "type": "dependency"
+    },
+    {
+      "source": "sai-grp-frontend-src-components-zionxdr-files-e-s-u",
+      "target": "sai-file-frontend-src-components-zionxdr-eaglesocutils-ts",
+      "type": "dependency"
+    },
+    {
+      "source": "sai-grp-frontend-src-components-zionxdr-files-e-s-u",
+      "target": "sai-file-frontend-src-components-zionxdr-secstatusbadge-tsx",
+      "type": "dependency"
+    },
+    {
+      "source": "sai-grp-frontend-src-components-zionxdr-files-e-s-u",
+      "target": "sai-file-frontend-src-components-zionxdr-securitycoveragecard-tsx",
+      "type": "dependency"
+    },
+    {
+      "source": "sai-grp-frontend-src-components-zionxdr-files-e-s-u",
+      "target": "sai-file-frontend-src-components-zionxdr-securitycoverageutils-ts",
+      "type": "dependency"
+    },
+    {
+      "source": "sai-grp-frontend-src-components-zionxdr-files-e-s-u",
       "target": "sai-file-frontend-src-components-zionxdr-usezionxdrscrollchrome-ts",
       "type": "dependency"
     },
@@ -12642,7 +13983,12 @@
     },
     {
       "source": "sai-dir-frontend-src-pages",
-      "target": "sai-grp-frontend-src-pages-files-z",
+      "target": "sai-grp-frontend-src-pages-files-z-1-12",
+      "type": "dependency"
+    },
+    {
+      "source": "sai-dir-frontend-src-pages",
+      "target": "sai-grp-frontend-src-pages-files-z-13-16",
       "type": "dependency"
     },
     {
@@ -12721,62 +14067,82 @@
       "type": "dependency"
     },
     {
-      "source": "sai-grp-frontend-src-pages-files-z",
+      "source": "sai-grp-frontend-src-pages-files-z-1-12",
       "target": "sai-file-frontend-src-pages-zionpage-tsx",
       "type": "dependency"
     },
     {
-      "source": "sai-grp-frontend-src-pages-files-z",
+      "source": "sai-grp-frontend-src-pages-files-z-1-12",
       "target": "sai-file-frontend-src-pages-zionvmbackuptab-tsx",
       "type": "dependency"
     },
     {
-      "source": "sai-grp-frontend-src-pages-files-z",
+      "source": "sai-grp-frontend-src-pages-files-z-1-12",
+      "target": "sai-file-frontend-src-pages-zionvmclusterpanel-tsx",
+      "type": "dependency"
+    },
+    {
+      "source": "sai-grp-frontend-src-pages-files-z-1-12",
       "target": "sai-file-frontend-src-pages-zionvmcorpparitypanel-tsx",
       "type": "dependency"
     },
     {
-      "source": "sai-grp-frontend-src-pages-files-z",
+      "source": "sai-grp-frontend-src-pages-files-z-1-12",
       "target": "sai-file-frontend-src-pages-zionvmdashboardview-tsx",
       "type": "dependency"
     },
     {
-      "source": "sai-grp-frontend-src-pages-files-z",
+      "source": "sai-grp-frontend-src-pages-files-z-1-12",
       "target": "sai-file-frontend-src-pages-zionvmenterprises2630panel-tsx",
       "type": "dependency"
     },
     {
-      "source": "sai-grp-frontend-src-pages-files-z",
+      "source": "sai-grp-frontend-src-pages-files-z-1-12",
+      "target": "sai-file-frontend-src-pages-zionvmhapanel-tsx",
+      "type": "dependency"
+    },
+    {
+      "source": "sai-grp-frontend-src-pages-files-z-1-12",
       "target": "sai-file-frontend-src-pages-zionvmlxctab-tsx",
       "type": "dependency"
     },
     {
-      "source": "sai-grp-frontend-src-pages-files-z",
+      "source": "sai-grp-frontend-src-pages-files-z-1-12",
       "target": "sai-file-frontend-src-pages-zionvmmanagerpanel-tsx",
       "type": "dependency"
     },
     {
-      "source": "sai-grp-frontend-src-pages-files-z",
+      "source": "sai-grp-frontend-src-pages-files-z-1-12",
+      "target": "sai-file-frontend-src-pages-zionvmnetworkpanel-tsx",
+      "type": "dependency"
+    },
+    {
+      "source": "sai-grp-frontend-src-pages-files-z-1-12",
       "target": "sai-file-frontend-src-pages-zionvmnmsinventoryview-tsx",
       "type": "dependency"
     },
     {
-      "source": "sai-grp-frontend-src-pages-files-z",
+      "source": "sai-grp-frontend-src-pages-files-z-1-12",
       "target": "sai-file-frontend-src-pages-zionvmopspanel-tsx",
       "type": "dependency"
     },
     {
-      "source": "sai-grp-frontend-src-pages-files-z",
+      "source": "sai-grp-frontend-src-pages-files-z-13-16",
       "target": "sai-file-frontend-src-pages-zionvmpage-tsx",
       "type": "dependency"
     },
     {
-      "source": "sai-grp-frontend-src-pages-files-z",
+      "source": "sai-grp-frontend-src-pages-files-z-13-16",
       "target": "sai-file-frontend-src-pages-zionvmpermissionspanel-tsx",
       "type": "dependency"
     },
     {
-      "source": "sai-grp-frontend-src-pages-files-z",
+      "source": "sai-grp-frontend-src-pages-files-z-13-16",
+      "target": "sai-file-frontend-src-pages-zionvmstoragepanel-tsx",
+      "type": "dependency"
+    },
+    {
+      "source": "sai-grp-frontend-src-pages-files-z-13-16",
       "target": "sai-file-frontend-src-pages-zionxdrpage-tsx",
       "type": "dependency"
     },
@@ -12987,6 +14353,11 @@
     },
     {
       "source": "sai-dir-scripts",
+      "target": "sai-file-scripts-gen-documentacao-completa-py",
+      "type": "dependency"
+    },
+    {
+      "source": "sai-dir-scripts",
       "target": "sai-file-scripts-open-lan-access-ps1",
       "type": "dependency"
     },
@@ -13037,12 +14408,32 @@
     },
     {
       "source": "sai-dir-zionxdr-eagle-offensive-platform-agent-config",
+      "target": "sai-file-zionxdr-eagle-offensive-platform-agent-config-correlation-yaml",
+      "type": "dependency"
+    },
+    {
+      "source": "sai-dir-zionxdr-eagle-offensive-platform-agent-config",
       "target": "sai-file-zionxdr-eagle-offensive-platform-agent-config-coverage-yaml",
       "type": "dependency"
     },
     {
       "source": "sai-dir-zionxdr-eagle-offensive-platform-agent-config",
       "target": "sai-file-zionxdr-eagle-offensive-platform-agent-config-rules-yaml",
+      "type": "dependency"
+    },
+    {
+      "source": "sai-dir-zionxdr-eagle-offensive-platform-agent-config",
+      "target": "sai-file-zionxdr-eagle-offensive-platform-agent-config-whitelist-yaml",
+      "type": "dependency"
+    },
+    {
+      "source": "sai-dir-zionxdr-eagle-offensive-platform-agent-config-rules-d",
+      "target": "sai-file-zionxdr-eagle-offensive-platform-agent-config-rules-d-extended-behavioral-yaml",
+      "type": "dependency"
+    },
+    {
+      "source": "sai-dir-zionxdr-eagle-offensive-platform-agent-config-rules-d",
+      "target": "sai-file-zionxdr-eagle-offensive-platform-agent-config-rules-d-gap-fill-requested-yaml",
       "type": "dependency"
     },
     {
@@ -13062,96 +14453,116 @@
     },
     {
       "source": "sai-dir-zionxdr-eagle-offensive-platform-agent-eagle",
-      "target": "sai-grp-zionxdr-eagle-offensive-platform-agent-eagle-files-c-e-m",
+      "target": "sai-grp-zionxdr-eagle-offensive-platform-agent-eagle-files-c-e-i",
       "type": "dependency"
     },
     {
       "source": "sai-dir-zionxdr-eagle-offensive-platform-agent-eagle",
-      "target": "sai-grp-zionxdr-eagle-offensive-platform-agent-eagle-files-r-s-t-z",
+      "target": "sai-grp-zionxdr-eagle-offensive-platform-agent-eagle-files-m-r-s-t-w-z",
       "type": "dependency"
     },
     {
-      "source": "sai-grp-zionxdr-eagle-offensive-platform-agent-eagle-files-c-e-m",
+      "source": "sai-grp-zionxdr-eagle-offensive-platform-agent-eagle-files-c-e-i",
       "target": "sai-file-zionxdr-eagle-offensive-platform-agent-eagle-init-py",
       "type": "dependency"
     },
     {
-      "source": "sai-grp-zionxdr-eagle-offensive-platform-agent-eagle-files-c-e-m",
+      "source": "sai-grp-zionxdr-eagle-offensive-platform-agent-eagle-files-c-e-i",
       "target": "sai-file-zionxdr-eagle-offensive-platform-agent-eagle-main-py",
       "type": "dependency"
     },
     {
-      "source": "sai-grp-zionxdr-eagle-offensive-platform-agent-eagle-files-c-e-m",
+      "source": "sai-grp-zionxdr-eagle-offensive-platform-agent-eagle-files-c-e-i",
       "target": "sai-file-zionxdr-eagle-offensive-platform-agent-eagle-cli-py",
       "type": "dependency"
     },
     {
-      "source": "sai-grp-zionxdr-eagle-offensive-platform-agent-eagle-files-c-e-m",
+      "source": "sai-grp-zionxdr-eagle-offensive-platform-agent-eagle-files-c-e-i",
       "target": "sai-file-zionxdr-eagle-offensive-platform-agent-eagle-console-server-py",
       "type": "dependency"
     },
     {
-      "source": "sai-grp-zionxdr-eagle-offensive-platform-agent-eagle-files-c-e-m",
+      "source": "sai-grp-zionxdr-eagle-offensive-platform-agent-eagle-files-c-e-i",
+      "target": "sai-file-zionxdr-eagle-offensive-platform-agent-eagle-correlation-engine-py",
+      "type": "dependency"
+    },
+    {
+      "source": "sai-grp-zionxdr-eagle-offensive-platform-agent-eagle-files-c-e-i",
       "target": "sai-file-zionxdr-eagle-offensive-platform-agent-eagle-correlator-py",
       "type": "dependency"
     },
     {
-      "source": "sai-grp-zionxdr-eagle-offensive-platform-agent-eagle-files-c-e-m",
+      "source": "sai-grp-zionxdr-eagle-offensive-platform-agent-eagle-files-c-e-i",
       "target": "sai-file-zionxdr-eagle-offensive-platform-agent-eagle-coverage-py",
       "type": "dependency"
     },
     {
-      "source": "sai-grp-zionxdr-eagle-offensive-platform-agent-eagle-files-c-e-m",
+      "source": "sai-grp-zionxdr-eagle-offensive-platform-agent-eagle-files-c-e-i",
       "target": "sai-file-zionxdr-eagle-offensive-platform-agent-eagle-engine-py",
       "type": "dependency"
     },
     {
-      "source": "sai-grp-zionxdr-eagle-offensive-platform-agent-eagle-files-c-e-m",
+      "source": "sai-grp-zionxdr-eagle-offensive-platform-agent-eagle-files-c-e-i",
       "target": "sai-file-zionxdr-eagle-offensive-platform-agent-eagle-etw-sensor-py",
       "type": "dependency"
     },
     {
-      "source": "sai-grp-zionxdr-eagle-offensive-platform-agent-eagle-files-c-e-m",
+      "source": "sai-grp-zionxdr-eagle-offensive-platform-agent-eagle-files-c-e-i",
       "target": "sai-file-zionxdr-eagle-offensive-platform-agent-eagle-evidence-py",
       "type": "dependency"
     },
     {
-      "source": "sai-grp-zionxdr-eagle-offensive-platform-agent-eagle-files-c-e-m",
+      "source": "sai-grp-zionxdr-eagle-offensive-platform-agent-eagle-files-c-e-i",
+      "target": "sai-file-zionxdr-eagle-offensive-platform-agent-eagle-incident-engine-py",
+      "type": "dependency"
+    },
+    {
+      "source": "sai-grp-zionxdr-eagle-offensive-platform-agent-eagle-files-m-r-s-t-w-z",
       "target": "sai-file-zionxdr-eagle-offensive-platform-agent-eagle-memory-scan-py",
       "type": "dependency"
     },
     {
-      "source": "sai-grp-zionxdr-eagle-offensive-platform-agent-eagle-files-c-e-m",
+      "source": "sai-grp-zionxdr-eagle-offensive-platform-agent-eagle-files-m-r-s-t-w-z",
       "target": "sai-file-zionxdr-eagle-offensive-platform-agent-eagle-models-py",
       "type": "dependency"
     },
     {
-      "source": "sai-grp-zionxdr-eagle-offensive-platform-agent-eagle-files-r-s-t-z",
+      "source": "sai-grp-zionxdr-eagle-offensive-platform-agent-eagle-files-m-r-s-t-w-z",
       "target": "sai-file-zionxdr-eagle-offensive-platform-agent-eagle-response-py",
       "type": "dependency"
     },
     {
-      "source": "sai-grp-zionxdr-eagle-offensive-platform-agent-eagle-files-r-s-t-z",
+      "source": "sai-grp-zionxdr-eagle-offensive-platform-agent-eagle-files-m-r-s-t-w-z",
+      "target": "sai-file-zionxdr-eagle-offensive-platform-agent-eagle-risk-py",
+      "type": "dependency"
+    },
+    {
+      "source": "sai-grp-zionxdr-eagle-offensive-platform-agent-eagle-files-m-r-s-t-w-z",
       "target": "sai-file-zionxdr-eagle-offensive-platform-agent-eagle-runner-py",
       "type": "dependency"
     },
     {
-      "source": "sai-grp-zionxdr-eagle-offensive-platform-agent-eagle-files-r-s-t-z",
+      "source": "sai-grp-zionxdr-eagle-offensive-platform-agent-eagle-files-m-r-s-t-w-z",
       "target": "sai-file-zionxdr-eagle-offensive-platform-agent-eagle-sensor-py",
       "type": "dependency"
     },
     {
-      "source": "sai-grp-zionxdr-eagle-offensive-platform-agent-eagle-files-r-s-t-z",
+      "source": "sai-grp-zionxdr-eagle-offensive-platform-agent-eagle-files-m-r-s-t-w-z",
       "target": "sai-file-zionxdr-eagle-offensive-platform-agent-eagle-service-py",
       "type": "dependency"
     },
     {
-      "source": "sai-grp-zionxdr-eagle-offensive-platform-agent-eagle-files-r-s-t-z",
+      "source": "sai-grp-zionxdr-eagle-offensive-platform-agent-eagle-files-m-r-s-t-w-z",
       "target": "sai-file-zionxdr-eagle-offensive-platform-agent-eagle-telemetry-ops-py",
       "type": "dependency"
     },
     {
-      "source": "sai-grp-zionxdr-eagle-offensive-platform-agent-eagle-files-r-s-t-z",
+      "source": "sai-grp-zionxdr-eagle-offensive-platform-agent-eagle-files-m-r-s-t-w-z",
+      "target": "sai-file-zionxdr-eagle-offensive-platform-agent-eagle-whitelist-py",
+      "type": "dependency"
+    },
+    {
+      "source": "sai-grp-zionxdr-eagle-offensive-platform-agent-eagle-files-m-r-s-t-w-z",
       "target": "sai-file-zionxdr-eagle-offensive-platform-agent-eagle-zionxdr-control-py",
       "type": "dependency"
     },
