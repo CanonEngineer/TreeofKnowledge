@@ -4,7 +4,7 @@
   "repoUrl": "https://github.com/CanonEngineer/SentinelAI",
   "color": "#38bdf8",
   "demoUrl": "http://localhost:5173",
-  "nodeCount": 857,
+  "nodeCount": 869,
   "categories": {
     "core": {
       "label": "Backend",
@@ -50,7 +50,7 @@
       "color": "#3b82f6",
       "size": 2.2,
       "file": "README.md",
-      "description": "Árvore completa do repositório — 701 arquivos de código mapeados (backend, frontend, mobile, docs, scripts, deploy). Estabilização Fases 1–8 + 9b (credenciais, wallboard, agent lab, CMDB, SLA, NetFlow UI)."
+      "description": "Árvore completa do repositório — 713 arquivos de código mapeados (backend, frontend, mobile, docs, scripts, deploy). Estabilização Fases 1–8 + 9b (credenciais, wallboard, agent lab, CMDB, SLA, NetFlow UI)."
     },
     {
       "id": "sai-dir-github",
@@ -2117,6 +2117,18 @@
       "description": "Código-fonte: `_recover_out/scan_peaks.py`"
     },
     {
+      "id": "sai-file-recover-out-scan-undefined-names-py",
+      "label": "scan_undefined_names.py",
+      "parent": "sai-grp-recover-out-files-r-s-z",
+      "layer": "file",
+      "category": "network",
+      "categoryLabel": "Rede / Scan",
+      "color": "#22d3ee",
+      "size": 0.95,
+      "file": "_recover_out/scan_undefined_names.py",
+      "description": "Código-fonte: `_recover_out/scan_undefined_names.py`"
+    },
+    {
       "id": "sai-file-recover-out-strreplace-meta-json",
       "label": "strreplace_meta.json",
       "parent": "sai-grp-recover-out-files-r-s-z",
@@ -3377,6 +3389,30 @@
       "description": "Código-fonte: `backend/app/data/agent/install-zionvm-agent.sh`"
     },
     {
+      "id": "sai-file-backend-app-data-agent-install-zionxdr-agent-ps1",
+      "label": "install-zionxdr-agent.ps1",
+      "parent": "sai-dir-backend-app-data-agent",
+      "layer": "file",
+      "category": "scripts",
+      "categoryLabel": "Scripts",
+      "color": "#64748b",
+      "size": 0.95,
+      "file": "backend/app/data/agent/install-zionxdr-agent.ps1",
+      "description": "Código-fonte: `backend/app/data/agent/install-zionxdr-agent.ps1`"
+    },
+    {
+      "id": "sai-file-backend-app-data-agent-install-zionxdr-agent-sh",
+      "label": "install-zionxdr-agent.sh",
+      "parent": "sai-dir-backend-app-data-agent",
+      "layer": "file",
+      "category": "other",
+      "categoryLabel": "Outros",
+      "color": "#64748b",
+      "size": 0.95,
+      "file": "backend/app/data/agent/install-zionxdr-agent.sh",
+      "description": "Código-fonte: `backend/app/data/agent/install-zionxdr-agent.sh`"
+    },
+    {
       "id": "sai-file-backend-app-data-agent-sentinel-lab-agent-py",
       "label": "sentinel_lab_agent.py",
       "parent": "sai-dir-backend-app-data-agent",
@@ -3461,6 +3497,18 @@
       "description": "Código-fonte: `backend/app/data/agent/zionxdr_windows_agent.py`"
     },
     {
+      "id": "sai-file-backend-app-data-eagle-runtime-zionxdr-control-json",
+      "label": "zionxdr_control.json",
+      "parent": "sai-dir-backend-app-data-eagle-runtime",
+      "layer": "file",
+      "category": "other",
+      "categoryLabel": "Outros",
+      "color": "#64748b",
+      "size": 0.95,
+      "file": "backend/app/data/eagle-runtime/zionxdr_control.json",
+      "description": "Código-fonte: `backend/app/data/eagle-runtime/zionxdr_control.json`"
+    },
+    {
       "id": "sai-file-backend-app-data-eagle-runtime-config-correlation-yaml",
       "label": "correlation.yaml",
       "parent": "sai-dir-backend-app-data-eagle-runtime-config",
@@ -3531,6 +3579,18 @@
       "size": 0.95,
       "file": "backend/app/data/eagle-runtime/config/rules.d/gap_fill_requested.yaml",
       "description": "Código-fonte: `backend/app/data/eagle-runtime/config/rules.d/gap_fill_requested.yaml`"
+    },
+    {
+      "id": "sai-file-backend-app-data-eagle-runtime-config-rules-d-sai-next-advanced-yaml",
+      "label": "sai_next_advanced.yaml",
+      "parent": "sai-dir-backend-app-data-eagle-runtime-config-rules-d",
+      "layer": "file",
+      "category": "other",
+      "categoryLabel": "Outros",
+      "color": "#64748b",
+      "size": 0.95,
+      "file": "backend/app/data/eagle-runtime/config/rules.d/sai_next_advanced.yaml",
+      "description": "Código-fonte: `backend/app/data/eagle-runtime/config/rules.d/sai_next_advanced.yaml`"
     },
     {
       "id": "sai-file-backend-app-engines-init-py",
@@ -6017,6 +6077,18 @@
       "description": "Código-fonte: `backend/scripts/zvm_dump_state.py`"
     },
     {
+      "id": "sai-file-backend-scripts-zvm-e2e-probe-py",
+      "label": "zvm_e2e_probe.py",
+      "parent": "sai-dir-backend-scripts",
+      "layer": "file",
+      "category": "scripts",
+      "categoryLabel": "Scripts",
+      "color": "#64748b",
+      "size": 0.95,
+      "file": "backend/scripts/zvm_e2e_probe.py",
+      "description": "Código-fonte: `backend/scripts/zvm_e2e_probe.py`"
+    },
+    {
       "id": "sai-file-backend-scripts-zvm-try-create-py",
       "label": "zvm_try_create.py",
       "parent": "sai-dir-backend-scripts",
@@ -8393,16 +8465,16 @@
       "description": "Grupo de arquivos em `frontend/src/components/zionxdr/` — Arquivos Z (1–12)"
     },
     {
-      "id": "sai-grp-frontend-src-components-zionxdr-files-z-13-16",
-      "label": "Arquivos Z (13–16)",
+      "id": "sai-grp-frontend-src-components-zionxdr-files-z-13-18",
+      "label": "Arquivos Z (13–18)",
       "parent": "sai-dir-frontend-src-components-zionxdr",
       "layer": "module",
       "category": "frontend",
       "categoryLabel": "Frontend",
       "color": "#eab308",
       "size": 1.35,
-      "file": "frontend/src/components/zionxdr/[files-z-13-16]",
-      "description": "Grupo de arquivos em `frontend/src/components/zionxdr/` — Arquivos Z (13–16)"
+      "file": "frontend/src/components/zionxdr/[files-z-13-18]",
+      "description": "Grupo de arquivos em `frontend/src/components/zionxdr/` — Arquivos Z (13–18)"
     },
     {
       "id": "sai-file-frontend-src-components-zionxdr-eaglealertcard-tsx",
@@ -8489,6 +8561,18 @@
       "description": "Código-fonte: `frontend/src/components/zionxdr/useZionxdrScrollChrome.ts`"
     },
     {
+      "id": "sai-file-frontend-src-components-zionxdr-zionxdragentinstalldialog-tsx",
+      "label": "ZionXDRAgentInstallDialog.tsx",
+      "parent": "sai-grp-frontend-src-components-zionxdr-files-z-1-12",
+      "layer": "file",
+      "category": "frontend",
+      "categoryLabel": "Frontend",
+      "color": "#eab308",
+      "size": 0.95,
+      "file": "frontend/src/components/zionxdr/ZionXDRAgentInstallDialog.tsx",
+      "description": "Código-fonte: `frontend/src/components/zionxdr/ZionXDRAgentInstallDialog.tsx`"
+    },
+    {
       "id": "sai-file-frontend-src-components-zionxdr-zionxdrconsole-tsx",
       "label": "ZionXDRConsole.tsx",
       "parent": "sai-grp-frontend-src-components-zionxdr-files-z-1-12",
@@ -8499,6 +8583,18 @@
       "size": 0.95,
       "file": "frontend/src/components/zionxdr/ZionXDRConsole.tsx",
       "description": "Código-fonte: `frontend/src/components/zionxdr/ZionXDRConsole.tsx`"
+    },
+    {
+      "id": "sai-file-frontend-src-components-zionxdr-zionxdrcopilotdrawer-tsx",
+      "label": "ZionXDRCopilotDrawer.tsx",
+      "parent": "sai-grp-frontend-src-components-zionxdr-files-z-1-12",
+      "layer": "file",
+      "category": "frontend",
+      "categoryLabel": "Frontend",
+      "color": "#eab308",
+      "size": 0.95,
+      "file": "frontend/src/components/zionxdr/ZionXDRCopilotDrawer.tsx",
+      "description": "Código-fonte: `frontend/src/components/zionxdr/ZionXDRCopilotDrawer.tsx`"
     },
     {
       "id": "sai-file-frontend-src-components-zionxdr-zionxdrcorpconfirmdialog-tsx",
@@ -8611,7 +8707,7 @@
     {
       "id": "sai-file-frontend-src-components-zionxdr-zionxdrincidentpanel-tsx",
       "label": "ZionXDRIncidentPanel.tsx",
-      "parent": "sai-grp-frontend-src-components-zionxdr-files-z-1-12",
+      "parent": "sai-grp-frontend-src-components-zionxdr-files-z-13-18",
       "layer": "file",
       "category": "frontend",
       "categoryLabel": "Frontend",
@@ -8623,7 +8719,7 @@
     {
       "id": "sai-file-frontend-src-components-zionxdr-zionxdrlayers-tsx",
       "label": "ZionXDRLayers.tsx",
-      "parent": "sai-grp-frontend-src-components-zionxdr-files-z-1-12",
+      "parent": "sai-grp-frontend-src-components-zionxdr-files-z-13-18",
       "layer": "file",
       "category": "frontend",
       "categoryLabel": "Frontend",
@@ -8635,7 +8731,7 @@
     {
       "id": "sai-file-frontend-src-components-zionxdr-zionxdrnmscard-tsx",
       "label": "ZionXDRNmsCard.tsx",
-      "parent": "sai-grp-frontend-src-components-zionxdr-files-z-13-16",
+      "parent": "sai-grp-frontend-src-components-zionxdr-files-z-13-18",
       "layer": "file",
       "category": "frontend",
       "categoryLabel": "Frontend",
@@ -8647,7 +8743,7 @@
     {
       "id": "sai-file-frontend-src-components-zionxdr-zionxdrpolicycreatedialog-tsx",
       "label": "ZionXDRPolicyCreateDialog.tsx",
-      "parent": "sai-grp-frontend-src-components-zionxdr-files-z-13-16",
+      "parent": "sai-grp-frontend-src-components-zionxdr-files-z-13-18",
       "layer": "file",
       "category": "frontend",
       "categoryLabel": "Frontend",
@@ -8659,7 +8755,7 @@
     {
       "id": "sai-file-frontend-src-components-zionxdr-zionxdrpolicypanel-tsx",
       "label": "ZionXDRPolicyPanel.tsx",
-      "parent": "sai-grp-frontend-src-components-zionxdr-files-z-13-16",
+      "parent": "sai-grp-frontend-src-components-zionxdr-files-z-13-18",
       "layer": "file",
       "category": "frontend",
       "categoryLabel": "Frontend",
@@ -8671,7 +8767,7 @@
     {
       "id": "sai-file-frontend-src-components-zionxdr-zionxdrtelemetrycard-tsx",
       "label": "ZionXDRTelemetryCard.tsx",
-      "parent": "sai-grp-frontend-src-components-zionxdr-files-z-13-16",
+      "parent": "sai-grp-frontend-src-components-zionxdr-files-z-13-18",
       "layer": "file",
       "category": "frontend",
       "categoryLabel": "Frontend",
@@ -9821,6 +9917,30 @@
       "description": "Código-fonte: `zionxdr/eagle-offensive-platform/README.md`"
     },
     {
+      "id": "sai-file-zionxdr-eagle-offensive-platform-agent-install-zionxdr-agent-ps1",
+      "label": "install-zionxdr-agent.ps1",
+      "parent": "sai-dir-zionxdr-eagle-offensive-platform-agent",
+      "layer": "file",
+      "category": "scripts",
+      "categoryLabel": "Scripts",
+      "color": "#64748b",
+      "size": 0.95,
+      "file": "zionxdr/eagle-offensive-platform/agent/install-zionxdr-agent.ps1",
+      "description": "Código-fonte: `zionxdr/eagle-offensive-platform/agent/install-zionxdr-agent.ps1`"
+    },
+    {
+      "id": "sai-file-zionxdr-eagle-offensive-platform-agent-install-zionxdr-agent-sh",
+      "label": "install-zionxdr-agent.sh",
+      "parent": "sai-dir-zionxdr-eagle-offensive-platform-agent",
+      "layer": "file",
+      "category": "other",
+      "categoryLabel": "Outros",
+      "color": "#64748b",
+      "size": 0.95,
+      "file": "zionxdr/eagle-offensive-platform/agent/install-zionxdr-agent.sh",
+      "description": "Código-fonte: `zionxdr/eagle-offensive-platform/agent/install-zionxdr-agent.sh`"
+    },
+    {
       "id": "sai-file-zionxdr-eagle-offensive-platform-agent-readme-md",
       "label": "README.md",
       "parent": "sai-dir-zionxdr-eagle-offensive-platform-agent",
@@ -9915,6 +10035,18 @@
       "size": 0.95,
       "file": "zionxdr/eagle-offensive-platform/agent/config/rules.d/gap_fill_requested.yaml",
       "description": "Código-fonte: `zionxdr/eagle-offensive-platform/agent/config/rules.d/gap_fill_requested.yaml`"
+    },
+    {
+      "id": "sai-file-zionxdr-eagle-offensive-platform-agent-config-rules-d-sai-next-advanced-yaml",
+      "label": "sai_next_advanced.yaml",
+      "parent": "sai-dir-zionxdr-eagle-offensive-platform-agent-config-rules-d",
+      "layer": "file",
+      "category": "other",
+      "categoryLabel": "Outros",
+      "color": "#64748b",
+      "size": 0.95,
+      "file": "zionxdr/eagle-offensive-platform/agent/config/rules.d/sai_next_advanced.yaml",
+      "description": "Código-fonte: `zionxdr/eagle-offensive-platform/agent/config/rules.d/sai_next_advanced.yaml`"
     },
     {
       "id": "sai-file-zionxdr-eagle-offensive-platform-agent-console-static-app-js",
@@ -10191,6 +10323,18 @@
       "size": 0.95,
       "file": "zionxdr/eagle-offensive-platform/agent/eagle/service.py",
       "description": "Código-fonte: `zionxdr/eagle-offensive-platform/agent/eagle/service.py`"
+    },
+    {
+      "id": "sai-file-zionxdr-eagle-offensive-platform-agent-eagle-story-graph-py",
+      "label": "story_graph.py",
+      "parent": "sai-grp-zionxdr-eagle-offensive-platform-agent-eagle-files-m-r-s-t-w-z",
+      "layer": "file",
+      "category": "core",
+      "categoryLabel": "Backend",
+      "color": "#3b82f6",
+      "size": 0.95,
+      "file": "zionxdr/eagle-offensive-platform/agent/eagle/story_graph.py",
+      "description": "Código-fonte: `zionxdr/eagle-offensive-platform/agent/eagle/story_graph.py`"
     },
     {
       "id": "sai-file-zionxdr-eagle-offensive-platform-agent-eagle-telemetry-ops-py",
@@ -11188,6 +11332,11 @@
     },
     {
       "source": "sai-grp-recover-out-files-r-s-z",
+      "target": "sai-file-recover-out-scan-undefined-names-py",
+      "type": "dependency"
+    },
+    {
+      "source": "sai-grp-recover-out-files-r-s-z",
       "target": "sai-file-recover-out-strreplace-meta-json",
       "type": "dependency"
     },
@@ -11713,6 +11862,16 @@
     },
     {
       "source": "sai-dir-backend-app-data-agent",
+      "target": "sai-file-backend-app-data-agent-install-zionxdr-agent-ps1",
+      "type": "dependency"
+    },
+    {
+      "source": "sai-dir-backend-app-data-agent",
+      "target": "sai-file-backend-app-data-agent-install-zionxdr-agent-sh",
+      "type": "dependency"
+    },
+    {
+      "source": "sai-dir-backend-app-data-agent",
       "target": "sai-file-backend-app-data-agent-sentinel-lab-agent-py",
       "type": "dependency"
     },
@@ -11747,6 +11906,11 @@
       "type": "dependency"
     },
     {
+      "source": "sai-dir-backend-app-data-eagle-runtime",
+      "target": "sai-file-backend-app-data-eagle-runtime-zionxdr-control-json",
+      "type": "dependency"
+    },
+    {
       "source": "sai-dir-backend-app-data-eagle-runtime-config",
       "target": "sai-file-backend-app-data-eagle-runtime-config-correlation-yaml",
       "type": "dependency"
@@ -11774,6 +11938,11 @@
     {
       "source": "sai-dir-backend-app-data-eagle-runtime-config-rules-d",
       "target": "sai-file-backend-app-data-eagle-runtime-config-rules-d-gap-fill-requested-yaml",
+      "type": "dependency"
+    },
+    {
+      "source": "sai-dir-backend-app-data-eagle-runtime-config-rules-d",
+      "target": "sai-file-backend-app-data-eagle-runtime-config-rules-d-sai-next-advanced-yaml",
       "type": "dependency"
     },
     {
@@ -12813,6 +12982,11 @@
     },
     {
       "source": "sai-dir-backend-scripts",
+      "target": "sai-file-backend-scripts-zvm-e2e-probe-py",
+      "type": "dependency"
+    },
+    {
+      "source": "sai-dir-backend-scripts",
       "target": "sai-file-backend-scripts-zvm-try-create-py",
       "type": "dependency"
     },
@@ -13803,7 +13977,7 @@
     },
     {
       "source": "sai-dir-frontend-src-components-zionxdr",
-      "target": "sai-grp-frontend-src-components-zionxdr-files-z-13-16",
+      "target": "sai-grp-frontend-src-components-zionxdr-files-z-13-18",
       "type": "dependency"
     },
     {
@@ -13843,7 +14017,17 @@
     },
     {
       "source": "sai-grp-frontend-src-components-zionxdr-files-z-1-12",
+      "target": "sai-file-frontend-src-components-zionxdr-zionxdragentinstalldialog-tsx",
+      "type": "dependency"
+    },
+    {
+      "source": "sai-grp-frontend-src-components-zionxdr-files-z-1-12",
       "target": "sai-file-frontend-src-components-zionxdr-zionxdrconsole-tsx",
+      "type": "dependency"
+    },
+    {
+      "source": "sai-grp-frontend-src-components-zionxdr-files-z-1-12",
+      "target": "sai-file-frontend-src-components-zionxdr-zionxdrcopilotdrawer-tsx",
       "type": "dependency"
     },
     {
@@ -13892,32 +14076,32 @@
       "type": "dependency"
     },
     {
-      "source": "sai-grp-frontend-src-components-zionxdr-files-z-1-12",
+      "source": "sai-grp-frontend-src-components-zionxdr-files-z-13-18",
       "target": "sai-file-frontend-src-components-zionxdr-zionxdrincidentpanel-tsx",
       "type": "dependency"
     },
     {
-      "source": "sai-grp-frontend-src-components-zionxdr-files-z-1-12",
+      "source": "sai-grp-frontend-src-components-zionxdr-files-z-13-18",
       "target": "sai-file-frontend-src-components-zionxdr-zionxdrlayers-tsx",
       "type": "dependency"
     },
     {
-      "source": "sai-grp-frontend-src-components-zionxdr-files-z-13-16",
+      "source": "sai-grp-frontend-src-components-zionxdr-files-z-13-18",
       "target": "sai-file-frontend-src-components-zionxdr-zionxdrnmscard-tsx",
       "type": "dependency"
     },
     {
-      "source": "sai-grp-frontend-src-components-zionxdr-files-z-13-16",
+      "source": "sai-grp-frontend-src-components-zionxdr-files-z-13-18",
       "target": "sai-file-frontend-src-components-zionxdr-zionxdrpolicycreatedialog-tsx",
       "type": "dependency"
     },
     {
-      "source": "sai-grp-frontend-src-components-zionxdr-files-z-13-16",
+      "source": "sai-grp-frontend-src-components-zionxdr-files-z-13-18",
       "target": "sai-file-frontend-src-components-zionxdr-zionxdrpolicypanel-tsx",
       "type": "dependency"
     },
     {
-      "source": "sai-grp-frontend-src-components-zionxdr-files-z-13-16",
+      "source": "sai-grp-frontend-src-components-zionxdr-files-z-13-18",
       "target": "sai-file-frontend-src-components-zionxdr-zionxdrtelemetrycard-tsx",
       "type": "dependency"
     },
@@ -14398,6 +14582,16 @@
     },
     {
       "source": "sai-dir-zionxdr-eagle-offensive-platform-agent",
+      "target": "sai-file-zionxdr-eagle-offensive-platform-agent-install-zionxdr-agent-ps1",
+      "type": "dependency"
+    },
+    {
+      "source": "sai-dir-zionxdr-eagle-offensive-platform-agent",
+      "target": "sai-file-zionxdr-eagle-offensive-platform-agent-install-zionxdr-agent-sh",
+      "type": "dependency"
+    },
+    {
+      "source": "sai-dir-zionxdr-eagle-offensive-platform-agent",
       "target": "sai-file-zionxdr-eagle-offensive-platform-agent-readme-md",
       "type": "dependency"
     },
@@ -14434,6 +14628,11 @@
     {
       "source": "sai-dir-zionxdr-eagle-offensive-platform-agent-config-rules-d",
       "target": "sai-file-zionxdr-eagle-offensive-platform-agent-config-rules-d-gap-fill-requested-yaml",
+      "type": "dependency"
+    },
+    {
+      "source": "sai-dir-zionxdr-eagle-offensive-platform-agent-config-rules-d",
+      "target": "sai-file-zionxdr-eagle-offensive-platform-agent-config-rules-d-sai-next-advanced-yaml",
       "type": "dependency"
     },
     {
@@ -14549,6 +14748,11 @@
     {
       "source": "sai-grp-zionxdr-eagle-offensive-platform-agent-eagle-files-m-r-s-t-w-z",
       "target": "sai-file-zionxdr-eagle-offensive-platform-agent-eagle-service-py",
+      "type": "dependency"
+    },
+    {
+      "source": "sai-grp-zionxdr-eagle-offensive-platform-agent-eagle-files-m-r-s-t-w-z",
+      "target": "sai-file-zionxdr-eagle-offensive-platform-agent-eagle-story-graph-py",
       "type": "dependency"
     },
     {
